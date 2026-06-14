@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+
+# Env / secrets
+.env
+.env.*
+
+# Local data dir for dev
+data/
+*.apkg
+*.mp3
+
+# uv
+.venv/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Render
+.render/
