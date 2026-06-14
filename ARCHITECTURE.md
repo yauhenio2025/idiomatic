@@ -3,7 +3,24 @@
 A cloud pipeline that monitors a curated list of YouTube channels per language,
 detects new short videos (5–15 min), extracts genuinely idiomatic expressions
 that aren't already in the per-language expression library, generates Anki
-decks teaching them, and emails the user a download link.
+decks teaching them, and exposes them via an HTTP API for a local agent to
+pull and batch-import into Anki whenever Anki is open.
+
+## Mental model
+
+  - Subscribe to ~15-20 channels per language up front.
+  - Cron polls every couple of hours; new videos get queued.
+  - The worker only spends Gemini money on idioms NOT already in the language's
+    expression library — so steady state is ~5 new decks per day total across
+    languages (most days a channel publishes nothing genuinely new).
+  - Apkgs live on the Render persistent disk and stay there until the local
+    agent acks them as imported.
+  - The local agent (a tiny systemd/cron job on the user's machine) polls the
+    cloud API, downloads any unacked apkgs, and imports them into Anki via the
+    existing `scraper/import_apkg.py` flatpak path. If Anki is closed it
+    leaves them queued locally and tries again next tick.
+
+No email, no AnkiWeb sync trickery — local agent + cloud API is the bridge.
 
 ## Source of truth: the existing pimsleur project
 
@@ -27,34 +44,47 @@ local Mandarin/Pimsleur flows stay in the pimsleur repo for now.
 │  Render workspace `caii`, project `idiomatic`                            │
 ├──────────────────────────────────────────────────────────────────────────┤
 │                                                                          │
-│   idiomatic-cron      ──┐                                                │
-│   (cron job, 2h tick)   │   queues new videos found in channel RSS feeds │
-│                         ▼                                                │
+│   idiomatic-cron     ──┐                                                 │
+│   (cron, 2h tick)      │   queues new videos found in channel RSS feeds  │
+│                        ▼                                                 │
 │   ┌──────────────────────────────────────┐   ┌────────────────────────┐  │
 │   │ idiomatic-worker (background_worker) │◀──│ idiomatic-db (Postgres)│  │
-│   │ - dequeues video jobs                │   │  channels              │  │
+│   │ - claims next queued video           │   │  channels              │  │
 │   │ - yt-dlp audio                       │──▶│  videos                │  │
 │   │ - Gemini 3.5 Flash: extract + ts     │   │  expressions           │  │
-│   │ - dedup vs expression library        │   │  jobs                  │  │
-│   │ - structured-explanation generation  │   │  apkgs                 │  │
-│   │ - render audio (Gemini Flash TTS)    │   │  subscribers           │  │
-│   │ - build apkg                         │   └────────────────────────┘  │
-│   │ - upload to /data persistent disk    │                               │
-│   │ - email signed download link         │                               │
-│   └──────────────────────────────────────┘                               │
-│                         ▲                                                │
-│                         │                                                │
-│   idiomatic-api ───────┘   (FastAPI; optional for MVP)                   │
-│   - /channels CRUD       — manage tracked channels                       │
-│   - /videos              — pipeline status                               │
-│   - /expressions/<lang>  — browse library                                │
-│   - /apkg/<token>        — signed download                               │
+│   │ - dedup vs expression library        │   │  apkgs                 │  │
+│   │ - generate structured explanations   │   │  agents                │  │
+│   │ - Gemini Flash TTS audio             │   └────────────────────────┘  │
+│   │ - build apkg                         │              ▲                │
+│   │ - write to /data, record in db       │              │                │
+│   └──────────────────────────────────────┘              │                │
+│                                                         │                │
+│   idiomatic-api  (FastAPI web service)                  │                │
+│   - GET  /apkgs/pending?lang=…&agent=…   ──┐            │                │
+│   - GET  /apkgs/<id>/download              │── exposes the queue to the  │
+│   - POST /apkgs/<id>/ack                   │   local Anki-side agent     │
+│   - GET  /expressions/<lang>?since=…       │                             │
+│   - POST /channels                          │                            │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+                                  │
+                                  │  HTTPS  (agent_token in header)
+                                  ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+│  Local machine (user's Fedora box)                                       │
+│                                                                          │
+│   idiomatic-agent  (systemd timer, every 30 min)                         │
+│   - polls /apkgs/pending for unacked decks                               │
+│   - downloads them under ~/idiomatic-inbox/                              │
+│   - if `pgrep anki` says Anki is OPEN: skip import this tick             │
+│   - if CLOSED: invoke flatpak import_apkg.py for each, then POST /ack    │
+│   - apkgs that fail import stay queued for next tick                     │
 │                                                                          │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
 
-For the MVP we ship **cron + worker + db** only. The API service can come once
-the worker proves out end to end.
+**M1 ships cron + worker + db + API.** The agent is a separate ~50-line script
+that lives in the user's `pimsleur` repo (alongside `import_apkg.py`).
 
 ## Critical design choices
 
@@ -117,13 +147,66 @@ yt-dlp reads the page).
 We could swap to the YouTube Data API later if we need richer filtering
 (by tag, transcript availability, etc.) — but RSS gets us 80% there.
 
-### 5. Apkg storage + delivery
+### 5. Inflow throttling: per-language daily cap
 
-Render persistent disk (10GB mounted on the worker at `/data`) holds the apkgs.
-When the worker finishes a video, it inserts into `apkgs` table, generates a
-signed download token, emails the user.
+Steady state should be ~5 new decks/day total across all languages — most
+videos a channel publishes won't yield any NEW idioms after the library
+matures (dedup catches them). But to absorb spikes (channel uploads 8 videos
+in a day during breaking news), the worker enforces a soft cap:
 
-Email via [Resend](https://resend.com) (3000 free emails/month, simple API).
+  - `max_new_apkgs_per_lang_per_day` (default 3): once a language has produced
+    that many decks today, subsequent videos in that language stay queued
+    until tomorrow. We process them eventually; we just don't blast the user
+    with 15 new German decks in one day.
+  - The cap counts apkgs created today, not videos processed. Videos that
+    dedup down to zero new idioms get marked `skipped` and don't count.
+
+This keeps the user's daily Anki import to a manageable handful regardless of
+channel-side bursts.
+
+### 6. Apkg storage + delivery (local-pull agent, no email)
+
+Worker writes apkgs to the Render persistent disk (10GB at `/data`) and
+records each one in the `apkgs` table. The web API exposes the queue:
+
+  - `GET  /apkgs/pending?lang=…&agent=…` — list apkgs not yet acked by this
+    agent.
+  - `GET  /apkgs/<id>/download` — the raw apkg bytes.
+  - `POST /apkgs/<id>/ack` — agent reports it imported successfully (or
+    failed and wants the record marked).
+
+A tiny **local agent** runs on the user's machine on a 30-min systemd
+timer:
+
+```python
+# Sketch — lives in pimsleur/scraper/idiomatic_agent.py
+agents = httpx.Client(base_url=settings.api_base, headers={"x-agent": TOKEN})
+pending = agents.get("/apkgs/pending").json()
+for apkg in pending:
+    path = INBOX_DIR / apkg["filename"]
+    if not path.exists():
+        path.write_bytes(agents.get(f"/apkgs/{apkg['id']}/download").content)
+
+if anki_is_running():        # pgrep -af "/app/bin/anki"
+    log.info("anki open — skipping import this tick")
+    sys.exit(0)
+
+for path in INBOX_DIR.glob("*.apkg"):
+    apkg_id = ...   # parse from filename
+    if subprocess_import_via_flatpak(path) == 0:
+        agents.post(f"/apkgs/{apkg_id}/ack", json={"status": "ok"})
+        path.unlink()
+    else:
+        agents.post(f"/apkgs/{apkg_id}/ack", json={"status": "failed"})
+```
+
+If Anki is open, apkgs accumulate locally; the timer keeps trying. On days
+the user runs Anki, the timer batches imports of everything queued since
+last close. Skipped days just mean a bigger batch next time.
+
+Agent authentication: each device gets an `agent_token` row in the db.
+Tokens carry which `langs` they want and which `apkgs` they've acked — so
+two machines (laptop + iPad-via-AnkiWeb) each have their own queue.
 
 ## Database schema (initial)
 
@@ -165,22 +248,29 @@ CREATE TABLE expressions (
 CREATE INDEX expressions_norm ON expressions(lang, normalized);
 
 CREATE TABLE apkgs (
-  id            SERIAL PRIMARY KEY,
-  video_id      INTEGER REFERENCES videos(id),
-  lang          TEXT NOT NULL,
-  filename      TEXT NOT NULL,                -- relative to /data
-  size_bytes    BIGINT,
-  n_idioms      INTEGER,                      -- new ones (not deduped)
-  download_token TEXT UNIQUE NOT NULL,        -- random URL slug
-  created_at    TIMESTAMPTZ DEFAULT NOW(),
-  delivered_at  TIMESTAMPTZ                   -- when email was sent
+  id             SERIAL PRIMARY KEY,
+  video_id       INTEGER REFERENCES videos(id),
+  lang           TEXT NOT NULL,
+  filename       TEXT NOT NULL,                -- relative to DATA_DIR
+  size_bytes     BIGINT,
+  n_idioms       INTEGER,                      -- new ones (post-dedup)
+  created_at     TIMESTAMPTZ DEFAULT NOW()
 );
 
-CREATE TABLE subscribers (
-  id            SERIAL PRIMARY KEY,
-  email         TEXT NOT NULL,
-  langs         TEXT[] NOT NULL,              -- which langs they want
-  active        BOOLEAN DEFAULT TRUE
+CREATE TABLE agents (
+  id             SERIAL PRIMARY KEY,
+  token          TEXT UNIQUE NOT NULL,         -- bearer auth
+  name           TEXT,                         -- "fedora-laptop"
+  langs          TEXT[] NOT NULL,              -- which langs this device cares about
+  last_seen      TIMESTAMPTZ
+);
+
+CREATE TABLE agent_acks (
+  agent_id       INTEGER REFERENCES agents(id) ON DELETE CASCADE,
+  apkg_id        INTEGER REFERENCES apkgs(id)  ON DELETE CASCADE,
+  status         TEXT NOT NULL,                -- ok|failed
+  acked_at       TIMESTAMPTZ DEFAULT NOW(),
+  PRIMARY KEY (agent_id, apkg_id)
 );
 ```
 
@@ -205,8 +295,19 @@ videos.status:  queued
                           insert apkgs row
                           insert new expressions rows
                           status='done', finished_at=NOW()
-                          email each subscriber with download link
+                          (delivery is pull-based — agents fetch when they tick)
 ```
+
+Before claiming a video, the worker also checks the daily cap:
+
+```sql
+-- pseudo
+SELECT COUNT(*) FROM apkgs
+WHERE lang = $1 AND created_at >= date_trunc('day', NOW())
+```
+
+If that's ≥ `max_new_apkgs_per_lang_per_day`, the worker skips queued videos
+in that lang and looks for another. They process tomorrow.
 
 ## Repository layout
 
@@ -235,7 +336,7 @@ idiomatic/
 │   │   └── apkg.py            # genanki packaging
 │   ├── worker.py              # main loop: poll job table, run pipeline
 │   ├── cron.py                # RSS poll → enqueue
-│   └── email.py               # Resend client
+│   └── api.py                 # FastAPI app: /apkgs/* + /channels CRUD
 └── tests/
     └── ...
 ```
@@ -243,35 +344,32 @@ idiomatic/
 ## Env vars (all secrets via Render env group `idiomatic-secrets`)
 
 ```
-GEMINI_API_KEY       — text + audio + TTS
+GEMINI_API_KEY       — text + audio + TTS, all via gemini-3.5-flash
 ELEVENLABS_API_KEY   — optional, only if we swap TTS providers
-RESEND_API_KEY       — email
 DATABASE_URL         — Postgres, auto-injected by Render
-SIGN_KEY             — random string, for signing download tokens
-APP_BASE_URL         — https://idiomatic.onrender.com (or wherever the API lives)
-DATA_DIR             — /data on Render, ~/idiomatic-data locally
+DATA_DIR             — /data on the worker/api, ~/idiomatic-data locally
+APP_BASE_URL         — public URL of the api service
 ```
 
-## Open decisions for the user
-
-Before we commit to the above, three questions:
-
-1. **TTS provider for MVP?** Defaulting to Gemini Flash TTS (cheaper, in-stack).
-   ElevenLabs voices sound better but add cost + dependency. Easy to flip later
-   via `tts_provider.py`.
-2. **Email provider?** Resend assumed. Postmark also fine. Need an API key on
-   the chosen provider.
-3. **First language to target?** I'd start with one (Italian or German — best
-   tested in pimsleur) to nail the loop, then turn on more channels.
+The local agent (running on the user's box) needs only:
+```
+IDIOMATIC_API_URL    — e.g. https://idiomatic-api.onrender.com
+IDIOMATIC_AGENT_TOKEN — bearer token created via `INSERT INTO agents ...`
+INBOX_DIR            — ~/idiomatic-inbox (where downloaded apkgs land)
+```
 
 ## Path to production
 
-1. **This commit** (M1): scaffold, db schema, render.yaml. No code runs yet.
-2. **M2**: worker that processes ONE manually-enqueued video end-to-end and
-   produces an apkg on disk. Skip email, skip cron.
-3. **M3**: cron + RSS polling. Now it processes channels autonomously.
-4. **M4**: dedup against expressions table. Worker filters before generating.
-5. **M5**: email delivery via Resend.
-6. **M6**: 15-20 channels seeded per language.
-7. **M7** (stretch): minimal web UI for browsing the expression library and
+1. ✅ **M1** — scaffold, db schema, render blueprint, agent-pull design.
+2. **M2** — worker processes ONE manually-enqueued video end-to-end:
+   yt-dlp → Gemini 3.5 Flash audio extraction → dedup → structured-explanation
+   generation → Gemini Flash TTS → genanki apkg → write to /data.
+3. **M3** — cron + RSS polling. Channels seeded; pipeline runs autonomously.
+4. **M4** — per-language daily cap enforced in the worker's claim loop.
+5. **M5** — FastAPI service: /apkgs/pending, /apkgs/{id}/download, /ack,
+   /channels CRUD. Bearer-token agent auth.
+6. **M6** — local agent script lands in the pimsleur repo (alongside
+   import_apkg.py) + systemd timer unit.
+7. **M7** — seed 15-20 channels per language. Steady state.
+8. **M8 (stretch)** — tiny web UI for browsing the expression library and
    re-queuing failed videos.

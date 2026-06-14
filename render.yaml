@@ -2,12 +2,16 @@
 # Push to main and Render picks this up.
 #
 # Secrets live in env group `idiomatic-secrets` (create it in the dashboard
-# once and attach to both services). See ARCHITECTURE.md for the env vars
-# expected.
+# once and attach to both services). See ARCHITECTURE.md for the env vars.
+#
+# Note on disks: Render attaches a persistent disk to exactly one service.
+# So worker + API share one container (the API process spawns the worker
+# loop as an asyncio task at startup) and one disk. The cron is separate
+# (it doesn't need /data — just enqueues videos in the db).
 
 databases:
   - name: idiomatic-db
-    plan: basic-256mb
+    plan: basic_256mb
     region: frankfurt
     postgresMajorVersion: "16"
 
@@ -28,13 +32,16 @@ services:
           property: connectionString
       - fromGroup: idiomatic-secrets
 
-  - type: worker
-    name: idiomatic-worker
-    runtime: docker                    # Dockerfile pulls ffmpeg + yt-dlp
-    plan: standard
+  # API + worker live in one process. FastAPI serves the agent endpoints;
+  # an asyncio background task drains the videos queue. They share /data.
+  - type: web
+    name: idiomatic-app
+    runtime: docker
+    plan: standard                     # bumped from starter — the worker side does real CPU work
     region: frankfurt
     branch: main
     dockerfilePath: ./Dockerfile
+    dockerCommand: uv run uvicorn idiomatic.api:app --host 0.0.0.0 --port $PORT
     disk:
       name: idiomatic-data
       mountPath: /data

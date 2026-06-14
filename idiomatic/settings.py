@@ -22,19 +22,19 @@ class Settings(BaseSettings):
     gemini_text_model: str = "gemini-3.5-flash"          # text + audio understanding
     gemini_tts_model: str = "gemini-3.1-flash-tts-preview"
 
-    # Fallback / future
+    # Fallback TTS provider (used only if we swap voices via tts_provider)
     elevenlabs_api_key: str | None = None
-
-    # --- email --------------------------------------------------------------
-    resend_api_key: str | None = None
-    email_from: str = "idiomatic@example.com"
 
     # --- pipeline tunables --------------------------------------------------
     min_duration_sec: int = 5 * 60
     max_duration_sec: int = 15 * 60
-    target_idioms_per_video: int = 12      # rough target before dedup
+    target_idioms_per_video: int = 12               # rough Gemini extraction target
     worker_poll_interval_sec: int = 10
     worker_max_attempts: int = 3
+
+    # Soft cap on inflow — keeps daily Anki import manageable.
+    # Counted against apkgs created today, not videos processed.
+    max_new_apkgs_per_lang_per_day: int = 3
 
 
 _settings: Settings | None = None

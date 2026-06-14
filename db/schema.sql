@@ -46,15 +46,23 @@ CREATE TABLE IF NOT EXISTS apkgs (
   filename       TEXT NOT NULL,                  -- path relative to DATA_DIR
   size_bytes     BIGINT,
   n_idioms       INTEGER,                        -- new idioms (post-dedup)
-  download_token TEXT UNIQUE NOT NULL,
-  created_at     TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  delivered_at   TIMESTAMPTZ
+  created_at     TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS apkgs_lang_created_idx ON apkgs(lang, created_at);
+
+CREATE TABLE IF NOT EXISTS agents (
+  id             SERIAL PRIMARY KEY,
+  token          TEXT UNIQUE NOT NULL,           -- bearer auth header
+  name           TEXT,                           -- e.g. "fedora-laptop"
+  langs          TEXT[] NOT NULL,                -- which langs to deliver
+  last_seen      TIMESTAMPTZ,
+  created_at     TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE TABLE IF NOT EXISTS subscribers (
-  id            SERIAL PRIMARY KEY,
-  email         TEXT NOT NULL,
-  langs         TEXT[] NOT NULL,
-  active        BOOLEAN NOT NULL DEFAULT TRUE,
-  added_at      TIMESTAMPTZ NOT NULL DEFAULT NOW()
+CREATE TABLE IF NOT EXISTS agent_acks (
+  agent_id       INTEGER REFERENCES agents(id) ON DELETE CASCADE,
+  apkg_id        INTEGER REFERENCES apkgs(id)  ON DELETE CASCADE,
+  status         TEXT NOT NULL,                  -- ok|failed
+  acked_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  PRIMARY KEY (agent_id, apkg_id)
 );

@@ -5,7 +5,7 @@ description = "YouTube → Anki idiom-deck cloud worker"
 requires-python = ">=3.11"
 dependencies = [
     "asyncpg>=0.30",          # postgres
-    "httpx>=0.27",            # async HTTP for Gemini, Resend, RSS
+    "httpx>=0.27",            # async HTTP for Gemini, RSS
     "feedparser>=6.0",        # YouTube channel RSS
     "genanki>=0.13",          # apkg packaging
     "tenacity>=8.5",          # retry decorators
@@ -14,6 +14,8 @@ dependencies = [
     "python-slugify>=8.0",
     "structlog>=24.4",        # structured logging
     "uvloop>=0.20",           # faster event loop
+    "fastapi>=0.115",         # web service for agent pull
+    "uvicorn[standard]>=0.30",# ASGI server
 ]
 
 [tool.uv]
