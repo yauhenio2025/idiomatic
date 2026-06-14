@@ -1,13 +1,15 @@
 # Render blueprint for idiomatic.
 # Push to main and Render picks this up.
 #
-# Secrets live in env group `idiomatic-secrets` (create it in the dashboard
-# once and attach to both services). See ARCHITECTURE.md for the env vars.
-#
 # Note on disks: Render attaches a persistent disk to exactly one service.
 # So worker + API share one container (the API process spawns the worker
 # loop as an asyncio task at startup) and one disk. The cron is separate
 # (it doesn't need /data — just enqueues videos in the db).
+#
+# Secrets: GEMINI_API_KEY and ELEVENLABS_API_KEY are declared with
+# `sync: false`. At the first deploy Render prompts you to paste each
+# value; they're stored per-service. Edit them later in
+# Dashboard → service → Environment.
 
 databases:
   - name: idiomatic-db
@@ -30,14 +32,17 @@ services:
         fromDatabase:
           name: idiomatic-db
           property: connectionString
-      - fromGroup: idiomatic-secrets
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
 
   # API + worker live in one process. FastAPI serves the agent endpoints;
   # an asyncio background task drains the videos queue. They share /data.
   - type: web
     name: idiomatic-app
     runtime: docker
-    plan: standard                     # bumped from starter — the worker side does real CPU work
+    plan: standard                     # worker side does real CPU work
     region: frankfurt
     branch: main
     dockerfilePath: ./Dockerfile
@@ -53,4 +58,7 @@ services:
           property: connectionString
       - key: DATA_DIR
         value: /data
-      - fromGroup: idiomatic-secrets
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
