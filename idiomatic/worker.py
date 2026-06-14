@@ -40,10 +40,14 @@ async def _download_audio(youtube_id: str, dst_dir: Path) -> Path:
         return out
     dst_dir.mkdir(parents=True, exist_ok=True)
     yt_dlp = shutil.which("yt-dlp") or "yt-dlp"
+    # Render's IPs get the "sign in to confirm you're not a bot" wall on
+    # YouTube's default web client. Force alternative player clients that
+    # are usually still anonymous-OK from datacenter IPs.
     cmd = [
         yt_dlp,
         "-f", "bestaudio/best",
         "-x", "--audio-format", "mp3", "--audio-quality", "5",
+        "--extractor-args", "youtube:player_client=android,tv_embedded,web",
         "-o", str(dst_dir / "source.%(ext)s"),
         f"https://www.youtube.com/watch?v={youtube_id}",
     ]
