@@ -26,7 +26,10 @@ class Settings(BaseSettings):
     elevenlabs_api_key: str | None = None
 
     # --- pipeline tunables --------------------------------------------------
-    min_duration_sec: int = 5 * 60
+    # Min bumped from 5→7 min so we skip the firehose of short news clips
+    # (tagesschau alone publishes ~50/day; the longer pieces are richer in
+    # idiomatic content anyway).
+    min_duration_sec: int = 7 * 60
     max_duration_sec: int = 15 * 60
     target_idioms_per_video: int = 12               # rough Gemini extraction target
     worker_poll_interval_sec: int = 10
