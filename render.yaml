@@ -25,7 +25,7 @@ services:
     region: frankfurt
     branch: main
     schedule: "0 */2 * * *"            # every 2 hours
-    buildCommand: pip install uv && uv sync --frozen
+    buildCommand: pip install uv && uv sync
     startCommand: uv run python -m idiomatic.cron
     envVars:
       - key: DATABASE_URL
