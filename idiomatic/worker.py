@@ -197,7 +197,19 @@ async def loop(once: bool = False) -> None:
     log.info("worker.start", once=once, poll=settings.worker_poll_interval_sec)
     try:
         while True:
-            video = await db.claim_next_video()
+            try:
+                video = await db.claim_next_video()
+            except asyncio.CancelledError:
+                raise
+            except Exception as e:
+                # Transient DB issue (schema not yet applied, connection
+                # reset, etc.). Don't let it kill the unobserved task —
+                # just log + back off and try again.
+                log.warning("worker.claim_failed", err=str(e)[:200])
+                await asyncio.sleep(settings.worker_poll_interval_sec)
+                if once:
+                    return
+                continue
             if video is None:
                 if once:
                     return
