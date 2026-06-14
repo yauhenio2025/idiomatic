@@ -9,7 +9,9 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import base64
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -18,6 +20,26 @@ from pathlib import Path
 
 import structlog
 from slugify import slugify  # python-slugify pkg, slugify module
+
+
+# ---- one-time setup: write the YouTube cookies file from the env var --------
+
+_COOKIES_PATH = Path("/tmp/youtube-cookies.txt")
+
+
+def _materialize_cookies() -> Path | None:
+    """Decode YOUTUBE_COOKIES_B64 to a real cookies.txt yt-dlp can read.
+    Returns the path, or None if no env var is set."""
+    blob = os.environ.get("YOUTUBE_COOKIES_B64")
+    if not blob:
+        return None
+    if _COOKIES_PATH.exists() and _COOKIES_PATH.stat().st_size > 0:
+        return _COOKIES_PATH
+    try:
+        _COOKIES_PATH.write_bytes(base64.b64decode(blob))
+    except Exception:
+        return None
+    return _COOKIES_PATH
 
 from . import db
 from .pipeline import audio as audio_mod
@@ -40,17 +62,18 @@ async def _download_audio(youtube_id: str, dst_dir: Path) -> Path:
         return out
     dst_dir.mkdir(parents=True, exist_ok=True)
     yt_dlp = shutil.which("yt-dlp") or "yt-dlp"
-    # Render's IPs get the "sign in to confirm you're not a bot" wall on
-    # YouTube's default web client. Force alternative player clients that
-    # are usually still anonymous-OK from datacenter IPs.
     cmd = [
         yt_dlp,
         "-f", "bestaudio/best",
         "-x", "--audio-format", "mp3", "--audio-quality", "5",
-        "--extractor-args", "youtube:player_client=android,tv_embedded,web",
         "-o", str(dst_dir / "source.%(ext)s"),
-        f"https://www.youtube.com/watch?v={youtube_id}",
     ]
+    # Pass authenticated cookies if we have them — required on datacenter IPs
+    # where YouTube serves the "sign in to confirm you're not a bot" wall.
+    cookies = _materialize_cookies()
+    if cookies:
+        cmd += ["--cookies", str(cookies)]
+    cmd.append(f"https://www.youtube.com/watch?v={youtube_id}")
     proc = await asyncio.create_subprocess_exec(
         *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE,
     )
