@@ -97,6 +97,26 @@ async def _call(model: str, parts: list[dict], *,
 # 1. Text generation (with optional JSON structured output)
 # ============================================================================
 
+def _parse_json_lenient(text: str) -> Any:
+    """Gemini occasionally returns JSON with trailing junk (extra `}`,
+    repeated objects, prose tail) even when responseMimeType=application/json.
+    Try strict json.loads first; on failure, walk a raw_decode to extract
+    the first complete JSON value."""
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    decoder = json.JSONDecoder()
+    # Skip any leading whitespace / code-fence
+    stripped = text.lstrip()
+    if stripped.startswith("```"):
+        stripped = stripped.split("\n", 1)[1] if "\n" in stripped else stripped
+        if stripped.endswith("```"):
+            stripped = stripped.rsplit("```", 1)[0]
+    obj, _ = decoder.raw_decode(stripped)
+    return obj
+
+
 async def generate_text(prompt: str, *, json_mode: bool = False,
                          temperature: float = 0.3) -> str | Any:
     """Returns the text payload (or parsed JSON if json_mode)."""
@@ -108,7 +128,7 @@ async def generate_text(prompt: str, *, json_mode: bool = False,
         temperature=temperature,
     )
     text = cand["content"]["parts"][0]["text"].strip()
-    return json.loads(text) if json_mode else text
+    return _parse_json_lenient(text) if json_mode else text
 
 
 # ============================================================================
@@ -145,7 +165,7 @@ async def generate_from_audio(prompt: str, audio_path: Path, *,
         temperature=temperature, timeout=timeout,
     )
     text = cand["content"]["parts"][0]["text"].strip()
-    return json.loads(text) if json_mode else text
+    return _parse_json_lenient(text) if json_mode else text
 
 
 # ============================================================================
@@ -189,28 +209,84 @@ async def _silence_mp3(out: Path, ms: int = 300) -> None:
     )
 
 
+async def _tts_call_fast(text: str, voice: str) -> dict:
+    """Bypass the global tenacity retry. TTS preview hangs frequently; we'd
+    rather fail fast and fall back to silence than burn 8 min on retries.
+
+    Strategy: one attempt at 60s, one retry at 90s, then bubble up. The
+    caller catches and decides (English→ElevenLabs, target→silence).
+    """
+    s = get_settings()
+    parts = [{"text": text}]
+    last_exc: Exception | None = None
+    for attempt, timeout in enumerate((60.0, 90.0), 1):
+        try:
+            gen_config: dict[str, Any] = {
+                "temperature": 0.3,
+                "responseModalities": ["AUDIO"],
+                "speechConfig": {
+                    "voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}},
+                },
+            }
+            body = {"contents": [{"parts": parts}], "generationConfig": gen_config}
+            url = _model_url(s.gemini_tts_model)
+            async with httpx.AsyncClient(timeout=timeout) as client:
+                r = await client.post(url, params={"key": s.gemini_api_key}, json=body)
+            if r.status_code in (429, 500, 502, 503, 504):
+                last_exc = GeminiTransient(f"HTTP {r.status_code}: {r.text[:200]}")
+                continue
+            if r.status_code >= 400:
+                raise GeminiBlocked(f"HTTP {r.status_code}: {r.text[:300]}")
+            body_json = r.json()
+            cands = body_json.get("candidates") or []
+            if not cands:
+                fb = body_json.get("promptFeedback") or {}
+                raise GeminiBlocked(f"no candidates; feedback={fb}")
+            return cands[0]
+        except (httpx.ReadTimeout, httpx.ConnectTimeout, httpx.ConnectError,
+                httpx.RemoteProtocolError) as e:
+            last_exc = GeminiTransient(
+                f"tts attempt {attempt} {type(e).__name__}: {str(e)[:120]}")
+            continue
+    raise last_exc or GeminiTransient("tts: exhausted attempts")
+
+
 async def synthesize(text: str, *, voice: str, out: Path) -> None:
     """TTS via Gemini Flash TTS.
 
-    On GeminiBlocked (safety filter, etc.):
+    Idempotent: skips if `out` already exists with size > 0.
+
+    Falls back on any non-success outcome (Gemini safety block, ReadTimeout,
+    network error):
       - English text (voice='Kore') → ElevenLabs Sarah (verified voice ID).
       - Anything else → write a silent placeholder so the calling concat
         doesn't crash. We lose that snippet but the rest of the deck survives.
-    Idempotent: skips if `out` already exists with size > 0.
+
+    TTS preview is the slowest layer; this path is intentionally fail-fast
+    (max ~2.5 min wall-clock per call vs. the 8 min the global retry budget
+    would otherwise consume).
     """
     if out.exists() and out.stat().st_size > 0:
         return
     out.parent.mkdir(parents=True, exist_ok=True)
 
     s = get_settings()
-    parts = [{"text": text}]
     try:
-        cand = await _call(
-            s.gemini_tts_model, parts,
-            response_modalities=["AUDIO"],
-            speech_voice=voice,
-            timeout=180,
-        )
+        cand = await _tts_call_fast(text, voice)
+    except GeminiTransient as e:
+        # Network / 5xx after 2 attempts — fall through to fallback below
+        # (same handling as GeminiBlocked).
+        log.warning("gemini.tts.transient.using_fallback",
+                     voice=voice, err=str(e)[:120], text_head=text[:60])
+        if voice == "Kore" and s.elevenlabs_api_key:
+            try:
+                await _elevenlabs_sarah(text, out, s.elevenlabs_api_key)
+                return
+            except Exception as fb_err:
+                log.warning("gemini.tts.fallback_sarah_failed",
+                             err=repr(fb_err)[:200])
+        await _silence_mp3(out, ms=300)
+        return
     except GeminiBlocked as e:
         # English → Sarah; target-language → silence placeholder.
         if voice == "Kore" and s.elevenlabs_api_key:
