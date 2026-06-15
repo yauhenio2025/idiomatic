@@ -66,6 +66,10 @@ async def _download_audio(youtube_id: str, dst_dir: Path) -> Path:
         yt_dlp,
         "-f", "bestaudio/best",
         "-x", "--audio-format", "mp3", "--audio-quality", "5",
+        # Allow yt-dlp to fetch the EJS JS-challenge solver from GitHub.
+        # Without this, YouTube's nsig/throttle challenge fails and downloads
+        # are blocked even with valid cookies. Deno is installed in the image.
+        "--remote-components", "ejs:github",
         "-o", str(dst_dir / "source.%(ext)s"),
     ]
     # Pass authenticated cookies if we have them — required on datacenter IPs
