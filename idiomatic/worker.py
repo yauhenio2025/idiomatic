@@ -112,6 +112,13 @@ async def process_video(video: dict) -> None:
         narration_root = Path(settings.data_dir) / "narration"
         await connectives.ensure_cached(narration_root, voice_en="Kore")
 
+        # Pre-create the silence cache files. silence_mp3() checks `exists()`
+        # then ffmpegs to the path — racy under parallel idioms (two writers
+        # produce a corrupt file, breaking the later -c copy concat with
+        # ffmpeg exit code 183). Do them serially up front.
+        for ms in (300, 700, 1200, 1500):
+            audio_mod.silence_mp3(narration_root, ms)
+
         video_audio_dir = work_root / "audio"
         video_audio_dir.mkdir(parents=True, exist_ok=True)
 
