@@ -25,6 +25,18 @@ class Settings(BaseSettings):
     # Fallback TTS provider (used only if we swap voices via tts_provider)
     elevenlabs_api_key: str | None = None
 
+    # --- Oxylabs YouTube Downloader (replaces yt-dlp) -----------------------
+    oxylabs_user: str | None = None
+    oxylabs_pass: str | None = None
+    # Oxylabs pushes the .m4a to S3-compatible storage; we use Cloudflare R2.
+    r2_access_key_id: str | None = None
+    r2_secret_access_key: str | None = None
+    r2_endpoint: str | None = None
+    r2_bucket: str = "idiomatic-yt-audio"
+    # How long to wait for Oxylabs to finish a download (seconds).
+    oxylabs_max_wait_sec: int = 900
+    oxylabs_poll_interval_sec: int = 15
+
     # --- pipeline tunables --------------------------------------------------
     # Min bumped from 5→7 min so we skip the firehose of short news clips
     # (tagesschau alone publishes ~50/day; the longer pieces are richer in

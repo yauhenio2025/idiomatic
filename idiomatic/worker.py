@@ -9,11 +9,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
-import base64
-import json
-import os
 import shutil
-import subprocess
 import sys
 import tempfile
 from pathlib import Path
@@ -21,27 +17,8 @@ from pathlib import Path
 import structlog
 from slugify import slugify  # python-slugify pkg, slugify module
 
-
-# ---- one-time setup: write the YouTube cookies file from the env var --------
-
-_COOKIES_PATH = Path("/tmp/youtube-cookies.txt")
-
-
-def _materialize_cookies() -> Path | None:
-    """Decode YOUTUBE_COOKIES_B64 to a real cookies.txt yt-dlp can read.
-    Returns the path, or None if no env var is set."""
-    blob = os.environ.get("YOUTUBE_COOKIES_B64")
-    if not blob:
-        return None
-    if _COOKIES_PATH.exists() and _COOKIES_PATH.stat().st_size > 0:
-        return _COOKIES_PATH
-    try:
-        _COOKIES_PATH.write_bytes(base64.b64decode(blob))
-    except Exception:
-        return None
-    return _COOKIES_PATH
-
 from . import db
+from . import oxylabs_client
 from .pipeline import audio as audio_mod
 from .pipeline import connectives
 from .pipeline.apkg import build_apkg
@@ -56,36 +33,23 @@ log = structlog.get_logger()
 # ---- one-video helpers ----------------------------------------------------
 
 async def _download_audio(youtube_id: str, dst_dir: Path) -> Path:
-    """yt-dlp the audio track as mp3. Idempotent."""
-    out = dst_dir / "source.mp3"
-    if out.exists() and out.stat().st_size > 0:
-        return out
+    """Fetch the audio track via Oxylabs YouTube Downloader → Cloudflare R2.
+
+    Idempotent. Returns the audio file path (extension depends on what
+    Oxylabs returns — typically .aac or .m4a; Gemini and ffmpeg accept both).
+    Oxylabs eats the bot-wall fight on their side.
+    """
+    # Fast path: if we already pulled it locally, reuse it (worker may retry
+    # this video).
+    for existing in dst_dir.glob("source.*"):
+        if existing.is_file() and existing.stat().st_size > 0:
+            return existing
     dst_dir.mkdir(parents=True, exist_ok=True)
-    yt_dlp = shutil.which("yt-dlp") or "yt-dlp"
-    cmd = [
-        yt_dlp,
-        "-f", "bestaudio/best",
-        "-x", "--audio-format", "mp3", "--audio-quality", "5",
-        # Allow yt-dlp to fetch the EJS JS-challenge solver from GitHub.
-        # Without this, YouTube's nsig/throttle challenge fails and downloads
-        # are blocked even with valid cookies. Deno is installed in the image.
-        "--remote-components", "ejs:github",
-        "-o", str(dst_dir / "source.%(ext)s"),
-    ]
-    # Pass authenticated cookies if we have them — required on datacenter IPs
-    # where YouTube serves the "sign in to confirm you're not a bot" wall.
-    cookies = _materialize_cookies()
-    if cookies:
-        cmd += ["--cookies", str(cookies)]
-    cmd.append(f"https://www.youtube.com/watch?v={youtube_id}")
-    proc = await asyncio.create_subprocess_exec(
-        *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE,
-    )
-    _, stderr = await proc.communicate()
-    if proc.returncode != 0:
-        raise RuntimeError(f"yt-dlp failed: {stderr.decode()[:300]}")
-    if not out.exists():
-        raise RuntimeError(f"yt-dlp produced no mp3 at {out}")
+    job_id = await oxylabs_client.submit_audio_job(youtube_id)
+    await oxylabs_client.wait_for_done(job_id)
+    out = await oxylabs_client.download_audio(youtube_id, job_id, dst_dir)
+    # Best-effort R2 cleanup so the bucket doesn't grow forever.
+    await oxylabs_client.cleanup_r2(youtube_id)
     return out
 
 
@@ -126,12 +90,13 @@ async def process_video(video: dict) -> None:
     work_root = Path(tempfile.gettempdir()) / "idiomatic" / youtube_id
     work_root.mkdir(parents=True, exist_ok=True)
     try:
-        # 1. Download audio
-        source_mp3 = await _download_audio(youtube_id, work_root)
+        # 1. Download audio via Oxylabs → R2 (returns .m4a; Gemini + ffmpeg
+        # both accept it directly, no re-encode needed).
+        source_audio = await _download_audio(youtube_id, work_root)
 
         # 2. Extract idiomatic phrases via Gemini 3.5 Flash audio understanding
         extracted = await extract_from_audio(
-            source_mp3, lang, n_target=settings.target_idioms_per_video,
+            source_audio, lang, n_target=settings.target_idioms_per_video,
         )
         if not extracted:
             await db.mark_video_status(video["id"], "skipped", "no idioms extracted")
@@ -157,7 +122,7 @@ async def process_video(video: dict) -> None:
                 # Render audio (front + back)
                 front, back = await audio_mod.render_card_audio(
                     idx=i, enriched=en, lang=lang,
-                    source_mp3=source_mp3,
+                    source_mp3=source_audio,
                     audio_start=phrase.audio_start, audio_end=phrase.audio_end,
                     video_audio_dir=video_audio_dir,
                     narration_root=narration_root,

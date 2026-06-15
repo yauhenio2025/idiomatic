@@ -107,16 +107,28 @@ async def generate_text(prompt: str, *, json_mode: bool = False,
 # 2. Audio-input extraction — the key M2 capability that lets us skip Whisper
 # ============================================================================
 
+_AUDIO_MIME = {
+    ".mp3": "audio/mpeg",
+    ".m4a": "audio/mp4",
+    ".mp4": "audio/mp4",
+    ".aac": "audio/aac",
+    ".ogg": "audio/ogg",
+    ".wav": "audio/wav",
+    ".flac": "audio/flac",
+}
+
+
 async def generate_from_audio(prompt: str, audio_path: Path, *,
                                json_mode: bool = True,
                                temperature: float = 0.3,
                                timeout: float = 300.0) -> Any:
-    """Send an mp3 inline (base64) alongside a prompt. Returns JSON by default."""
+    """Send an audio file inline (base64) alongside a prompt. Returns JSON by default."""
     s = get_settings()
     audio_bytes = audio_path.read_bytes()
+    mime = _AUDIO_MIME.get(audio_path.suffix.lower(), "audio/mpeg")
     parts = [
         {"text": prompt},
-        {"inlineData": {"mimeType": "audio/mpeg",
+        {"inlineData": {"mimeType": mime,
                          "data": base64.b64encode(audio_bytes).decode()}},
     ]
     cand = await _call(

@@ -62,3 +62,18 @@ services:
         sync: false
       - key: ELEVENLABS_API_KEY
         sync: false
+      # Oxylabs YouTube Downloader — bypasses YouTube's bot wall on their
+      # infrastructure. Replaces the yt-dlp + cookies path entirely.
+      - key: OXYLABS_USER
+        sync: false
+      - key: OXYLABS_PASS
+        sync: false
+      # Cloudflare R2 — Oxylabs pushes the .m4a here; the worker pulls it.
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false
+      - key: R2_ENDPOINT
+        sync: false
+      - key: R2_BUCKET
+        value: idiomatic-yt-audio
