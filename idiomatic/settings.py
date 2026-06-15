@@ -51,6 +51,16 @@ class Settings(BaseSettings):
     # Counted against apkgs created today, not videos processed.
     max_new_apkgs_per_lang_per_day: int = 3
 
+    # --- parallelism --------------------------------------------------------
+    # Concurrent Gemini TTS HTTP calls. Tier-1 paid Gemini allows ~60-300
+    # RPM for the TTS preview; 8 in flight stays well clear while pushing
+    # ~5× throughput vs. sequential.
+    tts_concurrency: int = 8
+    # Concurrent idioms processed inside a single video. Each idiom fires
+    # ~15-25 TTS calls, so the global cap above is what actually bounds the
+    # total. 3 idioms × 8 TTS slots saturates without bursting.
+    idiom_parallelism: int = 3
+
 
 _settings: Settings | None = None
 

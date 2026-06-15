@@ -7,6 +7,7 @@ don't need to clean up code fences.
 
 from __future__ import annotations
 
+import asyncio
 import base64
 import io
 import json
@@ -23,6 +24,20 @@ from tenacity import (
 )
 
 from .settings import get_settings
+
+# --- TTS concurrency bound --------------------------------------------------
+# Gemini Flash TTS preview is rate-limited (~60-300 RPM on paid tier-1). When
+# we fan out idioms in parallel, this semaphore is what actually caps the
+# pressure on the API.  Lazy-init because the running event loop has to
+# exist when the semaphore is created.
+_TTS_SEM: asyncio.Semaphore | None = None
+
+
+def _tts_sem() -> asyncio.Semaphore:
+    global _TTS_SEM
+    if _TTS_SEM is None:
+        _TTS_SEM = asyncio.Semaphore(get_settings().tts_concurrency)
+    return _TTS_SEM
 
 log = structlog.get_logger()
 
@@ -230,8 +245,11 @@ async def _tts_call_fast(text: str, voice: str) -> dict:
             }
             body = {"contents": [{"parts": parts}], "generationConfig": gen_config}
             url = _model_url(s.gemini_tts_model)
-            async with httpx.AsyncClient(timeout=timeout) as client:
-                r = await client.post(url, params={"key": s.gemini_api_key}, json=body)
+            # Bound concurrent TTS RPC pressure across all parallel idioms.
+            async with _tts_sem():
+                async with httpx.AsyncClient(timeout=timeout) as client:
+                    r = await client.post(url, params={"key": s.gemini_api_key},
+                                           json=body)
             if r.status_code in (429, 500, 502, 503, 504):
                 last_exc = GeminiTransient(f"HTTP {r.status_code}: {r.text[:200]}")
                 continue

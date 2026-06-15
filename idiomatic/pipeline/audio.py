@@ -12,6 +12,7 @@ expression skips most TTS calls.
 
 from __future__ import annotations
 
+import asyncio
 import hashlib
 import subprocess
 import tempfile
@@ -118,45 +119,58 @@ async def render_card_audio(idx: int, enriched: Enriched, lang: str,
                           audio_start, audio_end,
                           video_audio_dir / f"snippet_{pid}.mp3")
 
-    # --- bare expression in target voice ------------------------------------
+    # ---------------------------------------------------------------------
+    # PLANNING pass: every TTS coroutine we need, all paths predetermined.
+    # We then asyncio.gather them — bound by the module-level TTS semaphore
+    # in gemini.py — and only after they all settle do we stitch with ffmpeg
+    # (which is sequential per-file anyway).
+    # ---------------------------------------------------------------------
+    tts_tasks: list = []
+
     idiom_tgt = video_audio_dir / f"idiom_tgt_{pid}.mp3"
-    await gemini.synthesize(enriched.phrase, voice=voice_tgt, out=idiom_tgt)
+    tts_tasks.append(gemini.synthesize(enriched.phrase, voice=voice_tgt, out=idiom_tgt))
 
-    # --- English meaning in narrator voice ----------------------------------
     idiom_en = video_audio_dir / f"idiom_en_{pid}.mp3"
-    await gemini.synthesize(enriched.english, voice=EN_VOICE, out=idiom_en)
+    tts_tasks.append(gemini.synthesize(enriched.english, voice=EN_VOICE, out=idiom_en))
 
-    # --- structured-explanation alternating segments ------------------------
-    # For each non-null structured field, we play:
-    #   [English connective tissue (cached)] → [target-language content TTS]
-    expl_segments: list[Path] = []
+    # Plan structured-explanation segments.
+    expl_plan: list[tuple[Path, Path]] = []   # (conn_path, seg_path)
     for key, target_text in enriched.structured.items():
         conn_text, conn_path = connectives.pick_connective(narration_root, key, seed)
         if not conn_text:
             continue
-        # Cache the connective if missing (ensure_cached already runs at boot;
-        # this is the safety net for an idiom that uses a brand-new connective
-        # added in a code update).
+        # Connectives are pre-cached by ensure_cached() at process start,
+        # but if a code update added a new variant we missed, fall back here.
         if not conn_path.exists():
-            await gemini.synthesize(conn_text, voice=EN_VOICE, out=conn_path)
-        # Hash-stable per-card TTS for the actual content
+            tts_tasks.append(gemini.synthesize(conn_text, voice=EN_VOICE,
+                                                 out=conn_path))
         h = hashlib.sha1(target_text.encode()).hexdigest()[:10]
         seg_path = video_audio_dir / f"expl_{pid}_{key}_{h}.mp3"
-        await gemini.synthesize(target_text, voice=voice_tgt, out=seg_path)
-        expl_segments.append(conn_path)
-        expl_segments.append(sh)
-        expl_segments.append(seg_path)
-        expl_segments.append(md)
+        tts_tasks.append(gemini.synthesize(target_text, voice=voice_tgt,
+                                             out=seg_path))
+        expl_plan.append((conn_path, seg_path))
 
-    # --- example sentences --------------------------------------------------
-    teach_pairs: list[tuple[Path, Path]] = []      # first 3 — front
-    drill_pairs: list[tuple[Path, Path]] = []      # last 3 — back
+    # Plan example sentences.
+    teach_plan: list[tuple[Path, Path]] = []
+    drill_plan: list[tuple[Path, Path]] = []
     for i, ex in enumerate(enriched.examples):
         en_path = video_audio_dir / f"ex_{pid}_{i+1}_en.mp3"
         tgt_path = video_audio_dir / f"ex_{pid}_{i+1}_tgt.mp3"
-        await gemini.synthesize(ex["en"], voice=EN_VOICE, out=en_path)
-        await gemini.synthesize(ex["target"], voice=voice_tgt, out=tgt_path)
-        (teach_pairs if i < 3 else drill_pairs).append((en_path, tgt_path))
+        tts_tasks.append(gemini.synthesize(ex["en"], voice=EN_VOICE, out=en_path))
+        tts_tasks.append(gemini.synthesize(ex["target"], voice=voice_tgt, out=tgt_path))
+        (teach_plan if i < 3 else drill_plan).append((en_path, tgt_path))
+
+    # Fire them all. synthesize() never raises (it silence-falls-back on
+    # any error), so a plain gather is safe.
+    await asyncio.gather(*tts_tasks)
+
+    # Now flatten the explanation plan into the canonical alternation:
+    #   [conn] [silence] [target] [silence]
+    expl_segments: list[Path] = []
+    for conn_path, seg_path in expl_plan:
+        expl_segments += [conn_path, sh, seg_path, md]
+    teach_pairs = teach_plan
+    drill_pairs = drill_plan
 
     # --- stitch FRONT: snippet → idiom_tgt → idiom_en → explanation → 3 teach
     front_pieces: list[Path] = [snippet, md, idiom_tgt, sh, idiom_en, md]

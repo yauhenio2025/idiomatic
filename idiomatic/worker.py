@@ -115,33 +115,40 @@ async def process_video(video: dict) -> None:
         video_audio_dir = work_root / "audio"
         video_audio_dir.mkdir(parents=True, exist_ok=True)
 
-        enriched_tuples = []        # (Enriched, front_mp3, back_mp3)
         import time as _time
-        for i, phrase in enumerate(fresh, 1):
-            t0 = _time.monotonic()
-            log.info("worker.idiom.start", i=i, of=len(fresh),
-                     phrase=phrase.text[:50])
-            try:
-                en = await enrich_one(phrase.text, phrase.english, lang)
-                log.info("worker.idiom.enriched", i=i,
-                         dt=round(_time.monotonic() - t0, 1))
-                front, back = await audio_mod.render_card_audio(
-                    idx=i, enriched=en, lang=lang,
-                    source_mp3=source_audio,
-                    audio_start=phrase.audio_start, audio_end=phrase.audio_end,
-                    video_audio_dir=video_audio_dir,
-                    narration_root=narration_root,
-                )
-                enriched_tuples.append((en, front, back))
-                log.info("worker.idiom.done", i=i,
-                         dt=round(_time.monotonic() - t0, 1))
-            except Exception as e:
-                import traceback
-                log.warning("worker.idiom.failed",
-                             i=i, phrase=phrase.text[:40], err=repr(e),
-                             dt=round(_time.monotonic() - t0, 1),
-                             tb=traceback.format_exc()[-400:])
-                continue
+        sem = asyncio.Semaphore(settings.idiom_parallelism)
+
+        async def _one(i: int, phrase) -> tuple | None:
+            async with sem:
+                t0 = _time.monotonic()
+                log.info("worker.idiom.start", i=i, of=len(fresh),
+                         phrase=phrase.text[:50])
+                try:
+                    en = await enrich_one(phrase.text, phrase.english, lang)
+                    log.info("worker.idiom.enriched", i=i,
+                             dt=round(_time.monotonic() - t0, 1))
+                    front, back = await audio_mod.render_card_audio(
+                        idx=i, enriched=en, lang=lang,
+                        source_mp3=source_audio,
+                        audio_start=phrase.audio_start, audio_end=phrase.audio_end,
+                        video_audio_dir=video_audio_dir,
+                        narration_root=narration_root,
+                    )
+                    log.info("worker.idiom.done", i=i,
+                             dt=round(_time.monotonic() - t0, 1))
+                    return (en, front, back)
+                except Exception as e:
+                    import traceback
+                    log.warning("worker.idiom.failed",
+                                 i=i, phrase=phrase.text[:40], err=repr(e),
+                                 dt=round(_time.monotonic() - t0, 1),
+                                 tb=traceback.format_exc()[-400:])
+                    return None
+
+        results = await asyncio.gather(
+            *[_one(i, p) for i, p in enumerate(fresh, 1)]
+        )
+        enriched_tuples = [r for r in results if r is not None]
 
         if not enriched_tuples:
             await db.mark_video_status(video["id"], "failed",
