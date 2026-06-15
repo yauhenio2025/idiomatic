@@ -54,7 +54,9 @@ async def _call(model: str, parts: list[dict], *,
                 response_modalities: list[str] | None = None,
                 speech_voice: str | None = None,
                 temperature: float = 0.3,
-                timeout: float = 240.0) -> dict:
+                timeout: float = 120.0) -> dict:
+    """One Gemini API call. Network / 5xx / 429 / timeout → GeminiTransient
+    (tenacity retries). 4xx → GeminiBlocked (do not retry — bad prompt)."""
     s = get_settings()
     gen_config: dict[str, Any] = {"temperature": temperature}
     if response_mime_type:
@@ -69,8 +71,14 @@ async def _call(model: str, parts: list[dict], *,
     body = {"contents": [{"parts": parts}], "generationConfig": gen_config}
     url = _model_url(model)
 
-    async with httpx.AsyncClient(timeout=timeout) as client:
-        r = await client.post(url, params={"key": s.gemini_api_key}, json=body)
+    try:
+        async with httpx.AsyncClient(timeout=timeout) as client:
+            r = await client.post(url, params={"key": s.gemini_api_key}, json=body)
+    except (httpx.ReadTimeout, httpx.ConnectTimeout, httpx.ConnectError,
+            httpx.RemoteProtocolError) as e:
+        # Fail fast and retry — keeping per-call timeout short means an
+        # actually stuck call dies in 2 min instead of hanging for 10+.
+        raise GeminiTransient(f"network/timeout: {type(e).__name__}: {str(e)[:120]}")
 
     if r.status_code in (429, 500, 502, 503, 504):
         raise GeminiTransient(f"HTTP {r.status_code}: {r.text[:200]}")
