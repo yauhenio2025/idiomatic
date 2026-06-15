@@ -164,8 +164,10 @@ async def process_video(video: dict) -> None:
                 )
                 enriched_tuples.append((en, front, back))
             except Exception as e:
+                import traceback
                 log.warning("worker.enrich_or_render_failed",
-                             phrase=phrase.text[:40], err=str(e))
+                             phrase=phrase.text[:40], err=repr(e),
+                             tb=traceback.format_exc()[-400:])
                 continue
 
         if not enriched_tuples:

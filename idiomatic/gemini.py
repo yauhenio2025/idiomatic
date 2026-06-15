@@ -152,9 +152,30 @@ def _wav_to_mp3(wav_path: Path, mp3_path: Path) -> None:
     )
 
 
+_SARAH_VOICE_ID = "EXAVITQu4vr4xnSDxMaL"
+_SARAH_MODEL = "eleven_turbo_v2_5"
+
+
+async def _silence_mp3(out: Path, ms: int = 300) -> None:
+    """Write a tiny silent mp3 as a placeholder when TTS is unrecoverably blocked."""
+    out.parent.mkdir(parents=True, exist_ok=True)
+    import subprocess
+    subprocess.run(
+        ["ffmpeg", "-y", "-loglevel", "error",
+         "-f", "lavfi", "-i", "anullsrc=channel_layout=mono:sample_rate=24000",
+         "-t", f"{ms/1000:.3f}",
+         "-c:a", "libmp3lame", "-q:a", "9", str(out)],
+        check=True,
+    )
+
+
 async def synthesize(text: str, *, voice: str, out: Path) -> None:
-    """TTS via Gemini Flash TTS. Falls back to ElevenLabs on GeminiBlocked
-    if ELEVENLABS_API_KEY is set (covers the safety-filter case).
+    """TTS via Gemini Flash TTS.
+
+    On GeminiBlocked (safety filter, etc.):
+      - English text (voice='Kore') → ElevenLabs Sarah (verified voice ID).
+      - Anything else → write a silent placeholder so the calling concat
+        doesn't crash. We lose that snippet but the rest of the deck survives.
     Idempotent: skips if `out` already exists with size > 0.
     """
     if out.exists() and out.stat().st_size > 0:
@@ -171,15 +192,26 @@ async def synthesize(text: str, *, voice: str, out: Path) -> None:
             timeout=180,
         )
     except GeminiBlocked as e:
-        if not s.elevenlabs_api_key:
-            raise
-        log.warning("gemini.tts.blocked.fallback_elevenlabs", err=str(e)[:120])
-        await _elevenlabs_fallback(text, voice, out)
+        # English → Sarah; target-language → silence placeholder.
+        if voice == "Kore" and s.elevenlabs_api_key:
+            try:
+                log.warning("gemini.tts.blocked.fallback_sarah",
+                             err=str(e)[:120], text_head=text[:60])
+                await _elevenlabs_sarah(text, out, s.elevenlabs_api_key)
+                return
+            except Exception as fb_err:
+                log.warning("gemini.tts.fallback_sarah_failed",
+                             err=repr(fb_err)[:200])
+        log.warning("gemini.tts.blocked.using_silence",
+                     voice=voice, err=str(e)[:120], text_head=text[:60])
+        await _silence_mp3(out, ms=300)
         return
 
     audio_part = next((p for p in cand["content"]["parts"] if "inlineData" in p), None)
     if not audio_part:
-        raise GeminiBlocked("Gemini TTS returned no inlineData part")
+        log.warning("gemini.tts.no_inline_data.using_silence", voice=voice)
+        await _silence_mp3(out, ms=300)
+        return
     pcm = base64.b64decode(audio_part["inlineData"]["data"])
 
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False,
@@ -192,32 +224,17 @@ async def synthesize(text: str, *, voice: str, out: Path) -> None:
         wav_path.unlink(missing_ok=True)
 
 
-# ---- ElevenLabs fallback (only used when Gemini TTS refuses a payload) ----
-
-# Voice mapping mirrors the pimsleur LANG_VOICES.
-_ELEVENLABS_VOICE_BY_GEMINI = {
-    "Charon":  ("dlGxemPxFMTY7iXagmOj", "eleven_multilingual_v2"),  # Johannes Dokumentarfilm (DE)
-    "Aoede":   ("h5HFD5gAWf8oVdGbAW1L", "eleven_multilingual_v2"),  # Claire Estelle (FR)
-    "Leda":    ("uScy1bXtKz8vPzfdFsFw", "eleven_multilingual_v2"),  # Giovanni Rossi (IT)
-    "Orus":    ("v7iolaAOTNCBKtFhJzZc", "eleven_multilingual_v2"),  # Marcelo Costa (PT-BR)
-    "Fenrir":  ("piI8Kku0DcvcL6TTSeQI", "eleven_multilingual_v2"),  # Eleguar (ES)
-    "Kore":    ("EXAVITQu4vr4xnSDxMaL", "eleven_turbo_v2_5"),         # Sarah (EN, narration)
-}
-
-
-async def _elevenlabs_fallback(text: str, gemini_voice: str, out: Path) -> None:
-    s = get_settings()
-    voice_id, model = _ELEVENLABS_VOICE_BY_GEMINI.get(
-        gemini_voice, _ELEVENLABS_VOICE_BY_GEMINI["Kore"])
+async def _elevenlabs_sarah(text: str, out: Path, api_key: str) -> None:
+    """ElevenLabs Sarah — verified voice_id. English fallback only."""
     async with httpx.AsyncClient(timeout=60) as client:
         r = await client.post(
-            f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
-            headers={"xi-api-key": s.elevenlabs_api_key or "",
+            f"https://api.elevenlabs.io/v1/text-to-speech/{_SARAH_VOICE_ID}",
+            headers={"xi-api-key": api_key,
                      "Content-Type": "application/json",
                      "Accept": "audio/mpeg"},
-            json={"text": text, "model_id": model,
+            json={"text": text, "model_id": _SARAH_MODEL,
                   "voice_settings": {"stability": 0.5, "similarity_boost": 0.75}},
         )
     if r.status_code != 200:
-        raise RuntimeError(f"ElevenLabs fallback failed: HTTP {r.status_code}")
+        raise RuntimeError(f"ElevenLabs Sarah failed: HTTP {r.status_code} {r.text[:200]}")
     out.write_bytes(r.content)
