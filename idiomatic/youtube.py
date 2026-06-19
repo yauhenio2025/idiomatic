@@ -43,27 +43,32 @@ async def fetch_recent(channel_id: str, limit: int = 15) -> list[FeedEntry]:
     return out
 
 
-async def fetch_metadata(youtube_id: str) -> dict:
-    """Use yt-dlp --dump-json (subprocess) to get duration + accurate title.
+_LEN_RE = re.compile(r'"lengthSeconds":"(\d+)"')
+_TITLE_RE = re.compile(r'<meta property="og:title" content="([^"]*)"')
+_CHANNEL_RE = re.compile(r'"author":"([^"]+)"')
 
-    Defer to a subprocess for stability; the youtube_dl/yt-dlp internal API
-    drifts between releases.
+
+async def fetch_metadata(youtube_id: str) -> dict:
+    """Scrape duration + title from the YouTube watch page HTML.
+
+    No auth, no yt-dlp, no bot wall — the public watch page embeds enough
+    JSON for our needs (`"lengthSeconds":"…"` and og:title meta). Used by
+    the cron at enqueue time to filter by duration window.
     """
-    import asyncio, json, shutil
-    yt_dlp = shutil.which("yt-dlp") or "yt-dlp"
-    proc = await asyncio.create_subprocess_exec(
-        yt_dlp, "--dump-json", "--skip-download",
-        f"https://www.youtube.com/watch?v={youtube_id}",
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE,
-    )
-    stdout, stderr = await proc.communicate()
-    if proc.returncode != 0:
-        raise RuntimeError(f"yt-dlp metadata failed for {youtube_id}: {stderr.decode()[:200]}")
-    meta = json.loads(stdout.decode())
+    url = f"https://www.youtube.com/watch?v={youtube_id}"
+    async with httpx.AsyncClient(timeout=20, follow_redirects=True,
+                                  headers={"User-Agent": "Mozilla/5.0"}) as client:
+        r = await client.get(url)
+        r.raise_for_status()
+    html = r.text
+    len_m = _LEN_RE.search(html)
+    title_m = _TITLE_RE.search(html)
+    chan_m = _CHANNEL_RE.search(html)
+    if not len_m:
+        raise RuntimeError(f"no lengthSeconds in watch page for {youtube_id}")
     return {
         "youtube_id": youtube_id,
-        "title": meta.get("title"),
-        "duration_sec": int(meta.get("duration") or 0),
-        "channel_name": meta.get("uploader"),
+        "title": (title_m.group(1) if title_m else youtube_id),
+        "duration_sec": int(len_m.group(1)),
+        "channel_name": (chan_m.group(1) if chan_m else None),
     }
