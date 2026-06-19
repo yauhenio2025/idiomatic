@@ -24,18 +24,23 @@ async def run() -> None:
     log.info("cron.start", n_channels=len(channels))
 
     enqueued = skipped_dur = skipped_known = 0
-    for ch in channels:
+    for i, ch in enumerate(channels):
+        # YouTube's RSS feed rate-limits / load-sheds when hit back-to-back.
+        # 1.5s between channels makes a 24-channel walk take ~36s instead of
+        # ~5s, but our hit-rate jumps from ~60% to near-100%.
+        if i > 0:
+            await asyncio.sleep(1.5)
         try:
             entries = await fetch_recent(ch["youtube_id"], limit=15)
         except Exception as e:
-            log.warn("cron.rss_failed", channel=ch["youtube_id"], err=str(e))
+            log.warning("cron.rss_failed", channel=ch["youtube_id"], err=str(e)[:200])
             continue
 
         for e in entries:
             try:
                 meta = await fetch_metadata(e.youtube_id)
             except Exception as ex:
-                log.warn("cron.meta_failed", yt=e.youtube_id, err=str(ex))
+                log.warning("cron.meta_failed", yt=e.youtube_id, err=str(ex))
                 continue
 
             dur = meta["duration_sec"]
