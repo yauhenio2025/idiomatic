@@ -136,3 +136,133 @@ async def insert_expressions(lang: str, video_id: int,
             )
     # asyncpg's executemany doesn't return per-row counts; re-query is simpler
     return len(items)
+
+
+# ---- Pool-deck source data (per-idiom + per-example) -----------------------
+
+async def insert_idiom_record(
+    *, expression_id: int, video_id: int, lang: str,
+    idiom_text: str, english_gloss: str,
+    audio_idiom_tgt: str | None, audio_idiom_en: str | None,
+) -> int:
+    """One row per enriched idiom in a video. Returns expression_idioms.id."""
+    pool = await get_pool()
+    return await pool.fetchval(
+        """
+        INSERT INTO expression_idioms
+            (expression_id, video_id, lang, idiom_text, english_gloss,
+             audio_idiom_tgt, audio_idiom_en)
+        VALUES ($1, $2, $3, $4, $5, $6, $7)
+        RETURNING id
+        """,
+        expression_id, video_id, lang, idiom_text, english_gloss,
+        audio_idiom_tgt, audio_idiom_en,
+    )
+
+
+async def insert_examples(idiom_id: int, examples: list[dict]) -> None:
+    """examples: ord-indexed dicts with en_text/target_text/audio_en/audio_target."""
+    if not examples:
+        return
+    pool = await get_pool()
+    rows = [
+        (idiom_id, ex["ord"], ex["en_text"], ex["target_text"],
+         ex.get("audio_en"), ex.get("audio_target"))
+        for ex in examples
+    ]
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            await conn.executemany(
+                """
+                INSERT INTO expression_examples
+                    (idiom_id, ord, en_text, target_text, audio_en, audio_target)
+                VALUES ($1, $2, $3, $4, $5, $6)
+                ON CONFLICT (idiom_id, ord) DO NOTHING
+                """,
+                rows,
+            )
+
+
+async def get_expression_id(lang: str, normalized: str) -> int | None:
+    pool = await get_pool()
+    return await pool.fetchval(
+        "SELECT id FROM expressions WHERE lang = $1 AND normalized = $2",
+        lang, normalized,
+    )
+
+
+async def fetch_pool_idioms(lang: str) -> list[dict]:
+    """All idiom records for a language, with their examples nested."""
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT i.id, i.idiom_text, i.english_gloss,
+               i.audio_idiom_tgt, i.audio_idiom_en,
+               v.youtube_id, v.title AS video_title
+        FROM expression_idioms i
+        LEFT JOIN videos v ON v.id = i.video_id
+        WHERE i.lang = $1
+        ORDER BY i.id
+        """,
+        lang,
+    )
+    idiom_ids = [r["id"] for r in rows]
+    examples = await pool.fetch(
+        """
+        SELECT idiom_id, ord, en_text, target_text, audio_en, audio_target
+        FROM expression_examples
+        WHERE idiom_id = ANY($1::bigint[])
+        ORDER BY idiom_id, ord
+        """,
+        idiom_ids,
+    )
+    by_idiom: dict[int, list[dict]] = {i: [] for i in idiom_ids}
+    for ex in examples:
+        by_idiom[ex["idiom_id"]].append(dict(ex))
+    out = []
+    for r in rows:
+        d = dict(r)
+        d["examples"] = by_idiom.get(r["id"], [])
+        out.append(d)
+    return out
+
+
+# ---- apkgs upsert helpers --------------------------------------------------
+
+async def insert_video_apkg(
+    *, video_id: int, lang: str, filename: str,
+    size_bytes: int, n_idioms: int,
+) -> int:
+    pool = await get_pool()
+    return await pool.fetchval(
+        """
+        INSERT INTO apkgs (video_id, lang, filename, size_bytes, n_idioms, kind)
+        VALUES ($1, $2, $3, $4, $5, 'video')
+        RETURNING id
+        """,
+        video_id, lang, filename, size_bytes, n_idioms,
+    )
+
+
+async def upsert_pool_apkg(
+    *, lang: str, kind: str, filename: str,
+    size_bytes: int, n_idioms: int,
+) -> int:
+    """Replace the existing pool apkg for (lang, kind). Old row is deleted
+    (cascade-deletes agent_acks) so agents re-pull the new version."""
+    assert kind in ("pool_expr", "pool_idiom_t2e", "pool_idiom_e2t")
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            await conn.execute(
+                "DELETE FROM apkgs WHERE lang = $1 AND kind = $2",
+                lang, kind,
+            )
+            return await conn.fetchval(
+                """
+                INSERT INTO apkgs (video_id, lang, filename, size_bytes, n_idioms, kind)
+                VALUES (NULL, $1, $2, $3, $4, $5)
+                RETURNING id
+                """,
+                lang, filename, size_bytes, n_idioms, kind,
+            )

@@ -76,6 +76,70 @@ async def _under_daily_cap(lang: str) -> bool:
     return n_today < settings.max_new_apkgs_per_lang_per_day
 
 
+# ---- pool-source persistence ----------------------------------------------
+
+async def _persist_pool_source(*, survivors: list, lang: str, video_id: int,
+                                video_audio_dir: Path) -> None:
+    """Copy per-card audio (idiom_tgt/en, ex_*_en/tgt) from the ephemeral
+    work_root into /data/staged_audio/<youtube_id>/, and write the
+    corresponding expression_idioms + expression_examples rows.
+
+    The per-video work_root is wiped at the end of process_video, so this
+    must run BEFORE the finally-block cleanup. Idempotent: copying an
+    existing file is a no-op via shutil.copy2 + path exists guard.
+    """
+    settings = get_settings()
+    youtube_id = video_audio_dir.parent.name
+    stage_dir = Path(settings.data_dir) / "staged_audio" / youtube_id
+    stage_dir.mkdir(parents=True, exist_ok=True)
+
+    def _persist(src: Path) -> str | None:
+        """Copy src into stage_dir; return path RELATIVE to staged_audio root.
+        Returns None if src doesn't exist."""
+        if not src.exists():
+            return None
+        dst = stage_dir / src.name
+        if not dst.exists() or dst.stat().st_size == 0:
+            shutil.copy2(src, dst)
+        return f"{youtube_id}/{src.name}"
+
+    from .pipeline.dedup import normalize as _normalize
+
+    for pid_int, en, _front, _back in survivors:
+        pid = f"{pid_int:03d}"
+        idiom_tgt_rel = _persist(video_audio_dir / f"idiom_tgt_{pid}.mp3")
+        idiom_en_rel = _persist(video_audio_dir / f"idiom_en_{pid}.mp3")
+
+        # Find the expression_id we just inserted for this phrase
+        expression_id = await db.get_expression_id(lang, _normalize(en.phrase))
+        if expression_id is None:
+            log.warning("worker.pool_no_expression",
+                         phrase=en.phrase[:40])
+            continue
+
+        idiom_id = await db.insert_idiom_record(
+            expression_id=expression_id, video_id=video_id, lang=lang,
+            idiom_text=en.phrase, english_gloss=en.english,
+            audio_idiom_tgt=idiom_tgt_rel, audio_idiom_en=idiom_en_rel,
+        )
+
+        example_rows = []
+        for j, ex in enumerate(en.examples, 1):
+            ex_en_rel = _persist(video_audio_dir / f"ex_{pid}_{j}_en.mp3")
+            ex_tgt_rel = _persist(video_audio_dir / f"ex_{pid}_{j}_tgt.mp3")
+            example_rows.append({
+                "ord": j,
+                "en_text": ex.get("en", ""),
+                "target_text": ex.get("target", ""),
+                "audio_en": ex_en_rel,
+                "audio_target": ex_tgt_rel,
+            })
+        await db.insert_examples(idiom_id, example_rows)
+
+    log.info("worker.pool_source_persisted",
+             youtube_id=youtube_id, n=len(survivors))
+
+
 # ---- main per-video pipeline ----------------------------------------------
 
 async def process_video(video: dict) -> None:
@@ -143,7 +207,7 @@ async def process_video(video: dict) -> None:
                     )
                     log.info("worker.idiom.done", i=i,
                              dt=round(_time.monotonic() - t0, 1))
-                    return (en, front, back)
+                    return (i, en, front, back)
                 except Exception as e:
                     import traceback
                     log.warning("worker.idiom.failed",
@@ -155,14 +219,16 @@ async def process_video(video: dict) -> None:
         results = await asyncio.gather(
             *[_one(i, p) for i, p in enumerate(fresh, 1)]
         )
-        enriched_tuples = [r for r in results if r is not None]
+        # survivors: list of (pid, Enriched, front_mp3, back_mp3) tuples
+        survivors = [r for r in results if r is not None]
 
-        if not enriched_tuples:
+        if not survivors:
             await db.mark_video_status(video["id"], "failed",
                                         "all enrichments failed")
             return
 
-        # 5. Build apkg
+        # 5. Build apkg — feed it just (en, front, back) to keep the signature
+        enriched_tuples = [(en, f, b) for _i, en, f, b in survivors]
         slug = slugify(title)[:60] or youtube_id
         apkg_dir = Path(settings.data_dir) / "apkgs" / lang
         apkg_dir.mkdir(parents=True, exist_ok=True)
@@ -179,21 +245,15 @@ async def process_video(video: dict) -> None:
             stage_dir=Path(settings.data_dir) / "media_stage",
         )
 
-        # 6. Record + insert expressions
-        pool = await db.get_pool()
-        apkg_id = await pool.fetchval(
-            """
-            INSERT INTO apkgs (video_id, lang, filename, size_bytes, n_idioms)
-            VALUES ($1, $2, $3, $4, $5)
-            RETURNING id
-            """,
-            video["id"], lang, "apkgs/" + apkg_filename,
-            apkg_path.stat().st_size, len(enriched_tuples),
+        # 6. Record video apkg + insert expressions
+        apkg_id = await db.insert_video_apkg(
+            video_id=video["id"], lang=lang,
+            filename="apkgs/" + apkg_filename,
+            size_bytes=apkg_path.stat().st_size,
+            n_idioms=len(enriched_tuples),
         )
         log.info("worker.apkg_inserted", id=apkg_id, n=len(enriched_tuples))
 
-        # Insert new expressions into the library (one row per fresh phrase
-        # that actually made it into the deck)
         kept_phrases = [p for p, _, _ in enriched_tuples]
         ext_for_db = [
             {"text": e.phrase, "normalized": normalize(e.phrase),
@@ -201,6 +261,26 @@ async def process_video(video: dict) -> None:
             for e in kept_phrases
         ]
         await db.insert_expressions(lang, video["id"], ext_for_db)
+
+        # 7. Persist per-card audio + idiom/example records for the pool
+        #    builder. Failures here log but don't fail the video — the
+        #    per-video apkg is already shipped.
+        try:
+            await _persist_pool_source(
+                survivors=survivors, lang=lang, video_id=video["id"],
+                video_audio_dir=video_audio_dir,
+            )
+        except Exception as e:
+            log.warning("worker.pool_persist_failed", err=repr(e)[:200])
+
+        # 8. Rebuild the language's pool apkgs so this video's idioms show
+        #    up in cross-video drilling decks.
+        try:
+            from .pipeline import pool as pool_mod
+            await pool_mod.rebuild_pools(lang)
+        except Exception as e:
+            log.warning("worker.pool_rebuild_failed",
+                         lang=lang, err=repr(e)[:200])
 
         await db.mark_video_status(video["id"], "done")
         log.info("worker.done", id=video["id"], n_idioms=len(enriched_tuples))
