@@ -90,6 +90,24 @@ async def mark_video_status(video_id: int, status: str, msg: str | None = None) 
     )
 
 
+async def requeue_no_attempt(video_id: int, msg: str | None = None) -> None:
+    """Release a claimed video back to the queue WITHOUT counting it as an
+    attempt. Used when we punt for an externally-imposed reason (daily cap,
+    shutdown) that has nothing to do with the video itself."""
+    pool = await get_pool()
+    await pool.execute(
+        """
+        UPDATE videos
+        SET status = 'queued',
+            attempts = GREATEST(attempts - 1, 0),
+            status_msg = $2,
+            picked_at = NULL
+        WHERE id = $1
+        """,
+        video_id, msg,
+    )
+
+
 # ---- Expression library ---------------------------------------------------
 
 async def existing_normalized_for_lang(lang: str) -> set[str]:

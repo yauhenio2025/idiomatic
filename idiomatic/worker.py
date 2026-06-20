@@ -237,11 +237,11 @@ async def loop(once: bool = False) -> None:
                 continue
 
             # Soft daily cap. If we're at the cap for this video's language,
-            # release it back to queued and look for another.
+            # release it back to queued WITHOUT counting this as an attempt
+            # (otherwise three cap-hits permanently wedge the row).
             if not await _under_daily_cap(video["lang"]):
                 log.info("worker.daily_cap_hit", lang=video["lang"])
-                await db.mark_video_status(video["id"], "queued",
-                                            f"cap hit; retry tomorrow")
+                await db.requeue_no_attempt(video["id"], "cap hit; retry tomorrow")
                 if once:
                     return
                 # Avoid hot-spinning if every language is capped
@@ -252,8 +252,8 @@ async def loop(once: bool = False) -> None:
                 await process_video(video)
             except asyncio.CancelledError:
                 # Lifespan shutdown — release the claim so another instance
-                # can pick it up.
-                await db.mark_video_status(video["id"], "queued", "shutdown")
+                # can pick it up. This isn't the video's fault either.
+                await db.requeue_no_attempt(video["id"], "shutdown")
                 raise
             except Exception as e:
                 log.exception("worker.failed", id=video["id"], err=str(e))
