@@ -122,3 +122,27 @@ async def health() -> dict:
     pool = await db.get_pool()
     n = await pool.fetchval("SELECT COUNT(*) FROM videos WHERE status = 'queued'")
     return {"ok": True, "queued_videos": n}
+
+
+# --- admin: backfill pool source data from existing per-video apkgs ---------
+# One-shot operation triggered manually. Reuses the agent's token for auth
+# so we don't need a separate admin credential.
+
+@app.post("/admin/backfill")
+async def admin_backfill(agent: dict = Depends(authed_agent)) -> dict:
+    """Kick off a background backfill of expression_idioms + examples + audio
+    from every per-video apkg under /data/apkgs/. Returns immediately;
+    poll /admin/backfill/status for progress."""
+    from . import backfill
+    if backfill.get_state()["running"]:
+        return {"started": False, "reason": "already running"}
+    asyncio.create_task(backfill.run_backfill())
+    return {"started": True}
+
+
+@app.get("/admin/backfill/status")
+async def admin_backfill_status(
+    agent: dict = Depends(authed_agent),
+) -> dict:
+    from . import backfill
+    return backfill.get_state()
