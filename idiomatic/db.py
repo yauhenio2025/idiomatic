@@ -144,6 +144,9 @@ async def insert_idiom_record(
     *, expression_id: int, video_id: int, lang: str,
     idiom_text: str, english_gloss: str,
     audio_idiom_tgt: str | None, audio_idiom_en: str | None,
+    source_phrase_target: str | None = None,
+    source_phrase_en: str | None = None,
+    explanation_en: str | None = None,
 ) -> int:
     """One row per enriched idiom in a video. Returns expression_idioms.id."""
     pool = await get_pool()
@@ -151,12 +154,14 @@ async def insert_idiom_record(
         """
         INSERT INTO expression_idioms
             (expression_id, video_id, lang, idiom_text, english_gloss,
-             audio_idiom_tgt, audio_idiom_en)
-        VALUES ($1, $2, $3, $4, $5, $6, $7)
+             audio_idiom_tgt, audio_idiom_en,
+             source_phrase_target, source_phrase_en, explanation_en)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
         RETURNING id
         """,
         expression_id, video_id, lang, idiom_text, english_gloss,
         audio_idiom_tgt, audio_idiom_en,
+        source_phrase_target, source_phrase_en, explanation_en,
     )
 
 
@@ -198,6 +203,7 @@ async def fetch_pool_idioms(lang: str) -> list[dict]:
         """
         SELECT i.id, i.idiom_text, i.english_gloss,
                i.audio_idiom_tgt, i.audio_idiom_en,
+               i.source_phrase_target, i.source_phrase_en, i.explanation_en,
                v.youtube_id, v.title AS video_title
         FROM expression_idioms i
         LEFT JOIN videos v ON v.id = i.video_id
@@ -250,7 +256,7 @@ async def upsert_pool_apkg(
 ) -> int:
     """Replace the existing pool apkg for (lang, kind). Old row is deleted
     (cascade-deletes agent_acks) so agents re-pull the new version."""
-    assert kind in ("pool_expr", "pool_idiom_t2e", "pool_idiom_e2t")
+    assert kind in ("pool_idioms", "pool_expr", "pool_idiom_t2e", "pool_idiom_e2t")
     pool = await get_pool()
     async with pool.acquire() as conn:
         async with conn.transaction():

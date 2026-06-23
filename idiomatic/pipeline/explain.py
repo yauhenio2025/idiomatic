@@ -89,6 +89,11 @@ class Enriched:
     english: str
     examples: list[dict]                # [{'target', 'en'}, ...] of length up to 6
     structured: dict[str, str]          # {'usage': '...', 'collocations': '...', ...}
+    # Passed through from the source ExtractedPhrase by the worker so the
+    # card layer can render them without re-querying.
+    source_phrase_target: str = ""
+    source_phrase_en: str = ""
+    explanation_en: str = ""
 
 
 async def generate_examples(phrase: str, english_gloss: str, lang: str) -> list[dict]:
@@ -127,12 +132,25 @@ async def generate_structured_explanation(phrase: str, english_gloss: str,
             if (raw.get(k) or "").strip()}
 
 
-async def enrich_one(phrase: str, english_gloss: str, lang: str) -> Enriched:
-    """Run both LLM calls in parallel and return the bundle."""
+async def enrich_one(phrase: str, english_gloss: str, lang: str, *,
+                      source_phrase_target: str = "",
+                      source_phrase_en: str = "",
+                      explanation_en: str = "") -> Enriched:
+    """Run both LLM calls in parallel and return the bundle.
+
+    Pass-through args (source_phrase_*, explanation_en) come from the
+    upstream ExtractedPhrase and don't trigger new LLM calls — they were
+    already obtained in the audio-extraction step.
+    """
     import asyncio
     examples, structured = await asyncio.gather(
         generate_examples(phrase, english_gloss, lang),
         generate_structured_explanation(phrase, english_gloss, lang),
     )
-    return Enriched(phrase=phrase, english=english_gloss,
-                     examples=examples, structured=structured)
+    return Enriched(
+        phrase=phrase, english=english_gloss,
+        examples=examples, structured=structured,
+        source_phrase_target=source_phrase_target,
+        source_phrase_en=source_phrase_en,
+        explanation_en=explanation_en,
+    )

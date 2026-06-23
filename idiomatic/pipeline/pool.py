@@ -37,6 +37,8 @@ import structlog
 
 from .. import db
 from ..settings import get_settings
+from . import audio as audio_mod
+from . import apkg as apkg_mod
 
 log = structlog.get_logger()
 
@@ -320,17 +322,207 @@ def _build_idiom_audio_pool(lang: str, idioms: list[dict],
 
 
 # ============================================================================
+# 4th builder: per-language Idioms didactic deck (mirrors apkg.py model)
+# ============================================================================
+
+def _stitch_pool_card_audio(*, lang: str, idiom: dict, narration_root: Path,
+                              stage_dir: Path, youtube_id: str) -> tuple[Path, Path] | None:
+    """Restitch front + back per-card audio for the pool deck using the
+    persisted per-card mp3s + cached narration. Returns (front, back) or
+    None if essential pieces are missing.
+
+    Front layout (pimsleur shape):
+      here_it_is → idiom_tgt → meaning → idiom_en
+      → how_to_use → explanation_en TTS → examples_intro
+      → ex1_en → sh → ex1_tgt → md → ex2_en → sh → ex2_tgt → md → ex3_en → sh → ex3_tgt
+
+    Back layout:
+      practice_intro → sentence_1 → ex4_en → think → ex4_tgt → lg
+      → sentence_2 → ex5_en → think → ex5_tgt → lg
+      → sentence_3 → ex6_en → think → ex6_tgt
+
+    Note: the original-video snippet is OMITTED from pool cards — that
+    snippet is per-video and doesn't fit a cross-video aggregation.
+    """
+    data_root = Path(get_settings().data_dir) / "staged_audio"
+    seed = f"pool::{lang}::{idiom['id']}"
+    sh = audio_mod.silence_mp3(narration_root, 300)
+    md = audio_mod.silence_mp3(narration_root, 700)
+    lg = audio_mod.silence_mp3(narration_root, 1200)
+    think = audio_mod.silence_mp3(narration_root, 1500)
+    lang_name = _LANG_NAMES.get(lang, lang.upper())
+
+    def _narr(key: str, lang_filled: bool = False) -> Path | None:
+        text, p = connectives.pick_general(
+            narration_root, key, seed,
+            lang_name=(lang_name if lang_filled else None),
+        )
+        if not p or not p.exists():
+            return None
+        return p
+
+    # Resolve per-card audio paths
+    tgt = idiom.get("audio_idiom_tgt")
+    en = idiom.get("audio_idiom_en")
+    if not (tgt and en):
+        return None
+    idiom_tgt = data_root / tgt
+    idiom_en = data_root / en
+    if not (idiom_tgt.exists() and idiom_en.exists()):
+        return None
+
+    listen_context = _narr("listen_context")
+    here_it_is = _narr("here_it_is")
+    meaning = _narr("meaning")
+    how_to_use = _narr("how_to_use")
+    examples_intro = _narr("examples_intro")
+    practice_intro = _narr("practice_intro", lang_filled=True)
+    sentence_leads = [_narr(f"sentence_{i}") for i in (1, 2, 3)]
+
+    # Examples
+    examples = idiom.get("examples") or []
+    ex_files: list[tuple[Path | None, Path | None]] = []
+    for ex in examples:
+        ae = ex.get("audio_en")
+        at = ex.get("audio_target")
+        p_en = data_root / ae if ae else None
+        p_tg = data_root / at if at else None
+        ex_files.append((
+            p_en if p_en and p_en.exists() else None,
+            p_tg if p_tg and p_tg.exists() else None,
+        ))
+
+    teach = ex_files[:3]
+    drill = ex_files[3:6]
+
+    # Front audio: connectives are SKIPPED if missing (degrade gracefully)
+    front_pieces: list[Path] = []
+    if here_it_is: front_pieces += [here_it_is, sh]
+    front_pieces += [idiom_tgt, md]
+    if meaning: front_pieces += [meaning, sh]
+    front_pieces += [idiom_en, md]
+    # Explanation paragraph if available
+    explanation_text = (idiom.get("explanation_en") or "").strip()
+    if explanation_text:
+        # We didn't pre-TTS the explanation. For pool cards we can either
+        # TTS it inline (slow) or skip. Skip for now — text is shown on
+        # the card; the lesson audio still works without it.
+        pass
+    if teach and any(en and tg for en, tg in teach):
+        if examples_intro: front_pieces += [examples_intro, sh]
+        for i, (en_p, tgt_p) in enumerate(teach):
+            if not (en_p and tgt_p):
+                continue
+            if i > 0: front_pieces.append(md)
+            front_pieces += [en_p, sh, tgt_p]
+
+    # Back audio
+    back_pieces: list[Path] = []
+    if practice_intro: back_pieces += [practice_intro, md]
+    drilled = 0
+    for i, (en_p, tgt_p) in enumerate(drill):
+        if not (en_p and tgt_p):
+            continue
+        if drilled > 0: back_pieces.append(lg)
+        lead = sentence_leads[i] if i < 3 else None
+        if lead: back_pieces += [lead, sh]
+        back_pieces += [en_p, think, tgt_p]
+        drilled += 1
+
+    out_front = stage_dir / f"pool_{youtube_id}_idiom_{idiom['id']}_front.mp3"
+    out_back = stage_dir / f"pool_{youtube_id}_idiom_{idiom['id']}_back.mp3"
+    if not front_pieces or not back_pieces:
+        return None
+    audio_mod.concat_mp3s(front_pieces, out_front)
+    audio_mod.concat_mp3s(back_pieces, out_back)
+    return out_front, out_back
+
+
+def _build_idioms_pool(lang: str, idioms: list[dict],
+                       narration_root: Path,
+                       stage_dir: Path, out: Path) -> int:
+    """Build the per-language Idioms didactic pool deck."""
+    deck_name = f"Idiomatic::{_LANG_NAMES.get(lang, lang.upper())}::Idioms"
+    deck = genanki.Deck(_deck_id(deck_name), deck_name)
+    model = apkg_mod.make_model()
+    media_files: list[str] = []
+    seen: set[str] = set()
+    n_cards = 0
+    for idiom in idioms:
+        idiom_text = idiom["idiom_text"]
+        idiom_en = idiom["english_gloss"]
+        youtube_id = idiom.get("youtube_id") or "noid"
+        video_title = idiom.get("video_title") or ""
+        guid = _guid(f"yt-idiom-pool::{lang}", _norm(idiom_text))
+        if guid in seen:
+            continue
+        seen.add(guid)
+
+        stitched = _stitch_pool_card_audio(
+            lang=lang, idiom=idiom, narration_root=narration_root,
+            stage_dir=stage_dir, youtube_id=youtube_id,
+        )
+        if not stitched:
+            log.info("pool.idioms.skip_no_audio", idiom_id=idiom["id"])
+            continue
+        front_path, back_path = stitched
+
+        # Stage the front/back audio (already in stage_dir; just register)
+        front_name = front_path.name
+        back_name = back_path.name
+        media_files.append(str(front_path))
+        media_files.append(str(back_path))
+
+        # Stage individual example audios for the card display? No — the
+        # display uses text fields only; only front/back audio is needed.
+
+        examples = idiom.get("examples") or []
+        example_fields: list[str] = []
+        for k in range(apkg_mod.EXAMPLES_PER_IDIOM):
+            example_fields.append(
+                examples[k]["en_text"] if k < len(examples) else "")
+            example_fields.append(
+                examples[k]["target_text"] if k < len(examples) else "")
+
+        source_html_str = _source_html(idiom_text, video_title, youtube_id)
+        deck.add_note(genanki.Note(
+            model=model,
+            fields=[
+                f"{n_cards + 1:03d}",
+                idiom_text, idiom_en,
+                idiom.get("explanation_en") or "",
+                *example_fields,
+                idiom.get("source_phrase_target") or "",
+                idiom.get("source_phrase_en") or "",
+                f"[sound:{front_name}]",
+                f"[sound:{back_name}]",
+                source_html_str,
+            ],
+            guid=guid,
+            tags=["youtube", lang, "idiomatic-pool"],
+        ))
+        n_cards += 1
+
+    out.parent.mkdir(parents=True, exist_ok=True)
+    pkg = genanki.Package(deck)
+    pkg.media_files = list({m for m in media_files})
+    pkg.write_to_file(str(out))
+    return n_cards
+
+
+# ============================================================================
 # Top-level: rebuild every pool apkg for a language
 # ============================================================================
 
 async def rebuild_pools(lang: str) -> dict:
-    """Builds all three pool apkgs for the language and upserts their rows
-    in the apkgs table. Returns a small stats dict."""
+    """Builds ALL four pool apkgs for the language and upserts their rows
+    in the apkgs table. Returns a stats dict."""
     settings = get_settings()
     idioms = await db.fetch_pool_idioms(lang)
     if not idioms:
         log.info("pool.skip_empty", lang=lang)
-        return {"lang": lang, "n_idioms": 0, "expr_cards": 0,
+        return {"lang": lang, "n_idioms": 0,
+                "idioms_cards": 0, "expr_cards": 0,
                 "t2e_cards": 0, "e2t_cards": 0}
 
     apkg_root = Path(settings.data_dir) / "apkgs" / lang
@@ -341,16 +533,21 @@ async def rebuild_pools(lang: str) -> dict:
     if stage_root.exists():
         shutil.rmtree(stage_root)
     stage_root.mkdir(parents=True, exist_ok=True)
+    narration_root = Path(settings.data_dir) / "narration"
 
-    expr_apkg = apkg_root / f"_pool_expressions.apkg"
-    t2e_apkg = apkg_root / f"_pool_idioms_t2e.apkg"
-    e2t_apkg = apkg_root / f"_pool_idioms_e2t.apkg"
+    idioms_apkg = apkg_root / "_pool_idioms.apkg"
+    expr_apkg = apkg_root / "_pool_expressions.apkg"
+    t2e_apkg = apkg_root / "_pool_idioms_t2e.apkg"
+    e2t_apkg = apkg_root / "_pool_idioms_e2t.apkg"
 
+    idioms_n = _build_idioms_pool(lang, idioms, narration_root,
+                                    stage_root, idioms_apkg)
     expr_n = _build_expression_pool(lang, idioms, stage_root, expr_apkg)
     t2e_n = _build_idiom_audio_pool(lang, idioms, stage_root, t2e_apkg, "t2e")
     e2t_n = _build_idiom_audio_pool(lang, idioms, stage_root, e2t_apkg, "e2t")
 
     for kind, path, n in (
+        ("pool_idioms", idioms_apkg, idioms_n),
         ("pool_expr", expr_apkg, expr_n),
         ("pool_idiom_t2e", t2e_apkg, t2e_n),
         ("pool_idiom_e2t", e2t_apkg, e2t_n),
@@ -366,4 +563,7 @@ async def rebuild_pools(lang: str) -> dict:
                  apkg_id=apkg_id, n=n, size=path.stat().st_size)
 
     return {"lang": lang, "n_idioms": len(idioms),
-            "expr_cards": expr_n, "t2e_cards": t2e_n, "e2t_cards": e2t_n}
+            "idioms_cards": idioms_n,
+            "expr_cards": expr_n,
+            "t2e_cards": t2e_n,
+            "e2t_cards": e2t_n}

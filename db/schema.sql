@@ -67,6 +67,13 @@ CREATE TABLE IF NOT EXISTS expression_idioms (
   lang           TEXT NOT NULL,
   idiom_text     TEXT NOT NULL,
   english_gloss  TEXT NOT NULL,
+  -- The full sentence from the video where the idiom appeared
+  -- (both langs, populated by extract.py).
+  source_phrase_target TEXT,
+  source_phrase_en     TEXT,
+  -- 2-3 sentence English explanation of usage. Drives the
+  -- "how to use it" portion of the front audio.
+  explanation_en TEXT,
   -- Both paths are relative to DATA_DIR/staged_audio
   audio_idiom_tgt TEXT,
   audio_idiom_en  TEXT,

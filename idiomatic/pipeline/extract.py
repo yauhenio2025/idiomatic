@@ -28,6 +28,13 @@ class ExtractedPhrase:
     english: str
     audio_start: float
     audio_end: float
+    # Trigger sentence — the full sentence from the audio where the
+    # expression appeared, both langs. Surfaced on the back of the card.
+    source_phrase_target: str = ""
+    source_phrase_en: str = ""
+    # 2-3 sentence English explanation. TTS'd into the front audio and
+    # displayed on the front of the card.
+    explanation_en: str = ""
 
     @classmethod
     def from_dict(cls, d: dict) -> "ExtractedPhrase":
@@ -38,6 +45,9 @@ class ExtractedPhrase:
             english=(d.get("english") or "").strip(),
             audio_start=float(d.get("audio_start") or 0.0),
             audio_end=float(d.get("audio_end") or 0.0),
+            source_phrase_target=(d.get("source_phrase") or "").strip(),
+            source_phrase_en=(d.get("source_phrase_en") or "").strip(),
+            explanation_en=(d.get("explanation") or "").strip(),
         )
 
 
@@ -65,10 +75,13 @@ AVOID:
 - Near-duplicates of each other
 
 For EACH chosen expression, output:
-- `text`: the exact wording as spoken in the audio, in the natural {lang_name} script.
+- `text`: the expression itself as spoken in the audio, in the natural {lang_name} script. Just the expression, not the surrounding sentence.
 - `english`: a brief English gloss (≤10 words).
-- `audio_start`: start time in seconds (float).
-- `audio_end`: end time in seconds (float).
+- `source_phrase`: the FULL {lang_name} sentence from the audio that contained this expression — verbatim, including everything around it.
+- `source_phrase_en`: a natural English translation of source_phrase.
+- `explanation`: 2-3 sentence English explanation of what the expression means, when it's used, and what register / collocations / pitfalls a learner should know. Written like a textbook usage note, not a dictionary entry. Use simple English; the learner is B2/C1 so they understand the target language but the explanation is in English.
+- `audio_start`: start time in seconds (float) of the expression itself.
+- `audio_end`: end time in seconds (float) of the expression itself.
 
 Pin the timestamps tightly to where the expression is actually uttered — they
 will be used to slice the audio for flashcards.

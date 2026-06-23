@@ -1,13 +1,21 @@
-"""Audio rendering for an enriched idiom.
+"""Audio rendering for one enriched idiom — pimsleur didactic shape.
 
-Builds two stitched mp3s per card (front + back) by alternating:
-  - the original-video clip (sliced from the source mp3 by ffmpeg)
-  - English connective tissue (cached Sarah-equivalent voice, Kore)
-  - target-language content (Gemini Flash TTS in the per-language voice)
-  - silences (cached short/mid/long ffmpeg-generated silence mp3s)
+FRONT audio (the lesson):
+  listen_context → silence → snippet (the original video clip)
+  → here_it_is → idiom_tgt
+  → meaning → idiom_en
+  → how_to_use → explanation_en (TTS'd English paragraph)
+  → examples_intro → 3 teach pairs (en → silence → target)
 
-Caches everything aggressively. A second video that mentions the same
-expression skips most TTS calls.
+BACK audio (the drill, with think-pause):
+  practice_intro
+  → sentence_1 → drill1_en → think pause → drill1_target
+  → sentence_2 → drill2_en → think pause → drill2_target
+  → sentence_3 → drill3_en → think pause → drill3_target
+
+Connective narration is pre-rendered once per language (cached on disk).
+Per-card audio (idiom_*, explanation_*, ex_*) is rendered in parallel via
+gemini.synthesize then concat'd by ffmpeg.
 """
 
 from __future__ import annotations
@@ -41,6 +49,11 @@ LANG_VOICE = {
 }
 EN_VOICE = "Kore"
 
+_LANG_NAMES = {
+    "de": "German", "fr": "French", "it": "Italian",
+    "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin",
+}
+
 
 # ---- silence cache --------------------------------------------------------
 
@@ -61,8 +74,8 @@ def silence_mp3(root: Path, ms: int) -> Path:
 
 # ---- slicing --------------------------------------------------------------
 
-def slice_clip(src_mp3: Path, start: float, end: float, out: Path) -> Path:
-    """ffmpeg-slice the source mp3. Idempotent."""
+def slice_clip(src_audio: Path, start: float, end: float, out: Path) -> Path:
+    """ffmpeg-slice the source audio to mp3. Idempotent."""
     if out.exists() and out.stat().st_size > 0:
         return out
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -70,29 +83,44 @@ def slice_clip(src_mp3: Path, start: float, end: float, out: Path) -> Path:
     subprocess.run(
         ["ffmpeg", "-y", "-loglevel", "error",
          "-ss", f"{start:.3f}", "-t", f"{duration:.3f}",
-         "-i", str(src_mp3),
+         "-i", str(src_audio),
          "-c:a", "libmp3lame", "-q:a", "4", str(out)],
         check=True,
     )
     return out
 
 
-# ---- concat ----------------------------------------------------------------
+# ---- concat (loudness-normalized) -----------------------------------------
 
-def concat_mp3s(pieces: list[Path], out: Path) -> Path:
+def concat_mp3s(pieces: list[Path], out: Path,
+                 normalize_loudness: bool = True) -> Path:
+    """Concat with ffmpeg. -c copy is the fastest path but it only works
+    if every input shares codec params; in our pipeline they should.
+    When normalize_loudness=True we run a second pass with loudnorm to
+    even out the volume across narration / TTS / video snippet inputs."""
     out.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(mode="w", suffix=".txt", delete=False,
                                       dir=out.parent) as f:
         listfile = Path(f.name)
         for p in pieces:
             f.write(f"file '{Path(p).resolve()}'\n")
+    raw = out.with_suffix(".raw.mp3") if normalize_loudness else out
     try:
         subprocess.run(
             ["ffmpeg", "-y", "-loglevel", "error",
              "-f", "concat", "-safe", "0", "-i", str(listfile),
-             "-c", "copy", str(out)],
+             "-c", "copy", str(raw)],
             check=True,
         )
+        if normalize_loudness:
+            subprocess.run(
+                ["ffmpeg", "-y", "-loglevel", "error",
+                 "-i", str(raw),
+                 "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
+                 "-c:a", "libmp3lame", "-q:a", "4", str(out)],
+                check=True,
+            )
+            raw.unlink(missing_ok=True)
     finally:
         listfile.unlink(missing_ok=True)
     return out
@@ -106,6 +134,7 @@ async def render_card_audio(idx: int, enriched: Enriched, lang: str,
                               narration_root: Path) -> tuple[Path, Path]:
     """Returns (front_mp3, back_mp3) for this idiom."""
     voice_tgt = LANG_VOICE.get(lang, "Charon")
+    lang_name = _LANG_NAMES.get(lang, lang.upper())
     seed = f"{source_mp3.stem}::{idx:03d}"
     pid = f"{idx:03d}"
 
@@ -119,79 +148,93 @@ async def render_card_audio(idx: int, enriched: Enriched, lang: str,
                           audio_start, audio_end,
                           video_audio_dir / f"snippet_{pid}.mp3")
 
-    # ---------------------------------------------------------------------
-    # PLANNING pass: every TTS coroutine we need, all paths predetermined.
-    # We then asyncio.gather them — bound by the module-level TTS semaphore
-    # in gemini.py — and only after they all settle do we stitch with ffmpeg
-    # (which is sequential per-file anyway).
-    # ---------------------------------------------------------------------
+    # --- planning pass ------------------------------------------------------
     tts_tasks: list = []
 
+    # The per-card TTS files
     idiom_tgt = video_audio_dir / f"idiom_tgt_{pid}.mp3"
-    tts_tasks.append(gemini.synthesize(enriched.phrase, voice=voice_tgt, out=idiom_tgt))
+    tts_tasks.append(gemini.synthesize(enriched.phrase, voice=voice_tgt,
+                                         out=idiom_tgt))
 
     idiom_en = video_audio_dir / f"idiom_en_{pid}.mp3"
-    tts_tasks.append(gemini.synthesize(enriched.english, voice=EN_VOICE, out=idiom_en))
+    tts_tasks.append(gemini.synthesize(enriched.english, voice=EN_VOICE,
+                                         out=idiom_en))
 
-    # Plan structured-explanation segments.
-    expl_plan: list[tuple[Path, Path]] = []   # (conn_path, seg_path)
-    for key, target_text in enriched.structured.items():
-        conn_text, conn_path = connectives.pick_connective(narration_root, key, seed)
-        if not conn_text:
-            continue
-        # Connectives are pre-cached by ensure_cached() at process start,
-        # but if a code update added a new variant we missed, fall back here.
-        if not conn_path.exists():
-            tts_tasks.append(gemini.synthesize(conn_text, voice=EN_VOICE,
-                                                 out=conn_path))
-        h = hashlib.sha1(target_text.encode()).hexdigest()[:10]
-        seg_path = video_audio_dir / f"expl_{pid}_{key}_{h}.mp3"
-        tts_tasks.append(gemini.synthesize(target_text, voice=voice_tgt,
-                                             out=seg_path))
-        expl_plan.append((conn_path, seg_path))
+    explanation_en_audio: Path | None = None
+    if (enriched.explanation_en or "").strip():
+        explanation_en_audio = video_audio_dir / f"explanation_{pid}.mp3"
+        tts_tasks.append(gemini.synthesize(
+            enriched.explanation_en, voice=EN_VOICE,
+            out=explanation_en_audio,
+        ))
 
-    # Plan example sentences.
+    # Plan example sentences (6 total: first 3 teach, last 3 drill).
     teach_plan: list[tuple[Path, Path]] = []
     drill_plan: list[tuple[Path, Path]] = []
     for i, ex in enumerate(enriched.examples):
         en_path = video_audio_dir / f"ex_{pid}_{i+1}_en.mp3"
         tgt_path = video_audio_dir / f"ex_{pid}_{i+1}_tgt.mp3"
-        tts_tasks.append(gemini.synthesize(ex["en"], voice=EN_VOICE, out=en_path))
-        tts_tasks.append(gemini.synthesize(ex["target"], voice=voice_tgt, out=tgt_path))
+        tts_tasks.append(gemini.synthesize(ex["en"], voice=EN_VOICE,
+                                             out=en_path))
+        tts_tasks.append(gemini.synthesize(ex["target"], voice=voice_tgt,
+                                             out=tgt_path))
         (teach_plan if i < 3 else drill_plan).append((en_path, tgt_path))
 
-    # Fire them all. synthesize() never raises (it silence-falls-back on
-    # any error), so a plain gather is safe.
+    # Fire them all concurrently. synthesize() never raises (silence
+    # fallback on any error), so a plain gather is safe.
     await asyncio.gather(*tts_tasks)
 
-    # Now flatten the explanation plan into the canonical alternation:
-    #   [conn] [silence] [target] [silence]
-    expl_segments: list[Path] = []
-    for conn_path, seg_path in expl_plan:
-        expl_segments += [conn_path, sh, seg_path, md]
-    teach_pairs = teach_plan
-    drill_pairs = drill_plan
+    # --- narration cues (already pre-rendered in narration_root) -----------
+    def _narr(key: str, lang_filled: bool = False) -> Path:
+        text, p = connectives.pick_general(
+            narration_root, key, seed,
+            lang_name=(lang_name if lang_filled else None),
+        )
+        if not p:
+            return sh  # no variants → degrade to silence
+        # If the file isn't there for some reason (cache miss), fall back
+        # to silence rather than crashing — ensure_cached should have
+        # populated it.
+        return p if p.exists() else sh
 
-    # --- stitch FRONT: snippet → idiom_tgt → idiom_en → explanation → 3 teach
-    front_pieces: list[Path] = [snippet, md, idiom_tgt, sh, idiom_en, md]
-    front_pieces += expl_segments
-    if teach_pairs:
-        front_pieces.append(md)
-        for en_p, tgt_p in teach_pairs:
-            front_pieces += [en_p, sh, tgt_p, md]
+    listen_context = _narr("listen_context")
+    here_it_is = _narr("here_it_is")
+    meaning = _narr("meaning")
+    how_to_use = _narr("how_to_use")
+    examples_intro = _narr("examples_intro")
+    practice_intro = _narr("practice_intro", lang_filled=True)
+    sentence_1 = _narr("sentence_1")
+    sentence_2 = _narr("sentence_2")
+    sentence_3 = _narr("sentence_3")
+
+    # --- stitch FRONT -------------------------------------------------------
+    front_pieces: list[Path] = []
+    if snippet:
+        front_pieces += [listen_context, sh, snippet, md]
+    front_pieces += [here_it_is, sh, idiom_tgt, md]
+    front_pieces += [meaning, sh, idiom_en, md]
+    if explanation_en_audio:
+        front_pieces += [how_to_use, sh, explanation_en_audio, md]
+    if teach_plan:
+        front_pieces += [examples_intro, sh]
+        for i, (en_p, tgt_p) in enumerate(teach_plan):
+            if i > 0:
+                front_pieces.append(md)
+            front_pieces += [en_p, sh, tgt_p]
     front = video_audio_dir / f"front_{pid}.mp3"
     concat_mp3s(front_pieces, front)
 
-    # --- stitch BACK: 3 drill (EN → think pause → target) ------------------
-    back_pieces: list[Path] = []
-    for en_p, tgt_p in drill_pairs:
-        back_pieces += [en_p, think, tgt_p, md]
+    # --- stitch BACK --------------------------------------------------------
+    back_pieces: list[Path] = [practice_intro, md]
+    sentence_leads = [sentence_1, sentence_2, sentence_3]
+    for i, (en_p, tgt_p) in enumerate(drill_plan[:3]):
+        if i > 0:
+            back_pieces.append(lg)
+        back_pieces += [sentence_leads[i], sh, en_p, think, tgt_p]
     back = video_audio_dir / f"back_{pid}.mp3"
-    if back_pieces:
+    if len(back_pieces) > 2:
         concat_mp3s(back_pieces, back)
     else:
-        # No drill examples? Make a one-frame placeholder so the apkg builder
-        # has something to attach.
-        concat_mp3s([sh], back)
+        concat_mp3s([sh], back, normalize_loudness=False)
 
     return front, back

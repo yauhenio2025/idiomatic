@@ -1,11 +1,12 @@
-"""Build a single Anki .apkg containing one card per enriched idiom.
+"""Build per-video Anki .apkg in the pimsleur didactic shape.
 
-Card layout — display fields for visual reference, audio carries the
-pedagogical load. Same template philosophy as pimsleur's
-"YouTube Idiom Card v3 Structured".
+23-field model mirroring scraper/idioms.py from the pimsleur project:
+  IdiomId, Idiom, IdiomEn, Explanation,
+  Example1En, Example1Target .. Example6En, Example6Target,
+  SourcePhrase, SourceEn, FrontAudio, BackAudio, Source
 
-GUID: yt-idiom-cloud::<youtube_id>::<normalized phrase> — stable so
-re-imports update in place if a video gets re-processed.
+GUID: yt-idiom-cloud::<youtube_id>::<normalized phrase>. Same as before,
+so re-imports update in place.
 """
 
 from __future__ import annotations
@@ -24,125 +25,103 @@ from .explain import Enriched
 log = structlog.get_logger()
 
 
-# Stable model_id distinct from pimsleur's 1820114600/700/800/900 ranges.
-MODEL_ID = 1_820_120_000
-MODEL_NAME = "Idiomatic Cloud Card v1"
+# Bumped from the 8-field 1_820_120_000 model. Old notes with that model
+# stay in Anki but won't share fields with these.
+MODEL_ID = 1_820_120_100
+MODEL_NAME = "Idiomatic Cloud Card v2"
+
+# Examples expected per idiom (3 teach on front, 3 drill on back).
+EXAMPLES_PER_IDIOM = 6
 
 
-# Field labels for the structured-explanation sections (English).
-EXPL_LABELS = {
-    "usage":               "Usage",
-    "collocations":        "Typical collocations",
-    "synonyms_formal":     "More formal alternative",
-    "synonyms_neutral":    "Close synonym",
-    "synonyms_colloquial": "More casually",
-    "antonyms":            "Opposite",
-    "register_note":       "Register",
-    "metaphor":            "Image / etymology",
-    "pitfall":             "Grammatical pitfall",
-    "false_friend":        "False-friend warning",
-}
+# ---- HTML + CSS ----------------------------------------------------------
 
-
-# ---- HTML helpers ---------------------------------------------------------
-
-def _vocab_table_html(structured: dict[str, str]) -> str:
-    if not structured:
-        return ""
-    rows = []
-    for k, v in structured.items():
-        label = EXPL_LABELS.get(k, k.replace("_", " ").title())
-        rows.append(
-            f'<div class="expl-section">'
-            f'<div class="expl-label">{html.escape(label)}</div>'
-            f'<div class="expl-text">{html.escape(v)}</div>'
-            f'</div>'
-        )
-    return "".join(rows)
-
-
-def _examples_html(examples: list[dict]) -> str:
-    if not examples:
-        return ""
-    blocks = []
-    for ex in examples:
-        blocks.append(
-            f'<div class="example-block">'
-            f'<div class="ex-tgt">{html.escape(ex.get("target",""))}</div>'
-            f'<div class="ex-en">{html.escape(ex.get("en",""))}</div>'
-            f'</div>'
-        )
-    return "".join(blocks)
-
-
-# ---- model ---------------------------------------------------------------
-
-FRONT_TMPL = """<div class="idiom">{{Phrase}}</div>
-<div class="en">{{English}}</div>
-<div class="audio-row">{{FrontAudio}}</div>"""
-
-BACK_TMPL = """<div class="idiom">{{Phrase}}</div>
-<div class="en">{{English}}</div>
-<div class="audio-row">{{FrontAudio}}</div>
-<hr id="answer">
-
-{{#StructuredHTML}}
-{{StructuredHTML}}
-{{/StructuredHTML}}
-
-{{#ExamplesHTML}}
-<div class="prompt-label">Examples</div>
-{{ExamplesHTML}}
-{{/ExamplesHTML}}
-
-<div class="prompt-label">Drill</div>
-<div class="audio-row">{{BackAudio}}</div>
-
-<div class="footer">{{Source}}</div>"""
-
-CSS = """
-.card {font-family: -apple-system, system-ui, "Noto Sans CJK SC", sans-serif;
-       background:#fff; color:#000; text-align:center; padding:16px 12px;}
-.idiom {font-size: clamp(32px, 7vw, 56px); font-weight:600;
-        margin:20px 0 6px; color:#111; line-height:1.2;}
-.en {font-size: clamp(16px, 3.4vw, 20px); color:#555;
-     max-width:580px; margin:0 auto 16px; line-height:1.4;}
-.audio-row {margin:12px 0;}
-hr#answer {border:0; border-top:1px solid #ccc; margin:20px 0;}
-.prompt-label {font-size: clamp(11px, 2.4vw, 14px); color:#888;
-               letter-spacing:0.06em; text-transform:uppercase;
-               margin-top:22px; margin-bottom:8px;}
-
-.expl-section {text-align: left; max-width: 580px;
-               margin: 12px auto 0; padding: 0 4px;}
-.expl-label {font-size: clamp(11px, 2.4vw, 14px); color: #888;
-             letter-spacing: 0.06em; text-transform: uppercase;
-             margin-top: 14px; margin-bottom: 4px;}
-.expl-text {font-size: clamp(14px, 3vw, 18px); color: #222; line-height:1.45;}
-
-.example-block {max-width:580px; margin:10px auto 0; padding:8px 4px 0;
-                text-align:left; border-top:1px dashed #e3e3e3;}
-.example-block:first-of-type {border-top:0;}
-.example-block .ex-tgt {font-size: clamp(18px, 4vw, 24px); font-weight:600;
-                        color:#111; line-height:1.3;}
-.example-block .ex-en {font-size: clamp(13px, 2.8vw, 16px); color:#555;
-                       margin-top:3px;}
-
-.footer {margin-top:24px; font-size: clamp(10px, 2vw, 13px); color:#999;}
-.replay-button svg {width:44px; height:44px;}
+IDIOM_CSS = """
+.card {font-family: -apple-system, system-ui, sans-serif; background: #ffffff; color: #000;
+       text-align: center; padding: 20px 14px;}
+.prompt-label {font-size: clamp(13px, 3vw, 18px); color: #666; margin: 14px 0 6px;
+               letter-spacing: 0.05em; text-transform: uppercase;}
+.idiom {font-size: clamp(24px, 5.5vw, 42px); font-weight: 700; line-height: 1.25;
+        margin: 6px 0 12px; color: #111;}
+.en-hint {font-size: clamp(16px, 3.5vw, 22px); color: #555; margin-bottom: 8px;}
+.explanation {font-size: clamp(14px, 3vw, 18px); color: #333; margin: 14px 12px;
+              text-align: left; line-height: 1.5; max-width: 580px;
+              margin-left: auto; margin-right: auto;}
+.example-row {text-align: left; max-width: 560px; margin: 6px auto;
+              font-size: clamp(14px, 3vw, 18px); line-height: 1.4;}
+.example-row .en-line {color: #555;}
+.example-row .tgt-line {color: #111; font-weight: 600; margin-top: 2px;}
+hr#answer {border: 0; border-top: 1px solid #bbb; margin: 18px 0;}
+.footer {margin-top: 22px; font-size: clamp(10px, 2vw, 13px); color: #888;
+         max-width: 580px; margin-left: auto; margin-right: auto; text-align: left;}
+.footer .src-pair {margin: 6px 0;}
+.footer .src-en {color: #999; font-style: italic;}
+.footer .src-tgt {color: #555;}
+.replay-button svg {width: 44px; height: 44px;}
 """
+
+# Front: idiom + en gloss + English explanation + audio + 3 EN-only drill
+# prompts (the things heard on the back). Examples 4–6 are the drill set.
+IDIOM_FRONT_TMPL = """<div class="idiom">{{Idiom}}</div>
+<div class="en-hint">{{IdiomEn}}</div>
+<div class="explanation">{{Explanation}}</div>
+<div class="prompt-label" style="margin-top: 16px;">Listen and learn</div>
+<div>{{FrontAudio}}</div>
+<div class="prompt-label" style="margin-top: 18px;">Now translate these in your head:</div>
+<div class="example-row"><div class="en-line">1. {{Example4En}}</div></div>
+<div class="example-row"><div class="en-line">2. {{Example5En}}</div></div>
+<div class="example-row"><div class="en-line">3. {{Example6En}}</div></div>"""
+
+# Back: verify-translation audio + drill pairs (examples 4–6) + teaching
+# examples (1–3) shown for reference + trigger sentence + video link.
+IDIOM_BACK_TMPL = """<hr id="answer">
+<div class="prompt-label">Verify your translation</div>
+<div>{{BackAudio}}</div>
+<div class="example-row">
+  <div class="en-line">1. {{Example4En}}</div>
+  <div class="tgt-line">→ {{Example4Target}}</div>
+</div>
+<div class="example-row">
+  <div class="en-line">2. {{Example5En}}</div>
+  <div class="tgt-line">→ {{Example5Target}}</div>
+</div>
+<div class="example-row">
+  <div class="en-line">3. {{Example6En}}</div>
+  <div class="tgt-line">→ {{Example6Target}}</div>
+</div>
+<div class="prompt-label" style="margin-top: 18px; color: #999;">Teaching examples (heard on front):</div>
+<div class="example-row" style="opacity: 0.75;">
+  <div class="en-line">· {{Example1En}}</div>
+  <div class="tgt-line">→ {{Example1Target}}</div>
+</div>
+<div class="example-row" style="opacity: 0.75;">
+  <div class="en-line">· {{Example2En}}</div>
+  <div class="tgt-line">→ {{Example2Target}}</div>
+</div>
+<div class="example-row" style="opacity: 0.75;">
+  <div class="en-line">· {{Example3En}}</div>
+  <div class="tgt-line">→ {{Example3Target}}</div>
+</div>
+<div class="footer">
+  <div class="src-pair">
+    <div class="src-tgt">{{SourcePhrase}}</div>
+    <div class="src-en">{{SourceEn}}</div>
+  </div>
+  {{Source}}
+</div>"""
 
 
 def make_model() -> genanki.Model:
-    fields = [
-        "PhraseId", "Phrase", "English", "StructuredHTML", "ExamplesHTML",
-        "FrontAudio", "BackAudio", "Source",
-    ]
+    fields = ["IdiomId", "Idiom", "IdiomEn", "Explanation"]
+    for i in range(1, EXAMPLES_PER_IDIOM + 1):
+        fields += [f"Example{i}En", f"Example{i}Target"]
+    fields += ["SourcePhrase", "SourceEn", "FrontAudio", "BackAudio", "Source"]
     return genanki.Model(
         MODEL_ID, MODEL_NAME,
         fields=[{"name": n} for n in fields],
-        templates=[{"name": "Idiom", "qfmt": FRONT_TMPL, "afmt": BACK_TMPL}],
-        css=CSS,
+        templates=[{"name": "Idiom practice",
+                    "qfmt": IDIOM_FRONT_TMPL, "afmt": IDIOM_BACK_TMPL}],
+        css=IDIOM_CSS,
     )
 
 
@@ -154,16 +133,18 @@ def _guid(youtube_id: str, normalized: str) -> str:
     ).hexdigest()[:16]
 
 
+def _ex(examples: list[dict], i: int, key: str) -> str:
+    """Return examples[i][key] or empty string."""
+    if i < len(examples):
+        return examples[i].get(key, "") or ""
+    return ""
+
+
 def build_apkg(*, out_path: Path, deck_name: str, youtube_id: str,
                 video_title: str, video_url: str,
                 idioms: list[tuple[Enriched, Path, Path]],
                 stage_dir: Path) -> Path:
-    """Pack one apkg.
-
-    idioms: list of (enriched, front_mp3, back_mp3) tuples.
-    stage_dir: where to hardlink media under unique names to avoid global
-               Anki-media collisions when many videos sit side-by-side.
-    """
+    """idioms: list of (enriched, front_mp3, back_mp3) tuples."""
     model = make_model()
     deck_id = 1_810_000_000 + (
         int(hashlib.sha1(f"idiomatic-cloud::{deck_name}".encode()).hexdigest()[:8], 16)
@@ -192,20 +173,25 @@ def build_apkg(*, out_path: Path, deck_name: str, youtube_id: str,
         b_name = _stage(f"back_{i:03d}.mp3", back)
         media += [str(stage_dir / f_name), str(stage_dir / b_name)]
 
-        # We don't have a per-phrase normalized field on Enriched (the
-        # caller has it via the extract step). Use the phrase text as a
-        # stable proxy.
         norm = e.phrase.lower().strip()
+        examples = e.examples or []
+        example_fields: list[str] = []
+        for k in range(EXAMPLES_PER_IDIOM):
+            example_fields.append(_ex(examples, k, "en"))
+            example_fields.append(_ex(examples, k, "target"))
+
         deck.add_note(genanki.Note(
             model=model,
             fields=[
-                f"{i:03d}",
-                e.phrase,
-                e.english,
-                _vocab_table_html(e.structured),
-                _examples_html(e.examples),
-                f"[sound:{f_name}]",
-                f"[sound:{b_name}]",
+                f"{i:03d}",                      # IdiomId
+                e.phrase,                         # Idiom
+                e.english,                        # IdiomEn
+                getattr(e, "explanation_en", "") or "",  # Explanation paragraph
+                *example_fields,                  # Example1En..Example6Target
+                getattr(e, "source_phrase_target", "") or "",  # SourcePhrase
+                getattr(e, "source_phrase_en", "") or "",      # SourceEn
+                f"[sound:{f_name}]",              # FrontAudio
+                f"[sound:{b_name}]",              # BackAudio
                 f'from <a href="{html.escape(video_url)}">{html.escape(video_title)}</a>',
             ],
             guid=_guid(youtube_id, norm),

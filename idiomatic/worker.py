@@ -121,6 +121,9 @@ async def _persist_pool_source(*, survivors: list, lang: str, video_id: int,
             expression_id=expression_id, video_id=video_id, lang=lang,
             idiom_text=en.phrase, english_gloss=en.english,
             audio_idiom_tgt=idiom_tgt_rel, audio_idiom_en=idiom_en_rel,
+            source_phrase_target=getattr(en, "source_phrase_target", "") or None,
+            source_phrase_en=getattr(en, "source_phrase_en", "") or None,
+            explanation_en=getattr(en, "explanation_en", "") or None,
         )
 
         example_rows = []
@@ -175,6 +178,12 @@ async def process_video(video: dict) -> None:
         # 4. Enrich each fresh phrase (examples + structured explanation)
         narration_root = Path(settings.data_dir) / "narration"
         await connectives.ensure_cached(narration_root, voice_en="Kore")
+        # Per-language practice_intro narration (one-shot per language)
+        _LANG_NAMES = {"de": "German", "fr": "French", "it": "Italian",
+                       "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin"}
+        await connectives.ensure_lang_cached(
+            narration_root, _LANG_NAMES.get(lang, lang.upper()), voice_en="Kore",
+        )
 
         # Pre-create the silence cache files. silence_mp3() checks `exists()`
         # then ffmpegs to the path — racy under parallel idioms (two writers
@@ -195,7 +204,14 @@ async def process_video(video: dict) -> None:
                 log.info("worker.idiom.start", i=i, of=len(fresh),
                          phrase=phrase.text[:50])
                 try:
-                    en = await enrich_one(phrase.text, phrase.english, lang)
+                    en = await enrich_one(
+                        phrase.text, phrase.english, lang,
+                        source_phrase_target=getattr(phrase,
+                                                      "source_phrase_target", ""),
+                        source_phrase_en=getattr(phrase,
+                                                  "source_phrase_en", ""),
+                        explanation_en=getattr(phrase, "explanation_en", ""),
+                    )
                     log.info("worker.idiom.enriched", i=i,
                              dt=round(_time.monotonic() - t0, 1))
                     front, back = await audio_mod.render_card_audio(
