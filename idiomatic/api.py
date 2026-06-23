@@ -146,3 +146,71 @@ async def admin_backfill_status(
 ) -> dict:
     from . import backfill
     return backfill.get_state()
+
+
+# --- admin: audio audit (read mp3 metadata to verify TTS output) -----------
+
+@app.get("/admin/audio-audit")
+async def admin_audio_audit(
+    agent: dict = Depends(authed_agent),
+) -> dict:
+    """Walks /data/staged_audio, returns per-language file count + size
+    histogram. Anything < 5 KB is almost certainly a silence placeholder."""
+    import subprocess
+    settings = get_settings()
+    root = Path(settings.data_dir) / "staged_audio"
+    out: dict = {}
+    if not root.exists():
+        return {"error": "no staged_audio dir", "root": str(root)}
+    # videos table maps youtube_id → lang
+    pool = await db.get_pool()
+    yid_to_lang = {r["youtube_id"]: r["lang"] for r in
+                   await pool.fetch("SELECT youtube_id, lang FROM videos")}
+    for video_dir in sorted(root.iterdir()):
+        if not video_dir.is_dir():
+            continue
+        lang = yid_to_lang.get(video_dir.name, "?")
+        by_kind: dict = {}
+        for f in sorted(video_dir.glob("*.mp3")):
+            kind = (f.name.split("_")[0]
+                    + ("_" + f.name.split("_")[1] if f.name.startswith("ex_")
+                       else "_" + f.name.split("_")[1].rstrip(".mp3")
+                       if "_" in f.name else ""))
+            # crude bucketing
+            if f.name.startswith("idiom_tgt_"):
+                kind = "idiom_tgt"
+            elif f.name.startswith("idiom_en_"):
+                kind = "idiom_en"
+            elif f.name.startswith("ex_") and f.name.endswith("_en.mp3"):
+                kind = "ex_en"
+            elif f.name.startswith("ex_") and f.name.endswith("_tgt.mp3"):
+                kind = "ex_tgt"
+            else:
+                kind = "other"
+            by_kind.setdefault(kind, [])
+            by_kind[kind].append(f.stat().st_size)
+        summary = {}
+        for k, sizes in by_kind.items():
+            sizes.sort()
+            tiny = sum(1 for s in sizes if s < 5000)
+            summary[k] = {
+                "n": len(sizes),
+                "min": sizes[0], "max": sizes[-1],
+                "median": sizes[len(sizes)//2],
+                "tiny_under_5kb": tiny,
+            }
+        out.setdefault(lang, {})[video_dir.name] = summary
+    return out
+
+
+@app.get("/admin/audio-sample/{youtube_id}/{filename}")
+async def admin_audio_sample(
+    youtube_id: str, filename: str,
+    agent: dict = Depends(authed_agent),
+):
+    """Stream a specific staged_audio file. Use to listen to a sample."""
+    settings = get_settings()
+    p = Path(settings.data_dir) / "staged_audio" / youtube_id / filename
+    if not p.exists() or not p.is_file():
+        raise HTTPException(404, "not found")
+    return FileResponse(p, media_type="audio/mpeg")
