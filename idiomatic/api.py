@@ -214,3 +214,22 @@ async def admin_audio_sample(
     if not p.exists() or not p.is_file():
         raise HTTPException(404, "not found")
     return FileResponse(p, media_type="audio/mpeg")
+
+
+# --- admin: backfill v2 (trigger sentence + explanation for existing rows) -
+
+@app.post("/admin/backfill-v2")
+async def admin_backfill_v2(agent: dict = Depends(authed_agent)) -> dict:
+    from . import backfill_v2
+    if backfill_v2.get_state()["running"]:
+        return {"started": False, "reason": "already running"}
+    asyncio.create_task(backfill_v2.run_backfill_v2())
+    return {"started": True}
+
+
+@app.get("/admin/backfill-v2/status")
+async def admin_backfill_v2_status(
+    agent: dict = Depends(authed_agent),
+) -> dict:
+    from . import backfill_v2
+    return backfill_v2.get_state()
