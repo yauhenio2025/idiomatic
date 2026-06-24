@@ -39,6 +39,7 @@ from .. import db
 from ..settings import get_settings
 from . import audio as audio_mod
 from . import apkg as apkg_mod
+from . import connectives
 
 log = structlog.get_logger()
 
