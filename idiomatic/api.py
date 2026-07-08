@@ -233,3 +233,28 @@ async def admin_backfill_v2_status(
 ) -> dict:
     from . import backfill_v2
     return backfill_v2.get_state()
+
+
+@app.get("/admin/video-info")
+async def admin_video_info(
+    youtube_id: str, agent: dict = Depends(authed_agent),
+) -> dict:
+    """Lookup by youtube_id — used by the Anki add-on's Reorganize step
+    to answer 'what date should I prefix this deck with?'"""
+    pool = await db.get_pool()
+    row = await pool.fetchrow(
+        """
+        SELECT title, lang, first_seen::date AS first_seen_date
+        FROM videos WHERE youtube_id = $1
+        """,
+        youtube_id,
+    )
+    if not row:
+        raise HTTPException(404, "unknown youtube_id")
+    return {
+        "youtube_id": youtube_id,
+        "title": row["title"],
+        "lang": row["lang"],
+        "first_seen_date": row["first_seen_date"].isoformat()
+        if row["first_seen_date"] else None,
+    }

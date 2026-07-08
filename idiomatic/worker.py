@@ -251,9 +251,30 @@ async def process_video(video: dict) -> None:
         apkg_filename = f"{lang}/{slug}-{youtube_id}.apkg"
         apkg_path = Path(settings.data_dir) / "apkgs" / apkg_filename
 
+        # Date prefix so decks sort chronologically inside Anki. Use the
+        # video's first_seen timestamp (when the cron first enqueued it).
+        _LANG_NAMES_FOR_DECK = {
+            "de": "German", "fr": "French", "it": "Italian",
+            "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin",
+            "nl": "Dutch", "sv": "Swedish", "no": "Norwegian", "da": "Danish",
+        }
+        lang_name_deck = _LANG_NAMES_FOR_DECK.get(lang, lang.upper())
+        date_prefix = "0000-00-00"
+        try:
+            _pool = await db.get_pool()
+            row = await _pool.fetchrow(
+                "SELECT first_seen::date AS d FROM videos WHERE id = $1",
+                video["id"],
+            )
+            if row and row["d"]:
+                date_prefix = row["d"].isoformat()
+        except Exception:
+            pass
+        deck_name = f"Idiomatic::{lang_name_deck}::{date_prefix} · {title}"
+
         build_apkg(
             out_path=apkg_path,
-            deck_name=f"Idiomatic::{lang}::{title}",
+            deck_name=deck_name,
             youtube_id=youtube_id,
             video_title=title,
             video_url=f"https://www.youtube.com/watch?v={youtube_id}",
