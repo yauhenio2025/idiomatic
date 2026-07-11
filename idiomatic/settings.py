@@ -51,6 +51,11 @@ class Settings(BaseSettings):
     # Counted against apkgs created today, not videos processed.
     max_new_apkgs_per_lang_per_day: int = 3
 
+    # Skip a pool rebuild if the same language was rebuilt more recently
+    # than this (worker fires one per processed video; back-to-back videos
+    # in one language made that expensive). /admin/rebuild-pools bypasses.
+    pool_rebuild_debounce_min: int = 30
+
     # --- parallelism --------------------------------------------------------
     # Concurrent Gemini TTS HTTP calls. Tier-1 paid Gemini allows ~60-300
     # RPM for the TTS preview; 8 in flight stays well clear while pushing

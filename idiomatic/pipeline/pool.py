@@ -516,10 +516,21 @@ def _build_idioms_pool(lang: str, idioms: list[dict],
 # Top-level: rebuild every pool apkg for a language
 # ============================================================================
 
-async def rebuild_pools(lang: str) -> dict:
+async def rebuild_pools(lang: str, force: bool = False) -> dict:
     """Builds ALL four pool apkgs for the language and upserts their rows
-    in the apkgs table. Returns a stats dict."""
+    in the apkgs table. Returns a stats dict.
+
+    Debounced: skipped when the language was already rebuilt within the
+    last `pool_rebuild_debounce_min` minutes, unless force=True
+    (/admin/rebuild-pools). A skipped rebuild is harmless — the next
+    non-debounced one reads the full DB and picks everything up.
+    """
     settings = get_settings()
+    if not force and await db.pool_rebuilt_within(
+            lang, settings.pool_rebuild_debounce_min):
+        log.info("pool.skip_debounced", lang=lang,
+                 window_min=settings.pool_rebuild_debounce_min)
+        return {"lang": lang, "debounced": True}
     idioms = await db.fetch_pool_idioms(lang)
     if not idioms:
         log.info("pool.skip_empty", lang=lang)
@@ -563,6 +574,9 @@ async def rebuild_pools(lang: str) -> dict:
         )
         log.info("pool.upserted", lang=lang, kind=kind,
                  apkg_id=apkg_id, n=n, size=path.stat().st_size)
+
+    # Stamp only after a successful rebuild so a failed one isn't debounced.
+    await db.mark_pool_rebuilt(lang)
 
     return {"lang": lang, "n_idioms": len(idioms),
             "idioms_cards": idioms_n,

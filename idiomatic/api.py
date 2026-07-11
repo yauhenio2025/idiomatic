@@ -235,6 +235,27 @@ async def admin_backfill_v2_status(
     return backfill_v2.get_state()
 
 
+@app.post("/admin/rebuild-pools")
+async def admin_rebuild_pools(
+    lang: str, agent: dict = Depends(authed_agent),
+) -> dict:
+    """Force a pool rebuild for one language, bypassing the 30-min
+    debounce. Runs in the background (a big language re-stitches a lot of
+    audio); watch the pool.* log lines for the result."""
+    from .pipeline import pool as pool_mod
+
+    async def _run() -> None:
+        try:
+            stats = await pool_mod.rebuild_pools(lang, force=True)
+            log.info("admin.rebuild_pools.done", **stats)
+        except Exception as e:
+            log.warning("admin.rebuild_pools.failed", lang=lang,
+                         err=repr(e)[:200])
+
+    asyncio.create_task(_run())
+    return {"started": True, "lang": lang, "forced": True}
+
+
 @app.get("/admin/video-info")
 async def admin_video_info(
     youtube_id: str, agent: dict = Depends(authed_agent),

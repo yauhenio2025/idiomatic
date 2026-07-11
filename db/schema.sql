@@ -101,6 +101,15 @@ CREATE TABLE IF NOT EXISTS expression_examples (
 );
 CREATE INDEX IF NOT EXISTS expression_examples_idiom_idx ON expression_examples (idiom_id);
 
+-- Debounce state for pool rebuilds: rebuild_pools() skips a language that
+-- was already rebuilt in the last N minutes (worker triggers a rebuild
+-- after every video; back-to-back videos in one language made that
+-- expensive). /admin/rebuild-pools bypasses.
+CREATE TABLE IF NOT EXISTS pool_rebuild_state (
+  lang             TEXT PRIMARY KEY,
+  last_rebuilt_at  TIMESTAMPTZ NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS agents (
   id             SERIAL PRIMARY KEY,
   token          TEXT UNIQUE NOT NULL,           -- bearer auth header

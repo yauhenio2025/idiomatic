@@ -254,6 +254,34 @@ async def fetch_pool_idioms(lang: str) -> list[dict]:
     return out
 
 
+# ---- pool rebuild debounce ---------------------------------------------------
+
+async def pool_rebuilt_within(lang: str, minutes: int) -> bool:
+    pool = await get_pool()
+    return bool(await pool.fetchval(
+        """
+        SELECT EXISTS (
+            SELECT 1 FROM pool_rebuild_state
+            WHERE lang = $1
+              AND last_rebuilt_at > NOW() - make_interval(mins => $2)
+        )
+        """,
+        lang, minutes,
+    ))
+
+
+async def mark_pool_rebuilt(lang: str) -> None:
+    pool = await get_pool()
+    await pool.execute(
+        """
+        INSERT INTO pool_rebuild_state (lang, last_rebuilt_at)
+        VALUES ($1, NOW())
+        ON CONFLICT (lang) DO UPDATE SET last_rebuilt_at = NOW()
+        """,
+        lang,
+    )
+
+
 # ---- apkgs upsert helpers --------------------------------------------------
 
 async def insert_video_apkg(
