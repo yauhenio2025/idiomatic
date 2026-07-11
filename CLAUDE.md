@@ -101,8 +101,19 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 ## Rate limits I have to remember
 
 - **Daily cap per language**: `settings.max_new_apkgs_per_lang_per_day = 3`.
-  Enforced in `worker._under_daily_cap`. Video apkgs count, pool
-  rebuilds don't.
+  Only `kind='video'` apkgs count (enforced in `worker._under_daily_cap`
+  AND excluded at claim time via `db.langs_at_daily_cap`, so a capped
+  language can't starve the queue).
+- **Retry policy**: the claim burns an attempt; any failure except
+  OxylabsFatal requeues until `worker_max_attempts=3`, then `failed`.
+  Rows stuck in `processing` > 2 h are reclaimed automatically (reaper
+  in `claim_next_video`); exhausted stale rows are marked failed.
+  Manual `UPDATE videos SET status='queued', attempts=0` is only needed
+  to resurrect a `failed` row.
+- **Backfills**: only `/admin/backfill-v2` exists now — v1 was deleted
+  (it parsed the old 8-field model and would have inserted example-less
+  rows). `/admin/retts` re-synthesizes silence placeholders;
+  `/admin/rebuild-pools?lang=…` forces past the 30-min pool debounce.
 - **Gemini TTS preview** blocks ~1-4% of target-language content →
   silence placeholder (~600B mp3). English via Kore is stable.
 - **YouTube RSS** load-sheds. Cron paces 1.5s between channels.
