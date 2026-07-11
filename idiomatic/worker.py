@@ -39,9 +39,12 @@ async def _download_audio(youtube_id: str,
     Idempotent. Returns (audio path, duration_sec | None). The extension
     depends on what Oxylabs returns — typically .aac or .m4a; Gemini and
     ffmpeg accept both. Duration comes from the Oxylabs job status when we
-    actually ran a job; on the local-reuse fast path it's None and the
-    caller falls back to ffprobe. Oxylabs eats the bot-wall fight on their
-    side.
+    actually ran a job; on the reuse fast paths it's None and the caller
+    falls back to ffprobe. Oxylabs eats the bot-wall fight on their side.
+
+    R2 cleanup happens only after the video is marked done (see
+    process_video), so a retry after the local work dir was wiped reuses
+    the bucket object instead of paying for a second job.
     """
     # Fast path: if we already pulled it locally, reuse it (worker may retry
     # this video).
@@ -49,12 +52,7 @@ async def _download_audio(youtube_id: str,
         if existing.is_file() and existing.stat().st_size > 0:
             return existing, None
     dst_dir.mkdir(parents=True, exist_ok=True)
-    job_id = await oxylabs_client.submit_audio_job(youtube_id)
-    status_body = await oxylabs_client.wait_for_done(job_id)
-    out = await oxylabs_client.download_audio(youtube_id, job_id, dst_dir)
-    # Best-effort R2 cleanup so the bucket doesn't grow forever.
-    await oxylabs_client.cleanup_r2(youtube_id)
-    return out, oxylabs_client.duration_from_status(status_body)
+    return await oxylabs_client.fetch_audio(youtube_id, dst_dir)
 
 
 def _ffprobe_duration(path: Path) -> int | None:
@@ -365,6 +363,14 @@ async def process_video(video: dict) -> None:
 
         await db.mark_video_status(video["id"], "done")
         log.info("worker.done", id=video["id"], n_idioms=len(enriched_tuples))
+
+        # Only now is the R2 object safe to drop — any earlier and a
+        # retry re-pays Oxylabs for the download. Best-effort; a leftover
+        # object just costs a few MB until the next backfill touches it.
+        try:
+            await oxylabs_client.cleanup_r2(youtube_id)
+        except Exception as e:
+            log.warning("worker.r2_cleanup_failed", err=repr(e)[:150])
 
     finally:
         # Tidy local workdir; /data/apkgs stays.

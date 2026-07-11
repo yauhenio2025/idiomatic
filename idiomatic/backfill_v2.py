@@ -239,10 +239,10 @@ async def backfill_one_video_v2(*, video: dict) -> dict:
             break
     if source_audio is None:
         try:
-            job_id = await oxylabs_client.submit_audio_job(youtube_id)
-            await oxylabs_client.wait_for_done(job_id)
-            source_audio = await oxylabs_client.download_audio(
-                youtube_id, job_id, work_root,
+            # R2-reuse aware; only submits (and pays for) a new job when
+            # the bucket has nothing for this video.
+            source_audio, _dur = await oxylabs_client.fetch_audio(
+                youtube_id, work_root,
             )
         except Exception as e:
             return {"youtube_id": youtube_id, "error": f"oxylabs: {e}"}
@@ -284,6 +284,13 @@ async def backfill_one_video_v2(*, video: dict) -> dict:
             (g.get("explanation") or "").strip() or None,
         )
         updated += 1
+
+    # These videos are long done — drop the R2 object we just (re)bought
+    # instead of orphaning it (backfill_v2 previously never cleaned up).
+    try:
+        await oxylabs_client.cleanup_r2(youtube_id)
+    except Exception as e:
+        log.warning("backfill_v2.r2_cleanup_failed", err=repr(e)[:150])
 
     return {
         "youtube_id": youtube_id, "lang": lang,

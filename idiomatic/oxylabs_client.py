@@ -213,6 +213,24 @@ async def download_audio(video_id: str, job_id: str, dst_dir: Path) -> Path:
     return dst
 
 
+async def fetch_audio(video_id: str, dst_dir: Path) -> tuple[Path, int | None]:
+    """R2-reuse-aware fetch. cleanup_r2 is deferred until a video is done,
+    so a retry (or backfill) whose local work dir was wiped finds the
+    previous job's object still in the bucket and downloads it directly —
+    no second Oxylabs job paid for. Returns (path, duration_sec | None);
+    duration is only known when a fresh job ran."""
+    prefix = f"oxylabs-pushes/{video_id}/"
+    objs = await asyncio.to_thread(_list_prefix, prefix)
+    if any(not o["Key"].endswith("/") and o["Size"] > 0 for o in objs):
+        log.info("oxylabs.r2_reuse", video_id=video_id)
+        out = await download_audio(video_id, "r2-reuse", dst_dir)
+        return out, None
+    job_id = await submit_audio_job(video_id)
+    status_body = await wait_for_done(job_id)
+    out = await download_audio(video_id, job_id, dst_dir)
+    return out, duration_from_status(status_body)
+
+
 async def cleanup_r2(video_id: str) -> None:
     """Best-effort wipe of all objects under the per-video R2 prefix."""
     s = get_settings()
