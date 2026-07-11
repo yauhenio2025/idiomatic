@@ -87,7 +87,8 @@ async def _under_daily_cap(lang: str) -> bool:
     n_today = await pool.fetchval(
         """
         SELECT COUNT(*) FROM apkgs
-        WHERE lang = $1 AND created_at >= date_trunc('day', NOW())
+        WHERE lang = $1 AND kind = 'video'
+          AND created_at >= date_trunc('day', NOW())
         """,
         lang,
     )
