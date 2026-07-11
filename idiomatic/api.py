@@ -138,29 +138,6 @@ async def health() -> dict:
     return {"ok": True, "queued_videos": n}
 
 
-# --- admin: backfill pool source data from existing per-video apkgs ---------
-# One-shot operation triggered manually.
-
-@app.post("/admin/backfill")
-async def admin_backfill(_: None = Depends(authed_admin)) -> dict:
-    """Kick off a background backfill of expression_idioms + examples + audio
-    from every per-video apkg under /data/apkgs/. Returns immediately;
-    poll /admin/backfill/status for progress."""
-    from . import backfill
-    if backfill.get_state()["running"]:
-        return {"started": False, "reason": "already running"}
-    asyncio.create_task(backfill.run_backfill())
-    return {"started": True}
-
-
-@app.get("/admin/backfill/status")
-async def admin_backfill_status(
-    _: None = Depends(authed_admin),
-) -> dict:
-    from . import backfill
-    return backfill.get_state()
-
-
 # --- admin: audio audit (read mp3 metadata to verify TTS output) -----------
 
 @app.get("/admin/audio-audit")

@@ -78,7 +78,7 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
      (fluency), `pool_idiom_t2e`, `pool_idiom_e2t`.
 3. `api.py` — FastAPI. `/apkgs/pending`, `/apkgs/{id}/download`,
    `/apkgs/{id}/ack` for the add-on (agent token). `/health`. Admin
-   endpoints (require `X-Admin-Token`): `/admin/backfill`,
+   endpoints (require `X-Admin-Token`):
    `/admin/backfill-v2`, `/admin/audio-audit`, `/admin/audio-sample`,
    `/admin/rebuild-pools?lang=…` (bypasses the 30-min pool debounce).
    Exception: `/admin/video-info` stays agent-authed — the add-on's
