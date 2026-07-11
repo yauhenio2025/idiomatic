@@ -71,9 +71,12 @@ def _ffprobe_duration(path: Path) -> int | None:
         return None
 
 
-async def _filter_fresh(extracted: list, lang: str) -> list:
-    """Drop phrases already in the expression library."""
-    existing = await db.existing_normalized_for_lang(lang)
+async def _filter_fresh(extracted: list, lang: str, video_id: int) -> list:
+    """Drop phrases already in the expression library — except ones first
+    seen in THIS video, so a retry after a mid-video crash reprocesses its
+    own phrases instead of skipping them (their pool data may be missing)."""
+    existing = await db.existing_normalized_for_lang(
+        lang, exclude_video_id=video_id)
     fresh = [p for p in extracted if p.normalized not in existing]
     log.info("worker.dedup", n_extracted=len(extracted), n_fresh=len(fresh))
     return fresh
@@ -208,7 +211,7 @@ async def process_video(video: dict) -> None:
             return
 
         # 3. Dedup vs existing expression library
-        fresh = await _filter_fresh(extracted, lang)
+        fresh = await _filter_fresh(extracted, lang, video["id"])
         if not fresh:
             await db.mark_video_status(video["id"], "skipped", "all dedupes")
             return
@@ -338,15 +341,14 @@ async def process_video(video: dict) -> None:
         await db.insert_expressions(lang, video["id"], ext_for_db)
 
         # 7. Persist per-card audio + idiom/example records for the pool
-        #    builder. Failures here log but don't fail the video — the
-        #    per-video apkg is already shipped.
-        try:
-            await _persist_pool_source(
-                survivors=survivors, lang=lang, video_id=video["id"],
-                video_audio_dir=video_audio_dir,
-            )
-        except Exception as e:
-            log.warning("worker.pool_persist_failed", err=repr(e)[:200])
+        #    builder. Failures propagate: the video gets retried (F-004)
+        #    and every step is now idempotent (apkg + idiom rows upsert,
+        #    dedup ignores this video's own expressions), so a re-run
+        #    repairs the pool data instead of silently losing it forever.
+        await _persist_pool_source(
+            survivors=survivors, lang=lang, video_id=video["id"],
+            video_audio_dir=video_audio_dir,
+        )
 
         # 8. Rebuild the language's pool apkgs so this video's idioms show
         #    up in cross-video drilling decks.

@@ -53,6 +53,9 @@ CREATE TABLE IF NOT EXISTS apkgs (
 CREATE INDEX IF NOT EXISTS apkgs_lang_created_idx ON apkgs(lang, created_at);
 -- One pool apkg per (lang, kind). Video apkgs are one per video_id by ON CONFLICT.
 CREATE UNIQUE INDEX IF NOT EXISTS apkgs_pool_unique ON apkgs (lang, kind) WHERE kind <> 'video';
+-- One video apkg per video — a crashed-and-retried video upserts instead of
+-- double-delivering.
+CREATE UNIQUE INDEX IF NOT EXISTS apkgs_video_unique ON apkgs (video_id) WHERE kind = 'video';
 
 -- ============================================================================
 -- Pool-deck source data: per-idiom + per-example records, persistent across
@@ -87,6 +90,10 @@ CREATE TABLE IF NOT EXISTS expression_idioms (
 -- won't add the column to an already-created table). Idempotent.
 ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS structured JSONB;
 CREATE INDEX IF NOT EXISTS expression_idioms_lang_idx ON expression_idioms (lang);
+-- One idiom row per (expression, video) — makes _persist_pool_source
+-- re-runnable after a mid-video crash (retries upsert in place).
+CREATE UNIQUE INDEX IF NOT EXISTS expression_idioms_expr_video
+  ON expression_idioms (expression_id, video_id);
 CREATE INDEX IF NOT EXISTS expression_idioms_video_idx ON expression_idioms (video_id);
 
 CREATE TABLE IF NOT EXISTS expression_examples (

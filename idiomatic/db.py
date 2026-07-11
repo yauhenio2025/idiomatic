@@ -181,10 +181,22 @@ async def requeue_no_attempt(video_id: int, msg: str | None = None) -> None:
 
 # ---- Expression library ---------------------------------------------------
 
-async def existing_normalized_for_lang(lang: str) -> set[str]:
+async def existing_normalized_for_lang(lang: str,
+                                        exclude_video_id: int | None = None,
+                                        ) -> set[str]:
+    """Normalized expressions already in the library.
+
+    exclude_video_id leaves out expressions first seen in that video, so
+    a crashed-and-retried video isn't dedup-trapped by its own previous
+    attempt's inserts (which would mark it 'skipped' with the pool data
+    never persisted)."""
     pool = await get_pool()
     rows = await pool.fetch(
-        "SELECT normalized FROM expressions WHERE lang = $1", lang,
+        """
+        SELECT normalized FROM expressions
+        WHERE lang = $1 AND first_video_id IS DISTINCT FROM $2
+        """,
+        lang, exclude_video_id,
     )
     return {r["normalized"] for r in rows}
 
@@ -231,6 +243,15 @@ async def insert_idiom_record(
              source_phrase_target, source_phrase_en, explanation_en,
              structured)
         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11::jsonb)
+        ON CONFLICT (expression_id, video_id) DO UPDATE SET
+            idiom_text = EXCLUDED.idiom_text,
+            english_gloss = EXCLUDED.english_gloss,
+            audio_idiom_tgt = EXCLUDED.audio_idiom_tgt,
+            audio_idiom_en = EXCLUDED.audio_idiom_en,
+            source_phrase_target = EXCLUDED.source_phrase_target,
+            source_phrase_en = EXCLUDED.source_phrase_en,
+            explanation_en = EXCLUDED.explanation_en,
+            structured = EXCLUDED.structured
         RETURNING id
         """,
         expression_id, video_id, lang, idiom_text, english_gloss,
@@ -355,6 +376,10 @@ async def insert_video_apkg(
         """
         INSERT INTO apkgs (video_id, lang, filename, size_bytes, n_idioms, kind)
         VALUES ($1, $2, $3, $4, $5, 'video')
+        ON CONFLICT (video_id) WHERE kind = 'video' DO UPDATE SET
+            filename = EXCLUDED.filename,
+            size_bytes = EXCLUDED.size_bytes,
+            n_idioms = EXCLUDED.n_idioms
         RETURNING id
         """,
         video_id, lang, filename, size_bytes, n_idioms,
