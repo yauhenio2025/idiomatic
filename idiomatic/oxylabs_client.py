@@ -173,10 +173,12 @@ def duration_from_status(body: dict) -> int | None:
 
 # ---- pickup ----------------------------------------------------------------
 
-def _list_prefix(prefix: str) -> list[str]:
+def _list_prefix(prefix: str) -> list[dict]:
+    """[{'Key': ..., 'Size': ...}, ...] under the prefix."""
     s = get_settings()
     resp = _r2().list_objects_v2(Bucket=s.r2_bucket, Prefix=prefix)
-    return [o["Key"] for o in resp.get("Contents", [])]
+    return [{"Key": o["Key"], "Size": o.get("Size", 0)}
+            for o in resp.get("Contents", [])]
 
 
 async def download_audio(video_id: str, job_id: str, dst_dir: Path) -> Path:
@@ -185,12 +187,13 @@ async def download_audio(video_id: str, job_id: str, dst_dir: Path) -> Path:
     to `dst_dir/source.<ext>` preserving the original suffix (Gemini and
     ffmpeg both accept whatever Oxylabs returns)."""
     prefix = f"oxylabs-pushes/{video_id}/"
-    keys = await asyncio.to_thread(_list_prefix, prefix)
-    audio_keys = [k for k in keys if not k.endswith("/")]
-    if not audio_keys:
+    objs = await asyncio.to_thread(_list_prefix, prefix)
+    audio_objs = [o for o in objs if not o["Key"].endswith("/")]
+    if not audio_objs:
         raise OxylabsFatal(f"no object under R2 prefix {prefix!r} after job {job_id}")
-    # Pick the largest (in case the prefix has stragglers)
-    key = sorted(audio_keys, key=lambda k: k)[0]
+    # Pick the largest (in case the prefix has stragglers — metadata
+    # sidecars, partial retries). Actually by Size this time.
+    key = max(audio_objs, key=lambda o: o["Size"])["Key"]
     ext = Path(key).suffix or ".m4a"
     dst = dst_dir / f"source{ext}"
     dst_dir.mkdir(parents=True, exist_ok=True)
@@ -215,10 +218,10 @@ async def cleanup_r2(video_id: str) -> None:
     s = get_settings()
     prefix = f"oxylabs-pushes/{video_id}/"
     try:
-        keys = await asyncio.to_thread(_list_prefix, prefix)
-        for key in keys:
+        objs = await asyncio.to_thread(_list_prefix, prefix)
+        for obj in objs:
             await asyncio.to_thread(
-                _r2().delete_object, Bucket=s.r2_bucket, Key=key,
+                _r2().delete_object, Bucket=s.r2_bucket, Key=obj["Key"],
             )
     except Exception as e:
         log.warning("oxylabs.cleanup_failed", prefix=prefix, err=str(e)[:200])
