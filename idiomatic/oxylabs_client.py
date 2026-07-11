@@ -125,10 +125,23 @@ async def wait_for_done(job_id: str) -> dict:
     deadline = asyncio.get_event_loop().time() + s.oxylabs_max_wait_sec
     last = None
     while asyncio.get_event_loop().time() < deadline:
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, auth=(s.oxylabs_user, s.oxylabs_pass))
+        # One flaky poll must not kill a job we've already paid for —
+        # 429/5xx/network blips just mean "ask again next tick"; only a
+        # definitive 4xx (job unknown/expired) is fatal.
+        try:
+            async with httpx.AsyncClient(timeout=30) as client:
+                r = await client.get(url, auth=(s.oxylabs_user, s.oxylabs_pass))
+        except httpx.HTTPError as e:
+            log.warning("oxylabs.poll_transient", job_id=job_id,
+                         err=f"{type(e).__name__}: {str(e)[:120]}")
+            await asyncio.sleep(s.oxylabs_poll_interval_sec)
+            continue
+        if r.status_code == 429 or r.status_code >= 500:
+            log.warning("oxylabs.poll_transient", job_id=job_id,
+                         err=f"HTTP {r.status_code}")
+            await asyncio.sleep(s.oxylabs_poll_interval_sec)
+            continue
         if r.status_code >= 400:
-            # Transient codes already caught upstream; here just propagate.
             raise OxylabsFatal(f"poll HTTP {r.status_code}: {r.text[:200]}")
         body = r.json()
         status = body.get("status")
