@@ -75,7 +75,11 @@ async def authed_admin(x_admin_token: str | None = Header(default=None)) -> None
 
 @app.get("/apkgs/pending")
 async def list_pending(agent: dict = Depends(authed_agent)) -> list[dict]:
-    """Apkgs in this agent's langs that haven't been acked by this agent yet."""
+    """Apkgs in this agent's langs not yet delivered to this agent.
+
+    Failed acks are transient (network blip, locked collection), so a
+    failed-acked apkg is re-offered until its attempts hit the retry
+    budget — only an 'ok' ack (or budget exhaustion) is final."""
     pool = await db.get_pool()
     rows = await pool.fetch(
         """
@@ -83,15 +87,14 @@ async def list_pending(agent: dict = Depends(authed_agent)) -> list[dict]:
                v.youtube_id, v.title
         FROM apkgs a
         LEFT JOIN videos v ON v.id = a.video_id
+        LEFT JOIN agent_acks ak ON ak.agent_id = $2 AND ak.apkg_id = a.id
         WHERE a.lang = ANY($1::text[])
-          AND NOT EXISTS (
-              SELECT 1 FROM agent_acks ak
-              WHERE ak.agent_id = $2 AND ak.apkg_id = a.id
-          )
+          AND (ak.apkg_id IS NULL
+               OR (ak.status = 'failed' AND ak.attempts < $3))
         ORDER BY a.created_at
         LIMIT 50
         """,
-        agent["langs"], agent["id"],
+        agent["langs"], agent["id"], get_settings().ack_retry_budget,
     )
     return [dict(r) for r in rows]
 
@@ -122,7 +125,10 @@ async def ack(apkg_id: int, status: str = "ok",
         """
         INSERT INTO agent_acks (agent_id, apkg_id, status)
         VALUES ($1, $2, $3)
-        ON CONFLICT (agent_id, apkg_id) DO UPDATE SET status = $3, acked_at = NOW()
+        ON CONFLICT (agent_id, apkg_id) DO UPDATE SET
+            status = $3,
+            acked_at = NOW(),
+            attempts = agent_acks.attempts + 1
         """,
         agent["id"], apkg_id, status,
     )

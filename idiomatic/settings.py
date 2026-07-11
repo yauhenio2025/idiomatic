@@ -55,6 +55,11 @@ class Settings(BaseSettings):
     # Counted against apkgs created today, not videos processed.
     max_new_apkgs_per_lang_per_day: int = 3
 
+    # How many failed delivery attempts before /apkgs/pending stops
+    # re-offering an apkg to an agent. A transient blip (network, locked
+    # collection) used to bury the deck forever on the first failed ack.
+    ack_retry_budget: int = 5
+
     # Skip a pool rebuild if the same language was rebuilt more recently
     # than this (worker fires one per processed video; back-to-back videos
     # in one language made that expensive). /admin/rebuild-pools bypasses.

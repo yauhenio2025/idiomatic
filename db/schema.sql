@@ -130,6 +130,11 @@ CREATE TABLE IF NOT EXISTS agent_acks (
   agent_id       INTEGER REFERENCES agents(id) ON DELETE CASCADE,
   apkg_id        INTEGER REFERENCES apkgs(id)  ON DELETE CASCADE,
   status         TEXT NOT NULL,                  -- ok|failed
+  -- Delivery attempts so far. A 'failed' ack no longer buries the apkg:
+  -- /apkgs/pending re-offers it until attempts reaches the retry budget.
+  attempts       INTEGER NOT NULL DEFAULT 1,
   acked_at       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   PRIMARY KEY (agent_id, apkg_id)
 );
+-- Migration for pre-existing deployments.
+ALTER TABLE agent_acks ADD COLUMN IF NOT EXISTS attempts INTEGER NOT NULL DEFAULT 1;
