@@ -90,6 +90,15 @@ async def mark_video_status(video_id: int, status: str, msg: str | None = None) 
     )
 
 
+async def set_video_duration(video_id: int, duration_sec: int) -> None:
+    """Fill duration_sec once the worker has the audio (cron enqueues blind)."""
+    pool = await get_pool()
+    await pool.execute(
+        "UPDATE videos SET duration_sec = $2 WHERE id = $1",
+        video_id, duration_sec,
+    )
+
+
 async def requeue_no_attempt(video_id: int, msg: str | None = None) -> None:
     """Release a claimed video back to the queue WITHOUT counting it as an
     attempt. Used when we punt for an externally-imposed reason (daily cap,

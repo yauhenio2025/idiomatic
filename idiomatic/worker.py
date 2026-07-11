@@ -32,25 +32,43 @@ log = structlog.get_logger()
 
 # ---- one-video helpers ----------------------------------------------------
 
-async def _download_audio(youtube_id: str, dst_dir: Path) -> Path:
+async def _download_audio(youtube_id: str,
+                           dst_dir: Path) -> tuple[Path, int | None]:
     """Fetch the audio track via Oxylabs YouTube Downloader → Cloudflare R2.
 
-    Idempotent. Returns the audio file path (extension depends on what
-    Oxylabs returns — typically .aac or .m4a; Gemini and ffmpeg accept both).
-    Oxylabs eats the bot-wall fight on their side.
+    Idempotent. Returns (audio path, duration_sec | None). The extension
+    depends on what Oxylabs returns — typically .aac or .m4a; Gemini and
+    ffmpeg accept both. Duration comes from the Oxylabs job status when we
+    actually ran a job; on the local-reuse fast path it's None and the
+    caller falls back to ffprobe. Oxylabs eats the bot-wall fight on their
+    side.
     """
     # Fast path: if we already pulled it locally, reuse it (worker may retry
     # this video).
     for existing in dst_dir.glob("source.*"):
         if existing.is_file() and existing.stat().st_size > 0:
-            return existing
+            return existing, None
     dst_dir.mkdir(parents=True, exist_ok=True)
     job_id = await oxylabs_client.submit_audio_job(youtube_id)
-    await oxylabs_client.wait_for_done(job_id)
+    status_body = await oxylabs_client.wait_for_done(job_id)
     out = await oxylabs_client.download_audio(youtube_id, job_id, dst_dir)
     # Best-effort R2 cleanup so the bucket doesn't grow forever.
     await oxylabs_client.cleanup_r2(youtube_id)
-    return out
+    return out, oxylabs_client.duration_from_status(status_body)
+
+
+def _ffprobe_duration(path: Path) -> int | None:
+    """Container duration in whole seconds, or None if ffprobe can't tell."""
+    import subprocess
+    try:
+        r = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "csv=p=0", str(path)],
+            capture_output=True, text=True, timeout=60,
+        )
+        return int(float(r.stdout.strip()))
+    except (subprocess.SubprocessError, ValueError, OSError):
+        return None
 
 
 async def _filter_fresh(extracted: list, lang: str) -> list:
@@ -159,7 +177,25 @@ async def process_video(video: dict) -> None:
     try:
         # 1. Download audio via Oxylabs → R2 (returns .m4a; Gemini + ffmpeg
         # both accept it directly, no re-encode needed).
-        source_audio = await _download_audio(youtube_id, work_root)
+        source_audio, duration_sec = await _download_audio(youtube_id, work_root)
+
+        # 1b. Duration window check. The cron enqueues every RSS entry blind
+        # (RSS has no duration; scraping the watch page for it hit the bot
+        # wall), so the gate lives here where the length is known for free.
+        if duration_sec is None:
+            duration_sec = await asyncio.to_thread(_ffprobe_duration, source_audio)
+        if duration_sec is not None:
+            await db.set_video_duration(video["id"], duration_sec)
+            if not (settings.min_duration_sec <= duration_sec
+                    <= settings.max_duration_sec):
+                await db.mark_video_status(
+                    video["id"], "skipped",
+                    f"duration {duration_sec}s outside "
+                    f"[{settings.min_duration_sec}, {settings.max_duration_sec}]",
+                )
+                return
+        else:
+            log.warning("worker.duration_unknown", yt=youtube_id)
 
         # 2. Extract idiomatic phrases via Gemini 3.5 Flash audio understanding
         extracted = await extract_from_audio(

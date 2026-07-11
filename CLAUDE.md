@@ -42,11 +42,12 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 ## Pipeline stages (`idiomatic/`)
 
 1. `cron.py` — every 2h. Walks `channels` (24 subs across de/fr/it/pt/es),
-   pulls each channel's RSS, filters by duration window, `enqueue_video`.
-   Streams the watch page to keep memory bounded (fits the 512 MB cron
-   plan).
+   pulls each channel's RSS, enqueues every unseen entry (no watch-page
+   fetches — those hit the bot wall; duration is checked by the worker).
 2. `worker.py`::`process_video` — the whole per-video pipeline:
    - `oxylabs_client.py` submits audio job → downloads .aac from R2.
+   - Duration window check right after download (Oxylabs job-status
+     `duration_sec`, ffprobe fallback) — out-of-window → status `skipped`.
    - `pipeline/extract.py` — Gemini 3.5 Flash on the audio returns
      `{text, english, source_phrase, source_phrase_en, explanation,
       audio_start, audio_end}` per idiom.

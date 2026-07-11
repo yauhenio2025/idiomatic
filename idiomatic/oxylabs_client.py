@@ -116,9 +116,10 @@ async def submit_audio_job(video_id: str) -> str:
 
 # ---- poll ------------------------------------------------------------------
 
-async def wait_for_done(job_id: str) -> None:
-    """Poll until status is `done`. Raises OxylabsFatal on `faulted` or
-    timeout."""
+async def wait_for_done(job_id: str) -> dict:
+    """Poll until status is `done`; returns the final job-status JSON (it
+    carries a duration_sec field the worker uses for the length window).
+    Raises OxylabsFatal on `faulted` or timeout."""
     s = get_settings()
     url = f"{_OXY_BASE}/{job_id}"
     deadline = asyncio.get_event_loop().time() + s.oxylabs_max_wait_sec
@@ -129,16 +130,32 @@ async def wait_for_done(job_id: str) -> None:
         if r.status_code >= 400:
             # Transient codes already caught upstream; here just propagate.
             raise OxylabsFatal(f"poll HTTP {r.status_code}: {r.text[:200]}")
-        status = r.json().get("status")
+        body = r.json()
+        status = body.get("status")
         if status != last:
             log.info("oxylabs.status", job_id=job_id, status=status)
             last = status
         if status == "done":
-            return
+            return body
         if status == "faulted":
             raise OxylabsFatal(f"job {job_id} faulted: {r.text[:300]}")
         await asyncio.sleep(s.oxylabs_poll_interval_sec)
     raise OxylabsFatal(f"job {job_id} timeout after {s.oxylabs_max_wait_sec}s")
+
+
+def duration_from_status(body: dict) -> int | None:
+    """Pull duration_sec out of a job-status response, wherever it sits
+    (top level or inside the context key/value list)."""
+    dur = body.get("duration_sec")
+    if dur is None:
+        for kv in body.get("context") or []:
+            if isinstance(kv, dict) and kv.get("key") == "duration_sec":
+                dur = kv.get("value")
+                break
+    try:
+        return int(float(dur)) if dur is not None else None
+    except (TypeError, ValueError):
+        return None
 
 
 # ---- pickup ----------------------------------------------------------------
