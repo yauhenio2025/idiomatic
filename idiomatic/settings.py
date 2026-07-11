@@ -55,6 +55,12 @@ class Settings(BaseSettings):
     # Counted against apkgs created today, not videos processed.
     max_new_apkgs_per_lang_per_day: int = 3
 
+    # Video apkg FILES older than this get deleted by the cron once every
+    # agent that should receive them has acked ok (DB row stays; download
+    # of a reaped file returns 410). Pool apkgs are exempt — they're
+    # replaced wholesale on every rebuild.
+    apkg_retention_days: int = 30
+
     # How many failed delivery attempts before /apkgs/pending stops
     # re-offering an apkg to an agent. A transient blip (network, locked
     # collection) used to bury the deck forever on the first failed ack.

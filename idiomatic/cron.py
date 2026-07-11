@@ -9,13 +9,40 @@ worker._check_duration), where the length is known for free.
 from __future__ import annotations
 
 import asyncio
+from pathlib import Path
 
 import structlog
 
 from . import db
+from .settings import get_settings
 from .youtube import fetch_recent
 
 log = structlog.get_logger()
+
+
+async def cleanup_delivered_apkgs() -> None:
+    """Delete video apkg FILES that are past retention and fully delivered
+    (ok-acked by every subscribed agent). The DB row stays — a download of
+    a reaped file returns 410. Keeps the 10 GB /data disk from filling
+    (~12 MB per video apkg, forever, before this)."""
+    settings = get_settings()
+    eligible = await db.video_apkgs_eligible_for_cleanup(
+        settings.apkg_retention_days)
+    n = freed = 0
+    for row in eligible:
+        path = Path(settings.data_dir) / row["filename"]
+        if path.exists():
+            size = path.stat().st_size
+            try:
+                path.unlink()
+            except OSError as e:
+                log.warning("cron.cleanup_unlink_failed",
+                             file=row["filename"], err=str(e)[:100])
+                continue
+            n += 1
+            freed += size
+    if n:
+        log.info("cron.cleanup", n_files=n, freed_mb=round(freed / 1e6, 1))
 
 
 async def run() -> None:
@@ -52,6 +79,12 @@ async def run() -> None:
                           lang=ch["lang"], title=e.title[:60])
 
     log.info("cron.done", enqueued=enqueued, skipped_known=skipped_known)
+
+    try:
+        await cleanup_delivered_apkgs()
+    except Exception as e:
+        log.warning("cron.cleanup_failed", err=repr(e)[:200])
+
     await db.close_pool()
 
 

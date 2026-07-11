@@ -349,6 +349,32 @@ async def fetch_pool_idioms(lang: str) -> list[dict]:
     return out
 
 
+async def video_apkgs_eligible_for_cleanup(retention_days: int) -> list[dict[str, Any]]:
+    """Video apkgs older than the retention window whose file can be
+    deleted: every agent subscribed to the language has acked ok, and at
+    least one ok ack exists (guards the no-agents edge case)."""
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT a.id, a.filename FROM apkgs a
+        WHERE a.kind = 'video'
+          AND a.created_at < NOW() - make_interval(days => $1)
+          AND EXISTS (
+              SELECT 1 FROM agent_acks ak
+              WHERE ak.apkg_id = a.id AND ak.status = 'ok')
+          AND NOT EXISTS (
+              SELECT 1 FROM agents ag
+              WHERE a.lang = ANY(ag.langs)
+                AND NOT EXISTS (
+                    SELECT 1 FROM agent_acks ak
+                    WHERE ak.agent_id = ag.id AND ak.apkg_id = a.id
+                      AND ak.status = 'ok'))
+        """,
+        retention_days,
+    )
+    return [dict(r) for r in rows]
+
+
 # ---- pool rebuild debounce ---------------------------------------------------
 
 async def pool_rebuilt_within(lang: str, minutes: int) -> bool:
