@@ -357,7 +357,10 @@ async def synthesize(text: str, *, voice: str, out: Path) -> None:
 
 
 async def _elevenlabs_sarah(text: str, out: Path, api_key: str) -> None:
-    """ElevenLabs Sarah — verified voice_id. English fallback only."""
+    """ElevenLabs Sarah — verified voice_id. English fallback only.
+
+    Re-encoded to 24 kHz mono so it matches the Gemini-TTS/silence concat
+    inputs (the concat demuxer -c copy path needs homogeneous params)."""
     async with httpx.AsyncClient(timeout=60) as client:
         r = await client.post(
             f"https://api.elevenlabs.io/v1/text-to-speech/{_SARAH_VOICE_ID}",
@@ -369,5 +372,15 @@ async def _elevenlabs_sarah(text: str, out: Path, api_key: str) -> None:
         )
     if r.status_code != 200:
         raise RuntimeError(f"ElevenLabs Sarah failed: HTTP {r.status_code} {r.text[:200]}")
-    out.write_bytes(r.content)
+    raw = out.with_name(".el_raw_" + out.name)
+    raw.write_bytes(r.content)
+    try:
+        subprocess.run(
+            ["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw),
+             "-ar", "24000", "-ac", "1",
+             "-c:a", "libmp3lame", "-q:a", "4", str(out)],
+            check=True,
+        )
+    finally:
+        raw.unlink(missing_ok=True)
     silence_marker(out).unlink(missing_ok=True)

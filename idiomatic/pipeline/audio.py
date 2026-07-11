@@ -75,7 +75,12 @@ def silence_mp3(root: Path, ms: int) -> Path:
 # ---- slicing --------------------------------------------------------------
 
 def slice_clip(src_audio: Path, start: float, end: float, out: Path) -> Path:
-    """ffmpeg-slice the source audio to mp3. Idempotent."""
+    """ffmpeg-slice the source audio to mp3. Idempotent.
+
+    Forced to 24 kHz mono: every other concat input (Gemini TTS, silence
+    stubs) is 24 kHz mono, and the concat demuxer's -c copy splices raw
+    mp3 frames — heterogeneous params are undefined behavior that only
+    happens to survive the loudnorm re-encode today."""
     if out.exists() and out.stat().st_size > 0:
         return out
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -84,6 +89,7 @@ def slice_clip(src_audio: Path, start: float, end: float, out: Path) -> Path:
         ["ffmpeg", "-y", "-loglevel", "error",
          "-ss", f"{start:.3f}", "-t", f"{duration:.3f}",
          "-i", str(src_audio),
+         "-ar", "24000", "-ac", "1",
          "-c:a", "libmp3lame", "-q:a", "4", str(out)],
         check=True,
     )
