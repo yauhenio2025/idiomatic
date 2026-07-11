@@ -334,7 +334,8 @@ def _stitch_pool_card_audio(*, lang: str, idiom: dict, narration_root: Path,
 
     Front layout (pimsleur shape):
       here_it_is → idiom_tgt → meaning → idiom_en
-      → how_to_use → explanation_en TTS → examples_intro
+      → how_to_use → explanation audio (audio_explanation; TTS'd on miss
+        by rebuild_pools) → examples_intro
       → ex1_en → sh → ex1_tgt → md → ex2_en → sh → ex2_tgt → md → ex3_en → sh → ex3_tgt
 
     Back layout:
@@ -372,7 +373,6 @@ def _stitch_pool_card_audio(*, lang: str, idiom: dict, narration_root: Path,
     if not (idiom_tgt.exists() and idiom_en.exists()):
         return None
 
-    listen_context = _narr("listen_context")
     here_it_is = _narr("here_it_is")
     meaning = _narr("meaning")
     how_to_use = _narr("how_to_use")
@@ -402,13 +402,13 @@ def _stitch_pool_card_audio(*, lang: str, idiom: dict, narration_root: Path,
     front_pieces += [idiom_tgt, md]
     if meaning: front_pieces += [meaning, sh]
     front_pieces += [idiom_en, md]
-    # Explanation paragraph if available
-    explanation_text = (idiom.get("explanation_en") or "").strip()
-    if explanation_text:
-        # We didn't pre-TTS the explanation. For pool cards we can either
-        # TTS it inline (slow) or skip. Skip for now — text is shown on
-        # the card; the lesson audio still works without it.
-        pass
+    # Explanation audio ("how to use it") — persisted by the worker for
+    # new videos, TTS'd on miss by rebuild_pools for older rows.
+    expl_rel = idiom.get("audio_explanation")
+    expl_path = data_root / expl_rel if expl_rel else None
+    if expl_path and expl_path.exists() and expl_path.stat().st_size > 0:
+        if how_to_use: front_pieces += [how_to_use, sh]
+        front_pieces += [expl_path, md]
     if teach and any(en and tg for en, tg in teach):
         if examples_intro: front_pieces += [examples_intro, sh]
         for i, (en_p, tgt_p) in enumerate(teach):
@@ -512,6 +512,48 @@ def _build_idioms_pool(lang: str, idioms: list[dict],
     return n_cards
 
 
+async def _ensure_explanation_audio(lang: str, idioms: list[dict]) -> None:
+    """TTS-on-miss for the explanation audio. Backfill-v2-era idioms have
+    explanation_en text but no persisted audio; synthesize it once into
+    staged_audio and record the path (one-time cost per idiom, cached on
+    disk + in the DB thereafter)."""
+    import asyncio
+
+    from .. import gemini
+
+    data_root = Path(get_settings().data_dir) / "staged_audio"
+    tasks = []
+    for idiom in idioms:
+        text = (idiom.get("explanation_en") or "").strip()
+        if not text:
+            continue
+        rel = idiom.get("audio_explanation")
+        if rel and (data_root / rel).exists() \
+                and not gemini.silence_marker(data_root / rel).exists():
+            continue
+        ytid = idiom.get("youtube_id") or "noid"
+        rel = rel or f"{ytid}/explanation_id{idiom['id']}.mp3"
+        out = data_root / rel
+
+        async def _one(idiom: dict = idiom, text: str = text,
+                       rel: str = rel, out: Path = out) -> None:
+            try:
+                await gemini.synthesize(text, voice=audio_mod.EN_VOICE, out=out)
+            except Exception as e:
+                log.warning("pool.explanation_tts_failed",
+                             idiom_id=idiom["id"], err=repr(e)[:150])
+                return
+            if out.exists() and out.stat().st_size > 0:
+                if idiom.get("audio_explanation") != rel:
+                    await db.set_idiom_explanation_audio(idiom["id"], rel)
+                idiom["audio_explanation"] = rel
+
+        tasks.append(_one())
+    if tasks:
+        log.info("pool.explanation_tts_on_miss", lang=lang, n=len(tasks))
+        await asyncio.gather(*tasks)
+
+
 # ============================================================================
 # Top-level: rebuild every pool apkg for a language
 # ============================================================================
@@ -547,6 +589,10 @@ async def rebuild_pools(lang: str, force: bool = False) -> dict:
         shutil.rmtree(stage_root)
     stage_root.mkdir(parents=True, exist_ok=True)
     narration_root = Path(settings.data_dir) / "narration"
+
+    # Fill in missing explanation audio before stitching (older rows have
+    # the text but were never TTS'd — see F-008).
+    await _ensure_explanation_audio(lang, idioms)
 
     idioms_apkg = apkg_root / "_pool_idioms.apkg"
     expr_apkg = apkg_root / "_pool_expressions.apkg"

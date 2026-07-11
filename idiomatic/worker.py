@@ -133,6 +133,7 @@ async def _persist_pool_source(*, survivors: list, lang: str, video_id: int,
         pid = f"{pid_int:03d}"
         idiom_tgt_rel = _persist(video_audio_dir / f"idiom_tgt_{pid}.mp3")
         idiom_en_rel = _persist(video_audio_dir / f"idiom_en_{pid}.mp3")
+        explanation_rel = _persist(video_audio_dir / f"explanation_{pid}.mp3")
 
         # Find the expression_id we just inserted for this phrase
         expression_id = await db.get_expression_id(lang, _normalize(en.phrase))
@@ -149,6 +150,7 @@ async def _persist_pool_source(*, survivors: list, lang: str, video_id: int,
             source_phrase_en=getattr(en, "source_phrase_en", "") or None,
             explanation_en=getattr(en, "explanation_en", "") or None,
             structured=getattr(en, "structured", None) or None,
+            audio_explanation=explanation_rel,
         )
 
         example_rows = []

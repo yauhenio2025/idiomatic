@@ -81,14 +81,19 @@ CREATE TABLE IF NOT EXISTS expression_idioms (
   -- ({usage, collocations, synonyms_*, antonyms, register_note, metaphor,
   --   pitfall, false_friend}). Rendered on the card back.
   structured     JSONB,
-  -- Both paths are relative to DATA_DIR/staged_audio
+  -- All paths are relative to DATA_DIR/staged_audio
   audio_idiom_tgt TEXT,
   audio_idiom_en  TEXT,
+  -- English TTS of explanation_en. Persisted by the worker per video;
+  -- pool rebuilds TTS-on-miss for older rows (backfill-v2 era idioms
+  -- have the text but never had the audio).
+  audio_explanation TEXT,
   created_at     TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 -- Migration for pre-existing deployments (CREATE TABLE IF NOT EXISTS above
 -- won't add the column to an already-created table). Idempotent.
 ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS structured JSONB;
+ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS audio_explanation TEXT;
 CREATE INDEX IF NOT EXISTS expression_idioms_lang_idx ON expression_idioms (lang);
 -- One idiom row per (expression, video) — makes _persist_pool_source
 -- re-runnable after a mid-video crash (retries upsert in place).

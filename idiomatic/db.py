@@ -231,6 +231,7 @@ async def insert_idiom_record(
     source_phrase_en: str | None = None,
     explanation_en: str | None = None,
     structured: dict | None = None,
+    audio_explanation: str | None = None,
 ) -> int:
     """One row per enriched idiom in a video. Returns expression_idioms.id."""
     import json
@@ -241,8 +242,8 @@ async def insert_idiom_record(
             (expression_id, video_id, lang, idiom_text, english_gloss,
              audio_idiom_tgt, audio_idiom_en,
              source_phrase_target, source_phrase_en, explanation_en,
-             structured)
-        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11::jsonb)
+             structured, audio_explanation)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11::jsonb, $12)
         ON CONFLICT (expression_id, video_id) DO UPDATE SET
             idiom_text = EXCLUDED.idiom_text,
             english_gloss = EXCLUDED.english_gloss,
@@ -251,13 +252,24 @@ async def insert_idiom_record(
             source_phrase_target = EXCLUDED.source_phrase_target,
             source_phrase_en = EXCLUDED.source_phrase_en,
             explanation_en = EXCLUDED.explanation_en,
-            structured = EXCLUDED.structured
+            structured = EXCLUDED.structured,
+            audio_explanation = EXCLUDED.audio_explanation
         RETURNING id
         """,
         expression_id, video_id, lang, idiom_text, english_gloss,
         audio_idiom_tgt, audio_idiom_en,
         source_phrase_target, source_phrase_en, explanation_en,
         json.dumps(structured) if structured else None,
+        audio_explanation,
+    )
+
+
+async def set_idiom_explanation_audio(idiom_id: int, rel_path: str) -> None:
+    """Record a TTS-on-miss explanation audio produced during a pool rebuild."""
+    pool = await get_pool()
+    await pool.execute(
+        "UPDATE expression_idioms SET audio_explanation = $2 WHERE id = $1",
+        idiom_id, rel_path,
     )
 
 
@@ -298,7 +310,7 @@ async def fetch_pool_idioms(lang: str) -> list[dict]:
     rows = await pool.fetch(
         """
         SELECT i.id, i.idiom_text, i.english_gloss,
-               i.audio_idiom_tgt, i.audio_idiom_en,
+               i.audio_idiom_tgt, i.audio_idiom_en, i.audio_explanation,
                i.source_phrase_target, i.source_phrase_en, i.explanation_en,
                i.structured,
                v.youtube_id, v.title AS video_title
