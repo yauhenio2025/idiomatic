@@ -74,11 +74,18 @@ CREATE TABLE IF NOT EXISTS expression_idioms (
   -- 2-3 sentence English explanation of usage. Drives the
   -- "how to use it" portion of the front audio.
   explanation_en TEXT,
+  -- Categorical stylebook notes from explain.generate_structured_explanation
+  -- ({usage, collocations, synonyms_*, antonyms, register_note, metaphor,
+  --   pitfall, false_friend}). Rendered on the card back.
+  structured     JSONB,
   -- Both paths are relative to DATA_DIR/staged_audio
   audio_idiom_tgt TEXT,
   audio_idiom_en  TEXT,
   created_at     TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+-- Migration for pre-existing deployments (CREATE TABLE IF NOT EXISTS above
+-- won't add the column to an already-created table). Idempotent.
+ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS structured JSONB;
 CREATE INDEX IF NOT EXISTS expression_idioms_lang_idx ON expression_idioms (lang);
 CREATE INDEX IF NOT EXISTS expression_idioms_video_idx ON expression_idioms (video_id);
 

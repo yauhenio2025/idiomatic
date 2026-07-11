@@ -156,21 +156,25 @@ async def insert_idiom_record(
     source_phrase_target: str | None = None,
     source_phrase_en: str | None = None,
     explanation_en: str | None = None,
+    structured: dict | None = None,
 ) -> int:
     """One row per enriched idiom in a video. Returns expression_idioms.id."""
+    import json
     pool = await get_pool()
     return await pool.fetchval(
         """
         INSERT INTO expression_idioms
             (expression_id, video_id, lang, idiom_text, english_gloss,
              audio_idiom_tgt, audio_idiom_en,
-             source_phrase_target, source_phrase_en, explanation_en)
-        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+             source_phrase_target, source_phrase_en, explanation_en,
+             structured)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11::jsonb)
         RETURNING id
         """,
         expression_id, video_id, lang, idiom_text, english_gloss,
         audio_idiom_tgt, audio_idiom_en,
         source_phrase_target, source_phrase_en, explanation_en,
+        json.dumps(structured) if structured else None,
     )
 
 
@@ -213,6 +217,7 @@ async def fetch_pool_idioms(lang: str) -> list[dict]:
         SELECT i.id, i.idiom_text, i.english_gloss,
                i.audio_idiom_tgt, i.audio_idiom_en,
                i.source_phrase_target, i.source_phrase_en, i.explanation_en,
+               i.structured,
                v.youtube_id, v.title AS video_title
         FROM expression_idioms i
         LEFT JOIN videos v ON v.id = i.video_id
@@ -234,9 +239,16 @@ async def fetch_pool_idioms(lang: str) -> list[dict]:
     by_idiom: dict[int, list[dict]] = {i: [] for i in idiom_ids}
     for ex in examples:
         by_idiom[ex["idiom_id"]].append(dict(ex))
+    import json
     out = []
     for r in rows:
         d = dict(r)
+        # asyncpg hands jsonb back as a string unless a codec is registered
+        if isinstance(d.get("structured"), str):
+            try:
+                d["structured"] = json.loads(d["structured"])
+            except ValueError:
+                d["structured"] = None
         d["examples"] = by_idiom.get(r["id"], [])
         out.append(d)
     return out

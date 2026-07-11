@@ -33,6 +33,40 @@ MODEL_NAME = "Idiomatic Cloud Card v2"
 # Examples expected per idiom (3 teach on front, 3 drill on back).
 EXAMPLES_PER_IDIOM = 6
 
+# Field labels for the structured-explanation sections (English).
+EXPL_LABELS = {
+    "usage":               "Usage",
+    "collocations":        "Typical collocations",
+    "synonyms_formal":     "More formal alternative",
+    "synonyms_neutral":    "Close synonym",
+    "synonyms_colloquial": "More casually",
+    "antonyms":            "Opposite",
+    "register_note":       "Register",
+    "metaphor":            "Image / etymology",
+    "pitfall":             "Grammatical pitfall",
+    "false_friend":        "False-friend warning",
+}
+
+
+def structured_html(structured: dict[str, str] | None) -> str:
+    """Render the non-empty structured-explanation fields as labelled
+    sections (same look as the v1 card's structured block)."""
+    if not structured:
+        return ""
+    rows = []
+    for k, v in structured.items():
+        v = (v or "").strip()
+        if not v:
+            continue
+        label = EXPL_LABELS.get(k, k.replace("_", " ").title())
+        rows.append(
+            f'<div class="expl-section">'
+            f'<div class="expl-label">{html.escape(label)}</div>'
+            f'<div class="expl-text">{html.escape(v)}</div>'
+            f'</div>'
+        )
+    return "".join(rows)
+
 
 # ---- HTML + CSS ----------------------------------------------------------
 
@@ -57,6 +91,12 @@ hr#answer {border: 0; border-top: 1px solid #bbb; margin: 18px 0;}
 .footer .src-pair {margin: 6px 0;}
 .footer .src-en {color: #999; font-style: italic;}
 .footer .src-tgt {color: #555;}
+.expl-section {text-align: left; max-width: 560px;
+               margin: 12px auto 0; padding: 0 4px;}
+.expl-label {font-size: clamp(11px, 2.4vw, 14px); color: #888;
+             letter-spacing: 0.06em; text-transform: uppercase;
+             margin-top: 14px; margin-bottom: 4px;}
+.expl-text {font-size: clamp(14px, 3vw, 18px); color: #222; line-height: 1.45;}
 .replay-button svg {width: 44px; height: 44px;}
 """
 
@@ -89,6 +129,7 @@ IDIOM_BACK_TMPL = """<hr id="answer">
   <div class="en-line">3. {{Example6En}}</div>
   <div class="tgt-line">→ {{Example6Target}}</div>
 </div>
+{{StructuredHtml}}
 <div class="prompt-label" style="margin-top: 18px; color: #999;">Teaching examples (heard on front):</div>
 <div class="example-row" style="opacity: 0.75;">
   <div class="en-line">· {{Example1En}}</div>
@@ -115,7 +156,12 @@ def make_model() -> genanki.Model:
     fields = ["IdiomId", "Idiom", "IdiomEn", "Explanation"]
     for i in range(1, EXAMPLES_PER_IDIOM + 1):
         fields += [f"Example{i}En", f"Example{i}Target"]
-    fields += ["SourcePhrase", "SourceEn", "FrontAudio", "BackAudio", "Source"]
+    # StructuredHtml is appended LAST so the field list stays a prefix-
+    # compatible extension of the shipped v2 model — the add-on imports
+    # with update_notetypes=ALWAYS, which adds the new field in place
+    # without breaking same-GUID note updates.
+    fields += ["SourcePhrase", "SourceEn", "FrontAudio", "BackAudio", "Source",
+               "StructuredHtml"]
     return genanki.Model(
         MODEL_ID, MODEL_NAME,
         fields=[{"name": n} for n in fields],
@@ -193,6 +239,7 @@ def build_apkg(*, out_path: Path, deck_name: str, youtube_id: str,
                 f"[sound:{f_name}]",              # FrontAudio
                 f"[sound:{b_name}]",              # BackAudio
                 f'from <a href="{html.escape(video_url)}">{html.escape(video_title)}</a>',
+                structured_html(getattr(e, "structured", None)),
             ],
             guid=_guid(youtube_id, norm),
             tags=["youtube", youtube_id, "idiomatic-cloud"],

@@ -142,6 +142,7 @@ async def _persist_pool_source(*, survivors: list, lang: str, video_id: int,
             source_phrase_target=getattr(en, "source_phrase_target", "") or None,
             source_phrase_en=getattr(en, "source_phrase_en", "") or None,
             explanation_en=getattr(en, "explanation_en", "") or None,
+            structured=getattr(en, "structured", None) or None,
         )
 
         example_rows = []
