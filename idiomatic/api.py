@@ -43,6 +43,18 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="idiomatic", version="0.1.0", lifespan=lifespan)
 
+# Strong refs for fire-and-forget admin tasks. The event loop only keeps a
+# weak reference to tasks, so an unreferenced long-running backfill can be
+# garbage-collected mid-run (documented asyncio pitfall).
+_bg_tasks: set[asyncio.Task] = set()
+
+
+def _spawn_bg(coro) -> asyncio.Task:
+    task = asyncio.create_task(coro)
+    _bg_tasks.add(task)
+    task.add_done_callback(_bg_tasks.discard)
+    return task
+
 
 # --- agent auth -------------------------------------------------------------
 
@@ -223,20 +235,16 @@ async def admin_audio_sample(
 
 # --- admin: re-TTS silence placeholders in staged_audio --------------------
 
-_retts_task: asyncio.Task | None = None  # strong ref — see F-021
-
-
 @app.post("/admin/retts")
 async def admin_retts(_: None = Depends(authed_admin)) -> dict:
     """Re-synthesize every staged audio file that is a silence placeholder
     (< 5 KB). Background; poll /admin/retts/status. Run
     /admin/rebuild-pools per language afterwards to bake healed audio
     into the pool decks."""
-    global _retts_task
     from . import retts
     if retts.get_state().get("running"):
         return {"started": False, "reason": "already running"}
-    _retts_task = asyncio.create_task(retts.run_retts())
+    _spawn_bg(retts.run_retts())
     return {"started": True}
 
 
@@ -253,7 +261,7 @@ async def admin_backfill_v2(_: None = Depends(authed_admin)) -> dict:
     from . import backfill_v2
     if backfill_v2.get_state()["running"]:
         return {"started": False, "reason": "already running"}
-    asyncio.create_task(backfill_v2.run_backfill_v2())
+    _spawn_bg(backfill_v2.run_backfill_v2())
     return {"started": True}
 
 
@@ -282,7 +290,7 @@ async def admin_rebuild_pools(
             log.warning("admin.rebuild_pools.failed", lang=lang,
                          err=repr(e)[:200])
 
-    asyncio.create_task(_run())
+    _spawn_bg(_run())
     return {"started": True, "lang": lang, "forced": True}
 
 
