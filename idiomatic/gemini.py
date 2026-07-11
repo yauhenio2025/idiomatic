@@ -241,7 +241,12 @@ async def _tts_call_fast(text: str, voice: str) -> dict:
     caller catches and decides (English→ElevenLabs, target→silence).
     """
     s = get_settings()
-    parts = [{"text": text}]
+    # Instruction preamble (NOT spoken — verified: 2.74s vs 2.81s output
+    # for the same sentence with/without). Community guidance: an explicit
+    # read-aloud framing avoids sporadic PROHIBITED_CONTENT / empty-
+    # candidate misfires on bare target-language snippets. Gemini-only —
+    # the ElevenLabs fallback gets the raw text (it WOULD speak this).
+    parts = [{"text": f"Read the following aloud in a clear, natural voice: {text}"}]
     last_exc: Exception | None = None
     for attempt, timeout in enumerate((60.0, 90.0), 1):
         if attempt > 1:

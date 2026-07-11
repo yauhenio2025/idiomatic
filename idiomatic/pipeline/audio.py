@@ -35,6 +35,12 @@ from .explain import Enriched
 log = structlog.get_logger()
 
 # Per-language target voice for Gemini Flash TTS. English narration uses Kore.
+#
+# EMPIRICAL TASTE TABLE, not a correctness table: Google assigns prebuilt
+# voices style descriptors only ("Kore — Firm") and the model auto-detects
+# language from the input text — there is no official per-language roster,
+# and accent/pacing drift is per-call. Only pt and de output have been
+# listen-verified; treat the rest as unreviewed defaults.
 LANG_VOICE = {
     "de": "Charon",
     "fr": "Aoede",
