@@ -117,11 +117,13 @@ async def _persist_pool_source(*, survivors: list, lang: str, video_id: int,
 
     def _persist(src: Path) -> str | None:
         """Copy src into stage_dir; return path RELATIVE to staged_audio root.
-        Returns None if src doesn't exist."""
+        Returns None if src doesn't exist. Re-copies on size mismatch so a
+        healed TTS file (silence placeholder replaced on retry) supersedes
+        the staged silence."""
         if not src.exists():
             return None
         dst = stage_dir / src.name
-        if not dst.exists() or dst.stat().st_size == 0:
+        if not dst.exists() or dst.stat().st_size != src.stat().st_size:
             shutil.copy2(src, dst)
         return f"{youtube_id}/{src.name}"
 

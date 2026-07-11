@@ -221,6 +221,31 @@ async def admin_audio_sample(
     return FileResponse(p, media_type="audio/mpeg")
 
 
+# --- admin: re-TTS silence placeholders in staged_audio --------------------
+
+_retts_task: asyncio.Task | None = None  # strong ref — see F-021
+
+
+@app.post("/admin/retts")
+async def admin_retts(_: None = Depends(authed_admin)) -> dict:
+    """Re-synthesize every staged audio file that is a silence placeholder
+    (< 5 KB). Background; poll /admin/retts/status. Run
+    /admin/rebuild-pools per language afterwards to bake healed audio
+    into the pool decks."""
+    global _retts_task
+    from . import retts
+    if retts.get_state().get("running"):
+        return {"started": False, "reason": "already running"}
+    _retts_task = asyncio.create_task(retts.run_retts())
+    return {"started": True}
+
+
+@app.get("/admin/retts/status")
+async def admin_retts_status(_: None = Depends(authed_admin)) -> dict:
+    from . import retts
+    return retts.get_state()
+
+
 # --- admin: backfill v2 (trigger sentence + explanation for existing rows) -
 
 @app.post("/admin/backfill-v2")

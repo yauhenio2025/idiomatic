@@ -211,8 +211,16 @@ _SARAH_VOICE_ID = "EXAVITQu4vr4xnSDxMaL"
 _SARAH_MODEL = "eleven_turbo_v2_5"
 
 
+def silence_marker(out: Path) -> Path:
+    """Sidecar marking `out` as a silence placeholder (TTS failed). Its
+    presence makes synthesize() retry instead of treating the silence as a
+    finished file, so placeholders heal on any re-run."""
+    return out.with_name(out.name + ".silence")
+
+
 async def _silence_mp3(out: Path, ms: int = 300) -> None:
-    """Write a tiny silent mp3 as a placeholder when TTS is unrecoverably blocked."""
+    """Write a tiny silent mp3 as a placeholder when TTS is unrecoverably
+    blocked, plus the .silence sidecar that flags it for retry."""
     out.parent.mkdir(parents=True, exist_ok=True)
     import subprocess
     subprocess.run(
@@ -222,6 +230,7 @@ async def _silence_mp3(out: Path, ms: int = 300) -> None:
          "-c:a", "libmp3lame", "-q:a", "9", str(out)],
         check=True,
     )
+    silence_marker(out).touch()
 
 
 async def _tts_call_fast(text: str, voice: str) -> dict:
@@ -235,6 +244,10 @@ async def _tts_call_fast(text: str, voice: str) -> dict:
     parts = [{"text": text}]
     last_exc: Exception | None = None
     for attempt, timeout in enumerate((60.0, 90.0), 1):
+        if attempt > 1:
+            # Breathe before the retry — back-to-back re-sends convert a
+            # rate-limit burst (429) straight into permanent silences.
+            await asyncio.sleep(3.0 * attempt)
         try:
             gen_config: dict[str, Any] = {
                 "temperature": 0.3,
@@ -272,7 +285,10 @@ async def _tts_call_fast(text: str, voice: str) -> dict:
 async def synthesize(text: str, *, voice: str, out: Path) -> None:
     """TTS via Gemini Flash TTS.
 
-    Idempotent: skips if `out` already exists with size > 0.
+    Idempotent: skips if `out` already exists with size > 0 — UNLESS it's
+    flagged by a .silence sidecar, in which case it's a placeholder from a
+    failed earlier attempt and we retry (silences self-heal on re-runs
+    instead of being cached forever).
 
     Falls back on any non-success outcome (Gemini safety block, ReadTimeout,
     network error):
@@ -284,7 +300,8 @@ async def synthesize(text: str, *, voice: str, out: Path) -> None:
     (max ~2.5 min wall-clock per call vs. the 8 min the global retry budget
     would otherwise consume).
     """
-    if out.exists() and out.stat().st_size > 0:
+    if (out.exists() and out.stat().st_size > 0
+            and not silence_marker(out).exists()):
         return
     out.parent.mkdir(parents=True, exist_ok=True)
 
@@ -334,6 +351,7 @@ async def synthesize(text: str, *, voice: str, out: Path) -> None:
     try:
         wav_path.write_bytes(_pcm_to_wav(pcm))
         _wav_to_mp3(wav_path, out)
+        silence_marker(out).unlink(missing_ok=True)
     finally:
         wav_path.unlink(missing_ok=True)
 
@@ -352,3 +370,4 @@ async def _elevenlabs_sarah(text: str, out: Path, api_key: str) -> None:
     if r.status_code != 200:
         raise RuntimeError(f"ElevenLabs Sarah failed: HTTP {r.status_code} {r.text[:200]}")
     out.write_bytes(r.content)
+    silence_marker(out).unlink(missing_ok=True)
