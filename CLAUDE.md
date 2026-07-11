@@ -36,8 +36,17 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
   audio to Cloudflare R2.
 - `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY` / `R2_ENDPOINT` /
   `R2_BUCKET=idiomatic-yt-audio`.
-- Agent bearer (used by both the deprecated local agent and the add-on):
-  `7899f57f-ec05-4ebe-9e78-20d2545e0686`.
+- Agent bearer (`X-Agent-Token`, grants /apkgs/* + /admin/video-info only;
+  used by the add-on): `c910fe73-01d5-4204-9620-2d867c049ab0`.
+  Rotated 2026-07-11 — the old `7899f57f-…` token in git history is dead
+  once the rotation lands. To activate: run
+  `UPDATE agents SET token = 'c910fe73-01d5-4204-9620-2d867c049ab0' WHERE token = '7899f57f-ec05-4ebe-9e78-20d2545e0686';`
+  on prod. The add-on's config.json already carries the new value, so it
+  will 401 against prod until that UPDATE runs.
+- Admin bearer (`X-Admin-Token`, required for all /admin/* except
+  video-info): `0689b67f8b862835120a437c4215ab3facae55adef207721`.
+  Must be set as `ADMIN_TOKEN` in the Render env for idiomatic-app —
+  admin endpoints return 503 while it's unset.
 
 ## Pipeline stages (`idiomatic/`)
 
@@ -68,9 +77,12 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
      apkgs for the language: `pool_idioms` (didactic), `pool_expr`
      (fluency), `pool_idiom_t2e`, `pool_idiom_e2t`.
 3. `api.py` — FastAPI. `/apkgs/pending`, `/apkgs/{id}/download`,
-   `/apkgs/{id}/ack` for the add-on. `/health`. Admin endpoints:
-   `/admin/backfill`, `/admin/backfill-v2`, `/admin/audio-audit`,
-   `/admin/audio-sample`.
+   `/apkgs/{id}/ack` for the add-on (agent token). `/health`. Admin
+   endpoints (require `X-Admin-Token`): `/admin/backfill`,
+   `/admin/backfill-v2`, `/admin/audio-audit`, `/admin/audio-sample`,
+   `/admin/rebuild-pools?lang=…` (bypasses the 30-min pool debounce).
+   Exception: `/admin/video-info` stays agent-authed — the add-on's
+   Reorganize step calls it.
 
 ## DB schema (`db/schema.sql`)
 

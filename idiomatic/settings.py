@@ -16,6 +16,10 @@ class Settings(BaseSettings):
     data_dir: Path = Path("/data")
     app_base_url: str = "http://localhost:8000"
     sign_key: str = "dev-insecure-change-me"
+    # Bearer for /admin/* endpoints (X-Admin-Token header). Separate from
+    # the per-agent tokens in the agents table, which only grant /apkgs/*.
+    # Admin endpoints refuse everything while this is unset.
+    admin_token: str | None = None
 
     # --- LLM / TTS ----------------------------------------------------------
     gemini_api_key: str

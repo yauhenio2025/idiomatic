@@ -11,6 +11,8 @@ from __future__ import annotations
 
 import asyncio
 import contextlib
+import re
+import secrets
 from pathlib import Path
 
 import structlog
@@ -55,6 +57,18 @@ async def authed_agent(x_agent_token: str | None = Header(default=None)) -> dict
         raise HTTPException(401, "unknown agent")
     await pool.execute("UPDATE agents SET last_seen = NOW() WHERE id = $1", row["id"])
     return dict(row)
+
+
+# --- admin auth ---------------------------------------------------------------
+# Separate credential from the agent tokens: an agent token only grants
+# /apkgs/* (pull + ack); ADMIN_TOKEN (env) is required for /admin/*.
+
+async def authed_admin(x_admin_token: str | None = Header(default=None)) -> None:
+    admin_token = get_settings().admin_token
+    if not admin_token:
+        raise HTTPException(503, "admin endpoints disabled (ADMIN_TOKEN unset)")
+    if not x_admin_token or not secrets.compare_digest(x_admin_token, admin_token):
+        raise HTTPException(401, "bad admin token")
 
 
 # --- agent endpoints --------------------------------------------------------
@@ -125,11 +139,10 @@ async def health() -> dict:
 
 
 # --- admin: backfill pool source data from existing per-video apkgs ---------
-# One-shot operation triggered manually. Reuses the agent's token for auth
-# so we don't need a separate admin credential.
+# One-shot operation triggered manually.
 
 @app.post("/admin/backfill")
-async def admin_backfill(agent: dict = Depends(authed_agent)) -> dict:
+async def admin_backfill(_: None = Depends(authed_admin)) -> dict:
     """Kick off a background backfill of expression_idioms + examples + audio
     from every per-video apkg under /data/apkgs/. Returns immediately;
     poll /admin/backfill/status for progress."""
@@ -142,7 +155,7 @@ async def admin_backfill(agent: dict = Depends(authed_agent)) -> dict:
 
 @app.get("/admin/backfill/status")
 async def admin_backfill_status(
-    agent: dict = Depends(authed_agent),
+    _: None = Depends(authed_admin),
 ) -> dict:
     from . import backfill
     return backfill.get_state()
@@ -152,7 +165,7 @@ async def admin_backfill_status(
 
 @app.get("/admin/audio-audit")
 async def admin_audio_audit(
-    agent: dict = Depends(authed_agent),
+    _: None = Depends(authed_admin),
 ) -> dict:
     """Walks /data/staged_audio, returns per-language file count + size
     histogram. Anything < 5 KB is almost certainly a silence placeholder."""
@@ -203,12 +216,21 @@ async def admin_audio_audit(
     return out
 
 
+# Starlette decodes %2F/%2E in path params, so these must be validated
+# before they touch the filesystem — a crafted segment could otherwise
+# traverse out of staged_audio.
+_YTID_RE = re.compile(r"^[A-Za-z0-9_-]{5,20}$")
+_AUDIO_FILE_RE = re.compile(r"^(?!.*\.\.)[A-Za-z0-9._-]+\.mp3$")
+
+
 @app.get("/admin/audio-sample/{youtube_id}/{filename}")
 async def admin_audio_sample(
     youtube_id: str, filename: str,
-    agent: dict = Depends(authed_agent),
+    _: None = Depends(authed_admin),
 ):
     """Stream a specific staged_audio file. Use to listen to a sample."""
+    if not _YTID_RE.fullmatch(youtube_id) or not _AUDIO_FILE_RE.fullmatch(filename):
+        raise HTTPException(400, "bad path")
     settings = get_settings()
     p = Path(settings.data_dir) / "staged_audio" / youtube_id / filename
     if not p.exists() or not p.is_file():
@@ -219,7 +241,7 @@ async def admin_audio_sample(
 # --- admin: backfill v2 (trigger sentence + explanation for existing rows) -
 
 @app.post("/admin/backfill-v2")
-async def admin_backfill_v2(agent: dict = Depends(authed_agent)) -> dict:
+async def admin_backfill_v2(_: None = Depends(authed_admin)) -> dict:
     from . import backfill_v2
     if backfill_v2.get_state()["running"]:
         return {"started": False, "reason": "already running"}
@@ -229,7 +251,7 @@ async def admin_backfill_v2(agent: dict = Depends(authed_agent)) -> dict:
 
 @app.get("/admin/backfill-v2/status")
 async def admin_backfill_v2_status(
-    agent: dict = Depends(authed_agent),
+    _: None = Depends(authed_admin),
 ) -> dict:
     from . import backfill_v2
     return backfill_v2.get_state()
@@ -237,7 +259,7 @@ async def admin_backfill_v2_status(
 
 @app.post("/admin/rebuild-pools")
 async def admin_rebuild_pools(
-    lang: str, agent: dict = Depends(authed_agent),
+    lang: str, _: None = Depends(authed_admin),
 ) -> dict:
     """Force a pool rebuild for one language, bypassing the 30-min
     debounce. Runs in the background (a big language re-stitches a lot of
@@ -261,7 +283,11 @@ async def admin_video_info(
     youtube_id: str, agent: dict = Depends(authed_agent),
 ) -> dict:
     """Lookup by youtube_id — used by the Anki add-on's Reorganize step
-    to answer 'what date should I prefix this deck with?'"""
+    to answer 'what date should I prefix this deck with?'
+
+    Deliberately agent-authed (not admin): the add-on calls it with its
+    agent token, and it exposes nothing beyond video metadata the agent
+    can already see via /apkgs/pending."""
     pool = await db.get_pool()
     row = await pool.fetchrow(
         """
