@@ -38,6 +38,13 @@ class OxylabsFatal(Exception):
     """4xx (other than 429), or terminal job state."""
 
 
+class OxylabsPermanentVideoFailure(OxylabsFatal):
+    """Oxylabs succeeded at the API layer but the specific video can't be
+    downloaded (age/region/copyright restrictions, deleted, etc.). Distinct
+    from OxylabsFatal so the worker can mark the video 'skipped' rather
+    than 'failed' — retries would just re-hit the same wall."""
+
+
 # ---- one R2 client per process ---------------------------------------------
 
 _r2_client = None
@@ -149,6 +156,33 @@ async def wait_for_done(job_id: str) -> dict:
             log.info("oxylabs.status", job_id=job_id, status=status)
             last = status
         if status == "done":
+            # Oxylabs marks a job "done" even when their downloader hit an
+            # internal error for THIS specific video — the storage_url
+            # comes back with an unresolved {{ extension }} placeholder and
+            # the results endpoint reports a non-success status_code (e.g.
+            # 11205). Nothing lands in R2. Detect this now and surface as
+            # a permanent per-video failure so the worker skips it (not
+            # retriable — resubmitting reproduces the same error, verified
+            # empirically on Opera Mundi videos).
+            storage_url = body.get("storage_url") or ""
+            if "{{ extension }}" in storage_url or "%7B%7B" in storage_url:
+                # Fetch the per-page results to include the exact
+                # status_code in the error for observability.
+                try:
+                    async with httpx.AsyncClient(timeout=15) as client:
+                        rr = await client.get(
+                            f"{url}/results",
+                            auth=(s.oxylabs_user, s.oxylabs_pass),
+                        )
+                    codes = [r.get("status_code") for r in
+                              (rr.json().get("results") or [])
+                              if isinstance(r, dict)]
+                except Exception:
+                    codes = []
+                raise OxylabsPermanentVideoFailure(
+                    f"job {job_id}: oxylabs couldn't download this video "
+                    f"(unresolved storage_url; result codes={codes})"
+                )
             return body
         if status == "faulted":
             raise OxylabsFatal(f"job {job_id} faulted: {r.text[:300]}")

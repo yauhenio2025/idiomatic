@@ -423,6 +423,16 @@ async def loop(once: bool = False) -> None:
                 # can pick it up. This isn't the video's fault either.
                 await db.requeue_no_attempt(video["id"], "shutdown")
                 raise
+            except oxylabs_client.OxylabsPermanentVideoFailure as e:
+                # Oxylabs said "done" but the video is undownloadable
+                # (age-gated, region-locked, deleted, some internal 11205
+                # class). Retries reproduce the same error — mark skipped
+                # so it doesn't pollute the failures pile.
+                log.info("worker.skipped_oxylabs_permanent",
+                         id=video["id"], err=str(e)[:200])
+                await db.mark_video_status(
+                    video["id"], "skipped",
+                    f"oxylabs permanent: {str(e)[:400]}")
             except Exception as e:
                 # Only OxylabsFatal is known-deterministic (faulted job,
                 # 4xx). Everything else — network blips, Gemini hiccups,
