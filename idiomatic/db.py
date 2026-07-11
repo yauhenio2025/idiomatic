@@ -86,7 +86,12 @@ async def claim_next_video(exclude_langs: list[str] | None = None) -> dict[str, 
         SET status = 'processing', picked_at = NOW(), attempts = attempts + 1
         WHERE id = (
             SELECT id FROM videos
-            WHERE status = 'queued' AND attempts < $1
+            WHERE (status = 'queued'
+                   -- reaper: reclaim rows wedged in 'processing' by a
+                   -- non-graceful death (OOM, hard deploy)
+                   OR (status = 'processing'
+                       AND picked_at < NOW() - INTERVAL '2 hours'))
+              AND attempts < $1
               AND NOT (lang = ANY($2::text[]))
             ORDER BY first_seen
             FOR UPDATE SKIP LOCKED
@@ -98,6 +103,25 @@ async def claim_next_video(exclude_langs: list[str] | None = None) -> dict[str, 
         exclude_langs or [],
     )
     return dict(row) if row else None
+
+
+async def fail_exhausted_stale_processing(max_attempts: int) -> int:
+    """Stale 'processing' rows that already burned all attempts can't be
+    reclaimed by claim_next_video — mark them failed so they're visible
+    instead of wedged forever. Returns number of rows failed."""
+    pool = await get_pool()
+    result = await pool.execute(
+        """
+        UPDATE videos
+        SET status = 'failed', finished_at = NOW(),
+            status_msg = 'worker died mid-processing; attempts exhausted'
+        WHERE status = 'processing'
+          AND picked_at < NOW() - INTERVAL '2 hours'
+          AND attempts >= $1
+        """,
+        max_attempts,
+    )
+    return int(result.split()[-1])
 
 
 async def mark_video_status(video_id: int, status: str, msg: str | None = None) -> None:
@@ -119,6 +143,21 @@ async def set_video_duration(video_id: int, duration_sec: int) -> None:
     await pool.execute(
         "UPDATE videos SET duration_sec = $2 WHERE id = $1",
         video_id, duration_sec,
+    )
+
+
+async def requeue_for_retry(video_id: int, msg: str | None = None) -> None:
+    """Release a video back to the queue KEEPING the attempt it just burned.
+    Used for transient failures — the attempts < worker_max_attempts filter
+    in claim_next_video bounds the retries."""
+    pool = await get_pool()
+    await pool.execute(
+        """
+        UPDATE videos
+        SET status = 'queued', status_msg = $2, picked_at = NULL
+        WHERE id = $1
+        """,
+        video_id, msg,
     )
 
 

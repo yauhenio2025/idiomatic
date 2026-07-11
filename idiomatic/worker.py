@@ -373,6 +373,10 @@ async def loop(once: bool = False) -> None:
     try:
         while True:
             try:
+                n_reaped = await db.fail_exhausted_stale_processing(
+                    settings.worker_max_attempts)
+                if n_reaped:
+                    log.warning("worker.stale_processing_failed", n=n_reaped)
                 capped = await db.langs_at_daily_cap(
                     settings.max_new_apkgs_per_lang_per_day)
                 video = await db.claim_next_video(exclude_langs=capped)
@@ -414,8 +418,22 @@ async def loop(once: bool = False) -> None:
                 await db.requeue_no_attempt(video["id"], "shutdown")
                 raise
             except Exception as e:
-                log.exception("worker.failed", id=video["id"], err=str(e))
-                await db.mark_video_status(video["id"], "failed", str(e)[:500])
+                # Only OxylabsFatal is known-deterministic (faulted job,
+                # 4xx). Everything else — network blips, Gemini hiccups,
+                # DB resets — gets retried until worker_max_attempts is
+                # exhausted (the attempt was already counted at claim).
+                retriable = (not isinstance(e, oxylabs_client.OxylabsFatal)
+                             and video["attempts"] < settings.worker_max_attempts)
+                if retriable:
+                    log.warning("worker.retrying", id=video["id"],
+                                 attempt=video["attempts"],
+                                 of=settings.worker_max_attempts, err=str(e)[:200])
+                    await db.requeue_for_retry(
+                        video["id"],
+                        f"attempt {video['attempts']} failed: {str(e)[:400]}")
+                else:
+                    log.exception("worker.failed", id=video["id"], err=str(e))
+                    await db.mark_video_status(video["id"], "failed", str(e)[:500])
 
             if once:
                 return
