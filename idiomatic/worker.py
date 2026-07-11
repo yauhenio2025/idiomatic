@@ -19,6 +19,7 @@ from slugify import slugify  # python-slugify pkg, slugify module
 
 from . import db
 from . import oxylabs_client
+from .langs import lang_name
 from .pipeline import audio as audio_mod
 from .pipeline import connectives
 from .pipeline.apkg import build_apkg
@@ -222,10 +223,8 @@ async def process_video(video: dict) -> None:
         narration_root = Path(settings.data_dir) / "narration"
         await connectives.ensure_cached(narration_root, voice_en="Kore")
         # Per-language practice_intro narration (one-shot per language)
-        _LANG_NAMES = {"de": "German", "fr": "French", "it": "Italian",
-                       "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin"}
         await connectives.ensure_lang_cached(
-            narration_root, _LANG_NAMES.get(lang, lang.upper()), voice_en="Kore",
+            narration_root, lang_name(lang), voice_en="Kore",
         )
 
         # Pre-create the silence cache files. silence_mp3() checks `exists()`
@@ -296,12 +295,7 @@ async def process_video(video: dict) -> None:
 
         # Date prefix so decks sort chronologically inside Anki. Use the
         # video's first_seen timestamp (when the cron first enqueued it).
-        _LANG_NAMES_FOR_DECK = {
-            "de": "German", "fr": "French", "it": "Italian",
-            "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin",
-            "nl": "Dutch", "sv": "Swedish", "no": "Norwegian", "da": "Danish",
-        }
-        lang_name_deck = _LANG_NAMES_FOR_DECK.get(lang, lang.upper())
+        lang_name_deck = lang_name(lang)
         date_prefix = "0000-00-00"
         try:
             _pool = await db.get_pool()

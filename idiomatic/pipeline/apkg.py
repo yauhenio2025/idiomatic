@@ -1,12 +1,13 @@
 """Build per-video Anki .apkg in the pimsleur didactic shape.
 
-23-field model mirroring scraper/idioms.py from the pimsleur project:
+22-field model mirroring scraper/idioms.py from the pimsleur project:
   IdiomId, Idiom, IdiomEn, Explanation,
   Example1En, Example1Target .. Example6En, Example6Target,
-  SourcePhrase, SourceEn, FrontAudio, BackAudio, Source
+  SourcePhrase, SourceEn, FrontAudio, BackAudio, Source, StructuredHtml
 
-GUID: yt-idiom-cloud::<youtube_id>::<normalized phrase>. Same as before,
-so re-imports update in place.
+GUID: yt-idiom-cloud::<youtube_id>::<lowercased phrase> (NB: plain
+lower().strip(), not dedup.normalize). Stable, so re-imports update in
+place.
 """
 
 from __future__ import annotations
@@ -173,9 +174,12 @@ def make_model() -> genanki.Model:
 
 # ---- build ----------------------------------------------------------------
 
-def _guid(youtube_id: str, normalized: str) -> str:
+def _guid(youtube_id: str, phrase_lower: str) -> str:
+    """Keyed on the lower().strip()'d phrase — NOT dedup.normalize — and
+    must stay that way: changing the keying would orphan every existing
+    note's review history on re-import."""
     return hashlib.sha1(
-        f"yt-idiom-cloud::{youtube_id}::{normalized}".encode()
+        f"yt-idiom-cloud::{youtube_id}::{phrase_lower}".encode()
     ).hexdigest()[:16]
 
 

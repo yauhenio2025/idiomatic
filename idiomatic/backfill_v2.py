@@ -24,29 +24,17 @@ existing non-empty files; stitched mp3s overwrite cleanly.
 
 from __future__ import annotations
 
-import asyncio
-import base64
-import json
 import time
 from pathlib import Path
 
 import structlog
 
 from . import db, gemini, oxylabs_client
-from .pipeline import audio as audio_mod
-from .pipeline import connectives
+from .langs import LANG_NAMES as _LANG_NAMES
 from .pipeline import pool as pool_mod
-from .pipeline.audio import EN_VOICE, LANG_VOICE
-from .pipeline.dedup import normalize
 from .settings import get_settings
 
 log = structlog.get_logger()
-
-
-_LANG_NAMES = {
-    "de": "German", "fr": "French", "it": "Italian",
-    "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin",
-}
 
 
 # ---- Gemini call: trigger sentences + explanations for one video ----------
@@ -86,121 +74,6 @@ async def _backfill_video_via_gemini(*, source_audio: Path, lang: str,
         log.warning("backfill_v2.unexpected_shape", got=type(raw).__name__)
         return {}
     return raw
-
-
-# ---- Re-stitch one card's front/back audio --------------------------------
-
-async def _restitch_card(*, idiom_row: dict, stage_dir: Path,
-                          narration_root: Path, lang: str) -> tuple[Path, Path] | None:
-    """Rebuild front/back mp3s for an existing card. Uses the persisted
-    per-card mp3s + the narration cache + (optionally) a freshly TTS'd
-    explanation paragraph. Returns (front, back) paths or None."""
-    voice_tgt = LANG_VOICE.get(lang, "Charon")
-    lang_name = _LANG_NAMES.get(lang, lang.upper())
-    idiom_id = idiom_row["id"]
-    seed = f"backfill::{lang}::{idiom_id}"
-
-    sh = audio_mod.silence_mp3(narration_root, 300)
-    md = audio_mod.silence_mp3(narration_root, 700)
-    lg = audio_mod.silence_mp3(narration_root, 1200)
-    think = audio_mod.silence_mp3(narration_root, 1500)
-
-    def _narr(key: str, lang_filled: bool = False) -> Path | None:
-        text, p = connectives.pick_general(
-            narration_root, key, seed,
-            lang_name=(lang_name if lang_filled else None),
-        )
-        if not p or not p.exists():
-            return None
-        return p
-
-    data_root = Path(get_settings().data_dir) / "staged_audio"
-
-    tgt_rel = idiom_row.get("audio_idiom_tgt")
-    en_rel = idiom_row.get("audio_idiom_en")
-    if not (tgt_rel and en_rel):
-        return None
-    idiom_tgt = data_root / tgt_rel
-    idiom_en = data_root / en_rel
-    if not (idiom_tgt.exists() and idiom_en.exists()):
-        return None
-
-    # Per-idiom explanation TTS goes into the SAME staged_audio dir.
-    youtube_id = (idiom_row.get("youtube_id")
-                  or (idiom_row.get("audio_idiom_tgt") or "").split("/", 1)[0])
-    per_video_stage = data_root / youtube_id
-    per_video_stage.mkdir(parents=True, exist_ok=True)
-    explanation_audio: Path | None = None
-    expl_text = (idiom_row.get("explanation_en") or "").strip()
-    if expl_text:
-        explanation_audio = per_video_stage / f"explanation_{idiom_id}.mp3"
-        await gemini.synthesize(expl_text, voice=EN_VOICE,
-                                  out=explanation_audio)
-
-    # Examples
-    examples = idiom_row.get("examples") or []
-    ex_files: list[tuple[Path | None, Path | None]] = []
-    for ex in examples:
-        ae = ex.get("audio_en")
-        at = ex.get("audio_target")
-        p_en = data_root / ae if ae else None
-        p_tg = data_root / at if at else None
-        ex_files.append((
-            p_en if p_en and p_en.exists() else None,
-            p_tg if p_tg and p_tg.exists() else None,
-        ))
-    teach = ex_files[:3]
-    drill = ex_files[3:6]
-
-    listen_context = _narr("listen_context")
-    here_it_is = _narr("here_it_is")
-    meaning = _narr("meaning")
-    how_to_use = _narr("how_to_use")
-    examples_intro = _narr("examples_intro")
-    practice_intro = _narr("practice_intro", lang_filled=True)
-    s1, s2, s3 = (_narr(f"sentence_{i}") for i in (1, 2, 3))
-
-    # FRONT — no per-video snippet for backfilled cards (we don't have
-    # the source.aac persisted), so we lead with here_it_is.
-    front_pieces: list[Path] = []
-    if here_it_is: front_pieces += [here_it_is, sh]
-    front_pieces += [idiom_tgt, md]
-    if meaning: front_pieces += [meaning, sh]
-    front_pieces += [idiom_en, md]
-    if explanation_audio:
-        if how_to_use: front_pieces += [how_to_use, sh]
-        front_pieces += [explanation_audio, md]
-    if any(en and tg for en, tg in teach):
-        if examples_intro: front_pieces += [examples_intro, sh]
-        first = True
-        for en_p, tgt_p in teach:
-            if not (en_p and tgt_p):
-                continue
-            if not first: front_pieces.append(md)
-            front_pieces += [en_p, sh, tgt_p]
-            first = False
-
-    front = stage_dir / f"backfill_idiom_{idiom_id}_front.mp3"
-    audio_mod.concat_mp3s(front_pieces, front)
-
-    # BACK
-    back_pieces: list[Path] = []
-    if practice_intro: back_pieces += [practice_intro, md]
-    leads = [s1, s2, s3]
-    drilled = 0
-    for i, (en_p, tgt_p) in enumerate(drill):
-        if not (en_p and tgt_p):
-            continue
-        if drilled > 0: back_pieces.append(lg)
-        if leads[i]: back_pieces += [leads[i], sh]
-        back_pieces += [en_p, think, tgt_p]
-        drilled += 1
-    back = stage_dir / f"backfill_idiom_{idiom_id}_back.mp3"
-    if back_pieces and drilled > 0:
-        audio_mod.concat_mp3s(back_pieces, back)
-    else:
-        audio_mod.concat_mp3s([sh], back, normalize_loudness=False)
-    return front, back
 
 
 # ---- Backfill one video ---------------------------------------------------

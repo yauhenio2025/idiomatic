@@ -36,6 +36,7 @@ import genanki
 import structlog
 
 from .. import db
+from ..langs import LANG_NAMES as _LANG_NAMES
 from ..settings import get_settings
 from . import audio as audio_mod
 from . import apkg as apkg_mod
@@ -121,12 +122,6 @@ _E2T_BACK = """<hr id="answer">
 # Helpers
 # ============================================================================
 
-_LANG_NAMES = {
-    "de": "German", "fr": "French", "it": "Italian",
-    "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin",
-}
-
-
 def _norm(s: str) -> str:
     s = (s or "").strip().lower()
     s = "".join(c for c in unicodedata.normalize("NFKD", s)
@@ -142,11 +137,6 @@ def _guid(*parts: str) -> str:
 def _deck_id(name: str) -> int:
     h = hashlib.sha1(f"pool-deck::{name}".encode()).hexdigest()
     return 1_820_000_000 + (int(h[:8], 16) % 100_000_000)
-
-
-def _model_id(seed: str) -> int:
-    """Deck-naming helper for the pool decks (NOT note model id)."""
-    return _deck_id(seed)
 
 
 def _expr_model() -> genanki.Model:
@@ -489,7 +479,10 @@ def _build_idioms_pool(lang: str, idioms: list[dict],
         deck.add_note(genanki.Note(
             model=model,
             fields=[
-                f"{n_cards + 1:03d}",
+                # DB idiom id, not the rebuild-order ordinal — the ordinal
+                # shifted whenever idioms gained/lost audio, producing
+                # noisy field diffs on every re-import.
+                f"{idiom['id']:03d}",
                 idiom_text, idiom_en,
                 idiom.get("explanation_en") or "",
                 *example_fields,

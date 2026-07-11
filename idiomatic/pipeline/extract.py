@@ -16,6 +16,7 @@ from pathlib import Path
 import structlog
 
 from .. import gemini
+from ..langs import LANG_NAMES as _LANG_NAMES
 from .dedup import normalize
 
 log = structlog.get_logger()
@@ -51,11 +52,6 @@ class ExtractedPhrase:
         )
 
 
-_LANG_NAMES = {
-    "de": "German", "fr": "French", "it": "Italian",
-    "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin",
-    "nl": "Dutch", "sv": "Swedish", "no": "Norwegian", "da": "Danish",
-}
 
 
 PROMPT_TMPL = """You are listening to a {lang_name} video. Identify {n_target} of the most pedagogically valuable IDIOMATIC OR IDIOMATIC-BUT-COMMON expressions used in the audio. The audience is an advanced learner (B2/C1) who already knows everyday vocabulary and wants to acquire native-feeling expressions.

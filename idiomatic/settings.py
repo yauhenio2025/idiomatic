@@ -15,7 +15,6 @@ class Settings(BaseSettings):
     database_url: str
     data_dir: Path = Path("/data")
     app_base_url: str = "http://localhost:8000"
-    sign_key: str = "dev-insecure-change-me"
     # Bearer for /admin/* endpoints (X-Admin-Token header). Separate from
     # the per-agent tokens in the agents table, which only grant /apkgs/*.
     # Admin endpoints refuse everything while this is unset.
@@ -26,7 +25,7 @@ class Settings(BaseSettings):
     gemini_text_model: str = "gemini-3.5-flash"          # text + audio understanding
     gemini_tts_model: str = "gemini-3.1-flash-tts-preview"
 
-    # Fallback TTS provider (used only if we swap voices via tts_provider)
+    # ElevenLabs fallback (Sarah) — used when Gemini TTS blocks English text.
     elevenlabs_api_key: str | None = None
 
     # --- Oxylabs YouTube Downloader (replaces yt-dlp) -----------------------

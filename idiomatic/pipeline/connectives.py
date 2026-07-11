@@ -1,11 +1,9 @@
-"""Cached English connective phrases that introduce each section of a
-structured explanation. Same shape as pimsleur's EXPLANATION_CONNECTIVES.
+"""Cached English narration cues (deck connective tissue).
 
 Each list = variants of a short English phrase. The renderer picks one
 deterministically per (idiom, key) so different cards sound varied without
-being random across re-renders. The Sarah-equivalent voice (Kore via
-Gemini Flash TTS) reads each variant exactly once, and we cache the mp3
-on disk so subsequent decks reuse them.
+being random across re-renders. Kore via Gemini Flash TTS reads each
+variant exactly once; the mp3 is cached on disk and reused by every deck.
 """
 
 from __future__ import annotations
@@ -15,66 +13,6 @@ from pathlib import Path
 
 from .. import gemini
 
-EXPLANATION_CONNECTIVES: dict[str, list[str]] = {
-    "usage": [
-        "A note on usage.",
-        "Here's what it actually does.",
-        "Some context.",
-        "First, what it really means.",
-    ],
-    "collocations": [
-        "It typically appears with these words.",
-        "Common collocations.",
-        "Words that often turn up alongside it.",
-        "Watch for these companion words.",
-    ],
-    "synonyms_formal": [
-        "A more formal alternative.",
-        "In elevated speech.",
-        "A higher-register variant.",
-        "If you want to sound more polished.",
-    ],
-    "synonyms_neutral": [
-        "A close synonym.",
-        "Another way to put it.",
-        "A near-equivalent.",
-    ],
-    "synonyms_colloquial": [
-        "More casually.",
-        "In everyday speech.",
-        "A colloquial variant.",
-    ],
-    "antonyms": [
-        "The opposite.",
-        "An antonym.",
-        "Now flip it.",
-        "If you wanted to say the opposite.",
-    ],
-    "register_note": [
-        "A note on register.",
-        "Where this fits — and where it doesn't.",
-        "On tone.",
-    ],
-    "metaphor": [
-        "Where the image comes from.",
-        "The picture behind it.",
-        "A note on the metaphor.",
-    ],
-    "pitfall": [
-        "Watch out.",
-        "A common trap.",
-        "A grammatical pitfall.",
-        "Mind this one.",
-    ],
-    "false_friend": [
-        "Don't confuse it with the English.",
-        "A false-friend warning.",
-        "Watch the English cognate.",
-    ],
-}
-
-
-# Narration cues used outside the structured-explanation section.
 # Multi-variant so the same card-build picks one deterministically by seed
 # but different cards sound varied. Matches pimsleur's NARRATION shape.
 GENERAL_NARRATION: dict[str, list[str]] = {
@@ -137,16 +75,6 @@ def cache_path(narration_root: Path, key: str, text: str) -> Path:
     return narration_root / f"narr_{key}_{h}.mp3"
 
 
-def pick_connective(narration_root: Path, key: str, seed: str) -> tuple[str, Path]:
-    """Deterministic per-card pick. Returns (text, expected_mp3_path)."""
-    variants = EXPLANATION_CONNECTIVES.get(key, [])
-    if not variants:
-        return "", None  # type: ignore[return-value]
-    idx = int(hashlib.sha1(f"{key}::{seed}".encode()).hexdigest()[:8], 16) % len(variants)
-    text = variants[idx]
-    return text, cache_path(narration_root, f"expl_{key}", text)
-
-
 async def ensure_lang_cached(narration_root: Path, lang_name: str,
                               voice_en: str = "Kore") -> None:
     """Pre-render the {lang_name}-substituted variants of practice_intro.
@@ -162,20 +90,13 @@ async def ensure_lang_cached(narration_root: Path, lang_name: str,
 
 
 async def ensure_cached(narration_root: Path, voice_en: str = "Kore") -> None:
-    """Pre-render every connective variant + general-narration cue once.
+    """Pre-render every general-narration cue once.
 
     Idempotent — only TTSes a path if its mp3 isn't already on disk.
     Call this at worker startup so audio rendering for individual cards
-    never blocks on connective TTS round-trips.
+    never blocks on narration TTS round-trips.
     """
     narration_root.mkdir(parents=True, exist_ok=True)
-
-    # Connective variants (multiple per key)
-    for key, variants in EXPLANATION_CONNECTIVES.items():
-        for v in variants:
-            p = cache_path(narration_root, f"expl_{key}", v)
-            if not p.exists():
-                await gemini.synthesize(v, voice=voice_en, out=p)
 
     # General narration cues — render every variant of each. Skip the
     # practice_intro variants with {lang_name} placeholder, they're rendered

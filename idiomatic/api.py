@@ -164,7 +164,6 @@ async def admin_audio_audit(
 ) -> dict:
     """Walks /data/staged_audio, returns per-language file count + size
     histogram. Anything < 5 KB is almost certainly a silence placeholder."""
-    import subprocess
     settings = get_settings()
     root = Path(settings.data_dir) / "staged_audio"
     out: dict = {}

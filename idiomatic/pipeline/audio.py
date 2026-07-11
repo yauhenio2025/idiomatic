@@ -29,6 +29,7 @@ from pathlib import Path
 import structlog
 
 from .. import gemini
+from ..langs import LANG_NAMES as _LANG_NAMES
 from . import connectives
 from .explain import Enriched
 
@@ -54,12 +55,6 @@ LANG_VOICE = {
     "da": "Charon",
 }
 EN_VOICE = "Kore"
-
-_LANG_NAMES = {
-    "de": "German", "fr": "French", "it": "Italian",
-    "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin",
-}
-
 
 # ---- silence cache --------------------------------------------------------
 
@@ -147,7 +142,10 @@ async def render_card_audio(idx: int, enriched: Enriched, lang: str,
     """Returns (front_mp3, back_mp3) for this idiom."""
     voice_tgt = LANG_VOICE.get(lang, "Charon")
     lang_name = _LANG_NAMES.get(lang, lang.upper())
-    seed = f"{source_mp3.stem}::{idx:03d}"
+    # Seed on the video id (work_root dir name), not source_mp3.stem —
+    # the stem is always "source", which collapsed narration-variant
+    # choice to per-index (every video's idiom #1 sounded identical).
+    seed = f"{video_audio_dir.parent.name}::{idx:03d}"
     pid = f"{idx:03d}"
 
     sh = silence_mp3(narration_root, 300)

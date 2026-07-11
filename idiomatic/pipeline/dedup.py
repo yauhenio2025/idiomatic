@@ -1,4 +1,5 @@
-"""Filter freshly-extracted phrases against the per-language expression library."""
+"""Normalization for expression dedup (the actual filtering lives in
+worker._filter_fresh, which owns the DB lookup)."""
 
 from __future__ import annotations
 
@@ -20,8 +21,3 @@ def normalize(text: str) -> str:
     t = _NONALPHA_RE.sub(" ", t)
     t = _WHITESPACE_RE.sub(" ", t).strip()
     return t
-
-
-def filter_fresh(extracted: list, existing_normalized: set[str]) -> list:
-    """Drop entries whose normalized form is already in the library."""
-    return [e for e in extracted if e.normalized not in existing_normalized]

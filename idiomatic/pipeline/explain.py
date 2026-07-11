@@ -23,6 +23,7 @@ from typing import Any
 import structlog
 
 from .. import gemini
+from ..langs import LANG_NAMES as _LANG_NAMES
 
 log = structlog.get_logger()
 
@@ -74,13 +75,6 @@ Rules:
 - One sentence per field.
 - Typical: 4-6 fields. Trivial expressions: 2-3. Rich ones: 7-8. Never fill all 10 just to fill.
 - Output ONLY the JSON object."""
-
-
-_LANG_NAMES = {
-    "de": "German", "fr": "French", "it": "Italian",
-    "pt": "Portuguese", "es": "Spanish", "zh": "Mandarin",
-    "nl": "Dutch", "sv": "Swedish", "no": "Norwegian", "da": "Danish",
-}
 
 
 @dataclass(slots=True)
