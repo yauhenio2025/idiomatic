@@ -56,8 +56,29 @@ async def enqueue_video(youtube_id: str, channel_id: int | None, lang: str,
     return row["id"] if row else None
 
 
-async def claim_next_video() -> dict[str, Any] | None:
-    """Atomic claim of the next queued video."""
+async def langs_at_daily_cap(cap: int) -> list[str]:
+    """Languages that already shipped >= cap video apkgs today."""
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT lang FROM apkgs
+        WHERE kind = 'video' AND created_at >= date_trunc('day', NOW())
+        GROUP BY lang
+        HAVING COUNT(*) >= $1
+        """,
+        cap,
+    )
+    return [r["lang"] for r in rows]
+
+
+async def claim_next_video(exclude_langs: list[str] | None = None) -> dict[str, Any] | None:
+    """Atomic claim of the next queued video.
+
+    exclude_langs keeps capped languages out of the claim entirely —
+    otherwise a capped video at the head of the global FIFO is claimed,
+    requeued, and re-claimed every cycle, starving every other language
+    behind it for the rest of the day.
+    """
     pool = await get_pool()
     row = await pool.fetchrow(
         """
@@ -66,6 +87,7 @@ async def claim_next_video() -> dict[str, Any] | None:
         WHERE id = (
             SELECT id FROM videos
             WHERE status = 'queued' AND attempts < $1
+              AND NOT (lang = ANY($2::text[]))
             ORDER BY first_seen
             FOR UPDATE SKIP LOCKED
             LIMIT 1
@@ -73,6 +95,7 @@ async def claim_next_video() -> dict[str, Any] | None:
         RETURNING id, youtube_id, channel_id, lang, title, duration_sec, attempts
         """,
         get_settings().worker_max_attempts,
+        exclude_langs or [],
     )
     return dict(row) if row else None
 

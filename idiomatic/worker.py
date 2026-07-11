@@ -373,7 +373,9 @@ async def loop(once: bool = False) -> None:
     try:
         while True:
             try:
-                video = await db.claim_next_video()
+                capped = await db.langs_at_daily_cap(
+                    settings.max_new_apkgs_per_lang_per_day)
+                video = await db.claim_next_video(exclude_langs=capped)
             except asyncio.CancelledError:
                 raise
             except Exception as e:
@@ -391,9 +393,10 @@ async def loop(once: bool = False) -> None:
                 await asyncio.sleep(settings.worker_poll_interval_sec)
                 continue
 
-            # Soft daily cap. If we're at the cap for this video's language,
-            # release it back to queued WITHOUT counting this as an attempt
-            # (otherwise three cap-hits permanently wedge the row).
+            # Belt-and-braces cap re-check: the claim already excluded capped
+            # languages, so this only fires on a race (another apkg landed
+            # for this lang between the two queries). Release back to queued
+            # WITHOUT counting an attempt.
             if not await _under_daily_cap(video["lang"]):
                 log.info("worker.daily_cap_hit", lang=video["lang"])
                 await db.requeue_no_attempt(video["id"], "cap hit; retry tomorrow")
