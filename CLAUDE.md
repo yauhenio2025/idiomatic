@@ -15,6 +15,9 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 - Anki add-on (LOCAL, not in git):
   `/home/admin/.var/app/net.ankiweb.Anki/data/Anki2/addons21/idiomatic_puller/`
   It hits `/apkgs/pending`, downloads, imports on the Qt main thread,
+  acks. Also executes a one-shot `cleanup.json` (deck names + note GUIDs
+  to delete) on Anki startup — the mechanism for propagating server-side
+  purges into the collection, since imports never delete.
   acks. Runs on a QTimer inside Anki — the user leaves Anki open and
   never touches the terminal. Menu items under Tools → Idiomatic.
 - Deprecated local agent: `~/projects/pimsleur/scraper/idiomatic_agent.py`
