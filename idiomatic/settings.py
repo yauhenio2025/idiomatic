@@ -28,6 +28,13 @@ class Settings(BaseSettings):
     # ElevenLabs fallback (Sarah) — used when Gemini TTS blocks English text.
     elevenlabs_api_key: str | None = None
 
+    # YouTube Data API v3 — the cron uses it to pre-filter videos by
+    # duration BEFORE any Oxylabs spend (official API, no bot wall; a full
+    # 24-channel walk costs ~5 quota units of the 10k/day free tier).
+    # When unset or erroring, the cron enqueues blind and the worker's
+    # post-download ffprobe gate catches out-of-window videos instead.
+    youtube_api_key: str | None = None
+
     # --- Oxylabs YouTube Downloader (replaces yt-dlp) -----------------------
     oxylabs_user: str | None = None
     oxylabs_pass: str | None = None

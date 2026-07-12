@@ -1,9 +1,12 @@
 """Cron entrypoint — polled by Render every 2h.
 
-Walks every active channel, fetches its RSS, enqueues every unseen video.
-No per-video watch-page fetches: those tripped YouTube's bot wall. The
-duration window is enforced by the worker after the audio download (see
-worker._check_duration), where the length is known for free.
+Walks every active channel, fetches its RSS, pre-filters unseen videos
+by duration via the official Data API (no bot wall, ~5 quota units per
+walk), and enqueues only in-window ones. Out-of-window videos are stored
+as 'skipped' rows so later walks treat them as known. If the API key is
+missing or errors, videos are enqueued blind and the worker's
+post-download ffprobe gate filters instead (at the cost of one Oxylabs
+job per rejected video).
 """
 
 from __future__ import annotations
@@ -15,7 +18,7 @@ import structlog
 
 from . import db
 from .settings import get_settings
-from .youtube import fetch_recent
+from .youtube import fetch_durations, fetch_recent
 
 log = structlog.get_logger()
 
@@ -46,14 +49,14 @@ async def cleanup_delivered_apkgs() -> None:
 
 
 async def run() -> None:
+    settings = get_settings()
     channels = await db.list_active_channels()
     log.info("cron.start", n_channels=len(channels))
 
-    enqueued = skipped_known = 0
+    # Phase 1 — RSS walk. YouTube's feed endpoint load-sheds when hit
+    # back-to-back; 1.5s between channels keeps the hit-rate near 100%.
+    candidates: list[tuple] = []          # (FeedEntry, channel row)
     for i, ch in enumerate(channels):
-        # YouTube's RSS feed rate-limits / load-sheds when hit back-to-back.
-        # 1.5s between channels makes a 24-channel walk take ~36s instead of
-        # ~5s, but our hit-rate jumps from ~60% to near-100%.
         if i > 0:
             await asyncio.sleep(1.5)
         try:
@@ -62,23 +65,60 @@ async def run() -> None:
             log.warning("cron.rss_failed", channel=ch["youtube_id"],
                          err=str(e)[:200])
             continue
+        candidates.extend((e, ch) for e in entries)
 
-        for e in entries:
-            vid = await db.enqueue_video(
-                youtube_id=e.youtube_id,
-                channel_id=ch["id"],
-                lang=ch["lang"],
-                title=e.title,
-                duration_sec=None,  # unknown until the worker downloads it
+    # Phase 2 — drop videos we already have a row for (one DB round-trip),
+    # plus in-walk duplicates (the same video can appear in two feeds).
+    known = await db.existing_youtube_ids(
+        [e.youtube_id for e, _ in candidates])
+    seen_in_walk: set[str] = set()
+    fresh: list[tuple] = []
+    for e, ch in candidates:
+        if e.youtube_id in known or e.youtube_id in seen_in_walk:
+            continue
+        seen_in_walk.add(e.youtube_id)
+        fresh.append((e, ch))
+
+    # Phase 3 — duration pre-filter via the official Data API (cheap:
+    # 1 quota unit per 50 ids). On ANY API problem we fall back to blind
+    # enqueueing — the worker's post-download ffprobe gate still filters,
+    # it just costs an Oxylabs job per out-of-window video.
+    durations: dict[str, int] = {}
+    if settings.youtube_api_key and fresh:
+        try:
+            durations = await fetch_durations(
+                [e.youtube_id for e, _ in fresh], settings.youtube_api_key)
+        except Exception as e:
+            log.warning("cron.duration_api_failed", err=str(e)[:200])
+
+    enqueued = pre_skipped = 0
+    for e, ch in fresh:
+        dur = durations.get(e.youtube_id)
+        in_window = (dur is None or
+                     settings.min_duration_sec <= dur
+                     <= settings.max_duration_sec)
+        if not in_window:
+            await db.enqueue_video(
+                youtube_id=e.youtube_id, channel_id=ch["id"],
+                lang=ch["lang"], title=e.title, duration_sec=dur,
+                status="skipped",
+                status_msg=(f"duration {dur}s outside "
+                            f"[{settings.min_duration_sec}, "
+                            f"{settings.max_duration_sec}] (cron pre-filter)"),
             )
-            if vid is None:
-                skipped_known += 1
-            else:
-                enqueued += 1
-                log.info("cron.enqueued", id=vid, yt=e.youtube_id,
-                          lang=ch["lang"], title=e.title[:60])
+            pre_skipped += 1
+            continue
+        vid = await db.enqueue_video(
+            youtube_id=e.youtube_id, channel_id=ch["id"],
+            lang=ch["lang"], title=e.title, duration_sec=dur,
+        )
+        if vid is not None:
+            enqueued += 1
+            log.info("cron.enqueued", id=vid, yt=e.youtube_id,
+                      lang=ch["lang"], dur=dur, title=e.title[:60])
 
-    log.info("cron.done", enqueued=enqueued, skipped_known=skipped_known)
+    log.info("cron.done", enqueued=enqueued, pre_skipped=pre_skipped,
+             skipped_known=len(candidates) - len(fresh))
 
     try:
         await cleanup_delivered_apkgs()

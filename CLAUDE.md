@@ -30,6 +30,9 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 ## Credentials the user has given me (already in Render env)
 
 - `GEMINI_API_KEY` — Gemini 3.5 Flash + Flash TTS preview.
+- `YOUTUBE_API_KEY` — YouTube Data API v3 (GCP project `idiomatic-502204`),
+  used by the cron to pre-filter video durations before Oxylabs spend.
+  10k quota units/day free; a full walk costs ~5.
 - `ELEVENLABS_API_KEY` — English fallback voice (Sarah) when Gemini
   blocks Kore. Non-English blocks silence-fallback.
 - `OXYLABS_USER` / `OXYLABS_PASS` — YouTube Downloader source, pushes

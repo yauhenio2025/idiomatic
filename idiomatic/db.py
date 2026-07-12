@@ -41,19 +41,38 @@ async def list_active_channels() -> list[dict[str, Any]]:
 # ---- Video queue helpers ---------------------------------------------------
 
 async def enqueue_video(youtube_id: str, channel_id: int | None, lang: str,
-                         title: str | None, duration_sec: int | None) -> int | None:
-    """Insert a new video as queued. Returns its id, or None if it already exists."""
+                         title: str | None, duration_sec: int | None,
+                         status: str = "queued",
+                         status_msg: str | None = None) -> int | None:
+    """Insert a new video row. Returns its id, or None if it already exists.
+
+    status defaults to 'queued'; the cron's duration pre-filter inserts
+    out-of-window videos directly as 'skipped' so they're never claimed
+    (and never re-checked on later walks — the row makes them "known")."""
     pool = await get_pool()
     row = await pool.fetchrow(
         """
-        INSERT INTO videos (youtube_id, channel_id, lang, title, duration_sec)
-        VALUES ($1, $2, $3, $4, $5)
+        INSERT INTO videos (youtube_id, channel_id, lang, title, duration_sec,
+                            status, status_msg)
+        VALUES ($1, $2, $3, $4, $5, $6, $7)
         ON CONFLICT (youtube_id) DO NOTHING
         RETURNING id
         """,
-        youtube_id, channel_id, lang, title, duration_sec,
+        youtube_id, channel_id, lang, title, duration_sec, status, status_msg,
     )
     return row["id"] if row else None
+
+
+async def existing_youtube_ids(ids: list[str]) -> set[str]:
+    """Which of these youtube_ids already have a videos row (any status)."""
+    if not ids:
+        return set()
+    pool = await get_pool()
+    rows = await pool.fetch(
+        "SELECT youtube_id FROM videos WHERE youtube_id = ANY($1::text[])",
+        ids,
+    )
+    return {r["youtube_id"] for r in rows}
 
 
 async def langs_at_daily_cap(cap: int) -> list[str]:
