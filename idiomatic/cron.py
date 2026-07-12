@@ -12,6 +12,7 @@ job per rejected video).
 from __future__ import annotations
 
 import asyncio
+import re
 from pathlib import Path
 
 import structlog
@@ -65,6 +66,12 @@ async def run() -> None:
             log.warning("cron.rss_failed", channel=ch["youtube_id"],
                          err=str(e)[:200])
             continue
+        # Per-channel title filter (case-insensitive regex) — e.g. only
+        # 'caracciolo' videos from a general talk-show channel.
+        flt = ch.get("title_filter")
+        if flt:
+            rx = re.compile(flt, re.IGNORECASE)
+            entries = [e for e in entries if rx.search(e.title or "")]
         candidates.extend((e, ch) for e in entries)
 
     # Phase 2 — drop videos we already have a row for (one DB round-trip),
@@ -94,17 +101,16 @@ async def run() -> None:
     enqueued = pre_skipped = 0
     for e, ch in fresh:
         dur = durations.get(e.youtube_id)
-        in_window = (dur is None or
-                     settings.min_duration_sec <= dur
-                     <= settings.max_duration_sec)
+        lo = ch.get("min_duration_sec") or settings.min_duration_sec
+        hi = ch.get("max_duration_sec") or settings.max_duration_sec
+        in_window = dur is None or lo <= dur <= hi
         if not in_window:
             await db.enqueue_video(
                 youtube_id=e.youtube_id, channel_id=ch["id"],
                 lang=ch["lang"], title=e.title, duration_sec=dur,
                 status="skipped",
                 status_msg=(f"duration {dur}s outside "
-                            f"[{settings.min_duration_sec}, "
-                            f"{settings.max_duration_sec}] (cron pre-filter)"),
+                            f"[{lo}, {hi}] (cron pre-filter)"),
             )
             pre_skipped += 1
             continue

@@ -161,24 +161,111 @@ _AUDIO_MIME = {
 }
 
 
+# Inline base64 requests are capped around 20 MB total. Anything bigger
+# (long-form Limes/La7 videos: ~0.9 MB per audio minute) goes through the
+# Files API instead.
+_INLINE_AUDIO_LIMIT = 18 * 1024 * 1024
+
+
+async def _upload_file_api(audio_path: Path, mime: str) -> str:
+    """Upload via the Gemini Files API (resumable, one shot), wait until the
+    file is ACTIVE, return its fileUri. Files auto-expire server-side after
+    48 h; we also delete best-effort after use."""
+    s = get_settings()
+    data = audio_path.read_bytes()
+    start_headers = {
+        "X-Goog-Upload-Protocol": "resumable",
+        "X-Goog-Upload-Command": "start",
+        "X-Goog-Upload-Header-Content-Length": str(len(data)),
+        "X-Goog-Upload-Header-Content-Type": mime,
+        "Content-Type": "application/json",
+    }
+    async with httpx.AsyncClient(timeout=300) as client:
+        r = await client.post(
+            "https://generativelanguage.googleapis.com/upload/v1beta/files",
+            params={"key": s.gemini_api_key},
+            headers=start_headers,
+            json={"file": {"display_name": audio_path.name}},
+        )
+        r.raise_for_status()
+        upload_url = r.headers.get("X-Goog-Upload-URL")
+        if not upload_url:
+            raise GeminiBlocked("files api: no upload url in start response")
+        r = await client.post(
+            upload_url,
+            headers={
+                "X-Goog-Upload-Command": "upload, finalize",
+                "X-Goog-Upload-Offset": "0",
+                "Content-Length": str(len(data)),
+            },
+            content=data,
+        )
+        r.raise_for_status()
+        finfo = r.json().get("file", {})
+        name, uri = finfo.get("name"), finfo.get("uri")
+        if not uri:
+            raise GeminiBlocked(f"files api: no uri: {str(finfo)[:200]}")
+        # Audio usually goes ACTIVE immediately; poll briefly if PROCESSING.
+        for _ in range(30):
+            if finfo.get("state") in (None, "ACTIVE"):
+                break
+            await asyncio.sleep(2)
+            rr = await client.get(
+                f"https://generativelanguage.googleapis.com/v1beta/{name}",
+                params={"key": s.gemini_api_key})
+            rr.raise_for_status()
+            finfo = rr.json()
+        if finfo.get("state") == "FAILED":
+            raise GeminiBlocked(f"files api: processing failed for {name}")
+        log.info("gemini.file_uploaded", name=name,
+                 mb=round(len(data) / 1e6, 1))
+        return uri
+
+
+async def _delete_file_api(file_uri: str) -> None:
+    """Best-effort delete of an uploaded file (they self-expire in 48h)."""
+    s = get_settings()
+    # uri looks like https://generativelanguage.googleapis.com/v1beta/files/x
+    try:
+        async with httpx.AsyncClient(timeout=30) as client:
+            await client.delete(file_uri, params={"key": s.gemini_api_key})
+    except Exception:
+        pass
+
+
 async def generate_from_audio(prompt: str, audio_path: Path, *,
                                json_mode: bool = True,
                                temperature: float = 0.3,
                                timeout: float = 300.0) -> Any:
-    """Send an audio file inline (base64) alongside a prompt. Returns JSON by default."""
+    """Send an audio file alongside a prompt. Small files go inline
+    (base64); anything over ~18 MB goes through the Files API. Returns
+    parsed JSON by default."""
     s = get_settings()
-    audio_bytes = audio_path.read_bytes()
+    size = audio_path.stat().st_size
     mime = _AUDIO_MIME.get(audio_path.suffix.lower(), "audio/mpeg")
-    parts = [
-        {"text": prompt},
-        {"inlineData": {"mimeType": mime,
-                         "data": base64.b64encode(audio_bytes).decode()}},
-    ]
-    cand = await _call(
-        s.gemini_text_model, parts,
-        response_mime_type="application/json" if json_mode else None,
-        temperature=temperature, timeout=timeout,
-    )
+    file_uri = None
+    if size > _INLINE_AUDIO_LIMIT:
+        file_uri = await _upload_file_api(audio_path, mime)
+        parts = [
+            {"text": prompt},
+            {"fileData": {"mimeType": mime, "fileUri": file_uri}},
+        ]
+    else:
+        parts = [
+            {"text": prompt},
+            {"inlineData": {"mimeType": mime,
+                             "data": base64.b64encode(
+                                 audio_path.read_bytes()).decode()}},
+        ]
+    try:
+        cand = await _call(
+            s.gemini_text_model, parts,
+            response_mime_type="application/json" if json_mode else None,
+            temperature=temperature, timeout=timeout,
+        )
+    finally:
+        if file_uri:
+            await _delete_file_api(file_uri)
     text = cand["content"]["parts"][0]["text"].strip()
     return _parse_json_lenient(text) if json_mode else text
 

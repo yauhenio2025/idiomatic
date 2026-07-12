@@ -34,7 +34,10 @@ async def close_pool() -> None:
 
 async def list_active_channels() -> list[dict[str, Any]]:
     pool = await get_pool()
-    rows = await pool.fetch("SELECT id, youtube_id, lang, name FROM channels WHERE active = TRUE")
+    rows = await pool.fetch(
+        """SELECT id, youtube_id, lang, name, title_filter,
+                  min_duration_sec, max_duration_sec
+           FROM channels WHERE active = TRUE""")
     return [dict(r) for r in rows]
 
 

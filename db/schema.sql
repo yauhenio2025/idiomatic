@@ -7,7 +7,15 @@ CREATE TABLE IF NOT EXISTS channels (
   lang          TEXT NOT NULL,
   name          TEXT,
   added_at      TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  active        BOOLEAN NOT NULL DEFAULT TRUE
+  active        BOOLEAN NOT NULL DEFAULT TRUE,
+  -- Optional per-channel controls:
+  --   title_filter: case-insensitive regex; RSS entries whose title doesn't
+  --     match are ignored (e.g. 'caracciolo' on a general talk-show channel).
+  --   min/max_duration_sec: override the global duration window (NULL =
+  --     global default). Long-form channels (Limes lectures) set max=3600.
+  title_filter       TEXT,
+  min_duration_sec   INT,
+  max_duration_sec   INT
 );
 
 CREATE TABLE IF NOT EXISTS videos (

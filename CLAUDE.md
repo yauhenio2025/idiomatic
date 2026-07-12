@@ -56,7 +56,11 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 
 ## Pipeline stages (`idiomatic/`)
 
-1. `cron.py` — every 2h. Walks `channels` (24 subs across de/fr/it/pt/es),
+1. `cron.py` — every 2h. Channels can carry `title_filter` (case-insens.
+   regex; e.g. 'caracciolo' on La7 Attualità) and per-channel
+   `min/max_duration_sec` overriding the global 7–15 min window (Limes and
+   La7-Caracciolo allow up to 60 min; audio >18 MB automatically routes
+   through the Gemini Files API instead of inline base64). Walks `channels` (24 subs across de/fr/it/pt/es),
    pulls each channel's RSS, enqueues every unseen entry (no watch-page
    fetches — those hit the bot wall; duration is checked by the worker).
 2. `worker.py`::`process_video` — the whole per-video pipeline:

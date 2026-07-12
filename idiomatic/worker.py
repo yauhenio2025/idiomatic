@@ -187,19 +187,27 @@ async def process_video(video: dict) -> None:
         # both accept it directly, no re-encode needed).
         source_audio, duration_sec = await _download_audio(youtube_id, work_root)
 
-        # 1b. Duration window check. The cron enqueues every RSS entry blind
-        # (RSS has no duration; scraping the watch page for it hit the bot
-        # wall), so the gate lives here where the length is known for free.
+        # 1b. Duration window check — fallback for videos the cron enqueued
+        # without a known duration (Data API miss/quota). ffprobe reads the
+        # audio that's already on disk. Per-channel overrides (Limes/La7
+        # long-form) take precedence over the global window.
         if duration_sec is None:
             duration_sec = await asyncio.to_thread(_ffprobe_duration, source_audio)
         if duration_sec is not None:
             await db.set_video_duration(video["id"], duration_sec)
-            if not (settings.min_duration_sec <= duration_sec
-                    <= settings.max_duration_sec):
+            lo, hi = settings.min_duration_sec, settings.max_duration_sec
+            if video.get("channel_id"):
+                _pool = await db.get_pool()
+                ch = await _pool.fetchrow(
+                    "SELECT min_duration_sec, max_duration_sec FROM channels WHERE id = $1",
+                    video["channel_id"])
+                if ch:
+                    lo = ch["min_duration_sec"] or lo
+                    hi = ch["max_duration_sec"] or hi
+            if not (lo <= duration_sec <= hi):
                 await db.mark_video_status(
                     video["id"], "skipped",
-                    f"duration {duration_sec}s outside "
-                    f"[{settings.min_duration_sec}, {settings.max_duration_sec}]",
+                    f"duration {duration_sec}s outside [{lo}, {hi}]",
                 )
                 return
         else:
