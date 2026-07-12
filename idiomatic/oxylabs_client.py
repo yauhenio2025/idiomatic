@@ -156,32 +156,34 @@ async def wait_for_done(job_id: str) -> dict:
             log.info("oxylabs.status", job_id=job_id, status=status)
             last = status
         if status == "done":
-            # Oxylabs marks a job "done" even when their downloader hit an
-            # internal error for THIS specific video — the storage_url
-            # comes back with an unresolved {{ extension }} placeholder and
-            # the results endpoint reports a non-success status_code (e.g.
-            # 11205). Nothing lands in R2. Detect this now and surface as
-            # a permanent per-video failure so the worker skips it (not
-            # retriable — resubmitting reproduces the same error, verified
-            # empirically on Opera Mundi videos).
-            storage_url = body.get("storage_url") or ""
-            if "{{ extension }}" in storage_url or "%7B%7B" in storage_url:
-                # Fetch the per-page results to include the exact
-                # status_code in the error for observability.
-                try:
-                    async with httpx.AsyncClient(timeout=15) as client:
-                        rr = await client.get(
-                            f"{url}/results",
-                            auth=(s.oxylabs_user, s.oxylabs_pass),
-                        )
-                    codes = [r.get("status_code") for r in
-                              (rr.json().get("results") or [])
-                              if isinstance(r, dict)]
-                except Exception:
-                    codes = []
+            # Oxylabs marks a job status='done' even when their downloader
+            # hit an internal error for THIS specific video. The signal is
+            # in /results: successful jobs report status_code=200 (the
+            # video-page HTTP status Oxylabs saw). Real per-video failures
+            # (age/region/copyright etc.) report an Oxylabs-internal code
+            # like 11205 and nothing lands in R2. NOTE: the storage_url in
+            # the status body ALWAYS contains a literal '{{ extension }}'
+            # template — do NOT use it as a failure signal (previous
+            # version of this check misclassified 284+ downloadable videos
+            # as permanent, verified against R2 contents on 2026-07-12).
+            try:
+                async with httpx.AsyncClient(timeout=15) as client:
+                    rr = await client.get(
+                        f"{url}/results",
+                        auth=(s.oxylabs_user, s.oxylabs_pass),
+                    )
+                codes = [r.get("status_code") for r in
+                          (rr.json().get("results") or [])
+                          if isinstance(r, dict)]
+            except Exception:
+                codes = []
+            # Any code that isn't a normal HTTP OK (200) is Oxylabs saying
+            # they couldn't get this specific video. Empty codes → let the
+            # download step's R2-emptiness check decide.
+            if codes and not all(c == 200 for c in codes):
                 raise OxylabsPermanentVideoFailure(
                     f"job {job_id}: oxylabs couldn't download this video "
-                    f"(unresolved storage_url; result codes={codes})"
+                    f"(result codes={codes})"
                 )
             return body
         if status == "faulted":
