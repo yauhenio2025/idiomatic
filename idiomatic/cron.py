@@ -71,7 +71,11 @@ async def run() -> None:
         flt = ch.get("title_filter")
         if flt:
             rx = re.compile(flt, re.IGNORECASE)
-            entries = [e for e in entries if rx.search(e.title or "")]
+            # Match against title OR description: e.g. full Otto e mezzo
+            # episodes carry Caracciolo's name only in the description.
+            entries = [e for e in entries
+                       if rx.search((e.title or "") + " "
+                                    + (e.description or ""))]
         candidates.extend((e, ch) for e in entries)
 
     # Phase 2 — drop videos we already have a row for (one DB round-trip),

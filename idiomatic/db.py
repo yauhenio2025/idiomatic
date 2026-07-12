@@ -107,15 +107,19 @@ async def claim_next_video(exclude_langs: list[str] | None = None) -> dict[str, 
         UPDATE videos
         SET status = 'processing', picked_at = NOW(), attempts = attempts + 1
         WHERE id = (
-            SELECT id FROM videos
-            WHERE (status = 'queued'
+            SELECT v.id FROM videos v
+            LEFT JOIN channels c ON c.id = v.channel_id
+            WHERE (v.status = 'queued'
                    -- reaper: reclaim rows wedged in 'processing' by a
                    -- non-graceful death (OOM, hard deploy)
-                   OR (status = 'processing'
-                       AND picked_at < NOW() - INTERVAL '2 hours'))
-              AND attempts < $1
-              AND NOT (lang = ANY($2::text[]))
-            ORDER BY first_seen
+                   OR (v.status = 'processing'
+                       AND v.picked_at < NOW() - INTERVAL '2 hours'))
+              AND v.attempts < $1
+              -- capped languages are excluded, EXCEPT priority channels
+              -- (e.g. Caracciolo sources) which bypass the daily cap
+              AND (NOT (v.lang = ANY($2::text[]))
+                   OR COALESCE(c.priority, 0) >= 10)
+            ORDER BY COALESCE(c.priority, 0) DESC, v.first_seen
             FOR UPDATE SKIP LOCKED
             LIMIT 1
         )

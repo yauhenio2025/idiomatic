@@ -70,6 +70,15 @@ def _ffprobe_duration(path: Path) -> int | None:
         return None
 
 
+def _scaled_idiom_target(duration_sec: int | None, default: int) -> int:
+    """Scale the extraction target with video length: ~1 idiom per 75s,
+    floor 4 (short Caracciolo-style clips), cap 24 (hour-long lectures).
+    Unknown duration → the configured default (12)."""
+    if not duration_sec:
+        return default
+    return max(4, min(24, round(duration_sec / 75)))
+
+
 async def _filter_fresh(extracted: list, lang: str, video_id: int) -> list:
     """Drop phrases already in the expression library — except ones first
     seen in THIS video, so a retry after a mid-video crash reprocesses its
@@ -215,7 +224,8 @@ async def process_video(video: dict) -> None:
 
         # 2. Extract idiomatic phrases via Gemini 3.5 Flash audio understanding
         extracted = await extract_from_audio(
-            source_audio, lang, n_target=settings.target_idioms_per_video,
+            source_audio, lang, n_target=_scaled_idiom_target(
+                duration_sec, settings.target_idioms_per_video),
         )
         if not extracted:
             await db.mark_video_status(video["id"], "skipped", "no idioms extracted")

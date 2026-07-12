@@ -15,7 +15,10 @@ CREATE TABLE IF NOT EXISTS channels (
   --     global default). Long-form channels (Limes lectures) set max=3600.
   title_filter       TEXT,
   min_duration_sec   INT,
-  max_duration_sec   INT
+  max_duration_sec   INT,
+  -- priority >= 10: claimed before everything else AND bypasses the
+  -- daily per-language cap (used for must-have sources, e.g. Caracciolo).
+  priority           INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS videos (

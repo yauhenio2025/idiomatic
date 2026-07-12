@@ -34,6 +34,7 @@ class FeedEntry:
     youtube_id: str
     title: str
     published: str  # ISO timestamp
+    description: str = ""
 
 
 def parse_iso8601_duration(s: str) -> int | None:
@@ -89,5 +90,6 @@ async def fetch_recent(channel_id: str, limit: int = 15) -> list[FeedEntry]:
             youtube_id=ytid,
             title=entry.get("title", ""),
             published=entry.get("published", ""),
+            description=entry.get("summary", ""),
         ))
     return out
