@@ -120,7 +120,7 @@ async def claim_next_video(exclude_langs: list[str] | None = None) -> dict[str, 
               AND (NOT (v.lang = ANY($2::text[]))
                    OR COALESCE(c.priority, 0) >= 10)
             ORDER BY COALESCE(c.priority, 0) DESC, v.first_seen
-            FOR UPDATE SKIP LOCKED
+            FOR UPDATE OF v SKIP LOCKED
             LIMIT 1
         )
         RETURNING id, youtube_id, channel_id, lang, title, duration_sec, attempts

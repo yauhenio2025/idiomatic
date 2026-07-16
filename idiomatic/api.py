@@ -149,6 +149,28 @@ async def ack(apkg_id: int, status: str = "ok",
 
 # --- health ----------------------------------------------------------------
 
+@app.get("/agent/digest")
+async def agent_digest(agent: dict = Depends(authed_agent)) -> dict:
+    """Tiny liveness digest the Anki add-on polls alongside /apkgs/pending.
+    'stalled' means: work is queued but nothing has been produced for 6+
+    hours — the signature of a wedged worker (this exact class of outage
+    has happened twice; /health alone can't see it)."""
+    pool = await db.get_pool()
+    queued = await pool.fetchval(
+        "SELECT COUNT(*) FROM videos WHERE status = 'queued'")
+    latest = await pool.fetchval("SELECT MAX(created_at) FROM apkgs")
+    import datetime as _dt
+    age_h = None
+    if latest is not None:
+        age_h = round((_dt.datetime.now(_dt.timezone.utc) - latest
+                       ).total_seconds() / 3600, 1)
+    return {
+        "queued_videos": queued,
+        "latest_apkg_age_hours": age_h,
+        "stalled": bool(queued and age_h is not None and age_h > 6),
+    }
+
+
 @app.get("/health")
 async def health() -> dict:
     pool = await db.get_pool()
