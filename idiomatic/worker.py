@@ -194,7 +194,11 @@ async def process_video(video: dict) -> None:
     try:
         # 1. Download audio via Oxylabs → R2 (returns .m4a; Gemini + ffmpeg
         # both accept it directly, no re-encode needed).
-        source_audio, duration_sec = await _download_audio(youtube_id, work_root)
+        source_audio, dl_duration = await _download_audio(youtube_id, work_root)
+        # Trust order: cron-recorded Data-API duration (exact) → Oxylabs
+        # job metadata → ffprobe estimate (unreliable on VBR ADTS: observed
+        # 113626s for a 74-min lecture — do NOT let it override the API).
+        duration_sec = video.get("duration_sec") or dl_duration
 
         # 1b. Duration window check — fallback for videos the cron enqueued
         # without a known duration (Data API miss/quota). ffprobe reads the
@@ -425,7 +429,13 @@ async def loop(once: bool = False) -> None:
             # languages, so this only fires on a race (another apkg landed
             # for this lang between the two queries). Release back to queued
             # WITHOUT counting an attempt.
-            if not await _under_daily_cap(video["lang"]):
+            video_priority = 0
+            if video.get("channel_id"):
+                _pool = await db.get_pool()
+                video_priority = await _pool.fetchval(
+                    "SELECT COALESCE(priority,0) FROM channels WHERE id=$1",
+                    video["channel_id"]) or 0
+            if video_priority < 10 and not await _under_daily_cap(video["lang"]):
                 log.info("worker.daily_cap_hit", lang=video["lang"])
                 await db.requeue_no_attempt(video["id"], "cap hit; retry tomorrow")
                 if once:
