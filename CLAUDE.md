@@ -94,9 +94,17 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
    `/apkgs/{id}/ack` for the add-on (agent token). `/health`. Admin
    endpoints (require `X-Admin-Token`):
    `/admin/backfill-v2`, `/admin/audio-audit`, `/admin/audio-sample`,
-   `/admin/rebuild-pools?lang=…` (bypasses the 30-min pool debounce).
+   `/admin/rebuild-pools?lang=…` (bypasses the 30-min pool debounce),
+   `/admin/rotate-agent-token` (JSON {name, new_token}).
    Exception: `/admin/video-info` stays agent-authed — the add-on's
    Reorganize step calls it.
+   The API lifespan applies `db/schema.sql` (idempotent) at every boot —
+   that IS the migration mechanism; there is no manual psql step.
+4. **Dashboard** — https://idiomatic-app.onrender.com/ (see DASHBOARD.md).
+   `ui_api.py` = read-only JSON under `/ui/api/*` (admin token);
+   `frontend/` = React SPA built in the Dockerfile's node stage, served
+   at `/` by api.py behind every API route. Audio playback streams
+   staged_audio via `/ui/api/audio/{yt}/{file}`.
 
 ## DB schema (`db/schema.sql`)
 
@@ -111,6 +119,12 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
   pool_expr, pool_idiom_t2e, pool_idiom_e2t}`. Video apkgs are per
   (video_id); pool apkgs are per (lang, kind) via partial-unique index.
 - `agents`, `agent_acks` — agent auth + delivery tracking.
+- `extraction_log` — every Gemini-extracted phrase with its dedup
+  verdict ('fresh' | 'duplicate' + duplicate_of → expressions.id).
+  Written best-effort in worker._filter_fresh; data exists from
+  2026-07-20 forward (earlier dedups were never persisted).
+- `videos.processing_seconds` — wall-clock per-video processing time,
+  set at mark-done (older done rows backfilled from picked_at→finished_at).
 
 ## Rate limits I have to remember
 
