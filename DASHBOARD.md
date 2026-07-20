@@ -70,3 +70,15 @@ videos from picked_at→finished_at.
   after every API route.
 - Local dev: `npm run dev` in `frontend/` proxies `/ui/api` to a local
   uvicorn on :8000.
+
+## Context clips (added 2026-07-20, same day)
+
+Every idiom harvested from deploy-time forward also keeps a **context
+clip** — the full sentence from the original video, sliced via
+sentence-level timestamps from Gemini (sanity-checked; falls back to a
+padded expression window). It plays via the "in context" buttons on
+expression cards, the expression detail page, and video detail; it now
+also opens the front audio of video-deck cards and pool idiom cards
+(pool cards previously carried no original-video audio at all). Idioms
+from before the change have no clip — their source audio was already
+deleted — and the UI labels them as such.
