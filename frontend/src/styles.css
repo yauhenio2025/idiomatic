@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Dark-first dashboard. Palette follows the dataviz reference instance
+   (dark-surface steps, validated: all six checks pass for the 5 language
+   slots on #1a1a19). */
+:root {
+  color-scheme: dark;
+
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --surface-2: #222221;
+  --ink: #ffffff;
+  --ink-2: #c3c2b7;
+  --ink-muted: #898781;
+  --grid: #2c2c2a;
+  --baseline: #383835;
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* categorical: fixed slots per language, never cycled */
+  --lang-de: #3987e5;
+  --lang-es: #008300;
+  --lang-fr: #d55181;
+  --lang-it: #c98500;
+  --lang-pt: #199e70;
+  --lang-other: #9085e9;
+
+  /* status (reserved; always paired with icon/label) */
+  --status-good: #0ca30c;
+  --status-warning: #fab219;
+  --status-serious: #ec835a;
+  --status-critical: #d03b3b;
+
+  --accent: #3987e5;
+}
+
+@theme {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--ink-muted);
+  --color-grid: var(--grid);
+  --color-baseline: var(--baseline);
+  --color-edge: var(--border);
+  --color-accent: var(--accent);
+  --color-good: var(--status-good);
+  --color-warning: var(--status-warning);
+  --color-serious: var(--status-serious);
+  --color-critical: var(--status-critical);
+}
+
+html,
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* recessive scrollbars for the dark theme */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--baseline) transparent;
+}
