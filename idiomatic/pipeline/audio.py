@@ -86,10 +86,16 @@ def slice_clip(src_audio: Path, start: float, end: float, out: Path) -> Path:
         return out
     out.parent.mkdir(parents=True, exist_ok=True)
     duration = max(0.3, end - start)
+    # -ss AFTER -i: accurate decode-seek. Input-seeking (-ss before -i)
+    # byte-estimates the position on index-less ADTS .aac (the Oxylabs
+    # format) and drifts by tens of seconds deep into long files —
+    # discovered when whisper-verifying backfilled context clips: short
+    # videos sliced fine, minute-40 slices landed on the wrong sentence.
+    # Decode-seek costs a few seconds per slice on hour-long audio.
     subprocess.run(
         ["ffmpeg", "-y", "-loglevel", "error",
-         "-ss", f"{start:.3f}", "-t", f"{duration:.3f}",
          "-i", str(src_audio),
+         "-ss", f"{start:.3f}", "-t", f"{duration:.3f}",
          "-ar", "24000", "-ac", "1",
          "-c:a", "libmp3lame", "-q:a", "4", str(out)],
         check=True,
