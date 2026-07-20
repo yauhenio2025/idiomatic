@@ -134,6 +134,10 @@ async def _backfill_one_video(video: dict) -> dict:
                 continue
             start, end = w
             out = stage_dir / f"context_bf_{idiom['id']}.mp3"
+            # slice_clip is idempotent (existing file short-circuits) — a
+            # re-run after clearing bad clips must NOT resurrect the old
+            # audio from disk.
+            out.unlink(missing_ok=True)
             try:
                 audio_mod.slice_clip(source_audio, max(0.0, start - 0.25),
                                       end + 0.35, out)

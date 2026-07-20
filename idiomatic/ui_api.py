@@ -16,7 +16,7 @@ import re
 import secrets
 from pathlib import Path
 
-from fastapi import APIRouter, Depends, HTTPException, Header, Query
+from fastapi import APIRouter, Depends, HTTPException, Header, Query, Request
 from fastapi.responses import FileResponse
 
 from . import db
@@ -488,6 +488,46 @@ async def delivery(
         "agents": agents,
         "ack_retry_budget": settings.ack_retry_budget,
     }
+
+
+# --- context-clip upload (local alignment pipeline) -------------------------
+
+@router.post("/upload-context/{idiom_id}")
+async def upload_context(
+    idiom_id: int,
+    request: Request,
+    _: None = Depends(authed_ui),
+) -> dict:
+    """Store a locally-aligned context clip for one idiom and point
+    audio_context at it. Body: raw mp3 bytes (Content-Type: audio/mpeg).
+    Used by the offline whisper-alignment runner — Gemini's audio
+    timestamps proved too noisy for backfilling old videos, so the clips
+    are cut on the operator's machine from whisper word timestamps and
+    pushed up here."""
+    pool = await db.get_pool()
+    row = await pool.fetchrow(
+        """
+        SELECT i.id, v.youtube_id FROM expression_idioms i
+        JOIN videos v ON v.id = i.video_id WHERE i.id = $1
+        """,
+        idiom_id)
+    if not row:
+        raise HTTPException(404, "unknown idiom")
+    body = await request.body()
+    if len(body) < 2000 or len(body) > 8_000_000:
+        raise HTTPException(400, "clip size out of range")
+    if not (body[:3] == b"ID3" or body[:2] in (b"\xff\xfb", b"\xff\xf3", b"\xff\xf2")):
+        raise HTTPException(400, "not an mp3")
+    stage_dir = (Path(get_settings().data_dir) / "staged_audio"
+                 / row["youtube_id"])
+    stage_dir.mkdir(parents=True, exist_ok=True)
+    name = f"context_lc_{idiom_id}.mp3"
+    (stage_dir / name).write_bytes(body)
+    rel = f"{row['youtube_id']}/{name}"
+    await pool.execute(
+        "UPDATE expression_idioms SET audio_context = $2 WHERE id = $1",
+        idiom_id, rel)
+    return {"ok": True, "audio_context": rel}
 
 
 # --- audio streaming ---------------------------------------------------------------
