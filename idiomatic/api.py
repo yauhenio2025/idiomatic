@@ -354,6 +354,34 @@ async def admin_video_info(
     }
 
 
+# --- admin: backfill context clips (pre-2026-07-20 idioms) ------------------
+
+@app.post("/admin/backfill-context")
+async def admin_backfill_context(
+    limit: int | None = None, rebuild: bool = True,
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Re-download source audio for done videos whose idioms lack
+    audio_context, locate each stored sentence via Gemini, slice + stage
+    the clips. `limit` caps the number of videos (pilot runs);
+    `rebuild=false` skips the final pool rebuilds. Background; poll
+    /admin/backfill-context/status. Resumable — re-POST continues."""
+    from . import backfill_context
+    if backfill_context.get_state()["running"]:
+        return {"started": False, "reason": "already running"}
+    _spawn_bg(backfill_context.run_backfill_context(
+        limit=limit, rebuild=rebuild))
+    return {"started": True, "limit": limit, "rebuild": rebuild}
+
+
+@app.get("/admin/backfill-context/status")
+async def admin_backfill_context_status(
+    _: None = Depends(authed_admin),
+) -> dict:
+    from . import backfill_context
+    return backfill_context.get_state()
+
+
 # --- admin: rotate an agent's bearer token ----------------------------------
 
 @app.post("/admin/rotate-agent-token")
