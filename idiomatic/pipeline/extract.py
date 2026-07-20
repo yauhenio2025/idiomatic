@@ -36,19 +36,41 @@ class ExtractedPhrase:
     # 2-3 sentence English explanation. TTS'd into the front audio and
     # displayed on the front of the card.
     explanation_en: str = ""
+    # Window of the FULL source_phrase sentence — sliced into the
+    # "context clip" so the learner hears the whole utterance, not just
+    # the bare expression. Sanitized in from_dict: must contain the
+    # expression window and stay under 45s, else falls back to the
+    # expression window padded by 6s before / 3s after.
+    sentence_start: float = 0.0
+    sentence_end: float = 0.0
 
     @classmethod
     def from_dict(cls, d: dict) -> "ExtractedPhrase":
         text = (d.get("text") or "").strip()
+        audio_start = float(d.get("audio_start") or 0.0)
+        audio_end = float(d.get("audio_end") or 0.0)
+        try:
+            s_start = float(d.get("sentence_start"))
+            s_end = float(d.get("sentence_end"))
+        except (TypeError, ValueError):
+            s_start = s_end = -1.0
+        plausible = (0 <= s_start <= audio_start
+                     and s_end >= audio_end
+                     and 0 < s_end - s_start <= 45.0)
+        if not plausible:
+            s_start = max(0.0, audio_start - 6.0)
+            s_end = audio_end + 3.0
         return cls(
             text=text,
             normalized=normalize(text),
             english=(d.get("english") or "").strip(),
-            audio_start=float(d.get("audio_start") or 0.0),
-            audio_end=float(d.get("audio_end") or 0.0),
+            audio_start=audio_start,
+            audio_end=audio_end,
             source_phrase_target=(d.get("source_phrase") or "").strip(),
             source_phrase_en=(d.get("source_phrase_en") or "").strip(),
             explanation_en=(d.get("explanation") or "").strip(),
+            sentence_start=s_start,
+            sentence_end=s_end,
         )
 
 
@@ -78,9 +100,14 @@ For EACH chosen expression, output:
 - `explanation`: 2-3 sentence English explanation of what the expression means, when it's used, and what register / collocations / pitfalls a learner should know. Written like a textbook usage note, not a dictionary entry. Use simple English; the learner is B2/C1 so they understand the target language but the explanation is in English.
 - `audio_start`: start time in seconds (float) of the expression itself.
 - `audio_end`: end time in seconds (float) of the expression itself.
+- `sentence_start`: start time in seconds (float) of the FULL sentence you
+  transcribed in `source_phrase` (it must contain the expression window).
+- `sentence_end`: end time in seconds (float) of that full sentence.
 
-Pin the timestamps tightly to where the expression is actually uttered — they
-will be used to slice the audio for flashcards.
+Pin `audio_start`/`audio_end` tightly to where the expression is actually
+uttered, and `sentence_start`/`sentence_end` to the whole spoken sentence —
+both windows are used to slice the audio for flashcards (the sentence window
+lets the learner hear the expression in its real context).
 
 Output a JSON ARRAY of {n_target} objects. ONLY the array, no preamble."""
 

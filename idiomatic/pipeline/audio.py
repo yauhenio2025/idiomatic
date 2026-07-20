@@ -138,7 +138,9 @@ def concat_mp3s(pieces: list[Path], out: Path,
 async def render_card_audio(idx: int, enriched: Enriched, lang: str,
                               source_mp3: Path, audio_start: float, audio_end: float,
                               video_audio_dir: Path,
-                              narration_root: Path) -> tuple[Path, Path]:
+                              narration_root: Path,
+                              sentence_start: float | None = None,
+                              sentence_end: float | None = None) -> tuple[Path, Path]:
     """Returns (front_mp3, back_mp3) for this idiom."""
     voice_tgt = LANG_VOICE.get(lang, "Charon")
     lang_name = _LANG_NAMES.get(lang, lang.upper())
@@ -154,9 +156,20 @@ async def render_card_audio(idx: int, enriched: Enriched, lang: str,
     think = silence_mp3(narration_root, 1500)
 
     # --- snippet from the source video --------------------------------------
-    snippet = slice_clip(source_mp3,
-                          audio_start, audio_end,
-                          video_audio_dir / f"snippet_{pid}.mp3")
+    # Context clip = the whole sentence containing the expression (window
+    # from Gemini, sanitized upstream). The learner hears the expression
+    # in its real surroundings — the tight expression-only slice is only
+    # a fallback for pre-sentence-window extractions.
+    if (sentence_start is not None and sentence_end is not None
+            and sentence_end > sentence_start):
+        snippet = slice_clip(source_mp3,
+                              max(0.0, sentence_start - 0.25),
+                              sentence_end + 0.35,
+                              video_audio_dir / f"context_{pid}.mp3")
+    else:
+        snippet = slice_clip(source_mp3,
+                              audio_start, audio_end,
+                              video_audio_dir / f"snippet_{pid}.mp3")
 
     # --- planning pass ------------------------------------------------------
     tts_tasks: list = []

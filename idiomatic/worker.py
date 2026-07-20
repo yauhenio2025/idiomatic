@@ -163,6 +163,10 @@ async def _persist_pool_source(*, survivors: list, lang: str, video_id: int,
         idiom_tgt_rel = _persist(video_audio_dir / f"idiom_tgt_{pid}.mp3")
         idiom_en_rel = _persist(video_audio_dir / f"idiom_en_{pid}.mp3")
         explanation_rel = _persist(video_audio_dir / f"explanation_{pid}.mp3")
+        # Sentence-level slice of the original video (the "hear it in
+        # context" clip). Older extractions only produced the tight
+        # expression-only snippet, which we don't persist.
+        context_rel = _persist(video_audio_dir / f"context_{pid}.mp3")
 
         # Find the expression_id we just inserted for this phrase
         expression_id = await db.get_expression_id(lang, _normalize(en.phrase))
@@ -180,6 +184,7 @@ async def _persist_pool_source(*, survivors: list, lang: str, video_id: int,
             explanation_en=getattr(en, "explanation_en", "") or None,
             structured=getattr(en, "structured", None) or None,
             audio_explanation=explanation_rel,
+            audio_context=context_rel,
         )
 
         example_rows = []
@@ -307,6 +312,8 @@ async def process_video(video: dict) -> None:
                         audio_start=phrase.audio_start, audio_end=phrase.audio_end,
                         video_audio_dir=video_audio_dir,
                         narration_root=narration_root,
+                        sentence_start=getattr(phrase, "sentence_start", None),
+                        sentence_end=getattr(phrase, "sentence_end", None),
                     )
                     log.info("worker.idiom.done", i=i,
                              dt=round(_time.monotonic() - t0, 1))

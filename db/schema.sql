@@ -105,6 +105,10 @@ CREATE TABLE IF NOT EXISTS expression_idioms (
 -- won't add the column to an already-created table). Idempotent.
 ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS structured JSONB;
 ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS audio_explanation TEXT;
+-- Sentence-level slice of the original video audio ("hear it in context").
+-- NULL for idioms harvested before 2026-07-20 — their source audio was
+-- already deleted, so no backfill is possible.
+ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS audio_context TEXT;
 CREATE INDEX IF NOT EXISTS expression_idioms_lang_idx ON expression_idioms (lang);
 -- One idiom row per (expression, video) — makes _persist_pool_source
 -- re-runnable after a mid-video crash (retries upsert in place).

@@ -15,6 +15,7 @@ interface ExprRow {
   explanation_en: string | null;
   audio_idiom_tgt: string | null;
   audio_idiom_en: string | null;
+  audio_context: string | null;
   created_at: string;
   video_id: number | null;
   youtube_id: string | null;
@@ -134,6 +135,7 @@ export default function Expressions() {
                   <p className="line-clamp-2 text-sm text-ink-2">{r.explanation_en}</p>
                 )}
                 <div className="mt-auto flex flex-wrap items-center gap-2 pt-1">
+                  <AudioButton path={r.audio_context} label="in context" />
                   <AudioButton path={r.audio_idiom_tgt} label="idiom" />
                   <AudioButton path={r.audio_idiom_en} label="EN" />
                   <span className="ml-auto flex items-center gap-2 text-xs text-muted">

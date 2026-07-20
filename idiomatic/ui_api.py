@@ -272,7 +272,7 @@ async def video_detail(video_id: int, _: None = Depends(authed_ui)) -> dict:
         SELECT i.id, i.expression_id, i.idiom_text, i.english_gloss,
                i.source_phrase_target, i.source_phrase_en, i.explanation_en,
                i.structured, i.audio_idiom_tgt, i.audio_idiom_en,
-               i.audio_explanation, i.created_at
+               i.audio_explanation, i.audio_context, i.created_at
         FROM expression_idioms i WHERE i.video_id = $1 ORDER BY i.id
         """,
         video_id)
@@ -356,7 +356,7 @@ async def expressions(
         f"""
         SELECT i.id, i.expression_id, i.lang, i.idiom_text, i.english_gloss,
                i.explanation_en, i.audio_idiom_tgt, i.audio_idiom_en,
-               i.created_at,
+               i.audio_context, i.created_at,
                v.id AS video_id, v.youtube_id, v.title AS video_title,
                c.id AS channel_id, c.name AS channel_name,
                dup.n_reencounters

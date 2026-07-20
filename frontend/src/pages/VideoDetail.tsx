@@ -40,6 +40,7 @@ interface Detail {
     audio_idiom_tgt: string | null;
     audio_idiom_en: string | null;
     audio_explanation: string | null;
+    audio_context: string | null;
     examples: Example[];
   }[];
   extraction_log: {
@@ -130,6 +131,7 @@ export default function VideoDetail() {
                   </Link>
                   <span className="text-sm text-ink-2">{i.english_gloss}</span>
                   <div className="ml-auto flex gap-1.5">
+                    <AudioButton path={i.audio_context} label="in context" />
                     <AudioButton path={i.audio_idiom_tgt} label="idiom" />
                     <AudioButton path={i.audio_idiom_en} label="EN" />
                     <AudioButton path={i.audio_explanation} label="explainer" />

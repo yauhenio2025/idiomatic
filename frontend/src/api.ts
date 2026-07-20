@@ -104,6 +104,7 @@ export interface IdiomDetail {
   audio_idiom_tgt: string | null;
   audio_idiom_en: string | null;
   audio_explanation: string | null;
+  audio_context: string | null;
   created_at: string;
   youtube_id: string | null;
   video_title: string | null;

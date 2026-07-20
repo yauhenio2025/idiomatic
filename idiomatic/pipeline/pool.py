@@ -333,8 +333,11 @@ def _stitch_pool_card_audio(*, lang: str, idiom: dict, narration_root: Path,
       → sentence_2 → ex5_en → think → ex5_tgt → lg
       → sentence_3 → ex6_en → think → ex6_tgt
 
-    Note: the original-video snippet is OMITTED from pool cards — that
-    snippet is per-video and doesn't fit a cross-video aggregation.
+    When the idiom has a persisted context clip (audio_context — the
+    full sentence from the original video, staged from 2026-07-20 on),
+    the front opens with listen_context → context clip, so the learner
+    hears the expression in its real surroundings. Older idioms (no
+    persisted clip; their source audio is gone) keep the clip-less front.
     """
     data_root = Path(get_settings().data_dir) / "staged_audio"
     seed = f"pool::{lang}::{idiom['id']}"
@@ -363,6 +366,7 @@ def _stitch_pool_card_audio(*, lang: str, idiom: dict, narration_root: Path,
     if not (idiom_tgt.exists() and idiom_en.exists()):
         return None
 
+    listen_context = _narr("listen_context")
     here_it_is = _narr("here_it_is")
     meaning = _narr("meaning")
     how_to_use = _narr("how_to_use")
@@ -388,6 +392,11 @@ def _stitch_pool_card_audio(*, lang: str, idiom: dict, narration_root: Path,
 
     # Front audio: connectives are SKIPPED if missing (degrade gracefully)
     front_pieces: list[Path] = []
+    ctx_rel = idiom.get("audio_context")
+    ctx_path = data_root / ctx_rel if ctx_rel else None
+    if ctx_path and ctx_path.exists() and ctx_path.stat().st_size > 0:
+        if listen_context: front_pieces += [listen_context, sh]
+        front_pieces += [ctx_path, md]
     if here_it_is: front_pieces += [here_it_is, sh]
     front_pieces += [idiom_tgt, md]
     if meaning: front_pieces += [meaning, sh]

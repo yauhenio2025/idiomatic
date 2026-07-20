@@ -26,6 +26,7 @@ export default function ExpressionDetail() {
           <LangBadge lang={d.lang} />
         </div>
         <div className="mt-2 flex flex-wrap gap-2">
+          <AudioButton path={d.audio_context} label="hear it in context" />
           <AudioButton path={d.audio_idiom_tgt} label="hear the idiom" />
           <AudioButton path={d.audio_idiom_en} label="hear the English" />
           <AudioButton path={d.audio_explanation} label="hear the explainer" />
@@ -43,6 +44,17 @@ export default function ExpressionDetail() {
           <blockquote className="border-l-2 border-baseline pl-3 text-base italic">
             “{d.source_phrase_target}”
           </blockquote>
+          {d.audio_context ? (
+            <div className="mt-2 pl-3">
+              <AudioButton path={d.audio_context} label="play this moment from the video" />
+            </div>
+          ) : (
+            <p className="mt-2 pl-3 text-xs text-muted">
+              No context clip — this expression was harvested before
+              sentence clips were kept (2026-07-20); the source audio is
+              gone.
+            </p>
+          )}
           {d.source_phrase_en && (
             <p className="mt-1.5 pl-3 text-sm text-muted">— {d.source_phrase_en}</p>
           )}
