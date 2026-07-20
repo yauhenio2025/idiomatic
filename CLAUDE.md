@@ -43,16 +43,20 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 - `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY` / `R2_ENDPOINT` /
   `R2_BUCKET=idiomatic-yt-audio`.
 - Agent bearer (`X-Agent-Token`, grants /apkgs/* + /admin/video-info only;
-  used by the add-on): `c910fe73-01d5-4204-9620-2d867c049ab0`.
-  Rotated 2026-07-11 — the old `7899f57f-…` token in git history is dead
-  once the rotation lands. To activate: run
-  `UPDATE agents SET token = 'c910fe73-01d5-4204-9620-2d867c049ab0' WHERE token = '7899f57f-ec05-4ebe-9e78-20d2545e0686';`
-  on prod. The add-on's config.json already carries the new value, so it
-  will 401 against prod until that UPDATE runs.
-- Admin bearer (`X-Admin-Token`, required for all /admin/* except
-  video-info): `0689b67f8b862835120a437c4215ab3facae55adef207721`.
-  Must be set as `ADMIN_TOKEN` in the Render env for idiomatic-app —
-  admin endpoints return 503 while it's unset.
+  used by the add-on): NOT in this file — the live value exists only in
+  the `agents` DB row and the add-on's local `config.json`. Rotate with
+  `POST /admin/rotate-agent-token` (admin-authed, JSON
+  `{"name": "...", "new_token": "..."}`), then update the add-on config.
+  All tokens that ever appeared in git history are dead.
+- Admin bearer (`X-Admin-Token`, required for all /admin/* and the
+  dashboard /ui/api/*): NOT in this file — set as `ADMIN_TOKEN` in the
+  Render env for idiomatic-app (admin endpoints return 503 while unset);
+  the local copy lives in `~/.config/idiomatic-admin.env` (gitignored
+  path outside the repo). Rotate by updating both places.
+- SECURITY NOTE: this repo must stay PUBLIC for Render deploys to work
+  (the service clones it anonymously — no GitHub App connection), so no
+  live secret may ever be committed. Tokens formerly in git history were
+  all rotated dead on 2026-07-20.
 
 ## Pipeline stages (`idiomatic/`)
 

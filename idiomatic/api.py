@@ -18,8 +18,10 @@ from pathlib import Path
 import structlog
 from fastapi import Depends, FastAPI, Header, HTTPException
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from . import db
+from . import ui_api
 from .settings import get_settings
 from .worker import loop as worker_loop
 
@@ -49,6 +51,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="idiomatic", version="0.1.0", lifespan=lifespan)
+app.include_router(ui_api.router)
 
 # Strong refs for fire-and-forget admin tasks. The event loop only keeps a
 # weak reference to tasks, so an unreferenced long-running backfill can be
@@ -349,3 +352,49 @@ async def admin_video_info(
         "first_seen_date": row["first_seen_date"].isoformat()
         if row["first_seen_date"] else None,
     }
+
+
+# --- admin: rotate an agent's bearer token ----------------------------------
+
+@app.post("/admin/rotate-agent-token")
+async def admin_rotate_agent_token(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Set a new bearer token for one agent (by name). Used to kill
+    tokens that leaked into git history. The add-on 401s until its local
+    config.json carries the new value; failed acks retry, so a short
+    window is harmless."""
+    name, new_token = body.get("name"), body.get("new_token")
+    if not name or not new_token or len(new_token) < 16:
+        raise HTTPException(400, "need name + new_token (>= 16 chars)")
+    pool = await db.get_pool()
+    result = await pool.execute(
+        "UPDATE agents SET token = $2 WHERE name = $1", name, new_token)
+    if result.split()[-1] == "0":
+        raise HTTPException(404, "unknown agent name")
+    return {"ok": True, "agent": name}
+
+
+# --- dashboard SPA (must be registered LAST — the catch-all would otherwise
+# shadow the API routes above; FastAPI matches in registration order) --------
+
+_FRONTEND_DIST = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+
+if _FRONTEND_DIST.is_dir():
+    app.mount("/assets", StaticFiles(directory=_FRONTEND_DIST / "assets"),
+              name="assets")
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def spa(full_path: str):
+        """Serve the built dashboard; client-side routing gets index.html.
+        Unknown API-ish paths still 404 as JSON instead of returning HTML."""
+        if full_path.split("/", 1)[0] in ("ui", "apkgs", "admin", "agent",
+                                           "health", "assets"):
+            raise HTTPException(404, "not found")
+        candidate = (_FRONTEND_DIST / full_path).resolve()
+        if (full_path and candidate.is_file()
+                and candidate.is_relative_to(_FRONTEND_DIST)):
+            return FileResponse(candidate)
+        return FileResponse(_FRONTEND_DIST / "index.html")
+else:
+    log.warning("api.frontend_dist_missing", path=str(_FRONTEND_DIST))
