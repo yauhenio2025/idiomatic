@@ -382,6 +382,27 @@ async def admin_backfill_context_status(
     return backfill_context.get_state()
 
 
+@app.post("/admin/clear-context")
+async def admin_clear_context(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """NULL out audio_context for the given expression_idioms ids — used
+    to prune backfilled clips that failed the offline whisper
+    verification (clip transcribes to a different sentence). The staged
+    file is left on disk (unreferenced, ~100 KB each)."""
+    ids = body.get("ids")
+    if not isinstance(ids, list) or not all(isinstance(i, int) for i in ids):
+        raise HTTPException(400, "body must be {\"ids\": [int, ...]}")
+    if not ids:
+        return {"cleared": 0}
+    pool = await db.get_pool()
+    result = await pool.execute(
+        "UPDATE expression_idioms SET audio_context = NULL WHERE id = ANY($1::bigint[])",
+        ids,
+    )
+    return {"cleared": int(result.split()[-1])}
+
+
 # --- admin: rotate an agent's bearer token ----------------------------------
 
 @app.post("/admin/rotate-agent-token")
