@@ -133,6 +133,40 @@ CREATE TABLE IF NOT EXISTS pool_rebuild_state (
   last_rebuilt_at  TIMESTAMPTZ NOT NULL
 );
 
+-- ============================================================================
+-- Extraction/dedup log: one row per phrase Gemini extracted from a video,
+-- with the dedup verdict. Fills the "what did we reject as already-known"
+-- gap — before this table only fresh survivors were recorded anywhere.
+-- No backfill is possible (duplicates were dropped in memory); rows exist
+-- from the table's deploy date forward. UNIQUE(video_id, normalized) makes
+-- a retried video upsert its rows instead of duplicating them.
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS extraction_log (
+  id            BIGSERIAL PRIMARY KEY,
+  video_id      INTEGER REFERENCES videos(id) ON DELETE CASCADE,
+  lang          TEXT NOT NULL,
+  phrase        TEXT NOT NULL,
+  normalized    TEXT NOT NULL,
+  english       TEXT,
+  verdict       TEXT NOT NULL,                  -- 'fresh' | 'duplicate'
+  duplicate_of  INTEGER REFERENCES expressions(id) ON DELETE SET NULL,
+  created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  UNIQUE (video_id, normalized)
+);
+CREATE INDEX IF NOT EXISTS extraction_log_video_idx ON extraction_log (video_id);
+CREATE INDEX IF NOT EXISTS extraction_log_dup_idx
+  ON extraction_log (duplicate_of) WHERE duplicate_of IS NOT NULL;
+
+-- Wall-clock seconds process_video spent on the video (set at mark-done).
+ALTER TABLE videos ADD COLUMN IF NOT EXISTS processing_seconds INTEGER;
+-- Historical approximation for rows finished before the column existed:
+-- picked_at → finished_at brackets the processing window. Idempotent.
+UPDATE videos SET processing_seconds =
+    GREATEST(0, EXTRACT(EPOCH FROM finished_at - picked_at)::int)
+  WHERE processing_seconds IS NULL AND status = 'done'
+    AND picked_at IS NOT NULL AND finished_at IS NOT NULL;
+
 CREATE TABLE IF NOT EXISTS agents (
   id             SERIAL PRIMARY KEY,
   token          TEXT UNIQUE NOT NULL,           -- bearer auth header

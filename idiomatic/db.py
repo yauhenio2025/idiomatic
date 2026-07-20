@@ -23,6 +23,21 @@ async def get_pool() -> asyncpg.Pool:
     return _pool
 
 
+async def apply_schema() -> None:
+    """Execute db/schema.sql (fully idempotent — IF NOT EXISTS everywhere).
+
+    Called from the API lifespan at boot so new tables/columns exist before
+    the worker loop starts. Replaces manual psql migrations: prod DB
+    credentials never leave Render."""
+    from pathlib import Path
+    schema_path = Path(__file__).resolve().parent.parent / "db" / "schema.sql"
+    sql = schema_path.read_text(encoding="utf-8")
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        await conn.execute(sql)
+    log.info("db.schema_applied", path=str(schema_path))
+
+
 async def close_pool() -> None:
     global _pool
     if _pool is not None:
@@ -245,6 +260,62 @@ async def insert_expressions(lang: str, video_id: int,
             )
     # asyncpg's executemany doesn't return per-row counts; re-query is simpler
     return len(items)
+
+
+async def expression_ids_by_normalized(lang: str,
+                                         normalized: list[str],
+                                         ) -> dict[str, int]:
+    """normalized → expressions.id map for the given language."""
+    if not normalized:
+        return {}
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT id, normalized FROM expressions
+        WHERE lang = $1 AND normalized = ANY($2::text[])
+        """,
+        lang, normalized,
+    )
+    return {r["normalized"]: r["id"] for r in rows}
+
+
+async def log_extractions(video_id: int, lang: str,
+                           entries: list[dict]) -> None:
+    """entries: [{'phrase','normalized','english','verdict','duplicate_of'}].
+    Upserts on (video_id, normalized) so a retried video refreshes its own
+    rows instead of duplicating them."""
+    if not entries:
+        return
+    pool = await get_pool()
+    rows = [
+        (video_id, lang, e["phrase"], e["normalized"], e.get("english"),
+         e["verdict"], e.get("duplicate_of"))
+        for e in entries
+    ]
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            await conn.executemany(
+                """
+                INSERT INTO extraction_log
+                    (video_id, lang, phrase, normalized, english,
+                     verdict, duplicate_of)
+                VALUES ($1, $2, $3, $4, $5, $6, $7)
+                ON CONFLICT (video_id, normalized) DO UPDATE SET
+                    english = EXCLUDED.english,
+                    verdict = EXCLUDED.verdict,
+                    duplicate_of = EXCLUDED.duplicate_of,
+                    created_at = NOW()
+                """,
+                rows,
+            )
+
+
+async def set_processing_seconds(video_id: int, seconds: int) -> None:
+    pool = await get_pool()
+    await pool.execute(
+        "UPDATE videos SET processing_seconds = $2 WHERE id = $1",
+        video_id, seconds,
+    )
 
 
 # ---- Pool-deck source data (per-idiom + per-example) -----------------------

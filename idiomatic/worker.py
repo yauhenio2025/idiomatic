@@ -87,6 +87,27 @@ async def _filter_fresh(extracted: list, lang: str, video_id: int) -> list:
         lang, exclude_video_id=video_id)
     fresh = [p for p in extracted if p.normalized not in existing]
     log.info("worker.dedup", n_extracted=len(extracted), n_fresh=len(fresh))
+
+    # Record every verdict in extraction_log — duplicates used to vanish
+    # here without a trace. Best-effort: a logging hiccup must never fail
+    # the video.
+    try:
+        dup_norms = [p.normalized for p in extracted if p.normalized in existing]
+        dup_ids = await db.expression_ids_by_normalized(lang, dup_norms)
+        await db.log_extractions(video_id, lang, [
+            {
+                "phrase": p.text,
+                "normalized": p.normalized,
+                "english": p.english,
+                "verdict": "fresh" if p.normalized not in existing else "duplicate",
+                "duplicate_of": dup_ids.get(p.normalized)
+                if p.normalized in existing else None,
+            }
+            for p in extracted
+        ])
+    except Exception as e:
+        log.warning("worker.extraction_log_failed", err=repr(e)[:200])
+
     return fresh
 
 
@@ -189,6 +210,8 @@ async def process_video(video: dict) -> None:
     log.info("worker.processing", id=video["id"], yt=youtube_id, lang=lang,
              title=title[:60])
 
+    import time as _time_mod
+    t_start = _time_mod.monotonic()
     work_root = Path(tempfile.gettempdir()) / "idiomatic" / youtube_id
     work_root.mkdir(parents=True, exist_ok=True)
     try:
@@ -378,6 +401,11 @@ async def process_video(video: dict) -> None:
                          lang=lang, err=repr(e)[:200])
 
         await db.mark_video_status(video["id"], "done")
+        try:
+            await db.set_processing_seconds(
+                video["id"], int(_time_mod.monotonic() - t_start))
+        except Exception as e:
+            log.warning("worker.processing_seconds_failed", err=repr(e)[:150])
         log.info("worker.done", id=video["id"], n_idioms=len(enriched_tuples))
 
         # Only now is the R2 object safe to drop — any earlier and a

@@ -29,6 +29,13 @@ log = structlog.get_logger()
 @contextlib.asynccontextmanager
 async def lifespan(app: FastAPI):
     """Start the worker loop on app boot; cancel on shutdown."""
+    # Apply the idempotent schema first so new tables/columns exist before
+    # the worker claims anything. Non-fatal: a hiccup here must not take
+    # the delivery endpoints down (extraction_log writes are best-effort).
+    try:
+        await db.apply_schema()
+    except Exception as e:
+        log.warning("api.schema_apply_failed", err=repr(e)[:300])
     worker_task = asyncio.create_task(worker_loop(once=False))
     log.info("api.lifespan.started", worker_task=str(worker_task))
     try:
