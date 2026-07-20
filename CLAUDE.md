@@ -123,6 +123,13 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
   verdict ('fresh' | 'duplicate' + duplicate_of → expressions.id).
   Written best-effort in worker._filter_fresh; data exists from
   2026-07-20 forward (earlier dedups were never persisted).
+- `expression_idioms.audio_context` — per-idiom context clip (the full
+  sentence from the source video). Live path slices from Gemini
+  sentence timestamps; historical clips were whisper-aligned LOCALLY
+  (`tools/local_align.py` + `POST /ui/api/upload-context/{id}`) because
+  Gemini audio timestamps drift badly deep into long files. LESSON:
+  never trust LLM audio timestamps beyond ~10 min without verification,
+  and always decode-seek (-ss after -i) when slicing ADTS .aac.
 - `videos.processing_seconds` — wall-clock per-video processing time,
   set at mark-done (older done rows backfilled from picked_at→finished_at).
 
