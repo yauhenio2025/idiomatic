@@ -54,6 +54,7 @@ REASON_CLASS_SQL = """
     CASE
       WHEN v.status_msg LIKE '%(cron pre-filter%' THEN 'duration-pre-filter'
       WHEN v.status_msg LIKE 'duration %'         THEN 'duration-post-check'
+      WHEN v.status_msg LIKE 'expired:%'          THEN 'expired-stale'
       WHEN v.status_msg LIKE 'oxylabs permanent%' THEN 'oxylabs-permanent'
       WHEN v.status_msg LIKE 'wrong channel%'     THEN 'wrong-channel'
       WHEN v.status_msg = 'all dedupes'           THEN 'all-duplicates'

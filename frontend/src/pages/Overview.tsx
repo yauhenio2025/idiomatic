@@ -43,6 +43,7 @@ function lastNDays(n: number): string[] {
 const SKIP_LABELS: Record<string, string> = {
   "duration-pre-filter": "too short/long (RSS pre-filter)",
   "duration-post-check": "too short/long (after download)",
+  "expired-stale": "expired (news went stale in queue)",
   "oxylabs-permanent": "undownloadable (Oxylabs)",
   "wrong-channel": "wrong channel",
   "all-duplicates": "every idiom already known",

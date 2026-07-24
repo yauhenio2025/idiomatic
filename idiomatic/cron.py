@@ -49,10 +49,47 @@ async def cleanup_delivered_apkgs() -> None:
         log.info("cron.cleanup", n_files=n, freed_mb=round(freed / 1e6, 1))
 
 
+async def expire_stale_queued() -> int:
+    """Freshness-first queue policy: a queued video that waited longer
+    than queue_expiry_days is news that went stale — expire it instead of
+    letting the backlog grow forever (inflow outruns the daily build
+    caps). Priority/curated channels never expire."""
+    settings = get_settings()
+    if not settings.queue_expiry_days:
+        return 0
+    pool = await db.get_pool()
+    result = await pool.execute(
+        """
+        UPDATE videos v SET status = 'skipped',
+            status_msg = 'expired: queued longer than ' || $1 || ' days',
+            finished_at = NOW()
+        FROM (
+            SELECT v2.id FROM videos v2
+            LEFT JOIN channels c ON c.id = v2.channel_id
+            WHERE v2.status = 'queued'
+              AND v2.first_seen < NOW() - make_interval(days => $1)
+              AND COALESCE(c.priority, 0) < 10
+              AND COALESCE(c.name, '') NOT LIKE 'Curated ·%'
+        ) stale
+        WHERE v.id = stale.id
+        """,
+        settings.queue_expiry_days,
+    )
+    return int(result.split()[-1])
+
+
 async def run() -> None:
     settings = get_settings()
     channels = await db.list_active_channels()
     log.info("cron.start", n_channels=len(channels))
+
+    try:
+        n_expired = await expire_stale_queued()
+        if n_expired:
+            log.info("cron.expired_stale", n=n_expired,
+                     days=settings.queue_expiry_days)
+    except Exception as e:
+        log.warning("cron.expiry_failed", err=repr(e)[:200])
 
     # Phase 1 — RSS walk. YouTube's feed endpoint load-sheds when hit
     # back-to-back; 1.5s between channels keeps the hit-rate near 100%.

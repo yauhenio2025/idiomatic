@@ -61,6 +61,13 @@ class Settings(BaseSettings):
     # Counted against apkgs created today, not videos processed.
     max_new_apkgs_per_lang_per_day: int = 3
 
+    # Queued videos older than this expire to 'skipped' (cron, every 2h).
+    # RSS inflow (~34/day) permanently outruns build capacity (15/day), so
+    # without expiry the backlog grows ~20/day forever and decks are built
+    # from ever-staler news. Priority (>=10) and curated channels are
+    # exempt — those are deliberately mined back-catalog. 0 disables.
+    queue_expiry_days: int = 7
+
     # Video apkg FILES older than this get deleted by the cron once every
     # agent that should receive them has acked ok (DB row stays; download
     # of a reaped file returns 410). Pool apkgs are exempt — they're
