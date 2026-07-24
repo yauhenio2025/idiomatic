@@ -135,6 +135,10 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 
 ## Rate limits I have to remember
 
+- **Queue auto-expiry**: the cron expires queued videos older than
+  `queue_expiry_days` (default 7) to 'skipped' — inflow outruns build
+  capacity, so the queue is a rolling freshest-week window, not an IOU.
+  Priority (>=10) and curated channels are exempt.
 - **Daily cap per language**: `settings.max_new_apkgs_per_lang_per_day = 3`.
   Only `kind='video'` apkgs count (enforced in `worker._under_daily_cap`
   AND excluded at claim time via `db.langs_at_daily_cap`, so a capped
