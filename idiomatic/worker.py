@@ -111,6 +111,75 @@ async def _filter_fresh(extracted: list, lang: str, video_id: int) -> list:
     return fresh
 
 
+# ---- disk janitor ---------------------------------------------------------
+# Runs in THIS process because only idiomatic-app mounts /data. The cron
+# service has no disk, so cleanup_delivered_apkgs() there was a silent
+# no-op (path.exists() false for every row) — discovered 2026-07-27 when
+# the 10 GB disk filled and videos started failing at the media_stage copy.
+
+JANITOR_INTERVAL_SEC = 6 * 3600
+# media_stage files are only inputs to genanki's write_to_file, consumed
+# seconds after staging; anything older than this belongs to a long-
+# written apkg and is dead weight (~5 MB per idiom, never reaped before).
+MEDIA_STAGE_MAX_AGE_SEC = 2 * 86400
+
+
+def _sweep_media_stage() -> tuple[int, int]:
+    settings = get_settings()
+    stage = Path(settings.data_dir) / "media_stage"
+    if not stage.exists():
+        return 0, 0
+    import time
+    cutoff = time.time() - MEDIA_STAGE_MAX_AGE_SEC
+    n = freed = 0
+    for f in stage.iterdir():
+        try:
+            st = f.stat()
+            if f.is_file() and st.st_mtime < cutoff:
+                f.unlink()
+                n += 1
+                freed += st.st_size
+        except OSError:
+            continue
+    return n, freed
+
+
+async def _cleanup_delivered_apkgs() -> None:
+    """Delete video apkg FILES past retention and fully delivered (ok-acked
+    by every subscribed agent). The DB row stays — a download of a reaped
+    file returns 410. Moved here from cron.py, where it ran diskless."""
+    settings = get_settings()
+    eligible = await db.video_apkgs_eligible_for_cleanup(
+        settings.apkg_retention_days)
+    n = freed = 0
+    for row in eligible:
+        path = Path(settings.data_dir) / row["filename"]
+        if path.exists():
+            size = path.stat().st_size
+            try:
+                path.unlink()
+            except OSError as e:
+                log.warning("janitor.apkg_unlink_failed",
+                             file=row["filename"], err=str(e)[:100])
+                continue
+            n += 1
+            freed += size
+    if n:
+        log.info("janitor.apkgs_reaped", n_files=n,
+                 freed_mb=round(freed / 1e6, 1))
+
+
+async def run_janitor() -> None:
+    try:
+        n, freed = await asyncio.to_thread(_sweep_media_stage)
+        if n:
+            log.info("janitor.media_stage", n_files=n,
+                     freed_mb=round(freed / 1e6, 1))
+        await _cleanup_delivered_apkgs()
+    except Exception as e:
+        log.warning("janitor.failed", err=repr(e)[:200])
+
+
 # ---- daily cap check ------------------------------------------------------
 
 async def _under_daily_cap(lang: str) -> bool:
@@ -433,8 +502,14 @@ async def process_video(video: dict) -> None:
 async def loop(once: bool = False) -> None:
     settings = get_settings()
     log.info("worker.start", once=once, poll=settings.worker_poll_interval_sec)
+    import time as _t
+    last_janitor: float | None = None
     try:
         while True:
+            if last_janitor is None or \
+                    _t.monotonic() - last_janitor > JANITOR_INTERVAL_SEC:
+                last_janitor = _t.monotonic()
+                await run_janitor()
             try:
                 n_reaped = await db.fail_exhausted_stale_processing(
                     settings.worker_max_attempts)

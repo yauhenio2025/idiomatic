@@ -161,7 +161,16 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
   rows). `/admin/retts` re-synthesizes silence placeholders;
   `/admin/rebuild-pools?lang=…` forces past the 30-min pool debounce.
 - **Gemini TTS preview** blocks ~1-4% of target-language content →
-  silence placeholder (~600B mp3). English via Kore is stable.
+  silence placeholder (~600B mp3). English via Kore is stable. Since
+  2026-07-27 Gemini TTS is fallback-only (ElevenLabs primary), so blocks
+  only matter when ElevenLabs is down/out of credits.
+- **Disk janitor** (`worker.run_janitor`, at worker start + every 6h):
+  sweeps `/data/media_stage` files older than 2 days AND reaps delivered
+  video apkgs past `apkg_retention_days`. Lives in the worker because
+  only idiomatic-app mounts /data — the cron-side cleanup was a silent
+  no-op and the 10 GB disk filled on 2026-07-27 (videos failed at the
+  media_stage copy with ENOSPC; 9 marked failed, requeue after space
+  frees).
 - **YouTube RSS** load-sheds. Cron paces 1.5s between channels.
 
 ## When the user says…

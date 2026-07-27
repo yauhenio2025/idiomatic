@@ -13,7 +13,6 @@ from __future__ import annotations
 
 import asyncio
 import re
-from pathlib import Path
 
 import structlog
 
@@ -24,29 +23,10 @@ from .youtube import fetch_durations, fetch_recent
 log = structlog.get_logger()
 
 
-async def cleanup_delivered_apkgs() -> None:
-    """Delete video apkg FILES that are past retention and fully delivered
-    (ok-acked by every subscribed agent). The DB row stays — a download of
-    a reaped file returns 410. Keeps the 10 GB /data disk from filling
-    (~12 MB per video apkg, forever, before this)."""
-    settings = get_settings()
-    eligible = await db.video_apkgs_eligible_for_cleanup(
-        settings.apkg_retention_days)
-    n = freed = 0
-    for row in eligible:
-        path = Path(settings.data_dir) / row["filename"]
-        if path.exists():
-            size = path.stat().st_size
-            try:
-                path.unlink()
-            except OSError as e:
-                log.warning("cron.cleanup_unlink_failed",
-                             file=row["filename"], err=str(e)[:100])
-                continue
-            n += 1
-            freed += size
-    if n:
-        log.info("cron.cleanup", n_files=n, freed_mb=round(freed / 1e6, 1))
+# NOTE: apkg file cleanup used to live here — but this cron service has
+# no disk (render.yaml attaches /data to idiomatic-app only), so it was a
+# silent no-op while the 10 GB disk filled. The janitor now runs inside
+# the worker loop (worker.run_janitor), which owns /data.
 
 
 async def expire_stale_queued() -> int:
@@ -166,11 +146,6 @@ async def run() -> None:
 
     log.info("cron.done", enqueued=enqueued, pre_skipped=pre_skipped,
              skipped_known=len(candidates) - len(fresh))
-
-    try:
-        await cleanup_delivered_apkgs()
-    except Exception as e:
-        log.warning("cron.cleanup_failed", err=repr(e)[:200])
 
     await db.close_pool()
 
