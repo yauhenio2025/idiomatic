@@ -25,8 +25,14 @@ class Settings(BaseSettings):
     gemini_text_model: str = "gemini-3.5-flash"          # text + audio understanding
     gemini_tts_model: str = "gemini-3.1-flash-tts-preview"
 
-    # ElevenLabs fallback (Sarah) — used when Gemini TTS blocks English text.
+    # Primary TTS provider. "elevenlabs" (default) is ~40× cheaper per
+    # character than the Gemini TTS preview (July 2026 audit: Gemini billed
+    # ~€2/1k chars vs ElevenLabs turbo at $0.05/1k) and doesn't safety-block
+    # target-language content. Set to "gemini" to roll back instantly.
+    tts_provider: str = "elevenlabs"
     elevenlabs_api_key: str | None = None
+    # Turbo v2.5: 0.5 credit/char, supports language_code enforcement.
+    elevenlabs_model: str = "eleven_turbo_v2_5"
 
     # YouTube Data API v3 — the cron uses it to pre-filter videos by
     # duration BEFORE any Oxylabs spend (official API, no bot wall; a full

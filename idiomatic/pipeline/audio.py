@@ -183,7 +183,7 @@ async def render_card_audio(idx: int, enriched: Enriched, lang: str,
     # The per-card TTS files
     idiom_tgt = video_audio_dir / f"idiom_tgt_{pid}.mp3"
     tts_tasks.append(gemini.synthesize(enriched.phrase, voice=voice_tgt,
-                                         out=idiom_tgt))
+                                         out=idiom_tgt, lang=lang))
 
     idiom_en = video_audio_dir / f"idiom_en_{pid}.mp3"
     tts_tasks.append(gemini.synthesize(enriched.english, voice=EN_VOICE,
@@ -206,7 +206,7 @@ async def render_card_audio(idx: int, enriched: Enriched, lang: str,
         tts_tasks.append(gemini.synthesize(ex["en"], voice=EN_VOICE,
                                              out=en_path))
         tts_tasks.append(gemini.synthesize(ex["target"], voice=voice_tgt,
-                                             out=tgt_path))
+                                             out=tgt_path, lang=lang))
         (teach_plan if i < 3 else drill_plan).append((en_path, tgt_path))
 
     # Fire them all concurrently. synthesize() never raises (silence

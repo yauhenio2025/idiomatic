@@ -295,7 +295,22 @@ def _wav_to_mp3(wav_path: Path, mp3_path: Path) -> None:
 
 
 _SARAH_VOICE_ID = "EXAVITQu4vr4xnSDxMaL"
-_SARAH_MODEL = "eleven_turbo_v2_5"
+
+# Per-language ElevenLabs premade voices (multilingual models speak any
+# supported language; the voice sets timbre, language_code pins the accent).
+# Same status as audio.LANG_VOICE: an EMPIRICAL TASTE TABLE — only English
+# (Sarah) is listen-verified, the rest are unreviewed defaults.
+ELEVEN_LANG_VOICE = {
+    "en": _SARAH_VOICE_ID,          # Sarah
+    "de": "onwK4e9ZLuTAKqWW03F9",   # Daniel
+    "fr": "XB0fDUnXU5powFXDhCwa",   # Charlotte
+    "it": "ErXwobaYiN019PkySvjV",   # Antoni
+    "pt": "XrExE9yKIg1WjnnlVkGX",   # Matilda
+    "es": "JBFqnCBsd6RMkjVDRZzb",   # George
+}
+# Languages turbo/flash v2.5 accept as an enforced language_code.
+_ELEVEN_LANG_CODES = {"en", "de", "fr", "it", "pt", "es", "nl", "sv",
+                      "no", "da", "zh", "pl", "ru", "ja", "ko"}
 
 
 def silence_marker(out: Path) -> Path:
@@ -374,23 +389,29 @@ async def _tts_call_fast(text: str, voice: str) -> dict:
     raise last_exc or GeminiTransient("tts: exhausted attempts")
 
 
-async def synthesize(text: str, *, voice: str, out: Path) -> None:
-    """TTS via Gemini Flash TTS.
+async def synthesize(text: str, *, voice: str, out: Path,
+                      lang: str = "en") -> None:
+    """TTS. Primary provider is settings.tts_provider:
+
+    - "elevenlabs" (default): ElevenLabs turbo v2.5, per-language voice from
+      ELEVEN_LANG_VOICE. ~40× cheaper per char than the Gemini TTS preview
+      and no safety blocks on target-language content. On any ElevenLabs
+      failure (quota exhausted, 5xx) → fall through to the Gemini path.
+    - "gemini": the July-2026 behavior, unchanged.
+
+    `voice` stays the Gemini voice name (used on the Gemini path/fallback);
+    `lang` picks the ElevenLabs voice + enforced language_code. Callers that
+    don't pass lang get English — correct for all narration/gloss call sites.
 
     Idempotent: skips if `out` already exists with size > 0 — UNLESS it's
     flagged by a .silence sidecar, in which case it's a placeholder from a
     failed earlier attempt and we retry (silences self-heal on re-runs
     instead of being cached forever).
 
-    Falls back on any non-success outcome (Gemini safety block, ReadTimeout,
-    network error):
+    Gemini-path fallbacks on any non-success outcome:
       - English text (voice='Kore') → ElevenLabs Sarah (verified voice ID).
       - Anything else → write a silent placeholder so the calling concat
         doesn't crash. We lose that snippet but the rest of the deck survives.
-
-    TTS preview is the slowest layer; this path is intentionally fail-fast
-    (max ~2.5 min wall-clock per call vs. the 8 min the global retry budget
-    would otherwise consume).
     """
     if (out.exists() and out.stat().st_size > 0
             and not silence_marker(out).exists()):
@@ -398,6 +419,18 @@ async def synthesize(text: str, *, voice: str, out: Path) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
 
     s = get_settings()
+
+    if s.tts_provider == "elevenlabs" and s.elevenlabs_api_key:
+        try:
+            await _elevenlabs_tts(text, out, s.elevenlabs_api_key, lang=lang)
+            return
+        except Exception as e:
+            # Quota exhaustion / 5xx / network — Gemini TTS below is the
+            # safety net so a mid-month credit runout degrades gracefully
+            # instead of silencing every deck.
+            log.warning("elevenlabs.tts_failed.falling_back_to_gemini",
+                         lang=lang, err=repr(e)[:150], text_head=text[:60])
+
     try:
         cand = await _tts_call_fast(text, voice)
     except GeminiTransient as e:
@@ -407,7 +440,7 @@ async def synthesize(text: str, *, voice: str, out: Path) -> None:
                      voice=voice, err=str(e)[:120], text_head=text[:60])
         if voice == "Kore" and s.elevenlabs_api_key:
             try:
-                await _elevenlabs_sarah(text, out, s.elevenlabs_api_key)
+                await _elevenlabs_tts(text, out, s.elevenlabs_api_key, lang="en")
                 return
             except Exception as fb_err:
                 log.warning("gemini.tts.fallback_sarah_failed",
@@ -420,7 +453,7 @@ async def synthesize(text: str, *, voice: str, out: Path) -> None:
             try:
                 log.warning("gemini.tts.blocked.fallback_sarah",
                              err=str(e)[:120], text_head=text[:60])
-                await _elevenlabs_sarah(text, out, s.elevenlabs_api_key)
+                await _elevenlabs_tts(text, out, s.elevenlabs_api_key, lang="en")
                 return
             except Exception as fb_err:
                 log.warning("gemini.tts.fallback_sarah_failed",
@@ -448,22 +481,36 @@ async def synthesize(text: str, *, voice: str, out: Path) -> None:
         wav_path.unlink(missing_ok=True)
 
 
-async def _elevenlabs_sarah(text: str, out: Path, api_key: str) -> None:
-    """ElevenLabs Sarah — verified voice_id. English fallback only.
+async def _elevenlabs_tts(text: str, out: Path, api_key: str, *,
+                            lang: str = "en") -> None:
+    """ElevenLabs TTS (turbo v2.5). Voice from ELEVEN_LANG_VOICE by lang;
+    language_code enforced where supported so short snippets can't get
+    misread in the wrong language.
 
     Re-encoded to 24 kHz mono so it matches the Gemini-TTS/silence concat
-    inputs (the concat demuxer -c copy path needs homogeneous params)."""
-    async with httpx.AsyncClient(timeout=60) as client:
-        r = await client.post(
-            f"https://api.elevenlabs.io/v1/text-to-speech/{_SARAH_VOICE_ID}",
-            headers={"xi-api-key": api_key,
-                     "Content-Type": "application/json",
-                     "Accept": "audio/mpeg"},
-            json={"text": text, "model_id": _SARAH_MODEL,
-                  "voice_settings": {"stability": 0.5, "similarity_boost": 0.75}},
-        )
+    inputs (the concat demuxer -c copy path needs homogeneous params).
+
+    Shares the TTS semaphore with the Gemini path — ElevenLabs Pro allows
+    10 concurrent requests; tts_concurrency=8 stays under it."""
+    s = get_settings()
+    voice_id = ELEVEN_LANG_VOICE.get(lang, _SARAH_VOICE_ID)
+    body: dict[str, Any] = {
+        "text": text, "model_id": s.elevenlabs_model,
+        "voice_settings": {"stability": 0.5, "similarity_boost": 0.75},
+    }
+    if lang in _ELEVEN_LANG_CODES:
+        body["language_code"] = lang
+    async with _tts_sem():
+        async with httpx.AsyncClient(timeout=60) as client:
+            r = await client.post(
+                f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+                headers={"xi-api-key": api_key,
+                         "Content-Type": "application/json",
+                         "Accept": "audio/mpeg"},
+                json=body,
+            )
     if r.status_code != 200:
-        raise RuntimeError(f"ElevenLabs Sarah failed: HTTP {r.status_code} {r.text[:200]}")
+        raise RuntimeError(f"ElevenLabs TTS failed: HTTP {r.status_code} {r.text[:200]}")
     raw = out.with_name(".el_raw_" + out.name)
     raw.write_bytes(r.content)
     try:

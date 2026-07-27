@@ -32,12 +32,19 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 
 ## Credentials the user has given me (already in Render env)
 
-- `GEMINI_API_KEY` — Gemini 3.5 Flash + Flash TTS preview.
+- `GEMINI_API_KEY` — Gemini 3.5 Flash (text + audio understanding) +
+  Flash TTS preview (TTS FALLBACK only since 2026-07-27).
 - `YOUTUBE_API_KEY` — YouTube Data API v3 (GCP project `idiomatic-502204`),
   used by the cron to pre-filter video durations before Oxylabs spend.
   10k quota units/day free; a full walk costs ~5.
-- `ELEVENLABS_API_KEY` — English fallback voice (Sarah) when Gemini
-  blocks Kore. Non-English blocks silence-fallback.
+- `ELEVENLABS_API_KEY` — PRIMARY TTS provider since 2026-07-27 (all
+  languages, turbo v2.5, per-lang voices in `gemini.ELEVEN_LANG_VOICE`).
+  Dedicated "idiomatic use" key on the Pro account (1.5M credits/mo,
+  10 concurrent; usage-based overage billing NOT enabled — quota
+  exhaustion makes calls fail over to Gemini TTS). Switched because the
+  July-2026 spend audit showed Gemini TTS preview billing ~€2/1k chars
+  (~€4K/28d, on track for €7-9K/mo) vs ElevenLabs ~$0.05/1k chars.
+  Rollback: set `TTS_PROVIDER=gemini`.
 - `OXYLABS_USER` / `OXYLABS_PASS` — YouTube Downloader source, pushes
   audio to Cloudflare R2.
 - `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY` / `R2_ENDPOINT` /

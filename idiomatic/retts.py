@@ -33,10 +33,10 @@ def get_state() -> dict:
     return dict(_state)
 
 
-async def _work_items() -> list[tuple[str, str, str]]:
-    """(rel_audio_path, text, voice) for every audio reference in the DB."""
+async def _work_items() -> list[tuple[str, str, str, str]]:
+    """(rel_audio_path, text, voice, lang) for every audio reference in the DB."""
     pool = await db.get_pool()
-    items: list[tuple[str, str, str]] = []
+    items: list[tuple[str, str, str, str]] = []
     idioms = await pool.fetch(
         """
         SELECT lang, idiom_text, english_gloss, audio_idiom_tgt, audio_idiom_en
@@ -45,9 +45,11 @@ async def _work_items() -> list[tuple[str, str, str]]:
     for r in idioms:
         tgt_voice = LANG_VOICE.get(r["lang"], "Charon")
         if r["audio_idiom_tgt"]:
-            items.append((r["audio_idiom_tgt"], r["idiom_text"], tgt_voice))
+            items.append((r["audio_idiom_tgt"], r["idiom_text"], tgt_voice,
+                          r["lang"]))
         if r["audio_idiom_en"]:
-            items.append((r["audio_idiom_en"], r["english_gloss"], EN_VOICE))
+            items.append((r["audio_idiom_en"], r["english_gloss"], EN_VOICE,
+                          "en"))
     examples = await pool.fetch(
         """
         SELECT i.lang, e.en_text, e.target_text, e.audio_en, e.audio_target
@@ -57,9 +59,10 @@ async def _work_items() -> list[tuple[str, str, str]]:
     for r in examples:
         tgt_voice = LANG_VOICE.get(r["lang"], "Charon")
         if r["audio_en"]:
-            items.append((r["audio_en"], r["en_text"], EN_VOICE))
+            items.append((r["audio_en"], r["en_text"], EN_VOICE, "en"))
         if r["audio_target"]:
-            items.append((r["audio_target"], r["target_text"], tgt_voice))
+            items.append((r["audio_target"], r["target_text"], tgt_voice,
+                          r["lang"]))
     return items
 
 
@@ -71,7 +74,7 @@ async def run_retts() -> dict:
         items = await _work_items()
         _state["scanned"] = len(items)
 
-        async def _one(rel: str, text: str, voice: str) -> None:
+        async def _one(rel: str, text: str, voice: str, lang: str) -> None:
             p = root / rel
             if not (p.exists() and 0 < p.stat().st_size < SILENCE_MAX_BYTES):
                 return
@@ -81,7 +84,7 @@ async def run_retts() -> dict:
             tmp = p.with_name(".retts_" + p.name)
             try:
                 tmp.unlink(missing_ok=True)
-                await gemini.synthesize(text, voice=voice, out=tmp)
+                await gemini.synthesize(text, voice=voice, out=tmp, lang=lang)
                 if tmp.exists() and tmp.stat().st_size >= SILENCE_MAX_BYTES:
                     import os
                     os.replace(tmp, p)
