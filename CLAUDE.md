@@ -3,6 +3,9 @@
 Cloud service that turns YouTube videos into Anki idiom decks. Runs on
 Render. Delivered into the user's Anki via an add-on that auto-imports.
 
+For feature inventory see @docs/FEATURES.md, for change history see
+@docs/CHANGELOG.md. Grammar-exercise initiative: docs/GRAMMAR_STRATEGY.md.
+
 ## The whole flow, one sentence
 
 Cron polls YouTube channels → worker downloads audio via Oxylabs →
