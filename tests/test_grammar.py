@@ -71,3 +71,41 @@ def test_apkg_build_and_guid_stability(tmp_path: Path):
     con2 = sqlite3.connect(tmp_path / "b" / "collection.anki2")
     guid2 = con2.execute("SELECT guid FROM notes").fetchone()[0]
     assert guid == guid2
+
+
+def test_full_sentence_text():
+    from idiomatic.grammar.audio import full_sentence_text
+    assert (full_sentence_text("Ayer el ministro ___ (negar) las acusaciones.",
+                               "negó", "negar")
+            == "Ayer el ministro negó las acusaciones.")
+    assert full_sentence_text("Sin blank aquí.", "x", "y") == "Sin blank aquí."
+
+
+def test_apkg_with_audio(tmp_path: Path):
+    audio_dir = tmp_path / "media"
+    audio_dir.mkdir()
+    (audio_dir / "idg_es_1.mp3").write_bytes(b"\xff\xfb" + b"\x00" * 100)
+    items = [{"id": 1, "topic": "es_preterito", "infinitive": "tener",
+              "sentence": "Ayer el gobierno ___ (tener) que rectificar su postura.",
+              "answer": "tuvo", "gloss_en": "g", "why_en": ""},
+             {"id": 2, "topic": "es_preterito", "infinitive": "hacer",
+              "sentence": "Anoche la oposición ___ (hacer) público el informe.",
+              "answer": "hizo", "gloss_en": "g", "why_en": ""}]
+    labels = {t.key: (t.label, t.symbol) for t in PILOT_TOPICS_ES}
+    out = tmp_path / "g.apkg"
+    build_grammar_apkg(out_path=out, lang="es", items=items, topic_labels=labels,
+                       audio={1: "idg_es_1.mp3"}, audio_dir=audio_dir)
+
+    import json
+    import sqlite3
+    import zipfile
+    with zipfile.ZipFile(out) as z:
+        names = z.namelist()
+        media_map = json.loads(z.read("media"))
+        z.extract("collection.anki2", tmp_path)
+    assert "idg_es_1.mp3" in media_map.values()
+    con = sqlite3.connect(tmp_path / "collection.anki2")
+    rows = {f.split("\x1f")[0]: f for (f,) in
+            con.execute("SELECT flds FROM notes")}
+    assert "[sound:idg_es_1.mp3]" in rows["1"]   # item 1 has audio in Extra1
+    assert "[sound:" not in rows["2"]            # item 2 text-only

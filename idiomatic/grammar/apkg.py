@@ -61,8 +61,12 @@ hr#answer {border: 0; border-top: 1px solid #ccc; margin: 18px 0;}
 FRONT = """<div class="tense-line"><span class="sym">{{Symbol}}</span>{{TenseLabel}}</div>
 <div class="sentence">{{Sentence}}</div>"""
 
+# Extra1 holds the back audio ([sound:] — conjugated form, pause, full
+# sentence). Placed after the answer so autoplay fires on reveal; the
+# conditional keeps audio-less cards clean.
 BACK = """<div class="tense-line"><span class="sym">{{Symbol}}</span>{{TenseLabel}}</div>
 <div class="answer">{{Answer}}</div>
+{{#Extra1}}<div>{{Extra1}}</div>{{/Extra1}}
 <hr id="answer">
 <div class="sentence-full">{{SentenceFull}}</div>
 <div class="gloss">{{GlossEn}}</div>
@@ -100,10 +104,13 @@ def _full_html(sentence: str, answer: str, infinitive: str) -> str:
 
 def build_grammar_apkg(*, out_path: Path, lang: str,
                         items: list[dict], topic_labels: dict[str, tuple[str, str]],
+                        audio: dict[int, str] | None = None,
+                        audio_dir: Path | None = None,
                         ) -> int:
     """items: verified grammar_items rows (dicts with id, topic, sentence,
     answer, infinitive, gloss_en, why_en). topic_labels: topic key ->
-    (label, symbol). Returns note count."""
+    (label, symbol). audio: item_id -> media filename inside audio_dir;
+    items absent from the map ship text-only. Returns note count."""
     model = make_model()
     deck_name = f"Idiomatic Grammar {lang.upper()}"
     deck_id = 1_811_000_000 + (
@@ -112,9 +119,16 @@ def build_grammar_apkg(*, out_path: Path, lang: str,
     )
     deck = genanki.Deck(deck_id, deck_name)
 
+    audio = audio or {}
+    media: list[str] = []
     n = 0
     for it in items:
         label, symbol = topic_labels.get(it["topic"], (it["topic"], ""))
+        sound = ""
+        fname = audio.get(it["id"])
+        if fname and audio_dir is not None and (audio_dir / fname).exists():
+            sound = f"[sound:{fname}]"
+            media.append(str(audio_dir / fname))
         deck.add_note(genanki.Note(
             model=model,
             fields=[
@@ -128,14 +142,16 @@ def build_grammar_apkg(*, out_path: Path, lang: str,
                 _full_html(it["sentence"], it["answer"], it["infinitive"]),
                 html.escape(it.get("gloss_en") or ""),
                 html.escape(it.get("why_en") or ""),
-                "", "", "", "",
+                sound, "", "", "",
             ],
             guid=_guid(lang, it["id"]),
             tags=["idiomatic-grammar", it["topic"]],
         ))
         n += 1
 
-    genanki.Package(deck).write_to_file(str(out_path))
+    pkg = genanki.Package(deck)
+    pkg.media_files = media
+    pkg.write_to_file(str(out_path))
     log.info("grammar.apkg.written", path=str(out_path), n=n,
              size_kb=round(out_path.stat().st_size / 1e3))
     return n

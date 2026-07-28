@@ -15,6 +15,7 @@ import structlog
 
 from .. import db
 from ..settings import get_settings
+from . import audio as grammar_audio
 from . import generate
 from .apkg import build_grammar_apkg
 from .curriculum import topics_for
@@ -37,21 +38,30 @@ async def rebuild_grammar_deck(lang: str) -> dict[str, Any]:
 
     labels = {t.key: (t.label, t.symbol) for t in topics_for(lang)}
     s = get_settings()
+
+    # Back-of-card TTS (form + pause + full sentence). Idempotent per item;
+    # a TTS outage degrades those cards to text-only, retried next rebuild.
+    audio_map = await grammar_audio.ensure_audio(items, lang)
+    audio_dir = Path(s.data_dir) / "staged_audio" / "grammar" / lang
+
     apkg_root = Path(s.data_dir) / "apkgs" / lang
     apkg_root.mkdir(parents=True, exist_ok=True)
     out = apkg_root / "_grammar.apkg"
 
     n = await asyncio.to_thread(
         lambda: build_grammar_apkg(out_path=out, lang=lang, items=items,
-                                    topic_labels=labels)
+                                    topic_labels=labels,
+                                    audio=audio_map, audio_dir=audio_dir)
     )
     rel = out.relative_to(Path(s.data_dir))
     apkg_id = await db.upsert_pool_apkg(
         lang=lang, kind="grammar", filename=str(rel),
         size_bytes=out.stat().st_size, n_idioms=n,
     )
-    log.info("grammar.deck.upserted", lang=lang, apkg_id=apkg_id, cards=n)
-    return {"lang": lang, "cards": n, "apkg_id": apkg_id}
+    log.info("grammar.deck.upserted", lang=lang, apkg_id=apkg_id, cards=n,
+             with_audio=len(audio_map))
+    return {"lang": lang, "cards": n, "apkg_id": apkg_id,
+            "with_audio": len(audio_map)}
 
 
 async def run_generation(lang: str, n_per_topic: int = 12,
