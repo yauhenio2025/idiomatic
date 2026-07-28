@@ -9,8 +9,10 @@ __pycache__/
 .env
 .env.*
 
-# Local data dir for dev
-data/
+# Local data dir for dev (root only — 'data/' unanchored would also
+# swallow vendored data like idiomatic/grammar/data/)
+/data/
+!idiomatic/grammar/data/
 *.apkg
 *.mp3
 
