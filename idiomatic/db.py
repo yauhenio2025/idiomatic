@@ -134,7 +134,9 @@ async def claim_next_video(exclude_langs: list[str] | None = None) -> dict[str, 
               -- (e.g. Caracciolo sources) which bypass the daily cap
               AND (NOT (v.lang = ANY($2::text[]))
                    OR COALESCE(c.priority, 0) >= 10)
-            ORDER BY COALESCE(c.priority, 0) DESC, v.first_seen
+            -- newest-first: decks track fresh news at ~0 lag; the queue
+            -- expiry reaps the old tail instead of the worker chasing it
+            ORDER BY COALESCE(c.priority, 0) DESC, v.first_seen DESC
             FOR UPDATE OF v SKIP LOCKED
             LIMIT 1
         )
