@@ -448,6 +448,24 @@ async def admin_clear_context(
 
 # --- admin: rotate an agent's bearer token ----------------------------------
 
+@app.post("/admin/reset-acks")
+async def admin_reset_acks(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Delete acks so the add-on re-imports those apkgs on its next poll.
+    The recovery path for decks that were imported into the wrong Anki
+    profile (add-ons are installation-global) and acked from there."""
+    agent_id, apkg_ids = body.get("agent_id"), body.get("apkg_ids")
+    if not isinstance(agent_id, int) or not isinstance(apkg_ids, list) \
+            or not apkg_ids or not all(isinstance(i, int) for i in apkg_ids):
+        raise HTTPException(400, "need agent_id (int) + apkg_ids (non-empty int list)")
+    pool = await db.get_pool()
+    result = await pool.execute(
+        "DELETE FROM agent_acks WHERE agent_id = $1 AND apkg_id = ANY($2::int[])",
+        agent_id, apkg_ids)
+    return {"ok": True, "deleted": int(result.split()[-1])}
+
+
 @app.post("/admin/rotate-agent-token")
 async def admin_rotate_agent_token(
     body: dict, _: None = Depends(authed_admin),
