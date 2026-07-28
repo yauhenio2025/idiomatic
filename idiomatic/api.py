@@ -363,9 +363,28 @@ async def admin_grammar_rebuild(
     lang: str = "es", _: None = Depends(authed_admin),
 ) -> dict:
     """Rebuild + re-deliver the grammar deck from existing verified items
-    (no generation) — e.g. after a template change deploy."""
+    (no generation) — e.g. after a template change deploy. Background:
+    TTS for a full deck takes minutes; poll /admin/grammar-status."""
     from .grammar import service as grammar_service
-    return await grammar_service.rebuild_grammar_deck(lang)
+    if grammar_service.get_state().get("running"):
+        return {"started": False, "reason": "already running"}
+
+    async def _run() -> None:
+        grammar_service._state.clear()
+        grammar_service._state.update({"running": True, "lang": lang,
+                                        "mode": "rebuild"})
+        try:
+            result = await grammar_service.rebuild_grammar_deck(lang)
+            grammar_service._state["deck"] = result
+        except Exception as e:  # noqa: BLE001
+            log.warning("admin.grammar_rebuild.failed", lang=lang,
+                         err=repr(e)[:200])
+            grammar_service._state["error"] = repr(e)[:200]
+        finally:
+            grammar_service._state["running"] = False
+
+    _spawn_bg(_run())
+    return {"started": True, "lang": lang}
 
 
 @app.get("/admin/video-info")
