@@ -105,7 +105,9 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
    endpoints (require `X-Admin-Token`):
    `/admin/backfill-v2`, `/admin/audio-audit`, `/admin/audio-sample`,
    `/admin/rebuild-pools?lang=…` (bypasses the 30-min pool debounce),
-   `/admin/rotate-agent-token` (JSON {name, new_token}).
+   `/admin/rotate-agent-token` (JSON {name, new_token}),
+   `/admin/reset-acks` (JSON {agent_id, apkg_ids}) — un-ack so the
+   add-on re-imports; the wrong-profile-import recovery path.
    Exception: `/admin/video-info` stays agent-authed — the add-on's
    Reorganize step calls it.
    The API lifespan applies `db/schema.sql` (idempotent) at every boot —
