@@ -325,6 +325,49 @@ async def admin_rebuild_pools(
     return {"started": True, "lang": lang, "forced": True}
 
 
+# --- admin: grammar drills (docs/GRAMMAR_STRATEGY.md) ----------------------
+
+@app.post("/admin/grammar-generate")
+async def admin_grammar_generate(
+    lang: str = "es", n_per_topic: int = 12, topic: str | None = None,
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Generate + verify a batch of grammar drill items and rebuild the
+    lang's rolling grammar deck. Background; poll /admin/grammar-status."""
+    from .grammar import service as grammar_service
+    if grammar_service.get_state().get("running"):
+        return {"started": False, "reason": "already running",
+                **grammar_service.get_state()}
+    _spawn_bg(grammar_service.run_generation(lang, n_per_topic, topic))
+    return {"started": True, "lang": lang, "n_per_topic": n_per_topic,
+            "topic": topic}
+
+
+@app.get("/admin/grammar-status")
+async def admin_grammar_status(_: None = Depends(authed_admin)) -> dict:
+    from .grammar import service as grammar_service
+    return grammar_service.get_state()
+
+
+@app.get("/admin/grammar-stats")
+async def admin_grammar_stats(
+    lang: str = "es", _: None = Depends(authed_admin),
+) -> dict:
+    """Per-topic verified/rejected counts — the LLM error rate per topic
+    is a first-class metric here."""
+    return {"lang": lang, "topics": await db.grammar_topic_stats(lang)}
+
+
+@app.post("/admin/grammar-rebuild")
+async def admin_grammar_rebuild(
+    lang: str = "es", _: None = Depends(authed_admin),
+) -> dict:
+    """Rebuild + re-deliver the grammar deck from existing verified items
+    (no generation) — e.g. after a template change deploy."""
+    from .grammar import service as grammar_service
+    return await grammar_service.rebuild_grammar_deck(lang)
+
+
 @app.get("/admin/video-info")
 async def admin_video_info(
     youtube_id: str, agent: dict = Depends(authed_agent),

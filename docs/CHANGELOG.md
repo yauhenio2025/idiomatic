@@ -6,6 +6,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Grammar drill pipeline, Spanish pilot ([idiomatic/grammar/](../idiomatic/grammar/)): Gemini-generated one-form-per-card conjugation cloze items, verified against the vendored Jehle verb DB (wrong/unverifiable forms are persisted as `rejected`, never shipped); rolling `kind='grammar'` apkg per language delivered through the existing add-on path; admin endpoints `grammar-generate/status/stats/rebuild`; `grammar_items` table; deterministic tests in [tests/test_grammar.py](../tests/test_grammar.py).
 - `docs/` structure: feature inventory ([docs/FEATURES.md](FEATURES.md)) and this changelog.
 - Grammar-exercise strategy document ([docs/GRAMMAR_STRATEGY.md](GRAMMAR_STRATEGY.md)) — research-backed plan for LLM-generated, personalized grammar drills across es/pt/fr/it/de.
 - Research annex ([docs/research/](research/)): four commissioned reports (community wisdom, data sources & licenses, SLA pedagogy, AnkiDroid/genanki tech) grounding the grammar strategy.

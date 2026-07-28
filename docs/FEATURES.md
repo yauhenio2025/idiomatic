@@ -67,10 +67,19 @@
   - `frontend/` - React SPA
 - **Dependencies**: `ADMIN_TOKEN` env
 
-## Grammar (planned)
+## Grammar
 
-### Grammar exercise decks
-- **Status**: Planned
-- **Description**: LLM-generated, personalized grammar drills (5 langs) delivered through the existing apkg pipeline; strategy in `docs/GRAMMAR_STRATEGY.md`.
-- **Entry Points**: none yet
+### Grammar drill pipeline (Spanish pilot)
+- **Status**: Active
+- **Description**: LLM-generated conjugation drills, deterministically verified against the Jehle Spanish verb DB, compiled into one rolling `kind='grammar'` apkg per language (delivered via the normal add-on path). Strategy: `docs/GRAMMAR_STRATEGY.md`.
+- **Entry Points**:
+  - `idiomatic/grammar/morphology.py` - conjugation truth table + verifier (Jehle DB, vendored gzip)
+  - `idiomatic/grammar/curriculum.py` - pilot topics (8 Spanish tense/mood topics, KOFI-style)
+  - `idiomatic/grammar/generate.py` - Gemini batch generation + item verification
+  - `idiomatic/grammar/apkg.py` - frozen 14-field `Idiomatic Grammar Drill v1` model, GUIDs from DB ids
+  - `idiomatic/grammar/service.py` - orchestration + rolling deck rebuild
+  - `idiomatic/api.py` - `/admin/grammar-generate`, `/admin/grammar-status`, `/admin/grammar-stats`, `/admin/grammar-rebuild`
+  - `db/schema.sql` - `grammar_items` table (verified AND rejected rows kept)
+  - `tests/test_grammar.py` - deterministic tests (morphology, verifier, apkg/GUID stability)
+- **Dependencies**: Gemini text model, genanki, Jehle verb DB (vendored)
 - **Added**: 2026-07-28

@@ -530,8 +530,10 @@ async def upsert_pool_apkg(
     size_bytes: int, n_idioms: int,
 ) -> int:
     """Replace the existing pool apkg for (lang, kind). Old row is deleted
-    (cascade-deletes agent_acks) so agents re-pull the new version."""
-    assert kind in ("pool_idioms", "pool_expr", "pool_idiom_t2e", "pool_idiom_e2t")
+    (cascade-deletes agent_acks) so agents re-pull the new version.
+    'grammar' rides the same one-row-per-(lang,kind) mechanics."""
+    assert kind in ("pool_idioms", "pool_expr", "pool_idiom_t2e",
+                    "pool_idiom_e2t", "grammar")
     pool = await get_pool()
     async with pool.acquire() as conn:
         async with conn.transaction():
@@ -547,3 +549,71 @@ async def upsert_pool_apkg(
                 """,
                 lang, filename, size_bytes, n_idioms, kind,
             )
+
+
+# ---------------------------------------------------------------------------
+# Grammar items (docs/GRAMMAR_STRATEGY.md)
+# ---------------------------------------------------------------------------
+
+async def insert_grammar_items(items: list[dict[str, Any]], *, status: str,
+                                batch: str) -> int:
+    """Bulk insert generated items. ON CONFLICT (lang, sentence) DO NOTHING —
+    a regenerated near-duplicate sentence silently drops instead of erroring
+    the whole batch. Returns rows actually inserted."""
+    if not items:
+        return 0
+    pool = await get_pool()
+    inserted = 0
+    async with pool.acquire() as conn:
+        for it in items:
+            row = await conn.fetchval(
+                """
+                INSERT INTO grammar_items
+                    (lang, topic, infinitive, mood, tense, person,
+                     sentence, answer, gloss_en, why_en,
+                     status, reject_reason, batch)
+                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
+                ON CONFLICT (lang, sentence) DO NOTHING
+                RETURNING id
+                """,
+                it["lang"], it["topic"], it.get("infinitive"),
+                it.get("mood"), it.get("tense"), it.get("person"),
+                it["sentence"], it["answer"],
+                it.get("gloss_en"), it.get("why_en"),
+                status, it.get("reject_reason"), batch,
+            )
+            if row is not None:
+                inserted += 1
+    return inserted
+
+
+async def fetch_grammar_items(lang: str, status: str = "verified",
+                               ) -> list[dict[str, Any]]:
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT id, lang, topic, infinitive, mood, tense, person,
+               sentence, answer, gloss_en, why_en
+        FROM grammar_items
+        WHERE lang = $1 AND status = $2
+        ORDER BY topic, id
+        """,
+        lang, status,
+    )
+    return [dict(r) for r in rows]
+
+
+async def grammar_topic_stats(lang: str) -> list[dict[str, Any]]:
+    """Per-topic verified/rejected counts — the dashboard's view of both
+    curriculum size and LLM error rate."""
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT topic,
+               count(*) FILTER (WHERE status = 'verified') AS verified,
+               count(*) FILTER (WHERE status = 'rejected') AS rejected
+        FROM grammar_items WHERE lang = $1 GROUP BY topic ORDER BY topic
+        """,
+        lang,
+    )
+    return [dict(r) for r in rows]

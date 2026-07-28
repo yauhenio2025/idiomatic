@@ -171,6 +171,34 @@ UPDATE videos SET processing_seconds =
   WHERE processing_seconds IS NULL AND status = 'done'
     AND picked_at IS NOT NULL AND finished_at IS NOT NULL;
 
+-- ============================================================================
+-- Grammar drill items (docs/GRAMMAR_STRATEGY.md). LLM-generated, every row
+-- carries its verification verdict — rejected rows are kept on purpose so
+-- the per-topic LLM error rate is measurable. Verified rows are compiled
+-- into one rolling apkg per lang (apkgs.kind='grammar').
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS grammar_items (
+  id            BIGSERIAL PRIMARY KEY,
+  lang          TEXT NOT NULL,
+  topic         TEXT NOT NULL,                  -- curriculum.Topic.key
+  fmt           TEXT NOT NULL DEFAULT 'cloze',  -- F1 cloze (v1)
+  infinitive    TEXT,
+  mood          TEXT,
+  tense         TEXT,
+  person        TEXT,                           -- 1s..3p
+  sentence      TEXT NOT NULL,                  -- contains ___ (infinitive)
+  answer        TEXT NOT NULL,
+  gloss_en      TEXT,
+  why_en        TEXT,
+  status        TEXT NOT NULL DEFAULT 'verified', -- verified|rejected|retired
+  reject_reason TEXT,
+  batch         TEXT,                           -- generation run id
+  created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  UNIQUE (lang, sentence)
+);
+CREATE INDEX IF NOT EXISTS grammar_items_lang_topic ON grammar_items(lang, topic, status);
+
 CREATE TABLE IF NOT EXISTS agents (
   id             SERIAL PRIMARY KEY,
   token          TEXT UNIQUE NOT NULL,           -- bearer auth header
