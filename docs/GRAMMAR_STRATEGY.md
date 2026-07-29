@@ -333,19 +333,68 @@ memory; our layer aggregates over items per skill/topic.
    from raw answers, and generated items always pass the deterministic
    verifier.
 
-## 8. Roadmap
+## 8. Roadmap — WAVE PLAN (agreed with user 2026-07-29; CURRENT)
 
-- P0 (this week): finalize this doc; pick data sources; build the
-  morphology verifier; schema migration.
-- P1: text-only conjugation-core decks for 1 pilot language (es),
-  diagnostic first. Validate the full loop end-to-end incl. AnkiDroid
-  rendering.
-- P2: all 5 languages + selection topics (tense choice, prepositions,
-  articles) + error-correction format seeded from `_errors`.
-- P3: add-on telemetry + first planner run; retire the static drip in
-  favor of planned batches.
-- P4: audio formats (beep-cloze) reusing TTS/stitching.
-- P5: dashboard page for the curriculum (topic map, mastery, plans).
+STATUS AT LAST UPDATE (2026-07-29): Spanish verb pilot SHIPPED and
+user-approved ("worked nicely") — 94 cards / 8 tense topics, all with
+ElevenLabs back audio (apkg 848), studied in the SYLLABUS Anki profile.
+Pipeline: `idiomatic/grammar/` + `/admin/grammar-*` endpoints. Resume
+from the wave below that isn't checked off.
+
+The build order falls out of ONE question: how is each answer type
+VERIFIED? Verification tiers:
+
+- **Tier A — table lookup** (existing): verb forms vs morphology DB
+  (Jehle for es; kaikki/verbecc for others), German noun gender +
+  article/adjective declension, preposition case-government (de).
+- **Tier B — blind-fill agreement** (to build in Wave 2): for
+  closed-class answers with no lookup table (clitics, por/para,
+  prepositions, ser/estar). K independent solver calls get the sentence
+  with the blank and NO answer; unanimous convergence required, else
+  reject. Verifies correctness AND uniqueness (the #1 cloze failure
+  mode) in one mechanism. Plus hard-coded rules where they exist
+  (le+lo→se lo). Retrofit onto verb decks too — pennies per batch.
+
+Waves:
+
+- [ ] **Wave 1 — Spanish depth, morphology-only** (no new machinery):
+  commands tú/usted/ustedes affirmative+negative (Jehle has both
+  imperatives), complex/past conditionals (si + pluscuamperfecto subj →
+  condicional perfecto). New `curriculum.py` units only.
+- [ ] **Wave 2 — blind-fill verifier + Spanish closed-class units**:
+  clitic pronouns (incl. se-lo transformations, placement), por/para,
+  verb+preposition regimes. Formal/informal register drills.
+- [ ] **Wave 3 — German first new language** (its hardest topics are
+  Tier-A verifiable): noun gender + articles, adjective endings, case
+  after prepositions (fixed + Wechselpräpositionen). Needs kaikki
+  German noun/declension ingestion. Then German verb core (DWDSmor or
+  kaikki).
+- [ ] **Wave 4 — pt/fr/it verb cores**: clone of es pilot; work =
+  morphology DB ingestion per lang (kaikki or verbecc). PT must force +
+  verify EUROPEAN Portuguese (LLMs drift Brazilian — see §5).
+- [ ] **Wave 5 — telemetry + planner** (unchanged from §7): add-on
+  pushes revlog keyed by note GUID; weekly strong-model planner picks
+  the 2-3 active units per language.
+- [ ] Later: beep-cloze audio fronts, dashboard curriculum page,
+  error-correction format seeded from `_errors` decks.
+
+Volume rule (lesson of the 2023 EXCERCISES failure): generation is
+on-demand per unit, 2-3 active units per language at any time, mastered
+units retire. Never bulk-dump a full syllabus into the deck.
+
+## 8b. Division of labor — codex for heavy lifting (user directive, 2026-07-29)
+
+`codex` CLI is installed and authenticated on the user's machine
+(`codex exec "<prompt>"` runs headless; user has ample credits).
+STANDING RULE for this whole project: bulk, low-intelligence work goes
+to codex, NOT to the primary (Fable/Opus) session — sentence/example
+generation at volume, drafting per-unit item batches, scraping/
+formatting taxonomies, data-file wrangling, boilerplate test writing.
+The primary model does: architecture, verification design, curriculum
+decisions, code review of codex output, anything user-facing. Server-
+side runtime generation stays on Gemini Flash (already cheap); codex is
+for dev-time/offline workloads. Verify codex-generated items through
+the same deterministic/blind-fill verifiers as everything else.
 
 ## 9. Cost guardrails
 

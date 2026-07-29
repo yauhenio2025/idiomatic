@@ -4,7 +4,33 @@ Cloud service that turns YouTube videos into Anki idiom decks. Runs on
 Render. Delivered into the user's Anki via an add-on that auto-imports.
 
 For feature inventory see @docs/FEATURES.md, for change history see
-@docs/CHANGELOG.md. Grammar-exercise initiative: docs/GRAMMAR_STRATEGY.md.
+@docs/CHANGELOG.md.
+
+## GRAMMAR INITIATIVE (active, 2026-07) — resume here after context loss
+
+- Plan of record: **docs/GRAMMAR_STRATEGY.md §8 "WAVE PLAN"** — check
+  off waves as they ship; status line at the top of §8 says where we
+  are. Research annex in docs/research/.
+- Shipped: Spanish verb pilot (8 tense units, 94 cards, ElevenLabs
+  back audio: form + pause + full sentence), user-approved. Code in
+  `idiomatic/grammar/`; admin endpoints `/admin/grammar-generate|
+  status|stats|rebuild`; one rolling apkg per lang, `apkgs.kind='grammar'`.
+- The user studies grammar in the **evgeny@the-syllabus.com** Anki
+  profile (idiom decks live in evgeny.morozov+2@gmail.com). The add-on
+  delivers to whichever profile is open.
+- Deck model is FROZEN (14 fields, Extra1 = back audio) — never change
+  field count/order or template count; spares Extra2-4 remain.
+- Verification is non-negotiable: no generated form ships unverified
+  (Tier A table lookup now; Tier B blind-fill agreement from Wave 2).
+
+## Division of labor (user directive)
+
+Heavy, low-intelligence bulk work (mass sentence/example generation,
+taxonomy scraping, data wrangling, boilerplate) is DELEGATED to the
+codex CLI (`codex exec "<prompt>"` — installed, authed, ample credits);
+don't burn premium-model tokens on it. Premium session = architecture,
+verification design, curriculum decisions, reviewing codex output.
+Applies project-wide, not just to grammar.
 
 ## The whole flow, one sentence
 
