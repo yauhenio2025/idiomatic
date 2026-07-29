@@ -69,7 +69,9 @@ async def run_generation(lang: str, n_per_topic: int = 12,
     batch = f"{datetime.now(timezone.utc):%Y%m%d-%H%M}-{uuid.uuid4().hex[:6]}"
     topics = topics_for(lang)
     if only_topic:
-        topics = [t for t in topics if t.key == only_topic]
+        # comma-separated topic keys → generate just those units
+        keys = {k.strip() for k in only_topic.split(",") if k.strip()}
+        topics = [t for t in topics if t.key in keys]
     _state.clear()
     _state.update({"running": True, "lang": lang, "batch": batch,
                    "topics_total": len(topics), "topics_done": 0,

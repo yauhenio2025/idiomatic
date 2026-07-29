@@ -82,6 +82,40 @@ PILOT_TOPICS_ES: list[Topic] = [
     Topic("es_perfecto", "es", "Pretérito perfecto", "indicativo", "pretérito perfecto", "◄⊙",
           guidance="Present-relevant past. Cues: 'ya', 'todavía no', 'hoy', "
                    "'esta semana', 'alguna vez'."),
+    # --- Wave 1 additions (2026-07-29): commands + past conditionals ------
+    Topic("es_cmd_tu", "es", "Imperativo — tú", "imperativo afirmativo", "presente", "❗",
+          verbs=["tener", "poner", "hacer", "decir", "salir", "venir", "ir",
+                 "ser", "dar", "estar", "hablar", "mirar", "escribir", "leer",
+                 "abrir", "seguir", "pedir", "contar", "volver", "empezar"],
+          guidance="INFORMAL commands to tú ONLY (person=2s; never 1s, never "
+                   "other persons). The sentence must make the informal "
+                   "register obvious: talking to a friend, colleague, child "
+                   "('Por favor, ___ (tener) paciencia con tu hermano'). "
+                   "Prioritize the eight irregulars (ten, pon, haz, di, sal, "
+                   "ven, ve, sé)."),
+    Topic("es_cmd_usted", "es", "Imperativo — usted/ustedes", "imperativo afirmativo", "presente", "❗🎩",
+          guidance="FORMAL commands: usted (person=3s) or ustedes (3p), plus "
+                   "an occasional nosotros 'let's' (1p). Never 1s or 2s. "
+                   "Context must signal formality: official, professional, "
+                   "customer-facing ('Señor director, ___ (tener) en cuenta "
+                   "nuestra propuesta')."),
+    Topic("es_cmd_neg", "es", "Imperativo negativo", "imperativo negativo", "presente", "⛔",
+          guidance="Negative commands, mixed registers: tú (2s), usted (3s), "
+                   "ustedes (3p). Never 1s. The answer INCLUDES the 'no' "
+                   "('no hables', 'no vaya'). Do NOT write a separate 'no' in "
+                   "the sentence outside the blank — the blank carries it: "
+                   "'Por favor, ___ (hablar) tan rápido.'"),
+    Topic("es_cond_perf", "es", "Condicional perfecto", "indicativo", "condicional perfecto", "⇢?◄",
+          guidance="Past hypotheticals — the would-have apodosis: 'Si hubiera "
+                   "sabido la verdad, ___ (actuar) de otra manera.' The "
+                   "si-clause (or an equivalent like 'en tu lugar', 'con más "
+                   "tiempo') is the cue. Answer is the full compound form "
+                   "('habría actuado')."),
+    Topic("es_plusc_subj", "es", "Pluscuamperfecto de subjuntivo", "subjuntivo", "pluscuamperfecto", "〰◄",
+          guidance="The si-clause (or 'ojalá', 'como si') of past "
+                   "counterfactuals: 'Si ___ (saber) la verdad, habría "
+                   "actuado de otra manera.' Use -ra forms ('hubiera "
+                   "sabido'), full compound in the answer."),
 ]
 
 
