@@ -75,7 +75,14 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
   (~€4K/28d, on track for €7-9K/mo) vs ElevenLabs ~$0.05/1k chars.
   Rollback: set `TTS_PROVIDER=gemini`.
 - `OXYLABS_USER` / `OXYLABS_PASS` — YouTube Downloader source, pushes
-  audio to Cloudflare R2.
+  audio to Cloudflare R2. MUST request `audio_language=original` in the
+  job context (set since 2026-07-29): YouTube's auto-dub rollout made the
+  "default" track an AI English dub on many channels — 62 videos shipped
+  with English audio before this was caught. Defense-in-depth: extract.py
+  STEP 0 has Gemini verify the spoken language and raises
+  WrongLanguageAudio (worker marks the video skipped 'YouTube auto-dub');
+  `/admin/purge-video` purges + requeues a contaminated video and returns
+  deck name + note GUIDs for the add-on's cleanup.json.
 - `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY` / `R2_ENDPOINT` /
   `R2_BUCKET=idiomatic-yt-audio`.
 - Agent bearer (`X-Agent-Token`, grants /apkgs/* + /admin/video-info only;
