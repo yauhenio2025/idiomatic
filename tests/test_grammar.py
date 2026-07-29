@@ -224,3 +224,24 @@ def test_every_fip_unit_cell_exists():
                 if m.lookup(lang, v, t.mood, t.tense, "3s") is None:
                     missing.append((t.key, v))
     assert not missing, missing
+
+
+def test_compound_agreement_tolerance():
+    from idiomatic.grammar.curriculum import topics_for
+    fr = {t.key: t for t in topics_for("fr")}
+    it = {t.key: t for t in topics_for("it")}
+    t = fr["fr_passe_compose"]
+    fem = {"infinitive": "aller", "person": "3s",
+           "sentence": "Hier, la ministre ___ (aller) au sommet européen.",
+           "answer": "est allée"}
+    assert verify_item(t, fem) == (True, "")          # feminine agreement OK
+    wrong_aux = dict(fem, infinitive="monter", answer="a monté",
+                     sentence="Hier, la ministre ___ (monter) au podium.")
+    assert "wrong form" in verify_item(t, wrong_aux)[1]  # aux still strict
+    # avoir participle restored after the 'eu'-collision fix
+    assert m.lookup("fr", "avoir", "indicatif", "passé composé", "2p") == "avez eu"
+    ti = it["it_passato_prossimo"]
+    fem_it = {"infinitive": "andare", "person": "3p",
+              "sentence": "Ieri le giornaliste ___ (andare) alla conferenza.",
+              "answer": "sono andate"}
+    assert verify_item(ti, fem_it) == (True, "")

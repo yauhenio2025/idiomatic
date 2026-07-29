@@ -287,11 +287,36 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
                                      person, answer)
     if expected is None:
         return False, f"verb {inf!r} not in morphology DB"
+    if not ok and _agreement_variant_ok(topic.lang, expected, answer):
+        return True, ""
     if not ok:
         if _strip_accents_eq(answer.lower(), expected):
             return False, f"accent error: {answer!r} vs {expected!r}"
         return False, f"wrong form: {answer!r}, expected {expected!r}"
     return True, ""
+
+
+def _agreement_variant_ok(lang: str, expected: str, answer: str) -> bool:
+    """fr/it compound tenses: the table stores the MASCULINE participle,
+    but feminine/plural agreement is equally correct French/Italian
+    ('elle est allée'). Accept answers whose only deviation is a valid
+    agreement inflection of the participle; auxiliary must match exactly
+    (so 'a monté' vs 'est monté' is still rejected)."""
+    if lang not in ("fr", "it") or " " not in (expected or ""):
+        return False
+    exp_parts = expected.split()
+    ans_parts = _norm_answer(answer).split()
+    if len(exp_parts) != len(ans_parts) or exp_parts[:-1] != ans_parts[:-1]:
+        return False
+    base, got = exp_parts[-1], ans_parts[-1]
+    if lang == "fr":
+        return got in (base + "e", base + "s", base + "es")
+    # it: masc sg -o → fem sg -a; masc pl -i → fem pl -e
+    if base.endswith("o"):
+        return got in (base[:-1] + "a", base[:-1] + "i", base[:-1] + "e")
+    if base.endswith("i"):
+        return got == base[:-1] + "e"
+    return False
 
 
 _BLIND_SOLVER = """Spanish grammar exercise. Fill the blank.

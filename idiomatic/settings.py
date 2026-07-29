@@ -65,7 +65,12 @@ class Settings(BaseSettings):
 
     # Soft cap on inflow — keeps daily Anki import manageable.
     # Counted against apkgs created today, not videos processed.
-    max_new_apkgs_per_lang_per_day: int = 3
+    # TEMPORARILY LIFTED (was 3) on 2026-07-29 per user request, to batch
+    # through the 60-video auto-dub requeue backlog. Restore to 3 once
+    # `SELECT COUNT(*) FROM videos WHERE status_msg LIKE 'purged wrong%'
+    # AND status='queued'` reaches 0. The worker is serial (~15-25 min per
+    # video), so uncapped still means ~a day of wall-clock, not a flood.
+    max_new_apkgs_per_lang_per_day: int = 100
 
     # Queued videos older than this expire to 'skipped' (cron, every 2h).
     # RSS inflow (~34/day) permanently outruns build capacity (15/day), so

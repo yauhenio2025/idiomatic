@@ -396,7 +396,12 @@ Waves:
   stopword list ('macht' killed Macht) — verification tables should be
   maximal, filters minimal; second run 24/24. STILL OPEN from Wave 3
   scope: adjective endings unit; German verb core.
-- [ ] **Wave 4 — pt/fr/it verb cores**: clone of es pilot; work =
+- [x] **Wave 4 — pt/fr/it verb cores** (SHIPPED 2026-07-29): decks
+  FR 73 / IT 77 / PT 70 cards, 7 units each, all with audio. Verbecc
+  tables (150 verbs/lang); two verifier refinements post-launch:
+  agreement-tolerant comparison for fr/it compounds (masc-default
+  table vs legitimate feminine agreement) and the pt-'eu'-pronoun /
+  fr-'eu'-participle strip collision fix. Clone of es pilot; work =
   morphology DB ingestion per lang (kaikki or verbecc). PT variety =
   **BRAZILIAN Portuguese** (user directive 2026-07-29 — the earlier EP
   framing was an unchecked assumption of mine, never the user's ask;
