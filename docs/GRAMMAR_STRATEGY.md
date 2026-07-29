@@ -384,11 +384,17 @@ Waves:
   grammar/data/es_verb_prep.json). 59/60 accepted. Deck at 210 cards /
   18 units, all with audio (apkg 897). Register drills shipped in Wave 1
   (es_cmd_tu/usted/neg).
-- [ ] **Wave 3 — German first new language** (its hardest topics are
-  Tier-A verifiable): noun gender + articles, adjective endings, case
-  after prepositions (fixed + Wechselpräpositionen). Needs kaikki
-  German noun/declension ingestion. Then German verb core (DWDSmor or
-  kaikki).
+- [x] **Wave 3 — German first new language** (SHIPPED 2026-07-29,
+  batches 20260729-0412/-0417): de_gender, de_prep_fest,
+  de_prep_wechsel — deck "Idiomatic Grammar DE", 50 cards with audio
+  (apkg 901). Noun-gender table = gambolputty/german-nouns (82,944
+  unambiguous non-weak nouns, cross-gender homographs dropped); prep
+  bank by codex (37 preps, validated); article matrix hardcoded.
+  LESSON (rhymes with es_cmd_tu): first run rejected 10 common nouns
+  because the table was frequency-filtered on SUBTITLE data + a careless
+  stopword list ('macht' killed Macht) — verification tables should be
+  maximal, filters minimal; second run 24/24. STILL OPEN from Wave 3
+  scope: adjective endings unit; German verb core.
 - [ ] **Wave 4 — pt/fr/it verb cores**: clone of es pilot; work =
   morphology DB ingestion per lang (kaikki or verbecc). PT must force +
   verify EUROPEAN Portuguese (LLMs drift Brazilian — see §5).
