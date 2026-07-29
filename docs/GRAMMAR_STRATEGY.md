@@ -336,10 +336,15 @@ memory; our layer aggregates over items per skill/topic.
 ## 8. Roadmap — WAVE PLAN (agreed with user 2026-07-29; CURRENT)
 
 STATUS AT LAST UPDATE (2026-07-29): Spanish verb pilot SHIPPED and
-user-approved ("worked nicely") — 94 cards / 8 tense topics, all with
-ElevenLabs back audio (apkg 848), studied in the SYLLABUS Anki profile.
-Pipeline: `idiomatic/grammar/` + `/admin/grammar-*` endpoints. Resume
-from the wave below that isn't checked off.
+user-approved ("worked nicely"); Wave 1 SHIPPED same day — deck now 151
+cards / 13 units, all with ElevenLabs back audio (apkg 896), studied in
+the SYLLABUS Anki profile. Pipeline: `idiomatic/grammar/` +
+`/admin/grammar-*` endpoints. Resume from the wave below that isn't
+checked off. FINDING from Wave 1: informal-tú imperatives are the
+weakest LLM topic so far — 15 of 24 generated items rejected by the
+verifier (vs ~0-8% everywhere else); es_cmd_tu shipped 9/12. Inspect
+`grammar_items.reject_reason` for that unit before tuning its prompt
+(likely usted-form or subjunctive-form confusion).
 
 The build order falls out of ONE question: how is each answer type
 VERIFIED? Verification tiers:
@@ -357,10 +362,10 @@ VERIFIED? Verification tiers:
 
 Waves:
 
-- [ ] **Wave 1 — Spanish depth, morphology-only** (no new machinery):
-  commands tú/usted/ustedes affirmative+negative (Jehle has both
-  imperatives), complex/past conditionals (si + pluscuamperfecto subj →
-  condicional perfecto). New `curriculum.py` units only.
+- [x] **Wave 1 — Spanish depth, morphology-only** (SHIPPED 2026-07-29,
+  batch 20260729-0323): commands tú/usted/ustedes affirmative+negative,
+  complex/past conditionals. 57 accepted / 15 rejected (all rejects in
+  es_cmd_tu — see FINDING above).
 - [ ] **Wave 2 — blind-fill verifier + Spanish closed-class units**:
   clitic pronouns (incl. se-lo transformations, placement), por/para,
   verb+preposition regimes. Formal/informal register drills.
