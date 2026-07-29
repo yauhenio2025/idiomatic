@@ -103,23 +103,75 @@ def _norm_answer(s: str) -> str:
     return " ".join(s.split())
 
 
-def _bank_lines(topic: Topic, n: int) -> str:
-    """Sample regime pairs from the topic's data bank into prompt lines."""
+_PROMPT_DE_ART = """You are writing GERMAN grammar drill cards for ONE advanced \
+adult learner (reads German news daily; interests: geopolitics, tech \
+criticism, history, media). Target: {label}.
+
+Produce {n} items as a JSON array. Each item:
+{{
+  "sentence": "...",   // German sentence, 7-16 words, with ONE blank ___ \
+standing for an ARTICLE, immediately followed by its noun: "Er kam mit ___ Zug."
+  "noun": "...",       // that noun, exactly as written in the sentence, \
+singular, nominative surface form (e.g. "Zug")
+  "prep": "...",       // the governing preposition if the blank follows one, \
+else null
+  "case": "...",       // nom | akk | dat | gen — the case of the article
+  "definite": true,    // definite (der/die/das…) or indefinite (ein…) article
+  "answer": "...",     // the article alone, e.g. "dem"
+  "gloss_en": "...",   // natural English translation
+  "why": "..."         // ONE short English line naming the rule (e.g. "mit \
+always takes dative; Zug is masculine → dem")
+}}
+
+HARD RULES — a deterministic verifier checks gender, case government, and \
+the article table; violations are discarded:
+1. {guidance}
+2. Use common nouns (the verifier knows ~4000 frequent nouns; obscure or \
+compound-rare nouns get rejected). Singular only. The noun's surface form \
+must not change in the chosen case (no weak nouns like Student/Junge/Herr).
+3. Vary gender, case, and definiteness across the batch; no two sentences \
+with the same noun.
+4. Real-world content must be timelessly true or clearly hypothetical.
+
+Return ONLY the JSON array."""
+
+
+def _bank_entries(topic: Topic) -> list[dict]:
     if not topic.bank:
-        return ""
+        return []
     import json
-    import random
     from pathlib import Path
     path = Path(__file__).parent / "data" / topic.bank
     entries = json.loads(path.read_text(encoding="utf-8"))
+    # German prep bank: wechsel unit gets only two-way preps, fest the rest.
+    if topic.key == "de_prep_wechsel":
+        entries = [e for e in entries if e.get("case") == "wechsel"]
+    elif topic.key == "de_prep_fest":
+        entries = [e for e in entries if e.get("case") != "wechsel"]
+    return entries
+
+
+def _bank_lines(topic: Topic, n: int) -> str:
+    """Sample bank entries into prompt lines (schema-tolerant: es regime
+    pairs use 'verb', the de prep bank doesn't)."""
+    entries = _bank_entries(topic)
+    if not entries:
+        return ""
+    import random
     picked = random.sample(entries, min(2 * n, len(entries)))
-    lines = "\n".join(
-        f"- {e['verb']} + {e['prep']} — {e['en']} (trap: {e['trap']})"
-        for e in picked)
-    return f"\n\nRegime pairs to draw from (one verb per sentence):\n{lines}"
+    lines = []
+    for e in picked:
+        head = (f"{e['verb']} + {e['prep']}" if "verb" in e
+                else f"{e['prep']} (+{e['case']})")
+        lines.append(f"- {head} — {e['en']} (trap: {e['trap']})")
+    return ("\n\nPairs to draw from (one per sentence):\n" + "\n".join(lines))
 
 
 def build_prompt(topic: Topic, n: int) -> str:
+    if topic.verify in ("de_art", "de_art_blind"):
+        return _PROMPT_DE_ART.format(
+            label=topic.label, n=n, guidance=topic.guidance,
+        ) + _bank_lines(topic, n)
     if topic.verify == "blind":
         return _PROMPT_CLOSED.format(
             label=topic.label, n=n,
@@ -152,7 +204,10 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
         return False, "no blank in sentence"
     if not answer:
         return False, "empty answer"
-    if _answer_leaks(sentence, answer):
+    # Leak check skipped for German article topics: the same article form
+    # legitimately appears for other nouns in almost any sentence.
+    if (topic.verify not in ("de_art", "de_art_blind")
+            and _answer_leaks(sentence, answer)):
         return False, "answer leaks in sentence"
 
     if topic.verify == "blind":
@@ -160,6 +215,47 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
             allowed = {_norm_answer(a) for a in topic.answer_set}
             if _norm_answer(answer) not in allowed:
                 return False, f"answer {answer!r} not in closed inventory"
+        return True, ""
+
+    if topic.verify in ("de_art", "de_art_blind"):
+        # Deterministic German article check: gender table × case × matrix.
+        # NB: no leak check here — German sentences legitimately contain
+        # the same article form for OTHER nouns; the table already pins
+        # the answer.
+        noun = (item.get("noun") or "").strip()
+        case = (item.get("case") or "").strip().lower()
+        prep = (item.get("prep") or "").strip().lower() or None
+        definite = bool(item.get("definite", True))
+        if case not in morphology.DE_CASES:
+            return False, f"bad case {case!r}"
+        gender = morphology.de_gender(noun)
+        if gender is None:
+            return False, f"noun {noun!r} not in gender DB"
+        if f"___ {noun}" not in sentence.replace("___  ", "___ "):
+            return False, "blank is not directly before the stated noun"
+        if topic.key == "de_prep_fest":
+            got = morphology.de_prep_case(prep) if prep else None
+            if got is None:
+                return False, f"prep {prep!r} not in bank"
+            if got == "wechsel":
+                return False, f"two-way prep {prep!r} in fixed-prep unit"
+            if got != case:
+                return False, f"prep {prep!r} governs {got}, item says {case}"
+            if case == "gen" and gender in ("m", "n"):
+                return False, "genitive with m/n noun (surface form changes)"
+        if topic.key == "de_prep_wechsel":
+            if morphology.de_prep_case(prep) != "wechsel":
+                return False, f"prep {prep!r} is not a Wechselpräposition"
+            if case not in ("akk", "dat"):
+                return False, f"wechsel case must be akk/dat, got {case}"
+        if topic.key == "de_gender" and case != "nom":
+            return False, "de_gender items must be nominative"
+        expected = morphology.de_article(case, gender, definite)
+        if expected is None:
+            return False, f"no article for case={case} gender={gender}"
+        if _norm_answer(answer) != expected:
+            return False, (f"wrong article: {answer!r}, expected {expected!r} "
+                           f"({noun}={gender}, {case})")
         return True, ""
 
     inf = (item.get("infinitive") or "").strip().lower()
@@ -188,14 +284,17 @@ Return JSON: {{"answer": "..."}} — the blank's content only, nothing else."""
 BLIND_K = 3
 
 
-async def verify_blind(topic: Topic, item: dict) -> tuple[bool, str]:
+async def verify_blind(topic: Topic, item: dict,
+                        inventory: list[str] | None = None) -> tuple[bool, str]:
     """Tier-B verification: K independent solvers get the sentence and the
     inventory but NOT the answer. Unanimous agreement with the generator's
     answer required — disagreement means wrong OR ambiguous, both fatal
-    for a drill card."""
+    for a drill card. `inventory` overrides the topic's answer_set (used
+    for per-item candidate pairs, e.g. Wechselpräposition akk/dat)."""
+    inv = inventory if inventory is not None else topic.answer_set
     prompt = _BLIND_SOLVER.format(
         sentence=item["sentence"],
-        inventory=", ".join(topic.answer_set or []) or "any Spanish word(s)",
+        inventory=", ".join(inv or []) or "the missing word(s)",
     )
     import asyncio
     raws = await asyncio.gather(
@@ -226,7 +325,8 @@ async def generate_batch(topic: Topic, n: int) -> tuple[list[dict], list[dict]]:
         log.warning("grammar.gen.bad_payload", topic=topic.key, type=str(type(raw)))
         return [], []
 
-    is_blind = topic.verify == "blind"
+    is_morph = topic.verify == "morph"
+    needs_blind = topic.verify in ("blind", "de_art_blind")
     accepted, rejected, pending_blind = [], [], []
     seen_keys: set = set()
     for item in raw:
@@ -235,23 +335,27 @@ async def generate_batch(topic: Topic, n: int) -> tuple[list[dict], list[dict]]:
         base = {
             "lang": topic.lang, "topic": topic.key,
             "infinitive": ((item.get("infinitive") or "").strip().lower()
-                           or None) if not is_blind else None,
+                           or None) if is_morph else None,
             "mood": topic.mood or None, "tense": topic.tense or None,
             "person": ((item.get("person") or "").strip().lower()
-                       or None) if not is_blind else None,
+                       or None) if is_morph else None,
             "sentence": (item.get("sentence") or "").strip(),
             "answer": (item.get("answer") or "").strip(),
             "gloss_en": (item.get("gloss_en") or "").strip(),
             "why_en": (item.get("why") or "").strip(),
         }
+        if topic.verify in ("de_art", "de_art_blind"):
+            base["meta"] = {k: item.get(k)
+                            for k in ("noun", "prep", "case", "definite")}
         ok, reason = verify_item(topic, item)
-        key = (base["sentence"].lower() if is_blind
-               else (base["infinitive"], base["person"]))
+        key = ((base["infinitive"], base["person"]) if is_morph
+               else base["sentence"].lower())
         if ok and key in seen_keys:
             ok, reason = False, "duplicate in batch"
         if ok:
             seen_keys.add(key)
-            (pending_blind if is_blind else accepted).append(base)
+            (pending_blind if needs_blind else accepted).append(
+                (base, item) if needs_blind else base)
         else:
             base["reject_reason"] = reason
             rejected.append(base)
@@ -259,9 +363,20 @@ async def generate_batch(topic: Topic, n: int) -> tuple[list[dict], list[dict]]:
     # Tier-B: statically-OK items must also survive blind-fill agreement.
     if pending_blind:
         import asyncio
+
+        def _inventory(it: dict) -> list[str] | None:
+            if topic.verify != "de_art_blind":
+                return None                      # topic answer_set applies
+            g = morphology.de_gender((it.get("noun") or "").strip())
+            definite = bool(it.get("definite", True))
+            return [a for a in (morphology.de_article("akk", g, definite),
+                                 morphology.de_article("dat", g, definite))
+                    if a]
+
         verdicts = await asyncio.gather(
-            *(verify_blind(topic, b) for b in pending_blind))
-        for base, (ok, reason) in zip(pending_blind, verdicts):
+            *(verify_blind(topic, b, inventory=_inventory(it))
+              for b, it in pending_blind))
+        for (base, _it), (ok, reason) in zip(pending_blind, verdicts):
             if ok:
                 accepted.append(base)
             else:

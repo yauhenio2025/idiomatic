@@ -198,6 +198,9 @@ CREATE TABLE IF NOT EXISTS grammar_items (
   UNIQUE (lang, sentence)
 );
 CREATE INDEX IF NOT EXISTS grammar_items_lang_topic ON grammar_items(lang, topic, status);
+-- Structured facts behind non-verb items (German: noun/prep/case/definite);
+-- enables re-verification after verifier fixes. Idempotent migration.
+ALTER TABLE grammar_items ADD COLUMN IF NOT EXISTS meta JSONB;
 
 CREATE TABLE IF NOT EXISTS agents (
   id             SERIAL PRIMARY KEY,

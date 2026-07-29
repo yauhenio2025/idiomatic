@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from typing import Any
 
+import json
+
 import asyncpg
 import structlog
 
@@ -573,8 +575,8 @@ async def insert_grammar_items(items: list[dict[str, Any]], *, status: str,
                 INSERT INTO grammar_items
                     (lang, topic, infinitive, mood, tense, person,
                      sentence, answer, gloss_en, why_en,
-                     status, reject_reason, batch)
-                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
+                     status, reject_reason, batch, meta)
+                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
                 ON CONFLICT (lang, sentence) DO NOTHING
                 RETURNING id
                 """,
@@ -583,6 +585,7 @@ async def insert_grammar_items(items: list[dict[str, Any]], *, status: str,
                 it["sentence"], it["answer"],
                 it.get("gloss_en"), it.get("why_en"),
                 status, it.get("reject_reason"), batch,
+                json.dumps(it["meta"]) if it.get("meta") else None,
             )
             if row is not None:
                 inserted += 1

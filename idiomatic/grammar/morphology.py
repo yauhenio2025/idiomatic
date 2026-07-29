@@ -81,3 +81,56 @@ def verify(lang: str, infinitive: str, mood: str, tense: str, person: str,
     # bare form. Accept either the bare form or a 'no ' prefix match for
     # the negative imperative (Jehle already includes 'no').
     return _norm(form) == expected, expected
+
+
+# ============================================================================
+# German: noun gender + article declension + preposition case government.
+# Gender table: gambolputty/german-nouns (de.wiktionary-derived, CC BY-SA),
+# frequency-filtered to 4k unambiguous, non-weak nouns (surface form stable
+# across cases). Prep bank: grammar/data/de_preps.json (codex-produced,
+# review-validated). Articles are a closed 2×4×4 matrix — hardcoded.
+# ============================================================================
+
+DE_CASES = ("nom", "akk", "dat", "gen")
+
+_DE_DEF = {
+    "nom": {"m": "der", "f": "die", "n": "das"},
+    "akk": {"m": "den", "f": "die", "n": "das"},
+    "dat": {"m": "dem", "f": "der", "n": "dem"},
+    "gen": {"m": "des", "f": "der", "n": "des"},
+}
+_DE_INDEF = {
+    "nom": {"m": "ein", "f": "eine", "n": "ein"},
+    "akk": {"m": "einen", "f": "eine", "n": "ein"},
+    "dat": {"m": "einem", "f": "einer", "n": "einem"},
+    "gen": {"m": "eines", "f": "einer", "n": "eines"},
+}
+
+
+@lru_cache(maxsize=1)
+def _load_de_nouns() -> dict[str, str]:
+    import gzip as _gz
+    import json
+    with _gz.open(_DATA / "de_nouns.json.gz", "rt", encoding="utf-8") as f:
+        return json.load(f)
+
+
+@lru_cache(maxsize=1)
+def _load_de_preps() -> dict[str, str]:
+    import json
+    entries = json.loads((_DATA / "de_preps.json").read_text(encoding="utf-8"))
+    return {e["prep"]: e["case"] for e in entries}
+
+
+def de_gender(noun: str) -> str | None:
+    return _load_de_nouns().get((noun or "").strip())
+
+
+def de_prep_case(prep: str) -> str | None:
+    """'akk' | 'dat' | 'gen' | 'wechsel' | None."""
+    return _load_de_preps().get((prep or "").strip().lower())
+
+
+def de_article(case: str, gender: str, definite: bool = True) -> str | None:
+    table = _DE_DEF if definite else _DE_INDEF
+    return table.get(case, {}).get(gender)

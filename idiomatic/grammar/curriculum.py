@@ -175,14 +175,45 @@ PILOT_TOPICS_ES: list[Topic] = [
 ]
 
 
+TOPICS_DE: list[Topic] = [
+    # verify="de_art": deterministic — noun gender from the vendored table,
+    # case from context/prep bank, article from the declension matrix.
+    Topic("de_gender", "de", "Genus — der/die/das", "", "", "🚻",
+          verify="de_art",
+          guidance="The blank is the DEFINITE article of a singular noun in "
+                   "the NOMINATIVE (the noun must be the subject, case=nom): "
+                   "'___ Verhandlung dauerte drei Stunden.' Choose common "
+                   "nouns whose gender is NOT guessable from the ending "
+                   "(avoid -ung/-heit/-keit/-chen except occasionally)."),
+    Topic("de_prep_fest", "de", "Feste Präpositionen + Kasus", "", "", "🧭",
+          verify="de_art", bank="de_preps.json",
+          guidance="The blank is the article (definite or indefinite) "
+                   "directly after a FIXED-case preposition from the bank "
+                   "below (never an/auf/in/über/unter/vor/hinter/neben/"
+                   "zwischen): 'Er kam mit ___ Zug.' Genitive prepositions "
+                   "ONLY with feminine nouns ('während ___ Woche'). State "
+                   "prep, noun, case, definite in the JSON."),
+    Topic("de_prep_wechsel", "de", "Wechselpräpositionen", "", "", "↔",
+          verify="de_art_blind", bank="de_preps.json",
+          guidance="The blank is the article after one of the nine two-way "
+                   "prepositions (an, auf, hinter, in, neben, über, unter, "
+                   "vor, zwischen). The verb must make motion (→akk) or "
+                   "location (→dat) unambiguous: 'Er hängt das Bild an ___ "
+                   "Wand.' vs 'Das Bild hängt an ___ Wand.' Mix both "
+                   "readings ~50/50. State prep, noun, case, definite."),
+]
+
+
 def topics_for(lang: str) -> list[Topic]:
     if lang == "es":
         return PILOT_TOPICS_ES
+    if lang == "de":
+        return TOPICS_DE
     return []
 
 
 def topic_by_key(key: str) -> Topic | None:
-    for t in PILOT_TOPICS_ES:
+    for t in PILOT_TOPICS_ES + TOPICS_DE:
         if t.key == key:
             return t
     return None

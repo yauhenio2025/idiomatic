@@ -139,5 +139,43 @@ def test_verb_prep_bank_loads_into_prompt():
     from idiomatic.grammar.generate import build_prompt
     t = topic_by_key("es_verb_prep")
     p = build_prompt(t, 12)
-    assert "Regime pairs" in p
+    assert "Pairs to draw from" in p
     assert "soñar + con" in p or "depender + de" in p or "confiar + en" in p
+
+
+def test_de_article_verification():
+    t = topic_by_key("de_prep_fest")
+    good = {"sentence": "Er kam gestern mit ___ Zug aus Berlin zurück.",
+            "noun": "Zug", "prep": "mit", "case": "dat", "definite": True,
+            "answer": "dem"}
+    assert verify_item(t, good) == (True, "")
+    assert "wrong article" in verify_item(t, dict(good, answer="den"))[1]
+    assert "governs" in verify_item(t, dict(good, case="akk", answer="den"))[1]
+    assert "not in bank" in verify_item(t, dict(good, prep="zwecks"))[1]
+    assert "two-way" in verify_item(
+        t, dict(good, prep="in", sentence="Er stieg in ___ Zug."))[1]
+    # genitive with masculine noun → surface form would change → reject
+    gen = {"sentence": "Während ___ Krieg litt die Stadt sehr.",
+           "noun": "Krieg", "prep": "während", "case": "gen",
+           "definite": True, "answer": "des"}
+    assert "genitive with m/n" in verify_item(t, gen)[1]
+    # feminine genitive is fine
+    genf = {"sentence": "Während ___ Woche arbeitet sie in Hamburg.",
+            "noun": "Woche", "prep": "während", "case": "gen",
+            "definite": True, "answer": "der"}
+    assert verify_item(t, genf) == (True, "")
+
+    tg = topic_by_key("de_gender")
+    g = {"sentence": "___ Regierung hat die Reform gestern beschlossen.",
+         "noun": "Regierung", "case": "nom", "definite": True, "answer": "die"}
+    assert verify_item(tg, g) == (True, "")
+    assert "must be nominative" in verify_item(tg, dict(g, case="akk"))[1]
+    assert "not in gender DB" in verify_item(
+        tg, dict(g, noun="Xyzfoo", sentence="___ Xyzfoo ist da."))[1]
+
+    tw = topic_by_key("de_prep_wechsel")
+    w = {"sentence": "Er hängt das Bild an ___ Wand im Wohnzimmer.",
+         "noun": "Wand", "prep": "an", "case": "akk", "definite": True,
+         "answer": "die"}
+    assert verify_item(tw, w) == (True, "")
+    assert "Wechsel" in verify_item(tw, dict(w, prep="mit"))[1]

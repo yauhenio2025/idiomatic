@@ -1,0 +1,298 @@
+[
+ {
+  "prep": "durch",
+  "case": "akk",
+  "en": "through",
+  "trap": "Do not use the dative after durch.",
+  "example_dat_or_fixed": "Wir gehen durch den dunklen Wald nach Hause.",
+  "example_akk": null
+ },
+ {
+  "prep": "für",
+  "case": "akk",
+  "en": "for",
+  "trap": "Für always takes the accusative, even for recipients.",
+  "example_dat_or_fixed": "Das Geschenk ist für den neuen Kollegen bestimmt.",
+  "example_akk": null
+ },
+ {
+  "prep": "gegen",
+  "case": "akk",
+  "en": "against, around",
+  "trap": "Do not confuse gegen with dative-governing gegenüber.",
+  "example_dat_or_fixed": "Der Ball prallt gegen die hohe Mauer im Hof.",
+  "example_akk": null
+ },
+ {
+  "prep": "ohne",
+  "case": "akk",
+  "en": "without",
+  "trap": "Do not use the dative after ohne.",
+  "example_dat_or_fixed": "Sie fährt nie ohne den warmen Mantel hinaus.",
+  "example_akk": null
+ },
+ {
+  "prep": "um",
+  "case": "akk",
+  "en": "around, at",
+  "trap": "Do not use the dative after spatial or temporal um.",
+  "example_dat_or_fixed": "Die Kinder laufen um das große Haus herum.",
+  "example_akk": null
+ },
+ {
+  "prep": "bis",
+  "case": "akk",
+  "en": "until, up to",
+  "trap": "Before an article, bis usually combines with another preposition.",
+  "example_dat_or_fixed": "Sie bleibt bis an das Ende der Feier.",
+  "example_akk": null
+ },
+ {
+  "prep": "entlang",
+  "case": "akk",
+  "en": "along",
+  "trap": "With the accusative, entlang normally follows the noun phrase.",
+  "example_dat_or_fixed": "Wir spazieren den ruhigen Fluss entlang bis zur Brücke.",
+  "example_akk": null
+ },
+ {
+  "prep": "aus",
+  "case": "dat",
+  "en": "from, out of",
+  "trap": "Use dative for origin; do not confuse aus with accusative durch.",
+  "example_dat_or_fixed": "Er nimmt die Tassen aus dem alten Schrank heraus.",
+  "example_akk": null
+ },
+ {
+  "prep": "außer",
+  "case": "dat",
+  "en": "except for, besides",
+  "trap": "Außer normally takes the dative in standard German.",
+  "example_dat_or_fixed": "Außer dem neuen Praktikanten kennt jeder diese Regel.",
+  "example_akk": null
+ },
+ {
+  "prep": "bei",
+  "case": "dat",
+  "en": "at, near, with",
+  "trap": "Use bei for location, not motion toward a destination.",
+  "example_dat_or_fixed": "Sie wohnt bei der freundlichen Familie nebenan.",
+  "example_akk": null
+ },
+ {
+  "prep": "mit",
+  "case": "dat",
+  "en": "with, by",
+  "trap": "Mit always takes the dative.",
+  "example_dat_or_fixed": "Wir fahren mit dem frühen Zug nach Hamburg.",
+  "example_akk": null
+ },
+ {
+  "prep": "nach",
+  "case": "dat",
+  "en": "after, to",
+  "trap": "Do not add an article before most cities or countries after nach.",
+  "example_dat_or_fixed": "Nach dem langen Unterricht trinken wir einen Kaffee.",
+  "example_akk": null
+ },
+ {
+  "prep": "seit",
+  "case": "dat",
+  "en": "since, for",
+  "trap": "Use seit for an action continuing from the past.",
+  "example_dat_or_fixed": "Seit dem letzten Winter arbeitet sie in Berlin.",
+  "example_akk": null
+ },
+ {
+  "prep": "von",
+  "case": "dat",
+  "en": "from, of, by",
+  "trap": "The noun after von is dative, not genitive.",
+  "example_dat_or_fixed": "Das Paket kommt von der neuen Nachbarin oben.",
+  "example_akk": null
+ },
+ {
+  "prep": "zu",
+  "case": "dat",
+  "en": "to, at",
+  "trap": "Use dative after zu even when movement is involved.",
+  "example_dat_or_fixed": "Morgen gehe ich zu dem erfahrenen Zahnarzt.",
+  "example_akk": null
+ },
+ {
+  "prep": "gegenüber",
+  "case": "dat",
+  "en": "opposite, toward",
+  "trap": "Gegenüber takes dative and often follows the noun phrase.",
+  "example_dat_or_fixed": "Der Laden liegt dem großen Bahnhof gegenüber.",
+  "example_akk": null
+ },
+ {
+  "prep": "ab",
+  "case": "dat",
+  "en": "from, starting",
+  "trap": "With an article, temporal ab takes the dative.",
+  "example_dat_or_fixed": "Ab dem nächsten Monat gelten strengere Regeln.",
+  "example_akk": null
+ },
+ {
+  "prep": "während",
+  "case": "gen",
+  "en": "during, while",
+  "trap": "Formal standard German uses the genitive after während.",
+  "example_dat_or_fixed": "Während des langen Films blieb das Publikum still.",
+  "example_akk": null
+ },
+ {
+  "prep": "wegen",
+  "case": "gen",
+  "en": "because of",
+  "trap": "Use the genitive in careful standard German, despite colloquial dative.",
+  "example_dat_or_fixed": "Wegen des starken Regens fiel das Spiel aus.",
+  "example_akk": null
+ },
+ {
+  "prep": "trotz",
+  "case": "gen",
+  "en": "despite",
+  "trap": "Standard German generally uses the genitive after trotz.",
+  "example_dat_or_fixed": "Trotz der großen Müdigkeit arbeitete sie konzentriert weiter.",
+  "example_akk": null
+ },
+ {
+  "prep": "statt",
+  "case": "gen",
+  "en": "instead of",
+  "trap": "Do not automatically use von plus dative after statt.",
+  "example_dat_or_fixed": "Statt des teuren Hotels wählten wir eine Pension.",
+  "example_akk": null
+ },
+ {
+  "prep": "anstatt",
+  "case": "gen",
+  "en": "instead of",
+  "trap": "Anstatt governs the genitive when followed by a noun phrase.",
+  "example_dat_or_fixed": "Anstatt des roten Mantels trug er eine Jacke.",
+  "example_akk": null
+ },
+ {
+  "prep": "außerhalb",
+  "case": "gen",
+  "en": "outside",
+  "trap": "Do not confuse genitive außerhalb with dative außer.",
+  "example_dat_or_fixed": "Außerhalb der alten Stadt findet man günstige Wohnungen.",
+  "example_akk": null
+ },
+ {
+  "prep": "innerhalb",
+  "case": "gen",
+  "en": "inside, within",
+  "trap": "The following noun phrase normally appears in the genitive.",
+  "example_dat_or_fixed": "Innerhalb des ersten Monats lernte sie viel Deutsch.",
+  "example_akk": null
+ },
+ {
+  "prep": "aufgrund",
+  "case": "gen",
+  "en": "because of, due to",
+  "trap": "Avoid replacing the genitive with von in formal German.",
+  "example_dat_or_fixed": "Aufgrund des dichten Nebels wurde der Flug gestrichen.",
+  "example_akk": null
+ },
+ {
+  "prep": "angesichts",
+  "case": "gen",
+  "en": "in view of, given",
+  "trap": "Angesichts is followed by the genitive, not the dative.",
+  "example_dat_or_fixed": "Angesichts der schwierigen Lage blieben alle erstaunlich ruhig.",
+  "example_akk": null
+ },
+ {
+  "prep": "mangels",
+  "case": "gen",
+  "en": "for lack of",
+  "trap": "Mangels requires a genitive noun phrase in standard German.",
+  "example_dat_or_fixed": "Mangels des gültigen Ausweises durfte er nicht einreisen.",
+  "example_akk": null
+ },
+ {
+  "prep": "zugunsten",
+  "case": "gen",
+  "en": "in favor of, for the benefit of",
+  "trap": "The beneficiary after zugunsten is normally genitive.",
+  "example_dat_or_fixed": "Zugunsten der kranken Kinder spendete die Firma großzügig.",
+  "example_akk": null
+ },
+ {
+  "prep": "an",
+  "case": "wechsel",
+  "en": "at, on, to",
+  "trap": "Use dative for location and accusative for a destination.",
+  "example_dat_or_fixed": "Das Bild hängt an der weißen Wand.",
+  "example_akk": "Ich hänge das Bild an die weiße Wand."
+ },
+ {
+  "prep": "auf",
+  "case": "wechsel",
+  "en": "on, onto",
+  "trap": "Use accusative only when something moves onto a destination.",
+  "example_dat_or_fixed": "Die Schlüssel liegen auf dem kleinen Tisch.",
+  "example_akk": "Sie legt die Schlüssel auf den kleinen Tisch."
+ },
+ {
+  "prep": "hinter",
+  "case": "wechsel",
+  "en": "behind, to behind",
+  "trap": "Movement alone does not require accusative; destination does.",
+  "example_dat_or_fixed": "Der Garten liegt hinter dem alten Haus.",
+  "example_akk": "Wir stellen die Fahrräder hinter das alte Haus."
+ },
+ {
+  "prep": "in",
+  "case": "wechsel",
+  "en": "in, into",
+  "trap": "Use dative for being inside and accusative for going inside.",
+  "example_dat_or_fixed": "Die Kinder spielen in dem großen Garten.",
+  "example_akk": "Die Kinder laufen in den großen Garten."
+ },
+ {
+  "prep": "neben",
+  "case": "wechsel",
+  "en": "beside, next to",
+  "trap": "Choose the case by location versus destination, not by verb alone.",
+  "example_dat_or_fixed": "Der Schrank steht neben der breiten Tür.",
+  "example_akk": "Wir stellen den Schrank neben die breite Tür."
+ },
+ {
+  "prep": "über",
+  "case": "wechsel",
+  "en": "above, over",
+  "trap": "Static position takes dative; placement above something takes accusative.",
+  "example_dat_or_fixed": "Die Lampe hängt über dem runden Tisch.",
+  "example_akk": "Er hängt die Lampe über den runden Tisch."
+ },
+ {
+  "prep": "unter",
+  "case": "wechsel",
+  "en": "under, below",
+  "trap": "Use accusative for a destination underneath, not every movement.",
+  "example_dat_or_fixed": "Die Katze schläft unter dem weichen Sofa.",
+  "example_akk": "Die Katze kriecht unter das weiche Sofa."
+ },
+ {
+  "prep": "vor",
+  "case": "wechsel",
+  "en": "in front of, before",
+  "trap": "Spatial destination takes accusative; existing position takes dative.",
+  "example_dat_or_fixed": "Das Taxi wartet vor dem großen Hotel.",
+  "example_akk": "Der Fahrer stellt das Taxi vor das große Hotel."
+ },
+ {
+  "prep": "zwischen",
+  "case": "wechsel",
+  "en": "between, among",
+  "trap": "Use dative for position and accusative for placement between things.",
+  "example_dat_or_fixed": "Der Brunnen steht zwischen den beiden alten Häusern.",
+  "example_akk": "Sie stellt den Stuhl zwischen die beiden Betten."
+ }
+]
