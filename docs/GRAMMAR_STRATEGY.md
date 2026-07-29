@@ -340,11 +340,22 @@ user-approved ("worked nicely"); Wave 1 SHIPPED same day — deck now 151
 cards / 13 units, all with ElevenLabs back audio (apkg 896), studied in
 the SYLLABUS Anki profile. Pipeline: `idiomatic/grammar/` +
 `/admin/grammar-*` endpoints. Resume from the wave below that isn't
-checked off. FINDING from Wave 1: informal-tú imperatives are the
-weakest LLM topic so far — 15 of 24 generated items rejected by the
-verifier (vs ~0-8% everywhere else); es_cmd_tu shipped 9/12. Inspect
-`grammar_items.reject_reason` for that unit before tuning its prompt
-(likely usted-form or subjunctive-form confusion).
+checked off. RESOLVED FINDING (Wave 1 → 2): the es_cmd_tu 15/24
+rejection rate was NOT an LLM weakness — every reject was the OLD
+substring leak-check false-flagging short tú imperatives against their
+own infinitive hint (ten⊂tener, pon⊂poner, sal⊂salir…) and against
+ordinary words (da⊂datos). The LLM's forms were morphologically
+correct. Fixed by the word-boundary leak check (Wave 2); unit
+regenerated after the fix. Lesson recorded: when one unit's rejection
+rate is an outlier, read `/admin/grammar-rejects` BEFORE concluding the
+model is weak — the verifier can be the bug.
+
+KNOWN LIMITATION of blind-fill verification: solvers currently run on
+the SAME model family as the generator (Gemini Flash), so correlated
+errors can pass unanimously. Acceptable for v1 (rejection rate on
+closed-class units: 1/72); upgrade path = one solver vote from a
+different provider (codex/OpenAI) when wiring cross-provider calls is
+worth it.
 
 The build order falls out of ONE question: how is each answer type
 VERIFIED? Verification tiers:
@@ -366,9 +377,13 @@ Waves:
   batch 20260729-0323): commands tú/usted/ustedes affirmative+negative,
   complex/past conditionals. 57 accepted / 15 rejected (all rejects in
   es_cmd_tu — see FINDING above).
-- [ ] **Wave 2 — blind-fill verifier + Spanish closed-class units**:
-  clitic pronouns (incl. se-lo transformations, placement), por/para,
-  verb+preposition regimes. Formal/informal register drills.
+- [x] **Wave 2 — blind-fill verifier + Spanish closed-class units**
+  (SHIPPED 2026-07-29, batch 20260729-0346): K=3 blind-fill agreement
+  in `generate.verify_blind`; units es_clitics_dir/ind/selo, es_por_para,
+  es_verb_prep (60-regime bank by codex, review-validated, in
+  grammar/data/es_verb_prep.json). 59/60 accepted. Deck at 210 cards /
+  18 units, all with audio (apkg 897). Register drills shipped in Wave 1
+  (es_cmd_tu/usted/neg).
 - [ ] **Wave 3 — German first new language** (its hardest topics are
   Tier-A verifiable): noun gender + articles, adjective endings, case
   after prepositions (fixed + Wechselpräpositionen). Needs kaikki
