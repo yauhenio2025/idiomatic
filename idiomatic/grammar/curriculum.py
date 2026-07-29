@@ -55,6 +55,9 @@ class Topic:
     # For blind topics: the closed inventory the answer must come from
     # (None = no inventory check). Multi-word entries allowed ("se lo").
     answer_set: list[str] | None = None
+    # Optional JSON bank in grammar/data/ whose entries seed the generator
+    # prompt (e.g. verb+preposition regimes, codex-produced, human-reviewed).
+    bank: str | None = None
 
 
 PILOT_TOPICS_ES: list[Topic] = [
@@ -151,6 +154,15 @@ PILOT_TOPICS_ES: list[Topic] = [
                    "Sí, ___ di esta mañana.' → 'se las' (le+las → se las, "
                    "NEVER 'le las'). Direct-object gender/number must be "
                    "unambiguous from the antecedent."),
+    Topic("es_verb_prep", "es", "Régimen preposicional", "", "", "🧲",
+          verify="blind",
+          answer_set=["a", "de", "en", "con", "por", "para", "contra"],
+          bank="es_verb_prep.json",
+          guidance="The blank is ONLY the preposition governed by the verb "
+                   "(regime pairs are supplied below — use those verbs, one "
+                   "per sentence, and that exact preposition sense). The "
+                   "verb must sit right before or near the blank: 'El plan "
+                   "consiste ___ reducir la deuda.' → 'en'."),
     Topic("es_por_para", "es", "Por vs para", "", "", "⚖",
           verify="blind",
           answer_set=["por", "para"],

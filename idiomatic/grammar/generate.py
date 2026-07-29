@@ -103,13 +103,29 @@ def _norm_answer(s: str) -> str:
     return " ".join(s.split())
 
 
+def _bank_lines(topic: Topic, n: int) -> str:
+    """Sample regime pairs from the topic's data bank into prompt lines."""
+    if not topic.bank:
+        return ""
+    import json
+    import random
+    from pathlib import Path
+    path = Path(__file__).parent / "data" / topic.bank
+    entries = json.loads(path.read_text(encoding="utf-8"))
+    picked = random.sample(entries, min(2 * n, len(entries)))
+    lines = "\n".join(
+        f"- {e['verb']} + {e['prep']} — {e['en']} (trap: {e['trap']})"
+        for e in picked)
+    return f"\n\nRegime pairs to draw from (one verb per sentence):\n{lines}"
+
+
 def build_prompt(topic: Topic, n: int) -> str:
     if topic.verify == "blind":
         return _PROMPT_CLOSED.format(
             label=topic.label, n=n,
             inventory=", ".join(topic.answer_set or []) or "(open)",
             guidance=topic.guidance,
-        )
+        ) + _bank_lines(topic, n)
     return _PROMPT.format(
         label=topic.label, mood=topic.mood, tense=topic.tense, n=n,
         verbs=", ".join(topic.verbs), person_mix=PERSON_MIX,

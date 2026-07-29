@@ -1,0 +1,542 @@
+[
+ {
+  "verb": "soñar",
+  "prep": "con",
+  "pattern": "soñar con + inf/sust",
+  "en": "to dream of/about",
+  "trap": "English 'dream of' often triggers the incorrect preposition 'de'.",
+  "example_es": "Anoche soñé con vivir junto al mar.",
+  "example_en": "Last night I dreamt of living by the sea."
+ },
+ {
+  "verb": "depender",
+  "prep": "de",
+  "pattern": "depender de + sust/inf/cláusula",
+  "en": "to depend on",
+  "trap": "English 'depend on' may lead learners to use the incorrect 'en'.",
+  "example_es": "El éxito depende de que todos colaboremos.",
+  "example_en": "Success depends on all of us working together."
+ },
+ {
+  "verb": "confiar",
+  "prep": "en",
+  "pattern": "confiar en + persona/sust/cláusula",
+  "en": "to trust or have confidence in",
+  "trap": "Do not use 'de' or omit the preposition before the object of trust.",
+  "example_es": "Confío en que llegarás a tiempo.",
+  "example_en": "I trust that you'll arrive on time."
+ },
+ {
+  "verb": "consistir",
+  "prep": "en",
+  "pattern": "consistir en + sust/inf",
+  "en": "to consist in; involve",
+  "trap": "The English construction 'consist of' often produces the incorrect calque 'consistir de'.",
+  "example_es": "El trabajo consiste en revisar los datos.",
+  "example_en": "The job consists of reviewing the data."
+ },
+ {
+  "verb": "casarse",
+  "prep": "con",
+  "pattern": "casarse con + persona",
+  "en": "to marry someone",
+  "trap": "Unlike English 'marry someone', Spanish requires 'con' after 'casarse'.",
+  "example_es": "Se casó con su pareja el año pasado.",
+  "example_en": "She married her partner last year."
+ },
+ {
+  "verb": "enamorarse",
+  "prep": "de",
+  "pattern": "enamorarse de + persona/sust",
+  "en": "to fall in love with",
+  "trap": "English 'with' may prompt the incorrect 'con'; Spanish uses 'de'.",
+  "example_es": "Se enamoró de un compañero de trabajo.",
+  "example_en": "She fell in love with a coworker."
+ },
+ {
+  "verb": "acordarse",
+  "prep": "de",
+  "pattern": "acordarse de + sust/inf/cláusula",
+  "en": "to remember",
+  "trap": "Do not treat pronominal 'acordarse' like transitive 'recordar'; it requires 'de'.",
+  "example_es": "Acuérdate de cerrar la ventana.",
+  "example_en": "Remember to close the window."
+ },
+ {
+  "verb": "olvidarse",
+  "prep": "de",
+  "pattern": "olvidarse de + sust/inf",
+  "en": "to forget",
+  "trap": "Pronominal 'olvidarse' requires 'de', whereas non-pronominal 'olvidar' takes a direct object.",
+  "example_es": "Me olvidé de comprar pan.",
+  "example_en": "I forgot to buy bread."
+ },
+ {
+  "verb": "tratar",
+  "prep": "de",
+  "pattern": "tratar de + inf",
+  "en": "to try to do something",
+  "trap": "For 'try to', use 'tratar de', not 'tratar a' or 'tratar en'.",
+  "example_es": "Trato de dormir ocho horas cada noche.",
+  "example_en": "I try to sleep eight hours every night."
+ },
+ {
+  "verb": "dejar",
+  "prep": "de",
+  "pattern": "dejar de + inf",
+  "en": "to stop doing something",
+  "trap": "Use 'dejar de' for ceasing an activity; 'dejar para' means postponing it.",
+  "example_es": "Dejó de fumar hace dos años.",
+  "example_en": "He stopped smoking two years ago."
+ },
+ {
+  "verb": "acabar",
+  "prep": "de",
+  "pattern": "acabar de + inf",
+  "en": "to have just done something",
+  "trap": "The recent-past construction uses 'de', not 'a'.",
+  "example_es": "Acabo de hablar con la directora.",
+  "example_en": "I've just spoken to the headteacher."
+ },
+ {
+  "verb": "empezar",
+  "prep": "a",
+  "pattern": "empezar a + inf",
+  "en": "to begin to do something",
+  "trap": "Spanish uses 'a' before the following infinitive, not 'de'.",
+  "example_es": "Empezó a llover justo cuando salíamos.",
+  "example_en": "It started raining just as we were leaving."
+ },
+ {
+  "verb": "aprender",
+  "prep": "a",
+  "pattern": "aprender a + inf",
+  "en": "to learn to do something",
+  "trap": "Unlike English, Spanish inserts 'a' before the infinitive.",
+  "example_es": "Aprendí a conducir en Zaragoza.",
+  "example_en": "I learnt to drive in Zaragoza."
+ },
+ {
+  "verb": "ayudar",
+  "prep": "a",
+  "pattern": "ayudar a + inf",
+  "en": "to help to do something",
+  "trap": "English often omits 'to', but Spanish normally requires 'a' before the infinitive.",
+  "example_es": "¿Me ayudas a mover este armario?",
+  "example_en": "Will you help me move this wardrobe?"
+ },
+ {
+  "verb": "negarse",
+  "prep": "a",
+  "pattern": "negarse a + inf",
+  "en": "to refuse to do something",
+  "trap": "Do not omit 'a' before the action being refused.",
+  "example_es": "Se negó a firmar el contrato.",
+  "example_en": "He refused to sign the contract."
+ },
+ {
+  "verb": "atreverse",
+  "prep": "a",
+  "pattern": "atreverse a + inf",
+  "en": "to dare to do something",
+  "trap": "The action after 'atreverse' is introduced by 'a', not 'de'.",
+  "example_es": "No me atrevo a decírselo.",
+  "example_en": "I don't dare tell him."
+ },
+ {
+  "verb": "insistir",
+  "prep": "en",
+  "pattern": "insistir en + sust/inf",
+  "en": "to insist on",
+  "trap": "English 'insist on' corresponds to 'en', not 'sobre' or 'a'.",
+  "example_es": "Insistió en pagar él la cena.",
+  "example_en": "He insisted on paying for dinner himself."
+ },
+ {
+  "verb": "pensar",
+  "prep": "en",
+  "pattern": "pensar en + persona/sust/inf",
+  "en": "to think about or consider",
+  "trap": "Use 'pensar en' for the object of thought; 'pensar de' asks for an opinion.",
+  "example_es": "Pienso mucho en mis abuelos.",
+  "example_en": "I think about my grandparents a lot."
+ },
+ {
+  "verb": "contar",
+  "prep": "con",
+  "pattern": "contar con + persona/sust",
+  "en": "to count on; have available",
+  "trap": "English 'count on' does not translate with 'en'; Spanish uses 'con'.",
+  "example_es": "Contamos con vosotros para terminar hoy.",
+  "example_en": "We're counting on you all to finish today."
+ },
+ {
+  "verb": "preocuparse",
+  "prep": "por",
+  "pattern": "preocuparse por + persona/sust/cláusula",
+  "en": "to worry about",
+  "trap": "Use 'por' for the cause of worry; 'preocuparse de' more often means taking care to do something.",
+  "example_es": "Se preocupa demasiado por lo que piensen los demás.",
+  "example_en": "She worries too much about what other people might think."
+ },
+ {
+  "verb": "luchar",
+  "prep": "por",
+  "pattern": "luchar por + sust/inf",
+  "en": "to fight for",
+  "trap": "Use 'por' for a goal or cause, not 'para'.",
+  "example_es": "Luchamos por conservar el cine del barrio.",
+  "example_en": "We're fighting to preserve the neighbourhood cinema."
+ },
+ {
+  "verb": "optar",
+  "prep": "por",
+  "pattern": "optar por + sust/inf",
+  "en": "to choose or decide on",
+  "trap": "Use 'optar por' for choosing; 'optar a' means competing or applying for something.",
+  "example_es": "Optaron por aplazar la reunión.",
+  "example_en": "They chose to postpone the meeting."
+ },
+ {
+  "verb": "carecer",
+  "prep": "de",
+  "pattern": "carecer de + sust",
+  "en": "to lack",
+  "trap": "English 'lack' is transitive, but Spanish 'carecer' requires 'de'.",
+  "example_es": "El informe carece de datos que respalden la conclusión.",
+  "example_en": "The report lacks data supporting the conclusion."
+ },
+ {
+  "verb": "constar",
+  "prep": "de",
+  "pattern": "constar de + sust",
+  "en": "to consist of; comprise",
+  "trap": "Use 'constar de' for components; 'constar en' means being recorded somewhere.",
+  "example_es": "El curso consta de seis módulos.",
+  "example_en": "The course consists of six modules."
+ },
+ {
+  "verb": "burlarse",
+  "prep": "de",
+  "pattern": "burlarse de + persona/sust",
+  "en": "to make fun of",
+  "trap": "English 'laugh at' may trigger the incorrect 'a'; Spanish uses 'de'.",
+  "example_es": "Se burlaron de su acento durante la cena.",
+  "example_en": "They made fun of his accent during dinner."
+ },
+ {
+  "verb": "arrepentirse",
+  "prep": "de",
+  "pattern": "arrepentirse de + sust/inf",
+  "en": "to regret; repent of",
+  "trap": "The cause of regret is introduced by 'de', not 'por'.",
+  "example_es": "Me arrepiento de no haber aceptado la oferta.",
+  "example_en": "I regret not having accepted the offer."
+ },
+ {
+  "verb": "quejarse",
+  "prep": "de",
+  "pattern": "quejarse de + sust/cláusula",
+  "en": "to complain about",
+  "trap": "English 'about' often prompts 'sobre', but the standard regime is 'quejarse de'.",
+  "example_es": "Los vecinos se quejaron del ruido nocturno.",
+  "example_en": "The neighbours complained about the noise at night."
+ },
+ {
+  "verb": "darse cuenta",
+  "prep": "de",
+  "pattern": "darse cuenta de + sust/cláusula",
+  "en": "to realise; become aware of",
+  "trap": "Do not omit 'de', including before a clause introduced by 'que'.",
+  "example_es": "Me di cuenta de que había dejado las llaves en casa.",
+  "example_en": "I realised that I had left my keys at home."
+ },
+ {
+  "verb": "tener",
+  "prep": "de",
+  "pattern": "tener ganas de + sust/inf",
+  "en": "to feel like; look forward to",
+  "trap": "The desired activity follows 'ganas de', not 'ganas para'.",
+  "example_es": "Tengo ganas de verte este fin de semana.",
+  "example_en": "I'm looking forward to seeing you this weekend."
+ },
+ {
+  "verb": "estar",
+  "prep": "de",
+  "pattern": "estar a punto de + inf",
+  "en": "to be about to do something",
+  "trap": "The fixed expression ends in 'de', not 'para'.",
+  "example_es": "El tren está a punto de salir.",
+  "example_en": "The train is about to leave."
+ },
+ {
+  "verb": "ocuparse",
+  "prep": "de",
+  "pattern": "ocuparse de + sust/inf",
+  "en": "to take care of; deal with",
+  "trap": "The matter or task handled follows 'de', not 'en'.",
+  "example_es": "Yo me ocupo de preparar el presupuesto mensual.",
+  "example_en": "I take care of preparing the monthly budget."
+ },
+ {
+  "verb": "encargarse",
+  "prep": "de",
+  "pattern": "encargarse de + sust/inf",
+  "en": "to be responsible for",
+  "trap": "Do not use 'por' after 'encargarse'; responsibility is introduced by 'de'.",
+  "example_es": "Laura se encarga de reservar el alojamiento.",
+  "example_en": "Laura is responsible for booking the accommodation."
+ },
+ {
+  "verb": "prescindir",
+  "prep": "de",
+  "pattern": "prescindir de + persona/sust",
+  "en": "to do without; dispense with",
+  "trap": "The thing omitted is introduced by 'de', despite English 'without'.",
+  "example_es": "Podemos prescindir del coche porque el metro está cerca.",
+  "example_en": "We can do without the car because the underground is nearby."
+ },
+ {
+  "verb": "disponer",
+  "prep": "de",
+  "pattern": "disponer de + sust",
+  "en": "to have available",
+  "trap": "In the sense of having something available, 'disponer' requires 'de'.",
+  "example_es": "Disponemos de tres salas de reuniones.",
+  "example_en": "We have three meeting rooms available."
+ },
+ {
+  "verb": "alegrarse",
+  "prep": "de",
+  "pattern": "alegrarse de + sust/inf/cláusula",
+  "en": "to be glad about",
+  "trap": "Use 'de' for what makes you glad; 'alegrarse por alguien' expresses happiness on that person's behalf.",
+  "example_es": "Me alegro de que hayas venido.",
+  "example_en": "I'm glad you came."
+ },
+ {
+  "verb": "enterarse",
+  "prep": "de",
+  "pattern": "enterarse de + sust/cláusula",
+  "en": "to find out about",
+  "trap": "Do not use 'sobre' directly after 'enterarse'; the governed preposition is 'de'.",
+  "example_es": "Me enteré del cambio por una compañera.",
+  "example_en": "I found out about the change through a colleague."
+ },
+ {
+  "verb": "convencer",
+  "prep": "de",
+  "pattern": "convencer a alguien de + sust/inf/cláusula",
+  "en": "to convince someone of or to do something",
+  "trap": "After the person convinced, the argument or action is introduced by 'de', not 'a'.",
+  "example_es": "Convencí a Marta de que pidiera una segunda opinión.",
+  "example_en": "I convinced Marta to seek a second opinion."
+ },
+ {
+  "verb": "dedicarse",
+  "prep": "a",
+  "pattern": "dedicarse a + sust/inf",
+  "en": "to devote oneself to; work in",
+  "trap": "The occupation or activity follows 'a', not 'en'.",
+  "example_es": "Mi hermano se dedica a diseñar páginas web.",
+  "example_en": "My brother works designing websites."
+ },
+ {
+  "verb": "acostumbrarse",
+  "prep": "a",
+  "pattern": "acostumbrarse a + sust/inf",
+  "en": "to get used to",
+  "trap": "English 'used to' can obscure that Spanish always requires 'a' here.",
+  "example_es": "Me he acostumbrado a trabajar desde casa.",
+  "example_en": "I've got used to working from home."
+ },
+ {
+  "verb": "renunciar",
+  "prep": "a",
+  "pattern": "renunciar a + sust/inf",
+  "en": "to give up; resign from",
+  "trap": "English 'renounce' or 'give up' has no equivalent preposition, but Spanish requires 'a'.",
+  "example_es": "Renunció al puesto por motivos personales.",
+  "example_en": "She resigned from the position for personal reasons."
+ },
+ {
+  "verb": "acceder",
+  "prep": "a",
+  "pattern": "acceder a + sust/inf",
+  "en": "to agree to; gain access to",
+  "trap": "Whether it means agreeing or gaining access, the complement follows 'a'.",
+  "example_es": "La empresa accedió a devolvernos el dinero.",
+  "example_en": "The company agreed to refund our money."
+ },
+ {
+  "verb": "asistir",
+  "prep": "a",
+  "pattern": "asistir a + evento/lugar",
+  "en": "to attend",
+  "trap": "English 'attend' is transitive, but Spanish 'asistir' requires 'a'.",
+  "example_es": "Mañana asistiré a una reunión en Madrid.",
+  "example_en": "Tomorrow I'll attend a meeting in Madrid."
+ },
+ {
+  "verb": "pertenecer",
+  "prep": "a",
+  "pattern": "pertenecer a + persona/grupo/sust",
+  "en": "to belong to",
+  "trap": "Do not translate English 'belong to' with 'de'; Spanish uses 'a'.",
+  "example_es": "Este archivo pertenece al departamento jurídico.",
+  "example_en": "This file belongs to the legal department."
+ },
+ {
+  "verb": "referirse",
+  "prep": "a",
+  "pattern": "referirse a + persona/sust",
+  "en": "to refer to",
+  "trap": "The object referred to follows 'a', not 'sobre'.",
+  "example_es": "El artículo se refiere a un estudio reciente.",
+  "example_en": "The article refers to a recent study."
+ },
+ {
+  "verb": "oponerse",
+  "prep": "a",
+  "pattern": "oponerse a + sust/inf",
+  "en": "to oppose; be against",
+  "trap": "English 'oppose' is transitive, but Spanish 'oponerse' requires 'a'.",
+  "example_es": "Muchos vecinos se oponen a construir otro aparcamiento.",
+  "example_en": "Many residents oppose building another car park."
+ },
+ {
+  "verb": "contribuir",
+  "prep": "a",
+  "pattern": "contribuir a + sust/inf",
+  "en": "to contribute to",
+  "trap": "English 'contribute to' corresponds to 'a', not 'para'.",
+  "example_es": "Esta medida contribuirá a reducir el consumo de energía.",
+  "example_en": "This measure will help reduce energy consumption."
+ },
+ {
+  "verb": "tender",
+  "prep": "a",
+  "pattern": "tender a + inf",
+  "en": "to tend to do something",
+  "trap": "The following infinitive requires 'a', just as in the fixed construction 'tender a'.",
+  "example_es": "Cuando está cansado, tiende a cometer más errores.",
+  "example_en": "When he's tired, he tends to make more mistakes."
+ },
+ {
+  "verb": "jugar",
+  "prep": "a",
+  "pattern": "jugar a + juego/deporte",
+  "en": "to play a game or sport",
+  "trap": "In European Spanish, games and sports follow 'a'; 'jugar con' means playing with someone or something.",
+  "example_es": "Los niños juegan al fútbol en el parque.",
+  "example_en": "The children play football in the park."
+ },
+ {
+  "verb": "fijarse",
+  "prep": "en",
+  "pattern": "fijarse en + persona/sust/cláusula",
+  "en": "to notice; pay attention to",
+  "trap": "The focus of attention follows 'en', not 'a'.",
+  "example_es": "Fíjate en cómo cambia la luz al atardecer.",
+  "example_en": "Notice how the light changes at sunset."
+ },
+ {
+  "verb": "centrarse",
+  "prep": "en",
+  "pattern": "centrarse en + sust/inf",
+  "en": "to focus on",
+  "trap": "English 'focus on' maps to 'centrarse en', not 'centrarse sobre'.",
+  "example_es": "El debate se centró en buscar soluciones prácticas.",
+  "example_en": "The debate focused on finding practical solutions."
+ },
+ {
+  "verb": "basarse",
+  "prep": "en",
+  "pattern": "basarse en + sust",
+  "en": "to be based on",
+  "trap": "The basis is introduced by 'en', not 'sobre'.",
+  "example_es": "La película se basa en una novela histórica.",
+  "example_en": "The film is based on a historical novel."
+ },
+ {
+  "verb": "tardar",
+  "prep": "en",
+  "pattern": "tardar en + inf",
+  "en": "to take time to do something",
+  "trap": "Spanish inserts 'en' before the action, unlike English 'take time to'.",
+  "example_es": "Tardamos dos horas en llegar a Toledo.",
+  "example_en": "It took us two hours to reach Toledo."
+ },
+ {
+  "verb": "convertirse",
+  "prep": "en",
+  "pattern": "convertirse en + sust",
+  "en": "to become; turn into",
+  "trap": "Use 'en' for the resulting state, not 'a' or 'de'.",
+  "example_es": "El antiguo almacén se convirtió en una biblioteca.",
+  "example_en": "The old warehouse became a library."
+ },
+ {
+  "verb": "influir",
+  "prep": "en",
+  "pattern": "influir en + persona/sust",
+  "en": "to influence; affect",
+  "trap": "English 'influence' is transitive, but Spanish normally uses 'influir en'.",
+  "example_es": "La luz influye en nuestro estado de ánimo.",
+  "example_en": "Light influences our mood."
+ },
+ {
+  "verb": "coincidir",
+  "prep": "con",
+  "pattern": "coincidir con + persona/opinión",
+  "en": "to agree with; coincide with",
+  "trap": "Agreement with a person or view uses 'con', not 'a'.",
+  "example_es": "Coincido contigo en lo esencial.",
+  "example_en": "I agree with you on the essentials."
+ },
+ {
+  "verb": "conformarse",
+  "prep": "con",
+  "pattern": "conformarse con + sust/inf",
+  "en": "to settle for; be satisfied with",
+  "trap": "The accepted result follows 'con', not 'de'.",
+  "example_es": "No me conformo con una explicación tan vaga.",
+  "example_en": "I won't settle for such a vague explanation."
+ },
+ {
+  "verb": "confundir",
+  "prep": "con",
+  "pattern": "confundir algo/alguien con + algo/alguien",
+  "en": "to confuse or mistake for",
+  "trap": "The item something is mistaken for is introduced by 'con', not 'por'.",
+  "example_es": "No confundas la cortesía con la amistad.",
+  "example_en": "Don't confuse politeness with friendship."
+ },
+ {
+  "verb": "preguntar",
+  "prep": "por",
+  "pattern": "preguntar por + persona/sust",
+  "en": "to ask for or about",
+  "trap": "Use 'por' for the person or subject sought; 'preguntar a' introduces the person being asked.",
+  "example_es": "En recepción pregunté por Ana.",
+  "example_en": "I asked for Ana at reception."
+ },
+ {
+  "verb": "servir",
+  "prep": "para",
+  "pattern": "servir para + sust/inf",
+  "en": "to be useful for; serve to",
+  "trap": "Use 'para' for purpose; 'servir de' means serving as something.",
+  "example_es": "Este botón sirve para apagar la pantalla.",
+  "example_en": "This button is used to switch off the screen."
+ },
+ {
+  "verb": "luchar",
+  "prep": "contra",
+  "pattern": "luchar contra + persona/sust",
+  "en": "to fight against",
+  "trap": "Use 'contra' for an opponent or harmful force; 'luchar por' introduces the goal or cause defended.",
+  "example_es": "Los médicos luchan contra la propagación del virus.",
+  "example_en": "Doctors are fighting against the spread of the virus."
+ }
+]

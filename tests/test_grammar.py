@@ -133,3 +133,11 @@ def test_por_para_inventory():
     assert verify_item(t, {"sentence": "El tren sale ___ Madrid a las ocho.",
                            "answer": "para"})[0]
     assert not verify_item(t, {"sentence": "x ___ y", "answer": "de"})[0]
+
+
+def test_verb_prep_bank_loads_into_prompt():
+    from idiomatic.grammar.generate import build_prompt
+    t = topic_by_key("es_verb_prep")
+    p = build_prompt(t, 12)
+    assert "Regime pairs" in p
+    assert "soñar + con" in p or "depender + de" in p or "confiar + en" in p
