@@ -25,7 +25,7 @@ from .pipeline import connectives
 from .pipeline.apkg import build_apkg
 from .pipeline.dedup import normalize
 from .pipeline.explain import enrich_one
-from .pipeline.extract import extract_from_audio
+from .pipeline.extract import WrongLanguageAudio, extract_from_audio
 from .settings import get_settings
 
 log = structlog.get_logger()
@@ -324,10 +324,21 @@ async def process_video(video: dict) -> None:
             log.warning("worker.duration_unknown", yt=youtube_id)
 
         # 2. Extract idiomatic phrases via Gemini 3.5 Flash audio understanding
-        extracted = await extract_from_audio(
-            source_audio, lang, n_target=_scaled_idiom_target(
-                duration_sec, settings.target_idioms_per_video),
-        )
+        try:
+            extracted = await extract_from_audio(
+                source_audio, lang, n_target=_scaled_idiom_target(
+                    duration_sec, settings.target_idioms_per_video),
+            )
+        except WrongLanguageAudio as e:
+            # Wipe the dub from R2 so a later retry (e.g. after we learn to
+            # request the original track) re-downloads instead of reusing it.
+            await oxylabs_client.cleanup_r2(youtube_id)
+            await db.mark_video_status(
+                video["id"], "skipped",
+                f"audio track is '{e.detected}', not '{lang}' "
+                f"(YouTube auto-dub)",
+            )
+            return
         if not extracted:
             await db.mark_video_status(video["id"], "skipped", "no idioms extracted")
             return

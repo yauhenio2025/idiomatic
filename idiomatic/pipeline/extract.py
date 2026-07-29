@@ -22,6 +22,18 @@ from .dedup import normalize
 log = structlog.get_logger()
 
 
+class WrongLanguageAudio(Exception):
+    """The audio track is not in the channel's language — typically a
+    YouTube auto-dubbed English track that the downloader picked instead
+    of the original (rolled out widely mid-2026). Extracting from a dub
+    yields cards whose 'context clip from the video' is English speech."""
+
+    def __init__(self, detected: str, expected: str):
+        self.detected = detected
+        self.expected = expected
+        super().__init__(f"audio language {detected!r} != expected {expected!r}")
+
+
 @dataclass(slots=True)
 class ExtractedPhrase:
     text: str
@@ -76,7 +88,16 @@ class ExtractedPhrase:
 
 
 
-PROMPT_TMPL = """You are listening to a {lang_name} video. Identify {n_target} of the most pedagogically valuable IDIOMATIC OR IDIOMATIC-BUT-COMMON expressions used in the audio. The audience is an advanced learner (B2/C1) who already knows everyday vocabulary and wants to acquire native-feeling expressions.
+PROMPT_TMPL = """You are given the audio track of a video that is SUPPOSED to be in {lang_name}.
+
+STEP 0 — LANGUAGE CHECK (do this first): determine the primary language actually SPOKEN in the audio. Many YouTube videos now carry AI-dubbed alternative audio tracks, so the speech may be English (or another language) even though the video is from a {lang_name} channel. Judge ONLY by what is spoken — never assume. Brief foreign-language quotes inside an otherwise {lang_name} video are fine; judge by the majority of the speech.
+
+If the primary spoken language is NOT {lang_name}, output EXACTLY this JSON object and nothing else:
+{{"audio_language": "<ISO 639-1 code of the language you actually hear>"}}
+
+Only if the primary spoken language IS {lang_name}, continue:
+
+Identify {n_target} of the most pedagogically valuable IDIOMATIC OR IDIOMATIC-BUT-COMMON expressions used in the audio. The audience is an advanced learner (B2/C1) who already knows everyday vocabulary and wants to acquire native-feeling expressions.
 
 PREFER expressions that are:
 - Set phrases, idioms, fixed collocations
@@ -123,6 +144,14 @@ async def extract_from_audio(
 
     raw = await gemini.generate_from_audio(prompt, audio_path,
                                             json_mode=True, temperature=0.3)
+    if isinstance(raw, dict) and raw.get("audio_language"):
+        detected = str(raw["audio_language"]).strip().lower()[:8]
+        if detected and detected != lang:
+            log.warning("extract.wrong_language", expected=lang, detected=detected)
+            raise WrongLanguageAudio(detected, lang)
+        # Gemini says it IS the right language but used the escape shape —
+        # treat as an empty extraction rather than crashing.
+        raw = []
     if not isinstance(raw, list):
         log.warning("extract.unexpected_shape", got=type(raw).__name__)
         return []

@@ -476,6 +476,123 @@ async def admin_clear_context(
     return {"cleared": int(result.split()[-1])}
 
 
+@app.post("/admin/purge-video")
+async def admin_purge_video(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Purge every artifact of a video whose audio turned out to be a
+    wrong-language track (e.g. a YouTube auto-dub the downloader picked):
+    expression rows, per-video apkg row + file, staged audio, R2 object.
+    Returns the Anki deck name + note GUIDs for the add-on's cleanup.json.
+    body: {"youtube_id": "...", "requeue": bool} — requeue resets the video
+    to queued/attempts=0 so the fixed downloader re-fetches the original
+    track. Pool apkgs are NOT rebuilt here; call /admin/rebuild-pools?lang=…
+    once after a batch of purges."""
+    import shutil as _shutil
+
+    from . import oxylabs_client
+    from .langs import LANG_NAMES
+    from .pipeline.apkg import _guid as _video_guid
+    from .pipeline.pool import _guid as _pool_guid
+    from .pipeline.pool import _norm as _pool_norm
+
+    youtube_id = body.get("youtube_id")
+    requeue = bool(body.get("requeue"))
+    if not isinstance(youtube_id, str) or not youtube_id.strip():
+        raise HTTPException(400, "need youtube_id")
+    youtube_id = youtube_id.strip()
+    pool = await db.get_pool()
+    v = await pool.fetchrow(
+        "SELECT id, lang, title, first_seen::date AS d FROM videos WHERE youtube_id = $1",
+        youtube_id)
+    if not v:
+        raise HTTPException(404, "unknown youtube_id")
+
+    idioms = await pool.fetch(
+        "SELECT id, idiom_text, expression_id FROM expression_idioms WHERE video_id = $1",
+        v["id"])
+    idiom_ids = [r["id"] for r in idioms]
+    examples = await pool.fetch(
+        "SELECT idiom_id, target_text FROM expression_examples WHERE idiom_id = ANY($1::bigint[])",
+        idiom_ids) if idiom_ids else []
+
+    # Expressions that exist ONLY in this video — their pool notes must go
+    # too. Shared expressions keep their pool notes (rebuilt from the
+    # surviving occurrence).
+    expr_ids = list({r["expression_id"] for r in idioms
+                     if r["expression_id"] is not None})
+    orphaned: set = set()
+    if expr_ids:
+        rows = await pool.fetch(
+            """SELECT e.id FROM expressions e
+               WHERE e.id = ANY($1::bigint[])
+                 AND NOT EXISTS (SELECT 1 FROM expression_idioms ei
+                                 WHERE ei.expression_id = e.id
+                                   AND ei.video_id <> $2)""",
+            expr_ids, v["id"])
+        orphaned = {r["id"] for r in rows}
+
+    date_prefix = v["d"].isoformat() if v["d"] else "0000-00-00"
+    deck_name = (f"Idiomatic::{LANG_NAMES.get(v['lang'], v['lang'].upper())}"
+                 f"::{date_prefix} · {v['title']}")
+    guids = [_video_guid(youtube_id, (r["idiom_text"] or "").lower().strip())
+             for r in idioms]
+    ex_by_idiom: dict = {}
+    for r in examples:
+        ex_by_idiom.setdefault(r["idiom_id"], []).append(r["target_text"])
+    for r in idioms:
+        if r["expression_id"] in orphaned:
+            it = r["idiom_text"] or ""
+            guids.append(_pool_guid(f"yt-idiom-pool::{v['lang']}", _pool_norm(it)))
+            guids.append(_pool_guid("yt-pool-t2e", _pool_norm(it)))
+            guids.append(_pool_guid("yt-pool-e2t", _pool_norm(it)))
+            for tg in ex_by_idiom.get(r["id"], []):
+                guids.append(_pool_guid("yt-pool", _pool_norm(it), _pool_norm(tg or "")))
+
+    # --- deletions, FK-safe order -------------------------------------------
+    if idiom_ids:
+        await pool.execute(
+            "DELETE FROM expression_examples WHERE idiom_id = ANY($1::bigint[])",
+            idiom_ids)
+        await pool.execute(
+            "DELETE FROM expression_idioms WHERE video_id = $1", v["id"])
+    if orphaned:
+        await pool.execute(
+            "DELETE FROM expressions WHERE id = ANY($1::bigint[])",
+            list(orphaned))
+    apkg_rows = await pool.fetch(
+        "SELECT id, filename FROM apkgs WHERE video_id = $1", v["id"])
+    settings = get_settings()
+    for r in apkg_rows:
+        (Path(settings.data_dir) / r["filename"]).unlink(missing_ok=True)
+    if apkg_rows:
+        ids = [r["id"] for r in apkg_rows]
+        await pool.execute(
+            "DELETE FROM agent_acks WHERE apkg_id = ANY($1::int[])", ids)
+        await pool.execute(
+            "DELETE FROM apkgs WHERE id = ANY($1::int[])", ids)
+    _shutil.rmtree(Path(settings.data_dir) / "staged_audio" / youtube_id,
+                   ignore_errors=True)
+    await oxylabs_client.cleanup_r2(youtube_id)
+
+    if requeue:
+        await pool.execute(
+            """UPDATE videos SET status='queued', attempts=0, picked_at=NULL,
+               finished_at=NULL, status_msg='purged wrong-language artifacts; requeued'
+               WHERE id = $1""", v["id"])
+    else:
+        await pool.execute(
+            """UPDATE videos SET status='skipped',
+               status_msg='purged: wrong-language audio track'
+               WHERE id = $1""", v["id"])
+
+    return {"ok": True, "youtube_id": youtube_id, "lang": v["lang"],
+            "deck_name": deck_name, "note_guids": guids,
+            "idioms_purged": len(idiom_ids),
+            "expressions_orphaned": len(orphaned),
+            "apkgs_deleted": len(apkg_rows), "requeued": requeue}
+
+
 # --- admin: rotate an agent's bearer token ----------------------------------
 
 @app.post("/admin/reset-acks")

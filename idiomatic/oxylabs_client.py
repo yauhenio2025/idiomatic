@@ -99,7 +99,13 @@ async def submit_audio_job(video_id: str) -> str:
     payload = {
         "source": "youtube_download",
         "query": video_id,
-        "context": [{"key": "download_type", "value": "audio"}],
+        "context": [
+            {"key": "download_type", "value": "audio"},
+            # YouTube auto-dubbing (mid-2026 rollout) makes the "default"
+            # track an AI English dub on many channels — always take the
+            # original-language track.
+            {"key": "audio_language", "value": "original"},
+        ],
         "storage_type": "s3_compatible",
         "storage_url": _r2_storage_url(prefix),
     }
