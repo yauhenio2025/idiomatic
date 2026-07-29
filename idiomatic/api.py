@@ -576,9 +576,13 @@ async def admin_purge_video(
     await oxylabs_client.cleanup_r2(youtube_id)
 
     if requeue:
+        # first_seen=NOW(): (a) survives the 7-day queue expiry, (b) sorts
+        # to the front of the newest-first claim order so the re-download
+        # with the original track happens promptly.
         await pool.execute(
             """UPDATE videos SET status='queued', attempts=0, picked_at=NULL,
-               finished_at=NULL, status_msg='purged wrong-language artifacts; requeued'
+               finished_at=NULL, first_seen=NOW(),
+               status_msg='purged wrong-language artifacts; requeued'
                WHERE id = $1""", v["id"])
     else:
         await pool.execute(
