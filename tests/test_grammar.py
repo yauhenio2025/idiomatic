@@ -20,6 +20,7 @@ def test_every_pilot_verb_exists_in_morphology_db():
     missing = [
         (t.key, v)
         for t in PILOT_TOPICS_ES
+        if t.verify == "morph"
         for v in t.verbs
         if m.lookup("es", v, t.mood, t.tense, "3s") is None
     ]
@@ -109,3 +110,26 @@ def test_apkg_with_audio(tmp_path: Path):
             con.execute("SELECT flds FROM notes")}
     assert "[sound:idg_es_1.mp3]" in rows["1"]   # item 1 has audio in Extra1
     assert "[sound:" not in rows["2"]            # item 2 text-only
+
+
+def test_blind_topic_static_checks():
+    t = topic_by_key("es_clitics_selo")
+    good = {"sentence": "¿Le entregaste las llaves al portero? Sí, ___ di esta mañana.",
+            "answer": "se las"}
+    assert verify_item(t, good) == (True, "")
+    assert "inventory" in verify_item(t, dict(good, answer="le las"))[1]
+    # word-boundary leak: 'los' in the sentence must NOT flag answer 'lo'
+    t2 = topic_by_key("es_clitics_dir")
+    ok, why = verify_item(t2, {"sentence": "¿Compraste los libros? Sí, ___ compré ayer.",
+                               "answer": "lo"})
+    assert why != "answer leaks in sentence"
+    # a real leak still flags
+    assert verify_item(t2, {"sentence": "Lo vi ayer y ___ saludé.",
+                            "answer": "lo"}) == (False, "answer leaks in sentence")
+
+
+def test_por_para_inventory():
+    t = topic_by_key("es_por_para")
+    assert verify_item(t, {"sentence": "El tren sale ___ Madrid a las ocho.",
+                           "answer": "para"})[0]
+    assert not verify_item(t, {"sentence": "x ___ y", "answer": "de"})[0]

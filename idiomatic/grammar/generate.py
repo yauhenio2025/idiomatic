@@ -63,13 +63,53 @@ is 2p).
 Return ONLY the JSON array."""
 
 
+_PROMPT_CLOSED = """You are writing Spanish grammar drill cards for ONE advanced \
+adult learner (reads Spanish news daily; interests: geopolitics, tech \
+criticism, history, media). Target: {label}.
+
+Produce {n} items as a JSON array. Each item:
+{{
+  "sentence": "...",   // Spanish sentence(s), 8-20 words, with ONE blank ___ \
+whose content is exactly one entry from the inventory below. A two-part \
+sentence (question + answer, or two clauses) is fine.
+  "answer": "...",     // the blank's content, exactly one inventory entry
+  "gloss_en": "...",   // natural English translation of the full text
+  "why": "..."         // ONE short English line naming the rule that decides \
+the answer
+}}
+
+The inventory (closed set — answers come ONLY from here): {inventory}
+
+HARD RULES — items violating any of these are discarded by a verifier:
+1. The context must make the answer UNIQUELY determined: an expert filling \
+the blank without seeing your answer must arrive at exactly it. {guidance}
+2. The answer must NOT also appear verbatim elsewhere in the sentence.
+3. European Spanish only. Vary structures and persons; no two sentences may \
+share the same opening words.
+4. Real-world content must be timelessly true or clearly hypothetical.
+
+Return ONLY the JSON array."""
+
+
 def _strip_accents_eq(a: str, b: str) -> bool:
     d = lambda s: "".join(c for c in unicodedata.normalize("NFD", s)
                           if unicodedata.category(c) != "Mn")
     return d(a) == d(b)
 
 
+def _norm_answer(s: str) -> str:
+    s = unicodedata.normalize("NFC", (s or "").strip().lower())
+    s = s.strip(".,;:!?¡¿\"'«»")
+    return " ".join(s.split())
+
+
 def build_prompt(topic: Topic, n: int) -> str:
+    if topic.verify == "blind":
+        return _PROMPT_CLOSED.format(
+            label=topic.label, n=n,
+            inventory=", ".join(topic.answer_set or []) or "(open)",
+            guidance=topic.guidance,
+        )
     return _PROMPT.format(
         label=topic.label, mood=topic.mood, tense=topic.tense, n=n,
         verbs=", ".join(topic.verbs), person_mix=PERSON_MIX,
@@ -77,20 +117,39 @@ def build_prompt(topic: Topic, n: int) -> str:
     )
 
 
+def _answer_leaks(sentence: str, answer: str) -> bool:
+    """Word-boundary leak check — substring matching false-flags short
+    closed-class answers ('lo' inside 'los')."""
+    import re
+    rest = sentence.replace("___", " ")
+    return re.search(rf"(?<![\wáéíóúüñ]){re.escape(answer)}(?![\wáéíóúüñ])",
+                     rest, re.IGNORECASE) is not None
+
+
 def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
-    """Deterministic checks. Returns (ok, reason-if-rejected)."""
-    inf = (item.get("infinitive") or "").strip().lower()
-    person = (item.get("person") or "").strip().lower()
+    """Static checks (no network). Returns (ok, reason-if-rejected).
+    Blind topics additionally require verify_blind() to pass."""
     sentence = (item.get("sentence") or "").strip()
     answer = (item.get("answer") or "").strip()
 
-    if person not in morphology.PERSONS:
-        return False, f"bad person {person!r}"
     if "___" not in sentence:
         return False, "no blank in sentence"
     if not answer:
         return False, "empty answer"
+    if _answer_leaks(sentence, answer):
+        return False, "answer leaks in sentence"
 
+    if topic.verify == "blind":
+        if topic.answer_set is not None:
+            allowed = {_norm_answer(a) for a in topic.answer_set}
+            if _norm_answer(answer) not in allowed:
+                return False, f"answer {answer!r} not in closed inventory"
+        return True, ""
+
+    inf = (item.get("infinitive") or "").strip().lower()
+    person = (item.get("person") or "").strip().lower()
+    if person not in morphology.PERSONS:
+        return False, f"bad person {person!r}"
     ok, expected = morphology.verify(topic.lang, inf, topic.mood, topic.tense,
                                      person, answer)
     if expected is None:
@@ -99,12 +158,45 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
         if _strip_accents_eq(answer.lower(), expected):
             return False, f"accent error: {answer!r} vs {expected!r}"
         return False, f"wrong form: {answer!r}, expected {expected!r}"
-
-    # The answer must not also appear verbatim outside the blank (a cue
-    # that gives the answer away, or a duplicated verb).
-    if answer.lower() in sentence.lower().replace("___", " "):
-        return False, "answer leaks in sentence"
     return True, ""
+
+
+_BLIND_SOLVER = """Spanish grammar exercise. Fill the blank.
+
+Sentence: {sentence}
+
+The blank contains exactly one of: {inventory}
+
+Return JSON: {{"answer": "..."}} — the blank's content only, nothing else."""
+
+BLIND_K = 3
+
+
+async def verify_blind(topic: Topic, item: dict) -> tuple[bool, str]:
+    """Tier-B verification: K independent solvers get the sentence and the
+    inventory but NOT the answer. Unanimous agreement with the generator's
+    answer required — disagreement means wrong OR ambiguous, both fatal
+    for a drill card."""
+    prompt = _BLIND_SOLVER.format(
+        sentence=item["sentence"],
+        inventory=", ".join(topic.answer_set or []) or "any Spanish word(s)",
+    )
+    import asyncio
+    raws = await asyncio.gather(
+        *(gemini.generate_text(prompt, json_mode=True, temperature=0.2)
+          for _ in range(BLIND_K)),
+        return_exceptions=True,
+    )
+    votes = []
+    for r in raws:
+        if isinstance(r, dict):
+            votes.append(_norm_answer(str(r.get("answer", ""))))
+        else:
+            votes.append("<error>")
+    target = _norm_answer(item["answer"])
+    if all(v == target for v in votes):
+        return True, ""
+    return False, f"blind disagreement: votes {votes} vs {target!r}"
 
 
 async def generate_batch(topic: Topic, n: int) -> tuple[list[dict], list[dict]]:
@@ -118,31 +210,47 @@ async def generate_batch(topic: Topic, n: int) -> tuple[list[dict], list[dict]]:
         log.warning("grammar.gen.bad_payload", topic=topic.key, type=str(type(raw)))
         return [], []
 
-    accepted, rejected = [], []
-    seen_keys: set[tuple[str, str]] = set()
+    is_blind = topic.verify == "blind"
+    accepted, rejected, pending_blind = [], [], []
+    seen_keys: set = set()
     for item in raw:
         if not isinstance(item, dict):
             continue
         base = {
             "lang": topic.lang, "topic": topic.key,
-            "infinitive": (item.get("infinitive") or "").strip().lower(),
-            "mood": topic.mood, "tense": topic.tense,
-            "person": (item.get("person") or "").strip().lower(),
+            "infinitive": ((item.get("infinitive") or "").strip().lower()
+                           or None) if not is_blind else None,
+            "mood": topic.mood or None, "tense": topic.tense or None,
+            "person": ((item.get("person") or "").strip().lower()
+                       or None) if not is_blind else None,
             "sentence": (item.get("sentence") or "").strip(),
             "answer": (item.get("answer") or "").strip(),
             "gloss_en": (item.get("gloss_en") or "").strip(),
             "why_en": (item.get("why") or "").strip(),
         }
         ok, reason = verify_item(topic, item)
-        key = (base["infinitive"], base["person"])
+        key = (base["sentence"].lower() if is_blind
+               else (base["infinitive"], base["person"]))
         if ok and key in seen_keys:
-            ok, reason = False, "duplicate verb+person in batch"
+            ok, reason = False, "duplicate in batch"
         if ok:
             seen_keys.add(key)
-            accepted.append(base)
+            (pending_blind if is_blind else accepted).append(base)
         else:
             base["reject_reason"] = reason
             rejected.append(base)
+
+    # Tier-B: statically-OK items must also survive blind-fill agreement.
+    if pending_blind:
+        import asyncio
+        verdicts = await asyncio.gather(
+            *(verify_blind(topic, b) for b in pending_blind))
+        for base, (ok, reason) in zip(pending_blind, verdicts):
+            if ok:
+                accepted.append(base)
+            else:
+                base["reject_reason"] = reason
+                rejected.append(base)
 
     log.info("grammar.gen.batch", topic=topic.key, requested=n,
              returned=len(raw), accepted=len(accepted), rejected=len(rejected))

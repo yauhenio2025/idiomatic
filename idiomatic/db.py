@@ -619,3 +619,22 @@ async def grammar_topic_stats(lang: str) -> list[dict[str, Any]]:
         lang,
     )
     return [dict(r) for r in rows]
+
+
+async def fetch_grammar_rejects(lang: str, topic: str | None = None,
+                                 limit: int = 50) -> list[dict[str, Any]]:
+    """Rejected items with reasons — the diagnostic view for tuning
+    generator prompts per unit."""
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT id, topic, infinitive, person, sentence, answer,
+               reject_reason, batch, created_at
+        FROM grammar_items
+        WHERE lang = $1 AND status = 'rejected'
+          AND ($2::text IS NULL OR topic = $2)
+        ORDER BY id DESC LIMIT $3
+        """,
+        lang, topic, limit,
+    )
+    return [dict(r) for r in rows]

@@ -40,12 +40,21 @@ class Topic:
     key: str                 # stable id, used in tags + telemetry
     lang: str
     label: str               # human label for dashboards
-    mood: str                # morphology.py lookup key
+    mood: str                # morphology.py lookup key ("" for closed-class)
     tense: str
     symbol: str              # tiny on-card cue, KOFI-style
     verbs: list[str] = field(default_factory=lambda: TOP_VERBS_ES)
     # Free-text constraints handed to the generator prompt.
     guidance: str = ""
+    # Verification mode (docs/GRAMMAR_STRATEGY.md §8):
+    #   "morph" — Tier A: answer checked against the morphology table.
+    #   "blind" — Tier B: K independent blind solvers must all reproduce
+    #             the answer from the sentence alone (correctness AND
+    #             uniqueness in one test). For closed-class topics.
+    verify: str = "morph"
+    # For blind topics: the closed inventory the answer must come from
+    # (None = no inventory check). Multi-word entries allowed ("se lo").
+    answer_set: list[str] | None = None
 
 
 PILOT_TOPICS_ES: list[Topic] = [
@@ -116,6 +125,41 @@ PILOT_TOPICS_ES: list[Topic] = [
                    "counterfactuals: 'Si ___ (saber) la verdad, habría "
                    "actuado de otra manera.' Use -ra forms ('hubiera "
                    "sabido'), full compound in the answer."),
+    # --- Wave 2 additions (2026-07-29): closed-class, blind-verified ------
+    Topic("es_clitics_dir", "es", "Clíticos — objeto directo", "", "", "🔗",
+          verify="blind",
+          answer_set=["lo", "la", "los", "las", "me", "te", "nos", "os"],
+          guidance="Direct-object pronoun. The antecedent must appear "
+                   "earlier in the sentence (or in a quoted question) with "
+                   "unambiguous gender+number: '¿Has leído el informe? Sí, "
+                   "___ terminé anoche.' Vary gender/number/person. The "
+                   "blank contains ONLY the pronoun."),
+    Topic("es_clitics_ind", "es", "Clíticos — objeto indirecto", "", "", "🔗➡",
+          verify="blind",
+          answer_set=["le", "les", "me", "te", "nos", "os"],
+          guidance="Indirect-object pronoun, incl. the redundant clitic with "
+                   "an explicit 'a X' phrase: '___ mandé el borrador a la "
+                   "editora ayer.' → 'le'. Number of the a-phrase decides "
+                   "le vs les. The blank contains ONLY the pronoun."),
+    Topic("es_clitics_selo", "es", "Clíticos — combinaciones (se lo)", "", "", "🔗🔗",
+          verify="blind",
+          answer_set=["se lo", "se la", "se los", "se las", "me lo", "me la",
+                      "me los", "me las", "te lo", "te la", "te los", "te las",
+                      "nos lo", "nos la", "nos los", "nos las"],
+          guidance="Double clitic cluster. Both objects must be recoverable "
+                   "from the sentence: '¿Le entregaste las llaves al portero? "
+                   "Sí, ___ di esta mañana.' → 'se las' (le+las → se las, "
+                   "NEVER 'le las'). Direct-object gender/number must be "
+                   "unambiguous from the antecedent."),
+    Topic("es_por_para", "es", "Por vs para", "", "", "⚖",
+          verify="blind",
+          answer_set=["por", "para"],
+          guidance="One blank where exactly one of por/para is correct and "
+                   "the reason is a nameable rule (cause vs purpose, "
+                   "duration/exchange/means vs destination/deadline/"
+                   "recipient/opinion). Avoid contexts where both are "
+                   "grammatical with different meanings — the sentence must "
+                   "force one reading. State the rule in 'why'."),
 ]
 
 

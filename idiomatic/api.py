@@ -358,6 +358,17 @@ async def admin_grammar_stats(
     return {"lang": lang, "topics": await db.grammar_topic_stats(lang)}
 
 
+@app.get("/admin/grammar-rejects")
+async def admin_grammar_rejects(
+    lang: str = "es", topic: str | None = None, limit: int = 50,
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Rejected items with reasons — for diagnosing weak generator units
+    (e.g. the Wave-1 es_cmd_tu 15/24 rejection finding)."""
+    return {"lang": lang, "topic": topic,
+            "rejects": await db.fetch_grammar_rejects(lang, topic, limit)}
+
+
 @app.post("/admin/grammar-rebuild")
 async def admin_grammar_rebuild(
     lang: str = "es", _: None = Depends(authed_admin),
