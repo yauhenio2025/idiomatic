@@ -186,9 +186,10 @@ database before it can enter a deck. Failed verification → regenerate,
 never ship. This is evidence-backed, not paranoia: published evals
 (MultiBLiMP 2025, MORPHOGEN, ALBA 2026) show frontier LLMs are
 near-ceiling on high-resource conjugation but reliably fail on
-(a) gender agreement in Romance, (b) variety defaults — **LLMs default
-to Brazilian Portuguese** even when told otherwise, which corrupts
-future-subjunctive/2nd-person drills for EP, (c) rare literary tenses
+(a) gender agreement in Romance, (b) variety defaults — LLMs need
+explicit variety pinning either way (NB 2026-07-29: the user wants
+**Brazilian** Portuguese, so the documented LLM drift toward BP is
+benign here; the verifier still pins persons — tu/vós rejected), (c) rare literary tenses
 (passato remoto irregulars), (d) regressions introduced by
 post-training.
 
@@ -396,8 +397,10 @@ Waves:
   maximal, filters minimal; second run 24/24. STILL OPEN from Wave 3
   scope: adjective endings unit; German verb core.
 - [ ] **Wave 4 — pt/fr/it verb cores**: clone of es pilot; work =
-  morphology DB ingestion per lang (kaikki or verbecc). PT must force +
-  verify EUROPEAN Portuguese (LLMs drift Brazilian — see §5).
+  morphology DB ingestion per lang (kaikki or verbecc). PT variety =
+  **BRAZILIAN Portuguese** (user directive 2026-07-29 — the earlier EP
+  framing was an unchecked assumption of mine, never the user's ask;
+  você/vocês-based drills, tu/vós hard-rejected by the verifier).
 - [ ] **Wave 5 — telemetry + planner** (unchanged from §7): add-on
   pushes revlog keyed by note GUID; weekly strong-model planner picks
   the 2-3 active units per language.
@@ -449,7 +452,7 @@ outputs into `docs/research/` and I'll fold them in:
    with LLMs, and cloze vs basic debates. Quote posts with links.
    Raw findings, organized, no product advice."
 2. **Advanced-learner error inventories** — "For each of Spanish,
-   European Portuguese, French, Italian, German: compile the 50-80
+   Brazilian Portuguese, French, Italian, German: compile the 50-80
    most persistent grammar errors of ADVANCED (B2-C1) adult learners
    whose other languages include English and several Romance languages
    — drawing on learner-corpus research (e.g. CEDEL2, Lang-8 studies,

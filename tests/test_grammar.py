@@ -202,18 +202,17 @@ def test_romance_verb_verification():
     assert verify_item(t, good) == (True, "")
     assert not verify_item(t, dict(good, answer="fecette"))[0]
 
-    t = pt["pt_futuro_conjuntivo"]
+    t = pt["pt_futuro_subjuntivo"]
     good = {"infinitive": "fazer", "person": "3s",
-            "sentence": "Quando o governo ___ (fazer) a reforma, o país mudará.",
+            "sentence": "Quando o governo ___ (fazer) a reforma, o país vai mudar.",
             "answer": "fizer"}
     assert verify_item(t, good) == (True, "")
-    # BP-style or wrong-mood slips get caught
+    # wrong-mood slips get caught
     assert not verify_item(t, dict(good, answer="fará"))[0]
-    # vós is banned for EP
-    vos = {"infinitive": "falar", "person": "2p",
-           "sentence": "Quando vós ___ (falar) com o ministro, avisai-me.",
-           "answer": "falardes"}
-    assert "European Portuguese" in verify_item(t, vos)[1]
+    # tu and vós are banned — Brazilian drills are você-based
+    for person, ans in (("2s", "fizeres"), ("2p", "fizerdes")):
+        bad = dict(good, person=person, answer=ans)
+        assert "Brazilian" in verify_item(t, bad)[1]
 
 
 def test_every_fip_unit_cell_exists():

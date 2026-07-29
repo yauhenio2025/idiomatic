@@ -35,9 +35,11 @@ LANG_PROFILE = {
     "it": {"language": "Italian", "variety": "standard Italian",
            "person_mix": "all persons freely; voi (2p) is normal"},
     "pt": {"language": "Portuguese",
-           "variety": "EUROPEAN Portuguese (Portugal) — tu for informal "
-                      "address, 'estar a + infinitive', never Brazilian usage",
-           "person_mix": "1s, 2s (tu), 3s, 1p, 3p; NEVER 2p (vós is archaic)"},
+           "variety": "BRAZILIAN Portuguese — você/vocês for address "
+                      "(3s/3p conjugation), 'estar + gerúndio' (estou "
+                      "falando), Brazilian vocabulary and usage",
+           "person_mix": "1s, 3s (você/ele/ela), 1p, 3p (vocês/eles); NEVER "
+                         "tu (2s) or vós (2p)"},
 }
 
 PERSON_MIX = LANG_PROFILE["es"]["person_mix"]  # kept for backward reference
@@ -278,8 +280,9 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
     person = (item.get("person") or "").strip().lower()
     if person not in morphology.PERSONS:
         return False, f"bad person {person!r}"
-    if topic.lang == "pt" and person == "2p":
-        return False, "vós (2p) excluded — European Portuguese drills"
+    if topic.lang == "pt" and person in ("2s", "2p"):
+        return False, ("tu/vós forms excluded — Brazilian drills use "
+                       "você (3s) / vocês (3p)")
     ok, expected = morphology.verify(topic.lang, inf, topic.mood, topic.tense,
                                      person, answer)
     if expected is None:

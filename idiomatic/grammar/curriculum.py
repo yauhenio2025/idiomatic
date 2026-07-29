@@ -206,8 +206,9 @@ TOPICS_DE: list[Topic] = [
 
 def _load_fip_topics() -> dict[str, list[Topic]]:
     """fr/it/pt verb-core units from grammar/data/units_fip.json (specs
-    drafted by codex, tense keys corrected to the verbecc tables, EP guard
-    appended for pt — see Wave 4 in docs/GRAMMAR_STRATEGY.md §8)."""
+    drafted by codex, tense keys corrected to the verbecc tables; pt is
+    BRAZILIAN Portuguese by user directive — você-based, tu/vós rejected
+    in verify_item — see Wave 4 in docs/GRAMMAR_STRATEGY.md §8)."""
     import json
     from pathlib import Path
     raw = json.loads((Path(__file__).parent / "data" / "units_fip.json"

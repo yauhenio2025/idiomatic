@@ -452,7 +452,7 @@
     "trazer",
     "sair"
    ],
-   "guidance": "Prioritize eu and tu forms, stem alternations, and the high-frequency paradigms ser, estar, ter, ir, fazer, poder, querer and vir; exclude vós and practise vocês with third-person plural forms. Use « agora », « hoje », « normalmente », « todos os dias » and « neste momento »; for an action genuinely in progress, European Portuguese normally uses « estar a + infinitivo », not « estar + gerúndio ». EUROPEAN Portuguese (Portugal) ONLY: tu for informal 2s, 'estar a + infinitive', EP vocabulary; never Brazilian usage. Never use vós/2p (archaic)."
+   "guidance": "Prioritize eu and tu forms, stem alternations, and the high-frequency paradigms ser, estar, ter, ir, fazer, poder, querer and vir; exclude vós and practise vocês with third-person plural forms. Use « agora », « hoje », « normalmente », « todos os dias » and « neste momento »; for an action genuinely in progress, European Portuguese normally uses « estar a + infinitivo », not « estar + gerúndio ». BRAZILIAN Portuguese ONLY: você/vocês for address (conjugated as 3s/3p), 'estar + gerúndio' (estou falando), Brazilian vocabulary and usage. Never use tu (2s) or vós (2p) forms."
   },
   {
    "key": "pt_preterito_perfeito",
@@ -482,7 +482,7 @@
     "conduzir",
     "sair"
    ],
-   "guidance": "Prioritize fui, estive, tive, houve, fiz, pude, quis, soube, vim, pus, disse, dei, vi and trouxe, with normal tu forms and no vós forms. Cues include « ontem », « anteontem », « na semana passada », « há dois dias », « de repente » and « uma vez »; unlike other Romance languages, European Portuguese often uses this simple tense where French or Italian would use a compound perfect. EUROPEAN Portuguese (Portugal) ONLY: tu for informal 2s, 'estar a + infinitive', EP vocabulary; never Brazilian usage. Never use vós/2p (archaic)."
+   "guidance": "Prioritize fui, estive, tive, houve, fiz, pude, quis, soube, vim, pus, disse, dei, vi and trouxe, with normal tu forms and no vós forms. Cues include « ontem », « anteontem », « na semana passada », « há dois dias », « de repente » and « uma vez »; unlike other Romance languages, European Portuguese often uses this simple tense where French or Italian would use a compound perfect. BRAZILIAN Portuguese ONLY: você/vocês for address (conjugated as 3s/3p), 'estar + gerúndio' (estou falando), Brazilian vocabulary and usage. Never use tu (2s) or vós (2p) forms."
   },
   {
    "key": "pt_preterito_imperfeito",
@@ -512,7 +512,7 @@
     "trazer",
     "viver"
    ],
-   "guidance": "Prioritize era, ia, vinha and punha, then contrast habitual or ongoing background with completed events in the pretérito perfeito simples. Cues include « antigamente », « nessa altura », « todos os dias », « enquanto », « muitas vezes » and « quando era criança »; for past progression prefer European Portuguese « estava a + infinitivo ». EUROPEAN Portuguese (Portugal) ONLY: tu for informal 2s, 'estar a + infinitive', EP vocabulary; never Brazilian usage. Never use vós/2p (archaic)."
+   "guidance": "Prioritize era, ia, vinha and punha, then contrast habitual or ongoing background with completed events in the pretérito perfeito simples. Cues include « antigamente », « nessa altura », « todos os dias », « enquanto », « muitas vezes » and « quando era criança »; for past progression prefer European Portuguese « estava a + infinitivo ». BRAZILIAN Portuguese ONLY: você/vocês for address (conjugated as 3s/3p), 'estar + gerúndio' (estou falando), Brazilian vocabulary and usage. Never use tu (2s) or vós (2p) forms."
   },
   {
    "key": "pt_futuro_simples",
@@ -542,7 +542,7 @@
     "sair",
     "conseguir"
    ],
-   "guidance": "Drill the synthetic endings with irregular stems dir-, far- and trar-, while keeping tu forms active and excluding vós. Use « amanhã », « em breve », « para a semana », « daqui a dois anos » and « um dia »; spoken European Portuguese often prefers « ir + infinitivo », while the synthetic future also marks conjecture, as in « Estará em casa ». EUROPEAN Portuguese (Portugal) ONLY: tu for informal 2s, 'estar a + infinitive', EP vocabulary; never Brazilian usage. Never use vós/2p (archaic)."
+   "guidance": "Drill the synthetic endings with irregular stems dir-, far- and trar-, while keeping tu forms active and excluding vós. Use « amanhã », « em breve », « para a semana », « daqui a dois anos » and « um dia »; spoken European Portuguese often prefers « ir + infinitivo », while the synthetic future also marks conjecture, as in « Estará em casa ». BRAZILIAN Portuguese ONLY: você/vocês for address (conjugated as 3s/3p), 'estar + gerúndio' (estou falando), Brazilian vocabulary and usage. Never use tu (2s) or vós (2p) forms."
   },
   {
    "key": "pt_condicional_presente",
@@ -572,11 +572,11 @@
     "sair",
     "preferir"
    ],
-   "guidance": "Prioritize faria, diria and traria alongside high-frequency polite forms such as « gostaria », « queria » and « poderia », and practise tu plus vocês rather than vós. Cues include « no teu lugar », « idealmente », « de bom grado » and « se tivesse tempo »; standard hypothetical clauses use « se + imperfeito do conjuntivo, condicional », not the conditional after « se ». EUROPEAN Portuguese (Portugal) ONLY: tu for informal 2s, 'estar a + infinitive', EP vocabulary; never Brazilian usage. Never use vós/2p (archaic)."
+   "guidance": "Prioritize faria, diria and traria alongside high-frequency polite forms such as « gostaria », « queria » and « poderia », and practise tu plus vocês rather than vós. Cues include « no teu lugar », « idealmente », « de bom grado » and « se tivesse tempo »; standard hypothetical clauses use « se + imperfeito do conjuntivo, condicional », not the conditional after « se ». BRAZILIAN Portuguese ONLY: você/vocês for address (conjugated as 3s/3p), 'estar + gerúndio' (estou falando), Brazilian vocabulary and usage. Never use tu (2s) or vós (2p) forms."
   },
   {
-   "key": "pt_conjuntivo_presente",
-   "label": "Presente do conjuntivo: desejo, dúvida e finalidade",
+   "key": "pt_subjuntivo_presente",
+   "label": "Presente do subjuntivo: desejo, dúvida e finalidade",
    "mood": "subjuntivo",
    "tense": "presente",
    "symbol": "〰",
@@ -602,11 +602,11 @@
     "trazer",
     "sair"
    ],
-   "guidance": "Prioritize seja, esteja, tenha, haja, vá, faça, possa, queira, saiba, venha, ponha, diga, dê and veja, practising tu forms but excluding vós. Triggers include « é possível que », « quero que », « duvido que », « embora », « para que », « antes que » and « talvez »; affirmative certainty expressions such as « sei que » and « é evidente que » normally require the indicative. EUROPEAN Portuguese (Portugal) ONLY: tu for informal 2s, 'estar a + infinitive', EP vocabulary; never Brazilian usage. Never use vós/2p (archaic)."
+   "guidance": "Prioritize seja, esteja, tenha, haja, vá, faça, possa, queira, saiba, venha, ponha, diga, dê and veja, practising tu forms but excluding vós. Triggers include « é possível que », « quero que », « duvido que », « embora », « para que », « antes que » and « talvez »; affirmative certainty expressions such as « sei que » and « é evidente que » normally require the indicative. BRAZILIAN Portuguese ONLY: você/vocês for address (conjugated as 3s/3p), 'estar + gerúndio' (estou falando), Brazilian vocabulary and usage. Never use tu (2s) or vós (2p) forms."
   },
   {
-   "key": "pt_futuro_conjuntivo",
-   "label": "Futuro do conjuntivo: condições e tempo futuro",
+   "key": "pt_futuro_subjuntivo",
+   "label": "Futuro do subjuntivo: condições e tempo futuro",
    "mood": "subjuntivo",
    "tense": "futuro",
    "symbol": "〰→",
@@ -632,7 +632,7 @@
     "sair",
     "conseguir"
    ],
-   "guidance": "Prioritize irregular stems derived from the third-person plural preterite—for, estiver, tiver, houver, fizer, puder, quiser, souber, vier, puser, disser, der, vir and trouxer—and include normal tu forms while excluding vós. Future-reference clauses with « se », « quando », « logo que », « assim que », « enquanto » and « onde quer que » select this tense, as in « quando tiveres tempo »; do not use it when « quando » introduces a past habit or a present fact. EUROPEAN Portuguese (Portugal) ONLY: tu for informal 2s, 'estar a + infinitive', EP vocabulary; never Brazilian usage. Never use vós/2p (archaic)."
+   "guidance": "Prioritize irregular stems derived from the third-person plural preterite—for, estiver, tiver, houver, fizer, puder, quiser, souber, vier, puser, disser, der, vir and trouxer—and include normal tu forms while excluding vós. Future-reference clauses with « se », « quando », « logo que », « assim que », « enquanto » and « onde quer que » select this tense, as in « quando tiveres tempo »; do not use it when « quando » introduces a past habit or a present fact. BRAZILIAN Portuguese ONLY: você/vocês for address (conjugated as 3s/3p), 'estar + gerúndio' (estou falando), Brazilian vocabulary and usage. Never use tu (2s) or vós (2p) forms."
   }
  ]
 }
