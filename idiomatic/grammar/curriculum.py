@@ -204,16 +204,38 @@ TOPICS_DE: list[Topic] = [
 ]
 
 
+def _load_fip_topics() -> dict[str, list[Topic]]:
+    """fr/it/pt verb-core units from grammar/data/units_fip.json (specs
+    drafted by codex, tense keys corrected to the verbecc tables, EP guard
+    appended for pt — see Wave 4 in docs/GRAMMAR_STRATEGY.md §8)."""
+    import json
+    from pathlib import Path
+    raw = json.loads((Path(__file__).parent / "data" / "units_fip.json"
+                      ).read_text(encoding="utf-8"))
+    return {
+        lang: [Topic(u["key"], lang, u["label"], u["mood"], u["tense"],
+                     u["symbol"], verbs=u["verbs"], guidance=u["guidance"])
+               for u in units]
+        for lang, units in raw.items()
+    }
+
+
+_FIP_TOPICS = _load_fip_topics()
+
+
 def topics_for(lang: str) -> list[Topic]:
     if lang == "es":
         return PILOT_TOPICS_ES
     if lang == "de":
         return TOPICS_DE
-    return []
+    return _FIP_TOPICS.get(lang, [])
 
 
 def topic_by_key(key: str) -> Topic | None:
-    for t in PILOT_TOPICS_ES + TOPICS_DE:
+    all_topics = PILOT_TOPICS_ES + TOPICS_DE
+    for ts in _FIP_TOPICS.values():
+        all_topics = all_topics + ts
+    for t in all_topics:
         if t.key == key:
             return t
     return None

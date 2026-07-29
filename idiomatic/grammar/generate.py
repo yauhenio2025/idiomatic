@@ -23,21 +23,36 @@ PERSON_LABEL = {
     "1p": "nosotros", "2p": "vosotros", "3p": "ellos/ustedes",
 }
 
-# 2p (vosotros) is real but rare in the user's input diet; weight it down
-# by simply asking for fewer of them.
-PERSON_MIX = "1s, 2s, 3s, 1p, 3p freely; at most one vosotros (2p) item per batch"
+# Per-language prompt profile for the verb-morphology template. person_mix
+# controls the 2p problem: vosotros is rare in the user's es input diet,
+# vós is archaic in EP (hard-rejected by the verifier), voi/vous are normal.
+LANG_PROFILE = {
+    "es": {"language": "Spanish", "variety": "European Spanish",
+           "person_mix": "1s, 2s, 3s, 1p, 3p freely; at most one vosotros "
+                         "(2p) item per batch"},
+    "fr": {"language": "French", "variety": "standard European French",
+           "person_mix": "all persons freely; vous (2p) is normal"},
+    "it": {"language": "Italian", "variety": "standard Italian",
+           "person_mix": "all persons freely; voi (2p) is normal"},
+    "pt": {"language": "Portuguese",
+           "variety": "EUROPEAN Portuguese (Portugal) — tu for informal "
+                      "address, 'estar a + infinitive', never Brazilian usage",
+           "person_mix": "1s, 2s (tu), 3s, 1p, 3p; NEVER 2p (vós is archaic)"},
+}
 
-_PROMPT = """You are writing Spanish conjugation drill cards for ONE advanced \
-adult learner (reads Spanish news daily; interests: geopolitics, tech \
+PERSON_MIX = LANG_PROFILE["es"]["person_mix"]  # kept for backward reference
+
+_PROMPT = """You are writing {language} conjugation drill cards for ONE advanced \
+adult learner (reads {language} news daily; interests: geopolitics, tech \
 criticism, history, media). Target: {label} — mood "{mood}", tense "{tense}".
 
 Produce {n} items as a JSON array. Each item:
 {{
   "infinitive": "...",          // pick from: {verbs}
   "person": "...",              // one of 1s 2s 3s 1p 2p 3p ({person_mix})
-  "sentence": "...",            // Spanish sentence, 7-16 words, with the verb \
-replaced by ___ followed by the infinitive in parentheses: "Ayer el ministro \
-___ (negar) las acusaciones."
+  "sentence": "...",            // {language} sentence, 7-16 words, with the \
+verb replaced by ___ followed by the infinitive in parentheses (format \
+example from Spanish: "Ayer el ministro ___ (negar) las acusaciones.")
   "answer": "...",              // the conjugated form alone, e.g. "negó"
   "gloss_en": "...",            // natural English translation of the full sentence
   "why": "..."                  // ONE short English line: why this tense/form \
@@ -57,8 +72,7 @@ timelessly true or clearly hypothetical — no invented breaking news presented 
 as fact.
 5. Vary subjects, verbs, and persons across the batch; no two sentences with \
 the same verb+person.
-6. Content in Spanish only (European Spanish; use vosotros only when person \
-is 2p).
+6. Content in {language} only ({variety}).
 
 Return ONLY the JSON array."""
 
@@ -178,9 +192,11 @@ def build_prompt(topic: Topic, n: int) -> str:
             inventory=", ".join(topic.answer_set or []) or "(open)",
             guidance=topic.guidance,
         ) + _bank_lines(topic, n)
+    prof = LANG_PROFILE.get(topic.lang, LANG_PROFILE["es"])
     return _PROMPT.format(
         label=topic.label, mood=topic.mood, tense=topic.tense, n=n,
-        verbs=", ".join(topic.verbs), person_mix=PERSON_MIX,
+        verbs=", ".join(topic.verbs), person_mix=prof["person_mix"],
+        language=prof["language"], variety=prof["variety"],
         guidance=topic.guidance,
     )
 
@@ -262,6 +278,8 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
     person = (item.get("person") or "").strip().lower()
     if person not in morphology.PERSONS:
         return False, f"bad person {person!r}"
+    if topic.lang == "pt" and person == "2p":
+        return False, "vós (2p) excluded — European Portuguese drills"
     ok, expected = morphology.verify(topic.lang, inf, topic.mood, topic.tense,
                                      person, answer)
     if expected is None:

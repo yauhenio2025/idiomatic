@@ -179,3 +179,49 @@ def test_de_article_verification():
          "answer": "die"}
     assert verify_item(tw, w) == (True, "")
     assert "Wechsel" in verify_item(tw, dict(w, prep="mit"))[1]
+
+
+def test_romance_verb_verification():
+    from idiomatic.grammar.curriculum import topics_for
+    fr = {t.key: t for t in topics_for("fr")}
+    it = {t.key: t for t in topics_for("it")}
+    pt = {t.key: t for t in topics_for("pt")}
+    assert len(fr) == 7 and len(it) == 7 and len(pt) == 7
+
+    t = fr["fr_passe_compose"]
+    good = {"infinitive": "aller", "person": "3s",
+            "sentence": "Hier soir, le ministre ___ (aller) au sommet européen.",
+            "answer": "est allé"}
+    assert verify_item(t, good) == (True, "")
+    assert "wrong form" in verify_item(t, dict(good, answer="a allé"))[1]
+
+    t = it["it_passato_remoto"]
+    good = {"infinitive": "fare", "person": "3s",
+            "sentence": "Nel 1968 il governo ___ (fare) una scelta decisiva.",
+            "answer": "fece"}
+    assert verify_item(t, good) == (True, "")
+    assert not verify_item(t, dict(good, answer="fecette"))[0]
+
+    t = pt["pt_futuro_conjuntivo"]
+    good = {"infinitive": "fazer", "person": "3s",
+            "sentence": "Quando o governo ___ (fazer) a reforma, o país mudará.",
+            "answer": "fizer"}
+    assert verify_item(t, good) == (True, "")
+    # BP-style or wrong-mood slips get caught
+    assert not verify_item(t, dict(good, answer="fará"))[0]
+    # vós is banned for EP
+    vos = {"infinitive": "falar", "person": "2p",
+           "sentence": "Quando vós ___ (falar) com o ministro, avisai-me.",
+           "answer": "falardes"}
+    assert "European Portuguese" in verify_item(t, vos)[1]
+
+
+def test_every_fip_unit_cell_exists():
+    from idiomatic.grammar.curriculum import topics_for
+    missing = []
+    for lang in ("fr", "it", "pt"):
+        for t in topics_for(lang):
+            for v in t.verbs:
+                if m.lookup(lang, v, t.mood, t.tense, "3s") is None:
+                    missing.append((t.key, v))
+    assert not missing, missing

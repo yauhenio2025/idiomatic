@@ -61,12 +61,16 @@ def lookup(lang: str, infinitive: str, mood: str, tense: str,
            person: str) -> str | None:
     """Expected form, or None if the (verb, mood, tense, person) cell is
     unknown to the database (unknown ≠ wrong: caller decides policy)."""
-    if lang != "es":
-        return None
-    forms = _load_es().get((_norm(infinitive), _norm(mood), _norm(tense)))
-    if not forms:
-        return None
-    return forms.get(person)
+    if lang == "es":
+        forms = _load_es().get((_norm(infinitive), _norm(mood), _norm(tense)))
+        return forms.get(person) if forms else None
+    if lang in _VERBECC_LANGS:
+        forms = (_load_verbecc(lang)
+                 .get(_norm(infinitive), {})
+                 .get(_norm(mood), {})
+                 .get(_norm(tense)))
+        return forms.get(person) if forms else None
+    return None
 
 
 def verify(lang: str, infinitive: str, mood: str, tense: str, person: str,
@@ -134,3 +138,23 @@ def de_prep_case(prep: str) -> str | None:
 def de_article(case: str, gender: str, definite: bool = True) -> str | None:
     table = _DE_DEF if definite else _DE_INDEF
     return table.get(case, {}).get(gender)
+
+
+# ============================================================================
+# fr / it / pt verbs: tables generated offline from verbecc (Verbiste-derived,
+# GPL data; template-based conjugations only, no ML-predicted verbs) and
+# vendored as {infinitive: {mood: {tense: {person: form}}}}. Compound forms
+# default to the MASCULINE participle (être/essere verbs) — curriculum
+# guidance keeps subjects masculine in those units.
+# ============================================================================
+
+_VERBECC_LANGS = ("fr", "it", "pt")
+
+
+@lru_cache(maxsize=4)
+def _load_verbecc(lang: str) -> dict:
+    import gzip as _gz
+    import json
+    with _gz.open(_DATA / f"{lang}_verbs_verbecc.json.gz", "rt",
+                  encoding="utf-8") as f:
+        return json.load(f)
