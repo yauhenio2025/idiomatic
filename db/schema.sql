@@ -109,6 +109,10 @@ ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS audio_explanation TEXT;
 -- NULL for idioms harvested before 2026-07-20 — their source audio was
 -- already deleted, so no backfill is possible.
 ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS audio_context TEXT;
+-- Citation/dictionary form of the expression (verbs in infinitive, nouns
+-- in singular): 'das Sagen haben' for as-spoken 'hat das Sagen'. Shown on
+-- the card back next to the as-spoken form. NULL = not yet generated.
+ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS citation_form TEXT;
 CREATE INDEX IF NOT EXISTS expression_idioms_lang_idx ON expression_idioms (lang);
 -- One idiom row per (expression, video) — makes _persist_pool_source
 -- re-runnable after a mid-video crash (retries upsert in place).

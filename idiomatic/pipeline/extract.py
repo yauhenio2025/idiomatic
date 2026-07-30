@@ -45,6 +45,10 @@ class ExtractedPhrase:
     # expression appeared, both langs. Surfaced on the back of the card.
     source_phrase_target: str = ""
     source_phrase_en: str = ""
+    # Citation/dictionary form (verbs in infinitive, nouns in singular,
+    # article kept where idiomatic). Shown on the card back so the
+    # learner sees 'das Sagen haben', not just as-spoken 'hat das Sagen'.
+    citation_form: str = ""
     # 2-3 sentence English explanation. TTS'd into the front audio and
     # displayed on the front of the card.
     explanation_en: str = ""
@@ -80,6 +84,7 @@ class ExtractedPhrase:
             audio_end=audio_end,
             source_phrase_target=(d.get("source_phrase") or "").strip(),
             source_phrase_en=(d.get("source_phrase_en") or "").strip(),
+            citation_form=(d.get("citation_form") or "").strip(),
             explanation_en=(d.get("explanation") or "").strip(),
             sentence_start=s_start,
             sentence_end=s_end,
@@ -116,6 +121,7 @@ AVOID:
 For EACH chosen expression, output:
 - `text`: the expression itself as spoken in the audio, in the natural {lang_name} script. Just the expression, not the surrounding sentence.
 - `english`: a brief English gloss (≤10 words).
+- `citation_form`: the expression in its CITATION (dictionary) form — verbs in the infinitive, nouns in the singular, keeping any article or pronoun that is part of the fixed expression. E.g. as-spoken "hat das Sagen" → citation_form "das Sagen haben"; "nous sommes gâtés" → "être gâté". If the as-spoken form IS already the citation form, repeat it.
 - `source_phrase`: the FULL {lang_name} sentence from the audio that contained this expression — verbatim, including everything around it.
 - `source_phrase_en`: a natural English translation of source_phrase.
 - `explanation`: 2-3 sentence English explanation of what the expression means, when it's used, and what register / collocations / pitfalls a learner should know. Written like a textbook usage note, not a dictionary entry. Use simple English; the learner is B2/C1 so they understand the target language but the explanation is in English.

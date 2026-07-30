@@ -334,6 +334,7 @@ async def insert_idiom_record(
     structured: dict | None = None,
     audio_explanation: str | None = None,
     audio_context: str | None = None,
+    citation_form: str | None = None,
 ) -> int:
     """One row per enriched idiom in a video. Returns expression_idioms.id."""
     import json
@@ -344,8 +345,8 @@ async def insert_idiom_record(
             (expression_id, video_id, lang, idiom_text, english_gloss,
              audio_idiom_tgt, audio_idiom_en,
              source_phrase_target, source_phrase_en, explanation_en,
-             structured, audio_explanation, audio_context)
-        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11::jsonb, $12, $13)
+             structured, audio_explanation, audio_context, citation_form)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11::jsonb, $12, $13, $14)
         ON CONFLICT (expression_id, video_id) DO UPDATE SET
             idiom_text = EXCLUDED.idiom_text,
             english_gloss = EXCLUDED.english_gloss,
@@ -356,7 +357,9 @@ async def insert_idiom_record(
             explanation_en = EXCLUDED.explanation_en,
             structured = EXCLUDED.structured,
             audio_explanation = EXCLUDED.audio_explanation,
-            audio_context = EXCLUDED.audio_context
+            audio_context = EXCLUDED.audio_context,
+            citation_form = COALESCE(EXCLUDED.citation_form,
+                                     expression_idioms.citation_form)
         RETURNING id
         """,
         expression_id, video_id, lang, idiom_text, english_gloss,
@@ -365,6 +368,7 @@ async def insert_idiom_record(
         json.dumps(structured) if structured else None,
         audio_explanation,
         audio_context,
+        citation_form,
     )
 
 
@@ -415,7 +419,7 @@ async def fetch_pool_idioms(lang: str) -> list[dict]:
         """
         SELECT i.id, i.idiom_text, i.english_gloss,
                i.audio_idiom_tgt, i.audio_idiom_en, i.audio_explanation,
-               i.audio_context,
+               i.audio_context, i.citation_form,
                i.source_phrase_target, i.source_phrase_en, i.explanation_en,
                i.structured,
                v.youtube_id, v.title AS video_title

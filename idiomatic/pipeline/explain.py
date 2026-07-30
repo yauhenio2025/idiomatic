@@ -87,6 +87,7 @@ class Enriched:
     # card layer can render them without re-querying.
     source_phrase_target: str = ""
     source_phrase_en: str = ""
+    citation_form: str = ""
     explanation_en: str = ""
 
 
@@ -129,6 +130,7 @@ async def generate_structured_explanation(phrase: str, english_gloss: str,
 async def enrich_one(phrase: str, english_gloss: str, lang: str, *,
                       source_phrase_target: str = "",
                       source_phrase_en: str = "",
+                      citation_form: str = "",
                       explanation_en: str = "") -> Enriched:
     """Run both LLM calls in parallel and return the bundle.
 
@@ -146,5 +148,6 @@ async def enrich_one(phrase: str, english_gloss: str, lang: str, *,
         examples=examples, structured=structured,
         source_phrase_target=source_phrase_target,
         source_phrase_en=source_phrase_en,
+        citation_form=citation_form,
         explanation_en=explanation_en,
     )

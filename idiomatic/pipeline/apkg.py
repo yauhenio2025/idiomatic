@@ -49,12 +49,24 @@ EXPL_LABELS = {
 }
 
 
-def structured_html(structured: dict[str, str] | None) -> str:
+def structured_html(structured: dict[str, str] | None,
+                    citation_form: str | None = None) -> str:
     """Render the non-empty structured-explanation fields as labelled
-    sections (same look as the v1 card's structured block)."""
-    if not structured:
-        return ""
+    sections (same look as the v1 card's structured block). The citation
+    (dictionary) form, when known and different from the as-spoken form,
+    is rendered as the first row — no notetype field is added (notetype
+    schema changes on import have bitten this project before)."""
     rows = []
+    cf = (citation_form or "").strip()
+    if cf:
+        rows.append(
+            f'<div class="expl-section expl-citation">'
+            f'<div class="expl-label">Dictionary form</div>'
+            f'<div class="expl-text"><b>{html.escape(cf)}</b></div>'
+            f'</div>'
+        )
+    if not structured:
+        return "".join(rows)
     for k, v in structured.items():
         v = (v or "").strip()
         if not v:
@@ -243,7 +255,8 @@ def build_apkg(*, out_path: Path, deck_name: str, youtube_id: str,
                 f"[sound:{f_name}]",              # FrontAudio
                 f"[sound:{b_name}]",              # BackAudio
                 f'from <a href="{html.escape(video_url)}">{html.escape(video_title)}</a>',
-                structured_html(getattr(e, "structured", None)),
+                structured_html(getattr(e, "structured", None),
+                                getattr(e, "citation_form", "")),
             ],
             guid=_guid(youtube_id, norm),
             tags=["youtube", youtube_id, "idiomatic-cloud"],

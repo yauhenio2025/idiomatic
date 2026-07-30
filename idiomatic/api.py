@@ -476,6 +476,55 @@ async def admin_clear_context(
     return {"cleared": int(result.split()[-1])}
 
 
+@app.get("/admin/citation-todo")
+async def admin_citation_todo(
+    _: None = Depends(authed_admin),
+    limit: int = 500,
+) -> dict:
+    """Idioms still lacking a citation (dictionary) form. Consumed by the
+    local codex backfill; write back via POST /admin/citation-forms."""
+    pool = await db.get_pool()
+    rows = await pool.fetch(
+        """SELECT id, lang, idiom_text, english_gloss, source_phrase_target
+           FROM expression_idioms
+           WHERE citation_form IS NULL
+           ORDER BY id LIMIT $1""",
+        max(1, min(limit, 2000)))
+    total = await pool.fetchval(
+        "SELECT COUNT(*) FROM expression_idioms WHERE citation_form IS NULL")
+    return {"remaining": total, "items": [dict(r) for r in rows]}
+
+
+@app.post("/admin/citation-forms")
+async def admin_citation_forms(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Bulk-set citation forms: {"forms": {"<idiom_id>": "<citation form>"}}.
+    Empty/whitespace values are rejected per-row (kept NULL for retry)."""
+    forms = body.get("forms")
+    if not isinstance(forms, dict) or not forms:
+        raise HTTPException(400, 'need {"forms": {"<id>": "<form>", ...}}')
+    pairs = []
+    for k, v in forms.items():
+        try:
+            i = int(k)
+        except (TypeError, ValueError):
+            raise HTTPException(400, f"non-integer id {k!r}")
+        v = (v or "").strip()
+        if v:
+            pairs.append((i, v[:300]))
+    pool = await db.get_pool()
+    updated = 0
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            for i, v in pairs:
+                r = await conn.execute(
+                    "UPDATE expression_idioms SET citation_form = $2 WHERE id = $1",
+                    i, v)
+                updated += int(r.split()[-1])
+    return {"ok": True, "updated": updated, "skipped_empty": len(forms) - len(pairs)}
+
+
 @app.post("/admin/purge-video")
 async def admin_purge_video(
     body: dict, _: None = Depends(authed_admin),
