@@ -60,3 +60,52 @@ External spot-checks used for the highest-risk rules:
    build, which needs the same declension matrix anyway — one engine,
    two units. Until then dative-verb items use article+noun frames the
    existing de_art checker can already validate where possible.
+
+## IMPLEMENTED (2026-07-31)
+
+All ten commissioned topics are wired into generation. Every bank loader filters
+the leading `_meta` object before lookup, inventory construction, or sampling.
+The shipped verification behavior is:
+
+- `fr_quantites_de`, `fr_an_annee`, and `es_muy_mucho` use a closed blind
+  inventory.
+- `fr_prep_lieux`, `pt_regencia_verbal`, and `it_reggenze_verbali` use bank
+  lookup plus Tier B blind-fill with `K=3`.
+- `fr_genre_noyau` deterministically targets the controlled `un`/`une` choice.
+- `pt_gender_core` deterministically targets controlled `o`/`a` or
+  `um`/`uma` choices and checks exact canonical bank-frame answers.
+- `it_genere_plurali` deterministically targets a banked article+noun phrase
+  or plural.
+- `de_dativ_verben` statically checks the banked `case` and uses Tier B
+  blind-fill with `K=3`. When a canonical bank frame is reused, its exact answer
+  is checked deterministically. No full-NP inflection engine is part of this
+  unit.
+- `Ø` is a literal answer marker, not an instruction to render an empty answer.
+- Capitalization tolerance is relaxed only when the blank is sentence-initial;
+  capitalization remains exact everywhere else.
+
+### Deviations from the drafts
+
+- Gender article exercises were narrowed to controlled article choices
+  (`un`/`une` in French; `o`/`a` or `um`/`uma` in Portuguese). This keeps the
+  deterministic target unambiguous instead of requiring a broader noun-phrase
+  generator. Portuguese non-noun construction rows reuse their canonical bank
+  examples, and Italian article/plural cards must expose the citation noun, so
+  bank metadata remains tied to the visible exercise.
+- The three closed units verify membership in their closed inventories rather
+  than requiring novel-context row identity. A blind prompt need not reproduce
+  one uniquely identifiable source row, so inventory membership is the stable
+  correctness criterion.
+- `de_dativ_verben` does not use a full-NP inflection engine, per the supervising
+  decision above. It ships with the banked-case check, `K=3` blind verification,
+  and exact canonical-frame answers where applicable; the shared declension
+  engine remains deferred to the `de_adj_endings` work.
+- Regime and German verb metadata cannot be morphologically matched to every
+  possible conjugated surface form without another language-specific engine.
+  The prompt pins one exact bank row, static verification checks that row's
+  answer/case, and the blind pass checks the resulting sentence; semantic
+  metadata-to-verb binding remains prompt-enforced for novel contexts.
+- Required leading anchors are always included in sampled prompt rows. The
+  recommended whole-batch ratios remain explicit prompt constraints rather
+  than static rejection criteria, because rejecting an otherwise correct card
+  cannot repair the distribution of the rest of a generated batch.

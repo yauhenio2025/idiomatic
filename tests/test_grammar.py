@@ -209,6 +209,279 @@ def test_verb_prep_bank_loads_into_prompt():
     assert len(pair_lines) >= 5, p[-500:]
 
 
+def test_all_new_banks_load_and_build_prompts():
+    from idiomatic.grammar.curriculum import Topic
+    from idiomatic.grammar.generate import (
+        _bank_entries, _norm_answer, build_prompt,
+    )
+
+    expected_counts = {
+        "fr_quantites_de": 72,
+        "fr_prep_lieux": 151,
+        "fr_genre_noyau": 102,
+        "fr_an_annee": 60,
+        "pt_gender_core": 120,
+        "pt_regencia_verbal": 73,
+        "it_genere_plurali": 159,
+        "it_reggenze_verbali": 70,
+        "es_muy_mucho": 50,
+        "de_dativ_verben": 81,
+    }
+    for key, count in expected_counts.items():
+        topic = topic_by_key(key)
+        assert topic is not None and topic.bank
+        entries = _bank_entries(topic)
+        assert len(entries) == count, key
+        assert all("_meta" not in row for row in entries)
+        prompt = build_prompt(topic, 3)
+        assert topic.label in prompt
+        assert "Pairs to draw from" in prompt
+        assert "_meta" not in prompt
+
+    answer_fields = {
+        "fr_quantites_de": "correct",
+        "fr_prep_lieux": "correct_prep",
+        "fr_an_annee": "correct",
+        "pt_regencia_verbal": "prep",
+        "it_reggenze_verbali": "prep",
+        "es_muy_mucho": "correct",
+    }
+    for key, field in answer_fields.items():
+        topic = topic_by_key(key)
+        bank_answers = {_norm_answer(row[field])
+                        for row in _bank_entries(topic)}
+        inventory = {_norm_answer(answer) for answer in topic.answer_set}
+        assert inventory == bank_answers, key
+
+    assert "German grammar drill cards" in build_prompt(
+        topic_by_key("de_dativ_verben"), 1)
+    pt_prompt = build_prompt(topic_by_key("pt_regencia_verbal"), 2)
+    for anchor in ("tentar + Ø", "conseguir + Ø", "decidir + Ø", "ir + Ø"):
+        assert anchor in pt_prompt
+    it_prompt = build_prompt(topic_by_key("it_reggenze_verbali"), 2)
+    for anchor in ("cercare + di", "permettere + di", "partecipare + a",
+                   "guadagnare + come"):
+        assert anchor in it_prompt
+
+    # Metadata removal is conditional: legacy banks begin with real rows.
+    assert len(_bank_entries(topic_by_key("es_verb_prep"))) == 60
+    legacy_de = Topic("test_de_preps", "de", "x", "", "", "",
+                      bank="de_preps.json")
+    assert len(_bank_entries(legacy_de)) == 37
+
+
+def test_new_unit_clusters_and_seed_order():
+    from idiomatic.grammar.curriculum import topics_for, unit_seed_rows
+
+    expected = {
+        "fr_quantites_de": ("fr", "7 Articles & quantités"),
+        "fr_prep_lieux": ("fr", "5 Prépositions"),
+        "fr_genre_noyau": ("fr", "6 Genre & accord"),
+        "fr_an_annee": ("fr", "7 Articles & quantités"),
+        "pt_gender_core": ("pt", "5 Gênero & Artigos"),
+        "pt_regencia_verbal": ("pt", "6 Regência"),
+        "it_genere_plurali": ("it", "5 Genere e plurali"),
+        "it_reggenze_verbali": ("it", "6 Reggenze"),
+        "es_muy_mucho": ("es", "9 Grado y cantidad"),
+        "de_dativ_verben": ("de", "5 Kasus"),
+    }
+    rows = {row["key"]: row for row in unit_seed_rows()}
+    for key, (lang, cluster) in expected.items():
+        topic = topic_by_key(key)
+        assert topic.lang == lang and topic.cluster == cluster
+        assert rows[key]["status"] == "active"
+        assert rows[key]["cluster"] == cluster
+        assert rows[key]["sort_order"] == [
+            t.key for t in topics_for(lang)
+        ].index(key)
+
+
+def test_all_new_bank_verifiers_accept_correct_and_reject_wrong_answers():
+    cases = [
+        (
+            "fr_quantites_de",
+            {"sentence": "Le rapport cite ___ sources indépendantes.",
+             "answer": "beaucoup de"},
+            "beaucoup des",
+        ),
+        (
+            "fr_prep_lieux",
+            {"sentence": "La Ligue arabe siège ___ Caire.",
+             "place": "Le Caire", "answer": "au"},
+            "en",
+        ),
+        (
+            "fr_genre_noyau",
+            {"sentence": "C'est ___ période décisive.",
+             "noun": "période", "answer": "une"},
+            "un",
+        ),
+        (
+            "fr_an_annee",
+            {"sentence": "Cette ___, le budget de la recherche augmente.",
+             "answer": "année"},
+            "semaine",
+        ),
+        (
+            "pt_gender_core",
+            {"sentence": "Este é ___ problema importante.",
+             "noun_or_frame": "problema", "target": "indefinite",
+             "answer": "um"},
+            "uma",
+        ),
+        (
+            "pt_regencia_verbal",
+            {"sentence": "O resultado depende ___ uma votação no Senado.",
+             "verb": "depender",
+             "pattern": "depender de + substantivo/infinitivo",
+             "answer": "de"},
+            "em",
+        ),
+        (
+            "it_genere_plurali",
+            {"sentence": "Il plurale di «problema» è ___.",
+             "noun": "problema", "target": "plural", "answer": "problemi"},
+            "probleme",
+        ),
+        (
+            "it_reggenze_verbali",
+            {"sentence": "Gli analisti credono ___ aver trovato la causa.",
+             "verb": "credere", "pattern": "credere di + infinito",
+             "answer": "di"},
+            "in",
+        ),
+        (
+            "es_muy_mucho",
+            {"sentence": "La inteligencia artificial está ___ de moda.",
+             "answer": "muy"},
+            "muy más",
+        ),
+        (
+            "de_dativ_verben",
+            {"sentence": "Der Server gehört ___ (das Ministerium).",
+             "verb": "gehören", "case": "dat",
+             "answer": "dem Ministerium"},
+            "den Ministerium",
+        ),
+    ]
+    for key, good, wrong_answer in cases:
+        topic = topic_by_key(key)
+        assert verify_item(topic, good) == (True, ""), key
+        bad = dict(good, answer=wrong_answer)
+        assert not verify_item(topic, bad)[0], key
+
+
+def test_new_bank_verifier_edge_cases():
+    # Apostrophes are part of these answers, not disposable quote marks.
+    fr = topic_by_key("fr_quantites_de")
+    apostrophe = {
+        "sentence": ("Dans ce rapport soutenu : « Le pays a conclu "
+                     "___importants accords commerciaux. »"),
+        "answer": "d'",
+    }
+    assert verify_item(fr, apostrophe) == (True, "")
+    assert not verify_item(fr, dict(apostrophe, answer="d"))[0]
+
+    it = topic_by_key("it_genere_plurali")
+    l_apostrophe = {
+        "sentence": "La forma singolare del nome «uovo» è ___.",
+        "noun": "uovo", "target": "singular_phrase", "answer": "l'uovo",
+    }
+    assert verify_item(it, l_apostrophe) == (True, "")
+    assert not verify_item(it, dict(l_apostrophe, answer="il uovo"))[0]
+    assert not verify_item(it, dict(l_apostrophe, target="article_sg"))[0]
+    unrelated = dict(l_apostrophe,
+                     sentence="La forma richiesta dal manuale è ___.")
+    assert not verify_item(it, unrelated)[0]
+    plural = {"sentence": "Il plurale di «problema» è ___.",
+              "noun": "problema", "target": "plural", "answer": "problemi"}
+    assert not verify_item(
+        it, dict(plural, sentence="Problemi è la risposta a «problema»: ___."),
+    )[0]
+
+    # Case folds only where the blank starts a sentence.
+    fr_an = topic_by_key("fr_an_annee")
+    proper = {"sentence": "Le Nouvel ___ est un jour férié.", "answer": "An"}
+    assert verify_item(fr_an, proper) == (True, "")
+    assert not verify_item(fr_an, dict(proper, answer="an"))[0]
+    es = topic_by_key("es_muy_mucho")
+    initial = {"sentence": "___ empresas publicaron sus propios modelos.",
+               "answer": "muchas"}
+    assert verify_item(es, initial) == (True, "")
+    assert not verify_item(
+        es, {"sentence": "La tarea parece ___ difícil.", "answer": "Muy"})[0]
+
+    pt_gender = topic_by_key("pt_gender_core")
+    frame = {"sentence": "A campanha foi divulgada ___ sociais.",
+             "noun_or_frame": "por + as redes", "target": "bank",
+             "answer": "pelas redes"}
+    assert verify_item(pt_gender, frame) == (True, "")
+    assert not verify_item(
+        pt_gender,
+        dict(frame, sentence="A resposta oficial foi divulgada ___."),
+    )[0]
+
+    pt = topic_by_key("pt_regencia_verbal")
+    zero = {"sentence": "A equipe tentou ___ resolver a falha.",
+            "verb": "tentar", "pattern": "tentar Ø + infinitivo",
+            "answer": "Ø"}
+    assert verify_item(pt, zero) == (True, "")
+    assert not verify_item(pt, dict(zero, answer="de"))[0]
+
+    de = topic_by_key("de_dativ_verben")
+    lower_noun = {"sentence": "Der Server gehört ___ (das Ministerium).",
+                  "verb": "gehören", "case": "dat",
+                  "answer": "dem ministerium"}
+    assert not verify_item(de, lower_noun)[0]
+
+
+def test_blind_verifier_preserves_noninitial_case(monkeypatch):
+    import asyncio
+    from idiomatic.grammar import generate as gen
+
+    async def fake_solver(prompt, **_kwargs):
+        if "empresas" in prompt:
+            return {"answer": "Muchas"}
+        return {"answer": "dem Ministerium"}
+
+    monkeypatch.setattr(gen.gemini, "generate_text", fake_solver)
+    de = topic_by_key("de_dativ_verben")
+    bad_case = {"sentence": "Die Reform hilft ___ (das Ministerium).",
+                "answer": "dem ministerium"}
+    ok, why = asyncio.run(gen.verify_blind(de, bad_case))
+    assert not ok and "blind disagreement" in why
+
+    es = topic_by_key("es_muy_mucho")
+    initial = {"sentence": "___ empresas publicaron sus modelos.",
+               "answer": "muchas"}
+    assert asyncio.run(gen.verify_blind(es, initial)) == (True, "")
+
+
+def test_bank_blind_generation_runs_three_solvers(monkeypatch):
+    import asyncio
+    from idiomatic.grammar import generate as gen
+
+    generated = {"sentence": "La Ligue arabe siège ___ Caire.",
+                 "place": "Le Caire", "answer": "au",
+                 "gloss_en": "The Arab League is based in Cairo.",
+                 "why": "Le Caire takes au."}
+    calls = []
+
+    async def fake_generate(prompt, **_kwargs):
+        calls.append(prompt)
+        if "Produce 1 items" in prompt:
+            return [generated]
+        return {"answer": "au"}
+
+    monkeypatch.setattr(gen.gemini, "generate_text", fake_generate)
+    accepted, rejected = asyncio.run(
+        gen.generate_batch(topic_by_key("fr_prep_lieux"), 1))
+    assert not rejected
+    assert len(accepted) == 1
+    assert accepted[0]["meta"] == {"place": "Le Caire"}
+    assert len(calls) == 1 + gen.BLIND_K
+
+
 def test_de_article_verification():
     t = topic_by_key("de_prep_fest")
     good = {"sentence": "Er kam gestern mit ___ Zug aus Berlin zurück.",
@@ -252,7 +525,7 @@ def test_romance_verb_verification():
     fr = {t.key: t for t in topics_for("fr")}
     it = {t.key: t for t in topics_for("it")}
     pt = {t.key: t for t in topics_for("pt")}
-    assert len(fr) == 7 and len(it) == 7 and len(pt) == 7
+    assert len(fr) == 11 and len(it) == 9 and len(pt) == 9
 
     t = fr["fr_passe_compose"]
     good = {"infinitive": "aller", "person": "3s",
@@ -286,6 +559,8 @@ def test_every_fip_unit_cell_exists():
     missing = []
     for lang in ("fr", "it", "pt"):
         for t in topics_for(lang):
+            if t.verify != "morph":
+                continue
             for v in t.verbs:
                 if m.lookup(lang, v, t.mood, t.tense, "3s") is None:
                     missing.append((t.key, v))
