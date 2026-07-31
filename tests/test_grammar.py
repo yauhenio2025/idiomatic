@@ -193,6 +193,171 @@ def test_por_para_inventory():
     assert not verify_item(t, {"sentence": "x ___ y", "answer": "de"})[0]
 
 
+def test_promoted_romance_unit_contracts():
+    """The four Wave-K keys are live, blind-verified curriculum topics."""
+    from idiomatic.grammar import generate as gen
+
+    expected = {
+        "fr_pronoms_y_en": ("fr", "4 Pronoms", "Pronoms y / en", "🔗"),
+        "pt_clitic_placement": (
+            "pt", "4 Clíticos", "Colocação pronominal", "🔗",
+        ),
+        "it_clitici_ci_ne": ("it", "4 Clitici", "Clitici ci / ne", "🔗"),
+        "es_ser_estar": ("es", "7 Ser/Estar", "Ser vs estar", "⚖"),
+    }
+    for key, (lang, cluster, label, symbol) in expected.items():
+        topic = topic_by_key(key)
+        assert topic is not None, key
+        assert (topic.lang, topic.cluster, topic.label, topic.symbol) == (
+            lang, cluster, label, symbol,
+        )
+        assert topic.verify == "blind", key
+        assert topic.answer_set, key
+
+    assert gen.BLIND_K == 3
+    assert topic_by_key("fr_pronoms_y_en").answer_set == ["y", "en"]
+    assert topic_by_key("it_clitici_ci_ne").answer_set == ["ci", "ne", "ce ne"]
+    assert topic_by_key("fr_pronoms_y_en").bank is None
+    assert topic_by_key("es_ser_estar").bank is None
+    # The deliberately small Ser/Estar scope needs only third-person forms:
+    # present, imperfect and preterite, singular and plural, for both verbs.
+    assert set(topic_by_key("es_ser_estar").answer_set) == {
+        "es", "son", "está", "están",
+        "era", "eran", "estaba", "estaban",
+        "fue", "fueron", "estuvo", "estuvieron",
+    }
+
+
+def test_promoted_romance_banks_load_with_attested_anchors():
+    import json
+    import re
+    from idiomatic.grammar.generate import _bank_entries, _norm_answer
+
+    for key in ("pt_clitic_placement", "it_clitici_ci_ne"):
+        topic = topic_by_key(key)
+        assert topic.bank == f"{key}.json"
+        path = Path(__file__).parents[1] / "idiomatic" / "grammar" / "data" / topic.bank
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        assert list(raw[0]) == ["_meta"], key
+        assert raw[0]["_meta"].get("validation_notes"), key
+        entries = _bank_entries(topic)
+        assert 36 <= len(entries) <= 44, (key, len(entries))
+        assert all({"frame", "correct", "rule_en"} <= row.keys()
+                   for row in entries), key
+        assert all(row["frame"].count("___") == 1 for row in entries), key
+        bank_answers = {_norm_answer(row["correct"]) for row in entries}
+        inventory = {_norm_answer(answer) for answer in topic.answer_set}
+        assert inventory == bank_answers, key
+
+    pt_rows = _bank_entries(topic_by_key("pt_clitic_placement"))
+    pt_text = "\n".join(str(row) for row in pt_rows).casefold()
+    assert "procurá-los" in pt_text
+    assert "comigo" in pt_text and "conosco" in pt_text
+    assert re.search(r"á-l[oa]s?", pt_text)
+    assert re.search(r"ê-l[oa]s?", pt_text)
+    assert re.search(r"i-l[oa]s?", pt_text)
+    assert "procl" in pt_text
+
+    it_text = "\n".join(
+        str(row) for row in _bank_entries(topic_by_key("it_clitici_ci_ne"))
+    ).casefold()
+    for anchor in ("farcela", "cavarsela", "fregarsene"):
+        assert anchor in it_text
+
+
+def test_promoted_romance_prompts_build():
+    from idiomatic.grammar.generate import build_prompt
+
+    for key in ("fr_pronoms_y_en", "pt_clitic_placement",
+                "it_clitici_ci_ne", "es_ser_estar"):
+        topic = topic_by_key(key)
+        prompt = build_prompt(topic, 3)
+        assert topic.label in prompt
+        assert "Produce 3 items" in prompt
+        assert "The inventory (closed set" in prompt
+        for answer in topic.answer_set:
+            assert answer in prompt
+
+    pt_prompt = build_prompt(topic_by_key("pt_clitic_placement"), 3)
+    assert "Brazilian Portuguese" in pt_prompt
+    assert "Pairs to draw from" in pt_prompt
+    it_prompt = build_prompt(topic_by_key("it_clitici_ci_ne"), 3)
+    assert "Pairs to draw from" in it_prompt
+    fr_guidance = topic_by_key("fr_pronoms_y_en").guidance.casefold()
+    assert "antecedent" in fr_guidance and "recover" in fr_guidance
+    es_guidance = topic_by_key("es_ser_estar").guidance.casefold()
+    assert "only decision" in es_guidance
+
+
+def test_promoted_romance_verifiers_accept_correct_and_reject_wrong():
+    from idiomatic.grammar.generate import _bank_entries, _norm_answer
+
+    closed_cases = [
+        (
+            "fr_pronoms_y_en",
+            {"sentence": "Tu vas à la conférence demain ? Oui, j'___ vais.",
+             "answer": "y"},
+            "là",
+        ),
+        (
+            "es_ser_estar",
+            {"sentence": "Tras la votación, la puerta ___ cerrada toda la noche.",
+             "answer": "estuvo"},
+            "quedó",
+        ),
+    ]
+    for key, good, wrong_answer in closed_cases:
+        topic = topic_by_key(key)
+        assert verify_item(topic, good) == (True, ""), key
+        assert not verify_item(topic, dict(good, answer=wrong_answer))[0], key
+
+    # Exact curated frames get a deterministic answer check before K=3.
+    for key in ("pt_clitic_placement", "it_clitici_ci_ne"):
+        topic = topic_by_key(key)
+        rows = _bank_entries(topic)
+        row = (next(r for r in rows
+                    if _norm_answer(r["correct"]) == "procurá-los")
+               if key == "pt_clitic_placement" else rows[0])
+        good = {"sentence": row["frame"], "answer": row["correct"]}
+        assert verify_item(topic, good) == (True, ""), key
+        wrong_answer = next(
+            answer for answer in topic.answer_set
+            if _norm_answer(answer) != _norm_answer(row["correct"])
+        )
+        assert not verify_item(topic, dict(good, answer=wrong_answer))[0], key
+
+    # This unit is explicitly Brazilian; morphology-style person metadata
+    # must not provide a path for tu/vós items into the blind pipeline.
+    pt = topic_by_key("pt_clitic_placement")
+    row = next(r for r in _bank_entries(pt)
+               if _norm_answer(r["correct"]) == "procurá-los")
+    good = {"sentence": row["frame"], "answer": row["correct"]}
+    for person in ("2s", "2p"):
+        ok, why = verify_item(pt, dict(good, person=person))
+        assert not ok and "Brazilian" in why
+
+
+def test_promoted_romance_seed_rows_preserve_total_and_promote_status():
+    from collections import Counter
+    from idiomatic.grammar.curriculum import PLANNED_UNITS, unit_seed_rows
+
+    rows = unit_seed_rows()
+    by_key = {row["key"]: row for row in rows}
+    assert len(rows) == 63
+    assert Counter(row["status"] for row in rows) == {
+        "active": 61, "planned": 2,
+    }
+    assert {row["key"] for row in PLANNED_UNITS} == {
+        "de_adj_endings", "de_verb_core",
+    }
+    for key in ("fr_pronoms_y_en", "pt_clitic_placement",
+                "it_clitici_ci_ne", "es_ser_estar"):
+        assert by_key[key]["status"] == "active"
+        assert by_key[key]["sort_order"] < 1000
+    # No code-level override: the schema/default keeps the requested 12.
+    assert "target_size" not in by_key["es_ser_estar"]
+
+
 def test_verb_prep_bank_loads_into_prompt():
     from idiomatic.grammar.generate import build_prompt
     t = topic_by_key("es_verb_prep")
@@ -458,6 +623,25 @@ def test_blind_verifier_preserves_noninitial_case(monkeypatch):
     assert asyncio.run(gen.verify_blind(es, initial)) == (True, "")
 
 
+def test_blind_verifier_uses_the_brazilian_portuguese_profile(monkeypatch):
+    import asyncio
+    from idiomatic.grammar import generate as gen
+
+    prompts = []
+
+    async def fake_solver(prompt, **_kwargs):
+        prompts.append(prompt)
+        return {"answer": "comigo"}
+
+    monkeypatch.setattr(gen.gemini, "generate_text", fake_solver)
+    pt = topic_by_key("pt_clitic_placement")
+    item = {"sentence": "A pesquisadora vai trabalhar ___ durante a visita.",
+            "answer": "comigo"}
+    assert asyncio.run(gen.verify_blind(pt, item)) == (True, "")
+    assert len(prompts) == gen.BLIND_K
+    assert all("BRAZILIAN Portuguese" in prompt for prompt in prompts)
+
+
 def test_bank_blind_generation_runs_three_solvers(monkeypatch):
     import asyncio
     from idiomatic.grammar import generate as gen
@@ -526,11 +710,11 @@ def test_romance_verb_verification():
     fr = {t.key: t for t in topics_for("fr")}
     it = {t.key: t for t in topics_for("it")}
     pt = {t.key: t for t in topics_for("pt")}
-    # Seven morphology units per language survive; bank units + the F3
-    # attested unit append after them (fr: 7 morph + 4 bank + 1 F3 = 12).
+    # Seven morphology units per language survive; promoted clitic units,
+    # other bank units, and the F3 attested unit append after them.
     assert all(sum(t.verify == "morph" for t in topics.values()) == 7
                for topics in (fr, it, pt))
-    assert len(fr) == 12 and len(it) == 10 and len(pt) == 10
+    assert len(fr) == 13 and len(it) == 11 and len(pt) == 11
 
     t = fr["fr_passe_compose"]
     good = {"infinitive": "aller", "person": "3s",

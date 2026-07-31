@@ -371,6 +371,7 @@ _NEW_BANK_KEYS = {
     "fr_quantites_de", "fr_prep_lieux", "fr_genre_noyau", "fr_an_annee",
     "pt_gender_core", "pt_regencia_verbal", "it_genere_plurali",
     "it_reggenze_verbali", "es_muy_mucho", "de_dativ_verben",
+    "pt_clitic_placement", "it_clitici_ci_ne",
 }
 
 _BANK_META_FIELDS = {
@@ -599,6 +600,20 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
         return False, "no blank in sentence"
     if not answer:
         return False, "empty answer"
+    if topic.key == "pt_clitic_placement":
+        person = (item.get("person") or "").strip().lower()
+        if person in ("2s", "2p"):
+            return False, ("tu/vós forms excluded — Brazilian drills use "
+                           "você (3s) / vocês (3p)")
+        import re
+        non_br = re.search(
+            r"(?<!\w)(?:tu|vós|te|vos|contigo|convosco|"
+            r"teu|tua|teus|tuas|vosso|vossa|vossos|vossas)(?!\w)",
+            f"{sentence} {answer}", re.IGNORECASE,
+        )
+        if non_br:
+            return False, ("tu/vós forms excluded — Brazilian drills use "
+                           "você/vocês and proclisis defaults")
     if topic.key in _NEW_BANK_KEYS and sentence.count("___") != 1:
         return False, "sentence must contain exactly one blank"
     if (topic.key in _NEW_BANK_KEYS and _answer_case_text(answer).endswith("'")
@@ -751,7 +766,7 @@ async def verify_blind(topic: Topic, item: dict,
     inv = inventory if inventory is not None else topic.answer_set
     prof = LANG_PROFILE.get(topic.lang, LANG_PROFILE["es"])
     prompt = _BLIND_SOLVER.format(
-        language=prof["language"],
+        language=prof["variety"],
         sentence=item["sentence"],
         inventory=", ".join(inv or []) or "the missing word(s)",
     )

@@ -183,6 +183,20 @@ PILOT_TOPICS_ES: list[Topic] = [
                    "recipient/opinion). Avoid contexts where both are "
                    "grammatical with different meanings — the sentence must "
                    "force one reading. State the rule in 'why'."),
+    Topic("es_ser_estar", "es", "Ser vs estar", "", "", "⚖",
+          verify="blind",
+          answer_set=["es", "son", "está", "están", "era", "eran",
+                      "estaba", "estaban", "fue", "fueron", "estuvo",
+                      "estuvieron"],
+          guidance="SMALL coverage unit: focus on estar with result-state "
+                   "participles, adjectives, locations, and fixed state/PP "
+                   "predicates (especially estar en contacto), with ser "
+                   "only as the forced contrast. Use only 3s/3p present, "
+                   "imperfect, or preterite forms from the inventory. The "
+                   "subject and time frame must make person and tense "
+                   "mechanical: choosing ser versus estar must be the ONLY "
+                   "decision. Avoid contexts where both verbs are possible "
+                   "with different readings."),
     Topic("es_muy_mucho", "es", "Muy, mucho, tan y tanto", "", "", "∑",
           verify="blind",
           answer_set=["muy", "mucho", "mucha", "muchos", "muchas",
@@ -247,6 +261,7 @@ CLUSTER_BY_KEY: dict[str, str] = {
     "es_clitics_dir": "5 Pronombres", "es_clitics_ind": "5 Pronombres",
     "es_clitics_selo": "5 Pronombres",
     "es_por_para": "6 Preposiciones", "es_verb_prep": "6 Preposiciones",
+    "es_ser_estar": "7 Ser/Estar",
     # Cluster numbering: 8 = grado y cantidad (es), 9 = the learner's own
     # errors (F3) in EVERY language — keep that invariant; interference
     # (F4) will take 10.
@@ -269,18 +284,10 @@ for _t in PILOT_TOPICS_ES + TOPICS_DE:
 # real topic list (same key!) and delete it here; boot seeding then flips
 # its DB row from planned to active.
 PLANNED_UNITS: list[dict] = [
-    {"key": "es_ser_estar", "lang": "es", "cluster": "7 Ser/Estar",
-     "label": "Ser vs estar", "symbol": "⚖"},
     {"key": "de_adj_endings", "lang": "de", "cluster": "3 Adjektive",
      "label": "Adjektivendungen", "symbol": "🖌"},
     {"key": "de_verb_core", "lang": "de", "cluster": "4 Verben",
      "label": "Verbformen — Kern", "symbol": "⚙"},
-    {"key": "fr_pronoms_y_en", "lang": "fr", "cluster": "4 Pronoms",
-     "label": "Pronoms y / en", "symbol": "🔗"},
-    {"key": "it_clitici_ci_ne", "lang": "it", "cluster": "4 Clitici",
-     "label": "Clitici ci / ne", "symbol": "🔗"},
-    {"key": "pt_clitic_placement", "lang": "pt", "cluster": "4 Clíticos",
-     "label": "Colocação pronominal", "symbol": "🔗"},
 ]
 
 
@@ -303,6 +310,18 @@ def _load_fip_topics() -> dict[str, list[Topic]]:
 
 
 _FIP_TOPICS = _load_fip_topics()
+
+
+def _frame_answer_set(filename: str) -> list[str]:
+    """Ordered unique answers from a generated frame bank."""
+    import json
+    from pathlib import Path
+    raw = json.loads((Path(__file__).parent / "data" / filename
+                      ).read_text(encoding="utf-8"))
+    return list(dict.fromkeys(
+        row["correct"] for row in raw
+        if isinstance(row, dict) and "_meta" not in row
+    ))
 
 
 F3_TOPICS: dict[str, Topic] = {
@@ -333,6 +352,18 @@ F3_TOPICS: dict[str, Topic] = {
 # loaded above, preserving those units' existing sort order and stable keys.
 _BANK_TOPICS: dict[str, list[Topic]] = {
     "fr": [
+        Topic("fr_pronoms_y_en", "fr", "Pronoms y / en", "", "", "🔗",
+              cluster="4 Pronoms", verify="blind",
+              answer_set=["y", "en"],
+              guidance="Choose y or en and blank ONLY that pronoun. Its "
+                       "antecedent must be explicitly recoverable in the "
+                       "same sentence or preceding clause: the place or "
+                       "non-human à-complement replaced by y, or the "
+                       "non-human de-complement/quantity replaced by en, "
+                       "must be stated. Use a tonic pronoun for a person and "
+                       "do not use human antecedents in this unit. Never rely "
+                       "on world knowledge or an unstated discourse referent; "
+                       "the antecedent must force a unique answer."),
         Topic("fr_quantites_de", "fr", "Quantités — de / des", "", "", "∑",
               cluster="7 Articles & quantités", verify="blind",
               answer_set=[
@@ -383,6 +414,22 @@ _BANK_TOPICS: dict[str, list[Topic]] = {
                        "contexts where both choices are defensible."),
     ],
     "it": [
+        Topic("it_clitici_ci_ne", "it", "Clitici ci / ne", "", "", "🔗",
+              cluster="4 Clitici", verify="blind",
+              answer_set=["ci", "ne", "ce ne"],
+              bank="it_clitici_ci_ne.json",
+              guidance="Blank ONLY ci, ne, or ce ne. Make the antecedent "
+                       "overt and uniquely recoverable: ci resumes a place "
+                       "or a non-human a/in/su complement and occurs in the "
+                       "banked lexicalized forms metterci, volerci, capirci, "
+                       "and saperci fare; ne resumes a di/from/quantity "
+                       "complement. Before ne, ci becomes ce in partitive, "
+                       "existential/impersonal, and first-person-plural "
+                       "reflexive procomplementary clusters. Use the banked "
+                       "contrast frames, "
+                       "including contexts with the remedial procomplementari "
+                       "farcela, cavarsela, and fregarsene; do not blank their "
+                       "other clitics or admit an answer outside the inventory."),
         Topic("it_genere_plurali", "it", "Genere, articoli e plurali", "", "", "🚻↔",
               cluster="5 Genere e plurali", verify="it_noun",
               bank="it_genere_plurali.json",
@@ -410,6 +457,18 @@ _BANK_TOPICS: dict[str, list[Topic]] = {
                        "guadagnare come."),
     ],
     "pt": [
+        Topic("pt_clitic_placement", "pt", "Colocação pronominal", "", "", "🔗",
+              cluster="4 Clíticos", verify="blind",
+              answer_set=_frame_answer_set("pt_clitic_placement.json"),
+              bank="pt_clitic_placement.json",
+              guidance="Brazilian Portuguese only: never use tu/vós forms. "
+                       "Choose one banked mixed frame and blank its complete "
+                       "target: infinitive+enclisis (drop final -r and write "
+                       "-a/-e/-i with the required accent before -lo/-la/"
+                       "-los/-las), comigo/conosco, or the full proclitic "
+                       "clitic+verb group. Use você/vocês and Brazilian "
+                       "proclisis defaults; preserve all banked accents and "
+                       "hyphens, and make referents explicit."),
         Topic("pt_gender_core", "pt", "Gênero, artigos e concordância", "", "", "🚻",
               cluster="5 Gênero & Artigos", verify="pt_gender",
               bank="pt_gender_core.json",
