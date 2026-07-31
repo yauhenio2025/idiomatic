@@ -824,6 +824,85 @@ async def lingq_stats() -> list[dict[str, Any]]:
     return [dict(r) for r in rows]
 
 
+async def upsert_personal_errors(rows: list[dict[str, Any]]) -> int:
+    """One transaction per batch (same write-pressure lesson as
+    upsert_lingq_terms). Re-uploads refresh the mutable analysis fields
+    but never clobber status='retired' — retirement is user state."""
+    if not rows:
+        return 0
+    pool = await get_pool()
+    n = 0
+    async with pool.acquire() as conn, conn.transaction():
+        for r in rows:
+            await conn.execute(
+                """
+                INSERT INTO personal_errors
+                    (lang, kind, wrong, right_form, gloss_en, category,
+                     subcategory, why, interference_source, occurrences,
+                     first_seen, last_seen, sources, unit_hint, confidence)
+                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15)
+                ON CONFLICT (lang, COALESCE(wrong, ''), right_form)
+                DO UPDATE SET
+                    kind = EXCLUDED.kind,
+                    gloss_en = EXCLUDED.gloss_en,
+                    category = EXCLUDED.category,
+                    subcategory = EXCLUDED.subcategory,
+                    why = EXCLUDED.why,
+                    interference_source = EXCLUDED.interference_source,
+                    occurrences = EXCLUDED.occurrences,
+                    first_seen = EXCLUDED.first_seen,
+                    last_seen = EXCLUDED.last_seen,
+                    sources = EXCLUDED.sources,
+                    unit_hint = EXCLUDED.unit_hint,
+                    confidence = EXCLUDED.confidence
+                """,
+                r["lang"], r["kind"], r.get("wrong"), r["right_form"],
+                r.get("gloss_en"), r["category"], r.get("subcategory"),
+                r.get("why"), r.get("interference_source"),
+                r.get("occurrences", 1), r.get("first_seen"),
+                r.get("last_seen"), r.get("sources") or [],
+                r.get("unit_hint"), r.get("confidence"),
+            )
+            n += 1
+    return n
+
+
+async def stage_personal_errors(payload: str, n_rows: int) -> int:
+    """One blob INSERT from the web process; cron does the real work."""
+    pool = await get_pool()
+    return await pool.fetchval(
+        """INSERT INTO personal_errors_staging (payload, n_rows)
+           VALUES ($1, $2) RETURNING id""",
+        payload, n_rows)
+
+
+async def fetch_unprocessed_error_staging() -> list[dict[str, Any]]:
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """SELECT id, payload FROM personal_errors_staging
+           WHERE processed_at IS NULL ORDER BY id""")
+    return [dict(r) for r in rows]
+
+
+async def mark_error_staging(staging_id: int, *, note: str) -> None:
+    pool = await get_pool()
+    await pool.execute(
+        """UPDATE personal_errors_staging
+           SET processed_at = NOW(), note = $2, payload = ''
+           WHERE id = $1""",
+        staging_id, note)
+
+
+async def personal_errors_stats() -> list[dict[str, Any]]:
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """SELECT lang, kind, category, count(*) AS n,
+                  SUM(occurrences) AS occurrences
+           FROM personal_errors
+           GROUP BY lang, kind, category ORDER BY lang, n DESC""")
+    return [dict(r) for r in rows]
+
+
 async def sample_lingq_terms(lang: str, n: int = 20,
                               max_status: int = 2) -> list[dict[str, Any]]:
     """Random sample of still-being-learned terms for prompt injection.

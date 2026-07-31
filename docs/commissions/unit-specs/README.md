@@ -46,3 +46,17 @@ External spot-checks used for the highest-risk rules:
 - [Treccani: Italian plurals, including gender-changing and double plurals](https://www.treccani.it/enciclopedia/plurale_%28Enciclopedia-dell%27Italiano%29/)
 - [Duden: the dative object](https://www.duden.de/sprachwissen/fuer-lernende/dativobjekt)
 - [Ciberdúvidas: variation in Brazilian `assistir` government](https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/regencia-do-verbo-assistir/19132)
+
+## Decisions (2026-07-31, supervising session — resolves open questions 5 & 6)
+
+1. **Italian cluster strings CONFIRMED FINAL**: `5 Genere e plurali` and
+   `6 Reggenze` (as proposed above — reggenze at 6 so the two clusters
+   sort independently). These strings are now frozen the moment cards
+   ship, same rule as every other cluster.
+2. **de_dativ_verben verification**: ship v1 with Tier B blind-fill
+   (K=3) + the bank's `case` field as a static check; do NOT block on a
+   full-NP inflection engine. The deterministic NP-inflection verifier
+   (dative plural -n, weak nouns) is bundled into the de_adj_endings
+   build, which needs the same declension matrix anyway — one engine,
+   two units. Until then dative-verb items use article+noun frames the
+   existing de_art checker can already validate where possible.

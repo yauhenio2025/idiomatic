@@ -98,6 +98,18 @@ async def run() -> None:
     except Exception as e:
         log.warning("cron.lingq_sync_failed", err=repr(e)[:200])
 
+    # Personal-error registry ingest: the web process only stages the
+    # uploaded JSONL blob; the batched upserts run here, where a wedged
+    # import can stall one cron tick but never the API/delivery path
+    # (same containment as the LingQ sync above).
+    try:
+        from . import personal_errors as pe
+        stats = await pe.ingest_staged()
+        if stats:
+            log.info("cron.personal_errors_ingested", **stats)
+    except Exception as e:
+        log.warning("cron.personal_errors_ingest_failed", err=repr(e)[:200])
+
     # Phase 1 — RSS walk. YouTube's feed endpoint load-sheds when hit
     # back-to-back; 1.5s between channels keeps the hit-rate near 100%.
     candidates: list[tuple] = []          # (FeedEntry, channel row)

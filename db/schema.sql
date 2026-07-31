@@ -250,6 +250,57 @@ CREATE TABLE IF NOT EXISTS lingq_terms (
 );
 CREATE INDEX IF NOT EXISTS lingq_terms_lang_status ON lingq_terms(lang, status);
 
+-- ============================================================================
+-- Personal error registry (Wave 7 Phase 1): 5+ years of teacher-marked
+-- errors, normalized by codex commission A (docs/commissions/
+-- CODEX_A_ERROR_REGISTRY.md). The raw corpus lives OUTSIDE this public
+-- repo (~/projects/idiomatic-data/errmine on the operator's machine);
+-- rows arrive via /admin/personal-errors-upload (stages a JSONL file to
+-- /data) and are ingested by the CRON container (LingQ containment
+-- lesson: bulk DB imports never run in the web process). Feeds F3
+-- error-correction generation + error-aware prompts + the Wave-5
+-- planner prior.
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS personal_errors (
+  id                  BIGSERIAL PRIMARY KEY,
+  lang                TEXT NOT NULL,
+  kind                TEXT NOT NULL,           -- error|reteach|vocab_gap
+  wrong               TEXT,                    -- attested wrong form (null for reteach/vocab_gap)
+  right_form          TEXT NOT NULL,
+  gloss_en            TEXT,
+  category            TEXT NOT NULL,           -- controlled vocabulary (idiomatic/personal_errors.py)
+  subcategory         TEXT,
+  why                 TEXT,
+  interference_source TEXT,                    -- es|pt|it|fr|en|ru|null
+  occurrences         INT NOT NULL DEFAULT 1,
+  first_seen          DATE,
+  last_seen           DATE,
+  sources             TEXT[],
+  unit_hint           TEXT,
+  confidence          TEXT,                    -- high|medium|low
+  status              TEXT NOT NULL DEFAULT 'active',  -- active|retired
+  created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE UNIQUE INDEX IF NOT EXISTS personal_errors_pair
+  ON personal_errors (lang, COALESCE(wrong, ''), right_form);
+CREATE INDEX IF NOT EXISTS personal_errors_lang_cat
+  ON personal_errors (lang, category, kind);
+
+-- Staging for the registry upload: the web process does ONE cheap blob
+-- INSERT here; the cron container (which cannot see /data — that mount
+-- belongs to idiomatic-app only) parses and batch-upserts on its next
+-- tick, then stamps processed_at. Failed ingest leaves processed_at
+-- NULL for retry; a corrupt payload gets processed_at set + note.
+CREATE TABLE IF NOT EXISTS personal_errors_staging (
+  id           BIGSERIAL PRIMARY KEY,
+  payload      TEXT NOT NULL,                  -- raw JSONL
+  n_rows       INT,
+  uploaded_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  processed_at TIMESTAMPTZ,
+  note         TEXT
+);
+
 -- Tiny generic KV: external service tokens + sync state stamps.
 CREATE TABLE IF NOT EXISTS kv_store (
   key        TEXT PRIMARY KEY,

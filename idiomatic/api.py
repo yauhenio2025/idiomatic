@@ -16,7 +16,7 @@ import secrets
 from pathlib import Path
 
 import structlog
-from fastapi import Depends, FastAPI, Header, HTTPException
+from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -542,6 +542,44 @@ async def admin_lingq_sample(
         raise HTTPException(400, "n must be 1..200")
     return {"lang": lang,
             "terms": await db.sample_lingq_terms(lang, n, max_status)}
+
+
+@app.post("/admin/personal-errors-upload")
+async def admin_personal_errors_upload(
+    request: Request, _: None = Depends(authed_admin),
+) -> dict:
+    """Stage the personal-error registry (raw JSONL body, commission-A
+    schema) for CRON-side ingestion. This endpoint validates and does
+    ONE blob insert into personal_errors_staging — the batched upserts
+    deliberately run in the cron container (LingQ web-process-hang
+    lesson; and cron can't see /data, so the DB is the handoff)."""
+    from . import personal_errors as pe
+    body = (await request.body()).decode("utf-8", errors="replace")
+    if len(body) > 50_000_000:
+        raise HTTPException(413, "too large")
+    rows, errors = pe.parse_jsonl(body)
+    if errors:
+        raise HTTPException(400, {"n_errors": len(errors),
+                                  "first_errors": errors[:10]})
+    if not rows:
+        raise HTTPException(400, "no rows")
+    staging_id = await db.stage_personal_errors(body, len(rows))
+    return {"staged": len(rows), "staging_id": staging_id,
+            "note": "ingested by the cron container on its next tick "
+                    "(top of the even hour)"}
+
+
+@app.get("/admin/personal-errors-status")
+async def admin_personal_errors_status(_: None = Depends(authed_admin)) -> dict:
+    pool = await db.get_pool()
+    pending = await pool.fetchval(
+        "SELECT COUNT(*) FROM personal_errors_staging WHERE processed_at IS NULL")
+    last = await pool.fetchrow(
+        """SELECT uploaded_at, processed_at, n_rows, note
+           FROM personal_errors_staging ORDER BY id DESC LIMIT 1""")
+    return {"staging_pending": pending,
+            "last_upload": dict(last) if last else None,
+            "stats": await db.personal_errors_stats()}
 
 
 @app.get("/admin/video-info")

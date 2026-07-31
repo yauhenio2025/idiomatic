@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { adminCall } from "../api";
 import AudioButton from "../components/AudioButton";
 import { Card, Empty, ErrorBox, LangBadge, Spinner, Td, Th } from "../components/ui";
-import { fmtDate } from "../format";
+import { fmtDate, langName } from "../format";
 import { useApi } from "../hooks";
 
 type UnitStatus = "active" | "maintenance" | "planned";
@@ -127,6 +127,76 @@ function SentenceWithBlank({
       <span className="font-medium text-accent">___{marker}</span>
       {after}
     </>
+  );
+}
+
+interface LingqTerm {
+  term: string;
+  gloss: string | null;
+  status: number | null;
+}
+
+// The learner's LingQ vocabulary rides along inside generation prompts
+// ("we study vocabulary even as we study grammar") — this panel shows a
+// sample of what the generator draws from for this language.
+function VocabPanel({ lang }: { lang: string }) {
+  const [terms, setTerms] = useState<LingqTerm[] | null>(null);
+  const [state, setState] = useState<"idle" | "loading" | "error" | "empty">("idle");
+
+  const load = useCallback(async () => {
+    setState("loading");
+    try {
+      const r = await adminCall<{ terms: LingqTerm[] }>("/admin/lingq-sample", {
+        method: "GET",
+        params: { lang, n: 18 },
+      });
+      setTerms(r.terms);
+      setState(r.terms.length ? "idle" : "empty");
+    } catch {
+      setState("error");
+    }
+  }, [lang]);
+
+  useEffect(() => {
+    void load();
+  }, [load]);
+
+  if (state === "empty") return null; // mirror not filled for this lang yet
+  return (
+    <Card
+      title="Vocabulary woven into generation"
+      aside={
+        <button
+          type="button"
+          onClick={() => void load()}
+          className="text-xs text-muted transition-colors hover:text-ink-2"
+        >
+          {state === "loading" ? "sampling…" : "resample ↻"}
+        </button>
+      }
+    >
+      {state === "error" ? (
+        <div className="text-xs text-muted">
+          LingQ sample unavailable (mirror still syncing?)
+        </div>
+      ) : (
+        <div className="flex flex-wrap gap-1.5">
+          {(terms ?? []).map((t) => (
+            <span
+              key={t.term}
+              title={t.gloss ?? undefined}
+              className="rounded-full border border-edge bg-surface-2 px-2.5 py-1 text-xs text-ink-2"
+            >
+              {t.term}
+            </span>
+          ))}
+        </div>
+      )}
+      <p className="mt-2 text-[11px] text-muted">
+        Random sample of still-learning LingQ terms for {langName(lang)} — the
+        generator weaves several of these into each new batch of drill sentences.
+      </p>
+    </Card>
   );
 }
 
@@ -386,6 +456,8 @@ export default function GrammarUnit() {
           <p className="text-sm italic leading-relaxed text-muted">{data.guidance}</p>
         </Card>
       )}
+
+      <VocabPanel lang={unit.lang} />
 
       <Card title={`Verified cards · ${data.items.length}`}>
         {retireError != null && (
