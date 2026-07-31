@@ -2,6 +2,7 @@
 lang: de
 slug: passiv
 title: "Move the Event Forward: the German Process Passive"
+takeaway: "For the process passive, promote the object and use werden in the target tense plus the past participle at the end."
 fossil_evidence:
   - ref: "docs/research/error-profiles/de.md §2, secondary structural signal"
     count: "approximately 35 teacher-supplied instances: 20 xlsx plus 15 Teachee, 2019–2024"

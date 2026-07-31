@@ -167,6 +167,14 @@ def candidate_to_item(row: Mapping[str, Any]) -> dict[str, Any]:
         "gloss_en": _text(row.get("gloss_en")) or _text(row.get("category")),
         "why_en": _text(row.get("why")),
         "status": "verified",
+        # Presentation glosses are optional/free text, so they are not a
+        # reliable classifier for pairing an F3 card with an explainer.
+        # Preserve the registry's controlled fields behind the frozen model.
+        "meta": {
+            "source_category": _text(row.get("category")),
+            "source_subcategory": _text(row.get("subcategory")),
+            "source_unit_hint": _text(row.get("unit_hint")),
+        },
     }
 
 

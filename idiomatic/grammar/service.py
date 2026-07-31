@@ -16,6 +16,7 @@ import structlog
 from .. import db
 from ..settings import get_settings
 from . import audio as grammar_audio
+from . import explainers
 from . import generate
 from .apkg import build_grammar_apkg
 from .curriculum import topics_for
@@ -38,16 +39,25 @@ async def rebuild_grammar_deck(lang: str) -> dict[str, Any]:
 
     labels = {t.key: (t.label, t.symbol) for t in topics_for(lang)}
     clusters = {t.key: t.cluster for t in topics_for(lang)}
+    if lang in explainers.EXPLAINER_UNITS:
+        listening = explainers.EXPLAINER_UNITS[lang]
+        labels[listening.topic] = (listening.label, listening.symbol)
+        clusters[listening.topic] = listening.cluster
     s = get_settings()
+    audio_dir = Path(s.data_dir) / "staged_audio" / "grammar" / lang
 
     # Back-of-card TTS (form + pause + full sentence). F4 fronts deliberately
     # mix languages; sending the whole filled prompt through the receiving-
     # language voice would mispronounce the source cue. Keep F4 text-only until
     # a target-answer-only audio path exists. Other formats remain idempotent;
     # a TTS outage degrades those cards to text-only, retried next rebuild.
-    audio_items = [item for item in items if item.get("fmt") != "f4"]
-    audio_map = await grammar_audio.ensure_audio(audio_items, lang)
+    # Authored explainers already have a fully stitched content-addressed
+    # MP3 — never replace it with drill audio; F4 stays text-only.
     audio_dir = Path(s.data_dir) / "staged_audio" / "grammar" / lang
+    drill_items = [item for item in items
+                   if item.get("fmt") not in ("f4", "explainer")]
+    audio_map = await grammar_audio.ensure_audio(drill_items, lang)
+    audio_map.update(explainers.prebuilt_audio_map(items, audio_dir))
 
     apkg_root = Path(s.data_dir) / "apkgs" / lang
     apkg_root.mkdir(parents=True, exist_ok=True)
@@ -70,8 +80,48 @@ async def rebuild_grammar_deck(lang: str) -> dict[str, Any]:
             "with_audio": len(audio_map)}
 
 
+def claim_grammar_job(lang: str, mode: str) -> bool:
+    """Atomically claim the web process's single grammar job slot.
+
+    Admin handlers call this synchronously before scheduling their task, so a
+    second request cannot slip into the check-to-first-coroutine-tick window.
+    """
+    if _state.get("running"):
+        return False
+    _state.clear()
+    _state.update({"running": True, "lang": lang, "mode": mode,
+                   "errors": []})
+    return True
+
+
+def claim_explainer_build(lang: str) -> bool:
+    return claim_grammar_job(lang, "explainers")
+
+
+async def run_explainer_build(lang: str, *, claimed: bool = False) -> None:
+    """Render/upsert one language's authored lessons without rebuilding.
+
+    Uses the grammar status state so generation, rebuild, and explainer TTS
+    cannot overlap in the web process.  The explicit grammar-rebuild endpoint
+    remains the only operation that packages and delivers a new deck.
+    """
+    if not claimed and not claim_explainer_build(lang):
+        return
+    try:
+        result = await explainers.build_language(lang)
+        _state["explainers"] = result
+        _state["errors"] = list(result["failed"])
+    except Exception as exc:  # noqa: BLE001 - background status must retain failure
+        log.exception("grammar.explainers_build.failed", lang=lang)
+        _state["errors"] = [repr(exc)[:500]]
+    finally:
+        _state["running"] = False
+        _state["finished_at"] = datetime.now(timezone.utc).isoformat()
+
+
 async def run_generation(lang: str, n_per_topic: int = 12,
-                          only_topic: str | None = None) -> None:
+                          only_topic: str | None = None, *,
+                          claimed: bool = False) -> None:
     batch = f"{datetime.now(timezone.utc):%Y%m%d-%H%M}-{uuid.uuid4().hex[:6]}"
     # F3 personal errors and F4 reviewed interference pairs are filled by
     # their deterministic converters. Neither may trigger generation or an
@@ -83,8 +133,11 @@ async def run_generation(lang: str, n_per_topic: int = 12,
         # comma-separated topic keys → generate just those units
         keys = {k.strip() for k in only_topic.split(",") if k.strip()}
         topics = [t for t in topics if t.key in keys]
+    if not claimed and not claim_grammar_job(lang, "generation"):
+        return
     _state.clear()
-    _state.update({"running": True, "lang": lang, "batch": batch,
+    _state.update({"running": True, "lang": lang, "mode": "generation",
+                   "batch": batch,
                    "topics_total": len(topics), "topics_done": 0,
                    "accepted": 0, "rejected": 0, "errors": []})
     try:

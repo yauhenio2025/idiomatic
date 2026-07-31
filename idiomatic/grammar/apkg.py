@@ -1,20 +1,24 @@
-"""Text-only grammar drill deck builder.
+"""Grammar drill and authored grammar-radio deck builder.
 
 Model rules (docs/research/ankidroid-tech.md): the model is FROZEN —
 never change field count/order/names or template count of MODEL_ID, or
 every subscriber is forced into a one-way full sync. Extra1..Extra4 are
-reserved for future needs. GUIDs derive from the DB primary key, so
-re-imports update fields in place and preserve scheduling/FSRS state.
+reserved for future needs. Ordinary GUIDs derive from the DB primary key;
+authored explainers use their stable source slug. Re-imports therefore update
+fields in place and preserve scheduling/FSRS state for both note families.
 """
 
 from __future__ import annotations
 
 import hashlib
 import html
+import json
 from pathlib import Path
 
 import genanki
 import structlog
+
+from .explainers import EXPLAINER_UNITS, fossil_tags_for_item
 
 log = structlog.get_logger()
 
@@ -23,7 +27,7 @@ MODEL_NAME = "Idiomatic Grammar Drill v1"
 
 FIELDS = [
     "ItemId", "Lang", "Topic", "TenseLabel", "Symbol",
-    "Sentence",        # cloze with ___, an F3 wrong phrase, or an F4 contrast
+    "Sentence",        # cloze with ___, F3 wrong phrase, F4 contrast, or explainer title
     "Answer",
     "SentenceFull",    # blank replaced by <b>form</b>
     "GlossEn", "Why",
@@ -87,6 +91,25 @@ def _guid(lang: str, item_id: int) -> str:
                         ).hexdigest()[:16]
 
 
+def _explainer_guid(lang: str, slug: str) -> str:
+    return hashlib.sha1(
+        f"idiomatic-grammar-explainer::{lang}::{slug}".encode()
+    ).hexdigest()[:16]
+
+
+def _item_meta(item: dict) -> dict:
+    value = item.get("meta")
+    if isinstance(value, dict):
+        return value
+    if isinstance(value, str):
+        try:
+            parsed = json.loads(value)
+        except json.JSONDecodeError:
+            return {}
+        return parsed if isinstance(parsed, dict) else {}
+    return {}
+
+
 def _blank_html(sentence: str, infinitive: str) -> str:
     esc = html.escape(sentence)
     return esc.replace("___", '<span class="blank">___</span>', 1)
@@ -128,7 +151,9 @@ def build_grammar_apkg(*, out_path: Path, lang: str,
     """items: verified grammar_items rows (dicts with id, topic, sentence,
     answer, infinitive, gloss_en, why_en). topic_labels: topic key ->
     (label, symbol). audio: item_id -> media filename inside audio_dir;
-    items absent from the map ship text-only. topic_clusters: topic key ->
+    items absent from the map ship text-only. Values may be paths relative to
+    audio_dir (explainer media lives under ``explainers/``); Anki sound tags
+    always use the packaged basename. topic_clusters: topic key ->
     cluster string; one genanki.Deck per cluster present in the item set
     ("Idiomatic Grammar {LANG}::{cluster}"). Notes keep their GUIDs — a
     note re-imported under a new subdeck updates fields in place but does
@@ -140,41 +165,75 @@ def build_grammar_apkg(*, out_path: Path, lang: str,
 
     audio = audio or {}
     media: list[str] = []
+    media_seen: set[str] = set()
     n = 0
     for it in items:
-        label, symbol = topic_labels.get(it["topic"], (it["topic"], ""))
-        deck_name = deck_name_for(lang, topic_clusters.get(it["topic"], ""))
+        is_explainer = it.get("fmt") == "explainer"
+        metadata = _item_meta(it)
+        slug = metadata.get("slug")
+        if is_explainer and (not isinstance(slug, str) or not slug):
+            raise ValueError("explainer grammar item is missing meta.slug")
+        unit = EXPLAINER_UNITS.get(lang) if is_explainer else None
+        fallback_label = (unit.label, unit.symbol) if unit else (it["topic"], "")
+        label, symbol = topic_labels.get(it["topic"], fallback_label)
+        cluster = topic_clusters.get(it["topic"], unit.cluster if unit else "")
+        deck_name = deck_name_for(lang, cluster)
         deck = decks.get(deck_name)
         if deck is None:
             deck = decks[deck_name] = genanki.Deck(_deck_id(deck_name), deck_name)
         sound = ""
         fname = audio.get(it["id"])
-        if fname and audio_dir is not None and (audio_dir / fname).exists():
-            sound = f"[sound:{fname}]"
-            media.append(str(audio_dir / fname))
-        sentence_full = (
-            html.escape(it["answer"])
-            if it.get("fmt") == "f3"
-            else _full_html(it["sentence"], it["answer"],
-                            it.get("infinitive") or "")
-        )
+        if fname and audio_dir is not None:
+            media_path = audio_dir / fname
+            if media_path.exists():
+                # genanki flattens every media path to basename.  Emitting a
+                # relative subdirectory in [sound:] would create a reference
+                # that can never resolve inside the APKG.
+                sound = f"[sound:{media_path.name}]"
+                media_key = str(media_path.resolve())
+                if media_key not in media_seen:
+                    media.append(str(media_path))
+                    media_seen.add(media_key)
+        if is_explainer:
+            item_id = f"explainer:{lang}:{slug}"
+            sentence = html.escape(it["sentence"])
+            sentence_full = html.escape(it["sentence"])
+            guid = _explainer_guid(lang, slug)
+            tags = [
+                "idiomatic-grammar",
+                "grammar-radio",
+                f"{lang}_explainers",
+                it["topic"],
+                f"idiomatic-fossil::{lang}::{slug}",
+            ]
+        else:
+            item_id = str(it["id"])
+            sentence = _blank_html(it["sentence"], it.get("infinitive") or "")
+            sentence_full = (
+                html.escape(it["answer"])
+                if it.get("fmt") == "f3"
+                else _full_html(it["sentence"], it["answer"],
+                                it.get("infinitive") or "")
+            )
+            guid = _guid(lang, it["id"])
+            tags = ["idiomatic-grammar", it["topic"], *fossil_tags_for_item(it)]
         deck.add_note(genanki.Note(
             model=model,
             fields=[
-                str(it["id"]),
+                item_id,
                 lang,
                 it["topic"],
                 label,
                 symbol,
-                _blank_html(it["sentence"], it.get("infinitive") or ""),
+                sentence,
                 html.escape(it["answer"]),
                 sentence_full,
                 html.escape(it.get("gloss_en") or ""),
                 html.escape(it.get("why_en") or ""),
                 sound, "", "", "",
             ],
-            guid=_guid(lang, it["id"]),
-            tags=["idiomatic-grammar", it["topic"]],
+            guid=guid,
+            tags=tags,
         ))
         n += 1
 

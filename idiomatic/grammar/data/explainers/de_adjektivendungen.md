@@ -2,6 +2,7 @@
 lang: de
 slug: adjektivendungen
 title: "One Signal per Noun Phrase: German Adjective Endings"
+takeaway: "Mark gender, number, and case once per noun phrase: if the determiner shows the signal, use a weak adjective ending; otherwise the adjective shows it."
 fossil_evidence:
   - ref: "docs/research/error-profiles/de.md §3, fossil A"
     count: "6 verbatim errors spanning 2019–2024"

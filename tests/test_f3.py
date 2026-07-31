@@ -130,6 +130,11 @@ def test_candidate_mapping_uses_frozen_model_semantics():
     assert item["answer"] == "à Berlin"
     assert item["gloss_en"] == "prep_place"
     assert item["why_en"] == "Cities take à; en is for countries."
+    assert item["meta"] == {
+        "source_category": "prep_place",
+        "source_subcategory": "",
+        "source_unit_hint": "",
+    }
 
     with_gloss = candidate_to_item(_candidate(gloss_en="in Berlin"))
     assert with_gloss["gloss_en"] == "in Berlin"

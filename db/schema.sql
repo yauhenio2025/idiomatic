@@ -185,19 +185,19 @@ UPDATE videos SET processing_seconds =
 CREATE TABLE IF NOT EXISTS grammar_items (
   id            BIGSERIAL PRIMARY KEY,
   lang          TEXT NOT NULL,
-  topic         TEXT NOT NULL,                  -- curriculum.Topic.key
-  fmt           TEXT NOT NULL DEFAULT 'cloze',  -- cloze (F1) | f3 | f4
+  topic         TEXT NOT NULL,                  -- curriculum or authored unit key
+  fmt           TEXT NOT NULL DEFAULT 'cloze',  -- cloze (F1) | f3 | f4 | explainer
   infinitive    TEXT,
   mood          TEXT,
   tense         TEXT,
   person        TEXT,                           -- 1s..3p
-  sentence      TEXT NOT NULL,                  -- cloze/F4 frame or F3 wrong phrase
+  sentence      TEXT NOT NULL,                  -- cloze/F4 frame, F3 wrong phrase, or explainer title
   answer        TEXT NOT NULL,
   gloss_en      TEXT,
   why_en        TEXT,
   status        TEXT NOT NULL DEFAULT 'verified', -- verified|rejected|retired
   reject_reason TEXT,
-  batch         TEXT,                           -- generation run id
+  batch         TEXT,                           -- generation/authored build id
   created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   UNIQUE (lang, sentence)
 );
@@ -205,6 +205,13 @@ CREATE INDEX IF NOT EXISTS grammar_items_lang_topic ON grammar_items(lang, topic
 -- Structured facts behind non-verb items (German: noun/prep/case/definite);
 -- enables re-verification after verifier fixes. Idempotent migration.
 ALTER TABLE grammar_items ADD COLUMN IF NOT EXISTS meta JSONB;
+-- Authored grammar-radio rows use a mutable title as ``sentence``.  Their
+-- stable identity is the source slug stored in meta, so source edits update
+-- one row (and preserve its scheduling identity) instead of inserting a
+-- second note.  Ordinary generated/F3 uniqueness remains (lang, sentence).
+CREATE UNIQUE INDEX IF NOT EXISTS grammar_items_explainer_slug_unique
+  ON grammar_items (lang, (meta->>'slug'))
+  WHERE fmt = 'explainer';
 
 -- Curriculum units (Wave 6): code (grammar/curriculum.py) stays the
 -- DEFINITION source — api.py re-seeds rows from it on every boot and
@@ -295,6 +302,8 @@ CREATE INDEX IF NOT EXISTS personal_errors_lang_cat
 -- Link to the ordinary verified grammar_items row produced for F3. Keeping
 -- this on the source registry makes conversion resumable and idempotent.
 ALTER TABLE personal_errors ADD COLUMN IF NOT EXISTS f3_item_id BIGINT;
+CREATE INDEX IF NOT EXISTS personal_errors_f3_item_idx
+  ON personal_errors (f3_item_id) WHERE f3_item_id IS NOT NULL;
 
 -- Staging for the registry upload: the web process does ONE cheap blob
 -- INSERT here; the cron container (which cannot see /data — that mount

@@ -605,6 +605,45 @@ async def insert_grammar_items(items: list[dict[str, Any]], *, status: str,
     return inserted
 
 
+async def upsert_explainer_item(item: dict[str, Any], *, batch: str) -> int:
+    """Insert/update one authored explainer by stable ``(lang, meta.slug)``.
+
+    The row id is deliberately preserved on source edits.  APKG explainers
+    use a slug-derived GUID as an additional frozen identity guarantee, while
+    the stable database row keeps operational references and stats coherent.
+    """
+    meta = item.get("meta")
+    slug = meta.get("slug") if isinstance(meta, dict) else None
+    if item.get("fmt") != "explainer" or not isinstance(slug, str) or not slug:
+        raise ValueError("explainer item requires fmt='explainer' and meta.slug")
+    pool = await get_pool()
+    item_id = await pool.fetchval(
+        """
+        INSERT INTO grammar_items
+            (lang, topic, fmt, infinitive, mood, tense, person,
+             sentence, answer, gloss_en, why_en,
+             status, reject_reason, batch, meta)
+        VALUES ($1,$2,'explainer',NULL,NULL,NULL,NULL,$3,$4,$5,$6,
+                'verified',NULL,$7,$8)
+        ON CONFLICT (lang, (meta->>'slug')) WHERE fmt = 'explainer'
+        DO UPDATE SET
+            topic = EXCLUDED.topic,
+            sentence = EXCLUDED.sentence,
+            answer = EXCLUDED.answer,
+            gloss_en = EXCLUDED.gloss_en,
+            why_en = EXCLUDED.why_en,
+            status = 'verified',
+            reject_reason = NULL,
+            batch = EXCLUDED.batch,
+            meta = EXCLUDED.meta
+        RETURNING id
+        """,
+        item["lang"], item["topic"], item["sentence"], item["answer"],
+        item.get("gloss_en"), item.get("why_en"), batch, json.dumps(meta),
+    )
+    return int(item_id)
+
+
 async def fetch_grammar_items(lang: str, status: str = "verified",
                                ) -> list[dict[str, Any]]:
     """Fetch deck-eligible grammar rows.
@@ -617,8 +656,24 @@ async def fetch_grammar_items(lang: str, status: str = "verified",
     rows = await pool.fetch(
         """
         SELECT i.id, i.lang, i.topic, i.fmt, i.infinitive, i.mood, i.tense,
-               i.person, i.sentence, i.answer, i.gloss_en, i.why_en
+               i.person, i.sentence, i.answer, i.gloss_en, i.why_en,
+               CASE
+                 WHEN i.fmt = 'f3' AND source.category IS NOT NULL THEN
+                   COALESCE(i.meta, '{}'::jsonb) || jsonb_strip_nulls(
+                     jsonb_build_object(
+                       'source_category', source.category,
+                       'source_subcategory', source.subcategory,
+                       'source_unit_hint', source.unit_hint))
+                 ELSE i.meta
+               END AS meta
         FROM grammar_items i
+        LEFT JOIN LATERAL (
+            SELECT p.category, p.subcategory, p.unit_hint
+            FROM personal_errors p
+            WHERE p.f3_item_id = i.id
+            ORDER BY p.id
+            LIMIT 1
+        ) source ON TRUE
         WHERE i.lang = $1 AND i.status = $2
           AND NOT EXISTS (
               SELECT 1 FROM f4_pairs p
@@ -629,7 +684,16 @@ async def fetch_grammar_items(lang: str, status: str = "verified",
         """,
         lang, status,
     )
-    return [dict(r) for r in rows]
+    result = [dict(r) for r in rows]
+    # asyncpg returns JSON/JSONB as text unless a custom codec is installed.
+    # Normalize here so deck assembly is independent of pool configuration.
+    for item in result:
+        if isinstance(item.get("meta"), str):
+            try:
+                item["meta"] = json.loads(item["meta"])
+            except json.JSONDecodeError:
+                item["meta"] = None
+    return result
 
 
 async def grammar_topic_stats(lang: str) -> list[dict[str, Any]]:
@@ -930,7 +994,7 @@ async def fetch_f3_candidates(lang: str) -> list[dict[str, Any]]:
         """
         SELECT p.id, p.lang, p.kind, p.status, p.confidence, p.f3_item_id,
                p.wrong, p.right_form, p.gloss_en, p.category,
-               p.subcategory, p.why, p.occurrences,
+               p.subcategory, p.unit_hint, p.why, p.occurrences,
                p.first_seen, p.last_seen,
                EXISTS (
                    SELECT 1
@@ -967,7 +1031,8 @@ async def insert_f3_grammar_item(
     async with pool.acquire() as conn, conn.transaction():
         source = await conn.fetchrow(
             """
-            SELECT id, lang, wrong, right_form, gloss_en, category, why
+            SELECT id, lang, wrong, right_form, gloss_en, category,
+                   subcategory, unit_hint, why
             FROM personal_errors
             WHERE id = $1
               AND kind = 'error'
@@ -988,12 +1053,17 @@ async def insert_f3_grammar_item(
         def clean(value: Any) -> str:
             return " ".join(str(value or "").strip().split())
 
+        meta = item.get("meta") if isinstance(item.get("meta"), dict) else {}
         if (item.get("lang") != source["lang"]
                 or clean(item.get("sentence")) != clean(source["wrong"])
                 or clean(item.get("answer")) != clean(source["right_form"])
                 or clean(item.get("gloss_en"))
                 != (clean(source["gloss_en"]) or clean(source["category"]))
-                or clean(item.get("why_en")) != clean(source["why"])):
+                or clean(item.get("why_en")) != clean(source["why"])
+                or clean(meta.get("source_category")) != clean(source["category"])
+                or clean(meta.get("source_subcategory"))
+                != clean(source["subcategory"])
+                or clean(meta.get("source_unit_hint")) != clean(source["unit_hint"])):
             return None
 
         item_id = await _insert_grammar_item(

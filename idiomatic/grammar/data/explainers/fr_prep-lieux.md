@@ -2,6 +2,7 @@
 lang: fr
 slug: prep-lieux
 title: "Cities and countries"
+takeaway: "Use à with ordinary cities; for countries choose en, au, or aux from the name's gender, initial sound, and number."
 fossil_evidence:
   - ref: "docs/research/error-profiles/fr.md §2.1(c)"
     count: 56

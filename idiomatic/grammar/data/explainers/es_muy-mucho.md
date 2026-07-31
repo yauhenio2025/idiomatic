@@ -2,6 +2,7 @@
 lang: es
 slug: muy-mucho
 title: "Very, Much, and Many: muy versus mucho"
+takeaway: "Use muy before adjectives or adverbs; use mucho for quantity, agreeing before nouns and staying invariable after verbs."
 fossil_evidence:
   - ref: "docs/research/error-profiles/es.md §2, category 2"
     count: "7 of 62 verbatim errors, in both directions, 2019–2022"

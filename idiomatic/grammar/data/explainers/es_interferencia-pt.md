@@ -2,6 +2,7 @@
 lang: es
 slug: interferencia-pt
 title: "Close Cousins, Different Words: Portuguese into Spanish"
+takeaway: "When Spanish feels suspiciously effortless, retrieve the whole Spanish word or paradigm instead of reshaping Portuguese."
 fossil_evidence:
   - ref: "docs/research/error-profiles/es.md §2, category 1"
     count: "26 of 62 verbatim pairs show cross-language interference; approximately 14 are Portuguese-sourced"

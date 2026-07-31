@@ -392,8 +392,10 @@ def test_promoted_romance_seed_rows_preserve_total_and_promote_status():
     # Post-L: de_adj_endings promoted too and de_verb_core pruned, so
     # everything is active (63 = 61 + de_adj_endings + de_passiv - verb_core
     # ... net 63; PLANNED_UNITS is empty).
-    assert len(rows) == 63
-    assert Counter(row["status"] for row in rows) == {"active": 63}
+    # 67 = 63 + the four F4 interference units (H); explainer cards are
+    # upserted rows, not curriculum units.
+    assert len(rows) == 67
+    assert Counter(row["status"] for row in rows) == {"active": 67}
     assert PLANNED_UNITS == []
     for key in ("fr_pronoms_y_en", "pt_clitic_placement",
                 "it_clitici_ci_ne", "es_ser_estar",

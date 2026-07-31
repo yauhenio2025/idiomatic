@@ -324,8 +324,8 @@ async def _silence_mp3(out: Path, ms: int = 300) -> None:
     """Write a tiny silent mp3 as a placeholder when TTS is unrecoverably
     blocked, plus the .silence sidecar that flags it for retry."""
     out.parent.mkdir(parents=True, exist_ok=True)
-    import subprocess
-    subprocess.run(
+    await asyncio.to_thread(
+        subprocess.run,
         ["ffmpeg", "-y", "-loglevel", "error",
          "-f", "lavfi", "-i", "anullsrc=channel_layout=mono:sample_rate=24000",
          "-t", f"{ms/1000:.3f}",
@@ -475,7 +475,7 @@ async def synthesize(text: str, *, voice: str, out: Path,
         wav_path = Path(f.name)
     try:
         wav_path.write_bytes(_pcm_to_wav(pcm))
-        _wav_to_mp3(wav_path, out)
+        await asyncio.to_thread(_wav_to_mp3, wav_path, out)
         silence_marker(out).unlink(missing_ok=True)
     finally:
         wav_path.unlink(missing_ok=True)
@@ -514,7 +514,8 @@ async def _elevenlabs_tts(text: str, out: Path, api_key: str, *,
     raw = out.with_name(".el_raw_" + out.name)
     raw.write_bytes(r.content)
     try:
-        subprocess.run(
+        await asyncio.to_thread(
+            subprocess.run,
             ["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw),
              "-ar", "24000", "-ac", "1",
              "-c:a", "libmp3lame", "-q:a", "4", str(out)],

@@ -2,6 +2,7 @@
 lang: pt
 slug: genero-ma-agem
 title: "The Gender Switch: -ma and -agem"
+takeaway: "Learn core -ma nouns as masculine and ordinary -agem nouns as feminine, then make every neighboring word agree."
 fossil_evidence:
   - ref: "docs/research/error-profiles/pt.md §2, category 2"
     count: "193 gender rows across 2019–2022"

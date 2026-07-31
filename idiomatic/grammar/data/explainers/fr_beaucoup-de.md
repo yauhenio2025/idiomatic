@@ -2,6 +2,7 @@
 lang: fr
 slug: beaucoup-de
 title: "The quantity link"
+takeaway: "For an indefinite quantity, use quantity plus de plus noun; keep the definite article only for a defined subset."
 fossil_evidence:
   - ref: "docs/research/error-profiles/fr.md §3, pattern 1"
     count: 138
