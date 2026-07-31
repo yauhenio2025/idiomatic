@@ -563,9 +563,32 @@ async def upsert_pool_apkg(
 # Grammar items (docs/GRAMMAR_STRATEGY.md)
 # ---------------------------------------------------------------------------
 
+async def _insert_grammar_item(
+    conn: asyncpg.Connection, item: dict[str, Any], *, status: str,
+    batch: str, fmt: str,
+) -> int | None:
+    """Insert one grammar item, returning its id or None on sentence conflict."""
+    return await conn.fetchval(
+        """
+        INSERT INTO grammar_items
+            (lang, topic, fmt, infinitive, mood, tense, person,
+             sentence, answer, gloss_en, why_en,
+             status, reject_reason, batch, meta)
+        VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15)
+        ON CONFLICT (lang, sentence) DO NOTHING
+        RETURNING id
+        """,
+        item["lang"], item["topic"], fmt, item.get("infinitive"),
+        item.get("mood"), item.get("tense"), item.get("person"),
+        item["sentence"], item["answer"], item.get("gloss_en"),
+        item.get("why_en"), status, item.get("reject_reason"), batch,
+        json.dumps(item["meta"]) if item.get("meta") else None,
+    )
+
+
 async def insert_grammar_items(items: list[dict[str, Any]], *, status: str,
-                                batch: str) -> int:
-    """Bulk insert generated items. ON CONFLICT (lang, sentence) DO NOTHING —
+                                batch: str, fmt: str = "cloze") -> int:
+    """Bulk insert grammar items. ON CONFLICT (lang, sentence) DO NOTHING —
     a regenerated near-duplicate sentence silently drops instead of erroring
     the whole batch. Returns rows actually inserted."""
     if not items:
@@ -574,22 +597,8 @@ async def insert_grammar_items(items: list[dict[str, Any]], *, status: str,
     inserted = 0
     async with pool.acquire() as conn:
         for it in items:
-            row = await conn.fetchval(
-                """
-                INSERT INTO grammar_items
-                    (lang, topic, infinitive, mood, tense, person,
-                     sentence, answer, gloss_en, why_en,
-                     status, reject_reason, batch, meta)
-                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
-                ON CONFLICT (lang, sentence) DO NOTHING
-                RETURNING id
-                """,
-                it["lang"], it["topic"], it.get("infinitive"),
-                it.get("mood"), it.get("tense"), it.get("person"),
-                it["sentence"], it["answer"],
-                it.get("gloss_en"), it.get("why_en"),
-                status, it.get("reject_reason"), batch,
-                json.dumps(it["meta"]) if it.get("meta") else None,
+            row = await _insert_grammar_item(
+                conn, it, status=status, batch=batch, fmt=fmt,
             )
             if row is not None:
                 inserted += 1
@@ -601,7 +610,7 @@ async def fetch_grammar_items(lang: str, status: str = "verified",
     pool = await get_pool()
     rows = await pool.fetch(
         """
-        SELECT id, lang, topic, infinitive, mood, tense, person,
+        SELECT id, lang, topic, fmt, infinitive, mood, tense, person,
                sentence, answer, gloss_en, why_en
         FROM grammar_items
         WHERE lang = $1 AND status = $2
@@ -865,6 +874,97 @@ async def upsert_personal_errors(rows: list[dict[str, Any]]) -> int:
             )
             n += 1
     return n
+
+
+async def fetch_f3_candidates(lang: str) -> list[dict[str, Any]]:
+    """Eligible personal errors, ranked for F3 conversion.
+
+    ``sentence_collision`` lets the conversion layer count and log existing
+    grammar sentence conflicts while continuing farther down the ranked list.
+    The unique constraint remains the final guard against a concurrent insert
+    after this read.
+    """
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT p.id, p.lang, p.kind, p.status, p.confidence, p.f3_item_id,
+               p.wrong, p.right_form, p.gloss_en, p.category,
+               p.subcategory, p.why, p.occurrences,
+               p.first_seen, p.last_seen,
+               EXISTS (
+                   SELECT 1
+                   FROM grammar_items i
+                   WHERE i.lang = p.lang
+                     AND i.sentence = REGEXP_REPLACE(
+                         BTRIM(p.wrong), '[[:space:]]+', ' ', 'g'
+                     )
+               ) AS sentence_collision
+        FROM personal_errors p
+        WHERE p.lang = $1
+          AND p.kind = 'error'
+          AND p.status = 'active'
+          AND p.confidence = 'high'
+          AND p.f3_item_id IS NULL
+          AND p.wrong IS NOT NULL
+        ORDER BY p.occurrences DESC, p.last_seen DESC NULLS LAST, p.id
+        """,
+        lang,
+    )
+    return [dict(r) for r in rows]
+
+
+async def insert_f3_grammar_item(
+    personal_error_id: int, item: dict[str, Any], *, batch: str,
+) -> int | None:
+    """Atomically convert one still-eligible personal error into an F3 item.
+
+    The source row is locked and rechecked because candidate selection and
+    conversion are separate calls. Returns the grammar_items id, or None when
+    the source was already linked/became ineligible or its sentence collided.
+    """
+    pool = await get_pool()
+    async with pool.acquire() as conn, conn.transaction():
+        source = await conn.fetchrow(
+            """
+            SELECT id, lang, wrong, right_form, gloss_en, category, why
+            FROM personal_errors
+            WHERE id = $1
+              AND kind = 'error'
+              AND status = 'active'
+              AND confidence = 'high'
+              AND f3_item_id IS NULL
+              AND wrong IS NOT NULL
+            FOR UPDATE
+            """,
+            personal_error_id,
+        )
+        if source is None:
+            return None
+
+        # Never link an item to a different source pair accidentally. F3's
+        # mapping normalizes whitespace but otherwise preserves the
+        # teacher-attested text verbatim.
+        def clean(value: Any) -> str:
+            return " ".join(str(value or "").strip().split())
+
+        if (item.get("lang") != source["lang"]
+                or clean(item.get("sentence")) != clean(source["wrong"])
+                or clean(item.get("answer")) != clean(source["right_form"])
+                or clean(item.get("gloss_en"))
+                != (clean(source["gloss_en"]) or clean(source["category"]))
+                or clean(item.get("why_en")) != clean(source["why"])):
+            return None
+
+        item_id = await _insert_grammar_item(
+            conn, item, status="verified", batch=batch, fmt="f3",
+        )
+        if item_id is None:
+            return None
+        await conn.execute(
+            "UPDATE personal_errors SET f3_item_id = $2 WHERE id = $1",
+            personal_error_id, item_id,
+        )
+        return item_id
 
 
 async def stage_personal_errors(payload: str, n_rows: int) -> int:

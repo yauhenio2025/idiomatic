@@ -334,6 +334,24 @@ async def admin_rebuild_pools(
 
 # --- admin: grammar drills (docs/GRAMMAR_STRATEGY.md) ----------------------
 
+@app.post("/admin/f3-convert")
+async def admin_f3_convert(
+    lang: str, n: int = 20, _: None = Depends(authed_admin),
+) -> dict:
+    """Turn teacher-attested personal errors into verified F3 cards.
+
+    This is a bounded synchronous DB operation.  Rebuilding the rolling
+    grammar deck remains an explicit, separate admin action.
+    """
+    from .grammar import f3
+
+    if lang not in f3.TOPIC_BY_LANG:
+        raise HTTPException(400, "lang must be fr|pt|es|it|de")
+    if not 1 <= n <= 200:
+        raise HTTPException(400, "n must be 1..200")
+    return await f3.convert(lang, n)
+
+
 @app.post("/admin/grammar-generate")
 async def admin_grammar_generate(
     lang: str = "es", n_per_topic: int = 12, topic: str | None = None,
@@ -462,6 +480,11 @@ async def admin_grammar_topup(
     if topic is None:
         raise HTTPException(404, "unknown unit key (planned units have no "
                                  "generator yet)")
+    if topic.verify == "attested":
+        raise HTTPException(
+            409,
+            "attested F3 units are filled via /admin/f3-convert, not LLM generation",
+        )
     units = await db.grammar_units_with_counts(topic.lang)
     unit = next((u for u in units if u["key"] == key), None)
     if unit is None:
