@@ -199,7 +199,14 @@ def test_verb_prep_bank_loads_into_prompt():
     t = topic_by_key("es_verb_prep")
     p = build_prompt(t, 12)
     assert "Pairs to draw from" in p
-    assert "soñar + con" in p or "depender + de" in p or "confiar + en" in p
+    # The bank is randomly SAMPLED into the prompt, so never assert
+    # specific verbs (that made this test flaky ~1 run in 3) — assert
+    # the structural shape: several "verb + prep — gloss (trap: …)"
+    # lines drawn from the bank's closed preposition inventory.
+    import re
+    pair_lines = re.findall(r"^- \S+ \+ (a|de|en|con|por|para|contra) — .+\(trap: ",
+                            p, flags=re.MULTILINE)
+    assert len(pair_lines) >= 5, p[-500:]
 
 
 def test_de_article_verification():
