@@ -105,6 +105,9 @@ the blank without seeing your answer must arrive at exactly it. {guidance}
 3. Use {variety}. Vary structures and persons; no two sentences may share the \
 same opening words.
 4. Real-world content must be timelessly true or clearly hypothetical.
+5. Preserve literal spacing at the blank boundary. If the answer ends in an \
+apostrophe, put the blank immediately against the following word \
+(`___énergie`, never `___ énergie`) so insertion produces valid elision.
 
 Return ONLY the JSON array."""
 
@@ -179,6 +182,9 @@ below; use any declared target enum exactly as described.
 answer elsewhere in the sentence, and do not add a second blank.
 4. Use {variety}. Real-world content must be timelessly true or clearly
 hypothetical. Vary structures across the batch.
+5. Preserve literal spacing at the blank boundary. If the answer ends in an
+apostrophe, put the blank immediately against the following word
+(`___énergie`, never `___ énergie`) so insertion produces valid elision.
 
 Return ONLY the JSON array."""
 
@@ -430,6 +436,16 @@ def _bank_answer_matches(sentence: str, answer: str, expected: str) -> bool:
             and got.casefold() == want.casefold())
 
 
+def _sentence_surface_answer(sentence: str, answer: str) -> str:
+    """Capitalize the first letter when a bank answer starts the sentence."""
+    if not _blank_starts_sentence(sentence):
+        return answer
+    for index, char in enumerate(answer):
+        if char.isalpha():
+            return answer[:index] + char.upper() + answer[index + 1:]
+    return answer
+
+
 def _wrong_bank_answer(answer: str, expected: str) -> tuple[bool, str]:
     return False, f"wrong bank answer: {answer!r}, expected {expected!r}"
 
@@ -444,6 +460,13 @@ def _blank_before(sentence: str, value: str) -> bool:
     import re
     return re.search(rf"___\s+{re.escape(value)}(?!\w)", sentence,
                      re.IGNORECASE) is not None
+
+
+def _citation_after_blank(sentence: str) -> str:
+    """Return a citation hint in the exact ``___ (phrase)`` format."""
+    import re
+    match = re.search(r"___ \(([^()\n]+)\)", sentence)
+    return match.group(1) if match else ""
 
 
 def _verify_fr_gender(topic: Topic, item: dict,
@@ -493,18 +516,20 @@ def _verify_pt_gender(topic: Topic, item: dict,
         if target != "bank":
             return False, f"bank frame requires target='bank', got {target!r}"
         expected = fact
-        import re
-        canonical = re.sub(re.escape(fact), "___", row["example"], count=1,
-                           flags=re.IGNORECASE)
-        if canonical == row["example"]:
-            return False, "bank answer is not present in canonical example"
-        if _norm_key(sentence) != _norm_key(canonical):
-            return False, "bank frame must use its canonical sentence"
         if _answer_leaks(sentence, answer):
             return False, "answer leaks in sentence"
     if not _bank_answer_matches(sentence, answer, expected):
         return _wrong_bank_answer(answer, expected)
     return True, ""
+
+
+def _pt_gender_uses_bank_frame(topic: Topic, item: dict) -> bool:
+    """True for full-phrase PT rows whose novel context needs Tier B."""
+    meta = item.get("meta") if isinstance(item.get("meta"), dict) else {}
+    key = (item.get("noun_or_frame") or item.get("noun")
+           or meta.get("noun_or_frame") or meta.get("noun") or "").strip()
+    row = _find_bank_row(topic, noun_or_frame=key)
+    return bool(row and row.get("gender_or_correct") not in ("m", "f"))
 
 
 def _verify_it_noun(topic: Topic, item: dict,
@@ -577,13 +602,20 @@ def _verify_bank_blind(topic: Topic, item: dict,
         if case != row["case"]:
             return False, (f"verb {verb!r} governs {row['case']}, "
                            f"item says {case or '<missing>'}")
-        # The approved v1 has no NP-inflection engine. Exact canonical bank
-        # frames still have a deterministic answer; novel frames proceed to
-        # the K=3 blind solvers after this static case check.
-        if _norm_key(sentence) == _norm_key(row["example_frame"]):
-            expected = row["example_answer"]
-            if not _bank_answer_matches(sentence, answer, expected):
-                return _wrong_bank_answer(answer, expected)
+        # The approved v1 has no general NP-inflection engine. Pinning the
+        # visible citation phrase to the selected bank row lets novel contexts
+        # reuse that row's fully declined answer without pretending to parse
+        # arbitrary German noun phrases. Tier B still checks the new context.
+        citation = _citation_after_blank(sentence)
+        if not citation:
+            return False, "missing parenthesized citation phrase after blank"
+        bank_citation = _citation_after_blank(row["example_frame"])
+        if citation != bank_citation:
+            return False, (f"citation phrase {citation!r} does not match "
+                           f"bank row {bank_citation!r}")
+        expected = row["example_answer"]
+        if not _bank_answer_matches(sentence, answer, expected):
+            return _wrong_bank_answer(answer, expected)
         return True, ""
 
     return False, f"unsupported bank-blind topic {topic.key!r}"
@@ -591,7 +623,7 @@ def _verify_bank_blind(topic: Topic, item: dict,
 
 def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
     """Static checks (no network). Returns (ok, reason-if-rejected).
-    Blind topics additionally require verify_blind() to pass."""
+    Tier-B topics/items additionally require verify_blind() to pass."""
     sentence = (item.get("sentence") or "").strip()
     answer = (item.get("answer") or "").strip()
 
@@ -738,35 +770,108 @@ If Ø is listed, it is the literal answer marker for a grammatically bare slot
 
 Return JSON: {{"answer": "..."}} — the blank's content only, nothing else."""
 
+_BLIND_SOLVER_DE_DATIV = """German grammar exercise. Fill the blank.
+
+Sentence: {sentence}
+
+The phrase immediately after ___ in parentheses is a NOMINATIVE citation-form
+hint. The hint is removed from the completed sentence. Infer the grammatical
+case required by the sentence, inflect that entire phrase accordingly, and
+return the COMPLETE phrase, including its determiner, adjectives, and noun.
+Never return only the article or determiner.
+
+Citation phrase: {citation}
+
+Return JSON: {{"answer": "..."}} — the blank's complete content only, nothing
+else."""
+
+_PT_FRAME_CONTEXT_SOLVER = """Brazilian Portuguese grammar check.
+
+Sentence with blank: {sentence}
+Candidate blank content: {answer}
+Completed sentence: {completed}
+
+Does the candidate form a grammatically integrated, natural phrase in this
+specific completed sentence? Judge grammatical and semantic fit, not whether
+some different phrase could also replace it. Return JSON: {{"valid": true}} or
+{{"valid": false}} only."""
+
 BLIND_K = 3
+BLIND_MAX_ATTEMPTS_PER_VOTE = 2
 
 
 async def verify_blind(topic: Topic, item: dict,
                         inventory: list[str] | None = None) -> tuple[bool, str]:
-    """Tier-B verification: K independent solvers get the sentence and the
-    inventory but NOT the answer. Unanimous agreement with the generator's
-    answer required — disagreement means wrong OR ambiguous, both fatal
-    for a drill card. `inventory` overrides the topic's answer_set (used
-    for per-item candidate pairs, e.g. Wechselpräposition akk/dat)."""
+    """Tier-B verification with K independent, unanimous solver votes.
+
+    Blind-fill topics hide the answer and require all solvers to reproduce it;
+    disagreement means wrong or ambiguous, both fatal for a drill card. Full-
+    phrase PT gender rows have an exact deterministic answer already, so their
+    solvers instead judge whether that phrase fits the novel context. `inventory`
+    overrides the topic's answer_set for per-item candidate pairs.
+    """
     inv = inventory if inventory is not None else topic.answer_set
     prof = LANG_PROFILE.get(topic.lang, LANG_PROFILE["es"])
-    prompt = _BLIND_SOLVER.format(
-        language=prof["language"],
-        sentence=item["sentence"],
-        inventory=", ".join(inv or []) or "the missing word(s)",
-    )
+    if (topic.key == "pt_gender_core"
+            and _pt_gender_uses_bank_frame(topic, item)):
+        surface_answer = _sentence_surface_answer(
+            item["sentence"], _answer_case_text(item["answer"]))
+        prompt = _PT_FRAME_CONTEXT_SOLVER.format(
+            sentence=item["sentence"],
+            answer=surface_answer,
+            completed=item["sentence"].replace("___", surface_answer, 1),
+        )
+    elif topic.key == "de_dativ_verben":
+        prompt = _BLIND_SOLVER_DE_DATIV.format(
+            sentence=item["sentence"],
+            citation=_citation_after_blank(item["sentence"]),
+        )
+    else:
+        prompt = _BLIND_SOLVER.format(
+            language=prof["language"],
+            sentence=item["sentence"],
+            inventory=", ".join(inv or []) or "the missing word(s)",
+        )
     import asyncio
-    raws = await asyncio.gather(
-        *(gemini.generate_text(prompt, json_mode=True, temperature=0.2)
-          for _ in range(BLIND_K)),
-        return_exceptions=True,
-    )
-    votes = []
-    for r in raws:
-        if isinstance(r, dict):
-            votes.append(_answer_case_text(str(r.get("answer", ""))))
-        else:
-            votes.append("<error>")
+
+    if (topic.key == "pt_gender_core"
+            and _pt_gender_uses_bank_frame(topic, item)):
+        async def _validity_vote() -> bool | None:
+            for _ in range(BLIND_MAX_ATTEMPTS_PER_VOTE):
+                try:
+                    raw = await gemini.generate_text(
+                        prompt, json_mode=True, temperature=0.2)
+                except Exception:  # noqa: BLE001 — bounded, fail-closed retry
+                    continue
+                if isinstance(raw, dict) and isinstance(raw.get("valid"), bool):
+                    return raw["valid"]
+            return None
+
+        context_votes = await asyncio.gather(
+            *(_validity_vote() for _ in range(BLIND_K)))
+        if all(vote is True for vote in context_votes):
+            return True, ""
+        return False, f"context disagreement: votes {context_votes}"
+
+    async def _valid_vote() -> str:
+        # A transport/malformed-response failure is not linguistic evidence.
+        # Refill that solver slot, but fail closed unless all K slots produce
+        # valid answers within the bounded attempt count.
+        for _ in range(BLIND_MAX_ATTEMPTS_PER_VOTE):
+            try:
+                raw = await gemini.generate_text(
+                    prompt, json_mode=True, temperature=0.2)
+            except Exception:  # noqa: BLE001 — bounded retry then fail closed
+                continue
+            if isinstance(raw, dict):
+                answer = raw.get("answer")
+                if isinstance(answer, str):
+                    vote = _answer_case_text(answer)
+                    if vote:
+                        return vote
+        return "<error>"
+
+    votes = await asyncio.gather(*(_valid_vote() for _ in range(BLIND_K)))
     target = _answer_case_text(item["answer"])
     if all(_bank_answer_matches(item["sentence"], v, target) for v in votes):
         return True, ""
@@ -789,7 +894,8 @@ async def generate_batch(topic: Topic, n: int,
         return [], []
 
     is_morph = topic.verify == "morph"
-    needs_blind = topic.verify in ("blind", "de_art_blind", "bank_blind")
+    topic_needs_blind = topic.verify in (
+        "blind", "de_art_blind", "bank_blind")
     accepted, rejected, pending_blind = [], [], []
     seen_keys: set = set()
     for item in raw:
@@ -804,6 +910,8 @@ async def generate_batch(topic: Topic, n: int,
             hint = (item.get("infinitive") or "").strip().lower() or None
         elif topic.verify == "it_noun":
             hint = (item.get("noun") or "").strip() or None
+        elif topic.key == "de_dativ_verben":
+            hint = _citation_after_blank(item.get("sentence") or "") or None
         base = {
             "lang": topic.lang, "topic": topic.key,
             "infinitive": hint,
@@ -822,19 +930,25 @@ async def generate_batch(topic: Topic, n: int,
             base["meta"] = {k: item.get(k)
                             for k in _BANK_META_FIELDS[topic.key]}
         ok, reason = verify_item(topic, item)
+        if ok and topic.key in _NEW_BANK_KEYS:
+            base["answer"] = _sentence_surface_answer(
+                base["sentence"], base["answer"])
         key = ((base["infinitive"], base["person"]) if is_morph
                else base["sentence"].lower())
         if ok and key in seen_keys:
             ok, reason = False, "duplicate in batch"
         if ok:
             seen_keys.add(key)
-            (pending_blind if needs_blind else accepted).append(
-                (base, item) if needs_blind else base)
+            item_needs_blind = (topic_needs_blind
+                                or (topic.key == "pt_gender_core"
+                                    and _pt_gender_uses_bank_frame(topic, item)))
+            (pending_blind if item_needs_blind else accepted).append(
+                (base, item) if item_needs_blind else base)
         else:
             base["reject_reason"] = reason
             rejected.append(base)
 
-    # Tier-B: statically-OK items must also survive blind-fill agreement.
+    # Tier B: statically-OK items must also survive their solver check.
     if pending_blind:
         import asyncio
 

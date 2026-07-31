@@ -73,32 +73,36 @@ The shipped verification behavior is:
   lookup plus Tier B blind-fill with `K=3`.
 - `fr_genre_noyau` deterministically targets the controlled `un`/`une` choice.
 - `pt_gender_core` deterministically targets controlled `o`/`a` or
-  `um`/`uma` choices and checks exact canonical bank-frame answers.
+  `um`/`uma` choices and checks exact bank-frame answers. Noun rows expose the
+  bank noun immediately after the article blank; full-phrase rows may use a
+  novel context while retaining the bank answer verbatim, then receive a
+  three-vote grammatical/semantic context-fit check.
 - `it_genere_plurali` deterministically targets a banked article+noun phrase
   or plural.
-- `de_dativ_verben` statically checks the banked `case` and uses Tier B
-  blind-fill with `K=3`. When a canonical bank frame is reused, its exact answer
-  is checked deterministically. No full-NP inflection engine is part of this
-  unit.
+- `de_dativ_verben` statically checks the banked `case`, citation phrase, and
+  exact banked declension, then uses Tier B blind-fill with `K=3` valid,
+  unanimous votes. No general full-NP inflection engine is part of this unit.
 - `Ø` is a literal answer marker, not an instruction to render an empty answer.
 - Capitalization tolerance is relaxed only when the blank is sentence-initial;
-  capitalization remains exact everywhere else.
+  capitalization remains exact everywhere else. Accepted sentence-initial bank
+  answers are capitalized before persistence and rendering.
 
 ### Deviations from the drafts
 
 - Gender article exercises were narrowed to controlled article choices
   (`un`/`une` in French; `o`/`a` or `um`/`uma` in Portuguese). This keeps the
   deterministic target unambiguous instead of requiring a broader noun-phrase
-  generator. Portuguese non-noun construction rows reuse their canonical bank
-  examples, and Italian article/plural cards must expose the citation noun, so
-  bank metadata remains tied to the visible exercise.
+  generator. Portuguese non-noun construction rows copy the complete bank
+  answer, may place it in a new context, and use Tier B to reject a bank phrase
+  that does not fit that context; Italian article/plural cards expose the
+  citation noun, so bank metadata remains tied to the visible exercise.
 - The three closed units verify membership in their closed inventories rather
   than requiring novel-context row identity. A blind prompt need not reproduce
   one uniquely identifiable source row, so inventory membership is the stable
   correctness criterion.
 - `de_dativ_verben` does not use a full-NP inflection engine, per the supervising
-  decision above. It ships with the banked-case check, `K=3` blind verification,
-  and exact canonical-frame answers where applicable; the shared declension
+  decision above. It reuses each selected row's citation phrase and exact
+  declined answer, then obtains `K=3` valid blind votes; the shared declension
   engine remains deferred to the `de_adj_endings` work.
 - Regime and German verb metadata cannot be morphologically matched to every
   possible conjugated surface form without another language-specific engine.
@@ -109,3 +113,110 @@ The shipped verification behavior is:
   recommended whole-batch ratios remain explicit prompt constraints rather
   than static rejection criteria, because rejecting an otherwise correct card
   cannot repair the distribution of the rest of a generated batch.
+
+## Live reject audit and verifier tuning (2026-08-01)
+
+Evidence came from the first live batches in
+`/home/admin/projects/idiomatic-data/tuning/rejects_*.json`. Each rejected item
+was classified as **(a)** genuinely bad, **(b)** good but rejected by an
+over-strict verifier, or **(c)** good but serialized against an unstated prompt
+rule. Counts below refer to those staged batches, not a new generation run.
+
+### `pt_gender_core`: 14/24 rejected before, projected 2/24 after
+
+Twelve cards used the exact banked answer in a grammatical new context. The old
+verifier required normalized equality with a synthetic canonical cloze, even
+though the exercise answer itself remained deterministically pinned. Two cards
+really did omit the noun after an article-only blank and remain rejected.
+
+| ID | Class | Bank target | Audit result |
+|---:|:---:|---|---|
+| 647 | a | `emblema` / `um` | Filling the blank yields `virou um da...`; the noun is absent. |
+| 646 | b | `uns links quebrados` | Exact answer is grammatical in the novel article context. |
+| 645 | b | `pelas redes` | Exact contraction and agreement in a novel campaign sentence. |
+| 644 | b | `duzentas pessoas entrevistadas` | Correct feminine hundred; the old canonical substitution was impossible because the bank example splits the phrase with `foram`. |
+| 643 | b | `no site` | Correct contraction in a novel availability sentence. |
+| 642 | b | `duas telas adicionais` | Correct feminine numeral phrase. |
+| 641 | b | `duas semanas completas` | Correct feminine numeral phrase. |
+| 640 | b | `numa mensagem` | Correct contraction and following feminine agreement. |
+| 639 | b | `pelos sites` | Correct masculine-plural contraction and agreement. |
+| 638 | b | `na ordem judicial` | Correct feminine contraction. |
+| 637 | a | `garagem` / `A` | Filling the blank yields `A do novo centro...`; the noun is absent. |
+| 636 | b | `oitocentos milhões de usuários` | Correct agreement with masculine `milhões`. |
+| 635 | b | `neste idioma` | Correct contraction in a novel publication sentence. |
+| 634 | b | `duas leis complementares` | Correct feminine numeral phrase. |
+
+After tuning, non-noun rows require `target="bank"` and the exact
+`gender_or_correct` answer but no longer require the canonical sentence. The
+answer-leak and single-blank checks remain, and each novel full-phrase context
+must receive three valid affirmative context-fit votes. This catches an exact
+bank phrase placed into an ungrammatical sentence without demanding canonical
+wording. Noun rows still require the blank immediately before the exact visible
+noun; guidance now states that rule and explicitly permits new contexts only
+for complete bank phrases. Dump-derived tests pair every newly accepted sentence
+with a wrong-gender answer, exercise the context validator against a malformed
+placement, and retain both missing-noun rejections. Expected disposition is
+therefore 22 accepted and 2 rejected, versus 10 accepted and 14 rejected before.
+
+### `fr_quantites_de`: 9/24 rejected before, projected 6/24 after regeneration
+
+The suspected inventory/elision mismatch was not present: the closed inventory
+already contains the required `de`/`d'` variants. Seven items instead wrote a
+space after the blank even though their answer ended in an apostrophe. Literal
+replacement would produce invalid forms such as `d' énergie`, so that verifier
+guard remains strict. The generator prompt had never stated this serialization
+rule; it does now. Deeper review found only three of the seven otherwise ready
+to ship.
+
+| ID | Class | Audit result |
+|---:|:---:|---|
+| 822 | a | `dispose d'ingénieurs` competes with `dispose assez d'ingénieurs`; all three blind votes chose bare `d'`. |
+| 821 | a | `pas de`, `plus de`, and `d'autres` remain defensible; the blind votes split. |
+| 820 | c | `trop ... pour pouvoir` forces `trop d'`; only the unstated apostrophe-boundary format failed. |
+| 819 | c | The sufficiency cue plus exported surplus supports `assez d'`; only boundary spacing failed. |
+| 818 | a | Both `n'a pas d'autre choix` and `n'a plus d'autre choix` fit without a distinguishing cue. |
+| 817 | a | The generated sentence dropped the bank's mandatory literal formal-register cue and also spaced the apostrophe. |
+| 816 | c | The newer chip plus comparison cues `moins d'`; only boundary spacing failed. |
+| 815 | a | `beaucoup`, `assez`, `plus`, and `trop` all produce defensible readings. |
+| 814 | a | The opening modifier is ill attached, the comparison direction is not forced, and the mutable `aujourd'hui` claim is unsuitable. |
+
+The verifier still rejects all seven unchanged spaced forms. With `___` joined
+to the following vowel-initial word, IDs 820, 819, and 816 pass static checks
+and proceed to Tier B; the other six rejects remain rejected on ambiguity or
+quality grounds. Guidance now demands overt scalar/directional cues,
+distinguishes `pas` from `plus`, preserves literal formal-register cues, and
+states `___énergie` rather than `___ énergie`. Tests retain the exact boundary
+rejection, accept the three corrected serializations, and prove that bare `d'`
+is not treated as equivalent to `assez d'` or another longer answer.
+
+### `de_dativ_verben`: 5/12 rejected before, projected 0/12 after
+
+All five cards were linguistically correct and already supplied the complete
+dative NP requested by the generator prompt. Across their 15 blind votes, eight
+were exact full phrases, four were article-only interpretations of the visible
+parenthetical hint, and three were solver errors. The generic blind prompt did
+not explain that the parenthetical citation is removed on completion, and every
+error was incorrectly treated as linguistic disagreement.
+
+| ID | Class | Bank verb | Audit result |
+|---:|:---:|---|---|
+| 691 | b | `zustimmen` | Correct `dem Kompromiss`; two solvers returned only `dem` and one errored. |
+| 692 | b | `drohen` | Correct `dem Unternehmen`; two exact votes and one article-only vote. |
+| 693 | b | `widerstehen` | Correct `dem politischen Druck`; two exact votes and one error. |
+| 694 | b | `gelingen` | Correct `den beiden Delegationen`; two exact votes and one error. |
+| 695 | b | `fehlen` | Correct sentence-initial `dem Bericht`; capitalization tolerance worked, but one vote returned only `Dem`. |
+
+The dedicated blind prompt now says that the parenthetical text is a nominative
+citation hint removed from the completed sentence, tells the solver to infer
+the case from the sentence itself, and demands the entire declined phrase,
+never only its determiner. It does not reveal the banked target case. Invalid,
+empty, or failed solver responses are retried once per vote slot; the verifier
+still fails closed unless all three slots return valid, unanimous full answers.
+The static pass requires the chosen bank row's exact citation phrase and exact
+declined answer even in a novel context. The citation is stored through the
+existing hint field so card backs and audio remove it after inserting the
+answer, and a sentence-initial answer is capitalized before storage. Tests replay
+all five sentences, reject paired wrong cases, partial answers, and a metadata-
+matched dative phrase placed under an accusative verb; exercise transient and
+persistent disagreement paths; assert no majority voting; and cover downstream
+hint removal and capitalization.
