@@ -9,6 +9,7 @@ error rate per topic — that number is itself a finding.
 from __future__ import annotations
 
 import unicodedata
+from functools import lru_cache
 
 import structlog
 
@@ -161,6 +162,84 @@ with the same noun.
 Return ONLY the JSON array."""
 
 
+_PROMPT_DE_NP = """You are writing GERMAN adjective-ending drill cards for ONE \
+advanced adult learner (reads German news daily; interests: geopolitics, tech \
+criticism, history, media). Target: {label}.
+
+Produce {n} items as a JSON array. Each item:
+{{
+  "sentence": "...",       // German sentence, 8-20 words, with exactly ONE \
+blank and the adjective lemma as a hint. target=article_adjective uses \
+"___ (hart) Konkurrent"; target=adjective uses "der ___ (hart) Konkurrent".
+  "noun": "...",           // nominative surface for the requested number: \
+singular citation form for sg, nominative plural form for pl
+  "case": "...",           // nom | akk | dat | gen
+  "number": "...",         // sg | pl
+  "definiteness": "...",   // definite | indefinite | none | kein | mein
+  "adjective": "...",      // uninflected adjective or prepared degree stem
+  "target": "...",         // article_adjective | adjective
+  "answer": "...",         // exactly the material represented by ___
+  "gloss_en": "...",       // natural English translation
+  "why": "..."             // one short English line naming the pattern/ending
+}}
+
+HARD RULES — decline_np() deterministically checks the complete noun phrase:
+1. {guidance}
+2. The noun must be banked: singulars come from the gender/weak-noun tables; \
+plural metadata comes exactly from this approved nominative-plural inventory: \
+{plural_nouns}. Write its correctly declined surface immediately after the \
+parenthesized adjective hint.
+3. With target=adjective, put the correct declined determiner immediately before \
+the blank. Use target=article_adjective for no-article strong forms. Plural mixed \
+forms use kein or mein, never indefinite.
+4. Cover all three patterns across the batch: weak after a definite article, \
+mixed after ein/kein/mein, and strong with no article. Vary case and number.
+5. The context and parenthesized lemma must make one answer possible. Real-world \
+content must be timelessly true or clearly hypothetical.
+
+Return ONLY the JSON array."""
+
+
+_PROMPT_DE_PASSIV = """You are writing GERMAN process-passive drill cards for \
+ONE advanced adult learner (reads German news daily; interests: geopolitics, \
+tech criticism, history, media). Target: {label}.
+
+Produce {n} items as a JSON array. Choose lexical verbs from: {verbs}
+Each item:
+{{
+  "sentence": "...",       // 8-20 words ending in a subordinate clause whose \
+complete clause-final passive predicate is ___ followed by the infinitive hint, \
+e.g. "..., dass der Bericht morgen ___ (veröffentlichen)."
+  "infinitive": "...",     // lexical infinitive from the list
+  "participle": "...",     // exact Partizip II of that infinitive
+  "person": "...",         // 1s | 2s | 3s | 1p | 2p | 3p
+  "tense": "...",          // present | preterite | perfect | modal
+  "modal": null,            // for modal only: müssen | können | sollen | dürfen
+  "answer": "...",         // complete predicate in subordinate-clause order
+  "gloss_en": "...",       // natural English translation
+  "why": "..."             // one short English line naming the passive form
+}}
+
+Required answer shapes:
+- present: "veröffentlicht wird"
+- preterite: "veröffentlicht wurde"
+- perfect: "veröffentlicht worden ist" (NEVER "geworden")
+- modal: "veröffentlicht werden muss"
+
+HARD RULES — finite auxiliaries are table-checked and known participles are \
+dictionary-checked:
+1. {guidance}
+2. The explicit subordinate-clause subject must agree with person. For modal \
+items, set modal to the infinitive whose present form ends the answer; otherwise \
+set modal to null.
+3. The answer is one contiguous predicate and appears nowhere outside the blank. \
+Use exactly one blank, immediately followed by " (infinitive)" at clause end.
+4. Mix all four tense values. Real-world content must be timelessly true or \
+clearly hypothetical.
+
+Return ONLY the JSON array."""
+
+
 _PROMPT_BANK = """You are writing {language} grammar drill cards for ONE \
 advanced adult learner (reads {language} news daily; interests: geopolitics, \
 tech criticism, history, media). Target: {label}.
@@ -217,6 +296,40 @@ _BANK_PROMPT_FIELDS = {
         '  "verb": "...",       // exact bank verb\n'
         '  "case": "dat",       // copy the bank case; always dat in this unit'
     ),
+}
+
+
+# Finite forms needed to construct a clause-final process passive. Keeping
+# these closed tables here makes auxiliary verification independent of an LLM.
+_DE_WERDEN_PRESENT = {
+    "1s": "werde", "2s": "wirst", "3s": "wird",
+    "1p": "werden", "2p": "werdet", "3p": "werden",
+}
+_DE_WERDEN_PRETERITE = {
+    "1s": "wurde", "2s": "wurdest", "3s": "wurde",
+    "1p": "wurden", "2p": "wurdet", "3p": "wurden",
+}
+_DE_SEIN_PRESENT = {
+    "1s": "bin", "2s": "bist", "3s": "ist",
+    "1p": "sind", "2p": "seid", "3p": "sind",
+}
+_DE_MODAL_PRESENT = {
+    "müssen": {
+        "1s": "muss", "2s": "musst", "3s": "muss",
+        "1p": "müssen", "2p": "müsst", "3p": "müssen",
+    },
+    "können": {
+        "1s": "kann", "2s": "kannst", "3s": "kann",
+        "1p": "können", "2p": "könnt", "3p": "können",
+    },
+    "sollen": {
+        "1s": "soll", "2s": "sollst", "3s": "soll",
+        "1p": "sollen", "2p": "sollt", "3p": "sollen",
+    },
+    "dürfen": {
+        "1s": "darf", "2s": "darfst", "3s": "darf",
+        "1p": "dürfen", "2p": "dürft", "3p": "dürfen",
+    },
 }
 
 
@@ -339,6 +452,16 @@ def _vocab_lines(extra_vocab: list[dict] | None) -> str:
 def build_prompt(topic: Topic, n: int,
                  extra_vocab: list[dict] | None = None) -> str:
     prof = LANG_PROFILE.get(topic.lang, LANG_PROFILE["es"])
+    if topic.verify == "de_np":
+        return _PROMPT_DE_NP.format(
+            label=topic.label, n=n, guidance=topic.guidance,
+            plural_nouns=", ".join(sorted(_load_de_adj_plural_nouns())),
+        ) + _vocab_lines(extra_vocab)
+    if topic.verify == "de_passiv":
+        return _PROMPT_DE_PASSIV.format(
+            label=topic.label, n=n, guidance=topic.guidance,
+            verbs=", ".join(topic.verbs),
+        ) + _vocab_lines(extra_vocab)
     if topic.verify in ("de_art", "de_art_blind"):
         return _PROMPT_DE_ART.format(
             label=topic.label, n=n, guidance=topic.guidance,
@@ -390,10 +513,294 @@ _BANK_META_FIELDS = {
     "de_dativ_verben": ("verb", "case"),
 }
 
+_SPECIAL_META_FIELDS = {
+    "de_adj_endings": (
+        "noun", "case", "number", "definiteness", "adjective", "target",
+    ),
+    "de_passiv": (
+        "infinitive", "participle", "person", "tense", "modal",
+    ),
+}
+
 
 def _norm_key(value: object) -> str:
     return " ".join(unicodedata.normalize(
         "NFC", str(value or "").strip()).casefold().split())
+
+
+def _item_text(value: object) -> str:
+    """Trim an LLM text field; non-text JSON is an invalid empty field."""
+    return value.strip() if isinstance(value, str) else ""
+
+
+@lru_cache(maxsize=1)
+def _load_de_adj_plural_nouns() -> frozenset[str]:
+    """Approved nominative plurals for deterministic adjective cards."""
+    import json
+    from pathlib import Path
+
+    path = Path(__file__).parent / "data" / "de_adj_plural_nouns.json"
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(raw, list) or not all(isinstance(noun, str) for noun in raw):
+        raise ValueError("de_adj_plural_nouns.json must be a list of nouns")
+    if len(raw) != len(set(raw)):
+        raise ValueError("de_adj_plural_nouns.json contains duplicate nouns")
+    return frozenset(raw)
+
+
+@lru_cache(maxsize=1)
+def _load_de_participles() -> dict[str, str]:
+    """Curated Partizip-II facts used by the deterministic passive path."""
+    import json
+    from pathlib import Path
+
+    path = Path(__file__).parent / "data" / "de_participles.json"
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    return {_norm_key(inf): _norm_key(part) for inf, part in raw.items()}
+
+
+_DE_PASSIVE_TENSE_ALIASES = {
+    "present": "present", "present tense": "present",
+    "präsens": "present", "praesens": "present",
+    "preterite": "preterite", "simple past": "preterite",
+    "präteritum": "preterite", "praeteritum": "preterite",
+    "perfect": "perfect", "present perfect": "perfect",
+    "perfekt": "perfect",
+    "modal": "modal", "modal passive": "modal",
+    "modal+infinitive": "modal", "modal infinitive": "modal",
+}
+
+
+def _de_passive_tense(value: object) -> str | None:
+    return _DE_PASSIVE_TENSE_ALIASES.get(_norm_key(value))
+
+
+def _de_passive_needs_blind(item: dict) -> bool:
+    """Whether lexical Partizip II lacks an independent dictionary fact.
+
+    Known entries take the deterministic Tier-A path only. An unknown lemma
+    is allowed through static auxiliary/order checks, but this predicate sends
+    that individual item — not the whole topic — to K=3 blind verification.
+    """
+    infinitive = _norm_key(item.get("infinitive"))
+    return bool(infinitive and infinitive not in _load_de_participles())
+
+
+def _de_np_surfaces(item: dict) -> tuple[str, str, str]:
+    """Return (determiner, declined adjective, declined noun) from the engine."""
+    for field in ("noun", "case", "number", "definiteness", "adjective"):
+        if not isinstance(item.get(field), str):
+            raise ValueError(f"{field} must be text")
+    noun = unicodedata.normalize("NFC", item["noun"].strip())
+    adjective = unicodedata.normalize("NFC", item["adjective"].strip())
+    if not noun or not adjective:
+        raise ValueError("noun and adjective are required")
+
+    case_aliases = {
+        "nom": "nom", "nominative": "nom", "nominativ": "nom",
+        "akk": "akk", "accusative": "akk", "akkusativ": "akk",
+        "dat": "dat", "dative": "dat", "dativ": "dat",
+        "gen": "gen", "genitive": "gen", "genitiv": "gen",
+    }
+    number_aliases = {
+        "sg": "sg", "singular": "sg", "sing": "sg",
+        "pl": "pl", "plural": "pl",
+    }
+    case = case_aliases.get(_norm_key(item.get("case")))
+    number = number_aliases.get(_norm_key(item.get("number")))
+    definiteness = _norm_key(item.get("definiteness"))
+    if case is None:
+        raise ValueError(f"bad case {item.get('case')!r}")
+    if number is None:
+        raise ValueError(f"bad number {item.get('number')!r}")
+    if not definiteness:
+        raise ValueError("definiteness is required")
+    if number == "pl" and noun not in _load_de_adj_plural_nouns():
+        raise ValueError(f"plural noun is not in adjective bank: {noun!r}")
+
+    full_np = morphology.decline_np(
+        noun, case=case, number=number, definiteness=definiteness,
+        adjective=adjective,
+    )
+    bare_np = morphology.decline_np(
+        noun, case=case, number=number, definiteness=definiteness,
+    )
+    if not isinstance(full_np, str) or not isinstance(bare_np, str):
+        raise ValueError("decline_np returned no surface form")
+    full_np, bare_np = full_np.strip(), bare_np.strip()
+    if not full_np or not bare_np:
+        raise ValueError("decline_np returned an empty surface form")
+
+    declined_noun = bare_np.rsplit(" ", 1)[-1]
+    noun_suffix = f" {declined_noun}"
+    if full_np == declined_noun or not full_np.endswith(noun_suffix):
+        raise ValueError("declined adjective phrase has an unexpected shape")
+    full_prefix = full_np[:-len(noun_suffix)].strip()
+    if bare_np == declined_noun:
+        determiner = ""
+    elif bare_np.endswith(noun_suffix):
+        determiner = bare_np[:-len(noun_suffix)].strip()
+    else:
+        raise ValueError("declined bare phrase has an unexpected shape")
+
+    if determiner:
+        marker = f"{determiner} "
+        if not full_prefix.startswith(marker):
+            raise ValueError("declined determiner does not match adjective phrase")
+        declined_adjective = full_prefix[len(marker):].strip()
+    else:
+        declined_adjective = full_prefix
+    if not declined_adjective:
+        raise ValueError("declined adjective is empty")
+    return determiner, declined_adjective, declined_noun
+
+
+_DE_DETERMINER_SURFACES = frozenset({
+    "der", "die", "das", "den", "dem", "des",
+    "ein", "eine", "einen", "einem", "einer", "eines",
+    "kein", "keine", "keinen", "keinem", "keiner", "keines",
+    "mein", "meine", "meinen", "meinem", "meiner", "meines",
+    "dein", "deine", "deinen", "deinem", "deiner", "deines",
+    "sein", "seine", "seinen", "seinem", "seiner", "seines",
+    "ihr", "ihre", "ihren", "ihrem", "ihrer", "ihres",
+    "unser", "unsere", "unseren", "unserem", "unserer", "unseres",
+    "euer", "eure", "euren", "eurem", "eurer", "eures",
+})
+
+
+def _verify_de_np(item: dict, sentence: str,
+                  answer: str) -> tuple[bool, str]:
+    target = _norm_key(item.get("target"))
+    if target not in ("article_adjective", "adjective"):
+        return False, f"bad adjective target {target!r}"
+    try:
+        determiner, declined_adjective, declined_noun = _de_np_surfaces(item)
+    except (KeyError, TypeError, ValueError) as exc:
+        return False, f"cannot decline noun phrase: {exc}"
+    adjective = unicodedata.normalize("NFC", item["adjective"].strip())
+
+    import re
+    if target == "article_adjective":
+        expected = " ".join(p for p in (determiner, declined_adjective) if p)
+        placement_pattern = re.escape(
+            f"___ ({adjective}) {declined_noun}"
+        ) + r"(?!\w)"
+        # This target owns the determiner inside the blank. A visible article
+        # immediately before it would produce e.g. *der der härteste* even
+        # though the shorter placement substring happens to match.
+        prefix = sentence.split("___", 1)[0]
+        visible = re.search(r"([^\W\d_]+)\s*$", prefix, re.UNICODE)
+        if visible and visible.group(1).casefold() in _DE_DETERMINER_SURFACES:
+            return False, "target='article_adjective' has a visible determiner"
+    else:
+        if not determiner:
+            return False, "target='adjective' requires a visible determiner"
+        expected = declined_adjective
+        initial_determiner = determiner[:1].upper() + determiner[1:]
+        determiner_pattern = "|".join(
+            re.escape(value) for value in dict.fromkeys(
+                (determiner, initial_determiner)
+            )
+        )
+        placement_pattern = (
+            rf"(?:{determiner_pattern}) "
+            + re.escape(f"___ ({adjective}) {declined_noun}")
+            + r"(?!\w)"
+        )
+
+    # Hint and noun case stay exact because card/audio replacement is exact.
+    # Only a visible sentence-initial determiner may capitalize its first letter.
+    if re.search(placement_pattern, sentence) is None:
+        return False, "blank/hint is not in the expected declined noun phrase"
+    if not _bank_answer_matches(sentence, answer, expected):
+        return False, f"wrong noun-phrase answer: {answer!r}, expected {expected!r}"
+    return True, ""
+
+
+def _verify_de_passive(topic: Topic, item: dict, sentence: str,
+                       answer: str) -> tuple[bool, str]:
+    for field in ("infinitive", "participle", "person", "tense"):
+        if not isinstance(item.get(field), str):
+            return False, f"passive {field} must be text"
+    if item.get("modal") is not None and not isinstance(item.get("modal"), str):
+        return False, "passive modal must be text or null"
+    raw_infinitive = unicodedata.normalize("NFC", item["infinitive"].strip())
+    infinitive = _norm_key(item.get("infinitive"))
+    participle = _norm_key(item.get("participle"))
+    person = _norm_key(item.get("person"))
+    tense = _de_passive_tense(item.get("tense"))
+    modal = _norm_key(item.get("modal"))
+    if not infinitive:
+        return False, "passive infinitive is required"
+    if not participle or " " in participle:
+        return False, "passive participle must be one word"
+    if person not in morphology.PERSONS:
+        return False, f"bad person {person!r}"
+    if tense is None:
+        return False, f"bad passive tense {item.get('tense')!r}"
+    if raw_infinitive != infinitive:
+        return False, "passive infinitive must use its lowercase citation form"
+    if infinitive not in {_norm_key(verb) for verb in topic.verbs}:
+        return False, f"passive infinitive is outside topic inventory: {infinitive!r}"
+
+    hint = f"___ ({infinitive})"
+    if hint not in sentence:
+        return False, "blank is not followed by the stated infinitive hint"
+    prefix, tail = sentence.split(hint, 1)
+    if tail.strip(" \t\r\n.,;:!?…'\"»”"):
+        return False, "passive predicate blank must be clause-final"
+
+    # The answer uses subordinate-clause word order, so a preceding explicit
+    # subordinator is part of the statically enforced exercise template.
+    import re
+    subordinate = list(re.finditer(
+        r"[,;:]\s*(?:dass|weil|obwohl|wenn|falls|ob|da|indem|nachdem|"
+        r"bevor|sobald|während|als)\b",
+        prefix,
+        flags=re.IGNORECASE,
+    ))
+    if not subordinate:
+        return False, "passive predicate is not in a subordinate clause"
+
+    # Catch explicit-pronoun/person contradictions without pretending to parse
+    # arbitrary German noun phrases. Noun subjects remain prompt-constrained.
+    clause_start = prefix[subordinate[-1].end():]
+    pronoun = re.match(r"\s*(ich|du|er|sie|es|wir|ihr)\b", clause_start,
+                       flags=re.IGNORECASE)
+    allowed_by_pronoun = {
+        "ich": {"1s"}, "du": {"2s"}, "er": {"3s"},
+        "sie": {"3s", "3p"}, "es": {"3s"}, "wir": {"1p"},
+        "ihr": {"2p"},
+    }
+    if (pronoun and person not in allowed_by_pronoun[pronoun.group(1).casefold()]):
+        return False, "passive subject pronoun does not match person metadata"
+
+    known = _load_de_participles().get(infinitive)
+    if known is not None and participle != known:
+        return False, (f"wrong participle: {participle!r}, expected {known!r} "
+                       f"for {infinitive!r}")
+
+    if tense == "present":
+        if modal:
+            return False, "modal metadata is only valid for modal passive"
+        expected = f"{participle} {_DE_WERDEN_PRESENT[person]}"
+    elif tense == "preterite":
+        if modal:
+            return False, "modal metadata is only valid for modal passive"
+        expected = f"{participle} {_DE_WERDEN_PRETERITE[person]}"
+    elif tense == "perfect":
+        if modal:
+            return False, "modal metadata is only valid for modal passive"
+        expected = f"{participle} worden {_DE_SEIN_PRESENT[person]}"
+    else:
+        forms = _DE_MODAL_PRESENT.get(modal)
+        if forms is None:
+            return False, f"unsupported modal {modal or '<missing>'!r}"
+        expected = f"{participle} werden {forms[person]}"
+
+    if _norm_answer(answer) != _norm_answer(expected):
+        return False, f"wrong passive: {answer!r}, expected {expected!r}"
+    return True, ""
 
 
 def _find_bank_row(topic: Topic, **fields: object) -> dict | None:
@@ -625,8 +1032,8 @@ def _verify_bank_blind(topic: Topic, item: dict,
 def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
     """Static checks (no network). Returns (ok, reason-if-rejected).
     Tier-B topics/items additionally require verify_blind() to pass."""
-    sentence = (item.get("sentence") or "").strip()
-    answer = (item.get("answer") or "").strip()
+    sentence = _item_text(item.get("sentence"))
+    answer = _item_text(item.get("answer"))
 
     if "___" not in sentence:
         return False, "no blank in sentence"
@@ -646,7 +1053,9 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
         if non_br:
             return False, ("tu/vós forms excluded — Brazilian drills use "
                            "você/vocês and proclisis defaults")
-    if topic.key in _NEW_BANK_KEYS and sentence.count("___") != 1:
+    if (topic.key in _NEW_BANK_KEYS
+            or topic.verify in ("de_np", "de_passiv")) \
+            and sentence.count("___") != 1:
         return False, "sentence must contain exactly one blank"
     if (topic.key in _NEW_BANK_KEYS and _answer_case_text(answer).endswith("'")
             and sentence.split("___", 1)[1].startswith(" ")):
@@ -657,6 +1066,12 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
                              "pt_gender", "it_noun")
             and _answer_leaks(sentence, answer)):
         return False, "answer leaks in sentence"
+
+    if topic.verify == "de_np":
+        return _verify_de_np(item, sentence, answer)
+
+    if topic.verify == "de_passiv":
+        return _verify_de_passive(topic, item, sentence, answer)
 
     if topic.verify == "blind":
         if topic.answer_set is not None:
@@ -918,27 +1333,33 @@ async def generate_batch(topic: Topic, n: int,
     for item in raw:
         if not isinstance(item, dict):
             continue
-        # it_noun items carry the citation noun as the "___ (noun)" hint —
-        # storing it in `infinitive` reuses the whole hint pipeline
-        # (front shows it, back strips it, audio speaks the clean
-        # corrected sentence).
+        # Non-verb clozes can also reuse `infinitive` as their citation hint:
+        # the card/audio pipeline removes "___ (hint)" after filling it.
         hint = None
         if is_morph:
-            hint = (item.get("infinitive") or "").strip().lower() or None
+            hint = _item_text(item.get("infinitive")).lower() or None
         elif topic.verify == "it_noun":
-            hint = (item.get("noun") or "").strip() or None
+            hint = _item_text(item.get("noun")) or None
         elif topic.key == "de_dativ_verben":
             hint = _citation_after_blank(item.get("sentence") or "") or None
+        elif topic.verify == "de_np":
+            hint = _item_text(item.get("adjective")) or None
+        elif topic.verify == "de_passiv":
+            hint = _item_text(item.get("infinitive")).lower() or None
+        item_tense = (_de_passive_tense(item.get("tense"))
+                      if topic.verify == "de_passiv" else None)
         base = {
             "lang": topic.lang, "topic": topic.key,
             "infinitive": hint,
-            "mood": topic.mood or None, "tense": topic.tense or None,
-            "person": ((item.get("person") or "").strip().lower()
-                       or None) if is_morph else None,
-            "sentence": (item.get("sentence") or "").strip(),
-            "answer": (item.get("answer") or "").strip(),
-            "gloss_en": (item.get("gloss_en") or "").strip(),
-            "why_en": (item.get("why") or "").strip(),
+            "mood": topic.mood or None,
+            "tense": item_tense or topic.tense or None,
+            "person": (_item_text(item.get("person")).lower()
+                       or None) if (is_morph or topic.verify == "de_passiv")
+                      else None,
+            "sentence": _item_text(item.get("sentence")),
+            "answer": _item_text(item.get("answer")),
+            "gloss_en": _item_text(item.get("gloss_en")),
+            "why_en": _item_text(item.get("why")),
         }
         if topic.verify in ("de_art", "de_art_blind"):
             base["meta"] = {k: item.get(k)
@@ -946,6 +1367,9 @@ async def generate_batch(topic: Topic, n: int,
         elif topic.key in _BANK_META_FIELDS:
             base["meta"] = {k: item.get(k)
                             for k in _BANK_META_FIELDS[topic.key]}
+        elif topic.key in _SPECIAL_META_FIELDS:
+            base["meta"] = {k: item.get(k)
+                            for k in _SPECIAL_META_FIELDS[topic.key]}
         ok, reason = verify_item(topic, item)
         if ok and topic.key in _NEW_BANK_KEYS:
             base["answer"] = _sentence_surface_answer(
@@ -956,9 +1380,15 @@ async def generate_batch(topic: Topic, n: int,
             ok, reason = False, "duplicate in batch"
         if ok:
             seen_keys.add(key)
-            item_needs_blind = (topic_needs_blind
-                                or (topic.key == "pt_gender_core"
-                                    and _pt_gender_uses_bank_frame(topic, item)))
+            # Passive is hybrid per item: known participles finish at
+            # Tier A; unknown lexical participles fall back to K=3 blind.
+            item_needs_blind = (
+                topic_needs_blind
+                or (topic.key == "pt_gender_core"
+                    and _pt_gender_uses_bank_frame(topic, item))
+                or (topic.verify == "de_passiv"
+                    and _de_passive_needs_blind(item))
+            )
             (pending_blind if item_needs_blind else accepted).append(
                 (base, item) if item_needs_blind else base)
         else:

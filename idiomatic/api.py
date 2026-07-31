@@ -41,8 +41,10 @@ async def lifespan(app: FastAPI):
     # Re-seed grammar_units from curriculum code (the definition source);
     # only code-owned columns are overwritten — see db.seed_grammar_units.
     try:
-        from .grammar.curriculum import unit_seed_rows
-        await db.seed_grammar_units(unit_seed_rows())
+        from .grammar.curriculum import OBSOLETE_UNIT_KEYS, unit_seed_rows
+        await db.seed_grammar_units(
+            unit_seed_rows(), obsolete_keys=OBSOLETE_UNIT_KEYS,
+        )
     except Exception as e:
         log.warning("api.grammar_units_seed_failed", err=repr(e)[:300])
     worker_task = asyncio.create_task(worker_loop(once=False))

@@ -13,7 +13,7 @@ Built 2026-07-31 for `CODEX_B_UNIT_BANKS.md`. Counts exclude each JSON file's le
 | `it_genere_plurali` | 5 Genere e plurali | 159 | F1 + F5 | deterministic |
 | `it_reggenze_verbali` | 6 Reggenze | 70 | F1 + F3 | regime lookup + blind |
 | `es_muy_mucho` | 9 Grado y cantidad | 50 | F1 + F3 | closed inventory + blind |
-| `de_dativ_verben` | 5 Kasus | 81 | F1 + F3 | regime + NP inflection |
+| `de_dativ_verben` | 5 Kasus | 81 | F1 + F3 | regime + Tier B blind (v1) |
 | **Total** |  | **938** |  |  |
 
 ## Loader contract
@@ -27,7 +27,10 @@ All banks are JSON arrays. Element zero is `{"_meta": {...}}`; generation code m
 3. `pt_regencia_verbal` targets careful professional BR for `assistir a` and `chegar a`; colloquial Brazilian alternatives are widespread and should be acknowledged on the card back if retained.
 4. Italian body/collective plurals have meaning-dependent masculine alternatives. The bank pins the requested body/collective forms; generated sentences must preserve those senses.
 5. The recommended Italian cluster strings are `5 Genere e plurali` and `6 Reggenze`, moving reggenze one number later than the thin-profile draft so the two new clusters sort independently. Cluster strings are final once cards ship, so confirm before wiring.
-6. `de_dativ_verben` needs deterministic full-NP inflection, including dative plural and weak nouns; the current article-only German verifier is insufficient.
+6. The article-only German verifier is insufficient for adjective-ending work or
+   deterministic full-NP inflection. This is resolved by the shared engine that
+   ships with `de_adj_endings`; the already-shipped `de_dativ_verben` v1 is not
+   automatically rewired to use it (see the decisions below).
 7. Zero-preposition Portuguese regimes need an explicit item-model convention (`Ø` answer versus a different cloze representation) before generation.
 
 ## Self-check summary
@@ -56,10 +59,30 @@ External spot-checks used for the highest-risk rules:
 2. **de_dativ_verben verification**: ship v1 with Tier B blind-fill
    (K=3) + the bank's `case` field as a static check; do NOT block on a
    full-NP inflection engine. The deterministic NP-inflection verifier
-   (dative plural -n, weak nouns) is bundled into the de_adj_endings
+   (dative plural -n, weak nouns) is bundled into the `de_adj_endings`
    build, which needs the same declension matrix anyway — one engine,
-   two units. Until then dative-verb items use article+noun frames the
-   existing de_art checker can already validate where possible.
+   reusable by multiple units. Dative-verb items continue to use the
+   shipped bank/static-case + blind-verification path unless a later
+   commission explicitly rewires them.
+
+## German declension and passive decision (2026-08-01)
+
+- `de_adj_endings` now ships as an active unit in `3 Adjektive`, backed by the
+  shared deterministic full-NP inflection engine. The engine covers article
+  class, strong/mixed/weak adjective endings, dative plural, weak nouns, and
+  genitive noun inflection. Generated plural cards are restricted to a curated
+  nominative-plural bank because the vendored gender table has no plural
+  paradigms.
+- `de_passiv` now ships as a separate active unit in `4 Verben`, covering the
+  werden-passive in the present, Präteritum, Perfekt, and modal + passive
+  infinitive constructions. Deterministic form checks are used where the
+  dictionaries cover an item; otherwise the item uses the established Tier B
+  blind-fill fallback with `K=3`.
+- `de_verb_core` is superseded and remains outside the curriculum. Its attested
+  passive scope is served by `de_passiv`; Konjunktiv II remains future work.
+  Boot seeding explicitly removes the obsolete planned database row on upgrade.
+- This commission makes the shared NP engine available but does not change the
+  verification contract of the already-shipped `de_dativ_verben` unit.
 
 ## IMPLEMENTED (2026-07-31)
 
@@ -101,9 +124,16 @@ The shipped verification behavior is:
   one uniquely identifiable source row, so inventory membership is the stable
   correctness criterion.
 - `de_dativ_verben` does not use a full-NP inflection engine, per the supervising
+<<<<<<< HEAD
   decision above. It reuses each selected row's citation phrase and exact
   declined answer, then obtains `K=3` valid blind votes; the shared declension
   engine remains deferred to the `de_adj_endings` work.
+=======
+   decision above. It ships with the banked-case check, `K=3` blind verification,
+   and exact canonical-frame answers where applicable. The shared declension
+   engine now ships with `de_adj_endings`, but this commission does not
+   automatically rewire `de_dativ_verben` to use it.
+>>>>>>> codex/declension
 - Regime and German verb metadata cannot be morphologically matched to every
   possible conjugated surface form without another language-specific engine.
   The prompt pins one exact bank row, static verification checks that row's
