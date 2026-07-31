@@ -135,3 +135,19 @@ async def run_sync(langs: list[str] | None = None) -> None:
         _STATE["running"] = False
         _STATE["finished_at"] = datetime.now(timezone.utc).isoformat()
         log.info("lingq.sync_done", langs=_STATE.get("langs"))
+
+
+async def account_counts(token: str) -> dict[str, int]:
+    """lang -> total cards on the LingQ account (one page_size=1 call per
+    language — cheap). Lets the cron detect partial/missing languages
+    and self-heal instead of trusting a staleness stamp."""
+    out: dict[str, int] = {}
+    async with httpx.AsyncClient() as client:
+        for lang in await discover_languages(token):
+            try:
+                data = await _get_json(
+                    client, f"{_BASE}/{lang}/cards/?page_size=1", token)
+                out[lang] = int(data.get("count") or 0)
+            except Exception as e:  # noqa: BLE001
+                log.warning("lingq.count_failed", lang=lang, err=repr(e)[:120])
+    return out

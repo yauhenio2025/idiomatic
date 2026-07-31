@@ -78,15 +78,23 @@ async def run() -> None:
         from datetime import datetime, timedelta, timezone
 
         from . import lingq
-        last = await db.get_kv("lingq_last_sync")
-        stale = (settings.lingq_sync_interval_hours > 0
-                 and (last is None
-                      or datetime.fromisoformat(last)
-                      < datetime.now(timezone.utc)
-                      - timedelta(hours=settings.lingq_sync_interval_hours)))
-        if stale and await db.get_external_token("lingq"):
-            log.info("cron.lingq_sync_start", last=last)
-            await lingq.run_sync()
+        token = await db.get_external_token("lingq")
+        if settings.lingq_sync_interval_hours > 0 and token:
+            last = await db.get_kv("lingq_last_sync")
+            stale = (last is None
+                     or datetime.fromisoformat(last)
+                     < datetime.now(timezone.utc)
+                     - timedelta(hours=settings.lingq_sync_interval_hours))
+            # Self-heal: any language whose local mirror trails the
+            # account count gets (re)synced — covers first-run partials
+            # (the 2026-07-31 de interruption) and new languages, without
+            # waiting out the staleness window.
+            counts = await lingq.account_counts(token)
+            have = {s["lang"]: s["terms"] for s in await db.lingq_stats()}
+            behind = [l for l, c in counts.items() if have.get(l, 0) < c]
+            if stale or behind:
+                log.info("cron.lingq_sync_start", stale=stale, behind=behind)
+                await lingq.run_sync(None if stale else behind)
     except Exception as e:
         log.warning("cron.lingq_sync_failed", err=repr(e)[:200])
 

@@ -510,6 +510,11 @@ async def admin_lingq_sync(
     poll /admin/lingq-status. langs: optional comma-separated subset
     (default: every language on the LingQ account)."""
     from . import lingq
+    if not get_settings().lingq_web_sync_enabled:
+        raise HTTPException(
+            409, "lingq sync runs in the cron container (self-healing: it "
+                 "fetches any missing/incomplete language on each 2h tick); "
+                 "set LINGQ_WEB_SYNC_ENABLED=true only for emergencies")
     if lingq.get_state().get("running"):
         return {"started": False, "reason": "already running",
                 **lingq.get_state()}

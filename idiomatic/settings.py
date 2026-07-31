@@ -79,6 +79,11 @@ class Settings(BaseSettings):
     # LingQ vocabulary mirror: cron re-syncs when the last pull is older
     # than this (user adds new LingQs rarely). 0 disables auto-sync.
     lingq_sync_interval_hours: int = 24
+    # Emergency escape hatch only: sync in the WEB process. Twice on
+    # 2026-07-31 a full sync coincided with the web app hanging (root
+    # cause still unproven — batched transactions did NOT fix it), so
+    # sync now runs exclusively in the cron container by default.
+    lingq_web_sync_enabled: bool = False
 
     # Video apkg FILES older than this get deleted by the cron once every
     # agent that should receive them has acked ok (DB row stays; download
