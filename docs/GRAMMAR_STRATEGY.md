@@ -409,8 +409,15 @@ Waves:
 - [ ] **Wave 5 — telemetry + planner** (unchanged from §7): add-on
   pushes revlog keyed by note GUID; weekly strong-model planner picks
   the 2-3 active units per language.
-- [ ] Later: beep-cloze audio fronts, dashboard curriculum page,
-  error-correction format seeded from `_errors` decks.
+- [ ] **Wave 6 — dashboard grammar section + deck taxonomy**
+  (COMMISSIONED 2026-07-31, brief:
+  docs/commissions/GRAMMAR_FRONTEND_COMMISSION.md — execute in a fresh
+  session): subdecks per topic cluster (final cluster map in the brief),
+  grammar_units DB table with per-unit target_size/status, /grammar
+  dashboard pages with Top-up/Rebuild controls, add-on one-shot
+  reorganize of existing cards into subdecks.
+- [ ] Later: beep-cloze audio fronts, error-correction format seeded
+  from `_errors` decks.
 
 Volume rule (lesson of the 2023 EXCERCISES failure): generation is
 on-demand per unit, 2-3 active units per language at any time, mastered
