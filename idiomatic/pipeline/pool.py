@@ -664,6 +664,13 @@ async def _rebuild_pools_locked(lang: str, force: bool) -> dict:
         log.info("pool.upserted", lang=lang, kind=kind,
                  apkg_id=apkg_id, n=n, size=path.stat().st_size)
 
+    # The stage dir's stitched mp3s are only needed while genanki packages
+    # the apkgs above — after upsert they're dead weight until the next
+    # rebuild wipes them anyway. Leaving them around across 5 languages
+    # was a multi-GB steady-state cost on the 10 GB disk (ENOSPC,
+    # 2026-07-31 — second disk-full incident after 2026-07-27).
+    shutil.rmtree(stage_root, ignore_errors=True)
+
     # Stamp only after a successful rebuild so a failed one isn't debounced.
     await db.mark_pool_rebuilt(lang)
 

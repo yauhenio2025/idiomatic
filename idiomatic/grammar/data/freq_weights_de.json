@@ -1,0 +1,170 @@
+{
+  "_meta": {
+    "schema_version": 1,
+    "language": "de",
+    "build_date": "2026-08-01",
+    "source": {
+      "name": "hermitdave/FrequencyWords 2018 full list",
+      "repository": "https://github.com/hermitdave/FrequencyWords",
+      "revision": "525f9b560de45753a5ea01069454e72e9aa541c6",
+      "corpus": "OPUS OpenSubtitles 2018",
+      "license": "CC BY-SA 4.0",
+      "sha256": "a5fc13f4efaaf70fd9226d11295fd3cd4c2264852ee1fad22c0abaf64acec8dc"
+    },
+    "normalization": "ambiguity-adjusted effective unigram count divided by the maximum cell score within each unit",
+    "compound_policy": "geometric mean of component-token counts; German de_passiv averages present, preterite, perfect, and modal categories",
+    "homograph_policy": "split exact forms shared by lemmas/persons; penalize very short forms, cross-lemma and finite/nonfinite collisions, and a conservative per-language known-homograph list",
+    "eligible_persons": [
+      "1s",
+      "2s",
+      "3s",
+      "1p",
+      "2p",
+      "3p"
+    ],
+    "unit_person_overrides": {},
+    "unit_count": 1,
+    "weighted_cell_count": 96,
+    "zero_weight_cell_count": 0,
+    "missing_morphology_cell_count": 6,
+    "scope_note": "German currently has one verb-list unit, de_passiv. The unknown participle for archivieren remains at zero rather than being guessed."
+  },
+  "de_passiv": {
+    "veröffentlichen": {
+      "1s": 0.31429,
+      "2s": 0.304725,
+      "3s": 0.414702,
+      "1p": 0.220453,
+      "2p": 0.154378,
+      "3p": 0.220453
+    },
+    "schreiben": {
+      "1s": 0.758286,
+      "2s": 0.694685,
+      "3s": 1.0,
+      "1p": 0.520711,
+      "2p": 0.345257,
+      "3p": 0.520711
+    },
+    "ersetzen": {
+      "1s": 0.331232,
+      "2s": 0.320116,
+      "3s": 0.437043,
+      "1p": 0.232051,
+      "2p": 0.162005,
+      "3p": 0.232051
+    },
+    "wählen": {
+      "1s": 0.480382,
+      "2s": 0.453491,
+      "3s": 0.633691,
+      "1p": 0.333571,
+      "2p": 0.227723,
+      "3p": 0.333571
+    },
+    "prüfen": {
+      "1s": 0.302223,
+      "2s": 0.293728,
+      "3s": 0.398789,
+      "1p": 0.212182,
+      "2p": 0.148922,
+      "3p": 0.212182
+    },
+    "korrigieren": {
+      "1s": 0.333573,
+      "2s": 0.322238,
+      "3s": 0.440129,
+      "1p": 0.233652,
+      "2p": 0.163055,
+      "3p": 0.233652
+    },
+    "beschließen": {
+      "1s": 0.455456,
+      "2s": 0.431435,
+      "3s": 0.600831,
+      "1p": 0.316669,
+      "2p": 0.216897,
+      "3p": 0.316669
+    },
+    "entwickeln": {
+      "1s": 0.484781,
+      "2s": 0.457376,
+      "3s": 0.639491,
+      "1p": 0.336552,
+      "2p": 0.229628,
+      "3p": 0.336552
+    },
+    "genehmigen": {
+      "1s": 0.273405,
+      "2s": 0.267339,
+      "3s": 0.360786,
+      "1p": 0.192397,
+      "2p": 0.135808,
+      "3p": 0.192397
+    },
+    "ablehnen": {
+      "1s": 0.420855,
+      "2s": 0.400673,
+      "3s": 0.555212,
+      "1p": 0.293167,
+      "2p": 0.201772,
+      "3p": 0.293167
+    },
+    "untersuchen": {
+      "1s": 0.422737,
+      "2s": 0.402351,
+      "3s": 0.557694,
+      "1p": 0.294447,
+      "2p": 0.202598,
+      "3p": 0.294447
+    },
+    "finanzieren": {
+      "1s": 0.252243,
+      "2s": 0.247837,
+      "3s": 0.332876,
+      "1p": 0.177833,
+      "2p": 0.126096,
+      "3p": 0.177833
+    },
+    "produzieren": {
+      "1s": 0.278269,
+      "2s": 0.271806,
+      "3s": 0.3672,
+      "1p": 0.19574,
+      "2p": 0.138031,
+      "3p": 0.19574
+    },
+    "schützen": {
+      "1s": 0.310715,
+      "2s": 0.301471,
+      "3s": 0.409988,
+      "1p": 0.218004,
+      "2p": 0.152764,
+      "3p": 0.218004
+    },
+    "verbieten": {
+      "1s": 0.534583,
+      "2s": 0.501177,
+      "3s": 0.705143,
+      "1p": 0.370247,
+      "2p": 0.251079,
+      "3p": 0.370247
+    },
+    "eröffnen": {
+      "1s": 0.338914,
+      "2s": 0.327076,
+      "3s": 0.447172,
+      "1p": 0.237305,
+      "2p": 0.16545,
+      "3p": 0.237305
+    },
+    "archivieren": {
+      "1s": 0.0,
+      "2s": 0.0,
+      "3s": 0.0,
+      "1p": 0.0,
+      "2p": 0.0,
+      "3p": 0.0
+    }
+  }
+}

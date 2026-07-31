@@ -169,12 +169,46 @@ async def _cleanup_delivered_apkgs() -> None:
                  freed_mb=round(freed / 1e6, 1))
 
 
+def _sweep_pool_stage() -> tuple[int, int]:
+    """Remove per-language _pool_stage dirs untouched for 2+ hours (an
+    in-flight rebuild keeps writing, so its dir stays fresh). These are
+    packaging intermediates — the finished apkgs don't need them."""
+    import time as _time
+    root = Path(get_settings().data_dir) / "_pool_stage"
+    if not root.exists():
+        return 0, 0
+    n = freed = 0
+    cutoff = _time.time() - 2 * 3600
+    for d in root.iterdir():
+        if not d.is_dir():
+            continue
+        try:
+            newest = max((f.stat().st_mtime for f in d.rglob("*")
+                          if f.is_file()), default=d.stat().st_mtime)
+            if newest < cutoff:
+                size = sum(f.stat().st_size for f in d.rglob("*")
+                           if f.is_file())
+                shutil.rmtree(d, ignore_errors=True)
+                n += 1
+                freed += size
+        except OSError:
+            continue
+    return n, freed
+
+
 async def run_janitor() -> None:
     try:
+        du = shutil.disk_usage(get_settings().data_dir)
+        log.info("janitor.disk", used_gb=round(du.used / 1e9, 2),
+                 free_gb=round(du.free / 1e9, 2))
         n, freed = await asyncio.to_thread(_sweep_media_stage)
         if n:
             log.info("janitor.media_stage", n_files=n,
                      freed_mb=round(freed / 1e6, 1))
+        n2, freed2 = await asyncio.to_thread(_sweep_pool_stage)
+        if n2:
+            log.info("janitor.pool_stage", n_dirs=n2,
+                     freed_mb=round(freed2 / 1e6, 1))
         await _cleanup_delivered_apkgs()
     except Exception as e:
         log.warning("janitor.failed", err=repr(e)[:200])
