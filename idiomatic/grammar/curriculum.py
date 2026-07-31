@@ -62,6 +62,9 @@ class Topic:
     #   "bank_blind" — Tier A bank metadata/answer check, then Tier B.
     #   "fr_gender" / "pt_gender" / "it_noun" — deterministic facts
     #             from the named unit bank.
+    #   "de_np" — Tier A: full German NP checked by decline_np().
+    #   "de_passiv" — Tier A for banked participles; unknown participles
+    #             additionally require Tier-B blind agreement.
     verify: str = "morph"
     # For blind topics: the closed inventory the answer must come from
     # (None = no inventory check). Multi-word entries allowed ("se lo").
@@ -223,6 +226,38 @@ TOPICS_DE: list[Topic] = [
                    "location (→dat) unambiguous: 'Er hängt das Bild an ___ "
                    "Wand.' vs 'Das Bild hängt an ___ Wand.' Mix both "
                    "readings ~50/50. State prep, noun, case, definite."),
+    Topic("de_adj_endings", "de", "Adjektivendungen", "", "", "🖌",
+          verbs=[], verify="de_np",
+          guidance="Use a single inflected noun phrase with one adjective. "
+                   "The lemma in parentheses makes the lexical choice fixed; "
+                   "the learner supplies either article+adjective or only "
+                   "the adjective after a visible article. Interleave weak, "
+                   "mixed, and strong declension across case, gender, and "
+                   "number. Avoid sense-ambiguous noun homographs such as "
+                   "Erbe, Heide, Kunde, Junge, and Bulle. Include one "
+                   "explicit F5 landmark paradigm-card "
+                   "note for EACH pattern — weak, mixed, and strong — while "
+                   "keeping generated drill items in the F1 single-cloze "
+                   "format."),
+    Topic("de_passiv", "de", "Vorgangspassiv", "", "", "⚙",
+          verbs=[
+              "veröffentlichen", "schreiben", "ersetzen", "wählen",
+              "prüfen", "korrigieren", "beschließen", "entwickeln",
+              "genehmigen", "ablehnen", "untersuchen", "finanzieren",
+              "produzieren", "schützen", "verbieten", "eröffnen",
+              # Deliberately absent from the local participle dictionary: it
+              # exercises the documented per-item K=3 fallback path.
+              "archivieren",
+          ],
+          verify="de_passiv",
+          guidance="Use a subordinate clause whose clause-final passive "
+                   "predicate is one contiguous blank followed by the lexical "
+                   "infinitive in parentheses. Mix present, Präteritum, "
+                   "Perfekt, and present modal+infinitive passive. The answer "
+                   "uses subordinate-clause order: 'veröffentlicht wird', "
+                   "'veröffentlicht wurde', 'veröffentlicht worden ist', or "
+                   "'veröffentlicht werden muss'. Never use 'geworden' in "
+                   "the process-passive perfect."),
     Topic("de_dativ_verben", "de", "Verben mit Dativobjekt", "", "", "➡",
           verify="bank_blind", bank="de_dativ_verben.json",
           guidance="Choose one banked verb and blank its complete dative "
@@ -254,6 +289,7 @@ CLUSTER_BY_KEY: dict[str, str] = {
     "es_mis_errores": "9 Mis errores",
     "de_gender": "1 Genus",
     "de_prep_fest": "2 Präpositionen", "de_prep_wechsel": "2 Präpositionen",
+    "de_adj_endings": "3 Adjektive", "de_passiv": "4 Verben",
     "de_dativ_verben": "5 Kasus",
     "de_meine_fehler": "9 Meine Fehler",
 }
@@ -271,10 +307,6 @@ for _t in PILOT_TOPICS_ES + TOPICS_DE:
 PLANNED_UNITS: list[dict] = [
     {"key": "es_ser_estar", "lang": "es", "cluster": "7 Ser/Estar",
      "label": "Ser vs estar", "symbol": "⚖"},
-    {"key": "de_adj_endings", "lang": "de", "cluster": "3 Adjektive",
-     "label": "Adjektivendungen", "symbol": "🖌"},
-    {"key": "de_verb_core", "lang": "de", "cluster": "4 Verben",
-     "label": "Verbformen — Kern", "symbol": "⚙"},
     {"key": "fr_pronoms_y_en", "lang": "fr", "cluster": "4 Pronoms",
      "label": "Pronoms y / en", "symbol": "🔗"},
     {"key": "it_clitici_ci_ne", "lang": "it", "cluster": "4 Clitici",
@@ -282,6 +314,11 @@ PLANNED_UNITS: list[dict] = [
     {"key": "pt_clitic_placement", "lang": "pt", "cluster": "4 Clíticos",
      "label": "Colocação pronominal", "symbol": "🔗"},
 ]
+
+# Code-owned unit rows removed from the curriculum. Boot seeding prunes these
+# explicit keys so upgrades do not leave superseded planned placeholders in
+# the dashboard forever.
+OBSOLETE_UNIT_KEYS: tuple[str, ...] = ("de_verb_core",)
 
 
 def _load_fip_topics() -> dict[str, list[Topic]]:

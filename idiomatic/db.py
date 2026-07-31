@@ -637,17 +637,24 @@ async def grammar_topic_stats(lang: str) -> list[dict[str, Any]]:
     return [dict(r) for r in rows]
 
 
-async def seed_grammar_units(rows: list[dict[str, Any]]) -> None:
+async def seed_grammar_units(rows: list[dict[str, Any]], *,
+                             obsolete_keys: tuple[str, ...] = ()) -> None:
     """Boot-time upsert from curriculum code (the definition source).
     Code-owned columns (lang, cluster, label, symbol, sort_order) are
     overwritten; user-mutable state (status, target_size, notes,
     updated_at) is left alone — except a 'planned' row whose unit now
-    exists in code gets promoted to 'active'. rows: dicts with key, lang,
-    cluster, label, symbol, status, sort_order."""
-    if not rows:
+    exists in code gets promoted to 'active'. Explicit ``obsolete_keys`` are
+    deleted because code is the curriculum definition source. rows: dicts
+    with key, lang, cluster, label, symbol, status, sort_order."""
+    if not rows and not obsolete_keys:
         return
     pool = await get_pool()
     async with pool.acquire() as conn:
+        if obsolete_keys:
+            await conn.execute(
+                "DELETE FROM grammar_units WHERE key = ANY($1::text[])",
+                list(obsolete_keys),
+            )
         for r in rows:
             await conn.execute(
                 """
