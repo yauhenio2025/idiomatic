@@ -59,6 +59,9 @@ class Topic:
     #             uniqueness in one test). For closed-class topics.
     #   "attested" — teacher-attested personal-error pair; never generated
     #                 or sent through an LLM verifier.
+    #   "bank_blind" — Tier A bank metadata/answer check, then Tier B.
+    #   "fr_gender" / "pt_gender" / "it_noun" — deterministic facts
+    #             from the named unit bank.
     verify: str = "morph"
     # For blind topics: the closed inventory the answer must come from
     # (None = no inventory check). Multi-word entries allowed ("se lo").
@@ -180,6 +183,17 @@ PILOT_TOPICS_ES: list[Topic] = [
                    "recipient/opinion). Avoid contexts where both are "
                    "grammatical with different meanings — the sentence must "
                    "force one reading. State the rule in 'why'."),
+    Topic("es_muy_mucho", "es", "Muy, mucho, tan y tanto", "", "", "∑",
+          verify="blind",
+          answer_set=["muy", "mucho", "mucha", "muchos", "muchas",
+                      "mucho más", "tan", "tanto"],
+          bank="es_muy_mucho.json",
+          guidance="Use one banked contrast: muy before an adjective/adverb; "
+                   "agreeing mucho before a noun; invariable mucho/tanto "
+                   "after a verb; mucho más for a comparative; tan for "
+                   "equal degree. In a 24-card batch target 8 muy, 8 agreeing "
+                   "mucho forms, 4 mucho más, and 4 tan/tanto. Never accept "
+                   "'muy más'."),
 ]
 
 
@@ -209,6 +223,13 @@ TOPICS_DE: list[Topic] = [
                    "location (→dat) unambiguous: 'Er hängt das Bild an ___ "
                    "Wand.' vs 'Das Bild hängt an ___ Wand.' Mix both "
                    "readings ~50/50. State prep, noun, case, definite."),
+    Topic("de_dativ_verben", "de", "Verben mit Dativobjekt", "", "", "➡",
+          verify="bank_blind", bank="de_dativ_verben.json",
+          guidance="Choose one banked verb and blank its complete dative "
+                   "noun phrase. Give the nominative citation phrase in "
+                   "parentheses, keep true dative objects distinct from "
+                   "prepositional phrases, and state verb and case in the "
+                   "JSON. Ditransitives must make the recipient explicit."),
 ]
 
 
@@ -226,9 +247,14 @@ CLUSTER_BY_KEY: dict[str, str] = {
     "es_clitics_dir": "5 Pronombres", "es_clitics_ind": "5 Pronombres",
     "es_clitics_selo": "5 Pronombres",
     "es_por_para": "6 Preposiciones", "es_verb_prep": "6 Preposiciones",
+    # Cluster numbering: 8 = grado y cantidad (es), 9 = the learner's own
+    # errors (F3) in EVERY language — keep that invariant; interference
+    # (F4) will take 10.
+    "es_muy_mucho": "8 Grado y cantidad",
     "es_mis_errores": "9 Mis errores",
     "de_gender": "1 Genus",
     "de_prep_fest": "2 Präpositionen", "de_prep_wechsel": "2 Präpositionen",
+    "de_dativ_verben": "5 Kasus",
     "de_meine_fehler": "9 Meine Fehler",
 }
 
@@ -303,13 +329,119 @@ F3_TOPICS: dict[str, Topic] = {
 }
 
 
+# Bank-backed lexical/agreement units. These append to the verb-core lists
+# loaded above, preserving those units' existing sort order and stable keys.
+_BANK_TOPICS: dict[str, list[Topic]] = {
+    "fr": [
+        Topic("fr_quantites_de", "fr", "Quantités — de / des", "", "", "∑",
+              cluster="7 Articles & quantités", verify="blind",
+              answer_set=[
+                  "beaucoup de", "beaucoup d'", "trop de", "trop d'",
+                  "assez de", "assez d'", "peu de", "peu d'", "plus de",
+                  "plus d'", "moins de", "moins d'", "pas de", "pas d'",
+                  "d'autres", "la plupart des", "la plupart d'entre eux",
+                  "bien des", "de", "d'",
+              ],
+              bank="fr_quantites_de.json",
+              guidance="Use one banked quantity construction and preserve "
+                       "its reading: indefinite quantities and negated "
+                       "objects take de/d'; d'autres marks additional "
+                       "items; la plupart and bien des keep their banked "
+                       "forms. Formal adjective+noun rows must retain an "
+                       "explicit careful-written-language cue."),
+        Topic("fr_prep_lieux", "fr", "Prépositions de lieu", "", "", "📍",
+              cluster="5 Prépositions", verify="bank_blind",
+              answer_set=["à", "en", "au", "aux", "dans le", "dans la",
+                          "dans les", "dans l'"],
+              bank="fr_prep_lieux.json",
+              guidance="Choose one banked place and use its exact "
+                       "preposition; never infer it from spelling. Put one "
+                       "blank immediately before the place, keep movement "
+                       "versus location neutral, draw at least half the "
+                       "batch from high-priority cities/countries, and cap "
+                       "regions/islands at one fifth."),
+        Topic("fr_genre_noyau", "fr", "Genre — noms fréquents", "", "", "🚻",
+              cluster="6 Genre & accord", verify="fr_gender",
+              bank="fr_genre_noyau.json",
+              guidance="Choose one banked noun in its stated sense and "
+                       "blank only the controlled indefinite article un/une. "
+                       "Return the exact noun in the JSON so its gender can "
+                       "be checked deterministically. Pin mode as method, "
+                       "livre as book, and politique as policy; interleave "
+                       "the banked suffix-family contrasts only after the 19 "
+                       "personal core nouns."),
+        Topic("fr_an_annee", "fr", "An / année et durées", "", "", "📅",
+              cluster="7 Articles & quantités", verify="blind",
+              answer_set=["an", "An", "ans", "année", "années", "jour",
+                          "jours", "journée", "matin", "matinée", "soir",
+                          "soirée"],
+              bank="fr_an_annee.json",
+              guidance="Preserve one banked fixed expression or forced "
+                       "construal: measurement versus experienced period, "
+                       "calendar point versus full event/duration, or "
+                       "time-of-day label versus elapsed block. Avoid free "
+                       "contexts where both choices are defensible."),
+    ],
+    "it": [
+        Topic("it_genere_plurali", "it", "Genere, articoli e plurali", "", "", "🚻↔",
+              cluster="5 Genere e plurali", verify="it_noun",
+              bank="it_genere_plurali.json",
+              guidance="Choose one banked noun and test exactly one declared "
+                       "target: singular article+noun, plural article+noun, "
+                       "or plural alone. Include the citation noun outside "
+                       "the blank so metadata stays checkable. Mix il/i, "
+                       "lo/gli, both l' patterns, "
+                       "and la/le before interleaving regular, invariant, and "
+                       "irregular plurals. Preserve the banked sense for "
+                       "gender-changing body and collective forms."),
+        Topic("it_reggenze_verbali", "it", "Reggenze verbali", "", "", "🧲",
+              cluster="6 Reggenze", verify="bank_blind",
+              answer_set=["a", "come", "con", "da", "di", "in", "per", "su"],
+              bank="it_reggenze_verbali.json",
+              guidance="Choose one exact banked verb sense and blank only "
+                       "its preposition. Preserve other argument markers, "
+                       "and add enough lexical context to disambiguate verbs "
+                       "with more than one regime, especially pensare and "
+                       "credere. Initial batches must include cercare di, "
+                       "permettere a qualcuno di, partecipare a, and "
+                       "guadagnare come."),
+    ],
+    "pt": [
+        Topic("pt_gender_core", "pt", "Gênero, artigos e concordância", "", "", "🚻",
+              cluster="5 Gênero & Artigos", verify="pt_gender",
+              bank="pt_gender_core.json",
+              guidance="Use Brazilian Portuguese. For noun rows, blank a "
+                       "controlled definite or indefinite article and return "
+                       "the exact noun key. For numeral, agreement, and "
+                       "contraction frames, use the canonical bank example "
+                       "with its full answer blanked. Prioritize -ma/-agem "
+                       "traps, core "
+                       "news nouns, dois/duas, agreeing hundreds, and "
+                       "article contractions."),
+        Topic("pt_regencia_verbal", "pt", "Regência verbal", "", "", "🧲",
+              cluster="6 Regência", verify="bank_blind",
+              answer_set=["Ø", "a", "ao", "com", "de", "em", "na", "no",
+                          "para", "por", "que", "às"],
+              bank="pt_regencia_verbal.json",
+              guidance="Use careful professional Brazilian Portuguese and "
+                       "one exact banked sense. Blank only the regime marker; "
+                       "the literal answer Ø means no preposition. Keep full "
+                       "banked contractions as answers and preserve country "
+                       "articles where required. Initial batches must include "
+                       "tentar Ø, conseguir Ø, decidir Ø, and ir Ø before "
+                       "broader expansion."),
+    ],
+}
+
+
 def topics_for(lang: str) -> list[Topic]:
     if lang == "es":
         base = PILOT_TOPICS_ES
     elif lang == "de":
         base = TOPICS_DE
     else:
-        base = _FIP_TOPICS.get(lang, [])
+        base = _FIP_TOPICS.get(lang, []) + _BANK_TOPICS.get(lang, [])
+    # F3 (the learner's own attested errors) always sorts last per language.
     f3_topic = F3_TOPICS.get(lang)
     return [*base, f3_topic] if f3_topic is not None else list(base)
 

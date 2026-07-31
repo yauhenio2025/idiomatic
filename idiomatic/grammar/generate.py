@@ -40,6 +40,8 @@ LANG_PROFILE = {
                       "falando), Brazilian vocabulary and usage",
            "person_mix": "1s, 3s (você/ele/ela), 1p, 3p (vocês/eles); NEVER "
                          "tu (2s) or vós (2p)"},
+    "de": {"language": "German", "variety": "standard German",
+           "person_mix": "all persons freely"},
 }
 
 PERSON_MIX = LANG_PROFILE["es"]["person_mix"]  # kept for backward reference
@@ -79,13 +81,13 @@ the same verb+person.
 Return ONLY the JSON array."""
 
 
-_PROMPT_CLOSED = """You are writing Spanish grammar drill cards for ONE advanced \
-adult learner (reads Spanish news daily; interests: geopolitics, tech \
-criticism, history, media). Target: {label}.
+_PROMPT_CLOSED = """You are writing {language} grammar drill cards for ONE \
+advanced adult learner (reads {language} news daily; interests: geopolitics, \
+tech criticism, history, media). Target: {label}.
 
 Produce {n} items as a JSON array. Each item:
 {{
-  "sentence": "...",   // Spanish sentence(s), 8-20 words, with ONE blank ___ \
+  "sentence": "...",   // {language} sentence(s), 8-20 words, with ONE blank ___ \
 whose content is exactly one entry from the inventory below. A two-part \
 sentence (question + answer, or two clauses) is fine.
   "answer": "...",     // the blank's content, exactly one inventory entry
@@ -100,8 +102,8 @@ HARD RULES — items violating any of these are discarded by a verifier:
 1. The context must make the answer UNIQUELY determined: an expert filling \
 the blank without seeing your answer must arrive at exactly it. {guidance}
 2. The answer must NOT also appear verbatim elsewhere in the sentence.
-3. European Spanish only. Vary structures and persons; no two sentences may \
-share the same opening words.
+3. Use {variety}. Vary structures and persons; no two sentences may share the \
+same opening words.
 4. Real-world content must be timelessly true or clearly hypothetical.
 
 Return ONLY the JSON array."""
@@ -115,7 +117,11 @@ def _strip_accents_eq(a: str, b: str) -> bool:
 
 def _norm_answer(s: str) -> str:
     s = unicodedata.normalize("NFC", (s or "").strip().lower())
-    s = s.strip(".,;:!?¡¿\"'«»")
+    # A trailing apostrophe is grammatical content in French/Italian answers
+    # such as d' and l'; do not strip it as generic quote punctuation.
+    s = s.strip(".,;:!?¡¿\"«»")
+    if len(s) > 1 and s.startswith("'") and s.endswith("'"):
+        s = s[1:-1].strip()
     return " ".join(s.split())
 
 
@@ -152,6 +158,67 @@ with the same noun.
 Return ONLY the JSON array."""
 
 
+_PROMPT_BANK = """You are writing {language} grammar drill cards for ONE \
+advanced adult learner (reads {language} news daily; interests: geopolitics, \
+tech criticism, history, media). Target: {label}.
+
+Produce {n} items as a JSON array. Each item:
+{{
+{metadata_fields}
+  "sentence": "...",   // {language} text, 8-20 words, with exactly ONE ___
+  "answer": "...",     // the blank's complete content only
+  "gloss_en": "...",   // natural English translation of the completed text
+  "why": "..."         // ONE short English line naming the deciding rule
+}}
+
+HARD RULES — deterministic bank checks reject invalid metadata and answers:
+1. {guidance}
+2. Copy every bank-key metadata value exactly from ONE authoritative bank row
+below; use any declared target enum exactly as described.
+3. The sentence must make that row's answer uniquely correct. Do not reveal the
+answer elsewhere in the sentence, and do not add a second blank.
+4. Use {variety}. Real-world content must be timelessly true or clearly
+hypothetical. Vary structures across the batch.
+
+Return ONLY the JSON array."""
+
+
+_BANK_PROMPT_FIELDS = {
+    "fr_prep_lieux": (
+        '  "place": "...",      // exact bank place key (including any stored article)'
+    ),
+    "fr_genre_noyau": (
+        '  "noun": "...",       // exact bank noun; answer is un or une'
+    ),
+    "pt_gender_core": (
+        '  "noun_or_frame": "...", // exact bank key\n'
+        '  "target": "...",     // definite | indefinite for m/f noun rows; '
+        'bank for supplied frames'
+    ),
+    "pt_regencia_verbal": (
+        '  "verb": "...",       // exact bank verb\n'
+        '  "pattern": "...",    // exact bank pattern (pins the sense)'
+    ),
+    "it_genere_plurali": (
+        '  "noun": "...",       // exact bank noun\n'
+        '  "target": "...",     // singular_phrase | plural_phrase | plural'
+    ),
+    "it_reggenze_verbali": (
+        '  "verb": "...",       // exact bank verb\n'
+        '  "pattern": "...",    // exact bank pattern (pins the sense)'
+    ),
+    "de_dativ_verben": (
+        '  "verb": "...",       // exact bank verb\n'
+        '  "case": "dat",       // copy the bank case; always dat in this unit'
+    ),
+}
+
+
+def _join_article_noun(article: str, noun: str) -> str:
+    """Italian l' joins directly; other articles take a space."""
+    return f"{article}{noun}" if article.endswith("'") else f"{article} {noun}"
+
+
 def _bank_entries(topic: Topic) -> list[dict]:
     if not topic.bank:
         return []
@@ -159,6 +226,10 @@ def _bank_entries(topic: Topic) -> list[dict]:
     from pathlib import Path
     path = Path(__file__).parent / "data" / topic.bank
     entries = json.loads(path.read_text(encoding="utf-8"))
+    # Wave-7 banks carry provenance as element zero. Legacy banks do not,
+    # so filter by shape instead of unconditionally discarding the first row.
+    entries = [e for e in entries
+               if isinstance(e, dict) and "_meta" not in e]
     # German prep bank: wechsel unit gets only two-way preps, fest the rest.
     if topic.key == "de_prep_wechsel":
         entries = [e for e in entries if e.get("case") == "wechsel"]
@@ -168,18 +239,76 @@ def _bank_entries(topic: Topic) -> list[dict]:
 
 
 def _bank_lines(topic: Topic, n: int) -> str:
-    """Sample bank entries into prompt lines (schema-tolerant: es regime
-    pairs use 'verb', the de prep bank doesn't)."""
+    """Sample authoritative rows into compact, schema-specific prompt lines."""
     entries = _bank_entries(topic)
     if not entries:
         return ""
     import random
-    picked = random.sample(entries, min(2 * n, len(entries)))
+    count = min(2 * n, len(entries))
+    # Specs mark these leading rows as anchors that must be available before
+    # broader pattern expansion. Keep them first, then sample the remainder.
+    anchor_count = {
+        "fr_prep_lieux": 12,
+        "fr_genre_noyau": 19,
+        "pt_regencia_verbal": 4,
+        "it_reggenze_verbali": 4,
+        "es_muy_mucho": 7,
+    }.get(topic.key, 0)
+    anchors = entries[:min(anchor_count, count)]
+    remainder = entries[len(anchors):]
+    picked = anchors + random.sample(remainder, count - len(anchors))
     lines = []
     for e in picked:
-        head = (f"{e['verb']} + {e['prep']}" if "verb" in e
-                else f"{e['prep']} (+{e['case']})")
-        lines.append(f"- {head} — {e['en']} (trap: {e['trap']})")
+        if "verb" in e and "pattern" in e:
+            # es/pt/it regime schema. `example_es` intentionally contains
+            # the target language in the Portuguese and Italian banks.
+            lines.append(
+                f"- {e['verb']} + {e['prep']} — {e['en']} "
+                f"(trap: {e['trap']}; pattern: {e['pattern']}; "
+                f"example: {e['example_es']})"
+            )
+        elif "example_frame" in e:
+            lines.append(
+                f"- {e['verb']} (+{e['case']}) — {e['example_frame']} "
+                f"→ {e['example_answer']}"
+            )
+        elif "place" in e:
+            lines.append(
+                f"- {e['place']} ({e['place_type']}, {e['gender']}) "
+                f"→ {e['correct_prep']} (example: {e['example']})"
+            )
+        elif "noun_or_frame" in e:
+            lines.append(
+                f"- {e['noun_or_frame']} → {e['gender_or_correct']} "
+                f"(trap: {e['trap_reason']}; example: {e['example']})"
+            )
+        elif "plural" in e and "article_sg" in e:
+            sg = _join_article_noun(e["article_sg"], e["singular"])
+            pl = _join_article_noun(e["article_pl"], e["plural"])
+            lines.append(
+                f"- {e['noun']} ({e['gender']}) → singular {sg}; "
+                f"plural {pl}; plural-only {e['plural']} "
+                f"(trap: {e['trap_reason']})"
+            )
+        elif "noun" in e and "gender" in e:
+            lines.append(
+                f"- {e['noun']} → {e['gender']} "
+                f"(trap: {e['trap_reason']}; example: {e['example']})"
+            )
+        elif "frame" in e and "correct" in e:
+            detail = e.get("rule_en") or e.get("trap") or "banked form"
+            trap = f"; trap: {e['trap']}" if e.get("trap") else ""
+            lines.append(
+                f"- {e['frame']} → {e['correct']} "
+                f"(rule: {detail}{trap})"
+            )
+        elif "prep" in e and "case" in e:
+            lines.append(
+                f"- {e['prep']} (+{e['case']}) — {e['en']} "
+                f"(trap: {e['trap']})"
+            )
+        else:  # Defensive: a new schema should fail visibly in its prompt.
+            lines.append(f"- unsupported bank row: {e!r}")
     return ("\n\nPairs to draw from (one per sentence):\n" + "\n".join(lines))
 
 
@@ -203,17 +332,24 @@ def _vocab_lines(extra_vocab: list[dict] | None) -> str:
 
 def build_prompt(topic: Topic, n: int,
                  extra_vocab: list[dict] | None = None) -> str:
+    prof = LANG_PROFILE.get(topic.lang, LANG_PROFILE["es"])
     if topic.verify in ("de_art", "de_art_blind"):
         return _PROMPT_DE_ART.format(
             label=topic.label, n=n, guidance=topic.guidance,
         ) + _bank_lines(topic, n) + _vocab_lines(extra_vocab)
+    if topic.verify in ("bank_blind", "fr_gender", "pt_gender", "it_noun"):
+        return _PROMPT_BANK.format(
+            language=prof["language"], variety=prof["variety"],
+            label=topic.label, n=n, guidance=topic.guidance,
+            metadata_fields=_BANK_PROMPT_FIELDS[topic.key],
+        ) + _bank_lines(topic, n) + _vocab_lines(extra_vocab)
     if topic.verify == "blind":
         return _PROMPT_CLOSED.format(
+            language=prof["language"], variety=prof["variety"],
             label=topic.label, n=n,
             inventory=", ".join(topic.answer_set or []) or "(open)",
             guidance=topic.guidance,
         ) + _bank_lines(topic, n) + _vocab_lines(extra_vocab)
-    prof = LANG_PROFILE.get(topic.lang, LANG_PROFILE["es"])
     return _PROMPT.format(
         label=topic.label, mood=topic.mood, tense=topic.tense, n=n,
         verbs=", ".join(topic.verbs), person_mix=prof["person_mix"],
@@ -231,6 +367,225 @@ def _answer_leaks(sentence: str, answer: str) -> bool:
                      rest, re.IGNORECASE) is not None
 
 
+_NEW_BANK_KEYS = {
+    "fr_quantites_de", "fr_prep_lieux", "fr_genre_noyau", "fr_an_annee",
+    "pt_gender_core", "pt_regencia_verbal", "it_genere_plurali",
+    "it_reggenze_verbali", "es_muy_mucho", "de_dativ_verben",
+}
+
+_BANK_META_FIELDS = {
+    "fr_prep_lieux": ("place",),
+    "fr_genre_noyau": ("noun", "target"),
+    "pt_gender_core": ("noun_or_frame", "target"),
+    "pt_regencia_verbal": ("verb", "pattern"),
+    "it_genere_plurali": ("noun", "target"),
+    "it_reggenze_verbali": ("verb", "pattern"),
+    "de_dativ_verben": ("verb", "case"),
+}
+
+
+def _norm_key(value: object) -> str:
+    return " ".join(unicodedata.normalize(
+        "NFC", str(value or "").strip()).casefold().split())
+
+
+def _find_bank_row(topic: Topic, **fields: object) -> dict | None:
+    """Find one row by stable schema keys, with Unicode/case normalization."""
+    if not fields or any(not _norm_key(v) for v in fields.values()):
+        return None
+    for row in _bank_entries(topic):
+        if all(_norm_key(row.get(k)) == _norm_key(v)
+               for k, v in fields.items()):
+            return row
+    return None
+
+
+def _answer_case_text(value: str) -> str:
+    """Whitespace/punctuation normalization that preserves meaningful case."""
+    value = unicodedata.normalize("NFC", (value or "").strip())
+    value = value.strip(".,;:!?¡¿\"«»")
+    if len(value) > 1 and value.startswith("'") and value.endswith("'"):
+        value = value[1:-1].strip()
+    return " ".join(value.split())
+
+
+def _blank_starts_sentence(sentence: str) -> bool:
+    """True when only opening punctuation precedes the blank in its clause."""
+    prefix = sentence.split("___", 1)[0].rstrip()
+    if not prefix:
+        return True
+    # Treat a blank immediately after sentence-ending punctuation and optional
+    # opening quotes/inverted punctuation as sentence-initial too.
+    import re
+    tail = re.split(r"[.!?:]\s*", prefix)[-1]
+    return not any(ch.isalnum() for ch in tail)
+
+
+def _bank_answer_matches(sentence: str, answer: str, expected: str) -> bool:
+    got = _answer_case_text(answer)
+    want = _answer_case_text(expected)
+    if got == want:
+        return True
+    return (_blank_starts_sentence(sentence)
+            and got.casefold() == want.casefold())
+
+
+def _wrong_bank_answer(answer: str, expected: str) -> tuple[bool, str]:
+    return False, f"wrong bank answer: {answer!r}, expected {expected!r}"
+
+
+def _mentions(sentence: str, value: str) -> bool:
+    import re
+    return re.search(rf"(?<!\w){re.escape(value)}(?!\w)", sentence,
+                     re.IGNORECASE) is not None
+
+
+def _blank_before(sentence: str, value: str) -> bool:
+    import re
+    return re.search(rf"___\s+{re.escape(value)}(?!\w)", sentence,
+                     re.IGNORECASE) is not None
+
+
+def _verify_fr_gender(topic: Topic, item: dict,
+                      sentence: str, answer: str) -> tuple[bool, str]:
+    noun = (item.get("noun") or "").strip()
+    row = _find_bank_row(topic, noun=noun)
+    if row is None:
+        return False, f"noun {noun!r} not in bank"
+    gender = row["gender"]
+    target = (item.get("target") or "").strip().lower()
+    if not target:
+        target = "indefinite"
+    expected_by_target = {
+        "indefinite": {"m": "un", "f": "une"}[gender],
+        "un_une": {"m": "un", "f": "une"}[gender],
+    }
+    expected = expected_by_target.get(target)
+    if expected is None:
+        return False, f"bad gender target {target!r}"
+    if not _blank_before(sentence, noun):
+        return False, "blank is not directly before the stated noun"
+    if not _bank_answer_matches(sentence, answer, expected):
+        return _wrong_bank_answer(answer, expected)
+    return True, ""
+
+
+def _verify_pt_gender(topic: Topic, item: dict,
+                      sentence: str, answer: str) -> tuple[bool, str]:
+    key = (item.get("noun_or_frame") or item.get("noun") or "").strip()
+    row = _find_bank_row(topic, noun_or_frame=key)
+    if row is None:
+        return False, f"noun/frame {key!r} not in bank"
+    fact = row["gender_or_correct"]
+    if fact in ("m", "f"):
+        target = (item.get("target") or "definite").strip().lower()
+        expected_by_target = {
+            "definite": {"m": "o", "f": "a"}[fact],
+            "indefinite": {"m": "um", "f": "uma"}[fact],
+        }
+        expected = expected_by_target.get(target)
+        if expected is None:
+            return False, f"bad gender target {target!r}"
+        if not _blank_before(sentence, key):
+            return False, "blank is not directly before the stated noun"
+    else:
+        target = (item.get("target") or "bank").strip().lower()
+        if target != "bank":
+            return False, f"bank frame requires target='bank', got {target!r}"
+        expected = fact
+        import re
+        canonical = re.sub(re.escape(fact), "___", row["example"], count=1,
+                           flags=re.IGNORECASE)
+        if canonical == row["example"]:
+            return False, "bank answer is not present in canonical example"
+        if _norm_key(sentence) != _norm_key(canonical):
+            return False, "bank frame must use its canonical sentence"
+        if _answer_leaks(sentence, answer):
+            return False, "answer leaks in sentence"
+    if not _bank_answer_matches(sentence, answer, expected):
+        return _wrong_bank_answer(answer, expected)
+    return True, ""
+
+
+def _verify_it_noun(topic: Topic, item: dict,
+                    sentence: str, answer: str) -> tuple[bool, str]:
+    noun = (item.get("noun") or "").strip()
+    row = _find_bank_row(topic, noun=noun)
+    if row is None:
+        return False, f"noun {noun!r} not in bank"
+    target = (item.get("target") or "plural").strip().lower()
+    expected_by_target = {
+        "plural": row["plural"],
+        "singular_phrase": _join_article_noun(
+            row["article_sg"], row["singular"]),
+        "plural_phrase": _join_article_noun(
+            row["article_pl"], row["plural"]),
+    }
+    expected = expected_by_target.get(target)
+    if expected is None:
+        return False, f"bad noun target {target!r}"
+    if not _mentions(sentence.replace("___", " "), noun):
+        return False, "stated noun does not appear outside the blank"
+    if _answer_leaks(sentence, answer):
+        return False, "answer leaks in sentence"
+    if not _bank_answer_matches(sentence, answer, expected):
+        return _wrong_bank_answer(answer, expected)
+    return True, ""
+
+
+def _verify_bank_blind(topic: Topic, item: dict,
+                       sentence: str, answer: str) -> tuple[bool, str]:
+    if topic.key == "fr_prep_lieux":
+        place = (item.get("place") or "").strip()
+        row = _find_bank_row(topic, place=place)
+        if row is None:
+            return False, f"place {place!r} not in bank"
+        surface = place[3:] if place.startswith(("Le ", "La ")) else place
+        expected = row["correct_prep"]
+        if expected.endswith("'"):
+            import re
+            placed = re.search(rf"___{re.escape(surface)}(?!\w)", sentence,
+                               re.IGNORECASE)
+        else:
+            placed = _blank_before(sentence, surface)
+        if not placed:
+            return False, "blank is not immediately before the stated place"
+        if not _bank_answer_matches(sentence, answer, expected):
+            return _wrong_bank_answer(answer, expected)
+        return True, ""
+
+    if topic.key in ("pt_regencia_verbal", "it_reggenze_verbali"):
+        verb = (item.get("verb") or "").strip()
+        pattern = (item.get("pattern") or "").strip()
+        row = _find_bank_row(topic, verb=verb, pattern=pattern)
+        if row is None:
+            return False, f"verb/pattern {verb!r}, {pattern!r} not in bank"
+        expected = row["prep"]
+        if not _bank_answer_matches(sentence, answer, expected):
+            return _wrong_bank_answer(answer, expected)
+        return True, ""
+
+    if topic.key == "de_dativ_verben":
+        verb = (item.get("verb") or "").strip()
+        row = _find_bank_row(topic, verb=verb)
+        if row is None:
+            return False, f"verb {verb!r} not in bank"
+        case = (item.get("case") or "").strip().lower()
+        if case != row["case"]:
+            return False, (f"verb {verb!r} governs {row['case']}, "
+                           f"item says {case or '<missing>'}")
+        # The approved v1 has no NP-inflection engine. Exact canonical bank
+        # frames still have a deterministic answer; novel frames proceed to
+        # the K=3 blind solvers after this static case check.
+        if _norm_key(sentence) == _norm_key(row["example_frame"]):
+            expected = row["example_answer"]
+            if not _bank_answer_matches(sentence, answer, expected):
+                return _wrong_bank_answer(answer, expected)
+        return True, ""
+
+    return False, f"unsupported bank-blind topic {topic.key!r}"
+
+
 def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
     """Static checks (no network). Returns (ok, reason-if-rejected).
     Blind topics additionally require verify_blind() to pass."""
@@ -241,18 +596,49 @@ def verify_item(topic: Topic, item: dict) -> tuple[bool, str]:
         return False, "no blank in sentence"
     if not answer:
         return False, "empty answer"
+    if topic.key in _NEW_BANK_KEYS and sentence.count("___") != 1:
+        return False, "sentence must contain exactly one blank"
+    if (topic.key in _NEW_BANK_KEYS and _answer_case_text(answer).endswith("'")
+            and sentence.split("___", 1)[1].startswith(" ")):
+        return False, "apostrophe answer must join the following word"
     # Leak check skipped for German article topics: the same article form
     # legitimately appears for other nouns in almost any sentence.
-    if (topic.verify not in ("de_art", "de_art_blind")
+    if (topic.verify not in ("de_art", "de_art_blind", "fr_gender",
+                             "pt_gender", "it_noun")
             and _answer_leaks(sentence, answer)):
         return False, "answer leaks in sentence"
 
     if topic.verify == "blind":
         if topic.answer_set is not None:
-            allowed = {_norm_answer(a) for a in topic.answer_set}
-            if _norm_answer(answer) not in allowed:
+            if not any(_bank_answer_matches(sentence, answer, allowed)
+                       for allowed in topic.answer_set):
                 return False, f"answer {answer!r} not in closed inventory"
+        if topic.key == "fr_an_annee":
+            import re
+            if (re.search(r"\bNouvel\s+___", sentence, re.IGNORECASE)
+                    and _answer_case_text(answer) != "An"):
+                return _wrong_bank_answer(answer, "An")
+        # Exact bank frames additionally retain their curated answer and case.
+        # Novel contexts cannot have row identity, so Tier B handles them.
+        if topic.key in _NEW_BANK_KEYS:
+            row = next((e for e in _bank_entries(topic)
+                        if _norm_key(e.get("frame")) == _norm_key(sentence)), None)
+            if row is not None and not _bank_answer_matches(
+                    sentence, answer, row["correct"]):
+                return _wrong_bank_answer(answer, row["correct"])
         return True, ""
+
+    if topic.verify == "bank_blind":
+        return _verify_bank_blind(topic, item, sentence, answer)
+
+    if topic.verify == "fr_gender":
+        return _verify_fr_gender(topic, item, sentence, answer)
+
+    if topic.verify == "pt_gender":
+        return _verify_pt_gender(topic, item, sentence, answer)
+
+    if topic.verify == "it_noun":
+        return _verify_it_noun(topic, item, sentence, answer)
 
     if topic.verify in ("de_art", "de_art_blind"):
         # Deterministic German article check: gender table × case × matrix.
@@ -338,11 +724,14 @@ def _agreement_variant_ok(lang: str, expected: str, answer: str) -> bool:
     return False
 
 
-_BLIND_SOLVER = """Spanish grammar exercise. Fill the blank.
+_BLIND_SOLVER = """{language} grammar exercise. Fill the blank.
 
 Sentence: {sentence}
 
 The blank contains exactly one of: {inventory}
+
+If Ø is listed, it is the literal answer marker for a grammatically bare slot
+(no preposition); return Ø rather than an empty string.
 
 Return JSON: {{"answer": "..."}} — the blank's content only, nothing else."""
 
@@ -357,7 +746,9 @@ async def verify_blind(topic: Topic, item: dict,
     for a drill card. `inventory` overrides the topic's answer_set (used
     for per-item candidate pairs, e.g. Wechselpräposition akk/dat)."""
     inv = inventory if inventory is not None else topic.answer_set
+    prof = LANG_PROFILE.get(topic.lang, LANG_PROFILE["es"])
     prompt = _BLIND_SOLVER.format(
+        language=prof["language"],
         sentence=item["sentence"],
         inventory=", ".join(inv or []) or "the missing word(s)",
     )
@@ -370,11 +761,11 @@ async def verify_blind(topic: Topic, item: dict,
     votes = []
     for r in raws:
         if isinstance(r, dict):
-            votes.append(_norm_answer(str(r.get("answer", ""))))
+            votes.append(_answer_case_text(str(r.get("answer", ""))))
         else:
             votes.append("<error>")
-    target = _norm_answer(item["answer"])
-    if all(v == target for v in votes):
+    target = _answer_case_text(item["answer"])
+    if all(_bank_answer_matches(item["sentence"], v, target) for v in votes):
         return True, ""
     return False, f"blind disagreement: votes {votes} vs {target!r}"
 
@@ -395,7 +786,7 @@ async def generate_batch(topic: Topic, n: int,
         return [], []
 
     is_morph = topic.verify == "morph"
-    needs_blind = topic.verify in ("blind", "de_art_blind")
+    needs_blind = topic.verify in ("blind", "de_art_blind", "bank_blind")
     accepted, rejected, pending_blind = [], [], []
     seen_keys: set = set()
     for item in raw:
@@ -416,6 +807,9 @@ async def generate_batch(topic: Topic, n: int,
         if topic.verify in ("de_art", "de_art_blind"):
             base["meta"] = {k: item.get(k)
                             for k in ("noun", "prep", "case", "definite")}
+        elif topic.key in _BANK_META_FIELDS:
+            base["meta"] = {k: item.get(k)
+                            for k in _BANK_META_FIELDS[topic.key]}
         ok, reason = verify_item(topic, item)
         key = ((base["infinitive"], base["person"]) if is_morph
                else base["sentence"].lower())
