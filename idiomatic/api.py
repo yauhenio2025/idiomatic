@@ -38,6 +38,13 @@ async def lifespan(app: FastAPI):
         await db.apply_schema()
     except Exception as e:
         log.warning("api.schema_apply_failed", err=repr(e)[:300])
+    # Re-seed grammar_units from curriculum code (the definition source);
+    # only code-owned columns are overwritten — see db.seed_grammar_units.
+    try:
+        from .grammar.curriculum import unit_seed_rows
+        await db.seed_grammar_units(unit_seed_rows())
+    except Exception as e:
+        log.warning("api.grammar_units_seed_failed", err=repr(e)[:300])
     worker_task = asyncio.create_task(worker_loop(once=False))
     log.info("api.lifespan.started", worker_task=str(worker_task))
     try:
@@ -396,6 +403,90 @@ async def admin_grammar_rebuild(
 
     _spawn_bg(_run())
     return {"started": True, "lang": lang}
+
+
+@app.get("/admin/grammar-deckmap")
+async def admin_grammar_deckmap(agent: dict = Depends(authed_agent)) -> dict:
+    """unit tag → full Anki deck name, for the add-on's one-shot
+    'Reorganize grammar decks' step (cards carry their unit key as a tag;
+    this is the join key). Deliberately agent-authed like /admin/video-info
+    — the add-on only holds the agent token, and the map exposes nothing
+    beyond deck naming."""
+    from .grammar.apkg import MODEL_NAME, deck_name_for
+    from .grammar.curriculum import GRAMMAR_LANGS, topics_for
+    deckmap = {
+        t.key: deck_name_for(lang, t.cluster)
+        for lang in GRAMMAR_LANGS
+        for t in topics_for(lang)
+    }
+    return {"model_name": MODEL_NAME, "map": deckmap}
+
+
+@app.post("/admin/grammar-unit/{key}")
+async def admin_grammar_unit(
+    key: str, patch: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Patch a unit's user-mutable state from the dashboard. Body JSON:
+    {target_size?, status?, notes?}."""
+    allowed = {"target_size", "status", "notes"}
+    unknown = set(patch) - allowed
+    if unknown:
+        raise HTTPException(400, f"unknown fields: {sorted(unknown)}")
+    status = patch.get("status")
+    if status is not None and status not in ("active", "maintenance", "planned"):
+        raise HTTPException(400, "status must be active|maintenance|planned")
+    target = patch.get("target_size")
+    if target is not None and not (isinstance(target, int) and 0 < target <= 100):
+        raise HTTPException(400, "target_size must be an int in 1..100")
+    row = await db.update_grammar_unit(
+        key, target_size=target, status=status, notes=patch.get("notes"))
+    if row is None:
+        raise HTTPException(404, "unknown unit key")
+    return {"ok": True, "unit": row}
+
+
+@app.post("/admin/grammar-topup/{key}")
+async def admin_grammar_topup(
+    key: str, _: None = Depends(authed_admin),
+) -> dict:
+    """Generate target_size - current_verified items for one unit, then
+    rebuild the language's deck. Background; poll /admin/grammar-status.
+    The per-unit sizing knob (docs/GRAMMAR_STRATEGY.md Wave 6) — targets
+    are hand-set for now, mastery-driven after Wave 5."""
+    from .grammar import service as grammar_service
+    from .grammar.curriculum import topic_by_key
+    if grammar_service.get_state().get("running"):
+        return {"started": False, "reason": "already running",
+                **grammar_service.get_state()}
+    topic = topic_by_key(key)
+    if topic is None:
+        raise HTTPException(404, "unknown unit key (planned units have no "
+                                 "generator yet)")
+    units = await db.grammar_units_with_counts(topic.lang)
+    unit = next((u for u in units if u["key"] == key), None)
+    if unit is None:
+        raise HTTPException(404, "unit not seeded")
+    shortfall = unit["target_size"] - unit["verified"]
+    if shortfall <= 0:
+        return {"started": False, "reason": "at target",
+                "verified": unit["verified"],
+                "target_size": unit["target_size"]}
+    _spawn_bg(grammar_service.run_generation(topic.lang, shortfall, key))
+    return {"started": True, "lang": topic.lang, "unit": key,
+            "n_requested": shortfall}
+
+
+@app.post("/admin/grammar-retire-item/{item_id}")
+async def admin_grammar_retire_item(
+    item_id: int, _: None = Depends(authed_admin),
+) -> dict:
+    """Retire one verified item. The next rebuild drops it from the deck;
+    its note stays in the Anki collection until a cleanup.json purge
+    (acceptable v1 — the UI says so)."""
+    row = await db.retire_grammar_item(item_id)
+    if row is None:
+        raise HTTPException(404, "item not found or not in 'verified' state")
+    return {"ok": True, **row}
 
 
 @app.get("/admin/video-info")

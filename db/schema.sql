@@ -206,6 +206,25 @@ CREATE INDEX IF NOT EXISTS grammar_items_lang_topic ON grammar_items(lang, topic
 -- enables re-verification after verifier fixes. Idempotent migration.
 ALTER TABLE grammar_items ADD COLUMN IF NOT EXISTS meta JSONB;
 
+-- Curriculum units (Wave 6): code (grammar/curriculum.py) stays the
+-- DEFINITION source — api.py re-seeds rows from it on every boot and
+-- overwrites the code-owned columns (cluster, label, symbol, sort_order).
+-- The DB carries only the MUTABLE state: status, target_size, notes.
+-- status='planned' rows are curriculum intent with no generation yet.
+CREATE TABLE IF NOT EXISTS grammar_units (
+  key          TEXT PRIMARY KEY,               -- curriculum.Topic.key = card tag
+  lang         TEXT NOT NULL,
+  cluster      TEXT NOT NULL,                  -- Anki subdeck ("1 Tiempos")
+  label        TEXT NOT NULL,
+  symbol       TEXT NOT NULL DEFAULT '',
+  status       TEXT NOT NULL DEFAULT 'active', -- active|maintenance|planned
+  target_size  INT  NOT NULL DEFAULT 12,       -- desired verified-card count
+  sort_order   INT  NOT NULL DEFAULT 0,
+  notes        TEXT,
+  updated_at   TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS grammar_units_lang_idx ON grammar_units(lang, sort_order);
+
 CREATE TABLE IF NOT EXISTS agents (
   id             SERIAL PRIMARY KEY,
   token          TEXT UNIQUE NOT NULL,           -- bearer auth header

@@ -102,28 +102,51 @@ def _full_html(sentence: str, answer: str, infinitive: str) -> str:
     return esc
 
 
+def _deck_id(deck_name: str) -> int:
+    """Stable id hashed from the FULL deck name (same formula the rolling
+    single deck used, so pre-subdeck ids stay reproducible)."""
+    return 1_811_000_000 + (
+        int(hashlib.sha1(f"idiomatic-grammar::{deck_name}".encode()
+                          ).hexdigest()[:8], 16) % 100_000_000
+    )
+
+
+def deck_name_for(lang: str, cluster: str) -> str:
+    """'::' nests in Anki; a cluster-less topic falls back to the root
+    deck. Shared with /admin/grammar-deckmap so the add-on's reorganize
+    step and the apkg builder can never disagree."""
+    root = f"Idiomatic Grammar {lang.upper()}"
+    return f"{root}::{cluster}" if cluster else root
+
+
 def build_grammar_apkg(*, out_path: Path, lang: str,
                         items: list[dict], topic_labels: dict[str, tuple[str, str]],
                         audio: dict[int, str] | None = None,
                         audio_dir: Path | None = None,
+                        topic_clusters: dict[str, str] | None = None,
                         ) -> int:
     """items: verified grammar_items rows (dicts with id, topic, sentence,
     answer, infinitive, gloss_en, why_en). topic_labels: topic key ->
     (label, symbol). audio: item_id -> media filename inside audio_dir;
-    items absent from the map ship text-only. Returns note count."""
+    items absent from the map ship text-only. topic_clusters: topic key ->
+    cluster string; one genanki.Deck per cluster present in the item set
+    ("Idiomatic Grammar {LANG}::{cluster}"). Notes keep their GUIDs — a
+    note re-imported under a new subdeck updates fields in place but does
+    NOT move already-imported cards (the add-on's reorganize handles
+    that). Returns note count."""
     model = make_model()
-    deck_name = f"Idiomatic Grammar {lang.upper()}"
-    deck_id = 1_811_000_000 + (
-        int(hashlib.sha1(f"idiomatic-grammar::{deck_name}".encode()
-                          ).hexdigest()[:8], 16) % 100_000_000
-    )
-    deck = genanki.Deck(deck_id, deck_name)
+    topic_clusters = topic_clusters or {}
+    decks: dict[str, genanki.Deck] = {}
 
     audio = audio or {}
     media: list[str] = []
     n = 0
     for it in items:
         label, symbol = topic_labels.get(it["topic"], (it["topic"], ""))
+        deck_name = deck_name_for(lang, topic_clusters.get(it["topic"], ""))
+        deck = decks.get(deck_name)
+        if deck is None:
+            deck = decks[deck_name] = genanki.Deck(_deck_id(deck_name), deck_name)
         sound = ""
         fname = audio.get(it["id"])
         if fname and audio_dir is not None and (audio_dir / fname).exists():
@@ -150,9 +173,10 @@ def build_grammar_apkg(*, out_path: Path, lang: str,
         ))
         n += 1
 
-    pkg = genanki.Package(deck)
+    pkg = genanki.Package(sorted(decks.values(), key=lambda d: d.name))
     pkg.media_files = media
     pkg.write_to_file(str(out_path))
     log.info("grammar.apkg.written", path=str(out_path), n=n,
+             decks=len(decks),
              size_kb=round(out_path.stat().st_size / 1e3))
     return n

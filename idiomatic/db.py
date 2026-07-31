@@ -628,6 +628,111 @@ async def grammar_topic_stats(lang: str) -> list[dict[str, Any]]:
     return [dict(r) for r in rows]
 
 
+async def seed_grammar_units(rows: list[dict[str, Any]]) -> None:
+    """Boot-time upsert from curriculum code (the definition source).
+    Code-owned columns (lang, cluster, label, symbol, sort_order) are
+    overwritten; user-mutable state (status, target_size, notes,
+    updated_at) is left alone — except a 'planned' row whose unit now
+    exists in code gets promoted to 'active'. rows: dicts with key, lang,
+    cluster, label, symbol, status, sort_order."""
+    if not rows:
+        return
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        for r in rows:
+            await conn.execute(
+                """
+                INSERT INTO grammar_units
+                    (key, lang, cluster, label, symbol, status, sort_order)
+                VALUES ($1, $2, $3, $4, $5, $6, $7)
+                ON CONFLICT (key) DO UPDATE SET
+                    lang = EXCLUDED.lang,
+                    cluster = EXCLUDED.cluster,
+                    label = EXCLUDED.label,
+                    symbol = EXCLUDED.symbol,
+                    sort_order = EXCLUDED.sort_order,
+                    status = CASE
+                        WHEN grammar_units.status = 'planned'
+                             AND EXCLUDED.status = 'active'
+                        THEN 'active'
+                        ELSE grammar_units.status
+                    END
+                """,
+                r["key"], r["lang"], r["cluster"], r["label"],
+                r["symbol"], r["status"], r["sort_order"],
+            )
+
+
+async def grammar_units_with_counts(lang: str | None = None,
+                                     ) -> list[dict[str, Any]]:
+    """Every curriculum unit with its live item counts and last-batch
+    info — the /grammar tree's data. Batch ids start YYYYMMDD-HHMM, so
+    MAX(batch) is also the most recent one."""
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT u.key, u.lang, u.cluster, u.label, u.symbol, u.status,
+               u.target_size, u.sort_order, u.notes, u.updated_at,
+               COALESCE(c.verified, 0) AS verified,
+               COALESCE(c.rejected, 0) AS rejected,
+               COALESCE(c.retired, 0)  AS retired,
+               c.last_item_at, c.last_batch
+        FROM grammar_units u
+        LEFT JOIN LATERAL (
+            SELECT count(*) FILTER (WHERE status = 'verified') AS verified,
+                   count(*) FILTER (WHERE status = 'rejected') AS rejected,
+                   count(*) FILTER (WHERE status = 'retired')  AS retired,
+                   MAX(created_at) AS last_item_at,
+                   MAX(batch)      AS last_batch
+            FROM grammar_items i
+            WHERE i.topic = u.key AND i.lang = u.lang) c ON TRUE
+        WHERE $1::text IS NULL OR u.lang = $1
+        ORDER BY u.lang, u.sort_order
+        """,
+        lang,
+    )
+    return [dict(r) for r in rows]
+
+
+async def update_grammar_unit(key: str, *, target_size: int | None = None,
+                               status: str | None = None,
+                               notes: str | None = None,
+                               ) -> dict[str, Any] | None:
+    """Patch the user-mutable columns; None = leave unchanged. Returns the
+    updated row, or None for an unknown key."""
+    pool = await get_pool()
+    row = await pool.fetchrow(
+        """
+        UPDATE grammar_units SET
+            target_size = COALESCE($2, target_size),
+            status      = COALESCE($3, status),
+            notes       = COALESCE($4, notes),
+            updated_at  = NOW()
+        WHERE key = $1
+        RETURNING key, lang, cluster, label, symbol, status, target_size,
+                  sort_order, notes, updated_at
+        """,
+        key, target_size, status, notes,
+    )
+    return dict(row) if row else None
+
+
+async def retire_grammar_item(item_id: int) -> dict[str, Any] | None:
+    """Kill one bad card: verified → retired. The next deck rebuild drops
+    it from the apkg (its note stays in Anki until a cleanup.json purge).
+    Returns {id, lang, topic} or None if the item wasn't verified."""
+    pool = await get_pool()
+    row = await pool.fetchrow(
+        """
+        UPDATE grammar_items SET status = 'retired'
+        WHERE id = $1 AND status = 'verified'
+        RETURNING id, lang, topic
+        """,
+        item_id,
+    )
+    return dict(row) if row else None
+
+
 async def fetch_grammar_rejects(lang: str, topic: str | None = None,
                                  limit: int = 50) -> list[dict[str, Any]]:
     """Rejected items with reasons — the diagnostic view for tuning

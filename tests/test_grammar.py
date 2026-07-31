@@ -74,6 +74,65 @@ def test_apkg_build_and_guid_stability(tmp_path: Path):
     assert guid == guid2
 
 
+def test_every_topic_has_cluster_and_seed_rows_complete():
+    from idiomatic.grammar.curriculum import (
+        GRAMMAR_LANGS, PLANNED_UNITS, topics_for, unit_seed_rows,
+    )
+    for lang in GRAMMAR_LANGS:
+        for t in topics_for(lang):
+            assert t.cluster, f"{t.key} has no cluster"
+    rows = unit_seed_rows()
+    keys = [r["key"] for r in rows]
+    assert len(keys) == len(set(keys)), "duplicate unit keys in seed"
+    n_topics = sum(len(topics_for(lang)) for lang in GRAMMAR_LANGS)
+    assert len(rows) == n_topics + len(PLANNED_UNITS)
+    for r in rows:
+        assert r["cluster"] and r["label"] and r["status"] in ("active", "planned")
+    # active units sort before planned ones within a language
+    assert all(r["sort_order"] >= 1000 for r in rows
+               if r["status"] == "planned")
+
+
+def test_apkg_subdecks_per_cluster(tmp_path: Path):
+    """Items from different clusters land in different subdecks; GUIDs
+    stay the pure (lang, id) function they were before subdecks."""
+    import json
+    import sqlite3
+    import zipfile
+    from idiomatic.grammar.curriculum import topics_for
+    items = [{"id": 1, "topic": "es_preterito", "infinitive": "tener",
+              "sentence": "Ayer el gobierno ___ (tener) que rectificar su postura.",
+              "answer": "tuvo", "gloss_en": "g", "why_en": ""},
+             {"id": 2, "topic": "es_cmd_tu", "infinitive": "poner",
+              "sentence": "Por favor, ___ (poner) la mesa antes de cenar.",
+              "answer": "pon", "gloss_en": "g", "why_en": ""}]
+    labels = {t.key: (t.label, t.symbol) for t in PILOT_TOPICS_ES}
+    clusters = {t.key: t.cluster for t in topics_for("es")}
+    out = tmp_path / "g.apkg"
+    n = build_grammar_apkg(out_path=out, lang="es", items=items,
+                           topic_labels=labels, topic_clusters=clusters)
+    assert n == 2
+    with zipfile.ZipFile(out) as z:
+        z.extract("collection.anki2", tmp_path)
+    con = sqlite3.connect(tmp_path / "collection.anki2")
+    decks = json.loads(con.execute("SELECT decks FROM col").fetchone()[0])
+    names = {d["name"] for d in decks.values()}
+    assert "Idiomatic Grammar ES::1 Tiempos" in names
+    assert "Idiomatic Grammar ES::4 Imperativo" in names
+    # note GUIDs are unchanged by the subdeck split
+    import hashlib
+    guids = {g for (g,) in con.execute("SELECT guid FROM notes")}
+    expect = {hashlib.sha1(f"idiomatic-grammar::es::{i}".encode()
+                           ).hexdigest()[:16] for i in (1, 2)}
+    assert guids == expect
+    # deck ids are stable functions of the full deck name
+    from idiomatic.grammar.apkg import _deck_id, deck_name_for
+    assert deck_name_for("es", "1 Tiempos") == "Idiomatic Grammar ES::1 Tiempos"
+    assert deck_name_for("es", "") == "Idiomatic Grammar ES"
+    ids = {int(k) for k in decks if decks[k]["name"].startswith("Idiomatic")}
+    assert _deck_id("Idiomatic Grammar ES::1 Tiempos") in ids
+
+
 def test_full_sentence_text():
     from idiomatic.grammar.audio import full_sentence_text
     assert (full_sentence_text("Ayer el ministro ___ (negar) las acusaciones.",

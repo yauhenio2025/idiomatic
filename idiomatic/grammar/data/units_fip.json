@@ -6,6 +6,7 @@
    "mood": "indicatif",
    "tense": "présent",
    "symbol": "⊙",
+   "cluster": "1 Temps",
    "verbs": [
     "être",
     "avoir",
@@ -36,6 +37,7 @@
    "mood": "indicatif",
    "tense": "passé composé",
    "symbol": "←",
+   "cluster": "1 Temps",
    "verbs": [
     "être",
     "avoir",
@@ -66,6 +68,7 @@
    "mood": "indicatif",
    "tense": "imparfait",
    "symbol": "←≈",
+   "cluster": "1 Temps",
    "verbs": [
     "être",
     "avoir",
@@ -96,6 +99,7 @@
    "mood": "indicatif",
    "tense": "futur simple",
    "symbol": "→",
+   "cluster": "1 Temps",
    "verbs": [
     "être",
     "avoir",
@@ -126,6 +130,7 @@
    "mood": "conditionnel",
    "tense": "présent",
    "symbol": "◇",
+   "cluster": "2 Conditionnel",
    "verbs": [
     "être",
     "avoir",
@@ -156,6 +161,7 @@
    "mood": "subjonctif",
    "tense": "présent",
    "symbol": "〰",
+   "cluster": "3 Subjonctif",
    "verbs": [
     "être",
     "avoir",
@@ -186,6 +192,7 @@
    "mood": "subjonctif",
    "tense": "présent",
    "symbol": "〰↔",
+   "cluster": "3 Subjonctif",
    "verbs": [
     "être",
     "avoir",
@@ -218,6 +225,7 @@
    "mood": "indicativo",
    "tense": "presente",
    "symbol": "⊙",
+   "cluster": "1 Tempi",
    "verbs": [
     "essere",
     "avere",
@@ -248,6 +256,7 @@
    "mood": "indicativo",
    "tense": "passato prossimo",
    "symbol": "←",
+   "cluster": "1 Tempi",
    "verbs": [
     "essere",
     "avere",
@@ -278,6 +287,7 @@
    "mood": "indicativo",
    "tense": "imperfetto",
    "symbol": "←≈",
+   "cluster": "1 Tempi",
    "verbs": [
     "essere",
     "avere",
@@ -308,6 +318,7 @@
    "mood": "indicativo",
    "tense": "futuro",
    "symbol": "→",
+   "cluster": "1 Tempi",
    "verbs": [
     "essere",
     "avere",
@@ -338,6 +349,7 @@
    "mood": "condizionale",
    "tense": "presente",
    "symbol": "◇",
+   "cluster": "2 Condizionale",
    "verbs": [
     "essere",
     "avere",
@@ -368,6 +380,7 @@
    "mood": "congiuntivo",
    "tense": "presente",
    "symbol": "〰",
+   "cluster": "3 Congiuntivo",
    "verbs": [
     "essere",
     "avere",
@@ -398,6 +411,7 @@
    "mood": "indicativo",
    "tense": "passato remoto",
    "symbol": "←!",
+   "cluster": "1 Tempi",
    "verbs": [
     "essere",
     "avere",
@@ -430,6 +444,7 @@
    "mood": "indicativo",
    "tense": "presente",
    "symbol": "⊙",
+   "cluster": "1 Tempos",
    "verbs": [
     "ser",
     "estar",
@@ -460,6 +475,7 @@
    "mood": "indicativo",
    "tense": "pretérito perfeito",
    "symbol": "←",
+   "cluster": "1 Tempos",
    "verbs": [
     "ser",
     "ir",
@@ -490,6 +506,7 @@
    "mood": "indicativo",
    "tense": "pretérito imperfeito",
    "symbol": "←≈",
+   "cluster": "1 Tempos",
    "verbs": [
     "ser",
     "estar",
@@ -520,6 +537,7 @@
    "mood": "indicativo",
    "tense": "futuro do presente",
    "symbol": "→",
+   "cluster": "1 Tempos",
    "verbs": [
     "ser",
     "estar",
@@ -550,6 +568,7 @@
    "mood": "condicional",
    "tense": "futuro do pretérito",
    "symbol": "◇",
+   "cluster": "2 Condicional",
    "verbs": [
     "ser",
     "estar",
@@ -580,6 +599,7 @@
    "mood": "subjuntivo",
    "tense": "presente",
    "symbol": "〰",
+   "cluster": "3 Subjuntivo",
    "verbs": [
     "ser",
     "estar",
@@ -610,6 +630,7 @@
    "mood": "subjuntivo",
    "tense": "futuro",
    "symbol": "〰→",
+   "cluster": "3 Subjuntivo",
    "verbs": [
     "ser",
     "estar",

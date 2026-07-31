@@ -491,6 +491,112 @@ async def delivery(
     }
 
 
+# --- grammar (Wave 6: curriculum tree + unit detail) -------------------------
+
+def _grammar_audio_rel(lang: str, item_id: int) -> str | None:
+    """Relative path for the frontend audio player, or None when the item
+    has no usable mp3 (TTS degraded to silence — ships text-only)."""
+    p = (Path(get_settings().data_dir) / "staged_audio" / "grammar" / lang
+         / f"idg_{lang}_{item_id}.mp3")
+    if p.is_file() and p.stat().st_size > 1000:
+        return f"grammar/{lang}/{p.name}"
+    return None
+
+
+@router.get("/grammar/overview")
+async def grammar_overview(_: None = Depends(authed_ui)) -> dict:
+    """The whole curriculum tree: per language → clusters → units with
+    verified-vs-target counts, reject rates, last batch, plus the rolling
+    deck's apkg + ack state (same join as the Delivery page) and the live
+    generation-run state for button gating."""
+    from .grammar import service as grammar_service
+    from .grammar.curriculum import GRAMMAR_LANGS
+
+    units = await db.grammar_units_with_counts()
+    pool = await db.get_pool()
+    decks = {r["lang"]: dict(r) for r in await pool.fetch(
+        """
+        SELECT a.id AS apkg_id, a.lang, a.size_bytes, a.n_idioms AS cards,
+               a.created_at AS built_at,
+               ack.status AS ack_status, ack.attempts AS ack_attempts,
+               ack.acked_at, ag.name AS agent_name
+        FROM apkgs a
+        LEFT JOIN LATERAL (
+            SELECT status, attempts, acked_at, agent_id FROM agent_acks
+            WHERE apkg_id = a.id ORDER BY acked_at DESC LIMIT 1) ack ON TRUE
+        LEFT JOIN agents ag ON ag.id = ack.agent_id
+        WHERE a.kind = 'grammar'
+        """)}
+
+    langs = []
+    for lang in GRAMMAR_LANGS:
+        lang_units = [u for u in units if u["lang"] == lang]
+        clusters: list[dict] = []
+        for u in lang_units:
+            if not clusters or clusters[-1]["cluster"] != u["cluster"]:
+                clusters.append({"cluster": u["cluster"], "units": []})
+            clusters[-1]["units"].append(u)
+        langs.append({"lang": lang, "deck": decks.get(lang),
+                      "clusters": clusters})
+    return {"langs": langs, "lang_names": LANG_NAMES,
+            "run": grammar_service.get_state()}
+
+
+@router.get("/grammar/units/{key}")
+async def grammar_unit_detail(key: str, _: None = Depends(authed_ui)) -> dict:
+    """Unit meta + generation guidance + every verified item as card data
+    (with audio availability) + the rejects with reasons — the LLM-error
+    diagnostic that has caught every pipeline bug so far."""
+    from .grammar.apkg import deck_name_for
+    from .grammar.curriculum import topic_by_key
+
+    units = await db.grammar_units_with_counts()
+    unit = next((u for u in units if u["key"] == key), None)
+    if unit is None:
+        raise HTTPException(404, "unknown unit key")
+    lang = unit["lang"]
+    topic = topic_by_key(key)
+
+    pool = await db.get_pool()
+    items = [dict(r) for r in await pool.fetch(
+        """
+        SELECT id, infinitive, person, sentence, answer, gloss_en, why_en,
+               batch, created_at
+        FROM grammar_items
+        WHERE lang = $1 AND topic = $2 AND status = 'verified'
+        ORDER BY id
+        """,
+        lang, key)]
+    for it in items:
+        it["audio"] = _grammar_audio_rel(lang, it["id"])
+
+    return {
+        "unit": unit,
+        "guidance": topic.guidance if topic else None,
+        "deck_name": deck_name_for(lang, unit["cluster"]),
+        "items": items,
+        "rejects": await db.fetch_grammar_rejects(lang, key, limit=200),
+    }
+
+
+@router.get("/audio/grammar/{lang}/{filename}")
+async def grammar_audio(
+    lang: str, filename: str,
+    x_admin_token: str | None = Header(default=None),
+    token: str | None = Query(default=None),
+):
+    """Stream one grammar drill mp3 from staged_audio/grammar/<lang>/.
+    Same auth + strict path validation as the idiom audio route."""
+    _check_token(x_admin_token or token)
+    if not re.fullmatch(r"[a-z]{2}", lang) or not _AUDIO_FILE_RE.fullmatch(filename):
+        raise HTTPException(400, "bad path")
+    p = (Path(get_settings().data_dir) / "staged_audio" / "grammar"
+         / lang / filename)
+    if not p.exists() or not p.is_file():
+        raise HTTPException(404, "not found")
+    return FileResponse(p, media_type="audio/mpeg")
+
+
 # --- context-clip upload (local alignment pipeline) -------------------------
 
 @router.post("/upload-context/{idiom_id}")

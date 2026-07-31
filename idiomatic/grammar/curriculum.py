@@ -43,6 +43,12 @@ class Topic:
     mood: str                # morphology.py lookup key ("" for closed-class)
     tense: str
     symbol: str              # tiny on-card cue, KOFI-style
+    # Anki subdeck this unit's cards live in: "Idiomatic Grammar {LANG}::
+    # {cluster}". Numbered so Anki sorts them. Assigned via CLUSTER_BY_KEY
+    # below (es/de) or units_fip.json (fr/it/pt); strings are FINAL per
+    # docs/commissions/GRAMMAR_FRONTEND_COMMISSION.md — renaming one would
+    # orphan the existing Anki subdeck and re-split the user's collection.
+    cluster: str = ""
     verbs: list[str] = field(default_factory=lambda: TOP_VERBS_ES)
     # Free-text constraints handed to the generator prompt.
     guidance: str = ""
@@ -204,6 +210,50 @@ TOPICS_DE: list[Topic] = [
 ]
 
 
+# Topic-cluster map for the es/de units (fr/it/pt carry theirs in
+# units_fip.json). One subdeck per cluster; every unit key MUST appear here
+# (enforced by a test).
+CLUSTER_BY_KEY: dict[str, str] = {
+    "es_pres_irreg": "1 Tiempos", "es_preterito": "1 Tiempos",
+    "es_imperfecto": "1 Tiempos", "es_futuro": "1 Tiempos",
+    "es_condicional": "1 Tiempos", "es_perfecto": "1 Tiempos",
+    "es_subj_pres": "2 Subjuntivo", "es_subj_imp": "2 Subjuntivo",
+    "es_cond_perf": "3 Condicionales", "es_plusc_subj": "3 Condicionales",
+    "es_cmd_tu": "4 Imperativo", "es_cmd_usted": "4 Imperativo",
+    "es_cmd_neg": "4 Imperativo",
+    "es_clitics_dir": "5 Pronombres", "es_clitics_ind": "5 Pronombres",
+    "es_clitics_selo": "5 Pronombres",
+    "es_por_para": "6 Preposiciones", "es_verb_prep": "6 Preposiciones",
+    "de_gender": "1 Genus",
+    "de_prep_fest": "2 Präpositionen", "de_prep_wechsel": "2 Präpositionen",
+}
+
+for _t in PILOT_TOPICS_ES + TOPICS_DE:
+    _t.cluster = CLUSTER_BY_KEY[_t.key]
+
+
+# Units that exist only as curriculum intent (grammar_units rows with
+# status='planned', no Topic/generation yet) — the "what's NEXT per
+# language" layer of the dashboard tree. Candidates from
+# docs/GRAMMAR_STRATEGY.md §3. When one is implemented, move it into the
+# real topic list (same key!) and delete it here; boot seeding then flips
+# its DB row from planned to active.
+PLANNED_UNITS: list[dict] = [
+    {"key": "es_ser_estar", "lang": "es", "cluster": "7 Ser/Estar",
+     "label": "Ser vs estar", "symbol": "⚖"},
+    {"key": "de_adj_endings", "lang": "de", "cluster": "3 Adjektive",
+     "label": "Adjektivendungen", "symbol": "🖌"},
+    {"key": "de_verb_core", "lang": "de", "cluster": "4 Verben",
+     "label": "Verbformen — Kern", "symbol": "⚙"},
+    {"key": "fr_pronoms_y_en", "lang": "fr", "cluster": "4 Pronoms",
+     "label": "Pronoms y / en", "symbol": "🔗"},
+    {"key": "it_clitici_ci_ne", "lang": "it", "cluster": "4 Clitici",
+     "label": "Clitici ci / ne", "symbol": "🔗"},
+    {"key": "pt_clitic_placement", "lang": "pt", "cluster": "4 Clíticos",
+     "label": "Colocação pronominal", "symbol": "🔗"},
+]
+
+
 def _load_fip_topics() -> dict[str, list[Topic]]:
     """fr/it/pt verb-core units from grammar/data/units_fip.json (specs
     drafted by codex, tense keys corrected to the verbecc tables; pt is
@@ -215,7 +265,8 @@ def _load_fip_topics() -> dict[str, list[Topic]]:
                       ).read_text(encoding="utf-8"))
     return {
         lang: [Topic(u["key"], lang, u["label"], u["mood"], u["tense"],
-                     u["symbol"], verbs=u["verbs"], guidance=u["guidance"])
+                     u["symbol"], cluster=u["cluster"], verbs=u["verbs"],
+                     guidance=u["guidance"])
                for u in units]
         for lang, units in raw.items()
     }
@@ -230,6 +281,23 @@ def topics_for(lang: str) -> list[Topic]:
     if lang == "de":
         return TOPICS_DE
     return _FIP_TOPICS.get(lang, [])
+
+
+GRAMMAR_LANGS = ["es", "de", "fr", "it", "pt"]
+
+
+def unit_seed_rows() -> list[dict]:
+    """Rows for db.seed_grammar_units — every implemented Topic (active)
+    plus PLANNED_UNITS (planned, sorted after the real ones)."""
+    rows = []
+    for lang in GRAMMAR_LANGS:
+        for i, t in enumerate(topics_for(lang)):
+            rows.append({"key": t.key, "lang": lang, "cluster": t.cluster,
+                         "label": t.label, "symbol": t.symbol,
+                         "status": "active", "sort_order": i})
+    for i, u in enumerate(PLANNED_UNITS):
+        rows.append({**u, "status": "planned", "sort_order": 1000 + i})
+    return rows
 
 
 def topic_by_key(key: str) -> Topic | None:

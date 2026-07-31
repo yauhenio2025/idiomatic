@@ -37,6 +37,7 @@ async def rebuild_grammar_deck(lang: str) -> dict[str, Any]:
         return {"lang": lang, "cards": 0, "skipped": "no verified items"}
 
     labels = {t.key: (t.label, t.symbol) for t in topics_for(lang)}
+    clusters = {t.key: t.cluster for t in topics_for(lang)}
     s = get_settings()
 
     # Back-of-card TTS (form + pause + full sentence). Idempotent per item;
@@ -51,7 +52,8 @@ async def rebuild_grammar_deck(lang: str) -> dict[str, Any]:
     n = await asyncio.to_thread(
         lambda: build_grammar_apkg(out_path=out, lang=lang, items=items,
                                     topic_labels=labels,
-                                    audio=audio_map, audio_dir=audio_dir)
+                                    audio=audio_map, audio_dir=audio_dir,
+                                    topic_clusters=clusters)
     )
     rel = out.relative_to(Path(s.data_dir))
     apkg_id = await db.upsert_pool_apkg(
