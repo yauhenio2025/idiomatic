@@ -778,11 +778,14 @@ async def get_external_token(name: str) -> str | None:
 
 
 async def upsert_lingq_terms(rows: list[dict[str, Any]]) -> int:
+    """One transaction per page: row-by-row autocommit at ~52k rows put
+    visible write pressure on the basic-256mb Postgres during the first
+    full sync (2026-07-31 outage suspect — the web app shares that DB)."""
     if not rows:
         return 0
     pool = await get_pool()
     n = 0
-    async with pool.acquire() as conn:
+    async with pool.acquire() as conn, conn.transaction():
         for r in rows:
             await conn.execute(
                 """

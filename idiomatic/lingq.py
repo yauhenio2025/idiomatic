@@ -101,7 +101,9 @@ async def sync_language(client: httpx.AsyncClient, token: str,
         upserted += await db.upsert_lingq_terms(rows)
         url = data.get("next")
         _STATE["progress"] = f"{lang}: {fetched}"
-        await asyncio.sleep(0.4)          # stay polite; ~270 calls total
+        # Politeness to LingQ AND breathing room for our own shared DB /
+        # event loop — the web app serving /health lives in this process.
+        await asyncio.sleep(1.0)
     return fetched, upserted
 
 
