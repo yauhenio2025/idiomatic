@@ -1,5 +1,9 @@
 # Wave-7 Phase-2 unit-bank index
 
+The separate [F4 interference specification](F4_INTERFERENCE.md) records the
+private-bank ingestion/card contract and the final cluster strings for the four
+receiving-language interference units; no F4 pair content is stored here.
+
 Built 2026-07-31 for `CODEX_B_UNIT_BANKS.md`. Counts exclude each JSON file's leading `_meta` header object.
 
 | Unit | Cluster | Entries | Primary format | Verification |

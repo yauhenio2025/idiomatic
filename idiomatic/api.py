@@ -352,6 +352,25 @@ async def admin_f3_convert(
     return await f3.convert(lang, n)
 
 
+@app.post("/admin/f4-convert")
+async def admin_f4_convert(
+    lang: str, n: int = 20, _: None = Depends(authed_admin),
+) -> dict:
+    """Compile reviewed private interference pairs into verified F4 cards.
+
+    Like F3 conversion, this is bounded synchronous DB work and deliberately
+    does not rebuild the rolling grammar deck. German pair data may be staged,
+    but its one-row bank has no curriculum unit and is not convertible yet.
+    """
+    from .grammar import f4
+
+    if lang not in f4.TOPIC_BY_LANG:
+        raise HTTPException(400, "lang must be es|pt|fr|it")
+    if not 1 <= n <= 200:
+        raise HTTPException(400, "n must be 1..200")
+    return await f4.convert(lang, n)
+
+
 @app.post("/admin/grammar-generate")
 async def admin_grammar_generate(
     lang: str = "es", n_per_topic: int = 12, topic: str | None = None,
@@ -360,6 +379,21 @@ async def admin_grammar_generate(
     """Generate + verify a batch of grammar drill items and rebuild the
     lang's rolling grammar deck. Background; poll /admin/grammar-status."""
     from .grammar import service as grammar_service
+    from .grammar.curriculum import topic_by_key
+
+    if topic:
+        requested = {key.strip() for key in topic.split(",") if key.strip()}
+        static_topics = {
+            key for key in requested
+            if (unit := topic_by_key(key)) is not None
+            and unit.verify in ("attested", "f4")
+        }
+        if static_topics:
+            raise HTTPException(
+                409,
+                "static F3/F4 units are filled via their conversion endpoints, "
+                "not LLM generation",
+            )
     if grammar_service.get_state().get("running"):
         return {"started": False, "reason": "already running",
                 **grammar_service.get_state()}
@@ -480,10 +514,11 @@ async def admin_grammar_topup(
     if topic is None:
         raise HTTPException(404, "unknown unit key (planned units have no "
                                  "generator yet)")
-    if topic.verify == "attested":
+    if topic.verify in ("attested", "f4"):
         raise HTTPException(
             409,
-            "attested F3 units are filled via /admin/f3-convert, not LLM generation",
+            "static F3/F4 units are filled via their conversion endpoints, "
+            "not LLM generation",
         )
     units = await db.grammar_units_with_counts(topic.lang)
     unit = next((u for u in units if u["key"] == key), None)
@@ -603,6 +638,58 @@ async def admin_personal_errors_status(_: None = Depends(authed_admin)) -> dict:
     return {"staging_pending": pending,
             "last_upload": dict(last) if last else None,
             "stats": await db.personal_errors_stats()}
+
+
+@app.post("/admin/f4-pairs-upload")
+async def admin_f4_pairs_upload(
+    request: Request, _: None = Depends(authed_admin),
+) -> dict:
+    """Validate and stage one private F4 JSON-array bank for cron ingest.
+
+    The API process performs exactly one blob insert. Pair upserts and registry
+    attestation checks remain isolated in the cron process.
+    """
+    from .grammar import f4
+
+    raw = await request.body()
+    if len(raw) > 10_000_000:
+        raise HTTPException(413, "too large")
+    try:
+        body = raw.decode("utf-8", errors="strict")
+    except UnicodeDecodeError as exc:
+        raise HTTPException(400, "body must be valid UTF-8") from exc
+    rows, errors = f4.parse_pair_bank(body)
+    if errors:
+        raise HTTPException(
+            400, {"n_errors": len(errors), "first_errors": errors[:10]}
+        )
+    if not rows:
+        raise HTTPException(400, "no rows")
+    staging_id = await db.stage_f4_pairs(body, len(rows))
+    return {
+        "staged": len(rows),
+        "staging_id": staging_id,
+        "target_lang": rows[0]["target_lang"],
+        "note": "ingested by the cron container on its next tick",
+    }
+
+
+@app.get("/admin/f4-pairs-status")
+async def admin_f4_pairs_status(_: None = Depends(authed_admin)) -> dict:
+    """Return F4 ingest progress and aggregate counts without pair content."""
+    pool = await db.get_pool()
+    pending = await pool.fetchval(
+        "SELECT COUNT(*) FROM f4_pairs_staging WHERE processed_at IS NULL"
+    )
+    last = await pool.fetchrow(
+        """SELECT uploaded_at, processed_at, n_rows, note
+           FROM f4_pairs_staging ORDER BY id DESC LIMIT 1"""
+    )
+    return {
+        "staging_pending": pending,
+        "last_upload": dict(last) if last else None,
+        "stats": await db.f4_pairs_stats(),
+    }
 
 
 @app.get("/admin/video-info")

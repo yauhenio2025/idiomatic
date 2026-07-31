@@ -254,7 +254,7 @@ async def insert_expressions(lang: str, video_id: int,
     pool = await get_pool()
     async with pool.acquire() as conn:
         async with conn.transaction():
-            inserted = await conn.executemany(
+            await conn.executemany(
                 """
                 INSERT INTO expressions (lang, text, normalized, english, first_video_id)
                 VALUES ($1, $2, $3, $4, $5)
@@ -607,14 +607,25 @@ async def insert_grammar_items(items: list[dict[str, Any]], *, status: str,
 
 async def fetch_grammar_items(lang: str, status: str = "verified",
                                ) -> list[dict[str, Any]]:
+    """Fetch deck-eligible grammar rows.
+
+    A linked F4 note is withheld while its private source row is dirty.  Bank
+    additions can invalidate a whole-bank production signature, so serving the
+    previously verified note before reconversion would expose a stale prompt.
+    """
     pool = await get_pool()
     rows = await pool.fetch(
         """
-        SELECT id, lang, topic, fmt, infinitive, mood, tense, person,
-               sentence, answer, gloss_en, why_en
-        FROM grammar_items
-        WHERE lang = $1 AND status = $2
-        ORDER BY topic, id
+        SELECT i.id, i.lang, i.topic, i.fmt, i.infinitive, i.mood, i.tense,
+               i.person, i.sentence, i.answer, i.gloss_en, i.why_en
+        FROM grammar_items i
+        WHERE i.lang = $1 AND i.status = $2
+          AND NOT EXISTS (
+              SELECT 1 FROM f4_pairs p
+              WHERE p.grammar_item_id = i.id
+                AND (p.status <> 'active' OR p.needs_conversion)
+          )
+        ORDER BY i.topic, i.id
         """,
         lang, status,
     )
@@ -729,17 +740,37 @@ async def update_grammar_unit(key: str, *, target_size: int | None = None,
 async def retire_grammar_item(item_id: int) -> dict[str, Any] | None:
     """Kill one bad card: verified → retired. The next deck rebuild drops
     it from the apkg (its note stays in Anki until a cleanup.json purge).
+    A linked F4 source pair is retired in the same transaction so a later
+    conversion cannot silently recreate a card the operator removed.
     Returns {id, lang, topic} or None if the item wasn't verified."""
     pool = await get_pool()
-    row = await pool.fetchrow(
-        """
-        UPDATE grammar_items SET status = 'retired'
-        WHERE id = $1 AND status = 'verified'
-        RETURNING id, lang, topic
-        """,
-        item_id,
-    )
-    return dict(row) if row else None
+    async with pool.acquire() as conn, conn.transaction():
+        # Conversion locks pair → grammar item. Use the same order here to
+        # prevent a concurrent refresh/retirement deadlock.
+        f4_pair_id = await conn.fetchval(
+            """SELECT id FROM f4_pairs
+               WHERE grammar_item_id = $1 FOR UPDATE""",
+            item_id,
+        )
+        row = await conn.fetchrow(
+            """
+            UPDATE grammar_items SET status = 'retired'
+            WHERE id = $1 AND status = 'verified'
+            RETURNING id, lang, topic
+            """,
+            item_id,
+        )
+        if row is None:
+            return None
+        if f4_pair_id is not None:
+            await conn.execute(
+                """UPDATE f4_pairs
+                   SET status = 'retired', needs_conversion = FALSE,
+                       updated_at = NOW()
+                   WHERE id = $1""",
+                f4_pair_id,
+            )
+        return dict(row)
 
 
 async def fetch_grammar_rejects(lang: str, topic: str | None = None,
@@ -846,12 +877,14 @@ async def upsert_personal_errors(rows: list[dict[str, Any]]) -> int:
             await conn.execute(
                 """
                 INSERT INTO personal_errors
-                    (lang, kind, wrong, right_form, gloss_en, category,
+                    (registry_id, lang, kind, wrong, right_form, gloss_en, category,
                      subcategory, why, interference_source, occurrences,
                      first_seen, last_seen, sources, unit_hint, confidence)
-                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15)
+                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16)
                 ON CONFLICT (lang, COALESCE(wrong, ''), right_form)
                 DO UPDATE SET
+                    registry_id = COALESCE(
+                        EXCLUDED.registry_id, personal_errors.registry_id),
                     kind = EXCLUDED.kind,
                     gloss_en = EXCLUDED.gloss_en,
                     category = EXCLUDED.category,
@@ -865,12 +898,13 @@ async def upsert_personal_errors(rows: list[dict[str, Any]]) -> int:
                     unit_hint = EXCLUDED.unit_hint,
                     confidence = EXCLUDED.confidence
                 """,
-                r["lang"], r["kind"], r.get("wrong"), r["right_form"],
-                r.get("gloss_en"), r["category"], r.get("subcategory"),
-                r.get("why"), r.get("interference_source"),
-                r.get("occurrences", 1), r.get("first_seen"),
-                r.get("last_seen"), r.get("sources") or [],
-                r.get("unit_hint"), r.get("confidence"),
+                r.get("registry_id"), r["lang"], r["kind"], r.get("wrong"),
+                r["right_form"], r.get("gloss_en"), r["category"],
+                r.get("subcategory"), r.get("why"),
+                r.get("interference_source"), r.get("occurrences", 1),
+                r.get("first_seen"), r.get("last_seen"),
+                r.get("sources") or [], r.get("unit_hint"),
+                r.get("confidence"),
             )
             n += 1
     return n
@@ -1000,6 +1034,333 @@ async def personal_errors_stats() -> list[dict[str, Any]]:
                   SUM(occurrences) AS occurrences
            FROM personal_errors
            GROUP BY lang, kind, category ORDER BY lang, n DESC""")
+    return [dict(r) for r in rows]
+
+
+async def stage_f4_pairs(payload: str, n_rows: int) -> int:
+    """Stage one private F4 bank with a single web-process INSERT."""
+    pool = await get_pool()
+    return await pool.fetchval(
+        """INSERT INTO f4_pairs_staging (payload, n_rows)
+           VALUES ($1, $2) RETURNING id""",
+        payload, n_rows,
+    )
+
+
+async def fetch_unprocessed_f4_staging() -> list[dict[str, Any]]:
+    """Return pending F4 payloads oldest-first for cron-side ingestion."""
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """SELECT id, payload FROM f4_pairs_staging
+           WHERE processed_at IS NULL ORDER BY id"""
+    )
+    return [dict(r) for r in rows]
+
+
+async def mark_f4_staging(staging_id: int, *, note: str) -> None:
+    """Finish a staged F4 payload and erase its private raw contents."""
+    pool = await get_pool()
+    await pool.execute(
+        """UPDATE f4_pairs_staging
+           SET processed_at = NOW(), note = $2, payload = ''
+           WHERE id = $1""",
+        staging_id, note,
+    )
+
+
+async def _resolve_f4_personal_error(
+    conn: asyncpg.Connection, row: dict[str, Any],
+) -> int | None:
+    """Resolve an attested F4 row to its local personal-errors source.
+
+    Exact pairs use the registry's unique target/wrong/right identity.  A
+    reviewed projection must name the private registry's stable external id;
+    both selected forms are then checked as case-sensitive, verbatim
+    substrings.  This function is called for every row before its batch writes
+    begin, so a deterministic validation error cannot leave a partial batch.
+    """
+    pair_key = str(row.get("pair_key") or "")
+    projection_id = row.get("projection_registry_id")
+    if not row.get("attested"):
+        if projection_id is not None:
+            raise ValueError(
+                f"F4 pair {pair_key}: unattested pair declares a projection"
+            )
+        return None
+
+    if projection_id is None:
+        source = await conn.fetchrow(
+            """SELECT id
+               FROM personal_errors
+               WHERE lang = $1 AND kind = 'error'
+                 AND wrong = $2 AND right_form = $3""",
+            row["target_lang"], row["false_form"], row["correct_target"],
+        )
+        if source is None:
+            raise ValueError(
+                f"F4 pair {pair_key}: no exact personal-error match"
+            )
+        return int(source["id"])
+
+    source = await conn.fetchrow(
+        """SELECT id, lang, wrong, right_form
+           FROM personal_errors
+           WHERE registry_id = $1 AND kind = 'error'""",
+        projection_id,
+    )
+    if source is None:
+        raise ValueError(
+            f"F4 pair {pair_key}: unknown projection registry id"
+        )
+    wrong = source["wrong"] or ""
+    right = source["right_form"] or ""
+    if (source["lang"] != row["target_lang"]
+            or row["false_form"] not in wrong
+            or row["correct_target"] not in right):
+        raise ValueError(
+            f"F4 pair {pair_key}: projection does not match registry row"
+        )
+    return int(source["id"])
+
+
+async def upsert_f4_pairs(rows: list[dict[str, Any]]) -> int:
+    """Validate and upsert one F4 batch atomically.
+
+    All attestation links are resolved before the first INSERT. Every accepted
+    target-bank upload conservatively marks that target's active rows dirty:
+    adding one answer can change the uniqueness certificate of otherwise
+    unchanged A/B cards. Existing grammar_items ids and user-owned retirement
+    state are never overwritten by an upload.
+    """
+    if not rows:
+        return 0
+    pool = await get_pool()
+    async with pool.acquire() as conn, conn.transaction():
+        validated: list[tuple[dict[str, Any], int | None]] = []
+        for row in rows:
+            personal_error_id = await _resolve_f4_personal_error(conn, row)
+            validated.append((row, personal_error_id))
+
+        # Conflict updates take row locks. A stable order prevents two
+        # concurrently uploaded banks from acquiring the same locks in
+        # opposite orders.
+        validated.sort(key=lambda value: value[0]["pair_key"])
+        for row, personal_error_id in validated:
+            pair_id = await conn.fetchval(
+                """
+                INSERT INTO f4_pairs
+                    (schema_version, pair_key, target_lang, source_lang,
+                     concept_en, correct_target, false_form, source_form,
+                     category, why, occurrences, attested, personal_error_id)
+                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
+                ON CONFLICT (pair_key) DO UPDATE SET
+                    source_lang = EXCLUDED.source_lang,
+                    concept_en = EXCLUDED.concept_en,
+                    source_form = EXCLUDED.source_form,
+                    category = EXCLUDED.category,
+                    why = EXCLUDED.why,
+                    occurrences = EXCLUDED.occurrences,
+                    attested = EXCLUDED.attested,
+                    personal_error_id = EXCLUDED.personal_error_id,
+                    needs_conversion = f4_pairs.needs_conversion OR
+                        ROW(f4_pairs.source_lang,
+                            f4_pairs.concept_en,
+                            f4_pairs.source_form,
+                            f4_pairs.category,
+                            f4_pairs.why,
+                            f4_pairs.occurrences,
+                            f4_pairs.attested,
+                            f4_pairs.personal_error_id)
+                        IS DISTINCT FROM
+                        ROW(EXCLUDED.source_lang,
+                            EXCLUDED.concept_en,
+                            EXCLUDED.source_form,
+                            EXCLUDED.category,
+                            EXCLUDED.why,
+                            EXCLUDED.occurrences,
+                            EXCLUDED.attested,
+                            EXCLUDED.personal_error_id),
+                    updated_at = NOW()
+                WHERE f4_pairs.schema_version = EXCLUDED.schema_version
+                  AND f4_pairs.target_lang = EXCLUDED.target_lang
+                RETURNING id
+                """,
+                row["schema_version"], row["pair_key"], row["target_lang"],
+                row["source_lang"], row["concept_en"],
+                row["correct_target"], row["false_form"],
+                row["source_form"], row["category"], row["why"],
+                row["occurrences"], row["attested"], personal_error_id,
+            )
+            if pair_id is None:
+                # The SHA-256 identity was reused for different immutable
+                # inputs.  Raising here rolls back every write in this batch.
+                raise ValueError(
+                    f"F4 pair {row['pair_key']}: pair-key identity mismatch"
+                )
+        # A production signature is certified against the whole active target
+        # bank, not just the changed row. Recompile every linked row for each
+        # target represented in this accepted upload while retaining its id.
+        await conn.execute(
+            """UPDATE f4_pairs
+               SET needs_conversion = TRUE,
+                   updated_at = GREATEST(
+                       clock_timestamp(), updated_at + INTERVAL '1 microsecond'
+                   )
+               WHERE status = 'active' AND target_lang = ANY($1::text[])""",
+            sorted({row["target_lang"] for row in rows}),
+        )
+    return len(rows)
+
+
+async def fetch_active_f4_pairs(target_lang: str) -> list[dict[str, Any]]:
+    """Return every active pair for one receiving language.
+
+    Callers need the whole target bank, including already-converted rows, to
+    certify production-signature uniqueness before selecting dirty cards.
+    """
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """SELECT id, schema_version, pair_key, target_lang, source_lang,
+                  concept_en, correct_target, false_form, source_form,
+                  category, why, occurrences, attested, personal_error_id,
+                  grammar_item_id, needs_conversion, status, created_at,
+                  updated_at, converted_at
+           FROM f4_pairs
+           WHERE target_lang = $1 AND status = 'active'
+           ORDER BY attested DESC, occurrences DESC, pair_key""",
+        target_lang,
+    )
+    return [dict(r) for r in rows]
+
+
+async def upsert_f4_grammar_item(
+    f4_pair_id: int, item: dict[str, Any], *, batch: str,
+) -> int | None:
+    """Atomically create or refresh the stable grammar item for one F4 pair.
+
+    The pair row is locked and eligibility plus the identity-bearing mapped
+    fields are rechecked.  Existing grammar rows are updated in place so their
+    integer ItemId and Anki GUID never change.  ``None`` means the pair was no
+    longer dirty/active or its compiled ``(lang, sentence)`` collided.
+    """
+    pool = await get_pool()
+    async with pool.acquire() as conn, conn.transaction():
+        source = await conn.fetchrow(
+            """SELECT id, pair_key, target_lang, source_lang, concept_en,
+                      correct_target, false_form, source_form, category, why,
+                      occurrences, attested, grammar_item_id, updated_at
+               FROM f4_pairs
+               WHERE id = $1 AND status = 'active' AND needs_conversion
+               FOR UPDATE""",
+            f4_pair_id,
+        )
+        if source is None:
+            return None
+
+        expected_topic = f"{source['target_lang']}_interference_f4"
+        meta = item.get("meta")
+        if (item.get("fmt") != "f4"
+                or item.get("lang") != source["target_lang"]
+                or item.get("topic") != expected_topic
+                or item.get("answer") != source["correct_target"]
+                or item.get("gloss_en") != source["concept_en"]
+                or item.get("why_en") != source["why"]
+                or not isinstance(item.get("sentence"), str)
+                or item["sentence"].count("___") != 1
+                or not isinstance(meta, dict)
+                or meta.get("pair_key") != source["pair_key"]
+                or meta.get("source_lang") != source["source_lang"]
+                or meta.get("source_form") != source["source_form"]
+                or meta.get("false_form") != source["false_form"]
+                or meta.get("category") != source["category"]
+                or meta.get("attested") != source["attested"]
+                or meta.get("occurrences") != source["occurrences"]
+                or meta.get("source_revision")
+                != source["updated_at"].isoformat()):
+            return None
+
+        grammar_item_id = source["grammar_item_id"]
+        if grammar_item_id is None:
+            grammar_item_id = await _insert_grammar_item(
+                conn, item, status="verified", batch=batch, fmt="f4",
+            )
+            if grammar_item_id is None:
+                return None
+        else:
+            linked = await conn.fetchrow(
+                """SELECT id, lang, topic, fmt, meta
+                   FROM grammar_items WHERE id = $1 FOR UPDATE""",
+                grammar_item_id,
+            )
+            linked_meta = linked["meta"] if linked is not None else None
+            if isinstance(linked_meta, str):
+                try:
+                    linked_meta = json.loads(linked_meta)
+                except (TypeError, ValueError):
+                    linked_meta = None
+            if (linked is None
+                    or linked["fmt"] != "f4"
+                    or linked["lang"] != source["target_lang"]
+                    or linked["topic"] != expected_topic
+                    or not isinstance(linked_meta, dict)
+                    or linked_meta.get("pair_key") != source["pair_key"]):
+                return None
+            collision = await conn.fetchval(
+                """SELECT id FROM grammar_items
+                   WHERE lang = $1 AND sentence = $2 AND id <> $3
+                   LIMIT 1""",
+                item["lang"], item["sentence"], grammar_item_id,
+            )
+            if collision is not None:
+                return None
+            try:
+                # The nested transaction is a savepoint: an insert racing the
+                # collision read can still trip the unique constraint without
+                # aborting the outer transaction or clearing the dirty flag.
+                async with conn.transaction():
+                    updated = await conn.fetchval(
+                        """UPDATE grammar_items SET
+                               lang = $2, topic = $3, fmt = 'f4',
+                               infinitive = $4, mood = $5, tense = $6,
+                               person = $7, sentence = $8, answer = $9,
+                               gloss_en = $10, why_en = $11,
+                               batch = $12, meta = $13
+                           WHERE id = $1
+                           RETURNING id""",
+                        grammar_item_id, item["lang"], item["topic"],
+                        item.get("infinitive"), item.get("mood"),
+                        item.get("tense"), item.get("person"),
+                        item["sentence"], item["answer"],
+                        item.get("gloss_en"), item.get("why_en"), batch,
+                        json.dumps(meta) if meta else None,
+                    )
+            except asyncpg.UniqueViolationError:
+                return None
+            if updated is None:
+                return None
+
+        await conn.execute(
+            """UPDATE f4_pairs
+               SET grammar_item_id = $2, needs_conversion = FALSE,
+                   converted_at = NOW(), updated_at = NOW()
+               WHERE id = $1""",
+            f4_pair_id, grammar_item_id,
+        )
+        return int(grammar_item_id)
+
+
+async def f4_pairs_stats() -> list[dict[str, Any]]:
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """SELECT target_lang, status, count(*) AS pairs,
+                  count(*) FILTER (WHERE attested) AS attested,
+                  count(*) FILTER (WHERE needs_conversion) AS needs_conversion,
+                  COALESCE(SUM(occurrences), 0) AS occurrences,
+                  MAX(updated_at) AS last_updated
+           FROM f4_pairs
+           GROUP BY target_lang, status
+           ORDER BY target_lang, status"""
+    )
     return [dict(r) for r in rows]
 
 

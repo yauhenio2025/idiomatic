@@ -2,6 +2,9 @@
 
 from pathlib import Path
 
+import httpx
+import pytest
+
 from idiomatic.grammar import morphology as m
 from idiomatic.grammar.apkg import build_grammar_apkg
 from idiomatic.grammar.curriculum import PILOT_TOPICS_ES, topic_by_key
@@ -91,6 +94,49 @@ def test_every_topic_has_cluster_and_seed_rows_complete():
     # active units sort before planned ones within a language
     assert all(r["sort_order"] >= 1000 for r in rows
                if r["status"] == "planned")
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize(
+    "topic",
+    [
+        "es_mis_errores",
+        "es_interference_f4",
+        "es_preterito, fr_mes_erreurs",
+    ],
+)
+async def test_admin_generate_rejects_static_conversion_topics(
+    monkeypatch, topic: str,
+):
+    from idiomatic import api
+    from idiomatic.grammar import service as grammar_service
+
+    spawned = []
+    sentinel = object()
+    monkeypatch.setattr(grammar_service, "get_state", lambda: {"running": False})
+    monkeypatch.setattr(grammar_service, "run_generation", lambda *_args: sentinel)
+    monkeypatch.setattr(api, "_spawn_bg", spawned.append)
+    api.app.dependency_overrides[api.authed_admin] = lambda: None
+    try:
+        transport = httpx.ASGITransport(app=api.app)
+        async with httpx.AsyncClient(
+            transport=transport, base_url="http://test",
+        ) as client:
+            response = await client.post(
+                "/admin/grammar-generate",
+                params={"lang": "es", "topic": topic},
+            )
+    finally:
+        api.app.dependency_overrides.pop(api.authed_admin, None)
+
+    assert response.status_code == 409
+    assert response.json() == {
+        "detail": (
+            "static F3/F4 units are filled via their conversion endpoints, "
+            "not LLM generation"
+        )
+    }
+    assert spawned == []
 
 
 def test_apkg_subdecks_per_cluster(tmp_path: Path):
@@ -526,11 +572,11 @@ def test_romance_verb_verification():
     fr = {t.key: t for t in topics_for("fr")}
     it = {t.key: t for t in topics_for("it")}
     pt = {t.key: t for t in topics_for("pt")}
-    # Seven morphology units per language survive; bank units + the F3
-    # attested unit append after them (fr: 7 morph + 4 bank + 1 F3 = 12).
+    # Seven morphology units per language survive; bank units, F3, and F4
+    # append after them (fr: 7 morph + 4 bank + 1 F3 + 1 F4 = 13).
     assert all(sum(t.verify == "morph" for t in topics.values()) == 7
                for topics in (fr, it, pt))
-    assert len(fr) == 12 and len(it) == 10 and len(pt) == 10
+    assert len(fr) == 13 and len(it) == 11 and len(pt) == 11
 
     t = fr["fr_passe_compose"]
     good = {"infinitive": "aller", "person": "3s",

@@ -40,9 +40,13 @@ async def rebuild_grammar_deck(lang: str) -> dict[str, Any]:
     clusters = {t.key: t.cluster for t in topics_for(lang)}
     s = get_settings()
 
-    # Back-of-card TTS (form + pause + full sentence). Idempotent per item;
+    # Back-of-card TTS (form + pause + full sentence). F4 fronts deliberately
+    # mix languages; sending the whole filled prompt through the receiving-
+    # language voice would mispronounce the source cue. Keep F4 text-only until
+    # a target-answer-only audio path exists. Other formats remain idempotent;
     # a TTS outage degrades those cards to text-only, retried next rebuild.
-    audio_map = await grammar_audio.ensure_audio(items, lang)
+    audio_items = [item for item in items if item.get("fmt") != "f4"]
+    audio_map = await grammar_audio.ensure_audio(audio_items, lang)
     audio_dir = Path(s.data_dir) / "staged_audio" / "grammar" / lang
 
     apkg_root = Path(s.data_dir) / "apkgs" / lang
@@ -69,10 +73,12 @@ async def rebuild_grammar_deck(lang: str) -> dict[str, Any]:
 async def run_generation(lang: str, n_per_topic: int = 12,
                           only_topic: str | None = None) -> None:
     batch = f"{datetime.now(timezone.utc):%Y%m%d-%H%M}-{uuid.uuid4().hex[:6]}"
-    # Personal-error F3 units contain teacher-attested pairs and are filled
-    # only by grammar.f3.convert; they must never trigger generation or an
-    # LLM verification call. Rebuilds still include them via topics_for().
-    topics = [t for t in topics_for(lang) if t.verify != "attested"]
+    # F3 personal errors and F4 reviewed interference pairs are filled by
+    # their deterministic converters. Neither may trigger generation or an
+    # LLM verification call; rebuilds still include both via topics_for().
+    static_verify_modes = {"attested", "f4"}
+    topics = [t for t in topics_for(lang)
+              if t.verify not in static_verify_modes]
     if only_topic:
         # comma-separated topic keys → generate just those units
         keys = {k.strip() for k in only_topic.split(",") if k.strip()}

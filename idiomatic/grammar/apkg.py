@@ -23,7 +23,7 @@ MODEL_NAME = "Idiomatic Grammar Drill v1"
 
 FIELDS = [
     "ItemId", "Lang", "Topic", "TenseLabel", "Symbol",
-    "Sentence",        # cloze with ___ (infinitive), or an F3 wrong phrase
+    "Sentence",        # cloze with ___, an F3 wrong phrase, or an F4 contrast
     "Answer",
     "SentenceFull",    # blank replaced by <b>form</b>
     "GlossEn", "Why",

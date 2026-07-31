@@ -59,6 +59,8 @@ class Topic:
     #             uniqueness in one test). For closed-class topics.
     #   "attested" — teacher-attested personal-error pair; never generated
     #                 or sent through an LLM verifier.
+    #   "f4" — reviewed cross-language interference bank; compiled
+    #          deterministically and never generated or LLM-verified.
     #   "bank_blind" — Tier A bank metadata/answer check, then Tier B.
     #   "fr_gender" / "pt_gender" / "it_noun" — deterministic facts
     #             from the named unit bank.
@@ -252,6 +254,7 @@ CLUSTER_BY_KEY: dict[str, str] = {
     # (F4) will take 10.
     "es_muy_mucho": "8 Grado y cantidad",
     "es_mis_errores": "9 Mis errores",
+    "es_interference_f4": "10 Interferencias",
     "de_gender": "1 Genus",
     "de_prep_fest": "2 Präpositionen", "de_prep_wechsel": "2 Präpositionen",
     "de_dativ_verben": "5 Kasus",
@@ -325,6 +328,26 @@ F3_TOPICS: dict[str, Topic] = {
     "de": Topic(
         "de_meine_fehler", "de", "Korrigiere: was ich gesagt habe", "", "", "⚠",
         cluster=CLUSTER_BY_KEY["de_meine_fehler"], verbs=[], verify="attested",
+    ),
+}
+
+
+F4_TOPICS: dict[str, Topic] = {
+    "es": Topic(
+        "es_interference_f4", "es", "Contrastes entre lenguas", "", "", "⇄",
+        cluster=CLUSTER_BY_KEY["es_interference_f4"], verbs=[], verify="f4",
+    ),
+    "pt": Topic(
+        "pt_interference_f4", "pt", "Contrastes entre línguas", "", "", "⇄",
+        cluster="10 Interferência", verbs=[], verify="f4",
+    ),
+    "fr": Topic(
+        "fr_interference_f4", "fr", "Contrastes entre langues", "", "", "⇄",
+        cluster="10 Interférences", verbs=[], verify="f4",
+    ),
+    "it": Topic(
+        "it_interference_f4", "it", "Contrasti tra lingue", "", "", "⇄",
+        cluster="10 Interferenze", verbs=[], verify="f4",
     ),
 }
 
@@ -444,9 +467,12 @@ def topics_for(lang: str) -> list[Topic]:
         base = TOPICS_DE
     else:
         base = _FIP_TOPICS.get(lang, []) + _BANK_TOPICS.get(lang, [])
-    # F3 (the learner's own attested errors) always sorts last per language.
+    # Personal F3 corrections sort after ordinary generated/banked units. F4
+    # interference contrasts then take the final slot where that deck exists.
     f3_topic = F3_TOPICS.get(lang)
-    return [*base, f3_topic] if f3_topic is not None else list(base)
+    f4_topic = F4_TOPICS.get(lang)
+    return [*base, *([f3_topic] if f3_topic is not None else []),
+            *([f4_topic] if f4_topic is not None else [])]
 
 
 GRAMMAR_LANGS = ["es", "de", "fr", "it", "pt"]
