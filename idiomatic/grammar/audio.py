@@ -79,7 +79,7 @@ async def ensure_item_audio(item: dict, lang: str) -> Path | None:
         log.warning("grammar.audio.silence_skip", item=item["id"], lang=lang)
         return None
 
-    gap = silence_mp3(work, 700)
+    gap = await asyncio.to_thread(silence_mp3, work, 700)
     await asyncio.to_thread(concat_mp3s, [answer_mp3, gap, sentence_mp3], final)
     return final
 

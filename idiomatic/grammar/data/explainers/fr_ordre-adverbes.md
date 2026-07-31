@@ -2,6 +2,7 @@
 lang: fr
 slug: ordre-adverbes
 title: "Where the adverb goes"
+takeaway: "In neutral French, place a short common adverb after the finite verb—or after the auxiliary in a compound tense."
 fossil_evidence:
   - ref: "docs/research/error-profiles/fr.md §2.6(a)"
     count: "60+"

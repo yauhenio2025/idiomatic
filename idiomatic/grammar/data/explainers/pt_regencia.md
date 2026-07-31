@@ -2,6 +2,7 @@
 lang: pt
 slug: regencia
 title: "Zero Means Zero: Verbs Before an Infinitive"
+takeaway: "Before an action infinitive, tentar, conseguir, decidir, and future ir take no preposition."
 fossil_evidence:
   - ref: "docs/research/error-profiles/pt.md §2, category 6"
     count: "30 verb-plus-preposition regime rows across 2019–2022"

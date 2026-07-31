@@ -2,6 +2,7 @@
 lang: pt
 slug: futuro-subjuntivo
 title: "The Future Gate: When and If"
+takeaway: "For a future pending event after se, quando, logo que, or assim que, use the future subjunctive—not the future inside the dependent clause."
 fossil_evidence:
   - ref: "docs/research/error-profiles/pt.md §3, fossil 4"
     count: "7 errors in 2020–2021"

@@ -2,6 +2,7 @@
 lang: es
 slug: light-verbs
 title: "Choose the Noun's Partner: Spanish Light Verbs"
+takeaway: "Let the noun choose its verb: retrieve each Spanish verb-and-noun combination as a whole chunk."
 fossil_evidence:
   - ref: "docs/research/error-profiles/es.md §2, category 5"
     count: "3 verbatim errors plus repeated teaching across 2019–2022"

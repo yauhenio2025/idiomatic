@@ -360,10 +360,11 @@ async def admin_grammar_generate(
     """Generate + verify a batch of grammar drill items and rebuild the
     lang's rolling grammar deck. Background; poll /admin/grammar-status."""
     from .grammar import service as grammar_service
-    if grammar_service.get_state().get("running"):
+    if not grammar_service.claim_grammar_job(lang, "generation"):
         return {"started": False, "reason": "already running",
                 **grammar_service.get_state()}
-    _spawn_bg(grammar_service.run_generation(lang, n_per_topic, topic))
+    _spawn_bg(grammar_service.run_generation(
+        lang, n_per_topic, topic, claimed=True))
     return {"started": True, "lang": lang, "n_per_topic": n_per_topic,
             "topic": topic}
 
@@ -372,6 +373,27 @@ async def admin_grammar_generate(
 async def admin_grammar_status(_: None = Depends(authed_admin)) -> dict:
     from .grammar import service as grammar_service
     return grammar_service.get_state()
+
+
+@app.post("/admin/explainers-build")
+async def admin_explainers_build(
+    lang: str, _: None = Depends(authed_admin),
+) -> dict:
+    """TTS, stitch, and upsert one language's authored grammar-radio cards.
+
+    Background; poll /admin/grammar-status.  Packaging/delivery deliberately
+    stays a separate explicit POST to /admin/grammar-rebuild.
+    """
+    from .grammar import service as grammar_service
+    from .grammar.explainers import SUPPORTED_LANGS
+
+    if lang not in SUPPORTED_LANGS:
+        raise HTTPException(400, "lang must be fr|pt|es|de")
+    if not grammar_service.claim_explainer_build(lang):
+        return {"started": False, "reason": "already running",
+                **grammar_service.get_state()}
+    _spawn_bg(grammar_service.run_explainer_build(lang, claimed=True))
+    return {"started": True, "lang": lang, "deck_rebuild": "separate"}
 
 
 @app.get("/admin/grammar-stats")
@@ -402,13 +424,11 @@ async def admin_grammar_rebuild(
     (no generation) — e.g. after a template change deploy. Background:
     TTS for a full deck takes minutes; poll /admin/grammar-status."""
     from .grammar import service as grammar_service
-    if grammar_service.get_state().get("running"):
-        return {"started": False, "reason": "already running"}
+    if not grammar_service.claim_grammar_job(lang, "rebuild"):
+        return {"started": False, "reason": "already running",
+                **grammar_service.get_state()}
 
     async def _run() -> None:
-        grammar_service._state.clear()
-        grammar_service._state.update({"running": True, "lang": lang,
-                                        "mode": "rebuild"})
         try:
             result = await grammar_service.rebuild_grammar_deck(lang)
             grammar_service._state["deck"] = result
@@ -432,11 +452,16 @@ async def admin_grammar_deckmap(agent: dict = Depends(authed_agent)) -> dict:
     beyond deck naming."""
     from .grammar.apkg import MODEL_NAME, deck_name_for
     from .grammar.curriculum import GRAMMAR_LANGS, topics_for
+    from .grammar.explainers import EXPLAINER_UNITS
     deckmap = {
         t.key: deck_name_for(lang, t.cluster)
         for lang in GRAMMAR_LANGS
         for t in topics_for(lang)
     }
+    deckmap.update({
+        unit.topic: deck_name_for(lang, unit.cluster)
+        for lang, unit in EXPLAINER_UNITS.items()
+    })
     return {"model_name": MODEL_NAME, "map": deckmap}
 
 
@@ -494,7 +519,11 @@ async def admin_grammar_topup(
         return {"started": False, "reason": "at target",
                 "verified": unit["verified"],
                 "target_size": unit["target_size"]}
-    _spawn_bg(grammar_service.run_generation(topic.lang, shortfall, key))
+    if not grammar_service.claim_grammar_job(topic.lang, "generation"):
+        return {"started": False, "reason": "already running",
+                **grammar_service.get_state()}
+    _spawn_bg(grammar_service.run_generation(
+        topic.lang, shortfall, key, claimed=True))
     return {"started": True, "lang": topic.lang, "unit": key,
             "n_requested": shortfall}
 

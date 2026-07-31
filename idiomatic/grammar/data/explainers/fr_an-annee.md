@@ -2,6 +2,7 @@
 lang: fr
 slug: an-annee
 title: "Counting time and living through it"
+takeaway: "Use an to count units of time; use année for a lived, described, or calendar period."
 fossil_evidence:
   - ref: "docs/research/error-profiles/fr.md §3, pattern 2"
     count: 102
