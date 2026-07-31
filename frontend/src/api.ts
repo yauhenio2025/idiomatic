@@ -51,6 +51,41 @@ export async function api<T>(
   return res.json();
 }
 
+// Admin actions (grammar generate/rebuild/top-up/unit edits) live under
+// /admin/*, not /ui/api/* — same token, different prefix. The dashboard
+// is read-only EXCEPT the grammar section (commission 2026-07-31).
+export async function adminCall<T>(
+  path: string,
+  opts?: {
+    method?: "GET" | "POST";
+    params?: Record<string, string | number | boolean | undefined | null>;
+    body?: unknown;
+  },
+): Promise<T> {
+  const url = new URL(path, window.location.origin);
+  if (opts?.params) {
+    for (const [k, v] of Object.entries(opts.params)) {
+      if (v !== undefined && v !== null && v !== "") url.searchParams.set(k, String(v));
+    }
+  }
+  const res = await fetch(url, {
+    method: opts?.method ?? "POST",
+    headers: {
+      "X-Admin-Token": getToken() ?? "",
+      ...(opts?.body !== undefined ? { "Content-Type": "application/json" } : {}),
+    },
+    ...(opts?.body !== undefined ? { body: JSON.stringify(opts.body) } : {}),
+  });
+  if (res.status === 401) {
+    onUnauthorized?.();
+    throw new ApiError(401, "unauthorized");
+  }
+  if (!res.ok) {
+    throw new ApiError(res.status, `${res.status} ${await res.text()}`);
+  }
+  return res.json();
+}
+
 // Audio is fetched as a blob (the <audio> element can't send headers) and
 // cached as object URLs per path for the session.
 const audioCache = new Map<string, string>();

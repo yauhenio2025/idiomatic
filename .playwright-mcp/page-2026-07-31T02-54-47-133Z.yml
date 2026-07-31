@@ -1,0 +1,112 @@
+- generic [ref=e9]:
+  - complementary [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: idiomatic
+      - generic [ref=e13]: harvest dashboard
+    - navigation [ref=e14]:
+      - link "◉ Overview" [ref=e15] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e16]: ◉
+        - text: Overview
+      - link "▤ Videos" [ref=e17] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=e18]: ▤
+        - text: Videos
+      - link "❝ Expressions" [ref=e19] [cursor=pointer]:
+        - /url: /expressions
+        - generic [ref=e20]: ❝
+        - text: Expressions
+      - link "⚲ Channels" [ref=e21] [cursor=pointer]:
+        - /url: /channels
+        - generic [ref=e22]: ⚲
+        - text: Channels
+      - link "∴ Grammar" [ref=e23] [cursor=pointer]:
+        - /url: /grammar
+        - generic [ref=e24]: ∴
+        - text: Grammar
+      - link "⇣ Delivery" [ref=e25] [cursor=pointer]:
+        - /url: /delivery
+        - generic [ref=e26]: ⇣
+        - text: Delivery
+    - button "log out" [ref=e28]
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - heading "Overview" [level=1] [ref=e32]
+        - generic [ref=e33]: refreshes every 30s
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: Worker
+          - generic [ref=e37]: ✓ idle
+          - generic [ref=e38]: no decks yet
+        - generic [ref=e39]:
+          - generic [ref=e40]: Queued videos
+          - generic [ref=e41]: "0"
+          - generic [ref=e42]: 0 failed total
+        - generic [ref=e43]:
+          - generic [ref=e44]: Expression library
+          - generic [ref=e45]: "0"
+        - generic [ref=e46]:
+          - generic [ref=e47]: Today's builds vs cap (3/lang)
+          - generic [ref=e48]:
+            - generic [ref=e49]: German
+            - generic [ref=e56]: Spanish
+            - generic [ref=e63]: French
+            - generic [ref=e70]: Italian
+            - generic [ref=e77]: Portuguese
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - heading "Decks built per day" [level=2] [ref=e87]
+            - generic [ref=e88]: last 30 days · stacked by language
+          - img [ref=e90]:
+            - generic [ref=e91]: "0"
+            - generic [ref=e93]: "1"
+            - generic [ref=e155]: 07-02
+            - generic [ref=e156]: 07-06
+            - generic [ref=e157]: 07-10
+            - generic [ref=e158]: 07-14
+            - generic [ref=e159]: 07-18
+            - generic [ref=e160]: 07-22
+            - generic [ref=e161]: 07-26
+            - generic [ref=e162]: 07-30
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - heading "Expression library growth" [level=2] [ref=e165]
+            - generic [ref=e166]: cumulative unique expressions
+          - img [ref=e168]:
+            - generic [ref=e169]: "0"
+            - generic [ref=e171]: "0"
+            - generic [ref=e173]: "1"
+            - generic [ref=e175]: "1"
+            - generic [ref=e177]: "1"
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - generic [ref=e181]:
+            - 'heading "Last 7 days: from RSS to Anki" [level=2] [ref=e182]'
+            - generic [ref=e183]: the funnel
+          - generic [ref=e184]:
+            - generic [ref=e185]:
+              - generic "videos discovered" [ref=e186]
+              - generic [ref=e189]: "0"
+            - generic [ref=e190]:
+              - generic "pre-filtered out" [ref=e191]
+              - generic [ref=e194]: "0"
+            - generic [ref=e195]:
+              - generic "enqueued" [ref=e196]
+              - generic [ref=e199]: "0"
+            - generic [ref=e200]:
+              - generic "✓ decks built" [ref=e201]
+              - generic [ref=e204]: "0"
+            - generic [ref=e205]:
+              - generic "queued / in flight" [ref=e206]
+              - generic [ref=e209]: "0"
+            - generic [ref=e210]:
+              - generic "✕ failed" [ref=e211]
+              - generic [ref=e214]: "0"
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - heading "Dedup — what we already knew" [level=2] [ref=e217]
+            - generic [ref=e218]: no data yet
+          - paragraph [ref=e219]: The extraction log starts recording at first deploy — duplicate rejections were never persisted before, so older videos show no dedup data (that history is unrecoverable, not zero).
+      - generic [ref=e220]: 0 videos done all-time · 0 skipped · 0 failed

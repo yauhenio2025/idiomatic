@@ -5,6 +5,7 @@ const NAV = [
   { to: "/videos", label: "Videos", icon: "▤" },
   { to: "/expressions", label: "Expressions", icon: "❝" },
   { to: "/channels", label: "Channels", icon: "⚲" },
+  { to: "/grammar", label: "Grammar", icon: "∴" },
   { to: "/delivery", label: "Delivery", icon: "⇣" },
 ];
 

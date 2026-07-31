@@ -11,10 +11,20 @@ For feature inventory see @docs/FEATURES.md, for change history see
 - Plan of record: **docs/GRAMMAR_STRATEGY.md §8 "WAVE PLAN"** — check
   off waves as they ship; status line at the top of §8 says where we
   are. Research annex in docs/research/.
-- Shipped: Spanish verb pilot (8 tense units, 94 cards, ElevenLabs
-  back audio: form + pause + full sentence), user-approved. Code in
-  `idiomatic/grammar/`; admin endpoints `/admin/grammar-generate|
-  status|stats|rebuild`; one rolling apkg per lang, `apkgs.kind='grammar'`.
+- Shipped: Waves 1-4 + 6 — five decks (es/de/fr/it/pt, 42 units, ~520
+  cards, ElevenLabs back audio), user-approved. Code in
+  `idiomatic/grammar/`; admin endpoints `/admin/grammar-generate|status|
+  stats|rejects|rebuild|deckmap|unit|topup|retire-item`; one rolling
+  apkg per lang (`apkgs.kind='grammar'`) with one SUBDECK per topic
+  cluster (`Idiomatic Grammar ES::1 Tiempos`; map in curriculum.py
+  CLUSTER_BY_KEY + units_fip.json, strings FINAL). `grammar_units`
+  table = curriculum state (target_size/status/notes mutable; other
+  cols re-seeded from code on boot). Dashboard /grammar +
+  /grammar/unit/:key pages control generation (the one allowed
+  dashboard-mutation surface). The add-on has a one-shot "Reorganize
+  grammar decks" step (moves existing cards into subdecks by unit tag,
+  preserves scheduling; auto-runs on profile open, marker file
+  grammar_reorg.done.json, skips profiles without grammar cards).
 - The user studies grammar in the **evgeny@the-syllabus.com** Anki
   profile (idiom decks live in evgeny.morozov+2@gmail.com). The add-on
   delivers to whichever profile is open.

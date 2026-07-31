@@ -69,17 +69,28 @@
 
 ## Grammar
 
-### Grammar drill pipeline (Spanish pilot)
+### Grammar drill pipeline (5 languages)
 - **Status**: Active
-- **Description**: LLM-generated conjugation drills, deterministically verified against the Jehle Spanish verb DB, compiled into one rolling `kind='grammar'` apkg per language (delivered via the normal add-on path). Strategy: `docs/GRAMMAR_STRATEGY.md`.
+- **Description**: LLM-generated grammar drills (verb morphology + closed-class), deterministically or blind-fill verified, compiled into one rolling `kind='grammar'` apkg per language with **one subdeck per topic cluster** (`Idiomatic Grammar {LANG}::{cluster}`). Strategy: `docs/GRAMMAR_STRATEGY.md`.
 - **Entry Points**:
-  - `idiomatic/grammar/morphology.py` - conjugation truth table + verifier (Jehle DB, vendored gzip)
-  - `idiomatic/grammar/curriculum.py` - pilot topics (8 Spanish tense/mood topics, KOFI-style)
-  - `idiomatic/grammar/generate.py` - Gemini batch generation + item verification
-  - `idiomatic/grammar/apkg.py` - frozen 14-field `Idiomatic Grammar Drill v1` model, GUIDs from DB ids
+  - `idiomatic/grammar/morphology.py` - conjugation truth tables + verifier (Jehle es, verbecc fr/it/pt, german-nouns de)
+  - `idiomatic/grammar/curriculum.py` - 42 units across es/de/fr/it/pt; `cluster` per Topic (`CLUSTER_BY_KEY`), `PLANNED_UNITS`, `unit_seed_rows()`
+  - `idiomatic/grammar/generate.py` - Gemini batch generation + item verification (Tier A morph / Tier B blind-fill)
+  - `idiomatic/grammar/apkg.py` - frozen 14-field `Idiomatic Grammar Drill v1` model, GUIDs from DB ids; `deck_name_for()` + per-cluster genanki decks
   - `idiomatic/grammar/service.py` - orchestration + rolling deck rebuild
-  - `idiomatic/api.py` - `/admin/grammar-generate`, `/admin/grammar-status`, `/admin/grammar-stats`, `/admin/grammar-rebuild`
-  - `db/schema.sql` - `grammar_items` table (verified AND rejected rows kept)
-  - `tests/test_grammar.py` - deterministic tests (morphology, verifier, apkg/GUID stability)
-- **Dependencies**: Gemini text model, genanki, Jehle verb DB (vendored)
-- **Added**: 2026-07-28
+  - `idiomatic/api.py:330-518` - `/admin/grammar-generate|status|stats|rejects|rebuild`, `/admin/grammar-deckmap` (agent-authed, add-on reorganize), `/admin/grammar-unit/{key}`, `/admin/grammar-topup/{key}`, `/admin/grammar-retire-item/{id}`
+  - `db/schema.sql` - `grammar_items` (verified/rejected/retired) + `grammar_units` (cluster, status, target_size — code-owned cols re-seeded on boot)
+  - `tests/test_grammar.py` - morphology, verifier, apkg/GUID stability, subdeck split, seed completeness
+- **Dependencies**: Gemini text model, genanki, vendored morphology DBs
+- **Added**: 2026-07-28 | **Modified**: 2026-07-31
+
+### Grammar dashboard section
+- **Status**: Active
+- **Description**: `/grammar` curriculum tree (per-language clusters → units with verified-vs-target progress, reject rates, Top up / Rebuild controls, live run polling) + `/grammar/unit/:key` detail (settings editor, verified mini-cards with audio + retire, rejects diagnostics). First dashboard surface allowed to mutate state (grammar only).
+- **Entry Points**:
+  - `idiomatic/ui_api.py` - `/ui/api/grammar/overview`, `/ui/api/grammar/units/{key}`, `/ui/api/audio/grammar/{lang}/{file}`
+  - `frontend/src/pages/Grammar.tsx` - curriculum tree page
+  - `frontend/src/pages/GrammarUnit.tsx` - unit detail page
+  - `frontend/src/api.ts` - `adminCall()` (admin-token actions from the SPA)
+- **Dependencies**: Admin API + dashboard
+- **Added**: 2026-07-31

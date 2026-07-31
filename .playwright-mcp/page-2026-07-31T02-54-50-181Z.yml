@@ -1,0 +1,33 @@
+- generic [ref=f1e3]:
+  - complementary [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - generic [ref=f1e6]: idiomatic
+      - generic [ref=f1e7]: harvest dashboard
+    - navigation [ref=f1e8]:
+      - link "◉ Overview" [ref=f1e9] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e10]: ◉
+        - text: Overview
+      - link "▤ Videos" [ref=f1e11] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=f1e12]: ▤
+        - text: Videos
+      - link "❝ Expressions" [ref=f1e13] [cursor=pointer]:
+        - /url: /expressions
+        - generic [ref=f1e14]: ❝
+        - text: Expressions
+      - link "⚲ Channels" [ref=f1e15] [cursor=pointer]:
+        - /url: /channels
+        - generic [ref=f1e16]: ⚲
+        - text: Channels
+      - link "∴ Grammar" [ref=f1e17] [cursor=pointer]:
+        - /url: /grammar
+        - generic [ref=f1e18]: ∴
+        - text: Grammar
+      - link "⇣ Delivery" [ref=f1e19] [cursor=pointer]:
+        - /url: /delivery
+        - generic [ref=f1e20]: ⇣
+        - text: Delivery
+    - button "log out" [ref=f1e22]
+  - main [ref=f1e23]:
+    - generic [ref=f1e24]: loading…

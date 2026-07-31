@@ -336,12 +336,13 @@ memory; our layer aggregates over items per skill/topic.
 
 ## 8. Roadmap — WAVE PLAN (agreed with user 2026-07-29; CURRENT)
 
-STATUS AT LAST UPDATE (2026-07-29): Spanish verb pilot SHIPPED and
-user-approved ("worked nicely"); Wave 1 SHIPPED same day — deck now 151
-cards / 13 units, all with ElevenLabs back audio (apkg 896), studied in
-the SYLLABUS Anki profile. Pipeline: `idiomatic/grammar/` +
-`/admin/grammar-*` endpoints. Resume from the wave below that isn't
-checked off. RESOLVED FINDING (Wave 1 → 2): the es_cmd_tu 15/24
+STATUS AT LAST UPDATE (2026-07-31): Waves 1-4 and 6 shipped. Five decks
+live (es 222 / de 50 / fr 83 / it 84 / pt 82 cards, 42 units), all with
+ElevenLabs back audio, studied in the SYLLABUS Anki profile. Wave 6
+added per-cluster subdecks, the grammar_units curriculum table, and the
+dashboard /grammar section (see commission brief). Pipeline:
+`idiomatic/grammar/` + `/admin/grammar-*` endpoints. Resume from the
+wave below that isn't checked off (Wave 5 is next). RESOLVED FINDING (Wave 1 → 2): the es_cmd_tu 15/24
 rejection rate was NOT an LLM weakness — every reject was the OLD
 substring leak-check false-flagging short tú imperatives against their
 own infinitive hint (ten⊂tener, pon⊂poner, sal⊂salir…) and against
@@ -409,13 +410,18 @@ Waves:
 - [ ] **Wave 5 — telemetry + planner** (unchanged from §7): add-on
   pushes revlog keyed by note GUID; weekly strong-model planner picks
   the 2-3 active units per language.
-- [ ] **Wave 6 — dashboard grammar section + deck taxonomy**
-  (COMMISSIONED 2026-07-31, brief:
-  docs/commissions/GRAMMAR_FRONTEND_COMMISSION.md — execute in a fresh
-  session): subdecks per topic cluster (final cluster map in the brief),
-  grammar_units DB table with per-unit target_size/status, /grammar
-  dashboard pages with Top-up/Rebuild controls, add-on one-shot
-  reorganize of existing cards into subdecks.
+- [x] **Wave 6 — dashboard grammar section + deck taxonomy**
+  (SHIPPED 2026-07-31, brief:
+  docs/commissions/GRAMMAR_FRONTEND_COMMISSION.md): subdecks per topic
+  cluster (final cluster map in the brief; apkg builds one genanki deck
+  per cluster, deck ids hashed from full names, GUIDs untouched),
+  grammar_units DB table (code-owned cols re-seeded on boot; per-unit
+  target_size/status/notes mutable; planned units = what's-next),
+  /grammar + /grammar/unit/:key dashboard pages with
+  Top-up/Rebuild/retire controls wrapping /admin/grammar-*, add-on
+  one-shot "Reorganize grammar decks" (col.set_deck by unit tag via
+  agent-authed /admin/grammar-deckmap; FSRS preset stays on the PARENT
+  deck only — subdecks inherit).
 - [ ] Later: beep-cloze audio fronts, error-correction format seeded
   from `_errors` decks.
 

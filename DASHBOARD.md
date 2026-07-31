@@ -2,10 +2,14 @@
 
 https://idiomatic-app.onrender.com/ — served by the same FastAPI app that
 runs the pipeline; log in with the admin token (local copy:
-`~/.config/idiomatic-admin.env`). Read-only: nothing on the dashboard can
-mutate pipeline state.
+`~/.config/idiomatic-admin.env`). Read-only — EXCEPT the Grammar section
+(amended 2026-07-31 by the Wave-6 commission): grammar pages may trigger
+generation/rebuild runs and edit curriculum-unit state via `/admin/*`
+endpoints. Everything else still cannot mutate pipeline state.
 
 ## What each page answers
+
+Navigation: Overview · Videos · Expressions · Channels · Grammar · Delivery.
 
 **Overview** — "is the machine alive, and what has it been producing?"
 Health strip: worker state (idle/processing/stalled — stalled means work
@@ -43,6 +47,22 @@ idioms yielded, yield per processed video, last-video date. Priority
 channels wear 🔥 (they bypass the daily cap); active channels with
 plenty of traffic and zero yield are flagged as dead weight.
 
+**Grammar** — "where is the grammar curriculum, and is the LLM behaving?"
+Per language: the rolling deck's card count / size / delivery state with a
+Rebuild button, then the curriculum tree — topic clusters (matching the
+Anki subdecks, `Idiomatic Grammar ES::1 Tiempos` …) → unit rows with
+verified-vs-target progress bars, reject counts + rates (the LLM-error
+diagnostic that has caught every pipeline bug so far), last-batch age,
+status chips (active/maintenance/planned — planned = what's next, no
+generator yet), and a Top-up button that generates `target_size −
+verified` items for that unit. While a run is live the page polls
+`/admin/grammar-status` and disables all actions. The unit detail page
+shows the generation guidance, every verified item as a reveal-to-answer
+mini-card with audio playback and a retire control (retired cards drop
+from the deck at the next rebuild; the note stays in Anki until a
+cleanup.json purge), and the full reject list with verifier reasons.
+Unit settings (target size, status, notes) are editable in place.
+
 **Delivery** — "did it reach Anki?" Agent liveness (the add-on's
 last_seen), then every apkg with kind, size, built time, and ack state:
 imported ✓ / awaiting pickup / failed-but-retrying (with attempt count
@@ -62,7 +82,10 @@ videos from picked_at→finished_at.
   X-Admin-Token auth (constant-time), parametrized read-only SQL.
   Audio: `/ui/api/audio/{youtube_id}/{file}.mp3` streams from
   `/data/staged_audio/` (same strict path validation as
-  /admin/audio-sample; also accepts ?token= for direct links).
+  /admin/audio-sample; also accepts ?token= for direct links);
+  `/ui/api/audio/grammar/{lang}/{file}.mp3` does the same for grammar
+  drill audio. Grammar action buttons call `/admin/grammar-*` endpoints
+  with the same admin token (`adminCall` in `frontend/src/api.ts`).
 - Frontend: `frontend/` — Vite + React + TS + Tailwind, dark theme,
   hand-rolled SVG charts (5-language categorical palette validated for
   CVD safety on the dark surface). Built in the Dockerfile's node stage;

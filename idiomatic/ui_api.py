@@ -530,14 +530,16 @@ async def grammar_overview(_: None = Depends(authed_ui)) -> dict:
 
     langs = []
     for lang in GRAMMAR_LANGS:
-        lang_units = [u for u in units if u["lang"] == lang]
-        clusters: list[dict] = []
-        for u in lang_units:
-            if not clusters or clusters[-1]["cluster"] != u["cluster"]:
-                clusters.append({"cluster": u["cluster"], "units": []})
-            clusters[-1]["units"].append(u)
+        # Group by cluster NAME (units of one cluster are not necessarily
+        # adjacent in sort_order — es_perfecto joined "1 Tiempos" late);
+        # clusters sort by their numeric prefix ("1 …" < "2 …").
+        by_cluster: dict[str, list[dict]] = {}
+        for u in units:
+            if u["lang"] == lang:
+                by_cluster.setdefault(u["cluster"], []).append(u)
         langs.append({"lang": lang, "deck": decks.get(lang),
-                      "clusters": clusters})
+                      "clusters": [{"cluster": c, "units": by_cluster[c]}
+                                   for c in sorted(by_cluster)]})
     return {"langs": langs, "lang_names": LANG_NAMES,
             "run": grammar_service.get_state()}
 

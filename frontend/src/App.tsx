@@ -9,6 +9,8 @@ import VideoDetail from "./pages/VideoDetail";
 import Expressions from "./pages/Expressions";
 import ExpressionDetail from "./pages/ExpressionDetail";
 import Channels from "./pages/Channels";
+import Grammar from "./pages/Grammar";
+import GrammarUnit from "./pages/GrammarUnit";
 import Delivery from "./pages/Delivery";
 
 export default function App() {
@@ -61,6 +63,8 @@ export default function App() {
         <Route path="/expressions" element={<Expressions />} />
         <Route path="/expressions/:id" element={<ExpressionDetail />} />
         <Route path="/channels" element={<Channels />} />
+        <Route path="/grammar" element={<Grammar />} />
+        <Route path="/grammar/unit/:key" element={<GrammarUnit />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
