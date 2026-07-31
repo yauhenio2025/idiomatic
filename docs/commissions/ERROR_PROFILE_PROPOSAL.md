@@ -41,13 +41,14 @@ initiative should build next:
    apart, muy/mucho ×7 (es); adjective-ending × gender × case errors
    spanning 2019→2024 (de). These are not open-ended categories —
    they're drillable closed lists.
-4. **Some units are refuted by the evidence.** Zero recorded
-   subjunctive-form, por/para, or command errors in six years of es
-   lessons; near-zero conditional/future errors in fr and pt. Lower
-   those target_sizes and spend the reps where the errors are.
-   (Caveat everywhere: teachers record what the learner PRODUCES —
-   avoidance of hard forms hides errors. Selection drills still earn
-   their place; form drills less so.)
+4. **Some units are refuted by the evidence — but read absences
+   carefully.** Zero recorded por/para errors + user confirmation
+   ("I understand the difference") → genuinely lower. Zero recorded
+   es subjunctive errors → NOT lowered: the user's own caveat
+   (2026-07-31) is that absence there may mean avoidance, unmarked
+   errors, or native-like slips — so the subjunctive family keeps its
+   targets, and near-zero-evidence synthetic futures/conditionals
+   (which he replaces with periphrasis) get small-not-gutted targets.
 5. **Gender is a per-learner closed list.** fr: 297 gender rows
    concentrate on ~40 nouns (période, fois, méthode, vie, moyen…);
    pt: 225 rows on -ma/-agem + a short noun list. Drilling *his*
@@ -107,9 +108,16 @@ Full tables in the profiles; the priority picks:
   production), then a "5 Kasus" cluster (de_dativ_verben,
   de_n_deklination, de_genitiv); scope de_verb_core to passive/KII —
   present/perfect agreement is NOT his gap.
-- **it**: it_reggenze_verbali (verb+prep regimes — 5 of his 11 real
-  errors) alongside the promoted it_clitici_ci_ne. Nothing more;
-  strongest language.
+- **it**: SELF-REPORTED profile supersedes the thin 2019 data (user,
+  2026-07-31): weaknesses = prepositions, congiuntivo, passato remoto
+  ("so complex I never use it" — classic avoidance), articles +
+  gender, especially gendered PLURAL endings. Actions: raise
+  it_congiuntivo_presente + it_passato_remoto targets; build
+  it_reggenze_verbali (prep regimes; also 5 of the 11 recorded errors)
+  and a new it_genere_plurali unit (articles il/lo/la, -o/-a/-e/-i
+  plural endings, irregular plurals il problema/i problemi, la mano/
+  le mani, l'uovo/le uova); it_clitici_ci_ne stays promoted. Level:
+  upper-intermediate, not "no work needed".
 
 ### Phase 3 — interference contrast deck (F4)
 One cross-Romance deck built FROM the attested interference pairs
@@ -158,7 +166,29 @@ autoplays) or plain mp3s. Pairs each explainer with its F3 cards.
 6. **Compound-noun routing (de)**: the 22 compound corrections are a
    circumlocution habit, not grammar — route to the vocab/idiom side.
 
-## 4. Decision points for the user
+## 4. Decision points — RESOLVED (user delegated, 2026-07-31)
+
+User: "take the decisions you think are necessary… start formulating
+commissions… give codex a pretty substantial task." Decisions taken:
+1. Phase-0 retuning APPLIED via /admin/grammar-unit (raises to 18:
+   pt_preterito_perfeito, pt_futuro_subjuntivo, fr_present_irreguliers,
+   es_clitics_selo, de_gender, it_congiuntivo_presente,
+   it_passato_remoto; lowers to 8: fr_futur_simple,
+   fr_conditionnel_present, pt_futuro_simples, pt_condicional_presente,
+   es_por_para; mild lowers to 10: es_futuro, es_condicional,
+   es_perfecto; es subjunctive family kept at 12 per the avoidance
+   caveat). Top-ups run for the raised units.
+2. F3 placement: cluster inside each grammar deck ("9 Mes erreurs" /
+   "9 Meus erros" / …), no new deck kind.
+3. Order: registry (codex commission A, RUNNING) → F3 → new units
+   (banks prepared by codex commission B, RUNNING) → F4 → explainers.
+4. Live capture: deferred until after Wave 5 telemetry.
+5. Raw corpus + registry stay OUT of the public repo (repo must stay
+   public for Render; personal lesson data lives in
+   `~/projects/idiomatic-data/errmine/`, loaded into the DB via admin
+   endpoint when Phase 1 ships).
+
+## 4b. Original decision points (for reference)
 
 1. Approve Phase 0 retuning now? (I can apply the target_size changes
    via the dashboard/DB in minutes; reversible.)

@@ -215,3 +215,16 @@ plus cross-language borrowing. Cheapest fixes, in order:
    for it, specifically for verb-regime prepositions, imperfect-vs-
    perfect aspect choice, and subjunctive triggers — the three areas
    where this thin dataset and pan-Romance interference already agree.
+
+## Addendum (2026-07-31): user self-report supersedes the thin data
+
+The learner (upper-intermediate Italian, their strongest language)
+named their weaknesses directly, which outranks this 2019 snapshot:
+**prepositions** (matches §2's verb-regime finding), **congiuntivo**,
+**passato remoto** ("super complex with endings, so I never use it" —
+avoidance, so zero recorded errors ≠ mastery), and **articles +
+gender, especially gendered plural endings**. Curriculum consequence:
+raise it_congiuntivo_presente and it_passato_remoto targets; build
+it_reggenze_verbali and a new it_genere_plurali unit (articles,
+-o/-a/-e/-i plurals, irregulars: il problema/i problemi, la mano/le
+mani, l'uovo/le uova). No Italian error-capture machinery needed.
