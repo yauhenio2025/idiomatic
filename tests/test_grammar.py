@@ -419,7 +419,7 @@ def test_new_bank_verifier_edge_cases():
     assert verify_item(pt_gender, frame) == (True, "")
     assert not verify_item(
         pt_gender,
-        dict(frame, sentence="A resposta oficial foi divulgada ___."),
+        dict(frame, answer="pelos redes"),
     )[0]
 
     pt = topic_by_key("pt_regencia_verbal")
@@ -434,6 +434,431 @@ def test_new_bank_verifier_edge_cases():
                   "verb": "gehören", "case": "dat",
                   "answer": "dem ministerium"}
     assert not verify_item(de, lower_noun)[0]
+
+
+def test_pt_gender_live_reject_regressions():
+    """Novel contexts may exercise exact bank phrases; gender stays pinned."""
+    topic = topic_by_key("pt_gender_core")
+    cases = [
+        ({"sentence": ("O polêmico artigo sobre a história da imprensa "
+                       "continha ___ que irritaram os leitores."),
+          "noun_or_frame": "___ links quebrados", "target": "bank",
+          "answer": "uns links quebrados"}, "umas links quebrados"),
+        ({"sentence": ("A nova campanha de conscientização política foi "
+                       "amplamente divulgada ___ sociais."),
+          "noun_or_frame": "por + as redes", "target": "bank",
+          "answer": "pelas redes"}, "pelos redes"),
+        ({"sentence": ("O instituto de pesquisa anunciou que ___ responderam "
+                       "ao questionário ontem."),
+          "noun_or_frame": "___ pessoas entrevistadas", "target": "bank",
+          "answer": "duzentas pessoas entrevistadas"},
+         "duzentos pessoas entrevistadas"),
+        ({"sentence": ("Os dados detalhados sobre a cupidez dos empreiteiros "
+                       "estão disponíveis ___."),
+          "noun_or_frame": "em + o site", "target": "bank",
+          "answer": "no site"}, "na site"),
+        ({"sentence": ("O estúdio comprou ___ para monitorar a campanha de "
+                       "desinformação digital."),
+          "noun_or_frame": "___ telas adicionais", "target": "bank",
+          "answer": "duas telas adicionais"}, "dois telas adicionais"),
+        ({"sentence": ("O comitê de ética levou ___ de debates intensos "
+                       "antes de decidir arquivar a investigação sobre o senador."),
+          "noun_or_frame": "___ semanas completas", "target": "bank",
+          "answer": "duas semanas completas"}, "dois semanas completas"),
+        ({"sentence": ("O líder da oposição criticou duramente a nova "
+                       "política de isentar impostos ___ enviada aos seus apoiadores."),
+          "noun_or_frame": "em + uma mensagem", "target": "bank",
+          "answer": "numa mensagem"}, "num mensagem"),
+        ({"sentence": ("A falsa narrativa sobre o conflito foi rapidamente "
+                       "disseminada ___ de notícias patrocinados pelo Estado."),
+          "noun_or_frame": "por + os sites", "target": "bank",
+          "answer": "pelos sites"}, "pelas sites"),
+        ({"sentence": ("O empreiteiro foi obrigado a paralisar a construção "
+                       "civil com base na determinação expressa ___."),
+          "noun_or_frame": "em + a ordem judicial", "target": "bank",
+          "answer": "na ordem judicial"}, "no ordem judicial"),
+        ({"sentence": ("Não há necessidade de ser um gênio para ver que a "
+                       "rede social, com mais de ___, domina o mercado."),
+          "noun_or_frame": "___ milhões de usuários", "target": "bank",
+          "answer": "oitocentos milhões de usuários"},
+         "oitocentas milhões de usuários"),
+        ({"sentence": ("Conquanto o autor seja alemão, o ensaio original "
+                       "sobre geopolítica e vigilância digital foi publicado ___."),
+          "noun_or_frame": "em + este idioma", "target": "bank",
+          "answer": "neste idioma"}, "nesta idioma"),
+        ({"sentence": ("O Congresso finalmente aprovou ___ que estavam "
+                       "engavetadas há anos devido ao lobby das grandes empresas."),
+          "noun_or_frame": "___ leis complementares", "target": "bank",
+          "answer": "duas leis complementares"}, "dois leis complementares"),
+    ]
+    for good, wrong_answer in cases:
+        assert verify_item(topic, good) == (True, ""), good["sentence"]
+        ok, why = verify_item(topic, dict(good, answer=wrong_answer))
+        assert not ok and "wrong bank answer" in why, good["sentence"]
+
+    # The two dump items that omitted the stated noun remain rejected.
+    malformed_and_corrected = [
+        (
+            {"sentence": ("O novo prédio da agência espacial virou ___ da "
+                          "modernidade tecnológica nacional."),
+             "noun_or_frame": "emblema", "target": "indefinite", "answer": "um"},
+            {"sentence": ("O novo prédio da agência espacial virou ___ emblema "
+                          "da modernidade tecnológica nacional."),
+             "noun_or_frame": "emblema", "target": "indefinite", "answer": "um"},
+            "uma",
+        ),
+        (
+            {"sentence": ("___ do novo centro de inovação tecnológica abriga "
+                          "dezenas de carros elétricos autônomos de última geração."),
+             "noun_or_frame": "garagem", "target": "definite", "answer": "A"},
+            {"sentence": ("___ garagem do novo centro de inovação tecnológica "
+                          "abriga dezenas de carros elétricos autônomos de "
+                          "última geração."),
+             "noun_or_frame": "garagem", "target": "definite", "answer": "A"},
+            "O",
+        ),
+    ]
+    for malformed, corrected, wrong_answer in malformed_and_corrected:
+        assert verify_item(topic, malformed) == (
+            False, "blank is not directly before the stated noun")
+        assert verify_item(topic, corrected) == (True, "")
+        assert not verify_item(topic, dict(corrected, answer=wrong_answer))[0]
+
+
+def test_pt_gender_novel_frames_get_context_validation(monkeypatch):
+    import asyncio
+    from idiomatic.grammar import generate as gen
+
+    topic = topic_by_key("pt_gender_core")
+    generated = {
+        "sentence": ("O polêmico artigo sobre a história da imprensa continha "
+                     "___ que irritaram os leitores."),
+        "noun_or_frame": "___ links quebrados", "target": "bank",
+        "answer": "uns links quebrados",
+        "gloss_en": "The controversial article contained broken links.",
+        "why": "Links is masculine, so use uns.",
+    }
+    calls = []
+
+    async def accepting_solver(prompt, **_kwargs):
+        calls.append(prompt)
+        if "Produce 1 items" in prompt:
+            return [generated]
+        assert "Completed sentence:" in prompt
+        assert "continha uns links quebrados que" in prompt
+        return {"valid": True}
+
+    monkeypatch.setattr(gen.gemini, "generate_text", accepting_solver)
+    accepted, rejected = asyncio.run(gen.generate_batch(topic, 1))
+    assert not rejected and len(accepted) == 1
+    assert len(calls) == 1 + gen.BLIND_K
+
+    # Exact bank metadata/answer alone is not enough: a grammatical-context
+    # vote rejects an unrelated placement without restoring canonical wording.
+    bad_context = {
+        "sentence": "O relatório foi publicado ___.",
+        "noun_or_frame": "___ telas adicionais", "target": "bank",
+        "answer": "duas telas adicionais",
+    }
+    assert verify_item(topic, bad_context) == (True, "")
+
+    async def rejecting_solver(prompt, **_kwargs):
+        assert "foi publicado duas telas adicionais" in prompt
+        return {"valid": False}
+
+    monkeypatch.setattr(gen.gemini, "generate_text", rejecting_solver)
+    ok, why = asyncio.run(gen.verify_blind(topic, bad_context))
+    assert not ok and "context disagreement" in why
+
+
+def test_tuned_generation_prompts_state_checked_format_rules():
+    from idiomatic.grammar.generate import build_prompt
+
+    fr_prompt = build_prompt(topic_by_key("fr_quantites_de"), 1)
+    assert "`___énergie`, never `___ énergie`" in fr_prompt
+    assert "explicitly distinguish pas from plus" in fr_prompt
+
+    pt_prompt = build_prompt(topic_by_key("pt_gender_core"), 1)
+    assert "visible exact noun key immediately after it" in pt_prompt
+    assert "need not copy the canonical example" in pt_prompt
+
+    de_prompt = build_prompt(topic_by_key("de_dativ_verben"), 1)
+    assert "never only its article or determiner" in de_prompt
+    assert "parentheses immediately after the blank" in de_prompt
+
+
+def test_fr_quantites_live_apostrophe_boundary_regressions():
+    topic = topic_by_key("fr_quantites_de")
+    spaced_cases = [
+        (("Ce projet de loi sur la cybersécurité contient ___ ambiguïtés "
+          "pour pouvoir être voté en l'état."), "trop d'"),
+        (("Notre pays produit ___ électricité pour alimenter toute la région "
+          "et exporter le surplus."), "assez d'"),
+        (("Face à cette cyberattaque massive, l'État n'a ___ autre choix "
+          "que de renforcer son pare-feu national."), "pas d'"),
+        (("Selon sa synthèse, l'historien écrit : « Cette crise politique a "
+          "provoqué ___ étranges réactions au sein du gouvernement. »"), "d'"),
+        (("Grâce à sa puce de dernière génération, ce nouveau serveur "
+          "consomme ___ énergie que le modèle précédent."), "moins d'"),
+        (("Pour faire contrepoids aux géants du Web, cette transition "
+          "numérique demandera ___ argent public."), "beaucoup d'"),
+        (("Bien qu'en crise géopolitique, l'intelligence artificielle attire "
+          "aujourd'hui ___ investissements que le secteur traditionnel."),
+         "plus d'"),
+    ]
+    for sentence, answer in spaced_cases:
+        assert verify_item(topic, {"sentence": sentence, "answer": answer}) == (
+            False, "apostrophe answer must join the following word")
+
+    # Only these three were otherwise ship-ready; corrected serialization is
+    # accepted statically and still proceeds to the semantic blind pass.
+    for sentence, answer in (spaced_cases[0], spaced_cases[1], spaced_cases[4]):
+        joined = sentence.replace("___ ", "___", 1)
+        assert verify_item(topic, {"sentence": joined, "answer": answer}) == (
+            True, "")
+
+
+def test_fr_quantites_live_blind_disagreements_remain_strict(monkeypatch):
+    import asyncio
+    from idiomatic.grammar import generate as gen
+
+    topic = topic_by_key("fr_quantites_de")
+
+    def verify_with_votes(item, votes):
+        answers = iter(votes)
+
+        async def fake_solver(_prompt, **_kwargs):
+            return {"answer": next(answers)}
+
+        monkeypatch.setattr(gen.gemini, "generate_text", fake_solver)
+        return asyncio.run(gen.verify_blind(topic, item))
+
+    clear_items = [
+        {"sentence": ("Ce projet de loi sur la cybersécurité contient "
+                      "___ambiguïtés pour pouvoir être voté en l'état."),
+         "answer": "trop d'"},
+        {"sentence": ("Notre pays produit ___électricité pour alimenter toute "
+                      "la région et exporter le surplus."),
+         "answer": "assez d'"},
+        {"sentence": ("Grâce à sa puce de dernière génération, ce nouveau "
+                      "serveur consomme ___énergie que le modèle précédent."),
+         "answer": "moins d'"},
+    ]
+    for clear in clear_items:
+        assert verify_with_votes(clear, [clear["answer"]] * 3) == (True, "")
+
+    clear = clear_items[0]
+    wrong = dict(clear, answer="trop de")
+    ok, why = verify_with_votes(wrong, ["trop d'"] * 3)
+    assert not ok and "blind disagreement" in why
+
+    disposer = {"sentence": ("Notre cellule cyber dispose ___ingénieurs "
+                              "qualifiés pour parer ces attaques de grande envergure."),
+                "answer": "assez d'"}
+    assert not verify_with_votes(disposer, ["d'"] * 3)[0]
+
+    other_choice = {"sentence": ("Face à cette cyberattaque massive, l'État "
+                                 "n'a ___autre choix que de renforcer son "
+                                 "pare-feu national."),
+                    "answer": "pas d'"}
+    assert not verify_with_votes(other_choice, ["plus d'"] * 3)[0]
+
+
+def test_de_dativ_live_reject_regressions():
+    topic = topic_by_key("de_dativ_verben")
+    cases = [
+        ({"sentence": ("Selbstredend stimmte eine knappe Mehrheit im Parlament "
+                       "schließlich ___ (der Kompromiss) zu."),
+          "verb": "zustimmen", "case": "dat", "answer": "dem Kompromiss"},
+         "den Kompromiss"),
+        ({"sentence": ("Die Regulierungsbehörde drohte ___ (das Unternehmen) "
+                       "wegen Verstößen gegen den Datenschutz mit einer hohen "
+                       "Geldbuße."),
+          "verb": "drohen", "case": "dat", "answer": "dem Unternehmen"},
+         "den Unternehmen"),
+        ({"sentence": ("Die öffentlich-rechtliche Institution muss ___ "
+                       "(der politische Druck) in Krisenzeiten unbedingt "
+                       "widerstehen."),
+          "verb": "widerstehen", "case": "dat",
+          "answer": "dem politischen Druck"}, "den politischen Druck"),
+        ({"sentence": ("Die historische Einigung gelang ___ "
+                       "(die beiden Delegationen) erst nach tagelangen, zähen "
+                       "Verhandlungen."),
+          "verb": "gelingen", "case": "dat",
+          "answer": "den beiden Delegationen"}, "dem beiden Delegationen"),
+        ({"sentence": ("___ (der Bericht) über die Digitalisierung des "
+                       "Einzellebens fehlen leider belastbare Quellen."),
+          "verb": "fehlen", "case": "dat", "answer": "dem Bericht"},
+         "den Bericht"),
+    ]
+    for good, wrong_answer in cases:
+        assert verify_item(topic, good) == (True, ""), good["sentence"]
+        assert not verify_item(topic, dict(good, answer=wrong_answer))[0]
+
+    partial = dict(cases[0][0], answer="dem")
+    assert not verify_item(topic, partial)[0]
+    missing_hint = dict(cases[0][0], sentence=(
+        "Selbstredend stimmte eine knappe Mehrheit schließlich ___ zu."))
+    assert "missing parenthesized" in verify_item(topic, missing_hint)[1]
+    malformed_hint = dict(cases[0][0], sentence=(
+        "Selbstredend stimmte eine knappe Mehrheit schließlich "
+        "___(der Kompromiss) zu."))
+    assert "missing parenthesized" in verify_item(topic, malformed_hint)[1]
+    mismatched_hint = dict(cases[0][0], sentence=(
+        "Selbstredend stimmte eine knappe Mehrheit schließlich "
+        "___ (das Unternehmen) zu."))
+    assert "does not match bank row" in verify_item(topic, mismatched_hint)[1]
+
+
+def test_de_dativ_all_bank_rows_satisfy_tuned_static_contract():
+    from idiomatic.grammar.generate import _bank_entries
+
+    topic = topic_by_key("de_dativ_verben")
+    for row in _bank_entries(topic):
+        item = {
+            "sentence": row["example_frame"],
+            "verb": row["verb"],
+            "case": row["case"],
+            "answer": row["example_answer"],
+        }
+        assert verify_item(topic, item) == (True, ""), row["verb"]
+
+
+def test_de_dativ_blind_refills_errors_without_majority_voting(monkeypatch):
+    import asyncio
+    from idiomatic.grammar import generate as gen
+
+    topic = topic_by_key("de_dativ_verben")
+    item = {"sentence": ("Die historische Einigung gelang ___ "
+                         "(die beiden Delegationen) erst nach tagelangen, "
+                         "zähen Verhandlungen."),
+            "answer": "den beiden Delegationen"}
+
+    def verify_with_results(results):
+        pending = iter(results)
+        prompts = []
+
+        async def fake_solver(prompt, **_kwargs):
+            prompts.append(prompt)
+            value = next(pending)
+            # Let all three initial lanes acquire their response before the
+            # failed lane retries, matching real concurrent calls.
+            await asyncio.sleep(0)
+            if isinstance(value, Exception):
+                raise value
+            return {"answer": value}
+
+        monkeypatch.setattr(gen.gemini, "generate_text", fake_solver)
+        verdict = asyncio.run(gen.verify_blind(topic, item))
+        return verdict, prompts
+
+    exact = "den beiden Delegationen"
+    verdict, prompts = verify_with_results([
+        RuntimeError("transient"), exact, exact, exact,
+    ])
+    assert verdict == (True, "")
+    assert len(prompts) == gen.BLIND_K + 1
+    assert all("return the COMPLETE phrase" in prompt for prompt in prompts)
+    assert all("Never return only the article" in prompt for prompt in prompts)
+    assert all("Infer the grammatical" in prompt for prompt in prompts)
+    assert all("into the dative" not in prompt for prompt in prompts)
+
+    verdict, _ = verify_with_results([
+        RuntimeError("transient"), exact, "dem beiden Delegationen", exact,
+    ])
+    assert not verdict[0] and "blind disagreement" in verdict[1]
+
+    # A partial determiner is a valid response, not a transport error: it is
+    # not retried or accepted as if it proved the whole noun phrase.
+    partial_item = {"sentence": ("Selbstredend stimmte eine knappe Mehrheit "
+                                 "schließlich ___ (der Kompromiss) zu."),
+                    "answer": "dem Kompromiss"}
+
+    async def partial_solver(_prompt, **_kwargs):
+        return {"answer": "dem"}
+
+    monkeypatch.setattr(gen.gemini, "generate_text", partial_solver)
+    assert not asyncio.run(gen.verify_blind(topic, partial_item))[0]
+
+    # With the clarified solver prompt, every formerly-good dump sentence
+    # passes the complete Tier-B path when all three complete votes agree.
+    live_items = [
+        {"sentence": ("Selbstredend stimmte eine knappe Mehrheit im Parlament "
+                      "schließlich ___ (der Kompromiss) zu."),
+         "answer": "dem Kompromiss"},
+        {"sentence": ("Die Regulierungsbehörde drohte ___ (das Unternehmen) "
+                      "wegen Verstößen gegen den Datenschutz mit einer hohen "
+                      "Geldbuße."),
+         "answer": "dem Unternehmen"},
+        {"sentence": ("Die öffentlich-rechtliche Institution muss ___ "
+                      "(der politische Druck) in Krisenzeiten unbedingt "
+                      "widerstehen."),
+         "answer": "dem politischen Druck"},
+        item,
+        {"sentence": ("___ (der Bericht) über die Digitalisierung des "
+                      "Einzellebens fehlen leider belastbare Quellen."),
+         "answer": "dem Bericht"},
+    ]
+    for live_item in live_items:
+        expected = live_item["answer"]
+
+        async def complete_solver(prompt, **_kwargs):
+            assert "return the COMPLETE phrase" in prompt
+            return {"answer": expected}
+
+        monkeypatch.setattr(gen.gemini, "generate_text", complete_solver)
+        assert asyncio.run(gen.verify_blind(topic, live_item)) == (True, "")
+
+    # Static metadata cannot bind every conjugated/separable verb surface.
+    # Tier B therefore gets no target-case hint and rejects a dative answer in
+    # a sentence whose actual verb requires accusative.
+    wrong_context = {
+        "sentence": "Die Redaktion veröffentlichte ___ (der Bericht) gestern.",
+        "verb": "fehlen", "case": "dat", "answer": "dem Bericht",
+    }
+    assert verify_item(topic, wrong_context) == (True, "")
+    wrong_context_prompts = []
+
+    async def independent_solver(prompt, **_kwargs):
+        wrong_context_prompts.append(prompt)
+        return {"answer": "den Bericht"}
+
+    monkeypatch.setattr(gen.gemini, "generate_text", independent_solver)
+    verdict = asyncio.run(gen.verify_blind(topic, wrong_context))
+    assert not verdict[0] and "blind disagreement" in verdict[1]
+    assert all("into the dative" not in prompt
+               for prompt in wrong_context_prompts)
+
+
+def test_de_dativ_generation_stores_and_removes_citation_hint(monkeypatch):
+    import asyncio
+    from idiomatic.grammar import generate as gen
+    from idiomatic.grammar.audio import full_sentence_text
+
+    generated = {
+        "sentence": ("___ (der Bericht) über die Digitalisierung des "
+                     "Einzellebens fehlen leider belastbare Quellen."),
+        "verb": "fehlen", "case": "dat", "answer": "dem Bericht",
+        "gloss_en": "The report lacks reliable sources.",
+        "why": "Fehlen takes a dative experiencer.",
+    }
+
+    async def fake_generate(prompt, **_kwargs):
+        if "Produce 1 items" in prompt:
+            return [generated]
+        return {"answer": "dem Bericht"}
+
+    monkeypatch.setattr(gen.gemini, "generate_text", fake_generate)
+    accepted, rejected = asyncio.run(
+        gen.generate_batch(topic_by_key("de_dativ_verben"), 1))
+    assert not rejected and len(accepted) == 1
+    assert accepted[0]["infinitive"] == "der Bericht"
+    assert accepted[0]["answer"] == "Dem Bericht"
+    assert full_sentence_text(
+        accepted[0]["sentence"], accepted[0]["answer"],
+        accepted[0]["infinitive"],
+    ) == ("Dem Bericht über die Digitalisierung des Einzellebens fehlen "
+          "leider belastbare Quellen.")
 
 
 def test_blind_verifier_preserves_noninitial_case(monkeypatch):

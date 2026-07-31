@@ -226,10 +226,12 @@ TOPICS_DE: list[Topic] = [
     Topic("de_dativ_verben", "de", "Verben mit Dativobjekt", "", "", "➡",
           verify="bank_blind", bank="de_dativ_verben.json",
           guidance="Choose one banked verb and blank its complete dative "
-                   "noun phrase. Give the nominative citation phrase in "
-                   "parentheses, keep true dative objects distinct from "
-                   "prepositional phrases, and state verb and case in the "
-                   "JSON. Ditransitives must make the recipient explicit."),
+                   "noun phrase, never only its article or determiner. Reuse "
+                   "that bank row's nominative citation phrase exactly and "
+                   "put it in parentheses immediately after the blank. Keep "
+                   "true dative objects distinct from prepositional phrases, "
+                   "and state verb and case in the JSON. Ditransitives must "
+                   "make the recipient explicit."),
 ]
 
 
@@ -343,12 +345,19 @@ _BANK_TOPICS: dict[str, list[Topic]] = {
                   "bien des", "de", "d'",
               ],
               bank="fr_quantites_de.json",
-              guidance="Use one banked quantity construction and preserve "
-                       "its reading: indefinite quantities and negated "
-                       "objects take de/d'; d'autres marks additional "
-                       "items; la plupart and bien des keep their banked "
-                       "forms. Formal adjective+noun rows must retain an "
-                       "explicit careful-written-language cue."),
+              guidance="Use one banked quantity construction and make its "
+                       "reading follow from an overt cue, not mere "
+                       "plausibility. Indefinite quantities and negated "
+                       "objects take de/d', but a bare disposer de or ne... "
+                       "frame is insufficient: explicitly distinguish pas "
+                       "from plus. Comparatives need a directional cue; "
+                       "d'autres marks additional items; la plupart and bien "
+                       "des keep their banked forms. Formal adjective+noun "
+                       "rows must literally retain a cue such as soigné, "
+                       "formel, soutenu, or officiel. HARD FORMAT: when the "
+                       "answer ends in an apostrophe, attach the blank "
+                       "directly to the next word (`___énergie`, not `___ "
+                       "énergie`)."),
         Topic("fr_prep_lieux", "fr", "Prépositions de lieu", "", "", "📍",
               cluster="5 Prépositions", verify="bank_blind",
               answer_set=["à", "en", "au", "aux", "dans le", "dans la",
@@ -413,12 +422,14 @@ _BANK_TOPICS: dict[str, list[Topic]] = {
         Topic("pt_gender_core", "pt", "Gênero, artigos e concordância", "", "", "🚻",
               cluster="5 Gênero & Artigos", verify="pt_gender",
               bank="pt_gender_core.json",
-              guidance="Use Brazilian Portuguese. For noun rows, blank a "
-                       "controlled definite or indefinite article and return "
-                       "the exact noun key. For numeral, agreement, and "
-                       "contraction frames, use the canonical bank example "
-                       "with its full answer blanked. Prioritize -ma/-agem "
-                       "traps, core "
+              guidance="Use Brazilian Portuguese. For noun rows, blank only "
+                       "a controlled definite or indefinite article and put "
+                       "the visible exact noun key immediately after it, as "
+                       "in `___ problema`; never omit the noun. For numeral, "
+                       "agreement, and contraction frames, set target to bank "
+                       "and make the blank replace the entire exact bank "
+                       "answer. Write a natural new context; it need not copy "
+                       "the canonical example. Prioritize -ma/-agem traps, core "
                        "news nouns, dois/duas, agreeing hundreds, and "
                        "article contractions."),
         Topic("pt_regencia_verbal", "pt", "Regência verbal", "", "", "🧲",
