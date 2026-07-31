@@ -81,11 +81,20 @@ async def run_generation(lang: str, n_per_topic: int = 12,
     try:
         for topic in topics:
             try:
-                accepted, rejected = await generate.generate_batch(topic, n_per_topic)
+                # Fresh LingQ vocab sample per topic — optional sentence
+                # material so grammar reps double as vocab reminders.
+                # Empty table / any failure → plain generation.
+                try:
+                    vocab = await db.sample_lingq_terms(lang, 15)
+                except Exception:  # noqa: BLE001
+                    vocab = []
+                accepted, rejected = await generate.generate_batch(
+                    topic, n_per_topic, extra_vocab=vocab)
                 # A retry pass for the shortfall: one extra call max, only
                 # if the verifier ate more than half the batch.
                 if len(accepted) < n_per_topic // 2:
-                    more_a, more_r = await generate.generate_batch(topic, n_per_topic)
+                    more_a, more_r = await generate.generate_batch(
+                        topic, n_per_topic, extra_vocab=vocab)
                     accepted += more_a
                     rejected += more_r
                 ins_a = await db.insert_grammar_items(accepted, status="verified",

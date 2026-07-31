@@ -183,24 +183,43 @@ def _bank_lines(topic: Topic, n: int) -> str:
     return ("\n\nPairs to draw from (one per sentence):\n" + "\n".join(lines))
 
 
-def build_prompt(topic: Topic, n: int) -> str:
+def _vocab_lines(extra_vocab: list[dict] | None) -> str:
+    """LingQ terms the learner is studying, offered to the generator as
+    OPTIONAL sentence material — vocabulary reinforcement riding along
+    with grammar drills ("we study vocabulary even as we study grammar"
+    — user, 2026-07-31). Never a constraint: the grammar target rules
+    stay absolute, and terms that don't fit are skipped."""
+    if not extra_vocab:
+        return ""
+    lines = "\n".join(
+        f"- {t['term']}" + (f" — {t['gloss']}" if t.get("gloss") else "")
+        for t in extra_vocab)
+    return ("\n\nOPTIONAL vocabulary to weave in: the learner is studying "
+            "these words/phrases on LingQ. Where one fits NATURALLY into a "
+            "sentence (as ordinary content, never as the blank), prefer it "
+            "over generic vocabulary — aim to use several across the batch, "
+            "and skip any that don't fit:\n" + lines)
+
+
+def build_prompt(topic: Topic, n: int,
+                 extra_vocab: list[dict] | None = None) -> str:
     if topic.verify in ("de_art", "de_art_blind"):
         return _PROMPT_DE_ART.format(
             label=topic.label, n=n, guidance=topic.guidance,
-        ) + _bank_lines(topic, n)
+        ) + _bank_lines(topic, n) + _vocab_lines(extra_vocab)
     if topic.verify == "blind":
         return _PROMPT_CLOSED.format(
             label=topic.label, n=n,
             inventory=", ".join(topic.answer_set or []) or "(open)",
             guidance=topic.guidance,
-        ) + _bank_lines(topic, n)
+        ) + _bank_lines(topic, n) + _vocab_lines(extra_vocab)
     prof = LANG_PROFILE.get(topic.lang, LANG_PROFILE["es"])
     return _PROMPT.format(
         label=topic.label, mood=topic.mood, tense=topic.tense, n=n,
         verbs=", ".join(topic.verbs), person_mix=prof["person_mix"],
         language=prof["language"], variety=prof["variety"],
         guidance=topic.guidance,
-    )
+    ) + _vocab_lines(extra_vocab)
 
 
 def _answer_leaks(sentence: str, answer: str) -> bool:
@@ -360,10 +379,14 @@ async def verify_blind(topic: Topic, item: dict,
     return False, f"blind disagreement: votes {votes} vs {target!r}"
 
 
-async def generate_batch(topic: Topic, n: int) -> tuple[list[dict], list[dict]]:
+async def generate_batch(topic: Topic, n: int,
+                          extra_vocab: list[dict] | None = None,
+                          ) -> tuple[list[dict], list[dict]]:
     """Returns (accepted, rejected); each item dict is augmented with
-    mood/tense/topic keys ready for DB insert."""
-    raw = await gemini.generate_text(build_prompt(topic, n), json_mode=True,
+    mood/tense/topic keys ready for DB insert. extra_vocab: LingQ terms
+    offered to the prompt as optional sentence material."""
+    raw = await gemini.generate_text(build_prompt(topic, n, extra_vocab),
+                                     json_mode=True,
                                      temperature=0.7)
     if isinstance(raw, dict):        # model wrapped the array in an object
         raw = next((v for v in raw.values() if isinstance(v, list)), [])

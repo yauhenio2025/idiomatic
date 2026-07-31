@@ -304,3 +304,30 @@ def test_compound_agreement_tolerance():
               "sentence": "Ieri le giornaliste ___ (andare) alla conferenza.",
               "answer": "sono andate"}
     assert verify_item(ti, fem_it) == (True, "")
+
+
+def test_vocab_lines_injection():
+    from idiomatic.grammar.generate import build_prompt
+    t = topic_by_key("es_preterito")
+    vocab = [{"term": "desprovista de", "gloss": "devoid of", "status": 0},
+             {"term": "concretado", "gloss": None, "status": 1}]
+    p = build_prompt(t, 5, extra_vocab=vocab)
+    assert "OPTIONAL vocabulary" in p
+    assert "desprovista de — devoid of" in p
+    assert "- concretado" in p
+    assert "never as the blank" in p
+    # without vocab the prompt is unchanged
+    assert "OPTIONAL vocabulary" not in build_prompt(t, 5)
+
+
+def test_lingq_row_parsing():
+    from idiomatic.lingq import _row_from_card
+    card = {"pk": 123, "term": " desprovista de ", "fragment": "x",
+            "status": 0, "extended_status": None, "notes": "",
+            "hints": [{"locale": "en", "text": "devoid of"}],
+            "tags": ["news"], "srs_due_date": "2026-08-01T00:00:00Z"}
+    r = _row_from_card("es", card)
+    assert r["term"] == "desprovista de" and r["lingq_id"] == 123
+    assert r["hints"] == [{"locale": "en", "text": "devoid of"}]
+    assert _row_from_card("es", {"pk": None, "term": "x"}) is None
+    assert _row_from_card("es", {"pk": 1, "term": "  "}) is None

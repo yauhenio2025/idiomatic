@@ -94,3 +94,14 @@
   - `frontend/src/api.ts` - `adminCall()` (admin-token actions from the SPA)
 - **Dependencies**: Admin API + dashboard
 - **Added**: 2026-07-31
+
+### LingQ vocabulary mirror
+- **Status**: Active
+- **Description**: The user's saved LingQ vocabulary (10 languages incl. not-yet-active sv/da/nl/no/zh) mirrored into `lingq_terms`; grammar generation weaves a per-topic sample of still-learning terms into drill sentences (optional material, never the blank); daily cron auto-sync; `/admin/lingq-sample` feeds local agents (codex).
+- **Entry Points**:
+  - `idiomatic/lingq.py` - API v2 client + paginated sync
+  - `idiomatic/api.py` - `/admin/lingq-token|sync|status|sample`
+  - `idiomatic/cron.py` - staleness-triggered auto-sync
+  - `db/schema.sql` - `lingq_terms`, `kv_store`
+- **Dependencies**: LingQ API v2 (token in kv_store)
+- **Added**: 2026-07-31

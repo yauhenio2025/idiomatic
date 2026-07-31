@@ -225,6 +225,38 @@ CREATE TABLE IF NOT EXISTS grammar_units (
 );
 CREATE INDEX IF NOT EXISTS grammar_units_lang_idx ON grammar_units(lang, sort_order);
 
+-- ============================================================================
+-- LingQ vocabulary mirror (user's saved words/phrases from lingq.com, all
+-- learning languages incl. not-yet-active ones). Source for vocab-aware
+-- exercise generation; synced via idiomatic/lingq.py (cron-triggered +
+-- /admin/lingq-sync). The API token lives in kv_store ('token:lingq'),
+-- NEVER in this public repo.
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS lingq_terms (
+  id              BIGSERIAL PRIMARY KEY,
+  lingq_id        BIGINT UNIQUE NOT NULL,     -- LingQ card pk
+  lang            TEXT NOT NULL,
+  term            TEXT NOT NULL,
+  fragment        TEXT,                       -- sentence fragment it was saved from
+  hints           JSONB,                      -- [{locale, text}]
+  status          SMALLINT,                   -- LingQ 0..3 (new -> known)
+  extended_status SMALLINT,
+  notes           TEXT,
+  tags            TEXT[],
+  srs_due_date    TIMESTAMPTZ,
+  imported_at     TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at      TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS lingq_terms_lang_status ON lingq_terms(lang, status);
+
+-- Tiny generic KV: external service tokens + sync state stamps.
+CREATE TABLE IF NOT EXISTS kv_store (
+  key        TEXT PRIMARY KEY,
+  value      TEXT NOT NULL,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE IF NOT EXISTS agents (
   id             SERIAL PRIMARY KEY,
   token          TEXT UNIQUE NOT NULL,           -- bearer auth header

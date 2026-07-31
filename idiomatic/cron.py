@@ -71,6 +71,25 @@ async def run() -> None:
     except Exception as e:
         log.warning("cron.expiry_failed", err=repr(e)[:200])
 
+    # LingQ vocabulary auto-sync: the user adds new LingQs rarely, so a
+    # daily-ish pull is plenty. Piggybacks on this 2h cron; a missing
+    # token or a failure never blocks the RSS walk.
+    try:
+        from datetime import datetime, timedelta, timezone
+
+        from . import lingq
+        last = await db.get_kv("lingq_last_sync")
+        stale = (settings.lingq_sync_interval_hours > 0
+                 and (last is None
+                      or datetime.fromisoformat(last)
+                      < datetime.now(timezone.utc)
+                      - timedelta(hours=settings.lingq_sync_interval_hours)))
+        if stale and await db.get_external_token("lingq"):
+            log.info("cron.lingq_sync_start", last=last)
+            await lingq.run_sync()
+    except Exception as e:
+        log.warning("cron.lingq_sync_failed", err=repr(e)[:200])
+
     # Phase 1 — RSS walk. YouTube's feed endpoint load-sheds when hit
     # back-to-back; 1.5s between channels keeps the hit-rate near 100%.
     candidates: list[tuple] = []          # (FeedEntry, channel row)

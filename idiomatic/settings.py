@@ -76,6 +76,10 @@ class Settings(BaseSettings):
     # exempt — those are deliberately mined back-catalog. 0 disables.
     queue_expiry_days: int = 7
 
+    # LingQ vocabulary mirror: cron re-syncs when the last pull is older
+    # than this (user adds new LingQs rarely). 0 disables auto-sync.
+    lingq_sync_interval_hours: int = 24
+
     # Video apkg FILES older than this get deleted by the cron once every
     # agent that should receive them has acked ok (DB row stays; download
     # of a reaped file returns 410). Pool apkgs are exempt — they're

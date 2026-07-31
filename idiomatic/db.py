@@ -750,3 +750,90 @@ async def fetch_grammar_rejects(lang: str, topic: str | None = None,
         lang, topic, limit,
     )
     return [dict(r) for r in rows]
+
+
+# ---------------------------------------------------------------------------
+# LingQ vocabulary mirror + kv store (idiomatic/lingq.py)
+# ---------------------------------------------------------------------------
+
+async def set_kv(key: str, value: str) -> None:
+    pool = await get_pool()
+    await pool.execute(
+        """INSERT INTO kv_store (key, value) VALUES ($1, $2)
+           ON CONFLICT (key) DO UPDATE SET value = $2, updated_at = NOW()""",
+        key, value)
+
+
+async def get_kv(key: str) -> str | None:
+    pool = await get_pool()
+    return await pool.fetchval("SELECT value FROM kv_store WHERE key = $1", key)
+
+
+async def set_external_token(name: str, token: str) -> None:
+    await set_kv(f"token:{name}", token)
+
+
+async def get_external_token(name: str) -> str | None:
+    return await get_kv(f"token:{name}")
+
+
+async def upsert_lingq_terms(rows: list[dict[str, Any]]) -> int:
+    if not rows:
+        return 0
+    pool = await get_pool()
+    n = 0
+    async with pool.acquire() as conn:
+        for r in rows:
+            await conn.execute(
+                """
+                INSERT INTO lingq_terms
+                    (lingq_id, lang, term, fragment, hints, status,
+                     extended_status, notes, tags, srs_due_date)
+                VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,
+                        NULLIF($10, '')::timestamptz)
+                ON CONFLICT (lingq_id) DO UPDATE SET
+                    term = EXCLUDED.term,
+                    fragment = EXCLUDED.fragment,
+                    hints = EXCLUDED.hints,
+                    status = EXCLUDED.status,
+                    extended_status = EXCLUDED.extended_status,
+                    notes = EXCLUDED.notes,
+                    tags = EXCLUDED.tags,
+                    srs_due_date = EXCLUDED.srs_due_date,
+                    updated_at = NOW()
+                """,
+                r["lingq_id"], r["lang"], r["term"], r.get("fragment"),
+                json.dumps(r.get("hints") or []), r.get("status"),
+                r.get("extended_status"), r.get("notes"),
+                r.get("tags") or [], r.get("srs_due_date") or "",
+            )
+            n += 1
+    return n
+
+
+async def lingq_stats() -> list[dict[str, Any]]:
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """SELECT lang, count(*) AS terms,
+                  count(*) FILTER (WHERE status < 3) AS learning,
+                  MAX(updated_at) AS last_updated
+           FROM lingq_terms GROUP BY lang ORDER BY terms DESC""")
+    return [dict(r) for r in rows]
+
+
+async def sample_lingq_terms(lang: str, n: int = 20,
+                              max_status: int = 2) -> list[dict[str, Any]]:
+    """Random sample of still-being-learned terms for prompt injection.
+    max_status 2 = exclude 'known' (status 3); pass 3 to include all."""
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """SELECT term, hints, status FROM lingq_terms
+           WHERE lang = $1 AND COALESCE(status, 0) <= $2
+           ORDER BY random() LIMIT $3""",
+        lang, max_status, n)
+    out = []
+    for r in rows:
+        hints = json.loads(r["hints"]) if isinstance(r["hints"], str) else (r["hints"] or [])
+        gloss = next((h.get("text") for h in hints if h.get("text")), None)
+        out.append({"term": r["term"], "gloss": gloss, "status": r["status"]})
+    return out

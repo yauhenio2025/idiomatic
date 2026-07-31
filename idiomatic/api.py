@@ -489,6 +489,56 @@ async def admin_grammar_retire_item(
     return {"ok": True, **row}
 
 
+# --- admin: LingQ vocabulary mirror ----------------------------------------
+
+@app.post("/admin/lingq-token")
+async def admin_lingq_token(body: dict, _: None = Depends(authed_admin)) -> dict:
+    """Store the LingQ API token (kv_store, never the repo/env — the repo
+    is public). Body: {"token": "..."}."""
+    token = (body.get("token") or "").strip()
+    if not token or len(token) < 20:
+        raise HTTPException(400, "body must be {'token': '<lingq api token>'}")
+    await db.set_external_token("lingq", token)
+    return {"ok": True}
+
+
+@app.post("/admin/lingq-sync")
+async def admin_lingq_sync(
+    langs: str | None = None, _: None = Depends(authed_admin),
+) -> dict:
+    """Pull the user's LingQ vocabulary into lingq_terms. Background;
+    poll /admin/lingq-status. langs: optional comma-separated subset
+    (default: every language on the LingQ account)."""
+    from . import lingq
+    if lingq.get_state().get("running"):
+        return {"started": False, "reason": "already running",
+                **lingq.get_state()}
+    lang_list = [s.strip() for s in langs.split(",")] if langs else None
+    _spawn_bg(lingq.run_sync(lang_list))
+    return {"started": True, "langs": lang_list or "all"}
+
+
+@app.get("/admin/lingq-status")
+async def admin_lingq_status(_: None = Depends(authed_admin)) -> dict:
+    from . import lingq
+    return {**lingq.get_state(),
+            "last_sync": await db.get_kv("lingq_last_sync"),
+            "stats": await db.lingq_stats()}
+
+
+@app.get("/admin/lingq-sample")
+async def admin_lingq_sample(
+    lang: str, n: int = 20, max_status: int = 2,
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Random sample of studied terms — for local agents (codex) that
+    build exercises and want to weave in the learner's vocabulary."""
+    if n < 1 or n > 200:
+        raise HTTPException(400, "n must be 1..200")
+    return {"lang": lang,
+            "terms": await db.sample_lingq_terms(lang, n, max_status)}
+
+
 @app.get("/admin/video-info")
 async def admin_video_info(
     youtube_id: str, agent: dict = Depends(authed_agent),
