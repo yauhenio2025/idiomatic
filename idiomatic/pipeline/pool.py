@@ -462,10 +462,18 @@ def _build_idioms_pool(lang: str, idioms: list[dict],
             continue
         seen.add(guid)
 
-        stitched = _stitch_pool_card_audio(
-            lang=lang, idiom=idiom, narration_root=narration_root,
-            stage_dir=stage_dir, youtube_id=youtube_id,
-        )
+        # One corrupt staged mp3 must cost THIS card its audio, never the
+        # whole 4-deck rebuild: the 2026-07-31 de rebuilds died wholesale
+        # on ffmpeg loudnorm failing over one bad piece (idiom 1825).
+        try:
+            stitched = _stitch_pool_card_audio(
+                lang=lang, idiom=idiom, narration_root=narration_root,
+                stage_dir=stage_dir, youtube_id=youtube_id,
+            )
+        except Exception as e:  # noqa: BLE001 — ffmpeg/IO failures only skip
+            log.warning("pool.idioms.stitch_failed", idiom_id=idiom["id"],
+                         yt=youtube_id, err=repr(e)[:200])
+            stitched = None
         if not stitched:
             log.info("pool.idioms.skip_no_audio", idiom_id=idiom["id"])
             continue
