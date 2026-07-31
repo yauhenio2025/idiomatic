@@ -23,7 +23,7 @@ MODEL_NAME = "Idiomatic Grammar Drill v1"
 
 FIELDS = [
     "ItemId", "Lang", "Topic", "TenseLabel", "Symbol",
-    "Sentence",        # with ___ (infinitive)
+    "Sentence",        # cloze with ___ (infinitive), or an F3 wrong phrase
     "Answer",
     "SentenceFull",    # blank replaced by <b>form</b>
     "GlossEn", "Why",
@@ -152,6 +152,12 @@ def build_grammar_apkg(*, out_path: Path, lang: str,
         if fname and audio_dir is not None and (audio_dir / fname).exists():
             sound = f"[sound:{fname}]"
             media.append(str(audio_dir / fname))
+        sentence_full = (
+            html.escape(it["answer"])
+            if it.get("fmt") == "f3"
+            else _full_html(it["sentence"], it["answer"],
+                            it.get("infinitive") or "")
+        )
         deck.add_note(genanki.Note(
             model=model,
             fields=[
@@ -162,8 +168,7 @@ def build_grammar_apkg(*, out_path: Path, lang: str,
                 symbol,
                 _blank_html(it["sentence"], it.get("infinitive") or ""),
                 html.escape(it["answer"]),
-                _full_html(it["sentence"], it["answer"],
-                           it.get("infinitive") or ""),
+                sentence_full,
                 html.escape(it.get("gloss_en") or ""),
                 html.escape(it.get("why_en") or ""),
                 sound, "", "", "",

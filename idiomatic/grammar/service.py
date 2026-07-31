@@ -69,7 +69,10 @@ async def rebuild_grammar_deck(lang: str) -> dict[str, Any]:
 async def run_generation(lang: str, n_per_topic: int = 12,
                           only_topic: str | None = None) -> None:
     batch = f"{datetime.now(timezone.utc):%Y%m%d-%H%M}-{uuid.uuid4().hex[:6]}"
-    topics = topics_for(lang)
+    # Personal-error F3 units contain teacher-attested pairs and are filled
+    # only by grammar.f3.convert; they must never trigger generation or an
+    # LLM verification call. Rebuilds still include them via topics_for().
+    topics = [t for t in topics_for(lang) if t.verify != "attested"]
     if only_topic:
         # comma-separated topic keys → generate just those units
         keys = {k.strip() for k in only_topic.split(",") if k.strip()}

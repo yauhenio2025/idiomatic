@@ -186,12 +186,12 @@ CREATE TABLE IF NOT EXISTS grammar_items (
   id            BIGSERIAL PRIMARY KEY,
   lang          TEXT NOT NULL,
   topic         TEXT NOT NULL,                  -- curriculum.Topic.key
-  fmt           TEXT NOT NULL DEFAULT 'cloze',  -- F1 cloze (v1)
+  fmt           TEXT NOT NULL DEFAULT 'cloze',  -- cloze (F1) | f3
   infinitive    TEXT,
   mood          TEXT,
   tense         TEXT,
   person        TEXT,                           -- 1s..3p
-  sentence      TEXT NOT NULL,                  -- contains ___ (infinitive)
+  sentence      TEXT NOT NULL,                  -- cloze frame or F3 wrong phrase
   answer        TEXT NOT NULL,
   gloss_en      TEXT,
   why_en        TEXT,
@@ -286,6 +286,9 @@ CREATE UNIQUE INDEX IF NOT EXISTS personal_errors_pair
   ON personal_errors (lang, COALESCE(wrong, ''), right_form);
 CREATE INDEX IF NOT EXISTS personal_errors_lang_cat
   ON personal_errors (lang, category, kind);
+-- Link to the ordinary verified grammar_items row produced for F3. Keeping
+-- this on the source registry makes conversion resumable and idempotent.
+ALTER TABLE personal_errors ADD COLUMN IF NOT EXISTS f3_item_id BIGINT;
 
 -- Staging for the registry upload: the web process does ONE cheap blob
 -- INSERT here; the cron container (which cannot see /data — that mount

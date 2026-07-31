@@ -160,7 +160,6 @@ def test_apkg_with_audio(tmp_path: Path):
     import sqlite3
     import zipfile
     with zipfile.ZipFile(out) as z:
-        names = z.namelist()
         media_map = json.loads(z.read("media"))
         z.extract("collection.anki2", tmp_path)
     assert "idg_es_1.mp3" in media_map.values()
@@ -252,7 +251,10 @@ def test_romance_verb_verification():
     fr = {t.key: t for t in topics_for("fr")}
     it = {t.key: t for t in topics_for("it")}
     pt = {t.key: t for t in topics_for("pt")}
-    assert len(fr) == 7 and len(it) == 7 and len(pt) == 7
+    # Each language keeps its seven morphology units; additional formats such
+    # as the attested F3 unit are deliberately appended to the curriculum.
+    assert all(sum(t.verify == "morph" for t in topics.values()) == 7
+               for topics in (fr, it, pt))
 
     t = fr["fr_passe_compose"]
     good = {"infinitive": "aller", "person": "3s",

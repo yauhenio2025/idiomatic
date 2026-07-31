@@ -1,5 +1,5 @@
-"""Back-of-card audio for grammar drills: the conjugated form, a beat of
-silence, then the full sentence — target-language ElevenLabs voice via
+"""Back-of-card audio for grammar drills: the answer, a beat of silence,
+then the corrected sentence — target-language ElevenLabs voice via
 gemini.synthesize (Gemini TTS fallback, same as the idiom pipeline).
 
 Files persist under /data/staged_audio/grammar/<lang>/ (the janitor only
@@ -24,12 +24,27 @@ from ..settings import get_settings
 log = structlog.get_logger()
 
 
-def full_sentence_text(sentence: str, answer: str, infinitive: str) -> str:
-    """'Ayer el ministro ___ (negar) las acusaciones.' -> with 'negó'."""
+def full_sentence_text(sentence: str, answer: str, infinitive: str,
+                       fmt: str = "cloze") -> str:
+    """Return the corrected sentence spoken after the answer.
+
+    Existing cloze callers replace the blank as before. An F3 front is the
+    learner's wrong phrase and deliberately has no blank, so its corrected
+    sentence is the answer itself.
+    """
+    if fmt == "f3":
+        return answer
     for pat in (f"___ ({infinitive})", f"___  ({infinitive})", "___"):
         if pat in sentence:
             return sentence.replace(pat, answer, 1)
     return sentence
+
+
+def _item_sentence_text(item: dict) -> str:
+    """Correct sentence spoken after the answer for any grammar format."""
+    return full_sentence_text(item["sentence"], item["answer"],
+                              item.get("infinitive") or "",
+                              item.get("fmt") or "cloze")
 
 
 def _media_name(lang: str, item_id: int) -> str:
@@ -52,8 +67,7 @@ async def ensure_item_audio(item: dict, lang: str) -> Path | None:
     work.mkdir(exist_ok=True)
     answer_mp3 = work / f"{item['id']}_answer.mp3"
     sentence_mp3 = work / f"{item['id']}_sentence.mp3"
-    sentence = full_sentence_text(item["sentence"], item["answer"],
-                                  item.get("infinitive") or "")
+    sentence = _item_sentence_text(item)
 
     await asyncio.gather(
         gemini.synthesize(item["answer"], voice=voice, out=answer_mp3, lang=lang),

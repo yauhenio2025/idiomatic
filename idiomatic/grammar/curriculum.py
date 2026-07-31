@@ -57,6 +57,8 @@ class Topic:
     #   "blind" — Tier B: K independent blind solvers must all reproduce
     #             the answer from the sentence alone (correctness AND
     #             uniqueness in one test). For closed-class topics.
+    #   "attested" — teacher-attested personal-error pair; never generated
+    #                 or sent through an LLM verifier.
     verify: str = "morph"
     # For blind topics: the closed inventory the answer must come from
     # (None = no inventory check). Multi-word entries allowed ("se lo").
@@ -224,8 +226,10 @@ CLUSTER_BY_KEY: dict[str, str] = {
     "es_clitics_dir": "5 Pronombres", "es_clitics_ind": "5 Pronombres",
     "es_clitics_selo": "5 Pronombres",
     "es_por_para": "6 Preposiciones", "es_verb_prep": "6 Preposiciones",
+    "es_mis_errores": "9 Mis errores",
     "de_gender": "1 Genus",
     "de_prep_fest": "2 Präpositionen", "de_prep_wechsel": "2 Präpositionen",
+    "de_meine_fehler": "9 Meine Fehler",
 }
 
 for _t in PILOT_TOPICS_ES + TOPICS_DE:
@@ -275,12 +279,39 @@ def _load_fip_topics() -> dict[str, list[Topic]]:
 _FIP_TOPICS = _load_fip_topics()
 
 
+F3_TOPICS: dict[str, Topic] = {
+    "fr": Topic(
+        "fr_mes_erreurs", "fr", "Corrige : ce que j'ai dit", "", "", "⚠",
+        cluster="9 Mes erreurs", verbs=[], verify="attested",
+    ),
+    "pt": Topic(
+        "pt_meus_erros", "pt", "Corrija: o que eu disse", "", "", "⚠",
+        cluster="9 Meus erros", verbs=[], verify="attested",
+    ),
+    "es": Topic(
+        "es_mis_errores", "es", "Corrige: lo que dije", "", "", "⚠",
+        cluster=CLUSTER_BY_KEY["es_mis_errores"], verbs=[], verify="attested",
+    ),
+    "it": Topic(
+        "it_miei_errori", "it", "Correggi: quello che ho detto", "", "", "⚠",
+        cluster="9 I miei errori", verbs=[], verify="attested",
+    ),
+    "de": Topic(
+        "de_meine_fehler", "de", "Korrigiere: was ich gesagt habe", "", "", "⚠",
+        cluster=CLUSTER_BY_KEY["de_meine_fehler"], verbs=[], verify="attested",
+    ),
+}
+
+
 def topics_for(lang: str) -> list[Topic]:
     if lang == "es":
-        return PILOT_TOPICS_ES
-    if lang == "de":
-        return TOPICS_DE
-    return _FIP_TOPICS.get(lang, [])
+        base = PILOT_TOPICS_ES
+    elif lang == "de":
+        base = TOPICS_DE
+    else:
+        base = _FIP_TOPICS.get(lang, [])
+    f3_topic = F3_TOPICS.get(lang)
+    return [*base, f3_topic] if f3_topic is not None else list(base)
 
 
 GRAMMAR_LANGS = ["es", "de", "fr", "it", "pt"]
@@ -301,10 +332,8 @@ def unit_seed_rows() -> list[dict]:
 
 
 def topic_by_key(key: str) -> Topic | None:
-    all_topics = PILOT_TOPICS_ES + TOPICS_DE
-    for ts in _FIP_TOPICS.values():
-        all_topics = all_topics + ts
-    for t in all_topics:
-        if t.key == key:
-            return t
+    for lang in GRAMMAR_LANGS:
+        for topic in topics_for(lang):
+            if topic.key == key:
+                return topic
     return None
