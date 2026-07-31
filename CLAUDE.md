@@ -79,8 +79,10 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 - `ELEVENLABS_API_KEY` — PRIMARY TTS provider since 2026-07-27 (all
   languages, turbo v2.5, per-lang voices in `gemini.ELEVEN_LANG_VOICE`).
   Dedicated "idiomatic use" key on the Pro account (1.5M credits/mo,
-  10 concurrent; usage-based overage billing NOT enabled — quota
-  exhaustion makes calls fail over to Gemini TTS). Switched because the
+  10 concurrent; usage-based overage billing ENABLED per user
+  2026-07-31 — quota exhaustion now bills overage at the same cheap
+  rate instead of failing over to Gemini TTS; the Gemini fallback only
+  triggers on actual ElevenLabs outages). Switched because the
   July-2026 spend audit showed Gemini TTS preview billing ~€2/1k chars
   (~€4K/28d, on track for €7-9K/mo) vs ElevenLabs ~$0.05/1k chars.
   Rollback: set `TTS_PROVIDER=gemini`.
