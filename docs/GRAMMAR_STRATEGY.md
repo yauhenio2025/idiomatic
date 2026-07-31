@@ -422,16 +422,18 @@ Waves:
   one-shot "Reorganize grammar decks" (col.set_deck by unit tag via
   agent-authed /admin/grammar-deckmap; FSRS preset stays on the PARENT
   deck only — subdecks inherit).
-- [x] **Wave 7 phases 0-2 (SHIPPED 2026-07-31 same day)** — F3 format
+- [x] **Wave 7 phases 0-3 (SHIPPED 2026-07-31 through 2026-08-01)** — F3 format
   live (91 attested-error cards in per-lang "9 my errors" clusters,
   /admin/f3-convert), 10 bank units wired (first batches live for
   fr_quantites_de 15, pt_gender_core 10, es_muy_mucho 11,
   it_genere_plurali 12/12 after the citation-noun-hint verifier fix,
   de_dativ_verben 7), decks now fr 124 / pt 124 / es 258 / it 120 /
-  de 79 = 705 cards all-audio. Still open from the proposal: F4
-  interference deck (bank ready in ~/projects/idiomatic-data/
-  interference), explainer TTS delivery (scripts + design shipped),
-  remaining 5 bank units' first batches, planned-unit promotions.
+  de 79 = 705 cards all-audio. F4 interference delivery is now wired for
+  es/pt/fr/it through private DB staging, cron-side registry validation, and
+  deterministic `/admin/f4-convert` compilation into cluster 10; German stays
+  data-ready but has no one-card curriculum cluster. Still open from the
+  proposal: explainer TTS delivery (scripts + design shipped), remaining 5
+  bank units' first batches, planned-unit promotions.
   Original proposal scope: five per-language profiles in docs/research/error-profiles/
   (10,314 spreadsheet rows + 3,502 Teachee notes analyzed); synthesis
   + phased plan in docs/commissions/ERROR_PROFILE_PROPOSAL.md

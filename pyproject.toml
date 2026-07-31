@@ -12,6 +12,7 @@ dependencies = [
     "pydantic>=2.7",          # config + DTOs
     "pydantic-settings>=2.4", # env-driven settings
     "python-slugify>=8.0",
+    "regex==2024.11.6",      # pinned Unicode extended-grapheme segmentation (F4)
     "structlog>=24.4",        # structured logging
     "uvloop>=0.20",           # faster event loop
     "fastapi>=0.115",         # web service for agent pull

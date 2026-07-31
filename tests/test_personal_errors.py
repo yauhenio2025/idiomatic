@@ -6,7 +6,8 @@ from idiomatic.personal_errors import parse_jsonl
 
 
 def _line(**over):
-    d = {"lang": "fr", "kind": "error", "wrong": "en Berlin",
+    d = {"id": 123_456_789,
+         "lang": "fr", "kind": "error", "wrong": "en Berlin",
          "right": "à Berlin", "category": "preposition_selection",
          "why": "cities take à", "occurrences": 11,
          "first_seen": "2019-06-04", "last_seen": "2024-03-01",
@@ -19,6 +20,7 @@ def test_parse_good_line():
     rows, errors = parse_jsonl(_line())
     assert not errors and len(rows) == 1
     r = rows[0]
+    assert r["registry_id"] == 123_456_789
     assert r["right_form"] == "à Berlin"
     assert r["occurrences"] == 11
     assert str(r["first_seen"]) == "2019-06-04"
@@ -33,6 +35,9 @@ def test_parse_rejects_bad_rows():
         _line(right=""),
         _line(kind="error", wrong=None),
         _line(confidence="ultra"),
+        _line(id=0),
+        _line(id=True),
+        _line(id="123456789"),
         "not json at all",
     ]
     rows, errors = parse_jsonl("\n".join(cases))
@@ -47,5 +52,6 @@ def test_parse_tolerates_gaps_and_defaults():
     rows, errors = parse_jsonl(ok + "\n\n" + _line())
     assert not errors and len(rows) == 2
     assert rows[0]["wrong"] is None
+    assert rows[0]["registry_id"] is None
     assert rows[0]["occurrences"] == 1
     assert rows[0]["first_seen"] is None

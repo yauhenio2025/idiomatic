@@ -171,7 +171,8 @@ def test_f3_topics_are_appended_attested_units():
     for lang, (key, cluster, label) in _F3_TOPICS.items():
         topic = topic_by_key(key)
         assert topic is not None
-        assert topics_for(lang)[-1] == topic
+        expected_index = -1 if lang == "de" else -2
+        assert topics_for(lang)[expected_index] == topic
         assert (topic.lang, topic.key, topic.cluster) == (lang, key, cluster)
         assert topic.label == label
         assert topic.symbol == "⚠"

@@ -91,7 +91,8 @@ async def run() -> None:
             # waiting out the staleness window.
             counts = await lingq.account_counts(token)
             have = {s["lang"]: s["terms"] for s in await db.lingq_stats()}
-            behind = [l for l, c in counts.items() if have.get(l, 0) < c]
+            behind = [code for code, count in counts.items()
+                      if have.get(code, 0) < count]
             if stale or behind:
                 log.info("cron.lingq_sync_start", stale=stale, behind=behind)
                 await lingq.run_sync(None if stale else behind)
@@ -102,13 +103,37 @@ async def run() -> None:
     # uploaded JSONL blob; the batched upserts run here, where a wedged
     # import can stall one cron tick but never the API/delivery path
     # (same containment as the LingQ sync above).
+    personal_errors_ingest_ok = True
     try:
         from . import personal_errors as pe
         stats = await pe.ingest_staged()
         if stats:
             log.info("cron.personal_errors_ingested", **stats)
     except Exception as e:
+        personal_errors_ingest_ok = False
         log.warning("cron.personal_errors_ingest_failed", err=repr(e)[:200])
+
+    # Private F4 banks use the same DB-staging containment. Run this after the
+    # personal-error ingest so newly uploaded registry ids/pairs are available
+    # for exact attestation and reviewed-projection checks in the same tick.
+    if personal_errors_ingest_ok:
+        try:
+            from .grammar import f4
+            stats = await f4.ingest_staged()
+            if stats:
+                log.info("cron.f4_pairs_ingested", **stats)
+        except Exception as e:
+            # Driver exceptions can include a failing row in their detail
+            # string; F4 forms are private, so record only the exception class.
+            log.warning("cron.f4_pairs_ingest_failed", err_type=type(e).__name__)
+    else:
+        # A pair bank may rely on registry ids staged in the same tick. Leave
+        # its raw payload pending for a retry instead of misclassifying it as
+        # corrupt merely because its prerequisite ingest was unavailable.
+        log.warning(
+            "cron.f4_pairs_ingest_deferred",
+            reason="personal_errors_ingest_failed",
+        )
 
     # Phase 1 — RSS walk. YouTube's feed endpoint load-sheds when hit
     # back-to-back; 1.5s between channels keeps the hit-rate near 100%.

@@ -186,12 +186,12 @@ CREATE TABLE IF NOT EXISTS grammar_items (
   id            BIGSERIAL PRIMARY KEY,
   lang          TEXT NOT NULL,
   topic         TEXT NOT NULL,                  -- curriculum.Topic.key
-  fmt           TEXT NOT NULL DEFAULT 'cloze',  -- cloze (F1) | f3
+  fmt           TEXT NOT NULL DEFAULT 'cloze',  -- cloze (F1) | f3 | f4
   infinitive    TEXT,
   mood          TEXT,
   tense         TEXT,
   person        TEXT,                           -- 1s..3p
-  sentence      TEXT NOT NULL,                  -- cloze frame or F3 wrong phrase
+  sentence      TEXT NOT NULL,                  -- cloze/F4 frame or F3 wrong phrase
   answer        TEXT NOT NULL,
   gloss_en      TEXT,
   why_en        TEXT,
@@ -255,8 +255,8 @@ CREATE INDEX IF NOT EXISTS lingq_terms_lang_status ON lingq_terms(lang, status);
 -- errors, normalized by codex commission A (docs/commissions/
 -- CODEX_A_ERROR_REGISTRY.md). The raw corpus lives OUTSIDE this public
 -- repo (~/projects/idiomatic-data/errmine on the operator's machine);
--- rows arrive via /admin/personal-errors-upload (stages a JSONL file to
--- /data) and are ingested by the CRON container (LingQ containment
+-- rows arrive via /admin/personal-errors-upload (stages one JSONL blob in
+-- Postgres) and are ingested by the CRON container (LingQ containment
 -- lesson: bulk DB imports never run in the web process). Feeds F3
 -- error-correction generation + error-aware prompts + the Wave-5
 -- planner prior.
@@ -264,6 +264,7 @@ CREATE INDEX IF NOT EXISTS lingq_terms_lang_status ON lingq_terms(lang, status);
 
 CREATE TABLE IF NOT EXISTS personal_errors (
   id                  BIGSERIAL PRIMARY KEY,
+  registry_id         BIGINT,                    -- stable id from the private source registry
   lang                TEXT NOT NULL,
   kind                TEXT NOT NULL,           -- error|reteach|vocab_gap
   wrong               TEXT,                    -- attested wrong form (null for reteach/vocab_gap)
@@ -282,8 +283,13 @@ CREATE TABLE IF NOT EXISTS personal_errors (
   status              TEXT NOT NULL DEFAULT 'active',  -- active|retired
   created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+-- Older deployments predate registry-id preservation.  Keep this as an
+-- idempotent ALTER as well as in CREATE TABLE for both fresh and live DBs.
+ALTER TABLE personal_errors ADD COLUMN IF NOT EXISTS registry_id BIGINT;
 CREATE UNIQUE INDEX IF NOT EXISTS personal_errors_pair
   ON personal_errors (lang, COALESCE(wrong, ''), right_form);
+CREATE UNIQUE INDEX IF NOT EXISTS personal_errors_registry_id
+  ON personal_errors (registry_id) WHERE registry_id IS NOT NULL;
 CREATE INDEX IF NOT EXISTS personal_errors_lang_cat
   ON personal_errors (lang, category, kind);
 -- Link to the ordinary verified grammar_items row produced for F3. Keeping
@@ -298,6 +304,57 @@ ALTER TABLE personal_errors ADD COLUMN IF NOT EXISTS f3_item_id BIGINT;
 CREATE TABLE IF NOT EXISTS personal_errors_staging (
   id           BIGSERIAL PRIMARY KEY,
   payload      TEXT NOT NULL,                  -- raw JSONL
+  n_rows       INT,
+  uploaded_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  processed_at TIMESTAMPTZ,
+  note         TEXT
+);
+
+-- Curated cross-language interference pairs (F4).  The private JSON banks
+-- never enter this public repository: the web process stages one raw JSON
+-- blob in f4_pairs_staging and the cron process validates it against
+-- personal_errors before upserting these rows.  pair_key is the stable
+-- content identity; grammar_item_id keeps the Anki note id/GUID stable when
+-- mutable evidence or presentation fields change on a later upload.
+CREATE TABLE IF NOT EXISTS f4_pairs (
+  id                  BIGSERIAL PRIMARY KEY,
+  schema_version      INT NOT NULL,
+  pair_key            TEXT NOT NULL,
+  target_lang         TEXT NOT NULL,
+  source_lang         TEXT NOT NULL,
+  concept_en          TEXT NOT NULL,
+  correct_target      TEXT NOT NULL,
+  false_form          TEXT NOT NULL,
+  source_form         TEXT NOT NULL,
+  category            TEXT NOT NULL,
+  why                 TEXT NOT NULL,
+  occurrences         INT NOT NULL,
+  attested            BOOLEAN NOT NULL,
+  personal_error_id   BIGINT REFERENCES personal_errors(id) ON DELETE SET NULL,
+  grammar_item_id     BIGINT REFERENCES grammar_items(id) ON DELETE SET NULL,
+  needs_conversion    BOOLEAN NOT NULL DEFAULT TRUE,
+  status              TEXT NOT NULL DEFAULT 'active', -- active|retired
+  created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  converted_at        TIMESTAMPTZ,
+  CHECK (schema_version > 0),
+  CHECK (pair_key ~ '^[0-9a-f]{64}$'),
+  CHECK (target_lang <> source_lang),
+  CHECK (occurrences >= 0),
+  CHECK ((attested AND occurrences >= 1)
+         OR (NOT attested AND occurrences = 0)),
+  CHECK (status IN ('active', 'retired'))
+);
+CREATE UNIQUE INDEX IF NOT EXISTS f4_pairs_pair_key
+  ON f4_pairs(pair_key);
+CREATE UNIQUE INDEX IF NOT EXISTS f4_pairs_grammar_item
+  ON f4_pairs(grammar_item_id) WHERE grammar_item_id IS NOT NULL;
+CREATE INDEX IF NOT EXISTS f4_pairs_target_status
+  ON f4_pairs(target_lang, status, needs_conversion);
+
+CREATE TABLE IF NOT EXISTS f4_pairs_staging (
+  id           BIGSERIAL PRIMARY KEY,
+  payload      TEXT NOT NULL,                    -- raw private JSON bank
   n_rows       INT,
   uploaded_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   processed_at TIMESTAMPTZ,

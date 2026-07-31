@@ -74,15 +74,17 @@
 - **Description**: LLM-generated grammar drills (verb morphology + closed-class), deterministically or blind-fill verified, compiled into one rolling `kind='grammar'` apkg per language with **one subdeck per topic cluster** (`Idiomatic Grammar {LANG}::{cluster}`). Strategy: `docs/GRAMMAR_STRATEGY.md`.
 - **Entry Points**:
   - `idiomatic/grammar/morphology.py` - conjugation truth tables + verifier (Jehle es, verbecc fr/it/pt, german-nouns de)
-  - `idiomatic/grammar/curriculum.py` - 42 units across es/de/fr/it/pt; `cluster` per Topic (`CLUSTER_BY_KEY`), `PLANNED_UNITS`, `unit_seed_rows()`
+  - `idiomatic/grammar/curriculum.py` - 61 active units across es/de/fr/it/pt; `cluster` per Topic (`CLUSTER_BY_KEY`), `PLANNED_UNITS`, `unit_seed_rows()`
+  - `idiomatic/grammar/f4.py` - strict private-bank validation, Unicode answer signatures, deterministic A/B/C card mapping, staged ingest, and conversion for es/pt/fr/it
+  - `idiomatic/api.py` - admin-only `/admin/f4-pairs-upload|status` and `/admin/f4-convert`; cron performs the private bulk ingest
   - `idiomatic/grammar/generate.py` - Gemini batch generation + item verification (Tier A morph / Tier B blind-fill)
   - `idiomatic/grammar/apkg.py` - frozen 14-field `Idiomatic Grammar Drill v1` model, GUIDs from DB ids; `deck_name_for()` + per-cluster genanki decks
   - `idiomatic/grammar/service.py` - orchestration + rolling deck rebuild
   - `idiomatic/api.py:330-518` - `/admin/grammar-generate|status|stats|rejects|rebuild`, `/admin/grammar-deckmap` (agent-authed, add-on reorganize), `/admin/grammar-unit/{key}`, `/admin/grammar-topup/{key}`, `/admin/grammar-retire-item/{id}`
-  - `db/schema.sql` - `grammar_items` (verified/rejected/retired) + `grammar_units` (cluster, status, target_size — code-owned cols re-seeded on boot)
+  - `db/schema.sql` - `grammar_items` (verified/rejected/retired), `grammar_units` (cluster, status, target_size — code-owned cols re-seeded on boot), and private `f4_pairs` + staging
   - `tests/test_grammar.py` - morphology, verifier, apkg/GUID stability, subdeck split, seed completeness
-- **Dependencies**: Gemini text model, genanki, vendored morphology DBs
-- **Added**: 2026-07-28 | **Modified**: 2026-07-31
+- **Dependencies**: Gemini text model, genanki, pinned `regex` grapheme segmentation, vendored morphology DBs
+- **Added**: 2026-07-28 | **Modified**: 2026-08-01
 
 ### Grammar dashboard section
 - **Status**: Active

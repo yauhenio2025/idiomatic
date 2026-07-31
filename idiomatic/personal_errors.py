@@ -54,6 +54,13 @@ def parse_jsonl(text: str) -> tuple[list[dict[str, Any]], list[str]]:
         kind = d.get("kind")
         cat = d.get("category")
         right = d.get("right")
+        registry_id = d.get("id")
+        if (registry_id is not None
+                and (isinstance(registry_id, bool)
+                     or not isinstance(registry_id, int)
+                     or registry_id <= 0)):
+            errors.append(f"line {i}: bad id {registry_id!r}")
+            continue
         if lang not in LANGS:
             errors.append(f"line {i}: bad lang {lang!r}")
             continue
@@ -74,6 +81,7 @@ def parse_jsonl(text: str) -> tuple[list[dict[str, Any]], list[str]]:
             continue
         occ = d.get("occurrences")
         rows.append({
+            "registry_id": registry_id,
             "lang": lang, "kind": kind, "wrong": d.get("wrong"),
             "right_form": right, "gloss_en": d.get("gloss_en"),
             "category": cat, "subcategory": d.get("subcategory"),
