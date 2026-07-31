@@ -25,6 +25,7 @@ poll. genanki stable GUIDs make re-import in Anki an UPDATE not a dup.
 
 from __future__ import annotations
 
+import asyncio
 import hashlib
 import html
 import os
@@ -394,7 +395,10 @@ def _stitch_pool_card_audio(*, lang: str, idiom: dict, narration_root: Path,
     front_pieces: list[Path] = []
     ctx_rel = idiom.get("audio_context")
     ctx_path = data_root / ctx_rel if ctx_rel else None
-    if ctx_path and ctx_path.exists() and ctx_path.stat().st_size > 0:
+    # > 1000, not > 0: a failed slice can persist a few-hundred-byte
+    # stub (e.g. 8kF0yFI_5vU/context_006.mp3, 236 B) that makes ffmpeg
+    # concat error out — degrade that card to no-context instead.
+    if ctx_path and ctx_path.exists() and ctx_path.stat().st_size > 1000:
         if listen_context: front_pieces += [listen_context, sh]
         front_pieces += [ctx_path, md]
     if here_it_is: front_pieces += [here_it_is, sh]
@@ -602,11 +606,21 @@ async def rebuild_pools(lang: str, force: bool = False) -> dict:
     t2e_apkg = apkg_root / "_pool_idioms_t2e.apkg"
     e2t_apkg = apkg_root / "_pool_idioms_e2t.apkg"
 
-    idioms_n = _build_idioms_pool(lang, idioms, narration_root,
-                                    stage_root, idioms_apkg)
-    expr_n = _build_expression_pool(lang, idioms, stage_root, expr_apkg)
-    t2e_n = _build_idiom_audio_pool(lang, idioms, stage_root, t2e_apkg, "t2e")
-    e2t_n = _build_idiom_audio_pool(lang, idioms, stage_root, e2t_apkg, "e2t")
+    # to_thread is load-bearing, not style: these builders run hundreds
+    # of blocking ffmpeg subprocess.run calls, and calling them directly
+    # from this coroutine froze the WHOLE web process (API + delivery)
+    # for 10+ minutes per rebuild once the library grew — the 2026-07-31
+    # triple outage (docs/incidents/2026-07-31-web-hangs.md). In a
+    # worker thread the event loop keeps serving while ffmpeg grinds.
+    idioms_n = await asyncio.to_thread(
+        _build_idioms_pool, lang, idioms, narration_root,
+        stage_root, idioms_apkg)
+    expr_n = await asyncio.to_thread(
+        _build_expression_pool, lang, idioms, stage_root, expr_apkg)
+    t2e_n = await asyncio.to_thread(
+        _build_idiom_audio_pool, lang, idioms, stage_root, t2e_apkg, "t2e")
+    e2t_n = await asyncio.to_thread(
+        _build_idiom_audio_pool, lang, idioms, stage_root, e2t_apkg, "e2t")
 
     for kind, path, n in (
         ("pool_idioms", idioms_apkg, idioms_n),
