@@ -526,7 +526,10 @@ def _verify_it_noun(topic: Topic, item: dict,
         return False, f"bad noun target {target!r}"
     if not _mentions(sentence.replace("___", " "), noun):
         return False, "stated noun does not appear outside the blank"
-    if _answer_leaks(sentence, answer):
+    # Strip the "(citation noun)" hint before the leak check: invariant
+    # plurals (la città / le città) legitimately repeat the hint word in
+    # the answer and must not be false-flagged.
+    if _answer_leaks(sentence.replace(f"({noun})", " "), answer):
         return False, "answer leaks in sentence"
     if not _bank_answer_matches(sentence, answer, expected):
         return _wrong_bank_answer(answer, expected)
@@ -792,10 +795,18 @@ async def generate_batch(topic: Topic, n: int,
     for item in raw:
         if not isinstance(item, dict):
             continue
+        # it_noun items carry the citation noun as the "___ (noun)" hint —
+        # storing it in `infinitive` reuses the whole hint pipeline
+        # (front shows it, back strips it, audio speaks the clean
+        # corrected sentence).
+        hint = None
+        if is_morph:
+            hint = (item.get("infinitive") or "").strip().lower() or None
+        elif topic.verify == "it_noun":
+            hint = (item.get("noun") or "").strip() or None
         base = {
             "lang": topic.lang, "topic": topic.key,
-            "infinitive": ((item.get("infinitive") or "").strip().lower()
-                           or None) if is_morph else None,
+            "infinitive": hint,
             "mood": topic.mood or None, "tense": topic.tense or None,
             "person": ((item.get("person") or "").strip().lower()
                        or None) if is_morph else None,

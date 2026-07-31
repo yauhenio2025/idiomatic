@@ -388,12 +388,15 @@ _BANK_TOPICS: dict[str, list[Topic]] = {
               bank="it_genere_plurali.json",
               guidance="Choose one banked noun and test exactly one declared "
                        "target: singular article+noun, plural article+noun, "
-                       "or plural alone. Include the citation noun outside "
-                       "the blank so metadata stays checkable. Mix il/i, "
-                       "lo/gli, both l' patterns, "
-                       "and la/le before interleaving regular, invariant, and "
-                       "irregular plurals. Preserve the banked sense for "
-                       "gender-changing body and collective forms."),
+                       "or plural alone. HARD FORMAT RULE: write the blank as "
+                       "___ followed by the citation noun (singular) in "
+                       "parentheses, exactly like verb cards — 'Le moderne "
+                       "___ (fabbrica) di microchip sono contese.' The "
+                       "parenthetical is the only place the noun appears "
+                       "outside the blank. Mix il/i, lo/gli, both l' "
+                       "patterns, and la/le before interleaving regular, "
+                       "invariant, and irregular plurals. Preserve the banked "
+                       "sense for gender-changing body and collective forms."),
         Topic("it_reggenze_verbali", "it", "Reggenze verbali", "", "", "🧲",
               cluster="6 Reggenze", verify="bank_blind",
               answer_set=["a", "come", "con", "da", "di", "in", "per", "su"],
