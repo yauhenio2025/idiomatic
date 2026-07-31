@@ -422,8 +422,16 @@ Waves:
   one-shot "Reorganize grammar decks" (col.set_deck by unit tag via
   agent-authed /admin/grammar-deckmap; FSRS preset stays on the PARENT
   deck only — subdecks inherit).
-- [ ] Later: beep-cloze audio fronts, error-correction format seeded
-  from `_errors` decks.
+- [ ] **Wave 7 (PROPOSED 2026-07-31)** — leverage the personal error
+  mine: five per-language profiles in docs/research/error-profiles/
+  (10,314 spreadsheet rows + 3,502 Teachee notes analyzed); synthesis
+  + phased plan in docs/commissions/ERROR_PROFILE_PROPOSAL.md
+  (target retuning, personal_errors registry + F3 error-correction
+  format, evidence-based new units, F4 interference deck, error-aware
+  generation, grammar explainers). Awaiting user decisions (§4 of the
+  proposal).
+- [ ] Later: beep-cloze audio fronts (error-correction format is now
+  Wave 7's F3, seeded from the real error mine instead of guesses).
 
 Volume rule (lesson of the 2023 EXCERCISES failure): generation is
 on-demand per unit, 2-3 active units per language at any time, mastered
