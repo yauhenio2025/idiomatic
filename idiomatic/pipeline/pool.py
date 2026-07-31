@@ -565,6 +565,16 @@ async def _ensure_explanation_audio(lang: str, idioms: list[dict]) -> None:
 # Top-level: rebuild every pool apkg for a language
 # ============================================================================
 
+# One lock per language: with the builders in threads (the 2026-07-31
+# event-loop fix), two rebuilds of the same lang can genuinely overlap —
+# worker-triggered + /admin/rebuild-pools — and each starts by wiping
+# the shared stage dir, corrupting the other's in-flight stitch. The
+# old blocking behavior serialized them by accident; this does it on
+# purpose. Locks are per-process, which is enough: only the web app
+# builds pools.
+_REBUILD_LOCKS: dict[str, asyncio.Lock] = {}
+
+
 async def rebuild_pools(lang: str, force: bool = False) -> dict:
     """Builds ALL four pool apkgs for the language and upserts their rows
     in the apkgs table. Returns a stats dict.
@@ -573,7 +583,15 @@ async def rebuild_pools(lang: str, force: bool = False) -> dict:
     last `pool_rebuild_debounce_min` minutes, unless force=True
     (/admin/rebuild-pools). A skipped rebuild is harmless — the next
     non-debounced one reads the full DB and picks everything up.
-    """
+    Serialized per language (see _REBUILD_LOCKS)."""
+    lock = _REBUILD_LOCKS.setdefault(lang, asyncio.Lock())
+    if lock.locked():
+        log.info("pool.rebuild_waiting", lang=lang)
+    async with lock:
+        return await _rebuild_pools_locked(lang, force)
+
+
+async def _rebuild_pools_locked(lang: str, force: bool) -> dict:
     settings = get_settings()
     if not force and await db.pool_rebuilt_within(
             lang, settings.pool_rebuild_debounce_min):
