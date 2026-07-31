@@ -322,21 +322,9 @@ for _t in PILOT_TOPICS_ES + TOPICS_DE:
 # real topic list (same key!) and delete it here; boot seeding then flips
 # its DB row from planned to active.
 PLANNED_UNITS: list[dict] = [
-<<<<<<< HEAD
-    {"key": "de_adj_endings", "lang": "de", "cluster": "3 Adjektive",
-     "label": "Adjektivendungen", "symbol": "🖌"},
-    {"key": "de_verb_core", "lang": "de", "cluster": "4 Verben",
-     "label": "Verbformen — Kern", "symbol": "⚙"},
-=======
-    {"key": "es_ser_estar", "lang": "es", "cluster": "7 Ser/Estar",
-     "label": "Ser vs estar", "symbol": "⚖"},
-    {"key": "fr_pronoms_y_en", "lang": "fr", "cluster": "4 Pronoms",
-     "label": "Pronoms y / en", "symbol": "🔗"},
-    {"key": "it_clitici_ci_ne", "lang": "it", "cluster": "4 Clitici",
-     "label": "Clitici ci / ne", "symbol": "🔗"},
-    {"key": "pt_clitic_placement", "lang": "pt", "cluster": "4 Clíticos",
-     "label": "Colocação pronominal", "symbol": "🔗"},
->>>>>>> codex/declension
+    # Empty as of 2026-07-31: commissions K and L promoted every planned
+    # unit (Romance four + de_adj_endings) or pruned it (de_verb_core —
+    # superseded by de_passiv; KII remains future work).
 ]
 
 # Code-owned unit rows removed from the curriculum. Boot seeding prunes these

@@ -343,15 +343,15 @@ def test_promoted_romance_seed_rows_preserve_total_and_promote_status():
 
     rows = unit_seed_rows()
     by_key = {row["key"]: row for row in rows}
+    # Post-L: de_adj_endings promoted too and de_verb_core pruned, so
+    # everything is active (63 = 61 + de_adj_endings + de_passiv - verb_core
+    # ... net 63; PLANNED_UNITS is empty).
     assert len(rows) == 63
-    assert Counter(row["status"] for row in rows) == {
-        "active": 61, "planned": 2,
-    }
-    assert {row["key"] for row in PLANNED_UNITS} == {
-        "de_adj_endings", "de_verb_core",
-    }
+    assert Counter(row["status"] for row in rows) == {"active": 63}
+    assert PLANNED_UNITS == []
     for key in ("fr_pronoms_y_en", "pt_clitic_placement",
-                "it_clitici_ci_ne", "es_ser_estar"):
+                "it_clitici_ci_ne", "es_ser_estar",
+                "de_adj_endings", "de_passiv"):
         assert by_key[key]["status"] == "active"
         assert by_key[key]["sort_order"] < 1000
     # No code-level override: the schema/default keeps the requested 12.
