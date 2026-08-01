@@ -1,0 +1,644 @@
+[
+  {
+    "_meta": {
+      "language": "de",
+      "bank": "f2_de_case_roles",
+      "format": "F2 structured-input interpretation",
+      "item_count": 50,
+      "feeds_units": [
+        "de_adj_endings",
+        "de_dativ_verben"
+      ],
+      "built": "2026-08-01",
+      "source_evidence": "docs/commissions/CODEX_P_F2_INTERPRETATION.md; docs/GRAMMAR_STRATEGY.md §§3b and 4; docs/research/error-profiles/de.md §§3C, 6, and 8; idiomatic/grammar/apkg.py frozen 14-field note model",
+      "provenance": "Fifty manually authored and reviewed Standard German minimal pairs, grounded in the learner's documented nominative/dative/accusative role confusion and professional-news vocabulary profile; no corpus sentence is reproduced.",
+      "coverage": {
+        "content_items": 50,
+        "options_per_item": 2,
+        "answer_positions": {
+          "A": 25,
+          "B": 25
+        },
+        "constructions": {
+          "active_main_clause": 20,
+          "active_subordinate_clause": 15,
+          "active_relative_clause": 15
+        },
+        "case_decisions": {
+          "nominative_vs_accusative": 32,
+          "nominative_vs_dative": 18,
+          "dative_object_with_fixed_theme": 7
+        },
+        "distinct_lexical_frames": 50,
+        "register": "Standard German; news, public-affairs, academic, and professional contexts",
+        "first_tested_participant_role": {
+          "subject": 25,
+          "non_subject": 25
+        },
+        "answer_positions_by_routing": {
+          "de_adj_endings": {
+            "A": 16,
+            "B": 16
+          },
+          "de_dativ_verben": {
+            "A": 9,
+            "B": 9
+          }
+        },
+        "answer_positions_by_route_and_construction": {
+          "de_adj_endings": {
+            "main": {
+              "A": 6,
+              "B": 6
+            },
+            "subordinate": {
+              "A": 5,
+              "B": 5
+            },
+            "relative": {
+              "A": 5,
+              "B": 5
+            }
+          },
+          "de_dativ_verben": {
+            "main": {
+              "A": 4,
+              "B": 4
+            },
+            "subordinate": {
+              "A": 2,
+              "B": 3
+            },
+            "relative": {
+              "A": 3,
+              "B": 2
+            }
+          }
+        },
+        "answer_positions_by_first_tested_role": {
+          "subject": {
+            "A": 12,
+            "B": 13
+          },
+          "non_subject": {
+            "A": 13,
+            "B": 12
+          }
+        }
+      },
+      "presentation": "Questions and labeled options are in German; concise metalinguistic why feedback is in English. Options are statically ordered for think-then-reveal self-grading.",
+      "validation_notes": "Every decision contrasts two human or institutional participants for whom either direction is contextually plausible. Overt masculine determiner, adjective, relative-pronoun, and where applicable weak-noun morphology uniquely assigns the roles. Surface order and lexical stems stay fixed in each full-sentence contrast_form; only role-bearing case morphology changes, and the contrast flips to the sole unselected option. No reversed contrast is duplicated as a seed row. Content order and correct labels are stored in a frozen, deterministic constrained permutation; labels are cross-balanced by routing case and construction, have no short repeated cycle, and never run more than three times consecutively.",
+      "ordering_policy": "Frozen deterministic constraint-solved permutation v3 (solver seed 93320260801; restart 0; accepted at iteration 37251); exhaustive validation applies run≤3 and period-2/period-3 rejection to full label, construction, and route-category streams; route- and construction-filtered label streams; route×construction label cells; routed construction streams; and first-tested-role label streams."
+    }
+  },
+  {
+    "sentence": "Der leitende Ingenieur, den der zuständige Ingenieur konsultiert, nimmt danach an der Pressekonferenz teil.",
+    "question": "Wer konsultiert wen?",
+    "options": [
+      "A. Der zuständige Ingenieur konsultiert den leitenden Ingenieur.",
+      "B. Der leitende Ingenieur konsultiert den zuständigen Ingenieur."
+    ],
+    "answer": "A. Der zuständige Ingenieur konsultiert den leitenden Ingenieur.",
+    "why": "Den makes the lead engineer the accusative object; der zuständige Ingenieur is nominative, so the responsible engineer consults the lead engineer.",
+    "contrast_form": "Der leitende Ingenieur, der den zuständigen Ingenieur konsultiert, nimmt danach an der Pressekonferenz teil."
+  },
+  {
+    "sentence": "Dem zuständigen Kurator übergibt der leitende Kurator das Dossier nach der Sitzung.",
+    "question": "Wer übergibt wem das Dossier?",
+    "options": [
+      "A. Der leitende Kurator übergibt dem zuständigen Kurator das Dossier.",
+      "B. Der zuständige Kurator übergibt dem leitenden Kurator das Dossier."
+    ],
+    "answer": "A. Der leitende Kurator übergibt dem zuständigen Kurator das Dossier.",
+    "why": "Dem zuständigen Kurator is dative and der leitende Kurator is nominative, so the lead curator hands the dossier to the responsible curator.",
+    "contrast_form": "Der zuständige Kurator übergibt dem leitenden Kurator das Dossier nach der Sitzung."
+  },
+  {
+    "sentence": "Der regionale Beobachter, den der internationale Beobachter kontrolliert, bleibt bis zum Ende vor Ort.",
+    "question": "Wer kontrolliert wen?",
+    "options": [
+      "A. Der internationale Beobachter kontrolliert den regionalen Beobachter.",
+      "B. Der regionale Beobachter kontrolliert den internationalen Beobachter."
+    ],
+    "answer": "A. Der internationale Beobachter kontrolliert den regionalen Beobachter.",
+    "why": "Den makes the regional observer the accusative object; der internationale Beobachter is nominative and performs the check.",
+    "contrast_form": "Der regionale Beobachter, der den internationalen Beobachter kontrolliert, bleibt bis zum Ende vor Ort."
+  },
+  {
+    "sentence": "Der neue Produzent empfiehlt den bisherigen Produzenten für das Projekt.",
+    "question": "Wer empfiehlt wen?",
+    "options": [
+      "A. Der bisherige Produzent empfiehlt den neuen Produzenten.",
+      "B. Der neue Produzent empfiehlt den bisherigen Produzenten."
+    ],
+    "answer": "B. Der neue Produzent empfiehlt den bisherigen Produzenten.",
+    "why": "Der neue Produzent is nominative; den bisherigen Produzenten is accusative, so the new producer makes the recommendation.",
+    "contrast_form": "Den neuen Produzenten empfiehlt der bisherige Produzent für das Projekt."
+  },
+  {
+    "sentence": "Den regionalen Sprecher informiert der nationale Sprecher über die Änderung.",
+    "question": "Wer informiert wen?",
+    "options": [
+      "A. Der regionale Sprecher informiert den nationalen Sprecher.",
+      "B. Der nationale Sprecher informiert den regionalen Sprecher."
+    ],
+    "answer": "B. Der nationale Sprecher informiert den regionalen Sprecher.",
+    "why": "Den regionalen Sprecher is accusative; der nationale Sprecher is nominative, so the national spokesperson provides the information.",
+    "contrast_form": "Der regionale Sprecher informiert den nationalen Sprecher über die Änderung."
+  },
+  {
+    "sentence": "Der erste Herausgeber, der dem zweiten Herausgeber den Bericht vorliest, reist danach nach Hamburg.",
+    "question": "Wer liest wem den Bericht vor?",
+    "options": [
+      "A. Der erste Herausgeber liest dem zweiten Herausgeber den Bericht vor.",
+      "B. Der zweite Herausgeber liest dem ersten Herausgeber den Bericht vor."
+    ],
+    "answer": "A. Der erste Herausgeber liest dem zweiten Herausgeber den Bericht vor.",
+    "why": "Der is a nominative relative pronoun referring to the first editor; dem zweiten Herausgeber is dative, so the first editor reads the report aloud to the second.",
+    "contrast_form": "Der erste Herausgeber, dem der zweite Herausgeber den Bericht vorliest, reist danach nach Hamburg."
+  },
+  {
+    "sentence": "Weil der südliche Gouverneur den nördlichen Gouverneur empfängt, beginnt das Treffen pünktlich.",
+    "question": "Wer empfängt wen?",
+    "options": [
+      "A. Der südliche Gouverneur empfängt den nördlichen Gouverneur.",
+      "B. Der nördliche Gouverneur empfängt den südlichen Gouverneur."
+    ],
+    "answer": "A. Der südliche Gouverneur empfängt den nördlichen Gouverneur.",
+    "why": "Der südliche Gouverneur is nominative; den nördlichen Gouverneur is accusative, so the southern governor receives the northern one.",
+    "contrast_form": "Weil den südlichen Gouverneur der nördliche Gouverneur empfängt, beginnt das Treffen pünktlich."
+  },
+  {
+    "sentence": "Der erste Rezensent, der den zweiten Rezensenten beurteilt, reist anschließend nach Berlin.",
+    "question": "Wer beurteilt wen?",
+    "options": [
+      "A. Der zweite Rezensent beurteilt den ersten Rezensenten.",
+      "B. Der erste Rezensent beurteilt den zweiten Rezensenten."
+    ],
+    "answer": "B. Der erste Rezensent beurteilt den zweiten Rezensenten.",
+    "why": "Der is a nominative relative pronoun referring to the first reviewer; den zweiten Rezensenten is accusative.",
+    "contrast_form": "Der erste Rezensent, den der zweite Rezensent beurteilt, reist anschließend nach Berlin."
+  },
+  {
+    "sentence": "Der erste Kandidat unterstützt den zweiten Kandidaten in der Kampagne.",
+    "question": "Wer unterstützt wen?",
+    "options": [
+      "A. Der erste Kandidat unterstützt den zweiten Kandidaten.",
+      "B. Der zweite Kandidat unterstützt den ersten Kandidaten."
+    ],
+    "answer": "A. Der erste Kandidat unterstützt den zweiten Kandidaten.",
+    "why": "Der erste Kandidat is nominative; den zweiten Kandidaten is accusative, so the first candidate provides the support.",
+    "contrast_form": "Den ersten Kandidaten unterstützt der zweite Kandidat in der Kampagne."
+  },
+  {
+    "sentence": "Der externe Chirurg, der dem internen Chirurgen assistiert, erläutert später den Eingriff.",
+    "question": "Wer assistiert wem?",
+    "options": [
+      "A. Der interne Chirurg assistiert dem externen Chirurgen.",
+      "B. Der externe Chirurg assistiert dem internen Chirurgen."
+    ],
+    "answer": "B. Der externe Chirurg assistiert dem internen Chirurgen.",
+    "why": "Der is a nominative relative pronoun referring to the external surgeon; dem internen Chirurgen is dative.",
+    "contrast_form": "Der externe Chirurg, dem der interne Chirurg assistiert, erläutert später den Eingriff."
+  },
+  {
+    "sentence": "Ob der leitende Arzt den beratenden Arzt respektiert, lässt der Bericht offen.",
+    "question": "Wer respektiert wen?",
+    "options": [
+      "A. Der leitende Arzt respektiert den beratenden Arzt.",
+      "B. Der beratende Arzt respektiert den leitenden Arzt."
+    ],
+    "answer": "A. Der leitende Arzt respektiert den beratenden Arzt.",
+    "why": "Der leitende Arzt is nominative; den beratenden Arzt is accusative, so the lead physician shows the respect.",
+    "contrast_form": "Ob den leitenden Arzt der beratende Arzt respektiert, lässt der Bericht offen."
+  },
+  {
+    "sentence": "Obwohl der erste Delegierte den zweiten Delegierten provoziert, bleibt die Sitzung ruhig.",
+    "question": "Wer provoziert wen?",
+    "options": [
+      "A. Der erste Delegierte provoziert den zweiten Delegierten.",
+      "B. Der zweite Delegierte provoziert den ersten Delegierten."
+    ],
+    "answer": "A. Der erste Delegierte provoziert den zweiten Delegierten.",
+    "why": "Der erste Delegierte is nominative; den zweiten Delegierten is accusative, so the first delegate initiates the provocation.",
+    "contrast_form": "Obwohl den ersten Delegierten der zweite Delegierte provoziert, bleibt die Sitzung ruhig."
+  },
+  {
+    "sentence": "Der erste Autor, den der zweite Autor im Bericht erwähnt, hält am Freitag einen Vortrag.",
+    "question": "Wer erwähnt wen?",
+    "options": [
+      "A. Der erste Autor erwähnt den zweiten Autor.",
+      "B. Der zweite Autor erwähnt den ersten Autor."
+    ],
+    "answer": "B. Der zweite Autor erwähnt den ersten Autor.",
+    "why": "Den refers to the first author as the accusative object; der zweite Autor is nominative and makes the mention.",
+    "contrast_form": "Der erste Autor, der den zweiten Autor im Bericht erwähnt, hält am Freitag einen Vortrag."
+  },
+  {
+    "sentence": "Dem externen Sachverständigen widerspricht der interne Sachverständige im Ausschuss.",
+    "question": "Wer widerspricht wem?",
+    "options": [
+      "A. Der interne Sachverständige widerspricht dem externen Sachverständigen.",
+      "B. Der externe Sachverständige widerspricht dem internen Sachverständigen."
+    ],
+    "answer": "A. Der interne Sachverständige widerspricht dem externen Sachverständigen.",
+    "why": "Dem externen Sachverständigen is dative; der interne Sachverständige is nominative, so the internal expert voices the disagreement.",
+    "contrast_form": "Der externe Sachverständige widerspricht dem internen Sachverständigen im Ausschuss."
+  },
+  {
+    "sentence": "Den französischen Diplomaten warnt der deutsche Diplomat vor einer Eskalation.",
+    "question": "Wer warnt wen?",
+    "options": [
+      "A. Der französische Diplomat warnt den deutschen Diplomaten.",
+      "B. Der deutsche Diplomat warnt den französischen Diplomaten."
+    ],
+    "answer": "B. Der deutsche Diplomat warnt den französischen Diplomaten.",
+    "why": "Den französischen Diplomaten is accusative; der deutsche Diplomat is nominative, so the German diplomat gives the warning.",
+    "contrast_form": "Der französische Diplomat warnt den deutschen Diplomaten vor einer Eskalation."
+  },
+  {
+    "sentence": "Ob der erste Sprecher dem zweiten Sprecher antwortet, bleibt bis nach der Pause offen.",
+    "question": "Wer antwortet wem?",
+    "options": [
+      "A. Der zweite Sprecher antwortet dem ersten Sprecher.",
+      "B. Der erste Sprecher antwortet dem zweiten Sprecher."
+    ],
+    "answer": "B. Der erste Sprecher antwortet dem zweiten Sprecher.",
+    "why": "Der erste Sprecher is nominative; dem zweiten Sprecher is dative, so the first spokesperson gives the reply.",
+    "contrast_form": "Ob dem ersten Sprecher der zweite Sprecher antwortet, bleibt bis nach der Pause offen."
+  },
+  {
+    "sentence": "Der frühere Vorsitzende, der den amtierenden Vorsitzenden beschuldigt, reist am Abend nach Brüssel.",
+    "question": "Wer beschuldigt wen?",
+    "options": [
+      "A. Der frühere Vorsitzende beschuldigt den amtierenden Vorsitzenden.",
+      "B. Der amtierende Vorsitzende beschuldigt den früheren Vorsitzenden."
+    ],
+    "answer": "A. Der frühere Vorsitzende beschuldigt den amtierenden Vorsitzenden.",
+    "why": "Der is a nominative relative pronoun referring to the former chair; den amtierenden Vorsitzenden is accusative.",
+    "contrast_form": "Der frühere Vorsitzende, den der amtierende Vorsitzende beschuldigt, reist am Abend nach Brüssel."
+  },
+  {
+    "sentence": "Der jüngere Analyst zitiert den älteren Analysten in der Studie.",
+    "question": "Wer zitiert wen?",
+    "options": [
+      "A. Der ältere Analyst zitiert den jüngeren Analysten.",
+      "B. Der jüngere Analyst zitiert den älteren Analysten."
+    ],
+    "answer": "B. Der jüngere Analyst zitiert den älteren Analysten.",
+    "why": "Der jüngere Analyst is nominative; den älteren Analysten is accusative, so the younger analyst cites the older one.",
+    "contrast_form": "Den jüngeren Analysten zitiert der ältere Analyst in der Studie."
+  },
+  {
+    "sentence": "Dem ersten Referenten schickt der zweite Referent den Entwurf am Montag.",
+    "question": "Wer schickt wem den Entwurf?",
+    "options": [
+      "A. Der erste Referent schickt dem zweiten Referenten den Entwurf.",
+      "B. Der zweite Referent schickt dem ersten Referenten den Entwurf."
+    ],
+    "answer": "B. Der zweite Referent schickt dem ersten Referenten den Entwurf.",
+    "why": "Dem ersten Referenten is dative and der zweite Referent is nominative, so the second presenter sends the draft to the first.",
+    "contrast_form": "Der erste Referent schickt dem zweiten Referenten den Entwurf am Montag."
+  },
+  {
+    "sentence": "Während den jüngeren Professor der ältere Professor fördert, prüft die Fakultät den Antrag.",
+    "question": "Wer fördert wen?",
+    "options": [
+      "A. Der jüngere Professor fördert den älteren Professor.",
+      "B. Der ältere Professor fördert den jüngeren Professor."
+    ],
+    "answer": "B. Der ältere Professor fördert den jüngeren Professor.",
+    "why": "Den jüngeren Professor is accusative; der ältere Professor is nominative, so the older professor provides the support.",
+    "contrast_form": "Während der jüngere Professor den älteren Professor fördert, prüft die Fakultät den Antrag."
+  },
+  {
+    "sentence": "Den örtlichen Unternehmer verklagt der auswärtige Unternehmer wegen des Vertrags.",
+    "question": "Wer verklagt wen?",
+    "options": [
+      "A. Der auswärtige Unternehmer verklagt den örtlichen Unternehmer.",
+      "B. Der örtliche Unternehmer verklagt den auswärtigen Unternehmer."
+    ],
+    "answer": "A. Der auswärtige Unternehmer verklagt den örtlichen Unternehmer.",
+    "why": "Den örtlichen Unternehmer is accusative; der auswärtige Unternehmer is nominative, so the nonlocal entrepreneur brings the suit.",
+    "contrast_form": "Der örtliche Unternehmer verklagt den auswärtigen Unternehmer wegen des Vertrags."
+  },
+  {
+    "sentence": "Den leitenden Redakteur korrigiert der stellvertretende Redakteur während der Probe.",
+    "question": "Wer korrigiert wen?",
+    "options": [
+      "A. Der stellvertretende Redakteur korrigiert den leitenden Redakteur.",
+      "B. Der leitende Redakteur korrigiert den stellvertretenden Redakteur."
+    ],
+    "answer": "A. Der stellvertretende Redakteur korrigiert den leitenden Redakteur.",
+    "why": "Den leitenden Redakteur is accusative; der stellvertretende Redakteur is nominative, so the deputy editor makes the correction.",
+    "contrast_form": "Der leitende Redakteur korrigiert den stellvertretenden Redakteur während der Probe."
+  },
+  {
+    "sentence": "Der erste Dozent erklärt dem zweiten Dozenten das Verfahren vor dem Seminar.",
+    "question": "Wer erklärt wem das Verfahren?",
+    "options": [
+      "A. Der zweite Dozent erklärt dem ersten Dozenten das Verfahren.",
+      "B. Der erste Dozent erklärt dem zweiten Dozenten das Verfahren."
+    ],
+    "answer": "B. Der erste Dozent erklärt dem zweiten Dozenten das Verfahren.",
+    "why": "Der erste Dozent is nominative and dem zweiten Dozenten is dative, so the first lecturer explains the procedure to the second.",
+    "contrast_form": "Dem ersten Dozenten erklärt der zweite Dozent das Verfahren vor dem Seminar."
+  },
+  {
+    "sentence": "Obwohl dem jüngeren Kandidaten der ältere Kandidat gratuliert, bleibt das Ergebnis umstritten.",
+    "question": "Wer gratuliert wem?",
+    "options": [
+      "A. Der ältere Kandidat gratuliert dem jüngeren Kandidaten.",
+      "B. Der jüngere Kandidat gratuliert dem älteren Kandidaten."
+    ],
+    "answer": "A. Der ältere Kandidat gratuliert dem jüngeren Kandidaten.",
+    "why": "Dem jüngeren Kandidaten is dative; der ältere Kandidat is nominative, so the older candidate offers congratulations.",
+    "contrast_form": "Obwohl der jüngere Kandidat dem älteren Kandidaten gratuliert, bleibt das Ergebnis umstritten."
+  },
+  {
+    "sentence": "Der neue Botschafter, den der frühere Botschafter begrüßt, nimmt anschließend Platz.",
+    "question": "Wer begrüßt wen?",
+    "options": [
+      "A. Der neue Botschafter begrüßt den früheren Botschafter.",
+      "B. Der frühere Botschafter begrüßt den neuen Botschafter."
+    ],
+    "answer": "B. Der frühere Botschafter begrüßt den neuen Botschafter.",
+    "why": "Den makes the new ambassador the accusative object; der frühere Botschafter is nominative and offers the greeting.",
+    "contrast_form": "Der neue Botschafter, der den früheren Botschafter begrüßt, nimmt anschließend Platz."
+  },
+  {
+    "sentence": "Dass den internen Prüfer der externe Prüfer überzeugt, überrascht den Ausschuss.",
+    "question": "Wer überzeugt wen?",
+    "options": [
+      "A. Der externe Prüfer überzeugt den internen Prüfer.",
+      "B. Der interne Prüfer überzeugt den externen Prüfer."
+    ],
+    "answer": "A. Der externe Prüfer überzeugt den internen Prüfer.",
+    "why": "Den internen Prüfer is accusative; der externe Prüfer is nominative, so the external auditor does the convincing.",
+    "contrast_form": "Dass der interne Prüfer den externen Prüfer überzeugt, überrascht den Ausschuss."
+  },
+  {
+    "sentence": "Der erste Redner, der dem zweiten Redner applaudiert, verlässt danach das Podium.",
+    "question": "Wer applaudiert wem?",
+    "options": [
+      "A. Der erste Redner applaudiert dem zweiten Redner.",
+      "B. Der zweite Redner applaudiert dem ersten Redner."
+    ],
+    "answer": "A. Der erste Redner applaudiert dem zweiten Redner.",
+    "why": "Der is a nominative relative pronoun referring to the first speaker; dem zweiten Redner is dative, so the first applauds the second.",
+    "contrast_form": "Der erste Redner, dem der zweite Redner applaudiert, verlässt danach das Podium."
+  },
+  {
+    "sentence": "Der erste Journalist, den der zweite Journalist interviewt, nimmt später an einer Podiumsdiskussion teil.",
+    "question": "Wer interviewt wen?",
+    "options": [
+      "A. Der zweite Journalist interviewt den ersten Journalisten.",
+      "B. Der erste Journalist interviewt den zweiten Journalisten."
+    ],
+    "answer": "A. Der zweite Journalist interviewt den ersten Journalisten.",
+    "why": "Den refers to der erste Journalist as the accusative object; der zweite Journalist is nominative and conducts the interview.",
+    "contrast_form": "Der erste Journalist, der den zweiten Journalisten interviewt, nimmt später an einer Podiumsdiskussion teil."
+  },
+  {
+    "sentence": "Obwohl den ersten Sachverständigen der zweite Sachverständige prüft, bleibt das Verfahren transparent.",
+    "question": "Wer prüft wen?",
+    "options": [
+      "A. Der erste Sachverständige prüft den zweiten Sachverständigen.",
+      "B. Der zweite Sachverständige prüft den ersten Sachverständigen."
+    ],
+    "answer": "B. Der zweite Sachverständige prüft den ersten Sachverständigen.",
+    "why": "Den ersten Sachverständigen is accusative; der zweite Sachverständige is nominative, so the second expert conducts the examination.",
+    "contrast_form": "Obwohl der erste Sachverständige den zweiten Sachverständigen prüft, bleibt das Verfahren transparent."
+  },
+  {
+    "sentence": "Der private Investor kontaktiert den institutionellen Investor nach der Veröffentlichung.",
+    "question": "Wer kontaktiert wen?",
+    "options": [
+      "A. Der private Investor kontaktiert den institutionellen Investor.",
+      "B. Der institutionelle Investor kontaktiert den privaten Investor."
+    ],
+    "answer": "A. Der private Investor kontaktiert den institutionellen Investor.",
+    "why": "Der private Investor is nominative; den institutionellen Investor is accusative, so the private investor initiates contact.",
+    "contrast_form": "Den privaten Investor kontaktiert der institutionelle Investor nach der Veröffentlichung."
+  },
+  {
+    "sentence": "Dass dem regionalen Berater der nationale Berater misstraut, geht aus dem Protokoll hervor.",
+    "question": "Wer misstraut wem?",
+    "options": [
+      "A. Der nationale Berater misstraut dem regionalen Berater.",
+      "B. Der regionale Berater misstraut dem nationalen Berater."
+    ],
+    "answer": "A. Der nationale Berater misstraut dem regionalen Berater.",
+    "why": "Dem regionalen Berater is dative; der nationale Berater is nominative, so the national adviser is the one who distrusts the other.",
+    "contrast_form": "Dass der regionale Berater dem nationalen Berater misstraut, geht aus dem Protokoll hervor."
+  },
+  {
+    "sentence": "Den externen Berater kritisiert der interne Berater nach der Sitzung.",
+    "question": "Wer kritisiert wen?",
+    "options": [
+      "A. Der externe Berater kritisiert den internen Berater.",
+      "B. Der interne Berater kritisiert den externen Berater."
+    ],
+    "answer": "B. Der interne Berater kritisiert den externen Berater.",
+    "why": "Den externen Berater is accusative; der interne Berater is nominative, so the internal adviser performs the criticism.",
+    "contrast_form": "Der externe Berater kritisiert den internen Berater nach der Sitzung."
+  },
+  {
+    "sentence": "Der erste Techniker hilft dem zweiten Techniker bei der Auswertung.",
+    "question": "Wer hilft wem?",
+    "options": [
+      "A. Der zweite Techniker hilft dem ersten Techniker.",
+      "B. Der erste Techniker hilft dem zweiten Techniker."
+    ],
+    "answer": "B. Der erste Techniker hilft dem zweiten Techniker.",
+    "why": "Der erste Techniker is nominative; dem zweiten Techniker is dative, so the first technician provides the help.",
+    "contrast_form": "Dem ersten Techniker hilft der zweite Techniker bei der Auswertung."
+  },
+  {
+    "sentence": "Weil dieser Senator den anderen Senator ignoriert, verzögert sich die Einigung.",
+    "question": "Wer ignoriert wen?",
+    "options": [
+      "A. Der andere Senator ignoriert diesen Senator.",
+      "B. Dieser Senator ignoriert den anderen Senator."
+    ],
+    "answer": "B. Dieser Senator ignoriert den anderen Senator.",
+    "why": "Dieser Senator is nominative; den anderen Senator is accusative, so the senator identified by dieser does the ignoring.",
+    "contrast_form": "Weil diesen Senator der andere Senator ignoriert, verzögert sich die Einigung."
+  },
+  {
+    "sentence": "Dieser Landesminister befragt den Bundesminister vor der Abstimmung.",
+    "question": "Wer befragt wen?",
+    "options": [
+      "A. Der Landesminister befragt den Bundesminister.",
+      "B. Der Bundesminister befragt den Landesminister."
+    ],
+    "answer": "A. Der Landesminister befragt den Bundesminister.",
+    "why": "Dieser Landesminister is nominative; den Bundesminister is accusative, so the state minister asks the questions.",
+    "contrast_form": "Diesen Landesminister befragt der Bundesminister vor der Abstimmung."
+  },
+  {
+    "sentence": "Der regionale Abgeordnete, dem der nationale Abgeordnete eine Nachricht schreibt, nimmt noch am selben Tag an der Sitzung teil.",
+    "question": "Wer schreibt wem eine Nachricht?",
+    "options": [
+      "A. Der regionale Abgeordnete schreibt dem nationalen Abgeordneten eine Nachricht.",
+      "B. Der nationale Abgeordnete schreibt dem regionalen Abgeordneten eine Nachricht."
+    ],
+    "answer": "B. Der nationale Abgeordnete schreibt dem regionalen Abgeordneten eine Nachricht.",
+    "why": "Dem makes the regional representative the dative recipient; der nationale Abgeordnete is nominative and writes the message.",
+    "contrast_form": "Der regionale Abgeordnete, der dem nationalen Abgeordneten eine Nachricht schreibt, nimmt noch am selben Tag an der Sitzung teil."
+  },
+  {
+    "sentence": "Ob der externe Ermittler den internen Ermittler entlastet, bleibt nach der Anhörung offen.",
+    "question": "Wer entlastet wen?",
+    "options": [
+      "A. Der interne Ermittler entlastet den externen Ermittler.",
+      "B. Der externe Ermittler entlastet den internen Ermittler."
+    ],
+    "answer": "B. Der externe Ermittler entlastet den internen Ermittler.",
+    "why": "Der externe Ermittler is nominative; den internen Ermittler is accusative, so the external investigator clears the internal one.",
+    "contrast_form": "Ob den externen Ermittler der interne Ermittler entlastet, bleibt nach der Anhörung offen."
+  },
+  {
+    "sentence": "Weil der erste Ausschuss dem zweiten Ausschuss zustimmt, kann der Beschluss veröffentlicht werden.",
+    "question": "Wer stimmt wem zu?",
+    "options": [
+      "A. Der zweite Ausschuss stimmt dem ersten Ausschuss zu.",
+      "B. Der erste Ausschuss stimmt dem zweiten Ausschuss zu."
+    ],
+    "answer": "B. Der erste Ausschuss stimmt dem zweiten Ausschuss zu.",
+    "why": "Der erste Ausschuss is nominative; dem zweiten Ausschuss is dative, so the first committee expresses agreement with the second.",
+    "contrast_form": "Weil dem ersten Ausschuss der zweite Ausschuss zustimmt, kann der Beschluss veröffentlicht werden."
+  },
+  {
+    "sentence": "Der jüngere Abgeordnete dankt dem älteren Abgeordneten nach der Debatte.",
+    "question": "Wer dankt wem?",
+    "options": [
+      "A. Der jüngere Abgeordnete dankt dem älteren Abgeordneten.",
+      "B. Der ältere Abgeordnete dankt dem jüngeren Abgeordneten."
+    ],
+    "answer": "A. Der jüngere Abgeordnete dankt dem älteren Abgeordneten.",
+    "why": "Der jüngere Abgeordnete is nominative; dem älteren Abgeordneten is dative, so the younger representative expresses thanks.",
+    "contrast_form": "Dem jüngeren Abgeordneten dankt der ältere Abgeordnete nach der Debatte."
+  },
+  {
+    "sentence": "Der externe Aufseher, der den internen Aufseher überwacht, nimmt anschließend an der Sitzung teil.",
+    "question": "Wer überwacht wen?",
+    "options": [
+      "A. Der externe Aufseher überwacht den internen Aufseher.",
+      "B. Der interne Aufseher überwacht den externen Aufseher."
+    ],
+    "answer": "A. Der externe Aufseher überwacht den internen Aufseher.",
+    "why": "Der is a nominative relative pronoun referring to the external supervisor; den internen Aufseher is accusative.",
+    "contrast_form": "Der externe Aufseher, den der interne Aufseher überwacht, nimmt anschließend an der Sitzung teil."
+  },
+  {
+    "sentence": "Der erste Gutachter lobt den zweiten Gutachter im Abschlussbericht.",
+    "question": "Wer lobt wen?",
+    "options": [
+      "A. Der erste Gutachter lobt den zweiten Gutachter.",
+      "B. Der zweite Gutachter lobt den ersten Gutachter."
+    ],
+    "answer": "A. Der erste Gutachter lobt den zweiten Gutachter.",
+    "why": "Der erste Gutachter is nominative; den zweiten Gutachter is accusative, so the first reviewer gives the praise.",
+    "contrast_form": "Den ersten Gutachter lobt der zweite Gutachter im Abschlussbericht."
+  },
+  {
+    "sentence": "Der externe Prüfer zeigt dem internen Prüfer die Unterlagen im Besprechungsraum.",
+    "question": "Wer zeigt wem die Unterlagen?",
+    "options": [
+      "A. Der interne Prüfer zeigt dem externen Prüfer die Unterlagen.",
+      "B. Der externe Prüfer zeigt dem internen Prüfer die Unterlagen."
+    ],
+    "answer": "B. Der externe Prüfer zeigt dem internen Prüfer die Unterlagen.",
+    "why": "Der externe Prüfer is nominative and dem internen Prüfer is dative, so the external auditor shows the documents to the internal one.",
+    "contrast_form": "Dem externen Prüfer zeigt der interne Prüfer die Unterlagen im Besprechungsraum."
+  },
+  {
+    "sentence": "Den externen Juristen berät der interne Jurist vor der Anhörung.",
+    "question": "Wer berät wen?",
+    "options": [
+      "A. Der externe Jurist berät den internen Juristen.",
+      "B. Der interne Jurist berät den externen Juristen."
+    ],
+    "answer": "B. Der interne Jurist berät den externen Juristen.",
+    "why": "Den externen Juristen is accusative; der interne Jurist is nominative, so the in-house lawyer gives the advice.",
+    "contrast_form": "Der externe Jurist berät den internen Juristen vor der Anhörung."
+  },
+  {
+    "sentence": "Der unabhängige Forscher, der den staatlichen Forscher verteidigt, spricht anschließend mit der Presse.",
+    "question": "Wer verteidigt wen?",
+    "options": [
+      "A. Der staatliche Forscher verteidigt den unabhängigen Forscher.",
+      "B. Der unabhängige Forscher verteidigt den staatlichen Forscher."
+    ],
+    "answer": "B. Der unabhängige Forscher verteidigt den staatlichen Forscher.",
+    "why": "Der is a nominative relative pronoun referring to the independent researcher; den staatlichen Forscher is accusative.",
+    "contrast_form": "Der unabhängige Forscher, den der staatliche Forscher verteidigt, spricht anschließend mit der Presse."
+  },
+  {
+    "sentence": "Dass den ersten Referenten der zweite Referent bei der Sitzung vertritt, bestätigt das Protokoll.",
+    "question": "Wer vertritt wen?",
+    "options": [
+      "A. Der zweite Referent vertritt den ersten Referenten.",
+      "B. Der erste Referent vertritt den zweiten Referenten."
+    ],
+    "answer": "A. Der zweite Referent vertritt den ersten Referenten.",
+    "why": "Den ersten Referenten is accusative; der zweite Referent is nominative, so the second presenter substitutes for the first.",
+    "contrast_form": "Dass der erste Referent den zweiten Referenten bei der Sitzung vertritt, bestätigt das Protokoll."
+  },
+  {
+    "sentence": "Dem regionalen Vertreter vertraut der nationale Vertreter trotz der Kritik.",
+    "question": "Wer vertraut wem?",
+    "options": [
+      "A. Der nationale Vertreter vertraut dem regionalen Vertreter.",
+      "B. Der regionale Vertreter vertraut dem nationalen Vertreter."
+    ],
+    "answer": "A. Der nationale Vertreter vertraut dem regionalen Vertreter.",
+    "why": "Dem regionalen Vertreter is dative; der nationale Vertreter is nominative, so the national representative trusts the regional representative.",
+    "contrast_form": "Der regionale Vertreter vertraut dem nationalen Vertreter trotz der Kritik."
+  },
+  {
+    "sentence": "Dass den ersten Forscher der zweite Forscher für den Preis nominiert, meldet die Akademie am Abend.",
+    "question": "Wer nominiert wen?",
+    "options": [
+      "A. Der erste Forscher nominiert den zweiten Forscher.",
+      "B. Der zweite Forscher nominiert den ersten Forscher."
+    ],
+    "answer": "B. Der zweite Forscher nominiert den ersten Forscher.",
+    "why": "Den ersten Forscher is accusative; der zweite Forscher is nominative, so the second researcher submits the nomination.",
+    "contrast_form": "Dass der erste Forscher den zweiten Forscher für den Preis nominiert, meldet die Akademie am Abend."
+  },
+  {
+    "sentence": "Der leitende Moderator, den der stellvertretende Moderator unterbricht, verlässt später das Studio.",
+    "question": "Wer unterbricht wen?",
+    "options": [
+      "A. Der leitende Moderator unterbricht den stellvertretenden Moderator.",
+      "B. Der stellvertretende Moderator unterbricht den leitenden Moderator."
+    ],
+    "answer": "B. Der stellvertretende Moderator unterbricht den leitenden Moderator.",
+    "why": "Den makes the lead moderator the accusative object; der stellvertretende Moderator is nominative and performs the interruption.",
+    "contrast_form": "Der leitende Moderator, der den stellvertretenden Moderator unterbricht, verlässt später das Studio."
+  },
+  {
+    "sentence": "Der neue Senator, dem der frühere Senator zuhört, verlässt anschließend den Sitzungssaal.",
+    "question": "Wer hört wem zu?",
+    "options": [
+      "A. Der frühere Senator hört dem neuen Senator zu.",
+      "B. Der neue Senator hört dem früheren Senator zu."
+    ],
+    "answer": "A. Der frühere Senator hört dem neuen Senator zu.",
+    "why": "Dem marks the new senator as the person being listened to; der frühere Senator is nominative, so the former senator does the listening.",
+    "contrast_form": "Der neue Senator, der dem früheren Senator zuhört, verlässt anschließend den Sitzungssaal."
+  },
+  {
+    "sentence": "Weil der interne Redakteur dem externen Redakteur die Datei sendet, kann die Ausgabe erscheinen.",
+    "question": "Wer sendet wem die Datei?",
+    "options": [
+      "A. Der externe Redakteur sendet dem internen Redakteur die Datei.",
+      "B. Der interne Redakteur sendet dem externen Redakteur die Datei."
+    ],
+    "answer": "B. Der interne Redakteur sendet dem externen Redakteur die Datei.",
+    "why": "Der interne Redakteur is nominative and dem externen Redakteur is dative, so the internal editor sends the file to the external one.",
+    "contrast_form": "Weil dem internen Redakteur der externe Redakteur die Datei sendet, kann die Ausgabe erscheinen."
+  }
+]

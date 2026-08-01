@@ -1,53 +1,598 @@
 [
-  {"_meta":{"source_evidence":"docs/GRAMMAR_STRATEGY.md §§3b and 4; docs/research/error-profiles/es.md §§2, 3 and 6 (preterite morphology plus one directly attested preterite-for-imperfect selection error)","format":"F2 reciprocal preterite/imperfect interpretation pairs; the visible verb form is the only decisive aspect cue","built":"2026-08-01","feeds_units":["es_preterito","es_imperfecto"],"routes":["odd items 1-49: es_preterito","even items 2-50: es_imperfecto"],"validation_notes":"Standard international Spanish, professional/news register. Exactly 25 reciprocal pairs; no lexical time adverbs; A/B order alternates by pair."}},
-  {"sentence":"La comisión revisó el protocolo.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Revisó' is preterite: it bounds the review as a completed whole. The contrast 'revisaba' removes that completed boundary.","contrast_form":"La comisión revisaba el protocolo."},
-  {"sentence":"La comisión revisaba el protocolo.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Revisaba' is imperfect: it presents the review from within or as repeated, without marking completion. 'Revisó' would bound it as complete.","contrast_form":"La comisión revisó el protocolo."},
-  {"sentence":"La periodista entrevistó al ministro.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Entrevistó' is preterite: it presents the interview as one bounded, completed event. 'Entrevistaba' would leave its endpoint unasserted.","contrast_form":"La periodista entrevistaba al ministro."},
-  {"sentence":"La periodista entrevistaba al ministro.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Entrevistaba' is imperfect: it depicts the interview as ongoing or recurrent, not as a completed whole. 'Entrevistó' supplies the boundary.","contrast_form":"La periodista entrevistó al ministro."},
-  {"sentence":"La empresa publicó informes de transparencia.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Publicó' is preterite: the publication is viewed as a completed occurrence. 'Publicaba' would present it as a practice or an unfolding activity.","contrast_form":"La empresa publicaba informes de transparencia."},
-  {"sentence":"La empresa publicaba informes de transparencia.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Publicaba' is imperfect: it presents publication as habitual or in progress, with no completed endpoint. 'Publicó' would close the event.","contrast_form":"La empresa publicó informes de transparencia."},
-  {"sentence":"El analista comparó los presupuestos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Comparó' is preterite: it packages the comparison as a finished whole. 'Comparaba' would show it underway or repeated.","contrast_form":"El analista comparaba los presupuestos."},
-  {"sentence":"El analista comparaba los presupuestos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Comparaba' is imperfect: the comparison is viewed internally or habitually, without a final boundary. 'Comparó' would mark it complete.","contrast_form":"El analista comparó los presupuestos."},
-  {"sentence":"La fiscal investigó la filtración.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Investigó' is preterite: it construes the investigation as bounded and complete. 'Investigaba' would present it as ongoing or habitual.","contrast_form":"La fiscal investigaba la filtración."},
-  {"sentence":"La fiscal investigaba la filtración.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Investigaba' is imperfect: it locates the reader inside an investigation or a repeated practice, without asserting completion. 'Investigó' would close it.","contrast_form":"La fiscal investigó la filtración."},
-  {"sentence":"El equipo actualizó la base de datos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Actualizó' is preterite: the update is presented as completed. 'Actualizaba' would instead depict updating as ongoing or recurrent.","contrast_form":"El equipo actualizaba la base de datos."},
-  {"sentence":"El equipo actualizaba la base de datos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Actualizaba' is imperfect: it leaves the updating process open or habitual. 'Actualizó' would present one completed update.","contrast_form":"El equipo actualizó la base de datos."},
-  {"sentence":"La comisión negoció el acuerdo.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Negoció' is preterite: it views the negotiation as a bounded whole. 'Negociaba' would leave it ongoing or characterize a repeated activity.","contrast_form":"La comisión negociaba el acuerdo."},
-  {"sentence":"La comisión negociaba el acuerdo.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Negociaba' is imperfect: the negotiation is viewed in progress or as habitual, without a completed boundary. 'Negoció' would bound it.","contrast_form":"La comisión negoció el acuerdo."},
-  {"sentence":"El tribunal examinó las pruebas.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Examinó' is preterite: the examination is packaged as finished. 'Examinaba' would present it from inside or as a recurring procedure.","contrast_form":"El tribunal examinaba las pruebas."},
-  {"sentence":"El tribunal examinaba las pruebas.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Examinaba' is imperfect: it supplies an internal or habitual view and does not assert completion. 'Examinó' would close the examination.","contrast_form":"El tribunal examinó las pruebas."},
-  {"sentence":"La redacción verificó las fuentes.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Verificó' is preterite: it presents source checking as a completed event. 'Verificaba' would make it an ongoing or habitual process.","contrast_form":"La redacción verificaba las fuentes."},
-  {"sentence":"La redacción verificaba las fuentes.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Verificaba' is imperfect: it portrays source checking as in progress or regular, without an endpoint. 'Verificó' would mark completion.","contrast_form":"La redacción verificó las fuentes."},
-  {"sentence":"El banco financió el proyecto.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Financió' is preterite: the financing is framed as a bounded completed contribution. 'Financiaba' would present continuing or customary support.","contrast_form":"El banco financiaba el proyecto."},
-  {"sentence":"El banco financiaba el proyecto.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Financiaba' is imperfect: the support is portrayed as ongoing or habitual, with no asserted endpoint. 'Financió' would bound it.","contrast_form":"El banco financió el proyecto."},
-  {"sentence":"El ayuntamiento aplicó la norma.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Aplicó' is preterite: it presents application of the rule as a completed occurrence. 'Aplicaba' would describe an ongoing or regular practice.","contrast_form":"El ayuntamiento aplicaba la norma."},
-  {"sentence":"El ayuntamiento aplicaba la norma.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Aplicaba' is imperfect: it presents enforcement as habitual or underway, not as a closed event. 'Aplicó' would mark it complete.","contrast_form":"El ayuntamiento aplicó la norma."},
-  {"sentence":"El laboratorio probó el sistema.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Probó' is preterite: it bounds the test as one completed event. 'Probaba' would depict testing in progress or as repeated.","contrast_form":"El laboratorio probaba el sistema."},
-  {"sentence":"El laboratorio probaba el sistema.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Probaba' is imperfect: the testing is viewed internally or habitually, without completion. 'Probó' would supply the completed boundary.","contrast_form":"El laboratorio probó el sistema."},
-  {"sentence":"La consultora midió el impacto.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Midió' is preterite: it presents the measurement as completed. 'Medía' would portray measuring as ongoing or customary.","contrast_form":"La consultora medía el impacto."},
-  {"sentence":"La consultora medía el impacto.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Medía' is imperfect: it leaves the measuring activity open or habitual. 'Midió' would frame it as a finished whole.","contrast_form":"La consultora midió el impacto."},
-  {"sentence":"El ministerio auditó los contratos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Auditó' is preterite: it construes the audit as a bounded completed event. 'Auditaba' would present it as underway or repeated.","contrast_form":"El ministerio auditaba los contratos."},
-  {"sentence":"El ministerio auditaba los contratos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Auditaba' is imperfect: it presents auditing as in progress or routine, with no asserted completion. 'Auditó' would close it.","contrast_form":"El ministerio auditó los contratos."},
-  {"sentence":"El sindicato organizó reuniones sectoriales.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Organizó' is preterite: it presents the organizing as a completed occurrence. 'Organizaba' would characterize an ongoing or habitual activity.","contrast_form":"El sindicato organizaba reuniones sectoriales."},
-  {"sentence":"El sindicato organizaba reuniones sectoriales.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Organizaba' is imperfect: it makes the meetings a recurring or unfolding activity, without a final boundary. 'Organizó' would bound the event.","contrast_form":"El sindicato organizó reuniones sectoriales."},
-  {"sentence":"La directora leyó los informes.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Leyó' is preterite: it presents the reading as completed. 'Leía' would show it in progress or as a regular activity.","contrast_form":"La directora leía los informes."},
-  {"sentence":"La directora leía los informes.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Leía' is imperfect: the reading is viewed internally or habitually, with no claim that it finished. 'Leyó' would mark it complete.","contrast_form":"La directora leyó los informes."},
-  {"sentence":"El portavoz explicó la reforma.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Explicó' is preterite: it packages the explanation as a completed event. 'Explicaba' would depict it as ongoing or repeated.","contrast_form":"El portavoz explicaba la reforma."},
-  {"sentence":"El portavoz explicaba la reforma.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Explicaba' is imperfect: it presents the explanation in progress or as habitual, without completion. 'Explicó' would close it.","contrast_form":"El portavoz explicó la reforma."},
-  {"sentence":"Los investigadores siguieron el protocolo.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Siguieron' is preterite: it views adherence as a bounded completed episode. 'Seguían' would present it as an ongoing or regular practice.","contrast_form":"Los investigadores seguían el protocolo."},
-  {"sentence":"Los investigadores seguían el protocolo.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Seguían' is imperfect: it depicts adherence as ongoing or habitual and does not mark an endpoint. 'Siguieron' would bound it.","contrast_form":"Los investigadores siguieron el protocolo."},
-  {"sentence":"La agencia recopiló datos estadísticos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Recopiló' is preterite: it presents data collection as completed. 'Recopilaba' would make it an ongoing or recurring process.","contrast_form":"La agencia recopilaba datos estadísticos."},
-  {"sentence":"La agencia recopilaba datos estadísticos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Recopilaba' is imperfect: it views data collection from within or as routine, without asserting completion. 'Recopiló' would close it.","contrast_form":"La agencia recopiló datos estadísticos."},
-  {"sentence":"El consejo debatió la propuesta.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Debatió' is preterite: it frames the debate as a completed occurrence. 'Debatía' would present it in progress or as habitual.","contrast_form":"El consejo debatía la propuesta."},
-  {"sentence":"El consejo debatía la propuesta.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Debatía' is imperfect: the debate is depicted as ongoing or recurrent, without a completed boundary. 'Debatió' would bound it.","contrast_form":"El consejo debatió la propuesta."},
-  {"sentence":"Los técnicos repararon los servidores.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Repararon' is preterite: it presents the repairs as a completed episode. 'Reparaban' would portray the work as ongoing or routine.","contrast_form":"Los técnicos reparaban los servidores."},
-  {"sentence":"Los técnicos reparaban los servidores.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Reparaban' is imperfect: it leaves the repair work open or habitual. 'Repararon' would present it as a completed whole.","contrast_form":"Los técnicos repararon los servidores."},
-  {"sentence":"La emisora transmitió el debate.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Transmitió' is preterite: it construes the broadcast as one bounded event. 'Transmitía' would show it underway or as a recurring practice.","contrast_form":"La emisora transmitía el debate."},
-  {"sentence":"La emisora transmitía el debate.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Transmitía' is imperfect: it depicts broadcasting in progress or habitually, with no endpoint asserted. 'Transmitió' would close it.","contrast_form":"La emisora transmitió el debate."},
-  {"sentence":"La jueza evaluó las solicitudes.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Evaluó' is preterite: it packages the evaluation as completed. 'Evaluaba' would present it as an ongoing or habitual activity.","contrast_form":"La jueza evaluaba las solicitudes."},
-  {"sentence":"La jueza evaluaba las solicitudes.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Evaluaba' is imperfect: it views the evaluation from within or as repeated and does not assert completion. 'Evaluó' would bound it.","contrast_form":"La jueza evaluó las solicitudes."},
-  {"sentence":"El editor corrigió los artículos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"B","why":"'Corrigió' is preterite: it presents the editing as a completed occurrence. 'Corregía' would portray it as ongoing or customary.","contrast_form":"El editor corregía los artículos."},
-  {"sentence":"El editor corregía los artículos.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Habitual/en curso: no se marca el límite final."},{"label":"B","text":"Cerrada: se presenta como un hecho completo."}],"answer":"A","why":"'Corregía' is imperfect: the editing is presented as in progress or routine, without a final boundary. 'Corrigió' would close it.","contrast_form":"El editor corrigió los artículos."},
-  {"sentence":"La delegación preparó el informe.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"A","why":"'Preparó' is preterite: it frames preparation of the report as complete. 'Preparaba' would leave the process ongoing or habitual.","contrast_form":"La delegación preparaba el informe."},
-  {"sentence":"La delegación preparaba el informe.","question":"¿La acción se presenta como cerrada o como habitual/en curso?","options":[{"label":"A","text":"Cerrada: se presenta como un hecho completo."},{"label":"B","text":"Habitual/en curso: no se marca el límite final."}],"answer":"B","why":"'Preparaba' is imperfect: it presents preparation as underway or recurrent, without asserting completion. 'Preparó' would mark the completed boundary.","contrast_form":"La delegación preparó el informe."}
+  {
+    "_meta": {
+      "source_evidence": "docs/commissions/CODEX_P_F2_INTERPRETATION.md; docs/GRAMMAR_STRATEGY.md §§3b and 4; docs/research/error-profiles/es.md §§2, 3 and 6; es_preterito and es_imperfecto unit guidance",
+      "format": "F2 structured-input interpretation cards with two fixed, labeled target-language options and concise English metalinguistic feedback",
+      "built": "2026-08-01",
+      "language": "es",
+      "bank": "f2_es_pret_impf",
+      "variety": "Neutral Latin American Spanish; no vosotros morphology or region-specific lexis",
+      "provenance": "50 newly authored seed items. The learner error profile informed coverage, but no learner sentence or private source text is reproduced.",
+      "item_count": 50,
+      "feeds_units": [
+        "es_preterito",
+        "es_imperfecto"
+      ],
+      "coverage": {
+        "content_items": 50,
+        "preterite_as_bounded_whole": 25,
+        "imperfect_as_habitual_or_ongoing": 25,
+        "minimal_pair_contrasts": 50,
+        "profile_priority_source_forms": [
+          "hizo",
+          "puso",
+          "mantuvo",
+          "produjo",
+          "expuso",
+          "invirtió"
+        ],
+        "answer_positions": {
+          "A": 25,
+          "B": 25
+        },
+        "answer_positions_by_source": {
+          "preterite": {
+            "A": 13,
+            "B": 12
+          },
+          "imperfect": {
+            "A": 12,
+            "B": 13
+          }
+        }
+      },
+      "validation_notes": "Questions and options are in Spanish; why is concise English feedback. Every row omits temporal adverbs and independent aspect cues, so target morphology alone selects the viewpoint. The options describe a bounded whole versus an internal, habitual, or ongoing view without claiming real-world completion. Each contrast_form changes only target morphology and reverses the keyed option. Source viewpoints and correct labels are stored in a frozen, deterministically de-patterned order; labels are 25/25 overall, cross-balanced by source viewpoint, nonperiodic, and never run more than three times consecutively.",
+      "ordering_policy": "Frozen deterministic constraint-solved permutation v2 (seed 41); label and source-category streams reject runs longer than three, six-position period-2 windows, and nine-position period-3 windows in the full sequence and relevant routed subsequences."
+    }
+  },
+  {
+    "sentence": "La autoridad supervisaba el proceso.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Supervisaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; supervisó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La autoridad supervisó el proceso."
+  },
+  {
+    "sentence": "El archivo digitalizó la colección.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Digitalizó is a preterite form, so it presents the event as a bounded whole; digitalizaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El archivo digitalizaba la colección."
+  },
+  {
+    "sentence": "El comité hizo el análisis técnico.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Hizo is a preterite form, so it presents the event as a bounded whole; hacía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El comité hacía el análisis técnico."
+  },
+  {
+    "sentence": "El departamento preparaba el presupuesto.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Preparaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; preparó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "El departamento preparó el presupuesto."
+  },
+  {
+    "sentence": "La jueza rechazó el recurso.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Rechazó is a preterite form, so it presents the event as a bounded whole; rechazaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "La jueza rechazaba el recurso."
+  },
+  {
+    "sentence": "El equipo corrigió el informe.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Corrigió is a preterite form, so it presents the event as a bounded whole; corregía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El equipo corregía el informe."
+  },
+  {
+    "sentence": "El gabinete estudiaba el borrador.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Estudiaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; estudió is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "El gabinete estudió el borrador."
+  },
+  {
+    "sentence": "La agencia examinaba las solicitudes.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Examinaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; examinó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La agencia examinó las solicitudes."
+  },
+  {
+    "sentence": "La periodista reconstruía los hechos.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Reconstruía is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; reconstruyó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La periodista reconstruyó los hechos."
+  },
+  {
+    "sentence": "El banco concedió el crédito.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Concedió is a preterite form, so it presents the event as a bounded whole; concedía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El banco concedía el crédito."
+  },
+  {
+    "sentence": "La autoridad cerró el expediente.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Cerró is a preterite form, so it presents the event as a bounded whole; cerraba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "La autoridad cerraba el expediente."
+  },
+  {
+    "sentence": "Los investigadores analizaban las muestras.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Analizaban is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; analizaron is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "Los investigadores analizaron las muestras."
+  },
+  {
+    "sentence": "La empresa negociaba el contrato.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Negociaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; negoció is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La empresa negoció el contrato."
+  },
+  {
+    "sentence": "El Parlamento derogó la norma.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Derogó is a preterite form, so it presents the event as a bounded whole; derogaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El Parlamento derogaba la norma."
+  },
+  {
+    "sentence": "El Senado puso la reforma a votación.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Puso is a preterite form, so it presents the event as a bounded whole; ponía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El Senado ponía la reforma a votación."
+  },
+  {
+    "sentence": "Los peritos inspeccionaban la infraestructura.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Inspeccionaban is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; inspeccionaron is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "Los peritos inspeccionaron la infraestructura."
+  },
+  {
+    "sentence": "La portavoz expuso los motivos.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Expuso is a preterite form, so it presents the event as a bounded whole; exponía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "La portavoz exponía los motivos."
+  },
+  {
+    "sentence": "Los negociadores elaboraban una propuesta.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Elaboraban is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; elaboraron is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "Los negociadores elaboraron una propuesta."
+  },
+  {
+    "sentence": "La empresa desarrollaba el sistema.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Desarrollaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; desarrolló is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La empresa desarrolló el sistema."
+  },
+  {
+    "sentence": "La redactora verificaba las cifras.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Verificaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; verificó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La redactora verificó las cifras."
+  },
+  {
+    "sentence": "La dirección mantuvo el servicio.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Mantuvo is a preterite form, so it presents the event as a bounded whole; mantenía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "La dirección mantenía el servicio."
+  },
+  {
+    "sentence": "El organismo suspendió la licencia.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Suspendió is a preterite form, so it presents the event as a bounded whole; suspendía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El organismo suspendía la licencia."
+  },
+  {
+    "sentence": "La unidad documentaba el incidente.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Documentaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; documentó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La unidad documentó el incidente."
+  },
+  {
+    "sentence": "La comisión redactaba las conclusiones.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Redactaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; redactó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La comisión redactó las conclusiones."
+  },
+  {
+    "sentence": "El portavoz confirmó la noticia.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Confirmó is a preterite form, so it presents the event as a bounded whole; confirmaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El portavoz confirmaba la noticia."
+  },
+  {
+    "sentence": "El tribunal anuló la resolución.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Anuló is a preterite form, so it presents the event as a bounded whole; anulaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El tribunal anulaba la resolución."
+  },
+  {
+    "sentence": "Los funcionarios clasificaban los documentos.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Clasificaban is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; clasificaron is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "Los funcionarios clasificaron los documentos."
+  },
+  {
+    "sentence": "El consejo autorizó la operación.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Autorizó is a preterite form, so it presents the event as a bounded whole; autorizaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El consejo autorizaba la operación."
+  },
+  {
+    "sentence": "El municipio adjudicó el contrato.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Adjudicó is a preterite form, so it presents the event as a bounded whole; adjudicaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El municipio adjudicaba el contrato."
+  },
+  {
+    "sentence": "El fondo invirtió en infraestructura.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Invirtió is a preterite form, so it presents the event as a bounded whole; invertía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El fondo invertía en infraestructura."
+  },
+  {
+    "sentence": "La comisión debatía la reforma.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Debatía is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; debatió is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La comisión debatió la reforma."
+  },
+  {
+    "sentence": "El consejo ratificó el acuerdo.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Ratificó is a preterite form, so it presents the event as a bounded whole; ratificaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El consejo ratificaba el acuerdo."
+  },
+  {
+    "sentence": "La fiscalía investigaba la filtración.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Investigaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; investigó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La fiscalía investigó la filtración."
+  },
+  {
+    "sentence": "La consultora calculaba los costos.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Calculaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; calculó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La consultora calculó los costos."
+  },
+  {
+    "sentence": "El regulador impuso la sanción.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Impuso is a preterite form, so it presents the event as a bounded whole; imponía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El regulador imponía la sanción."
+  },
+  {
+    "sentence": "La editorial traducía el documento.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Traducía is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; tradujo is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La editorial tradujo el documento."
+  },
+  {
+    "sentence": "Los técnicos restauraron el archivo.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Restauraron is a preterite form, so it presents the event as a bounded whole; restauraban is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "Los técnicos restauraban el archivo."
+  },
+  {
+    "sentence": "La plataforma procesaba las solicitudes.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Procesaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; procesó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La plataforma procesó las solicitudes."
+  },
+  {
+    "sentence": "El equipo modelaba los escenarios.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Modelaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; modeló is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "El equipo modeló los escenarios."
+  },
+  {
+    "sentence": "Los expertos evaluaban el impacto.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Evaluaban is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; evaluaron is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "Los expertos evaluaron el impacto."
+  },
+  {
+    "sentence": "El comité aprobó la propuesta.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Aprobó is a preterite form, so it presents the event as a bounded whole; aprobaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El comité aprobaba la propuesta."
+  },
+  {
+    "sentence": "El juez dictó la sentencia.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Dictó is a preterite form, so it presents the event as a bounded whole; dictaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El juez dictaba la sentencia."
+  },
+  {
+    "sentence": "El laboratorio certificó el resultado.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Certificó is a preterite form, so it presents the event as a bounded whole; certificaba is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El laboratorio certificaba el resultado."
+  },
+  {
+    "sentence": "La oficina registraba las denuncias.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "A. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Registraba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; registró is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La oficina registró las denuncias."
+  },
+  {
+    "sentence": "Los analistas comparaban los indicadores.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Comparaban is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; compararon is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "Los analistas compararon los indicadores."
+  },
+  {
+    "sentence": "La redacción contrastaba las fuentes.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Contrastaba is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; contrastó is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "La redacción contrastó las fuentes."
+  },
+  {
+    "sentence": "La oficina emitió los certificados.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Emitió is a preterite form, so it presents the event as a bounded whole; emitía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "La oficina emitía los certificados."
+  },
+  {
+    "sentence": "El comité eligió a la presidenta.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "A. Como un hecho delimitado, visto como un todo.",
+    "why": "Eligió is a preterite form, so it presents the event as a bounded whole; elegía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El comité elegía a la presidenta."
+  },
+  {
+    "sentence": "Los auditores revisaban las cuentas.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como un hecho delimitado, visto como un todo.",
+      "B. Como una situación habitual o en curso, sin enfocar su límite."
+    ],
+    "answer": "B. Como una situación habitual o en curso, sin enfocar su límite.",
+    "why": "Revisaban is an imperfect form, so it presents the event from within or as habitual, without focusing an endpoint; revisaron is a preterite form and would present it as a bounded whole.",
+    "contrast_form": "Los auditores revisaron las cuentas."
+  },
+  {
+    "sentence": "El organismo produjo el informe.",
+    "question": "¿Cómo presenta la forma verbal la acción?",
+    "options": [
+      "A. Como una situación habitual o en curso, sin enfocar su límite.",
+      "B. Como un hecho delimitado, visto como un todo."
+    ],
+    "answer": "B. Como un hecho delimitado, visto como un todo.",
+    "why": "Produjo is a preterite form, so it presents the event as a bounded whole; producía is an imperfect form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "El organismo producía el informe."
+  }
 ]

@@ -1,53 +1,612 @@
 [
-  {"_meta":{"bank":"f2_it_pp_imperfetto","lang":"it","fmt":"f2","built":"2026-08-01","item_count":50,"source_evidence":["docs/GRAMMAR_STRATEGY.md §§3b and 4 (structured input; form is the only cue to meaning)","docs/research/error-profiles/it.md §§2, 5, and 6 (direct c’era → c’è stato tense-selection error)","docs/research/error-profiles/it.md Addendum (learner explicitly requests passato remoto recognition)"],"provenance":"Fifty newly authored, bank-attested seed items in standard Italian; no learner sentence or personal data is reproduced. Passato remoto forms were cross-checked against the vendored verbecc table where available.","target_units":["it_passato_prossimo","it_imperfetto","it_passato_remoto"],"register":"Neutral news and professional Italian; the passato remoto subset uses historical/reporting-style clauses that are also structurally possible at the imperfetto.","language_policy":"sentence, question, options, answer, and contrast_form are Italian; why is concise English metalinguistic feedback.","coverage":{"content_items":50,"reciprocal_passato_prossimo_imperfetto_sets":20,"passato_prossimo":20,"imperfetto":20,"passato_remoto_recognition":10,"passato_remoto_persons":{"3s":5,"3p":5},"passato_prossimo_auxiliary_pairs":{"avere":16,"essere_or_pronominal":4},"correct_option_A":25,"correct_option_B":25,"options_per_item":2},"register_semantics":"Passato remoto is taught as a bounded perfective narrative tense, common in historical/literary standard prose and still ordinary in some regional speech. It is not defined as objectively distant in time and is not presented as semantically more completed than passato prossimo.","validation_notes":"Each reciprocal frame appears once at imperfetto and once at passato prossimo; ten additional passato-remoto rows contrast with the corresponding imperfetto. Apart from required auxiliary, clitic, participle agreement, and l’/la surface alternations, contrast_form changes only target verbal morphology. No time adverb, duration phrase, habitual-frequency expression, completion predicate, or surrounding event independently determines aspect."}},
-  {"sentence":"La commissione esaminava il dossier.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"The imperfetto form esaminava gives an internal view of the review and does not assert its endpoint.","contrast_form":"La commissione ha esaminato il dossier."},
-  {"sentence":"La commissione ha esaminato il dossier.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha esaminato is passato prossimo morphology and packages the review as a bounded whole.","contrast_form":"La commissione esaminava il dossier."},
-  {"sentence":"Gli investigatori interrogavano il testimone.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Interrogavano is imperfetto and presents the questioning from within, with no endpoint asserted.","contrast_form":"Gli investigatori hanno interrogato il testimone."},
-  {"sentence":"Gli investigatori hanno interrogato il testimone.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Hanno interrogato marks the passato prossimo, so the questioning is viewed as a bounded event.","contrast_form":"Gli investigatori interrogavano il testimone."},
-  {"sentence":"Il ministero preparava il rapporto.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Preparava is imperfetto and opens an internal view of the preparation rather than asserting its endpoint.","contrast_form":"Il ministero ha preparato il rapporto."},
-  {"sentence":"Il ministero ha preparato il rapporto.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha preparato is passato prossimo and presents the preparation as one bounded whole.","contrast_form":"Il ministero preparava il rapporto."},
-  {"sentence":"I negoziatori discutevano la proposta.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Discutevano is imperfetto morphology and presents the discussion in progress or as background.","contrast_form":"I negoziatori hanno discusso la proposta."},
-  {"sentence":"I negoziatori hanno discusso la proposta.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Hanno discusso is passato prossimo and views the discussion as a bounded event.","contrast_form":"I negoziatori discutevano la proposta."},
-  {"sentence":"La squadra analizzava i dati.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Analizzava is imperfetto and frames the analysis from inside its unfolding.","contrast_form":"La squadra ha analizzato i dati."},
-  {"sentence":"La squadra ha analizzato i dati.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha analizzato is passato prossimo morphology and packages the analysis as a bounded whole.","contrast_form":"La squadra analizzava i dati."},
-  {"sentence":"Il tribunale valutava il ricorso.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Valutava is imperfetto and leaves the review’s endpoint unasserted.","contrast_form":"Il tribunale ha valutato il ricorso."},
-  {"sentence":"Il tribunale ha valutato il ricorso.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha valutato is passato prossimo and presents the review as a bounded event viewed globally.","contrast_form":"Il tribunale valutava il ricorso."},
-  {"sentence":"Gli esperti stimavano il rischio.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Stimavano is imperfetto and depicts the assessment in its course, without asserting a boundary.","contrast_form":"Gli esperti hanno stimato il rischio."},
-  {"sentence":"Gli esperti hanno stimato il rischio.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Hanno stimato is passato prossimo and presents the assessment as one bounded whole.","contrast_form":"Gli esperti stimavano il rischio."},
-  {"sentence":"La redazione verificava la fonte.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Verificava is imperfetto, so the checking is viewed from within rather than as a closed whole.","contrast_form":"La redazione ha verificato la fonte."},
-  {"sentence":"La redazione ha verificato la fonte.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha verificato marks the passato prossimo and bounds the checking event.","contrast_form":"La redazione verificava la fonte."},
-  {"sentence":"Il consiglio rivedeva il bilancio.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Rivedeva is imperfetto and presents the revision as unfolding, with no endpoint asserted.","contrast_form":"Il consiglio ha rivisto il bilancio."},
-  {"sentence":"Il consiglio ha rivisto il bilancio.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha rivisto is passato prossimo and views the revision as a bounded whole.","contrast_form":"Il consiglio rivedeva il bilancio."},
-  {"sentence":"Gli ingegneri collaudavano il sistema.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Collaudavano is imperfetto and supplies an internal or background view of the testing.","contrast_form":"Gli ingegneri hanno collaudato il sistema."},
-  {"sentence":"Gli ingegneri hanno collaudato il sistema.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Hanno collaudato is passato prossimo morphology and packages the testing as a bounded event.","contrast_form":"Gli ingegneri collaudavano il sistema."},
-  {"sentence":"L’agenzia pubblicava il bollettino.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Pubblicava is imperfetto and presents publication as ongoing, habitual, or background without choosing among those readings.","contrast_form":"L’agenzia ha pubblicato il bollettino."},
-  {"sentence":"L’agenzia ha pubblicato il bollettino.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha pubblicato marks the passato prossimo and presents the publication as bounded.","contrast_form":"L’agenzia pubblicava il bollettino."},
-  {"sentence":"I deputati esaminavano l’emendamento.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Esaminavano is imperfetto and views the examination in its course, without asserting an endpoint.","contrast_form":"I deputati hanno esaminato l’emendamento."},
-  {"sentence":"I deputati hanno esaminato l’emendamento.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Hanno esaminato is passato prossimo morphology and gives the examination a bounded, global view.","contrast_form":"I deputati esaminavano l’emendamento."},
-  {"sentence":"La banca finanziava il progetto.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Finanziava is imperfetto and leaves the financing internally viewed or habitual, with no final boundary asserted.","contrast_form":"La banca ha finanziato il progetto."},
-  {"sentence":"La banca ha finanziato il progetto.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha finanziato is passato prossimo and presents the financing as a bounded event.","contrast_form":"La banca finanziava il progetto."},
-  {"sentence":"Il comitato selezionava il candidato.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Selezionava is imperfetto and shows the selection process from within, without asserting its endpoint.","contrast_form":"Il comitato ha selezionato il candidato."},
-  {"sentence":"Il comitato ha selezionato il candidato.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha selezionato is passato prossimo and presents the selection as a bounded whole.","contrast_form":"Il comitato selezionava il candidato."},
-  {"sentence":"La direzione consultava i sindacati.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Consultava is imperfetto morphology and presents the consultation as unfolding or background.","contrast_form":"La direzione ha consultato i sindacati."},
-  {"sentence":"La direzione ha consultato i sindacati.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Ha consultato marks the passato prossimo and bounds the consultation as a whole.","contrast_form":"La direzione consultava i sindacati."},
-  {"sentence":"I revisori controllavano i conti.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Controllavano is imperfetto and gives an internal view of the audit activity.","contrast_form":"I revisori hanno controllato i conti."},
-  {"sentence":"I revisori hanno controllato i conti.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Hanno controllato is passato prossimo and presents the audit activity as bounded.","contrast_form":"I revisori controllavano i conti."},
-  {"sentence":"L’impresa si ritirava dal mercato.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Si ritirava is imperfetto and views the withdrawal in progress, without asserting its endpoint.","contrast_form":"L’impresa si è ritirata dal mercato."},
-  {"sentence":"L’impresa si è ritirata dal mercato.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Si è ritirata is passato prossimo; the auxiliary and agreed participle present a bounded withdrawal.","contrast_form":"L’impresa si ritirava dal mercato."},
-  {"sentence":"La ricercatrice entrava nel laboratorio.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Entrava is imperfetto and presents the entry from inside its unfolding rather than at its boundary.","contrast_form":"La ricercatrice è entrata nel laboratorio."},
-  {"sentence":"La ricercatrice è entrata nel laboratorio.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"È entrata is passato prossimo and presents the entry as a bounded transition.","contrast_form":"La ricercatrice entrava nel laboratorio."},
-  {"sentence":"I delegati arrivavano alla sede.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Arrivavano is imperfetto and gives an internal or background view of the arrivals.","contrast_form":"I delegati sono arrivati alla sede."},
-  {"sentence":"I delegati sono arrivati alla sede.","question":"Come viene presentata l’azione?","options":["A. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."],"answer":"B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Sono arrivati is passato prossimo and bounds the delegates’ arrival as a complete event view.","contrast_form":"I delegati arrivavano alla sede."},
-  {"sentence":"I rappresentanti si riunivano in sede.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato.","why":"Si riunivano is imperfetto and presents the gathering as ongoing, habitual, or background.","contrast_form":"I rappresentanti si sono riuniti in sede."},
-  {"sentence":"I rappresentanti si sono riuniti in sede.","question":"Come viene presentata l’azione?","options":["A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","B. L’azione è colta nel suo svolgimento o come sfondo, senza un limite finale affermato."],"answer":"A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.","why":"Si sono riuniti is passato prossimo and presents the gathering as a bounded event.","contrast_form":"I rappresentanti si riunivano in sede."},
-  {"sentence":"Il consiglio decise la strategia.","question":"Che cosa indica la forma verbale?","options":["A. Un evento delimitato, narrato al passato remoto.","B. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto."],"answer":"A. Un evento delimitato, narrato al passato remoto.","why":"Decise is 3sg passato remoto and marks a bounded narrative event; the tense does not itself mean ‘long ago’.","contrast_form":"Il consiglio decideva la strategia."},
-  {"sentence":"I deputati discussero la proposta.","question":"Che cosa indica la forma verbale?","options":["A. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto.","B. Un evento delimitato, narrato al passato remoto."],"answer":"B. Un evento delimitato, narrato al passato remoto.","why":"Discussero is 3pl passato remoto: bounded narrative aspect in a form common in historical prose and regionally in speech.","contrast_form":"I deputati discutevano la proposta."},
-  {"sentence":"La commissione lesse il rapporto.","question":"Che cosa indica la forma verbale?","options":["A. Un evento delimitato, narrato al passato remoto.","B. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto."],"answer":"A. Un evento delimitato, narrato al passato remoto.","why":"Lesse is 3sg passato remoto and presents the reading as a bounded narrative event, not simply an objectively remote one.","contrast_form":"La commissione leggeva il rapporto."},
-  {"sentence":"Gli esperti scrissero il parere.","question":"Che cosa indica la forma verbale?","options":["A. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto.","B. Un evento delimitato, narrato al passato remoto."],"answer":"B. Un evento delimitato, narrato al passato remoto.","why":"Scrissero is 3pl passato remoto and packages the writing as a bounded event in narrative discourse.","contrast_form":"Gli esperti scrivevano il parere."},
-  {"sentence":"Il ministero prese il controllo del progetto.","question":"Che cosa indica la forma verbale?","options":["A. Un evento delimitato, narrato al passato remoto.","B. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto."],"answer":"A. Un evento delimitato, narrato al passato remoto.","why":"Prese is 3sg passato remoto and marks a bounded transition; standard use varies by genre and region, not aspect.","contrast_form":"Il ministero prendeva il controllo del progetto."},
-  {"sentence":"L’assemblea scelse la presidente.","question":"Che cosa indica la forma verbale?","options":["A. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto.","B. Un evento delimitato, narrato al passato remoto."],"answer":"B. Un evento delimitato, narrato al passato remoto.","why":"Scelse is 3sg passato remoto and presents the choice as a bounded narrative event.","contrast_form":"L’assemblea sceglieva la presidente."},
-  {"sentence":"I negoziatori raggiunsero l’accordo.","question":"Che cosa indica la forma verbale?","options":["A. Un evento delimitato, narrato al passato remoto.","B. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto."],"answer":"A. Un evento delimitato, narrato al passato remoto.","why":"Raggiunsero is 3pl passato remoto and gives reaching the agreement a bounded, narrative view.","contrast_form":"I negoziatori raggiungevano l’accordo."},
-  {"sentence":"Il tribunale risolse la controversia.","question":"Che cosa indica la forma verbale?","options":["A. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto.","B. Un evento delimitato, narrato al passato remoto."],"answer":"B. Un evento delimitato, narrato al passato remoto.","why":"Risolse is 3sg passato remoto: a bounded narrative event in a tense common in historical and literary standard Italian.","contrast_form":"Il tribunale risolveva la controversia."},
-  {"sentence":"I traduttori tradussero il documento.","question":"Che cosa indica la forma verbale?","options":["A. Un evento delimitato, narrato al passato remoto.","B. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto."],"answer":"A. Un evento delimitato, narrato al passato remoto.","why":"Tradussero is 3pl passato remoto and packages the translation as a bounded narrative event.","contrast_form":"I traduttori traducevano il documento."},
-  {"sentence":"I membri posero la questione.","question":"Che cosa indica la forma verbale?","options":["A. Un’azione colta nel suo svolgimento o come sfondo, all’imperfetto.","B. Un evento delimitato, narrato al passato remoto."],"answer":"B. Un evento delimitato, narrato al passato remoto.","why":"Posero is 3pl passato remoto and marks a bounded narrative act; it does not encode objective temporal remoteness.","contrast_form":"I membri ponevano la questione."}
+  {
+    "_meta": {
+      "bank": "f2_it_pp_imperfetto",
+      "language": "it",
+      "format": "F2 structured-input interpretation cards with two fixed, labeled target-language options and concise English metalinguistic feedback",
+      "built": "2026-08-01",
+      "item_count": 50,
+      "source_evidence": [
+        "docs/GRAMMAR_STRATEGY.md §§3b and 4 (structured input; form is the only cue to meaning)",
+        "docs/research/error-profiles/it.md §§2, 5, and 6 (direct c’era → c’è stato tense-selection error)",
+        "docs/research/error-profiles/it.md Addendum (learner explicitly requests passato remoto recognition)"
+      ],
+      "provenance": "Fifty newly authored, bank-attested seed items in standard Italian; no learner sentence or personal data is reproduced. All ten passato remoto forms were cross-checked against the vendored verbecc table.",
+      "register": "Neutral news and professional Italian; the passato remoto subset uses historical/reporting-style clauses that are also structurally possible at the imperfetto.",
+      "language_policy": "sentence, question, options, answer, and contrast_form are Italian; why is concise English metalinguistic feedback.",
+      "coverage": {
+        "content_items": 50,
+        "distinct_source_frames": 50,
+        "reversed_source_duplicates": 0,
+        "imperfetto_source_rows": 20,
+        "passato_prossimo_source_rows": 20,
+        "passato_remoto_recognition_rows": 10,
+        "contrast_only_opposites": 50,
+        "attested_anchor_family_rows": 1,
+        "passato_remoto_persons": {
+          "3s": 5,
+          "3p": 5
+        },
+        "passato_prossimo_source_auxiliaries": {
+          "avere": 16,
+          "essere_or_pronominal": 4
+        },
+        "correct_option_A": 25,
+        "correct_option_B": 25,
+        "options_per_item": 2,
+        "answer_positions_by_source": {
+          "imperfetto": {
+            "A": 10,
+            "B": 10
+          },
+          "passato_prossimo": {
+            "A": 10,
+            "B": 10
+          },
+          "passato_remoto": {
+            "A": 5,
+            "B": 5
+          }
+        }
+      },
+      "register_semantics": "Passato remoto is taught as a bounded perfective narrative tense, common in historical/literary standard prose and still ordinary in some regional speech. It is not defined as objectively distant in time and is not presented as semantically more completed than passato prossimo.",
+      "validation_notes": "All 50 source frames are distinct; no contrast_form is repeated as another source sentence. Exactly 20 sources use imperfetto, 20 use passato prossimo, and 10 recognize passato remoto. The c’era/c’è stata family adapts the sole directly attested tense-selection pattern without reproducing its private wording. Apart from required auxiliary, reflexive clitic, and participle agreement, contrast_form changes only target verbal morphology. No time adverb, duration phrase, habitual-frequency expression, completion predicate, or surrounding event independently determines aspect. Content order and correct labels are stored in a frozen, deterministic constrained permutation; labels are cross-balanced by source tense, have no short repeated cycle, and never run more than three times consecutively.",
+      "feeds_units": [
+        "it_passato_prossimo",
+        "it_imperfetto",
+        "it_passato_remoto"
+      ],
+      "ordering_policy": "Frozen deterministic constraint-solved permutation v2 (seed 3); label and source-category streams reject runs longer than three, six-position period-2 windows, and nine-position period-3 windows in the full sequence and relevant routed subsequences."
+    }
+  },
+  {
+    "sentence": "Il Parlamento ha approvato la legge.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha approvato marks the passato prossimo and packages adoption as a bounded event.",
+    "contrast_form": "Il Parlamento approvava la legge."
+  },
+  {
+    "sentence": "I deputati discussero la proposta.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un evento delimitato, narrato al passato remoto.",
+      "B. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto."
+    ],
+    "answer": "A. Un evento delimitato, narrato al passato remoto.",
+    "why": "Discussero is 3pl passato remoto: bounded narrative aspect in a form common in historical prose and regionally in speech.",
+    "contrast_form": "I deputati discutevano la proposta."
+  },
+  {
+    "sentence": "I membri posero la questione.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto.",
+      "B. Un evento delimitato, narrato al passato remoto."
+    ],
+    "answer": "B. Un evento delimitato, narrato al passato remoto.",
+    "why": "Posero is 3pl passato remoto and marks a bounded narrative act; it does not encode objective temporal remoteness.",
+    "contrast_form": "I membri ponevano la questione."
+  },
+  {
+    "sentence": "Il consiglio decise la strategia.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto.",
+      "B. Un evento delimitato, narrato al passato remoto."
+    ],
+    "answer": "B. Un evento delimitato, narrato al passato remoto.",
+    "why": "Decise is 3sg passato remoto and marks a bounded narrative event; the tense does not itself mean ‘long ago’.",
+    "contrast_form": "Il consiglio decideva la strategia."
+  },
+  {
+    "sentence": "La presidente ha firmato l’accordo.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha firmato is passato prossimo and presents the signing as one bounded whole.",
+    "contrast_form": "La presidente firmava l’accordo."
+  },
+  {
+    "sentence": "L’impresa si ritirava dal mercato.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Si ritirava is imperfetto and views the withdrawal in progress, without asserting its endpoint.",
+    "contrast_form": "L’impresa si è ritirata dal mercato."
+  },
+  {
+    "sentence": "I revisori controllavano i conti.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Controllavano is imperfetto and gives an internal view of the audit activity.",
+    "contrast_form": "I revisori hanno controllato i conti."
+  },
+  {
+    "sentence": "Il consorzio è entrato nel mercato.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "È entrato is passato prossimo and presents entry into the market as a bounded transition.",
+    "contrast_form": "Il consorzio entrava nel mercato."
+  },
+  {
+    "sentence": "La direzione consultava i sindacati.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Consultava is imperfetto morphology and presents the consultation as unfolding or background.",
+    "contrast_form": "La direzione ha consultato i sindacati."
+  },
+  {
+    "sentence": "Il comitato selezionava il candidato.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Selezionava is imperfetto and shows the selection process from within, without asserting its endpoint.",
+    "contrast_form": "Il comitato ha selezionato il candidato."
+  },
+  {
+    "sentence": "L’autorità di vigilanza ha autorizzato la fusione.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha autorizzato is passato prossimo and presents the authorization as one bounded event.",
+    "contrast_form": "L’autorità di vigilanza autorizzava la fusione."
+  },
+  {
+    "sentence": "C’era una conferenza nel centro congressi.",
+    "question": "Come viene presentata la conferenza?",
+    "options": [
+      "A. Come una situazione di sfondo, senza che ne siano indicati i confini temporali.",
+      "B. Come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. Come una situazione di sfondo, senza che ne siano indicati i confini temporali.",
+    "why": "C’era is imperfetto and supplies background existence without bounding the conference as an occurrence.",
+    "contrast_form": "C’è stata una conferenza nel centro congressi."
+  },
+  {
+    "sentence": "Il governo ha annunciato il provvedimento.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha annunciato is passato prossimo and presents the announcement as a bounded event.",
+    "contrast_form": "Il governo annunciava il provvedimento."
+  },
+  {
+    "sentence": "Il ministero prese il controllo del progetto.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto.",
+      "B. Un evento delimitato, narrato al passato remoto."
+    ],
+    "answer": "B. Un evento delimitato, narrato al passato remoto.",
+    "why": "Prese is 3sg passato remoto and marks a bounded transition; standard use varies by genre and region, not aspect.",
+    "contrast_form": "Il ministero prendeva il controllo del progetto."
+  },
+  {
+    "sentence": "Le parti sociali hanno definito le priorità.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Hanno definito is passato prossimo and packages the definition of priorities as bounded.",
+    "contrast_form": "Le parti sociali definivano le priorità."
+  },
+  {
+    "sentence": "Il tribunale valutava il ricorso.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Valutava is imperfetto and leaves the review’s endpoint unasserted.",
+    "contrast_form": "Il tribunale ha valutato il ricorso."
+  },
+  {
+    "sentence": "La commissione lesse il rapporto.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un evento delimitato, narrato al passato remoto.",
+      "B. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto."
+    ],
+    "answer": "A. Un evento delimitato, narrato al passato remoto.",
+    "why": "Lesse is 3sg passato remoto and presents the reading as a bounded narrative event, not simply an objectively remote one.",
+    "contrast_form": "La commissione leggeva il rapporto."
+  },
+  {
+    "sentence": "La squadra analizzava i dati.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Analizzava is imperfetto and frames the analysis from inside its unfolding.",
+    "contrast_form": "La squadra ha analizzato i dati."
+  },
+  {
+    "sentence": "La delegazione si è riunita al ministero.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Si è riunita is passato prossimo and presents the meeting as a bounded occurrence.",
+    "contrast_form": "La delegazione si riuniva al ministero."
+  },
+  {
+    "sentence": "Il mediatore ha proposto una soluzione.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha proposto marks the passato prossimo and views the proposal as a bounded act.",
+    "contrast_form": "Il mediatore proponeva una soluzione."
+  },
+  {
+    "sentence": "Il laboratorio ha documentato l’anomalia.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha documentato marks the passato prossimo and presents the documentation as bounded.",
+    "contrast_form": "Il laboratorio documentava l’anomalia."
+  },
+  {
+    "sentence": "Gli esperti scrissero il parere.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto.",
+      "B. Un evento delimitato, narrato al passato remoto."
+    ],
+    "answer": "B. Un evento delimitato, narrato al passato remoto.",
+    "why": "Scrissero is 3pl passato remoto and packages the writing as a bounded event in narrative discourse.",
+    "contrast_form": "Gli esperti scrivevano il parere."
+  },
+  {
+    "sentence": "La ricercatrice entrava nel laboratorio.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Entrava is imperfetto and presents the entry from inside its unfolding rather than at its boundary.",
+    "contrast_form": "La ricercatrice è entrata nel laboratorio."
+  },
+  {
+    "sentence": "La redazione verificava la fonte.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Verificava is imperfetto, so the checking is viewed from within rather than as a closed whole.",
+    "contrast_form": "La redazione ha verificato la fonte."
+  },
+  {
+    "sentence": "Il ministero preparava il rapporto.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Preparava is imperfetto and opens an internal view of the preparation rather than asserting its endpoint.",
+    "contrast_form": "Il ministero ha preparato il rapporto."
+  },
+  {
+    "sentence": "Il tribunale risolse la controversia.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un evento delimitato, narrato al passato remoto.",
+      "B. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto."
+    ],
+    "answer": "A. Un evento delimitato, narrato al passato remoto.",
+    "why": "Risolse is 3sg passato remoto: a bounded narrative event in a tense common in historical and literary standard Italian.",
+    "contrast_form": "Il tribunale risolveva la controversia."
+  },
+  {
+    "sentence": "I ricercatori hanno identificato la causa.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Hanno identificato marks the passato prossimo and packages the identification as a bounded whole.",
+    "contrast_form": "I ricercatori identificavano la causa."
+  },
+  {
+    "sentence": "Gli esperti stimavano il rischio.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Stimavano is imperfetto and depicts the assessment in its course, without asserting a boundary.",
+    "contrast_form": "Gli esperti hanno stimato il rischio."
+  },
+  {
+    "sentence": "I giornalisti hanno rivelato il documento.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Hanno rivelato marks the passato prossimo and gives the disclosure a bounded, global view.",
+    "contrast_form": "I giornalisti rivelavano il documento."
+  },
+  {
+    "sentence": "I deputati esaminavano l’emendamento.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Esaminavano is imperfetto and views the examination in its course, without asserting an endpoint.",
+    "contrast_form": "I deputati hanno esaminato l’emendamento."
+  },
+  {
+    "sentence": "Gli investigatori interrogavano il testimone.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Interrogavano is imperfetto and presents the questioning from within, with no endpoint asserted.",
+    "contrast_form": "Gli investigatori hanno interrogato il testimone."
+  },
+  {
+    "sentence": "Gli ingegneri collaudavano il sistema.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Collaudavano is imperfetto and supplies an internal or background view of the testing.",
+    "contrast_form": "Gli ingegneri hanno collaudato il sistema."
+  },
+  {
+    "sentence": "L’azienda ha lanciato il servizio.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha lanciato is passato prossimo and presents the launch as a bounded transition.",
+    "contrast_form": "L’azienda lanciava il servizio."
+  },
+  {
+    "sentence": "L’agenzia pubblicava il bollettino.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Pubblicava is imperfetto and presents publication as ongoing, habitual, or background without choosing among those readings.",
+    "contrast_form": "L’agenzia ha pubblicato il bollettino."
+  },
+  {
+    "sentence": "I delegati arrivavano al consolato.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Arrivavano is imperfetto and gives an internal or background view of the arrivals.",
+    "contrast_form": "I delegati sono arrivati al consolato."
+  },
+  {
+    "sentence": "L’assemblea scelse la presidente.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un evento delimitato, narrato al passato remoto.",
+      "B. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto."
+    ],
+    "answer": "A. Un evento delimitato, narrato al passato remoto.",
+    "why": "Scelse is 3sg passato remoto and presents the choice as a bounded narrative event.",
+    "contrast_form": "L’assemblea sceglieva la presidente."
+  },
+  {
+    "sentence": "La filiale si è trasferita nella nuova sede.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Si è trasferita is passato prossimo and packages the relocation as a bounded event.",
+    "contrast_form": "La filiale si trasferiva nella nuova sede."
+  },
+  {
+    "sentence": "I traduttori tradussero il documento.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un evento delimitato, narrato al passato remoto.",
+      "B. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto."
+    ],
+    "answer": "A. Un evento delimitato, narrato al passato remoto.",
+    "why": "Tradussero is 3pl passato remoto and packages the translation as a bounded narrative event.",
+    "contrast_form": "I traduttori traducevano il documento."
+  },
+  {
+    "sentence": "I sindacati hanno contestato la decisione.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Hanno contestato is passato prossimo and gives the challenge a bounded, global view.",
+    "contrast_form": "I sindacati contestavano la decisione."
+  },
+  {
+    "sentence": "Gli uffici hanno trasmesso i risultati.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Hanno trasmesso is passato prossimo morphology and bounds the transmission event.",
+    "contrast_form": "Gli uffici trasmettevano i risultati."
+  },
+  {
+    "sentence": "La commissione esaminava il dossier.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "The imperfetto form esaminava gives an internal view of the review and does not assert its endpoint.",
+    "contrast_form": "La commissione ha esaminato il dossier."
+  },
+  {
+    "sentence": "La direttrice è arrivata in redazione.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "È arrivata is passato prossimo: the auxiliary è and past participle arrivata present the arrival as a bounded whole; -a agrees with la direttrice.",
+    "contrast_form": "La direttrice arrivava in redazione."
+  },
+  {
+    "sentence": "La piattaforma ha elaborato le richieste.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha elaborato is passato prossimo and packages the processing as a bounded event.",
+    "contrast_form": "La piattaforma elaborava le richieste."
+  },
+  {
+    "sentence": "La banca finanziava il progetto.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Finanziava is imperfetto and leaves the financing internally viewed or habitual, with no final boundary asserted.",
+    "contrast_form": "La banca ha finanziato il progetto."
+  },
+  {
+    "sentence": "Il consiglio rivedeva il bilancio.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Rivedeva is imperfetto and presents the revision as unfolding, with no endpoint asserted.",
+    "contrast_form": "Il consiglio ha rivisto il bilancio."
+  },
+  {
+    "sentence": "I negoziatori raggiunsero l’accordo.",
+    "question": "Che cosa indica la forma verbale?",
+    "options": [
+      "A. Un’azione presentata come in corso, abituale o di sfondo, all’imperfetto.",
+      "B. Un evento delimitato, narrato al passato remoto."
+    ],
+    "answer": "B. Un evento delimitato, narrato al passato remoto.",
+    "why": "Raggiunsero is 3pl passato remoto and gives reaching the agreement a bounded, narrative view.",
+    "contrast_form": "I negoziatori raggiungevano l’accordo."
+  },
+  {
+    "sentence": "I negoziatori discutevano la proposta.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+    "why": "Discutevano is imperfetto morphology and presents the discussion in progress or as background.",
+    "contrast_form": "I negoziatori hanno discusso la proposta."
+  },
+  {
+    "sentence": "I responsabili hanno corretto l’errore.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+      "B. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione."
+    ],
+    "answer": "A. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Hanno corretto is passato prossimo and presents the correction as a bounded whole.",
+    "contrast_form": "I responsabili correggevano l’errore."
+  },
+  {
+    "sentence": "L’istituto ha misurato l’impatto.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha misurato marks the passato prossimo and bounds the measurement event.",
+    "contrast_form": "L’istituto misurava l’impatto."
+  },
+  {
+    "sentence": "La corte ha respinto la richiesta.",
+    "question": "Come viene presentata l’azione?",
+    "options": [
+      "A. L’azione è presentata come in corso, abituale o di sfondo, senza che ne sia indicata la conclusione.",
+      "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme."
+    ],
+    "answer": "B. L’azione è presentata come un evento delimitato, considerato nel suo insieme.",
+    "why": "Ha respinto is passato prossimo morphology and bounds the rejection event.",
+    "contrast_form": "La corte respingeva la richiesta."
+  }
 ]

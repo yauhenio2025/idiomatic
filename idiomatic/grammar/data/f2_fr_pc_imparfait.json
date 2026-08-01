@@ -1,53 +1,604 @@
 [
-  {"_meta":{"bank":"f2_fr_pc_imparfait","lang":"fr","fmt":"f2","built":"2026-08-01","item_count":50,"source_evidence":["docs/GRAMMAR_STRATEGY.md §§3b and 4 (structured input; form is the only cue to meaning)","docs/research/error-profiles/fr.md §§2.10 and 6 (15 recorded passé-composé/imparfait selection errors; keep the target small)"],"provenance":"Fifty newly authored, bank-attested seed items in standard French; no learner sentences or personal data are reproduced.","target_units":["fr_passe_compose","fr_imparfait"],"register":"Neutral news and professional French.","language_policy":"sentence, question, options, answer, and contrast_form are French; why is concise English metalinguistic feedback.","coverage":{"content_items":50,"minimal_pair_sets":25,"passe_compose":25,"imparfait":25,"avoir_pairs":21,"etre_or_pronominal_pairs":4,"correct_option_A":25,"correct_option_B":25,"options_per_item":2,"persons_by_pair":{"1s":1,"2s":1,"1p":1,"2p":1,"3s":13,"3p":8}},"validation_notes":"Every frame occurs once in each tense. Apart from grammatically required auxiliary, participle, agreement, and je/j' elision, each contrast changes only target verbal morphology. No time adverb, duration phrase, habitual-frequency expression, completion predicate, or surrounding event independently supplies the aspect reading. Passé composé is described as bounded/perfective, not as proof that every real-world consequence is complete; imparfait is described as an internal/background view without an asserted endpoint."}},
-  {"sentence":"La commission examinait le dossier.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"The imparfait form examinait gives an internal view of the review and does not assert its endpoint.","contrast_form":"La commission a examiné le dossier."},
-  {"sentence":"La commission a examiné le dossier.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"The auxiliary a plus examiné marks the passé composé and packages the review as a bounded whole.","contrast_form":"La commission examinait le dossier."},
-  {"sentence":"Les enquêteurs interrogeaient le témoin.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"The imparfait form interrogeaient presents the questioning from within, with no endpoint asserted.","contrast_form":"Les enquêteurs ont interrogé le témoin."},
-  {"sentence":"Les enquêteurs ont interrogé le témoin.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"Ont interrogé is passé composé morphology, so the questioning is viewed as a bounded event.","contrast_form":"Les enquêteurs interrogeaient le témoin."},
-  {"sentence":"Le ministère préparait le rapport.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Préparait is imparfait and opens an internal view of the preparation rather than asserting its endpoint.","contrast_form":"Le ministère a préparé le rapport."},
-  {"sentence":"Le ministère a préparé le rapport.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"A préparé is passé composé and presents the preparation as one bounded whole.","contrast_form":"Le ministère préparait le rapport."},
-  {"sentence":"Les négociateurs discutaient la proposition.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Discutaient is imparfait morphology and presents the discussion in progress or as background.","contrast_form":"Les négociateurs ont discuté la proposition."},
-  {"sentence":"Les négociateurs ont discuté la proposition.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"Ont discuté marks the passé composé, which views the discussion as a bounded event.","contrast_form":"Les négociateurs discutaient la proposition."},
-  {"sentence":"L’équipe analysait les données.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Analysait is imparfait and frames the analysis from inside its unfolding.","contrast_form":"L’équipe a analysé les données."},
-  {"sentence":"L’équipe a analysé les données.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"A analysé is passé composé morphology and packages the analysis as a bounded whole.","contrast_form":"L’équipe analysait les données."},
-  {"sentence":"Le tribunal étudiait le recours.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Étudiait is imparfait and leaves the review’s endpoint unasserted.","contrast_form":"Le tribunal a étudié le recours."},
-  {"sentence":"Le tribunal a étudié le recours.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"A étudié is passé composé and presents the review as a bounded event viewed globally.","contrast_form":"Le tribunal étudiait le recours."},
-  {"sentence":"Les experts évaluaient le risque.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Évaluaient is imparfait and depicts the evaluation in its course, without asserting a boundary.","contrast_form":"Les experts ont évalué le risque."},
-  {"sentence":"Les experts ont évalué le risque.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"Ont évalué is passé composé and presents the evaluation as one bounded whole.","contrast_form":"Les experts évaluaient le risque."},
-  {"sentence":"La rédaction vérifiait la source.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Vérifiait is imparfait morphology, so the checking is viewed from within rather than as a closed whole.","contrast_form":"La rédaction a vérifié la source."},
-  {"sentence":"La rédaction a vérifié la source.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"A vérifié marks the passé composé and bounds the checking event.","contrast_form":"La rédaction vérifiait la source."},
-  {"sentence":"Le conseil révisait le budget.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Révisait is imparfait and presents the revision as unfolding, with no endpoint asserted.","contrast_form":"Le conseil a révisé le budget."},
-  {"sentence":"Le conseil a révisé le budget.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"A révisé is passé composé and views the revision as a bounded whole.","contrast_form":"Le conseil révisait le budget."},
-  {"sentence":"Les ingénieurs testaient le système.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Testaient is imparfait and supplies an internal or background view of the testing.","contrast_form":"Les ingénieurs ont testé le système."},
-  {"sentence":"Les ingénieurs ont testé le système.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"Ont testé is passé composé morphology and packages the testing as a bounded event.","contrast_form":"Les ingénieurs testaient le système."},
-  {"sentence":"L’agence publiait le bulletin.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Publiait is imparfait and presents publication as ongoing, habitual, or background without choosing among those readings.","contrast_form":"L’agence a publié le bulletin."},
-  {"sentence":"L’agence a publié le bulletin.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"A publié marks the passé composé and presents the publication as bounded.","contrast_form":"L’agence publiait le bulletin."},
-  {"sentence":"Les députés débattaient de l’amendement.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Débattaient is imparfait and views the debate in its course, without asserting an endpoint.","contrast_form":"Les députés ont débattu de l’amendement."},
-  {"sentence":"Les députés ont débattu de l’amendement.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"Ont débattu is passé composé morphology and gives the debate a bounded, global view.","contrast_form":"Les députés débattaient de l’amendement."},
-  {"sentence":"La banque finançait le projet.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Finançait is imparfait and leaves the financing internally viewed or habitual, with no final boundary asserted.","contrast_form":"La banque a financé le projet."},
-  {"sentence":"La banque a financé le projet.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"A financé is passé composé and presents the financing as a bounded event.","contrast_form":"La banque finançait le projet."},
-  {"sentence":"Le comité sélectionnait le candidat.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Sélectionnait is imparfait and shows the selection process from within, without asserting its endpoint.","contrast_form":"Le comité a sélectionné le candidat."},
-  {"sentence":"Le comité a sélectionné le candidat.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"A sélectionné is passé composé and presents the selection as a bounded whole.","contrast_form":"Le comité sélectionnait le candidat."},
-  {"sentence":"La direction consultait les syndicats.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Consultait is imparfait morphology and presents the consultation as unfolding or background.","contrast_form":"La direction a consulté les syndicats."},
-  {"sentence":"La direction a consulté les syndicats.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"A consulté marks the passé composé, bounding the consultation as a whole.","contrast_form":"La direction consultait les syndicats."},
-  {"sentence":"Les auditeurs contrôlaient les comptes.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Contrôlaient is imparfait and gives an internal view of the audit activity.","contrast_form":"Les auditeurs ont contrôlé les comptes."},
-  {"sentence":"Les auditeurs ont contrôlé les comptes.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"Ont contrôlé is passé composé and presents the audit activity as bounded.","contrast_form":"Les auditeurs contrôlaient les comptes."},
-  {"sentence":"L’entreprise se retirait du marché.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Se retirait is imparfait and views the withdrawal in progress, without asserting its endpoint.","contrast_form":"L’entreprise s’est retirée du marché."},
-  {"sentence":"L’entreprise s’est retirée du marché.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"S’est retirée is passé composé; the auxiliary and agreed participle present a bounded withdrawal.","contrast_form":"L’entreprise se retirait du marché."},
-  {"sentence":"La chercheuse arrivait au laboratoire.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Arrivait is imparfait and presents the arrival from inside its unfolding rather than at its boundary.","contrast_form":"La chercheuse est arrivée au laboratoire."},
-  {"sentence":"La chercheuse est arrivée au laboratoire.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"Est arrivée is passé composé and presents the arrival as a bounded transition.","contrast_form":"La chercheuse arrivait au laboratoire."},
-  {"sentence":"Les délégués entraient dans la salle.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Entraient is imparfait and gives an internal view of the delegates’ entry.","contrast_form":"Les délégués sont entrés dans la salle."},
-  {"sentence":"Les délégués sont entrés dans la salle.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"Sont entrés is passé composé and bounds the entry as a complete event view.","contrast_form":"Les délégués entraient dans la salle."},
-  {"sentence":"Les représentants se réunissaient au siège.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Se réunissaient is imparfait and presents the gathering as ongoing, habitual, or background.","contrast_form":"Les représentants se sont réunis au siège."},
-  {"sentence":"Les représentants se sont réunis au siège.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"Se sont réunis is passé composé and presents the gathering as a bounded event.","contrast_form":"Les représentants se réunissaient au siège."},
-  {"sentence":"Nous comparions les scénarios.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Comparions is the first-person plural imparfait and presents the comparison from within.","contrast_form":"Nous avons comparé les scénarios."},
-  {"sentence":"Nous avons comparé les scénarios.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"Avons comparé is passé composé and presents the comparison as a bounded whole.","contrast_form":"Nous comparions les scénarios."},
-  {"sentence":"Vous présentiez la proposition.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Présentiez is the second-person plural imparfait and leaves the presentation’s endpoint unasserted.","contrast_form":"Vous avez présenté la proposition."},
-  {"sentence":"Vous avez présenté la proposition.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"Avez présenté is passé composé and packages the presentation as a bounded event.","contrast_form":"Vous présentiez la proposition."},
-  {"sentence":"Je coordonnais l’enquête.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Coordonnais is the first-person singular imparfait and presents the coordination as ongoing or background.","contrast_form":"J’ai coordonné l’enquête."},
-  {"sentence":"J’ai coordonné l’enquête.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"Ai coordonné is passé composé and gives the coordination a bounded, global view.","contrast_form":"Je coordonnais l’enquête."},
-  {"sentence":"Tu préparais la synthèse.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Préparais is the second-person singular imparfait and does not assert the preparation’s endpoint.","contrast_form":"Tu as préparé la synthèse."},
-  {"sentence":"Tu as préparé la synthèse.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est présentée comme un événement borné, envisagé globalement.","B. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée."],"answer":"A. L’action est présentée comme un événement borné, envisagé globalement.","why":"As préparé marks the passé composé and presents the preparation as a bounded event.","contrast_form":"Tu préparais la synthèse."},
-  {"sentence":"Les analystes calculaient le coût.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","why":"Calculaient is imparfait and shows the calculation in progress or as background.","contrast_form":"Les analystes ont calculé le coût."},
-  {"sentence":"Les analystes ont calculé le coût.","question":"Comment l’action est-elle présentée ?","options":["A. L’action est saisie en cours ou comme arrière-plan, sans borne finale affirmée.","B. L’action est présentée comme un événement borné, envisagé globalement."],"answer":"B. L’action est présentée comme un événement borné, envisagé globalement.","why":"Ont calculé is passé composé and presents the calculation as one bounded whole.","contrast_form":"Les analystes calculaient le coût."}
+  {
+    "_meta": {
+      "bank": "f2_fr_pc_imparfait",
+      "language": "fr",
+      "format": "F2 structured-input interpretation cards with two fixed, labeled target-language options and concise English metalinguistic feedback",
+      "built": "2026-08-01",
+      "item_count": 50,
+      "source_evidence": [
+        "docs/GRAMMAR_STRATEGY.md §§3b and 4 (structured input; form is the only cue to meaning)",
+        "docs/research/error-profiles/fr.md §§2.10 and 6 (15 recorded passé composé/imparfait selection errors; keep the target small)"
+      ],
+      "provenance": "Fifty newly authored, bank-attested seed items in standard French; no learner sentences or personal data are reproduced.",
+      "feeds_units": [
+        "fr_passe_compose",
+        "fr_imparfait"
+      ],
+      "register": "Neutral news and professional French.",
+      "language_policy": "sentence, question, options, answer, and contrast_form are French; why is concise English metalinguistic feedback.",
+      "coverage": {
+        "content_items": 50,
+        "distinct_source_frames": 50,
+        "reversed_source_duplicates": 0,
+        "imparfait_source_rows": 25,
+        "passe_compose_source_rows": 25,
+        "contrast_only_opposites": 50,
+        "contrast_pairs_with_avoir": 46,
+        "contrast_pairs_with_etre_or_pronominal": 4,
+        "correct_option_A": 25,
+        "correct_option_B": 25,
+        "options_per_item": 2,
+        "persons_by_source": {
+          "1s": 1,
+          "1p": 1,
+          "2p": 1,
+          "3s": 28,
+          "3p": 19
+        },
+        "answer_positions_by_source": {
+          "imparfait": {
+            "A": 12,
+            "B": 13
+          },
+          "passe_compose": {
+            "A": 13,
+            "B": 12
+          }
+        }
+      },
+      "validation_notes": "All 50 source frames are distinct; no contrast_form is repeated as another source sentence. Exactly 25 sources use imparfait and 25 use passé composé. Apart from grammatically required auxiliary, participle, agreement, and je/j’ elision, each contrast changes only target verbal morphology. No time adverb, duration phrase, habitual-frequency expression, completion predicate, or surrounding event independently supplies the aspect reading. Passé composé is described as bounded/perfective, not as proof that every real-world consequence is complete; imparfait is an internal/background view without an asserted endpoint. Content order and correct labels are stored in a frozen, deterministic constrained permutation; labels are cross-balanced by source tense, have no short repeated cycle, and never run more than three times consecutively.",
+      "ordering_policy": "Frozen deterministic constraint-solved permutation v2 (seed 190); label and source-category streams reject runs longer than three, six-position period-2 windows, and nine-position period-3 windows in the full sequence and relevant routed subsequences."
+    }
+  },
+  {
+    "sentence": "La police a sécurisé le bâtiment.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A sécurisé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "La police sécurisait le bâtiment."
+  },
+  {
+    "sentence": "La banque finançait le projet.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Finançait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "La banque a financé le projet."
+  },
+  {
+    "sentence": "L’entreprise se retirait du marché.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Se retirait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "L’entreprise s’est retirée du marché."
+  },
+  {
+    "sentence": "Les analystes calculaient le coût.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Calculaient is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Les analystes ont calculé le coût."
+  },
+  {
+    "sentence": "Le médiateur a proposé une solution.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A proposé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Le médiateur proposait une solution."
+  },
+  {
+    "sentence": "La plateforme a traité les demandes.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A traité marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "La plateforme traitait les demandes."
+  },
+  {
+    "sentence": "La cour a rejeté la requête.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A rejeté marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "La cour rejetait la requête."
+  },
+  {
+    "sentence": "Le comité sélectionnait le candidat.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Sélectionnait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Le comité a sélectionné le candidat."
+  },
+  {
+    "sentence": "La commission a recommandé une réforme.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A recommandé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "La commission recommandait une réforme."
+  },
+  {
+    "sentence": "L’équipe analysait les données.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Analysait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "L’équipe a analysé les données."
+  },
+  {
+    "sentence": "La commission examinait le dossier.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Examinait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "La commission a examiné le dossier."
+  },
+  {
+    "sentence": "Nous comparions les scénarios.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Comparions is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Nous avons comparé les scénarios."
+  },
+  {
+    "sentence": "Les partenaires ont défini les priorités.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont défini marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les partenaires définissaient les priorités."
+  },
+  {
+    "sentence": "Les responsables ont corrigé l’erreur.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont corrigé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les responsables corrigeaient l’erreur."
+  },
+  {
+    "sentence": "Les représentants se réunissaient au siège.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Se réunissaient is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Les représentants se sont réunis au siège."
+  },
+  {
+    "sentence": "Les autorités ont fermé le site.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont fermé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les autorités fermaient le site."
+  },
+  {
+    "sentence": "Les économistes ont modélisé la demande.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont modélisé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les économistes modélisaient la demande."
+  },
+  {
+    "sentence": "Les syndicats ont contesté la décision.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont contesté marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les syndicats contestaient la décision."
+  },
+  {
+    "sentence": "La chercheuse arrivait au laboratoire.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Arrivait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "La chercheuse est arrivée au laboratoire."
+  },
+  {
+    "sentence": "Le laboratoire a documenté l’anomalie.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A documenté marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Le laboratoire documentait l’anomalie."
+  },
+  {
+    "sentence": "Les représentants ont approuvé le protocole.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont approuvé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les représentants approuvaient le protocole."
+  },
+  {
+    "sentence": "La direction consultait les syndicats.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Consultait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "La direction a consulté les syndicats."
+  },
+  {
+    "sentence": "Les médecins ont observé la réaction.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont observé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les médecins observaient la réaction."
+  },
+  {
+    "sentence": "Le conseil révisait le budget.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Révisait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Le conseil a révisé le budget."
+  },
+  {
+    "sentence": "Vous présentiez la proposition.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Présentiez is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Vous avez présenté la proposition."
+  },
+  {
+    "sentence": "Les journalistes ont révélé le document.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont révélé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les journalistes révélaient le document."
+  },
+  {
+    "sentence": "La présidente a signé l’accord.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A signé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "La présidente signait l’accord."
+  },
+  {
+    "sentence": "Les experts évaluaient le risque.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Évaluaient is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Les experts ont évalué le risque."
+  },
+  {
+    "sentence": "Les députés débattaient de l’amendement.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Débattaient is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Les députés ont débattu de l’amendement."
+  },
+  {
+    "sentence": "Les délégués entraient dans la salle.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Entraient is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Les délégués sont entrés dans la salle."
+  },
+  {
+    "sentence": "La société a déployé la mise à jour.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A déployé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "La société déployait la mise à jour."
+  },
+  {
+    "sentence": "L’entreprise a lancé le service.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A lancé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "L’entreprise lançait le service."
+  },
+  {
+    "sentence": "Le ministère préparait le rapport.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Préparait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Le ministère a préparé le rapport."
+  },
+  {
+    "sentence": "Les enquêteurs interrogeaient le témoin.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Interrogeaient is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Les enquêteurs ont interrogé le témoin."
+  },
+  {
+    "sentence": "Le service juridique a rédigé le contrat.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A rédigé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Le service juridique rédigeait le contrat."
+  },
+  {
+    "sentence": "Les négociateurs discutaient la proposition.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Discutaient is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Les négociateurs ont discuté la proposition."
+  },
+  {
+    "sentence": "Les services ont transmis les résultats.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont transmis marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les services transmettaient les résultats."
+  },
+  {
+    "sentence": "Le régulateur a autorisé la fusion.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A autorisé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Le régulateur autorisait la fusion."
+  },
+  {
+    "sentence": "Le Parlement a adopté la loi.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A adopté marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Le Parlement adoptait la loi."
+  },
+  {
+    "sentence": "L’agence publiait le bulletin.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Publiait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "L’agence a publié le bulletin."
+  },
+  {
+    "sentence": "Le gouvernement a annoncé la mesure.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "B. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A annoncé marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Le gouvernement annonçait la mesure."
+  },
+  {
+    "sentence": "La rédaction vérifiait la source.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Vérifiait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "La rédaction a vérifié la source."
+  },
+  {
+    "sentence": "Je coordonnais l’enquête.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Coordonnais is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "J’ai coordonné l’enquête."
+  },
+  {
+    "sentence": "L’institut a mesuré l’impact.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A mesuré marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "L’institut mesurait l’impact."
+  },
+  {
+    "sentence": "Le jury a retenu la candidature.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "A retenu marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Le jury retenait la candidature."
+  },
+  {
+    "sentence": "Les auditeurs contrôlaient les comptes.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Contrôlaient is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Les auditeurs ont contrôlé les comptes."
+  },
+  {
+    "sentence": "Les chercheurs ont identifié la cause.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "A. L’action est présentée comme un événement borné, envisagé globalement.",
+    "why": "Ont identifié marks the passé composé and presents the event as a bounded whole.",
+    "contrast_form": "Les chercheurs identifiaient la cause."
+  },
+  {
+    "sentence": "Le tribunal étudiait le recours.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+      "B. L’action est présentée comme un événement borné, envisagé globalement."
+    ],
+    "answer": "A. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Étudiait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Le tribunal a étudié le recours."
+  },
+  {
+    "sentence": "Les ingénieurs testaient le système.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Testaient is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Les ingénieurs ont testé le système."
+  },
+  {
+    "sentence": "Le secrétariat compilait les réponses.",
+    "question": "Comment l’action est-elle présentée ?",
+    "options": [
+      "A. L’action est présentée comme un événement borné, envisagé globalement.",
+      "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé."
+    ],
+    "answer": "B. L’action est présentée comme en cours, habituelle ou en arrière-plan, sans que son terme soit affirmé.",
+    "why": "Compilait is imparfait morphology; it presents the event from within, as habitual, or as background, without asserting an endpoint.",
+    "contrast_form": "Le secrétariat a compilé les réponses."
+  }
 ]

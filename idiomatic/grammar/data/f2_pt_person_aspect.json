@@ -1,0 +1,602 @@
+[
+  {
+    "_meta": {
+      "source_evidence": "docs/commissions/CODEX_P_F2_INTERPRETATION.md; docs/GRAMMAR_STRATEGY.md §§3b and 4; docs/research/error-profiles/pt.md §§2, 3 and 6 (fiz/fez and other 1sg/3sg preterite confusion); idiomatic/grammar/data/units_fip.json guidance for pt_preterito_perfeito and pt_preterito_imperfeito",
+      "format": "F2 structured-input interpretation cards with two fixed, labeled target-language options and concise English metalinguistic feedback",
+      "built": "2026-08-01",
+      "language": "pt",
+      "bank": "f2_pt_person_aspect",
+      "variety": "Brazilian Portuguese; você/vocês agreement, Brazilian professional lexis, no tu or vós forms",
+      "provenance": "50 newly authored seed items. The learner error profile informed the fiz/fez weighting and the additional non-syncretic 1sg/3sg pairs, but no learner sentence or private source text is reproduced.",
+      "item_count": 50,
+      "feeds_units": [
+        "pt_preterito_perfeito",
+        "pt_preterito_imperfeito"
+      ],
+      "coverage": {
+        "content_items": 50,
+        "person_first_singular": 10,
+        "person_third_singular": 10,
+        "fiz_fez_person_rows": 8,
+        "additional_profile_attested_person_rows": 12,
+        "perfeito_as_bounded_whole": 15,
+        "imperfeito_as_habitual_or_ongoing": 15,
+        "minimal_pair_contrasts": 50,
+        "answer_positions": {
+          "A": 25,
+          "B": 25
+        },
+        "answer_positions_by_decision": {
+          "person_first_singular": {
+            "A": 5,
+            "B": 5
+          },
+          "person_third_singular": {
+            "A": 5,
+            "B": 5
+          },
+          "perfeito": {
+            "A": 7,
+            "B": 8
+          },
+          "imperfeito": {
+            "A": 8,
+            "B": 7
+          }
+        }
+      },
+      "validation_notes": "The question and options are in Brazilian Portuguese; why is concise English feedback. Person rows omit overt subjects and all independent person cues; the non-syncretic focal verb form, including eight fiz/fez rows, alone distinguishes 1sg from 3sg agreement. Aspect rows omit temporal adverbs and independent completion cues, and their options describe grammatical viewpoint rather than external-world success. Each contrast_form changes only target morphology and reverses the keyed option. Person and aspect decisions and correct labels are stored in a frozen, deterministically de-patterned order; labels are 25/25 overall, cross-balanced by decision type, nonperiodic, and never run more than three times consecutively.",
+      "ordering_policy": "Frozen deterministic constraint-solved permutation v4 (Mulberry32 seed 1; first zero-violation permutation at search step 74549); label, source-semantic-category, and top-level person/aspect decision streams reject runs longer than three, six-position period-2 windows, and nine-position period-3 windows in the full sequence and all relevant routed and category-filtered subsequences."
+    }
+  },
+  {
+    "sentence": "O porta-voz confirmou a informação.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "A. Como um evento delimitado, visto como um todo.",
+    "why": "Confirmou is a pretérito perfeito simples form, so it presents the event as a bounded whole; confirmava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "O porta-voz confirmava a informação."
+  },
+  {
+    "sentence": "A promotoria investigava o vazamento.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Investigava is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; investigou is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "A promotoria investigou o vazamento."
+  },
+  {
+    "sentence": "A empresa negociava o contrato.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "B. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Negociava is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; negociou is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "A empresa negociou o contrato."
+  },
+  {
+    "sentence": "Fiz a síntese do parecer.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "B. 1ª pessoa do singular: eu.",
+    "why": "Fiz is the first-person singular form of fazer in the pretérito perfeito simples, so the omitted subject is eu. Fez marks third-person singular.",
+    "contrast_form": "Fez a síntese do parecer."
+  },
+  {
+    "sentence": "A equipe corrigiu o documento.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "A. Como um evento delimitado, visto como um todo.",
+    "why": "Corrigiu is a pretérito perfeito simples form, so it presents the event as a bounded whole; corrigia is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "A equipe corrigia o documento."
+  },
+  {
+    "sentence": "Tive acesso ao banco de dados.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "B. 1ª pessoa do singular: eu.",
+    "why": "Tive is the first-person singular form of ter in the pretérito perfeito simples, so the omitted subject is eu. Teve marks third-person singular.",
+    "contrast_form": "Teve acesso ao banco de dados."
+  },
+  {
+    "sentence": "O órgão regulador aplicou a sanção.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "B. Como um evento delimitado, visto como um todo.",
+    "why": "Aplicou is a pretérito perfeito simples form, so it presents the event as a bounded whole; aplicava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "O órgão regulador aplicava a sanção."
+  },
+  {
+    "sentence": "A repartição emitiu as certidões.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "B. Como um evento delimitado, visto como um todo.",
+    "why": "Emitiu is a pretérito perfeito simples form, so it presents the event as a bounded whole; emitia is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "A repartição emitia as certidões."
+  },
+  {
+    "sentence": "Comecei a verificar os resultados.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "A. 1ª pessoa do singular: eu.",
+    "why": "Comecei is the first-person singular form of começar in the pretérito perfeito simples, so the omitted subject is eu. Começou marks third-person singular.",
+    "contrast_form": "Começou a verificar os resultados."
+  },
+  {
+    "sentence": "Escreveu o parecer jurídico.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Escreveu is the third-person singular form of escrever in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Escrevi marks first-person singular eu.",
+    "contrast_form": "Escrevi o parecer jurídico."
+  },
+  {
+    "sentence": "Criei o modelo estatístico.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "B. 1ª pessoa do singular: eu.",
+    "why": "Criei is the first-person singular form of criar in the pretérito perfeito simples, so the omitted subject is eu. Criou marks third-person singular.",
+    "contrast_form": "Criou o modelo estatístico."
+  },
+  {
+    "sentence": "Os auditores conferiam as contas.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Conferiam is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; conferiram is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "Os auditores conferiram as contas."
+  },
+  {
+    "sentence": "Esteve na sessão de conciliação.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Esteve is the third-person singular form of estar in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Estive marks first-person singular eu.",
+    "contrast_form": "Estive na sessão de conciliação."
+  },
+  {
+    "sentence": "Os pesquisadores analisavam as amostras.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "B. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Analisavam is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; analisaram is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "Os pesquisadores analisaram as amostras."
+  },
+  {
+    "sentence": "Criou o protocolo de auditoria.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Criou is the third-person singular form of criar in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Criei marks first-person singular eu.",
+    "contrast_form": "Criei o protocolo de auditoria."
+  },
+  {
+    "sentence": "Fiz a transcrição integral.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "A. 1ª pessoa do singular: eu.",
+    "why": "Fiz is the first-person singular form of fazer in the pretérito perfeito simples, so the omitted subject is eu. Fez marks third-person singular.",
+    "contrast_form": "Fez a transcrição integral."
+  },
+  {
+    "sentence": "Os técnicos restauraram o servidor.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "B. Como um evento delimitado, visto como um todo.",
+    "why": "Restauraram is a pretérito perfeito simples form, so it presents the event as a bounded whole; restauravam is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "Os técnicos restauravam o servidor."
+  },
+  {
+    "sentence": "A equipe revisava as cláusulas.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "B. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Revisava is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; revisou is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "A equipe revisou as cláusulas."
+  },
+  {
+    "sentence": "Os analistas comparavam os índices.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Comparavam is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; compararam is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "Os analistas compararam os índices."
+  },
+  {
+    "sentence": "Começou a modelar o cenário.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Começou is the third-person singular form of começar in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Comecei marks first-person singular eu.",
+    "contrast_form": "Comecei a modelar o cenário."
+  },
+  {
+    "sentence": "O município homologou a licitação.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "A. Como um evento delimitado, visto como um todo.",
+    "why": "Homologou is a pretérito perfeito simples form, so it presents the event as a bounded whole; homologava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "O município homologava a licitação."
+  },
+  {
+    "sentence": "A editora traduzia o documento.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Traduzia is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; traduziu is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "A editora traduziu o documento."
+  },
+  {
+    "sentence": "A juíza rejeitou o recurso.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "B. Como um evento delimitado, visto como um todo.",
+    "why": "Rejeitou is a pretérito perfeito simples form, so it presents the event as a bounded whole; rejeitava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "A juíza rejeitava o recurso."
+  },
+  {
+    "sentence": "Entendeu a nova diretriz.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Entendeu is the third-person singular form of entender in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Entendi marks first-person singular eu.",
+    "contrast_form": "Entendi a nova diretriz."
+  },
+  {
+    "sentence": "A agência examinava os pedidos.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "B. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Examinava is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; examinou is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "A agência examinou os pedidos."
+  },
+  {
+    "sentence": "A plataforma processava os requerimentos.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Processava is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; processou is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "A plataforma processou os requerimentos."
+  },
+  {
+    "sentence": "Estive na reunião editorial.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "A. 1ª pessoa do singular: eu.",
+    "why": "Estive is the first-person singular form of estar in the pretérito perfeito simples, so the omitted subject is eu. Esteve marks third-person singular.",
+    "contrast_form": "Esteve na reunião editorial."
+  },
+  {
+    "sentence": "Entendi a ressalva orçamentária.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "A. 1ª pessoa do singular: eu.",
+    "why": "Entendi is the first-person singular form of entender in the pretérito perfeito simples, so the omitted subject is eu. Entendeu marks third-person singular.",
+    "contrast_form": "Entendeu a ressalva orçamentária."
+  },
+  {
+    "sentence": "A delegação assinou o memorando.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "B. Como um evento delimitado, visto como um todo.",
+    "why": "Assinou is a pretérito perfeito simples form, so it presents the event as a bounded whole; assinava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "A delegação assinava o memorando."
+  },
+  {
+    "sentence": "Fiz a análise técnica.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "B. 1ª pessoa do singular: eu.",
+    "why": "Fiz is the first-person singular form of fazer in the pretérito perfeito simples, so the omitted subject is eu. Fez marks third-person singular.",
+    "contrast_form": "Fez a análise técnica."
+  },
+  {
+    "sentence": "Fez a avaliação jurídica.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Fez is the third-person singular form of fazer in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Fiz marks first-person singular eu.",
+    "contrast_form": "Fiz a avaliação jurídica."
+  },
+  {
+    "sentence": "O conselho ratificou o acordo.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "A. Como um evento delimitado, visto como um todo.",
+    "why": "Ratificou is a pretérito perfeito simples form, so it presents the event as a bounded whole; ratificava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "O conselho ratificava o acordo."
+  },
+  {
+    "sentence": "O comitê aprovou o parecer.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "B. Como um evento delimitado, visto como um todo.",
+    "why": "Aprovou is a pretérito perfeito simples form, so it presents the event as a bounded whole; aprovava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "O comitê aprovava o parecer."
+  },
+  {
+    "sentence": "O departamento preparava o orçamento.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "B. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Preparava is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; preparou is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "O departamento preparou o orçamento."
+  },
+  {
+    "sentence": "Escrevi a nota técnica.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "A. 1ª pessoa do singular: eu.",
+    "why": "Escrevi is the first-person singular form of escrever in the pretérito perfeito simples, so the omitted subject is eu. Escreveu marks third-person singular.",
+    "contrast_form": "Escreveu a nota técnica."
+  },
+  {
+    "sentence": "O tribunal anulou a decisão.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "A. Como um evento delimitado, visto como um todo.",
+    "why": "Anulou is a pretérito perfeito simples form, so it presents the event as a bounded whole; anulava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "O tribunal anulava a decisão."
+  },
+  {
+    "sentence": "O ministério publicou os indicadores.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "B. Como um evento delimitado, visto como um todo.",
+    "why": "Publicou is a pretérito perfeito simples form, so it presents the event as a bounded whole; publicava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "O ministério publicava os indicadores."
+  },
+  {
+    "sentence": "Fez a checagem das fontes.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Fez is the third-person singular form of fazer in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Fiz marks first-person singular eu.",
+    "contrast_form": "Fiz a checagem das fontes."
+  },
+  {
+    "sentence": "Fez o cálculo orçamentário.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Fez is the third-person singular form of fazer in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Fiz marks first-person singular eu.",
+    "contrast_form": "Fiz o cálculo orçamentário."
+  },
+  {
+    "sentence": "O banco concedeu o financiamento.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "B. Como um evento delimitado, visto como um todo.",
+    "why": "Concedeu is a pretérito perfeito simples form, so it presents the event as a bounded whole; concedia is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "O banco concedia o financiamento."
+  },
+  {
+    "sentence": "Teve responsabilidade pela projeção de receita.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 1ª pessoa do singular: eu.",
+      "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular."
+    ],
+    "answer": "B. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Teve is the third-person singular form of ter in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Tive marks first-person singular eu.",
+    "contrast_form": "Tive responsabilidade pela projeção de receita."
+  },
+  {
+    "sentence": "O gabinete estudava a minuta.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Estudava is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; estudou is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "O gabinete estudou a minuta."
+  },
+  {
+    "sentence": "A universidade arquivou os processos.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "A. Como um evento delimitado, visto como um todo.",
+    "why": "Arquivou is a pretérito perfeito simples form, so it presents the event as a bounded whole; arquivava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "A universidade arquivava os processos."
+  },
+  {
+    "sentence": "A comissão discutia o regulamento.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Discutia is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; discutiu is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "A comissão discutiu o regulamento."
+  },
+  {
+    "sentence": "Fiz a revisão editorial.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "B. 1ª pessoa do singular: eu.",
+    "why": "Fiz is the first-person singular form of fazer in the pretérito perfeito simples, so the omitted subject is eu. Fez marks third-person singular.",
+    "contrast_form": "Fez a revisão editorial."
+  },
+  {
+    "sentence": "A redação consultava as fontes.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "B. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Consultava is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; consultou is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "A redação consultou as fontes."
+  },
+  {
+    "sentence": "O Senado alterou o artigo.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "A. Como um evento delimitado, visto como um todo.",
+    "why": "Alterou is a pretérito perfeito simples form, so it presents the event as a bounded whole; alterava is a pretérito imperfeito form and would present it from within or as habitual, without focusing an endpoint.",
+    "contrast_form": "O Senado alterava o artigo."
+  },
+  {
+    "sentence": "Fez a auditoria externa.",
+    "question": "Que pessoa gramatical a forma verbal marca?",
+    "options": [
+      "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+      "B. 1ª pessoa do singular: eu."
+    ],
+    "answer": "A. 3ª pessoa do singular: ele, ela, você, a gente ou outro sintagma nominal singular.",
+    "why": "Fez is the third-person singular form of fazer in the pretérito perfeito simples, compatible with ele, ela, você, a gente, or another singular noun phrase. Fiz marks first-person singular eu.",
+    "contrast_form": "Fiz a auditoria externa."
+  },
+  {
+    "sentence": "A autoridade monitorava o processo.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+      "B. Como um evento delimitado, visto como um todo."
+    ],
+    "answer": "A. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Monitorava is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; monitorou is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "A autoridade monitorou o processo."
+  },
+  {
+    "sentence": "Os especialistas avaliavam o impacto.",
+    "question": "Como a forma verbal apresenta a ação?",
+    "options": [
+      "A. Como um evento delimitado, visto como um todo.",
+      "B. Como uma situação habitual ou em curso, sem focalizar seu limite."
+    ],
+    "answer": "B. Como uma situação habitual ou em curso, sem focalizar seu limite.",
+    "why": "Avaliavam is a pretérito imperfeito form, so it presents the event from within or as habitual, without focusing an endpoint; avaliaram is a pretérito perfeito simples form and would present it as a bounded whole.",
+    "contrast_form": "Os especialistas avaliaram o impacto."
+  }
+]
