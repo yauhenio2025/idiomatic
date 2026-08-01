@@ -6,14 +6,14 @@ Brazilian speech and formal writing do not always make the same placement choice
 
 ## First identify the object
 
-Direct-object clitics agree in gender and number with the replaced noun:
+The third-person direct-object clitics *o, a, os,* and *as* agree in gender and number with the replaced noun:
 
 - *o relatório* → *o*;
 - *a reportagem* → *a*;
 - *os arquivos* → *os*;
 - *as entrevistas* → *as*.
 
-In contemporary Brazilian conversation, a pronoun before the conjugated verb is a strong default: *Eu o vi* is formal; *Eu vi ele* is common in speech, while *Eu vi o relatório* avoids the issue. With two verbs, a clitic between them is extremely natural: *Vou te mandar o arquivo*; *Eles querem nos entrevistar*. This differs from Spanish placement and deserves its own rhythm.
+In ordinary declarative clauses, when Brazilian Portuguese uses an unstressed clitic with a conjugated verb, placement before the verb is the strong default: *Eu o vi* is grammatical but formal in much everyday speech. Conversation also commonly uses the tonic form after the verb—*Eu vi ele*—while repeating the noun, as in *Eu vi o relatório*, avoids the choice. With two verbs, a clitic between them is extremely natural: *Vou te mandar o arquivo*; *Eles querem nos entrevistar*. This differs from Spanish placement and deserves its own rhythm.
 
 ## Infinitive plus *o/a*: drop the *r*, add *l*
 
@@ -33,11 +33,11 @@ In natural Brazilian speech, you may instead hear *para procurar eles* or a repe
 
 ## Indirect objects favor Brazilian proclisis
 
-The indirect clitics most useful in your variety are *me, te, lhe, nos, lhes*. With a single verb, contemporary Brazilian Portuguese normally puts an unstressed pronoun before it: *Ela me disse a verdade*; *O editor nos enviou o contrato*. With a verb sequence, placement between the verbs is common: *Ela vai me dizer*; *Eles querem te mandar uma carta*; *A plataforma está nos cobrando uma taxa*.
+The most useful indirect clitics in your variety are *me, te,* and *nos*. *Lhe* and *lhes* also occur, especially in formal writing and in some second-person uses, but Brazilian conversation often replaces them with *para ele, para ela, para você,* or their plural forms. With a single verb, contemporary Brazilian Portuguese normally puts an unstressed pronoun before it: *Ela me disse a verdade*; *O editor nos enviou o contrato*. With a verb sequence, placement between the verbs is common: *Ela vai me dizer*; *Eles querem te mandar uma carta*; *A plataforma está nos cobrando uma taxa*.
 
 This middle position is a useful contrast with Spanish, where a pronoun generally goes before the whole sequence or attaches to a nonfinite verb. Keep the Brazilian frame as a spoken chunk: *vai me dizer*, not a word-for-word transformation of *me va a decir*.
 
-Formal European-influenced rules may prefer other positions in some written contexts, but this reader targets Brazilian Portuguese. Negative and other attracting words reinforce proclisis: *não me disseram*, *quando nos avisarem*, *ninguém o publicou*.
+Traditional formal placement rules may require other positions in some written contexts, but this reader targets contemporary Brazilian Portuguese. Negative and other attracting words reinforce proclisis: *não me disseram*, *quando nos avisarem*, *ninguém o publicou*.
 
 ## *Comigo* and *conosco* are fused forms
 
@@ -75,5 +75,4 @@ Adapted from Orlando R. Kelm’s contrastive discussions of Brazilian object-pro
 
 - Sources: [Lesson 14 notes](https://coerll.utexas.edu/brazilpod/tafalado/pdf/tafalado_gra_14.pdf) and [Lesson 16 notes](https://coerll.utexas.edu/brazilpod/tafalado/pdf/tafalado_gra_16.pdf)
 - Author: Orlando R. Kelm
-- License: [COERLL record — CC BY, version not stated](https://coerll.utexas.edu/coerll/oer/ta-falado/)
-
+- License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), verified from the archived lesson footer and supported by the [COERLL record](https://coerll.utexas.edu/coerll/oer/ta-falado/)

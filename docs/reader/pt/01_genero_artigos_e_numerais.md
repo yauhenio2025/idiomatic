@@ -1,4 +1,4 @@
-# Gênero que propagates: articles, agreement, and numbers
+# Gender propagates: articles, agreement, and numbers
 
 Portuguese gender is not a label attached to a noun and then forgotten. It is a signal that travels through the noun phrase. Once you choose *o programa*, the same masculine choice normally appears in the determiner and adjective: *um programa novo*, *este programa europeu*, *os programas novos*. With a feminine noun, the chain changes together: *uma mensagem nova*, *esta mensagem urgente*, *as mensagens novas*.
 
@@ -35,7 +35,7 @@ This is why **em França** and **na site** are different failures. In the first,
 
 ## Portuguese makes “two” agree
 
-Unlike Spanish, Portuguese marks gender on the numbers one and two: *um/uma* and *dois/duas*. It also marks gender on the hundreds from two hundred through nine hundred. This produces forms that are easy to flatten when speaking quickly:
+Like Spanish, Portuguese marks gender on one and on the hundreds from two hundred through nine hundred. Unlike invariant Spanish *dos*, however, Portuguese also distinguishes *dois/duas*. This is the cross-language contrast most likely to flatten under speaking pressure:
 
 - *dois meses*, but *duas semanas*;
 - *dois episódios*, but *duas entrevistas*;
@@ -60,8 +60,8 @@ Use contrast pairs to strengthen retrieval: *um programa / uma mensagem*; *dois 
 
 ### Attribution and license
 
-Adapted from the presentation of gender, plural agreement, and noun phrases in Craig R. Stokes, *Elementary Portuguese: A First-Year Course*, especially “Suplementos—Unidade 2—Parte B,” and from Orlando R. Kelm, *Tá Falado*, Grammar Lesson 13, “Gender in Portuguese and Spanish.” The explanations were reorganized around this learner’s recorded errors; examples and wording are new.
+Adapted from Craig R. Stokes’s presentations of gender and articles in “Suplementos—Unidade 2—Parte A” and plural agreement in “Suplementos—Unidade 2—Parte B,” *Elementary Portuguese: A First-Year Course*, and from Orlando R. Kelm, *Tá Falado*, Grammar Lesson 13, “Gender in Portuguese and Spanish.” The number contrast was checked against Eduardo Viana da Silva’s *Bate-Papo*, “Unidade 1—Parte A.” The explanations were reorganized around this learner’s recorded errors; examples and wording are new.
 
-- Stokes source: [Suplementos—Unidade 2—Parte B](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/suplementos-unidade-2-parte-b/) — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- Kelm source and license record: [Tá Falado (COERLL)](https://coerll.utexas.edu/coerll/oer/ta-falado/) — CC BY (publisher does not state a version)
-
+- Stokes sources: [gender and articles](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/suplementos-unidade-2-parte-a/) and [plural agreement](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/suplementos-unidade-2-parte-b/) — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Viana da Silva source: [numbers and agreement in *Bate-Papo*](https://uw.pressbooks.pub/batepapo/chapter/unidade-1-parte-a/) — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Kelm source: [*Tá Falado*, Grammar Lesson 13](https://coerll.utexas.edu/brazilpod/tafalado/lesson-gra13.html) and [lesson notes (PDF)](https://coerll.utexas.edu/brazilpod/tafalado/pdf/tafalado_gra_13.pdf) — [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), verified from the archived lesson footer

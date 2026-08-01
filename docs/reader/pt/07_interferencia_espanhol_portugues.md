@@ -1,4 +1,4 @@
-# Do not “Portuguese-ize” Spanish: retrieve a Portuguese family
+# Do not “Spanish-ize” Portuguese: retrieve a Portuguese family
 
 More than half of your recorded Portuguese errors are cross-Romance lexical or morphological transfers. That number changes the diagnosis. You do not lack enough Portuguese words to discuss technology, publishing, or geopolitics. Under speaking pressure, a Spanish or Italian neighbor wins the retrieval race, and you fit it into an otherwise Portuguese sentence.
 
@@ -70,12 +70,12 @@ The table is not for simultaneous translation practice. It tells you which bound
 
 ## Sound contrasts can carry grammatical consequences
 
-Some short pairs are both lexical and phonological: *mas* “but” versus *mais* “more,” and *sem* “without” versus *sim* “yes.” Your pronunciation record shows substitutions in both sets. Put them in clauses whose syntax makes the distinction unavoidable:
+Some short pairs require different repair strategies. In much Brazilian speech, *mas* “but” may be diphthongized and sound like or nearly like *mais* “more,” so sound alone is not a dependable selector. Let syntax choose: *mas* links contrasting clauses, while *mais* modifies a quantity or comparison. By contrast, *sem* “without” and *sim* “yes” retain a useful vowel contrast. Your pronunciation record shows substitutions in both sets, so put them in clauses whose structure makes the intended word unavoidable:
 
 - *O plano é caro, mas é mais seguro.*
 - *Sem dados, não podemos dizer que sim.*
 
-Slow the stressed vowel enough to choose the word; then speed up the whole phrase. A spelling-only exercise will not fix a spoken merger.
+For *sem/sim*, slow the stressed vowel enough to choose the word, then speed up the whole phrase. For *mas/mais*, rehearse the complete syntactic frame instead of expecting pronunciation to rescue the choice. A spelling-only exercise will not fix errors that recur during speech.
 
 ## Retrieval protocol
 
@@ -91,4 +91,4 @@ Adapted at the level of contrastive method from Orlando R. Kelm’s *Tá Falado*
 
 - Course: [Tá Falado site map](https://coerll.utexas.edu/brazilpod/tafalado/sitemap.html)
 - Author: Orlando R. Kelm
-- License: [COERLL record — CC BY, version not stated](https://coerll.utexas.edu/coerll/oer/ta-falado/)
+- License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), verified from the archived lesson footer and supported by the [COERLL record](https://coerll.utexas.edu/coerll/oer/ta-falado/)

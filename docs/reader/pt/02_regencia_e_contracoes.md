@@ -13,7 +13,7 @@ In Brazilian Portuguese, these four high-frequency verbs take a bare infinitive 
 - *tentar + infinitive*: *O governo tentou conter a inflação.*
 - *conseguir + infinitive*: *A equipe conseguiu publicar a reportagem.*
 - *decidir + infinitive*: *Os editores decidiram adiar o lançamento.*
-- *ir + infinitive* for the near future: *Vou gravar o episódio amanhã.*
+- *ir + infinitive* for the periphrastic future: *Vou gravar o episódio amanhã.*
 
 There is no *de* after *tentar* or *decidir*, no *a* after *conseguir*, and no Spanish-style *a* between a conjugated *ir* and its future infinitive. Say the pair as one rhythm group: *tentou conter*, *conseguiu publicar*, *decidiram adiar*, *vai gravar*.
 
@@ -22,7 +22,7 @@ This does not mean Portuguese dislikes prepositions before infinitives. It means
 - *começar a negociar*;
 - *continuar a trabalhar* or, very commonly in Brazil, *continuar trabalhando*;
 - *gostar de analisar*;
-- *precisar de rever o texto*;
+- *precisar rever o texto* (Brazilian Portuguese; compare *precisar de + noun*);
 - *aprender a usar o sistema*;
 - *parar de publicar*.
 
@@ -77,6 +77,7 @@ Review the frame, not the translation. The question is never “Which prepositio
 
 Original chapter written for this reader from the learner’s attested error profile. No third-party prose was adapted. The current open sources surveyed for Portuguese do not provide a reliable, sufficiently complete treatment of this learner-specific cross-Romance regency set.
 
-- Supporting open comparison source: Orlando R. Kelm, [*Tá Falado* grammar series](https://coerll.utexas.edu/brazilpod/tafalado/sitemap.html) — [COERLL license record: CC BY, version not stated](https://coerll.utexas.edu/coerll/oer/ta-falado/)
-- Internal evidence source: [Portuguese learner error profile](../../research/error-profiles/pt.md) — project document, used as evidence rather than adapted prose
+This original contribution is © 2026 Idiomatic project contributors and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
+- Supporting open comparison source: Orlando R. Kelm, [*Tá Falado* grammar series](https://coerll.utexas.edu/brazilpod/tafalado/sitemap.html) — [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), verified from the archived lesson footer
+- Internal evidence source: [Portuguese learner error profile](../../research/error-profiles/pt.md) — project document, used as evidence rather than adapted prose

@@ -15,6 +15,10 @@ License shorthand:
 
 - [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): adaptation and
   redistribution allowed with attribution and an indication of changes.
+- [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/): the older
+  unported attribution license used by the archived *Tá Falado* lessons and
+  the legacy *Français interactif* site; it also permits commercial reuse and
+  adaptation with attribution.
 - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/): the same,
   but adaptations must be distributed under the same license.
 - **Public domain**: no copyright restriction in the work itself. Project
@@ -25,8 +29,8 @@ License shorthand:
 
 | Source | Current status and license | Verdict |
 |---|---|---|
-| [Français interactif](https://coerll.utexas.edu/coerll/oer/francais-interactif/), Carl Blyth, Karen Kelton, and Nancy Guilloteau, COERLL | Exists; COERLL's current record says **CC BY**. The curriculum includes a textbook, grammar reference, video, and exercises. | **Eligible.** Clear, accurate first-year explanations. For the learner's advanced weak points, its companion *Tex's French Grammar* is easier to cite topic by topic. |
-| [Grimm Grammar](https://coerll.utexas.edu/coerll/oer/grimm-grammar/), Zsuzsanna Abrams, COERLL | Exists; COERLL's current record says **CC BY**. | **Eligible.** Excellent compact explanations of cases, adjective endings, passive voice, and prepositional verbs. Its fairy-tale examples are replaced here with media, policy, and technology examples. |
+| [*Français interactif*, current Pressbooks edition](https://utexas.pressbooks.pub/francais-interactif/), Karen Kelton, Nancy Guilloteau, and Carl Blyth, COERLL / University of Texas at Austin | Exists. The [fourth-edition preface PDF](https://utexas.pressbooks.pub/app/uploads/sites/25/2025/03/Fi_preface_ed4_0.pdf) explicitly states **CC BY 4.0**. The separate [legacy-site adoption page](https://laits.utexas.edu/fi/page/adopt/) identifies the fourth edition as 2019 and applies **CC BY 3.0** to legacy-site materials unless otherwise indicated. | **Eligible, with edition-specific attribution.** Reuse from the current Pressbooks/fourth-edition PDF is attributed as CC BY 4.0; a legacy page would retain its stated CC BY 3.0 terms. No *Français interactif* prose is adapted in the present French chapters. |
+| [Grimm Grammar](https://coerll.utexas.edu/gg/gr/index.html), Zsuzsanna Abrams, COERLL | Exists; the live grammar HTML links to [**CC BY 4.0 International**](https://creativecommons.org/licenses/by/4.0/), and COERLL's [current record](https://coerll.utexas.edu/coerll/oer/grimm-grammar/) says CC BY. | **Eligible.** Excellent compact explanations of cases, adjective endings, passive voice, and prepositional verbs. Its fairy-tale examples are replaced here with media, policy, and technology examples. |
 | [Spanish Grammar in Context](https://coerll.utexas.edu/coerll/oer/spanish-grammar-in-context/), Barbara E. Bullock and Almeida Jacqueline Toribio, COERLL | Exists, but the current COERLL record says **CC BY-NC-SA**, not CC BY. | **Verified but not eligible for this reader.** It is high-quality and grounded in authentic Texas Spanish, but its current NC restriction falls outside this commission's accepted-license list. No prose from it is adapted. |
 
 This corrects the statement in `docs/GRAMMAR_STRATEGY.md` §5 that all three are
@@ -36,20 +40,34 @@ CC BY. The first two still are; the third currently is not.
 
 ### Eligible sources
 
-| Source | License evidence | Quality verdict and useful coverage |
+| Source and primary content | Exact license evidence | Quality, coverage, and use in this reader |
 |---|---|---|
-| [Français interactif](https://coerll.utexas.edu/coerll/oer/francais-interactif/) | COERLL: **CC BY** | Vetted curriculum with reliable beginner-to-intermediate explanations. Broad coverage; useful as a cross-check rather than the sole source for advanced personalization. |
-| [Tex's French Grammar](https://coerll.utexas.edu/coerll/oer/texs-french-grammar/), Carl Blyth and Karen Kelton | COERLL: **CC BY** | Best topic-level reference in this survey. Clear prose and compact paradigms for [quantity expressions](https://laits.utexas.edu/tex/pdf/det8.pdf), [place prepositions](https://www.laits.utexas.edu/tex/gr/pre3.html), [adverb placement](https://www.laits.utexas.edu/tex/gr/adv2.html), [*y*](https://laits.utexas.edu/tex/pd/pro6.html), and adjective agreement. Accurate, though its whimsical examples need register adaptation. |
-| [Grammaire Ouverte](https://open.umn.edu/opentextbooks/textbooks/1323), James Law, BYU Open Textbook Network | Open Textbook Library record: **CC BY** | A genuinely advanced reference, written in French, covering nouns, pronouns, quantifiers, prepositions, negation, moods, and literary tenses. Strong prose; fewer exercises. Excellent second opinion for this reader's C1-level questions. |
-| [Atelier: Le français au niveau intermédiaire](https://mtsu.pressbooks.pub/atelier/), Joan McRae and Kathryn Murphy-Judy | [MTSU Pressbooks catalog](https://mtsu.pressbooks.pub/catalog/): **CC BY** | Communicative intermediate textbook with grammar embedded in readings and activities. Good for discourse context; less efficient as a point reference. |
-| [French Wikibook](https://en.wikibooks.org/wiki/French/Grammar) | Page footer and [Wikibooks copyright policy](https://en.wikibooks.org/wiki/Wikibooks:Copyrights): **CC BY-SA 4.0** (also GFDL where applicable) | Wide coverage, including articles, prepositions, pronouns, and tenses. Quality is uneven and some explanations are elementary. Useful only after independent accuracy checking; any adaptation must remain share-alike. |
-| [Le Littéraire dans le quotidien](https://www.coerll.utexas.edu/lldq/LLDQ-textbook.pdf), Joanna Gay Luks | [COERLL French catalog](https://coerll.utexas.edu/coerll/materials/language/french/): **CC BY** | Particularly useful explanation of the “invariable *de*” after quantity expressions—the learner's most repeated single French error. Dense and literary in places, but linguistically insightful. |
+| [*Français interactif*, current Pressbooks edition](https://utexas.pressbooks.pub/francais-interactif/), Karen Kelton, Nancy Guilloteau, and Carl Blyth | Its [fourth-edition preface PDF](https://utexas.pressbooks.pub/app/uploads/sites/25/2025/03/Fi_preface_ed4_0.pdf) explicitly names the **Creative Commons Attribution 4.0 International License**. The [legacy adoption page](https://laits.utexas.edu/fi/page/adopt/) separately says legacy-site materials are **CC BY 3.0** unless otherwise indicated and asks for attribution to COERLL and UT Austin. | Professionally developed, reliable first-year curriculum with readings, videos, grammar, and activities. **Surveyed and cross-checked, not adapted** in the eight chapters. The edition boundary is preserved rather than flattening both sites to generic “CC BY.” |
+| [*Tex's French Grammar*, current Pressbooks edition](https://utexas.pressbooks.pub/texfrenchgrammar/), Carl Blyth, Karen Kelton, Lindsy Myers, Catherine Delyfer, Yvonne Munn, and Jane Lippmann | Each current chapter carries an on-page **CC BY 4.0** notice; see [place names](https://utexas.pressbooks.pub/texfrenchgrammar/chapter/pre3/), [quantity expressions](https://utexas.pressbooks.pub/texfrenchgrammar/chapter/det8/), and [negation](https://utexas.pressbooks.pub/texfrenchgrammar/chapter/neg3/). The notice is “except where otherwise noted”; no separately credited asset is reused here. | Excellent compact topic reference. Explanatory prose from the three linked current pages informs chapters 01, 03, and 08. It is condensed and reorganized, and every example is replaced. **Only the current Pressbooks text is adapted.** |
+| [*Grammaire Ouverte*](https://open.byu.edu/grammaire_ouverte), James Law (2022), BYU Open Textbook Network | The publisher's [avant-propos](https://open.byu.edu/grammaire_ouverte/avant_propos) and its [publisher-generated PDF](https://edtechbooks.s3.us-west-2.amazonaws.com/pdfs/450/7928.pdf) explicitly state **CC BY 4.0** and permit sharing and adaptation with attribution. | Best fit for an advanced learner: French-language, corpus-aware explanations of nouns, adjectives, determiners, quantifiers, verbs, prepositions, adverbs, pronouns, and negation. It informs chapters 01–05 and 07–08. Only the authors' explanatory prose is adapted; quoted corpus/literary examples are not reproduced. |
+| [French Grammar, Wikibooks](https://en.wikibooks.org/wiki/French/Grammar) | The page footer and official [Wikibooks copyright policy](https://en.wikibooks.org/wiki/Wikibooks:Copyrights) specify **CC BY-SA 4.0** (with GFDL availability where applicable). Modified reuse must retain CC BY-SA 4.0 or later, attribution, a license notice, and an indication of changes. | Broad but uneven and sometimes elementary. **Surveyed, not adapted**: none of its prose appears in these chapters, so the present French package does not inherit share-alike. Any future adaptation must be labeled CC BY-SA and remain share-alike. |
 
 ### Rejected or not used
 
-- *Français inclusif* and *Enhancing French Skills* are CC BY-NC-SA; the NC
-  condition is outside the commission's accepted set.
-- *Liberté* and many cloned Pressbooks editions are CC BY-NC-SA or CC BY-NC.
+- The [legacy LAITS pages for *Tex's French Grammar*](https://www.laits.utexas.edu/tex/copyright.html)
+  prohibit redistribution and alteration and limit use to personal,
+  educational, noncommercial purposes. Their prose is **not** adapted. The
+  current Pressbooks edition has its own explicit CC BY 4.0 notice and is the
+  sole Tex source used above.
+- [*Français inclusif*](https://open.umn.edu/opentextbooks/textbooks/1681) and
+  [*Liberté*](https://open.umn.edu/opentextbooks/textbooks/194) are
+  **CC BY-NC-SA**; [*Au boulot!*](https://open.umn.edu/opentextbooks/textbooks/600)
+  and [*CITOYEN.NE.S*](https://open.umn.edu/opentextbooks/textbooks/1081) are
+  **CC BY-NC**. The NC condition falls outside the commission's accepted set.
+- The current [*Tout un Monde* Pressbooks publication](https://uta.pressbooks.pub/intermediatefrench/front-matter/about-the-publisher/)
+  says **All Rights Reserved**, while the older [Open Textbook Library
+  record](https://open.umn.edu/opentextbooks/textbooks/tout-un-monde-an-interdisciplinary-approach-to-intermediate-french)
+  says CC BY. That unresolved version boundary is too ambiguous for adaptation.
+- Project Gutenberg's record for [*Le Premier Livre*](https://www.gutenberg.org/ebooks/48011),
+  by Albert A. Méras and B. Méras, marks it public domain **in the USA**.
+  It was surveyed but not adapted: its usage and pedagogy are dated, and that
+  jurisdiction-specific record is not enough to place it in the internationally
+  reusable table above.
 - Commercial references such as *Le Bon Usage* and *A Comprehensive French
   Grammar* are all-rights-reserved/paywalled. They are not reproduced or
   adapted.
@@ -60,19 +78,20 @@ CC BY. The first two still are; the third currently is not.
 
 | Source | License evidence | Quality verdict and useful coverage |
 |---|---|---|
-| [Grimm Grammar](https://coerll.utexas.edu/coerll/oer/grimm-grammar/), Zsuzsanna Abrams | COERLL: **CC BY** | The strongest match to this learner's needs: authoritative pages on [adjective endings](https://coerll.utexas.edu/gg/pd/adj_01.html), [dative](https://coerll.utexas.edu/gg/pr/cas_07.html), [genitive](https://coerll.utexas.edu/gg/gr/cas_08.html), [passive voice](https://coerll.utexas.edu/gg/gr/vpass_01.html), and [prepositional verbs/da-compounds](https://coerll.utexas.edu/gg/pr/vphr_01.html). |
-| [Deutsch im Blick](https://coerll.utexas.edu/coerll/oer/deutsch-im-blick/), Zsuzsanna Abrams | COERLL: **CC BY**; the [second-edition PDF](https://www.coerll.utexas.edu/dib/pdfs/DeutschImBlick-textbook.pdf) specifies CC BY 4.0 | Large, professionally developed first-year course. Strong contextual examples and exercises; grammar depth is lower than *Grimm Grammar*. |
-| [German 101-1](https://open.umn.edu/opentextbooks/textbooks/1143), Rebecca Linam | Open Textbook Library: **CC BY** | Reviewed, current introductory prose with short readings, dialogues, and practice. Good scaffolding and modern context, but below the learner's level. |
-| [German 102](https://open.umn.edu/opentextbooks/textbooks/german-102), Rebecca Linam | Open Textbook Library: **CC BY** | Clear continuation with easy-to-read grammar explanations. Useful coverage bridge between elementary case marking and intermediate structures. |
-| [German 201](https://open.umn.edu/opentextbooks/textbooks/german-201), Rebecca Linam | Open Textbook Library: **CC BY** | Especially relevant chapters on adjective endings after *ein*-words, reflexive verbs, prepositional complements, da-/wo-compounds, and participles used adjectivally. |
-| [German Wikibook grammar](https://en.wikibooks.org/wiki/German/Grammar) | [Wikibooks copyright policy](https://en.wikibooks.org/wiki/Wikibooks:Copyrights): **CC BY-SA 4.0** (also GFDL where applicable) | Broad and unusually detailed, including cases, adjective declension, word order, and prepositional verbs. Community-edited and uneven; use only with verification. Share-alike applies to adaptations. |
+| [Grimm Grammar](https://coerll.utexas.edu/gg/gr/index.html), Zsuzsanna Abrams / COERLL; live HTML checked 2026-08-01 | Each checked grammar page contains an active `rel="license"` link to [**CC BY 4.0 International**](https://creativecommons.org/licenses/by/4.0/); COERLL's [current catalog record](https://coerll.utexas.edu/coerll/oer/grimm-grammar/) also labels the work CC BY. | **Best core source.** Clear bilingual explanations and full paradigms for [adjective endings](https://coerll.utexas.edu/gg/gr/adj_01.html), [dative](https://coerll.utexas.edu/gg/gr/cas_07.html), [genitive](https://coerll.utexas.edu/gg/gr/cas_08.html), [passive](https://coerll.utexas.edu/gg/gr/vpass_01.html), weak nouns, and [verb–preposition frames/da-compounds](https://coerll.utexas.edu/gg/gr/vphr_01.html). A few beginner shortcuts are over-broad, especially the purported decline of the genitive and a case shortcut for two-way prepositions, so the reader narrows them rather than copying them. The site still exists and is live. |
+| [Deutsch im Blick, 2nd ed.](https://coerll.utexas.edu/dib/) (2017), Zsuzsanna Abrams et al. / COERLL | The live site footer links to [**CC BY 4.0 International**](https://creativecommons.org/licenses/by/4.0/), and the [second-edition PDF](https://www.coerll.utexas.edu/dib/pdfs/DeutschImBlick-textbook.pdf) prints that exact license. | **Good contextual supplement, not a stand-alone advanced grammar.** Professionally developed thematic units and natural situations; explicit grammar depth is lower than *Grimm Grammar*. Linked songs, videos, and separately credited media are not imported. |
+| [German 101](https://una.pressbooks.pub/gr101/front-matter/about-german-101/) (2022), Rebecca Linam / University of North Alabama | The primary Pressbooks page states [**CC BY 4.0 International**](https://creativecommons.org/licenses/by/4.0/), except where otherwise noted. | **Good elementary scaffold.** Reviewed, readable explanations and short dialogues, though below this learner's level. Only Linam's prose is eligible; third-party images, audio, H5P, songs, and linked videos retain separate licenses. |
+| [German 102](https://una.pressbooks.pub/german-102/) (2022), Rebecca Linam / University of North Alabama | The book-information page states [**CC BY 4.0 International**](https://creativecommons.org/licenses/by/4.0/), except where otherwise noted. | **Strong modular match.** Clear units on dative endings and verbs, adjective endings, N-nouns, da-compounds, and genitive. The reader adapts only author-written grammar prose and replaces every example. |
+| [German 201](https://una.pressbooks.pub/gr-201/) (2023), Rebecca Linam / University of North Alabama | The book-information page states [**CC BY 4.0 International**](https://creativecommons.org/licenses/by/4.0/), except where otherwise noted. | **Strong intermediate supplement.** Particularly relevant chapters on *ein*-word endings, prepositional complements, da-/wo-compounds, and participles used adjectivally. Third-party media and activities are excluded. |
+| [German/Grammar](https://en.wikibooks.org/wiki/German/Grammar), English Wikibooks; hub revision 4040861 (2022-03-17), subsidiary pages checked through 2025-12-31 | Wikibooks' site-information rights record and [copyright policy](https://en.wikibooks.org/wiki/Wikibooks:Copyrights) specify [**CC BY-SA 4.0 International**](https://creativecommons.org/licenses/by-sa/4.0/). | **Useful cross-check, variable editorial depth.** Broad coverage of cases, adjective declension, nouns, word order, and prepositions. No Wikibooks prose is incorporated into the German chapters; if it is adapted later, the derivative must use a compatible license—**share-alike applies**. |
 
 ### Rejected or not used
 
-- Commercial grammars and Duden's paid products are reference-only and not
-  licensed for adaptation.
-- “Free” worksheets without an explicit license were rejected. Access alone
-  does not create remix permission.
+- [*A Foundation Course in Reading German*](https://wisc.pb.unizin.org/readinggerman/front-matter/about/), Howard Martin, revised by Alan Ng, is **CC BY-NC-SA 4.0** on its own “About” page. It is excellent but rejected because this commission excludes NC.
+- [OpenLearn's *Intermediate German: The world of work*](https://www.open.edu/openlearn/languages/intermediate-german-the-world-work) is marked **CC BY-NC** and warns that third-party items are outside even that course license. It is rejected.
+- Commercial grammars from Duden, Routledge, Hueber, Cornelsen, and Klett are paywalled or all-rights-reserved unless a particular page says otherwise. No prose from them is adapted.
+- Project Gutenberg marks *Kleine deutsche Sprachlehre* public domain **in the USA**, not worldwide. That jurisdiction-limited notice, together with its nineteenth-century orthography, is insufficient for this international package.
+- Anonymous PDF mirrors, unlicensed “free” worksheets, scraped grammar books, and pages with no verifiable derivative-work grant are rejected. Access alone does not create remix permission.
 
 ## Spanish
 
@@ -80,20 +99,37 @@ CC BY. The first two still are; the third currently is not.
 
 | Source | License evidence | Quality verdict and useful coverage |
 |---|---|---|
-| [Trayectos](https://coerll.utexas.edu/coerll/oer/trayectos/), Gabriela Zapata and Alessandra Ribota | COERLL: **CC BY-SA** | Professionally produced, multimodal first-year curriculum with grammar in authentic cultural contexts. High quality, but mostly elementary. Adaptations must be CC BY-SA. |
-| [Hecho en Texas](https://coerll.utexas.edu/coerll/materials/license/cc-by-sa/), Joshua Frank | COERLL's CC-BY-SA catalog: **CC BY-SA** | Adaptation of *Trayectos* for Spanish learners in Texas. Useful for contemporary, plural varieties and communicative examples; not a compact advanced reference. |
-| [Semillas: Elementary Spanish I](https://open.umn.edu/opentextbooks/textbooks/1765), Gabriela Olivares, eden jones, Rachel Klevar, and Giovanni Zimotti | Open Textbook Library: **CC BY** | Peer-reviewed and current, with integrated grammar. Reviewer notes identify a few editing errors, so individual claims require checking. Strong pedagogy, introductory scope. |
-| [Semillas: Elementary Spanish II](https://open.umn.edu/opentextbooks/textbooks/1981), Rachel Klevar, Gabriela Olivares, and Giovanni Zimotti | Open Textbook Library: **CC BY** | Current continuation covering habits, routines, the past, and adventures. Good contextual prose for tense contrasts. |
-| [Spanish Grammar Wikibook](https://en.wikibooks.org/wiki/Spanish_Grammar) and [Spanish Preterite](https://en.wikibooks.org/wiki/Spanish/Preterite) | Page footer and [Wikibooks policy](https://en.wikibooks.org/wiki/Wikibooks:Copyrights): **CC BY-SA 4.0** (older printable versions name CC BY-SA 3.0) | Useful compact tables for strong preterites and double-object pronouns. Uneven and occasionally dated; facts were independently checked. Adapted chapters must remain share-alike. |
+| [*SOS Spanish Basic Grammar Toolkit*](https://open.uct.ac.za/handle/11427/32170), María Recuenco Peñalver and Mercedes Rodriguez-Rubio Camacho (University of Cape Town, 2020) | The primary OpenUCT item record links [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/); the PDF cover repeats it. | Concise beginner scaffold, especially useful for *muy/mucho*. It contains editing errors, so it was never the sole authority. Used in Chapter 2 after independent checking. |
+| [*Trayectos*](https://coerll.utexas.edu/coerll/oer/trayectos/), Gabriela Zapata and Alessandra Ribota (COERLL) | The primary COERLL catalog says **CC BY-SA** but does not state a version. Individual assets and lesson contributions carry their own notices. | Professionally produced, multimodal first-year curriculum with diverse Spanish-speaking contexts. It is the upstream work for *Hecho en Texas*; no *Trayectos* prose was directly adapted without the downstream page license. |
+| [*Hecho en Texas*](https://utexas.pressbooks.pub/hechoentexas/), Joshua Frank (UT Austin, 2025) | The book's primary [licensing statement](https://utexas.pressbooks.pub/hechoentexas/front-matter/about-the-textbook/) says [**CC BY-SA 4.0 International**](https://creativecommons.org/licenses/by-sa/4.0/), except where otherwise noted, and explicitly requires ShareAlike. | Contemporary adaptation of *Trayectos*. Its pages on [*ir + a + lugar*](https://utexas.pressbooks.pub/hechoentexas/chapter/m2-1-hablemos-de-gramatica-estructura-1/) and [double object pronouns](https://utexas.pressbooks.pub/hechoentexas/chapter/m2-1-hablemos-de-gramatica-estructura-4/) directly fit the learner's errors. Used in Chapters 3 and 6; both remain CC BY-SA 4.0. |
+| [*El Jardín del Lenguaje*](https://pressbooks.uiowa.edu/spanishforeducators/), Luke Whitaker and Giovanni Zimotti (eds.), University of Iowa | The primary book record and chapter footer state [**CC BY 4.0 International**](https://creativecommons.org/licenses/by/4.0/), except where otherwise noted. | Fourth-semester material and the best level match in this Spanish survey. Its [preterite overview](https://pressbooks.uiowa.edu/spanishforeducators/chapter/gramatica-modulo-1-2/) is useful, though much of the book is activity- and embed-heavy. Used in Chapter 4. |
+| [*Comunidades*](https://pressbooks.palni.org/comunidades/), Yuriko Ikeda and Julia C. Baumgardt (PALNI, 2024) | The primary book record states [**CC BY 4.0 International**](https://creativecommons.org/licenses/by/4.0/), except where otherwise noted. | Current, peer-reviewed communicative text with integrated culture. It is introductory and not the variety anchor for this Colombian-influenced profile. Surveyed as a cross-check, not adapted. |
+| Amanda Hadley and Kelsey Harper, [*Voces en camino — Voces nuevas*, “Los números de 100 a 1.000.000”](https://human.libretexts.org/Courses/Butler_County_Community_College/FL107%3A_Voces_en_camino_-_Voces_nuevas_%28Beginning_Spanish_1%29/04%3A_Unidad_4/4.04%3A_En_contexto-_Los_numeros_de_100_a_1000000/4.4.00%3A_Vocabulario) (LibreTexts) | The primary lesson footer and page metadata state [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/). | Focused, usable account of *cien/ciento*, irregular hundreds, agreement, *mil*, *millón*, and years. Used in Chapter 7 after independent checking; the adaptation remains CC BY-SA 4.0. |
 
 ### Rejected or not used
 
-- *Spanish Grammar in Context* is currently CC BY-NC-SA, despite the older
-  strategy note calling it CC BY. It is not adapted here.
-- *Libro Libre* (CC BY-NC-SA) and *¡Empecemos por aquí!* (CC BY-NC) fall
-  outside the permitted license set.
+- [*Spanish Grammar in Context*](https://coerll.utexas.edu/coerll/oer/spanish-grammar-in-context/)
+  still exists, but COERLL's current catalog states **CC BY-NC-SA**, not CC
+  BY, and the project's own [credits page](https://grammar.spanishintexas.org/credits/)
+  specifies **CC BY-NC-SA 4.0**. This corrects the older strategy note. Its
+  prose is not adapted here.
+- The archived/original [*Entrada Libre* record](https://commons.libretexts.org/book/human-29322)
+  is **CC BY-NC-SA 4.0**, while the current [second edition](https://human.libretexts.org/Bookshelves/Languages/Spanish/Second-year_Spanish_Bookshelf/Entrada_Libre_2e_%28Moon%2C_Lee%2C_Harmon%2C_and_D%C3%ADaz-Rodil%29)
+  is **CC BY-NC 4.0**. [*Libro Libre*](https://louis.pressbooks.pub/elementaryspanish1and2/front-matter/attribution-statement/)
+  is **CC BY-NC-SA 4.0**; [*¡Empecemos por aquí!*](https://open.umn.edu/opentextbooks/textbooks/beginning-spanish-empecemos-por-aqui)
+  and [*Manual de Redacción*](https://uta.pressbooks.pub/spanishcomposition/)
+  are **CC BY-NC**; and the current [*Puertas y Puentes*, second edition](https://human.libretexts.org/Courses/Franklin_and_Marshall_College/Puertas_y_Puentes%3A_Intermediate_Spanish_I___2e)
+  is **CC BY-NC-SA 4.0**. All versions named here carry NC and are excluded.
+- The Pressbooks work [*Introduction to Spanish*](https://nmoer.pressbooks.pub/introductiontospanish/)
+  now displays **CC BY 4.0**, but its [lesson 3.1 conjugation table](https://nmoer.pressbooks.pub/introductiontospanish/chapter/leccion-3-1/)
+  visibly gives an incorrect present-tense form. Its license is eligible, but
+  it fails the quality review and no prose from it was adapted.
 - RAE/ASALE publications are authoritative but not openly licensed for
-  adaptation. They are not source prose for this reader.
+  adaptation. They were used to verify rules and forms, never as source prose.
+- The [*Spanish Grammar Wikibook*](https://en.wikibooks.org/wiki/Spanish_Grammar)
+  is genuinely open under current Wikibooks
+  terms (generally CC BY-SA 4.0 plus GFDL), but its uneven editing made it a
+  weaker choice than the six university OER sources above. It was not adapted.
 
 ## Italian
 
@@ -101,15 +137,26 @@ CC BY. The first two still are; the third currently is not.
 
 | Source | License evidence | Quality verdict and useful coverage |
 |---|---|---|
-| [Italiano avanzato](https://open.byu.edu/italiano_avanzato), BYU Open Learning Network | Its [foreword/PDF](https://edtechbooks.s3.us-west-2.amazonaws.com/pdfs/551/_551.pdf) states **CC BY 4.0** | Best modern open Italian grammar found. Designed for Intermediate-High through Advanced learners and grounded in ACTFL functions. Strong on pronouns, *ne*, conjunctions, prepositions, and present/past subjunctive. |
-| [Italian Wikibook grammar](https://en.wikibooks.org/wiki/Italian/Grammar) | Page footer and [Wikibooks policy](https://en.wikibooks.org/wiki/Wikibooks:Copyrights): **CC BY-SA 4.0** (also GFDL where applicable) | Broad reference covering articles, gender, verbs, moods, prepositions, and sentence structure. Community-edited and uneven; useful as a cross-check, not sole authority. Share-alike applies to adaptations. |
-| [Exercises upon the Different Parts of Italian Speech](https://www.gutenberg.org/ebooks/50419), Ferdinando Bottarelli, revised by G. B. Rolandi (1822 edition) | Project Gutenberg identifies the underlying work as public-domain source text and supplies its reuse notice | Historically valuable rules and extensive exercises, unquestionably dated in register and pedagogy. Not used for modern-usage claims or adapted prose; retained as a public-domain comparison source. |
+| [Italiano avanzato](https://open.byu.edu/italiano_avanzato), Marie Orton and Dan Paul, BYU Open Learning Network | Its [foreword/PDF](https://edtechbooks.s3.us-west-2.amazonaws.com/pdfs/551/_551.pdf) states **CC BY 4.0** | Best modern open Italian grammar found. Designed for Intermediate-High through Advanced learners and grounded in ACTFL functions. Strong on pronouns, *ne*, conjunctions, prepositions, and present/past subjunctive. |
+| [Italiano in onda](https://www.italianoinonda.net/), Italian-language grammar and exercises | The site's own [license page](https://www.italianoinonda.net/licenza) states **CC BY 4.0** | A substantial, navigable modern grammar covering parts of speech, clauses, verb forms, and usage. Clear and useful for independent checking, although it is a general reference rather than a sequenced advanced course. No prose from it was needed in this edition. |
+| [Italiano 201](https://www.palomar.edu/worldlanguages/wp-content/uploads/sites/185/2017/10/Italiano-201.pdf), Scott Nelson and Provvidenza Scaduto, Palomar College | The source PDF's title page states **CC BY 4.0** and separately excludes linked external videos | A practical zero-cost intermediate textbook with grammar, readings, and production tasks. Its institutional PDF gives stronger license evidence than inconsistent third-party catalog metadata. Useful as a pedagogical cross-check; not adapted here. |
+| [Italian grammar on Wikibooks](https://en.wikibooks.org/wiki/Italian/Grammar), together with the Italian-language course [Italiano](https://it.wikibooks.org/wiki/Italiano) | The English and Italian [Wikibooks](https://en.wikibooks.org/wiki/Wikibooks:Copyrights) [copyright policies](https://it.wikibooks.org/wiki/Wikibooks:Copyright) state **CC BY-SA 4.0** (with GFDL also available for eligible text) | Broad coverage of nouns, articles, moods, and tense contrasts. Community-edited and uneven, so every adapted point was independently checked. The noun and *passato remoto* chapters use selected prose and therefore remain share-alike. |
+| [Passato remoto](https://it.wikipedia.org/wiki/Passato_remoto), Italian Wikipedia | Wikimedia's current [Terms of Use](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use) license contributed text under **CC BY-SA 4.0** and GFDL | Useful supporting synthesis for tense viewpoint and regional/register variation, with a visible revision history. It was used only alongside Wikibooks and independent form-checking; the resulting chapter is CC BY-SA 4.0. |
 
 ### Rejected or not used
 
-- *Gratis!* is CC BY-NC 4.0; *Spunti* is CC BY-NC 4.0; *Giornate Italiane*
-  is CC BY-NC-SA; *Radio Arlecchino* is CC BY-NC-ND. None meets this
-  commission's accepted-license set.
+- [*Gratis!*](https://temple.manifoldapp.org/projects/gratis) is **CC BY-NC
+  4.0**; [*Spunti: Italiano intermedio 1*](https://open.muhlenberg.pub/italiano-intermedio/)
+  is **CC BY-NC-SA 4.0**; [*Giornate Italiane*](https://coerll.utexas.edu/coerll/oer/giornate-italiane-2/)
+  is **CC BY-NC-SA**; and COERLL labels [*Radio Arlecchino*](https://coerll.utexas.edu/coerll/oer/radio-arlecchino/)
+  **CC BY-NC-ND**. None meets this commission's
+  accepted-license set.
+- Project Gutenberg's record for [*Exercises upon the Different Parts of
+  Italian Speech*](https://www.gutenberg.org/ebooks/50419), by Ferdinando
+  Bottarelli and revised by G. B. Rolandi, marks it public domain **in the
+  USA**. It was surveyed but not adapted: its usage is dated, and the
+  jurisdiction-specific record is not enough to place it in the
+  internationally reusable table above.
 - Modern commercial grammars are all-rights-reserved. No prose from them is
   included.
 
@@ -124,16 +171,31 @@ Brazilian Portuguese or are explicitly localized.
 | Source | License evidence | Quality verdict and useful coverage |
 |---|---|---|
 | [Bate-Papo: An Introduction to Portuguese](https://uw.pressbooks.pub/batepapo/), Eduardo Viana da Silva, University of Washington | The book information and [introduction](https://uw.pressbooks.pub/batepapo/front-matter/introduction/) state **CC BY 4.0** | The best modern open source for this learner. Designed with English speakers and Spanish interference in mind; primarily Brazilian Portuguese while noting Lusophone variation. Useful for gender/article agreement, contractions, *ser/estar*, and preterite forms. |
-| [Elementary Portuguese](https://elementaryportuguese.pressbooks.sunycreate.cloud/), Craig Stokes, SUNY | Individual grammar sections identify **CC BY**; for example [Unidade 2, Parte B](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/suplementos-unidade-2-parte-b/) | Clear, modular grammar supplements. Several sections adapt openly licensed Spanish materials into Portuguese and state attribution locally. Good for basic morphology; verify Brazilian usage and page-level attribution before adapting. |
-| [Portuguese Wikibook](https://en.wikibooks.org/wiki/Portuguese/Contents) and [Portuguese Grammar overview](https://en.wikibooks.org/wiki/Portuguese_Grammar/Grammar_overview) | Page footer and [Wikibooks policy](https://en.wikibooks.org/wiki/Wikibooks:Copyrights): **CC BY-SA 4.0** (also GFDL where applicable) | Broad coverage including future subjunctive and personal infinitive, but variety labeling and editing quality are inconsistent. Useful only with independent checking. Share-alike applies to adaptations. |
-| [A Brief Grammar of the Portuguese Language](https://gutenberg.org/ebooks/79190), John Casper Branner (1910) | Project Gutenberg record: **public domain in the USA**; author died in 1922 | Remarkably attentive to Brazilian Portuguese for its era and now globally out of copyright even under life-plus-100 terms. Valuable historically, but spelling, usage, and social register are dated; no modern-Brazilian prose here is based on it. |
+| [Elementary Portuguese](https://elementaryportuguese.pressbooks.sunycreate.cloud/), Craig R. Stokes, SUNY | The book's [introduction and license notice](https://elementaryportuguese.pressbooks.sunycreate.cloud/front-matter/introduction/) state **CC BY 4.0**, except where otherwise noted; adapted pages were checked individually | Clear, modular grammar supplements. Several sections adapt openly licensed materials and state attribution locally. Good for gender/agreement, *ser/estar*, and preterite paradigms; the reader uses only pages whose own notices are compatible. |
+| [Tá Falado](https://coerll.utexas.edu/coerll/oer/ta-falado/), Orlando R. Kelm, COERLL | COERLL's current resource record states **CC BY**. The Creative Commons badge in the archived [lesson footer](https://coerll.utexas.edu/brazilpod/tafalado/lesson-gra06.html) resolves to the [**CC BY 3.0 Unported** deed](https://creativecommons.org/licenses/by/3.0/), supplying the version omitted by the catalog. | Forty-six contrastive Portuguese/Spanish podcast lessons with downloadable grammar notes. This is the best match for the learner's Spanish interference, *ficar*, future subjunctive, gender, and Brazilian clitic/register questions. Adapted chapter notes name the specific lessons and indicate changes. |
+| [Língua da Gente](https://coerll.utexas.edu/coerll/oer/lingua-da-gente/), Orlando R. Kelm, COERLL | COERLL's current resource record states **CC BY**; it does not state a version | Short Brazilian dialogues followed by pronunciation, vocabulary, grammar, and culture analysis. The grammar prose is usable and the spoken register is valuable, though this reader did not need to adapt it. A strong future audio companion. |
 
 ### Rejected or not used
 
-- *Português para principiantes* is CC BY-NC-SA 4.0. It is free and useful,
-  but outside the commission's accepted license list.
-- *ClicaBrasil*, *Tá Falado*, and several other Brazilpod resources use NC
-  licenses. They are not adapted.
+- [*Português para principiantes*](https://wisc.pb.unizin.org/portuguese/)
+  is **CC BY-NC-SA 4.0**. It is free and useful, but outside the commission's
+  accepted license list.
+- [*ClicaBrasil*](https://coerll.utexas.edu/coerll/oer/clicabrasil/) is
+  currently **CC BY-NC-SA** and falls outside the accepted set.
+- The [English Portuguese Wikibook provenance page](https://en.wikibooks.org/wiki/Portuguese_Grammar/About_this_Wikibook)
+  sits under the platform-level CC BY-SA 4.0
+  license, but its own provenance note says that it is strongly based on a
+  separately copyrighted grammar. Under this reader's conservative
+  source-provenance rule, no prose from it was adapted.
+- Project Gutenberg's record for [*A Brief Grammar of the Portuguese
+  Language*](https://gutenberg.org/ebooks/79190), by John Casper Branner,
+  marks it public domain **in the USA**. It was surveyed but not adapted:
+  spelling, usage, and social register are dated, and the jurisdiction-specific
+  record is not enough to place it in the internationally reusable table above.
+- [Portuguese Communication Exercises](https://coerll.utexas.edu/coerll/oer/portuguese-communication-exercises/)
+  is CC BY, but it is chiefly a video/transcript collection rather than a
+  grammar-prose source, so it was not counted among the four eligible grammar
+  sources above.
 - Commercial Brazilian-Portuguese grammars are all-rights-reserved.
 
 ## Adaptation policy used in the chapters

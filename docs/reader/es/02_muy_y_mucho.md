@@ -62,7 +62,7 @@ adverb and usually follows the verb:
 
 - *Los precios subieron mucho.*
 - *El equipo trabajó mucho durante la campaña.*
-- *La nueva medida preocupa mucho a los inversores.*
+- *La nueva medida preocupa mucho a los inversionistas.*
 
 There is no agreement in these examples: a plural subject does not create
 **trabajaron muchos** unless *muchos* stands for a plural noun understood from
@@ -94,9 +94,9 @@ When speaking, look one unit to the right and name its job:
 
 Apply the test to a sentence from your register: “The very professional team
 published many reports, worked a lot, and made the process much more
-transparent.” The structure, not the English repetition, yields: *El equipo
-muy profesional publicó muchos informes, trabajó mucho e hizo el proceso mucho
-más transparente.*
+transparent.” The structure, not the English repetition, yields: *El equipo,
+que era muy profesional, publicó muchos informes, trabajó mucho y volvió el
+proceso mucho más transparente.*
 
 That single analysis covers all seven of your attested errors. Your task is
 not to memorize seven corrections; it is to recognize whether Spanish is

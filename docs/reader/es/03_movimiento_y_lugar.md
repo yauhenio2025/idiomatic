@@ -18,9 +18,10 @@ as part of the verb-and-place frame.
 > **You specifically do this:** all seven of your recorded movement/location
 > errors occurred in 2019: *viajar para*, *fui en Londres*, *me voy en
 > Francia*, *regreso en Italia*, *llegue en*, and the reverse choice *una
-> noche a París*, among them. Later evidence is better: in 2023 you produced
-> *viajar a Noruega* and *he pasado tres días en Bélgica* correctly. Treat
-> this as a fossilization risk under speed, not as an uncontrolled basic rule.
+> noche a París*, among them. Later evidence is better: your 2023 records
+> contain correct *viajar a Noruega* and *he pasado tres días en Bélgica*.
+> Treat this as a fossilization risk under speed, not as an uncontrolled basic
+> rule.
 
 ## Destinations take *a* in the core pattern
 
@@ -100,7 +101,7 @@ destination and location frames remain stable.
 ### Attribution and license
 
 **Status:** Adapted from Joshua Frank, [*Hecho en Texas*, “Estructura 1: El
-presente de los verbos ir, estar y dar”](https://utexas.pressbooks.pub/hechoentexas/chapter/m2-1-hablemos-de-gramatica-estructura-1/),
+futuro”](https://utexas.pressbooks.pub/hechoentexas/chapter/m2-1-hablemos-de-gramatica-estructura-1/),
 which adapts Gabriela Zapata and Alessandra Ribota's *Trayectos*.
 
 **Changes:** The elementary *ir + a + place* explanation was expanded into a

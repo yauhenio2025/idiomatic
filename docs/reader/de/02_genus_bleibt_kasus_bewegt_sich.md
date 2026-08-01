@@ -38,10 +38,10 @@ Use syntax and government, not English word order alone.
 
 German can front an object without turning it into a subject:
 
-> **Dieses neue Programm** kritisiert die Presse.  
+> **Diesen neuen Entwurf** kritisiert die Presse.  
 > **Diesem neuen Programm** fehlen klare Quellenangaben.
 
-In the first sentence, *die Presse* performs *kritisieren* and *dieses neue Programm* receives the action: accusative neuter. In the second, *fehlen* gives the thing lacked as nominative (*klare Quellenangaben*) and the affected entity as dative (*diesem neuen Programm*). Articles preserve the roles when word order moves.
+In the first sentence, *die Presse* performs *kritisieren* and *diesen neuen Entwurf* receives the action: the overt masculine accusative ending removes the ambiguity that a neuter form would leave. In the second, *fehlen* gives the thing lacked as nominative (*klare Quellenangaben*) and the affected entity as dative (*diesem neuen Programm*). Articles and endings preserve the roles when word order moves.
 
 Pronouns and agreement help confirm the analysis: *Das Programm ist teuer. **Es** wird trotzdem gekauft.* Neuter *es* points back to *das Programm*. For a female professional, referential gender and grammatical word formation align naturally in *die Presseagentin; sie*. Say *Sie war deine Presseagentin*, not *deine Presseagent*, when the referent is a woman and that distinction is relevant.
 

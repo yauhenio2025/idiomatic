@@ -8,7 +8,7 @@ Begin with three questions:
 2. What state is it in, or where is it? → often *estar*.
 3. Did it become that way, remain that way, or end up somewhere? → often *ficar*.
 
-> **You specifically do this:** you say *não é pronto*, *livros que são disponíveis*, *eu fui ocupado*, and *sou sempre ocupado*. You also use *ser* where a result needs *ficar*: *eles foram contentes* and *quando vai ser pronto?*
+> **You specifically do this:** you say *não é pronto*, *livros que são disponíveis*, *eu fui ocupado*, and *sou sempre ocupado*. You also use *ser* where Portuguese instead uses *estar* for a state or *ficar* for a change or result: *eles foram contentes* and *quando vai ser pronto?*
 
 ## *Ser*: category, identity, origin, and passive voice
 
@@ -72,8 +72,8 @@ Then check the tense independently. *Estava ocupado* is an ongoing past state; *
 
 ### Attribution and license
 
-Adapted from Craig R. Stokes’s explanations of *ser* and *estar* in *Elementary Portuguese* and Orlando R. Kelm’s contrastive lesson on *ficar* in *Tá Falado*. The three-way decision model and all personalized examples are new.
+Adapted from Craig R. Stokes’s *ser* explanation in “Suplementos—Unidade 1—Parte A,” the *estar* paradigm and contexts in Eduardo Viana da Silva’s “Unidade 3—Parte A” as modified by Stokes for *Elementary Portuguese*, and Orlando R. Kelm’s contrastive lesson on *ficar* in *Tá Falado*. The three-way decision model and all personalized examples are new.
 
-- Stokes source: [Suplementos—Unidade 1—Parte A](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/suplementos-unidade-1-parte-a/) — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- Kelm source: [Tá Falado, Grammar Lesson 6: The Verb “Ficar”](https://coerll.utexas.edu/brazilpod/tafalado/lesson-gra06.html) — [COERLL license record: CC BY, version not stated](https://coerll.utexas.edu/coerll/oer/ta-falado/)
-
+- *Ser* source: Craig R. Stokes, [Suplementos—Unidade 1—Parte A](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/suplementos-unidade-1-parte-a/) — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- *Estar* source: Eduardo Viana da Silva, modified by Craig R. Stokes, [Unidade 3—Parte A](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/unidade-3-parte-a/) — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- *Ficar* source: Orlando R. Kelm, [*Tá Falado*, Grammar Lesson 6](https://coerll.utexas.edu/brazilpod/tafalado/lesson-gra06.html) — [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), verified from the archived lesson footer

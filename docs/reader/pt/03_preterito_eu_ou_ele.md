@@ -66,8 +66,8 @@ Practice with paired headlines: *Eu escrevi o roteiro; a jornalista escreveu a r
 
 ### Attribution and license
 
-Adapted from Craig R. Stokes’s treatment of regular and irregular *pretérito perfeito* paradigms in *Elementary Portuguese: A First-Year Course*. The source’s table-first presentation was recast as learner-specific first/third-person contrasts; all news, publishing, and technology examples are new.
+Adapted from the *pretérito perfeito* paradigms in “Unidade 6—Parte A” of *Elementary Portuguese*—Craig R. Stokes’s modification of Eduardo Viana da Silva’s *Bate-Papo* unit—and from Stokes’s original “Suplementos—Unidade 6—Parte A.” The table-first presentation was recast as learner-specific first/third-person contrasts; all news, publishing, and technology examples are new.
 
-- Source: [Unidade 6—Parte A](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/unidade-6-parte-a/) and [Suplementos—Unidade 6—Parte A](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/suplementos-unidade-6-part-a/)
-- Author: Craig R. Stokes
+- Sources: [Unidade 6—Parte A](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/unidade-6-parte-a/) and [Suplementos—Unidade 6—Parte A](https://elementaryportuguese.pressbooks.sunycreate.cloud/chapter/suplementos-unidade-6-part-a/)
+- Authors and adaptation chain: Eduardo Viana da Silva, source unit; Craig R. Stokes, modification and supplement
 - License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)

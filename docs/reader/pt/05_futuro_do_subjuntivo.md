@@ -56,7 +56,7 @@ A powerful formation rule starts from the *eles* form of the *pretérito perfeit
 
 Then add *-mos* or *-em* where needed: *se nós tivermos*, *quando eles fizerem*. This rule connects the mood to a form family you can verify, instead of treating every irregular stem as a separate surprise.
 
-> **You specifically do this:** *quando eu vou ter mais tempo* avoids the irregular form *tiver*. Retrieve the pair *eles tiveram → se eu tiver*. Likewise, *a pandemia foi controlada* supplies *for* for the unresolved future: *quando a pandemia for controlada*.
+> **You specifically do this:** *quando eu vou ter mais tempo* avoids the irregular form *tiver*. Retrieve the pair *eles tiveram → se eu tiver*. Likewise, retrieve *eles foram → for* for the unresolved future: *quando a pandemia for controlada*.
 
 ## *Se* does not always mean future subjunctive
 
@@ -82,5 +82,4 @@ Adapted from Orlando R. Kelm, *Tá Falado*, Grammar Lesson 4, “Future Subjunct
 
 - Source: [lesson page](https://coerll.utexas.edu/brazilpod/tafalado/lesson-gra04.html) and [grammar notes (PDF)](https://coerll.utexas.edu/brazilpod/tafalado/pdf/tafalado_gra_04.pdf)
 - Author: Orlando R. Kelm
-- License: [COERLL record — CC BY, version not stated](https://coerll.utexas.edu/coerll/oer/ta-falado/)
-
+- License: [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), verified from the archived lesson footer and supported by the [COERLL record](https://coerll.utexas.edu/coerll/oer/ta-falado/)

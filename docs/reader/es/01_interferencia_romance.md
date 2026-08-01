@@ -4,7 +4,8 @@ Your largest Spanish pattern is not a missing tense or an obscure rule. It is
 competition among languages you already know. Portuguese, Italian, French,
 English, and Spanish offer related-looking words and paradigms; when Spanish
 retrieval is a fraction of a second late, a neighboring language supplies a
-plausible substitute. The result often *sounds* Romance, yet is not Spanish.
+plausible substitute. The result often *sounds* Romance, yet misses the form
+or meaning expected in neutral contemporary Spanish.
 
 That distinction matters because a cognate-shaped invention can pass through
 conversation unnoticed. A wrong irregular verb is conspicuous; *inserir* or
@@ -17,6 +18,14 @@ built from forms you have actually produced.
 > You said *inserir* instead of *insertar* twice, and *insertar* was taught or
 > retaught 16 times from 2019 through 2024. This is a persistent retrieval
 > competition, not a one-off typo.
+
+There is a useful precision here: the Spanish dictionary also records a verb
+*inserir*, with the conjugation *insiero/insirió* and a cross-reference to
+*injerir*. That does not make it the neutral software-and-editing verb in your
+recorded contexts. For inserting a link, card, or quotation, your Colombian
+teacher's repeated target *insertar* is the stable modern choice. Personal
+correction means selecting the intended register and sense, not declaring
+every competing shape nonexistent.
 
 ## Three kinds of interference
 
@@ -41,7 +50,7 @@ The third kind is derivational overconfidence. You recognize a Latinate base
 and manufacture a noun or adjective with a productive-looking ending. Spanish
 then asks for a different member of the word family:
 
-| Tempting invention | Spanish retrieval target | Useful chunk |
+| Tempting form in this context | Spanish retrieval target | Useful chunk |
 |---|---|---|
 | *dictación* | *dictado* | *el método del dictado* |
 | *consumación* | *consumo* | *el consumo de energía* |
@@ -50,11 +59,15 @@ then asks for a different member of the word family:
 | *mensales* | *mensuales* | *los pagos mensuales* |
 | *extensiva* | *muy extensa* | *una investigación muy extensa* |
 
-Spanish does have *consumación*, but in other senses, such as completion or
-consummation. Likewise, *cualidad* is a real word for a property or positive
-trait, while *calidad* is the target when discussing the quality of an audio
-or product. The lesson is not “never trust cognates.” It is “retrieve the
-whole phrase that matches the intended meaning.”
+Several left-column forms exist but not with the intended value here.
+*Dictación* has a regional administrative sense in Bolivia and Chile, while
+*extensiva* is a standard adjective for something that extends or applies more
+broadly; neither means the target phrase in this learner’s contexts. Spanish
+also has *consumación* in senses such as completion or consummation. Likewise,
+*cualidad* is a real word for a property or positive trait, while *calidad* is
+the target when discussing the quality of an audio or product. The lesson is
+not “never trust cognates.” It is “retrieve the whole phrase that matches the
+intended meaning.”
 
 ## Store islands, not isolated words
 
@@ -108,7 +121,11 @@ examples were written around the attested data in the [Spanish learner-error
 profile](../../research/error-profiles/es.md).
 
 **Changes:** Not applicable. Lexical contrasts were independently checked
-against current Spanish reference usage; reference wording was not copied.
+against current Spanish reference usage, including the [DLE entry for the
+distinct verb *inserir*](https://dle.rae.es/inserir), the [ASALE entry for
+regional *dictación*](https://www.asale.org/damer/dictaci%C3%B3n), and the
+[DLE entry for *extensivo*](https://dle.rae.es/extensivo); reference wording
+was not copied.
 
 **License:** © 2026 Idiomatic project contributors, licensed under [CC BY
 4.0](https://creativecommons.org/licenses/by/4.0/). Suggested attribution:
