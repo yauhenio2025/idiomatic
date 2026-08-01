@@ -1,0 +1,169 @@
+schema_version: 1
+language: German
+language_code: de
+target_variety: "standard German"
+scope: "Distilled grammar inventory, A2-C1"
+as_of: "2026-08-01"
+level_semantics: "Earliest defensible instructional level; all C1 assignments are provisional."
+sources:
+  - id: ggp_2025
+    url: "https://aclanthology.org/2025.konvens-2.17.pdf"
+    role: "German Grammar Profile: expert-derived A1-B2 inventory based on ÖSD/Profile Deutsch."
+    limitation: "The paper gives samples, not the complete feature list; it has no C1 layer."
+  - id: ggp_2026
+    url: "https://aclanthology.org/2026.bea-1.6.pdf"
+    role: "Validation study of 153 A1-B2 features."
+    limitation: "Theory-driven level assignments sometimes differ from corpus evidence."
+  - id: profile_deutsch
+    url: "https://www.osd.at/das-oesd/profile-deutsch/ziele-komponenten/"
+    role: "Official CEFR-linked German RLD through B2."
+    limitation: "The detailed database/book is commercial."
+  - id: goethe_domains
+    url: "https://www.goethe.de/ins/de/de/prf/grm.html"
+    role: "Authoritative overview of German grammar domains."
+    limitation: "Not level-tagged."
+  - id: bamf_b2
+    url: "https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Berufsbezsprachf-ESF-BAMF/BSK-Konzepte/kurskonzept-b2.pdf?__blob=publicationFile&v=15"
+    role: "Official occupational B2 teaching scope."
+    limitation: "Not a general exhaustive inventory."
+  - id: goethe_b2_c1
+    url: "https://www.goethe.de/resources/files/pdf313/kursprogramm-grammatik-b2-c1-ht-2023.pdf"
+    role: "B2/C1 teaching programme used for upper-level triangulation."
+    limitation: "Course syllabus, not a formal RLD; it does not cleanly separate every B2/C1 item."
+  - id: goethe_c1_14
+    url: "https://lernen.goethe.de/deutschonline/C1/PDF/DTonlineC1_K14_GR-RM_Rueckschau_DE.pdf"
+    role: "C1 course evidence for expanded participles and nominalisation."
+    limitation: "Selected course content only."
+conflicts:
+  - "The strategy treats the German Grammar Profile as the German taxonomy source, but its current public research artifacts cover only A1-B2 and do not expose the full inventory."
+  - "All C1 topic levels below are course-based inferences, not GGP assignments."
+
+topics:
+  - id: de_a2_case_np
+    domain: nominals
+    level: A2
+    topic: "Nominative, accusative, and dative noun phrases"
+    subtopics: ["article paradigms", "pronouns", "case by syntactic role", "core noun plurals"]
+    uncertain: false
+    source_refs: [ggp_2025, ggp_2026]
+  - id: de_a2_adjective_declension
+    domain: nominals
+    level: A2
+    topic: "Adjective endings after articles and zero article"
+    subtopics: ["weak/mixed/strong patterns", "gender-number-case agreement", "comparison"]
+    uncertain: false
+    source_refs: [ggp_2026, goethe_domains]
+  - id: de_a2_perfect_verbs
+    domain: verbs
+    level: A2
+    topic: "Perfekt, modal verbs, and separable verbs"
+    subtopics: ["haben/sein", "participle placement", "prefix separation", "modal infinitive"]
+    uncertain: false
+    source_refs: [ggp_2025]
+  - id: de_a2_prepositions
+    domain: selection
+    level: A2
+    topic: "Fixed-case and two-way prepositions"
+    subtopics: ["accusative/dative government", "motion versus location", "prepositional contractions"]
+    uncertain: false
+    source_refs: [ggp_2025, goethe_domains]
+  - id: de_a2_word_order
+    domain: syntax
+    level: A2
+    topic: "V2, clause brackets, and basic subordinate clauses"
+    subtopics: ["weil/dass/damit verb-final order", "finite versus non-finite placement", "Vorfeld variation"]
+    uncertain: false
+    source_refs: [ggp_2025]
+  - id: de_b1_tense_narration
+    domain: verbs
+    level: B1
+    topic: "Präteritum, Plusquamperfekt, and narrative sequencing"
+    subtopics: ["high-frequency irregular preterites", "past anteriority", "spoken/written distribution"]
+    uncertain: false
+    source_refs: [ggp_2026]
+  - id: de_b1_genitive_nouns
+    domain: nominals
+    level: B1
+    topic: "Basic genitive and noun declension"
+    subtopics: ["genitive articles/endings", "n-declension", "genitive attributes"]
+    uncertain: true
+    uncertainty_reason: "GGP samples place basic genitive at B1, but n-declension onset is not exposed in the public feature list."
+    source_refs: [ggp_2025, ggp_2026, goethe_b2_c1]
+  - id: de_b1_relatives_pronominal_adverbs
+    domain: pronouns
+    level: B1
+    topic: "Case-marked relatives and da-/wo-compounds"
+    subtopics: ["relative pronouns by role", "governed prepositions", "was/wo relatives", "darauf/worauf patterns"]
+    uncertain: true
+    uncertainty_reason: "Relative was/wo is sampled at B1; the full da-/wo progression is not publicly level-tagged."
+    source_refs: [ggp_2025, goethe_b2_c1]
+  - id: de_b1_connectors_order
+    domain: syntax
+    level: B1
+    topic: "Logical connectors and multi-clause word order"
+    subtopics: ["temporal, causal, conditional, concessive links", "inversion", "expanded clause brackets"]
+    uncertain: false
+    source_refs: [bamf_b2, ggp_2025]
+  - id: de_b2_passive
+    domain: voice
+    level: B2
+    topic: "Process, impersonal, and state passive"
+    subtopics: ["werden passive", "impersonal passive", "sein plus participle", "agent phrases"]
+    uncertain: true
+    uncertainty_reason: "Present/process passive is a GGP B2 sample; state-passive onset comes from a mixed B2/C1 course."
+    source_refs: [ggp_2026, bamf_b2, goethe_b2_c1]
+  - id: de_b2_passive_alternatives
+    domain: voice
+    level: B2
+    topic: "Passive alternatives"
+    subtopics: ["lassen plus infinitive", "sein plus zu", "-bar adjectives"]
+    uncertain: false
+    source_refs: [bamf_b2]
+  - id: de_b2_konjunktiv
+    domain: mood
+    level: B2
+    topic: "Konjunktiv II irrealis and Konjunktiv I reported speech"
+    subtopics: ["unreal wishes and conditions", "politeness", "source attribution"]
+    uncertain: false
+    source_refs: [ggp_2025, ggp_2026]
+  - id: de_b2_government_modality
+    domain: selection
+    level: B2
+    topic: "Complex government and subjective modality"
+    subtopics: ["verb/noun/adjective prepositions", "case selection", "evidential modal verbs"]
+    uncertain: true
+    uncertainty_reason: "B2/C1 teaching sources support the domain but do not publish a complete boundary."
+    source_refs: [bamf_b2, goethe_b2_c1]
+  - id: de_b2_nominal_style
+    domain: discourse
+    level: B2
+    topic: "Nominalisation and dense noun phrases"
+    subtopics: ["verb-to-noun conversion", "genitive and prepositional attributes", "formal register"]
+    uncertain: true
+    uncertainty_reason: "BAMF includes nominalisation at B2; broader productive mastery is commonly C1 course content."
+    source_refs: [bamf_b2, goethe_c1_14]
+  - id: de_c1_verb_chains
+    domain: syntax
+    level: C1
+    topic: "Full passive/modal/perfect chains and double infinitives"
+    subtopics: ["Ersatzinfinitiv", "subordinate-clause auxiliary order", "passive across tenses"]
+    uncertain: true
+    uncertainty_reason: "Goethe C1 course evidence; GGP has no C1 layer."
+    source_refs: [goethe_b2_c1]
+  - id: de_c1_participial_nominal_style
+    domain: discourse
+    level: C1
+    topic: "Expanded participial attributes and nominal/verbal reformulation"
+    subtopics: ["Partizip I/II attributes", "adjective declension in expanded NPs", "nominalisation/verbalisation"]
+    uncertain: true
+    uncertainty_reason: "Selected Goethe C1 course content, not a comprehensive RLD assignment."
+    source_refs: [goethe_c1_14]
+  - id: de_c1_register_information
+    domain: discourse
+    level: C1
+    topic: "Advanced source attribution, information structure, and formal government"
+    subtopics: ["reported-source stance", "Vorfeld/focus choices", "genitive prepositions", "register-sensitive modality"]
+    uncertain: true
+    uncertainty_reason: "Triangulated from upper-level courses; exact C1 boundaries are not published by GGP."
+    source_refs: [goethe_b2_c1, goethe_c1_14]
+

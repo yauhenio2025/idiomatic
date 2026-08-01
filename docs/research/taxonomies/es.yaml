@@ -1,0 +1,172 @@
+schema_version: 1
+language: Spanish
+language_code: es
+target_variety: "educated pan-Hispanic Spanish; regional alternatives retained"
+scope: "Distilled grammar inventory, A2-C1"
+as_of: "2026-08-01"
+level_semantics: "Earliest defensible instructional level, not evidence of mastery."
+sources:
+  - id: pcic_index
+    url: "https://cvc.cervantes.es/ensenanza/biblioteca_ELE/plan_curricular/indice.htm"
+    role: "Official Instituto Cervantes inventory index, A1-C2."
+    limitation: "The inventory is descriptive and very granular; this file consolidates it into drill-sized domains."
+  - id: pcic_a2
+    url: "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/02_gramatica_inventario_a1-a2.htm"
+    role: "Primary A2 mapping."
+    limitation: "A1 and A2 share one page; level labels within the page govern."
+  - id: pcic_b1_b2
+    url: "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/02_gramatica_inventario_b1-b2.htm"
+    role: "Primary B1/B2 mapping."
+    limitation: "Synthesis here does not reproduce the inventory wording."
+  - id: pcic_c1_c2
+    url: "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/02_gramatica_inventario_c1-c2.htm"
+    role: "Primary C1 mapping."
+    limitation: "Some broad nodes span C1-C2; uncertain boundaries are marked."
+  - id: kwiziq
+    url: "https://spanish.kwiziq.com/revision/grammar/by-cefr-level"
+    role: "Secondary decomposition check."
+    limitation: "Commercial and non-normative; never overrides PCIC."
+
+topics:
+  - id: es_a2_nominal_system
+    domain: nominals
+    level: A2
+    topic: "Gender, number, articles, demonstratives, and possessives"
+    subtopics: ["regular and irregular agreement", "article presence/absence", "basic noun-phrase order"]
+    uncertain: false
+    source_refs: [pcic_a2]
+  - id: es_a2_quantity_degree
+    domain: nominals
+    level: A2
+    topic: "Quantity, degree, comparison, and numerals"
+    subtopics: ["muy/mucho", "tan/tanto", "comparatives", "cardinals, ordinals, dates"]
+    uncertain: false
+    source_refs: [pcic_a2]
+  - id: es_a2_clitics
+    domain: pronouns
+    level: A2
+    topic: "Direct, indirect, and reflexive pronouns"
+    subtopics: ["lo/la/le distinctions", "basic placement", "gustar-type dative frames"]
+    uncertain: false
+    source_refs: [pcic_a2]
+  - id: es_a2_past_aspect
+    domain: verbs
+    level: A2
+    topic: "Present perfect, preterite, and imperfect"
+    subtopics: ["core forms", "bounded versus background readings", "regional perfect/preterite variation"]
+    uncertain: false
+    source_refs: [pcic_a2]
+  - id: es_a2_nonfinite_commands
+    domain: verbs
+    level: A2
+    topic: "Infinitive, gerund, participle, and affirmative commands"
+    subtopics: ["basic periphrases", "progressive", "informal commands"]
+    uncertain: false
+    source_refs: [pcic_a2]
+  - id: es_a2_copulas_prepositions
+    domain: selection
+    level: A2
+    topic: "Ser, estar, hay, and core prepositions"
+    subtopics: ["identity/state/location/existence", "place and motion", "time and duration", "basic por/para"]
+    uncertain: false
+    source_refs: [pcic_a2]
+  - id: es_a2_basic_clauses
+    domain: syntax
+    level: A2
+    topic: "Basic relatives and subordinate relations"
+    subtopics: ["que relatives", "infinitive complements", "time, cause, purpose, comparison, real conditions"]
+    uncertain: false
+    source_refs: [pcic_a2]
+  - id: es_b1_tense_system
+    domain: verbs
+    level: B1
+    topic: "Narrative contrast, future, conditional, and pluperfect"
+    subtopics: ["preterite/imperfect selection", "future and conditional functions", "past anteriority"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_b1_subjunctive
+    domain: mood
+    level: B1
+    topic: "Present subjunctive selection"
+    subtopics: ["desire, doubt, evaluation, and negative opinion", "future temporal/final clauses", "negative commands"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_b1_se_voice
+    domain: voice
+    level: B1
+    topic: "Impersonal and passive se"
+    subtopics: ["impersonal se", "passive se and agreement", "basic accidental constructions"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_b1_pronouns_relatives
+    domain: pronouns
+    level: B1
+    topic: "Clitic clusters and prepositional relatives"
+    subtopics: ["se lo order", "placement with non-finite forms and commands", "preposition plus relative"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_b1_regimes_linkage
+    domain: syntax
+    level: B1
+    topic: "Lexical government and multi-clause linkage"
+    subtopics: ["verb-preposition regimes", "cause, consequence, concession", "reported-speech foundations"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_b2_compound_moods
+    domain: verbs
+    level: B2
+    topic: "Future perfect, conditional perfect, and compound subjunctives"
+    subtopics: ["future perfect", "conditional perfect", "perfect and pluperfect subjunctive", "sequence of tenses"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_b2_mood_in_clauses
+    domain: mood
+    level: B2
+    topic: "Indicative/subjunctive contrasts across clause types"
+    subtopics: ["specific versus non-specific relatives", "time, concession, purpose", "real and unreal conditions"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_b2_voice_change_state
+    domain: voice
+    level: B2
+    topic: "Periphrastic/result passives, richer se, and change of state"
+    subtopics: ["ser versus estar plus participle", "passive and middle se", "hacerse/ponerse/quedarse/volverse"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_b2_relatives_nonfinite
+    domain: syntax
+    level: B2
+    topic: "Compound relatives and non-finite subordination"
+    subtopics: ["el cual/el que/quien/cuyo", "participial and gerund clauses", "aspectual/modal periphrases"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_b2_information_structure
+    domain: discourse
+    level: B2
+    topic: "Reported speech, nominalisation, and information structure"
+    subtopics: ["backshift", "topic/focus order", "adjective-position meaning", "logical connectors"]
+    uncertain: false
+    source_refs: [pcic_b1_b2]
+  - id: es_c1_tense_pragmatics
+    domain: discourse
+    level: C1
+    topic: "Pragmatic and evidential tense values"
+    subtopics: ["historical present", "distancing/censure imperfect", "conjectural or objection future/conditional"]
+    uncertain: false
+    source_refs: [pcic_c1_c2]
+  - id: es_c1_advanced_mood_se
+    domain: mood
+    level: C1
+    topic: "Subtle mood choice, aspectual se, and interest datives"
+    subtopics: ["presupposition and stance", "advanced concessive/causal choice", "ethical and affected datives"]
+    uncertain: false
+    source_refs: [pcic_c1_c2]
+  - id: es_c1_marked_formal_syntax
+    domain: syntax
+    level: C1
+    topic: "Marked agreement/order and formal clause compression"
+    subtopics: ["dislocation and subject order", "cuyo and dense relatives", "participial/infinitival clauses", "register and regional recognition"]
+    uncertain: true
+    uncertainty_reason: "The components occur in the official C1-C2 inventory, but this consolidated production bundle crosses boundaries inside that page."
+    source_refs: [pcic_c1_c2, kwiziq]
+

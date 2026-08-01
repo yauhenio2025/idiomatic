@@ -1,0 +1,169 @@
+schema_version: 1
+language: French
+language_code: fr
+target_variety: "standard contemporary French, with literary forms mainly receptive"
+scope: "Distilled grammar inventory, A2-C1"
+as_of: "2026-08-01"
+level_semantics: "Earliest defensible instructional level; a question mark is encoded as uncertain: true."
+sources:
+  - id: coe_rld
+    url: "https://www.coe.int/en/web/common-european-framework-reference-languages/reference-level-descriptions-rlds-developed-so-far"
+    role: "Confirms the official French RLD series A1-C2."
+    limitation: "The detailed official volumes are print publications."
+  - id: eaquals
+    url: "https://www.eaquals.org/wp-content/uploads/Inventaire_ONLINE_full.pdf"
+    role: "Open A1-C1 inventory developed with CIEP/Eurocentres from the French RLD tradition."
+    limitation: "Selective and consensus-based, not exhaustive; C1 consensus is explicitly thinner."
+  - id: kwiziq_tree
+    url: "https://french.kwiziq.com/revision/grammar/by-cefr-level"
+    role: "Granular secondary topic tree."
+    limitation: "Commercial and non-normative."
+  - id: kwiziq_tenses
+    url: "https://french.kwiziq.com/french-tenses-by-cefr-level"
+    role: "Secondary tense-level cross-check."
+    limitation: "Conflicts with Eaquals on several introduction levels."
+  - id: fei_b2
+    url: "https://www.france-education-international.fr/en/diplome/delf-tout-public/niveau-b2"
+    role: "Official B2 performance outcome."
+    limitation: "Not a grammar checklist."
+  - id: fei_c1
+    url: "https://www.france-education-international.fr/document/explic-grille-pe-c1"
+    role: "Official C1 morphosyntax assessment explanation."
+    limitation: "Names control domains, not a sequenced inventory."
+conflicts:
+  - "Futur simple: Eaquals A2, Kwiziq mainly B1."
+  - "Plus-que-parfait and initial present subjunctive: Eaquals B1, Kwiziq starts them at B2."
+  - "Passé simple: Eaquals C1; Kwiziq includes receptive work at B2 and C1."
+
+topics:
+  - id: fr_a2_tense_aspect
+    domain: verbs
+    level: A2
+    topic: "Present/progressive, passé composé, imparfait, and near future"
+    subtopics: ["core irregular forms", "completed versus background past", "aller plus infinitive"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_a2_future_simple
+    domain: verbs
+    level: A2
+    topic: "Futur simple introduction"
+    subtopics: ["prediction", "plans", "common irregular stems"]
+    uncertain: true
+    uncertainty_reason: "Eaquals places it at A2; Kwiziq concentrates it at B1."
+    source_refs: [eaquals, kwiziq_tenses]
+  - id: fr_a2_nominal_system
+    domain: nominals
+    level: A2
+    topic: "Gender/number, articles, quantities, adjectives, and comparison"
+    subtopics: ["agreement", "quantity plus de", "adjective position", "comparative and superlative"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_a2_pronouns_prepositions
+    domain: selection
+    level: A2
+    topic: "COD/COI, y/en, place/time prepositions, and basic regimes"
+    subtopics: ["object pronouns", "pronominal verbs", "location and movement", "verb plus à/de"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_a2_basic_syntax
+    domain: syntax
+    level: A2
+    topic: "Imperative, negation, and simple relatives"
+    subtopics: ["expanded negative forms", "qui/que/où", "polite conditional introduction"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_b1_pluperfect_subjunctive
+    domain: verbs
+    level: B1
+    topic: "Plus-que-parfait and initial present subjunctive"
+    subtopics: ["anterior past", "emotion, necessity, purpose, and doubt triggers"]
+    uncertain: true
+    uncertainty_reason: "Eaquals assigns B1; Kwiziq begins both topic families at B2."
+    source_refs: [eaquals, kwiziq_tenses, kwiziq_tree]
+  - id: fr_b1_conditional_hypothesis
+    domain: mood
+    level: B1
+    topic: "Conditional and real/possible hypotheses"
+    subtopics: ["politeness and advice", "present/future si chains", "possible conditionals"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_b1_voice_nonfinite
+    domain: voice
+    level: B1
+    topic: "Passive, gerund, and participle agreement"
+    subtopics: ["être passive", "en plus present participle", "preceding direct-object agreement"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_b1_pronouns_relatives
+    domain: pronouns
+    level: B1
+    topic: "Double pronouns and expanded relatives"
+    subtopics: ["clitic order", "dont", "compound relative introduction", "clefts"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_b1_regimes_linkage
+    domain: syntax
+    level: B1
+    topic: "Verb/adjective regimes and logical clause relations"
+    subtopics: ["à/de/Ø before infinitive", "cause, purpose, consequence, concession", "indirect-speech basics"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_b2_compound_future_conditional
+    domain: verbs
+    level: B2
+    topic: "Futur antérieur and conditionnel passé"
+    subtopics: ["future anteriority", "past regret and counterfactual result", "reported uncertainty"]
+    uncertain: false
+    source_refs: [eaquals, kwiziq_tenses]
+  - id: fr_b2_subjunctive_conditions
+    domain: mood
+    level: B2
+    topic: "Fuller subjunctive selection and unreal conditions"
+    subtopics: ["broad trigger classes", "past unreal si chains", "past infinitive"]
+    uncertain: false
+    source_refs: [eaquals, kwiziq_tree]
+  - id: fr_b2_participles_agreement
+    domain: verbs
+    level: B2
+    topic: "Present participle, verbal adjective, and exceptional agreement"
+    subtopics: ["participle versus adjective", "complex past-participle agreement", "causative agreement limits"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_b2_reported_speech
+    domain: syntax
+    level: B2
+    topic: "Past indirect speech and tense sequence"
+    subtopics: ["backshift", "deictic changes", "reported questions and commands"]
+    uncertain: false
+    source_refs: [eaquals]
+  - id: fr_b2_advanced_syntax
+    domain: syntax
+    level: B2
+    topic: "Compound relatives, double-clitic order, clefts, and argumentative connectors"
+    subtopics: ["lequel family", "pronoun order around infinitives/negation", "cause, purpose, concession, consequence"]
+    uncertain: false
+    source_refs: [eaquals, kwiziq_tree]
+  - id: fr_c1_narrative_tenses
+    domain: discourse
+    level: C1
+    topic: "Passé simple and narrative tense orchestration"
+    subtopics: ["literary tense recognition", "foreground/background sequencing", "register-sensitive production"]
+    uncertain: true
+    uncertainty_reason: "Eaquals places passé simple at C1; Kwiziq begins some receptive lessons at B2, and productive expectations are unclear."
+    source_refs: [eaquals, kwiziq_tenses]
+  - id: fr_c1_advanced_subordination
+    domain: syntax
+    level: C1
+    topic: "Low-frequency causal, purposive, consecutive, concessive, and hypothetical structures"
+    subtopics: ["advanced unreal hypotheses", "formal conjunctions", "dense clause linkage"]
+    uncertain: true
+    uncertainty_reason: "The open C1 inventory is explicitly low-consensus and selective."
+    source_refs: [eaquals, fei_c1]
+  - id: fr_c1_register_control
+    domain: discourse
+    level: C1
+    topic: "Register, implicit meaning, and high-accuracy morphosyntax"
+    subtopics: ["agreement and tense/mood control", "pronominal and relative constructions", "irony and stance", "formal cohesion"]
+    uncertain: true
+    uncertainty_reason: "Official assessment descriptors support the control domain, not a closed topic boundary."
+    source_refs: [fei_c1, eaquals]

@@ -1,0 +1,693 @@
+schema_version: 1
+language: Italian
+language_code: it
+scope: "Grammar first introduced or consolidated from CEFR A2 through C1"
+as_of: "2026-08-01"
+level_semantics: >-
+  level is the earliest defensible teaching/assessment level, not a claim that
+  the form is mastered there. A2-B2 labels follow the official Profilo della
+  lingua italiana pages cited on each node. Every C1 label is an inference and
+  is marked uncertain because neither Profilo nor the public CELI/CILS
+  specifications provide a C1 grammar checklist.
+strategy_conflict: >-
+  GRAMMAR_STRATEGY.md says that the Profilo inventory is print-only and that no
+  open Italian CEFR grammar dataset exists. That is no longer true for A1-B2:
+  the University for Foreigners of Perugia now publishes the full inventory as
+  browsable HTML. The narrower claim remains true at C1.
+sources:
+  profil_intro: "https://www.unistrapg.it/profilo_lingua_italiana/site/index.html"
+  profil_method: "https://www.unistrapg.it/profilo_lingua_italiana/site/origini.html"
+  profil_a2_verbs: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_verbi_a2.html"
+  profil_a2_nouns: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_nome_a2.html"
+  profil_a2_adjectives: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_aggettivi_a2.html"
+  profil_a2_pronouns: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_pronomi_a2.html"
+  profil_a2_articles: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_articoli_a2.html"
+  profil_a2_prepositions: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_preposizioni_a2.html"
+  profil_a2_clauses: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_frasecomplessa_a2.html"
+  profil_b1_verbs: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_verbi_b1.html"
+  profil_b1_nouns: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_nome_b1.html"
+  profil_b1_adjectives: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_aggettivi_b1.html"
+  profil_b1_pronouns: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_pronomi_b1.html"
+  profil_b1_articles: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_articoli_b1.html"
+  profil_b1_prepositions: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_preposizioni_b1.html"
+  profil_b1_clauses: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_frasecomplessa_b1.html"
+  profil_b2_verbs: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_verbi_b2.html"
+  profil_b2_pronouns: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_pronomi_b2.html"
+  profil_b2_prepositions: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_preposizioni_b2.html"
+  profil_b2_construction: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_costruz_b2.html"
+  profil_b2_clauses: "https://www.unistrapg.it/profilo_lingua_italiana/site/gram_frasecomplessa_b2.html"
+  cils_guidelines: "https://cils.unistrasi.it/public/articoli/52/Linee_guida_cils_pdf.pdf"
+  cefr_companion_it: "https://cils.unistrasi.it/public/articoli/82/Files/Volume-complementare-QCER-2020.pdf"
+  celi_c1: "https://www.unistrapg.it/sites/default/files/docs/certificazioni/celi-4-competenze-richieste.pdf"
+  roma_tre_c1: "https://cla.uniroma3.it/wp-content/uploads/sites/29/file_locked/2022/04/sillaboC1.pdf"
+source_conflicts:
+  - >-
+    Profilo/CELI introduce the temporal future and common imperatives at A2;
+    the CILS A2 productive list does not enumerate them.
+  - >-
+    Profilo places futuro anteriore at B1; CILS first enumerates it at B2.
+  - >-
+    Profilo introduces all four subjunctive tenses at B2 (with only partial
+    trapassato control); CILS reserves productive compound subjunctives for C1.
+  - >-
+    Profilo presents essere/venire passives at B2; CILS describes B2
+    recognition and C1 production. These nodes retain the earliest
+    introduction level but are marked uncertain for mastery.
+
+topic_tree:
+  - domain: "Nominal system and articles"
+    topics:
+      - id: it_a2_nouns_articles
+        topic: "Core gender, number, and article choice"
+        subtopics:
+          - "regular and frequent irregular noun gender/plural"
+          - "definite and indefinite allomorphs"
+          - "articles with possessives, kinship terms, dates, and place names"
+        level: A2
+        prerequisites: []
+        examples:
+          - "Mia sorella vive negli Stati Uniti."
+          - "Oggi è il cinque febbraio."
+        uncertain: false
+        sources: [profil_a2_nouns, profil_a2_articles]
+
+      - id: it_a2_adjectives_quantifiers
+        topic: "Adjectives, comparison, and core quantification"
+        subtopics:
+          - "-co/-go/-ca/-ga adjective agreement"
+          - "più plus adjective, molto plus adjective, and -issimo"
+          - "possessive, demonstrative, interrogative, indefinite, cardinal, and collective adjectives"
+        level: A2
+        prerequisites: [it_a2_nouns_articles]
+        examples:
+          - "Questo quartiere è più tranquillo del centro."
+          - "Abbiamo una stanza piccolissima e due balconi."
+        uncertain: false
+        sources: [profil_a2_adjectives]
+
+      - id: it_b1_comparison_word_formation
+        topic: "Comparison and nominal/adjectival word formation"
+        subtopics:
+          - "più/meno di versus più/meno che and equality"
+          - "relative and irregular superlatives; meglio versus migliore"
+          - "double plurals and diminutive/augmentative suffixes"
+        level: B1
+        prerequisites: [it_a2_nouns_articles, it_a2_adjectives_quantifiers]
+        examples:
+          - "È più difficile trovare lavoro che studiare."
+          - "Questa è la soluzione migliore fra tutte."
+        uncertain: false
+        sources: [profil_b1_nouns, profil_b1_adjectives]
+
+      - id: it_b1_article_distribution
+        topic: "Article presence, omission, and partitives"
+        subtopics:
+          - "geographic names by type"
+          - "partitive articles versus bare plurals"
+          - "specified time/place phrases and omission after con, senza, da"
+        level: B1
+        prerequisites: [it_a2_nouns_articles]
+        examples:
+          - "Ho comprato dei giocattoli per i bambini."
+          - "Lavora con attenzione e senza problemi."
+        uncertain: false
+        sources: [profil_b1_articles]
+
+      - id: it_b2_adjective_position
+        topic: "Adjective position and meaning"
+        subtopics:
+          - "prenominal evaluative readings"
+          - "postnominal descriptive or contrastive readings"
+        level: B2
+        prerequisites: [it_a2_nouns_articles]
+        examples:
+          - "È un vecchio amico, non un amico vecchio."
+          - "È un pover'uomo, ma non è un uomo povero."
+        uncertain: false
+        sources: [profil_b2_construction]
+
+      - id: it_c1_nominalisation
+        topic: "Dense nominal style and nominalisation"
+        subtopics:
+          - "verb-to-noun reformulation"
+          - "prepositional noun phrases in formal prose"
+          - "agreement across complex noun phrases"
+        level: C1
+        prerequisites: [it_b1_article_distribution, it_b2_adjective_position]
+        examples:
+          - "La mancata approvazione del bilancio ha provocato le dimissioni."
+          - "L'adozione di misure più rigorose resta oggetto di discussione."
+        uncertain: true
+        uncertainty_reason: "Triangulated from C1 control/register descriptors; absent from the official A1-B2 Profilo inventory and not itemised by CILS."
+        sources: [cils_guidelines, cefr_companion_it]
+
+  - domain: "Verb morphology, tense, aspect, and voice"
+    topics:
+      - id: it_a2_present_progressive
+        topic: "Present, modals, reflexives, and progressive"
+        subtopics:
+          - "regular and high-frequency irregular present forms"
+          - "dovere, potere, volere"
+          - "stare plus gerund"
+        level: A2
+        prerequisites: []
+        examples:
+          - "Non posso uscire perché sto lavorando."
+          - "Ci alziamo presto ogni mattina."
+        uncertain: false
+        sources: [profil_a2_verbs]
+
+      - id: it_a2_passato_prossimo
+        topic: "Passato prossimo"
+        subtopics:
+          - "avere versus essere"
+          - "past-participle formation and subject agreement with essere"
+          - "completed, bounded events"
+        level: A2
+        prerequisites: [it_a2_present_progressive]
+        examples:
+          - "Abbiamo finito il lavoro ieri."
+          - "Le ragazze sono arrivate alle nove."
+        uncertain: false
+        sources: [profil_a2_verbs]
+
+      - id: it_a2_imperfetto_core
+        topic: "Core imperfetto"
+        subtopics:
+          - "essere and avere in descriptions"
+          - "background states and people"
+        level: A2
+        prerequisites: [it_a2_present_progressive]
+        examples:
+          - "Da bambino avevo paura del buio."
+          - "La casa era piccola ma luminosa."
+        uncertain: false
+        sources: [profil_a2_verbs]
+
+      - id: it_a2_future_imperative
+        topic: "Temporal future and informal imperative"
+        subtopics:
+          - "future simple for predictions and plans"
+          - "affirmative and negative tu, noi, voi commands"
+        level: A2
+        prerequisites: [it_a2_present_progressive]
+        examples:
+          - "Domani pioverà tutto il giorno."
+          - "Non aprire quella porta!"
+        uncertain: true
+        uncertainty_reason: "Profilo explicitly assigns these forms to A2, while the CILS A2 productive list does not enumerate them."
+        sources: [profil_a2_verbs, cils_guidelines]
+
+      - id: it_b1_past_narration
+        topic: "Past narration and trapassato prossimo"
+        subtopics:
+          - "passato prossimo with transitive, unaccusative, and reflexive verbs"
+          - "extended imperfetto"
+          - "trapassato for anterior past"
+          - "passato prossimo versus imperfetto selection"
+        level: B1
+        prerequisites: [it_a2_passato_prossimo, it_a2_imperfetto_core]
+        examples:
+          - "Quando sono arrivato, il film era già cominciato."
+          - "Mentre guidavo, la macchina si è fermata."
+        uncertain: false
+        sources: [profil_b1_verbs]
+
+      - id: it_b1_future_anteriore
+        topic: "Futuro anteriore and modal future"
+        subtopics:
+          - "future anteriority"
+          - "present and anterior future as conjecture"
+        level: B1
+        prerequisites: [it_a2_future_imperative, it_a2_passato_prossimo]
+        examples:
+          - "Dopo che avrò finito, ti chiamerò."
+          - "Non risponde: sarà già partito."
+        uncertain: true
+        uncertainty_reason: "Profilo assigns futuro anteriore to B1; CILS first enumerates it at B2."
+        sources: [profil_b1_verbs, cils_guidelines]
+
+      - id: it_b1_conditional_present
+        topic: "Condizionale presente"
+        subtopics:
+          - "eventuality and desire"
+          - "polite requests"
+          - "advice with potere and dovere"
+        level: B1
+        prerequisites: [it_a2_future_imperative]
+        examples:
+          - "Potresti chiudere la finestra?"
+          - "Al tuo posto, dormirei di più."
+        uncertain: false
+        sources: [profil_b1_verbs]
+
+      - id: it_b1_impersonal_si
+        topic: "Impersonal and passive si"
+        subtopics:
+          - "singular impersonal predicates"
+          - "agreement in si passivante"
+          - "si with modal verbs"
+        level: B1
+        prerequisites: [it_a2_present_progressive, it_a2_nouns_articles]
+        examples:
+          - "In questa città si vive bene."
+          - "Qui si vendono prodotti locali."
+        uncertain: false
+        sources: [profil_b1_verbs, profil_b1_pronouns]
+
+      - id: it_b2_passato_remoto
+        topic: "Passato remoto"
+        subtopics:
+          - "regular and irregular forms"
+          - "bounded historical and literary narrative"
+          - "contrast with passato prossimo by register and region"
+        level: B2
+        prerequisites: [it_b1_past_narration]
+        examples:
+          - "Nel 1861 nacque il Regno d'Italia."
+          - "Entrò, vide la lettera e capì tutto."
+        uncertain: false
+        sources: [profil_b2_verbs]
+
+      - id: it_b2_conditional_past
+        topic: "Condizionale passato"
+        subtopics:
+          - "unreal past consequence"
+          - "future in the past"
+          - "unconfirmed reported information"
+        level: B2
+        prerequisites: [it_b1_conditional_present, it_a2_passato_prossimo]
+        examples:
+          - "Sarei venuto, ma ero malato."
+          - "Ha detto che sarebbe arrivata tardi."
+        uncertain: false
+        sources: [profil_b2_verbs]
+
+      - id: it_b2_passive_voice
+        topic: "Passive with essere, venire, and si"
+        subtopics:
+          - "event and state readings"
+          - "tense and participle agreement"
+          - "agent phrases with da"
+        level: B2
+        prerequisites: [it_b1_impersonal_si, it_b1_past_narration]
+        examples:
+          - "La proposta è stata approvata dal consiglio."
+          - "I dati vengono controllati ogni settimana."
+        uncertain: true
+        uncertainty_reason: "Profilo introduces the passive at B2, whereas CILS distinguishes B2 recognition from C1 productive control."
+        sources: [profil_b2_verbs, profil_b2_prepositions, cils_guidelines]
+
+      - id: it_c1_literary_tense_system
+        topic: "Literary and historical tense sequencing"
+        subtopics:
+          - "passato remoto versus imperfetto for foreground and background"
+          - "trapassato remoto recognition and constrained production"
+          - "historical present and register shift"
+        level: C1
+        prerequisites: [it_b2_passato_remoto, it_b1_past_narration]
+        examples:
+          - "Quando ebbe concluso il discorso, lasciò la sala."
+          - "Nel 1946 gli italiani votano e nasce la Repubblica."
+        uncertain: true
+        uncertainty_reason: "The C1 boundary and production expectation are inferred; Profilo ends at B2 and CILS gives performance descriptors rather than a grammar list."
+        sources: [cils_guidelines, cefr_companion_it]
+
+  - domain: "Mood and clause selection"
+    topics:
+      - id: it_b1_subjunctive_present
+        topic: "Congiuntivo presente in complement clauses"
+        subtopics:
+          - "opinion, hope, emotion, and impersonal triggers"
+          - "formal third-person exhortative"
+          - "informal indicative variation awareness"
+        level: B1
+        prerequisites: [it_a2_present_progressive]
+        examples:
+          - "Spero che tu venga domani."
+          - "Mi sembra che stia meglio."
+        uncertain: false
+        sources: [profil_b1_verbs, profil_b1_clauses]
+
+      - id: it_b1_real_conditionals
+        topic: "Real conditionals"
+        subtopics:
+          - "present-present"
+          - "present-future and future-future"
+        level: B1
+        prerequisites: [it_a2_future_imperative]
+        examples:
+          - "Se mangio troppo, sto male."
+          - "Se parti adesso, arriverai in tempo."
+        uncertain: false
+        sources: [profil_b1_verbs, profil_b1_clauses]
+
+      - id: it_b2_past_subjunctive
+        topic: "Congiuntivo passato"
+        subtopics:
+          - "anteriority under a present trigger"
+          - "perfect auxiliary and participle selection"
+        level: B2
+        prerequisites: [it_b1_subjunctive_present, it_a2_passato_prossimo]
+        examples:
+          - "Credo che abbiano già finito."
+          - "Mi dispiace che sia partita così presto."
+        uncertain: true
+        uncertainty_reason: "Profilo includes this at B2; CILS reserves productive compound-subjunctive control for C1."
+        sources: [profil_b2_verbs, cils_guidelines]
+
+      - id: it_b2_imperfect_subjunctive
+        topic: "Congiuntivo imperfetto"
+        subtopics:
+          - "simultaneity under a past or conditional trigger"
+          - "possibility conditionals"
+          - "come se clauses"
+        level: B2
+        prerequisites: [it_b1_subjunctive_present, it_b1_past_narration]
+        examples:
+          - "Volevo che venissi con noi."
+          - "Parla come se sapesse tutto."
+        uncertain: false
+        sources: [profil_b2_verbs, profil_b2_clauses]
+
+      - id: it_b2_pluperfect_subjunctive
+        topic: "Congiuntivo trapassato"
+        subtopics:
+          - "anteriority under a past trigger"
+          - "unreal past condition"
+          - "auxiliary and participle formation"
+        level: B2
+        prerequisites: [it_b2_past_subjunctive, it_b2_imperfect_subjunctive, it_b1_past_narration]
+        examples:
+          - "Pensavo che fossero già partiti."
+          - "Se avessi saputo la verità, non sarei venuto."
+        uncertain: true
+        uncertainty_reason: "Profilo introduces partial control at B2; CILS assigns productive control at C1."
+        sources: [profil_b2_verbs, profil_b2_clauses, cils_guidelines]
+
+      - id: it_b2_tense_concordance
+        topic: "Consecutio temporum and hypothetical periods"
+        subtopics:
+          - "mood and tense selection under present and past matrix verbs"
+          - "possibility and unreal conditionals"
+          - "indicative-subjunctive contrasts"
+        level: B2
+        prerequisites: [it_b2_past_subjunctive, it_b2_imperfect_subjunctive, it_b2_pluperfect_subjunctive, it_b2_conditional_past]
+        examples:
+          - "Pensavo che Maria fosse a casa."
+          - "Se me lo avessi detto, ti avrei creduto."
+        uncertain: true
+        uncertainty_reason: "Profilo introduces this system at B2, but the CILS C1 syllabus reserves productive compound-subjunctive and some unreal/implicit structures for C1."
+        sources: [profil_b2_verbs, profil_b2_clauses, cils_guidelines]
+
+      - id: it_c1_mood_register
+        topic: "Advanced mood choice and register"
+        subtopics:
+          - "subjunctive versus indicative as stance"
+          - "mood after concessive, restrictive, and indefinite antecedent frames"
+          - "formal versus colloquial alternatives"
+        level: C1
+        prerequisites: [it_b2_tense_concordance]
+        examples:
+          - "Cerco una soluzione che non comporti nuovi costi."
+          - "Benché sia plausibile, l'ipotesi non è dimostrata."
+        uncertain: true
+        uncertainty_reason: "Topic selection is plausible for C1 control but its exact level is not published as an Italian RLD inventory item."
+        sources: [cils_guidelines, celi_c1, roma_tre_c1]
+
+      - id: it_c1_reported_speech
+        topic: "Reported speech and viewpoint shift"
+        subtopics:
+          - "backshift and deictic adjustment"
+          - "conditional as future in the past"
+          - "reported assertions versus evidential distance"
+        level: C1
+        prerequisites: [it_b2_conditional_past, it_b2_tense_concordance]
+        examples:
+          - "Disse che sarebbe tornato il giorno seguente."
+          - "La stampa riferì che il ministro si era dimesso."
+        uncertain: true
+        uncertainty_reason: "The construction is compatible with C1 descriptors, but neither public CELI/CILS material assigns it to a grammar level."
+        sources: [cils_guidelines, celi_c1, roma_tre_c1]
+
+  - domain: "Pronouns, clitics, and relatives"
+    topics:
+      - id: it_a2_pronouns_clitics
+        topic: "Basic personal pronouns and clitics"
+        subtopics:
+          - "tonic complements after prepositions"
+          - "direct and indirect unstressed pronouns"
+          - "reflexives, possessives, demonstratives, and locative ci"
+        level: A2
+        prerequisites: [it_a2_present_progressive]
+        examples:
+          - "Questo regalo è per lei."
+          - "Il centro è lontano, ma ci vado a piedi."
+        uncertain: false
+        sources: [profil_a2_pronouns]
+
+      - id: it_a2_relative_che
+        topic: "Invariant relative che"
+        subtopics:
+          - "subject relative"
+          - "direct-object relative"
+        level: A2
+        prerequisites: [it_a2_pronouns_clitics]
+        examples:
+          - "Conosco una ragazza che lavora qui."
+          - "Ho letto il libro che mi hai consigliato."
+        uncertain: false
+        sources: [profil_a2_pronouns, profil_a2_clauses]
+
+      - id: it_b1_ci_ne
+        topic: "Ci and ne"
+        subtopics:
+          - "locative and prepositional ci"
+          - "partitive and di-complement ne"
+          - "lexicalised uses such as volerci and metterci"
+        level: B1
+        prerequisites: [it_a2_pronouns_clitics]
+        examples:
+          - "Alla proposta non ci credo."
+          - "Di quel pane ne prendo due chili."
+        uncertain: false
+        sources: [profil_b1_pronouns]
+
+      - id: it_b1_double_clitics
+        topic: "Double clitics and clitic placement"
+        subtopics:
+          - "me lo, te lo, glielo, ce l'ho"
+          - "agreement in compound tenses"
+          - "proclisis/enclisis with infinitive, imperative, and modal verbs"
+        level: B1
+        prerequisites: [it_a2_pronouns_clitics, it_a2_passato_prossimo]
+        examples:
+          - "Le chiavi? Gliele ho già date."
+          - "Non posso dirtelo adesso."
+        uncertain: false
+        sources: [profil_b1_pronouns]
+
+      - id: it_b1_relative_cui
+        topic: "Preposition plus cui"
+        subtopics:
+          - "indirect relative complements"
+          - "lexically governed prepositions"
+        level: B1
+        prerequisites: [it_a2_relative_che, it_a2_prepositions]
+        examples:
+          - "È la collega con cui lavoro."
+          - "Questo è il motivo per cui ho chiamato."
+        uncertain: false
+        sources: [profil_b1_pronouns, profil_b1_clauses]
+
+      - id: it_b2_advanced_relatives
+        topic: "Advanced relative pronouns"
+        subtopics:
+          - "il quale forms after prepositions"
+          - "chi and quanto as fused relatives"
+          - "possessive relative constructions"
+        level: B2
+        prerequisites: [it_b1_relative_cui]
+        examples:
+          - "La norma alla quale mi riferisco è recente."
+          - "Chi arriva tardi dovrà aspettare."
+        uncertain: false
+        sources: [profil_b2_pronouns]
+
+      - id: it_b2_procomplementary_clitics
+        topic: "Advanced clitic clusters and procomplementary verbs"
+        subtopics:
+          - "paired clitics with idiomatic verbs"
+          - "farcela, cavarsela, andarsene, fregarsene"
+          - "ci si, gerund enclisis, and passive si"
+        level: B2
+        prerequisites: [it_b1_ci_ne, it_b1_double_clitics, it_b1_impersonal_si]
+        examples:
+          - "Non me la sento di accettare."
+          - "Essendosene accorto, se n'è andato."
+        uncertain: false
+        sources: [profil_b2_pronouns]
+
+      - id: it_c1_clitic_information_structure
+        topic: "Clitics across discourse and formal registers"
+        subtopics:
+          - "clitic resumption and topical continuity"
+          - "lexicalised clitic constructions in controlled register"
+          - "ambiguity avoidance with multiple antecedents"
+        level: C1
+        prerequisites: [it_b2_procomplementary_clitics, it_b2_marked_order]
+        examples:
+          - "Di quella proposta, non se ne è più parlato."
+          - "Quanto alle obiezioni, gliele sottoporremo domani."
+        uncertain: true
+        uncertainty_reason: "Discourse-level control is inferred from C1 performance descriptors, not assigned by an Italian grammar inventory."
+        sources: [cils_guidelines, cefr_companion_it]
+
+  - domain: "Prepositions and lexical government"
+    topics:
+      - id: it_a2_prepositions
+        topic: "Core simple and articulated prepositions"
+        subtopics:
+          - "place, motion, source, time, means, material, and duration"
+          - "common prepositional locutions"
+          - "fixed expressions such as avere bisogno di and andare a"
+        level: A2
+        prerequisites: [it_a2_nouns_articles]
+        examples:
+          - "Vado all'università in autobus."
+          - "Studio italiano da un anno."
+        uncertain: false
+        sources: [profil_a2_prepositions]
+
+      - id: it_b1_verb_government
+        topic: "Verb and adjective government"
+        subtopics:
+          - "a/di/da after frequent verbs and adjectives"
+          - "implicit complement clauses"
+          - "polysemous regimes such as pensare a/di"
+        level: B1
+        prerequisites: [it_a2_prepositions]
+        examples:
+          - "Cerco di finire entro sera."
+          - "Parteciperemo alla riunione."
+        uncertain: false
+        sources: [profil_b1_prepositions]
+
+      - id: it_b2_preposition_functions
+        topic: "Advanced preposition functions and locutions"
+        subtopics:
+          - "cause, agent, topic, distribution, relation, and continuous time"
+          - "in base a, rispetto a, per mezzo di, all'interno di"
+          - "nonostante, attraverso, contro, eccetto, entro"
+        level: B2
+        prerequisites: [it_b1_verb_government]
+        examples:
+          - "Il prezzo varia in base alla domanda."
+          - "Per motivi di lavoro resterò fino a venerdì."
+        uncertain: false
+        sources: [profil_b2_prepositions]
+
+  - domain: "Clause linkage, non-finite clauses, and information structure"
+    topics:
+      - id: it_a2_basic_linkage
+        topic: "Basic coordination and subordination"
+        subtopics:
+          - "ma, anche, quando, and formulaic se"
+          - "a plus infinitive purpose clauses"
+          - "relative clauses with che"
+        level: A2
+        prerequisites: [it_a2_present_progressive]
+        examples:
+          - "La città è piccola, ma è molto vivace."
+          - "Vado al mercato a comprare la frutta."
+        uncertain: false
+        sources: [profil_a2_clauses]
+
+      - id: it_b1_clause_linkage
+        topic: "B1 connectors and finite/non-finite clauses"
+        subtopics:
+          - "cause, result, contrast, correlation, and concession"
+          - "temporal anteriority/posteriority"
+          - "object, subject, and real conditional clauses"
+        level: B1
+        prerequisites: [it_a2_basic_linkage, it_b1_future_anteriore, it_b1_subjunctive_present]
+        examples:
+          - "Visto che piove, resteremo a casa."
+          - "Non appena avrò finito, ti telefonerò."
+        uncertain: false
+        sources: [profil_b1_clauses]
+
+      - id: it_b2_nonfinite_clauses
+        topic: "Gerund, participle, and past-infinitive clauses"
+        subtopics:
+          - "present/past gerund for cause and time"
+          - "absolute past participle"
+          - "dopo plus past infinitive"
+          - "subject-control constraints"
+        level: B2
+        prerequisites: [it_b1_clause_linkage, it_b1_past_narration]
+        examples:
+          - "Avendo controllato i dati, pubblicò il rapporto."
+          - "Spenta la luce, uscimmo in silenzio."
+        uncertain: true
+        uncertainty_reason: "Profilo introduces these forms/functions at B2; CILS explicitly requires productive present/past gerund and participle control at C1."
+        sources: [profil_b2_verbs, profil_b2_clauses, cils_guidelines]
+
+      - id: it_b2_complex_subordination
+        topic: "B2 purpose, concessive, modal, and exception clauses"
+        subtopics:
+          - "perché/affinché plus subjunctive"
+          - "sebbene/benché/nonostante"
+          - "come se and a meno che non"
+          - "indirect questions"
+        level: B2
+        prerequisites: [it_b1_clause_linkage, it_b2_imperfect_subjunctive]
+        examples:
+          - "Te lo spiego affinché tu possa decidere."
+          - "Verrò, a meno che non debba lavorare."
+        uncertain: false
+        sources: [profil_b2_clauses]
+
+      - id: it_b2_marked_order
+        topic: "Marked information structure"
+        subtopics:
+          - "left dislocation with clitic resumption"
+          - "cleft and presentational constructions"
+          - "postverbal subjects"
+        level: B2
+        prerequisites: [it_b1_double_clitics, it_b1_clause_linkage]
+        examples:
+          - "Quel rapporto, l'ha scritto Marta."
+          - "È Giulia che ha risolto il problema."
+        uncertain: false
+        sources: [profil_b2_construction]
+
+      - id: it_c1_argumentative_connectors
+        topic: "Advanced argumentative linkage"
+        subtopics:
+          - "concession, reformulation, limitation, and counterargument"
+          - "correlative and paragraph-level connectors"
+          - "punctuation and syntactic scope"
+        level: C1
+        prerequisites: [it_b2_complex_subordination, it_b2_marked_order]
+        examples:
+          - "Ciò nondimeno, i risultati non consentono conclusioni definitive."
+          - "Non solo la misura è costosa, ma rischia altresì di essere inefficace."
+        uncertain: true
+        uncertainty_reason: "Exact C1 placement is inferred from discourse-control descriptors and sibling-language inventories."
+        sources: [cils_guidelines, celi_c1, roma_tre_c1]
+
+      - id: it_c1_syntactic_compression
+        topic: "Formal syntactic compression"
+        subtopics:
+          - "participial and gerundial clause chains"
+          - "nominal and infinitival reformulation"
+          - "explicit subject/reference control"
+        level: C1
+        prerequisites: [it_b2_nonfinite_clauses, it_c1_nominalisation]
+        examples:
+          - "Esaminati gli atti, la commissione deliberò all'unanimità."
+          - "Pur riconoscendone i limiti, ne proponiamo l'adozione."
+        uncertain: true
+        uncertainty_reason: "This is a pedagogical C1 consolidation inferred from register and cohesion descriptors, not an official topic assignment."
+        sources: [cils_guidelines, celi_c1, roma_tre_c1]

@@ -1,0 +1,80 @@
+schema_version: 1
+language: Italian
+language_code: it
+target_variety: "standard contemporary Italian"
+scope: "Distilled grammar inventory, A2-C1"
+as_of: "2026-08-01"
+detailed_tree: "../it-grammar-taxonomy.yaml"
+level_semantics: >-
+  A2-B2 uses the official Profilo as the primary introduction-level source.
+  Conflicts with CILS are marked. Every C1 assignment is uncertain because
+  Profilo ends at B2 and certification specifications are not a complete tree.
+sources:
+  - id: profilo
+    url: "https://www.unistrapg.it/profilo_lingua_italiana/site/index.html"
+    role: "Official open Italian RLD, A1-B2."
+    limitation: "No C1 layer."
+  - id: profilo_method
+    url: "https://www.unistrapg.it/profilo_lingua_italiana/site/origini.html"
+    role: "Method and validation background."
+    limitation: "Describes the inventory rather than adding C1 content."
+  - id: cils
+    url: "https://cils.unistrasi.it/public/articoli/52/Linee_guida_cils_pdf.pdf"
+    role: "Official cumulative exam guidance and upper-level triangulation."
+    limitation: "Older exam-oriented syllabus; level boundaries sometimes differ from Profilo."
+  - id: celi_c1
+    url: "https://www.unistrapg.it/sites/default/files/docs/certificazioni/celi-4-competenze-richieste.pdf"
+    role: "Official C1 competency description."
+    limitation: "Performance requirements, not a complete grammar inventory."
+conflicts:
+  - "Contrary to GRAMMAR_STRATEGY.md, the complete Profilo A1-B2 inventory is now openly browsable."
+  - "Profilo B1 versus CILS B2 for futuro anteriore."
+  - "Profilo B2 introduction/partial control versus CILS C1 production for compound subjunctives and passive."
+
+topics:
+  - {id: it_a2_nominals, domain: nominals, level: A2, topic: "Gender, plural, agreement, and article distribution", subtopics: ["articles with possessives/kinship/geography/time", "common irregular plurals", "adjective agreement"], uncertain: false, source_refs: [profilo]}
+  - {id: it_a2_core_verbs, domain: verbs, level: A2, topic: "Present, modals, progressive, passato prossimo, and core imperfetto", subtopics: ["auxiliary choice", "participle agreement with essere", "description versus completed event"], uncertain: false, source_refs: [profilo]}
+  - id: it_a2_future_imperative
+    domain: verbs
+    level: A2
+    topic: "Temporal future and common imperatives"
+    subtopics: ["future simple", "affirmative/negative tu/noi/voi commands"]
+    uncertain: true
+    uncertainty_reason: "Profilo/CELI include them at A2; the CILS A2 productive list does not enumerate them."
+    source_refs: [profilo, cils]
+  - {id: it_a2_pronouns_preps, domain: selection, level: A2, topic: "Basic clitics, ci, relatives, and core prepositions", subtopics: ["direct/indirect/reflexive pronouns", "locative ci", "relative che", "simple/articulated prepositions"], uncertain: false, source_refs: [profilo]}
+  - {id: it_a2_linkage, domain: syntax, level: A2, topic: "Basic coordination and subordination", subtopics: ["ma/anche/quando/se", "a plus infinitive purpose", "che relatives"], uncertain: false, source_refs: [profilo]}
+  - id: it_b1_tense_aspect
+    domain: verbs
+    level: B1
+    topic: "Past narration, trapassato, modal future, and futuro anteriore"
+    subtopics: ["passato prossimo/imperfect contrast", "past anteriority", "future conjecture"]
+    uncertain: true
+    uncertainty_reason: "Profilo places futuro anteriore at B1; CILS first enumerates it at B2."
+    source_refs: [profilo, cils]
+  - {id: it_b1_cond_subj, domain: mood, level: B1, topic: "Conditional present, present subjunctive, and real conditions", subtopics: ["politeness/advice", "opinion/emotion/hope triggers", "same-subject infinitive"], uncertain: false, source_refs: [profilo]}
+  - {id: it_b1_si_clitics, domain: pronouns, level: B1, topic: "Impersonal/passive si, ci/ne, double clitics, and placement", subtopics: ["compound-tense agreement", "proclisis/enclisis", "preposition plus cui"], uncertain: false, source_refs: [profilo]}
+  - {id: it_b1_regimes_clauses, domain: syntax, level: B1, topic: "Verb government, article distribution, and clause linkage", subtopics: ["a/di/da regimes", "partitives/bare nouns", "cause/time/concession/correlation"], uncertain: false, source_refs: [profilo]}
+  - {id: it_b2_remote_conditional, domain: verbs, level: B2, topic: "Passato remoto and conditional past", subtopics: ["historical/literary narrative", "future in the past", "past counterfactual result"], uncertain: false, source_refs: [profilo]}
+  - id: it_b2_subjunctive_sequence
+    domain: mood
+    level: B2
+    topic: "Past/imperfect/pluperfect subjunctive and tense sequence"
+    subtopics: ["present versus past matrices", "possibility/unreal conditions", "come se and concessives"]
+    uncertain: true
+    uncertainty_reason: "Profilo introduces all four tenses at B2, with partial pluperfect control; CILS reserves compound-subjunctive production for C1."
+    source_refs: [profilo, cils]
+  - id: it_b2_passive_nonfinite
+    domain: voice
+    level: B2
+    topic: "Passive and non-finite subordinate clauses"
+    subtopics: ["essere/venire passive", "gerund and participle clauses", "past infinitive"]
+    uncertain: true
+    uncertainty_reason: "Profilo introduces passive at B2; CILS distinguishes recognition from C1 production."
+    source_refs: [profilo, cils]
+  - {id: it_b2_advanced_pronouns, domain: pronouns, level: B2, topic: "Advanced relatives, procomplementary verbs, and clitic clusters", subtopics: ["il quale/chi/quanto", "farcela/cavarsela/andarsene", "ci si and gerund enclisis"], uncertain: false, source_refs: [profilo]}
+  - {id: it_b2_preps_structure, domain: syntax, level: B2, topic: "Advanced prepositions, complex subordination, and marked order", subtopics: ["abstract preposition functions", "purpose/concession/manner/exception", "dislocation, clefts, postverbal subjects"], uncertain: false, source_refs: [profilo]}
+  - {id: it_c1_compound_mood_mastery, domain: mood, level: C1, topic: "Productive compound subjunctives and full consecutio", subtopics: ["stance-sensitive mood", "indirect questions", "independent subjunctive"], uncertain: true, uncertainty_reason: "CILS/CELI triangulation; no official C1 RLD tree.", source_refs: [cils, celi_c1]}
+  - {id: it_c1_nonfinite_voice, domain: voice, level: C1, topic: "Productive non-finite clauses and complex voice", subtopics: ["past gerund and participle", "passive across tenses", "andare plus participle", "complex si"], uncertain: true, uncertainty_reason: "Upper-level syllabus synthesis, not a Profilo assignment.", source_refs: [cils, celi_c1]}
+  - {id: it_c1_nominalisation, domain: discourse, level: C1, topic: "Nominalisation, derivation, and dense formal noun phrases", subtopics: ["word families", "clause-to-noun reformulation", "academic/professional style"], uncertain: true, uncertainty_reason: "CILS names the domain but does not supply a full decomposed tree.", source_refs: [cils, celi_c1]}
+  - {id: it_c1_reported_cohesion, domain: discourse, level: C1, topic: "Reported speech, advanced subordination, and register-sensitive cohesion", subtopics: ["tense/deixis backshift", "advanced connectors", "marked information structure"], uncertain: true, uncertainty_reason: "Certification and university-syllabus triangulation; exact topic boundaries are uncertain.", source_refs: [cils, celi_c1]}

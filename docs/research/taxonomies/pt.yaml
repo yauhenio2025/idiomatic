@@ -1,0 +1,177 @@
+schema_version: 1
+language: Brazilian Portuguese
+language_code: pt
+target_variety: "Brazilian Portuguese; você/vocês baseline"
+scope: "Distilled grammar inventory, approximately A2-C1"
+as_of: "2026-08-01"
+level_semantics: >-
+  Every level is approximate. FUNAG explicitly calls its CEFR crosswalk
+  approximate and spiral; Camões describes European Portuguese. Concrete C1
+  structures are hypotheses constrained by Brazilian proficiency outcomes.
+sources:
+  - id: camoes
+    url: "https://www.instituto-camoes.pt/images/REFERENCIAL_ebook.pdf"
+    role: "Open CEFR-sequenced A1-C2 inventory."
+    limitation: "European Portuguese and illustrative rather than exhaustive."
+  - id: funag
+    url: "https://funag.gov.br/biblioteca-nova/pdf/mostraPdf/21/1124/proposta_curricular_para_ensino_de_portugues_nas_unidades_da_rede_de_ensino_do_itamaraty_em_paises_de_lingua_oficial_espanhola"
+    role: "Brazilian curriculum for Spanish-speaking learners; approximate A2-C1 crosswalk."
+    limitation: "Spiral syllabus and approximate levels; C1 is mainly functional."
+  - id: celpe_faq
+    url: "https://www.gov.br/inep/pt-br/acesso-a-informacao/perguntas-frequentes/celpe-bras"
+    role: "Authoritative Brazilian proficiency construct."
+    limitation: "Not a grammar checklist."
+  - id: celpe_base
+    url: "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/documento_base_do_exame_celpe_bras.pdf"
+    role: "Performance, genre, and register constraints."
+    limitation: "Does not assign structures to CEFR levels."
+conflicts:
+  - "Camões is European Portuguese; clitic placement, address/person paradigms, progressive forms, and future usage require Brazilian adaptation."
+  - "The product's Brazilian target follows FUNAG/Celpe-Bras where Camões conflicts."
+
+topics:
+  - id: pt_a2_nominal_system
+    domain: nominals
+    level: A2
+    topic: "Gender, plural, articles, contractions, and adjective agreement"
+    subtopics: ["irregular gender/plural", "article-preposition contractions", "noun/adjective agreement"]
+    uncertain: true
+    uncertainty_reason: "Approximate FUNAG crosswalk; Camões examples are European Portuguese."
+    source_refs: [funag, camoes]
+  - id: pt_a2_numerals
+    domain: nominals
+    level: A2
+    topic: "Numerals, dates, and agreement"
+    subtopics: ["dois/duas", "agreeing hundreds", "ordinals and dates"]
+    uncertain: true
+    uncertainty_reason: "Approximate Brazilian sequencing."
+    source_refs: [funag, camoes]
+  - id: pt_a2_present_past
+    domain: verbs
+    level: A2
+    topic: "Present and core past morphology"
+    subtopics: ["irregular present", "pretérito perfeito", "pretérito imperfeito", "perfect/imperfect foundations"]
+    uncertain: true
+    uncertainty_reason: "Approximate FUNAG mapping."
+    source_refs: [funag, camoes]
+  - id: pt_a2_progressive_commands
+    domain: verbs
+    level: A2
+    topic: "Brazilian progressive, imperatives, and address"
+    subtopics: ["estar plus gerund", "você/vocês commands", "proclisis defaults"]
+    uncertain: true
+    uncertainty_reason: "Highly variety-sensitive; European source forms cannot be transplanted."
+    source_refs: [funag]
+  - id: pt_a2_prepositions_copulas
+    domain: selection
+    level: A2
+    topic: "Core prepositions, por/para, and ser/estar/ficar"
+    subtopics: ["place, motion, time, cause, and purpose", "state and change", "basic government"]
+    uncertain: true
+    uncertainty_reason: "Approximate spiral placement."
+    source_refs: [funag, camoes]
+  - id: pt_a2_pronouns_clitics
+    domain: pronouns
+    level: A2
+    topic: "Core pronouns and Brazilian clitic patterns"
+    subtopics: ["direct/indirect/reflexive pronouns", "proclisis", "limited enclisis with infinitives", "comigo/conosco"]
+    uncertain: true
+    uncertainty_reason: "Variety-sensitive Brazilian adaptation."
+    source_refs: [funag, celpe_base]
+  - id: pt_b1_aspect_sequence
+    domain: verbs
+    level: B1
+    topic: "Past-aspect choice, future, and conditional"
+    subtopics: ["perfect versus imperfect", "past anteriority", "future/conditional functions"]
+    uncertain: true
+    uncertainty_reason: "Approximate FUNAG B1 equivalence."
+    source_refs: [funag, camoes]
+  - id: pt_b1_subjunctive_conditions
+    domain: mood
+    level: B1
+    topic: "Present/future subjunctive and conditional/time clauses"
+    subtopics: ["trigger selection", "future reference after quando/se", "real and possible conditions"]
+    uncertain: true
+    uncertainty_reason: "Approximate spiral placement, though both curricula include the system."
+    source_refs: [funag, camoes]
+  - id: pt_b1_personal_infinitive
+    domain: verbs
+    level: B1
+    topic: "Personal infinitive introduction"
+    subtopics: ["overt versus controlled subjects", "simple personal forms", "purpose/time clauses"]
+    uncertain: true
+    uncertainty_reason: "Camões places it around B1; FUNAG explicitly foregrounds it at B2."
+    source_refs: [camoes, funag]
+  - id: pt_b1_voice_relatives
+    domain: syntax
+    level: B1
+    topic: "Ser passive, relatives, and reported discourse foundations"
+    subtopics: ["passive agreement", "que/quem/onde/cujo", "basic tense/deixis shift"]
+    uncertain: true
+    uncertainty_reason: "Approximate cross-source consolidation."
+    source_refs: [funag, camoes]
+  - id: pt_b1_subordination
+    domain: syntax
+    level: B1
+    topic: "Causal, concessive, temporal, and purposive subordination"
+    subtopics: ["finite connectors", "mood choice", "cohesive relations"]
+    uncertain: true
+    uncertainty_reason: "Approximate spiral placement."
+    source_refs: [funag, camoes]
+  - id: pt_b2_compound_tenses
+    domain: verbs
+    level: B2
+    topic: "Compound indicative and subjunctive tenses"
+    subtopics: ["future/conditional perfect", "perfect/pluperfect/future-perfect subjunctive", "sequence of tenses"]
+    uncertain: true
+    uncertainty_reason: "Explicit FUNAG intermediate-II content, but CEFR equivalence is approximate."
+    source_refs: [funag]
+  - id: pt_b2_personal_infinitive_reduced
+    domain: syntax
+    level: B2
+    topic: "Simple/compound personal infinitive and reduced clauses"
+    subtopics: ["infinitive subject reference", "gerund/participle clauses", "finite-nonfinite reformulation"]
+    uncertain: true
+    uncertainty_reason: "Explicit FUNAG B2-equivalent content under an approximate crosswalk."
+    source_refs: [funag]
+  - id: pt_b2_government_relatives
+    domain: selection
+    level: B2
+    topic: "Verbal/nominal government and governed relatives"
+    subtopics: ["verb/noun/adjective prepositions", "preposition plus relative", "cujo agreement"]
+    uncertain: true
+    uncertainty_reason: "Explicit FUNAG intermediate-II content; exact CEFR boundary remains approximate."
+    source_refs: [funag]
+  - id: pt_b2_passive_se
+    domain: voice
+    level: B2
+    topic: "Synthetic/passive se and impersonal se"
+    subtopics: ["transitivity", "subject agreement", "passive versus impersonal interpretation"]
+    uncertain: true
+    uncertainty_reason: "FUNAG supports the topic, but the crosswalk is approximate and Brazilian usage is register-sensitive."
+    source_refs: [funag]
+  - id: pt_b2_register_linkage
+    domain: discourse
+    level: B2
+    topic: "Dense clause linkage, reported speech, and register variation"
+    subtopics: ["tense/deixis shift", "formal/informal alternatives", "argumentative connectors"]
+    uncertain: true
+    uncertainty_reason: "Functional domain consolidated from FUNAG/Celpe-Bras rather than a closed inventory."
+    source_refs: [funag, celpe_base]
+  - id: pt_c1_modal_register
+    domain: discourse
+    level: C1
+    topic: "Modalisation, idiomaticity, and genre-appropriate Brazilian register"
+    subtopics: ["hedging and stance", "address and formality", "idiomatic constructions", "cohesion"]
+    uncertain: true
+    uncertainty_reason: "FUNAG's C1-equivalent descriptors are functional; this is not a structure-by-structure assignment."
+    source_refs: [funag, celpe_base]
+  - id: pt_c1_compression_control
+    domain: discourse
+    level: C1
+    topic: "Advanced clause compression, agreement, and formal clitic recognition"
+    subtopics: ["reduced clauses", "complex tense/deixis shifts", "impersonal agreement", "formal enclisis/mesoclisis mainly receptive"]
+    uncertain: true
+    uncertainty_reason: "Inferred from advanced performance and register needs; no authoritative BR CEFR grammar checklist exists."
+    source_refs: [funag, celpe_base, camoes]
+
