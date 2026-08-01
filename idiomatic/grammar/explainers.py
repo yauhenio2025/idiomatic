@@ -57,6 +57,10 @@ EXPLAINER_UNITS: dict[str, ExplainerUnit] = {
     "pt": ExplainerUnit("pt_escuta", "0 Escuta"),
     "es": ExplainerUnit("es_escucha", "0 Escucha"),
     "de": ExplainerUnit("de_hoeren", "0 Hören"),
+    # Italian has no authored explainer scripts yet, but the podcast
+    # season (grammar/podcasts.py) routes Italian episodes through the
+    # same renderer — and future it explainers land here.
+    "it": ExplainerUnit("it_ascolto", "0 Ascolto"),
 }
 
 

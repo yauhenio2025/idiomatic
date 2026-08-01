@@ -590,7 +590,10 @@ async def grammar_audio(
     """Stream one grammar drill mp3 from staged_audio/grammar/<lang>/.
     Same auth + strict path validation as the idiom audio route."""
     _check_token(x_admin_token or token)
-    if not re.fullmatch(r"[a-z]{2}", lang) or not _AUDIO_FILE_RE.fullmatch(filename):
+    # 'podcasts' rides the grammar audio tree as a pseudo-language: the
+    # season MP3s live in staged_audio/grammar/podcasts/.
+    if (not re.fullmatch(r"[a-z]{2}|podcasts", lang)
+            or not _AUDIO_FILE_RE.fullmatch(filename)):
         raise HTTPException(400, "bad path")
     p = (Path(get_settings().data_dir) / "staged_audio" / "grammar"
          / lang / filename)

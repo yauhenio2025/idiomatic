@@ -723,6 +723,38 @@ async def admin_f4_pairs_status(_: None = Depends(authed_admin)) -> dict:
     }
 
 
+@app.post("/admin/podcasts-build")
+async def admin_podcasts_build(_: None = Depends(authed_admin)) -> dict:
+    """Render the grammar-walks season to numbered MP3s (design:
+    unit-specs/PODCASTS_DESIGN.md — plain files, not cards). Background;
+    poll /admin/grammar-status. Idempotent via the clip cache."""
+    from .grammar import podcasts
+    from .grammar import service as grammar_service
+    if not grammar_service.claim_grammar_job("podcasts", "podcasts"):
+        return {"started": False, "reason": "already running"}
+
+    async def _run() -> None:
+        try:
+            result = await podcasts.build_podcasts()
+            grammar_service._state["podcasts"] = result
+        except Exception as e:  # noqa: BLE001
+            log.warning("admin.podcasts_build.failed", err=repr(e)[:200])
+            grammar_service._state["error"] = repr(e)[:200]
+        finally:
+            grammar_service._state["running"] = False
+
+    _spawn_bg(_run())
+    return {"started": True}
+
+
+@app.get("/admin/podcasts-list")
+async def admin_podcasts_list(_: None = Depends(authed_admin)) -> dict:
+    from .grammar import podcasts
+    return {"episodes": podcasts.list_episodes(),
+            "note": "stream/download via /ui/api/audio/grammar/podcasts/"
+                    "<file>?token=<admin token>"}
+
+
 @app.get("/admin/video-info")
 async def admin_video_info(
     youtube_id: str, agent: dict = Depends(authed_agent),
