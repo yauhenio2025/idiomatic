@@ -7,7 +7,9 @@ est_minutes: 15
 evidence_refs:
   - "docs/research/error-profiles/de.md §3-A: 6 verbatim adjective/determiner-ending errors, 2019–2024"
   - "docs/research/error-profiles/de.md §6: de_adj_endings is the strongest verified German error class"
+  - "idiomatic/grammar/data/explainers/de_adjektivendungen.md"
   - "idiomatic/grammar/morphology.py: deterministic weak, mixed, and strong NP-declension matrices"
+  - "docs/GRAMMAR_STRATEGY.md §3b"
 ---
 
 ## SCRIPT
@@ -16,13 +18,13 @@ Today we are going to turn German adjective endings into one spoken decision tre
 
 This is worth doing because the evidence is unusually strong. Your German record contains six retained adjective or determiner errors between 2019 and 2024. They are not six versions of one memorized phrase. They reach all three adjective patterns and several combinations of gender, case, and number. Here are four of the recorded forms.
 
-TL: Der härtester Konkurrent.
+TL: Der härtester Konkurrent
 
-TL: Er hat sehr tiefgründiger Schlüsse daraus gezogen.
+TL: Er hat sehr tiefgründiger Schlüsse daraus gezogen
 
-TL: Sie haben keinen kohärentes Weltbild.
+TL: Sie haben keinen kohärentes Weltbild
 
-TL: Meine ultimative Ziel ist, daraus einen Film zu machen.
+TL: Meine ultimative Ziel ist daraus einen Film zu machen
 
 The corrected phrases are these.
 
@@ -50,7 +52,7 @@ TL: die Agentur
 
 In the plural, gender stops distinguishing the article and adjective table. Plural becomes its own destination. That is why a bare numeral phrase such as the recorded form below is a number problem, not a noun-gender problem.
 
-TL: Es kommen noch zwölf weiterer.
+TL: Es kommen noch zwölf weiterer
 
 The repair is:
 
@@ -80,7 +82,7 @@ TL: Das neue Programm funktioniert.
 
 Now decision three: inspect what stands to the left of the adjective. This is the branch that chooses one of the three patterns.
 
-If a definite article or another fully inflected der-type determiner stands there, choose the weak pattern. Think: the determiner has already done the loud grammatical signaling, so the adjective can be quiet.
+If a definite article or another similarly fully inflected determiner stands there, choose the weak pattern. Think: the determiner has already done the loud grammatical signaling, so the adjective can be quiet.
 
 TL: der neue Bericht
 
@@ -88,7 +90,7 @@ TL: diesen neuen Bericht
 
 TL: mit dem neuen Bericht
 
-If an ein-type word stands there, choose the mixed pattern. This family includes the indefinite article, the negative determiner, and possessives: words built like the forms of ein. Sometimes they display an ending and sometimes they leave a hole. The adjective is weak where the determiner speaks clearly and strong where the determiner leaves the crucial signal unsaid.
+If an indefinite article, negative determiner, or possessive stands there, choose the mixed pattern. Members of this family sometimes display an ending and sometimes leave a hole. The adjective is weak where the determiner speaks clearly and strong where the determiner leaves the crucial signal unsaid.
 
 TL: ein neuer Bericht
 
@@ -104,7 +106,7 @@ TL: mit neuem Material
 
 TL: kritische Analysen
 
-So the three branches are not three unrelated paradigms. They are three distributions of the same signaling work. Definite word present: weak. Ein-family present: mixed. Nothing present: strong.
+So the three branches are not three unrelated paradigms. They are three distributions of the same signaling work. Fully inflected determiner present: weak. Indefinite, negative, or possessive determiner present: mixed. Nothing present: strong.
 
 Let us make the weak branch easy enough to hear. After a definite determiner, the adjective has only two endings to choose from. The quiet ending is used in five common singular cells: all three nominative singulars, plus feminine and neuter accusative singular. Everywhere else, use the longer weak ending.
 
@@ -138,7 +140,7 @@ Here is self-check two. Say, “We discussed the important question.” The ques
 
 TL: Wir haben die wichtige Frage besprochen.
 
-Now the mixed branch. You do not need to memorize it as a full second table. Listen for three especially important holes in the ein-family: masculine nominative, neuter nominative, and neuter accusative. In those cells, the determiner has no ending. The adjective supplies the strong signal.
+Now the mixed branch. You do not need to memorize it as a full second table. Listen for three especially important holes in that determiner family: masculine nominative, neuter nominative, and neuter accusative. In those cells, the determiner has no ending. The adjective supplies the strong signal.
 
 TL: ein neuer Bericht
 
@@ -152,7 +154,7 @@ TL: kein kohärentes Weltbild
 
 TL: mein ultimatives Ziel
 
-Elsewhere, an ein-type word shows a clear ending and the adjective settles into the weak pattern.
+Elsewhere, a member of this determiner family shows a clear ending and the adjective settles into the weak pattern.
 
 TL: eine neue Studie
 
@@ -178,7 +180,7 @@ TL: klare Sprache
 
 TL: kaltes Wasser
 
-The bare nominative and accusative plural uses the short plural signal.
+The bare nominative and accusative plural use the short plural signal.
 
 TL: tiefgründige Schlüsse
 
@@ -206,33 +208,33 @@ Here is self-check four. Say, “Critical analyses can change the debate.” The
 
 TL: Kritische Analysen können die Debatte verändern.
 
-The final engine step is the noun. Usually the adjective has been the visible puzzle, but a complete noun phrase may also require noun inflection. Dative plurals commonly add an n when the plural does not already end in n or s.
+The final engine step is the noun. Usually the adjective has been the visible puzzle, but a complete noun phrase may also require noun inflection. Dative plurals commonly add a final nasal consonant when the ordinary plural does not already end in that sound or an ess sound.
 
 TL: mit neuen Büchern
 
-Weak masculine nouns add n or en outside the nominative singular.
+Weak masculine nouns typically take an additional ending outside the nominative singular.
 
 TL: der junge Student
 
 TL: mit dem jungen Studenten
 
-And masculine or neuter genitive singular nouns usually carry s or es.
+And masculine or neuter genitive singular nouns usually carry their own genitive ending.
 
 TL: wegen des neuen Berichts
 
 This noun check matters because a perfectly chosen adjective ending cannot rescue the wrong noun form. The deterministic engine follows the same order: it establishes the determiner class and adjective pattern, builds the article, attaches the adjective ending, and then applies the noun's own case and number rules.
 
-There is one recorded form that looks like ordinary agreement but needs a separate diagnosis.
+There is one recorded sentence that looks like ordinary agreement but needs a separate diagnosis.
 
-TL: ein größtmöglichstes Publikum
+TL: Ich brauche ein größtmöglichstes Publikum
 
 The target is:
 
-TL: ein größtmögliches Publikum
+TL: Ich brauche ein größtmögliches Publikum.
 
-The stem already means the greatest possible. Adding another superlative marker duplicates the degree. First choose the right stem, then add only the mixed neuter ending. The decision tree controls inflection; it cannot repair a malformed adjective stem unless you notice the duplication.
+The adjective stem already expresses the upper limit: as large as possible. An additional superlative suffix is nonstandard here. First choose the right stem, then add only the mixed neuter ending. The decision tree controls inflection; it cannot repair a malformed adjective stem unless you notice the extra degree marker.
 
-Let us now run the tree at speaking speed. Suppose you want to say “with our new strategy.” Strategy is feminine singular. The preposition selects dative. Our is an ein-family possessive. In dative it visibly carries the signal, so the adjective uses the quiet longer ending. The noun itself does not change.
+Let us now run the tree at speaking speed. Suppose you want to say “with our new strategy.” Strategy is feminine singular. The preposition selects dative. Our is a possessive in the mixed family. In dative it visibly carries the signal, so the adjective uses the quiet longer ending. The noun itself does not change.
 
 TL: mit unserer neuen Strategie
 
@@ -240,7 +242,7 @@ Suppose you want “a convincing argument” as the subject. Argument is neuter 
 
 TL: ein überzeugendes Argument
 
-Suppose you want “with convincing arguments,” with no determiner. Plural, dative, strong branch. The adjective carries the dative plural ending, and the plural noun receives its own dative n.
+Suppose you want “with convincing arguments,” with no determiner. Plural, dative, strong branch. The adjective carries the dative plural ending, and the plural noun receives its own dative ending.
 
 TL: mit überzeugenden Argumenten
 
@@ -268,7 +270,7 @@ TL: neuer Bericht
 
 That is meaningful contrast, not mechanical chanting: who is doing what, which referent is known, and whether a determiner is present all change the form. Interleaving those nearby choices trains the decision itself.
 
-One boundary keeps the tree from spreading too far. German declines an adjective when it stands attributively inside the noun phrase, before the noun. A predicate adjective after verbs such as sein, werden, and bleiben has no case ending.
+One boundary keeps the tree from spreading too far. German declines an adjective when it is attributive to an expressed or understood noun. A predicate adjective after linking verbs meaning be, become, and remain has no case ending.
 
 TL: der neue Bericht
 
@@ -278,7 +280,13 @@ An adverbial adjective is uninflected as well.
 
 TL: Die Redaktion reagiert schnell.
 
-So before launching the tree, ask one tiny preliminary question: is this adjective actually attached to a following noun? If yes, run the noun-phrase route. If it describes the subject after a linking verb or modifies the action, keep the citation form. This prevents the opposite error: adding a beautifully calculated ending where German wants none.
+When the noun is understood or the adjective has become a noun, however, the ending remains.
+
+TL: der Neue
+
+TL: etwas Neues
+
+So before launching the tree, ask whether the adjective belongs inside a noun phrase. If it does, decline it even when the noun itself is omitted. If it describes a subject after a linking verb or modifies an action, leave it uninflected.
 
 When two adjectives modify the same noun, each one takes the ending selected by the same branch. You do not spend the signal on the first adjective and leave the second bare.
 
@@ -288,4 +296,6 @@ TL: mit neuen, verlässlichen Daten
 
 The punctuation changes nothing. Gender and number, case, and determiner family remain shared inputs; each attributive adjective receives its own matching output. That makes coordinated phrases a useful final stress test for the decision tree.
 
-Sixty-second recap. Build every German adjective phrase from left to right in five decisions. First, retrieve the noun's gender and decide singular or plural. Second, get the case from the phrase's job: subject, direct object, dative role, or possession. Third, inspect the determiner. A definite der-type word selects weak endings. An ein-type word, including kein and possessives, selects mixed endings. No determiner selects strong endings. Fourth, attach the adjective ending: weak is mostly the longer quiet ending, mixed uses strong endings where the ein-word has a hole, and strong makes the adjective carry the signal. Fifth, check the noun for dative plural, weak-noun, or genitive inflection. Do not start by guessing the final syllable. Run the tree: gender and number, case, determiner family, adjective, noun. One route, every time.
+## 60-SECOND RECAP
+
+Sixty-second recap. Build every German adjective phrase from left to right in five decisions. First, retrieve the noun's gender and decide singular or plural. Second, get the case from the phrase's job: subject, direct object, dative role, or possession. Third, inspect the determiner. A definite article or similarly inflected determiner selects weak endings. An indefinite article, negative determiner, or possessive selects mixed endings. No determiner selects strong endings. Fourth, attach the adjective ending: weak is mostly the longer quiet ending, mixed uses strong endings where the determiner has a hole, and strong makes the adjective carry the signal. Fifth, check the noun for dative plural, weak-noun, or genitive inflection. Do not start by guessing the final syllable. Run the tree: gender and number, case, determiner family, adjective, noun. One route, every time.

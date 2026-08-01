@@ -9,6 +9,9 @@ evidence_refs:
   - "docs/research/error-profiles/pt.md §2 categories 1 and 6, §3 fossils 5–7 and 16"
   - "docs/commissions/ERROR_PROFILE_PROPOSAL.md §1 finding 2 and §2 phase 3"
   - "docs/GRAMMAR_STRATEGY.md §3b, interleaving confusable forms"
+  - "Pan et al. (2025), Learning and Instruction 95, 102045: https://sc-pan.github.io/pdf/PRKL_2024.pdf"
+  - "Real Academia Española, Diccionario de la lengua española, inserir: https://dle.rae.es/inserir"
+  - "Michaelis, Dicionário Brasileiro da Língua Portuguesa, planear and planejar: https://michaelis.uol.com.br/moderno-portugues/busca/portugues-brasileiro/planear"
 ---
 
 ## SCRIPT
@@ -17,21 +20,21 @@ Sometimes your Portuguese opens its mouth and Spanish comes out. Not a whole Spa
 
 This is not random. It is the most visible systemic weakness in your records. In Spanish, twenty-six of the sixty-two preserved learner-error pairs involve transfer from another language, with roughly fourteen pointing toward Portuguese. In Portuguese, five hundred and eighty-eight of one thousand and ninety-eight classified error rows involve Romance lexical or morphological transfer, mostly from Spanish and some from Italian.
 
-Those percentages are not directly comparable. The Spanish record preserves only sixty-two wrong forms, while the Portuguese record preserves more than a thousand. The teachers also changed how they captured errors over time. But the direction is unmistakable: related languages are competing at the moment of retrieval.
+Those percentages are not directly comparable. The Spanish record preserves only sixty-two wrong forms, while the Portuguese record preserves more than a thousand. The teachers also changed how they captured errors over time. But the directional pattern is unmistakable: forms associated with related languages repeatedly appear where the lessons expect a target-language alternative.
 
-That last phrase matters. This is often not a knowledge problem. If I showed you the two words on a screen, you would probably choose correctly. The failure happens before the screen exists, while speaking. Several related candidates become active, the fastest one wins, and your mouth commits before the language label has fully caught up.
+One plausible explanation is competition during retrieval rather than a simple knowledge gap. The records do not test recognition or distinguish that account from incomplete learning. Still, the pattern is consistent with several related candidates becoming active while you speak, allowing a familiar one to win before the language label has fully caught up.
 
 Close relatives create this problem precisely because they help so much. Spanish and Portuguese share thousands of recognizable forms, similar sentence patterns, and a great deal of history. Similarity accelerates comprehension. It also lowers the alarm threshold. A word that sounds Romance-shaped feels licensed, even when it belongs to the neighboring system.
 
-Your Spanish record gives a perfect specimen. The Portuguese software verb reached the microphone first.
+Your Spanish record gives a useful specimen from software talk. The lesson treats the ordinary Portuguese choice as the intrusion.
 
 TL: [pt] inserir
 
-The Spanish target is different.
+The ordinary Spanish software target is different. A Spanish dictionary also records a separate verb with the same spelling as the Portuguese form. Its existence does not make that spelling the ordinary choice for this software context.
 
 TL: [es] insertar
 
-The intrusion itself was recorded twice in twenty twenty-two, and the Spanish target was taught or retaught sixteen times from twenty nineteen through twenty twenty-four. That span tells us this is not a rare word you once forgot. It is a stable retrieval race in a domain you discuss constantly.
+The intrusion itself was recorded twice in twenty twenty-two, and the Spanish target was taught or retaught sixteen times from twenty nineteen through twenty twenty-four. That span tells us this is not a rare word you once forgot. It is a stable contrast problem in a domain you discuss constantly, whether its source is retrieval competition, incomplete lexical learning, or both.
 
 The solution is not to distrust all cognates. Most cognates are useful. The solution is to build a short watchlist for the forms that have actually crossed the border. Consider three more preserved Portuguese-shaped Spanish errors.
 
@@ -109,7 +112,7 @@ The same constructional transfer runs in the other direction. Portuguese commonl
 
 TL: [pt] viajar para um lugar
 
-The Spanish record preserves this transferred frame.
+The Spanish profile reconstructs the attested fragment meaning “to travel toward” in this transferred frame.
 
 TL: [es] viajar para un lugar
 
@@ -149,7 +152,7 @@ Your Portuguese record shows why the gate must include meaning, not just sound. 
 
 TL: [pt] todavia
 
-In Spanish, the accented cognate commonly means “still” or “yet.” In Portuguese, the unaccented word is a formal connector meaning “however” or “nevertheless.” Your intended Portuguese word for continuing time was:
+In Spanish, the accented cognate commonly means “still” or “yet.” In ordinary modern Portuguese, the unaccented word normally works as a relatively formal adversative connector meaning “however” or “nevertheless.” Your intended Portuguese word for continuing time was:
 
 TL: [pt] ainda
 
@@ -165,7 +168,7 @@ Another recorded case looks almost too small to matter.
 
 TL: [es] contento
 
-Spanish and Italian support that ending. Brazilian Portuguese uses the adjective ending in “e.”
+Spanish and Italian support that ending. Brazilian Portuguese uses a different final vowel in this adjective.
 
 TL: [pt] contente
 
@@ -203,7 +206,7 @@ Self-check five. Set the Portuguese gate, then say, “There is nothing here.”
 
 TL: [pt] Não tem nada aqui.
 
-How do you train all this without making the languages more confused? The research summary behind this project gives a reassuring answer. Deliberately interleaving confusable forms can improve separation, including across two Romance languages. The key is contrastive retrieval, not passive exposure. You should have to choose the receiving language and produce its form before seeing the answer.
+How do you train all this without making the languages more confused? The research summary behind this project offers cautious support for deliberate interleaving, including practice that involved two Romance languages. That study tested French and Spanish tense rules, not this exact Portuguese-Spanish watchlist, so it does not prove that mixing always reduces interference. Use it as support for contrastive retrieval: choose the receiving language and produce its form before seeing the answer.
 
 Use three kinds of contrast. First, same meaning, different whole word.
 
@@ -227,7 +230,7 @@ Do not block fifty Portuguese items and then fifty Spanish items. Begin with a v
 
 There is one more practical rule: suspicious ease is a signal. When a sophisticated word arrives instantly and looks perfectly Romance, spend half a second checking its passport. Ask: have I retrieved this exact item in the target language, or have I generated it from a cousin? You do not need that pause for every common word. Use it for your documented watchlist: software verbs, recurring discourse words, destination frames, and irregular paradigm cells.
 
-Variety labels can sometimes disguise the same problem. Your target is Brazilian Portuguese, and the Portuguese record is internally consistent about that variety. It corrects this Spanish-shaped or European-looking learner form:
+Variety labels require care because a teacher's preference is not always a grammatical correction. Your target is Brazilian Portuguese, and the Portuguese record consistently prefers the forms below. For accessing software, it redirects a form that is standard especially in European Portuguese:
 
 TL: [pt] aceder
 
@@ -235,13 +238,15 @@ to the Brazilian target:
 
 TL: [pt] acessar
 
-It likewise redirects the learner form for “to plan.”
+For the verb meaning “to plan,” the record redirects this form:
 
 TL: [pt] planear
 
+to this one:
+
 TL: [pt] planejar
 
-This does not mean those other forms are meaningless everywhere in the Portuguese-speaking world. It means they are not the targets in this learning system. A language gate therefore needs a variety setting too: Brazilian Portuguese, not an imagined blend assembled from Spanish and any Portuguese cognate that happens to be available.
+The first alternative is standard in European Portuguese, and a Brazilian dictionary also lists it by referring readers to the second. Your teacher consistently preferred the more usual Brazilian form. These are variety-and-frequency targets, not claims that the alternatives are meaningless or ungrammatical. A language gate therefore needs a variety setting too: Brazilian Portuguese, with its preferred vocabulary, rather than an undifferentiated blend assembled from any available cognate.
 
 When an intruder does escape, use a short repair sequence. First, stop without explaining the whole mistake. Second, say the correct target chunk once. Third, place it in a meaningful sentence. Finally, contrast it with the source-language form once, then move on. The aim is to strengthen the winning route, not to chant the error. For the software pair, the sequence ends with one Spanish sentence and one Portuguese sentence.
 
@@ -253,7 +258,7 @@ That watchlist should stay directional. Portuguese to Spanish includes the recor
 
 ## 60-SECOND RECAP
 
-Here is the one-minute version. Your Portuguese speaks Spanish because close languages activate one another, and the fastest candidate can reach speech before the target-language gate is secure. The evidence shows transfer at three levels: whole words, paradigm cells, and constructions. Do not repair a cousin by changing its ending. Retrieve the target word or chunk whole. Use a brief language anchor, keep a directional watchlist, and practice the dangerous pairs in alternating languages. Remember the core contrasts.
+Here is the one-minute version. A useful working explanation for these slips is that close languages activate one another, allowing a familiar candidate to reach speech before the target-language gate is secure; the records show the outputs, not the mental mechanism. Transfer appears at three levels: whole words, paradigm cells, and constructions. Do not repair a cousin by changing its ending. Retrieve the target word or chunk whole. Use a brief language anchor, keep a directional watchlist, and practice the dangerous pairs in alternating languages. Remember the core contrasts.
 
 TL: [es] insertar
 

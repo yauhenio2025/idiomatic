@@ -10,6 +10,7 @@ evidence_refs:
   - "docs/research/error-profiles/pt.md §6, pt_futuro_subjuntivo"
   - "idiomatic/grammar/data/explainers/pt_futuro-subjuntivo.md"
   - "docs/GRAMMAR_STRATEGY.md §3b, meaningful selection practice"
+  - "Real Academia Galega / Instituto da Lingua Galega, Normas ortográficas e morfolóxicas do idioma galego §17.1, future-subjunctive note: https://publicacions.academia.gal/index.php/rag/catalog/book/172"
 ---
 
 ## SCRIPT
@@ -18,7 +19,7 @@ Portuguese has a tense that can make a Spanish speaker feel as if the floor has 
 
 That form is the future subjunctive. It is not a museum piece. In Brazilian Portuguese it appears in ordinary plans, conditions, deadlines, promises, and instructions.
 
-The title calls it the tense only Portuguese kept. Let us make that memorable claim linguistically precise. Older Spanish had a future subjunctive too, and remnants still appear in legal formulas and fixed expressions. Productive future subjunctive also survives in Galician. But among the large modern Romance languages most learners meet, Portuguese is the language that uses it constantly in everyday speech. So “only Portuguese” is a useful family portrait, not a claim that no neighboring variety preserved it.
+The title calls it the tense only Portuguese kept. Let us make that memorable claim linguistically precise. Older Spanish had a future subjunctive too, and remnants still appear in legal formulas and fixed expressions. Galician and Spanish retain fossilized or restricted remnants; Portuguese keeps the tense productive in ordinary modern use. So “only Portuguese” is a useful family portrait, not a claim that no neighboring variety preserved a trace of it.
 
 For you, this is not an abstract curiosity. The Portuguese profile found seven future-subjunctive selection errors in twenty twenty and twenty twenty-one, followed by eight remediation notes in twenty twenty-three and twenty twenty-four. The teacher was still packaging forms such as “when you arrive” and “if they manage” years later. This is a persistent system, not a one-day slip.
 
@@ -30,7 +31,11 @@ The phrase meaning “I am going to return” is a perfectly good main-clause fu
 
 TL: quando eu voltar, eu vou ajustar os cartões
 
-Picture a gate. The clause after the gate names an event that must become true before the main event can proceed. The event is future, but it is not yet settled as a fact. Portuguese marks that pending status inside the gate.
+Picture a gate. The clause after the gate sets the pending circumstance under which the main clause is evaluated. It need not happen first in chronological time. The event is future, but it has not yet been realized at the moment of speaking. Portuguese marks that pending status inside the gate.
+
+Pending does not mean unlikely. You can be completely confident that the event will happen and still use this form because the event has not happened yet. Sunrise gives us a useful extreme case: the probability is not in doubt, but the time clause is still future-facing.
+
+TL: Quando o sol nascer, a cidade vai acordar.
 
 TL: Quando eu voltar, vou ajustar os cartões.
 
@@ -96,7 +101,7 @@ Irregular verbs reveal the machinery.
 
 TL: quando eu tiver; quando nós tivermos; quando eles tiverem
 
-The most useful formation rule starts from a past form you may already know. Take the third-person plural of the completed past and remove its final two letters. The remaining stem is the first and third person singular future subjunctive.
+The most useful formation rule starts from a past form you may already know. Take the third-person plural of the completed past and remove the last two letters, A and M. The remaining stem is the first and third person singular future subjunctive.
 
 TL: tiveram; tiver
 
@@ -118,7 +123,11 @@ Then add the personal endings. Hear one full high-frequency pattern.
 
 TL: fizer, fizeres, fizer, fizermos, fizerdes, fizerem
 
-In Brazilian conversation, the form for “you all” is normally carried by “vocês,” so you will hear the third-person plural form much more than the older second-person plural form. The full pattern still explains the system; your productive core can focus on the persons you actually use.
+In Brazilian conversation, the plural pronoun meaning “you all” normally takes the third-person plural form, which you will hear much more than the traditional second-person plural form.
+
+TL: vocês fizerem
+
+The full pattern still explains the system; your productive core can focus on the persons you actually use.
 
 Regular verbs hide the historical stem because removing the past plural ending returns something that looks like the infinitive.
 
@@ -192,7 +201,7 @@ Now compare a remote hypothesis. If the speaker imagines a less real or counterf
 
 TL: Se eu viajasse em janeiro, ficaria mais tempo.
 
-So there are two different “if” systems. Open future condition: future subjunctive. Remote or contrary-to-fact condition: imperfect subjunctive.
+For this future-facing contrast, keep two conditional frames apart. An open future condition takes the future subjunctive. A remote or contrary-to-fact condition takes the imperfect subjunctive. Other time frames can produce other patterns, so this is not a complete inventory of every conditional sentence.
 
 There is also an important false trigger. The same short word can mean “whether” inside an indirect question. Then it does not create a condition.
 
@@ -214,9 +223,9 @@ The future subjunctive also appears when a future person, place, or thing has no
 
 TL: Quem chegar primeiro vai abrir a sala.
 
-TL: O que você decidir estará bem para mim.
+TL: O que você decidir vai estar ótimo para mim.
 
-TL: Onde você estiver, eu ligo às oito.
+TL: Onde você estiver, vou ligar às oito.
 
 TL: Qualquer pessoa que tiver o link poderá entrar.
 
@@ -270,7 +279,7 @@ TL: Se eles conseguirem financiamento...
 
 TL: Assim que ela fizer a análise...
 
-Then attach the ordinary future.
+Then finish the main clause in whatever form the meaning requires. These three predictions use the ordinary spoken future.
 
 TL: vou começar a revisão
 
@@ -278,11 +287,11 @@ TL: vão ampliar o projeto
 
 TL: vai publicar o relatório
 
-This chunks the decision at the point where your recorded errors occur. You are not failing to express future time. You already use the spoken future well. You are marking future twice: once inside the gate and once in the main clause. Portuguese asks you to mark the subordinate event as pending, then leave the main future exactly where it belongs.
+This chunks the decision at the point where your recorded errors occur. You are not failing to express future time. You already use the spoken future well. In these examples, the error is marking the future with the spoken construction in both clauses. Portuguese asks you to mark the subordinate event as pending and use the spoken future only in the main clause.
 
 ## 60-SECOND RECAP
 
-Here is the future subjunctive in one minute. Use it inside a dependent clause when a future event is still pending: after a time gate, in an open condition, or in an open future relative. Keep the ordinary spoken or simple future in the main clause.
+Here is the future subjunctive in one minute. Use it in a dependent clause for a pending future event: after a time gate, in an open condition, or in an open future relative. Let the main clause follow its meaning—often future, but sometimes imperative or present.
 
 TL: Quando eu tiver tempo, vou ler.
 
@@ -290,8 +299,8 @@ TL: Se eles conseguirem financiamento, vão ampliar o projeto.
 
 TL: Quem chegar primeiro vai abrir a sala.
 
-Build irregular forms from the completed-past plural: remove the final two letters.
+Build irregular forms from the completed-past plural: remove the last two letters, A and M.
 
 TL: tiveram; tiver. Fizeram; fizer. Foram; for.
 
-Do not trigger the tense from future meaning alone. Habits take the indicative, remote conditions take the imperfect subjunctive, and expressions such as “before” and “in case” normally take the present subjunctive. Your recurring trap is putting the spoken future inside both clauses. Remember the repair: no “going to” inside the gate. Mark the event as pending, pass through the gate, and put the ordinary future in the main clause.
+Future meaning alone is not enough. Established habits normally take the indicative; remote conditions take the imperfect subjunctive; and expressions such as “before” or “in case” take the present subjunctive. Your recurring trap is putting the spoken future in both clauses. Repair it: no “going to” inside the gate. Mark the event as pending, then let the main clause express a prediction, instruction, or present consequence.

@@ -13,9 +13,9 @@ evidence_refs:
 
 ## SCRIPT
 
-If you avoid the Italian congiuntivo, you can become remarkably good at building sentences that never require it. You can turn an opinion into a statement. You can keep the same subject and use an infinitive. You can choose a conjunction that takes the indicative. The result may be fluent, but the grammar system remains unavailable precisely when you want to express doubt, desire, evaluation, or distance from a proposition.
+If you avoid the Italian subjunctive, you can become remarkably good at building sentences that never require it. You can turn an opinion into a statement. You can keep the same subject and use an infinitive. You can choose a conjunction that takes the indicative. The result may be fluent, but the grammar system remains unavailable precisely when you want to express doubt, desire, evaluation, or distance from a proposition.
 
-Your evidence needs an honest introduction. The Italian corpus is thin: eleven recorded production errors from one 2019 lesson, and no verbatim congiuntivo error. So we cannot claim that one particular wrong subjunctive form is fossilized. There is one implicit teacher target in a later essay set, and your current self-report explicitly names the congiuntivo as a weakness. In an avoidance pattern, zero recorded errors is not proof of mastery. It may simply mean the risky structure did not get produced.
+Your evidence needs an honest introduction. The Italian corpus is thin: eleven recorded production errors from one 2019 lesson, and no verbatim subjunctive error. So we cannot claim that one particular wrong subjunctive form is fossilized. There is one implicit teacher target in a later essay set, and your current self-report explicitly names the subjunctive as a weakness. In an avoidance pattern, zero recorded errors is not proof of mastery. It may simply mean the risky structure did not get produced.
 
 The teacher's target was embedded in this frame:
 
@@ -23,7 +23,7 @@ TL: Abbiamo bisogno di una nuova tecnologia che riesca...
 
 The record does not preserve the wrong form, so we will not invent one. We will use the target as a doorway into the system.
 
-First, forget the idea that the congiuntivo is an exotic tense. It is a mood. Tense locates an event in time. Mood tells us how the speaker presents the proposition: asserted as part of the conversational ground, or held inside somebody's wish, doubt, judgment, purpose, possibility, or other non-assertive frame.
+First, forget the idea that the subjunctive is an exotic tense. It is a mood. Tense locates an event in time. Mood helps mark how a clause is integrated into the speaker's stance. The subjunctive commonly places it inside somebody's wish, doubt, judgment, purpose, possibility, or another dependent frame; it does not by itself tell you whether the event is real.
 
 Compare two sentences.
 
@@ -33,7 +33,7 @@ TL: Dubito che Marco sia pronto.
 
 In the first, the subordinate claim is presented as known. In the second, it sits inside doubt. The event has not moved to a different time. The speaker's stance has changed, and the mood makes that stance audible.
 
-This gives us a practical architecture: a frame, then a proposition introduced by che. The frame controls how the proposition is presented.
+This gives us a practical architecture: a frame, then a dependent proposition introduced by the Italian equivalent of “that.” The frame controls how the proposition is presented.
 
 TL: Voglio che tu venga.
 
@@ -41,13 +41,13 @@ TL: È possibile che il piano funzioni.
 
 TL: Mi sorprende che loro siano già qui.
 
-Do not reduce that architecture to “che equals subjunctive.” Che only opens the clause. A factual frame can still take the indicative.
+Do not reduce that architecture to “the word introducing the clause automatically triggers the subjunctive.” That word only opens the clause. A factual frame can still take the indicative.
 
 TL: È chiaro che il piano funziona.
 
 TL: So che loro sono già qui.
 
-Your first decision, then, is not about a verb ending. Ask what the main frame does to the subordinate proposition. Does it assert it, or does it suspend it inside will, doubt, emotion, evaluation, necessity, purpose, or concession?
+Your first decision, then, is not about a verb ending. Ask what the main frame does to the subordinate proposition. Does it present it directly, or embed it under will, doubt, emotion, evaluation, necessity, purpose, or concession?
 
 Here is self-check one. Complete the idea “I doubt that he has enough time.”
 
@@ -55,7 +55,7 @@ Here is self-check one. Complete the idea “I doubt that he has enough time.”
 
 TL: Dubito che abbia abbastanza tempo.
 
-The most productive trigger family is will and influence. One person wants, asks, permits, prevents, or requires another person or thing to act.
+One productive trigger family is will and influence. One person wants, asks, permits, prevents, or requires another person or thing to act.
 
 TL: Voglio che tu legga il rapporto.
 
@@ -63,7 +63,7 @@ TL: Il direttore chiede che il testo sia più breve.
 
 TL: Bisogna che il governo intervenga.
 
-Notice the two-subject pattern. When the subject stays the same, Italian often prefers an infinitive and no subordinate congiuntivo clause.
+Notice the two-subject pattern. When the subject stays the same, Italian often prefers an infinitive and no subordinate subjunctive clause.
 
 TL: Voglio partire domani.
 
@@ -71,7 +71,7 @@ When the desired actor is someone else, use the full clause.
 
 TL: Voglio che tu parta domani.
 
-That contrast is an efficient anti-avoidance tool. Do not force the congiuntivo where an ordinary same-subject infinitive is natural. But do not erase the second person just to escape the mood.
+That contrast is an efficient anti-avoidance tool. Do not force the subjunctive where an ordinary same-subject infinitive is natural. But do not erase the second person just to escape the mood.
 
 Necessity and impersonal evaluation form a related family.
 
@@ -93,11 +93,11 @@ TL: È possibile che arrivino tardi.
 
 TL: Può darsi che abbiano ragione.
 
-Affirmative opinion verbs deserve nuance. In careful standard Italian, especially when the opinion is subjective, tentative, or open to challenge, the congiuntivo is normal after verbs such as pensare and credere.
+Affirmative opinion verbs deserve nuance. In careful standard Italian, especially when the opinion is subjective, tentative, or open to challenge, the subjunctive is normal after verbs meaning “to think” and “to believe.”
 
 TL: Penso che sia una buona idea.
 
-The indicative is also heard, particularly when the speaker presents the content with confidence or in informal speech. That does not make mood random. It means the choice itself can communicate stance. For a dependable upper-intermediate default, use the congiuntivo after a personal opinion frame with che, especially in monitored speech and writing.
+The indicative is also heard, particularly when the speaker presents the content with confidence or in informal speech. That does not make mood random. It means the choice itself can communicate stance. For a dependable upper-intermediate default, use the subjunctive after a personal opinion frame followed by a dependent clause, especially in monitored speech and writing.
 
 But a phrase meaning “in my opinion” normally introduces a direct assertion and therefore the indicative.
 
@@ -111,7 +111,7 @@ Self-check two. Say, “I don't think this method works.”
 
 TL: Non penso che questo metodo funzioni.
 
-Emotion and evaluation are another strong route. The subordinate event may be entirely real; the congiuntivo does not mean it failed to happen. It means the sentence is foregrounding somebody's reaction or judgment rather than simply asserting the event.
+Emotion and evaluation are another strong route. The subordinate event may be entirely real; the subjunctive does not mean it failed to happen. It means the sentence is foregrounding somebody's reaction or judgment rather than simply asserting the event.
 
 TL: Sono contento che tu sia venuto.
 
@@ -121,19 +121,21 @@ TL: È strano che nessuno ne parli.
 
 That first sentence can refer to a person who is visibly present. Reality is not the dividing line. Presentation is.
 
-Now add conjunctions that build the frame directly. Purpose commonly takes the congiuntivo.
+Now add conjunctions that build the frame directly. Purpose commonly takes the subjunctive.
 
 TL: Te lo spiego affinché tu possa decidere.
 
-Time before an event takes the congiuntivo when the subordinate event is pending relative to the main one.
+The conjunction meaning “before” takes the subjunctive when it introduces a finite clause.
 
 TL: Parliamone prima che inizi la riunione.
 
-Concession with benché or sebbene also takes it.
+Concessive conjunctions meaning “although” also take it.
+
+TL: benché; sebbene
 
 TL: Sebbene il problema sia complesso, dobbiamo decidere.
 
-Ordinary factual concession with anche se normally uses the indicative.
+An ordinary factual concession phrased as in the next example normally uses the indicative.
 
 TL: Anche se il problema è complesso, dobbiamo decidere.
 
@@ -161,7 +163,7 @@ This relative-clause pattern helps explain the teacher target. The phrase does n
 
 TL: Abbiamo bisogno di una nuova tecnologia che riesca a ridurre i costi.
 
-Now we need forms. Fortunately, the present congiuntivo is smaller than it first appears. In the singular, the first, second, and third persons share one form. Context and the overt subject tell you who acts.
+Now we need forms. Fortunately, the present subjunctive is smaller than it first appears. In the singular, the first, second, and third persons share one form. Context and the overt subject tell you who acts.
 
 For a regular verb in the first conjugation, hear the singular and the third-person plural.
 
@@ -201,25 +203,25 @@ TL: voglio che venga
 
 TL: è possibile che faccia
 
-Self-check four. Say, “It is possible that they will come tomorrow.” Italian can use the present congiuntivo for this future-oriented dependent event.
+Self-check four. Say, “It is possible that they will come tomorrow.” Italian can use the present subjunctive for this future-oriented dependent event.
 
 [PAUSE]
 
 TL: È possibile che vengano domani.
 
-Mood is only half the choice; you also need relative time. With a present main frame, use the present congiuntivo for an event that is simultaneous or later.
+Mood is only half the choice; you also need relative time. With a present main frame, use the present subjunctive for an event that is simultaneous or later.
 
 TL: Penso che Marco sia a casa.
 
 TL: Voglio che Marco venga domani.
 
-If the dependent event happened earlier, use the congiuntivo passato: present congiuntivo of the auxiliary plus past participle.
+If the dependent event happened earlier, use the past subjunctive: present subjunctive of the auxiliary plus past participle.
 
 TL: Penso che Marco abbia letto il rapporto.
 
 TL: Sono contento che Giulia sia arrivata.
 
-With a past main frame, Italian normally shifts back. Simultaneous or later relative to that past viewpoint uses the imperfect congiuntivo.
+With a past main frame, Italian normally shifts back. A simultaneous event under that past viewpoint uses the imperfect subjunctive.
 
 TL: Pensavo che Marco fosse a casa.
 
@@ -227,27 +229,27 @@ After a verb of will, the imperfect can also describe the action wanted for late
 
 TL: Volevo che Marco venisse il giorno dopo.
 
-An event already completed before that past viewpoint uses the pluperfect congiuntivo.
+An event already completed before that past viewpoint uses the pluperfect subjunctive.
 
 TL: Pensavo che Marco avesse già letto il rapporto.
 
-There is an important future-in-the-past nuance. After an epistemic verb such as pensare, a genuinely later predicted event is commonly expressed with the past conditional rather than forced into the imperfect congiuntivo.
+There is an important future-in-the-past nuance. After an epistemic verb meaning “to think,” a genuinely later predicted event is commonly expressed with the past conditional rather than forced into the imperfect subjunctive.
 
 TL: Pensavo che Marco sarebbe venuto il giorno dopo.
 
-That does not cancel the mood system. It means tense sequence and future-in-the-past have their own division of labor. For active practice, begin with unambiguous contrasts: current stance plus present or past congiuntivo; past desire plus imperfect congiuntivo; past stance plus pluperfect for an already earlier event.
+That does not cancel the mood system. It means tense sequence and future-in-the-past have their own division of labor. For active practice, begin with unambiguous contrasts: current stance plus present or past subjunctive; past desire plus imperfect subjunctive; past stance plus pluperfect for an already earlier event.
 
 You do not need all four forms in active production on day one. The anti-avoidance sequence is: make the mood decision, master present versus past under a current frame, and then add the two past-frame forms. A smaller system that you actually use beats a complete paradigm you route around.
 
-One important guardrail: Italian does not use the congiuntivo merely because a clause begins with se. A real open condition uses the indicative.
+One important guardrail: Italian does not use the subjunctive merely because a clause is an if-clause. A real open condition uses the indicative.
 
 TL: Se ho tempo, vengo.
 
-A hypothetical condition uses the imperfect congiuntivo with a conditional result.
+A hypothetical condition uses the imperfect subjunctive with a conditional result.
 
 TL: Se avessi tempo, verrei.
 
-Never put the conditional immediately after se in that standard hypothetical pattern. And do not import the Portuguese future-subjunctive system into Italian.
+Never put the conditional in the if-clause of that standard hypothetical pattern. And do not import the Portuguese future-subjunctive system into Italian.
 
 The final practical skill is repairing avoidance in real time. When you hear yourself starting a frame, buy half a second by treating the first part as a stored launch pad.
 
@@ -273,7 +275,7 @@ TL: Dubito che il progetto funzioni.
 
 TL: È importante che il progetto funzioni.
 
-This is the kind of interleaving that turns mood into meaning. The indicative is not the easy form and the congiuntivo the difficult form. They are two different instructions about how the listener should hold the proposition.
+This is the kind of interleaving that turns mood into meaning. The indicative is not the easy form and the subjunctive the difficult form. They are two different instructions about how the listener should hold the proposition.
 
 Self-check five. Say, “We need a solution that can reduce the costs.” The solution is sought, not already identified.
 
@@ -281,4 +283,10 @@ Self-check five. Say, “We need a solution that can reduce the costs.” The so
 
 TL: Abbiamo bisogno di una soluzione che possa ridurre i costi.
 
-Sixty-second recap. The congiuntivo is a mood, not a mysterious tense. First hear the two-clause architecture: a main frame plus che plus a proposition. Ask whether the frame asserts that proposition as fact or holds it inside desire, necessity, doubt, possibility, emotion, evaluation, purpose, concession, or an unidentified search. Factual knowing and clarity favor the indicative; wanting, doubting, judging, and frames such as prima che or sebbene open the congiuntivo route. Same subject often allows an infinitive; different subjects make the che-clause especially useful. Under a present frame, use the present congiuntivo for simultaneous or later events and the past congiuntivo for earlier ones. Anchor the common forms: sia, abbia, vada, faccia, possa, voglia, debba, sappia, venga, dia. Most importantly, do not redesign the sentence to escape the mood. Choose the stance, launch the frame, and produce it.
+## 60-SECOND RECAP
+
+Sixty-second recap. The subjunctive is a mood, not a mysterious tense. First hear the two-clause architecture: a main frame plus a dependent proposition. Ask whether the frame presents that proposition directly or places it inside desire, necessity, doubt, possibility, emotion, evaluation, purpose, concession, or an unidentified search. Factual knowing and clarity favor the indicative; wanting, doubting, judging, and conjunctions of purpose, concession, or pending time open the subjunctive route. The same subject often allows an infinitive; different subjects make the dependent clause especially useful. Under a present frame, use the present subjunctive for simultaneous or later events and the past subjunctive for earlier ones. Anchor these common forms:
+
+TL: sia; abbia; vada; faccia; possa; voglia; debba; sappia; venga; dia
+
+Most importantly, do not redesign the sentence to escape the mood. Choose the stance, launch the frame, and produce it.

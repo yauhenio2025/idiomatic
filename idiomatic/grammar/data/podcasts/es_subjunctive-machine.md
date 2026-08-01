@@ -9,13 +9,14 @@ evidence_refs:
   - "docs/research/error-profiles/es.md §6, es_subj_pres and es_subj_imp"
   - "docs/commissions/ERROR_PROFILE_PROPOSAL.md §1, finding 4"
   - "docs/GRAMMAR_STRATEGY.md §3b, production practice and error-specific feedback"
+  - "Real Academia Española and ASALE, Libro de estilo de la lengua española, El modo: ¿indicativo o subjuntivo?: https://www.rae.es/libro-estilo-lengua-espa%C3%B1ola/el-modo-indicativo-o-subjuntivo"
 ---
 
 ## SCRIPT
 
 The Spanish subjunctive has a public-relations problem. It is often introduced as a long list of emotions, doubts, wishes, conjunctions, and irregular forms. That makes it sound like a cabinet full of unrelated switches. You open the cabinet, hesitate, and choose the indicative because it feels safer.
 
-Today, let us replace that cabinet with a machine. The machine has one job: it marks a clause that the speaker is not presenting as a straightforward assertion. The clause may be wanted, feared, doubted, evaluated, sought, or still pending. Those meanings look different on the surface, but they all change the status of the information. The subjunctive is the machine's output signal.
+Today, let us replace that cabinet with a machine. For the dependent clauses in this episode, use this core model: the machine marks a clause that the speaker is not presenting as a straightforward assertion. The clause may be wanted, feared, doubted, evaluated, sought, or still pending. Those meanings look different on the surface, but they all change the status of the information. The subjunctive is the machine's output signal. Spanish also uses the subjunctive in some independent wishes and commands, but those are outside today's walk.
 
 This matters especially for you because the lesson record contains no verbatim Spanish subjunctive error to quote. That is good news, but it is not proof of spontaneous control. The record contains taught subjunctive examples and no visible imperfect-subjunctive attempts. In a corpus dominated by work and podcast narration, the easiest way never to make a subjunctive error is never to build the sentence that requires one. So this episode is about availability: making the system quick enough to use while speaking.
 
@@ -71,7 +72,7 @@ TL: Es importante que el audio sea claro.
 
 TL: Temo que la audiencia pierda interés.
 
-Notice why “subjunctive means uncertainty” is too small. In the first sentence, the episode may already be successful. The speaker is not uncertain; the speaker is reacting. The machine cares that the subordinate clause is framed as the object of that reaction.
+Notice why “subjunctive means uncertainty” is too small. In the first sentence, the episode's success may be treated as an established fact. The speaker is not uncertain; the speaker is reacting. The machine cares that the subordinate clause is framed as the object of that reaction.
 
 The third family is doubt, denial, and withheld commitment.
 
@@ -85,7 +86,7 @@ TL: No dudo de que el plan funciona.
 
 This speaker says there is no doubt. The content is asserted confidently, so the indicative is natural. The machine reads the whole stance, not a nearby particle.
 
-Your lessons supplied correct target examples in this family, including a hope and a risk.
+Your lessons have already practiced two patterns in this family: hoping that something does not disappoint us, and describing the risk that somebody may send the wrong thing. Here they are developed as complete examples.
 
 TL: Espero que no nos desilusione.
 
@@ -151,11 +152,11 @@ Some words can feed either signal because the speaker can frame the same situati
 
 TL: Aunque el episodio es largo, mantiene el interés.
 
-With the subjunctive, the speaker concedes the possibility without making that fact the point.
+With the subjunctive, the speaker does not present the description as new, asserted information. It may be hypothetical, already known but backgrounded, or simply irrelevant to the decision.
 
 TL: Aunque el episodio sea largo, lo publicaré completo.
 
-The second sentence can mean “even if it is long” or “long though it may be.” This is why a trigger list eventually breaks down. A list would have to place the same conjunction in two columns. The machine asks a better question: is the subordinate description being asserted here, or merely admitted as a possible obstacle? Mood choice can reveal that difference in stance.
+The second sentence can mean “even if it is long,” but it can also concede a length both speakers already know about. This is why a trigger list eventually breaks down. A list would have to place the same conjunction in two columns. The machine asks a better question: is the description being asserted as informative, or backgrounded as hypothetical, known, or irrelevant? Mood choice can reveal that difference in stance.
 
 Now we can reduce the machine to three questions. First: is there a subordinate clause with its own conjugated verb? Second: what stance does the main frame place over that clause? Third: am I asserting the subordinate content, or presenting it as wanted, judged, doubted, purposed, pending, or not yet identified?
 
@@ -175,9 +176,9 @@ For a remote or counterfactual condition, Spanish uses the imperfect subjunctive
 
 TL: Si tuviera tiempo, revisaría el texto.
 
-Do not say a present subjunctive after conditional “if.” This is a useful firewall from Portuguese, whose future subjunctive has its own pattern after a future condition.
+In ordinary standard Spanish, do not use a present subjunctive after conditional “if.” This is a useful firewall from Portuguese, whose future subjunctive has its own pattern after a future condition.
 
-The imperfect subjunctive is not a second machine. It is the same output viewed from a past, conditional, or hypothetical frame.
+The imperfect subjunctive is not a second machine. It is often the same output viewed from a past, conditional, or hypothetical frame.
 
 TL: Quiero que vengas mañana.
 
@@ -185,7 +186,7 @@ TL: Quería que vinieras al día siguiente.
 
 TL: Sería útil que vinieras temprano.
 
-The trigger relationship remains stable. Only the temporal viewpoint changes. For completed events, Spanish can add perfect forms.
+The subordinate relationship remains stable while the viewpoint shifts to a past or conditional frame. For completed events, Spanish can add perfect forms.
 
 TL: Me alegra que hayas terminado.
 
@@ -193,7 +194,7 @@ TL: Me alegró que hubieras terminado.
 
 You do not need all four forms before you can choose the mood. Selection comes first. If the machine chooses subjunctive, then choose a form that fits the time relationship.
 
-For the present subjunctive, a reliable production path starts with the present “I” form, removes its final vowel, and adds the opposite vowel family. That is why verbs with an irregular “I” form carry that stem into the subjunctive.
+For many present-subjunctive forms, especially in the singular, a useful production path starts with the present indicative “I” form. Strip its person ending and use the subjunctive ending family. That is why many irregular first-person stems carry into the subjunctive. Stem-changing and spelling-changing verbs, especially in some plural forms, need additional adjustments, so this is a route into the paradigm, not a complete conjugation algorithm.
 
 TL: tengo; que tenga
 
@@ -205,7 +206,7 @@ The fully irregular core is small and frequent.
 
 TL: sea, esté, vaya, haya, sepa, dé
 
-For the imperfect subjunctive, start from the third-person plural preterite, remove the final syllable, and add the new endings.
+For the imperfect subjunctive, start from the third-person plural preterite, remove its final three letters, and add the new endings.
 
 TL: tuvieron; tuviera
 
@@ -213,7 +214,11 @@ TL: hicieron; hiciera
 
 TL: publicaron; publicara
 
-The alternative forms ending in “se” are also standard. In most ordinary contexts, the two series express the same basic mood and tense. Choose one productive series first; recognition of the other can follow.
+The alternative series is also standard.
+
+TL: tuviese; hiciese; publicase
+
+In most ordinary contexts, the two series express the same basic mood and tense. Choose one productive series first; recognition of the other can follow.
 
 Here is the final self-check. You are speaking hypothetically: “If we had more time, it would be useful for the editor to make another version.” Build both subjunctive clauses.
 
@@ -225,7 +230,7 @@ If that took effort, good. The exercise forced meaning, not a naked conjugation.
 
 ## 60-SECOND RECAP
 
-Here is the whole walk in one minute. The subjunctive is not a synonym for unreality, and it is not a decoration after the word meaning “that.” It is the output of a clause machine. The indicative normally presents content as an assertion. The subjunctive marks content placed under a stance: influence, reaction, evaluation, doubt, purpose, a pending future event, or an unidentified person or thing. First find the two clauses. Then name their relationship. Only after selecting the mood should you choose present, imperfect, or a perfect form. Same subject often compresses to an infinitive; a new subject often exposes the full pattern. Remember the three decisive contrasts.
+Here is the whole walk in one minute. The indicative normally presents content as an assertion. In dependent clauses, the subjunctive marks content placed under a stance: influence, reaction, evaluation, doubt, purpose, a pending future event, or an unidentified person or thing. First find the two clauses and name their relationship. Then choose the mood; only afterward choose present, imperfect, or a perfect form. The same subject often compresses to an infinitive, while a new subject often exposes the full pattern. Remember these contrasts.
 
 TL: Sé que viene. Quiero que venga.
 
@@ -233,4 +238,4 @@ TL: Cuando termino, guardo una copia. Cuando termine, te llamaré.
 
 TL: Si tengo tiempo, lo hago. Si tuviera tiempo, lo haría.
 
-Your record does not show repeated wrong subjunctives. It shows a system that may be easy to avoid. The goal is therefore not more recognition. It is to let the machine run while you speak.
+Your record does not show repeated wrong subjunctives; it shows a system that may be easy to avoid. The goal is to let the machine run while you speak.
