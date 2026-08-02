@@ -1,9 +1,10 @@
 ---
 series: grammar-walks
 episode: 3
+format_version: 2
 lang: fr
-title: "The French quantity system"
-est_minutes: 16
+title: "Beaucoup de: fixing your most frequent French mistake"
+est_minutes: 19
 evidence_refs:
   - "docs/research/error-profiles/fr.md §§2.3(a), 3 pattern 1, and 7"
   - "docs/commissions/unit-specs/fr_quantites_de.md"
@@ -13,244 +14,324 @@ evidence_refs:
 
 ## SCRIPT
 
-Welcome to episode three. Today we are going to turn a notorious French nuisance into one system. The nuisance is the cluster of short forms in the next line. It often gets taught as several unrelated lists: the partitive article, plural articles, contractions, quantities, and negation. That makes French feel capricious. But most choices come from two questions.
+Hi. Today we're working on one small French word — and I promise it's worth a whole episode, because this is the single mistake you've made more often than any other in French. A hundred and thirty-eight times in your lesson notes, across five years. The good news: it's one habit, not a hundred rules. By the end of this walk, you'll hear it coming.
 
-TL: de, des, du, de la, de l'argent
-
-First: are you pointing to a defined thing, or merely introducing some amount of a thing? Second: has another word already measured that amount?
-
-Those questions matter especially for you because this is the most repeated single pattern in your French record. There are one hundred and thirty-eight direct matches for the quantity error, within a broader group of one hundred and sixty-one rows. One recorded sentence was:
+Here's a sentence you actually said, years ago:
 
 TL: J'apprends beaucoup des langues.
 
-For the ordinary meaning, "I am learning many languages," the correction is:
+[PAUSE:1200]
+
+And here's what your teacher corrected it to:
 
 TL: J'apprends beaucoup de langues.
 
-That correction is not an isolated phrase to memorize. It is the visible result of the whole quantity system. Let us build that system from the ground up.
+[PAUSE:1200]
 
-Imagine a noun arriving without an owner, without a previous mention, and without a precise number. French still wants to signal what sort of amount it is. With a singular countable object, you can introduce one item.
+One sound changed. Listen to just that difference, first the wrong one, then the right one.
 
-TL: J'ai lu un article.
+TL: des langues
 
-With several countable objects, French uses its ordinary indefinite plural article. In the next sentence, that article means something like "some."
+TL: de langues
 
-TL: J'ai lu des articles.
+[PAUSE:1500]
 
-With an uncountable substance or an amount viewed as a mass, French uses the partitive family. The form changes with the noun's gender and initial sound.
+Before any grammar, let's fix the sounds in your ear, because on paper these words look almost identical, and in speech they're easy to blur. There are three little words in this family. I'll say each one slowly, then use it.
 
-TL: Il faut du temps.
+The first is de. Spelled d, e. It sounds like "duh" — a lazy, colorless vowel.
 
-TL: Il faut de la patience.
+TL: de
 
-TL: Il faut de l'argent.
+TL: un verre de vin
 
-These three lines all introduce an unspecified amount: some time, some patience, some money. The first begins with the masculine singular partitive, the second with the feminine singular partitive, and the third with its elided form before a vowel sound. At this stage, no separate word says how much.
+A glass of wine.
 
-Now add a measuring word. Listen first to three central choices.
+[PAUSE:1000]
 
-TL: beaucoup, trop, assez
+The second is des. Spelled d, e, s. It sounds like "day" — a brighter, clearer vowel.
 
-They express, respectively, a large, excessive, or sufficient quantity. Here are five more high-value measurers.
+TL: des
 
-TL: peu, plus, moins, autant, combien
+TL: des amis
 
-Once one of these words has done the measuring, French does not need the indefinite or partitive article to do that job again. The measuring word connects to the noun with the plain form heard throughout the next examples.
+Some friends.
 
-TL: beaucoup de temps
+[PAUSE:1000]
 
-TL: beaucoup de patience
+The third is du. Spelled d, u. That tight French u, lips rounded.
+
+TL: du
+
+TL: du pain
+
+Some bread.
+
+[PAUSE:1500]
+
+One more time, just the three sounds, slowly. Duh. Day. Du.
+
+TL: de, des, du
+
+[PAUSE:2000]
+
+[CHIME]
+
+Now the rule itself — and it really is just one rule.
+
+When a quantity word comes first, French drops the article completely. After beaucoup, after trop, after assez, after peu — you don't say des, you don't say du, you don't say de la. You say plain de. Nothing else survives.
+
+Think of it this way: French doesn't let you say "many of the somes". Once you've said "a lot", the job of des is already done. So:
+
+TL: beaucoup de langues
+
+A lot of languages. Not "beaucoup des langues".
+
+[PAUSE:1000]
+
+TL: trop de réunions
+
+Too many meetings.
+
+[PAUSE:1000]
+
+TL: assez de temps
+
+Enough time.
+
+[PAUSE:1000]
+
+TL: peu de journalistes
+
+Few journalists.
+
+[PAUSE:1500]
+
+And notice something important: it doesn't matter whether the noun is singular or plural, masculine or feminine. The little word never changes. Time, meetings, wine, ideas — always plain de.
+
+TL: beaucoup de vin
+
+TL: beaucoup de réunions
+
+[PAUSE:1500]
+
+There's one small twist, and it's about sound, not grammar. If the next word starts with a vowel, de squeezes into d-apostrophe. You've known this forever from other contexts — it's the same squeeze as in "j'apprends". Listen:
 
 TL: beaucoup d'argent
 
-TL: beaucoup d'articles
+A lot of money.
 
-Notice what has disappeared. The masculine mass article, feminine mass article, elided mass article, and plural indefinite article have all yielded to the same connector. The noun can be masculine, feminine, singular, plural, countable, or uncountable. The connector does not agree; it merely elides before a vowel sound.
+[PAUSE:1000]
 
-This is a lexical family of quantity expressions, not a rule that every number requires the quantity connector. An exact cardinal number normally meets the noun directly.
+TL: trop d'informations
 
-TL: trois articles
+Too much information.
 
-A quantity noun, by contrast, can open its own connector frame.
+[PAUSE:1000]
 
-TL: une douzaine d'articles
+TL: assez d'énergie
 
-So learn which measuring expressions select the connector. The two short lists you just heard are the high-value family for this fossil.
+Enough energy.
 
-Here is your first self-check. Say, "The report contains a lot of information."
+[PAUSE:1500]
 
-[PAUSE]
+That's the whole core. Quantity word, then bare de, squeezed before a vowel. Let's make it automatic.
 
-TL: Le rapport contient beaucoup d'informations.
+[CHIME]
 
-If you kept the plural indefinite article after the quantity word, hear why that extra material is there. The quantity word has taken over the measuring job, so the article steps aside and the plain connector remains.
+First practice round. I'll give you a sentence in English. You say the French out loud — actually out loud, that's the point of doing this on a walk. Then I'll give you the answer. Take your time; there's a long pause each time.
 
-This also explains your second recorded fossil:
+Number one. "He reads a lot of newspapers." Start with "il lit".
 
-TL: Il gagne beaucoup de l'argent.
+[PAUSE:8000]
 
-That line combines a measuring word with the ordinary elided partitive. But the intended meaning is simply that he earns a lot of money, not a large share of some already identified money. The measuring word supplies the amount, so the correction is:
+TL: Il lit beaucoup de journaux.
 
-TL: Il gagne beaucoup d'argent.
+Beaucoup de. Duh, not day.
 
-The same mechanism works across the rest of the quantity family.
+[PAUSE:1500]
+
+Number two. "We have too many meetings." Start with "nous avons".
+
+[PAUSE:8000]
 
 TL: Nous avons trop de réunions.
 
-TL: Le comité a assez de preuves.
+[PAUSE:1500]
 
-TL: Cette région reçoit peu d'investissements.
+Number three — watch for the vowel. "She has a lot of influence." Start with "elle a".
 
-TL: Le nouveau serveur consomme moins d'énergie.
+[PAUSE:8000]
 
-TL: La rédaction demande plus de transparence.
+TL: Elle a beaucoup d'influence.
 
-Do not translate each expression word by word and then choose an article for the noun. Retrieve the frame as one operation: quantity word, connector, noun.
+The squeeze: beaucoup d'influence, because influence starts with a vowel.
 
-Now we need to rescue the two short forms in the next line, because neither is inherently a mistake.
+[PAUSE:1500]
 
-TL: des, du
+Number four. "There isn't enough water." Start with "il n'y a pas".
 
-The first can be an indefinite plural article meaning "some," or the contraction of a preposition plus the plural definite article. The second can be a masculine singular partitive article, or the contraction of that same preposition plus the masculine singular definite article.
+[PAUSE:8000]
 
-Listen to a definite example. We are not talking about arbitrary articles. We mean the particular articles you sent.
+TL: Il n'y a pas assez d'eau.
 
-TL: J'ai lu les articles que tu m'as envoyés.
+Assez d'eau. Two tricks at once there — well done if you got both.
 
-Now put the quantity expression in front of that defined set. The meaning is "many of the articles you sent." The preposition means "of," and the plural definite article must stay because the set is identified. Those two elements contract.
+[PAUSE:2000]
 
-TL: J'ai lu beaucoup des articles que tu m'as envoyés.
+[CHIME]
 
-This is grammatical. It does not contradict the earlier rule. The meaning has changed. Compare the pair.
+Now let's widen the circle a little, because the same habit covers two more situations you meet every day.
 
-TL: J'ai lu beaucoup d'articles.
+The first is negation. When a sentence goes negative, des and du collapse into plain de as well. You have money — j'ai de l'argent. You don't have money —
 
-TL: J'ai lu beaucoup des articles que tu m'as envoyés.
+TL: Je n'ai pas d'argent.
 
-The first line introduces many indefinite articles. The second selects many members from a definite set. The plain connector marks an indefinite measured quantity. A preposition plus a definite article marks a defined subset.
+[PAUSE:1000]
 
-The masculine singular works the same way. In the next line, the contracted form does not introduce an unspecified partitive amount. It combines the preposition meaning "of" with the masculine definite article because we are discussing the contents of one known report.
+There are questions — il y a des questions. There are no questions —
 
-TL: J'ai vérifié la plupart du rapport.
+TL: Il n'y a pas de questions.
 
-With a feminine definite noun there is no contraction.
+[PAUSE:1500]
 
-TL: J'ai vérifié la plupart de la traduction.
+Same reflex: negative sentence, bare de. "Pas des" is almost always wrong, and it was in your notes too.
 
-And before a vowel sound:
+[PAUSE:1000]
 
-TL: J'ai vérifié la plupart de l'article.
+The second situation is more subtle, and honestly, even French people wobble here in casual speech. In careful French, when a plural adjective comes before the noun, des softens to de. You don't say "des grandes villes" — you say:
 
-So when you hear either of those short forms, do not ask only, "What form follows this noun?" Ask what the phrase is doing. Is it introducing some amount? Or does a preposition point into a set that is already definite?
+TL: de grandes villes
 
-Self-check two. You mean "many of the reports that the committee selected." Say the full phrase.
+Big cities.
 
-[PAUSE]
+[PAUSE:1000]
 
-TL: beaucoup des rapports que le comité a sélectionnés
+TL: de bonnes idées
 
-The intended meaning is "many of the already-defined reports selected by the committee," so the definite article remains and the preposition contracts with it. A relative clause alone does not force that contraction. The following alternative can mean "many reports that the committee selected."
+Good ideas.
 
-TL: beaucoup de rapports que le comité a sélectionnés
+[PAUSE:1500]
 
-Negation gives us the same system from another angle. In an affirmative sentence, an indefinite or partitive object can appear with its ordinary article.
+If you only remember this one in writing, that's fine — it's a careful-register rule. But your ear should stop being surprised by it.
 
-TL: Elle a un projet.
+[CHIME]
 
-TL: Elle a des partenaires.
+Second practice round. Same game, slightly harder mix.
 
-TL: Elle a du temps.
+Number one. "I don't have time." Start with "je n'ai pas".
 
-But ordinary negation often turns that indefinite amount into zero. Zero is a quantity, and French normally uses the plain connector after it.
+[PAUSE:8000]
 
-TL: Elle n'a pas de projet.
+TL: Je n'ai pas de temps.
 
-TL: Elle n'a pas de partenaires.
+[PAUSE:1500]
 
-TL: Elle n'a pas de temps.
+Number two. "She asks good questions." Careful register. Start with "elle pose".
 
-TL: Elle n'a pas d'argent.
+[PAUSE:8000]
 
-Think of the negated frame as the zero member of the quantity family. The same connector can follow an expression of a large amount, a small amount, or no amount. That is much more coherent than memorizing a special article-erasing trick.
+TL: Elle pose de bonnes questions.
 
-Definiteness can survive negation, however. If you deny an action involving a particular thing, its definite article remains.
+De bonnes questions — the adjective comes first, so des steps down to de.
 
-TL: Je n'ai pas lu le rapport que tu m'as envoyé.
+[PAUSE:1500]
 
-And with the copular verb meaning "to be," French commonly retains the article because the sentence identifies or classifies what something is, rather than quantifying a direct object.
+Number three. "Too much noise, not enough ideas." A little slogan; give it a try.
 
-TL: Ce n'est pas du café.
+[PAUSE:8000]
 
-The practical default is narrow and useful: when an ordinary indefinite or partitive object falls under negation, expect the plain connector, elided before a vowel sound. Do not mechanically erase every article anywhere in a negative sentence.
+TL: Trop de bruit, pas assez d'idées.
 
-Self-check three. Turn this affirmative line into "The application does not collect biometric information."
+[PAUSE:2000]
 
-[PAUSE]
+[CHIME]
 
-TL: L'application ne collecte pas d'informations biométriques.
+Now, two expressions that look like exceptions — and aren't. They just belong to a different family, and they've both tripped you before.
 
-There are two nearby constructions worth attaching to this map. First, consider the word meaning "other." When you mean additional, indefinite plural things, standard French uses the indefinite pattern heard in the next sentence, not the form that points to a definite group.
+The first is la plupart. "Most". It's not a quantity adverb like beaucoup; it's a noun, "the majority". And because it's a noun, it keeps the full article after it:
 
-TL: Nous devons examiner d'autres options.
+TL: la plupart des journalistes
 
-Here the ordinary indefinite plural article reduces to the plain form before the adjective meaning "other," then elides before its vowel sound. This is a neighboring surface pattern, not a claim that the adjective itself measures quantity. The version with a plural definite article can be legitimate when it means "of the others" or contrasts a definite group. Again, meaning decides whether you are introducing additional things or pointing to an identified remainder.
+Most journalists. Des survives here — this is correct.
 
-Second, consider the expression meaning "most." Before a plural noun group, its ordinary frame contains the contracted plural definite article, as in the next sentence.
+[PAUSE:1000]
 
-TL: La plupart des journalistes ont publié un correctif.
+So: beaucoup de journalistes, but la plupart des journalistes. Hear them side by side:
 
-Before a stressed pronoun, use the expanded prepositional frame heard next.
+TL: beaucoup de journalistes
 
-TL: La plupart d'entre eux ont publié un correctif.
+TL: la plupart des journalistes
 
-Your record contains a version without the intervening preposition. The repair is not merely a different article; learn the complete French chunk from the previous line.
+[PAUSE:1500]
 
-There is also a formal fixed quantifier meaning "many" that retains the plural form. Learn it as a complete expression rather than extending it to the ordinary quantity family.
+The second is bien des — an old-fashioned, slightly literary way to say "many a". You'll read it more than you'll say it:
 
-TL: Bien des obstacles restent invisibles.
+TL: bien des erreurs
 
-Self-check four. Say, "Most of them agree."
+Many an error. Again, des is correct there.
 
-[PAUSE]
+[PAUSE:1500]
 
-TL: La plupart d'entre eux sont d'accord.
+If that feels like a lot, hold on to just this: the everyday quantity words — beaucoup, trop, assez, peu — take bare de. La plupart is the odd one out, and it's odd because it's secretly a noun.
 
-One last wrinkle belongs mainly to careful written French. The indefinite plural article is often reduced to the plain connector when an adjective comes before the noun.
+[CHIME]
 
-TL: Le gouvernement annonce de nouvelles mesures.
+Last round. Quick fire, mixed, five of them. This is the one that counts.
 
-TL: Le rapport avance de solides arguments.
+One. "A lot of money."
 
-This is useful for your formal register, but do not turn it into a universal ban on the ordinary plural article before every adjective. Spoken and less formal usage is more variable, and fixed units can behave differently. Treat it as a careful-production pattern, separate from the extremely robust quantity rule.
+[PAUSE:6000]
 
-Let us now turn the system into a fast decision routine. When a noun approaches, first ask whether it is definite. If it means the known report, the specified money, or the articles you sent, preserve the definite article. If the preposition meaning "of" meets the masculine singular or plural definite article, use the required contraction. The feminine and elided combinations remain visibly separate.
+TL: beaucoup d'argent
 
-If the noun is indefinite, ask whether a quantity word has already measured it. With no separate measure, choose a singular indefinite article for one countable item, the plural indefinite article for unspecified plural items, and the appropriate partitive article for an unspecified mass. With one of the measuring expressions rehearsed earlier, use the plain connector, elided before a vowel sound.
+[PAUSE:1200]
 
-Self-check five. Choose between the masculine partitive and the plain quantity connector, then say, "We have enough time to verify the figures."
+Two. "Most languages."
 
-[PAUSE]
+[PAUSE:6000]
 
-TL: Nous avons assez de temps pour vérifier les chiffres.
+TL: la plupart des langues
 
-Why the plain connector? Because the quantity word meaning "enough" has already measured the time. The noun's gender no longer selects the masculine partitive.
+[PAUSE:1200]
 
-The goal on a walk is not to recite labels. It is to hear a sequence of jobs. Definite marker. Quantity marker. Connector. Noun. French becomes difficult when short forms look alike, but their jobs remain distinguishable. One form may introduce unspecified plural items or mark a defined subset. Another may introduce an unspecified mass or point into a known masculine singular set. The contrasts you practiced separate those jobs.
+Three. "We don't have any answers." Start with "nous n'avons pas".
 
-## 60-SECOND RECAP
+[PAUSE:8000]
 
-Here is the whole system in one minute. If no separate word measures an indefinite noun, use its ordinary indefinite or partitive article. Listen to one singular item, several unspecified items, and three kinds of unspecified mass.
+TL: Nous n'avons pas de réponses.
 
-TL: un article; des articles; du temps; de la patience; de l'argent
+[PAUSE:1200]
 
-If a quantity word has already measured the noun, use the plain connector. It elides before a vowel sound but never agrees with the noun.
+Four. "Too many emails, too little time."
 
-TL: beaucoup de langues; trop de réunions; assez d'argent; peu de temps; pas de problème
+[PAUSE:8000]
 
-Keep a definite article when you mean a known set. The next phrase means many of those particular articles.
+TL: Trop d'e-mails, trop peu de temps.
 
-TL: beaucoup des articles que tu m'as envoyés
+[PAUSE:1200]
 
-There, the preposition and plural definite article contract; the masculine singular pair contracts too. Ask two questions: is the noun definite, and has another word already expressed quantity? For your main fossil, the answer is automatic.
+Five — the original sin, one last time. "I'm learning a lot of languages."
+
+[PAUSE:8000]
 
 TL: J'apprends beaucoup de langues.
+
+If you said "day" — des — go back thirty seconds and say it again with "duh". That exact sentence is the one to overwrite.
+
+[PAUSE:2000]
+
+[CHIME]
+
+Let's land it. Three things to take on the rest of your walk.
+
+First, the sound: de is "duh", des is "day", and after beaucoup, trop, assez and peu you want "duh" — bare de, squeezed to d-apostrophe before a vowel.
+
+Second, negation does the same thing: pas de, never "pas des".
+
+Third, la plupart plays by noun rules — la plupart des — and that's not an exception to your rule, it's a different animal.
+
+You've said "beaucoup des" a hundred and thirty-eight times. Somewhere on today's walk, say "beaucoup de choses" ten times instead — and mean it.
+
+TL: beaucoup de choses
+
+À la prochaine.

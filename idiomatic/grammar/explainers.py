@@ -72,7 +72,7 @@ class FossilEvidence:
 
 @dataclass(frozen=True)
 class Segment:
-    kind: Literal["speech", "pause"]
+    kind: Literal["speech", "pause", "chime"]
     text: str
     lang: str | None
     line_no: int
@@ -244,6 +244,16 @@ def _segments(body_lines: Sequence[str], *, path: Path, lang: str,
         if line == "[PAUSE]":
             rendered.append(Segment("pause", "", None, line_no))
             continue
+        if line.startswith("[PAUSE:") and line.endswith("]"):
+            ms_raw = line[len("[PAUSE:"):-1]
+            if not ms_raw.isdigit() or not 200 <= int(ms_raw) <= 15000:
+                raise _source_error(
+                    path, f"line {line_no}: [PAUSE:ms] wants 200-15000, got {ms_raw!r}")
+            rendered.append(Segment("pause", ms_raw, None, line_no))
+            continue
+        if line == "[CHIME]":
+            rendered.append(Segment("chime", "", None, line_no))
+            continue
         if line.startswith("TL:"):
             text = line[3:].strip()
             if not text:
@@ -394,7 +404,7 @@ def route_segment(segment: Segment, target_lang: str) -> VoiceRoute | None:
     """Return the explicit language/voice route for one parsed segment."""
     if target_lang not in EXPLAINER_UNITS:
         raise ValueError("target_lang must be fr|pt|es|de")
-    if segment.kind == "pause":
+    if segment.kind in ("pause", "chime"):
         return None
     if segment.lang == "en":
         return VoiceRoute("en", EN_VOICE)
@@ -450,6 +460,25 @@ def segment_cache_key(script: ExplainerScript, segment: Segment, settings: Any) 
     return f"{script.slug}_{route.lang}_{digest}"
 
 
+def _chime_mp3(work_dir: Path) -> Path:
+    """A soft two-tone section chime (E5->A5 with decay), generated once
+    per work dir — no licensed assets needed. v1: bump the constituent
+    key if the recipe changes."""
+    out = work_dir / "chime_v1.mp3"
+    if out.exists() and out.stat().st_size > 500:
+        return out
+    subprocess.run(
+        ["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi",
+         "-i", ("aevalsrc=0.28*sin(659.25*2*PI*t)*exp(-3*t)"
+                "+0.22*sin(880*2*PI*t)*exp(-2.2*(t-0.25))*gt(t\,0.25)"
+                ":d=1.6:s=44100"),
+         "-af", "afade=t=out:st=1.2:d=0.4",
+         "-c:a", "libmp3lame", "-q:a", "4", str(out)],
+        check=True,
+    )
+    return out
+
+
 def _probe_duration(path: Path) -> float:
     result = subprocess.run(
         [
@@ -495,7 +524,7 @@ async def render_explainer(
     keys_by_index: dict[int, str] = {}
     pending: dict[Path, tuple[str, VoiceRoute]] = {}
     for index, segment in enumerate(script.segments):
-        if segment.kind == "pause":
+        if segment.kind in ("pause", "chime"):
             continue
         route = route_segment(segment, script.lang)
         assert route is not None
@@ -529,17 +558,25 @@ async def render_explainer(
             f"{script.lang}/{script.slug}: incomplete TTS segments: {', '.join(sorted(failed))}"
         )
 
-    needs_pause = any(segment.kind == "pause" for segment in script.segments)
+    pause_lengths = {
+        int(segment.text) if segment.text else PAUSE_MS
+        for segment in script.segments if segment.kind == "pause"
+    }
     needs_gap = any(
         left.kind == right.kind == "speech"
         for left, right in zip(script.segments, script.segments[1:])
     )
-    pause_path = (
-        await asyncio.to_thread(silence_fn, work_dir, PAUSE_MS) if needs_pause else None
-    )
+    pause_paths = {
+        ms: await asyncio.to_thread(silence_fn, work_dir, ms)
+        for ms in sorted(pause_lengths)
+    }
     gap_path = (
         await asyncio.to_thread(silence_fn, work_dir, BETWEEN_SPEECH_MS)
         if needs_gap else None
+    )
+    chime_path = (
+        await asyncio.to_thread(_chime_mp3, work_dir)
+        if any(s.kind == "chime" for s in script.segments) else None
     )
 
     pieces: list[Path] = []
@@ -547,9 +584,13 @@ async def render_explainer(
     previous: Segment | None = None
     for index, segment in enumerate(script.segments):
         if segment.kind == "pause":
-            assert pause_path is not None
-            pieces.append(pause_path)
-            constituent_keys.append(f"pause:{PAUSE_MS}")
+            ms = int(segment.text) if segment.text else PAUSE_MS
+            pieces.append(pause_paths[ms])
+            constituent_keys.append(f"pause:{ms}")
+        elif segment.kind == "chime":
+            assert chime_path is not None
+            pieces.append(chime_path)
+            constituent_keys.append("chime:v1")
         else:
             if previous is not None and previous.kind == "speech":
                 assert gap_path is not None
