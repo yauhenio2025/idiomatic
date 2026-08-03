@@ -127,10 +127,17 @@ delivers to whichever profile is open.
    idiomatic_puller/__init__.py.
 3. **F2 implementation** (banks + design ready).
 4. Wire freq weights + vocab weave lists into generate.py prompts.
-5. pt_regencia/pt_clitic verifier strictness: read rejects, tune à la
+5. it_reggenze_verbali batch was killed by a Gemini malformed-JSON
+   error and pt_regencia_verbal had all candidates rejected → both
+   "6" clusters were empty until the 2026-08-03 re-run (verify they
+   filled; pt may need the strictness tuning below first). Known
+   cosmetic quirk: cluster "10" sorts between "1" and "2" in Anki
+   (lexicographic) — renaming shipped clusters orphans subdecks, so
+   only do it deliberately with an add-on reorganize pass.
+6. pt_regencia/pt_clitic verifier strictness: read rejects, tune à la
    commission J (dumps pattern in idiomatic-data/tuning/).
-6. CEFR roadmap → next new-unit batches (N's ~90 candidates).
-7. Explainer/podcast season 2 from reader chapters (flagged in
+7. CEFR roadmap → next new-unit batches (N's ~90 candidates).
+8. Explainer/podcast season 2 from reader chapters (flagged in
    docs/reader/README.md).
 
 ## Style notes for the successor
