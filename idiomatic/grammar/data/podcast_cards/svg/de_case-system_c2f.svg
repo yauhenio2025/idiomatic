@@ -1,0 +1,15 @@
+<svg viewBox="0 0 840 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Der neue Plan is the nominative subject of gefällt; dieser Frau corrected to diese Frau">
+  <rect x="80" y="70" width="250" height="66" rx="12" class="s-teal"/>
+  <text x="205" y="113" text-anchor="middle" font-size="25" font-weight="800" fill="#ffffff">der neue Plan</text>
+  <text x="205" y="168" text-anchor="middle" font-size="17" class="s-muted">subject — Nominativ, not an actor</text>
+  <text x="420" y="113" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">gefällt</text>
+  <rect x="510" y="70" width="250" height="66" rx="12" class="s-sun"/>
+  <text x="635" y="113" text-anchor="middle" font-size="25" font-weight="800" class="s-ink">der Redaktion</text>
+  <text x="635" y="168" text-anchor="middle" font-size="17" class="s-muted">experiencer — Dativ, verb-selected</text>
+  <line x1="100" y1="215" x2="740" y2="215" class="s-stroke-line" stroke-width="2"/>
+  <text x="420" y="268" text-anchor="middle" font-size="27" font-weight="700" class="s-dead" text-decoration="line-through">warum dieser Frau…</text>
+  <line x1="420" y1="288" x2="420" y2="316" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="420,336 407,312 433,312" class="s-teal"/>
+  <text x="420" y="372" text-anchor="middle" font-size="28" font-weight="800" class="s-teal">warum diese Frau…</text>
+  <text x="420" y="408" text-anchor="middle" font-size="19" class="s-muted">the subject stays nominative — case doesn't spread</text>
+</svg>

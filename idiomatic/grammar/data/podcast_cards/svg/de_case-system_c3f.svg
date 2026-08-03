@@ -1,0 +1,16 @@
+<svg viewBox="0 0 840 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reminder: find the job, check the verb, then the determiner — answers in the audio">
+  <rect x="70" y="130" width="200" height="70" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="170" y="167" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">the job?</text>
+  <text x="170" y="230" text-anchor="middle" font-size="16" class="s-muted">subject · object · recipient</text>
+  <line x1="285" y1="165" x2="330" y2="165" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="352,165 326,152 326,178" class="s-teal"/>
+  <rect x="365" y="130" width="200" height="70" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="465" y="167" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">the verb?</text>
+  <text x="465" y="230" text-anchor="middle" font-size="16" class="s-muted">it can override the feeling</text>
+  <line x1="580" y1="165" x2="625" y2="165" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="647,165 621,152 621,178" class="s-teal"/>
+  <rect x="660" y="130" width="120" height="70" rx="14" class="s-teal"/>
+  <text x="720" y="177" text-anchor="middle" font-size="34" font-weight="800" fill="#ffffff">?</text>
+  <text x="720" y="230" text-anchor="middle" font-size="16" class="s-muted">the determiner</text>
+  <text x="420" y="325" text-anchor="middle" font-size="20" class="s-muted">say the whole sentence out loud — the answers are in the audio</text>
+</svg>

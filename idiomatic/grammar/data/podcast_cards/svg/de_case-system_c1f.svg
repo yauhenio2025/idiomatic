@@ -1,0 +1,19 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Die Redakteurin nominative gives den Vertrag accusative to dem Autor dative">
+  <circle cx="150" cy="110" r="30" class="s-teal"/>
+  <rect x="118" y="146" width="64" height="48" rx="15" class="s-teal"/>
+  <text x="150" y="240" text-anchor="middle" font-size="23" font-weight="700" class="s-teal">die Redakteurin</text>
+  <text x="150" y="272" text-anchor="middle" font-size="17" class="s-muted">Nominativ — acts</text>
+  <rect x="330" y="120" width="180" height="60" rx="12" class="s-coral"/>
+  <text x="420" y="159" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">den Vertrag</text>
+  <text x="420" y="240" text-anchor="middle" font-size="17" class="s-muted">Akkusativ — changes hands</text>
+  <line x1="200" y1="150" x2="315" y2="150" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="330,150 306,138 306,162" class="s-teal"/>
+  <line x1="520" y1="150" x2="625" y2="150" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="648,150 622,138 622,162" class="s-teal"/>
+  <circle cx="700" cy="110" r="30" class="s-sun"/>
+  <rect x="668" y="146" width="64" height="48" rx="15" class="s-sun"/>
+  <text x="700" y="240" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">dem Autor</text>
+  <text x="700" y="272" text-anchor="middle" font-size="17" class="s-muted">Dativ — receives</text>
+  <text x="420" y="330" text-anchor="middle" font-size="22" font-weight="700" class="s-ink">gibt — who does what to whom</text>
+  <text x="420" y="398" text-anchor="middle" font-size="20" class="s-muted">the articles keep the jobs, whatever the word order</text>
+</svg>
