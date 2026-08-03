@@ -793,6 +793,41 @@ async def admin_podcast_cards_list(_: None = Depends(authed_admin)) -> dict:
     return {"episodes": podcast_cards.list_episode_sources()}
 
 
+@app.post("/admin/exercises2-build")
+async def admin_exercises2_build(
+    lang: str, _: None = Depends(authed_admin),
+) -> dict:
+    """Build one language's Exercises 2.0 deck (TTS + APKG) in the background."""
+    from .grammar import exercises2
+    from .grammar import service as grammar_service
+
+    if lang not in exercises2.SUPPORTED_LANGS:
+        raise HTTPException(400, "lang must be de|es|fr|it|pt")
+    if not grammar_service.claim_grammar_job(f"exercises2-{lang}", "exercises2"):
+        return {"error": "busy", **grammar_service.get_state()}
+
+    async def _run() -> None:
+        try:
+            result = await exercises2.build_language(lang)
+            grammar_service._state["exercises2"] = result
+        except Exception as e:  # noqa: BLE001
+            log.warning("admin.exercises2_build.failed", lang=lang,
+                        err=repr(e)[:200])
+            grammar_service._state["error"] = repr(e)[:200]
+        finally:
+            grammar_service._state["running"] = False
+
+    _spawn_bg(_run())
+    return {"started": True, "lang": lang}
+
+
+@app.get("/admin/exercises2-list")
+async def admin_exercises2_list(_: None = Depends(authed_admin)) -> dict:
+    """List reviewed exercises2 notes files with validation state."""
+    from .grammar import exercises2
+    return {"sources": exercises2.list_sources()}
+
+
 @app.get("/admin/video-info")
 async def admin_video_info(
     youtube_id: str, agent: dict = Depends(authed_agent),

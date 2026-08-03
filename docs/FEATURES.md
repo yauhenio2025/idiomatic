@@ -110,6 +110,20 @@
 - **Dependencies**: explainer renderer + clip cache (`idiomatic/grammar/explainers.py`), season-1 podcast sources/stage dir (`idiomatic/grammar/podcasts.py`), `gemini_image_model` setting (`gemini-3-pro-image-preview`), genanki
 - **Added**: 2026-08-03 | **Modified**: 2026-08-03
 
+### Exercises 2.0 (rich EN→TL usage notes; pilot: es connecting — format approved)
+- **Status**: Active (ES CONNECTING pilot approved 2026-08-04; IT corpus rebuild + further batches in progress)
+- **Description**: Revival of the 2023 legacy EXCERCISES corpus (see docs/research/legacy-excercises-audit.md) as rich notes: EN prompt → TL main rendering + accepted alternatives, register line, interference trap, in-register example (El País-opinion style), pre-rendered cloze. Content is codex-authored against commissions, audited, then committed as JSON under `data/exercises2/notes/<lang>_<topic>.json`; the builder synthesizes two cached leveled ElevenLabs clips per note (answer + example; silence-marked failures ship text-only), packages one frozen 17-field `Idiomatic Exercises v1` model (2 templates: Production, Cloze) into `Idiomatic Exercises {LANG}::{Topic}` subdecks, and publishes a rolling `apkgs.kind='exercises2'` row per language — zero add-on changes.
+- **Entry Points**:
+  - `idiomatic/grammar/exercises2.py` - schema validation, GUID/deck naming, cloze→mark/blank HTML, TTS cache + leveling, model + apkg build, `build_language()`
+  - `idiomatic/grammar/data/exercises2/notes/es_connecting.json` - approved 42-note pilot content
+  - `idiomatic/grammar/data/exercises2/it_rebuild/` - IT corpus rebuild inputs/outputs (2,589 EN prompts with es/fr/pt/de refs)
+  - `idiomatic/api.py:796-830` - `POST /admin/exercises2-build?lang`, `GET /admin/exercises2-list`
+  - `docs/commissions/EXERCISES2_PILOT_COMMISSION.md`, `docs/commissions/EXERCISES2_IT_REBUILD_COMMISSION.md` - codex authoring contracts
+  - `tools/it_rebuild_driver.sh` - resumable parallel codex driver for the IT rebuild
+  - `tests/test_exercises2.py` - schema/GUID/cloze/TTS-cache/apkg coverage
+- **Dependencies**: `gemini.synthesize` provider chain (ElevenLabs primary), `leveled_speech_clip` + voice fingerprint (`idiomatic/grammar/explainers.py`), `LANG_VOICE` (`idiomatic/pipeline/audio.py`), genanki, codex CLI (authoring)
+- **Added**: 2026-08-04
+
 ### LingQ vocabulary mirror
 - **Status**: Active
 - **Description**: The user's saved LingQ vocabulary (10 languages incl. not-yet-active sv/da/nl/no/zh) mirrored into `lingq_terms`; grammar generation weaves a per-topic sample of still-learning terms into drill sentences (optional material, never the blank); daily cron auto-sync; `/admin/lingq-sample` feeds local agents (codex).
