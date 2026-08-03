@@ -1,0 +1,602 @@
+[
+  {
+    "id": "it_commands_001",
+    "en": "Don't tell him about the Cold War!",
+    "it": "Non gli parli della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_002",
+    "en": "Show her the research on Big Tech!",
+    "it": "Le mostri la ricerca sulle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_003",
+    "en": "Don't give it to me!",
+    "it": "Non me lo dia!",
+    "note": "Il pronome inglese ‘it’ non specifica genere o numero e i riferimenti divergono; è stato reso con il maschile singolare non marcato ‘lo’."
+  },
+  {
+    "id": "it_commands_004",
+    "en": "Don't explain it to them!",
+    "it": "Non glielo spieghi!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_005",
+    "en": "Send her the article about neoliberalism!",
+    "it": "Le invii l'articolo sul neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_006",
+    "en": "Don't bring him the documentary on the Cold War!",
+    "it": "Non gli porti il documentario sulla guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_007",
+    "en": "Lend me the book on Big Tech regulations!",
+    "it": "Mi presti il libro sulla regolamentazione delle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_008",
+    "en": "Don't teach them about the consequences of neoliberal policies!",
+    "it": "Non insegni loro nulla sulle conseguenze delle politiche neoliberali!",
+    "note": "Autocorrezione nel controllo finale: la costruzione ‘insegni loro quali sono le conseguenze’ è stata resa più naturalmente con ‘insegni loro nulla sulle conseguenze’."
+  },
+  {
+    "id": "it_commands_009",
+    "en": "Offer her a seat at the conference!",
+    "it": "Le offra un posto alla conferenza!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_010",
+    "en": "Don't pass him the notes on the Cold War!",
+    "it": "Non gli passi gli appunti sulla guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_011",
+    "en": "Show it to us!",
+    "it": "Ce lo mostri!",
+    "note": "I riferimenti rendono erroneamente il singolare inglese ‘it’ con pronomi plurali; la traduzione segue l'inglese usando il singolare non marcato ‘lo’."
+  },
+  {
+    "id": "it_commands_012",
+    "en": "Don't give them the presentation on Big Tech mergers!",
+    "it": "Non dia loro la presentazione sulle fusioni tra le Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_013",
+    "en": "Tell me your thoughts on neoliberalism!",
+    "it": "Mi dica cosa pensa del neoliberismo!",
+    "note": "Il riferimento spagnolo usa erroneamente un destinatario di terza persona anziché ‘me’; la traduzione segue l'inglese. Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_014",
+    "en": "Don't hand it to her!",
+    "it": "Non glielo consegni!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_015",
+    "en": "Share the Cold War stories with him!",
+    "it": "Condivida con lui i racconti della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_016",
+    "en": "Don't recommend them that podcast on Big Tech!",
+    "it": "Non consigli loro quel podcast sulle Big Tech!",
+    "note": "La costruzione inglese ‘recommend them that podcast’ è anomala; è stata interpretata nel senso evidente di ‘recommend that podcast to them’."
+  },
+  {
+    "id": "it_commands_017",
+    "en": "Present it to us!",
+    "it": "Ce lo presenti!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_018",
+    "en": "Don't bring her the old photos from the Cold War era!",
+    "it": "Non le porti le vecchie foto dell'epoca della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_019",
+    "en": "Explain to them the dangers of monopolies!",
+    "it": "Spieghi loro i pericoli dei monopoli!",
+    "note": "I riferimenti spagnolo e francese usano erroneamente un destinatario singolare; la traduzione segue il plurale ‘them’ dell'inglese."
+  },
+  {
+    "id": "it_commands_020",
+    "en": "Don't offer him a platform to discuss neoliberalism!",
+    "it": "Non gli offra una piattaforma per discutere di neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_021",
+    "en": "Hand the report to me!",
+    "it": "Mi consegni il rapporto!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_022",
+    "en": "Don't show them the timeline of the Cold War!",
+    "it": "Non mostri loro la cronologia della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_023",
+    "en": "Share with us the insights on Big Tech!",
+    "it": "Condivida con noi le riflessioni sulle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_024",
+    "en": "Don't send him the link to that neoliberal critique!",
+    "it": "Non gli invii il link a quella critica neoliberale!",
+    "note": "‘Neoliberal critique’ può indicare una critica di matrice neoliberale o una critica del neoliberismo; è stata scelta la prima lettura, grammaticalmente diretta e condivisa da tre riferimenti, mentre il tedesco adotta la seconda."
+  },
+  {
+    "id": "it_commands_025",
+    "en": "Recommend her that Cold War documentary!",
+    "it": "Le consigli quel documentario sulla guerra fredda!",
+    "note": "La costruzione inglese ‘recommend her that documentary’ è anomala; è stata interpretata nel senso evidente di ‘recommend that documentary to her’."
+  },
+  {
+    "id": "it_commands_026",
+    "en": "Don't lend them the magazine about Big Tech breakthroughs!",
+    "it": "Non presti loro la rivista sui progressi delle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_027",
+    "en": "Bring it to me!",
+    "it": "Me lo porti!",
+    "note": "Il pronome inglese ‘it’ non specifica il genere e i riferimenti divergono; è stato reso con il maschile singolare non marcato ‘lo’."
+  },
+  {
+    "id": "it_commands_028",
+    "en": "Don't teach her the nuances of the Cold War!",
+    "it": "Non le insegni le sfumature della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_029",
+    "en": "Offer it to them!",
+    "it": "Glielo offra!",
+    "note": "Il riferimento francese aggiunge erroneamente l'azione ‘de le faire’; la traduzione segue l'inglese, corroborato dagli altri riferimenti."
+  },
+  {
+    "id": "it_commands_030",
+    "en": "Don't hand me the summary of neoliberalism's impacts!",
+    "it": "Non mi consegni la sintesi degli effetti del neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_031",
+    "en": "Share with him the findings on Big Tech!",
+    "it": "Condivida con lui i risultati sulle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_032",
+    "en": "Don't recommend us that Cold War movie!",
+    "it": "Non ci consigli quel film sulla guerra fredda!",
+    "note": "La costruzione inglese ‘recommend us that movie’ è anomala; è stata interpretata nel senso evidente di ‘recommend that movie to us’."
+  },
+  {
+    "id": "it_commands_033",
+    "en": "Send them the article on neoliberal trade!",
+    "it": "Invii loro l'articolo sul commercio neoliberale!",
+    "note": "I riferimenti spagnolo e francese usano erroneamente un destinatario singolare; la traduzione segue il plurale ‘them’ dell'inglese."
+  },
+  {
+    "id": "it_commands_034",
+    "en": "Don't present her with the book about the Cold War!",
+    "it": "Non le doni il libro sulla guerra fredda!",
+    "note": "‘Present someone with’ è stato reso nel suo senso idiomatico di ‘dare in dono’, come nei riferimenti spagnolo e tedesco; francese e portoghese lo traducono letteralmente con ‘presentare’."
+  },
+  {
+    "id": "it_commands_035",
+    "en": "Explain to me the rise of Big Tech!",
+    "it": "Mi spieghi l'ascesa delle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_036",
+    "en": "Don't lend it to him!",
+    "it": "Non glielo presti!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_037",
+    "en": "Show us the photos from the Cold War era!",
+    "it": "Ci mostri le foto dell'epoca della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_038",
+    "en": "Don't tell them about the Big Tech legislation!",
+    "it": "Non parli loro della legislazione sulle Big Tech!",
+    "note": "I riferimenti spagnolo e francese usano erroneamente un destinatario singolare; la traduzione segue il plurale ‘them’ dell'inglese."
+  },
+  {
+    "id": "it_commands_039",
+    "en": "Share with her the documentary on neoliberalism!",
+    "it": "Condivida con lei il documentario sul neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_040",
+    "en": "Don't offer us a perspective on the Cold War!",
+    "it": "Non ci offra una prospettiva sulla guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_041",
+    "en": "Hand them the folder on Big Tech controversies!",
+    "it": "Consegni loro la cartella sulle controversie legate alle Big Tech!",
+    "note": "Il riferimento francese usa erroneamente un destinatario singolare; la traduzione segue il plurale ‘them’ dell'inglese."
+  },
+  {
+    "id": "it_commands_042",
+    "en": "Don't recommend it to me!",
+    "it": "Non me lo consigli!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_043",
+    "en": "Present him with insights on neoliberal policies!",
+    "it": "Gli presenti alcune riflessioni sulle politiche neoliberali!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_044",
+    "en": "Don't lend her the Cold War artifacts!",
+    "it": "Non le presti i cimeli della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_045",
+    "en": "Show them the documentary on Big Tech!",
+    "it": "Mostri loro il documentario sulle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_046",
+    "en": "Don't explain to us the roots of neoliberalism!",
+    "it": "Non ci spieghi le origini del neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_047",
+    "en": "Send it to her!",
+    "it": "Glielo invii!",
+    "note": "Il pronome inglese ‘it’ non specifica genere o numero e i riferimenti divergono; è stato reso con il maschile singolare non marcato ‘lo’."
+  },
+  {
+    "id": "it_commands_048",
+    "en": "Don't teach him about the effects of the Cold War on culture!",
+    "it": "Non gli insegni nulla sugli effetti culturali della guerra fredda!",
+    "note": "Autocorrezione nel controllo finale: la costruzione iniziale è stata resa più naturalmente con ‘non gli insegni nulla sugli effetti culturali’."
+  },
+  {
+    "id": "it_commands_049",
+    "en": "Share with me your perspective on Big Tech!",
+    "it": "Condivida con me il suo punto di vista sulle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_050",
+    "en": "Don't offer them a course on neoliberalism!",
+    "it": "Non offra loro un corso sul neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_051",
+    "en": "Study the origins of the Cold War to understand its implications!",
+    "it": "Studi le origini della guerra fredda per comprenderne le implicazioni!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_052",
+    "en": "Don't dismiss the influence of Big Tech on our daily lives!",
+    "it": "Non ignori l'influenza delle Big Tech sulla nostra vita quotidiana!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_053",
+    "en": "Reevaluate the core tenets of neoliberalism!",
+    "it": "Rivaluti i principi fondamentali del neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_054",
+    "en": "Read primary sources to get a firsthand perspective of the Cold War!",
+    "it": "Legga fonti primarie per farsi un'idea diretta della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_055",
+    "en": "Limit your time on social media platforms for better mental health!",
+    "it": "Limiti il tempo che trascorre sulle piattaforme social per tutelare la sua salute mentale!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_056",
+    "en": "Promote sustainable practices in neoliberal policies!",
+    "it": "Promuova pratiche sostenibili nelle politiche neoliberali!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_057",
+    "en": "Understand the ideological differences that fueled the Cold War!",
+    "it": "Comprenda le differenze ideologiche che alimentarono la guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_058",
+    "en": "Don't let Big Tech monopolize the market; support local tech businesses!",
+    "it": "Non permetta alle Big Tech di monopolizzare il mercato; sostenga le imprese tecnologiche locali!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_059",
+    "en": "Encourage inclusive growth in neoliberal-driven economies!",
+    "it": "Promuova una crescita inclusiva nelle economie guidate dal neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_060",
+    "en": "Engage with documentaries that highlight the human stories of the Cold War!",
+    "it": "Guardi documentari che mettono in luce le vicende umane della guerra fredda!",
+    "note": "L'inglese ‘engage with documentaries’ è poco idiomatico; è stato reso nel senso contestuale di guardare con attenzione."
+  },
+  {
+    "id": "it_commands_061",
+    "en": "Challenge the unethical practices of Big Tech companies!",
+    "it": "Contesti le pratiche non etiche delle aziende Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_062",
+    "en": "Adapt neoliberal strategies to suit modern-day challenges!",
+    "it": "Adatti le strategie neoliberali alle sfide del mondo contemporaneo!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_063",
+    "en": "Speak out against the propaganda tactics of the Cold War era!",
+    "it": "Denunci le tattiche propagandistiche dell'epoca della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_064",
+    "en": "Don't trust every piece of information you read online; verify with trusted sources!",
+    "it": "Non dia per buona ogni informazione che legge online; la verifichi consultando fonti attendibili!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_065",
+    "en": "Question the unchecked power dynamics within neoliberal institutions!",
+    "it": "Metta in discussione le dinamiche di potere incontrollate all'interno delle istituzioni neoliberali!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_066",
+    "en": "Preserve Cold War artifacts for educational purposes!",
+    "it": "Conservi i reperti della guerra fredda a fini didattici!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_067",
+    "en": "Push for transparency in Big Tech operations!",
+    "it": "Si batta per la trasparenza nell'operato delle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_068",
+    "en": "Hold neoliberal leaders accountable for socio-economic disparities!",
+    "it": "Chieda conto ai leader neoliberali delle disparità socioeconomiche!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_069",
+    "en": "Remember the lessons from the Cold War; let's not repeat them!",
+    "it": "Ricordi le lezioni della guerra fredda; non ripetiamole!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_070",
+    "en": "Regulate Big Tech to ensure a fair digital landscape!",
+    "it": "Regolamenti le Big Tech per garantire un panorama digitale equo!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_071",
+    "en": "Implement policies that address the pitfalls of neoliberalism!",
+    "it": "Attui politiche che affrontino le criticità del neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_072",
+    "en": "Listen to oral histories from those who experienced the Cold War firsthand!",
+    "it": "Ascolti le testimonianze orali di chi ha vissuto in prima persona la guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_073",
+    "en": "Upgrade your digital privacy settings regularly!",
+    "it": "Aggiorni regolarmente le impostazioni della privacy digitale!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_074",
+    "en": "Reject neoliberal policies that prioritize profit over people!",
+    "it": "Respinga le politiche neoliberali che antepongono il profitto alle persone!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_075",
+    "en": "Embrace the cultural exchanges that emerged as a byproduct of the Cold War!",
+    "it": "Accolga gli scambi culturali emersi come conseguenza indiretta della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_076",
+    "en": "Boycott tech companies that misuse user data!",
+    "it": "Boicotti le aziende tecnologiche che usano impropriamente i dati degli utenti!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_077",
+    "en": "Highlight the successes and failures of neoliberal economies!",
+    "it": "Metta in evidenza i successi e i fallimenti delle economie neoliberali!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_078",
+    "en": "Collaborate on research that dives deep into the Cold War's influences on modern geopolitics!",
+    "it": "Collabori a ricerche che approfondiscano l'influenza della guerra fredda sulla geopolitica contemporanea!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_079",
+    "en": "Protect your personal data from Big Tech's reach!",
+    "it": "Protegga i suoi dati personali dall'accesso delle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_080",
+    "en": "Revise neoliberal principles to ensure they align with sustainable goals!",
+    "it": "Riveda i principi neoliberali per assicurarsi che siano in linea con gli obiettivi di sostenibilità!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_081",
+    "en": "Don't forget the human cost of the Cold War!",
+    "it": "Non dimentichi il costo umano della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_082",
+    "en": "Demand ethical behavior from Big Tech companies!",
+    "it": "Pretenda un comportamento etico dalle aziende Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_083",
+    "en": "Prioritize the welfare of citizens in any neoliberal policy!",
+    "it": "Dia priorità al benessere dei cittadini in qualsiasi politica neoliberale!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_084",
+    "en": "Document the unique art and culture that arose during the Cold War!",
+    "it": "Documenti l'arte e la cultura uniche sorte durante la guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_085",
+    "en": "Support tech startups that focus on ethical and sustainable practices!",
+    "it": "Sostenga le startup tecnologiche che puntano su pratiche etiche e sostenibili!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_086",
+    "en": "Ensure that neoliberalism does not exacerbate wealth disparities!",
+    "it": "Si assicuri che il neoliberismo non accentui le disparità di ricchezza!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_087",
+    "en": "Acknowledge the contributions of unsung heroes from the Cold War!",
+    "it": "Riconosca il contributo degli eroi della guerra fredda rimasti nell'ombra!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_088",
+    "en": "Innovate without compromising user privacy, Big Tech!",
+    "it": "Innovi senza compromettere la privacy degli utenti, Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_089",
+    "en": "Rethink neoliberal strategies that haven't worked in the past!",
+    "it": "Ripensi le strategie neoliberali che in passato non hanno funzionato!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_090",
+    "en": "Share stories from the Cold War to educate younger generations!",
+    "it": "Condivida racconti della guerra fredda per istruire le generazioni più giovani!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_091",
+    "en": "Don't underestimate the power of Big Tech in shaping public opinion!",
+    "it": "Non sottovaluti il potere delle Big Tech nel plasmare l'opinione pubblica!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_092",
+    "en": "Consider the long-term impacts of neoliberal policies on the environment!",
+    "it": "Consideri gli effetti a lungo termine delle politiche neoliberali sull'ambiente!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_093",
+    "en": "Learn from the mistakes and triumphs of the Cold War!",
+    "it": "Impari dagli errori e dai trionfi della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_094",
+    "en": "Don't compromise user safety for profit, Big Tech!",
+    "it": "Non sacrifichi la sicurezza degli utenti al profitto, Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_095",
+    "en": "Reform neoliberal systems to be more inclusive and democratic!",
+    "it": "Riformi i sistemi neoliberali affinché siano più inclusivi e democratici!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_096",
+    "en": "Preserve the cultural memory of the Cold War!",
+    "it": "Preservi la memoria culturale della guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_097",
+    "en": "Resist the monopolistic tendencies of Big Tech!",
+    "it": "Si opponga alle tendenze monopolistiche delle Big Tech!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_098",
+    "en": "Assess the socio-cultural impacts of neoliberalism regularly!",
+    "it": "Valuti regolarmente gli effetti socioculturali del neoliberismo!",
+    "note": "Autocorrezione nel controllo finale: ‘neoliberalismo’ è stato sostituito con il più idiomatico ‘neoliberismo’."
+  },
+  {
+    "id": "it_commands_099",
+    "en": "Celebrate the peace and collaborations that emerged post-Cold War!",
+    "it": "Celebri la pace e le collaborazioni nate dopo la guerra fredda!",
+    "note": ""
+  },
+  {
+    "id": "it_commands_100",
+    "en": "Challenge the norm; let's reshape Big Tech and neoliberal narratives for the better!",
+    "it": "Metta in discussione la norma; rimodelliamo in meglio le narrazioni sulle Big Tech e quelle neoliberali!",
+    "note": ""
+  }
+]
