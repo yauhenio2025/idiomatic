@@ -1,0 +1,21 @@
+<svg viewBox="0 0 840 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stance frames voglio, chiede, bisogna feed che and the clause flips; fact frames è chiaro, so keep the indicative">
+  <rect x="60" y="60" width="230" height="52" rx="12" class="s-coral"/>
+  <rect x="60" y="124" width="230" height="52" rx="12" class="s-coral"/>
+  <rect x="60" y="188" width="230" height="52" rx="12" class="s-coral"/>
+  <text x="175" y="94" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">voglio</text>
+  <text x="175" y="158" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">chiede</text>
+  <text x="175" y="222" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">bisogna</text>
+  <line x1="300" y1="86" x2="380" y2="140" class="s-stroke-teal" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="300" y1="150" x2="380" y2="150" class="s-stroke-teal" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="300" y1="214" x2="380" y2="160" class="s-stroke-teal" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="430" cy="150" r="42" class="s-sun"/>
+  <text x="430" y="161" text-anchor="middle" font-size="27" font-weight="800" class="s-ink">che</text>
+  <line x1="484" y1="150" x2="556" y2="150" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="580,150 552,136 552,164" class="s-teal"/>
+  <rect x="592" y="112" width="220" height="76" rx="14" class="s-teal"/>
+  <text x="702" y="160" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">congiuntivo</text>
+  <line x1="90" y1="280" x2="750" y2="280" class="s-stroke-line" stroke-width="2"/>
+  <text x="420" y="330" text-anchor="middle" font-size="26" font-weight="700" class="s-ink">è chiaro che · so che <tspan class="s-muted">→ indicativo</tspan></text>
+  <text x="420" y="366" text-anchor="middle" font-size="17" class="s-muted">a fact frame asserts — che alone triggers nothing</text>
+  <text x="420" y="414" text-anchor="middle" font-size="20" class="s-muted">ask what the frame does to the clause, not which word you said</text>
+</svg>
