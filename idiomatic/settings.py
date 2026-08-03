@@ -24,6 +24,7 @@ class Settings(BaseSettings):
     gemini_api_key: str
     gemini_text_model: str = "gemini-3.5-flash"          # text + audio understanding
     gemini_tts_model: str = "gemini-3.1-flash-tts-preview"
+    gemini_image_model: str = "gemini-3-pro-image-preview"
 
     # Primary TTS provider. "elevenlabs" (default) is ~40× cheaper per
     # character than the Gemini TTS preview (July 2026 audit: Gemini billed

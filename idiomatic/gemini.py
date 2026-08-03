@@ -1,6 +1,6 @@
-"""Gemini 3.5 Flash wrappers — text, audio-input, and TTS in one place.
+"""Gemini wrappers — text, image, audio-input, and TTS in one place.
 
-All three live in this module so the pipeline only imports one boundary.
+They live in this module so the pipeline only imports one boundary.
 Retries via tenacity. JSON responses use Gemini's responseMimeType so we
 don't need to clean up code fences.
 """
@@ -31,6 +31,9 @@ from .settings import get_settings
 # pressure on the API.  Lazy-init because the running event loop has to
 # exist when the semaphore is created.
 _TTS_SEM: asyncio.Semaphore | None = None
+
+# Image generation has a separate, deliberately tighter API concurrency cap.
+_IMAGE_SEM = asyncio.Semaphore(4)
 
 
 def _tts_sem() -> asyncio.Semaphore:
@@ -144,6 +147,142 @@ async def generate_text(prompt: str, *, json_mode: bool = False,
     )
     text = cand["content"]["parts"][0]["text"].strip()
     return _parse_json_lenient(text) if json_mode else text
+
+
+# ============================================================================
+# Image generation
+# ============================================================================
+
+def _response_excerpt(response: httpx.Response, limit: int = 300) -> str:
+    """Return a bounded response body for failures, including test doubles."""
+    try:
+        body = response.text
+    except Exception:
+        try:
+            body = json.dumps(response.json())
+        except Exception:
+            body = "<unreadable response body>"
+    return str(body)[:limit]
+
+
+@retry(
+    retry=retry_if_exception_type(GeminiTransient),
+    stop=stop_after_attempt(4),
+    wait=wait_exponential_jitter(initial=2, max=30),
+    reraise=True,
+)
+async def _image_post(url: str, body: dict[str, Any]) -> httpx.Response:
+    """POST one image request, retrying only transient API failures."""
+    s = get_settings()
+    try:
+        async with _IMAGE_SEM:
+            async with httpx.AsyncClient(timeout=120.0) as client:
+                response = await client.post(
+                    url, params={"key": s.gemini_api_key}, json=body,
+                )
+    except (httpx.TransportError, asyncio.TimeoutError) as exc:
+        raise GeminiTransient(
+            f"network/timeout: {type(exc).__name__}: {str(exc)[:120]}")
+
+    if response.status_code == 429 or 500 <= response.status_code < 600:
+        raise GeminiTransient(
+            f"HTTP {response.status_code}: {_response_excerpt(response, 200)}")
+    return response
+
+
+def _write_image_atomic(out: Path, image: bytes) -> None:
+    out.parent.mkdir(parents=True, exist_ok=True)
+    tmp = out.with_name(out.name + ".tmp")
+    try:
+        tmp.write_bytes(image)
+        tmp.replace(out)
+    finally:
+        tmp.unlink(missing_ok=True)
+
+
+async def generate_image(prompt: str, *, out: Path,
+                         aspect_ratio: str = "4:3") -> None:
+    """Generate one image and atomically write it to ``out``.
+
+    A 400 response gets one compatibility retry without ``imageConfig``;
+    image generation otherwise fails loudly rather than creating a placeholder.
+    """
+    s = get_settings()
+    url = _model_url(s.gemini_image_model)
+    generation_config: dict[str, Any] = {
+        "responseModalities": ["IMAGE"],
+        "imageConfig": {"aspectRatio": aspect_ratio},
+    }
+    body = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": generation_config,
+    }
+
+    try:
+        response = await _image_post(url, body)
+        if response.status_code == 400:
+            fallback_body = {
+                "contents": body["contents"],
+                "generationConfig": {"responseModalities": ["IMAGE"]},
+            }
+            response = await _image_post(url, fallback_body)
+    except GeminiTransient as exc:
+        raise RuntimeError(
+            f"Gemini image generation failed: {str(exc)[:300]}") from exc
+
+    if response.status_code >= 400:
+        raise RuntimeError(
+            f"Gemini image generation failed: HTTP {response.status_code}: "
+            f"{_response_excerpt(response)}")
+
+    try:
+        response_json = response.json()
+    except Exception as exc:
+        raise RuntimeError(
+            "Gemini image generation returned invalid JSON: "
+            f"{_response_excerpt(response)}") from exc
+
+    if not isinstance(response_json, dict):
+        raise RuntimeError(
+            "Gemini image generation returned an invalid response shape: "
+            f"{_response_excerpt(response)}")
+
+    encoded: str | None = None
+    for candidate in response_json.get("candidates") or []:
+        if not isinstance(candidate, dict):
+            continue
+        content = candidate.get("content") or {}
+        if not isinstance(content, dict):
+            continue
+        for part in content.get("parts") or []:
+            if not isinstance(part, dict):
+                continue
+            inline = part.get("inlineData") or part.get("inline_data")
+            if not isinstance(inline, dict):
+                continue
+            mime = inline.get("mimeType") or inline.get("mime_type") or ""
+            if isinstance(mime, str) and mime.startswith("image/"):
+                encoded = inline.get("data")
+                break
+        if encoded is not None:
+            break
+
+    if not isinstance(encoded, str):
+        raise RuntimeError(
+            "Gemini image generation returned no inline image: "
+            f"{_response_excerpt(response)}")
+    try:
+        image = base64.b64decode(encoded, validate=True)
+    except (ValueError, TypeError) as exc:
+        raise RuntimeError(
+            "Gemini image generation returned invalid base64: "
+            f"{_response_excerpt(response)}") from exc
+    if len(image) <= 10_000:
+        raise RuntimeError(
+            f"Gemini image generation returned only {len(image)} bytes: "
+            f"{_response_excerpt(response)}")
+
+    _write_image_atomic(out, image)
 
 
 # ============================================================================

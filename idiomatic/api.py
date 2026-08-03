@@ -755,6 +755,44 @@ async def admin_podcasts_list(_: None = Depends(authed_admin)) -> dict:
                     "<file>?token=<admin token>"}
 
 
+@app.post("/admin/podcast-cards-build")
+async def admin_podcast_cards_build(
+    lang: str, episode: int, _: None = Depends(authed_admin),
+) -> dict:
+    """Render and package one podcast-card episode in the background."""
+    from .grammar import podcast_cards
+    from .grammar import service as grammar_service
+
+    if lang not in ("de", "es", "fr", "it", "pt"):
+        raise HTTPException(400, "lang must be de|es|fr|it|pt")
+    if episode < 1:
+        raise HTTPException(400, "episode must be >= 1")
+    claim_key = f"podcast-cards-{lang}"
+    if not grammar_service.claim_grammar_job(claim_key, "podcast_cards"):
+        return {"error": "busy", **grammar_service.get_state()}
+
+    async def _run() -> None:
+        try:
+            result = await podcast_cards.build_episode(lang, episode)
+            grammar_service._state["podcast_cards"] = result
+        except Exception as e:  # noqa: BLE001
+            log.warning("admin.podcast_cards_build.failed", lang=lang,
+                        episode=episode, err=repr(e)[:200])
+            grammar_service._state["error"] = repr(e)[:200]
+        finally:
+            grammar_service._state["running"] = False
+
+    _spawn_bg(_run())
+    return {"started": True, "lang": lang, "episode": episode}
+
+
+@app.get("/admin/podcast-cards-list")
+async def admin_podcast_cards_list(_: None = Depends(authed_admin)) -> dict:
+    """List authored podcast-card sources and staged side assets."""
+    from .grammar import podcast_cards
+    return {"episodes": podcast_cards.list_episode_sources()}
+
+
 @app.get("/admin/video-info")
 async def admin_video_info(
     youtube_id: str, agent: dict = Depends(authed_agent),
