@@ -302,7 +302,7 @@ def test_card_mapping_is_raw_verified_and_localized(
             "slug": "lesson",
             "audio_filename": media,
             "duration_seconds": 37.125,
-            "renderer_revision": "grammar-radio-v1-pause1500-gap200",
+            "renderer_revision": "grammar-radio-v2-pause1500-gap200-lvl16",
         },
     }
 

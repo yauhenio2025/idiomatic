@@ -38,7 +38,13 @@ EXPECTED_COUNTS = {"fr": 4, "pt": 3, "es": 3, "de": 2}
 
 PAUSE_MS = 1_500
 BETWEEN_SPEECH_MS = 200
-RENDERER_REVISION = "grammar-radio-v1-pause1500-gap200"
+# v2: per-clip loudness leveling to LEVEL_TARGET_LUFS before stitching.
+# The final-file loudnorm in concat_mp3s is GLOBAL — it cannot equalize the
+# EN vs target-language voice gap inside one file (user report 2026-08-03:
+# French examples much quieter than English narration).
+RENDERER_REVISION = "grammar-radio-v2-pause1500-gap200-lvl16"
+LEVEL_TARGET_LUFS = -16.0
+LEVEL_REVISION = "lvl16v1"
 
 
 @dataclass(frozen=True)
@@ -515,6 +521,68 @@ def _chime_mp3(work_dir: Path) -> Path:
     return out
 
 
+_EBUR_INTEGRATED = re.compile(r"I:\s*(-?[\d.]+)\s*LUFS")
+_MEAN_VOLUME = re.compile(r"mean_volume:\s*(-?[\d.]+)\s*dB")
+
+
+def _measured_loudness(clip: Path) -> float | None:
+    """Integrated LUFS via ebur128; volumedetect mean as the short-clip
+    fallback (R128 integration is unstable under ~3 s, and many TL clips
+    are one word long)."""
+    result = subprocess.run(
+        ["ffmpeg", "-i", str(clip), "-af", "ebur128=framelog=quiet",
+         "-f", "null", "-"],
+        capture_output=True, text=True,
+    )
+    values = _EBUR_INTEGRATED.findall(result.stderr)
+    if values:
+        integrated = float(values[-1])
+        if -70.0 < integrated < 0.0:
+            return integrated
+    result = subprocess.run(
+        ["ffmpeg", "-i", str(clip), "-af", "volumedetect", "-f", "null", "-"],
+        capture_output=True, text=True,
+    )
+    values = _MEAN_VOLUME.findall(result.stderr)
+    if values:
+        # mean_volume tracks speech LUFS within ~2 dB — close enough for
+        # inter-voice leveling.
+        return float(values[-1])
+    return None
+
+
+def leveled_speech_clip(clip: Path) -> Path:
+    """Static-gain level one cached speech clip to LEVEL_TARGET_LUFS.
+
+    Plain volume gain + a safety limiter, deliberately NOT loudnorm: static
+    gain preserves the voice's natural dynamics and behaves on one-word
+    clips. Output is cached beside the raw clip (idempotent); an
+    unmeasurable clip ships unleveled rather than failing the build.
+    """
+    out = clip.with_name(f"{clip.stem}_{LEVEL_REVISION}.mp3")
+    if out.exists() and out.stat().st_size > 0:
+        return out
+    measured = _measured_loudness(clip)
+    if measured is None:
+        log.warning("grammar.level.unmeasurable", clip=clip.name)
+        return clip
+    gain = max(-12.0, min(12.0, LEVEL_TARGET_LUFS - measured))
+    temporary = out.with_name(f".{out.stem}.building.mp3")
+    temporary.unlink(missing_ok=True)
+    try:
+        subprocess.run(
+            ["ffmpeg", "-y", "-loglevel", "error", "-i", str(clip),
+             "-af", f"volume={gain:.2f}dB,alimiter=limit=0.97:level=false",
+             "-c:a", "libmp3lame", "-q:a", "4", str(temporary)],
+            check=True,
+        )
+        temporary.replace(out)
+    except Exception:
+        temporary.unlink(missing_ok=True)
+        raise
+    return out
+
+
 def _probe_duration(path: Path) -> float:
     result = subprocess.run(
         [
@@ -537,6 +605,7 @@ async def render_explainer(
     silence_fn: Callable[[Path, int], Path] = silence_mp3,
     concat_fn: Callable[[list[Path], Path], Path] = concat_mp3s,
     probe_fn: Callable[[Path], float] = _probe_duration,
+    level_fn: Callable[[Path], Path] = leveled_speech_clip,
 ) -> RenderedExplainer:
     """Render one explainer, reusing unchanged per-line clips.
 
@@ -593,6 +662,18 @@ async def render_explainer(
         raise ExplainerBuildError(
             f"{script.lang}/{script.slug}: incomplete TTS segments: {', '.join(sorted(failed))}"
         )
+
+    # Level every speech clip to one loudness target before stitching —
+    # per-voice output levels differ (EN narrator vs TL voice) and the
+    # global loudnorm in concat can't fix imbalance inside the file.
+    # Dedupe first: a repeated physical line maps to one cached clip.
+    unique_clips = {path: path for path in paths_by_index.values()}
+    leveled_list = await asyncio.gather(
+        *(asyncio.to_thread(level_fn, path) for path in unique_clips)
+    )
+    leveled = dict(zip(unique_clips, leveled_list, strict=True))
+    paths_by_index = {index: leveled[path]
+                      for index, path in paths_by_index.items()}
 
     pause_lengths = {
         int(segment.text) if segment.text else PAUSE_MS
