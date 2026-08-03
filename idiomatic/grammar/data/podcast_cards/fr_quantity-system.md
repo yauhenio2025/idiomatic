@@ -18,7 +18,7 @@ TITLE: Your №1 French mistake
 IMG: A large coral warning triangle containing the crossed-out words "beaucoup des" next to a glowing teal corrected label "beaucoup de", floating above a stylized stack of five years of lesson notebooks
 
 [MUSIC:intro]
-This card is about your single most frequent French mistake — you've made it a hundred and thirty-eight times in five years of lesson notes: saying "beaucoup des" where French wants "beaucoup de".
+This card is about your single most frequent French mistake — you've made it a hundred and thirty-eight times in five years of lesson notes. The good news: it's one habit, not a hundred rules.
 SHOW: 138× in your lesson notes — one habit, not a hundred rules.
 Here's a sentence you actually said, years ago:
 TL: J'apprends beaucoup des langues.
@@ -57,6 +57,7 @@ SHOW: some bread
 One more time, just the three sounds, slowly. Duh. Day. Du.
 TL: de, des, du
 [PAUSE:2000]
+That's the ear training done — move on to the next card.
 
 [CARD]
 TITLE: The rule: quantity → bare de
@@ -99,34 +100,39 @@ SHOW: enough energy
 [PAUSE:1500]
 That's the whole core: quantity word, then bare de, squeezed before a vowel.
 SHOW: quantity word → **de** (→ **d'** before a vowel)
+Core rule locked in — move on to the next card.
 
 [CARD]
 TITLE: Practice I — say it out loud
-IMG: A person mid-stride on a walking path wearing headphones, a large speech bubble containing only the word "de", a dotted path curving toward the horizon, energetic composition
+IMG: A person mid-stride on a walking path wearing headphones, a large speech bubble containing only the two French words "beaucoup de", a dotted path curving toward the horizon, energetic composition
 
-Practice time. The rule being drilled: after beaucoup, trop, assez and peu comes bare de. I'll give you a sentence in English; you say the French out loud — actually out loud, that's the point. Then I'll give you the answer.
+Practice time. The rule being drilled: after beaucoup, trop, assez and peu comes bare de. I'll give you a sentence in English; you say the French out loud — actually out loud, that's the point. Then you'll hear the answer, and the key chunk once more.
 Number one. "He reads a lot of newspapers." Start with "il lit".
 SHOW: 1. He reads a lot of newspapers. — *il lit…*
 [THINK:8000]
 TL-: Il lit beaucoup de journaux.
-Beaucoup de. Duh, not day.
+TL-: beaucoup de journaux
+Duh, not day.
 [PAUSE:1500]
 Number two. "We have too many meetings." Start with "nous avons".
 SHOW: 2. We have too many meetings. — *nous avons…*
 [THINK:8000]
 TL-: Nous avons trop de réunions.
+TL-: trop de réunions
 [PAUSE:1500]
 Number three — watch for the vowel. "She has a lot of influence." Start with "elle a".
 SHOW: 3. She has a lot of influence. — *elle a…*
 [THINK:8000]
 TL-: Elle a beaucoup d'influence.
-The squeeze: beaucoup d'influence, because influence starts with a vowel.
+TL-: beaucoup d'influence
+The squeeze — because the next word starts with a vowel.
 [PAUSE:1500]
 Number four. "There isn't enough water." Start with "il n'y a pas".
 SHOW: 4. There isn't enough water. — *il n'y a pas…*
 [THINK:8000]
 TL-: Il n'y a pas assez d'eau.
-Assez d'eau. Two tricks at once there — well done if you got both.
+TL-: assez d'eau
+Two tricks at once there — well done if you got both.
 [PAUSE:2000]
 Flip the card to widen the rule.
 
@@ -135,43 +141,52 @@ TITLE: Same reflex: pas de
 IMG: A split-panel diagram: left panel a large minus sign turning the word "des" into "de" chalkboard-style; right panel an elegant fountain pen writing the words "de bonnes idées"
 
 This side widens the circle: the same bare-de reflex covers two situations you meet every day.
-The first is negation. When a sentence goes negative, des and du collapse into plain de as well. You have money — j'ai de l'argent. You don't have money —
+The first is negation. When a sentence goes negative, des and du collapse into plain de as well. You have money:
+TL: J'ai de l'argent.
+SHOW: I have money
+You don't have money:
 TL: Je n'ai pas d'argent.
 SHOW: I don't have money
 [PAUSE:1000]
-There are questions — il y a des questions. There are no questions —
+There are questions:
+TL: Il y a des questions.
+There are no questions:
 TL: Il n'y a pas de questions.
 SHOW: pas de — never "pas des"
 [PAUSE:1500]
-The second is more subtle, and honestly, even French people wobble here in casual speech. In careful French, when a plural adjective comes before the noun, des softens to de. You don't say "des grandes villes" — you say:
+The second is more subtle, and honestly, even French people wobble here in casual speech. In careful French, when a plural adjective comes before the noun, des softens to de. First the wrong version, then the right one:
+TL-: des grandes villes
 TL: de grandes villes
 SHOW: big cities
 [PAUSE:1000]
 TL: de bonnes idées
 SHOW: good ideas
 [PAUSE:1500]
-If you only remember that one in writing, that's fine — it's a careful-register rule. But your ear should stop being surprised by it.
+If you only remember that one in writing, that's fine — it's a careful-register rule. But your ear should stop being surprised by it. Circle widened — move on to the next card.
 
 [CARD]
 TITLE: Practice II — the harder mix
 IMG: Three ascending stepping stones labeled exactly "pas de", "de bonnes", "trop de", with a small walking figure stepping onto the highest stone, sunrise gradient background
 
-Practice again — the reflex being drilled: quantity words and negation both take bare de. Slightly harder mix this time; say it out loud.
+Practice again — the reflex being drilled: quantity words and negation both take bare de. Slightly harder mix this time; say it out loud, then you'll hear the answer and the key chunk.
 Number one. "I don't have time." Start with "je n'ai pas".
 SHOW: 1. I don't have time. — *je n'ai pas…*
 [THINK:8000]
 TL-: Je n'ai pas de temps.
+TL-: pas de temps
 [PAUSE:1500]
 Number two. "She asks good questions." Careful register. Start with "elle pose".
 SHOW: 2. She asks good questions. (careful register) — *elle pose…*
 [THINK:8000]
 TL-: Elle pose de bonnes questions.
-De bonnes questions — the adjective comes first, so des steps down to de.
+TL-: de bonnes questions
+The adjective comes first, so des steps down to de.
 [PAUSE:1500]
 Number three. "Too much noise, not enough ideas." A little slogan; give it a try.
 SHOW: 3. Too much noise, not enough ideas.
 [THINK:8000]
 TL-: Trop de bruit, pas assez d'idées.
+A slogan worth keeping.
 [PAUSE:2000]
 Now flip the card for the two famous exceptions — that aren't.
 
@@ -184,7 +199,7 @@ The first is la plupart. "Most". It's not a quantity adverb like beaucoup; it's 
 TL: la plupart des journalistes
 SHOW: most journalists — **des** survives here; this is correct
 [PAUSE:1000]
-So: beaucoup de journalistes, but la plupart des journalistes. Hear them side by side:
+Hear the two families side by side:
 TL: beaucoup de journalistes
 TL: la plupart des journalistes
 [PAUSE:1500]
@@ -192,7 +207,7 @@ The second is bien des — an old-fashioned, slightly literary way to say "many 
 TL: bien des erreurs
 SHOW: many an error — also correct
 [PAUSE:1500]
-If that feels like a lot, hold on to just this: the everyday quantity words take bare de. La plupart is the odd one out, and it's odd because it's secretly a noun.
+If that feels like a lot, hold on to just this: the everyday quantity words take bare de. La plupart is the odd one out, and it's odd because it's secretly a noun. Impostors unmasked — move on to the next card.
 
 [CARD]
 TITLE: Quick fire — five in a row
@@ -223,6 +238,7 @@ Five — the original sin, one last time. "I'm learning a lot of languages."
 SHOW: 5. I'm learning a lot of languages.
 [THINK:8000]
 TL-: J'apprends beaucoup de langues.
+TL-: beaucoup de langues
 If you said "day" — des — say it again with "duh". That exact sentence is the one to overwrite.
 [PAUSE:2000]
 Flip the card one last time to land it.
@@ -238,7 +254,7 @@ Second, negation does the same thing: pas de, never "pas des".
 SHOW: 2. pas **de** — never "pas des"
 Third, la plupart plays by noun rules — la plupart des — and that's not an exception to your rule, it's a different animal.
 SHOW: 3. la plupart **des** — noun rules
-You've said "beaucoup des" a hundred and thirty-eight times. Somewhere in today's session, say "beaucoup de choses" ten times instead — and mean it.
+You've made this mistake a hundred and thirty-eight times. Somewhere in today's session, say this ten times instead — and mean it:
 TL: beaucoup de choses
-À la prochaine.
+That was the last card of the episode. À la prochaine.
 [MUSIC:outro]
