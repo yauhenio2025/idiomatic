@@ -1,6 +1,6 @@
 # Feature Inventory
 
-> Auto-maintained by Claude Code. Last updated: 2026-07-28
+> Auto-maintained by Claude Code. Last updated: 2026-08-03
 
 ## Ingestion
 
@@ -96,6 +96,18 @@
   - `frontend/src/api.ts` - `adminCall()` (admin-token actions from the SPA)
 - **Dependencies**: Admin API + dashboard
 - **Added**: 2026-07-31
+
+### Podcast lesson cards (pilot: fr episode 3)
+- **Status**: Active (pilot — one episode; batching the other nine awaits user approval)
+- **Description**: Grammar-walk episodes decomposed into ~5 two-sided Anki notes: each side has its own stitched narration (shared explainer clip cache), big-font HTML, and a Gemini-generated image; "flip the card" cues chain the sides. Own frozen 14-field `Idiomatic Podcast Lesson v1` model; delivered as `apkgs.kind='podcast_lesson'` per lang into `Idiomatic Grammar {LANG}::0 <listening>::NN <title>` subdecks with zero add-on changes.
+- **Entry Points**:
+  - `idiomatic/grammar/podcast_cards.py` - markup parser ([CARD]/[SIDE]/TITLE:/SHOW:/TL-:), side HTML, audio/image staging, model + apkg build, `build_episode()`
+  - `idiomatic/grammar/data/podcast_cards/fr_quantity-system.md` - authored pilot source (5 cards × 2 sides)
+  - `idiomatic/gemini.py:203-286` - `generate_image()` (Nano-Banana-Pro-class, atomic write, fail-loud, no placeholders)
+  - `idiomatic/api.py:758-792` - `POST /admin/podcast-cards-build?lang&episode`, `GET /admin/podcast-cards-list`
+  - `tests/test_podcast_cards.py` - parser/HTML/GUID/apkg/image-cache coverage
+- **Dependencies**: explainer renderer + clip cache (`idiomatic/grammar/explainers.py`), season-1 podcast sources/stage dir (`idiomatic/grammar/podcasts.py`), `gemini_image_model` setting (`gemini-3-pro-image-preview`), genanki
+- **Added**: 2026-08-03
 
 ### LingQ vocabulary mirror
 - **Status**: Active
