@@ -1385,5 +1385,619 @@
     "example_en": "On the other hand, imposing identical obligations on all services could entrench companies that already have large legal teams.",
     "cloze": "{{c1::Por otra parte}}, imponer obligaciones idénticas a todos los servicios podría afianzar a las empresas que ya disponen de grandes equipos jurídicos.",
     "note": "The old rendering is accurate; the example uses the connector as an unpaired counterweight. Self-review: replaced an overbroad warning about mixed pairs with the genuine mano calque trap."
+  },
+  {
+    "id": "esc143",
+    "en": "Rather",
+    "category": "reformulation",
+    "tl": "Más bien",
+    "alts": [
+      "Antes bien"
+    ],
+    "register": "Neutral corrective connector; Antes bien is more formal and emphatic.",
+    "trap": "Rather also expresses preference or degree; Más bien is the right choice here only for correction or replacement of a prior claim.",
+    "example_tl": "La reforma no limita el poder de las plataformas; más bien, legitima su papel como árbitros privados del debate público.",
+    "example_en": "The reform does not limit the platforms' power; rather, it legitimises their role as private arbiters of public debate.",
+    "cloze": "La reforma no limita el poder de las plataformas; {{c1::más bien}}, legitima su papel como árbitros privados del debate público.",
+    "note": "The old rendering is accurate for the corrective sense selected."
+  },
+  {
+    "id": "esc145",
+    "en": "Unlike",
+    "category": "contrast",
+    "tl": "A diferencia de",
+    "alts": [
+      "Frente a"
+    ],
+    "register": "Neutral comparative contrast; Frente a is slightly more compressed and can sound more adversarial.",
+    "trap": "Unlike before a noun is not the adjective diferente; use the fixed prepositional frame A diferencia de.",
+    "example_tl": "A diferencia de los radiodifusores públicos, las plataformas globales no están obligadas a justificar editorialmente sus decisiones de amplificación.",
+    "example_en": "Unlike public broadcasters, global platforms are not required to provide an editorial justification for their amplification decisions.",
+    "cloze": "{{c1::A diferencia de}} los radiodifusores públicos, las plataformas globales no están obligadas a justificar editorialmente sus decisiones de amplificación.",
+    "note": "The old rendering is accurate."
+  },
+  {
+    "id": "esc147",
+    "en": "While",
+    "category": "contrast",
+    "tl": "Mientras que",
+    "alts": [],
+    "register": "Neutral; contrasts two simultaneous or parallel states without necessarily implying direct opposition.",
+    "trap": "While is also temporal; Mientras que makes the contrastive reading explicit, whereas mientras alone often foregrounds simultaneity.",
+    "example_tl": "Mientras que los medios tradicionales publican criterios editoriales identificables, las plataformas ocultan decisiones equivalentes tras sistemas presentados como neutrales.",
+    "example_en": "While traditional media publish identifiable editorial criteria, platforms conceal equivalent decisions behind systems presented as neutral.",
+    "cloze": "{{c1::Mientras que}} los medios tradicionales publican criterios editoriales identificables, las plataformas ocultan decisiones equivalentes tras sistemas presentados como neutrales.",
+    "note": "The contrastive sense is selected; the bare English prompt is also capable of a temporal reading."
+  },
+  {
+    "id": "esc148",
+    "en": "Yet",
+    "category": "contrast",
+    "tl": "Sin embargo",
+    "alts": [
+      "Aun así",
+      "Con todo"
+    ],
+    "register": "Neutral adversative connector; Con todo is more essayistic and Aun así more explicitly concessive.",
+    "trap": "Temporal yet is todavía or aún; adversative yet is Sin embargo, Aun así or pero, depending on syntax.",
+    "example_tl": "Sin embargo, la ley conserva excepciones tan amplias que cualquier garantía de supervisión judicial podría quedar reducida a una formalidad.",
+    "example_en": "Yet the law retains exceptions so broad that any guarantee of judicial oversight could be reduced to a formality.",
+    "cloze": "{{c1::Sin embargo}}, la ley conserva excepciones tan amplias que cualquier garantía de supervisión judicial podría quedar reducida a una formalidad.",
+    "note": "The old rendering is accurate for the adversative sense."
+  },
+  {
+    "id": "esc150",
+    "en": "As with",
+    "category": "addition",
+    "tl": "Al igual que ocurre con",
+    "alts": [
+      "Como sucede con"
+    ],
+    "register": "Neutral-formal comparison frame; the explicit verb makes the analogy natural before a noun phrase.",
+    "trap": "The literal Como con is normally too compressed in careful prose; Spanish usually supplies ocurre or sucede.",
+    "example_tl": "Al igual que ocurre con la publicidad política, la promoción pagada de contenidos informativos exige reglas claras de transparencia y archivo.",
+    "example_en": "As with political advertising, the paid promotion of news content requires clear rules on transparency and archiving.",
+    "cloze": "{{c1::Al igual que ocurre con}} la publicidad política, la promoción pagada de contenidos informativos exige reglas claras de transparencia y archivo.",
+    "note": "Materially expands the compressed, translation-like old_back."
+  },
+  {
+    "id": "esc152",
+    "en": "By the same token",
+    "category": "addition",
+    "tl": "Por la misma razón",
+    "alts": [
+      "Por idéntico motivo"
+    ],
+    "register": "Neutral argumentative connector; extends the same premise or criterion to a parallel case.",
+    "trap": "Token is not ficha or señal here; the idiom refers to applying the same reason or line of argument.",
+    "example_tl": "Por la misma razón, una plataforma que selecciona y jerarquiza noticias no puede presentarse como un mero intermediario técnico.",
+    "example_en": "By the same token, a platform that selects and ranks news cannot present itself as a mere technical intermediary.",
+    "cloze": "{{c1::Por la misma razón}}, una plataforma que selecciona y jerarquiza noticias no puede presentarse como un mero intermediario técnico.",
+    "note": "Por lo mismo is possible, but Por la misma razón states the argumentative relation more precisely in European Spanish. Self-review: replaced a gerundial alternative whose understood subject did not align with the example."
+  },
+  {
+    "id": "esc153",
+    "en": "Compared to",
+    "category": "contrast",
+    "tl": "En comparación con",
+    "alts": [
+      "Frente a"
+    ],
+    "register": "Neutral comparative frame; Frente a is shorter and may give the contrast more rhetorical force.",
+    "trap": "The noun comparación selects con in this frame; en comparación a is not the standard choice here.",
+    "example_tl": "En comparación con la prensa nacional, los medios locales disponen de menos recursos para recurrir sanciones y negociar condiciones publicitarias.",
+    "example_en": "Compared to the national press, local media have fewer resources to appeal sanctions and negotiate advertising terms.",
+    "cloze": "{{c1::En comparación con}} la prensa nacional, los medios locales disponen de menos recursos para recurrir sanciones y negociar condiciones publicitarias.",
+    "note": "The old rendering is accurate."
+  },
+  {
+    "id": "esc154",
+    "en": "Correspondingly",
+    "category": "addition",
+    "tl": "En consonancia con ello",
+    "alts": [],
+    "register": "Written-formal; marks a response or change that matches the relationship just described.",
+    "trap": "Correspondientemente exists but is heavy and uncommon as a discourse connector; En consonancia con ello is more idiomatic.",
+    "example_tl": "En consonancia con ello, las obligaciones de transparencia deberían aumentar conforme crece la capacidad de una plataforma para condicionar la conversación pública.",
+    "example_en": "Correspondingly, transparency obligations should increase as a platform's capacity to shape public conversation grows.",
+    "cloze": "{{c1::En consonancia con ello}}, las obligaciones de transparencia deberían aumentar conforme crece la capacidad de una plataforma para condicionar la conversación pública.",
+    "note": "Materially diverges from the awkward legacy adverb. The relational reading of the context-free English item is selected. Self-review: removed the legacy-like adverbial alternative because it remained unnatural in the example."
+  },
+  {
+    "id": "esc164",
+    "en": "Just as",
+    "category": "addition",
+    "tl": "Del mismo modo que",
+    "alts": [
+      "Al igual que"
+    ],
+    "register": "Neutral comparison frame; introduces a precedent whose logic is extended in the main clause.",
+    "trap": "Just is not solo or justo here; the two words form a comparative connector.",
+    "example_tl": "Del mismo modo que regulamos la concentración televisiva, debemos limitar el control de las plataformas sobre la distribución digital de noticias.",
+    "example_en": "Just as we regulate concentration in television, we must limit platforms' control over the digital distribution of news.",
+    "cloze": "{{c1::Del mismo modo que}} regulamos la concentración televisiva, debemos limitar el control de las plataformas sobre la distribución digital de noticias.",
+    "note": "Diverges from old_back in favour of a more formal frame suited to the example."
+  },
+  {
+    "id": "esc165",
+    "en": "Just as…so too",
+    "category": "addition",
+    "tl": "Así como… también",
+    "alts": [
+      "Del mismo modo que… también"
+    ],
+    "register": "Neutral-formal correlative frame; establishes a structural analogy between two full propositions.",
+    "trap": "Avoid the hybrid Igual que… así también; Spanish normally correlates Así como with también, or Del mismo modo que with también.",
+    "example_tl": "Así como la imprenta alteró la autoridad religiosa, también las redes sociales han transformado quién puede fijar los límites del discurso público.",
+    "example_en": "Just as the printing press altered religious authority, so too have social networks transformed who can set the limits of public discourse.",
+    "cloze": "{{c1::Así como}} la imprenta alteró la autoridad religiosa, {{c1::también}} las redes sociales han transformado quién puede fijar los límites del discurso público.",
+    "note": "Materially regularises the awkward correlative pairing in old_back."
+  },
+  {
+    "id": "esc167",
+    "en": "Likewise",
+    "category": "addition",
+    "tl": "Del mismo modo",
+    "alts": [
+      "Asimismo"
+    ],
+    "register": "Neutral-formal; introduces a parallel claim or applies the preceding reasoning to another actor.",
+    "trap": "Likewise can answer a greeting in English; this note covers only its argumentative parallelism function.",
+    "example_tl": "Del mismo modo, los organismos reguladores necesitan independencia financiera si pretenden fiscalizar a empresas con recursos jurídicos prácticamente ilimitados.",
+    "example_en": "Likewise, regulatory bodies need financial independence if they intend to scrutinise companies with practically unlimited legal resources.",
+    "cloze": "{{c1::Del mismo modo}}, los organismos reguladores necesitan independencia financiera si pretenden fiscalizar a empresas con recursos jurídicos prácticamente ilimitados.",
+    "note": "The old rendering is accurate."
+  },
+  {
+    "id": "esc168",
+    "en": "Most important",
+    "category": "stance",
+    "tl": "Lo más importante es que",
+    "alts": [
+      "Lo fundamental es que"
+    ],
+    "register": "Neutral emphatic frame; introduces the proposition assigned greatest argumentative weight.",
+    "trap": "Before a finite proposition, Lo más importante is incomplete without the copular frame es que.",
+    "example_tl": "Lo más importante es que la reforma garantice a los investigadores un acceso estable a los datos sin supeditarlo al consentimiento de las plataformas.",
+    "example_en": "The most important thing is for the reform to guarantee researchers stable access to data without making it subject to the platforms' consent.",
+    "cloze": "{{c1::Lo más importante es que}} la reforma garantice a los investigadores un acceso estable a los datos sin supeditarlo al consentimiento de las plataformas.",
+    "note": "Expands the fragmentary old_back into a productive propositional frame. Self-review: recast the object structure to make the Spanish idiomatic and the English translation fully faithful."
+  },
+  {
+    "id": "esc173",
+    "en": "Similarly",
+    "category": "addition",
+    "tl": "De manera similar",
+    "alts": [
+      "Análogamente",
+      "Del mismo modo"
+    ],
+    "register": "Neutral-formal; Análogamente is more technical and Del mismo modo slightly less explicit about resemblance.",
+    "trap": "Similar a is an adjective plus a complement; the sentence adverb similarly requires De manera similar or an equivalent connector.",
+    "example_tl": "De manera similar, los buscadores deciden qué fuentes adquieren visibilidad mediante criterios opacos que rara vez pueden impugnarse eficazmente.",
+    "example_en": "Similarly, search engines decide which sources gain visibility through opaque criteria that can rarely be challenged effectively.",
+    "cloze": "{{c1::De manera similar}}, los buscadores deciden qué fuentes adquieren visibilidad mediante criterios opacos que rara vez pueden impugnarse eficazmente.",
+    "note": "Materially corrects old_back, which supplies the adjective similar rather than an adverbial connector."
+  },
+  {
+    "id": "esc182",
+    "en": "Last but not least",
+    "category": "structuring",
+    "tl": "Por último, pero no menos importante",
+    "alts": [
+      "Por último, aunque no menos importante"
+    ],
+    "register": "Neutral rhetorical closer; conventional in presentations and structured prose.",
+    "trap": "Do not translate least as menor here; menos importante is the fixed evaluative phrase.",
+    "example_tl": "Por último, pero no menos importante, la norma debe proteger a quienes moderan contenidos frente a objetivos de productividad incompatibles con su salud.",
+    "example_en": "Last but not least, the rule must protect content moderators from productivity targets incompatible with their health.",
+    "cloze": "{{c1::Por último}}, pero {{c1::no menos importante}}, la norma debe proteger a quienes moderan contenidos frente a objetivos de productividad incompatibles con su salud.",
+    "note": "The old rendering is accurate."
+  },
+  {
+    "id": "esc183",
+    "en": "First and foremost…",
+    "category": "stance",
+    "tl": "Ante todo",
+    "alts": [
+      "Antes que nada"
+    ],
+    "register": "Neutral emphatic prioritiser; Antes que nada is slightly more conversational.",
+    "trap": "Primero y ante todo is an avoidable English-shaped doubling; Ante todo alone conveys both priority and importance.",
+    "example_tl": "Ante todo, la política audiovisual debe preservar un espacio común donde la ciudadanía encuentre información contrastada y voces ideológicamente diversas.",
+    "example_en": "First and foremost, audiovisual policy must preserve a common space where citizens encounter verified information and ideologically diverse voices.",
+    "cloze": "{{c1::Ante todo}}, la política audiovisual debe preservar un espacio común donde la ciudadanía encuentre información contrastada y voces ideológicamente diversas.",
+    "note": "The trailing ellipsis is retained from the input; old_back is accurate."
+  },
+  {
+    "id": "esc184",
+    "en": "All things considered",
+    "category": "stance",
+    "tl": "Vistas todas las circunstancias",
+    "alts": [
+      "Considerándolo todo"
+    ],
+    "register": "Written-formal evaluative frame; Considerándolo todo is neutral and En definitiva more purely summative.",
+    "trap": "En conjunto means overall or taken together, but does not always convey that competing considerations have been weighed.",
+    "example_tl": "Vistas todas las circunstancias, la fusión ofrece beneficios operativos modestos y plantea riesgos graves para la diversidad informativa y la competencia.",
+    "example_en": "All things considered, the merger offers modest operational benefits and poses serious risks to media diversity and competition.",
+    "cloze": "{{c1::Vistas todas las circunstancias}}, la fusión ofrece beneficios operativos modestos y plantea riesgos graves para la diversidad informativa y la competencia.",
+    "note": "Materially diverges from old_back by preserving the deliberative force of the English frame. Self-review: removed En definitiva from alts because it summarises without necessarily weighing all considerations."
+  },
+  {
+    "id": "esc186",
+    "en": "As demonstrated above",
+    "category": "structuring",
+    "tl": "Como se ha demostrado anteriormente",
+    "alts": [
+      "Como ya se ha demostrado"
+    ],
+    "register": "Written-formal backward reference; suited to reports and extended analytical prose.",
+    "trap": "Spatial arriba sounds mechanical in formal cross-reference; anteriormente or ya normally renders above in continuous prose.",
+    "example_tl": "Como se ha demostrado anteriormente, la concentración de datos permite trasladar el dominio adquirido en un mercado digital hacia sectores adyacentes.",
+    "example_en": "As demonstrated above, data concentration enables dominance acquired in one digital market to be transferred to adjacent sectors.",
+    "cloze": "{{c1::Como se ha demostrado anteriormente}}, la concentración de datos permite trasladar el dominio adquirido en un mercado digital hacia sectores adyacentes.",
+    "note": "The legacy gloss omits the backward-reference element expressed by above."
+  },
+  {
+    "id": "esc187",
+    "en": "As noted",
+    "category": "structuring",
+    "tl": "Como ya se ha señalado",
+    "alts": [
+      "Como se ha indicado"
+    ],
+    "register": "Written-formal cross-reference; the impersonal passive avoids unnecessary authorial intrusion.",
+    "trap": "Notado usually means noticed; academic noted is normally señalado, indicado or apuntado.",
+    "example_tl": "Como ya se ha señalado, la transparencia carece de valor práctico cuando solo las propias empresas pueden interpretar los datos publicados.",
+    "example_en": "As noted, transparency has no practical value when only the companies themselves can interpret the published data.",
+    "cloze": "{{c1::Como ya se ha señalado}}, la transparencia carece de valor práctico cuando solo las propias empresas pueden interpretar los datos publicados.",
+    "note": "The old rendering is accurate; ya makes the backward reference explicit."
+  },
+  {
+    "id": "esc190",
+    "en": "Briefly",
+    "category": "reformulation",
+    "tl": "En pocas palabras",
+    "alts": [
+      "En suma"
+    ],
+    "register": "Neutral summarising connector; En suma is more compact and essayistic.",
+    "trap": "Brevemente can describe short duration; when the writer is condensing an argument, En pocas palabras is clearer.",
+    "example_tl": "En pocas palabras, el sistema privatiza decisiones públicas esenciales mientras impide conocer los criterios utilizados para adoptarlas y revisarlas.",
+    "example_en": "Briefly, the system privatises essential public decisions while preventing scrutiny of the criteria used to make and review them.",
+    "cloze": "{{c1::En pocas palabras}}, el sistema privatiza decisiones públicas esenciales mientras impide conocer los criterios utilizados para adoptarlas y revisarlas.",
+    "note": "Diverges from old_back for the discourse-summary sense selected."
+  },
+  {
+    "id": "esc191",
+    "en": "Generally speaking",
+    "category": "generalization",
+    "tl": "En términos generales",
+    "alts": [
+      "Por lo general"
+    ],
+    "register": "Neutral analytical hedge; frames a tendency while allowing exceptions.",
+    "trap": "Generalmente hablando is a word-for-word calque; use En términos generales or Por lo general.",
+    "example_tl": "En términos generales, las políticas de autorregulación funcionan peor cuando el modelo de negocio recompensa precisamente las conductas que pretenden limitar.",
+    "example_en": "Generally speaking, self-regulatory policies work worse when the business model rewards precisely the conduct they seek to curb.",
+    "cloze": "{{c1::En términos generales}}, las políticas de autorregulación funcionan peor cuando el modelo de negocio recompensa precisamente las conductas que pretenden limitar.",
+    "note": "The old rendering is valid but less explicit as a hedging frame."
+  },
+  {
+    "id": "esc192",
+    "en": "Given these points",
+    "category": "result",
+    "tl": "A la luz de lo anterior",
+    "alts": [
+      "Por todo ello"
+    ],
+    "register": "Written-formal; gathers the preceding arguments as grounds for a conclusion or recommendation.",
+    "trap": "Points means arguments here, not physical puntos; Dados estos puntos is understandable but sounds translated.",
+    "example_tl": "A la luz de lo anterior, conviene separar la infraestructura básica de los servicios comerciales que compiten sobre ella.",
+    "example_en": "Given these points, the basic infrastructure should be separated from the commercial services that compete on it.",
+    "cloze": "{{c1::A la luz de lo anterior}}, conviene separar la infraestructura básica de los servicios comerciales que compiten sobre ella.",
+    "note": "Materially diverges from the translation-like old_back."
+  },
+  {
+    "id": "esc194",
+    "en": "In any event",
+    "category": "concession",
+    "tl": "En cualquier caso",
+    "alts": [
+      "Sea como fuere"
+    ],
+    "register": "Neutral case-insensitive conclusion; Sea como fuere is more formal and explicitly concessive.",
+    "trap": "Event does not mean evento in this fixed phrase; caso expresses that the conclusion holds across possible scenarios.",
+    "example_tl": "En cualquier caso, una regulación tardía seguirá siendo preferible a mantener indefinidamente un mercado organizado alrededor de privilegios históricos.",
+    "example_en": "In any event, late regulation will remain preferable to indefinitely preserving a market organised around historic privileges.",
+    "cloze": "{{c1::En cualquier caso}}, una regulación tardía seguirá siendo preferible a mantener indefinidamente un mercado organizado alrededor de privilegios históricos.",
+    "note": "The old rendering is accurate."
+  },
+  {
+    "id": "esc197",
+    "en": "In essence",
+    "category": "reformulation",
+    "tl": "En esencia",
+    "alts": [
+      "En lo fundamental"
+    ],
+    "register": "Neutral analytical distillation; reduces a complex proposal to its defining effect.",
+    "trap": "",
+    "example_tl": "En esencia, la propuesta convierte una obligación democrática de rendición de cuentas en un ejercicio voluntario de relaciones públicas empresariales.",
+    "example_en": "In essence, the proposal turns a democratic accountability obligation into a voluntary corporate public-relations exercise.",
+    "cloze": "{{c1::En esencia}}, la propuesta convierte una obligación democrática de rendición de cuentas en un ejercicio voluntario de relaciones públicas empresariales.",
+    "note": "The old rendering is accurate."
+  },
+  {
+    "id": "esc199",
+    "en": "In the end",
+    "category": "structuring",
+    "tl": "A la postre",
+    "alts": [
+      "Al final"
+    ],
+    "register": "Written-formal and retrospective; Al final is the neutral choice in speech and less elevated prose.",
+    "trap": "En fin usually signals summary, resignation or a topic shift; it does not reliably express an eventual historical outcome.",
+    "example_tl": "A la postre, la dependencia tecnológica condicionó la política exterior europea mucho más que los compromisos públicos sobre autonomía estratégica.",
+    "example_en": "In the end, technological dependence shaped European foreign policy far more than public commitments to strategic autonomy did.",
+    "cloze": "{{c1::A la postre}}, la dependencia tecnológica condicionó la política exterior europea mucho más que los compromisos públicos sobre autonomía estratégica.",
+    "note": "Materially diverges from old_back by selecting the eventual-outcome sense."
+  },
+  {
+    "id": "esc200",
+    "en": "In the final analysis",
+    "category": "reformulation",
+    "tl": "En definitiva",
+    "alts": [
+      "En último término",
+      "A fin de cuentas"
+    ],
+    "register": "Written-neutral summative judgement; A fin de cuentas is slightly more conversational.",
+    "trap": "En el análisis final is a lexical calque; Spanish uses a fixed summative connector rather than mentioning analysis literally.",
+    "example_tl": "En definitiva, la legitimidad del nuevo marco dependerá de si redistribuye poder real o se limita a multiplicar obligaciones documentales.",
+    "example_en": "In the final analysis, the new framework's legitimacy will depend on whether it redistributes real power or merely multiplies documentation requirements.",
+    "cloze": "{{c1::En definitiva}}, la legitimidad del nuevo marco dependerá de si redistribuye poder real o se limita a multiplicar obligaciones documentales.",
+    "note": "Materially corrects the literal, unidiomatic old_back."
+  },
+  {
+    "id": "esc201",
+    "en": "On the whole",
+    "category": "generalization",
+    "tl": "En líneas generales",
+    "alts": [
+      "En conjunto",
+      "En términos generales"
+    ],
+    "register": "Neutral overall assessment; allows the writer to state a broad verdict while preserving qualifications.",
+    "trap": "",
+    "example_tl": "En líneas generales, el reglamento mejora la transparencia, aunque deja sin resolver los incentivos económicos que favorecen la desinformación.",
+    "example_en": "On the whole, the regulation improves transparency, although it leaves unresolved the economic incentives that favour disinformation.",
+    "cloze": "{{c1::En líneas generales}}, el reglamento mejora la transparencia, aunque deja sin resolver los incentivos económicos que favorecen la desinformación.",
+    "note": "The old rendering is valid and retained as an alternative. Self-review: removed a speculative word-for-word trap rather than invent a likely learner error."
+  },
+  {
+    "id": "esc207",
+    "en": "Ultimately",
+    "category": "stance",
+    "tl": "En última instancia",
+    "alts": [],
+    "register": "Written-formal; identifies the decisive level or condition after secondary considerations are stripped away.",
+    "trap": "Ultimately can also describe an eventual outcome, rendered A la postre; this example instead expresses the final determining consideration.",
+    "example_tl": "En última instancia, ninguna arquitectura institucional compensará la falta de voluntad política para imponer límites efectivos a los monopolios digitales.",
+    "example_en": "Ultimately, no institutional architecture will compensate for the lack of political will to impose effective limits on digital monopolies.",
+    "cloze": "{{c1::En última instancia}}, ninguna arquitectura institucional compensará la falta de voluntad política para imponer límites efectivos a los monopolios digitales.",
+    "note": "The old rendering is accurate for the sense selected."
+  },
+  {
+    "id": "esc208",
+    "en": "Although this may be true",
+    "category": "concession",
+    "tl": "Aunque esto pueda ser cierto",
+    "alts": [
+      "Si bien esto puede ser cierto"
+    ],
+    "register": "Neutral-formal concessive frame; acknowledges a possibility without fully endorsing the preceding claim.",
+    "trap": "The subjunctive pueda backgrounds the claim as possible; Aunque esto es cierto would assert it as fact and change the stance.",
+    "example_tl": "Aunque esto pueda ser cierto, la falta de pruebas públicas impide atribuir la disminución de los abusos exclusivamente a la nueva política.",
+    "example_en": "Although this may be true, the lack of public evidence prevents the reduction in abuses from being attributed solely to the new policy.",
+    "cloze": "{{c1::Aunque esto pueda ser cierto}}, la falta de pruebas públicas impide atribuir la disminución de los abusos exclusivamente a la nueva política.",
+    "note": "The modal pueda is added to preserve may; old_back concedes the proposition more directly. Self-review: replaced the unnatural collocation descenso de abusos with disminución de los abusos."
+  },
+  {
+    "id": "esc209",
+    "en": "Even if",
+    "category": "concession",
+    "tl": "Aunque",
+    "alts": [
+      "Aun cuando"
+    ],
+    "register": "Neutral hypothetical concession; the subjunctive carries much of the even-if meaning.",
+    "trap": "Even if is hypothetical and normally takes Aunque plus the subjunctive; factual even though commonly takes the indicative.",
+    "example_tl": "Aunque la plataforma publique sus criterios, seguirá siendo imposible evaluar su aplicación sin acceso independiente a muestras representativas de decisiones.",
+    "example_en": "Even if the platform publishes its criteria, assessing their application will remain impossible without independent access to representative samples of decisions.",
+    "cloze": "{{c1::Aunque}} la plataforma publique sus criterios, seguirá siendo imposible evaluar su aplicación sin acceso independiente a muestras representativas de decisiones.",
+    "note": "The old rendering is accurate only together with the hypothetical subjunctive illustrated here. Self-review: replaced Incluso si because it cannot take the example's present subjunctive unchanged."
+  },
+  {
+    "id": "esc211",
+    "en": "In the event that",
+    "category": "condition",
+    "tl": "En caso de que",
+    "alts": [],
+    "register": "Neutral-formal conditional frame; common in rules, protocols and contingency planning.",
+    "trap": "Keep de before que and use the subjunctive: en caso de que se produzca, not en caso que se produce.",
+    "example_tl": "En caso de que se produzca una filtración, la empresa deberá notificarla a los afectados y al supervisor en cuarenta y ocho horas.",
+    "example_en": "In the event that a leak occurs, the company must notify those affected and the supervisor within forty-eight hours.",
+    "cloze": "{{c1::En caso de que}} se produzca una filtración, la empresa deberá notificarla a los afectados y al supervisor en cuarenta y ocho horas.",
+    "note": "The old rendering is accurate."
+  },
+  {
+    "id": "esc213",
+    "en": "Only if",
+    "category": "condition",
+    "tl": "Solo si",
+    "alts": [
+      "Únicamente si"
+    ],
+    "register": "Neutral; states a necessary condition and is suitable in both analytical prose and speech.",
+    "trap": "Only if marks a necessary condition, not a sufficient one; reversing it to plain si can reverse the logic of the claim.",
+    "example_tl": "Solo si los reguladores pueden inspeccionar los sistemas internos será posible determinar si las auditorías publicadas reflejan realmente su funcionamiento.",
+    "example_en": "Only if regulators can inspect internal systems will it be possible to determine whether published audits truly reflect how they work.",
+    "cloze": "{{c1::Solo si}} los reguladores pueden inspeccionar los sistemas internos será posible determinar si las auditorías publicadas reflejan realmente su funcionamiento.",
+    "note": "Current standard orthography does not require an accent on solo; old_back uses the formerly conventional accent."
+  },
+  {
+    "id": "esc215",
+    "en": "Since",
+    "category": "condition",
+    "tl": "Puesto que",
+    "alts": [
+      "Dado que",
+      "Ya que"
+    ],
+    "register": "Neutral causal-premise connector; Puesto que is particularly comfortable in formal argument.",
+    "trap": "Since is ambiguous: causal since is Puesto que or Ya que, while temporal since is desde or desde que.",
+    "example_tl": "Puesto que el mercado ya está altamente concentrado, cualquier nueva adquisición debería someterse a un examen especialmente riguroso.",
+    "example_en": "Since the market is already highly concentrated, any new acquisition should undergo particularly rigorous scrutiny.",
+    "cloze": "{{c1::Puesto que}} el mercado ya está altamente concentrado, cualquier nueva adquisición debería someterse a un examen especialmente riguroso.",
+    "note": "Materially diverges from old_back, which covers only the temporal prepositional sense. Category condition is the nearest allowed label for a causal premise; the schema has no cause category."
+  },
+  {
+    "id": "esc218",
+    "en": "Whenever",
+    "category": "condition",
+    "tl": "Cada vez que",
+    "alts": [
+      "Siempre que"
+    ],
+    "register": "Neutral repeated-event frame; Siempre que is possible but can also mean provided that.",
+    "trap": "Cuando sea does not introduce a repeated event by itself; use Cada vez que, or Siempre que when context rules out a conditional reading.",
+    "example_tl": "Cada vez que una plataforma modifica sus reglas, miles de medios deben reorganizar estrategias editoriales sin conocer las razones del cambio.",
+    "example_en": "Whenever a platform changes its rules, thousands of media outlets must reorganise editorial strategies without knowing the reasons for the change.",
+    "cloze": "{{c1::Cada vez que}} una plataforma modifica sus reglas, miles de medios deben reorganizar estrategias editoriales sin conocer las razones del cambio.",
+    "note": "Materially corrects the unusable old_back. The example selects habitual whenever, not conditional whenever. Category condition is the nearest allowed label because the schema has no temporal category."
+  },
+  {
+    "id": "esc219",
+    "en": "All the same",
+    "category": "concession",
+    "tl": "Aun así",
+    "alts": [
+      "Con todo",
+      "No obstante"
+    ],
+    "register": "Neutral concessive connector; Con todo and No obstante are more formal.",
+    "trap": "Igualmente means likewise or equally, not nevertheless; Aun is unaccented here because it means even.",
+    "example_tl": "Aun así, la reducción de contenidos falsos no justifica delegar en empresas privadas decisiones que afectan directamente a derechos fundamentales.",
+    "example_en": "All the same, the reduction in false content does not justify delegating decisions that directly affect fundamental rights to private companies.",
+    "cloze": "{{c1::Aun así}}, la reducción de contenidos falsos no justifica delegar en empresas privadas decisiones que afectan directamente a derechos fundamentales.",
+    "note": "Materially corrects old_back, which expresses similarity rather than concession."
+  },
+  {
+    "id": "esc223",
+    "en": "And yet",
+    "category": "concession",
+    "tl": "Y, sin embargo",
+    "alts": [
+      "Y, aun así"
+    ],
+    "register": "Neutral emphatic adversative; the initial y preserves the sense of surprise after the preceding claim.",
+    "trap": "Do not use todavía for adversative yet; here yet means nevertheless, not up to now.",
+    "example_tl": "Y, sin embargo, los gobiernos siguen negociando códigos voluntarios con empresas que han incumplido reiteradamente compromisos idénticos durante años.",
+    "example_en": "And yet governments continue negotiating voluntary codes with companies that have repeatedly broken identical commitments for years.",
+    "cloze": "{{c1::Y, sin embargo}}, los gobiernos siguen negociando códigos voluntarios con empresas que han incumplido reiteradamente compromisos idénticos durante años.",
+    "note": "The old rendering is accurate. Self-review: clozed the contiguous connector as one unit rather than treating it as a discontinuous frame."
+  },
+  {
+    "id": "esc224",
+    "en": "Even though",
+    "category": "concession",
+    "tl": "Aunque",
+    "alts": [
+      "A pesar de que"
+    ],
+    "register": "Neutral factual concession; the indicative presents the conceded information as an asserted fact.",
+    "trap": "Even though commonly takes Aunque plus the indicative when the fact is asserted; do not copy the hypothetical subjunctive pattern of even if automatically.",
+    "example_tl": "Aunque la empresa conocía esos riesgos desde 2022, no modificó el sistema de recomendación hasta que comenzaron las investigaciones parlamentarias.",
+    "example_en": "Even though the company had known about those risks since 2022, it did not change the recommendation system until parliamentary investigations began.",
+    "cloze": "{{c1::Aunque}} la empresa conocía esos riesgos desde 2022, no modificó el sistema de recomendación hasta que comenzaron las investigaciones parlamentarias.",
+    "note": "The example deliberately contrasts factual indicative with the hypothetical subjunctive in esc209."
+  },
+  {
+    "id": "esc226",
+    "en": "Regardless of this",
+    "category": "concession",
+    "tl": "Con independencia de ello",
+    "alts": [
+      "Al margen de ello"
+    ],
+    "register": "Written-formal; sets a consideration aside without necessarily conceding that it is true.",
+    "trap": "Regardless here means irrespective, not necessarily despite; Pese a ello would add a more explicitly concessive relation.",
+    "example_tl": "Con independencia de ello, las autoridades deben investigar si la empresa obtuvo ventajas mediante acuerdos exclusivos con fabricantes de dispositivos.",
+    "example_en": "Regardless of this, the authorities must investigate whether the company obtained advantages through exclusive agreements with device manufacturers.",
+    "cloze": "{{c1::Con independencia de ello}}, las autoridades deben investigar si la empresa obtuvo ventajas mediante acuerdos exclusivos con fabricantes de dispositivos.",
+    "note": "Diverges from old_back to preserve the irrespective reading rather than force a despite relation."
+  },
+  {
+    "id": "esc227",
+    "en": "Broadly speaking",
+    "category": "generalization",
+    "tl": "A grandes rasgos",
+    "alts": [
+      "En términos generales"
+    ],
+    "register": "Neutral; signals a deliberately coarse overview rather than an exceptionless general claim.",
+    "trap": "The fixed phrase uses plural rasgos; do not calque speaking with hablando in a phrase such as ampliamente hablando.",
+    "example_tl": "A grandes rasgos, la estrategia europea combina obligaciones de transparencia, límites a determinadas prácticas comerciales y mecanismos nacionales de supervisión.",
+    "example_en": "Broadly speaking, the European strategy combines transparency obligations, limits on certain commercial practices and national oversight mechanisms.",
+    "cloze": "{{c1::A grandes rasgos}}, la estrategia europea combina obligaciones de transparencia, límites a determinadas prácticas comerciales y mecanismos nacionales de supervisión.",
+    "note": "Diverges from old_back by preserving the approximate, broad-outline nuance."
+  },
+  {
+    "id": "esc228",
+    "en": "Commonly",
+    "category": "generalization",
+    "tl": "Por lo común",
+    "alts": [
+      "Habitualmente"
+    ],
+    "register": "Written-neutral frequency generalisation; Habitualmente is the more usual spoken choice.",
+    "trap": "Commonly can mean usually or in a shared way; Por lo común covers the frequency sense selected here.",
+    "example_tl": "Por lo común, las campañas coordinadas explotan agravios preexistentes en lugar de inventar divisiones sociales completamente nuevas entre la población.",
+    "example_en": "Commonly, coordinated campaigns exploit pre-existing grievances rather than inventing completely new social divisions among the population.",
+    "cloze": "{{c1::Por lo común}}, las campañas coordinadas explotan agravios preexistentes en lugar de inventar divisiones sociales completamente nuevas entre la población.",
+    "note": "Comúnmente is valid, but Por lo común is lighter as an argumentative frequency hedge in this European Spanish example."
+  },
+  {
+    "id": "esc238",
+    "en": "Alternatively stated",
+    "category": "reformulation",
+    "tl": "Dicho de otro modo",
+    "alts": [
+      "Expresado de otra manera",
+      "En otras palabras"
+    ],
+    "register": "Neutral reformulation frame; introduces an equivalent formulation, not a competing course of action.",
+    "trap": "Alternativamente suggests alternation or a different option; here alternatively means in another formulation, so De otro modo is required.",
+    "example_tl": "Dicho de otro modo, la plataforma no se limita a alojar contenidos, sino que organiza activamente las condiciones de su circulación.",
+    "example_en": "Alternatively stated, the platform does not merely host content, but actively organises the conditions under which it circulates.",
+    "cloze": "{{c1::Dicho de otro modo}}, la plataforma no se limita a alojar contenidos, sino que organiza activamente las condiciones de su circulación.",
+    "note": "Materially corrects the literal, semantically misleading old_back."
+  },
+  {
+    "id": "esc242",
+    "en": "In simple terms",
+    "category": "reformulation",
+    "tl": "En términos sencillos",
+    "alts": [
+      "Dicho de forma sencilla"
+    ],
+    "register": "Neutral explanatory frame; suitable when making a technical mechanism accessible without becoming colloquial.",
+    "trap": "Sencillo means easy to understand here; simple can otherwise mean structurally simple or even simplistic, which requires different wording.",
+    "example_tl": "En términos sencillos, el algoritmo favorece los mensajes que generan reacciones intensas porque esas respuestas prolongan el tiempo de uso.",
+    "example_en": "In simple terms, the algorithm favours messages that generate intense reactions because those responses prolong usage time.",
+    "cloze": "{{c1::En términos sencillos}}, el algoritmo favorece los mensajes que generan reacciones intensas porque esas respuestas prolongan el tiempo de uso.",
+    "note": "The old rendering is accurate."
   }
 ]
