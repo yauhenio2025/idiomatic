@@ -1,0 +1,15 @@
+<svg viewBox="0 0 840 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One conjunction, three statuses: habit tenho leio, completed tive li, pending tiver vou ler">
+  <text x="330" y="90" text-anchor="end" font-size="27" font-weight="700" class="s-ink">Quando tenho…</text>
+  <text x="370" y="90" font-size="27" font-weight="700" class="s-ink">leio</text>
+  <text x="705" y="90" text-anchor="middle" font-size="19" font-weight="700" class="s-muted">habit</text>
+  <text x="330" y="160" text-anchor="end" font-size="27" font-weight="700" class="s-ink">Quando tive…</text>
+  <text x="370" y="160" font-size="27" font-weight="700" class="s-ink">li</text>
+  <text x="705" y="160" text-anchor="middle" font-size="19" font-weight="700" class="s-muted">completed</text>
+  <text x="330" y="230" text-anchor="end" font-size="27" font-weight="700" class="s-ink">Quando <tspan font-weight="800" class="s-teal">tiver</tspan>…</text>
+  <text x="370" y="230" font-size="27" font-weight="700" class="s-ink">vou ler</text>
+  <text x="705" y="230" text-anchor="middle" font-size="19" font-weight="700" class="s-teal">pending</text>
+  <line x1="100" y1="275" x2="740" y2="275" class="s-stroke-line" stroke-width="2"/>
+  <text x="420" y="330" text-anchor="middle" font-size="26" class="s-ink"><tspan class="s-dead" text-decoration="line-through">vou ter mais tempo</tspan>  →  <tspan font-weight="800" class="s-teal">tiver</tspan> mais tempo</text>
+  <text x="420" y="370" text-anchor="middle" font-size="18" class="s-muted">your recorded error — and the stem that repairs it</text>
+  <text x="420" y="415" text-anchor="middle" font-size="21" class="s-muted">status first, form second</text>
+</svg>
