@@ -1,0 +1,14 @@
+<svg viewBox="0 0 840 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reminder: retrieve article, noun, and neighbor together — answers in the audio">
+  <rect x="90" y="130" width="170" height="70" rx="14" class="s-teal"/>
+  <text x="175" y="175" text-anchor="middle" font-size="25" font-weight="800" fill="#ffffff">article</text>
+  <line x1="275" y1="165" x2="315" y2="165" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="337,165 311,152 311,178" class="s-teal"/>
+  <rect x="350" y="130" width="170" height="70" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="435" y="175" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">noun</text>
+  <line x1="535" y1="165" x2="575" y2="165" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="597,165 571,152 571,178" class="s-teal"/>
+  <rect x="610" y="130" width="170" height="70" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="695" y="177" text-anchor="middle" font-size="34" font-weight="800" class="s-teal">?</text>
+  <text x="695" y="240" text-anchor="middle" font-size="16" class="s-muted">the neighbor agrees</text>
+  <text x="420" y="330" text-anchor="middle" font-size="20" class="s-muted">say the whole package out loud — the answers are in the audio</text>
+</svg>
