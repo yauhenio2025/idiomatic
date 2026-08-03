@@ -39,19 +39,6 @@
     "note": "Self-review: replaced the English-influenced depuis une position with the idiomatic en position de faiblesse."
   },
   {
-    "id": "frc006",
-    "en": "For this reason",
-    "category": "result",
-    "tl": "Pour cette raison",
-    "alts": [],
-    "register": "Neutral; explicit and natural in both careful speech and analytical writing.",
-    "trap": "Unlike c'est pourquoi, pour cette raison is a detachable prepositional phrase and is normally followed by a comma when fronted.",
-    "example_tl": "Pour cette raison, le Parlement devrait soumettre tout nouveau système de surveillance à un contrôle judiciaire régulier et véritablement indépendant.",
-    "example_en": "For this reason, Parliament should subject every new surveillance system to regular and genuinely independent judicial oversight.",
-    "cloze": "{{c1::Pour cette raison}}, le Parlement devrait soumettre tout nouveau système de surveillance à un contrôle judiciaire régulier et véritablement indépendant.",
-    "note": ""
-  },
-  {
     "id": "frc007",
     "en": "Forthwith",
     "category": "structuring",
@@ -137,10 +124,10 @@
     "alts": ["particulièrement"],
     "register": "Neutral; especially natural as a focused modifier inside the clause.",
     "trap": "Here surtout focuses the group most affected; detached clause-initial surtout can instead mean the argumentative 'above all'.",
-    "example_tl": "Cette opacité pénalise surtout les petites rédactions, qui ne disposent ni des juristes ni des données nécessaires pour contester les plateformes.",
-    "example_en": "This opacity penalizes small newsrooms especially, as they have neither the lawyers nor the data needed to challenge the platforms.",
-    "cloze": "Cette opacité pénalise {{c1::surtout}} les petites rédactions, qui ne disposent ni des juristes ni des données nécessaires pour contester les plateformes.",
-    "note": "Kept separately from frc013 because the syntactic focus function is distinct from an argument-ranking discourse move."
+    "example_tl": "Cette opacité pénalise surtout les petites rédactions, qui ne disposent ni de l'expertise juridique ni des données nécessaires pour contester les plateformes.",
+    "example_en": "This opacity penalizes small newsrooms especially, as they have neither the legal expertise nor the data needed to challenge the platforms.",
+    "cloze": "Cette opacité pénalise {{c1::surtout}} les petites rédactions, qui ne disposent ni de l'expertise juridique ni des données nécessaires pour contester les plateformes.",
+    "note": "Kept separately from frc013 because the syntactic focus function is distinct from an argument-ranking discourse move. Self-review replaced the overly definite ni des juristes with ni de l'expertise juridique."
   },
   {
     "id": "frc020",
@@ -273,19 +260,6 @@
     "note": "Avoids the frequent false equivalence between English 'undoubtedly' and bare French sans doute."
   },
   {
-    "id": "frc040",
-    "en": "Additionally",
-    "category": "addition",
-    "tl": "De plus",
-    "alts": ["En outre"],
-    "register": "Neutral; de plus works in careful speech and writing, while en outre is slightly more formal.",
-    "trap": "Do not use aussi mechanically at the beginning of a formal sentence; its placement and possible inversion follow different patterns.",
-    "example_tl": "De plus, le texte ne prévoit aucun recours effectif pour les utilisateurs dont le compte a été suspendu par erreur.",
-    "example_en": "Additionally, the text provides no effective remedy for users whose account has been suspended in error.",
-    "cloze": "{{c1::De plus}}, le texte ne prévoit aucun recours effectif pour les utilisateurs dont le compte a été suspendu par erreur.",
-    "note": ""
-  },
-  {
     "id": "frc041",
     "en": "Along with",
     "category": "addition",
@@ -318,11 +292,11 @@
     "tl": "ainsi que",
     "alts": [],
     "register": "Neutral; standard in formal coordination without the emphatic force of et surtout.",
-    "trap": "Ainsi que coordinates constituents but does not always take the same agreement logic as two subjects joined straightforwardly by et.",
+    "trap": "Additive ainsi que generally triggers plural agreement between subjects; a parenthetical or comparative ainsi que may leave agreement with the first subject.",
     "example_tl": "Le règlement protège les journalistes ainsi que leurs sources contre la surveillance arbitraire exercée au nom d'impératifs de sécurité mal définis.",
     "example_en": "The regulation protects journalists as well as their sources against arbitrary surveillance carried out in the name of poorly defined security imperatives.",
     "cloze": "Le règlement protège les journalistes {{c1::ainsi que}} leurs sources contre la surveillance arbitraire exercée au nom d'impératifs de sécurité mal définis.",
-    "note": ""
+    "note": "Self-review replaced an underspecified agreement warning with the additive-versus-parenthetical distinction."
   },
   {
     "id": "frc048",
@@ -410,10 +384,10 @@
     "alts": ["sans compter"],
     "register": "Neutral; idiomatic in both serious speech and moderately formal commentary.",
     "trap": "The literal ne pas mentionner reports an omission; sans parler de is the additive discourse move that emphasizes a further consideration.",
-    "example_tl": "La concentration menace le pluralisme national, sans parler de ses effets sur les rédactions locales déjà privées de ressources publicitaires.",
-    "example_en": "Concentration threatens national pluralism, not to mention its effects on local newsrooms already deprived of advertising resources.",
-    "cloze": "La concentration menace le pluralisme national, {{c1::sans parler de}} ses effets sur les rédactions locales déjà privées de ressources publicitaires.",
-    "note": "The main rendering is more exact than the legacy Sans oublier, which can simply mean 'remembering also'."
+    "example_tl": "La concentration menace le pluralisme national, sans parler de ses effets sur les rédactions locales déjà privées de recettes publicitaires.",
+    "example_en": "Concentration threatens national pluralism, not to mention its effects on local newsrooms already deprived of advertising revenue.",
+    "cloze": "La concentration menace le pluralisme national, {{c1::sans parler de}} ses effets sur les rédactions locales déjà privées de recettes publicitaires.",
+    "note": "The main rendering is more exact than the legacy Sans oublier. Self-review replaced the unnatural ressources publicitaires with recettes publicitaires."
   },
   {
     "id": "frc066",
@@ -509,7 +483,7 @@
   {
     "id": "frc075",
     "en": "So that",
-    "category": "result",
+    "category": "structuring",
     "tl": "afin que",
     "alts": ["pour que"],
     "register": "Neutral-formal; afin que is especially common for explicit purpose in writing.",
@@ -517,7 +491,7 @@
     "example_tl": "Le règlement impose des rapports standardisés afin que les chercheurs puissent comparer les risques systémiques d'une plateforme à l'autre.",
     "example_en": "The regulation requires standardized reports so that researchers can compare systemic risks from one platform to another.",
     "cloze": "Le règlement impose des rapports standardisés {{c1::afin que}} les chercheurs puissent comparer les risques systémiques d'une plateforme à l'autre.",
-    "note": "The ambiguous prompt is explicitly resolved to the purpose reading; old_back represented the result reading. Self-review qualified the mood rule because de sorte que can also express purpose with the subjunctive."
+    "note": "The prompt is resolved to the purpose reading; old_back represented result. Self-review qualified the de sorte que mood rule and classified purpose consistently as structuring."
   },
   {
     "id": "frc076",

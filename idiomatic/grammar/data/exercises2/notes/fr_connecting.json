@@ -4,9 +4,7 @@
     "en": "As a consequence of,",
     "category": "result",
     "tl": "À la suite de",
-    "alts": [
-      "Du fait de"
-    ],
+    "alts": ["Du fait de"],
     "register": "Neutral-formal; common in analytical prose, though it can also carry a temporal 'following' sense.",
     "trap": "The legacy En conséquence de is grammatical but stiff; do not confuse à la suite de with the purely temporal après.",
     "example_tl": "À la suite de la suspension des livraisons de puces, plusieurs constructeurs européens ont revu leurs prévisions de croissance pour l'année prochaine.",
@@ -19,9 +17,7 @@
     "en": "As a result,",
     "category": "result",
     "tl": "En conséquence",
-    "alts": [
-      "De ce fait"
-    ],
+    "alts": ["De ce fait"],
     "register": "Neutral-formal; especially natural in written argumentation.",
     "trap": "En conséquence introduces a result; en conséquence de before a noun is possible but markedly heavier.",
     "example_tl": "En conséquence, le régulateur a suspendu le dispositif publicitaire jusqu'à ce que la plateforme fournisse des données vérifiables sur son efficacité réelle.",
@@ -34,9 +30,7 @@
     "en": "Due to",
     "category": "result",
     "tl": "En raison de",
-    "alts": [
-      "Du fait de"
-    ],
+    "alts": ["Du fait de"],
     "register": "Neutral-formal and suitable for causal attribution in policy writing.",
     "trap": "À cause de often suggests an adverse cause, whereas en raison de is neutral; dû à must agree when it is adjectival.",
     "example_tl": "En raison de la concentration du marché, les médias indépendants négocient désormais leurs revenus publicitaires en position de faiblesse structurelle.",
@@ -45,26 +39,11 @@
     "note": "Self-review: replaced the English-influenced depuis une position with the idiomatic en position de faiblesse."
   },
   {
-    "id": "frc006",
-    "en": "For this reason",
-    "category": "result",
-    "tl": "Pour cette raison",
-    "alts": [],
-    "register": "Neutral; explicit and natural in both careful speech and analytical writing.",
-    "trap": "Unlike c'est pourquoi, pour cette raison is a detachable prepositional phrase and is normally followed by a comma when fronted.",
-    "example_tl": "Pour cette raison, le Parlement devrait soumettre tout nouveau système de surveillance à un contrôle judiciaire régulier et véritablement indépendant.",
-    "example_en": "For this reason, Parliament should subject every new surveillance system to regular and genuinely independent judicial oversight.",
-    "cloze": "{{c1::Pour cette raison}}, le Parlement devrait soumettre tout nouveau système de surveillance à un contrôle judiciaire régulier et véritablement indépendant.",
-    "note": ""
-  },
-  {
     "id": "frc007",
     "en": "Forthwith",
     "category": "structuring",
     "tl": "sans délai",
-    "alts": [
-      "immédiatement"
-    ],
+    "alts": ["immédiatement"],
     "register": "Formal-administrative; immédiatement is less marked in general prose.",
     "trap": "The legacy De ce fait means 'as a result' and is a mistranslation: forthwith expresses immediate timing, not consequence.",
     "example_tl": "Après la divulgation des contrats secrets, la commission a demandé sans délai un audit complet des relations entre le ministère et ses fournisseurs.",
@@ -90,9 +69,7 @@
     "en": "Thereupon",
     "category": "result",
     "tl": "sur ce",
-    "alts": [
-      "là-dessus"
-    ],
+    "alts": ["là-dessus"],
     "register": "Written and somewhat formal; marks the next act or immediate response in a narrative sequence.",
     "trap": "The legacy Par conséquent gives a logical consequence, whereas thereupon normally marks what happened immediately after the preceding act.",
     "example_tl": "Le ministre a nié toute ingérence ; sur ce, la commission a publié des courriels contredisant point par point sa version des négociations.",
@@ -105,9 +82,7 @@
     "en": "Thus",
     "category": "result",
     "tl": "Ainsi",
-    "alts": [
-      "De ce fait"
-    ],
+    "alts": ["De ce fait"],
     "register": "Neutral-formal; very common in reasoned written exposition.",
     "trap": "Ainsi can mean either 'thus/as a result' or 'in this way'; the surrounding syntax must establish the intended relation.",
     "example_tl": "Ainsi, le contrôle public dépend entièrement de chiffres produits par les entreprises mêmes dont les pratiques sont censées être évaluées.",
@@ -120,9 +95,7 @@
     "en": "Above all",
     "category": "stance",
     "tl": "Surtout",
-    "alts": [
-      "Avant tout"
-    ],
+    "alts": ["Avant tout"],
     "register": "Neutral and emphatic; natural in both serious speech and opinion writing.",
     "trap": "At clause level, surtout ranks one consideration above the others; it is not limited to the narrower modifier sense of 'especially'.",
     "example_tl": "Surtout, cette affaire révèle combien les institutions publiques restent dépendantes d'infrastructures numériques qu'elles ne peuvent ni inspecter ni remplacer rapidement.",
@@ -135,9 +108,7 @@
     "en": "Clearly",
     "category": "stance",
     "tl": "Manifestement",
-    "alts": [
-      "De toute évidence"
-    ],
+    "alts": ["De toute évidence"],
     "register": "Neutral-formal; marks the writer's inference as evident and may sound assertive.",
     "trap": "Avoid English adverb order such as le gouvernement clairement sous-estime; use a detached initial adverb or place it after the finite verb.",
     "example_tl": "Manifestement, le gouvernement sous-estime le coût politique d'une surveillance confiée à des prestataires privés échappant presque entièrement au contrôle parlementaire.",
@@ -150,15 +121,13 @@
     "en": "Especially",
     "category": "stance",
     "tl": "surtout",
-    "alts": [
-      "particulièrement"
-    ],
+    "alts": ["particulièrement"],
     "register": "Neutral; especially natural as a focused modifier inside the clause.",
     "trap": "Here surtout focuses the group most affected; detached clause-initial surtout can instead mean the argumentative 'above all'.",
-    "example_tl": "Cette opacité pénalise surtout les petites rédactions, qui ne disposent ni des juristes ni des données nécessaires pour contester les plateformes.",
-    "example_en": "This opacity penalizes small newsrooms especially, as they have neither the lawyers nor the data needed to challenge the platforms.",
-    "cloze": "Cette opacité pénalise {{c1::surtout}} les petites rédactions, qui ne disposent ni des juristes ni des données nécessaires pour contester les plateformes.",
-    "note": "Kept separately from frc013 because the syntactic focus function is distinct from an argument-ranking discourse move."
+    "example_tl": "Cette opacité pénalise surtout les petites rédactions, qui ne disposent ni de l'expertise juridique ni des données nécessaires pour contester les plateformes.",
+    "example_en": "This opacity penalizes small newsrooms especially, as they have neither the legal expertise nor the data needed to challenge the platforms.",
+    "cloze": "Cette opacité pénalise {{c1::surtout}} les petites rédactions, qui ne disposent ni de l'expertise juridique ni des données nécessaires pour contester les plateformes.",
+    "note": "Kept separately from frc013 because the syntactic focus function is distinct from an argument-ranking discourse move. Self-review replaced the overly definite ni des juristes with ni de l'expertise juridique."
   },
   {
     "id": "frc020",
@@ -178,9 +147,7 @@
     "en": "In truth",
     "category": "reformulation",
     "tl": "À vrai dire",
-    "alts": [
-      "En vérité"
-    ],
+    "alts": ["En vérité"],
     "register": "Neutral to literary; à vrai dire is the natural corrective aside, while en vérité is more solemn.",
     "trap": "À vrai dire often softens a correction or candid admission; it does not merely certify that a factual statement is true.",
     "example_tl": "À vrai dire, le débat sur la souveraineté numérique masque souvent une dépendance persistante à l'égard de quelques fournisseurs américains d'infrastructures critiques.",
@@ -193,9 +160,7 @@
     "en": "Indeed",
     "category": "stance",
     "tl": "En effet",
-    "alts": [
-      "De fait"
-    ],
+    "alts": ["De fait"],
     "register": "Neutral-formal; standard for confirming or explaining the preceding claim.",
     "trap": "En effet confirms or supports a claim; corrective English 'in fact' is often en réalité or en fait instead.",
     "example_tl": "En effet, les chiffres publiés hier confirment que la nouvelle procédure avantage systématiquement les opérateurs déjà dominants sur le marché européen.",
@@ -208,9 +173,7 @@
     "en": "It should be noted",
     "category": "stance",
     "tl": "Il convient de noter que",
-    "alts": [
-      "Il faut souligner que"
-    ],
+    "alts": ["Il faut souligner que"],
     "register": "Written-formal; conventional in reports and policy analysis, with a deliberately impersonal tone.",
     "trap": "This impersonal frame requires que before a finite clause; with a noun, noter takes a direct object, as in noter une évolution.",
     "example_tl": "Il convient de noter que cette estimation exclut les dépenses engagées par les collectivités locales pour adapter leurs systèmes aux nouvelles normes.",
@@ -223,9 +186,7 @@
     "en": "Particularly / in particular",
     "category": "addition",
     "tl": "En particulier",
-    "alts": [
-      "Plus particulièrement"
-    ],
+    "alts": ["Plus particulièrement"],
     "register": "Neutral; isolates a salient member or case in careful speech and writing.",
     "trap": "En particulier singles out a case, whereas particulièrement more often modifies an adjective, verb, or the degree of a property.",
     "example_tl": "En particulier, les petits éditeurs risquent de supporter des coûts de mise en conformité disproportionnés par rapport à leurs revenus numériques.",
@@ -251,9 +212,7 @@
     "en": "To clarify",
     "category": "reformulation",
     "tl": "Pour être clair",
-    "alts": [
-      "Disons-le clairement"
-    ],
+    "alts": ["Disons-le clairement"],
     "register": "Neutral and direct; suitable for a forceful clarification in speech or opinion writing.",
     "trap": "Standalone Pour clarifier is possible but often leaves an implicit object; pour être clair explicitly frames the speaker's restatement.",
     "example_tl": "Pour être clair, cette proposition ne vise pas à interdire le chiffrement, mais à rendre les procédures de contrôle publiquement vérifiables.",
@@ -266,9 +225,7 @@
     "en": "To emphasize",
     "category": "stance",
     "tl": "Soulignons que",
-    "alts": [
-      "Insistons sur le fait que"
-    ],
+    "alts": ["Insistons sur le fait que"],
     "register": "Neutral-formal; an inclusive editorial imperative common in argumentative prose.",
     "trap": "The bare infinitive Souligner is a heading or instruction, not a fully integrated discourse move before a finite clause.",
     "example_tl": "Soulignons que les garanties annoncées restent purement théoriques tant que les chercheurs indépendants n'accèdent pas aux données brutes des plateformes.",
@@ -281,9 +238,7 @@
     "en": "To repeat",
     "category": "reformulation",
     "tl": "Répétons-le",
-    "alts": [
-      "Encore une fois"
-    ],
+    "alts": ["Encore une fois"],
     "register": "Neutral and emphatic; common in polemical or strongly argued prose.",
     "trap": "The object pronoun in répétons-le refers back to the proposition being repeated; bare répéter reads like an instruction label.",
     "example_tl": "Répétons-le, une politique industrielle sans objectifs mesurables risque surtout de subventionner les acteurs établis au détriment des nouveaux entrants.",
@@ -296,9 +251,7 @@
     "en": "Undoubtedly",
     "category": "stance",
     "tl": "Indéniablement",
-    "alts": [
-      "Sans aucun doute"
-    ],
+    "alts": ["Sans aucun doute"],
     "register": "Neutral-formal and strongly assertive; suitable for explicit authorial evaluation.",
     "trap": "French sans doute often means 'probably', not 'undoubtedly'; use sans aucun doute when full certainty is intended.",
     "example_tl": "Indéniablement, cette décision renforcera le pouvoir de négociation des plateformes face à des éditeurs déjà fragilisés par plusieurs années de crise.",
@@ -307,28 +260,11 @@
     "note": "Avoids the frequent false equivalence between English 'undoubtedly' and bare French sans doute."
   },
   {
-    "id": "frc040",
-    "en": "Additionally",
-    "category": "addition",
-    "tl": "De plus",
-    "alts": [
-      "En outre"
-    ],
-    "register": "Neutral; de plus works in careful speech and writing, while en outre is slightly more formal.",
-    "trap": "Do not use aussi mechanically at the beginning of a formal sentence; its placement and possible inversion follow different patterns.",
-    "example_tl": "De plus, le texte ne prévoit aucun recours effectif pour les utilisateurs dont le compte a été suspendu par erreur.",
-    "example_en": "Additionally, the text provides no effective remedy for users whose account has been suspended in error.",
-    "cloze": "{{c1::De plus}}, le texte ne prévoit aucun recours effectif pour les utilisateurs dont le compte a été suspendu par erreur.",
-    "note": ""
-  },
-  {
     "id": "frc041",
     "en": "Along with",
     "category": "addition",
     "tl": "Parallèlement à",
-    "alts": [
-      "En complément de"
-    ],
+    "alts": ["En complément de"],
     "register": "Neutral-formal; presents a coordinated accompanying policy measure.",
     "trap": "Parallèlement à requires a noun phrase; a following infinitive normally needs a recast rather than English along with plus gerund.",
     "example_tl": "Parallèlement à l'encadrement des algorithmes, l'Union devrait financer des infrastructures publiques capables d'offrir une véritable alternative aux services privés.",
@@ -341,9 +277,7 @@
     "en": "Apart from this",
     "category": "concession",
     "tl": "Cela mis à part",
-    "alts": [
-      "Hormis cela"
-    ],
+    "alts": ["Hormis cela"],
     "register": "Neutral-formal; a concise concessive pivot that brackets the preceding reservation.",
     "trap": "En dehors de cela is understandable but often sounds spatial or translated when used as an argumentative pivot.",
     "example_tl": "Cela mis à part, le rapport fournit une analyse rigoureuse des dépendances techniques qui limitent aujourd'hui la marge de manœuvre des gouvernements européens.",
@@ -358,20 +292,18 @@
     "tl": "ainsi que",
     "alts": [],
     "register": "Neutral; standard in formal coordination without the emphatic force of et surtout.",
-    "trap": "Ainsi que coordinates constituents but does not always take the same agreement logic as two subjects joined straightforwardly by et.",
+    "trap": "Additive ainsi que generally triggers plural agreement between subjects; a parenthetical or comparative ainsi que may leave agreement with the first subject.",
     "example_tl": "Le règlement protège les journalistes ainsi que leurs sources contre la surveillance arbitraire exercée au nom d'impératifs de sécurité mal définis.",
     "example_en": "The regulation protects journalists as well as their sources against arbitrary surveillance carried out in the name of poorly defined security imperatives.",
     "cloze": "Le règlement protège les journalistes {{c1::ainsi que}} leurs sources contre la surveillance arbitraire exercée au nom d'impératifs de sécurité mal définis.",
-    "note": ""
+    "note": "Self-review replaced an underspecified agreement warning with the additive-versus-parenthetical distinction."
   },
   {
     "id": "frc048",
     "en": "Coupled with",
     "category": "addition",
     "tl": "conjugué à",
-    "alts": [
-      "combiné à"
-    ],
+    "alts": ["combiné à"],
     "register": "Written-formal; compact analytical phrasing for interacting factors.",
     "trap": "Conjugué is a participle and must agree with the noun it modifies; do not freeze it in the masculine form in every sentence.",
     "example_tl": "Ce recul des recettes, conjugué à la hausse des coûts d'hébergement, fragilise encore davantage les éditeurs indépendants et les médias régionaux.",
@@ -384,9 +316,7 @@
     "en": "Furthermore",
     "category": "addition",
     "tl": "En outre",
-    "alts": [
-      "De surcroît"
-    ],
+    "alts": ["De surcroît"],
     "register": "Written-formal; conventional in reports, essays, and structured argumentation.",
     "trap": "En outre adds a separate supporting point; par ailleurs may instead signal a change of aspect or topic.",
     "example_tl": "En outre, aucune autorité nationale ne dispose actuellement des compétences techniques nécessaires pour reproduire les tests annoncés par l'entreprise.",
@@ -412,9 +342,7 @@
     "en": "In the same fashion",
     "category": "addition",
     "tl": "De même",
-    "alts": [
-      "De la même manière"
-    ],
+    "alts": ["De la même manière"],
     "register": "Neutral-formal; connects analogous reasoning without necessarily describing a literal manner.",
     "trap": "De même is the concise discourse connector; de la même façon can sound as though it describes how an action is performed.",
     "example_tl": "De même, les dispositifs européens échoueront si leurs autorités de contrôle manquent des moyens techniques nécessaires pour examiner les systèmes automatisés.",
@@ -427,9 +355,7 @@
     "en": "Moreover",
     "category": "addition",
     "tl": "Qui plus est",
-    "alts": [
-      "De surcroît"
-    ],
+    "alts": ["De surcroît"],
     "register": "Written-formal and emphatic; more marked than the neutral de plus.",
     "trap": "Qui plus est is a fixed expression: do not change qui or insert a noun subject into the phrase.",
     "example_tl": "Qui plus est, le mécanisme proposé confierait l'évaluation des risques aux cabinets privés qui conseillent déjà les entreprises concernées.",
@@ -442,9 +368,7 @@
     "en": "Not only…but also",
     "category": "addition",
     "tl": "non seulement… mais aussi",
-    "alts": [
-      "non seulement… mais également"
-    ],
+    "alts": ["non seulement… mais également"],
     "register": "Neutral-formal; a paired emphatic frame common in argumentation.",
     "trap": "Keep the two arms parallel: non seulement must introduce the same syntactic type as mais aussi, and French normally includes mais.",
     "example_tl": "La réforme impose non seulement des audits indépendants, mais aussi une transparence accrue sur les critères utilisés pour recommander les contenus politiques.",
@@ -457,24 +381,20 @@
     "en": "Not to mention",
     "category": "addition",
     "tl": "sans parler de",
-    "alts": [
-      "sans compter"
-    ],
+    "alts": ["sans compter"],
     "register": "Neutral; idiomatic in both serious speech and moderately formal commentary.",
     "trap": "The literal ne pas mentionner reports an omission; sans parler de is the additive discourse move that emphasizes a further consideration.",
-    "example_tl": "La concentration menace le pluralisme national, sans parler de ses effets sur les rédactions locales déjà privées de ressources publicitaires.",
-    "example_en": "Concentration threatens national pluralism, not to mention its effects on local newsrooms already deprived of advertising resources.",
-    "cloze": "La concentration menace le pluralisme national, {{c1::sans parler de}} ses effets sur les rédactions locales déjà privées de ressources publicitaires.",
-    "note": "The main rendering is more exact than the legacy Sans oublier, which can simply mean 'remembering also'."
+    "example_tl": "La concentration menace le pluralisme national, sans parler de ses effets sur les rédactions locales déjà privées de recettes publicitaires.",
+    "example_en": "Concentration threatens national pluralism, not to mention its effects on local newsrooms already deprived of advertising revenue.",
+    "cloze": "La concentration menace le pluralisme national, {{c1::sans parler de}} ses effets sur les rédactions locales déjà privées de recettes publicitaires.",
+    "note": "The main rendering is more exact than the legacy Sans oublier. Self-review replaced the unnatural ressources publicitaires with recettes publicitaires."
   },
   {
     "id": "frc066",
     "en": "For the purpose of",
     "category": "structuring",
     "tl": "Aux fins de",
-    "alts": [
-      "Dans le but de"
-    ],
+    "alts": ["Dans le but de"],
     "register": "Formal-administrative and legal; dans le but de is less institutional.",
     "trap": "Aux fins de is a fixed plural expression even when there is only one stated purpose.",
     "example_tl": "Aux fins de vérifier la conformité du système, les autorités pourront consulter les journaux techniques sans accéder au contenu des communications privées.",
@@ -487,9 +407,7 @@
     "en": "Given that",
     "category": "condition",
     "tl": "Étant donné que",
-    "alts": [
-      "Puisque"
-    ],
+    "alts": ["Puisque"],
     "register": "Neutral-formal; introduces an accepted premise used as a reason.",
     "trap": "French requires the full fixed frame étant donné que; Romance calques such as donné que are not standard in this use.",
     "example_tl": "Étant donné que les fournisseurs refusent de publier leurs méthodes, aucune évaluation indépendante ne peut confirmer les performances qu'ils revendiquent.",
@@ -515,9 +433,7 @@
     "en": "In fact",
     "category": "reformulation",
     "tl": "en réalité",
-    "alts": [
-      "en fait"
-    ],
+    "alts": ["en fait"],
     "register": "Neutral; en réalité is especially clear when correcting an appearance or prior characterization.",
     "trap": "En effet normally confirms a previous statement; corrective English 'in fact' calls for en réalité or en fait.",
     "example_tl": "Présenté comme un ajustement technique, le projet réduit en réalité les pouvoirs du régulateur et limite fortement son accès aux données.",
@@ -530,9 +446,7 @@
     "en": "In view of",
     "category": "condition",
     "tl": "Au vu de",
-    "alts": [
-      "Compte tenu de"
-    ],
+    "alts": ["Compte tenu de"],
     "register": "Neutral-formal; standard for grounding a decision in known evidence or circumstances.",
     "trap": "The legacy En vue de means 'with a view to/for the purpose of', not 'in view of' as a causal evidential frame.",
     "example_tl": "Au vu de ces révélations récentes, la commission devrait rouvrir son enquête sur les marchés conclus entre l'État et les entreprises de surveillance.",
@@ -545,9 +459,7 @@
     "en": "Provided that",
     "category": "condition",
     "tl": "À condition que",
-    "alts": [
-      "Pourvu que"
-    ],
+    "alts": ["Pourvu que"],
     "register": "Neutral; à condition que is standard, while pourvu que can sound more emphatic or express a hope in other contexts.",
     "trap": "À condition que requires the subjunctive; the legacy causal paraphrase entirely misses the conditional meaning.",
     "example_tl": "La mutualisation des données peut servir l'intérêt public, à condition que des garanties strictes empêchent leur réutilisation à des fins commerciales.",
@@ -560,9 +472,7 @@
     "en": "Seeing that",
     "category": "condition",
     "tl": "Puisque",
-    "alts": [
-      "Étant donné que"
-    ],
+    "alts": ["Étant donné que"],
     "register": "Neutral; puisque is suitable in reasoned prose, while vu que is more conversational.",
     "trap": "Puisque presents the reason as already accepted or evident; parce que answers a direct question about the cause.",
     "example_tl": "Puisque les plateformes contrôlent seules les indicateurs disponibles, leurs affirmations sur la baisse des contenus haineux demeurent impossibles à vérifier.",
@@ -573,26 +483,22 @@
   {
     "id": "frc075",
     "en": "So that",
-    "category": "result",
+    "category": "structuring",
     "tl": "afin que",
-    "alts": [
-      "pour que"
-    ],
+    "alts": ["pour que"],
     "register": "Neutral-formal; afin que is especially common for explicit purpose in writing.",
     "trap": "Afin que takes the subjunctive for purpose; de sorte que takes the indicative for result, though it can also take the subjunctive in a formal purpose use.",
     "example_tl": "Le règlement impose des rapports standardisés afin que les chercheurs puissent comparer les risques systémiques d'une plateforme à l'autre.",
     "example_en": "The regulation requires standardized reports so that researchers can compare systemic risks from one platform to another.",
     "cloze": "Le règlement impose des rapports standardisés {{c1::afin que}} les chercheurs puissent comparer les risques systémiques d'une plateforme à l'autre.",
-    "note": "The ambiguous prompt is explicitly resolved to the purpose reading; old_back represented the result reading. Self-review qualified the mood rule because de sorte que can also express purpose with the subjunctive."
+    "note": "The prompt is resolved to the purpose reading; old_back represented result. Self-review qualified the de sorte que mood rule and classified purpose consistently as structuring."
   },
   {
     "id": "frc076",
     "en": "With this in mind",
     "category": "structuring",
     "tl": "Dans cette optique",
-    "alts": [
-      "Dans cette perspective"
-    ],
+    "alts": ["Dans cette perspective"],
     "register": "Neutral-formal; common in policy proposals that derive a recommendation from a stated objective.",
     "trap": "Dans cette optique points forward to action shaped by the preceding consideration; avec cela en tête is an English calque.",
     "example_tl": "Dans cette optique, le gouvernement devrait privilégier des normes ouvertes qui réduisent durablement la dépendance des administrations à l'égard de quelques fournisseurs dominants.",
@@ -605,9 +511,7 @@
     "en": "With this purpose",
     "category": "structuring",
     "tl": "À cette fin",
-    "alts": [
-      "Dans ce but"
-    ],
+    "alts": ["Dans ce but"],
     "register": "Neutral-formal; concise and idiomatic for introducing a measure serving the stated purpose.",
     "trap": "À cette fin is fixed with singular fin; aux fins de is a more administrative frame followed directly by a noun or infinitive.",
     "example_tl": "À cette fin, le régulateur publiera chaque année un bilan détaillé des audits et des sanctions imposées aux plateformes concernées.",
@@ -633,9 +537,7 @@
     "en": "Illustrated by",
     "category": "reformulation",
     "tl": "comme l'illustre",
-    "alts": [
-      "ainsi qu'en témoigne"
-    ],
+    "alts": ["ainsi qu'en témoigne"],
     "register": "Neutral-formal; an idiomatic active evidential frame in analytical prose.",
     "trap": "A mechanical passive fragment illustré par often dangles; comme l'illustre plus a following subject integrates the example into the sentence.",
     "example_tl": "Cette dépendance demeure forte, comme l'illustre la récente panne qui a paralysé simultanément plusieurs services publics dans trois pays européens.",
@@ -648,9 +550,7 @@
     "en": "In the case of",
     "category": "structuring",
     "tl": "S'agissant de",
-    "alts": [
-      "Pour ce qui est de"
-    ],
+    "alts": ["Pour ce qui est de"],
     "register": "Written-formal; narrows the topic to a particular domain or case.",
     "trap": "En cas de means 'if an event occurs'; for topic selection, use s'agissant de or, less elegantly, dans le cas de.",
     "example_tl": "S'agissant de la modération des contenus politiques, le projet reste trop vague pour empêcher des décisions arbitraires pendant les campagnes électorales.",
@@ -663,9 +563,7 @@
     "en": "Including",
     "category": "addition",
     "tl": "notamment",
-    "alts": [
-      "y compris"
-    ],
+    "alts": ["y compris"],
     "register": "Neutral; notamment highlights representative members, while y compris explicitly includes boundary cases.",
     "trap": "The legacy dont is a relative pronoun requiring a syntactic relation to an antecedent; it is not a general equivalent of including.",
     "example_tl": "Plusieurs acteurs, notamment les chercheurs indépendants et les médias locaux, demandent un accès plus équitable aux données produites par les plateformes.",
@@ -678,9 +576,7 @@
     "en": "Namely",
     "category": "reformulation",
     "tl": "à savoir",
-    "alts": [
-      "c'est-à-dire"
-    ],
+    "alts": ["c'est-à-dire"],
     "register": "Neutral-formal; à savoir introduces an exact specification or exhaustive list.",
     "trap": "À savoir specifies what precedes; savoir alone means 'to know', and the fixed connector retains the preposition à.",
     "example_tl": "Le texte impose deux obligations nouvelles, à savoir la publication des critères de classement et l'archivage des décisions de modération.",
@@ -706,9 +602,7 @@
     "en": "Specifically",
     "category": "reformulation",
     "tl": "Plus précisément",
-    "alts": [
-      "Pour être précis"
-    ],
+    "alts": ["Pour être précis"],
     "register": "Neutral-formal; narrows or corrects the level of detail in an argument.",
     "trap": "Spécifiquement is possible as a manner modifier, but plus précisément is usually more idiomatic as a sentence-level reformulation marker.",
     "example_tl": "Plus précisément, l'accord autorise le ministère à conserver les métadonnées pendant cinq ans, sans contrôle judiciaire préalable ni justification individualisée.",
@@ -721,9 +615,7 @@
     "en": "Such as",
     "category": "addition",
     "tl": "tels que",
-    "alts": [
-      "comme"
-    ],
+    "alts": ["comme"],
     "register": "Neutral-formal; tel que is especially useful for introducing explicit examples after a noun.",
     "trap": "Tel agrees with the noun being exemplified: un service tel que, des plateformes telles que, des services tels que.",
     "example_tl": "Le règlement vise des services tels que les moteurs de recherche, les réseaux sociaux et les grandes places de marché numériques.",
@@ -736,9 +628,7 @@
     "en": "Alternatively",
     "category": "condition",
     "tl": "à défaut",
-    "alts": [
-      "sinon"
-    ],
+    "alts": ["sinon"],
     "register": "Neutral-formal in the fallback sense; sinon is less marked and broader.",
     "trap": "The legacy Par ailleurs adds or shifts a point; it does not present an alternative. À défaut specifically marks the fallback option.",
     "example_tl": "Le Conseil peut imposer immédiatement des mesures conservatoires ; à défaut, il devra attendre la conclusion d'une enquête qui durera plusieurs mois.",
@@ -751,9 +641,7 @@
     "en": "As opposed to",
     "category": "contrast",
     "tl": "contrairement à",
-    "alts": [
-      "à l'inverse de"
-    ],
+    "alts": ["à l'inverse de"],
     "register": "Neutral; standard for contrasting two policies, cases, or properties.",
     "trap": "Contrairement à takes a noun or stressed pronoun; before a clause, use contrairement à ce que plus indicative.",
     "example_tl": "Contrairement à une taxe générale, cette contribution ciblerait les entreprises dont le modèle repose directement sur la collecte massive de données personnelles.",
@@ -766,9 +654,7 @@
     "en": "Conversely",
     "category": "contrast",
     "tl": "À l'inverse",
-    "alts": [
-      "Inversement"
-    ],
+    "alts": ["Inversement"],
     "register": "Neutral-formal; introduces the reverse relation or contrasting case.",
     "trap": "À l'inverse is a discourse connector; au contraire usually rejects a preceding claim rather than merely reversing the comparison.",
     "example_tl": "À l'inverse, une obligation de transparence bien conçue renforcerait la concurrence en permettant aux petits acteurs de contester les décisions automatisées.",
@@ -781,9 +667,7 @@
     "en": "Despite/in spite of",
     "category": "concession",
     "tl": "Malgré",
-    "alts": [
-      "En dépit de"
-    ],
+    "alts": ["En dépit de"],
     "register": "Neutral; malgré is standard across registers, while en dépit de is more formal.",
     "trap": "Malgré normally takes a noun phrase; before a finite clause, use bien que plus subjunctive rather than the disputed malgré que.",
     "example_tl": "Malgré les garanties annoncées, le dispositif autorise toujours une collecte disproportionnée de données sur des citoyens qui ne sont soupçonnés d'aucune infraction.",
