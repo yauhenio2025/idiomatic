@@ -14,6 +14,8 @@ evidence_refs:
 
 ## SCRIPT
 
+[MUSIC:intro]
+
 Hi. Today we're working on one small French word — and I promise it's worth a whole episode, because this is the single mistake you've made more often than any other in French. A hundred and thirty-eight times in your lesson notes, across five years. The good news: it's one habit, not a hundred rules. By the end of this walk, you'll hear it coming.
 
 Here's a sentence you actually said, years ago:
@@ -142,7 +144,7 @@ First practice round. I'll give you a sentence in English. You say the French ou
 
 Number one. "He reads a lot of newspapers." Start with "il lit".
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: Il lit beaucoup de journaux.
 
@@ -152,7 +154,7 @@ Beaucoup de. Duh, not day.
 
 Number two. "We have too many meetings." Start with "nous avons".
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: Nous avons trop de réunions.
 
@@ -160,7 +162,7 @@ TL: Nous avons trop de réunions.
 
 Number three — watch for the vowel. "She has a lot of influence." Start with "elle a".
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: Elle a beaucoup d'influence.
 
@@ -170,7 +172,7 @@ The squeeze: beaucoup d'influence, because influence starts with a vowel.
 
 Number four. "There isn't enough water." Start with "il n'y a pas".
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: Il n'y a pas assez d'eau.
 
@@ -220,7 +222,7 @@ Second practice round. Same game, slightly harder mix.
 
 Number one. "I don't have time." Start with "je n'ai pas".
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: Je n'ai pas de temps.
 
@@ -228,7 +230,7 @@ TL: Je n'ai pas de temps.
 
 Number two. "She asks good questions." Careful register. Start with "elle pose".
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: Elle pose de bonnes questions.
 
@@ -238,7 +240,7 @@ De bonnes questions — the adjective comes first, so des steps down to de.
 
 Number three. "Too much noise, not enough ideas." A little slogan; give it a try.
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: Trop de bruit, pas assez d'idées.
 
@@ -280,7 +282,7 @@ Last round. Quick fire, mixed, five of them. This is the one that counts.
 
 One. "A lot of money."
 
-[PAUSE:6000]
+[THINK:6000]
 
 TL: beaucoup d'argent
 
@@ -288,7 +290,7 @@ TL: beaucoup d'argent
 
 Two. "Most languages."
 
-[PAUSE:6000]
+[THINK:6000]
 
 TL: la plupart des langues
 
@@ -296,7 +298,7 @@ TL: la plupart des langues
 
 Three. "We don't have any answers." Start with "nous n'avons pas".
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: Nous n'avons pas de réponses.
 
@@ -304,7 +306,7 @@ TL: Nous n'avons pas de réponses.
 
 Four. "Too many emails, too little time."
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: Trop d'e-mails, trop peu de temps.
 
@@ -312,7 +314,7 @@ TL: Trop d'e-mails, trop peu de temps.
 
 Five — the original sin, one last time. "I'm learning a lot of languages."
 
-[PAUSE:8000]
+[THINK:8000]
 
 TL: J'apprends beaucoup de langues.
 
@@ -335,3 +337,5 @@ You've said "beaucoup des" a hundred and thirty-eight times. Somewhere on today'
 TL: beaucoup de choses
 
 À la prochaine.
+
+[MUSIC:outro]

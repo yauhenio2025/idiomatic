@@ -72,7 +72,7 @@ class FossilEvidence:
 
 @dataclass(frozen=True)
 class Segment:
-    kind: Literal["speech", "pause", "chime"]
+    kind: Literal["speech", "pause", "chime", "music", "think"]
     text: str
     lang: str | None
     line_no: int
@@ -254,6 +254,20 @@ def _segments(body_lines: Sequence[str], *, path: Path, lang: str,
         if line == "[CHIME]":
             rendered.append(Segment("chime", "", None, line_no))
             continue
+        if line.startswith("[MUSIC:") and line.endswith("]"):
+            asset = line[len("[MUSIC:"):-1]
+            if asset not in ("intro", "outro"):
+                raise _source_error(
+                    path, f"line {line_no}: [MUSIC:x] wants intro|outro, got {asset!r}")
+            rendered.append(Segment("music", asset, None, line_no))
+            continue
+        if line.startswith("[THINK:") and line.endswith("]"):
+            ms_raw = line[len("[THINK:"):-1]
+            if not ms_raw.isdigit() or not 2000 <= int(ms_raw) <= 20000:
+                raise _source_error(
+                    path, f"line {line_no}: [THINK:ms] wants 2000-20000, got {ms_raw!r}")
+            rendered.append(Segment("think", ms_raw, None, line_no))
+            continue
         if line.startswith("TL:"):
             text = line[3:].strip()
             if not text:
@@ -404,7 +418,7 @@ def route_segment(segment: Segment, target_lang: str) -> VoiceRoute | None:
     """Return the explicit language/voice route for one parsed segment."""
     if target_lang not in EXPLAINER_UNITS:
         raise ValueError("target_lang must be fr|pt|es|de")
-    if segment.kind in ("pause", "chime"):
+    if segment.kind in ("pause", "chime", "music", "think"):
         return None
     if segment.lang == "en":
         return VoiceRoute("en", EN_VOICE)
@@ -458,6 +472,28 @@ def segment_cache_key(script: ExplainerScript, segment: Segment, settings: Any) 
         json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
     ).hexdigest()[:16]
     return f"{script.slug}_{route.lang}_{digest}"
+
+
+ASSETS_DIR = Path(__file__).parent / "data" / "audio_assets"
+
+
+def _think_mp3(work_dir: Path, ms: int) -> Path:
+    """Quiet thinking-music of exactly ms, looped from the bed asset
+    with gentle fades — fills exercise gaps instead of dead air."""
+    out = work_dir / f"think_{ms}_v1.mp3"
+    if out.exists() and out.stat().st_size > 500:
+        return out
+    seconds = ms / 1000
+    subprocess.run(
+        ["ffmpeg", "-y", "-loglevel", "error",
+         "-stream_loop", "-1", "-i", str(ASSETS_DIR / "thinking_bed.mp3"),
+         "-t", f"{seconds:.3f}",
+         "-af", (f"afade=t=in:d=0.4,"
+                 f"afade=t=out:st={max(seconds - 0.8, 0):.3f}:d=0.8"),
+         "-c:a", "libmp3lame", "-q:a", "5", str(out)],
+        check=True,
+    )
+    return out
 
 
 def _chime_mp3(work_dir: Path) -> Path:
@@ -524,7 +560,7 @@ async def render_explainer(
     keys_by_index: dict[int, str] = {}
     pending: dict[Path, tuple[str, VoiceRoute]] = {}
     for index, segment in enumerate(script.segments):
-        if segment.kind in ("pause", "chime"):
+        if segment.kind in ("pause", "chime", "music", "think"):
             continue
         route = route_segment(segment, script.lang)
         assert route is not None
@@ -578,6 +614,18 @@ async def render_explainer(
         await asyncio.to_thread(_chime_mp3, work_dir)
         if any(s.kind == "chime" for s in script.segments) else None
     )
+    music_paths = {
+        asset: ASSETS_DIR / f"theme_{asset}.mp3"
+        for asset in {s.text for s in script.segments if s.kind == "music"}
+    }
+    for asset, ap in music_paths.items():
+        if not ap.exists():
+            raise ExplainerBuildError(f"missing music asset {ap.name}")
+    think_lengths = {int(s.text) for s in script.segments if s.kind == "think"}
+    think_paths = {
+        ms: await asyncio.to_thread(_think_mp3, work_dir, ms)
+        for ms in sorted(think_lengths)
+    }
 
     pieces: list[Path] = []
     constituent_keys: list[str] = []
@@ -591,6 +639,13 @@ async def render_explainer(
             assert chime_path is not None
             pieces.append(chime_path)
             constituent_keys.append("chime:v1")
+        elif segment.kind == "music":
+            pieces.append(music_paths[segment.text])
+            constituent_keys.append(f"music:{segment.text}:v1")
+        elif segment.kind == "think":
+            ms = int(segment.text)
+            pieces.append(think_paths[ms])
+            constituent_keys.append(f"think:{ms}:v1")
         else:
             if previous is not None and previous.kind == "speech":
                 assert gap_path is not None
