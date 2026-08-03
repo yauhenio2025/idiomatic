@@ -1,0 +1,15 @@
+<svg viewBox="0 0 840 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quick fire: five items in a row">
+  <circle cx="120" cy="110" r="38" class="s-stroke-teal" stroke-width="5"/>
+  <circle cx="270" cy="110" r="38" class="s-stroke-teal" stroke-width="5"/>
+  <circle cx="420" cy="110" r="38" class="s-stroke-teal" stroke-width="5"/>
+  <circle cx="570" cy="110" r="38" class="s-stroke-teal" stroke-width="5"/>
+  <circle cx="720" cy="110" r="38" class="s-stroke-teal" stroke-width="5"/>
+  <circle cx="120" cy="110" r="11" class="s-teal"/>
+  <circle cx="270" cy="110" r="11" class="s-teal"/>
+  <circle cx="420" cy="110" r="11" class="s-teal"/>
+  <circle cx="570" cy="110" r="11" class="s-teal"/>
+  <line x1="760" y1="40" x2="732" y2="80" class="s-stroke-coral" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="723,94 726,66 748,80" class="s-coral"/>
+  <text x="420" y="212" text-anchor="middle" font-size="26" font-weight="700" class="s-ink">five in a row — the ones that count</text>
+  <text x="420" y="258" text-anchor="middle" font-size="21" class="s-muted">packets · disguises · head nouns — the <tspan font-weight="800" class="s-teal">packet</tspan> carries the gender</text>
+</svg>
