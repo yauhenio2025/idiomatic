@@ -15,7 +15,7 @@ evidence_refs:
 
 [CARD]
 TITLE: Your №1 French mistake
-IMG: A large coral warning triangle containing the crossed-out words "beaucoup des" next to a glowing teal corrected label "beaucoup de", floating above a stylized stack of five years of lesson notebooks
+SVG: fr_quantity-system_c1f.svg
 
 [MUSIC:intro]
 This card is about your single most frequent French mistake — you've made it a hundred and thirty-eight times in five years of lesson notes. The good news: it's one habit, not a hundred rules.
@@ -36,7 +36,7 @@ Keep that one-sound difference in your ear — and flip the card.
 
 [SIDE]
 TITLE: The three little words
-IMG: Three large circles in a row labeled exactly "de", "des", "du" — the first matte gray, the second bright yellow, the third teal with a small pursed-lips icon above it, phonetics-chart style
+SVG: fr_quantity-system_c1b.svg
 
 Ear training first: the three little words this whole episode turns on — de, des, du. I'll say each one slowly, then use it.
 The first is de. Spelled d, e. It sounds like "duh" — a lazy, colorless vowel.
@@ -61,7 +61,7 @@ That's the ear training done — move on to the next card.
 
 [CARD]
 TITLE: The rule: quantity → bare de
-IMG: A big teal funnel with the words "beaucoup", "trop", "assez", "peu" printed on its rim pouring into one small bright tile that says "de", while tiles saying "des", "du", "de la" bounce off the outside of the funnel
+SVG: fr_quantity-system_c2f.svg
 
 The rule this card teaches: when a quantity word comes first, French drops the article completely. After beaucoup, after trop, after assez, after peu — you don't say des, you don't say du. You say plain de. Nothing else survives.
 TL: beaucoup de, trop de, assez de, peu de
@@ -86,7 +86,7 @@ When you're ready, flip the card for the one twist this rule has.
 
 [SIDE]
 TITLE: The vowel squeeze: d'
-IMG: The word "de" drawn as a soft rounded shape being gently squeezed between the word "beaucoup" and a large vowel letter "a", emerging as a slim "d'" with a small apostrophe spark, playful physics-diagram style
+SVG: fr_quantity-system_c2b.svg
 
 The twist is about sound, not grammar: if the next word starts with a vowel, the bare de of quantity squeezes into d-apostrophe. You've known this squeeze forever — it's the same one as in "j'apprends". Listen:
 TL: beaucoup d'argent
@@ -104,7 +104,7 @@ Core rule locked in — move on to the next card.
 
 [CARD]
 TITLE: Practice I — say it out loud
-IMG: A person mid-stride on a walking path wearing headphones, a large speech bubble containing only the two French words "beaucoup de", a dotted path curving toward the horizon, energetic composition
+SVG: fr_quantity-system_c3f.svg
 
 Practice time. The rule being drilled: after beaucoup, trop, assez and peu comes bare de. I'll give you a sentence in English; you say the French out loud — actually out loud, that's the point. Then you'll hear the answer, and the key chunk once more.
 Number one. "He reads a lot of newspapers." Start with "il lit".
@@ -138,7 +138,7 @@ Flip the card to widen the rule.
 
 [SIDE]
 TITLE: Same reflex: pas de
-IMG: A split-panel diagram: left panel a large minus sign turning the word "des" into "de" chalkboard-style; right panel an elegant fountain pen writing the words "de bonnes idées"
+SVG: fr_quantity-system_c3b.svg
 
 This side widens the circle: the same bare-de reflex covers two situations you meet every day.
 The first is negation. When a sentence goes negative, des and du collapse into plain de as well. You have money:
@@ -166,7 +166,7 @@ If you only remember that one in writing, that's fine — it's a careful-registe
 
 [CARD]
 TITLE: Practice II — the harder mix
-IMG: Three ascending stepping stones labeled exactly "pas de", "de bonnes", "trop de", with a small walking figure stepping onto the highest stone, sunrise gradient background
+SVG: fr_quantity-system_c4f.svg
 
 Practice again — the reflex being drilled: quantity words and negation both take bare de. Slightly harder mix this time; say it out loud, then you'll hear the answer and the key chunk.
 Number one. "I don't have time." Start with "je n'ai pas".
@@ -192,7 +192,7 @@ Now flip the card for the two famous exceptions — that aren't.
 
 [SIDE]
 TITLE: The impostors: la plupart des
-IMG: A police-lineup scene of word-characters: "beaucoup", "trop", "assez" standing plainly, and "la plupart" wearing a bowler hat and monocle proudly holding a badge that reads "des", light detective-story illustration
+SVG: fr_quantity-system_c4b.svg
 
 Two expressions look like exceptions to the bare-de rule — and aren't. They just belong to a different family, and they've both tripped you before.
 The first is la plupart. "Most". It's not a quantity adverb like beaucoup; it's a noun, "the majority". And because it's a noun, it keeps the full article after it:
@@ -211,7 +211,7 @@ If that feels like a lot, hold on to just this: the everyday quantity words take
 
 [CARD]
 TITLE: Quick fire — five in a row
-IMG: Five archery target rings in a row, the first four hit dead center by teal darts, a fifth dart frozen mid-flight, dynamic diagonal composition
+SVG: fr_quantity-system_c5f.svg
 
 Quick-fire round — five mixed items, the ones that count. The reflex being tested: quantity words and negation take bare de; la plupart keeps des.
 One. "A lot of money."
@@ -245,7 +245,7 @@ Flip the card one last time to land it.
 
 [SIDE]
 TITLE: The landing: three things
-IMG: An open hand holding three smooth pebbles engraved exactly "de", "pas de", "la plupart des", walking boots and a blurred trail in the warm background, calm closing-scene illustration
+SVG: fr_quantity-system_c5b.svg
 
 Let's land it. Three things to take on the rest of your workout.
 First, the sound: de is "duh", des is "day" — and after beaucoup, trop, assez and peu you want "duh": bare de, squeezed to d-apostrophe before a vowel.

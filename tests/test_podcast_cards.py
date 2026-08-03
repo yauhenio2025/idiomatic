@@ -115,7 +115,12 @@ def test_real_pilot_source_parses_into_five_two_sided_cards():
         assert card.front.seq == card.back.seq == card.seq
         assert card.front.side == "front"
         assert card.back.side == "back"
-    assert all(side.title and side.img_prompt for side in sides)
+    assert all(side.title and side.svg_file and not side.img_prompt
+               for side in sides)
+    assert all(
+        (pc.SOURCE_DIR / "svg" / side.svg_file).stat().st_size > 0
+        for side in sides
+    )
     assert all(
         "flip" in [s for s in card.front.segments if s.kind == "speech"][-1].text.casefold()
         for card in script.cards
@@ -594,3 +599,147 @@ async def test_generate_image_retries_one_400_without_image_config(
     assert first["generationConfig"]["imageConfig"] == {"aspectRatio": "16:9"}
     assert "imageConfig" not in second["generationConfig"]
     assert second["generationConfig"]["responseModalities"] == ["IMAGE"]
+
+
+# ---------------------------------------------------------------------------
+# Authored SVG sidecars (the default visual system since the pilot review)
+# ---------------------------------------------------------------------------
+
+_GOOD_SVG = (
+    '<svg viewBox="0 0 840 300" xmlns="http://www.w3.org/2000/svg">'
+    '<text x="10" y="30" class="s-ink">de</text></svg>'
+)
+
+
+def _svg_card(index: int = 1, *, svg_name: str = "fixture-side.svg") -> str:
+    return f"""[CARD]
+TITLE: Front {index}
+SVG: {svg_name}
+Narrate front {index}.
+SHOW: Front note {index}
+[SIDE]
+TITLE: Back {index}
+SVG: {svg_name}
+TL: C'est le dos {index}.
+SHOW: Back note {index}
+"""
+
+
+def _write_svg_source(tmp_path: Path, *, svg_body: str = _GOOD_SVG) -> Path:
+    (tmp_path / "svg").mkdir(exist_ok=True)
+    (tmp_path / "svg" / "fixture-side.svg").write_text(svg_body, encoding="utf-8")
+    return _write_source(
+        tmp_path, "\n".join(_svg_card(i) for i in range(1, 5))
+    )
+
+
+def test_parser_accepts_svg_sidecar_and_rejects_img_svg_mix(tmp_path: Path):
+    path = _write_svg_source(tmp_path)
+    script = pc.parse_podcast_cards(path)
+    for card in script.cards:
+        for side in (card.front, card.back):
+            assert side.svg_file == "fixture-side.svg"
+            assert side.img_prompt == ""
+
+    mixed = _svg_card(1).replace("SVG: fixture-side.svg", "SVG: fixture-side.svg\nIMG: also an image", 1)
+    bad = _write_source(tmp_path, "\n".join([mixed, *(_svg_card(i) for i in range(2, 5))]))
+    _assert_source_error(bad, "exactly one IMG: or SVG:")
+
+
+def test_parser_rejects_missing_or_misnamed_svg_sidecar(tmp_path: Path):
+    (tmp_path / "svg").mkdir(exist_ok=True)
+    path = _write_source(
+        tmp_path, "\n".join(_svg_card(i, svg_name="absent.svg") for i in range(1, 5))
+    )
+    _assert_source_error(path, "does not exist")
+
+    bad_name = _write_source(
+        tmp_path, "\n".join(_svg_card(i, svg_name="Bad Name.svg") for i in range(1, 5)),
+        slug="fixture2",
+    )
+    _assert_source_error(bad_name, "invalid sidecar filename")
+
+
+@pytest.mark.parametrize(
+    ("svg_body", "match"),
+    [
+        ("<div>not svg</div>", "svg .*viewBox|viewBox"),
+        ('<svg viewBox="0 0 10 10"><script>alert(1)</script></svg>', "not allowed"),
+        ('<svg viewBox="0 0 10 10"><rect onclick="x()"/></svg>', "not allowed"),
+    ],
+    ids=["not-svg", "script-tag", "event-handler"],
+)
+def test_load_side_svg_sanitizes(tmp_path: Path, svg_body: str, match: str):
+    path = _write_svg_source(tmp_path, svg_body=svg_body)
+    script = pc.parse_podcast_cards(path)
+    with pytest.raises(ValueError, match=match):
+        pc.load_side_svg(script, script.cards[0].front)
+
+
+def test_load_side_svg_strips_xml_prolog(tmp_path: Path):
+    path = _write_svg_source(
+        tmp_path, svg_body='<?xml version="1.0" encoding="UTF-8"?>\n' + _GOOD_SVG
+    )
+    script = pc.parse_podcast_cards(path)
+    markup = pc.load_side_svg(script, script.cards[0].front)
+    assert markup.startswith("<svg")
+    assert "<?xml" not in markup
+
+
+def test_apkg_inlines_svg_markup_without_image_media(tmp_path: Path):
+    path = _write_svg_source(tmp_path)
+    script = pc.parse_podcast_cards(path)
+    sides = []
+    audio_names = set()
+    for card in script.cards:
+        for side in (card.front, card.back):
+            marker = side.side[0]
+            audio = tmp_path / f"idgpc_ep03_fr_c{card.seq}{marker}_{card.seq:011x}{marker}.mp3"
+            audio.write_bytes(b"fake mp3")
+            audio_names.add(audio.name)
+            sides.append(pc.BuiltSide(
+                side=side,
+                audio_path=audio,
+                image_path=None,
+                duration_seconds=2.0,
+                svg_markup=pc.load_side_svg(script, side),
+            ))
+    episode = pc.BuiltEpisode(script=script, sides=tuple(sides))
+    out = tmp_path / "svg-lessons.apkg"
+
+    count = pc.build_podcast_lessons_apkg(out_path=out, lang="fr", episodes=[episode])
+
+    assert count == 4
+    with zipfile.ZipFile(out) as package:
+        media_map = json.loads(package.read("media"))
+        unpacked = tmp_path / "unpacked-svg"
+        package.extract("collection.anki2", unpacked)
+    assert set(media_map.values()) == audio_names  # no image media at all
+
+    with sqlite3.connect(unpacked / "collection.anki2") as con:
+        rows = con.execute("SELECT flds FROM notes").fetchall()
+    for (field_blob,) in rows:
+        fields = dict(zip(_FROZEN_FIELDS, field_blob.split("\x1f"), strict=True))
+        for name in ("FrontImage", "BackImage"):
+            assert fields[name].startswith('<div class="pc-img-wrap"><svg')
+            assert "viewBox" in fields[name]
+
+
+def test_apkg_rejects_side_with_neither_visual(tmp_path: Path):
+    path = _write_svg_source(tmp_path)
+    script = pc.parse_podcast_cards(path)
+    sides = []
+    for card in script.cards:
+        for side in (card.front, card.back):
+            marker = side.side[0]
+            audio = tmp_path / f"a_c{card.seq}{marker}.mp3"
+            audio.write_bytes(b"fake mp3")
+            sides.append(pc.BuiltSide(
+                side=side, audio_path=audio, image_path=None,
+                duration_seconds=2.0, svg_markup=None,
+            ))
+    episode = pc.BuiltEpisode(script=script, sides=tuple(sides))
+    with pytest.raises(ValueError, match="neither image nor SVG"):
+        pc.build_podcast_lessons_apkg(
+            out_path=tmp_path / "broken.apkg", lang="fr", episodes=[episode],
+        )

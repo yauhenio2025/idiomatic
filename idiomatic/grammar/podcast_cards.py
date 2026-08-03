@@ -66,11 +66,35 @@ CSS = """
           line-height: 1.45; margin: 9px auto; max-width: 620px;}
 .pc-img {max-width: 100%; height: auto; border-radius: 12px;
          margin: 10px auto 18px;}
+.pc-img-wrap {margin: 10px auto 18px; max-width: 640px;}
+.pc-img-wrap svg {width: 100%; height: auto; display: block;}
+/* Authored-diagram palette — inline SVGs carry classes, colors live here
+   so night mode is one override block, not per-file edits. */
+svg .s-ink {fill: #22302e;}
+svg .s-muted {fill: #6d7a76;}
+svg .s-teal {fill: #0a9c76;}
+svg .s-coral {fill: #e8604c;}
+svg .s-sun {fill: #f2c94c;}
+svg .s-dead {fill: #b9c2be;}
+svg .s-tile {fill: #ffffff; stroke: #e3ddd0;}
+svg .s-stroke-teal {stroke: #0a9c76; fill: none;}
+svg .s-stroke-coral {stroke: #e8604c; fill: none;}
+svg .s-stroke-line {stroke: #e3ddd0; fill: none;}
 /* Explicit night mode prevents AnkiDroid's heuristic whole-card inversion. */
 .card.night_mode, .card.nightMode {background: #23272a; color: #e8e8e8;}
 .card.night_mode .pc-meta, .card.nightMode .pc-meta {color: #999;}
 .card.night_mode .pc-note, .card.nightMode .pc-note {color: #bbb;}
 .card.night_mode .pc-tl, .card.nightMode .pc-tl {color: #20c997;}
+.card.night_mode svg .s-ink, .card.nightMode svg .s-ink {fill: #e8ece9;}
+.card.night_mode svg .s-muted, .card.nightMode svg .s-muted {fill: #97a49f;}
+.card.night_mode svg .s-teal, .card.nightMode svg .s-teal {fill: #2fc296;}
+.card.night_mode svg .s-coral, .card.nightMode svg .s-coral {fill: #f0765f;}
+.card.night_mode svg .s-sun, .card.nightMode svg .s-sun {fill: #e6c25a;}
+.card.night_mode svg .s-dead, .card.nightMode svg .s-dead {fill: #55625d;}
+.card.night_mode svg .s-tile, .card.nightMode svg .s-tile {fill: #2a3431; stroke: #3a4642;}
+.card.night_mode svg .s-stroke-teal, .card.nightMode svg .s-stroke-teal {stroke: #2fc296;}
+.card.night_mode svg .s-stroke-coral, .card.nightMode svg .s-stroke-coral {stroke: #f0765f;}
+.card.night_mode svg .s-stroke-line, .card.nightMode svg .s-stroke-line {stroke: #3a4642;}
 """
 
 FRONT = """<div class="pc-meta">Ep {{Episode}} · {{Seq}} · {{Lang}}</div>
@@ -98,6 +122,10 @@ class CardSide:
     img_prompt: str
     segments: tuple[Segment, ...]
     display: tuple[DisplayItem, ...]
+    # Authored diagram sidecar (svg/<name>) — mutually exclusive with
+    # img_prompt. SVG is the default visual system since the 2026-08-03
+    # pilot review; IMG generation remains for mood/scene sides.
+    svg_file: str | None = None
 
 
 @dataclass(frozen=True)
@@ -123,8 +151,9 @@ class PodcastCardScript:
 class BuiltSide:
     side: CardSide
     audio_path: Path
-    image_path: Path
+    image_path: Path | None
     duration_seconds: float
+    svg_markup: str | None = None
 
 
 @dataclass(frozen=True)
@@ -265,20 +294,36 @@ def _parse_side(
 
     images = [(line_no, line[4:].strip()) for line_no, line in nonblank
               if line.startswith("IMG:")]
-    if len(images) != 1:
+    svgs = [(line_no, line[4:].strip()) for line_no, line in nonblank
+            if line.startswith("SVG:")]
+    if len(images) + len(svgs) != 1:
         raise _source_error(
-            path, images[1][0] if len(images) > 1 else fallback_line,
-            f"card {seq} {side} expected exactly one IMG:, found {len(images)}",
+            path, fallback_line,
+            f"card {seq} {side} expected exactly one IMG: or SVG:, "
+            f"found {len(images)} IMG: and {len(svgs)} SVG:",
         )
-    image_line, img_prompt = images[0]
-    if not img_prompt:
-        raise _source_error(path, image_line, "IMG: must be nonempty")
+    img_prompt = ""
+    svg_file: str | None = None
+    if images:
+        image_line, img_prompt = images[0]
+        if not img_prompt:
+            raise _source_error(path, image_line, "IMG: must be nonempty")
+    else:
+        svg_line, svg_file = svgs[0]
+        if not re.fullmatch(r"[a-z0-9][a-z0-9_\-]*\.svg", svg_file):
+            raise _source_error(
+                path, svg_line, f"SVG: invalid sidecar filename {svg_file!r}"
+            )
+        if not (path.parent / "svg" / svg_file).is_file():
+            raise _source_error(
+                path, svg_line, f"SVG: sidecar svg/{svg_file} does not exist"
+            )
 
     display: list[DisplayItem] = []
     spoken_lines: list[str] = []
     for line_no, raw in physical_lines:
         line = raw.strip()
-        if line.startswith(("TITLE:", "IMG:")):
+        if line.startswith(("TITLE:", "IMG:", "SVG:")):
             spoken_lines.append("")
         elif line.startswith("SHOW:"):
             text = line[5:].strip()
@@ -329,6 +374,7 @@ def _parse_side(
         img_prompt=img_prompt,
         segments=segments,
         display=tuple(display),
+        svg_file=svg_file,
     )
 
 
@@ -541,6 +587,32 @@ async def ensure_side_image(
     return out, True
 
 
+_SVG_EVENT_HANDLER = re.compile(r"\son[a-z]+\s*=")
+
+
+def load_side_svg(script: PodcastCardScript, side: CardSide) -> str:
+    """Read one authored diagram sidecar as inline-safe markup.
+
+    The files are trusted repo content, but validate anyway: inline SVG goes
+    verbatim into a note field that Anki renders in a webview, so scripts and
+    event handlers must be structurally impossible, not merely unauthored.
+    """
+    assert side.svg_file is not None
+    path = script.path.parent / "svg" / side.svg_file
+    markup = path.read_text(encoding="utf-8").strip()
+    if markup.startswith("<?xml"):
+        markup = markup.split("?>", 1)[1].strip()
+    if not markup.startswith("<svg") or "viewBox" not in markup:
+        raise ValueError(f"{path.name}: inline SVG needs an <svg …viewBox> root")
+    lowered = markup.lower()
+    if ("<script" in lowered or "javascript:" in lowered
+            or _SVG_EVENT_HANDLER.search(lowered)):
+        raise ValueError(f"{path.name}: scripts/event handlers are not allowed")
+    if len(markup) > 200_000:
+        raise ValueError(f"{path.name}: SVG too large to inline into a field")
+    return markup
+
+
 def _side_script(script: PodcastCardScript, side: CardSide) -> ExplainerScript:
     return ExplainerScript(
         path=script.path,
@@ -629,29 +701,43 @@ async def _build_episode_assets(
     image_dir = (
         Path(settings.data_dir) / "staged_audio" / "grammar" / "podcasts" / "images"
     )
-    image_results = await asyncio.gather(*(
-        ensure_side_image(
+
+    async def side_visual(side: CardSide) -> tuple[Path | None, str | None, bool]:
+        if side.svg_file is not None:
+            return None, load_side_svg(script, side), False
+        image_path, was_generated = await ensure_side_image(
             side,
             script.img_style,
             image_dir=image_dir,
             model=settings.gemini_image_model,
             generate_fn=generate_fn,
         )
-        for side in sides
-    ))
+        return image_path, None, was_generated
+
+    visuals = await asyncio.gather(*(side_visual(side) for side in sides))
     built_sides = tuple(
         BuiltSide(
             side=side,
             audio_path=audio_result[0],
-            image_path=image_result[0],
+            image_path=image_path,
             duration_seconds=audio_result[1],
+            svg_markup=svg_markup,
         )
-        for side, audio_result, image_result in zip(
-            sides, audio, image_results, strict=True
+        for side, audio_result, (image_path, svg_markup, _gen) in zip(
+            sides, audio, visuals, strict=True
         )
     )
-    generated = sum(was_generated for _path, was_generated in image_results)
-    return BuiltEpisode(script, built_sides), generated, len(sides) - generated
+    generated = sum(was_generated for _p, _m, was_generated in visuals)
+    cached = sum(1 for image_path, _m, gen in visuals
+                 if image_path is not None and not gen)
+    return BuiltEpisode(script, built_sides), generated, cached
+
+
+def _visual_field(built: BuiltSide) -> str:
+    if built.svg_markup:
+        return f'<div class="pc-img-wrap">{built.svg_markup}</div>'
+    assert built.image_path is not None
+    return f'<img class="pc-img" src="{built.image_path.name}">'
 
 
 def make_model() -> genanki.Model:
@@ -707,7 +793,14 @@ def build_podcast_lessons_apkg(
                     f"episode {script.episode} card {card.seq} is missing staged media"
                 ) from exc
             for built in (front, back):
+                if built.image_path is None and not built.svg_markup:
+                    raise ValueError(
+                        f"episode {script.episode} card {card.seq} "
+                        f"{built.side.side} has neither image nor SVG markup"
+                    )
                 for media_path in (built.audio_path, built.image_path):
+                    if media_path is None:
+                        continue
                     media_path = Path(media_path)
                     if not media_path.exists() or media_path.stat().st_size <= 0:
                         raise ValueError(f"missing podcast lesson media: {media_path}")
@@ -718,8 +811,8 @@ def build_podcast_lessons_apkg(
 
             front_audio = f"[sound:{front.audio_path.name}]"
             back_audio = f"[sound:{back.audio_path.name}]"
-            front_image = f'<img class="pc-img" src="{front.image_path.name}">'
-            back_image = f'<img class="pc-img" src="{back.image_path.name}">'
+            front_image = _visual_field(front)
+            back_image = _visual_field(back)
             deck.add_note(genanki.Note(
                 model=model,
                 fields=[
@@ -802,6 +895,7 @@ async def build_episode(lang: str, episode: int) -> dict[str, Any]:
         "episode": episode,
         "cards": len(selected.cards),
         "sides": len(requested.sides),
+        "svg_sides": sum(1 for side in requested.sides if side.svg_markup),
         "new_images": new_images,
         "cached_images": cached_images,
         "side_durations_s": durations,
@@ -833,7 +927,11 @@ def list_episode_sources() -> list[dict[str, Any]]:
                 _has_staged_audio(script, side, audio_dir) for side in sides
             )
             staged_images = 0
+            svg_sides = 0
             for side in sides:
+                if side.svg_file is not None:
+                    svg_sides += 1
+                    continue
                 key = image_cache_key(
                     script.img_style,
                     side.img_prompt,
@@ -849,5 +947,6 @@ def list_episode_sources() -> list[dict[str, Any]]:
                 "cards": len(script.cards),
                 "staged_audio": staged_audio,
                 "staged_images": staged_images,
+                "svg_sides": svg_sides,
             })
     return sorted(rows, key=lambda row: (row["lang"], row["episode"]))
