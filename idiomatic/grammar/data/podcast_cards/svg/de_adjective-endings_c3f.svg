@@ -1,0 +1,15 @@
+<svg viewBox="0 0 840 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reminder: gender and number, case, determiner family, then the ending — answers in the audio">
+  <rect x="60" y="130" width="210" height="70" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="165" y="167" text-anchor="middle" font-size="22" font-weight="700" class="s-ink">gender · number</text>
+  <line x1="285" y1="165" x2="325" y2="165" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="347,165 321,152 321,178" class="s-teal"/>
+  <rect x="360" y="130" width="130" height="70" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="425" y="167" text-anchor="middle" font-size="22" font-weight="700" class="s-ink">case</text>
+  <line x1="505" y1="165" x2="545" y2="165" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="567,165 541,152 541,178" class="s-teal"/>
+  <rect x="580" y="130" width="200" height="70" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="680" y="160" text-anchor="middle" font-size="22" font-weight="700" class="s-ink">determiner?</text>
+  <text x="680" y="188" text-anchor="middle" font-size="16" class="s-muted">who carries the signal</text>
+  <text x="420" y="260" text-anchor="middle" font-size="24" font-weight="800" class="s-teal">…then the ending arrives on its own</text>
+  <text x="420" y="325" text-anchor="middle" font-size="20" class="s-muted">say the whole phrase out loud — the answers are in the audio</text>
+</svg>
