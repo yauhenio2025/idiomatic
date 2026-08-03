@@ -1,0 +1,12 @@
+<svg viewBox="0 0 840 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reminder: one question — asserting the clause or placing it under a stance">
+  <text x="420" y="80" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">am I asserting the clause?</text>
+  <line x1="420" y1="100" x2="230" y2="150" class="s-stroke-line" stroke-width="3" stroke-linecap="round"/>
+  <line x1="420" y1="100" x2="610" y2="150" class="s-stroke-line" stroke-width="3" stroke-linecap="round"/>
+  <rect x="110" y="160" width="240" height="66" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="230" y="195" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">yes — asserted</text>
+  <text x="230" y="252" text-anchor="middle" font-size="19" font-weight="700" class="s-muted">indicativo</text>
+  <rect x="490" y="160" width="240" height="66" rx="14" class="s-teal"/>
+  <text x="610" y="195" text-anchor="middle" font-size="23" font-weight="800" fill="#ffffff">no — a stance</text>
+  <text x="610" y="252" text-anchor="middle" font-size="19" font-weight="800" class="s-teal">subjuntivo</text>
+  <text x="420" y="305" text-anchor="middle" font-size="20" class="s-muted">react · hope · withhold — say it, then check with the audio</text>
+</svg>
