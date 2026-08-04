@@ -90,7 +90,7 @@ class Settings(BaseSettings):
     # agent that should receive them has acked ok (DB row stays; download
     # of a reaped file returns 410). Pool apkgs are exempt — they're
     # replaced wholesale on every rebuild.
-    apkg_retention_days: int = 30
+    apkg_retention_days: int = 12
 
     # How many failed delivery attempts before /apkgs/pending stops
     # re-offering an apkg to an agent. A transient blip (network, locked

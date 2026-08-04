@@ -169,6 +169,42 @@ async def _cleanup_delivered_apkgs() -> None:
                  freed_mb=round(freed / 1e6, 1))
 
 
+async def _sweep_orphan_video_apkgs() -> None:
+    """Delete per-video apkg files whose DB row no longer exists.
+
+    /admin/purge-video (and pool-row replacement) removes apkgs rows; the
+    row-driven retention reaper then never sees the file again — the
+    2026-08-04 ENOSPC incident found six-week-old purged decks still on
+    disk. Rolling deck files (basename starting with '_') are never
+    candidates; a 1-day age guard avoids racing an in-flight build."""
+    import time as _time
+    settings = get_settings()
+    pool = await db.get_pool()
+    rows = await pool.fetch("SELECT filename FROM apkgs")
+    known = {row["filename"] for row in rows}
+    root = Path(settings.data_dir) / "apkgs"
+    if not root.exists():
+        return
+    cutoff = _time.time() - 24 * 3600
+    n = freed = 0
+    for path in root.glob("*/*.apkg"):
+        if path.name.startswith("_"):
+            continue
+        rel = str(path.relative_to(Path(settings.data_dir)))
+        try:
+            if rel in known or path.stat().st_mtime > cutoff:
+                continue
+            size = path.stat().st_size
+            path.unlink()
+            n += 1
+            freed += size
+        except OSError:
+            continue
+    if n:
+        log.info("janitor.orphan_apkgs_reaped", n_files=n,
+                 freed_mb=round(freed / 1e6, 1))
+
+
 def _sweep_pool_stage() -> tuple[int, int]:
     """Remove per-language _pool_stage dirs untouched for 2+ hours (an
     in-flight rebuild keeps writing, so its dir stays fresh). These are
@@ -210,6 +246,7 @@ async def run_janitor() -> None:
             log.info("janitor.pool_stage", n_dirs=n2,
                      freed_mb=round(freed2 / 1e6, 1))
         await _cleanup_delivered_apkgs()
+        await _sweep_orphan_video_apkgs()
     except Exception as e:
         log.warning("janitor.failed", err=repr(e)[:200])
 
