@@ -858,7 +858,40 @@ async def admin_translation_build(
 
 
 @app.get("/admin/disk-usage")
-async def admin_disk_usage(_: None = Depends(authed_admin)) -> dict:
+async def admin_disk_usage(
+    path: str = "", _: None = Depends(authed_admin),
+) -> dict:
+    """With ?path=<relative dir>: per-file listing (top 60 by size) instead
+    of the tree scan — for drilling into a heavy directory."""
+    if path:
+        root = Path(get_settings().data_dir)
+        target = (root / path).resolve()
+        if not str(target).startswith(str(root.resolve())):
+            raise HTTPException(400, "path escapes data dir")
+        if not target.is_dir():
+            raise HTTPException(404, "no such directory")
+
+        def listing() -> dict:
+            files = []
+            for p in target.iterdir():
+                try:
+                    if p.is_file():
+                        stat = p.stat()
+                        files.append((stat.st_size, p.name,
+                                      int(stat.st_mtime)))
+                except OSError:
+                    continue
+            files.sort(reverse=True)
+            return {"dir": path, "files": [
+                {"name": name, "mb": round(size / 1e6, 1), "mtime": mtime}
+                for size, name, mtime in files[:60]
+            ]}
+
+        return await asyncio.to_thread(listing)
+    return await _disk_tree_scan()
+
+
+async def _disk_tree_scan() -> dict:
     """Read-only /data usage report: filesystem totals + per-directory bytes
     (depth 2). Built for the 2026-08-04 ENOSPC incident — see also the
     worker janitor, which only covers media_stage + delivered video apkgs."""
