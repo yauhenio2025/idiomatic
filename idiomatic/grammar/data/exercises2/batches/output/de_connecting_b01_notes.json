@@ -21,7 +21,7 @@
     "register": "written-formal; especially natural in analytical accounts of causes and consequences",
     "trap": "Infolge normally governs the genitive in edited standard German and takes no von; the following noun phrase is not a subordinate clause.",
     "example_tl": "Infolge der übereilten Liberalisierung kontrollieren wenige Konzerne inzwischen zentrale Kommunikationskanäle, während unabhängige Medien kaum noch Zugang zu verlässlichen Nutzerdaten erhalten.",
-    "example_en": "As a consequence of the hasty liberalization, a few corporations now control key communication channels, while independent media scarcely retain access to reliable user data.",
+    "example_en": "As a consequence of the hasty liberalization, a few corporations now control key communication channels, while independent media can scarcely obtain access to reliable user data anymore.",
     "cloze": "{{c1::Infolge}} der übereilten Liberalisierung kontrollieren wenige Konzerne inzwischen zentrale Kommunikationskanäle, während unabhängige Medien kaum noch Zugang zu verlässlichen Nutzerdaten erhalten.",
     "note": "The legacy rendering is possible but more cumbersome; infolge is the more concise written-register choice here."
   },
@@ -45,11 +45,11 @@
     "tl": "Aufgrund",
     "alts": ["Wegen"],
     "register": "written-neutral to formal; wegen is usually less bureaucratic",
-    "trap": "Aufgrund normally takes the genitive in edited prose; avoid the padded aufgrund von when a straightforward genitive is available.",
+    "trap": "Aufgrund commonly takes the genitive in edited prose; aufgrund von is also standard, but the compact genitive is natural when the case is explicit.",
     "example_tl": "Aufgrund des wachsenden politischen Drucks veröffentlicht der Konzern nun Transparenzberichte, in denen jedoch entscheidende Angaben zur algorithmischen Reichweitensteuerung weiterhin fehlen.",
     "example_en": "Due to growing political pressure, the corporation is now publishing transparency reports in which crucial information about algorithmic reach management nevertheless remains missing.",
     "cloze": "{{c1::Aufgrund}} des wachsenden politischen Drucks veröffentlicht der Konzern nun Transparenzberichte, in denen jedoch entscheidende Angaben zur algorithmischen Reichweitensteuerung weiterhin fehlen.",
-    "note": "The legacy aufgrund von is not impossible, but the genitive construction is preferable in this register. Self-review replaced the anthropomorphic Berichte verschweigen with in denen ... Angaben fehlen."
+    "note": "The legacy aufgrund von is grammatical; this example uses the concise genitive construction. Self-review also replaced the anthropomorphic Berichte verschweigen with in denen ... Angaben fehlen."
   },
   {
     "id": "dec006",
@@ -107,14 +107,14 @@
     "id": "dec020",
     "en": "Importantly",
     "category": "stance",
-    "tl": "Entscheidend ist, dass",
-    "alts": ["Wichtig ist, dass"],
-    "register": "written-neutral; a natural argumentative frame that foregrounds the decisive point",
+    "tl": "Wichtig ist, dass",
+    "alts": ["Entscheidend ist, dass"],
+    "register": "written-neutral; a natural argumentative frame, with the alternative expressing a stronger claim",
     "trap": "A bare Wichtig is not a German sentence-level connector here; the full frame needs dass and verb-final order in the following clause.",
-    "example_tl": "Entscheidend ist, dass unabhängige Forschende Zugang zu den Plattformdaten erhalten, bevor öffentliche Debatten durch intransparente Empfehlungssysteme weiter verzerrt werden.",
-    "example_en": "Importantly, independent researchers must obtain access to platform data before public debates are further distorted by opaque recommendation systems.",
-    "cloze": "{{c1::Entscheidend ist, dass}} unabhängige Forschende Zugang zu den Plattformdaten erhalten, bevor öffentliche Debatten durch intransparente Empfehlungssysteme weiter verzerrt werden.",
-    "note": "Materially repairs old_back's fragment Wichtig. Self-review chose the complete idiomatic frame and verified clause-final erhalten after dass."
+    "example_tl": "Wichtig ist, dass unabhängige Forschende Zugang zu den Plattformdaten erhalten, bevor öffentliche Debatten durch intransparente Empfehlungssysteme weiter verzerrt werden.",
+    "example_en": "It is important that independent researchers gain access to platform data before public debates are further distorted by opaque recommendation systems.",
+    "cloze": "{{c1::Wichtig ist, dass}} unabhängige Forschende Zugang zu den Plattformdaten erhalten, bevor öffentliche Debatten durch intransparente Empfehlungssysteme weiter verzerrt werden.",
+    "note": "Materially repairs old_back's fragment Wichtig. Hostile self-review replaced the stronger Entscheidend with Wichtig for closer equivalence and removed an unsupported must from the English translation."
   },
   {
     "id": "dec021",
@@ -134,7 +134,7 @@
     "en": "In truth",
     "category": "contrast",
     "tl": "In Wahrheit",
-    "alts": ["Tatsächlich"],
+    "alts": [],
     "register": "written-neutral; typically corrective and mildly emphatic",
     "trap": "In Wahrheit normally contrasts reality with an appearance or prior claim; do not use it as an empty intensifier where wirklich would suffice.",
     "example_tl": "In Wahrheit stärkt die angeblich neutrale Moderationspolitik jene Akteure, die genügend Ressourcen besitzen, um jede neue Regel strategisch auszunutzen.",
@@ -174,7 +174,7 @@
     "category": "stance",
     "tl": "Naturgemäß",
     "alts": [],
-    "register": "written-neutral; presents a consequence as inherent in the circumstances",
+    "register": "written-neutral to formal; presents a consequence as inherent in the circumstances",
     "trap": "Naturgemäß takes V2 order at clause onset, while the following während clause is verb-final; natürlich can instead sound conversational or mean ‘of course.’",
     "example_tl": "Naturgemäß priorisiert eine werbefinanzierte Plattform messbare Aufmerksamkeit, während gesellschaftlicher Nutzen in ihren internen Erfolgsmetriken kaum eine Rolle spielt.",
     "example_en": "Naturally, an advertising-funded platform prioritizes measurable attention, while social benefit plays scarcely any role in its internal success metrics.",
@@ -189,10 +189,10 @@
     "alts": ["Vor allem"],
     "register": "neutral; natural in analytical prose when narrowing attention to a salient subset",
     "trap": "Im Besonderen is possible only in marked contexts and is usually stilted here; insbesondere or vor allem is the idiomatic focus marker.",
-    "example_tl": "Insbesondere kleinere Regionalzeitungen verlieren Werbeeinnahmen, weil Plattformen lokale Zielgruppen präziser vermessen und Anzeigenkunden mit kurzfristig billigeren Angeboten abwerben können.",
+    "example_tl": "Insbesondere kleinere Regionalzeitungen verlieren Werbeeinnahmen, weil Plattformen lokale Zielgruppen präziser vermessen und Anzeigenkunden mit kurzfristig günstigeren Angeboten abwerben können.",
     "example_en": "In particular, smaller regional newspapers are losing advertising revenue because platforms can measure local audiences more precisely and lure advertisers with cheaper short-term offers.",
-    "cloze": "{{c1::Insbesondere}} kleinere Regionalzeitungen verlieren Werbeeinnahmen, weil Plattformen lokale Zielgruppen präziser vermessen und Anzeigenkunden mit kurzfristig billigeren Angeboten abwerben können.",
-    "note": "Materially replaces the unnatural half of old_back; besonders alone remains possible when it directly modifies an adjective or constituent."
+    "cloze": "{{c1::Insbesondere}} kleinere Regionalzeitungen verlieren Werbeeinnahmen, weil Plattformen lokale Zielgruppen präziser vermessen und Anzeigenkunden mit kurzfristig günstigeren Angeboten abwerben können.",
+    "note": "Materially replaces the unnatural half of old_back; besonders alone remains possible when it directly modifies an adjective or constituent. Hostile self-review replaced billigeren with the more polished günstigeren."
   },
   {
     "id": "dec032",
@@ -280,10 +280,10 @@
     "alts": [],
     "register": "written-neutral; concise coordination common in reports and analytical prose",
     "trap": "Sowohl ... als auch means ‘both ... and’ and requires two parallel arms; it is not a drop-in translation of simple as well as.",
-    "example_tl": "Der Bericht untersucht staatliche Zensur sowie privatwirtschaftliche Moderation und zeigt, wie beide Mechanismen den Zugang oppositioneller Stimmen zur Öffentlichkeit begrenzen.",
-    "example_en": "The report examines state censorship as well as private-sector moderation and shows how both mechanisms limit opposition voices’ access to the public sphere.",
-    "cloze": "Der Bericht untersucht staatliche Zensur {{c1::sowie}} privatwirtschaftliche Moderation und zeigt, wie beide Mechanismen den Zugang oppositioneller Stimmen zur Öffentlichkeit begrenzen.",
-    "note": "Materially corrects old_back, which changed a simple coordinator into the emphatic correlative ‘both ... and.’"
+    "example_tl": "Der Bericht untersucht staatliche Zensur sowie privatwirtschaftliche Moderation und zeigt, wie beide Mechanismen den Zugang oppositioneller Akteure zur öffentlichen Debatte begrenzen.",
+    "example_en": "The report examines state censorship as well as private-sector moderation and shows how both mechanisms limit opposition actors’ access to public debate.",
+    "cloze": "Der Bericht untersucht staatliche Zensur {{c1::sowie}} privatwirtschaftliche Moderation und zeigt, wie beide Mechanismen den Zugang oppositioneller Akteure zur öffentlichen Debatte begrenzen.",
+    "note": "Materially corrects old_back, which changed a simple coordinator into the emphatic correlative ‘both ... and.’ Hostile self-review removed a strained metonymy from the example."
   },
   {
     "id": "dec048",
@@ -292,11 +292,11 @@
     "tl": "In Verbindung mit",
     "alts": ["Zusammen mit"],
     "register": "written-neutral; natural for interacting factors in analytical prose",
-    "trap": "Gekoppelt mit sounds mechanical or technical unless systems are literally coupled; the idiomatic discourse phrase takes mit plus dative.",
+    "trap": "Gekoppelt mit is valid even for abstract relations but can sound more technical or mechanical here; both phrases take mit plus dative.",
     "example_tl": "In Verbindung mit einer aggressiven Übernahmepolitik verschafft die exklusive Datenbasis dem Konzern einen Vorsprung, den kleinere Wettbewerber kaum noch aufholen können.",
-    "example_en": "Coupled with an aggressive acquisition policy, the exclusive data base gives the corporation a lead that smaller competitors can scarcely make up.",
+    "example_en": "Coupled with an aggressive acquisition policy, the exclusive data pool gives the corporation a lead that smaller competitors can scarcely make up.",
     "cloze": "{{c1::In Verbindung mit}} einer aggressiven Übernahmepolitik verschafft die exklusive Datenbasis dem Konzern einen Vorsprung, den kleinere Wettbewerber kaum noch aufholen können.",
-    "note": "Materially replaces the overly literal, technical-sounding legacy calque."
+    "note": "The legacy rendering is grammatical; hostile self-review retained In Verbindung mit as the less mechanical collocation for these interacting economic factors."
   },
   {
     "id": "dec049",
@@ -354,14 +354,14 @@
     "id": "dec058",
     "en": "Not only…but also",
     "category": "addition",
-    "tl": "nicht nur … sondern auch",
+    "tl": "nicht nur …, sondern auch",
     "alts": [],
     "register": "neutral; an emphatic correlative used in both serious speech and writing",
     "trap": "Keep the two coordinated arms parallel and place a comma before sondern; sondern does not trigger verb-final order, unlike a subordinator.",
     "example_tl": "Die neue Verordnung schützt nicht nur persönliche Daten, sondern auch die redaktionelle Unabhängigkeit kleiner Medien vor willkürlichen Eingriffen marktbeherrschender Plattformen.",
     "example_en": "The new regulation protects not only personal data but also the editorial independence of small media outlets from arbitrary intervention by dominant platforms.",
     "cloze": "Die neue Verordnung schützt {{c1::nicht nur}} persönliche Daten, {{c1::sondern auch}} die redaktionelle Unabhängigkeit kleiner Medien vor willkürlichen Eingriffen marktbeherrschender Plattformen.",
-    "note": ""
+    "note": "Hostile self-review added the obligatory comma to the displayed two-arm frame; the example already used it correctly."
   },
   {
     "id": "dec059",
@@ -388,19 +388,6 @@
     "example_en": "A binding transparency obligation could also help smaller news portals identify discriminatory losses of reach early and substantiate them clearly to the platforms.",
     "cloze": "Eine verbindliche Transparenzpflicht könnte {{c1::auch}} kleineren Nachrichtenportalen helfen, diskriminierende Reichweitenverluste frühzeitig zu erkennen und gegenüber den Plattformen nachvollziehbar zu belegen.",
     "note": "Kept despite its surface simplicity because old_back is a materially wrong false-friend translation."
-  },
-  {
-    "id": "dec065",
-    "en": "Because of",
-    "category": "result",
-    "tl": "Wegen",
-    "alts": ["Aufgrund"],
-    "register": "neutral; standard edited prose normally uses the genitive",
-    "trap": "Wegen introduces a noun phrase, not a clause: initial Wegen des ... takes main-clause V2; weil introduces a verb-final subordinate clause.",
-    "example_tl": "Wegen des fehlenden Datenzugangs können Forschende nicht überprüfen, ob die Plattform politische Inhalte unabhängig von deren ideologischer Ausrichtung gleich behandelt.",
-    "example_en": "Because of the lack of data access, researchers cannot verify whether the platform treats political content equally regardless of its ideological orientation.",
-    "cloze": "{{c1::Wegen}} des fehlenden Datenzugangs können Forschende nicht überprüfen, ob die Plattform politische Inhalte unabhängig von deren ideologischer Ausrichtung gleich behandelt.",
-    "note": "The legacy aufgrund von is possible but padded; the main rendering directly teaches wegen plus genitive."
   },
   {
     "id": "dec066",
@@ -449,10 +436,10 @@
     "alts": [],
     "register": "written-neutral; natural when correcting an appearance or sharpening a claim",
     "trap": "Corrective in fact is usually tatsächlich or in Wirklichkeit; in der Tat more often confirms a preceding claim rather than overturning it.",
-    "example_tl": "Tatsächlich verschärft die scheinbar neutrale Priorisierung populärer Beiträge bestehende Machtasymmetrien, weil etablierte Akteure Aufmerksamkeit leichter in politische Reichweite umwandeln.",
-    "example_en": "In fact, the seemingly neutral prioritization of popular posts exacerbates existing power asymmetries because established actors can convert attention into political reach more easily.",
-    "cloze": "{{c1::Tatsächlich}} verschärft die scheinbar neutrale Priorisierung populärer Beiträge bestehende Machtasymmetrien, weil etablierte Akteure Aufmerksamkeit leichter in politische Reichweite umwandeln.",
-    "note": "Materially distinguishes corrective in fact from old_back's usually confirmatory In der Tat."
+    "example_tl": "Tatsächlich wurden die meisten beanstandeten Beiträge nicht automatisch entfernt; interne Prüferinnen und Prüfer bestätigten die Entscheidungen erst nachträglich.",
+    "example_en": "In fact, most of the disputed posts were not removed automatically; internal reviewers confirmed the decisions only afterward.",
+    "cloze": "{{c1::Tatsächlich}} wurden die meisten beanstandeten Beiträge nicht automatisch entfernt; interne Prüferinnen und Prüfer bestätigten die Entscheidungen erst nachträglich.",
+    "note": "Materially distinguishes corrective in fact from old_back's usually confirmatory In der Tat. Hostile self-review replaced an example that duplicated dec022's appearance-versus-reality argument."
   },
   {
     "id": "dec070",
@@ -496,7 +483,7 @@
   {
     "id": "dec075",
     "en": "So that",
-    "category": "result",
+    "category": "structuring",
     "tl": "damit",
     "alts": [],
     "register": "neutral; standard subordinator for an intended purpose with a finite clause",
@@ -504,7 +491,7 @@
     "example_tl": "Die Behörde veröffentlicht sämtliche Prüfberichte, damit betroffene Redaktionen nachvollziehen können, nach welchen Kriterien ihre Inhalte systematisch herabgestuft wurden.",
     "example_en": "The authority publishes all audit reports so that affected newsrooms can understand the criteria by which their content was systematically downgraded.",
     "cloze": "Die Behörde veröffentlicht sämtliche Prüfberichte, {{c1::damit}} betroffene Redaktionen nachvollziehen können, nach welchen Kriterien ihre Inhalte systematisch herabgestuft wurden.",
-    "note": "Materially repairs old_back. Self-review explicitly chose the purpose reading; a result reading would require sodass and different discourse logic."
+    "note": "Materially repairs old_back. Self-review explicitly chose the purpose reading; hostile review changed the category from result to structuring because resultative so that would require sodass and different discourse logic."
   },
   {
     "id": "dec076",
@@ -540,10 +527,10 @@
     "alts": [],
     "register": "neutral; introduces a representative instance in analytical prose",
     "trap": "German normally omits the article in the fixed framing phrase als Beispiel für; für governs the accusative.",
-    "example_tl": "Als Beispiel für regulatorisches Versagen nennt der Bericht die jahrelange Untätigkeit gegenüber personalisierter politischer Werbung während mehrerer nationaler Wahlkämpfe.",
-    "example_en": "As an example of regulatory failure, the report cites years of inaction toward personalized political advertising during several national election campaigns.",
-    "cloze": "{{c1::Als Beispiel für}} regulatorisches Versagen nennt der Bericht die jahrelange Untätigkeit gegenüber personalisierter politischer Werbung während mehrerer nationaler Wahlkämpfe.",
-    "note": "The article in old_back is not strictly impossible but is unnecessarily heavy in this fixed frame."
+    "example_tl": "Als Beispiel für einen gravierenden Regulierungsfehler nennt der Bericht die jahrelange Untätigkeit gegenüber personalisierter politischer Werbung während mehrerer nationaler Wahlkämpfe.",
+    "example_en": "As an example of a serious regulatory failure, the report cites years of inaction toward personalized political advertising during several national election campaigns.",
+    "cloze": "{{c1::Als Beispiel für}} einen gravierenden Regulierungsfehler nennt der Bericht die jahrelange Untätigkeit gegenüber personalisierter politischer Werbung während mehrerer nationaler Wahlkämpfe.",
+    "note": "The article in old_back is not strictly impossible but is unnecessarily heavy in the fixed frame itself. Hostile self-review made the accusative complement morphologically visible."
   },
   {
     "id": "dec081",
@@ -601,14 +588,14 @@
     "id": "dec091",
     "en": "Proof of this",
     "category": "stance",
-    "tl": "Ein Beleg dafür",
+    "tl": "Ein Beweis dafür",
     "alts": [],
-    "register": "written-neutral; appropriately cautious for empirical argumentation",
-    "trap": "With a following proposition, German uses dafür, dass and verb-final order; Beweis can overstate what empirical evidence establishes.",
-    "example_tl": "Ein Beleg dafür ist, dass koordinierte Falschmeldungen regelmäßig dieselben emotionalen Schlagwörter verwenden, obwohl ihre angeblichen Quellen politisch weit auseinanderliegen.",
-    "example_en": "Evidence of this is that coordinated false reports regularly use the same emotive keywords, although their purported sources are politically far apart.",
-    "cloze": "{{c1::Ein Beleg dafür}} ist, dass koordinierte Falschmeldungen regelmäßig dieselben emotionalen Schlagwörter verwenden, obwohl ihre angeblichen Quellen politisch weit auseinanderliegen.",
-    "note": "The prompt lacks context. Self-review deliberately softens legacy Beweis to Beleg for non-mathematical evidence; use Ein Beweis dafür where conclusive proof is genuinely meant."
+    "register": "written-neutral to formal; makes a strong claim of conclusive proof and should be reserved for genuinely decisive evidence",
+    "trap": "Beweis is stronger than Beleg; do not weaken explicit proof to mere supporting evidence, but prefer Beleg when the facts are only corroborative.",
+    "example_tl": "Ein Beweis dafür liegt darin, dass die internen Protokolle denselben bislang bestrittenen Löschbefehl in drei voneinander unabhängigen Systemen eindeutig dokumentieren.",
+    "example_en": "Proof of this lies in the fact that the internal logs clearly document the same previously denied deletion order in three independent systems.",
+    "cloze": "{{c1::Ein Beweis dafür}} liegt darin, dass die internen Protokolle denselben bislang bestrittenen Löschbefehl in drei voneinander unabhängigen Systemen eindeutig dokumentieren.",
+    "note": "Hostile self-review replaced Beleg with Beweis to preserve the prompt's epistemic strength and rewrote the example around conclusive documentary proof."
   },
   {
     "id": "dec092",
@@ -697,7 +684,7 @@
     "register": "written-neutral; reverses the direction of a relation or argument",
     "trap": "Umgekehrt marks the reverse relation and takes V2 (gilt); im Gegenteil instead contradicts a preceding proposition and is not automatically interchangeable.",
     "example_tl": "Umgekehrt gilt jedoch auch: Ohne verlässliche Einnahmen können unabhängige Medien weder langfristig recherchieren noch dem politischen Druck mächtiger Eigentümer widerstehen.",
-    "example_en": "Conversely, the reverse also holds: without reliable revenue, independent media can neither conduct long-term investigations nor withstand pressure from powerful owners.",
+    "example_en": "Conversely, the reverse also holds: without reliable revenue, independent media can neither conduct long-term investigations nor withstand political pressure from powerful owners.",
     "cloze": "{{c1::Umgekehrt}} gilt jedoch auch: Ohne verlässliche Einnahmen können unabhängige Medien weder langfristig recherchieren noch dem politischen Druck mächtiger Eigentümer widerstehen.",
     "note": ""
   },

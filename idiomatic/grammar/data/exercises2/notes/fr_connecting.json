@@ -788,10 +788,10 @@
     ],
     "register": "Written-formal; explicitly juxtaposes evidence, positions, or cases.",
     "trap": "En contraste avec is an English-influenced choice in this discourse use; standard analytical French prefers par contraste avec.",
-    "example_tl": "Par contraste avec les déclarations officielles, les documents internes montrent que l'entreprise connaissait depuis longtemps les risques liés à son système.",
-    "example_en": "In contrast to the official statements, internal documents show that the company had long known the risks associated with its system.",
-    "cloze": "{{c1::Par contraste avec}} les déclarations officielles, les documents internes montrent que l'entreprise connaissait depuis longtemps les risques liés à son système.",
-    "note": "The parenthetical prompt is resolved to the prepositional comparison frame."
+    "example_tl": "Par contraste avec ces déclarations officielles, les documents internes montrent que l'entreprise connaissait depuis longtemps les risques liés à son système.",
+    "example_en": "In contrast to these official statements, internal documents show that the company had long known the risks associated with its system.",
+    "cloze": "{{c1::Par contraste avec}} ces déclarations officielles, les documents internes montrent que l'entreprise connaissait depuis longtemps les risques liés à son système.",
+    "note": "The prompt is resolved to the prepositional frame. Self-review used ces so À l'opposé de substitutes without changing a contraction."
   },
   {
     "id": "frc106",
@@ -807,21 +807,6 @@
     "example_en": "Instead, the ministry entrusted the assessment to a private firm that has advised the companies concerned for years.",
     "cloze": "{{c1::Au lieu de cela}}, le ministère a confié l'évaluation à un cabinet privé qui conseille depuis des années les entreprises concernées.",
     "note": "Materially corrects old_back, which gives contradiction rather than replacement."
-  },
-  {
-    "id": "frc107",
-    "en": "Nevertheless",
-    "category": "concession",
-    "tl": "Néanmoins",
-    "alts": [
-      "Toutefois"
-    ],
-    "register": "Written-formal; concise and conventional in policy analysis.",
-    "trap": "Néanmoins is a sentence adverb, not a conjunction: do not build a calqued néanmoins que clause.",
-    "example_tl": "Néanmoins, aucune de ces garanties ne permettra aux citoyens de savoir précisément comment leurs données ont été utilisées par les administrations.",
-    "example_en": "Nevertheless, none of these safeguards will allow citizens to know exactly how public administrations used their data.",
-    "cloze": "{{c1::Néanmoins}}, aucune de ces garanties ne permettra aux citoyens de savoir précisément comment leurs données ont été utilisées par les administrations.",
-    "note": ""
   },
   {
     "id": "frc110",
@@ -864,7 +849,7 @@
     "register": "Neutral; a compact self-correction in both careful speech and written argument.",
     "trap": "Bare plutôt expresses preference or degree; corrective English 'rather' is the two-word pivot ou plutôt.",
     "example_tl": "Le projet ne décentralise pas le contrôle ; il le confie, ou plutôt le délègue, à un autre groupe d'experts privés.",
-    "example_en": "The proposal does not decentralize control; it entrusts, or rather delegates, it to another group of private experts.",
+    "example_en": "The proposal does not decentralize control; it entrusts control—or rather delegates it—to another group of private experts.",
     "cloze": "Le projet ne décentralise pas le contrôle ; il le confie, {{c1::ou plutôt}} le délègue, à un autre groupe d'experts privés.",
     "note": "The context-sensitive prompt is explicitly resolved to its corrective reformulation use."
   },
@@ -908,10 +893,10 @@
     ],
     "register": "Neutral; comme pour is natural across registers, while à l'instar de is more formal.",
     "trap": "Comme avec is usually a literal English calque here; use comme pour when carrying an analysis over to another case.",
-    "example_tl": "Comme pour les médias publics, l'indépendance des autorités de contrôle dépend moins de leur statut que des moyens qui leur sont accordés.",
-    "example_en": "As with public media, the independence of supervisory authorities depends less on their status than on the resources granted to them.",
-    "cloze": "{{c1::Comme pour}} les médias publics, l'indépendance des autorités de contrôle dépend moins de leur statut que des moyens qui leur sont accordés.",
-    "note": "Materially replaces the legacy preposition with the idiomatic case-comparison frame."
+    "example_tl": "Comme pour certaines autorités sanitaires, les autorités de contrôle du numérique ne sont réellement indépendantes que si leur statut s'accompagne de moyens suffisants.",
+    "example_en": "As with certain health regulators, digital supervisory authorities are genuinely independent only if their status is backed by sufficient resources.",
+    "cloze": "{{c1::Comme pour}} certaines autorités sanitaires, les autorités de contrôle du numérique ne sont réellement indépendantes que si leur statut s'accompagne de moyens suffisants.",
+    "note": "Materially replaces the legacy preposition. Self-review aligned the comparison's subjects so À l'instar de is both contraction-safe and logically substitutable."
   },
   {
     "id": "frc122",
@@ -944,7 +929,7 @@
   {
     "id": "frc133",
     "en": "In the spitting image of",
-    "category": "contrast",
+    "category": "addition",
     "tl": "le portrait craché de",
     "alts": [
       "la copie conforme de"
@@ -954,7 +939,7 @@
     "example_tl": "Le nouveau dispositif est le portrait craché de celui que le gouvernement avait abandonné deux ans auparavant sous la pression des magistrats.",
     "example_en": "The new system is the spitting image of the one the government abandoned two years earlier under pressure from judges.",
     "cloze": "Le nouveau dispositif est {{c1::le portrait craché de}} celui que le gouvernement avait abandonné deux ans auparavant sous la pression des magistrats.",
-    "note": "The vivid idiom is intentionally used in a columnist's register; the example correctly uses deux ans, not deux années."
+    "note": "The vivid idiom is intentionally used in a columnist's register; the example uses deux ans correctly. Self-review classified analogy under addition rather than contrast."
   },
   {
     "id": "frc134",
@@ -992,10 +977,10 @@
     "alts": [],
     "register": "Neutral-formal; carries a conclusion or recommendation over to an analogous case.",
     "trap": "At sentence level, de même signals analogy; inside a verb phrase, de la même manière may instead describe how something is done.",
-    "example_tl": "De même, une réglementation efficace doit couvrir les courtiers en données qui alimentent discrètement l'économie de la surveillance ciblée.",
-    "example_en": "Likewise, effective regulation must cover the data brokers that quietly sustain the targeted-surveillance economy.",
-    "cloze": "{{c1::De même}}, une réglementation efficace doit couvrir les courtiers en données qui alimentent discrètement l'économie de la surveillance ciblée.",
-    "note": ""
+    "example_tl": "De même, une réglementation efficace doit couvrir les courtiers en données qui alimentent discrètement l'économie de la publicité ciblée.",
+    "example_en": "Likewise, effective regulation must cover the data brokers that quietly sustain the targeted-advertising economy.",
+    "cloze": "{{c1::De même}}, une réglementation efficace doit couvrir les courtiers en données qui alimentent discrètement l'économie de la publicité ciblée.",
+    "note": "Self-review replaced the translated-sounding surveillance ciblée with the established collocation publicité ciblée."
   },
   {
     "id": "frc138",
@@ -1006,7 +991,7 @@
     "register": "Neutral-formal; an evaluative sentence frame that raises the priority of the following point.",
     "trap": "Le plus important normally functions nominally and often requires c'est que; plus important encore works directly as a detached evaluation.",
     "example_tl": "Plus important encore, le texte ne garantit aucun accès indépendant aux modèles utilisés pour classer les contenus politiques pendant les élections.",
-    "example_en": "Most important, the text guarantees no independent access to the models used to rank political content during elections.",
+    "example_en": "Most importantly, the text guarantees no independent access to the models used to rank political content during elections.",
     "cloze": "{{c1::Plus important encore}}, le texte ne garantit aucun accès indépendant aux modèles utilisés pour classer les contenus politiques pendant les élections.",
     "note": "The fragmentary prompt is interpreted as a sentence-level priority marker."
   },
@@ -1032,11 +1017,11 @@
       "D'abord et surtout"
     ],
     "register": "Neutral and emphatic; natural in serious speech and opinion prose.",
-    "trap": "D'abord et avant tout duplicates the same temporal image and often reflects English phrasing; avant toute chose is more idiomatic.",
+    "trap": "D'abord et avant tout is understandable but pleonastic; avant toute chose is the leaner priority marker in formal prose.",
     "example_tl": "Avant toute chose, les autorités devraient définir précisément les risques qu'elles prétendent réduire et les indicateurs permettant d'évaluer leurs interventions.",
     "example_en": "First and foremost, the authorities should precisely define the risks they claim to reduce and the indicators for evaluating their interventions.",
     "cloze": "{{c1::Avant toute chose}}, les autorités devraient définir précisément les risques qu'elles prétendent réduire et les indicateurs permettant d'évaluer leurs interventions.",
-    "note": "Materially streamlines the pleonastic legacy gloss."
+    "note": "Materially streamlines the pleonastic legacy gloss; self-review softened the trap because the legacy phrase is attested, not ungrammatical."
   },
   {
     "id": "frc154",
@@ -1052,19 +1037,6 @@
     "example_en": "All things considered, the proposal improves transparency without challenging the structural power of the companies that control the infrastructure.",
     "cloze": "{{c1::Tout bien considéré}}, la proposition améliore la transparence sans remettre en cause le pouvoir structurel des entreprises qui contrôlent les infrastructures.",
     "note": ""
-  },
-  {
-    "id": "frc155",
-    "en": "Altogether",
-    "category": "stance",
-    "tl": "Somme toute",
-    "alts": [],
-    "register": "Written-formal; introduces a concise overall assessment.",
-    "trap": "En tout cas means 'in any case', not 'all in all'; English altogether also has degree senses that require different translations.",
-    "example_tl": "Somme toute, le programme finance surtout la numérisation des services existants plutôt qu'une véritable transformation de leur gouvernance.",
-    "example_en": "Altogether, the program mainly funds digitization of existing services rather than a genuine transformation of their governance.",
-    "cloze": "{{c1::Somme toute}}, le programme finance surtout la numérisation des services existants plutôt qu'une véritable transformation de leur gouvernance.",
-    "note": "The ambiguous prompt is explicitly interpreted in its concluding 'all in all' sense; old_back is incorrect for that reading."
   },
   {
     "id": "frc156",
@@ -1088,7 +1060,7 @@
       "Comme indiqué précédemment"
     ],
     "register": "Written-formal; explicitly refers back to a point already raised.",
-    "trap": "Noter and signaler here mean 'mention/point out', not the English sense of physically writing a note.",
+    "trap": "Avoid bare comme noté, a reduced-passive English calque; use comme nous l'avons signalé or the impersonal comme indiqué précédemment.",
     "example_tl": "Comme nous l'avons signalé, la baisse apparente des contenus haineux coïncide avec une réduction importante de l'accès accordé aux chercheurs.",
     "example_en": "As noted, the apparent decline in hateful content coincides with a significant reduction in the access granted to researchers.",
     "cloze": "{{c1::Comme nous l'avons signalé}}, la baisse apparente des contenus haineux coïncide avec une réduction importante de l'accès accordé aux chercheurs.",
@@ -1103,7 +1075,7 @@
       "Ainsi qu'on peut le constater"
     ],
     "register": "Neutral-formal and impersonal; avoids addressing the reader directly in an analytical essay.",
-    "trap": "Comme vous pouvez voir omits the required object pronoun le and sounds translated; comme on le voit is the conventional frame.",
+    "trap": "Literal second-person comme vous pouvez voir sounds translated in analytical prose; the conventional impersonal frame is comme on le voit.",
     "example_tl": "Comme on le voit, les objectifs affichés ne correspondent guère aux mécanismes de financement réellement prévus dans le texte.",
     "example_en": "As you can see, the stated objectives hardly correspond to the funding mechanisms actually provided for in the text.",
     "cloze": "{{c1::Comme on le voit}}, les objectifs affichés ne correspondent guère aux mécanismes de financement réellement prévus dans le texte.",
@@ -1171,16 +1143,14 @@
     "id": "frc165",
     "en": "In any event",
     "category": "concession",
-    "tl": "Quoi qu'il en soit",
-    "alts": [
-      "En tout état de cause"
-    ],
-    "register": "Neutral-formal; en tout état de cause is more legal-administrative.",
-    "trap": "Quoi qu'il en soit is a fixed concessive phrase with the subjunctive soit; do not write quoique il or replace en with le.",
-    "example_tl": "Quoi qu'il en soit, l'État reste responsable des décisions automatisées prises par les prestataires auxquels il délègue des missions essentielles.",
+    "tl": "En tout état de cause",
+    "alts": [],
+    "register": "Formal and legal-administrative; more marked than the neutral quoi qu'il en soit.",
+    "trap": "En tout état de cause is a fixed phrase meaning that the conclusion holds whatever the circumstances; en tout cas is less formal and broader.",
+    "example_tl": "En tout état de cause, l'État reste responsable des décisions automatisées prises par les prestataires auxquels il délègue des missions essentielles.",
     "example_en": "In any event, the state remains responsible for automated decisions made by the contractors to which it delegates essential duties.",
-    "cloze": "{{c1::Quoi qu'il en soit}}, l'État reste responsable des décisions automatisées prises par les prestataires auxquels il délègue des missions essentielles.",
-    "note": ""
+    "cloze": "{{c1::En tout état de cause}}, l'État reste responsable des décisions automatisées prises par les prestataires auxquels il délègue des missions essentielles.",
+    "note": "Self-review selected the marked legal rendering to keep this item distinct from the neutral concessive idiom in frc200."
   },
   {
     "id": "frc168",
@@ -1208,7 +1178,7 @@
     "register": "Neutral-formal; draws a concise synthesis from the preceding analysis.",
     "trap": "En somme means 'in short/all in all'; en total is not a summary connector and usually concerns a numerical total.",
     "example_tl": "En somme, la souveraineté proclamée reste largement symbolique tant que les administrations dépendent de logiciels qu'elles ne peuvent ni auditer ni modifier.",
-    "example_en": "In short, proclaimed sovereignty remains largely symbolic while public administrations depend on software they can neither audit nor modify.",
+    "example_en": "In short, proclaimed sovereignty remains largely symbolic as long as public administrations depend on software they can neither audit nor modify.",
     "cloze": "{{c1::En somme}}, la souveraineté proclamée reste largement symbolique tant que les administrations dépendent de logiciels qu'elles ne peuvent ni auditer ni modifier.",
     "note": ""
   },
@@ -1277,7 +1247,7 @@
     "register": "Neutral-formal; concedes the preceding point before an explicit restriction or counterargument.",
     "trap": "Même si c'est vrai sounds spoken and can suggest uncertainty; certes concedes the point for argumentative purposes and normally anticipates mais.",
     "example_tl": "Certes, la réforme améliore la transparence, mais elle laisse aux entreprises le soin de définir elles-mêmes les informations jugées pertinentes.",
-    "example_en": "Although this may be true of transparency, the reform still lets companies themselves define which information is considered relevant.",
+    "example_en": "Although it is true that the reform improves transparency, it still lets companies themselves define which information is considered relevant.",
     "cloze": "{{c1::Certes}}, la réforme améliore la transparence, mais elle laisse aux entreprises le soin de définir elles-mêmes les informations jugées pertinentes.",
     "note": "The full English hedge is functionally compressed into the idiomatic French concession Certes… mais."
   },
@@ -1288,11 +1258,11 @@
     "tl": "Même si",
     "alts": [],
     "register": "Neutral; standard for a hypothetical or fact-resistant concession.",
-    "trap": "Même si normally takes the indicative, not the subjunctive: même si la plateforme publie, not publie in a forced subjunctive analysis.",
-    "example_tl": "Même si la plateforme publie ses critères, les chercheurs ne pourront pas évaluer leur application sans accéder aux données de classement.",
-    "example_en": "Even if the platform publishes its criteria, researchers will not be able to assess their application without accessing ranking data.",
-    "cloze": "{{c1::Même si}} la plateforme publie ses critères, les chercheurs ne pourront pas évaluer leur application sans accéder aux données de classement.",
-    "note": ""
+    "trap": "Même si normally takes the indicative, not the subjunctive: même si la plateforme rend ses critères publics, not rende.",
+    "example_tl": "Même si la plateforme rend ses critères publics, les chercheurs ne pourront pas évaluer leur application sans accéder aux données de classement.",
+    "example_en": "Even if the platform makes its criteria public, researchers will not be able to assess their application without accessing ranking data.",
+    "cloze": "{{c1::Même si}} la plateforme rend ses critères publics, les chercheurs ne pourront pas évaluer leur application sans accéder aux données de classement.",
+    "note": "Self-review chose rendre so the example visibly contrasts the indicative rend with the incorrect subjunctive rende."
   },
   {
     "id": "frc183",
@@ -1358,10 +1328,10 @@
     "alts": [],
     "register": "Neutral; standard in both serious speech and formal writing.",
     "trap": "À moins que takes the subjunctive and often an expletive ne, which does not make the clause negative by itself.",
-    "example_tl": "À moins que le législateur n'impose des normes ouvertes, les administrations resteront captives de systèmes coûteux qu'elles ne maîtrisent pas.",
-    "example_en": "Unless lawmakers impose open standards, public administrations will remain captive to costly systems they do not control.",
-    "cloze": "{{c1::À moins que}} le législateur n'impose des normes ouvertes, les administrations resteront captives de systèmes coûteux qu'elles ne maîtrisent pas.",
-    "note": "The example makes the subjunctive plus expletive-ne construction explicit."
+    "example_tl": "À moins que le législateur ne définisse des normes ouvertes, les administrations resteront captives de systèmes coûteux qu'elles ne maîtrisent pas.",
+    "example_en": "Unless lawmakers define open standards, public administrations will remain captive to costly systems they do not control.",
+    "cloze": "{{c1::À moins que}} le législateur ne définisse des normes ouvertes, les administrations resteront captives de systèmes coûteux qu'elles ne maîtrisent pas.",
+    "note": "Self-review chose définisse so the subjunctive remains visibly distinct from the indicative définit alongside the expletive ne."
   },
   {
     "id": "frc193",
@@ -1432,6 +1402,6 @@
     "example_tl": "Quoi qu'il en soit, le Parlement ne peut approuver cet accord sans garanties précises sur l'accès aux données et le contrôle judiciaire.",
     "example_en": "Be that as it may, Parliament cannot approve this agreement without precise safeguards on data access and judicial oversight.",
     "cloze": "{{c1::Quoi qu'il en soit}}, le Parlement ne peut approuver cet accord sans garanties précises sur l'accès aux données et le contrôle judiciaire.",
-    "note": "Kept separately from frc165 because this prompt explicitly teaches the full concessive idiom, while frc165 foregrounds its transition function."
+    "note": "Kept separately from frc165 because this prompt teaches the neutral full concessive idiom, while frc165 uses a marked legal-administrative frame."
   }
 ]

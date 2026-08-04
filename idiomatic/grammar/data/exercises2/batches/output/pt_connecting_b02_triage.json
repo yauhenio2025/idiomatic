@@ -65,7 +65,7 @@
   {"id": "ptc164", "en": "In a word", "verdict": "keep", "reason": "Marked rhetorical condensation distinct from a generic conclusion heading."},
   {"id": "ptc165", "en": "In any event", "verdict": "keep", "reason": "Nonliteral event and hypothesis-insensitive conclusion have teaching value."},
   {"id": "ptc166", "en": "In brief", "verdict": "drop", "reason": "Functional duplicate of retained summary markers ptc160 and ptc164."},
-  {"id": "ptc167", "en": "In conclusion", "verdict": "keep", "reason": "Explicit formal closing marker appropriate to reports and presentations."},
+  {"id": "ptc167", "en": "In conclusion", "verdict": "drop", "reason": "Elementary conclusion marker duplicated by the richer retained summary and closing frames."},
   {"id": "ptc168", "en": "In essence", "verdict": "keep", "reason": "Reduces an argument to its underlying core rather than merely ending it."},
   {"id": "ptc169", "en": "In short", "verdict": "drop", "reason": "Functional duplicate of retained summary markers ptc160 and ptc164."},
   {"id": "ptc170", "en": "In summary", "verdict": "drop", "reason": "Transparent duplicate of retained summary and conclusion items."},
