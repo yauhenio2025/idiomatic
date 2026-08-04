@@ -302,14 +302,14 @@
     "id": "esc308",
     "en": "Drawing upon the evidence, one might suggest that...",
     "category": "stance",
-    "tl": "A la vista de las pruebas, cabe sostener que",
+    "tl": "A la vista de las pruebas, cabría sostener que",
     "alts": [],
     "register": "Written-formal evidential inference; impersonal cabe avoids an unnecessary generic subject.",
     "trap": "Basándose en las pruebas leaves an awkward or dangling agent with generic uno; an impersonal evidential frame is cleaner.",
-    "example_tl": "A la vista de las pruebas, cabe sostener que la campaña formó parte de una estrategia coordinada para debilitar la confianza electoral.",
+    "example_tl": "A la vista de las pruebas, cabría sostener que la campaña formó parte de una estrategia coordinada para debilitar la confianza electoral.",
     "example_en": "Drawing upon the evidence, one might suggest that the campaign formed part of a coordinated strategy to weaken electoral trust.",
-    "cloze": "{{c1::A la vista de las pruebas}}, {{c1::cabe sostener que}} la campaña formó parte de una estrategia coordinada para debilitar la confianza electoral.",
-    "note": "Materially recasts the agent-heavy old_back. The cloze treats the evidential basis and hedged inference as separate fixed arms."
+    "cloze": "{{c1::A la vista de las pruebas}}, {{c1::cabría sostener que}} la campaña formó parte de una estrategia coordinada para debilitar la confianza electoral.",
+    "note": "Materially recasts the agent-heavy old_back. Self-review: changed cabe to conditional cabría to preserve the hedge in one might. The cloze treats the evidential basis and hedged inference as separate fixed arms."
   },
   {
     "id": "esc309",
@@ -523,14 +523,14 @@
     "id": "esc331",
     "en": "This raises a compelling point about...",
     "category": "stance",
-    "tl": "Esto plantea una cuestión de peso sobre",
+    "tl": "Esto plantea una cuestión de calado sobre",
     "alts": ["Esto suscita una cuestión relevante sobre"],
     "register": "Written-formal issue-framing move; marks the resulting question as substantively important.",
     "trap": "Punto convincente is a lexical calque; point here means an important issue or consideration, naturally cuestión in Spanish.",
-    "example_tl": "Esto plantea una cuestión de peso sobre la legitimidad de delegar funciones regulatorias en organizaciones financiadas por las empresas supervisadas.",
+    "example_tl": "Esto plantea una cuestión de calado sobre la legitimidad de delegar funciones regulatorias en organizaciones financiadas por las empresas supervisadas.",
     "example_en": "This raises a compelling point about the legitimacy of delegating regulatory functions to organisations funded by the companies being supervised.",
-    "cloze": "{{c1::Esto plantea una cuestión de peso sobre}} la legitimidad de delegar funciones regulatorias en organizaciones financiadas por las empresas supervisadas.",
-    "note": "Materially corrects the unnatural old_back; the ellipsis is retained in en."
+    "cloze": "{{c1::Esto plantea una cuestión de calado sobre}} la legitimidad de delegar funciones regulatorias en organizaciones financiadas por las empresas supervisadas.",
+    "note": "Materially corrects the unnatural old_back. Self-review: replaced the less idiomatic cuestión de peso with the European essayistic cuestión de calado. The ellipsis is retained in en."
   },
   {
     "id": "esc332",
@@ -593,9 +593,9 @@
     "register": "Neutral analytical reframing; signals a move from immediate detail to broader historical structure.",
     "trap": "The literal Dando un paso atrás describes physical movement; analytical step back is naturally tomar distancia.",
     "example_tl": "Si tomamos cierta distancia, el conflicto actual revela una disputa histórica sobre quién controla las infraestructuras de comunicación.",
-    "example_en": "Taking a step back for a moment, the current conflict reveals a historical dispute over who controls communications infrastructure.",
+    "example_en": "If we take a step back for a moment, the current conflict reveals a historical dispute over who controls communications infrastructure.",
     "cloze": "{{c1::Si tomamos cierta distancia}}, el conflicto actual revela una disputa histórica sobre quién controla las infraestructuras de comunicación.",
-    "note": "Materially replaces the physical-action calque in old_back; the ellipsis is retained in en."
+    "note": "Materially replaces the physical-action calque in old_back. Self-review: made the English translation finite to avoid a dangling modifier. The ellipsis is retained in en."
   },
   {
     "id": "esc340",
