@@ -2704,5 +2704,392 @@
     "example_en": "It is equally valid to suggest that overly uniform regulation would harm small services without appreciably reducing the power of dominant ones.",
     "cloze": "{{c1::También cabe sostener que}} una regulación demasiado uniforme perjudicaría a servicios pequeños sin reducir de manera apreciable el poder de los dominantes.",
     "note": "The old rendering is valid and retained as an alternative; the curly apostrophe and ellipsis are retained in en."
+  },
+  {
+    "id": "esc343",
+    "en": "Adding another layer to this discussion...",
+    "category": "addition",
+    "tl": "A ello se añade que",
+    "alts": [
+      "A esto se suma que"
+    ],
+    "register": "Written-formal addition frame; adds a proposition without reproducing the English layer metaphor.",
+    "trap": "Añadir otra capa a la discusión is an English-shaped metaphor; Spanish argumentative prose normally uses an anaphoric additive frame.",
+    "example_tl": "A ello se añade que los sistemas de recomendación modifican sus criterios constantemente, lo que dificulta comparar auditorías realizadas en momentos distintos.",
+    "example_en": "Another layer in this discussion is that recommendation systems constantly change their criteria, making it difficult to compare audits conducted at different times.",
+    "cloze": "{{c1::A ello se añade que}} los sistemas de recomendación modifican sus criterios constantemente, lo que dificulta comparar auditorías realizadas en momentos distintos.",
+    "note": "Materially replaces the legacy metaphor with a native propositional frame. Self-review: made the English translation finite to avoid a dangling modifier. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc344",
+    "en": "When you really scrutinize the matter...",
+    "category": "stance",
+    "tl": "Un examen detenido de la cuestión revela que",
+    "alts": [
+      "Si se analiza la cuestión a fondo, se observa que"
+    ],
+    "register": "Written-formal analytical frame; avoids direct reader address and introduces a finding grounded in scrutiny.",
+    "trap": "Escudriñar is valid but marked and often literary; examen detenido or analizar a fondo is more natural in policy prose.",
+    "example_tl": "Un examen detenido de la cuestión revela que la supuesta neutralidad del sistema depende de decisiones normativas adoptadas por sus diseñadores.",
+    "example_en": "When one really scrutinises the matter, it becomes clear that the system's supposed neutrality depends on normative decisions made by its designers.",
+    "cloze": "{{c1::Un examen detenido de la cuestión revela que}} la supuesta neutralidad del sistema depende de decisiones normativas adoptadas por sus diseñadores.",
+    "note": "Materially recasts direct-address old_back into an impersonal analytical frame; the ellipsis is retained in en."
+  },
+  {
+    "id": "esc345",
+    "en": "Shifting gears for a moment...",
+    "category": "structuring",
+    "tl": "Cambiando de tercio",
+    "alts": [
+      "Pasando a otro asunto"
+    ],
+    "register": "Neutral-essayistic in European Spanish; the bullfighting-derived idiom is common for a clear change of subject.",
+    "trap": "Cambiando de marcha preserves the English vehicle metaphor too literally; European Spanish normally says Cambiando de tercio or Pasando a otro asunto.",
+    "example_tl": "Cambiando de tercio, conviene examinar cómo la dependencia de proveedores estadounidenses condiciona la autonomía estratégica que proclaman las instituciones europeas.",
+    "example_en": "Shifting gears for a moment, it is worth examining how dependence on US suppliers constrains the strategic autonomy proclaimed by European institutions.",
+    "cloze": "{{c1::Cambiando de tercio}}, conviene examinar cómo la dependencia de proveedores estadounidenses condiciona la autonomía estratégica que proclaman las instituciones europeas.",
+    "note": "Materially corrects the legacy calque and deliberately selects an established European Spanish idiom. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc346",
+    "en": "By contrast...",
+    "category": "contrast",
+    "tl": "En cambio",
+    "alts": [
+      "En contraste"
+    ],
+    "register": "Neutral contrastive connector; juxtaposes cases without necessarily refuting the previous claim.",
+    "trap": "Do not automatically use Por el contrario, which often rejects a prior assertion rather than merely contrasting two cases.",
+    "example_tl": "En cambio, las radios comunitarias conservan mecanismos de participación directa que permiten a sus audiencias cuestionar decisiones editoriales y prioridades presupuestarias.",
+    "example_en": "By contrast, community radio stations retain direct participation mechanisms that allow their audiences to challenge editorial decisions and budget priorities.",
+    "cloze": "{{c1::En cambio}}, las radios comunitarias conservan mecanismos de participación directa que permiten a sus audiencias cuestionar decisiones editoriales y prioridades presupuestarias.",
+    "note": "Old_back is possible, but the main choice and retained alternative are more idiomatic as free-standing connectors. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc347",
+    "en": "Turning our attention to...",
+    "category": "structuring",
+    "tl": "Centrándonos ahora en",
+    "alts": [
+      "Si dirigimos ahora la atención a"
+    ],
+    "register": "Neutral analytical transition; the first-person plural aligns naturally with the following podemos.",
+    "trap": "Volver la atención needs a following a and can sound translated; centrarse en is the more idiomatic topic-focus frame.",
+    "example_tl": "Centrándonos ahora en la financiación, podemos observar que los incentivos fiscales favorecen sistemáticamente a los grupos mediáticos de mayor tamaño.",
+    "example_en": "Turning our attention to funding, we can see that tax incentives systematically favour the largest media groups.",
+    "cloze": "{{c1::Centrándonos ahora en}} la financiación, podemos observar que los incentivos fiscales favorecen sistemáticamente a los grupos mediáticos de mayor tamaño.",
+    "note": "Self-review: aligned the gerund's understood first-person plural subject with podemos. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc348",
+    "en": "This brings us to another facet of discussion...",
+    "category": "structuring",
+    "tl": "Esto nos lleva a examinar otro aspecto de la cuestión",
+    "alts": [
+      "Esto conduce a otro aspecto del debate"
+    ],
+    "register": "Written-neutral transition; links the preceding reasoning to a related analytical dimension.",
+    "trap": "Faceta de la discusión is possible but conspicuously mirrors the English noun phrase; aspecto de la cuestión is more natural.",
+    "example_tl": "Esto nos lleva a examinar otro aspecto de la cuestión: la capacidad de los reguladores nacionales para coordinar investigaciones transfronterizas.",
+    "example_en": "This brings us to another facet of the discussion: national regulators' capacity to coordinate cross-border investigations.",
+    "cloze": "{{c1::Esto nos lleva a examinar otro aspecto de la cuestión}}: la capacidad de los reguladores nacionales para coordinar investigaciones transfronterizas.",
+    "note": "Materially smooths the legacy nominal calque; the ellipsis is retained in en."
+  },
+  {
+    "id": "esc351",
+    "en": "While that's an important point, another area to consider is...",
+    "category": "concession",
+    "tl": "Aunque ese punto es importante… también conviene examinar",
+    "alts": [],
+    "register": "Written-neutral two-part concession; acknowledges one point before adding a comparably relevant area.",
+    "trap": "Área a considerar is an English-shaped passive phrase; Spanish argumentative prose naturally uses conviene examinar.",
+    "example_tl": "Aunque ese punto es importante, también conviene examinar cómo la concentración publicitaria limita la independencia económica de los medios regionales.",
+    "example_en": "While that is an important point, another area to consider is how advertising concentration limits the economic independence of regional media.",
+    "cloze": "{{c1::Aunque ese punto es importante}}, {{c1::también conviene examinar}} cómo la concentración publicitaria limita la independencia económica de los medios regionales.",
+    "note": "Materially recasts the second arm of old_back; the ellipsis is retained in en."
+  },
+  {
+    "id": "esc354",
+    "en": "Leaving that behind for a moment...",
+    "category": "structuring",
+    "tl": "Dejando eso de lado por el momento",
+    "alts": [
+      "Si aparcamos eso por un momento"
+    ],
+    "register": "Neutral temporary topic suspension; aparcar is slightly more conversational but established figuratively.",
+    "trap": "Leave behind is not dejar atrás here, which suggests permanent abandonment; dejar de lado por el momento marks a temporary suspension.",
+    "example_tl": "Dejando eso de lado por el momento, debemos analizar las consecuencias laborales de automatizar decisiones antes reservadas a periodistas experimentados.",
+    "example_en": "Leaving that behind for a moment, we must analyse the labour consequences of automating decisions previously reserved for experienced journalists.",
+    "cloze": "{{c1::Dejando eso de lado por el momento}}, debemos analizar las consecuencias laborales de automatizar decisiones antes reservadas a periodistas experimentados.",
+    "note": "Self-review: aligned the gerund with the first-person plural debemos and preserved the temporary meaning. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc360",
+    "en": "Taking a detour from our previous discussion...",
+    "category": "structuring",
+    "tl": "A modo de inciso",
+    "alts": [
+      "Como breve digresión"
+    ],
+    "register": "Neutral explicit digression marker; appropriate when a short departure genuinely helps the argument.",
+    "trap": "Tomar un desvío describes route choice and sounds literal here; hacer un inciso is the conventional discourse move.",
+    "example_tl": "A modo de inciso, conviene recordar que muchas tecnologías presentadas como privadas fueron desarrolladas inicialmente con financiación pública directa.",
+    "example_en": "As a brief detour from the previous discussion, it is worth remembering that many supposedly private technologies were initially developed with direct public funding.",
+    "cloze": "{{c1::A modo de inciso}}, conviene recordar que muchas tecnologías presentadas como privadas fueron desarrolladas inicialmente con financiación pública directa.",
+    "note": "Materially replaces the physical-route calque in old_back. Self-review: replaced a gerundial draft with a nominal frame to avoid an unclear agent. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc361",
+    "en": "With that said, it's also crucial to look at...",
+    "category": "concession",
+    "tl": "Dicho esto, también es fundamental examinar",
+    "alts": [],
+    "register": "Written-neutral concessive addition; acknowledges the preceding point before introducing another necessary inquiry.",
+    "trap": "Look at is analytical here, so examinar is more idiomatic than mirar; dicho esto is a fixed absolute-participle phrase.",
+    "example_tl": "Dicho esto, también es fundamental examinar cómo las nuevas obligaciones afectan de manera desigual a empresas dominantes y operadores emergentes.",
+    "example_en": "With that said, it is also crucial to examine how the new obligations affect dominant companies and emerging operators unequally.",
+    "cloze": "{{c1::Dicho esto, también es fundamental examinar}} cómo las nuevas obligaciones afectan de manera desigual a empresas dominantes y operadores emergentes.",
+    "note": "Diverges from the literal mirar in old_back while preserving the strength of crucial. Self-review: aligned the contrasted actor types as empresas and operadores. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc364",
+    "en": "This segues nicely into our next topic, which is...",
+    "category": "structuring",
+    "tl": "Esto enlaza con el siguiente tema",
+    "alts": [
+      "Esto nos lleva al siguiente asunto"
+    ],
+    "register": "Neutral explicit transition; suitable for presentations and clearly sectioned analytical prose.",
+    "trap": "English segue is not used as a Spanish verb here; enlazar con or dar paso a supplies the native transition.",
+    "example_tl": "Esto enlaza con el siguiente tema: la necesidad de coordinar la política industrial europea con una estrategia coherente para garantizar el pluralismo informativo.",
+    "example_en": "This segues nicely into our next topic: the need to coordinate European industrial policy with a coherent strategy for guaranteeing media pluralism.",
+    "cloze": "{{c1::Esto enlaza con el siguiente tema}}: la necesidad de coordinar la política industrial europea con una estrategia coherente para garantizar el pluralismo informativo.",
+    "note": "The main form omits the translation-like muy bien in old_back. Self-review: clarified the purpose relation with para garantizar. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc365",
+    "en": "Having established that point, a different yet related matter is...",
+    "category": "structuring",
+    "tl": "Sentado lo anterior, conviene abordar otra cuestión relacionada",
+    "alts": [
+      "Una vez establecido lo anterior, cabe examinar otro asunto relacionado"
+    ],
+    "register": "Written-formal progression frame; Sentado lo anterior is compact and assumes the preceding point has been established.",
+    "trap": "The absolute participle is fixed as Sentado lo anterior; Habiendo establecido requires a clear agent and becomes awkward before an impersonal noun phrase.",
+    "example_tl": "Sentado lo anterior, conviene abordar otra cuestión relacionada: quién debe financiar las infraestructuras públicas necesarias para garantizar el acceso universal a la información.",
+    "example_en": "Having established that point, a different yet related matter is who should fund the public infrastructure needed to guarantee universal access to information.",
+    "cloze": "{{c1::Sentado lo anterior, conviene abordar otra cuestión relacionada}}: quién debe financiar las infraestructuras públicas necesarias para garantizar el acceso universal a la información.",
+    "note": "Materially replaces the agentless legacy gerund. Self-review: replaced acceso informativo universal with the idiomatic acceso universal a la información. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc366",
+    "en": "On the flip side...",
+    "category": "contrast",
+    "tl": "Por otra parte",
+    "alts": [
+      "En contrapartida"
+    ],
+    "register": "Neutral counterweight; En contrapartida more strongly presents a balancing disadvantage or benefit.",
+    "trap": "Flip side is an informal idiom, not a physical lado que se da la vuelta; use a conventional counterweight connector.",
+    "example_tl": "Por otra parte, imponer requisitos costosos podría consolidar a las empresas dominantes si sus competidores pequeños carecen de recursos para cumplirlos.",
+    "example_en": "On the flip side, imposing costly requirements could entrench dominant companies if their smaller competitors lack the resources to comply.",
+    "cloze": "{{c1::Por otra parte}}, imponer requisitos costosos podría consolidar a las empresas dominantes si sus competidores pequeños carecen de recursos para cumplirlos.",
+    "note": "Old_back is accurate; the ellipsis is retained in en."
+  },
+  {
+    "id": "esc368",
+    "en": "Apropos of that, it's pertinent to discuss...",
+    "category": "structuring",
+    "tl": "A este respecto, conviene abordar",
+    "alts": [
+      "A propósito de ello, cabe examinar"
+    ],
+    "register": "Written-formal related-topic transition; concise without the redundant claim that discussion is pertinent.",
+    "trap": "Es pertinente discutir is grammatical but stiff and English-shaped; conviene abordar is the idiomatic argumentative frame.",
+    "example_tl": "A este respecto, conviene abordar la falta de mecanismos que permitan a los usuarios impugnar decisiones automatizadas de manera efectiva.",
+    "example_en": "Apropos of that, it is pertinent to discuss the lack of mechanisms allowing users to challenge automated decisions effectively.",
+    "cloze": "{{c1::A este respecto, conviene abordar}} la falta de mecanismos que permitan a los usuarios impugnar decisiones automatizadas de manera efectiva.",
+    "note": "Materially condenses the heavy old_back; the ellipsis is retained in en."
+  },
+  {
+    "id": "esc369",
+    "en": "From the general to the specific...",
+    "category": "structuring",
+    "tl": "De lo general a lo concreto",
+    "alts": [
+      "Pasando de lo general a lo particular"
+    ],
+    "register": "Neutral analytical signpost; announces a move from broad principle to a concrete case.",
+    "trap": "Specific is often lo concreto or lo particular in this structuring phrase, not necessarily the cognate lo específico.",
+    "example_tl": "De lo general a lo concreto, examinemos ahora cómo las normas europeas afectan a una redacción local con recursos limitados.",
+    "example_en": "From the general to the specific, let us now examine how European rules affect a local newsroom with limited resources.",
+    "cloze": "{{c1::De lo general a lo concreto}}, examinemos ahora cómo las normas europeas afectan a una redacción local con recursos limitados.",
+    "note": "Old_back is grammatical; the main form is more idiomatic in European analytical prose. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc370",
+    "en": "In light of this, another dimension worth exploring is...",
+    "category": "result",
+    "tl": "A la luz de lo anterior, conviene examinar otro aspecto",
+    "alts": [
+      "Sobre esa base, merece la pena explorar otra dimensión"
+    ],
+    "register": "Written-formal inferential transition; links prior findings to the next analytical dimension.",
+    "trap": "When this refers to the preceding argument, lo anterior is often more precise than deictic esto; worth exploring becomes conviene examinar naturally.",
+    "example_tl": "A la luz de lo anterior, conviene examinar otro aspecto: la relación entre concentración empresarial y vulnerabilidad frente a presiones políticas.",
+    "example_en": "In light of this, another dimension worth exploring is the relationship between corporate concentration and vulnerability to political pressure.",
+    "cloze": "{{c1::A la luz de lo anterior, conviene examinar otro aspecto}}: la relación entre concentración empresarial y vulnerabilidad frente a presiones políticas.",
+    "note": "Diverges from old_back by making the backward reference and verbal frame more idiomatic. Self-review: replaced a gerundial alternative with Sobre esa base to avoid an unclear agent. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc371",
+    "en": "Broadening our scope, let's pivot to...",
+    "category": "structuring",
+    "tl": "Si ampliamos el enfoque, podemos pasar a",
+    "alts": [
+      "Ampliando el marco, podemos examinar"
+    ],
+    "register": "Neutral analytical expansion; the finite main form avoids both a dangling gerund and business-jargon pivotar.",
+    "trap": "Pivotar hacia is conspicuous English-influenced jargon here; pasar a or examinar is more idiomatic.",
+    "example_tl": "Si ampliamos el enfoque, podemos pasar a estudiar cómo la infraestructura digital condiciona las relaciones de poder entre Estados y empresas.",
+    "example_en": "Broadening our scope, we can turn to studying how digital infrastructure shapes power relations between states and companies.",
+    "cloze": "{{c1::Si ampliamos el enfoque, podemos pasar a}} estudiar cómo la infraestructura digital condiciona las relaciones de poder entre Estados y empresas.",
+    "note": "Materially corrects pivotamos in old_back. Self-review: aligned the alternative gerund with podemos. The ellipsis is retained in en."
+  },
+  {
+    "id": "esc372",
+    "en": "In any event,",
+    "category": "concession",
+    "tl": "En cualquier caso",
+    "alts": [
+      "En todo caso",
+      "Sea como fuere"
+    ],
+    "register": "Neutral case-insensitive conclusion; Sea como fuere is the most formal and explicitly concessive alternative.",
+    "trap": "Event does not mean evento in this idiom; caso expresses that the conclusion holds across possible scenarios.",
+    "example_tl": "En cualquier caso, la ausencia de consenso no justifica mantener indefinidamente normas diseñadas para un ecosistema informativo que ya no existe.",
+    "example_en": "In any event, the lack of consensus does not justify indefinitely retaining rules designed for an information ecosystem that no longer exists.",
+    "cloze": "{{c1::En cualquier caso}}, la ausencia de consenso no justifica mantener indefinidamente normas diseñadas para un ecosistema informativo que ya no existe.",
+    "note": "All three legacy options are valid and retained. The input's trailing comma is retained in en."
+  },
+  {
+    "id": "esc381",
+    "en": "it's time that we confront this problem",
+    "category": "stance",
+    "tl": "Ha llegado el momento de afrontar este problema",
+    "alts": [
+      "Es hora de que afrontemos este problema"
+    ],
+    "register": "Neutral emphatic call to action; the alternative foregrounds an inclusive first-person plural.",
+    "trap": "Afrontar is directly transitive, while enfrentarse requires a: afrontar el problema or enfrentarse al problema.",
+    "example_tl": "Ha llegado el momento de afrontar este problema con instrumentos públicos capaces de limitar el poder estructural de las plataformas dominantes.",
+    "example_en": "It is time that we confront this problem with public instruments capable of limiting the structural power of dominant platforms.",
+    "cloze": "{{c1::Ha llegado el momento de afrontar este problema}} con instrumentos públicos capaces de limitar el poder estructural de las plataformas dominantes.",
+    "note": "Old_back contains valid variants; the main form is the most compact complete sentence frame."
+  },
+  {
+    "id": "esc382",
+    "en": "In light of our recent findings, it becomes unmistakably clear that",
+    "category": "stance",
+    "tl": "A la luz de los últimos hallazgos, queda meridianamente claro que",
+    "alts": [
+      "A la vista de los hallazgos recientes, resulta evidente que"
+    ],
+    "register": "Written-formal emphatic inference; meridianamente claro is forceful and should be used sparingly.",
+    "trap": "Inequívocamente claro is redundant and sounds translated; queda claro, resulta evidente or the idiom meridianamente claro is more natural.",
+    "example_tl": "A la luz de los últimos hallazgos, queda meridianamente claro que la empresa conocía la vulnerabilidad mucho antes de comunicarla.",
+    "example_en": "In light of our recent findings, it becomes unmistakably clear that the company knew about the vulnerability long before disclosing it.",
+    "cloze": "{{c1::A la luz de los últimos hallazgos, queda meridianamente claro que}} la empresa conocía la vulnerabilidad mucho antes de comunicarla.",
+    "note": "Materially replaces the redundant legacy collocation while preserving its strong epistemic force."
+  },
+  {
+    "id": "esc383",
+    "en": "Upon careful examination of the evidence, one can't help but realize that",
+    "category": "stance",
+    "tl": "Un examen detenido de las pruebas obliga a concluir que",
+    "alts": [
+      "Tras examinar cuidadosamente las pruebas, resulta inevitable concluir que"
+    ],
+    "register": "Written-formal evidential inference; strong, but less personal and cumbersome than the English frame.",
+    "trap": "Generic one is not normally uno in polished Spanish; no puede sino darse cuenta is possible but unnecessarily personal here.",
+    "example_tl": "Un examen detenido de las pruebas obliga a concluir que varias agencias incumplieron deliberadamente los controles establecidos por el Parlamento.",
+    "example_en": "Upon careful examination of the evidence, one cannot help but realise that several agencies deliberately breached the controls established by Parliament.",
+    "cloze": "{{c1::Un examen detenido de las pruebas obliga a concluir que}} varias agencias incumplieron deliberadamente los controles establecidos por el Parlamento.",
+    "note": "Materially recasts generic uno and the personal realisation metaphor in old_back."
+  },
+  {
+    "id": "esc385",
+    "en": "Drawing upon historical precedents, it's evident that",
+    "category": "stance",
+    "tl": "Los precedentes históricos muestran que",
+    "alts": [
+      "A la luz de los precedentes históricos, resulta evidente que"
+    ],
+    "register": "Written-formal evidential frame; makes the precedents, rather than an unspecified analyst, the grammatical source of the inference.",
+    "trap": "Basándonos requires an explicit first-person plural agent; with impersonal it is evident, making precedents the subject avoids a dangling gerund.",
+    "example_tl": "Los precedentes históricos muestran que las infraestructuras de comunicación nunca son neutrales respecto de la distribución del poder político.",
+    "example_en": "Historical precedents show that communications infrastructures are never neutral with respect to the distribution of political power.",
+    "cloze": "{{c1::Los precedentes históricos muestran que}} las infraestructuras de comunicación nunca son neutrales respecto de la distribución del poder político.",
+    "note": "Self-review: eliminated the agent mismatch created by legacy Basándonos and made the English translation finite as well."
+  },
+  {
+    "id": "esc390",
+    "en": "Given the profound implications of these events, it's crucial to underscore that",
+    "category": "stance",
+    "tl": "Dadas las profundas consecuencias de estos hechos, es esencial subrayar que",
+    "alts": [
+      "Habida cuenta de las graves implicaciones de estos hechos, conviene destacar que"
+    ],
+    "register": "Written-formal premise plus emphasis; strong but appropriate when the consequences genuinely warrant it.",
+    "trap": "Dadas agrees with consecuencias in gender and number; Habida remains feminine singular in the fixed phrase Habida cuenta de.",
+    "example_tl": "Dadas las profundas consecuencias de estos hechos, es esencial subrayar que ninguna reparación económica devolverá plenamente la confianza pública.",
+    "example_en": "Given the profound implications of these events, it is crucial to underscore that no financial remedy will fully restore public trust.",
+    "cloze": "{{c1::Dadas las profundas consecuencias de estos hechos}}, {{c1::es esencial subrayar que}} ninguna reparación económica devolverá plenamente la confianza pública.",
+    "note": "Old_back is broadly accurate; consecuencias and hechos are more concrete in this example. The cloze separates premise and emphasis arms."
+  },
+  {
+    "id": "esc392",
+    "en": "Considering the broader implications of our decision, it's essential to give weight to",
+    "category": "stance",
+    "tl": "Al considerar las consecuencias más amplias de la decisión, debemos tener en cuenta",
+    "alts": [
+      "Si atendemos a las implicaciones más amplias de la decisión, debemos valorar"
+    ],
+    "register": "Written-formal deliberative frame; explicitly links broad consequences to the consideration that follows.",
+    "trap": "Dar peso a is possible but often mirrors give weight to mechanically; tener en cuenta or valorar is more idiomatic here.",
+    "example_tl": "Al considerar las consecuencias más amplias de la decisión, debemos tener en cuenta su impacto sobre medios pequeños y comunidades lingüísticas minoritarias.",
+    "example_en": "Considering the broader implications of our decision, it is essential to give weight to its impact on small media outlets and minority-language communities.",
+    "cloze": "{{c1::Al considerar las consecuencias más amplias de la decisión}}, {{c1::debemos tener en cuenta}} su impacto sobre medios pequeños y comunidades lingüísticas minoritarias.",
+    "note": "Materially replaces legacy dar peso a. The cloze separates the deliberative premise and evaluative instruction."
+  },
+  {
+    "id": "esc393",
+    "en": "When one takes a step back to assess the broader picture, it becomes evident that",
+    "category": "stance",
+    "tl": "Una mirada de conjunto permite comprobar que",
+    "alts": [
+      "Si tomamos distancia y observamos el panorama general, resulta evidente que"
+    ],
+    "register": "Written-formal synthesis frame; condenses a verbose generic-person construction into an impersonal assessment.",
+    "trap": "Generic one should not become uno automatically, and dar un paso atrás can suggest retreat rather than analytical distance.",
+    "example_tl": "Una mirada de conjunto permite comprobar que las crisis sucesivas responden a incentivos estructurales, no a errores aislados de moderación.",
+    "example_en": "When one steps back to assess the broader picture, it becomes evident that successive crises reflect structural incentives, not isolated moderation errors.",
+    "cloze": "{{c1::Una mirada de conjunto permite comprobar que}} las crisis sucesivas responden a incentivos estructurales, no a errores aislados de moderación.",
+    "note": "Materially condenses the generic-one and physical-step metaphors in old_back."
+  },
+  {
+    "id": "esc400",
+    "en": "When we contemplate the vast scope of what's at stake, it's clear that",
+    "category": "stance",
+    "tl": "Si consideramos la magnitud de lo que está en juego, queda claro que",
+    "alts": [
+      "Al contemplar el alcance de lo que está en juego, resulta evidente que"
+    ],
+    "register": "Written-formal evaluative frame; foregrounds the scale of the stakes before stating an inference.",
+    "trap": "What is at stake is the fixed lo que está en juego, not a literal phrase built from apuesta; vast scope is more naturally magnitud here.",
+    "example_tl": "Si consideramos la magnitud de lo que está en juego, queda claro que una respuesta meramente voluntaria resulta insuficiente.",
+    "example_en": "When we contemplate the vast scope of what is at stake, it is clear that a merely voluntary response is insufficient.",
+    "cloze": "{{c1::Si consideramos la magnitud de lo que está en juego, queda claro que}} una respuesta meramente voluntaria resulta insuficiente.",
+    "note": "Materially recasts the expansive legacy wording around alcance while preserving the fixed stakes idiom."
   }
 ]
