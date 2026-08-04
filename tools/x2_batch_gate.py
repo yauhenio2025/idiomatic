@@ -38,12 +38,20 @@ def _lang_score(text: str, lang: str) -> int:
 
 
 def _wrong_language(text: str, lang: str) -> str | None:
-    """Flag when another supported language outscores the target by 2+."""
+    """Flag when another supported language outscores the target by 2+.
+
+    Known false-positive classes (adjudicated 2026-08-04): the fr pattern's
+    l'/d'/qu' elisions and circumflexes also occur in Italian (l'accordo,
+    d'altronde) and Portuguese (independência) — suppress those signals
+    when scoring fr against it/pt targets."""
     own = _lang_score(text, lang)
     for other, _pattern in _LANG_HINTS.items():
         if other == lang:
             continue
-        if _lang_score(text, other) >= max(own + 2, 3):
+        score = _lang_score(text, other)
+        if other == "fr" and lang in ("it", "pt"):
+            score -= len(re.findall(r"l'|d'|qu'|[êâîôû]", text.lower()))
+        if score >= max(own + 2, 3):
             return other
     return None
 

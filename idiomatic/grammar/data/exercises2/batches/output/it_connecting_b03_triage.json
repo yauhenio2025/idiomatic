@@ -1,0 +1,608 @@
+[
+  {
+    "id": "itc203",
+    "en": "Regardless of this",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc204",
+    "en": "Up to a point",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc205",
+    "en": "As a rule",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc206",
+    "en": "Broadly speaking",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc207",
+    "en": "Commonly",
+    "verdict": "drop",
+    "reason": "Transparent single adverb with no distinct C1 teaching value."
+  },
+  {
+    "id": "itc208",
+    "en": "For the most part",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc209",
+    "en": "In general",
+    "verdict": "drop",
+    "reason": "Elementary duplicate of the richer generalization frames kept at itc205 and itc206."
+  },
+  {
+    "id": "itc210",
+    "en": "In most cases",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc211",
+    "en": "Mainly",
+    "verdict": "drop",
+    "reason": "Transparent elementary focus adverb with no distinct discourse lesson."
+  },
+  {
+    "id": "itc212",
+    "en": "More often than not",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc213",
+    "en": "Mostly",
+    "verdict": "drop",
+    "reason": "Ambiguous between extent and primary focus, both represented more precisely by kept items."
+  },
+  {
+    "id": "itc214",
+    "en": "Normally",
+    "verdict": "drop",
+    "reason": "Elementary adverb duplicating the usual-pattern meaning of kept itc205."
+  },
+  {
+    "id": "itc215",
+    "en": "Often",
+    "verdict": "drop",
+    "reason": "Elementary frequency adverb already owned at C1."
+  },
+  {
+    "id": "itc216",
+    "en": "Predominately",
+    "verdict": "drop",
+    "reason": "Rare variant of predominantly and a duplicate of the retained predominance family."
+  },
+  {
+    "id": "itc217",
+    "en": "Regularly",
+    "verdict": "drop",
+    "reason": "Transparent and ambiguous between frequent occurrence and regular scheduling."
+  },
+  {
+    "id": "itc218",
+    "en": "Typically",
+    "verdict": "drop",
+    "reason": "Transparent duplicate of the characteristic generalization already covered by itc205."
+  },
+  {
+    "id": "itc219",
+    "en": "Alternatively stated",
+    "verdict": "drop",
+    "reason": "Awkward English duplicate of the cleaner reformulation frame kept at itc226."
+  },
+  {
+    "id": "itc220",
+    "en": "Expressed simply",
+    "verdict": "drop",
+    "reason": "Duplicate of the usable plain-language reformulation frame kept at itc231."
+  },
+  {
+    "id": "itc221",
+    "en": "In a nutshell",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc222",
+    "en": "In other words",
+    "verdict": "drop",
+    "reason": "Elementary reformulation marker whose function is covered more richly by itc226 and itc233."
+  },
+  {
+    "id": "itc223",
+    "en": "In simple language",
+    "verdict": "drop",
+    "reason": "Fragment duplicated by the distinct plain-language and nontechnical frames kept at itc231 and itc249."
+  },
+  {
+    "id": "itc224",
+    "en": "In simple terms",
+    "verdict": "drop",
+    "reason": "Same simplification function as kept itc231, with nothing additional to teach."
+  },
+  {
+    "id": "itc225",
+    "en": "In summation",
+    "verdict": "drop",
+    "reason": "Marked English duplicate of the concise summary frame kept at itc221."
+  },
+  {
+    "id": "itc226",
+    "en": "Put differently",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc227",
+    "en": "Put in another way",
+    "verdict": "drop",
+    "reason": "Direct functional duplicate of the reformulation frame kept at itc226."
+  },
+  {
+    "id": "itc228",
+    "en": "Reiterated",
+    "verdict": "drop",
+    "reason": "Orphaned passive participle rather than a usable discourse move."
+  },
+  {
+    "id": "itc229",
+    "en": "Said differently",
+    "verdict": "drop",
+    "reason": "Direct functional duplicate of the reformulation frame kept at itc226."
+  },
+  {
+    "id": "itc230",
+    "en": "Simplified",
+    "verdict": "drop",
+    "reason": "Orphaned participle or adjective without a stable discourse syntax."
+  },
+  {
+    "id": "itc231",
+    "en": "Simply put",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc232",
+    "en": "That is to say, it's not at all like this.",
+    "verdict": "drop",
+    "reason": "Over-specific scraped sentence rather than a reusable connector; it duplicates kept itc233."
+  },
+  {
+    "id": "itc233",
+    "en": "That is to say",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc234",
+    "en": "To put it differently",
+    "verdict": "drop",
+    "reason": "Direct functional duplicate of the reformulation frame kept at itc226."
+  },
+  {
+    "id": "itc235",
+    "en": "As applied to",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc236",
+    "en": "As far as",
+    "verdict": "drop",
+    "reason": "Incomplete and irreducibly ambiguous among distance, extent, comparison, and topic-reference senses."
+  },
+  {
+    "id": "itc237",
+    "en": "As far as this topic is concerned,",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc238",
+    "en": "Concerning",
+    "verdict": "drop",
+    "reason": "Transparent topic preposition duplicated by the richer scope frames at itc237 and itc241."
+  },
+  {
+    "id": "itc239",
+    "en": "Considering",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc240",
+    "en": "In connection to",
+    "verdict": "drop",
+    "reason": "Questionable English collocation and a duplicate of the retained topic-reference family."
+  },
+  {
+    "id": "itc241",
+    "en": "In terms of",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc242",
+    "en": "Pertaining to",
+    "verdict": "drop",
+    "reason": "Attributive fragment duplicated by the complete topic-setting frames already retained."
+  },
+  {
+    "id": "itc243",
+    "en": "Regarding",
+    "verdict": "drop",
+    "reason": "Transparent duplicate of the more instructive topic-delimiting items itc237 and itc241."
+  },
+  {
+    "id": "itc244",
+    "en": "Speaking of the topic",
+    "verdict": "drop",
+    "reason": "Awkward self-referential classroom wording; natural discourse requires an actual topic referent."
+  },
+  {
+    "id": "itc245",
+    "en": "The fact that",
+    "verdict": "drop",
+    "reason": "Transparent subordinate-clause shell rather than an autonomous discourse connector."
+  },
+  {
+    "id": "itc246",
+    "en": "With regards to",
+    "verdict": "drop",
+    "reason": "Formally disfavored English variant and a duplicate of the retained topic-reference frames."
+  },
+  {
+    "id": "itc247",
+    "en": "With respect to",
+    "verdict": "drop",
+    "reason": "Same topic-delimiting function as kept itc237 and itc241, without a distinct Italian lesson."
+  },
+  {
+    "id": "itc248",
+    "en": "I mean",
+    "verdict": "drop",
+    "reason": "Elementary conversational self-repair marker with little value for the target professional register."
+  },
+  {
+    "id": "itc249",
+    "en": "In lay terms",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc250",
+    "en": "Simply stated",
+    "verdict": "drop",
+    "reason": "Functional duplicate of the plain-language reformulation frame kept at itc231."
+  },
+  {
+    "id": "itc251",
+    "en": "To break it down",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc252",
+    "en": "To clearly define",
+    "verdict": "drop",
+    "reason": "Orphaned purpose infinitive describing an action rather than a discourse transition."
+  },
+  {
+    "id": "itc253",
+    "en": "To explain",
+    "verdict": "drop",
+    "reason": "Elementary lexical infinitive rather than a reusable connector."
+  },
+  {
+    "id": "itc254",
+    "en": "To make plain",
+    "verdict": "drop",
+    "reason": "Incomplete verb phrase duplicated by the complete clarification frame kept at itc255."
+  },
+  {
+    "id": "itc255",
+    "en": "To put it clearly",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc256",
+    "en": "To put it in another way",
+    "verdict": "drop",
+    "reason": "Direct functional duplicate of the reformulation frame kept at itc226."
+  },
+  {
+    "id": "itc257",
+    "en": "To simplify",
+    "verdict": "drop",
+    "reason": "Transparent infinitive whose discourse function is already covered by itc231 and itc251."
+  },
+  {
+    "id": "itc258",
+    "en": "Across",
+    "verdict": "drop",
+    "reason": "Highly polysemous spatial preposition, not a context-free discourse connector."
+  },
+  {
+    "id": "itc259",
+    "en": "Adjacent",
+    "verdict": "drop",
+    "reason": "Off-topic bare spatial adjective."
+  },
+  {
+    "id": "itc260",
+    "en": "Around",
+    "verdict": "drop",
+    "reason": "Highly polysemous elementary spatial fragment with no stable discourse function."
+  },
+  {
+    "id": "itc261",
+    "en": "At the rear",
+    "verdict": "drop",
+    "reason": "Elementary spatial phrase unrelated to discourse connection."
+  },
+  {
+    "id": "itc262",
+    "en": "Below",
+    "verdict": "drop",
+    "reason": "Context-dependent elementary spatial item rather than a connector."
+  },
+  {
+    "id": "itc263",
+    "en": "Beneath",
+    "verdict": "drop",
+    "reason": "Off-topic spatial duplicate of itc262 with several syntactic uses."
+  },
+  {
+    "id": "itc264",
+    "en": "Near",
+    "verdict": "drop",
+    "reason": "Elementary spatial preposition or adjective unrelated to discourse structure."
+  },
+  {
+    "id": "itc265",
+    "en": "On bottom",
+    "verdict": "drop",
+    "reason": "Broken English spatial phrase; at the bottom or on the bottom would be required by context."
+  },
+  {
+    "id": "itc266",
+    "en": "On top",
+    "verdict": "drop",
+    "reason": "Off-topic elementary phrase ambiguous between spatial position and addition."
+  },
+  {
+    "id": "itc267",
+    "en": "Opposite",
+    "verdict": "drop",
+    "reason": "Underspecified spatial fragment spanning adjective, noun, and preposition uses."
+  },
+  {
+    "id": "itc268",
+    "en": "Over",
+    "verdict": "drop",
+    "reason": "Highly polysemous elementary fragment with no context-free Italian rendering."
+  },
+  {
+    "id": "itc269",
+    "en": "Surrounding",
+    "verdict": "drop",
+    "reason": "Off-topic participial or spatial fragment rather than a discourse move."
+  },
+  {
+    "id": "itc270",
+    "en": "To the left",
+    "verdict": "drop",
+    "reason": "Transparent elementary spatial direction unrelated to the chunk's discourse objective."
+  },
+  {
+    "id": "itc271",
+    "en": "Underneath",
+    "verdict": "drop",
+    "reason": "Elementary spatial fragment duplicated by neighboring items and lacking a stable syntax."
+  },
+  {
+    "id": "itc272",
+    "en": "but",
+    "verdict": "drop",
+    "reason": "Elementary conjunction explicitly below the C1 teaching threshold."
+  },
+  {
+    "id": "itc273",
+    "en": "in contrast",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc274",
+    "en": "on the contrary",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc275",
+    "en": "still",
+    "verdict": "drop",
+    "reason": "Irreducibly ambiguous among temporal, continuative, and concessive readings without context."
+  },
+  {
+    "id": "itc276",
+    "en": "Again",
+    "verdict": "drop",
+    "reason": "Elementary and ambiguous between repetition and argumentative resumption."
+  },
+  {
+    "id": "itc277",
+    "en": "interestingly",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc278",
+    "en": "it should be noted that",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc279",
+    "en": "more importantly",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc280",
+    "en": "most importantly",
+    "verdict": "drop",
+    "reason": "Same priority-marking function as the more instructive comparative frame kept at itc279."
+  },
+  {
+    "id": "itc281",
+    "en": "unfortunately",
+    "verdict": "drop",
+    "reason": "Transparent single stance adverb already owned at C1."
+  },
+  {
+    "id": "itc282",
+    "en": "It's important to note that...",
+    "verdict": "drop",
+    "reason": "Functional duplicate of the more compact noting and emphasis frames kept at itc278 and itc292."
+  },
+  {
+    "id": "itc283",
+    "en": "I firmly believe that...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc284",
+    "en": "One cannot overlook the fact that...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc285",
+    "en": "In my view...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc286",
+    "en": "From my perspective...",
+    "verdict": "drop",
+    "reason": "Direct functional duplicate of the personal-viewpoint frame kept at itc285."
+  },
+  {
+    "id": "itc287",
+    "en": "On the other hand...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc288",
+    "en": "Contrary to popular belief...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc289",
+    "en": "While many argue that..., I contend that...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc290",
+    "en": "There's a strong case to be made for...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc291",
+    "en": "It stands to reason that...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc292",
+    "en": "It's worth pointing out that...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc293",
+    "en": "I'd argue that...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc294",
+    "en": "One might reasonably conclude...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc295",
+    "en": "Conversely...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc296",
+    "en": "Without a doubt, I feel that...",
+    "verdict": "drop",
+    "reason": "Rhetorically incoherent combination of objective certainty and subjective feeling, duplicating stronger stance frames."
+  },
+  {
+    "id": "itc297",
+    "en": "Drawing upon the evidence, one might suggest that...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc298",
+    "en": "Although there's some truth in..., it's crucial to remember that...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc299",
+    "en": "I have reservations about...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc300",
+    "en": "It's hard to deny that...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc301",
+    "en": "However, a closer look reveals...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc302",
+    "en": "Another way to look at this is...",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "itc303",
+    "en": "I'm inclined to believe that...",
+    "verdict": "keep",
+    "reason": ""
+  }
+]

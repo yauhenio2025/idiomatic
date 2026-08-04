@@ -1,0 +1,601 @@
+[
+  {
+    "id": "itc203",
+    "en": "Regardless of this",
+    "category": "concession",
+    "tl": "Ciò nonostante",
+    "alts": [
+      "Nonostante ciò",
+      "Ciononostante"
+    ],
+    "register": "Neutral-formal; it concedes the preceding point while preserving the main claim, in speech or polished prose.",
+    "trap": "Unlike Spanish no obstante and French nonobstant, Italian nonostante normally needs an object here: nonostante ciò; standalone nonostante is not the standard connector.",
+    "example_tl": "Ciò nonostante, il governo continua a delegare decisioni strategiche alle piattaforme, senza pretendere accesso ai dati che ne determinano il potere politico.",
+    "example_en": "Regardless of this, the government continues to delegate strategic decisions to platforms without demanding access to the data that determines their political power.",
+    "cloze": "{{c1::Ciò nonostante}}, il governo continua a delegare decisioni strategiche alle piattaforme, senza pretendere accesso ai dati che ne determinano il potere politico.",
+    "note": ""
+  },
+  {
+    "id": "itc204",
+    "en": "Up to a point",
+    "category": "concession",
+    "tl": "Fino a un certo punto",
+    "alts": [
+      "Entro certi limiti"
+    ],
+    "register": "Neutral; a measured hedge that grants limited validity before introducing a qualification.",
+    "trap": "The phrase marks the limit of agreement, not a physical endpoint; Spanish hasta cierto punto and French jusqu'à un certain point transfer cleanly only in this abstract use.",
+    "example_tl": "Fino a un certo punto, la riforma limita gli abusi delle piattaforme; resta però intatto il loro controllo sull'accesso alle informazioni.",
+    "example_en": "Up to a point, the reform limits platform abuses; however, their control over access to information remains intact.",
+    "cloze": "{{c1::Fino a un certo punto}}, la riforma limita gli abusi delle piattaforme; resta però intatto il loro controllo sull'accesso alle informazioni.",
+    "note": ""
+  },
+  {
+    "id": "itc205",
+    "en": "As a rule",
+    "category": "generalization",
+    "tl": "Di norma",
+    "alts": [
+      "Come regola generale"
+    ],
+    "register": "Neutral-formal; it states a usual pattern while leaving room for exceptions.",
+    "trap": "French en règle générale can tempt in regola generale; in regola means compliant or in order in Italian, whereas this connector is di norma.",
+    "example_tl": "Di norma, le autorità intervengono soltanto dopo che una crisi mediatica ha reso politicamente costosa l'inerzia accumulata negli anni.",
+    "example_en": "As a rule, authorities intervene only after a media crisis has made years of accumulated inaction politically costly.",
+    "cloze": "{{c1::Di norma}}, le autorità intervengono soltanto dopo che una crisi mediatica ha reso politicamente costosa l'inerzia accumulata negli anni.",
+    "note": "Self-review: replaced an overbroad warning against per regola generale with the genuine false construction in regola generale."
+  },
+  {
+    "id": "itc206",
+    "en": "Broadly speaking",
+    "category": "generalization",
+    "tl": "In linea generale",
+    "alts": [
+      "In termini generali"
+    ],
+    "register": "Neutral-formal; it deliberately abstracts from exceptions and fine distinctions.",
+    "trap": "Broadly is not largamente here: largamente means extensively or abundantly, whereas the discourse-level generalization is in linea generale.",
+    "example_tl": "In linea generale, la sovranità digitale europea resta più ambiziosa nei documenti strategici che nelle scelte concrete di approvvigionamento tecnologico.",
+    "example_en": "Broadly speaking, European digital sovereignty remains more ambitious in strategic documents than in concrete technology procurement decisions.",
+    "cloze": "{{c1::In linea generale}}, la sovranità digitale europea resta più ambiziosa nei documenti strategici che nelle scelte concrete di approvvigionamento tecnologico.",
+    "note": "Self-review: removed artificial Spanish and French source phrases from what is genuinely an English broadly/largamente calque."
+  },
+  {
+    "id": "itc208",
+    "en": "For the most part",
+    "category": "generalization",
+    "tl": "Perlopiù",
+    "alts": [
+      "Per lo più",
+      "In gran parte"
+    ],
+    "register": "Neutral; it quantifies the predominant share of a situation without claiming universality.",
+    "trap": "Perlopiù and per lo più are both correct; unlike principalmente, they quantify what usually happens rather than identifying a claim's main focus.",
+    "example_tl": "Le piattaforme rispettano, perlopiù, gli obblighi formali, ma continuano a sottrarre al controllo pubblico le decisioni economicamente più rilevanti.",
+    "example_en": "For the most part, platforms comply with formal obligations but continue to shield the most economically consequential decisions from public scrutiny.",
+    "cloze": "Le piattaforme rispettano, {{c1::perlopiù}}, gli obblighi formali, ma continuano a sottrarre al controllo pubblico le decisioni economicamente più rilevanti.",
+    "note": "Self-review: corrected the initial false claim that the accepted spelling per lo più was a calque and added it as an alternative."
+  },
+  {
+    "id": "itc210",
+    "en": "In most cases",
+    "category": "generalization",
+    "tl": "Nella maggior parte dei casi",
+    "alts": [
+      "Nella maggioranza dei casi"
+    ],
+    "register": "Neutral; an explicit case-based majority claim, suitable for evidence-led analysis.",
+    "trap": "French dans la plupart des cas can tempt nella più parte dei casi; Italian requires maggior parte or maggioranza in this expression.",
+    "example_tl": "Nella maggior parte dei casi, gli utenti accettano condizioni opache non per consenso informato, ma perché non dispongono di alternative realistiche.",
+    "example_en": "In most cases, users accept opaque terms not through informed consent but because they have no realistic alternatives.",
+    "cloze": "{{c1::Nella maggior parte dei casi}}, gli utenti accettano condizioni opache non per consenso informato, ma perché non dispongono di alternative realistiche.",
+    "note": ""
+  },
+  {
+    "id": "itc212",
+    "en": "More often than not",
+    "category": "generalization",
+    "tl": "Il più delle volte",
+    "alts": [
+      "Nella maggior parte dei casi"
+    ],
+    "register": "Neutral; it expresses a recurrent majority tendency rather than an exceptionless rule.",
+    "trap": "Spanish la mayoría de las veces can tempt la maggioranza delle volte; the idiomatic Italian frequency expression is il più delle volte.",
+    "example_tl": "Il più delle volte, l'appello alla neutralità tecnologica nasconde decisioni politiche già incorporate nell'architettura dei sistemi digitali contemporanei.",
+    "example_en": "More often than not, appeals to technological neutrality conceal political decisions already embedded in the architecture of contemporary digital systems.",
+    "cloze": "{{c1::Il più delle volte}}, l'appello alla neutralità tecnologica nasconde decisioni politiche già incorporate nell'architettura dei sistemi digitali contemporanei.",
+    "note": "Self-review: replaced an artificial word-for-word interference example and expanded the sentence to the required 18-word minimum."
+  },
+  {
+    "id": "itc221",
+    "en": "In a nutshell",
+    "category": "reformulation",
+    "tl": "In poche parole",
+    "alts": [
+      "In breve"
+    ],
+    "register": "Neutral and concise; natural in serious speech and accessible professional prose, though less formal than in sintesi.",
+    "trap": "English nutshell has no lexical counterpart here: in un guscio di noce is a literal calque, whereas Italian uses in poche parole.",
+    "example_tl": "In poche parole, il sistema privatizza i profitti generati dai dati e trasferisce alla collettività i costi sociali della sorveglianza.",
+    "example_en": "In a nutshell, the system privatizes the profits generated by data and transfers the social costs of surveillance to the public.",
+    "cloze": "{{c1::In poche parole}}, il sistema privatizza i profitti generati dai dati e trasferisce alla collettività i costi sociali della sorveglianza.",
+    "note": "Self-review: removed a misleading warning against the valid Italian expression in una parola and replaced it with the genuine nutshell calque."
+  },
+  {
+    "id": "itc226",
+    "en": "Put differently",
+    "category": "reformulation",
+    "tl": "Detto altrimenti",
+    "alts": [
+      "Detto diversamente",
+      "In altri termini"
+    ],
+    "register": "Neutral-formal; a compact reformulation marker common in analytical prose.",
+    "trap": "The participle is the fixed neuter-style detto, not detta agreeing with an unstated parola; French autrement dit reverses the order and must not be copied syntactically.",
+    "example_tl": "Detto altrimenti, la piattaforma non si limita a distribuire contenuti: stabilisce anche quali forme di visibilità possano diventare economicamente sostenibili.",
+    "example_en": "Put differently, the platform does not merely distribute content; it also determines which forms of visibility can become economically sustainable.",
+    "cloze": "{{c1::Detto altrimenti}}, la piattaforma non si limita a distribuire contenuti: stabilisce anche quali forme di visibilità possano diventare economicamente sostenibili.",
+    "note": "Old_back's Detto diversamente is valid and retained as an alternative; Detto altrimenti is slightly more idiomatic in formal reformulation."
+  },
+  {
+    "id": "itc231",
+    "en": "Simply put",
+    "category": "reformulation",
+    "tl": "In parole povere",
+    "alts": [
+      "Detto in termini semplici"
+    ],
+    "register": "Neutral and deliberately plain; useful when translating technical analysis for a broad audience, but mildly conversational.",
+    "trap": "Povere means plain or unadorned in this fixed phrase, not intellectually deficient; French simplement dit should not be copied as semplicemente detto.",
+    "example_tl": "In parole povere, l'algoritmo premia ciò che trattiene l'attenzione, anche quando quel contenuto impoverisce deliberatamente il dibattito pubblico.",
+    "example_en": "Simply put, the algorithm rewards whatever holds attention, even when that content deliberately impoverishes public debate.",
+    "cloze": "{{c1::In parole povere}}, l'algoritmo premia ciò che trattiene l'attenzione, anche quando quel contenuto impoverisce deliberatamente il dibattito pubblico.",
+    "note": ""
+  },
+  {
+    "id": "itc233",
+    "en": "That is to say",
+    "category": "reformulation",
+    "tl": "Vale a dire",
+    "alts": [
+      "Ossia"
+    ],
+    "register": "Neutral-formal; it specifies or restates the preceding proposition with greater precision.",
+    "trap": "French c'est-à-dire and Spanish es decir use a copular form; the Italian fixed expression is vale a dire, not è a dire.",
+    "example_tl": "Il regolamento introduce un obbligo sostanziale, vale a dire l'accesso indipendente ai dati necessari per verificare il funzionamento dei sistemi di raccomandazione.",
+    "example_en": "The regulation introduces a substantive obligation, that is to say, independent access to the data needed to audit how recommendation systems work.",
+    "cloze": "Il regolamento introduce un obbligo sostanziale, {{c1::vale a dire}} l'accesso indipendente ai dati necessari per verificare il funzionamento dei sistemi di raccomandazione.",
+    "note": "Self-review: recast the explanation as an appositional noun phrase so both vale a dire and the alternative ossia fit naturally."
+  },
+  {
+    "id": "itc235",
+    "en": "As applied to",
+    "category": "structuring",
+    "tl": "Applicato a",
+    "alts": [],
+    "register": "Written-formal and technical; it narrows a general concept to a particular domain or object.",
+    "trap": "The opening participle must agree with and logically modify the following subject; a dangling applicato a is ungrammatical even when English tolerates a loose attachment.",
+    "example_tl": "Applicato a contesti geopolitici instabili, questo modello di previsione tende a scambiare la scarsità dei dati per assenza di conflitto.",
+    "example_en": "As applied to unstable geopolitical contexts, this forecasting model tends to mistake data scarcity for an absence of conflict.",
+    "cloze": "{{c1::Applicato a}} contesti geopolitici instabili, questo modello di previsione tende a scambiare la scarsità dei dati per assenza di conflitto.",
+    "note": ""
+  },
+  {
+    "id": "itc237",
+    "en": "As far as this topic is concerned,",
+    "category": "structuring",
+    "tl": "Per quanto riguarda questo tema",
+    "alts": [
+      "Quanto a questo tema"
+    ],
+    "register": "Neutral-formal; an explicit topic-delimiting frame, somewhat heavy if the topic is already obvious.",
+    "trap": "Spanish en lo que respecta a may tempt in quello che rispetta a, which is not Italian; use per quanto riguarda or quanto a.",
+    "example_tl": "Per quanto riguarda questo tema, il dibattito europeo continua a privilegiare dichiarazioni di principio rispetto a meccanismi efficaci di controllo democratico.",
+    "example_en": "As far as this topic is concerned, the European debate continues to favor statements of principle over effective mechanisms of democratic oversight.",
+    "cloze": "{{c1::Per quanto riguarda questo tema}}, il dibattito europeo continua a privilegiare dichiarazioni di principio rispetto a meccanismi efficaci di controllo democratico.",
+    "note": ""
+  },
+  {
+    "id": "itc239",
+    "en": "Considering",
+    "category": "condition",
+    "tl": "Considerato che",
+    "alts": [
+      "Dato che"
+    ],
+    "register": "Neutral-formal; here it introduces a premise expressed by a finite clause, not an ongoing mental action.",
+    "trap": "Spanish considerando que and French considérant que can encourage considerando che; that legalistic gerund exists, but considerato che is more idiomatic in general analysis.",
+    "example_tl": "Considerato che le autorità dipendono ancora dai dati delle imprese controllate, la promessa di una vigilanza realmente indipendente appare prematura.",
+    "example_en": "Considering that the authorities still depend on data from the companies they oversee, the promise of genuinely independent supervision appears premature.",
+    "cloze": "{{c1::Considerato che}} le autorità dipendono ancora dai dati delle imprese controllate, la promessa di una vigilanza realmente indipendente appare prematura.",
+    "note": "Materially expands old_back's bare Considerando into the finite premise-taking frame required by the example."
+  },
+  {
+    "id": "itc241",
+    "en": "In terms of",
+    "category": "structuring",
+    "tl": "In termini di",
+    "alts": [],
+    "register": "Neutral-formal; natural when naming a genuine dimension of comparison, but vague when used as a generic topic filler.",
+    "trap": "The cognate works in Italian, but Spanish en términos de and French en termes de can reinforce overuse; for a simple topic switch, quanto a is often sharper.",
+    "example_tl": "In termini di trasparenza, il nuovo codice rappresenta un progresso; sul piano dell'applicazione, tuttavia, lascia alle imprese margini ancora eccessivi.",
+    "example_en": "In terms of transparency, the new code is a step forward; in implementation, however, it still leaves companies excessive discretion.",
+    "cloze": "{{c1::In termini di}} trasparenza, il nuovo codice rappresenta un progresso; sul piano dell'applicazione, tuttavia, lascia alle imprese margini ancora eccessivi.",
+    "note": ""
+  },
+  {
+    "id": "itc249",
+    "en": "In lay terms",
+    "category": "reformulation",
+    "tl": "In termini non tecnici",
+    "alts": [],
+    "register": "Neutral-formal and explanatory; appropriate when translating specialist language for a non-specialist audience.",
+    "trap": "English lay does not normally mean laico here: under Spanish lego or French profane interference, avoid termini laici and say termini non tecnici.",
+    "example_tl": "In termini non tecnici, il modello impara quali contenuti ci trattengono più a lungo e ne propone altri con caratteristiche analoghe.",
+    "example_en": "In lay terms, the model learns which content keeps us engaged longer and suggests more content with similar characteristics.",
+    "cloze": "{{c1::In termini non tecnici}}, il modello impara quali contenuti ci trattengono più a lungo e ne propone altri con caratteristiche analoghe.",
+    "note": ""
+  },
+  {
+    "id": "itc251",
+    "en": "To break it down",
+    "category": "reformulation",
+    "tl": "Per analizzarlo punto per punto",
+    "alts": [
+      "Per scomporlo nei suoi elementi"
+    ],
+    "register": "Neutral and explanatory; it announces analytical decomposition rather than mere simplification.",
+    "trap": "Break down is nonliteral here; the English-shaped romperlo or spezzarlo describes physical damage rather than analytical decomposition.",
+    "example_tl": "Per analizzarlo punto per punto, conviene separare il modello economico della piattaforma dai suoi effetti politici e dalle scelte tecniche che li sostengono.",
+    "example_en": "To break it down, we should separate the platform's business model from its political effects and the technical choices that sustain them.",
+    "cloze": "{{c1::Per analizzarlo punto per punto}}, conviene separare il modello economico della piattaforma dai suoi effetti politici e dalle scelte tecniche che li sostengono.",
+    "note": "Self-review: removed spurious Spanish and French attribution from a pitfall that is specifically an English phrasal-verb calque."
+  },
+  {
+    "id": "itc255",
+    "en": "To put it clearly",
+    "category": "reformulation",
+    "tl": "Per dirla chiaramente",
+    "alts": [
+      "Per essere chiari"
+    ],
+    "register": "Neutral and emphatic; natural in serious speech and forceful opinion writing.",
+    "trap": "Italian uses the fossilized feminine clitic la in per dirla chiaramente; per dire chiaramente lacks the idiom's implicit 'put the matter' object.",
+    "example_tl": "Per dirla chiaramente, il governo ha scelto la convenienza immediata delle piattaforme invece della tutela duratura dello spazio informativo pubblico.",
+    "example_en": "To put it clearly, the government chose the platforms' immediate convenience over the lasting protection of the public information space.",
+    "cloze": "{{c1::Per dirla chiaramente}}, il governo ha scelto la convenienza immediata delle piattaforme invece della tutela duratura dello spazio informativo pubblico.",
+    "note": ""
+  },
+  {
+    "id": "itc273",
+    "en": "in contrast",
+    "category": "contrast",
+    "tl": "Per contro",
+    "alts": [
+      "Invece"
+    ],
+    "register": "Written-formal; it juxtaposes a contrasting fact without directly denying the previous claim.",
+    "trap": "Per contro contrasts two states of affairs; al contrario normally rejects or reverses a claim, so the two neighboring cards are not automatic synonyms.",
+    "example_tl": "Gli Stati Uniti privilegiano l'autoregolazione industriale; per contro, l'Unione europea affida alla legge un ruolo più esplicito nel governo delle piattaforme.",
+    "example_en": "The United States favors industry self-regulation; in contrast, the European Union gives law a more explicit role in governing platforms.",
+    "cloze": "Gli Stati Uniti privilegiano l'autoregolazione industriale; {{c1::per contro}}, l'Unione europea affida alla legge un ruolo più esplicito nel governo delle piattaforme.",
+    "note": ""
+  },
+  {
+    "id": "itc274",
+    "en": "on the contrary",
+    "category": "contrast",
+    "tl": "Al contrario",
+    "alts": [],
+    "register": "Neutral-formal; it directly rejects an inference or asserts the reverse of what precedes.",
+    "trap": "Spanish al contrario transfers cleanly, but French au contraire may encourage indiscriminate use; for simple juxtaposition rather than refutation, Italian prefers per contro or invece.",
+    "example_tl": "La moderazione automatica non ha ridotto la circolazione delle falsità; al contrario, ne ha spesso premiato le versioni più emotive e divisive.",
+    "example_en": "Automated moderation has not reduced the circulation of falsehoods; on the contrary, it has often rewarded their most emotional and divisive versions.",
+    "cloze": "La moderazione automatica non ha ridotto la circolazione delle falsità; {{c1::al contrario}}, ne ha spesso premiato le versioni più emotive e divisive.",
+    "note": ""
+  },
+  {
+    "id": "itc277",
+    "en": "interestingly",
+    "category": "stance",
+    "tl": "È interessante notare che",
+    "alts": [],
+    "register": "Neutral-formal; an authorial observation marker, best reserved for a genuinely revealing or unexpected fact.",
+    "trap": "Sentence-level interestingly is not normally interessantemente in Italian; that adverb suggests the manner in which something is done and often sounds calqued.",
+    "example_tl": "È interessante notare che le campagne più efficaci contro la disinformazione puntano a rafforzare la fiducia istituzionale, non soltanto a rimuovere contenuti falsi.",
+    "example_en": "Interestingly, the most effective campaigns against disinformation aim to strengthen institutional trust, not merely to remove false content.",
+    "cloze": "{{c1::È interessante notare che}} le campagne più efficaci contro la disinformazione puntano a rafforzare la fiducia istituzionale, non soltanto a rimuovere contenuti falsi.",
+    "note": "Self-review: replaced an abstract investire nella fiducia collocation with the more native puntare a rafforzare la fiducia."
+  },
+  {
+    "id": "itc278",
+    "en": "it should be noted that",
+    "category": "stance",
+    "tl": "Va notato che",
+    "alts": [
+      "Occorre notare che"
+    ],
+    "register": "Written-formal and impersonal; it flags a relevant qualification without foregrounding the author.",
+    "trap": "In va notato, andare forms a modal passive meaning that something should be noted; it does not retain its ordinary motion meaning.",
+    "example_tl": "Va notato che l'aumento delle rimozioni non dimostra, da solo, una riduzione effettiva dell'influenza esercitata dalle reti di propaganda.",
+    "example_en": "It should be noted that the increase in removals does not, by itself, demonstrate an actual reduction in the influence exerted by propaganda networks.",
+    "cloze": "{{c1::Va notato che}} l'aumento delle rimozioni non dimostra, da solo, una riduzione effettiva dell'influenza esercitata dalle reti di propaganda.",
+    "note": ""
+  },
+  {
+    "id": "itc279",
+    "en": "more importantly",
+    "category": "stance",
+    "tl": "Quel che più conta è che…",
+    "alts": [],
+    "register": "Neutral-formal; it raises the following consideration above the preceding one in argumentative importance.",
+    "trap": "Bare ancora più importante can read as an English- or French-shaped elliptical adjective; quel che più conta è che supplies a complete formal frame.",
+    "example_tl": "Quel che più conta è che l'accesso indipendente ai dati permette di verificare non solo gli errori degli algoritmi, ma anche gli incentivi economici sottostanti.",
+    "example_en": "More importantly, independent access to data makes it possible to examine not only algorithmic errors but also the underlying economic incentives.",
+    "cloze": "{{c1::Quel che più conta è che}} l'accesso indipendente ai dati permette di verificare non solo gli errori degli algoritmi, ma anche gli incentivi economici sottostanti.",
+    "note": "Materially expands old_back's elliptical Ancora più importante into a complete Italian discourse frame. Self-review: rebuilt the example with è che after detecting an awkward parenthetical use of quel che più conta, and classified the authorial prioritization as stance."
+  },
+  {
+    "id": "itc283",
+    "en": "I firmly believe that...",
+    "category": "stance",
+    "tl": "Ritengo fermamente che…",
+    "alts": [
+      "Credo fermamente che…"
+    ],
+    "register": "Formal and strongly committed; appropriate in signed commentary, but too personal for an institutional report.",
+    "trap": "Spanish creo firmemente que often takes the indicative; after Italian ritengo che, careful formal prose normally prefers the subjunctive.",
+    "example_tl": "Ritengo fermamente che la trasparenza algoritmica debba diventare un requisito democratico, non una concessione volontaria delle imprese sottoposte a controllo.",
+    "example_en": "I firmly believe that algorithmic transparency must become a democratic requirement, not a voluntary concession by the companies subject to oversight.",
+    "cloze": "{{c1::Ritengo fermamente che}} la trasparenza algoritmica debba diventare un requisito democratico, non una concessione volontaria delle imprese sottoposte a controllo.",
+    "note": "Old_back's Credo fermamente che is valid and retained as an alternative; Ritengo fermamente che better matches the formal register. Self-review: removed a gender-marked alternative that was not universally interchangeable."
+  },
+  {
+    "id": "itc284",
+    "en": "One cannot overlook the fact that...",
+    "category": "stance",
+    "tl": "Non si può ignorare che…",
+    "alts": [],
+    "register": "Formal and emphatic; an impersonal frame for presenting evidence as too consequential to omit.",
+    "trap": "Italian does not need the heavy nominal shell il fatto che whenever English uses the fact that; the direct che-clause is usually more idiomatic.",
+    "example_tl": "Non si può ignorare che la concentrazione proprietaria dei media riduca la varietà delle prospettive disponibili proprio durante le crisi politiche.",
+    "example_en": "One cannot overlook the fact that concentrated media ownership reduces the range of perspectives available precisely during political crises.",
+    "cloze": "{{c1::Non si può ignorare che}} la concentrazione proprietaria dei media riduca la varietà delle prospettive disponibili proprio durante le crisi politiche.",
+    "note": "Streamlines old_back by removing il fatto, a grammatically valid but unnecessarily heavy nominalization in this example."
+  },
+  {
+    "id": "itc285",
+    "en": "In my view...",
+    "category": "stance",
+    "tl": "A mio avviso…",
+    "alts": [
+      "A mio parere…"
+    ],
+    "register": "Neutral-formal; a conventional marker of personal assessment in signed analysis or serious discussion.",
+    "trap": "Unlike French à mon avis, the Italian fixed phrase has no article: a mio avviso, not al mio avviso.",
+    "example_tl": "A mio avviso, l'Europa sottovaluta ancora quanto la dipendenza dalle infrastrutture statunitensi limiti la sua autonomia nelle crisi geopolitiche.",
+    "example_en": "In my view, Europe still underestimates how much its dependence on US infrastructure limits its autonomy during geopolitical crises.",
+    "cloze": "{{c1::A mio avviso}}, l'Europa sottovaluta ancora quanto la dipendenza dalle infrastrutture statunitensi limiti la sua autonomia nelle crisi geopolitiche.",
+    "note": ""
+  },
+  {
+    "id": "itc287",
+    "en": "On the other hand...",
+    "category": "contrast",
+    "tl": "D'altra parte…",
+    "alts": [
+      "D'altro canto…"
+    ],
+    "register": "Neutral-formal; it introduces a counterweight or additional consideration rather than a direct refutation.",
+    "trap": "Spanish por otra parte can prompt per altra parte, and adding un produces the spatial da un'altra parte; the discourse connector is d'altra parte.",
+    "example_tl": "D'altra parte, imporre obblighi troppo rigidi alle imprese minori potrebbe consolidare proprio il vantaggio competitivo delle piattaforme dominanti.",
+    "example_en": "On the other hand, imposing overly rigid obligations on smaller companies could consolidate the very competitive advantage of the dominant platforms.",
+    "cloze": "{{c1::D'altra parte}}, imporre obblighi troppo rigidi alle imprese minori potrebbe consolidare proprio il vantaggio competitivo delle piattaforme dominanti.",
+    "note": ""
+  },
+  {
+    "id": "itc288",
+    "en": "Contrary to popular belief...",
+    "category": "contrast",
+    "tl": "Contrariamente a quanto si crede…",
+    "alts": [],
+    "register": "Neutral-formal; it overturns a widely assumed proposition without attributing it to a specific speaker.",
+    "trap": "Spanish creencia popular and French croyance populaire can tempt credenza popolare, which usually suggests folklore; quanto si crede is idiomatic here.",
+    "example_tl": "Contrariamente a quanto si crede, la crittografia forte non impedisce ogni indagine, ma obbliga le autorità a ricorrere a strumenti più mirati.",
+    "example_en": "Contrary to popular belief, strong encryption does not prevent every investigation but forces authorities to use more targeted tools.",
+    "cloze": "{{c1::Contrariamente a quanto si crede}}, la crittografia forte non impedisce ogni indagine, ma obbliga le autorità a ricorrere a strumenti più mirati.",
+    "note": ""
+  },
+  {
+    "id": "itc289",
+    "en": "While many argue that..., I contend that...",
+    "category": "concession",
+    "tl": "Mentre molti sostengono che…, io ritengo che…",
+    "alts": [],
+    "register": "Formal argumentative frame; it stages a competing view before advancing a signed counterclaim.",
+    "trap": "Mentre is contrastive here, not temporal; after sostengono che and ritengo che, edited Italian normally uses the subjunctive, unlike common Spanish patterns.",
+    "example_tl": "Mentre molti sostengono che la neutralità tecnologica protegga l'innovazione, io ritengo che spesso serva a occultare scelte politiche già incorporate nelle infrastrutture.",
+    "example_en": "While many argue that technological neutrality protects innovation, I contend that it often serves to conceal political choices already embedded in infrastructure.",
+    "cloze": "{{c1::Mentre molti sostengono che}} la neutralità tecnologica protegga l'innovazione, {{c1::io ritengo che}} spesso serva a occultare scelte politiche già incorporate nelle infrastrutture.",
+    "note": ""
+  },
+  {
+    "id": "itc290",
+    "en": "There's a strong case to be made for...",
+    "category": "stance",
+    "tl": "Ci sono validi argomenti a favore di…",
+    "alts": [
+      "Vi sono solidi argomenti a favore di…"
+    ],
+    "register": "Neutral-formal and evidential; it endorses a position while presenting it as arguable rather than self-evident.",
+    "trap": "English case is not caso here: c'è un caso forte per is a calque; Italian speaks of validi or solidi argomenti a favore di.",
+    "example_tl": "Ci sono validi argomenti a favore di un'autorità europea indipendente che possa controllare direttamente i sistemi algoritmici delle maggiori piattaforme.",
+    "example_en": "There's a strong case to be made for an independent European authority capable of directly auditing the algorithmic systems of the largest platforms.",
+    "cloze": "{{c1::Ci sono validi argomenti a favore di}} un'autorità europea indipendente che possa controllare direttamente i sistemi algoritmici delle maggiori piattaforme.",
+    "note": ""
+  },
+  {
+    "id": "itc291",
+    "en": "It stands to reason that...",
+    "category": "stance",
+    "tl": "È logico supporre che…",
+    "alts": [
+      "È logico ritenere che…"
+    ],
+    "register": "Neutral-formal; it presents an inference as strongly supported by ordinary reasoning.",
+    "trap": "English stands has no lexical equivalent in this idiom; sta alla ragione che is not standard Italian, whereas è logico supporre che is natural.",
+    "example_tl": "È logico supporre che gli Stati privilegino fornitori nazionali quando la sicurezza delle reti diventa una componente esplicita della politica estera.",
+    "example_en": "It stands to reason that states favor domestic suppliers when network security becomes an explicit component of foreign policy.",
+    "cloze": "{{c1::È logico supporre che}} gli Stati privilegino fornitori nazionali quando la sicurezza delle reti diventa una componente esplicita della politica estera.",
+    "note": "Self-review: replaced a weaker alternative with È logico ritenere che so the original degree of inferential confidence is preserved."
+  },
+  {
+    "id": "itc292",
+    "en": "It's worth pointing out that...",
+    "category": "stance",
+    "tl": "Vale la pena sottolineare che…",
+    "alts": [],
+    "register": "Neutral-formal; it marks a fact as especially relevant without claiming that it is decisive.",
+    "trap": "Spanish señalar and French signaler can encourage segnalare; it is grammatical, but sottolineare better conveys argumentative emphasis rather than mere reporting here.",
+    "example_tl": "Vale la pena sottolineare che alcune norme sulla trasparenza sono state formulate con il contributo delle stesse imprese che dovrebbero vincolare.",
+    "example_en": "It's worth pointing out that some transparency rules were drafted with input from the very companies they are supposed to constrain.",
+    "cloze": "{{c1::Vale la pena sottolineare che}} alcune norme sulla trasparenza sono state formulate con il contributo delle stesse imprese che dovrebbero vincolare.",
+    "note": "Self-review: replaced an implausibly literal finger-pointing warning with the genuine segnalare interference risk."
+  },
+  {
+    "id": "itc293",
+    "en": "I'd argue that...",
+    "category": "stance",
+    "tl": "Sosterrei che…",
+    "alts": [
+      "Direi che…"
+    ],
+    "register": "Formal and hedged; the conditional softens a signed argumentative claim without withdrawing it.",
+    "trap": "The conditional marks epistemic politeness, not a future-in-the-past; a categorical sostengo che loses the hedge in English I'd argue.",
+    "example_tl": "Sosterrei che il vero obiettivo della regolazione non sia eliminare ogni rischio, ma rendere contestabili le decisioni automatizzate più influenti.",
+    "example_en": "I'd argue that the real goal of regulation is not to eliminate every risk, but to make the most influential automated decisions contestable.",
+    "cloze": "{{c1::Sosterrei che}} il vero obiettivo della regolazione non sia eliminare ogni rischio, ma rendere contestabili le decisioni automatizzate più influenti.",
+    "note": "Materially sharpens old_back's natural Direi che to preserve the explicit argumentative force of argue; the legacy rendering remains an alternative."
+  },
+  {
+    "id": "itc294",
+    "en": "One might reasonably conclude...",
+    "category": "result",
+    "tl": "Si potrebbe ragionevolmente concludere che…",
+    "alts": [],
+    "register": "Written-formal; an impersonal, hedged inference drawn from evidence already presented.",
+    "trap": "English one is impersonal here, not the numeral or generic pronoun uno; formal Italian naturally uses si potrebbe concludere.",
+    "example_tl": "Si potrebbe ragionevolmente concludere che l'autoregolazione abbia fallito, poiché gli incentivi economici delle piattaforme restano incompatibili con una vigilanza rigorosa.",
+    "example_en": "One might reasonably conclude that self-regulation has failed, since platforms' economic incentives remain incompatible with rigorous oversight.",
+    "cloze": "{{c1::Si potrebbe ragionevolmente concludere che}} l'autoregolazione abbia fallito, poiché gli incentivi economici delle piattaforme restano incompatibili con una vigilanza rigorosa.",
+    "note": "Adds che to old_back so the frame can introduce the finite proposition represented by the prompt's ellipsis. Self-review: removed an overstated attribution of generic uno to Spanish interference."
+  },
+  {
+    "id": "itc295",
+    "en": "Conversely...",
+    "category": "contrast",
+    "tl": "Viceversa…",
+    "alts": [],
+    "register": "Neutral-formal; it reverses the direction or terms of a stated relationship rather than merely adding a contrasting fact.",
+    "trap": "Viceversa expresses a reciprocal reversal; al contrario usually refutes a proposition, and d'altra parte merely adds a counterweight.",
+    "example_tl": "La sfiducia nelle istituzioni alimenta la disinformazione; viceversa, l'esposizione continua a contenuti manipolativi può erodere ulteriormente la fiducia democratica.",
+    "example_en": "Distrust in institutions fuels disinformation; conversely, continuous exposure to manipulative content can further erode democratic trust.",
+    "cloze": "La sfiducia nelle istituzioni alimenta la disinformazione; {{c1::viceversa}}, l'esposizione continua a contenuti manipolativi può erodere ulteriormente la fiducia democratica.",
+    "note": ""
+  },
+  {
+    "id": "itc297",
+    "en": "Drawing upon the evidence, one might suggest that...",
+    "category": "result",
+    "tl": "Alla luce delle prove, si potrebbe ipotizzare che…",
+    "alts": [],
+    "register": "Written-formal; it combines an explicit evidential basis with a deliberately cautious inference.",
+    "trap": "A gerund such as attingendo alle prove easily dangles in Italian because the following impersonal si has no agent; alla luce delle prove avoids that mismatch.",
+    "example_tl": "Alla luce delle prove, si potrebbe ipotizzare che la campagna abbia mirato meno a persuadere gli elettori che a scoraggiarne la partecipazione.",
+    "example_en": "Drawing upon the evidence, one might suggest that the campaign aimed less to persuade voters than to discourage their participation.",
+    "cloze": "{{c1::Alla luce delle prove}}, {{c1::si potrebbe ipotizzare che}} la campagna abbia mirato meno a persuadere gli elettori che a scoraggiarne la partecipazione.",
+    "note": "Self-review: classified the evidence-based inference as result rather than generic stance."
+  },
+  {
+    "id": "itc298",
+    "en": "Although there's some truth in..., it's crucial to remember that...",
+    "category": "concession",
+    "tl": "Sebbene ci sia del vero in…, è fondamentale ricordare che…",
+    "alts": [],
+    "register": "Written-formal two-part frame; it grants limited merit before restoring a more consequential qualification.",
+    "trap": "Spanish aunque hay may encourage the indicative, but Italian sebbene requires the subjunctive here: ci sia, not c'è.",
+    "example_tl": "Sebbene ci sia del vero in questa lettura, è fondamentale ricordare che la tecnologia amplifica disuguaglianze politiche già profondamente radicate.",
+    "example_en": "Although there's some truth in this interpretation, it's crucial to remember that technology amplifies already deeply rooted political inequalities.",
+    "cloze": "{{c1::Sebbene ci sia del vero in}} questa lettura, {{c1::è fondamentale ricordare che}} la tecnologia amplifica disuguaglianze politiche già profondamente radicate.",
+    "note": ""
+  },
+  {
+    "id": "itc299",
+    "en": "I have reservations about...",
+    "category": "stance",
+    "tl": "Nutro delle riserve su…",
+    "alts": [
+      "Ho qualche riserva su…"
+    ],
+    "register": "Formal and measured; a signed objection that signals concern without outright rejection.",
+    "trap": "Spanish sobre and French sur should not produce sopra in this abstract construction; Italian uses riserve su, with the appropriate articulated form before a noun.",
+    "example_tl": "Nutro delle riserve su questa proposta, perché affida alle piattaforme il compito di definire gli stessi rischi che dovrebbero contribuire a ridurre.",
+    "example_en": "I have reservations about this proposal because it entrusts platforms with defining the very risks they are supposed to help reduce.",
+    "cloze": "{{c1::Nutro delle riserve su}} questa proposta, perché affida alle piattaforme il compito di definire gli stessi rischi che dovrebbero contribuire a ridurre.",
+    "note": ""
+  },
+  {
+    "id": "itc300",
+    "en": "It's hard to deny that...",
+    "category": "stance",
+    "tl": "È difficile negare che…",
+    "alts": [],
+    "register": "Neutral-formal; a high-confidence stance that leaves nominal room for disagreement while treating the proposition as strongly evidenced.",
+    "trap": "French nier que may accompany an asserted indicative, but careful Italian conventionally selects the subjunctive after negare che in this formal frame.",
+    "example_tl": "È difficile negare che la concentrazione delle infrastrutture digitali abbia accresciuto il potere politico di imprese sottratte a un controllo pubblico adeguato.",
+    "example_en": "It's hard to deny that the concentration of digital infrastructure has increased the political power of companies shielded from adequate public oversight.",
+    "cloze": "{{c1::È difficile negare che}} la concentrazione delle infrastrutture digitali abbia accresciuto il potere politico di imprese sottratte a un controllo pubblico adeguato.",
+    "note": "Self-review: corrected the interference source in the mood warning from Spanish to French."
+  },
+  {
+    "id": "itc301",
+    "en": "However, a closer look reveals...",
+    "category": "contrast",
+    "tl": "Tuttavia, un esame più attento rivela…",
+    "alts": [],
+    "register": "Written-formal; it corrects an initial impression by introducing closer analysis.",
+    "trap": "Closer look is not uno sguardo più vicino, a visual calque reinforced by Spanish mirada más cercana; Italian uses esame più attento or analisi più approfondita.",
+    "example_tl": "Tuttavia, un esame più attento rivela che la crescita degli investimenti ha favorito soprattutto acquisizioni, anziché ricerca e capacità produttiva.",
+    "example_en": "However, a closer look reveals that investment growth has primarily favored acquisitions rather than research and productive capacity.",
+    "cloze": "{{c1::Tuttavia, un esame più attento rivela}} che la crescita degli investimenti ha favorito soprattutto acquisizioni, anziché ricerca e capacità produttiva.",
+    "note": ""
+  },
+  {
+    "id": "itc302",
+    "en": "Another way to look at this is...",
+    "category": "reformulation",
+    "tl": "Un altro modo di vedere la questione è…",
+    "alts": [],
+    "register": "Neutral-formal; it offers an alternative analytical framing rather than a simple verbal paraphrase.",
+    "trap": "Spanish ver esto and French voir cela can encourage vedere questo; in Italian analytical prose, vedere la questione or leggere il problema is more idiomatic.",
+    "example_tl": "Un altro modo di vedere la questione è considerare la moderazione dei contenuti come una forma privata di governo dello spazio pubblico.",
+    "example_en": "Another way to look at this is to regard content moderation as a private form of governance over public space.",
+    "cloze": "{{c1::Un altro modo di vedere la questione è}} considerare la moderazione dei contenuti come una forma privata di governo dello spazio pubblico.",
+    "note": ""
+  },
+  {
+    "id": "itc303",
+    "en": "I'm inclined to believe that...",
+    "category": "stance",
+    "tl": "Tendo a ritenere che…",
+    "alts": [
+      "Tendo a credere che…"
+    ],
+    "register": "Neutral-formal and tentative; it marks a considered leaning rather than a settled conviction.",
+    "trap": "A literal sono inclinato a credere makes inclined sound physical or mechanical; idiomatic stance uses tendo a ritenere or sono propenso a credere.",
+    "example_tl": "Tendo a ritenere che una maggiore trasparenza, da sola, non basti a correggere incentivi economici strutturalmente contrari all'interesse pubblico.",
+    "example_en": "I'm inclined to believe that greater transparency alone is not enough to correct economic incentives structurally opposed to the public interest.",
+    "cloze": "{{c1::Tendo a ritenere che}} una maggiore trasparenza, da sola, non basti a correggere incentivi economici strutturalmente contrari all'interesse pubblico.",
+    "note": "Old_back's Tendo a credere che is fully idiomatic and retained as an alternative; ritenere better suits the analytical register. Self-review: replaced a vague complementation warning with the genuine inclined/inclinato false-friend risk."
+  }
+]
