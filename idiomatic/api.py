@@ -14,6 +14,7 @@ import contextlib
 import re
 import secrets
 from pathlib import Path
+from typing import Any
 
 import structlog
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
@@ -854,6 +855,47 @@ async def admin_translation_build(
 
     _spawn_bg(_run())
     return {"started": True, "lang": lang}
+
+
+@app.get("/admin/disk-usage")
+async def admin_disk_usage(_: None = Depends(authed_admin)) -> dict:
+    """Read-only /data usage report: filesystem totals + per-directory bytes
+    (depth 2). Built for the 2026-08-04 ENOSPC incident — see also the
+    worker janitor, which only covers media_stage + delivered video apkgs."""
+    import shutil as _shutil
+
+    def scan() -> dict:
+        root = Path(get_settings().data_dir)
+        total, used, free = _shutil.disk_usage(root)
+
+        def du(path: Path) -> int:
+            n = 0
+            for p in path.rglob("*"):
+                try:
+                    if p.is_file(follow_symlinks=False):
+                        n += p.stat().st_size
+                except OSError:
+                    continue
+            return n
+
+        tree: dict[str, Any] = {}
+        for top in sorted(p for p in root.iterdir() if p.is_dir()):
+            subs = [p for p in sorted(top.iterdir()) if p.is_dir()]
+            files_here = sum(
+                p.stat().st_size for p in top.iterdir() if p.is_file()
+            )
+            entry = {"_files_mb": round(files_here / 1e6, 1)}
+            for sub in subs:
+                entry[sub.name] = round(du(sub) / 1e6, 1)
+            tree[top.name] = entry
+        return {
+            "disk_gb": {"total": round(total / 1e9, 2),
+                        "used": round(used / 1e9, 2),
+                        "free": round(free / 1e9, 2)},
+            "dirs_mb": tree,
+        }
+
+    return await asyncio.to_thread(scan)
 
 
 @app.get("/admin/translation-list")
