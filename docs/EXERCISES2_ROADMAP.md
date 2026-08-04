@@ -5,11 +5,11 @@
 > time through the proven pipeline: chunk inputs → parallel codex sessions
 > (EXERCISES2_BATCH_COMMISSION.md) → mechanical gate (tools/x2_batch_gate.py)
 > → linguistic audit → merge to notes/ → `/admin/exercises2-build`.
-> Check waves off as they ship. STATUS LINE: **Wave 1 shipped; Wave 2 staged.**
+> Check waves off as they ship. STATUS LINE: **Wave 1 shipped in ALL FIVE languages (953 notes / 1,906 cards); Wave 2 staged.**
 
 | # | Wave | Size/lang | Status | Notes |
 |---|------|-----------|--------|-------|
-| 1 | ✅ CONNECTING | ~400 | **SHIPPED 2026-08-04** — es 207 / fr 191 / de 179 / pt 175; it gap-fill authoring | highest C1→C2 value; format = approved pilot |
+| 1 | ✅ CONNECTING | ~400 | **SHIPPED 2026-08-04** — es 207 / fr 191 / de 179 / pt 175 / it 201 (apkg 1396) | highest C1→C2 value; format = approved pilot |
 | 2 | ⏳ CONDITIONALS | 299 | **STAGED** — 15 chunk inputs + [addendum](commissions/EXERCISES2_CONDITIONALS_ADDENDUM.md) committed; awaiting user "go" | counterfactuals = documented weak spot in all 5 langs; IT included from start |
 | 3 | TENSES | 300 | not started | tense sequencing, same error-mine territory; reuse the conditionals addendum pattern |
 | 4 | FANCY_VOCAB | 582 | not started | academic register; biggest topic; simpler card shape — needs its own addendum (vocab-style notes) |
