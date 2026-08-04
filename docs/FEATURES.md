@@ -124,6 +124,18 @@
 - **Dependencies**: `gemini.synthesize` provider chain (ElevenLabs primary), `leveled_speech_clip` + voice fingerprint (`idiomatic/grammar/explainers.py`), `LANG_VOICE` (`idiomatic/pipeline/audio.py`), genanki, codex CLI (authoring)
 - **Added**: 2026-08-04
 
+### Translation-exercise decks (repurposed grammar drills)
+- **Status**: Active (code merged; first builds pending)
+- **Description**: Verified grammar drill sentences repurposed as EN→TL translation cards: FRONT = the drill's `gloss_en` spoken by the English narrator (new cached leveled TTS under `staged_audio/grammar/translation_en/<lang>/`), BACK = the TL sentence with the drilled form bolded, reusing the existing drill back-audio clip (`idg_<lang>_<id>.mp3`) — zero new TL synthesis (reuse-only guarantee; clip-less items are skipped + counted). Selection excludes f3/f4/explainer formats, sentences under 4 words, and duplicate sentences (first wins, decided before the audio check so GUIDs never flip with disk state). Own frozen 14-field `Idiomatic Translation v1` model (one "Translate" template, id 1_820_160_001); `Idiomatic Translation {LANG}::{cluster}` subdecks share the grammar deck's cluster strings; rolling `apkgs.kind='translation'` per language — zero add-on changes.
+- **Entry Points**:
+  - `idiomatic/grammar/translation.py` - selection filters, EN TTS cache, model + apkg build, `build_language()`, `language_inventory()`
+  - `idiomatic/api.py:831-863` - `POST /admin/translation-build?lang`, `GET /admin/translation-list`
+  - `idiomatic/db.py:543-545` - `'translation'` in the `upsert_pool_apkg` kind whitelist
+  - `docs/commissions/TRANSLATION_DECKS_COMMISSION.md` - the code commission
+  - `tests/test_translation.py` - model/GUID/selection/bolding/cache/apkg/silence coverage (16 tests)
+- **Dependencies**: grammar drill audio stage (`idiomatic/grammar/audio.py` naming + reuse check), `_full_html` bolding (`idiomatic/grammar/apkg.py`), cluster strings (`idiomatic/grammar/curriculum.py`), `gemini.synthesize` provider chain, `leveled_speech_clip` + voice fingerprint (`idiomatic/grammar/explainers.py`), `EN_VOICE` (`idiomatic/pipeline/audio.py`), genanki
+- **Added**: 2026-08-04
+
 ### LingQ vocabulary mirror
 - **Status**: Active
 - **Description**: The user's saved LingQ vocabulary (10 languages incl. not-yet-active sv/da/nl/no/zh) mirrored into `lingq_terms`; grammar generation weaves a per-topic sample of still-learning terms into drill sentences (optional material, never the blank); daily cron auto-sync; `/admin/lingq-sample` feeds local agents (codex).

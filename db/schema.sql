@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS apkgs (
   filename       TEXT NOT NULL,                  -- path relative to DATA_DIR
   size_bytes     BIGINT,
   n_idioms       INTEGER,                        -- new idioms (post-dedup)
-  -- kind: 'video' (per-video idiom deck) | 'pool_expr' | 'pool_idiom_t2e' | 'pool_idiom_e2t' | 'podcast_lesson' | 'exercises2'
+  -- kind: 'video' (per-video idiom deck) | 'pool_expr' | 'pool_idiom_t2e' | 'pool_idiom_e2t' | 'podcast_lesson' | 'exercises2' | 'translation'
   kind           TEXT NOT NULL DEFAULT 'video',
   created_at     TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );

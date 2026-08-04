@@ -828,6 +828,41 @@ async def admin_exercises2_list(_: None = Depends(authed_admin)) -> dict:
     return {"sources": exercises2.list_sources()}
 
 
+@app.post("/admin/translation-build")
+async def admin_translation_build(
+    lang: str, _: None = Depends(authed_admin),
+) -> dict:
+    """Build one language's translation deck (EN TTS + APKG) in the background."""
+    from .grammar import service as grammar_service
+    from .grammar import translation
+
+    if lang not in translation.SUPPORTED_LANGS:
+        raise HTTPException(400, "lang must be de|es|fr|it|pt")
+    if not grammar_service.claim_grammar_job(f"translation-{lang}", "translation"):
+        return {"error": "busy", **grammar_service.get_state()}
+
+    async def _run() -> None:
+        try:
+            result = await translation.build_language(lang)
+            grammar_service._state["translation"] = result
+        except Exception as e:  # noqa: BLE001
+            log.warning("admin.translation_build.failed", lang=lang,
+                        err=repr(e)[:200])
+            grammar_service._state["error"] = repr(e)[:200]
+        finally:
+            grammar_service._state["running"] = False
+
+    _spawn_bg(_run())
+    return {"started": True, "lang": lang}
+
+
+@app.get("/admin/translation-list")
+async def admin_translation_list(_: None = Depends(authed_admin)) -> dict:
+    """Per-language translation-deck inventory: eligible items, TL audio, EN cache."""
+    from .grammar import translation
+    return {"languages": await translation.language_inventory()}
+
+
 @app.get("/admin/video-info")
 async def admin_video_info(
     youtube_id: str, agent: dict = Depends(authed_agent),

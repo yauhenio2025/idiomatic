@@ -113,7 +113,7 @@ def test_trap_is_optional_but_other_fields_are_not(tmp_path: Path):
 
 def test_real_pilot_file_parses():
     notes = x2.parse_notes_file(x2.SOURCE_DIR / "es_connecting.json")
-    assert len(notes) == 42
+    assert len(notes) == 207
     assert {note.lang for note in notes} == {"es"}
     assert sum(1 for note in notes if note.trap) >= 30
 
