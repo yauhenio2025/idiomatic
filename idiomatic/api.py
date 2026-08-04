@@ -864,35 +864,33 @@ async def admin_disk_usage(_: None = Depends(authed_admin)) -> dict:
     worker janitor, which only covers media_stage + delivered video apkgs."""
     import shutil as _shutil
 
+    import os as _os
+
     def scan() -> dict:
         root = Path(get_settings().data_dir)
         total, used, free = _shutil.disk_usage(root)
-
-        def du(path: Path) -> int:
-            n = 0
-            for p in path.rglob("*"):
+        # One os.walk pass, bytes bucketed by <top>/<sub> relative to root.
+        buckets: dict[str, int] = {}
+        root_str = str(root)
+        for dirpath, _dirnames, filenames in _os.walk(root_str):
+            rel = _os.path.relpath(dirpath, root_str)
+            parts = [] if rel == "." else rel.split(_os.sep)
+            key = "/".join(parts[:2]) if parts else "_root_files"
+            for name in filenames:
                 try:
-                    if p.is_file(follow_symlinks=False):
-                        n += p.stat().st_size
+                    buckets[key] = buckets.get(key, 0) + _os.path.getsize(
+                        _os.path.join(dirpath, name))
                 except OSError:
                     continue
-            return n
-
-        tree: dict[str, Any] = {}
-        for top in sorted(p for p in root.iterdir() if p.is_dir()):
-            subs = [p for p in sorted(top.iterdir()) if p.is_dir()]
-            files_here = sum(
-                p.stat().st_size for p in top.iterdir() if p.is_file()
-            )
-            entry = {"_files_mb": round(files_here / 1e6, 1)}
-            for sub in subs:
-                entry[sub.name] = round(du(sub) / 1e6, 1)
-            tree[top.name] = entry
+        top = dict(sorted(
+            ((k, round(v / 1e6, 1)) for k, v in buckets.items()),
+            key=lambda kv: -kv[1],
+        )[:40])
         return {
             "disk_gb": {"total": round(total / 1e9, 2),
                         "used": round(used / 1e9, 2),
                         "free": round(free / 1e9, 2)},
-            "dirs_mb": tree,
+            "dirs_mb": top,
         }
 
     return await asyncio.to_thread(scan)
