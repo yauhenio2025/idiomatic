@@ -10,7 +10,7 @@
     "example_tl": "Bien que les plateformes aient publié de nouveaux rapports, aucune donnée brute ne permet aux chercheurs de vérifier les progrès qu'elles revendiquent.",
     "example_en": "Even though the platforms have published new reports, no raw data allows researchers to verify the progress they claim.",
     "cloze": "{{c1::Bien que}} les plateformes aient publié de nouveaux rapports, aucune donnée brute ne permet aux chercheurs de vérifier les progrès qu'elles revendiquent.",
-    "note": "Materially corrects old_back by choosing factual concession plus subjunctive rather than même si plus indicative."
+    "note": "Chooses bien que for a factual written concession; self-review notes that legacy même si can also mean 'even though' in some contexts but takes the indicative."
   },
   {
     "id": "frc202",
@@ -97,7 +97,7 @@
     "tl": "Dans la plupart des cas",
     "alts": [],
     "register": "Neutral; explicitly quantifies a recurring outcome by cases rather than by time.",
-    "trap": "La plupart requires de before its noun; do not use dans les plus des cas or omit the contraction in des.",
+    "trap": "After la plupart, use de: la plupart des cas; with people, say la plupart d'entre eux, not la plupart d'eux.",
     "example_tl": "Dans la plupart des cas, les utilisateurs ignorent qu'une décision automatisée a limité la visibilité de leurs publications politiques.",
     "example_en": "In most cases, users do not know that an automated decision has limited the visibility of their political posts.",
     "cloze": "{{c1::Dans la plupart des cas}}, les utilisateurs ignorent qu'une décision automatisée a limité la visibilité de leurs publications politiques.",
@@ -125,7 +125,7 @@
     "register": "Neutral and concise; natural in serious speech and moderately formal commentary.",
     "trap": "The English image of a nutshell is not carried into French; en deux mots is idiomatic even when the summary contains more than two words.",
     "example_tl": "En deux mots, le projet privatise le contrôle des infrastructures tout en faisant supporter leur coût aux collectivités publiques.",
-    "example_en": "In a nutshell, the proposal privatizes control of infrastructure while making public authorities bear its cost.",
+    "example_en": "In a nutshell, the proposal privatizes control of infrastructure while making public authorities bear the cost.",
     "cloze": "{{c1::En deux mots}}, le projet privatise le contrôle des infrastructures tout en faisant supporter leur coût aux collectivités publiques.",
     "note": ""
   },
@@ -215,10 +215,10 @@
     "alts": [],
     "register": "Neutral-formal; isolates the dimension along which an assessment is being made.",
     "trap": "En termes de is often overused under English influence; reserve it for actual terminology or quantified formulation, and use sur le plan de for a dimension.",
-    "example_tl": "Sur le plan de la transparence, le règlement progresse, mais il reste très insuffisant quant au contrôle des décisions automatisées.",
-    "example_en": "In terms of transparency, the regulation makes progress, but remains highly inadequate regarding oversight of automated decisions.",
-    "cloze": "{{c1::Sur le plan de}} la transparence, le règlement progresse, mais il reste très insuffisant quant au contrôle des décisions automatisées.",
-    "note": "The broad English prompt is resolved to evaluation along a dimension."
+    "example_tl": "Sur le plan de la transparence, le règlement marque un progrès, mais il reste largement insuffisant quant au contrôle des décisions automatisées.",
+    "example_en": "In terms of transparency, the regulation marks progress, but remains seriously inadequate regarding oversight of automated decisions.",
+    "cloze": "{{c1::Sur le plan de}} la transparence, le règlement marque un progrès, mais il reste largement insuffisant quant au contrôle des décisions automatisées.",
+    "note": "The prompt is resolved to evaluation along a dimension. Self-review replaced the calqued le règlement progresse with marque un progrès."
   },
   {
     "id": "frc243",
@@ -228,15 +228,15 @@
     "alts": ["En ce qui concerne"],
     "register": "Written-formal; narrows the discussion to a defined topic.",
     "trap": "S'agissant is an impersonal present participle fixed in this frame; do not make it agree with the following noun.",
-    "example_tl": "S'agissant de la gouvernance des données, le projet ne précise ni qui nommera les experts ni comment leurs conflits seront contrôlés.",
-    "example_en": "Regarding data governance, the proposal specifies neither who will appoint the experts nor how their conflicts will be monitored.",
-    "cloze": "{{c1::S'agissant de}} la gouvernance des données, le projet ne précise ni qui nommera les experts ni comment leurs conflits seront contrôlés.",
-    "note": ""
+    "example_tl": "S'agissant de la gouvernance des données, le projet ne précise ni qui nommera les experts ni comment leurs conflits d'intérêts seront encadrés.",
+    "example_en": "Regarding data governance, the proposal specifies neither who will appoint the experts nor how their conflicts of interest will be managed.",
+    "cloze": "{{c1::S'agissant de}} la gouvernance des données, le projet ne précise ni qui nommera les experts ni comment leurs conflits d'intérêts seront encadrés.",
+    "note": "Self-review replaced the vague leurs conflits seront contrôlés with the idiomatic conflits d'intérêts seront encadrés."
   },
   {
     "id": "frc245",
     "en": "The fact that",
-    "category": "stance",
+    "category": "structuring",
     "tl": "Le fait que",
     "alts": [],
     "register": "Neutral; nominalizes a complete proposition so it can serve as a subject or object.",
@@ -244,7 +244,7 @@
     "example_tl": "Le fait que seules les plateformes ont accès aux données empêche les chercheurs de vérifier indépendamment les résultats qu'elles publient.",
     "example_en": "The fact that only the platforms have access to the data prevents researchers from independently verifying the results they publish.",
     "cloze": "{{c1::Le fait que}} seules les plateformes ont accès aux données empêche les chercheurs de vérifier indépendamment les résultats qu'elles publient.",
-    "note": "The asserted fact deliberately takes indicative ont, visibly contrasting with subjunctive aient in non-assertive contexts."
+    "note": "The asserted fact takes indicative ont, contrasting with subjunctive aient in non-assertive contexts. Self-review classified this nominalizing frame as structuring, not stance."
   },
   {
     "id": "frc249",
@@ -263,14 +263,14 @@
     "id": "frc251",
     "en": "To break it down",
     "category": "reformulation",
-    "tl": "Concrètement",
+    "tl": "Si l'on décompose le problème",
     "alts": [],
-    "register": "Neutral; moves from an abstract claim to its practical components or implications.",
-    "trap": "Décomposer is appropriate for literally decomposing an object or analysis; as a discourse move, concrètement is usually more idiomatic.",
-    "example_tl": "Concrètement, le régulateur devra examiner les données d'entraînement, les critères de classement et les procédures internes de recours des plateformes.",
+    "register": "Neutral; explicitly announces that the argument will be separated into its practical components.",
+    "trap": "Bare pour décomposer leaves its object unstated; the complete frame si l'on décompose le problème makes the analytical operation explicit.",
+    "example_tl": "Si l'on décompose le problème, le régulateur doit examiner les données d'entraînement, les critères de classement et les procédures internes de recours des plateformes.",
     "example_en": "To break it down, the regulator will have to examine training data, ranking criteria, and the platforms' internal appeal procedures.",
-    "cloze": "{{c1::Concrètement}}, le régulateur devra examiner les données d'entraînement, les critères de classement et les procédures internes de recours des plateformes.",
-    "note": "Materially recasts the literal legacy infinitive as a natural move from abstraction to detail."
+    "cloze": "{{c1::Si l'on décompose le problème}}, le régulateur doit examiner les données d'entraînement, les critères de classement et les procédures internes de recours des plateformes.",
+    "note": "Self-review replaced loose Concrètement with a complete frame that explicitly preserves the source's decomposition metaphor."
   },
   {
     "id": "frc255",
@@ -280,36 +280,23 @@
     "alts": ["Soyons clairs"],
     "register": "Neutral and direct; suitable for forceful clarification in commentary.",
     "trap": "Pour l'expliquer clairement means 'to explain it clearly' and describes manner; pour le dire clairement frames the wording of a proposition.",
-    "example_tl": "Pour le dire clairement, aucune réforme crédible ne peut confier aux entreprises contrôlées le soin de définir seules les preuves recevables.",
+    "example_tl": "Pour le dire clairement : aucune réforme crédible ne peut confier aux entreprises contrôlées le soin de définir seules les preuves recevables.",
     "example_en": "To put it clearly, no credible reform can let the regulated companies alone define what counts as admissible evidence.",
-    "cloze": "{{c1::Pour le dire clairement}}, aucune réforme crédible ne peut confier aux entreprises contrôlées le soin de définir seules les preuves recevables.",
-    "note": "Materially corrects the explanatory rather than formulation-focused legacy phrase."
-  },
-  {
-    "id": "frc257",
-    "en": "To simplify",
-    "category": "reformulation",
-    "tl": "Pour simplifier",
-    "alts": [],
-    "register": "Neutral; announces a deliberate reduction of complexity rather than a complete account.",
-    "trap": "As a detached discourse infinitive, pour simplifier states the speaker's purpose; bare simplifier reads like an instruction or dictionary headword.",
-    "example_tl": "Pour simplifier, le système transforme des comportements complexes en scores que les administrations utilisent ensuite pour distribuer des droits sociaux.",
-    "example_en": "To simplify, the system turns complex behavior into scores that public administrations then use to distribute social rights.",
-    "cloze": "{{c1::Pour simplifier}}, le système transforme des comportements complexes en scores que les administrations utilisent ensuite pour distribuer des droits sociaux.",
-    "note": "Expands the legacy bare infinitive into a complete discourse frame."
+    "cloze": "{{c1::Pour le dire clairement}} : aucune réforme crédible ne peut confier aux entreprises contrôlées le soin de définir seules les preuves recevables.",
+    "note": "Materially corrects the explanatory legacy phrase. Self-review used a colon so Soyons clairs remains directly substitutable."
   },
   {
     "id": "frc273",
     "en": "in contrast",
     "category": "contrast",
     "tl": "En revanche",
-    "alts": ["À l'inverse"],
+    "alts": [],
     "register": "Neutral; juxtaposes a contrasting case without necessarily rejecting the preceding claim.",
     "trap": "Au contraire refutes or reverses a claim; en revanche merely introduces a contrasting fact or property.",
     "example_tl": "En revanche, les médias indépendants supportent des coûts de conformité élevés sans bénéficier des données qui permettraient de contester les décisions automatisées.",
     "example_en": "In contrast, independent media bear high compliance costs without receiving the data that would allow them to challenge automated decisions.",
     "cloze": "{{c1::En revanche}}, les médias indépendants supportent des coûts de conformité élevés sans bénéficier des données qui permettraient de contester les décisions automatisées.",
-    "note": "Materially corrects old_back by separating contrast from direct refutation."
+    "note": "Materially corrects old_back by separating contrast from direct refutation. Self-review removed À l'inverse so this card remains distinct from logical reversal in frc295."
   },
   {
     "id": "frc274",
@@ -355,13 +342,13 @@
     "en": "I firmly believe that...",
     "category": "stance",
     "tl": "J'ai la conviction que",
-    "alts": ["Je suis convaincu que"],
-    "register": "Formal and assertive; the main frame avoids marking the speaker's gender.",
-    "trap": "Je suis convaincu must agree with the speaker, convaincue for a woman; j'ai la conviction que is gender-neutral.",
+    "alts": ["Je crois fermement que"],
+    "register": "Formal and assertive; the main frame is slightly more institutional than je crois fermement que.",
+    "trap": "Place the adverb after the finite verb: je crois fermement, not the English-influenced je fermement crois.",
     "example_tl": "J'ai la conviction que la souveraineté numérique restera un slogan tant que les administrations dépendront entièrement de fournisseurs étrangers.",
     "example_en": "I firmly believe that digital sovereignty will remain a slogan as long as public administrations depend entirely on foreign suppliers.",
     "cloze": "{{c1::J'ai la conviction que}} la souveraineté numérique restera un slogan tant que les administrations dépendront entièrement de fournisseurs étrangers.",
-    "note": "The natural legacy Je crois fermement que remains valid; the main rendering provides a more formal, gender-neutral stance frame."
+    "note": "The natural legacy Je crois fermement que is retained as an alternative; the trap targets the learner's documented adverb-placement interference."
   },
   {
     "id": "frc284",
@@ -397,10 +384,10 @@
     "alts": [],
     "register": "Neutral-formal; challenges a widely repeated assumption in commentary or analysis.",
     "trap": "Croyance populaire often suggests folklore or a folk belief; idée reçue is the idiomatic term for a conventional misconception.",
-    "example_tl": "Contrairement à une idée reçue, les systèmes ouverts n'empêchent pas l'innovation ; ils réduisent surtout la dépendance envers un fournisseur unique.",
+    "example_tl": "Contrairement à une idée reçue, les systèmes ouverts n'empêchent pas l'innovation ; ils réduisent surtout la dépendance à l'égard d'un fournisseur unique.",
     "example_en": "Contrary to popular belief, open systems do not prevent innovation; they mainly reduce dependence on a single provider.",
-    "cloze": "{{c1::Contrairement à une idée reçue}}, les systèmes ouverts n'empêchent pas l'innovation ; ils réduisent surtout la dépendance envers un fournisseur unique.",
-    "note": "Materially replaces the literal legacy collocation with the idiomatic France-French frame."
+    "cloze": "{{c1::Contrairement à une idée reçue}}, les systèmes ouverts n'empêchent pas l'innovation ; ils réduisent surtout la dépendance à l'égard d'un fournisseur unique.",
+    "note": "Materially replaces the literal legacy collocation. Self-review uses the idiomatic dépendance à l'égard de."
   },
   {
     "id": "frc289",
@@ -410,10 +397,10 @@
     "alts": [],
     "register": "Written-formal; si has a concessive force here, and pour ma part marks the writer's counter-position.",
     "trap": "Sentence-initial si can mean 'although/while' in formal argument, not only 'if'; the two arms should present genuinely opposed claims.",
-    "example_tl": "Si beaucoup soutiennent que la modération automatisée est neutre, je considère pour ma part qu'elle reproduit des choix politiques contestables.",
-    "example_en": "While many argue that automated moderation is neutral, I contend that it reproduces contestable political choices.",
-    "cloze": "{{c1::Si beaucoup soutiennent que}} la modération automatisée est neutre, {{c1::je considère pour ma part que}} qu'elle reproduit des choix politiques contestables.",
-    "note": "Materially recasts the literal legacy alors que frame and separately clozes both argumentative arms."
+    "example_tl": "Si beaucoup soutiennent que la modération automatisée est neutre, je considère pour ma part que ces systèmes reproduisent des choix politiques contestables.",
+    "example_en": "While many argue that automated moderation is neutral, I contend that these systems reproduce contestable political choices.",
+    "cloze": "{{c1::Si beaucoup soutiennent que}} la modération automatisée est neutre, {{c1::je considère pour ma part que}} ces systèmes reproduisent des choix politiques contestables.",
+    "note": "Materially recasts the literal legacy alors que frame. Self-review removed an elision boundary so both fixed arms cloze cleanly."
   },
   {
     "id": "frc290",
@@ -423,10 +410,10 @@
     "alts": [],
     "register": "Written-formal; presents substantial support without claiming certainty.",
     "trap": "Plaider en faveur de is the idiomatic argumentative collocation; faire un cas fort pour is an English calque.",
-    "example_tl": "De solides arguments plaident en faveur de ce financement public, notamment la nécessité de préserver des infrastructures essentielles hors des monopoles privés.",
-    "example_en": "There is a strong case for this public funding, notably the need to keep essential infrastructure outside private monopolies.",
-    "cloze": "{{c1::De solides arguments plaident en faveur de}} ce financement public, notamment la nécessité de préserver des infrastructures essentielles hors des monopoles privés.",
-    "note": "The demonstrative complement avoids splitting the de contraction in the cloze."
+    "example_tl": "De solides arguments plaident en faveur de ce financement public, notamment la nécessité de maintenir les infrastructures essentielles à l'écart des monopoles privés.",
+    "example_en": "There is a strong case for this public funding, notably the need to keep essential infrastructure away from private monopolies.",
+    "cloze": "{{c1::De solides arguments plaident en faveur de}} ce financement public, notamment la nécessité de maintenir les infrastructures essentielles à l'écart des monopoles privés.",
+    "note": "The demonstrative avoids splitting a contraction. Self-review replaced préserver hors de with maintenir à l'écart de."
   },
   {
     "id": "frc291",
@@ -436,23 +423,23 @@
     "alts": [],
     "register": "Neutral-formal and assertive; presents the proposition as a logical expectation.",
     "trap": "Que does not automatically require the subjunctive: affirmative il va de soi que normally takes the indicative when asserting an evident fact.",
-    "example_tl": "Il va de soi que les autorités ont besoin de compétences techniques propres pour contrôler efficacement les systèmes qu'elles réglementent.",
+    "example_tl": "Il va de soi que les autorités ont besoin de leurs propres compétences techniques pour contrôler efficacement les systèmes qu'elles réglementent.",
     "example_en": "It stands to reason that authorities need their own technical expertise to oversee effectively the systems they regulate.",
-    "cloze": "{{c1::Il va de soi que}} les autorités ont besoin de compétences techniques propres pour contrôler efficacement les systèmes qu'elles réglementent.",
-    "note": "The indicative ont visibly contrasts with a mechanically imposed subjunctive aient."
+    "cloze": "{{c1::Il va de soi que}} les autorités ont besoin de leurs propres compétences techniques pour contrôler efficacement les systèmes qu'elles réglementent.",
+    "note": "The indicative ont contrasts with subjunctive aient. Self-review clarified 'their own' as leurs propres compétences techniques."
   },
   {
     "id": "frc292",
     "en": "It's worth pointing out that...",
     "category": "stance",
-    "tl": "Il importe de souligner que",
+    "tl": "Il convient de souligner que",
     "alts": [],
-    "register": "Written-formal; marks the following observation as significant without using a personal voice.",
-    "trap": "Cela vaut la peine de souligner is possible but often heavy here; il importe de souligner is the conventional analytical frame.",
-    "example_tl": "Il importe de souligner que cette estimation exclut les dépenses assumées par les collectivités pour adapter leurs services aux nouvelles normes.",
+    "register": "Written-formal; marks the observation as worth attention without overstating its importance.",
+    "trap": "Cela vaut la peine de souligner is possible but heavy; il convient de souligner is the conventional impersonal analytical frame.",
+    "example_tl": "Il convient de souligner que cette estimation exclut les dépenses supportées par les collectivités pour adapter leurs services aux nouvelles normes.",
     "example_en": "It is worth pointing out that this estimate excludes the expenditure borne by local authorities to adapt their services to the new standards.",
-    "cloze": "{{c1::Il importe de souligner que}} cette estimation exclut les dépenses assumées par les collectivités pour adapter leurs services aux nouvelles normes.",
-    "note": ""
+    "cloze": "{{c1::Il convient de souligner que}} cette estimation exclut les dépenses supportées par les collectivités pour adapter leurs services aux nouvelles normes.",
+    "note": "Self-review chose convient rather than stronger importe and replaced dépenses assumées with the established dépenses supportées."
   },
   {
     "id": "frc293",
@@ -471,14 +458,14 @@
     "id": "frc294",
     "en": "One might reasonably conclude...",
     "category": "result",
-    "tl": "On peut raisonnablement en conclure que",
+    "tl": "On pourrait raisonnablement en conclure que",
     "alts": [],
     "register": "Neutral-formal; draws a cautious inference from evidence already presented.",
     "trap": "The clitic en encodes 'from this evidence'; without it, conclure que remains grammatical but loses the explicit backward link.",
-    "example_tl": "On peut raisonnablement en conclure que les contrôles volontaires n'ont pas réduit le pouvoir structurel des plateformes dominantes.",
+    "example_tl": "On pourrait raisonnablement en conclure que les contrôles volontaires n'ont pas réduit le pouvoir structurel des plateformes dominantes.",
     "example_en": "One might reasonably conclude that voluntary controls have not reduced the structural power of dominant platforms.",
-    "cloze": "{{c1::On peut raisonnablement en conclure que}} les contrôles volontaires n'ont pas réduit le pouvoir structurel des plateformes dominantes.",
-    "note": "Materially adds the backward-linking en absent from the generic legacy phrase."
+    "cloze": "{{c1::On pourrait raisonnablement en conclure que}} les contrôles volontaires n'ont pas réduit le pouvoir structurel des plateformes dominantes.",
+    "note": "Materially adds backward-linking en; self-review changed peut to conditional pourrait to preserve the English hedge."
   },
   {
     "id": "frc295",
@@ -488,10 +475,10 @@
     "alts": ["À l'inverse"],
     "register": "Written-formal; introduces the reverse relationship rather than merely a different case.",
     "trap": "Au contraire rejects a claim; inversement reverses the direction of a relationship or inference.",
-    "example_tl": "Inversement, une obligation d'interopérabilité bien conçue permettrait aux petits acteurs d'accéder au marché sans reproduire toutes les infrastructures existantes.",
-    "example_en": "Conversely, a well-designed interoperability requirement would allow smaller players to enter the market without replicating all existing infrastructure.",
-    "cloze": "{{c1::Inversement}}, une obligation d'interopérabilité bien conçue permettrait aux petits acteurs d'accéder au marché sans reproduire toutes les infrastructures existantes.",
-    "note": ""
+    "example_tl": "La concentration accroît la dépendance des utilisateurs ; inversement, l'interopérabilité renforcerait leur capacité à changer librement de fournisseur.",
+    "example_en": "Concentration increases users' dependence; conversely, interoperability would strengthen their ability to switch providers freely.",
+    "cloze": "La concentration accroît la dépendance des utilisateurs ; {{c1::inversement}}, l'interopérabilité renforcerait leur capacité à changer librement de fournisseur.",
+    "note": "Self-review added the first relationship so the example genuinely reverses its direction rather than merely introducing a different case."
   },
   {
     "id": "frc297",
@@ -500,24 +487,24 @@
     "tl": "au vu des éléments disponibles… on peut avancer que",
     "alts": [],
     "register": "Written-formal; cautiously grounds a proposed inference in the available evidence.",
-    "trap": "Se baser sur les preuves is often translated and overly absolute; se fonder sur des éléments or au vu des éléments is more idiomatic and calibrated.",
-    "example_tl": "Au vu des éléments disponibles, on peut avancer que la réforme a surtout déplacé les coûts de contrôle vers les collectivités publiques.",
+    "trap": "In formal France French, prefer se fonder sur to se baser sur; éléments disponibles is also better calibrated here than categorical preuves.",
+    "example_tl": "Au vu des éléments disponibles, on peut avancer que la réforme a surtout reporté les coûts de contrôle sur les collectivités publiques.",
     "example_en": "Drawing upon the available evidence, one might suggest that the reform mainly shifted oversight costs onto public authorities.",
-    "cloze": "{{c1::Au vu des éléments disponibles}}, {{c1::on peut avancer que}} la réforme a surtout déplacé les coûts de contrôle vers les collectivités publiques.",
-    "note": "Materially replaces the legacy baser calque and clozes both the evidential and inferential arms."
+    "cloze": "{{c1::Au vu des éléments disponibles}}, {{c1::on peut avancer que}} la réforme a surtout reporté les coûts de contrôle sur les collectivités publiques.",
+    "note": "Materially replaces the legacy baser calque. Self-review uses reporter les coûts sur; both fixed arms remain clozed."
   },
   {
     "id": "frc298",
     "en": "Although there's some truth in..., it's crucial to remember that...",
     "category": "concession",
-    "tl": "s'il est vrai que… il ne faut pas oublier que",
+    "tl": "s'il y a une part de vérité dans l'idée que… il ne faut pas oublier que",
     "alts": [],
     "register": "Written-formal; concedes part of an argument before restoring a decisive counter-consideration.",
-    "trap": "Formal concessive si means 'although' here, not a condition; both arms need complete, genuinely opposed propositions.",
-    "example_tl": "S'il est vrai que la réforme accroît la transparence, il ne faut pas oublier qu'elle laisse les sanctions aux mêmes autorités sous-financées.",
-    "example_en": "Although there is some truth in claims that the reform increases transparency, it is crucial to remember that it leaves sanctions to the same underfunded authorities.",
-    "cloze": "{{c1::S'il est vrai que}} la réforme accroît la transparence, {{c1::il ne faut pas oublier que}} qu'elle laisse les sanctions aux mêmes autorités sous-financées.",
-    "note": "The verbose source frame is compressed into an idiomatic paired concession, with both fixed arms clozed."
+    "trap": "The first arm concedes only partial truth, not the entire claim; both arms still need complete and genuinely opposed propositions.",
+    "example_tl": "S'il y a une part de vérité dans l'idée que la réforme accroît la transparence, il ne faut pas oublier que les autorités sous-financées appliqueront les sanctions.",
+    "example_en": "Although there is some truth in the idea that the reform increases transparency, it is crucial to remember that underfunded authorities will enforce the penalties.",
+    "cloze": "{{c1::S'il y a une part de vérité dans l'idée que}} la réforme accroît la transparence, {{c1::il ne faut pas oublier que}} les autorités sous-financées appliqueront les sanctions.",
+    "note": "Self-review restored the partial concession and replaced the awkward laisser les sanctions construction; both fixed arms cloze cleanly."
   },
   {
     "id": "frc299",
@@ -540,9 +527,9 @@
     "alts": ["Il est difficile de nier que"],
     "register": "Written-formal and emphatic; presents acknowledgment as compelled by the evidence.",
     "trap": "Force est de is a fixed impersonal frame with no article before force; it is stronger than merely saying a claim is plausible.",
-    "example_tl": "Force est de reconnaître que les engagements volontaires n'ont pas empêché les plateformes de renforcer leur contrôle sur la distribution des informations.",
-    "example_en": "It is hard to deny that voluntary commitments have not prevented platforms from strengthening their control over information distribution.",
-    "cloze": "{{c1::Force est de reconnaître que}} les engagements volontaires n'ont pas empêché les plateformes de renforcer leur contrôle sur la distribution des informations.",
-    "note": "Uses a more idiomatic columnist's frame than the accurate but literal old_back; the register difference is explicit."
+    "example_tl": "Force est de reconnaître que les engagements volontaires ont permis aux plateformes de renforcer leur contrôle sur la distribution des informations.",
+    "example_en": "It is hard to deny that voluntary commitments have allowed platforms to strengthen their control over information distribution.",
+    "cloze": "{{c1::Force est de reconnaître que}} les engagements volontaires ont permis aux plateformes de renforcer leur contrôle sur la distribution des informations.",
+    "note": "Uses a columnist's frame rather than literal old_back. Self-review removed a nested negative so the alternative remains natural in the exact example."
   }
 ]

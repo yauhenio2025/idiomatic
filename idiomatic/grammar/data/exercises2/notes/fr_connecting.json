@@ -1403,5 +1403,1325 @@
     "example_en": "Be that as it may, Parliament cannot approve this agreement without precise safeguards on data access and judicial oversight.",
     "cloze": "{{c1::Quoi qu'il en soit}}, le Parlement ne peut approuver cet accord sans garanties précises sur l'accès aux données et le contrôle judiciaire.",
     "note": "Kept separately from frc165 because this prompt teaches the neutral full concessive idiom, while frc165 uses a marked legal-administrative frame."
+  },
+  {
+    "id": "frc201",
+    "en": "Even though",
+    "category": "concession",
+    "tl": "Bien que",
+    "alts": [
+      "Quoique"
+    ],
+    "register": "Neutral; standard for a factual clausal concession in careful speech and writing.",
+    "trap": "Bien que takes the subjunctive; même si takes the indicative and more readily presents a hypothetical concession.",
+    "example_tl": "Bien que les plateformes aient publié de nouveaux rapports, aucune donnée brute ne permet aux chercheurs de vérifier les progrès qu'elles revendiquent.",
+    "example_en": "Even though the platforms have published new reports, no raw data allows researchers to verify the progress they claim.",
+    "cloze": "{{c1::Bien que}} les plateformes aient publié de nouveaux rapports, aucune donnée brute ne permet aux chercheurs de vérifier les progrès qu'elles revendiquent.",
+    "note": "Chooses bien que for a factual written concession; self-review notes that legacy même si can also mean 'even though' in some contexts but takes the indicative."
+  },
+  {
+    "id": "frc202",
+    "en": "In spite of",
+    "category": "concession",
+    "tl": "En dépit de",
+    "alts": [
+      "Malgré"
+    ],
+    "register": "Written-formal; malgré is the neutral alternative across registers.",
+    "trap": "En dépit de takes a noun phrase; before a finite clause use bien que plus subjunctive, not en dépit que.",
+    "example_tl": "En dépit de ces garanties annoncées, le dispositif permet toujours aux services publics de conserver des données sans justification individualisée.",
+    "example_en": "In spite of these announced safeguards, the system still allows public services to retain data without individualized justification.",
+    "cloze": "{{c1::En dépit de}} ces garanties annoncées, le dispositif permet toujours aux services publics de conserver des données sans justification individualisée.",
+    "note": "The demonstrative noun phrase keeps both the main connector and its alternative directly substitutable without a contraction change."
+  },
+  {
+    "id": "frc203",
+    "en": "Regardless of this",
+    "category": "concession",
+    "tl": "Malgré cela",
+    "alts": [
+      "Quoi qu'il en soit"
+    ],
+    "register": "Neutral; an explicit concessive pivot referring back to the preceding obstacle or reservation.",
+    "trap": "Sans regard pour cela is a literal calque; malgré cela concedes the preceding point, while indépendamment de cela means separately from it.",
+    "example_tl": "Malgré cela, la commission envisage de renouveler l'accord avant même que l'évaluation indépendante de ses effets ne soit publiée.",
+    "example_en": "Regardless of this, the commission is considering renewing the agreement before the independent assessment of its effects is even published.",
+    "cloze": "{{c1::Malgré cela}}, la commission envisage de renouveler l'accord avant même que l'évaluation indépendante de ses effets ne soit publiée.",
+    "note": "The legacy En dépit de cela is valid but heavier; the main rendering is more natural as a discourse pivot."
+  },
+  {
+    "id": "frc204",
+    "en": "Up to a point",
+    "category": "concession",
+    "tl": "Dans une certaine mesure",
+    "alts": [
+      "Jusqu'à un certain point"
+    ],
+    "register": "Neutral-formal; a measured hedge common in analysis and debate.",
+    "trap": "Dans une certaine mesure qualifies the validity of a claim; jusqu'à un certain point can also evoke a literal endpoint in other contexts.",
+    "example_tl": "Dans une certaine mesure, cette critique est fondée, mais elle néglige les contraintes juridiques auxquelles les autorités nationales restent soumises.",
+    "example_en": "Up to a point, this criticism is justified, but it overlooks the legal constraints to which national authorities remain subject.",
+    "cloze": "{{c1::Dans une certaine mesure}}, cette critique est fondée, mais elle néglige les contraintes juridiques auxquelles les autorités nationales restent soumises.",
+    "note": ""
+  },
+  {
+    "id": "frc205",
+    "en": "As a rule",
+    "category": "generalization",
+    "tl": "En règle générale",
+    "alts": [
+      "D'ordinaire"
+    ],
+    "register": "Neutral; states a usual pattern while leaving room for exceptions.",
+    "trap": "En règle générale is a fixed generalization marker; règle does not refer here to a specific regulation or formal legal rule.",
+    "example_tl": "En règle générale, les autorités interviennent trop tard pour empêcher que les pratiques contestées ne deviennent la norme du marché.",
+    "example_en": "As a rule, authorities intervene too late to prevent disputed practices from becoming the market norm.",
+    "cloze": "{{c1::En règle générale}}, les autorités interviennent trop tard pour empêcher que les pratiques contestées ne deviennent la norme du marché.",
+    "note": ""
+  },
+  {
+    "id": "frc206",
+    "en": "Broadly speaking",
+    "category": "generalization",
+    "tl": "Globalement",
+    "alts": [
+      "Dans les grandes lignes"
+    ],
+    "register": "Neutral; offers a broad assessment without claiming that every detail supports it.",
+    "trap": "Largement parlant is an English calque; globalement evaluates the overall picture, while largement usually modifies degree inside a clause.",
+    "example_tl": "Globalement, le dispositif renforce la transparence sans modifier les rapports de force qui permettent aux plateformes d'imposer leurs propres normes.",
+    "example_en": "Broadly speaking, the system strengthens transparency without changing the power relations that allow platforms to impose their own standards.",
+    "cloze": "{{c1::Globalement}}, le dispositif renforce la transparence sans modifier les rapports de force qui permettent aux plateformes d'imposer leurs propres normes.",
+    "note": ""
+  },
+  {
+    "id": "frc208",
+    "en": "For the most part",
+    "category": "generalization",
+    "tl": "Pour l'essentiel",
+    "alts": [
+      "En grande partie"
+    ],
+    "register": "Neutral-formal; identifies what accounts for the main substance or share of a phenomenon.",
+    "trap": "Pour la plupart normally refers to a previously identified plural set; pour l'essentiel can summarize the main substance of a proposition.",
+    "example_tl": "Pour l'essentiel, les nouvelles obligations reprennent des engagements que les grandes plateformes avaient déjà annoncés sans calendrier contraignant.",
+    "example_en": "For the most part, the new obligations repeat commitments that the large platforms had already announced without a binding timetable.",
+    "cloze": "{{c1::Pour l'essentiel}}, les nouvelles obligations reprennent des engagements que les grandes plateformes avaient déjà annoncés sans calendrier contraignant.",
+    "note": ""
+  },
+  {
+    "id": "frc210",
+    "en": "In most cases",
+    "category": "generalization",
+    "tl": "Dans la plupart des cas",
+    "alts": [],
+    "register": "Neutral; explicitly quantifies a recurring outcome by cases rather than by time.",
+    "trap": "After la plupart, use de: la plupart des cas; with people, say la plupart d'entre eux, not la plupart d'eux.",
+    "example_tl": "Dans la plupart des cas, les utilisateurs ignorent qu'une décision automatisée a limité la visibilité de leurs publications politiques.",
+    "example_en": "In most cases, users do not know that an automated decision has limited the visibility of their political posts.",
+    "cloze": "{{c1::Dans la plupart des cas}}, les utilisateurs ignorent qu'une décision automatisée a limité la visibilité de leurs publications politiques.",
+    "note": ""
+  },
+  {
+    "id": "frc212",
+    "en": "More often than not",
+    "category": "generalization",
+    "tl": "Le plus souvent",
+    "alts": [
+      "La plupart du temps"
+    ],
+    "register": "Neutral; describes the usual outcome while allowing recurring exceptions.",
+    "trap": "Le plus souvent is a fixed frequency superlative with the article le; plus souvent alone is merely comparative, 'more often'.",
+    "example_tl": "Le plus souvent, les sanctions arrivent plusieurs années après les infractions et ne modifient donc guère les stratégies commerciales des entreprises.",
+    "example_en": "More often than not, penalties arrive several years after the offenses and therefore barely alter companies' commercial strategies.",
+    "cloze": "{{c1::Le plus souvent}}, les sanctions arrivent plusieurs années après les infractions et ne modifient donc guère les stratégies commerciales des entreprises.",
+    "note": "The example correctly uses plusieurs années for an extended period, reinforcing the learner's documented an/année distinction."
+  },
+  {
+    "id": "frc221",
+    "en": "In a nutshell",
+    "category": "reformulation",
+    "tl": "En deux mots",
+    "alts": [
+      "En bref"
+    ],
+    "register": "Neutral and concise; natural in serious speech and moderately formal commentary.",
+    "trap": "The English image of a nutshell is not carried into French; en deux mots is idiomatic even when the summary contains more than two words.",
+    "example_tl": "En deux mots, le projet privatise le contrôle des infrastructures tout en faisant supporter leur coût aux collectivités publiques.",
+    "example_en": "In a nutshell, the proposal privatizes control of infrastructure while making public authorities bear the cost.",
+    "cloze": "{{c1::En deux mots}}, le projet privatise le contrôle des infrastructures tout en faisant supporter leur coût aux collectivités publiques.",
+    "note": ""
+  },
+  {
+    "id": "frc222",
+    "en": "In other words",
+    "category": "reformulation",
+    "tl": "Autrement dit",
+    "alts": [
+      "En d'autres termes"
+    ],
+    "register": "Neutral; standard for restating an implication or making it more explicit.",
+    "trap": "Autrement dit is a fixed past-participle expression; do not make dit agree with the proposition being reformulated.",
+    "example_tl": "Autrement dit, la réforme demande aux citoyens de faire confiance à des systèmes que ni les chercheurs ni les juges ne peuvent examiner.",
+    "example_en": "In other words, the reform asks citizens to trust systems that neither researchers nor judges can examine.",
+    "cloze": "{{c1::Autrement dit}}, la réforme demande aux citoyens de faire confiance à des systèmes que ni les chercheurs ni les juges ne peuvent examiner.",
+    "note": ""
+  },
+  {
+    "id": "frc231",
+    "en": "Simply put",
+    "category": "reformulation",
+    "tl": "Pour le dire simplement",
+    "alts": [
+      "En termes simples"
+    ],
+    "register": "Neutral; explicitly simplifies the formulation without adopting a childish or condescending tone.",
+    "trap": "Simplement dit mirrors English word order and sounds marked; the idiomatic speaker-oriented frame is pour le dire simplement.",
+    "example_tl": "Pour le dire simplement, le mécanisme récompense les entreprises qui produisent le plus de données, indépendamment de leur utilité sociale.",
+    "example_en": "Simply put, the mechanism rewards the companies that produce the most data, regardless of their social usefulness.",
+    "cloze": "{{c1::Pour le dire simplement}}, le mécanisme récompense les entreprises qui produisent le plus de données, indépendamment de leur utilité sociale.",
+    "note": "Materially corrects the translated word order in old_back."
+  },
+  {
+    "id": "frc233",
+    "en": "That is to say",
+    "category": "reformulation",
+    "tl": "c'est-à-dire",
+    "alts": [],
+    "register": "Neutral; specifies the exact content of the preceding expression or proposition.",
+    "trap": "The connector is hyphenated c'est-à-dire; ce veut dire que is a separate finite construction meaning 'that means that'.",
+    "example_tl": "Le texte confie une seule mission au régulateur, c'est-à-dire vérifier si les plateformes respectent leurs propres engagements de transparence.",
+    "example_en": "The text gives the regulator a single task, that is to say, checking whether platforms honor their own transparency commitments.",
+    "cloze": "Le texte confie une seule mission au régulateur, {{c1::c'est-à-dire}} vérifier si les plateformes respectent leurs propres engagements de transparence.",
+    "note": ""
+  },
+  {
+    "id": "frc235",
+    "en": "As applied to",
+    "category": "structuring",
+    "tl": "Appliqué à",
+    "alts": [
+      "Transposé à"
+    ],
+    "register": "Written-formal; introduces the consequences of carrying a principle into a specific domain.",
+    "trap": "Appliqué is a participle and must agree with the principle or rule it modifies; the legacy topic phrase loses the application relation.",
+    "example_tl": "Appliqué à la régulation des plateformes, ce principe obligerait les autorités à publier leurs critères et à justifier chacune de leurs décisions.",
+    "example_en": "As applied to platform regulation, this principle would require authorities to publish their criteria and justify every decision.",
+    "cloze": "{{c1::Appliqué à}} la régulation des plateformes, ce principe obligerait les autorités à publier leurs critères et à justifier chacune de leurs décisions.",
+    "note": "Materially restores the application relation omitted by old_back; masculine appliqué agrees with ce principe."
+  },
+  {
+    "id": "frc239",
+    "en": "Considering",
+    "category": "condition",
+    "tl": "Compte tenu de",
+    "alts": [
+      "Étant donné"
+    ],
+    "register": "Neutral-formal; treats known circumstances as grounds for the following judgment.",
+    "trap": "Considering can mark grounds or a topic; the legacy En ce qui concerne gives only the topic reading and is wrong in this causal use.",
+    "example_tl": "Compte tenu de ces contraintes budgétaires, le régulateur devra concentrer ses contrôles sur les systèmes présentant les risques les plus graves.",
+    "example_en": "Considering these budget constraints, the regulator will have to focus its inspections on the systems posing the greatest risks.",
+    "cloze": "{{c1::Compte tenu de}} ces contraintes budgétaires, le régulateur devra concentrer ses contrôles sur les systèmes présentant les risques les plus graves.",
+    "note": "The prompt is resolved to its causal-circumstantial reading; the example keeps Étant donné directly substitutable."
+  },
+  {
+    "id": "frc240",
+    "en": "In connection to",
+    "category": "structuring",
+    "tl": "En lien avec",
+    "alts": [
+      "En rapport avec"
+    ],
+    "register": "Neutral; standard for a thematic or factual connection in professional prose.",
+    "trap": "En connexion avec is normally technical or literal; for a relationship between issues or investigations, use en lien avec.",
+    "example_tl": "En lien avec cette enquête, plusieurs collectivités ont suspendu leurs contrats avec l'entreprise et demandé un audit indépendant de ses logiciels.",
+    "example_en": "In connection with this investigation, several local authorities suspended their contracts with the company and requested an independent audit of its software.",
+    "cloze": "{{c1::En lien avec}} cette enquête, plusieurs collectivités ont suspendu leurs contrats avec l'entreprise et demandé un audit indépendant de ses logiciels.",
+    "note": "Materially replaces the generic legacy topic phrase with the intended relationship marker."
+  },
+  {
+    "id": "frc241",
+    "en": "In terms of",
+    "category": "structuring",
+    "tl": "Sur le plan de",
+    "alts": [],
+    "register": "Neutral-formal; isolates the dimension along which an assessment is being made.",
+    "trap": "En termes de is often overused under English influence; reserve it for actual terminology or quantified formulation, and use sur le plan de for a dimension.",
+    "example_tl": "Sur le plan de la transparence, le règlement marque un progrès, mais il reste largement insuffisant quant au contrôle des décisions automatisées.",
+    "example_en": "In terms of transparency, the regulation marks progress, but remains seriously inadequate regarding oversight of automated decisions.",
+    "cloze": "{{c1::Sur le plan de}} la transparence, le règlement marque un progrès, mais il reste largement insuffisant quant au contrôle des décisions automatisées.",
+    "note": "The prompt is resolved to evaluation along a dimension. Self-review replaced the calqued le règlement progresse with marque un progrès."
+  },
+  {
+    "id": "frc243",
+    "en": "Regarding",
+    "category": "structuring",
+    "tl": "S'agissant de",
+    "alts": [
+      "En ce qui concerne"
+    ],
+    "register": "Written-formal; narrows the discussion to a defined topic.",
+    "trap": "S'agissant is an impersonal present participle fixed in this frame; do not make it agree with the following noun.",
+    "example_tl": "S'agissant de la gouvernance des données, le projet ne précise ni qui nommera les experts ni comment leurs conflits d'intérêts seront encadrés.",
+    "example_en": "Regarding data governance, the proposal specifies neither who will appoint the experts nor how their conflicts of interest will be managed.",
+    "cloze": "{{c1::S'agissant de}} la gouvernance des données, le projet ne précise ni qui nommera les experts ni comment leurs conflits d'intérêts seront encadrés.",
+    "note": "Self-review replaced the vague leurs conflits seront contrôlés with the idiomatic conflits d'intérêts seront encadrés."
+  },
+  {
+    "id": "frc245",
+    "en": "The fact that",
+    "category": "structuring",
+    "tl": "Le fait que",
+    "alts": [],
+    "register": "Neutral; nominalizes a complete proposition so it can serve as a subject or object.",
+    "trap": "Le fait que does not automatically trigger the subjunctive: the indicative asserts the fact, while evaluation or non-assertion may favor the subjunctive.",
+    "example_tl": "Le fait que seules les plateformes ont accès aux données empêche les chercheurs de vérifier indépendamment les résultats qu'elles publient.",
+    "example_en": "The fact that only the platforms have access to the data prevents researchers from independently verifying the results they publish.",
+    "cloze": "{{c1::Le fait que}} seules les plateformes ont accès aux données empêche les chercheurs de vérifier indépendamment les résultats qu'elles publient.",
+    "note": "The asserted fact takes indicative ont, contrasting with subjunctive aient in non-assertive contexts. Self-review classified this nominalizing frame as structuring, not stance."
+  },
+  {
+    "id": "frc249",
+    "en": "In lay terms",
+    "category": "reformulation",
+    "tl": "Pour le dire sans jargon",
+    "alts": [
+      "En termes non techniques"
+    ],
+    "register": "Neutral-professional; explicitly makes specialist material accessible without becoming patronizing.",
+    "trap": "English lay here means non-specialist, not religiously secular; laïque would be a false-friend mistranslation.",
+    "example_tl": "Pour le dire sans jargon, l'algorithme décide quelles informations deviennent visibles et lesquelles restent pratiquement introuvables pour le public.",
+    "example_en": "In lay terms, the algorithm decides which information becomes visible and which remains practically impossible for the public to find.",
+    "cloze": "{{c1::Pour le dire sans jargon}}, l'algorithme décide quelles informations deviennent visibles et lesquelles restent pratiquement introuvables pour le public.",
+    "note": "Materially replaces the generic legacy simplification phrase with a rendering that captures non-specialist language."
+  },
+  {
+    "id": "frc251",
+    "en": "To break it down",
+    "category": "reformulation",
+    "tl": "Si l'on décompose le problème",
+    "alts": [],
+    "register": "Neutral; explicitly announces that the argument will be separated into its practical components.",
+    "trap": "Bare pour décomposer leaves its object unstated; the complete frame si l'on décompose le problème makes the analytical operation explicit.",
+    "example_tl": "Si l'on décompose le problème, le régulateur doit examiner les données d'entraînement, les critères de classement et les procédures internes de recours des plateformes.",
+    "example_en": "To break it down, the regulator will have to examine training data, ranking criteria, and the platforms' internal appeal procedures.",
+    "cloze": "{{c1::Si l'on décompose le problème}}, le régulateur doit examiner les données d'entraînement, les critères de classement et les procédures internes de recours des plateformes.",
+    "note": "Self-review replaced loose Concrètement with a complete frame that explicitly preserves the source's decomposition metaphor."
+  },
+  {
+    "id": "frc255",
+    "en": "To put it clearly",
+    "category": "reformulation",
+    "tl": "Pour le dire clairement",
+    "alts": [
+      "Soyons clairs"
+    ],
+    "register": "Neutral and direct; suitable for forceful clarification in commentary.",
+    "trap": "Pour l'expliquer clairement means 'to explain it clearly' and describes manner; pour le dire clairement frames the wording of a proposition.",
+    "example_tl": "Pour le dire clairement : aucune réforme crédible ne peut confier aux entreprises contrôlées le soin de définir seules les preuves recevables.",
+    "example_en": "To put it clearly, no credible reform can let the regulated companies alone define what counts as admissible evidence.",
+    "cloze": "{{c1::Pour le dire clairement}} : aucune réforme crédible ne peut confier aux entreprises contrôlées le soin de définir seules les preuves recevables.",
+    "note": "Materially corrects the explanatory legacy phrase. Self-review used a colon so Soyons clairs remains directly substitutable."
+  },
+  {
+    "id": "frc273",
+    "en": "in contrast",
+    "category": "contrast",
+    "tl": "En revanche",
+    "alts": [],
+    "register": "Neutral; juxtaposes a contrasting case without necessarily rejecting the preceding claim.",
+    "trap": "Au contraire refutes or reverses a claim; en revanche merely introduces a contrasting fact or property.",
+    "example_tl": "En revanche, les médias indépendants supportent des coûts de conformité élevés sans bénéficier des données qui permettraient de contester les décisions automatisées.",
+    "example_en": "In contrast, independent media bear high compliance costs without receiving the data that would allow them to challenge automated decisions.",
+    "cloze": "{{c1::En revanche}}, les médias indépendants supportent des coûts de conformité élevés sans bénéficier des données qui permettraient de contester les décisions automatisées.",
+    "note": "Materially corrects old_back by separating contrast from direct refutation. Self-review removed À l'inverse so this card remains distinct from logical reversal in frc295."
+  },
+  {
+    "id": "frc274",
+    "en": "on the contrary",
+    "category": "contrast",
+    "tl": "au contraire",
+    "alts": [
+      "bien au contraire"
+    ],
+    "register": "Neutral and emphatic; explicitly rejects the preceding proposition and asserts its reverse.",
+    "trap": "Do not use au contraire for a mere difference; that non-refutational contrast normally calls for en revanche.",
+    "example_tl": "La surveillance n'a pas diminué après la réforme ; au contraire, les données disponibles montrent qu'elle s'est étendue à de nouveaux secteurs.",
+    "example_en": "Surveillance did not decline after the reform; on the contrary, the available data show that it expanded into new sectors.",
+    "cloze": "La surveillance n'a pas diminué après la réforme ; {{c1::au contraire}}, les données disponibles montrent qu'elle s'est étendue à de nouveaux secteurs.",
+    "note": "Kept as a deliberate minimal functional contrast with frc273."
+  },
+  {
+    "id": "frc277",
+    "en": "interestingly",
+    "category": "stance",
+    "tl": "Fait intéressant",
+    "alts": [],
+    "register": "Neutral-formal journalistic framing; natural before a colon introducing the noteworthy observation.",
+    "trap": "Intéressamment is not the normal sentence adverb here; the legacy Il est intéressant de noter que is valid but needlessly heavy.",
+    "example_tl": "Fait intéressant : les collectivités ayant publié leurs contrats ont obtenu de meilleures conditions que celles qui ont négocié dans le secret.",
+    "example_en": "Interestingly, the local authorities that published their contracts obtained better terms than those that negotiated in secret.",
+    "cloze": "{{c1::Fait intéressant}} : les collectivités ayant publié leurs contrats ont obtenu de meilleures conditions que celles qui ont négocié dans le secret.",
+    "note": "Recasts the verbose legacy clause as a compact native journalistic frame."
+  },
+  {
+    "id": "frc279",
+    "en": "more importantly",
+    "category": "stance",
+    "tl": "Plus important encore",
+    "alts": [
+      "Surtout"
+    ],
+    "register": "Neutral-formal; raises the argumentative weight of the following point.",
+    "trap": "Detached plus important encore is an elliptical evaluation of the proposition; a full nominal le plus important normally requires c'est que.",
+    "example_tl": "Plus important encore, le texte ne garantit pas que les autorités disposeront des compétences nécessaires pour vérifier les modèles les plus complexes.",
+    "example_en": "More importantly, the text does not guarantee that authorities will have the expertise needed to verify the most complex models.",
+    "cloze": "{{c1::Plus important encore}}, le texte ne garantit pas que les autorités disposeront des compétences nécessaires pour vérifier les modèles les plus complexes.",
+    "note": "Materially supplies the missing encore required by the comparative discourse frame."
+  },
+  {
+    "id": "frc283",
+    "en": "I firmly believe that...",
+    "category": "stance",
+    "tl": "J'ai la conviction que",
+    "alts": [
+      "Je crois fermement que"
+    ],
+    "register": "Formal and assertive; the main frame is slightly more institutional than je crois fermement que.",
+    "trap": "Place the adverb after the finite verb: je crois fermement, not the English-influenced je fermement crois.",
+    "example_tl": "J'ai la conviction que la souveraineté numérique restera un slogan tant que les administrations dépendront entièrement de fournisseurs étrangers.",
+    "example_en": "I firmly believe that digital sovereignty will remain a slogan as long as public administrations depend entirely on foreign suppliers.",
+    "cloze": "{{c1::J'ai la conviction que}} la souveraineté numérique restera un slogan tant que les administrations dépendront entièrement de fournisseurs étrangers.",
+    "note": "The natural legacy Je crois fermement que is retained as an alternative; the trap targets the learner's documented adverb-placement interference."
+  },
+  {
+    "id": "frc284",
+    "en": "One cannot overlook the fact that...",
+    "category": "stance",
+    "tl": "Il ne faut pas perdre de vue que",
+    "alts": [
+      "On ne saurait ignorer que"
+    ],
+    "register": "Neutral-formal; emphatically keeps a decisive consideration in view.",
+    "trap": "Négliger le fait que is possible but heavy and literal; perdre de vue que is the idiomatic argumentative warning.",
+    "example_tl": "Il ne faut pas perdre de vue que les mêmes entreprises fournissent les outils, les données et parfois même les évaluateurs.",
+    "example_en": "One cannot overlook the fact that the same companies provide the tools, the data, and sometimes even the evaluators.",
+    "cloze": "{{c1::Il ne faut pas perdre de vue que}} les mêmes entreprises fournissent les outils, les données et parfois même les évaluateurs.",
+    "note": "Materially replaces the literal legacy phrasing with a native argumentative frame."
+  },
+  {
+    "id": "frc285",
+    "en": "In my view...",
+    "category": "stance",
+    "tl": "À mes yeux",
+    "alts": [
+      "Selon moi"
+    ],
+    "register": "Neutral; personal but appropriate in signed commentary and reasoned debate.",
+    "trap": "Dans mon avis is a Romance/English calque; use à mon avis, selon moi, or the slightly more evaluative à mes yeux.",
+    "example_tl": "À mes yeux, une autorité incapable d'accéder aux données brutes ne peut prétendre exercer un contrôle véritablement indépendant.",
+    "example_en": "In my view, an authority unable to access raw data cannot claim to exercise genuinely independent oversight.",
+    "cloze": "{{c1::À mes yeux}}, une autorité incapable d'accéder aux données brutes ne peut prétendre exercer un contrôle véritablement indépendant.",
+    "note": ""
+  },
+  {
+    "id": "frc288",
+    "en": "Contrary to popular belief...",
+    "category": "contrast",
+    "tl": "Contrairement à une idée reçue",
+    "alts": [],
+    "register": "Neutral-formal; challenges a widely repeated assumption in commentary or analysis.",
+    "trap": "Croyance populaire often suggests folklore or a folk belief; idée reçue is the idiomatic term for a conventional misconception.",
+    "example_tl": "Contrairement à une idée reçue, les systèmes ouverts n'empêchent pas l'innovation ; ils réduisent surtout la dépendance à l'égard d'un fournisseur unique.",
+    "example_en": "Contrary to popular belief, open systems do not prevent innovation; they mainly reduce dependence on a single provider.",
+    "cloze": "{{c1::Contrairement à une idée reçue}}, les systèmes ouverts n'empêchent pas l'innovation ; ils réduisent surtout la dépendance à l'égard d'un fournisseur unique.",
+    "note": "Materially replaces the literal legacy collocation. Self-review uses the idiomatic dépendance à l'égard de."
+  },
+  {
+    "id": "frc289",
+    "en": "While many argue that..., I contend that...",
+    "category": "contrast",
+    "tl": "si beaucoup soutiennent que… je considère pour ma part que",
+    "alts": [],
+    "register": "Written-formal; si has a concessive force here, and pour ma part marks the writer's counter-position.",
+    "trap": "Sentence-initial si can mean 'although/while' in formal argument, not only 'if'; the two arms should present genuinely opposed claims.",
+    "example_tl": "Si beaucoup soutiennent que la modération automatisée est neutre, je considère pour ma part que ces systèmes reproduisent des choix politiques contestables.",
+    "example_en": "While many argue that automated moderation is neutral, I contend that these systems reproduce contestable political choices.",
+    "cloze": "{{c1::Si beaucoup soutiennent que}} la modération automatisée est neutre, {{c1::je considère pour ma part que}} ces systèmes reproduisent des choix politiques contestables.",
+    "note": "Materially recasts the literal legacy alors que frame. Self-review removed an elision boundary so both fixed arms cloze cleanly."
+  },
+  {
+    "id": "frc290",
+    "en": "There's a strong case to be made for...",
+    "category": "stance",
+    "tl": "De solides arguments plaident en faveur de",
+    "alts": [],
+    "register": "Written-formal; presents substantial support without claiming certainty.",
+    "trap": "Plaider en faveur de is the idiomatic argumentative collocation; faire un cas fort pour is an English calque.",
+    "example_tl": "De solides arguments plaident en faveur de ce financement public, notamment la nécessité de maintenir les infrastructures essentielles à l'écart des monopoles privés.",
+    "example_en": "There is a strong case for this public funding, notably the need to keep essential infrastructure away from private monopolies.",
+    "cloze": "{{c1::De solides arguments plaident en faveur de}} ce financement public, notamment la nécessité de maintenir les infrastructures essentielles à l'écart des monopoles privés.",
+    "note": "The demonstrative avoids splitting a contraction. Self-review replaced préserver hors de with maintenir à l'écart de."
+  },
+  {
+    "id": "frc291",
+    "en": "It stands to reason that...",
+    "category": "stance",
+    "tl": "Il va de soi que",
+    "alts": [],
+    "register": "Neutral-formal and assertive; presents the proposition as a logical expectation.",
+    "trap": "Que does not automatically require the subjunctive: affirmative il va de soi que normally takes the indicative when asserting an evident fact.",
+    "example_tl": "Il va de soi que les autorités ont besoin de leurs propres compétences techniques pour contrôler efficacement les systèmes qu'elles réglementent.",
+    "example_en": "It stands to reason that authorities need their own technical expertise to oversee effectively the systems they regulate.",
+    "cloze": "{{c1::Il va de soi que}} les autorités ont besoin de leurs propres compétences techniques pour contrôler efficacement les systèmes qu'elles réglementent.",
+    "note": "The indicative ont contrasts with subjunctive aient. Self-review clarified 'their own' as leurs propres compétences techniques."
+  },
+  {
+    "id": "frc292",
+    "en": "It's worth pointing out that...",
+    "category": "stance",
+    "tl": "Il convient de souligner que",
+    "alts": [],
+    "register": "Written-formal; marks the observation as worth attention without overstating its importance.",
+    "trap": "Cela vaut la peine de souligner is possible but heavy; il convient de souligner is the conventional impersonal analytical frame.",
+    "example_tl": "Il convient de souligner que cette estimation exclut les dépenses supportées par les collectivités pour adapter leurs services aux nouvelles normes.",
+    "example_en": "It is worth pointing out that this estimate excludes the expenditure borne by local authorities to adapt their services to the new standards.",
+    "cloze": "{{c1::Il convient de souligner que}} cette estimation exclut les dépenses supportées par les collectivités pour adapter leurs services aux nouvelles normes.",
+    "note": "Self-review chose convient rather than stronger importe and replaced dépenses assumées with the established dépenses supportées."
+  },
+  {
+    "id": "frc293",
+    "en": "I'd argue that...",
+    "category": "stance",
+    "tl": "Je soutiendrais que",
+    "alts": [
+      "J'avancerais que"
+    ],
+    "register": "Neutral-formal; the conditional softens the claim while retaining a clear authorial position.",
+    "trap": "J'argumenterais que is an English lexical calque; French uses soutenir que or avancer que for putting forward a claim.",
+    "example_tl": "Je soutiendrais que la transparence ne suffit pas lorsque les citoyens ne disposent d'aucun moyen réel de contester une décision.",
+    "example_en": "I would argue that transparency is insufficient when citizens have no real means of challenging a decision.",
+    "cloze": "{{c1::Je soutiendrais que}} la transparence ne suffit pas lorsque les citoyens ne disposent d'aucun moyen réel de contester une décision.",
+    "note": ""
+  },
+  {
+    "id": "frc294",
+    "en": "One might reasonably conclude...",
+    "category": "result",
+    "tl": "On pourrait raisonnablement en conclure que",
+    "alts": [],
+    "register": "Neutral-formal; draws a cautious inference from evidence already presented.",
+    "trap": "The clitic en encodes 'from this evidence'; without it, conclure que remains grammatical but loses the explicit backward link.",
+    "example_tl": "On pourrait raisonnablement en conclure que les contrôles volontaires n'ont pas réduit le pouvoir structurel des plateformes dominantes.",
+    "example_en": "One might reasonably conclude that voluntary controls have not reduced the structural power of dominant platforms.",
+    "cloze": "{{c1::On pourrait raisonnablement en conclure que}} les contrôles volontaires n'ont pas réduit le pouvoir structurel des plateformes dominantes.",
+    "note": "Materially adds backward-linking en; self-review changed peut to conditional pourrait to preserve the English hedge."
+  },
+  {
+    "id": "frc295",
+    "en": "Conversely...",
+    "category": "contrast",
+    "tl": "Inversement",
+    "alts": [
+      "À l'inverse"
+    ],
+    "register": "Written-formal; introduces the reverse relationship rather than merely a different case.",
+    "trap": "Au contraire rejects a claim; inversement reverses the direction of a relationship or inference.",
+    "example_tl": "La concentration accroît la dépendance des utilisateurs ; inversement, l'interopérabilité renforcerait leur capacité à changer librement de fournisseur.",
+    "example_en": "Concentration increases users' dependence; conversely, interoperability would strengthen their ability to switch providers freely.",
+    "cloze": "La concentration accroît la dépendance des utilisateurs ; {{c1::inversement}}, l'interopérabilité renforcerait leur capacité à changer librement de fournisseur.",
+    "note": "Self-review added the first relationship so the example genuinely reverses its direction rather than merely introducing a different case."
+  },
+  {
+    "id": "frc297",
+    "en": "Drawing upon the evidence, one might suggest that...",
+    "category": "result",
+    "tl": "au vu des éléments disponibles… on peut avancer que",
+    "alts": [],
+    "register": "Written-formal; cautiously grounds a proposed inference in the available evidence.",
+    "trap": "In formal France French, prefer se fonder sur to se baser sur; éléments disponibles is also better calibrated here than categorical preuves.",
+    "example_tl": "Au vu des éléments disponibles, on peut avancer que la réforme a surtout reporté les coûts de contrôle sur les collectivités publiques.",
+    "example_en": "Drawing upon the available evidence, one might suggest that the reform mainly shifted oversight costs onto public authorities.",
+    "cloze": "{{c1::Au vu des éléments disponibles}}, {{c1::on peut avancer que}} la réforme a surtout reporté les coûts de contrôle sur les collectivités publiques.",
+    "note": "Materially replaces the legacy baser calque. Self-review uses reporter les coûts sur; both fixed arms remain clozed."
+  },
+  {
+    "id": "frc298",
+    "en": "Although there's some truth in..., it's crucial to remember that...",
+    "category": "concession",
+    "tl": "s'il y a une part de vérité dans l'idée que… il ne faut pas oublier que",
+    "alts": [],
+    "register": "Written-formal; concedes part of an argument before restoring a decisive counter-consideration.",
+    "trap": "The first arm concedes only partial truth, not the entire claim; both arms still need complete and genuinely opposed propositions.",
+    "example_tl": "S'il y a une part de vérité dans l'idée que la réforme accroît la transparence, il ne faut pas oublier que les autorités sous-financées appliqueront les sanctions.",
+    "example_en": "Although there is some truth in the idea that the reform increases transparency, it is crucial to remember that underfunded authorities will enforce the penalties.",
+    "cloze": "{{c1::S'il y a une part de vérité dans l'idée que}} la réforme accroît la transparence, {{c1::il ne faut pas oublier que}} les autorités sous-financées appliqueront les sanctions.",
+    "note": "Self-review restored the partial concession and replaced the awkward laisser les sanctions construction; both fixed arms cloze cleanly."
+  },
+  {
+    "id": "frc299",
+    "en": "I have reservations about...",
+    "category": "stance",
+    "tl": "J'émets des réserves quant à",
+    "alts": [
+      "J'ai des réserves sur"
+    ],
+    "register": "Written-formal; a measured way to express substantive concern without categorical rejection.",
+    "trap": "The formal collocation is émettre des réserves quant à; Romance calques such as respecto a or quanto a should not displace quant à.",
+    "example_tl": "J'émets des réserves quant à la capacité du mécanisme proposé à protéger réellement les journalistes contre la surveillance politique.",
+    "example_en": "I have reservations about the proposed mechanism's ability to protect journalists effectively against political surveillance.",
+    "cloze": "{{c1::J'émets des réserves quant à}} la capacité du mécanisme proposé à protéger réellement les journalistes contre la surveillance politique.",
+    "note": "Raises the register relative to the valid but less formal legacy J'ai des réserves sur."
+  },
+  {
+    "id": "frc300",
+    "en": "It's hard to deny that...",
+    "category": "stance",
+    "tl": "Force est de reconnaître que",
+    "alts": [
+      "Il est difficile de nier que"
+    ],
+    "register": "Written-formal and emphatic; presents acknowledgment as compelled by the evidence.",
+    "trap": "Force est de is a fixed impersonal frame with no article before force; it is stronger than merely saying a claim is plausible.",
+    "example_tl": "Force est de reconnaître que les engagements volontaires ont permis aux plateformes de renforcer leur contrôle sur la distribution des informations.",
+    "example_en": "It is hard to deny that voluntary commitments have allowed platforms to strengthen their control over information distribution.",
+    "cloze": "{{c1::Force est de reconnaître que}} les engagements volontaires ont permis aux plateformes de renforcer leur contrôle sur la distribution des informations.",
+    "note": "Uses a columnist's frame rather than literal old_back. Self-review removed a nested negative so the alternative remains natural in the exact example."
+  },
+  {
+    "id": "frc301",
+    "en": "However, a closer look reveals...",
+    "category": "contrast",
+    "tl": "à y regarder de plus près… on constate que",
+    "alts": [],
+    "register": "Written-formal; an idiomatic analytical pivot from an initial appearance to a closer finding.",
+    "trap": "The clitic y refers to the matter under review; do not omit it in this fixed infinitive frame or translate 'look' literally with voir.",
+    "example_tl": "À y regarder de plus près, on constate que la réforme réduit les obligations publiques tout en renforçant les prérogatives des opérateurs privés.",
+    "example_en": "However, a closer look reveals that the reform reduces public obligations while strengthening the prerogatives of private operators.",
+    "cloze": "{{c1::À y regarder de plus près}}, {{c1::on constate que}} la réforme réduit les obligations publiques tout en renforçant les prérogatives des opérateurs privés.",
+    "note": "Recasts the nominal legacy phrase as the idiomatic y-infinitive frame and separately clozes its observational arm."
+  },
+  {
+    "id": "frc303",
+    "en": "I'm inclined to believe that...",
+    "category": "stance",
+    "tl": "J'incline à penser que",
+    "alts": [
+      "J'aurais tendance à croire que"
+    ],
+    "register": "Written-formal and cautiously assertive; the alternative is more common in speech.",
+    "trap": "Incliner à means 'to be disposed to' in this formal stance frame; s'incliner means to bow or yield and is not interchangeable.",
+    "example_tl": "J'incline à penser que la commission sous-estime les conséquences politiques d'une dépendance prolongée à l'égard de fournisseurs étrangers.",
+    "example_en": "I am inclined to believe that the commission underestimates the political consequences of prolonged dependence on foreign suppliers.",
+    "cloze": "{{c1::J'incline à penser que}} la commission sous-estime les conséquences politiques d'une dépendance prolongée à l'égard de fournisseurs étrangers.",
+    "note": "The legacy frame is valid; this rendering supplies a distinct formal stance expression."
+  },
+  {
+    "id": "frc304",
+    "en": "It's a common misconception that...",
+    "category": "stance",
+    "tl": "On croit souvent à tort que",
+    "alts": [],
+    "register": "Neutral; directly challenges a widespread belief without an inflated nominal construction.",
+    "trap": "À tort means 'wrongly'; it follows the belief verb naturally, whereas une misconception commune is an English lexical calque.",
+    "example_tl": "On croit souvent à tort que les systèmes ouverts exposent davantage les données, alors qu'ils rendent surtout leur contrôle publiquement vérifiable.",
+    "example_en": "It is a common misconception that open systems expose more data, whereas they mainly make oversight publicly verifiable.",
+    "cloze": "{{c1::On croit souvent à tort que}} les systèmes ouverts exposent davantage les données, alors qu'ils rendent surtout leur contrôle publiquement vérifiable.",
+    "note": "Materially replaces the English lexical noun with the idiomatic French adverbial belief frame."
+  },
+  {
+    "id": "frc305",
+    "en": "While it's true that..., it doesn't necessarily follow that...",
+    "category": "concession",
+    "tl": "s'il est vrai que… il ne s'ensuit pas nécessairement que",
+    "alts": [],
+    "register": "Written-formal; concedes a premise while blocking an unwarranted inference.",
+    "trap": "S'ensuivre is pronominal and uses the impersonal il; after the negative inference frame, the following proposition normally takes the subjunctive.",
+    "example_tl": "S'il est vrai que la transparence progresse, il ne s'ensuit pas nécessairement que le contrôle exercé par les autorités soit devenu plus efficace.",
+    "example_en": "While it is true that transparency is improving, it does not necessarily follow that oversight by the authorities has become more effective.",
+    "cloze": "{{c1::S'il est vrai que}} la transparence progresse, {{c1::il ne s'ensuit pas nécessairement que}} le contrôle exercé par les autorités soit devenu plus efficace.",
+    "note": "Both fixed argumentative arms are clozed, and the example exposes the required subjunctive soit devenu."
+  },
+  {
+    "id": "frc306",
+    "en": "One must consider the possibility that...",
+    "category": "condition",
+    "tl": "Il faut envisager la possibilité que",
+    "alts": [],
+    "register": "Neutral-formal; introduces a materially plausible but unconfirmed outcome.",
+    "trap": "Possibilité que normally takes the subjunctive; envisager does not take de before this noun phrase.",
+    "example_tl": "Il faut envisager la possibilité que les autorités ne puissent pas reproduire les tests techniques annoncés par les fournisseurs.",
+    "example_en": "One must consider the possibility that the authorities may be unable to reproduce the technical tests announced by the providers.",
+    "cloze": "{{c1::Il faut envisager la possibilité que}} les autorités ne puissent pas reproduire les tests techniques annoncés par les fournisseurs.",
+    "note": "The subjunctive example makes the possibility frame's required mood visible."
+  },
+  {
+    "id": "frc307",
+    "en": "Despite conventional wisdom...",
+    "category": "concession",
+    "tl": "N'en déplaise aux idées reçues",
+    "alts": [
+      "Contrairement aux idées reçues"
+    ],
+    "register": "Written-formal and pointed; the alternative is more neutral.",
+    "trap": "N'en déplaise à is a fixed concessive frame with the subjunctive déplaise and the clitic en; it does not mean 'to displease'.",
+    "example_tl": "N'en déplaise aux idées reçues, la concurrence ne garantit pas à elle seule une gouvernance démocratique des infrastructures numériques.",
+    "example_en": "Despite conventional wisdom, competition does not by itself guarantee democratic governance of digital infrastructure without enforceable public-interest obligations.",
+    "cloze": "{{c1::N'en déplaise aux idées reçues}}, la concurrence ne garantit pas à elle seule une gouvernance démocratique des infrastructures numériques.",
+    "note": "Uses a marked France-French concessive idiom while retaining the plainer legacy idea as an alternative."
+  },
+  {
+    "id": "frc308",
+    "en": "To play devil's advocate for a moment...",
+    "category": "stance",
+    "tl": "Pour jouer un instant l'avocat du diable",
+    "alts": [],
+    "register": "Neutral and explicitly rhetorical; suitable in debate, though less common in highly formal reports.",
+    "trap": "French uses jouer l'avocat du diable without se faire in this compact frame; the role noun remains avocat regardless of the speaker's gender.",
+    "example_tl": "Pour jouer un instant l'avocat du diable, une surveillance limitée pourrait se justifier si elle empêchait réellement des abus graves.",
+    "example_en": "To play devil's advocate for a moment, limited surveillance might be justified if it genuinely prevented serious abuses.",
+    "cloze": "{{c1::Pour jouer un instant l'avocat du diable}}, une surveillance limitée pourrait se justifier si elle empêchait réellement des abus graves.",
+    "note": "Streamlines the heavier legacy se faire l'avocat construction."
+  },
+  {
+    "id": "frc309",
+    "en": "There's a significant amount of evidence suggesting...",
+    "category": "stance",
+    "tl": "De nombreux éléments donnent à penser que",
+    "alts": [
+      "Un faisceau d'indices suggère que"
+    ],
+    "register": "Written-formal and epistemically cautious; avoids claiming that the evidence constitutes definitive proof.",
+    "trap": "Preuves is too categorical when the evidence merely suggests; éléments or faisceau d'indices preserves the uncertainty in the English claim.",
+    "example_tl": "De nombreux éléments donnent à penser que la plateforme connaissait les effets discriminatoires du système bien avant la publication du rapport.",
+    "example_en": "A significant body of evidence suggests that the platform knew about the system's discriminatory effects well before the report was published.",
+    "cloze": "{{c1::De nombreux éléments donnent à penser que}} la plateforme connaissait les effets discriminatoires du système bien avant la publication du rapport.",
+    "note": "Materially recalibrates old_back from definitive proofs to suggestive evidence."
+  },
+  {
+    "id": "frc310",
+    "en": "I have my doubts about...",
+    "category": "stance",
+    "tl": "J'ai de sérieux doutes quant à",
+    "alts": [
+      "Je doute de"
+    ],
+    "register": "Neutral-formal; expresses marked skepticism without categorical rejection.",
+    "trap": "Use douter de before a noun phrase but douter que plus subjunctive before a clause; quant à is the formal noun-phrase link here.",
+    "example_tl": "J'ai de sérieux doutes quant à la capacité des audits volontaires à modifier les pratiques commerciales des plateformes dominantes.",
+    "example_en": "I have my doubts about the ability of voluntary audits to change the commercial practices of dominant platforms.",
+    "cloze": "{{c1::J'ai de sérieux doutes quant à}} la capacité des audits volontaires à modifier les pratiques commerciales des plateformes dominantes.",
+    "note": "Raises the register and intensity slightly relative to the valid legacy phrase."
+  },
+  {
+    "id": "frc312",
+    "en": "It begs the question...",
+    "category": "stance",
+    "tl": "Cela soulève la question suivante",
+    "alts": [],
+    "register": "Neutral-formal in the widespread modern 'raises the question' reading.",
+    "trap": "Strict English 'beg the question' means assume the conclusion; French cela soulève la question renders only the widespread intended sense 'raises the question'.",
+    "example_tl": "Cela soulève la question suivante : qui contrôlera les critères utilisés par les entreprises pour sélectionner les données accessibles aux chercheurs ?",
+    "example_en": "It begs the question: who will oversee the criteria companies use to select the data available to researchers?",
+    "cloze": "{{c1::Cela soulève la question suivante}} : qui contrôlera les critères utilisés par les entreprises pour sélectionner les données accessibles aux chercheurs ?",
+    "note": "The English item is usage-ambiguous; this card explicitly teaches its common intended 'raises' reading, not the logical fallacy."
+  },
+  {
+    "id": "frc315",
+    "en": "One might posit that…",
+    "category": "stance",
+    "tl": "On pourrait avancer que",
+    "alts": [
+      "On peut poser l'hypothèse que"
+    ],
+    "register": "Written-formal and cautious; introduces a claim for consideration rather than as settled fact.",
+    "trap": "Positer que is rare specialist jargon and often an English calque; avancer que or poser l'hypothèse que is natural analytical French.",
+    "example_tl": "On pourrait avancer que la centralisation des données constitue moins un choix technique qu'une stratégie de contrôle du marché.",
+    "example_en": "One might posit that data centralization is less a technical choice than a strategy for controlling the market.",
+    "cloze": "{{c1::On pourrait avancer que}} la centralisation des données constitue moins un choix technique qu'une stratégie de contrôle du marché.",
+    "note": "Materially replaces generic supposer with a cautious argument-proposal frame."
+  },
+  {
+    "id": "frc317",
+    "en": "It's crucial to distinguish between...",
+    "category": "structuring",
+    "tl": "il est essentiel de distinguer… de…",
+    "alts": [],
+    "register": "Neutral-formal; establishes an analytical distinction between two easily conflated concepts.",
+    "trap": "With distinguer, French uses distinguer X de Y; entre X et Y belongs to faire la distinction entre X et Y.",
+    "example_tl": "Il est essentiel de distinguer la publication d'informations de leur vérification indépendante par des chercheurs disposant d'un accès complet aux données.",
+    "example_en": "It is crucial to distinguish publishing information from its independent verification by researchers with full access to the data.",
+    "cloze": "{{c1::Il est essentiel de distinguer}} la publication d'informations {{c1::de}} leur vérification indépendante par des chercheurs disposant d'un accès complet aux données.",
+    "note": "The two fixed arms of the French X-de-Y construction are clozed separately."
+  },
+  {
+    "id": "frc318",
+    "en": "Let's not forget that...",
+    "category": "stance",
+    "tl": "N'oublions pas que",
+    "alts": [
+      "Rappelons que"
+    ],
+    "register": "Neutral-formal; an inclusive editorial imperative that restores a relevant consideration.",
+    "trap": "The first-person plural imperative ends in -ons and retains pas around oublier; do not use the infinitive oublier as a discourse instruction.",
+    "example_tl": "N'oublions pas que les administrations restent juridiquement responsables des décisions prises par les systèmes qu'elles achètent à des prestataires privés.",
+    "example_en": "Let us not forget that public administrations remain legally responsible for decisions made by systems they buy from private providers.",
+    "cloze": "{{c1::N'oublions pas que}} les administrations restent juridiquement responsables des décisions prises par les systèmes qu'elles achètent à des prestataires privés.",
+    "note": "The alternative is a slightly less insistent reminder and can replace the head phrase directly."
+  },
+  {
+    "id": "frc320",
+    "en": "Given the nuances of the topic...",
+    "category": "condition",
+    "tl": "Compte tenu de la complexité du sujet",
+    "alts": [],
+    "register": "Written-formal; acknowledges complexity before a calibrated judgment.",
+    "trap": "Nuance is countable more readily in English; French usually frames the overall property as la complexité or les subtilités du sujet.",
+    "example_tl": "Compte tenu de la complexité du sujet, toute règle uniforme risque de produire des effets très différents selon les secteurs concernés.",
+    "example_en": "Given the nuances of the topic, any uniform rule risks producing very different effects depending on the sectors concerned.",
+    "cloze": "{{c1::Compte tenu de la complexité du sujet}}, toute règle uniforme risque de produire des effets très différents selon les secteurs concernés.",
+    "note": "Materially replaces the literal plural nuance phrasing with an idiomatic holistic frame."
+  },
+  {
+    "id": "frc321",
+    "en": "Rather than assuming...",
+    "category": "contrast",
+    "tl": "Plutôt que de partir du principe que",
+    "alts": [],
+    "register": "Neutral-formal; contrasts an evidence-based course with an untested premise.",
+    "trap": "Supposer can mean to hypothesize neutrally; partir du principe que more clearly conveys taking something for granted without proof.",
+    "example_tl": "Plutôt que de partir du principe que les plateformes coopéreront, le législateur devrait prévoir des obligations vérifiables et des sanctions automatiques.",
+    "example_en": "Rather than assuming that platforms will cooperate voluntarily, lawmakers should provide for verifiable obligations and automatic penalties for repeated breaches.",
+    "cloze": "{{c1::Plutôt que de partir du principe que}} les plateformes coopéreront, le législateur devrait prévoir des obligations vérifiables et des sanctions automatiques.",
+    "note": "Expands the source into the idiomatic untested-assumption frame."
+  },
+  {
+    "id": "frc322",
+    "en": "Shifting the focus slightly...",
+    "category": "structuring",
+    "tl": "Changeons légèrement de focale",
+    "alts": [
+      "Déplaçons légèrement le regard"
+    ],
+    "register": "Journalistic and analytical; a controlled metaphor for changing the scale or object of attention.",
+    "trap": "Déplacer l'attention is understandable but English-influenced; changer de focale or déplacer le regard is more idiomatic commentary.",
+    "example_tl": "Changeons légèrement de focale : le véritable enjeu n'est pas la quantité de données, mais le pouvoir de les interpréter.",
+    "example_en": "Shifting the focus slightly, the real issue is not the quantity of data but the power to interpret it.",
+    "cloze": "{{c1::Changeons légèrement de focale}} : le véritable enjeu n'est pas la quantité de données, mais le pouvoir de les interpréter.",
+    "note": "Materially replaces the translated legacy collocation with a native analytical metaphor."
+  },
+  {
+    "id": "frc324",
+    "en": "While this perspective holds merit, one could also say...",
+    "category": "concession",
+    "tl": "si ce point de vue n'est pas sans mérite… on peut aussi soutenir que",
+    "alts": [],
+    "register": "Written-formal; the litotes concedes value before introducing a competing claim.",
+    "trap": "N'est pas sans mérite is a litotes meaning the view has some merit; it is not a double negative meaning the opposite.",
+    "example_tl": "Si ce point de vue n'est pas sans mérite, on peut aussi soutenir que la transparence demeure inutile sans pouvoir effectif de sanction.",
+    "example_en": "While this perspective has merit, one could also say that transparency remains useless without effective sanctioning power in practice.",
+    "cloze": "{{c1::Si ce point de vue n'est pas sans mérite}}, {{c1::on peut aussi soutenir que}} la transparence demeure inutile sans pouvoir effectif de sanction.",
+    "note": "Recasts the flat legacy concessive clause as a native litotic argument frame; both arms are clozed."
+  },
+  {
+    "id": "frc325",
+    "en": "Beyond the obvious...",
+    "category": "structuring",
+    "tl": "Au-delà des apparences",
+    "alts": [],
+    "register": "Neutral-formal; signals a move beneath the most immediately visible interpretation.",
+    "trap": "Au-delà de l'évidence sounds abstract and translated here; des apparences is the idiomatic contrast with a deeper analysis.",
+    "example_tl": "Au-delà des apparences, le débat porte moins sur l'efficacité technique que sur la répartition du pouvoir entre acteurs publics et privés.",
+    "example_en": "Beyond the obvious, the debate concerns less technical efficiency than the distribution of power between public and private actors.",
+    "cloze": "{{c1::Au-delà des apparences}}, le débat porte moins sur l'efficacité technique que sur la répartition du pouvoir entre acteurs publics et privés.",
+    "note": "Materially replaces the abstract legacy noun with the conventional appearances-versus-reality frame."
+  },
+  {
+    "id": "frc327",
+    "en": "Weighing the pros and cons...",
+    "category": "stance",
+    "tl": "Tout bien pesé",
+    "alts": [
+      "Après avoir pesé le pour et le contre"
+    ],
+    "register": "Neutral-formal; introduces a balanced judgment after considering advantages and disadvantages.",
+    "trap": "Peser le pour et le contre is a fixed expression with singular le before both nouns; tout bien pesé is the compact conclusion marker.",
+    "example_tl": "Tout bien pesé, le coût démocratique d'une surveillance opaque dépasse largement les gains d'efficacité administrative qu'elle pourrait procurer.",
+    "example_en": "Weighing the pros and cons, the democratic cost of opaque surveillance far exceeds any administrative efficiency gains it might provide.",
+    "cloze": "{{c1::Tout bien pesé}}, le coût démocratique d'une surveillance opaque dépasse largement les gains d'efficacité administrative qu'elle pourrait procurer.",
+    "note": "The compact head phrase presents the conclusion of a completed balancing process, not the process itself."
+  },
+  {
+    "id": "frc328",
+    "en": "From another vantage point...",
+    "category": "structuring",
+    "tl": "Sous un autre angle",
+    "alts": [
+      "D'un autre point de vue"
+    ],
+    "register": "Neutral; reframes the same issue through a different analytical perspective.",
+    "trap": "Point de vue takes de, not depuis; sous un autre angle is figurative and does not require a spatial complement.",
+    "example_tl": "Sous un autre angle, la mutualisation des données pourrait réduire la dépendance des chercheurs à l'égard de quelques entreprises dominantes.",
+    "example_en": "From another vantage point, data pooling could reduce researchers' dependence on a small number of dominant private companies.",
+    "cloze": "{{c1::Sous un autre angle}}, la mutualisation des données pourrait réduire la dépendance des chercheurs à l'égard de quelques entreprises dominantes.",
+    "note": "The alternative is a direct neutral substitute; both expressions announce a change of analytical perspective."
+  },
+  {
+    "id": "frc329",
+    "en": "It's tempting to believe that...",
+    "category": "stance",
+    "tl": "Il est tentant de croire que",
+    "alts": [],
+    "register": "Neutral-formal; presents an intuitively appealing inference that the writer will then qualify.",
+    "trap": "This frame normally signals distance from the tempting belief; it should not be read as the writer's straightforward endorsement.",
+    "example_tl": "Il est tentant de croire que davantage de transparence suffira, mais l'accès aux données ne garantit pas leur compréhension.",
+    "example_en": "It is tempting to believe that greater transparency will suffice, but access to data does not guarantee understanding.",
+    "cloze": "{{c1::Il est tentant de croire que}} davantage de transparence suffira, mais l'accès aux données ne garantit pas leur compréhension.",
+    "note": "The frame pragmatically foreshadows a reservation, which the example supplies after mais."
+  },
+  {
+    "id": "frc330",
+    "en": "Drawing a parallel to another situation...",
+    "category": "addition",
+    "tl": "Par analogie avec",
+    "alts": [
+      "En établissant un parallèle avec"
+    ],
+    "register": "Written-formal; explicitly transfers a line of analysis from a comparable domain.",
+    "trap": "Établir un parallèle takes avec, not à; par analogie avec is the compact discourse form.",
+    "example_tl": "Par analogie avec la régulation bancaire, le législateur pourrait imposer aux plateformes des réserves destinées à couvrir leurs risques systémiques.",
+    "example_en": "Drawing a parallel with banking regulation, lawmakers could require platforms to hold reserves covering their systemic risks in advance.",
+    "cloze": "{{c1::Par analogie avec}} la régulation bancaire, le législateur pourrait imposer aux plateformes des réserves destinées à couvrir leurs risques systémiques.",
+    "note": "The compact form is preferred as the reusable connector; the alternative spells out the comparative operation."
+  },
+  {
+    "id": "frc332",
+    "en": "By the same token...",
+    "category": "result",
+    "tl": "Pour la même raison",
+    "alts": [],
+    "register": "Neutral; applies the same reasoning to a further conclusion or case.",
+    "trap": "Token is not lexical here; de la même manière can describe manner, while pour la même raison preserves the inferential relation.",
+    "example_tl": "Pour la même raison, les autorités devraient publier leurs propres méthodes lorsqu'elles exigent des entreprises une transparence accrue.",
+    "example_en": "By the same token, authorities should publish their own methods when they demand greater transparency from private companies.",
+    "cloze": "{{c1::Pour la même raison}}, les autorités devraient publier leurs propres méthodes lorsqu'elles exigent des entreprises une transparence accrue.",
+    "note": "Materially replaces the vague manner phrase in old_back with explicit repeated reasoning."
+  },
+  {
+    "id": "frc333",
+    "en": "This isn't to say that..., but rather...",
+    "category": "reformulation",
+    "tl": "il ne s'agit pas de dire que… mais plutôt que",
+    "alts": [],
+    "register": "Neutral-formal; blocks an overinterpretation and supplies the intended narrower claim.",
+    "trap": "Il ne s'agit pas de takes an infinitive; the paired correction requires parallel finite clauses after dire que and mais plutôt que.",
+    "example_tl": "Il ne s'agit pas de dire que la technologie est neutre, mais plutôt que ses effets dépendent des institutions qui l'encadrent.",
+    "example_en": "This is not to say that technology is neutral, but rather that its effects depend on the institutions governing it.",
+    "cloze": "{{c1::Il ne s'agit pas de dire que}} la technologie est neutre, {{c1::mais plutôt que}} ses effets dépendent des institutions qui l'encadrent.",
+    "note": "Both fixed arms are clozed and their que-clauses are syntactically parallel."
+  },
+  {
+    "id": "frc334",
+    "en": "Taking a step back for a moment...",
+    "category": "structuring",
+    "tl": "Prenons un instant de recul",
+    "alts": [
+      "Avec un peu de recul"
+    ],
+    "register": "Neutral; an inclusive invitation to widen the analytical frame.",
+    "trap": "Prendre du recul is the fixed figurative expression; prendre un pas en arrière is a spatial English calque.",
+    "example_tl": "Prenons un instant de recul : cette controverse s'inscrit dans plusieurs années de privatisation progressive des infrastructures publiques.",
+    "example_en": "Taking a step back for a moment, this controversy belongs to several years of progressive privatization of public infrastructure.",
+    "cloze": "{{c1::Prenons un instant de recul}} : cette controverse s'inscrit dans plusieurs années de privatisation progressive des infrastructures publiques.",
+    "note": "The example deliberately uses plusieurs années for an extended period, reinforcing the documented an/année distinction."
+  },
+  {
+    "id": "frc336",
+    "en": "Without oversimplifying the matter...",
+    "category": "stance",
+    "tl": "Sans vouloir simplifier à l'excès",
+    "alts": [
+      "Sans caricaturer le débat"
+    ],
+    "register": "Neutral-formal; hedges a compressed account by acknowledging omitted complexity.",
+    "trap": "Sursimplifier is an English-influenced formation; standard French prefers simplifier à l'excès or simplifier abusivement.",
+    "example_tl": "Sans vouloir simplifier à l'excès, la réforme oppose deux visions incompatibles de la souveraineté : le contrôle public et l'autonomie privée.",
+    "example_en": "Without oversimplifying the matter, the reform pits two incompatible visions of sovereignty against each other: public control and private autonomy.",
+    "cloze": "{{c1::Sans vouloir simplifier à l'excès}}, la réforme oppose deux visions incompatibles de la souveraineté : le contrôle public et l'autonomie privée.",
+    "note": "Materially replaces the awkward legacy construction with an idiomatic speaker-oriented hedge."
+  },
+  {
+    "id": "frc338",
+    "en": "It’s equally valid to suggest...",
+    "category": "stance",
+    "tl": "On peut tout aussi légitimement avancer que",
+    "alts": [],
+    "register": "Written-formal; grants equal argumentative legitimacy to an alternative claim.",
+    "trap": "Valable normally describes a proposal or argument; the sentence-level manner judgment is more idiomatically expressed by légitimement.",
+    "example_tl": "On peut tout aussi légitimement avancer que la fragmentation des services publics affaiblit leur capacité collective de négociation.",
+    "example_en": "It is equally valid to suggest that fragmentation of public services weakens their collective bargaining capacity in negotiations with vendors.",
+    "cloze": "{{c1::On peut tout aussi légitimement avancer que}} la fragmentation des services publics affaiblit leur capacité collective de négociation.",
+    "note": "Materially recasts the adjectival legacy frame as a natural adverbial evaluation."
+  },
+  {
+    "id": "frc342",
+    "en": "On a related note...",
+    "category": "addition",
+    "tl": "Dans le même ordre d'idées",
+    "alts": [
+      "Dans le prolongement de cette réflexion"
+    ],
+    "register": "Neutral-formal; introduces a related point without claiming a strict logical consequence.",
+    "trap": "Note is not a literal written note here; the French connector refers to the same line or order of ideas.",
+    "example_tl": "Dans le même ordre d'idées, la mutualisation des compétences techniques permettrait aux petites collectivités de mieux contrôler leurs fournisseurs.",
+    "example_en": "On a related note, pooling technical expertise would allow smaller local authorities to oversee their providers more effectively.",
+    "cloze": "{{c1::Dans le même ordre d'idées}}, la mutualisation des compétences techniques permettrait aux petites collectivités de mieux contrôler leurs fournisseurs.",
+    "note": "The connector adds a neighboring argument and deliberately avoids presenting it as a consequence."
+  },
+  {
+    "id": "frc343",
+    "en": "By contrast...",
+    "category": "contrast",
+    "tl": "Par contraste",
+    "alts": [
+      "En revanche"
+    ],
+    "register": "Written-formal; sets the following case against the preceding one.",
+    "trap": "Par contraste is the standard detached form; en contraste is generally a translated choice in this argumentative use.",
+    "example_tl": "Par contraste, les infrastructures ouvertes permettent à plusieurs acteurs de vérifier les règles et de proposer des services concurrents.",
+    "example_en": "By contrast, open infrastructure allows multiple actors to verify the rules independently and offer genuinely competing services.",
+    "cloze": "{{c1::Par contraste}}, les infrastructures ouvertes permettent à plusieurs acteurs de vérifier les règles et de proposer des services concurrents.",
+    "note": "The alternative is slightly less explicit but preserves the intended contrast with the preceding case."
+  },
+  {
+    "id": "frc345",
+    "en": "In a different vein...",
+    "category": "structuring",
+    "tl": "Dans un autre ordre d'idées",
+    "alts": [
+      "Sur un autre registre"
+    ],
+    "register": "Neutral-formal; openly marks a shift to a different line of discussion.",
+    "trap": "Veine is not used literally for this English discourse metaphor; ordre d'idées or registre is idiomatic French.",
+    "example_tl": "Dans un autre ordre d'idées, la concentration du marché publicitaire menace directement le financement durable des médias locaux.",
+    "example_en": "In a different vein, concentration in the advertising market directly threatens the sustainable funding of local media over the long term.",
+    "cloze": "{{c1::Dans un autre ordre d'idées}}, la concentration du marché publicitaire menace directement le financement durable des médias locaux.",
+    "note": "Both head phrases make a genuine topic shift rather than merely adding a related supporting point."
+  },
+  {
+    "id": "frc350",
+    "en": "While that's an important point, another area to consider is...",
+    "category": "structuring",
+    "tl": "ce point mérite attention… il reste toutefois à examiner",
+    "alts": [],
+    "register": "Written-formal; acknowledges one point and opens a distinct outstanding question.",
+    "trap": "Rester à plus infinitive marks work still to be done; it is not the locative verb rester followed by a place.",
+    "example_tl": "Ce point mérite attention ; il reste toutefois à examiner comment la réforme affectera les médias opérant dans des langues minoritaires.",
+    "example_en": "While that point deserves attention, another area to consider is how the reform will affect media operating in minority languages.",
+    "cloze": "{{c1::Ce point mérite attention}} ; {{c1::il reste toutefois à examiner}} comment la réforme affectera les médias opérant dans des langues minoritaires.",
+    "note": "Materially condenses the cumbersome legacy frame; both transition arms are clozed."
+  },
+  {
+    "id": "frc352",
+    "en": "Let's now turn our focus to...",
+    "category": "structuring",
+    "tl": "Penchons-nous maintenant sur",
+    "alts": [
+      "Intéressons-nous maintenant à"
+    ],
+    "register": "Neutral-formal; an inclusive editorial transition to the next object of analysis.",
+    "trap": "Se pencher sur is the fixed figurative construction; pencher sur without the reflexive pronoun describes physical leaning.",
+    "example_tl": "Penchons-nous maintenant sur la manière dont les plateformes définissent les risques qu'elles acceptent de soumettre à un audit externe.",
+    "example_en": "Let us now turn our focus to how platforms define the risks they agree to submit to an external audit.",
+    "cloze": "{{c1::Penchons-nous maintenant sur}} la manière dont les plateformes définissent les risques qu'elles acceptent de soumettre à un audit externe.",
+    "note": "The alternative changes the governing preposition with its verb and remains a direct substitute before the noun phrase."
+  },
+  {
+    "id": "frc353",
+    "en": "Leaving that behind for a moment...",
+    "category": "structuring",
+    "tl": "Laissons cela de côté un instant",
+    "alts": [],
+    "register": "Neutral; temporarily brackets the preceding issue before identifying the immediate question.",
+    "trap": "Laisser de côté is the fixed figurative expression; laisser derrière suggests physically leaving something behind.",
+    "example_tl": "Laissons cela de côté un instant : la question immédiate est de savoir qui financera les nouveaux mécanismes de contrôle.",
+    "example_en": "Leaving that behind for a moment, the immediate question is who will fund the new oversight mechanisms in practice.",
+    "cloze": "{{c1::Laissons cela de côté un instant}} : la question immédiate est de savoir qui financera les nouveaux mécanismes de contrôle.",
+    "note": "The time phrase makes the suspension temporary rather than dismissing the preceding issue altogether."
+  },
+  {
+    "id": "frc360",
+    "en": "With that said, it's also crucial to look at...",
+    "category": "concession",
+    "tl": "cela étant… il faut aussi examiner",
+    "alts": [],
+    "register": "Written-formal; concedes what precedes while restoring an additional necessary line of inquiry.",
+    "trap": "Ceci étant dit is widespread but often mirrors English and is redundant; cela étant is the concise concessive pivot.",
+    "example_tl": "Cela étant, il faut aussi examiner la capacité réelle des autorités locales à faire respecter des obligations techniques complexes.",
+    "example_en": "With that said, it is also crucial to examine local authorities' actual ability to enforce complex technical obligations.",
+    "cloze": "{{c1::Cela étant}}, {{c1::il faut aussi examiner}} la capacité réelle des autorités locales à faire respecter des obligations techniques complexes.",
+    "note": "Materially removes the translated dit and tempers the source's inflated crucial; both arms are clozed."
+  },
+  {
+    "id": "frc363",
+    "en": "This segues nicely into our next topic, which is...",
+    "category": "structuring",
+    "tl": "Cela nous amène naturellement à",
+    "alts": [],
+    "register": "Neutral; links the preceding point smoothly to the next topic without an English loan verb.",
+    "trap": "French does not use a verb formed from English segue here; amener à or conduire à is the idiomatic transition.",
+    "example_tl": "Cela nous amène naturellement à la question du financement des infrastructures publiques et de leur gouvernance à long terme.",
+    "example_en": "This segues naturally into our next topic: the funding of public infrastructure and its governance under long-term democratic oversight.",
+    "cloze": "{{c1::Cela nous amène naturellement à}} la question du financement des infrastructures publiques et de leur gouvernance à long terme.",
+    "note": "Materially supplies a native transition verb rather than calquing the English metaphor."
+  },
+  {
+    "id": "frc364",
+    "en": "Having established that point, a different yet related matter is...",
+    "category": "structuring",
+    "tl": "Ce point établi, reste une question différente mais connexe",
+    "alts": [],
+    "register": "Written-formal; uses an absolute participial phrase to close one point and open a related one.",
+    "trap": "Établi agrees with point; with a feminine noun the absolute phrase would require établie.",
+    "example_tl": "Ce point établi, reste une question différente mais connexe : qui assumera la responsabilité des décisions prises par les systèmes automatisés ?",
+    "example_en": "Having established that point, a different yet related question remains: who will bear responsibility for decisions made by automated systems?",
+    "cloze": "{{c1::Ce point établi, reste une question différente mais connexe}} : qui assumera la responsabilité des décisions prises par les systèmes automatisés ?",
+    "note": "Recasts the serviceable legacy sentence as a tighter absolute construction."
+  },
+  {
+    "id": "frc365",
+    "en": "On the flip side...",
+    "category": "contrast",
+    "tl": "Le revers de la médaille, c'est que",
+    "alts": [],
+    "register": "Neutral and vivid; common in commentary for the negative counterpart of an apparent benefit.",
+    "trap": "De l'autre côté is spatial or a neutral alternative side; the idiom for a hidden drawback is le revers de la médaille.",
+    "example_tl": "Le revers de la médaille, c'est que la centralisation facilite aussi une surveillance massive des comportements individuels à grande échelle.",
+    "example_en": "On the flip side, centralization also makes mass surveillance of individual behavior easier across entire populations without meaningful oversight.",
+    "cloze": "{{c1::Le revers de la médaille, c'est que}} la centralisation facilite aussi une surveillance massive des comportements individuels à grande échelle.",
+    "note": "Materially restores the English idiom's drawback sense, absent from spatial old_back."
+  },
+  {
+    "id": "frc367",
+    "en": "Apropos of that, it's pertinent to discuss...",
+    "category": "structuring",
+    "tl": "à ce propos… il convient d'aborder",
+    "alts": [],
+    "register": "Written-formal; links the next discussion directly to the point just mentioned.",
+    "trap": "À ce propos means 'apropos of that'; à cet égard means 'in that respect' and does not itself announce a new discussion topic.",
+    "example_tl": "À ce propos, il convient d'aborder la responsabilité des cabinets privés qui conçoivent puis évaluent les mêmes systèmes automatisés.",
+    "example_en": "Apropos of that, it is pertinent to discuss the responsibility of private firms that design and then assess the same automated systems.",
+    "cloze": "{{c1::À ce propos}}, {{c1::il convient d'aborder}} la responsabilité des cabinets privés qui conçoivent puis évaluent les mêmes systèmes automatisés.",
+    "note": "Materially distinguishes topic linkage from the respect marker used in old_back; both arms are clozed."
+  },
+  {
+    "id": "frc368",
+    "en": "From the general to the specific...",
+    "category": "structuring",
+    "tl": "Du général au particulier",
+    "alts": [],
+    "register": "Neutral-formal; explicitly narrows an argument from a broad principle to a concrete application.",
+    "trap": "Particulier is a noun here meaning the specific case; do not translate it as a particular person or use spécifique substantivally.",
+    "example_tl": "Du général au particulier : les principes européens doivent maintenant se traduire par des procédures nationales de contrôle clairement définies.",
+    "example_en": "From the general to the specific, European principles must now be translated into clearly defined national oversight procedures.",
+    "cloze": "{{c1::Du général au particulier}} : les principes européens doivent maintenant se traduire par des procédures nationales de contrôle clairement définies.",
+    "note": "This compact paired construction explicitly announces a narrowing move in the organization of the argument."
+  },
+  {
+    "id": "frc370",
+    "en": "Broadening our scope, let's pivot to...",
+    "category": "structuring",
+    "tl": "Élargissons maintenant l'analyse à",
+    "alts": [
+      "Élargissons maintenant le cadre à"
+    ],
+    "register": "Neutral-formal; an inclusive editorial transition to a wider domain.",
+    "trap": "Champ d'action denotes an operational remit, not analytical scope; analyse or cadre is the natural object of élargir here.",
+    "example_tl": "Élargissons maintenant l'analyse à la dépendance énergétique des centres de données et à ses conséquences pour les politiques climatiques.",
+    "example_en": "Broadening our scope, let us pivot to data centers' energy dependence and its consequences for climate policy over the long term.",
+    "cloze": "{{c1::Élargissons maintenant l'analyse à}} la dépendance énergétique des centres de données et à ses conséquences pour les politiques climatiques.",
+    "note": "Materially replaces the operational legacy champ d'action and the English pivot metaphor."
+  },
+  {
+    "id": "frc371",
+    "en": "In any event,",
+    "category": "concession",
+    "tl": "En tout état de cause",
+    "alts": [
+      "Quoi qu'il en soit"
+    ],
+    "register": "Formal and legal-administrative; the alternative is neutral-formal.",
+    "trap": "En tout état de cause is fixed and means the conclusion holds whatever the circumstances; en tout cas is less formal and broader.",
+    "example_tl": "En tout état de cause, l'autorité publique demeure responsable des sanctions prononcées sur la base d'une évaluation automatisée.",
+    "example_en": "In any event, the public authority remains responsible for penalties imposed on the basis of an automated assessment.",
+    "cloze": "{{c1::En tout état de cause}}, l'autorité publique demeure responsable des sanctions prononcées sur la base d'une évaluation automatisée.",
+    "note": "Kept for its marked legal register."
+  },
+  {
+    "id": "frc372",
+    "en": "Even if this happens, it won't change much",
+    "category": "concession",
+    "tl": "Même si cela se produit",
+    "alts": [],
+    "register": "Neutral; introduces a hypothetical concession with the indicative.",
+    "trap": "Même si takes the indicative, not the subjunctive: cela se produit, not cela se produise in this frame.",
+    "example_tl": "Même si cela se produit, la décision ne modifiera guère la dépendance structurelle des administrations envers les fournisseurs dominants.",
+    "example_en": "Even if this happens, the decision will do little to change public administrations' structural dependence on dominant providers.",
+    "cloze": "{{c1::Même si cela se produit}}, la décision ne modifiera guère la dépendance structurelle des administrations envers les fournisseurs dominants.",
+    "note": "Generalizes the source sentence into the professional domain while preserving its concessive condition."
+  },
+  {
+    "id": "frc374",
+    "en": "While this is important, there are other pressing issues.",
+    "category": "concession",
+    "tl": "Si cette question est importante",
+    "alts": [],
+    "register": "Written-formal; concessive si acknowledges importance before reprioritizing the discussion.",
+    "trap": "Sentence-initial si can mean 'while/although' in formal argument, not only introduce a condition.",
+    "example_tl": "Si cette question est importante, d'autres urgences demeurent, notamment l'accès des chercheurs aux données et l'indépendance des autorités.",
+    "example_en": "While this issue is important, other pressing matters remain, notably researchers' access to data and the independence of authorities.",
+    "cloze": "{{c1::Si cette question est importante}}, d'autres urgences demeurent, notamment l'accès des chercheurs aux données et l'indépendance des autorités.",
+    "note": "Recasts the elementary source sentence as a useful formal concessive-si pattern."
+  },
+  {
+    "id": "frc375",
+    "en": "For whatever reason, we can't accept this.",
+    "category": "concession",
+    "tl": "Pour quelque raison que ce soit",
+    "alts": [
+      "Quelle qu'en soit la raison"
+    ],
+    "register": "Neutral-formal; dismisses the relevance of any possible reason to the conclusion.",
+    "trap": "Quelque is singular and invariable here, and que ce soit is subjunctive; do not write pour n'importe quelle raison in formal prose.",
+    "example_tl": "Pour quelque raison que ce soit, nous ne pouvons accepter un dispositif qui soustrait durablement les décisions publiques au contrôle judiciaire.",
+    "example_en": "For whatever reason, we cannot accept a system that permanently removes public decisions from judicial oversight in a constitutional democracy.",
+    "cloze": "{{c1::Pour quelque raison que ce soit}}, nous ne pouvons accepter un dispositif qui soustrait durablement les décisions publiques au contrôle judiciaire.",
+    "note": "The alternative inflects quel to agree with raison and refers anaphorically to the unspecified reason."
+  },
+  {
+    "id": "frc376",
+    "en": "As long as this doesn't happen, we'll be fine",
+    "category": "condition",
+    "tl": "Pourvu que cela ne se produise pas",
+    "alts": [],
+    "register": "Neutral; expresses a sufficient condition, while tant que more readily marks duration.",
+    "trap": "Pourvu que takes the subjunctive, here se produise; the English prompt is interpreted conditionally rather than as a duration.",
+    "example_tl": "Pourvu que cela ne se produise pas, le calendrier réglementaire pourra être respecté sans compromettre l'examen indépendant des données.",
+    "example_en": "As long as this does not happen, the regulatory timetable can be met without compromising independent review of the data.",
+    "cloze": "{{c1::Pourvu que cela ne se produise pas}}, le calendrier réglementaire pourra être respecté sans compromettre l'examen indépendant des données.",
+    "note": "Materially resolves the prompt to a sufficient-condition reading; old_back represented duration and is not wrong in a temporal context."
+  },
+  {
+    "id": "frc378",
+    "en": "it's not as easy as it seems.",
+    "category": "contrast",
+    "tl": "Les choses ne sont pas aussi simples qu'il y paraît",
+    "alts": [],
+    "register": "Neutral; an idiomatic warning against an apparently straightforward analysis.",
+    "trap": "French commonly uses impersonal il y paraît in this fixed comparison; facile is less natural than simple for an analytical problem.",
+    "example_tl": "Les choses ne sont pas aussi simples qu'il y paraît : la transparence peut renforcer le pouvoir des acteurs déjà dominants.",
+    "example_en": "It is not as easy as it seems: transparency can strengthen the power of already dominant actors without effective public oversight.",
+    "cloze": "{{c1::Les choses ne sont pas aussi simples qu'il y paraît}} : la transparence peut renforcer le pouvoir des acteurs déjà dominants.",
+    "note": "Materially idiomatizes both the subject and the adjective in the source sentence."
+  },
+  {
+    "id": "frc379",
+    "en": "The crux of the matter is that",
+    "category": "stance",
+    "tl": "Le nœud du problème, c'est que",
+    "alts": [
+      "Le cœur du problème tient au fait que"
+    ],
+    "register": "Neutral and emphatic; natural in opinion writing and serious speech.",
+    "trap": "In this presentational frame, French naturally uses the dislocation le nœud du problème, c'est que rather than a bare translated est que.",
+    "example_tl": "Le nœud du problème, c'est que la plateforme produit elle-même les données utilisées pour évaluer sa conformité réglementaire.",
+    "example_en": "The crux of the matter is that the platform itself produces the data used to assess its regulatory compliance.",
+    "cloze": "{{c1::Le nœud du problème, c'est que}} la plateforme produit elle-même les données utilisées pour évaluer sa conformité réglementaire.",
+    "note": "Materially replaces the stiff legacy copular frame with native dislocation."
+  },
+  {
+    "id": "frc381",
+    "en": "it's time that we confront this problem",
+    "category": "stance",
+    "tl": "Il est temps que nous affrontions",
+    "alts": [
+      "Il est temps d'affronter"
+    ],
+    "register": "Neutral-formal and urgent; calls for action without the source's English that-clause syntax.",
+    "trap": "Il est temps que takes the subjunctive, here affrontions; use il est temps de plus infinitive when the subject is understood generically.",
+    "example_tl": "Il est temps que nous affrontions la dépendance des institutions publiques à l'égard d'infrastructures qu'elles ne peuvent ni auditer ni remplacer.",
+    "example_en": "It is time that we confront public institutions' dependence on infrastructure they can neither meaningfully audit nor readily replace themselves.",
+    "cloze": "{{c1::Il est temps que nous affrontions}} la dépendance des institutions publiques à l'égard d'infrastructures qu'elles ne peuvent ni auditer ni remplacer.",
+    "note": "Corrects old_back by making the source's explicit nous visible through a subjunctive clause."
+  },
+  {
+    "id": "frc382",
+    "en": "In light of our recent findings, it becomes unmistakably clear that",
+    "category": "result",
+    "tl": "au vu de ces résultats récents… il apparaît clairement que",
+    "alts": [],
+    "register": "Written-formal; derives a strong conclusion from specified findings without preserving the source's redundant intensifiers.",
+    "trap": "Findings are résultats or constatations here, not découvertes; unmistakably clear is redundant and should not become an inflated French double intensifier.",
+    "example_tl": "Au vu de ces résultats récents, il apparaît clairement que la procédure actuelle ne protège pas suffisamment les médias indépendants.",
+    "example_en": "In light of these recent findings, it becomes unmistakably clear that the current procedure does not adequately protect independent media.",
+    "cloze": "{{c1::Au vu de ces résultats récents}}, {{c1::il apparaît clairement que}} la procédure actuelle ne protège pas suffisamment les médias indépendants.",
+    "note": "Materially removes inflated emphasis and separately clozes the evidential and inferential arms."
+  },
+  {
+    "id": "frc385",
+    "en": "Drawing upon historical precedents, it's evident that",
+    "category": "stance",
+    "tl": "Les précédents historiques montrent que",
+    "alts": [
+      "L'histoire montre que"
+    ],
+    "register": "Written-formal; lets the evidence serve as the grammatical subject, avoiding a dangling gerund.",
+    "trap": "A French en s'appuyant gerund must share the main clause's subject; impersonal il est évident creates a dangling construction in the legacy frame.",
+    "example_tl": "Les précédents historiques montrent que les régimes d'exception temporaires tendent à devenir permanents lorsque le contrôle parlementaire reste faible.",
+    "example_en": "Drawing upon historical precedents, it is evident that temporary emergency regimes tend to become permanent when parliamentary oversight remains weak.",
+    "cloze": "{{c1::Les précédents historiques montrent que}} les régimes d'exception temporaires tendent à devenir permanents lorsque le contrôle parlementaire reste faible.",
+    "note": "Materially repairs the dangling-subject error in old_back."
+  },
+  {
+    "id": "frc391",
+    "en": "It is within this framework of understanding that we must emphasize the role of",
+    "category": "stance",
+    "tl": "C'est dans ce cadre qu'il faut souligner le rôle de",
+    "alts": [],
+    "register": "Written-formal; a cleft frame that links a contextual framework to a specific institutional role.",
+    "trap": "Cadre de compréhension is an English nominal calque; dans ce cadre is sufficient and the cleft uses c'est… que.",
+    "example_tl": "C'est dans ce cadre qu'il faut souligner le rôle de la recherche publique dans l'évaluation indépendante des infrastructures numériques.",
+    "example_en": "It is within this framework that we must emphasize the role of public research in independently assessing digital infrastructure.",
+    "cloze": "{{c1::C'est dans ce cadre qu'il faut souligner le rôle de}} la recherche publique dans l'évaluation indépendante des infrastructures numériques.",
+    "note": "Materially condenses the inflated source frame and removes unrelated content inserted by old_back."
+  },
+  {
+    "id": "frc393",
+    "en": "When one takes a step back to assess the broader picture, it becomes evident that",
+    "category": "stance",
+    "tl": "avec le recul… il apparaît que",
+    "alts": [
+      "Si l'on prend du recul, on constate que"
+    ],
+    "register": "Written-formal; moves from immediate detail to a broader retrospective assessment.",
+    "trap": "Prendre du recul is the fixed figurative expression; évaluer l'image plus large is an English calque for assessing the broader picture.",
+    "example_tl": "Avec le recul, il apparaît que les accords volontaires ont surtout retardé l'adoption de règles publiques véritablement contraignantes.",
+    "example_en": "When one steps back to assess the broader picture, it becomes evident that voluntary agreements mainly delayed genuinely binding public rules.",
+    "cloze": "{{c1::Avec le recul}}, {{c1::il apparaît que}} les accords volontaires ont surtout retardé l'adoption de règles publiques véritablement contraignantes.",
+    "note": "Materially compresses the verbose source frame; both fixed arms are clozed."
+  },
+  {
+    "id": "frc400",
+    "en": "When we contemplate the vast scope of what's at stake, it's clear that",
+    "category": "stance",
+    "tl": "au vu de l'ampleur des enjeux… il est clair que",
+    "alts": [],
+    "register": "Written-formal; grounds a clear judgment in the scale of the stakes without grandiose first-person phrasing.",
+    "trap": "What's at stake is les enjeux; la vaste portée de ce qui est en jeu is a word-for-word English calque.",
+    "example_tl": "Au vu de l'ampleur des enjeux, il est clair que la décision ne peut rester entre les seules mains des entreprises.",
+    "example_en": "When we contemplate the vast scope of what is at stake, it is clear that the decision cannot remain solely in companies' hands.",
+    "cloze": "{{c1::Au vu de l'ampleur des enjeux}}, {{c1::il est clair que}} la décision ne peut rester entre les seules mains des entreprises.",
+    "note": "Materially condenses the grandiose source into an idiomatic evidential frame; both arms are clozed."
   }
 ]

@@ -55,7 +55,7 @@
   {"id":"frc254","en":"To make plain","verdict":"drop","reason":"duplicate — clarification is covered by kept frc255"},
   {"id":"frc255","en":"To put it clearly","verdict":"keep","reason":""},
   {"id":"frc256","en":"To put it in another way","verdict":"drop","reason":"duplicate — same reformulation as kept frc222"},
-  {"id":"frc257","en":"To simplify","verdict":"keep","reason":""},
+  {"id":"frc257","en":"To simplify","verdict":"drop","reason":"duplicate — same simplification move as kept frc231, without an additional lesson"},
   {"id":"frc258","en":"Across","verdict":"drop","reason":"broken/trivial — spatial preposition, not a discourse connector"},
   {"id":"frc259","en":"Adjacent","verdict":"drop","reason":"broken/trivial — spatial adjective, not a discourse connector"},
   {"id":"frc260","en":"Around","verdict":"drop","reason":"broken/trivial — context-sensitive spatial preposition/adverb"},
