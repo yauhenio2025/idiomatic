@@ -8,9 +8,22 @@
     "register": "written-formal; common when a ruling, method, or result departs from a reference point",
     "trap": "Von governs the dative; when the whole phrase fills the prefield, the finite verb follows in V2 order (bewertet das Gericht).",
     "example_tl": "Abweichend von der bisherigen Rechtsprechung bewertet das Gericht den automatisierten Datenabgleich nun als eigenständigen Eingriff in die informationelle Selbstbestimmung.",
-    "example_en": "Differing from previous case law, the court now assesses automated data matching as a distinct interference with informational self-determination.",
+    "example_en": "Departing from previous case law, the court now assesses automated data matching as a distinct interference with informational self-determination.",
     "cloze": "{{c1::Abweichend von}} der bisherigen Rechtsprechung bewertet das Gericht den automatisierten Datenabgleich nun als eigenständigen Eingriff in die informationelle Selbstbestimmung.",
-    "note": ""
+    "note": "Hostile self-review changed the English participial phrase from awkward Differing from to idiomatic Departing from while preserving the source meaning."
+  },
+  {
+    "id": "dec103",
+    "en": "However",
+    "category": "contrast",
+    "tl": "Allerdings",
+    "alts": ["Jedoch"],
+    "register": "neutral; Allerdings naturally introduces a qualification, while Jedoch is slightly more formal",
+    "trap": "Old_back's Dennoch specifically concedes a counterexpectation; initial Allerdings or Jedoch introduces a broader qualification and takes V2, unlike coordinating aber.",
+    "example_tl": "Allerdings greift der Entwurf zu kurz, weil er politische Werbung reguliert, die algorithmische Verstärkung organischer Desinformation jedoch vollständig ausklammert.",
+    "example_en": "However, the draft falls short because it regulates political advertising but entirely excludes the algorithmic amplification of organic disinformation.",
+    "cloze": "{{c1::Allerdings}} greift der Entwurf zu kurz, weil er politische Werbung reguliert, die algorithmische Verstärkung organischer Desinformation jedoch vollständig ausklammert.",
+    "note": "Materially corrects old_back, which narrows broad however to counterexpectational nevertheless. Hostile review restored this function after an overaggressive duplicate drop."
   },
   {
     "id": "dec104",
@@ -42,14 +55,14 @@
     "id": "dec109",
     "en": "Nor",
     "category": "addition",
-    "tl": "weder … noch",
+    "tl": "ebenso wenig",
     "alts": [],
-    "register": "neutral; the standard correlative for coordinating two negated constituents",
-    "trap": "German normally expresses English neither/nor with the full parallel frame weder ... noch; bare noch does not itself carry the required negation.",
-    "example_tl": "Die freiwilligen Leitlinien gewährleisten weder unabhängige Prüfungen noch wirksame Rechtsmittel für Redaktionen, deren Beiträge ohne nachvollziehbare Begründung systematisch herabgestuft werden.",
-    "example_en": "The voluntary guidelines guarantee neither independent audits nor effective remedies for newsrooms whose posts are systematically downgraded without a transparent justification.",
-    "cloze": "Die freiwilligen Leitlinien gewährleisten {{c1::weder}} unabhängige Prüfungen {{c1::noch}} wirksame Rechtsmittel für Redaktionen, deren Beiträge ohne nachvollziehbare Begründung systematisch herabgestuft werden.",
-    "note": "The isolated English prompt is structurally incomplete. Self-review authored the full correlative frame and wrapped both fixed arms."
+    "register": "neutral; a clause-level additive negation following an earlier negative proposition",
+    "trap": "English clause-level nor triggers inversion; German Ebenso wenig fills the prefield and takes V2 (bieten sie), while bare noch usually means ‘still/yet/more.’",
+    "example_tl": "Die freiwilligen Leitlinien gewährleisten keine unabhängigen Prüfungen; ebenso wenig bieten sie wirksame Rechtsmittel für Redaktionen, deren Beiträge ohne Begründung herabgestuft werden.",
+    "example_en": "The voluntary guidelines do not guarantee independent audits; nor do they offer effective remedies for newsrooms whose posts are downgraded without justification.",
+    "cloze": "Die freiwilligen Leitlinien gewährleisten keine unabhängigen Prüfungen; {{c1::ebenso wenig}} bieten sie wirksame Rechtsmittel für Redaktionen, deren Beiträge ohne Begründung herabgestuft werden.",
+    "note": "The source is structurally incomplete. Hostile self-review replaced an overtranslated weder ... noch frame with the clause-level equivalent Ebenso wenig."
   },
   {
     "id": "dec110",
@@ -125,9 +138,9 @@
     "register": "neutral; introduces a comparable case or historical parallel",
     "trap": "Bei governs the dative; wie mit is a literal calque unless actual accompaniment or instrumentality with mit is meant.",
     "example_tl": "Wie bei früheren Medienumbrüchen entscheidet auch diesmal nicht allein die Technik, sondern vor allem die politische Gestaltung der wirtschaftlichen Rahmenbedingungen.",
-    "example_en": "As with earlier transformations of the media, technology alone is not decisive this time; above all, the political design of the economic framework is.",
+    "example_en": "As with earlier transformations of the media, technology alone is not decisive this time; what matters above all is how the economic framework is shaped politically.",
     "cloze": "{{c1::Wie bei}} früheren Medienumbrüchen entscheidet auch diesmal nicht allein die Technik, sondern vor allem die politische Gestaltung der wirtschaftlichen Rahmenbedingungen.",
-    "note": "Materially repairs the legacy calque Wie mit. Self-review removed an ambiguous possessive from der wirtschaftlichen Rahmenbedingungen."
+    "note": "Materially repairs the legacy calque Wie mit. Self-review removed an ambiguous possessive from der wirtschaftlichen Rahmenbedingungen; hostile review also made the English translation idiomatic."
   },
   {
     "id": "dec122",
@@ -171,15 +184,15 @@
   {
     "id": "dec128",
     "en": "Equally",
-    "category": "stance",
-    "tl": "Gleichermaßen",
+    "category": "addition",
+    "tl": "Ebenso wichtig ist, dass",
     "alts": [],
-    "register": "written-neutral; marks equal importance or degree in an analytical comparison",
-    "trap": "Bare gleich usually means ‘same/equal’ or ‘in a moment’; gleichermaßen is the adverb meaning ‘equally’ in this evaluative frame.",
-    "example_tl": "Gleichermaßen wichtig ist, dass automatisierte Entscheidungen wirksam angefochten werden können, bevor sie den Zugang zu Arbeit, Krediten oder öffentlicher Infrastruktur beschränken.",
-    "example_en": "Equally important is that automated decisions can be challenged effectively before they restrict access to work, credit, or public infrastructure.",
-    "cloze": "{{c1::Gleichermaßen}} wichtig ist, dass automatisierte Entscheidungen wirksam angefochten werden können, bevor sie den Zugang zu Arbeit, Krediten oder öffentlicher Infrastruktur beschränken.",
-    "note": "Materially improves the underspecified legacy Gleich by selecting the equal-degree discourse use."
+    "register": "written-neutral; adds a second point and gives it equal argumentative weight",
+    "trap": "Gleich wichtig is valid when two explicit items are compared; the discourse frame Ebenso wichtig ist, dass adds a point and sends the finite verb to the end of the dass clause.",
+    "example_tl": "Ebenso wichtig ist, dass automatisierte Entscheidungen wirksam angefochten werden können, bevor sie den Zugang zu Arbeit, Krediten oder öffentlicher Infrastruktur beschränken.",
+    "example_en": "It is equally important that automated decisions can be challenged effectively before they restrict access to work, credit, or public infrastructure.",
+    "cloze": "{{c1::Ebenso wichtig ist, dass}} automatisierte Entscheidungen wirksam angefochten werden können, bevor sie den Zugang zu Arbeit, Krediten oder öffentlicher Infrastruktur beschränken.",
+    "note": "Materially improves the underspecified legacy Gleich. Hostile self-review selected a complete additive frame, acknowledged valid gleich wichtig, and repaired the marked English inversion."
   },
   {
     "id": "dec132",
@@ -206,6 +219,19 @@
     "example_en": "Just as independent courts limit state power, so too must transparent audit bodies effectively oversee the rule-setting of global platforms.",
     "cloze": "{{c1::So wie}} unabhängige Gerichte staatliche Macht begrenzen, {{c1::so}} müssen {{c1::auch}} transparente Prüfstellen die Regelsetzung globaler Plattformen wirksam kontrollieren.",
     "note": "Materially regularizes old_back's mixed frame. Self-review aligned the three discontinuous fixed elements with three cloze arms."
+  },
+  {
+    "id": "dec141",
+    "en": "Same as",
+    "category": "contrast",
+    "tl": "dasselbe wie",
+    "alts": [],
+    "register": "neutral; asserts or denies identity rather than mere resemblance",
+    "trap": "Ähnlich wie means ‘similar to’ and weakens identity to resemblance; dasselbe wie means ‘the same thing as’ and must not be confused with das Gleiche in every context.",
+    "example_tl": "Ein freiwilliger Verhaltenskodex ist nicht dasselbe wie eine rechtlich durchsetzbare Verpflichtung, auch wenn Branchenverbände beide Instrumente rhetorisch gern gleichsetzen.",
+    "example_en": "A voluntary code of conduct is not the same as a legally enforceable obligation, even if industry associations rhetorically like to equate the two instruments.",
+    "cloze": "Ein freiwilliger Verhaltenskodex ist nicht {{c1::dasselbe wie}} eine rechtlich durchsetzbare Verpflichtung, auch wenn Branchenverbände beide Instrumente rhetorisch gern gleichsetzen.",
+    "note": "Materially repairs old_back, which changes exact identity into mere similarity. Hostile review restored this false-equivalence card after triage."
   },
   {
     "id": "dec152",
@@ -250,14 +276,14 @@
     "id": "dec156",
     "en": "As demonstrated above",
     "category": "structuring",
-    "tl": "Wie oben nachgewiesen",
+    "tl": "Wie oben gezeigt",
     "alts": [],
-    "register": "written-formal; an evidential cross-reference appropriate only when the preceding analysis actually establishes the claim",
-    "trap": "Nachgewiesen preserves the strong claim ‘demonstrated’; dargelegt merely means ‘set out.’ The following main clause still has V2 order (erhöhen Systeme).",
-    "example_tl": "Wie oben nachgewiesen, erhöhen personalisierte Empfehlungssysteme die Sichtbarkeit emotionalisierender Beiträge, obwohl deren tatsächlicher Informationswert häufig deutlich geringer ist.",
+    "register": "written-formal; an evidential cross-reference to a result established earlier in the text",
+    "trap": "Wie oben gezeigt is the general cross-reference; use nachgewiesen only for actual proof and dargelegt when the point was merely set out. The main clause takes V2.",
+    "example_tl": "Wie oben gezeigt, erhöhen personalisierte Empfehlungssysteme die Sichtbarkeit emotionalisierender Beiträge, obwohl deren tatsächlicher Informationswert häufig deutlich geringer ist.",
     "example_en": "As demonstrated above, personalized recommendation systems increase the visibility of emotive posts, although their actual informational value is often considerably lower.",
-    "cloze": "{{c1::Wie oben nachgewiesen}}, erhöhen personalisierte Empfehlungssysteme die Sichtbarkeit emotionalisierender Beiträge, obwohl deren tatsächlicher Informationswert häufig deutlich geringer ist.",
-    "note": "Self-review preserved the source's evidential strength; use Wie oben dargelegt if the earlier passage only presented rather than demonstrated the point."
+    "cloze": "{{c1::Wie oben gezeigt}}, erhöhen personalisierte Empfehlungssysteme die Sichtbarkeit emotionalisierender Beiträge, obwohl deren tatsächlicher Informationswert häufig deutlich geringer ist.",
+    "note": "Old_back is correct. Hostile self-review replaced the context-dependent stronger nachgewiesen with the safer general rendering and clarified the evidential scale."
   },
   {
     "id": "dec157",
@@ -286,30 +312,17 @@
     "note": ""
   },
   {
-    "id": "dec162",
-    "en": "Generally speaking",
-    "category": "generalization",
-    "tl": "Im Allgemeinen",
-    "alts": ["Allgemein gesagt"],
-    "register": "neutral; states a broad tendency while leaving room for exceptions",
-    "trap": "Ganz allgemein gesprochen is a heavy calque; initial Im Allgemeinen takes V2, while the following sofern clause is verb-final.",
-    "example_tl": "Im Allgemeinen fördern offene Standards den Wettbewerb, sofern ihre technische Umsetzung nicht faktisch von einem einzigen marktbeherrschenden Anbieter kontrolliert wird.",
-    "example_en": "Generally speaking, open standards promote competition provided their technical implementation is not effectively controlled by a single dominant provider.",
-    "cloze": "{{c1::Im Allgemeinen}} fördern offene Standards den Wettbewerb, sofern ihre technische Umsetzung nicht faktisch von einem einzigen marktbeherrschenden Anbieter kontrolliert wird.",
-    "note": "Materially streamlines the calque in old_back. The alternative plugs into the same V2 clause without punctuation changes."
-  },
-  {
     "id": "dec163",
     "en": "Given these points",
     "category": "result",
     "tl": "Vor diesem Hintergrund",
-    "alts": ["Angesichts dieser Punkte"],
+    "alts": ["Angesichts dieser Überlegungen"],
     "register": "written-neutral; draws a recommendation from considerations established in prior discourse",
     "trap": "The prepositional frame takes main-clause V2 (sollte das Parlament); the following bevor clause sends werden to the end.",
     "example_tl": "Vor diesem Hintergrund sollte das Parlament den Entwurf überarbeiten, bevor provisorische Ausnahmen zu dauerhaften Schlupflöchern für marktbeherrschende Plattformen werden.",
     "example_en": "Given these points, parliament should revise the draft before provisional exceptions become permanent loopholes for dominant platforms.",
     "cloze": "{{c1::Vor diesem Hintergrund}} sollte das Parlament den Entwurf überarbeiten, bevor provisorische Ausnahmen zu dauerhaften Schlupflöchern für marktbeherrschende Plattformen werden.",
-    "note": "The alternative retains old_back and plugs into the same case and word-order environment."
+    "note": "Hostile self-review replaced the literal Punkte with the more idiomatic Überlegungen in the plug-compatible alternative."
   },
   {
     "id": "dec164",
@@ -468,19 +481,6 @@
     "note": ""
   },
   {
-    "id": "dec187",
-    "en": "Only after he came home did he realize something was wrong.",
-    "category": "structuring",
-    "tl": "erst als",
-    "alts": [],
-    "register": "neutral; erst als marks a single past threshold after which a realization or change occurs",
-    "trap": "English uses subject-auxiliary inversion after Only after; German uses verb-final order after als, then ordinary V2 in the main clause (erkannten sie).",
-    "example_tl": "Erst als unabhängige Forschende vollständigen Datenzugang erhielten, erkannten sie, wie systematisch die Plattform zuvor oppositionelle Inhalte benachteiligt hatte.",
-    "example_en": "Only after independent researchers obtained full data access did they recognize how systematically the platform had previously disadvantaged opposition content.",
-    "cloze": "{{c1::Erst als}} unabhängige Forschende vollständigen Datenzugang erhielten, erkannten sie, wie systematisch die Plattform zuvor oppositionelle Inhalte benachteiligt hatte.",
-    "note": "The legacy sentence is correct. Self-review generalized the item into the connector pattern while preserving the source's inversion lesson."
-  },
-  {
     "id": "dec189",
     "en": "Unless",
     "category": "condition",
@@ -501,10 +501,10 @@
     "alts": ["Wann immer"],
     "register": "neutral; marks a recurring condition rather than a one-time event",
     "trap": "Both forms introduce a verb-final clause (Regeln ändern); when that clause comes first, the main clause begins with V2 verlieren.",
-    "example_tl": "Immer wenn Plattformen ihre Moderationsregeln kurzfristig ändern, müssen kleinere Redaktionen ihre Veröffentlichungspläne revidieren und laufende Kampagnen kostspielig neu ausrichten.",
-    "example_en": "Whenever platforms change their moderation rules at short notice, smaller newsrooms must revise their publication plans and expensively redirect ongoing campaigns.",
-    "cloze": "{{c1::Immer wenn}} Plattformen ihre Moderationsregeln kurzfristig ändern, müssen kleinere Redaktionen ihre Veröffentlichungspläne revidieren und laufende Kampagnen kostspielig neu ausrichten.",
-    "note": "The alternative plugs into the same verb-final clause. Self-review replaced the unnatural geplante Reichweite with concrete Veröffentlichungspläne."
+    "example_tl": "Immer wenn Plattformen ihre Moderationsregeln kurzfristig ändern, müssen kleinere Redaktionen ihre Veröffentlichungspläne revidieren und laufende Kampagnen unter erheblichem Kostenaufwand neu ausrichten.",
+    "example_en": "Whenever platforms change their moderation rules at short notice, smaller newsrooms must revise their publication plans and reconfigure ongoing campaigns at considerable expense.",
+    "cloze": "{{c1::Immer wenn}} Plattformen ihre Moderationsregeln kurzfristig ändern, müssen kleinere Redaktionen ihre Veröffentlichungspläne revidieren und laufende Kampagnen unter erheblichem Kostenaufwand neu ausrichten.",
+    "note": "The alternative plugs into the same verb-final clause. Hostile self-review replaced an unnatural reach reference and then polished the costly realignment in both languages."
   },
   {
     "id": "dec193",
@@ -515,9 +515,9 @@
     "register": "written-neutral to formal; explicitly concedes a limited point before a qualification",
     "trap": "Zugegebenermaßen is a V2 sentence adverb (hat die Vereinbarung), not a subordinator; a following obwohl clause would instead be verb-final.",
     "example_tl": "Zugegebenermaßen hat die freiwillige Vereinbarung einzelne Verbesserungen bewirkt; eine unabhängige Kontrolle der zugrunde liegenden Empfehlungssysteme ersetzt sie jedoch nicht.",
-    "example_en": "Admittedly, the voluntary agreement has produced individual improvements; however, it is no substitute for independent oversight of the underlying recommendation systems.",
+    "example_en": "Admittedly, the voluntary agreement has produced some specific improvements; however, it is no substitute for independent oversight of the underlying recommendation systems.",
     "cloze": "{{c1::Zugegebenermaßen}} hat die freiwillige Vereinbarung einzelne Verbesserungen bewirkt; eine unabhängige Kontrolle der zugrunde liegenden Empfehlungssysteme ersetzt sie jedoch nicht.",
-    "note": ""
+    "note": "Hostile self-review replaced the literal individual improvements with idiomatic some specific improvements in the English translation."
   },
   {
     "id": "dec194",

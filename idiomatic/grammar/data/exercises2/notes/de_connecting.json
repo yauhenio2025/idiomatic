@@ -4,7 +4,9 @@
     "en": "Accordingly,",
     "category": "result",
     "tl": "Dementsprechend",
-    "alts": ["Folglich"],
+    "alts": [
+      "Folglich"
+    ],
     "register": "written-neutral; common in analytical and policy prose",
     "trap": "Dementsprechend is an adverbial in the prefield, so the finite verb follows immediately in V2 order; it does not trigger verb-final order.",
     "example_tl": "Dementsprechend muss die Bundesregierung ihre Plattformstrategie überarbeiten, bevor weitere öffentliche Mittel in technisch unausgereifte und demokratisch fragwürdige Systeme fließen.",
@@ -30,7 +32,9 @@
     "en": "As a result,",
     "category": "result",
     "tl": "Infolgedessen",
-    "alts": ["Als Folge davon"],
+    "alts": [
+      "Als Folge davon"
+    ],
     "register": "written-neutral to formal; a clear sentence-level consequence marker",
     "trap": "Infolgedessen occupies the prefield and requires V2 order (Infolgedessen verloren ...); obwohl, by contrast, sends the verb to the clause end.",
     "example_tl": "Infolgedessen verloren viele Lokalredaktionen ihre wirtschaftliche Grundlage, obwohl ihr investigativer Beitrag zur demokratischen Kontrolle dringender denn je gebraucht wird.",
@@ -43,7 +47,9 @@
     "en": "Due to",
     "category": "result",
     "tl": "Aufgrund",
-    "alts": ["Wegen"],
+    "alts": [
+      "Wegen"
+    ],
     "register": "written-neutral to formal; wegen is usually less bureaucratic",
     "trap": "Aufgrund commonly takes the genitive in edited prose; aufgrund von is also standard, but the compact genitive is natural when the case is explicit.",
     "example_tl": "Aufgrund des wachsenden politischen Drucks veröffentlicht der Konzern nun Transparenzberichte, in denen jedoch entscheidende Angaben zur algorithmischen Reichweitensteuerung weiterhin fehlen.",
@@ -56,7 +62,10 @@
     "en": "For this reason",
     "category": "result",
     "tl": "Aus diesem Grund",
-    "alts": ["Deshalb", "Daher"],
+    "alts": [
+      "Deshalb",
+      "Daher"
+    ],
     "register": "neutral; suitable in both serious speech and analytical writing",
     "trap": "As a prefield phrase, Aus diesem Grund is followed by the finite verb in V2 order; it does not subordinate the clause.",
     "example_tl": "Aus diesem Grund fordert das Parlament verbindliche Prüfverfahren, obwohl die Branche weiterhin behauptet, freiwillige Selbstkontrolle könne systemische Risiken ausreichend begrenzen.",
@@ -82,7 +91,9 @@
     "en": "Thus",
     "category": "result",
     "tl": "Somit",
-    "alts": ["Folglich"],
+    "alts": [
+      "Folglich"
+    ],
     "register": "written-neutral; more controlled in policy prose than conversational also",
     "trap": "German also can mean ‘thus/so’ but never English ‘also’; Somit is a prefield adverb and therefore takes V2 order (Somit bleibt ...).",
     "example_tl": "Somit bleibt die versprochene Dezentralisierung vorerst eine Marketingbehauptung, solange zentrale Betreiber sämtliche Zugangsregeln und Erlösmodelle einseitig festlegen können.",
@@ -95,7 +106,9 @@
     "en": "Importantly",
     "category": "stance",
     "tl": "Wichtig ist, dass",
-    "alts": ["Entscheidend ist, dass"],
+    "alts": [
+      "Entscheidend ist, dass"
+    ],
     "register": "written-neutral; a natural argumentative frame, with the alternative expressing a stronger claim",
     "trap": "A bare Wichtig is not a German sentence-level connector here; the full frame needs dass and verb-final order in the following clause.",
     "example_tl": "Wichtig ist, dass unabhängige Forschende Zugang zu den Plattformdaten erhalten, bevor öffentliche Debatten durch intransparente Empfehlungssysteme weiter verzerrt werden.",
@@ -108,7 +121,9 @@
     "en": "In detail",
     "category": "structuring",
     "tl": "Im Einzelnen",
-    "alts": ["Im Detail"],
+    "alts": [
+      "Im Detail"
+    ],
     "register": "written-neutral; particularly useful before a detailed account or breakdown",
     "trap": "Einzelnen is a nominalized adjective and is capitalized; the initial phrase occupies the prefield, so zeigt follows in V2 position.",
     "example_tl": "Im Einzelnen zeigt der Bericht, wie Empfehlungsalgorithmen politische Zuspitzung belohnen und zugleich die wirtschaftliche Abhängigkeit kleiner Medienhäuser verschärfen.",
@@ -134,7 +149,9 @@
     "en": "Indeed",
     "category": "stance",
     "tl": "In der Tat",
-    "alts": ["Tatsächlich"],
+    "alts": [
+      "Tatsächlich"
+    ],
     "register": "written-neutral to formal; confirms and strengthens a preceding claim",
     "trap": "In der Tat normally confirms what precedes; in the example it takes V2 (zeigen), whereas the embedded dass clause is verb-final (sanktioniert).",
     "example_tl": "In der Tat zeigen neuere Untersuchungen, dass automatisierte Moderation regionale Dialekte häufiger sanktioniert als die Standardsprache etablierter Nachrichtenredaktionen.",
@@ -173,7 +190,9 @@
     "en": "Particularly / in particular",
     "category": "structuring",
     "tl": "Insbesondere",
-    "alts": ["Vor allem"],
+    "alts": [
+      "Vor allem"
+    ],
     "register": "neutral; natural in analytical prose when narrowing attention to a salient subset",
     "trap": "Im Besonderen is possible only in marked contexts and is usually stilted here; insbesondere or vor allem is the idiomatic focus marker.",
     "example_tl": "Insbesondere kleinere Regionalzeitungen verlieren Werbeeinnahmen, weil Plattformen lokale Zielgruppen präziser vermessen und Anzeigenkunden mit kurzfristig günstigeren Angeboten abwerben können.",
@@ -186,7 +205,9 @@
     "en": "To clarify",
     "category": "reformulation",
     "tl": "Zur Klarstellung",
-    "alts": ["Um das klarzustellen"],
+    "alts": [
+      "Um das klarzustellen"
+    ],
     "register": "written-formal; the alternative is natural in serious speech",
     "trap": "Zu klären means ‘to be clarified’ or labels an unresolved task; it does not itself perform the discourse move ‘to clarify.’",
     "example_tl": "Zur Klarstellung: Die vorgeschlagene Meldepflicht betrifft ausschließlich kommerzielle Plattformen, nicht private Foren oder ehrenamtlich betriebene Archive mit begrenzter Reichweite.",
@@ -225,7 +246,9 @@
     "en": "Undoubtedly",
     "category": "stance",
     "tl": "Zweifellos",
-    "alts": ["Ohne Zweifel"],
+    "alts": [
+      "Ohne Zweifel"
+    ],
     "register": "written-neutral; firm but less ceremonious than zweifelsohne",
     "trap": "At clause onset Zweifellos occupies the prefield, so the finite auxiliary follows immediately: Zweifellos hat ..., not a verb-final pattern.",
     "example_tl": "Zweifellos hat die investigative Recherche erhebliche Missstände offengelegt; dennoch ersetzt die Plausibilität ihrer Darstellung keine gerichtsfeste Prüfung der veröffentlichten Vorwürfe.",
@@ -238,7 +261,9 @@
     "en": "Apart from this",
     "category": "addition",
     "tl": "Abgesehen davon",
-    "alts": ["Davon abgesehen"],
+    "alts": [
+      "Davon abgesehen"
+    ],
     "register": "neutral; introduces an additional consideration while setting the previous point aside",
     "trap": "English discourse ‘this’ is rendered anaphorically as davon, not von diesem without a noun; the phrase takes V2, unlike obwohl.",
     "example_tl": "Abgesehen davon bietet der Entwurf keinen wirksamen Schutz für Whistleblower, obwohl ihre Hinweise für die Aufdeckung systematischer Manipulation unverzichtbar sind.",
@@ -264,7 +289,9 @@
     "en": "Coupled with",
     "category": "addition",
     "tl": "In Verbindung mit",
-    "alts": ["Zusammen mit"],
+    "alts": [
+      "Zusammen mit"
+    ],
     "register": "written-neutral; natural for interacting factors in analytical prose",
     "trap": "Gekoppelt mit is valid even for abstract relations but can sound more technical or mechanical here; both phrases take mit plus dative.",
     "example_tl": "In Verbindung mit einer aggressiven Übernahmepolitik verschafft die exklusive Datenbasis dem Konzern einen Vorsprung, den kleinere Wettbewerber kaum noch aufholen können.",
@@ -277,7 +304,9 @@
     "en": "Finally",
     "category": "structuring",
     "tl": "Abschließend",
-    "alts": ["Zum Schluss"],
+    "alts": [
+      "Zum Schluss"
+    ],
     "register": "written-neutral; explicitly marks the closing point of an argument",
     "trap": "Schließlich often means ‘eventually’ or ‘after all’; use abschließend when finally is a structural signpost concluding an argument.",
     "example_tl": "Abschließend bleibt festzuhalten, dass digitale Souveränität ohne offene Standards die Abhängigkeit von ausländischen Anbietern lediglich durch die Abhängigkeit von nationalen Monopolen ersetzt.",
@@ -290,7 +319,9 @@
     "en": "Furthermore",
     "category": "addition",
     "tl": "Darüber hinaus",
-    "alts": ["Überdies"],
+    "alts": [
+      "Überdies"
+    ],
     "register": "written-neutral; überdies is somewhat more formal",
     "trap": "Darüber hinaus is followed by V2 order (verlangt); the purpose subordinator damit later sends werden to the clause end.",
     "example_tl": "Darüber hinaus verlangt der Ausschuss unabhängige Audits, damit Risiken nicht erst nach einer massenhaften Verletzung grundlegender Rechte sichtbar werden.",
@@ -303,7 +334,9 @@
     "en": "In addition to this",
     "category": "addition",
     "tl": "Zusätzlich dazu",
-    "alts": ["Ergänzend dazu"],
+    "alts": [
+      "Ergänzend dazu"
+    ],
     "register": "neutral; explicit anaphoric addition in policy prose and serious speech",
     "trap": "English discourse ‘this’ normally becomes dazu here, not zu diesem without a following noun; the phrase takes V2, while weil is verb-final.",
     "example_tl": "Zusätzlich dazu sollte die Behörde regionale Medien fördern, weil ein vielfältiger Informationsmarkt die Wirkung zentral gesteuerter Desinformation deutlich begrenzen kann.",
@@ -316,7 +349,9 @@
     "en": "In the same fashion",
     "category": "structuring",
     "tl": "Auf dieselbe Weise",
-    "alts": ["Ebenso"],
+    "alts": [
+      "Ebenso"
+    ],
     "register": "written-neutral; signals an analogous mechanism or pattern",
     "trap": "The compact idiom is auf dieselbe Weise; it fills the prefield and takes V2, whereas the following wenn clause has verb-final bewerten.",
     "example_tl": "Auf dieselbe Weise blenden standardisierte Moderationssysteme lokale politische Kontexte aus, wenn sie sprachliche Mehrdeutigkeit ausschließlich anhand globaler Trainingsdaten bewerten.",
@@ -433,7 +468,9 @@
     "en": "In view of",
     "category": "condition",
     "tl": "Angesichts",
-    "alts": ["In Anbetracht"],
+    "alts": [
+      "In Anbetracht"
+    ],
     "register": "written-neutral to formal; frames circumstances relevant to a judgment",
     "trap": "Angesichts governs the genitive in edited German; im Hinblick auf usually means ‘with regard to’ and does not express the same circumstantial premise.",
     "example_tl": "Angesichts der wachsenden geopolitischen Spannungen sollte Europa seine Bezugsquellen für kritische digitale Infrastruktur diversifizieren, ohne dabei neue Abhängigkeiten von einzelnen heimischen Konzernen zu schaffen.",
@@ -446,7 +483,9 @@
     "en": "Provided that",
     "category": "condition",
     "tl": "Vorausgesetzt, dass",
-    "alts": ["Sofern"],
+    "alts": [
+      "Sofern"
+    ],
     "register": "neutral to formal; states an explicit necessary condition",
     "trap": "Vorausgesetzt, dass introduces a verb-final subordinate clause (bleibt); after that whole clause, the main clause begins with V2 inversion (könnte das Verfahren).",
     "example_tl": "Vorausgesetzt, dass die Prüfstelle tatsächlich unabhängig bleibt, könnte das neue Verfahren erhebliche Fortschritte bei der Kontrolle algorithmischer Diskriminierung ermöglichen.",
@@ -485,7 +524,9 @@
     "en": "With this intention",
     "category": "structuring",
     "tl": "In dieser Absicht",
-    "alts": ["Zu diesem Zweck"],
+    "alts": [
+      "Zu diesem Zweck"
+    ],
     "register": "written-neutral; foregrounds the intention motivating the following action",
     "trap": "This prepositional phrase takes V2 order (richtete ... ein); a purpose clause would instead use um ... zu or verb-final damit.",
     "example_tl": "In dieser Absicht richtete das Ministerium einen unabhängigen Fonds ein, der lokale Recherchen zu grenzüberschreitender Desinformation langfristig finanzieren soll.",
@@ -550,7 +591,9 @@
     "en": "Namely",
     "category": "reformulation",
     "tl": "und zwar",
-    "alts": ["nämlich"],
+    "alts": [
+      "nämlich"
+    ],
     "register": "neutral; the safest way to introduce a precise specification in speech and writing",
     "trap": "Nämlich can also mark a reason and normally sits in the middle field; und zwar cleanly introduces an appended specification after a comma.",
     "example_tl": "Der Entwurf erfasst nur einen Teil des Problems, und zwar die kommerzielle Weitergabe sensibler Nutzerdaten an politische Beratungsfirmen.",
@@ -628,7 +671,9 @@
     "en": "Contrarily",
     "category": "contrast",
     "tl": "Im Gegenteil",
-    "alts": ["Ganz im Gegenteil"],
+    "alts": [
+      "Ganz im Gegenteil"
+    ],
     "register": "neutral; forcefully reverses or rejects the preceding claim",
     "trap": "Im Gegensatz is incomplete without zu plus a comparison term; free-standing Im Gegenteil reverses a prior proposition and is followed naturally by a colon here.",
     "example_tl": "Im Gegenteil: Die freiwillige Selbstkontrolle verschärft das Problem, weil sie grundlegende Interessenkonflikte als bloße Kommunikationsfehler der Plattformen erscheinen lässt.",
@@ -674,5 +719,1261 @@
     "example_en": "Despite considerable public pressure, the platform is maintaining its opaque moderation system and continues to deny independent researchers access to the data.",
     "cloze": "{{c1::Trotz}} des erheblichen öffentlichen Drucks hält die Plattform an ihrem intransparenten Moderationssystem fest und verweigert unabhängigen Forschenden weiterhin den Datenzugang.",
     "note": "Materially corrects old_back: trotz and obwohl express concession with different complements and word order and must not be listed as interchangeable forms."
+  },
+  {
+    "id": "dec101",
+    "en": "Differing from",
+    "category": "contrast",
+    "tl": "Abweichend von",
+    "alts": [],
+    "register": "written-formal; common when a ruling, method, or result departs from a reference point",
+    "trap": "Von governs the dative; when the whole phrase fills the prefield, the finite verb follows in V2 order (bewertet das Gericht).",
+    "example_tl": "Abweichend von der bisherigen Rechtsprechung bewertet das Gericht den automatisierten Datenabgleich nun als eigenständigen Eingriff in die informationelle Selbstbestimmung.",
+    "example_en": "Departing from previous case law, the court now assesses automated data matching as a distinct interference with informational self-determination.",
+    "cloze": "{{c1::Abweichend von}} der bisherigen Rechtsprechung bewertet das Gericht den automatisierten Datenabgleich nun als eigenständigen Eingriff in die informationelle Selbstbestimmung.",
+    "note": "Hostile self-review changed the English participial phrase from awkward Differing from to idiomatic Departing from while preserving the source meaning."
+  },
+  {
+    "id": "dec103",
+    "en": "However",
+    "category": "contrast",
+    "tl": "Allerdings",
+    "alts": [
+      "Jedoch"
+    ],
+    "register": "neutral; Allerdings naturally introduces a qualification, while Jedoch is slightly more formal",
+    "trap": "Old_back's Dennoch specifically concedes a counterexpectation; initial Allerdings or Jedoch introduces a broader qualification and takes V2, unlike coordinating aber.",
+    "example_tl": "Allerdings greift der Entwurf zu kurz, weil er politische Werbung reguliert, die algorithmische Verstärkung organischer Desinformation jedoch vollständig ausklammert.",
+    "example_en": "However, the draft falls short because it regulates political advertising but entirely excludes the algorithmic amplification of organic disinformation.",
+    "cloze": "{{c1::Allerdings}} greift der Entwurf zu kurz, weil er politische Werbung reguliert, die algorithmische Verstärkung organischer Desinformation jedoch vollständig ausklammert.",
+    "note": "Materially corrects old_back, which narrows broad however to counterexpectational nevertheless. Hostile review restored this function after an overaggressive duplicate drop."
+  },
+  {
+    "id": "dec104",
+    "en": "In contrast (to)",
+    "category": "contrast",
+    "tl": "Im Gegensatz zu",
+    "alts": [],
+    "register": "neutral; explicit comparison suitable for analytical speech and writing",
+    "trap": "Zu takes the dative here; the contrast phrase is followed by main-clause V2 (müssen Plattformen), while obwohl introduces verb-final beeinflussen.",
+    "example_tl": "Im Gegensatz zu öffentlich-rechtlichen Medien müssen Plattformen ihre Empfehlungslogik bislang kaum begründen, obwohl sie den politischen Informationsfluss maßgeblich beeinflussen.",
+    "example_en": "In contrast to public-service media, platforms have so far scarcely had to justify their recommendation logic, although they significantly influence the flow of political information.",
+    "cloze": "{{c1::Im Gegensatz zu}} öffentlich-rechtlichen Medien müssen Plattformen ihre Empfehlungslogik bislang kaum begründen, obwohl sie den politischen Informationsfluss maßgeblich beeinflussen.",
+    "note": ""
+  },
+  {
+    "id": "dec106",
+    "en": "Instead",
+    "category": "contrast",
+    "tl": "Stattdessen",
+    "alts": [],
+    "register": "neutral; replaces a previously mentioned option or action",
+    "trap": "Stattdessen is a pronominal adverb and takes V2 (Stattdessen finanziert ...); statt alone needs a noun or infinitive complement and is not interchangeable here.",
+    "example_tl": "Stattdessen finanziert die Regierung proprietäre Cloud-Dienste, obwohl offene Infrastrukturen langfristig mehr Wettbewerb und größere politische Handlungsfähigkeit ermöglichen würden.",
+    "example_en": "Instead, the government funds proprietary cloud services, although open infrastructure would enable more competition and greater political agency over the long term.",
+    "cloze": "{{c1::Stattdessen}} finanziert die Regierung proprietäre Cloud-Dienste, obwohl offene Infrastrukturen langfristig mehr Wettbewerb und größere politische Handlungsfähigkeit ermöglichen würden.",
+    "note": ""
+  },
+  {
+    "id": "dec109",
+    "en": "Nor",
+    "category": "addition",
+    "tl": "ebenso wenig",
+    "alts": [],
+    "register": "neutral; a clause-level additive negation following an earlier negative proposition",
+    "trap": "English clause-level nor triggers inversion; German Ebenso wenig fills the prefield and takes V2 (bieten sie), while bare noch usually means ‘still/yet/more.’",
+    "example_tl": "Die freiwilligen Leitlinien gewährleisten keine unabhängigen Prüfungen; ebenso wenig bieten sie wirksame Rechtsmittel für Redaktionen, deren Beiträge ohne Begründung herabgestuft werden.",
+    "example_en": "The voluntary guidelines do not guarantee independent audits; nor do they offer effective remedies for newsrooms whose posts are downgraded without justification.",
+    "cloze": "Die freiwilligen Leitlinien gewährleisten keine unabhängigen Prüfungen; {{c1::ebenso wenig}} bieten sie wirksame Rechtsmittel für Redaktionen, deren Beiträge ohne Begründung herabgestuft werden.",
+    "note": "The source is structurally incomplete. Hostile self-review replaced an overtranslated weder ... noch frame with the clause-level equivalent Ebenso wenig."
+  },
+  {
+    "id": "dec110",
+    "en": "Notwithstanding",
+    "category": "concession",
+    "tl": "Ungeachtet",
+    "alts": [],
+    "register": "written-formal; a concessive preposition common in legal and policy prose",
+    "trap": "Prepositional ungeachtet governs the genitive; adverbial notwithstanding would instead be dennoch, but the two constructions require different complements.",
+    "example_tl": "Ungeachtet der öffentlichen Kritik führt der Konzern das Gesichtserkennungssystem landesweit ein, ohne unabhängige Folgenabschätzungen oder wirksame Widerspruchsverfahren vorzulegen.",
+    "example_en": "Notwithstanding the public criticism, the corporation is introducing the facial-recognition system nationwide without presenting independent impact assessments or effective appeal procedures.",
+    "cloze": "{{c1::Ungeachtet}} der öffentlichen Kritik führt der Konzern das Gesichtserkennungssystem landesweit ein, ohne unabhängige Folgenabschätzungen oder wirksame Widerspruchsverfahren vorzulegen.",
+    "note": "The context-free prompt can also be an adverb. This note deliberately teaches the prepositional reading represented by old_back."
+  },
+  {
+    "id": "dec111",
+    "en": "On the other hand",
+    "category": "contrast",
+    "tl": "Andererseits",
+    "alts": [],
+    "register": "neutral; balances a preceding consideration in structured argument",
+    "trap": "Andererseits is often paired with einerseits in the wider discourse, but it is a V2 adverb here: Andererseits darf ..., not verb-final order.",
+    "example_tl": "Andererseits darf eine strengere Aufsicht kleinere Anbieter nicht mit denselben Berichtspflichten belasten wie marktbeherrschende Konzerne mit globaler Infrastruktur.",
+    "example_en": "On the other hand, stricter oversight must not burden smaller providers with the same reporting duties as dominant corporations with global infrastructure.",
+    "cloze": "{{c1::Andererseits}} darf eine strengere Aufsicht kleinere Anbieter nicht mit denselben Berichtspflichten belasten wie marktbeherrschende Konzerne mit globaler Infrastruktur.",
+    "note": "The example presupposes the first side in prior discourse, so only the source connector andererseits is clozed."
+  },
+  {
+    "id": "dec112",
+    "en": "Rather",
+    "category": "reformulation",
+    "tl": "vielmehr",
+    "alts": [],
+    "register": "written-neutral; corrects a rejected characterization by replacing it with a more accurate one",
+    "trap": "Corrective rather is vielmehr, usually after a negated claim; eher means ‘rather/more likely/preferably’ and does not perform this correction.",
+    "example_tl": "Die Reform erweitert staatliche Kontrolle nicht; vielmehr schafft sie erstmals nachvollziehbare Grenzen für Eingriffe, die bislang weitgehend im Verborgenen erfolgten.",
+    "example_en": "The reform does not expand state oversight; rather, it creates transparent limits for interventions that previously occurred largely out of public view.",
+    "cloze": "Die Reform erweitert staatliche Kontrolle nicht; {{c1::vielmehr}} schafft sie erstmals nachvollziehbare Grenzen für Eingriffe, die bislang weitgehend im Verborgenen erfolgten.",
+    "note": "Materially corrects old_back for the discourse use intended here. Self-review changed beschränkt to erweitert so the rejected and replacement claims are logically coherent."
+  },
+  {
+    "id": "dec114",
+    "en": "Unlike",
+    "category": "contrast",
+    "tl": "Anders als",
+    "alts": [],
+    "register": "neutral; direct comparison in speech and writing",
+    "trap": "Anders als takes no zu; the comparison term has the case required by its role, unlike im Gegensatz zu, which governs the dative.",
+    "example_tl": "Anders als traditionelle Rundfunkanstalten können globale Plattformen ihre Moderationsregeln kurzfristig ändern, ohne nationale Parlamente oder betroffene Redaktionen konsultieren zu müssen.",
+    "example_en": "Unlike traditional broadcasters, global platforms can change their moderation rules at short notice without having to consult national parliaments or affected newsrooms.",
+    "cloze": "{{c1::Anders als}} traditionelle Rundfunkanstalten können globale Plattformen ihre Moderationsregeln kurzfristig ändern, ohne nationale Parlamente oder betroffene Redaktionen konsultieren zu müssen.",
+    "note": ""
+  },
+  {
+    "id": "dec116",
+    "en": "Whereas",
+    "category": "contrast",
+    "tl": "Während",
+    "alts": [
+      "Wohingegen"
+    ],
+    "register": "neutral; während can mark either contrast or simultaneity, while wohingegen is explicitly contrastive",
+    "trap": "Contrastive während is a subordinator: unterliegen is clause-final, and the following main clause begins with V2 inversion (bestimmen Plattformen).",
+    "example_tl": "Während öffentlich-rechtliche Medien detaillierten Aufsichtspflichten unterliegen, bestimmen globale Plattformen ihre redaktionellen Standards weitgehend selbst und ändern sie ohne öffentliche Debatte.",
+    "example_en": "Whereas public-service media are subject to detailed oversight obligations, global platforms largely determine their own editorial standards and change them without public debate.",
+    "cloze": "{{c1::Während}} öffentlich-rechtliche Medien detaillierten Aufsichtspflichten unterliegen, bestimmen globale Plattformen ihre redaktionellen Standards weitgehend selbst und ändern sie ohne öffentliche Debatte.",
+    "note": "The alternative wohingegen plugs into the same verb-final clause and removes the temporal ambiguity."
+  },
+  {
+    "id": "dec120",
+    "en": "As with",
+    "category": "structuring",
+    "tl": "Wie bei",
+    "alts": [],
+    "register": "neutral; introduces a comparable case or historical parallel",
+    "trap": "Bei governs the dative; wie mit is a literal calque unless actual accompaniment or instrumentality with mit is meant.",
+    "example_tl": "Wie bei früheren Medienumbrüchen entscheidet auch diesmal nicht allein die Technik, sondern vor allem die politische Gestaltung der wirtschaftlichen Rahmenbedingungen.",
+    "example_en": "As with earlier transformations of the media, technology alone is not decisive this time; what matters above all is how the economic framework is shaped politically.",
+    "cloze": "{{c1::Wie bei}} früheren Medienumbrüchen entscheidet auch diesmal nicht allein die Technik, sondern vor allem die politische Gestaltung der wirtschaftlichen Rahmenbedingungen.",
+    "note": "Materially repairs the legacy calque Wie mit. Self-review removed an ambiguous possessive from der wirtschaftlichen Rahmenbedingungen; hostile review also made the English translation idiomatic."
+  },
+  {
+    "id": "dec122",
+    "en": "By the same token",
+    "category": "result",
+    "tl": "Aus demselben Grund",
+    "alts": [],
+    "register": "neutral; applies the same line of reasoning to a parallel conclusion",
+    "trap": "Im gleichen Sinne means ‘in the same sense’; it does not reliably express the inference ‘by the same reasoning.’ The prefield phrase takes V2.",
+    "example_tl": "Aus demselben Grund darf der Staat Redaktionen nicht zur Herausgabe journalistischer Quellen zwingen, selbst wenn er Sicherheitsinteressen geltend macht.",
+    "example_en": "By the same token, the state must not force newsrooms to disclose journalistic sources, even if it invokes security interests.",
+    "cloze": "{{c1::Aus demselben Grund}} darf der Staat Redaktionen nicht zur Herausgabe journalistischer Quellen zwingen, selbst wenn er Sicherheitsinteressen geltend macht.",
+    "note": "Materially corrects old_back. Self-review changed Plattformen to Redaktionen so possession and protection of journalistic sources is semantically natural."
+  },
+  {
+    "id": "dec123",
+    "en": "Compared to",
+    "category": "contrast",
+    "tl": "Im Vergleich zu",
+    "alts": [
+      "Verglichen mit"
+    ],
+    "register": "neutral; standard explicit comparison in analytical prose",
+    "trap": "Zu and mit both govern the dative in these two plug-in alternatives; initial Im Vergleich zu is followed by V2 order (verfügen Plattformen).",
+    "example_tl": "Im Vergleich zu nationalen Fernsehsendern verfügen Plattformen über deutlich präzisere Nutzerdaten, unterliegen jedoch in Europa wesentlich weniger strengen publizistischen Kontrollpflichten.",
+    "example_en": "Compared to national television broadcasters, platforms possess far more precise user data but are subject to substantially less stringent editorial oversight duties in Europe.",
+    "cloze": "{{c1::Im Vergleich zu}} nationalen Fernsehsendern verfügen Plattformen über deutlich präzisere Nutzerdaten, unterliegen jedoch in Europa wesentlich weniger strengen publizistischen Kontrollpflichten.",
+    "note": "Self-review replaced schwächeren Pflichten with the idiomatic weniger strengen Pflichten."
+  },
+  {
+    "id": "dec124",
+    "en": "Correspondingly",
+    "category": "result",
+    "tl": "Entsprechend",
+    "alts": [],
+    "register": "written-neutral; marks a matching degree or consequence",
+    "trap": "The whole phrase Entsprechend hoch fills the prefield, so sind follows in V2; the following wenn clause sends kontrollieren to the end.",
+    "example_tl": "Entsprechend hoch sind die politischen Risiken, wenn wenige private Anbieter zugleich Kommunikationsinfrastruktur, Werbemarkt und öffentliche Sichtbarkeit weitgehend kontrollieren.",
+    "example_en": "The political risks are correspondingly high when a few private providers largely control communication infrastructure, the advertising market, and public visibility at once.",
+    "cloze": "{{c1::Entsprechend}} hoch sind die politischen Risiken, wenn wenige private Anbieter zugleich Kommunikationsinfrastruktur, Werbemarkt und öffentliche Sichtbarkeit weitgehend kontrollieren.",
+    "note": "The context-free prompt presupposes a preceding scale or relation; the example supplies the matching-degree reading."
+  },
+  {
+    "id": "dec128",
+    "en": "Equally",
+    "category": "addition",
+    "tl": "Ebenso wichtig ist, dass",
+    "alts": [],
+    "register": "written-neutral; adds a second point and gives it equal argumentative weight",
+    "trap": "Gleich wichtig is valid when two explicit items are compared; the discourse frame Ebenso wichtig ist, dass adds a point and sends the finite verb to the end of the dass clause.",
+    "example_tl": "Ebenso wichtig ist, dass automatisierte Entscheidungen wirksam angefochten werden können, bevor sie den Zugang zu Arbeit, Krediten oder öffentlicher Infrastruktur beschränken.",
+    "example_en": "It is equally important that automated decisions can be challenged effectively before they restrict access to work, credit, or public infrastructure.",
+    "cloze": "{{c1::Ebenso wichtig ist, dass}} automatisierte Entscheidungen wirksam angefochten werden können, bevor sie den Zugang zu Arbeit, Krediten oder öffentlicher Infrastruktur beschränken.",
+    "note": "Materially improves the underspecified legacy Gleich. Hostile self-review selected a complete additive frame, acknowledged valid gleich wichtig, and repaired the marked English inversion."
+  },
+  {
+    "id": "dec132",
+    "en": "In the same way",
+    "category": "structuring",
+    "tl": "Auf dieselbe Weise",
+    "alts": [
+      "In derselben Weise"
+    ],
+    "register": "written-neutral; signals an analogous mechanism rather than mere similarity",
+    "trap": "The idiomatic phrase is much leaner than auf die gleiche Art und Weise; it takes V2, whereas the following wenn clause is verb-final.",
+    "example_tl": "Auf dieselbe Weise beeinflussen automatisierte Rankings die politische Wahrnehmung, wenn sie konfliktorientierte Beiträge systematisch sichtbarer machen als sachliche Einordnungen.",
+    "example_en": "In the same way, automated rankings influence political perception when they systematically make conflict-oriented posts more visible than factual contextualization.",
+    "cloze": "{{c1::Auf dieselbe Weise}} beeinflussen automatisierte Rankings die politische Wahrnehmung, wenn sie konfliktorientierte Beiträge systematisch sichtbarer machen als sachliche Einordnungen.",
+    "note": "Materially tightens the wordy legacy rendering. The alternative plugs in without a case or word-order change."
+  },
+  {
+    "id": "dec135",
+    "en": "Just as…so too",
+    "category": "structuring",
+    "tl": "so wie …, so … auch",
+    "alts": [],
+    "register": "written-neutral; a balanced correlative for extending an analogy",
+    "trap": "The so wie clause is verb-final (begrenzen); the second clause is V2, so its fixed so and auch are separated by the finite modal.",
+    "example_tl": "So wie unabhängige Gerichte staatliche Macht begrenzen, so müssen auch transparente Prüfstellen die Regelsetzung globaler Plattformen wirksam kontrollieren.",
+    "example_en": "Just as independent courts limit state power, so too must transparent audit bodies effectively oversee the rule-setting of global platforms.",
+    "cloze": "{{c1::So wie}} unabhängige Gerichte staatliche Macht begrenzen, {{c1::so}} müssen {{c1::auch}} transparente Prüfstellen die Regelsetzung globaler Plattformen wirksam kontrollieren.",
+    "note": "Materially regularizes old_back's mixed frame. Self-review aligned the three discontinuous fixed elements with three cloze arms."
+  },
+  {
+    "id": "dec141",
+    "en": "Same as",
+    "category": "contrast",
+    "tl": "dasselbe wie",
+    "alts": [],
+    "register": "neutral; asserts or denies identity rather than mere resemblance",
+    "trap": "Ähnlich wie means ‘similar to’ and weakens identity to resemblance; dasselbe wie means ‘the same thing as’ and must not be confused with das Gleiche in every context.",
+    "example_tl": "Ein freiwilliger Verhaltenskodex ist nicht dasselbe wie eine rechtlich durchsetzbare Verpflichtung, auch wenn Branchenverbände beide Instrumente rhetorisch gern gleichsetzen.",
+    "example_en": "A voluntary code of conduct is not the same as a legally enforceable obligation, even if industry associations rhetorically like to equate the two instruments.",
+    "cloze": "Ein freiwilliger Verhaltenskodex ist nicht {{c1::dasselbe wie}} eine rechtlich durchsetzbare Verpflichtung, auch wenn Branchenverbände beide Instrumente rhetorisch gern gleichsetzen.",
+    "note": "Materially repairs old_back, which changes exact identity into mere similarity. Hostile review restored this false-equivalence card after triage."
+  },
+  {
+    "id": "dec152",
+    "en": "Last but not least",
+    "category": "structuring",
+    "tl": "Nicht zuletzt",
+    "alts": [],
+    "register": "neutral; highlights an important final consideration without diminishing it",
+    "trap": "Zuletzt und nicht zuletzt is a redundant English calque; Nicht zuletzt alone is idiomatic and takes V2 (braucht eine Digitalpolitik).",
+    "example_tl": "Nicht zuletzt braucht eine glaubwürdige Digitalpolitik klare Haftungsregeln, damit wirtschaftliche Schäden nicht dauerhaft auf Nutzerinnen und Nutzer, Beschäftigte sowie öffentliche Institutionen abgewälzt werden.",
+    "example_en": "Last but not least, a credible digital policy needs clear liability rules so that economic harm is not permanently shifted onto users, workers, and public institutions.",
+    "cloze": "{{c1::Nicht zuletzt}} braucht eine glaubwürdige Digitalpolitik klare Haftungsregeln, damit wirtschaftliche Schäden nicht dauerhaft auf Nutzerinnen und Nutzer, Beschäftigte sowie öffentliche Institutionen abgewälzt werden.",
+    "note": "Materially repairs old_back's redundant calque. Self-review made the reference to users explicitly inclusive."
+  },
+  {
+    "id": "dec153",
+    "en": "First and foremost…",
+    "category": "structuring",
+    "tl": "In erster Linie",
+    "alts": [
+      "Vor allem"
+    ],
+    "register": "neutral; ranks priority rather than merely marking chronological order",
+    "trap": "Zuallererst primarily means ‘first of all’ in sequence; first and foremost usually calls for In erster Linie or Vor allem and V2 order.",
+    "example_tl": "In erster Linie muss die Reform demokratische Kontrolle stärken; kurzfristige Effizienzgewinne dürfen diesem Ziel nicht ohne öffentliche Begründung übergeordnet werden.",
+    "example_en": "First and foremost, the reform must strengthen democratic oversight; short-term efficiency gains must not be privileged over this goal without public justification.",
+    "cloze": "{{c1::In erster Linie}} muss die Reform demokratische Kontrolle stärken; kurzfristige Effizienzgewinne dürfen diesem Ziel nicht ohne öffentliche Begründung übergeordnet werden.",
+    "note": "Materially corrects old_back by preserving priority rather than sequence. Self-review replaced geopfert with übergeordnet to remove an unintended reversal of the English claim."
+  },
+  {
+    "id": "dec154",
+    "en": "All things considered",
+    "category": "generalization",
+    "tl": "Alles in allem",
+    "alts": [
+      "Unter dem Strich"
+    ],
+    "register": "written-neutral; Unter dem Strich is slightly more journalistic",
+    "trap": "Alles in allem is a fixed evaluative summary and takes V2 (verbessert der Entwurf); it does not trigger verb-final order.",
+    "example_tl": "Alles in allem verbessert der Entwurf die Transparenz, lässt jedoch zentrale Fragen zur Haftung für automatisierte Systeme und zur Unabhängigkeit der Aufsicht unbeantwortet.",
+    "example_en": "All things considered, the draft improves transparency but leaves key questions about liability for automated systems and the independence of oversight unanswered.",
+    "cloze": "{{c1::Alles in allem}} verbessert der Entwurf die Transparenz, lässt jedoch zentrale Fragen zur Haftung für automatisierte Systeme und zur Unabhängigkeit der Aufsicht unbeantwortet.",
+    "note": "Self-review added für to avoid implying that automated systems themselves bear legal liability."
+  },
+  {
+    "id": "dec156",
+    "en": "As demonstrated above",
+    "category": "structuring",
+    "tl": "Wie oben gezeigt",
+    "alts": [],
+    "register": "written-formal; an evidential cross-reference to a result established earlier in the text",
+    "trap": "Wie oben gezeigt is the general cross-reference; use nachgewiesen only for actual proof and dargelegt when the point was merely set out. The main clause takes V2.",
+    "example_tl": "Wie oben gezeigt, erhöhen personalisierte Empfehlungssysteme die Sichtbarkeit emotionalisierender Beiträge, obwohl deren tatsächlicher Informationswert häufig deutlich geringer ist.",
+    "example_en": "As demonstrated above, personalized recommendation systems increase the visibility of emotive posts, although their actual informational value is often considerably lower.",
+    "cloze": "{{c1::Wie oben gezeigt}}, erhöhen personalisierte Empfehlungssysteme die Sichtbarkeit emotionalisierender Beiträge, obwohl deren tatsächlicher Informationswert häufig deutlich geringer ist.",
+    "note": "Old_back is correct. Hostile self-review replaced the context-dependent stronger nachgewiesen with the safer general rendering and clarified the evidential scale."
+  },
+  {
+    "id": "dec157",
+    "en": "As noted",
+    "category": "structuring",
+    "tl": "Wie bereits erwähnt",
+    "alts": [],
+    "register": "written-neutral; a textual cross-reference to an earlier point",
+    "trap": "Wie bemerkt commonly means ‘as noticed/observed’; for a prior textual mention, Wie bereits erwähnt is the idiomatic reference.",
+    "example_tl": "Wie bereits erwähnt, erfasst die Statistik nur gemeldete Verstöße, während informelle Einschüchterung und algorithmische Benachteiligung weitgehend unsichtbar bleiben.",
+    "example_en": "As noted, the statistics record only reported violations, while informal intimidation and algorithmic disadvantage remain largely invisible.",
+    "cloze": "{{c1::Wie bereits erwähnt}}, erfasst die Statistik nur gemeldete Verstöße, während informelle Einschüchterung und algorithmische Benachteiligung weitgehend unsichtbar bleiben.",
+    "note": "Materially corrects the sense of old_back for a textual cross-reference."
+  },
+  {
+    "id": "dec161",
+    "en": "By and large",
+    "category": "generalization",
+    "tl": "Im Großen und Ganzen",
+    "alts": [],
+    "register": "neutral; a qualified generalization that allows exceptions",
+    "trap": "Großen and Ganzen are nominalized and capitalized; the phrase means ‘for the most part,’ not ‘completely,’ and takes V2.",
+    "example_tl": "Im Großen und Ganzen funktionieren die neuen Meldewege, doch kleinere Redaktionen warten weiterhin unverhältnismäßig lange auf verbindliche Entscheidungen der Plattformen.",
+    "example_en": "By and large, the new reporting channels work, but smaller newsrooms still wait disproportionately long for binding decisions from the platforms.",
+    "cloze": "{{c1::Im Großen und Ganzen}} funktionieren die neuen Meldewege, doch kleinere Redaktionen warten weiterhin unverhältnismäßig lange auf verbindliche Entscheidungen der Plattformen.",
+    "note": ""
+  },
+  {
+    "id": "dec163",
+    "en": "Given these points",
+    "category": "result",
+    "tl": "Vor diesem Hintergrund",
+    "alts": [
+      "Angesichts dieser Überlegungen"
+    ],
+    "register": "written-neutral; draws a recommendation from considerations established in prior discourse",
+    "trap": "The prepositional frame takes main-clause V2 (sollte das Parlament); the following bevor clause sends werden to the end.",
+    "example_tl": "Vor diesem Hintergrund sollte das Parlament den Entwurf überarbeiten, bevor provisorische Ausnahmen zu dauerhaften Schlupflöchern für marktbeherrschende Plattformen werden.",
+    "example_en": "Given these points, parliament should revise the draft before provisional exceptions become permanent loopholes for dominant platforms.",
+    "cloze": "{{c1::Vor diesem Hintergrund}} sollte das Parlament den Entwurf überarbeiten, bevor provisorische Ausnahmen zu dauerhaften Schlupflöchern für marktbeherrschende Plattformen werden.",
+    "note": "Hostile self-review replaced the literal Punkte with the more idiomatic Überlegungen in the plug-compatible alternative."
+  },
+  {
+    "id": "dec164",
+    "en": "In a word",
+    "category": "reformulation",
+    "tl": "Kurz gesagt",
+    "alts": [
+      "Mit einem Wort"
+    ],
+    "register": "neutral; Mit einem Wort is somewhat more rhetorical and literary",
+    "trap": "This is a summarizing discourse formula, not temporal in Kürze (‘shortly’); both listed forms naturally precede the colon in the example.",
+    "example_tl": "Kurz gesagt: Ohne überprüfbare Datenzugänge bleibt die öffentliche Debatte über algorithmische Macht von den selektiven Angaben der Plattformunternehmen abhängig.",
+    "example_en": "In a word: without verifiable data access, public debate about algorithmic power remains dependent on the selective disclosures of platform companies.",
+    "cloze": "{{c1::Kurz gesagt}}: Ohne überprüfbare Datenzugänge bleibt die öffentliche Debatte über algorithmische Macht von den selektiven Angaben der Plattformunternehmen abhängig.",
+    "note": "The legacy Mit einem Wort is valid; the main rendering is more idiomatic in contemporary analytical prose."
+  },
+  {
+    "id": "dec165",
+    "en": "In any event",
+    "category": "concession",
+    "tl": "Jedenfalls",
+    "alts": [],
+    "register": "neutral; sets alternatives aside and returns to a claim that holds regardless",
+    "trap": "In jedem Fall may literally quantify every case; discourse-level in any event is often the leaner jedenfalls, followed by V2 order.",
+    "example_tl": "Jedenfalls muss die Aufsichtsbehörde handeln, bevor weitere Beweise verloren gehen und betroffene Redaktionen ihre Ansprüche nicht mehr wirksam durchsetzen können.",
+    "example_en": "In any event, the supervisory authority must act before further evidence is lost and affected newsrooms can no longer enforce their claims effectively.",
+    "cloze": "{{c1::Jedenfalls}} muss die Aufsichtsbehörde handeln, bevor weitere Beweise verloren gehen und betroffene Redaktionen ihre Ansprüche nicht mehr wirksam durchsetzen können.",
+    "note": "The legacy form is possible, but the main choice better captures the discourse pivot."
+  },
+  {
+    "id": "dec167",
+    "en": "In conclusion",
+    "category": "structuring",
+    "tl": "Abschließend",
+    "alts": [
+      "Zum Schluss"
+    ],
+    "register": "written-neutral; Zum Schluss is slightly less formal",
+    "trap": "Als Schlussfolgerung means ‘as a conclusion’ and is not the natural section-closing signpost; Abschließend takes V2, followed here by dass verb-final.",
+    "example_tl": "Abschließend lässt sich festhalten, dass wirksame Plattformregulierung technische Fachkenntnis, institutionelle Unabhängigkeit und eine dauerhaft gesicherte demokratische Kontrolle voraussetzt.",
+    "example_en": "In conclusion, effective platform regulation can be said to require technical expertise, institutional independence, and permanently secured democratic oversight.",
+    "cloze": "{{c1::Abschließend}} lässt sich festhalten, dass wirksame Plattformregulierung technische Fachkenntnis, institutionelle Unabhängigkeit und eine dauerhaft gesicherte demokratische Kontrolle voraussetzt.",
+    "note": "Materially repairs the legacy nominal calque."
+  },
+  {
+    "id": "dec168",
+    "en": "In essence",
+    "category": "reformulation",
+    "tl": "Im Kern",
+    "alts": [
+      "Im Wesentlichen"
+    ],
+    "register": "written-neutral; distills an argument to its central mechanism",
+    "trap": "The phrase occupies the prefield and takes V2 (verlagert das Modell); the contrastive während clause is verb-final (verbleiben).",
+    "example_tl": "Im Kern verlagert das Geschäftsmodell gesellschaftliche Kosten auf die Öffentlichkeit, während Gewinne aus personalisierten Daten vollständig beim Plattformbetreiber verbleiben.",
+    "example_en": "In essence, the business model shifts social costs onto the public while profits from personalized data remain entirely with the platform operator.",
+    "cloze": "{{c1::Im Kern}} verlagert das Geschäftsmodell gesellschaftliche Kosten auf die Öffentlichkeit, während Gewinne aus personalisierten Daten vollständig beim Plattformbetreiber verbleiben.",
+    "note": "Old_back is valid; Im Kern is the more pointed distillation in this example."
+  },
+  {
+    "id": "dec170",
+    "en": "In summary",
+    "category": "structuring",
+    "tl": "Zusammenfassend",
+    "alts": [
+      "Kurz zusammengefasst"
+    ],
+    "register": "written-neutral; explicitly summarizes findings rather than merely ending the text",
+    "trap": "In der Zusammenfassung refers to a physical summary section; the discourse marker is Zusammenfassend and takes V2 before the dass clause.",
+    "example_tl": "Zusammenfassend zeigt die Untersuchung, dass freiwillige Selbstverpflichtungen zwar einzelne Verfahren verbessern, strukturelle Interessenkonflikte jedoch nicht dauerhaft lösen können.",
+    "example_en": "In summary, the study shows that voluntary commitments improve individual procedures but cannot permanently resolve structural conflicts of interest.",
+    "cloze": "{{c1::Zusammenfassend}} zeigt die Untersuchung, dass freiwillige Selbstverpflichtungen zwar einzelne Verfahren verbessern, strukturelle Interessenkonflikte jedoch nicht dauerhaft lösen können.",
+    "note": "Materially repairs old_back by changing a locative noun phrase into an actual summarizing move."
+  },
+  {
+    "id": "dec172",
+    "en": "In the final analysis",
+    "category": "stance",
+    "tl": "Letztlich",
+    "alts": [],
+    "register": "written-neutral; marks the decisive conclusion after competing considerations",
+    "trap": "In der letzten Analyse is an English calque; argumentative in the final analysis is letztlich, a V2 adverb followed here by entscheidet.",
+    "example_tl": "Letztlich entscheidet nicht die technische Leistungsfähigkeit eines Systems über seine Legitimität, sondern die Frage, ob Betroffene wirksam widersprechen können.",
+    "example_en": "In the final analysis, a system's legitimacy is determined not by its technical performance but by whether affected people can object effectively.",
+    "cloze": "{{c1::Letztlich}} entscheidet nicht die technische Leistungsfähigkeit eines Systems über seine Legitimität, sondern die Frage, ob Betroffene wirksam widersprechen können.",
+    "note": "Materially repairs a literal and unidiomatic legacy translation."
+  },
+  {
+    "id": "dec180",
+    "en": "Although this may be true",
+    "category": "concession",
+    "tl": "Auch wenn das zutreffen mag",
+    "alts": [],
+    "register": "neutral; concedes a claim provisionally before limiting its force",
+    "trap": "Auch wenn is a subordinator: mag is clause-final, and the following main clause begins with V2 inversion (rechtfertigt ein Effizienzgewinn).",
+    "example_tl": "Auch wenn das zutreffen mag, rechtfertigt ein möglicher Effizienzgewinn weder intransparente Entscheidungen noch den Ausschluss Betroffener von wirksamen Beschwerdeverfahren.",
+    "example_en": "Although this may be true, a possible efficiency gain justifies neither opaque decisions nor the exclusion of affected people from effective appeal procedures.",
+    "cloze": "{{c1::Auch wenn das zutreffen mag}}, rechtfertigt ein möglicher Effizienzgewinn weder intransparente Entscheidungen noch den Ausschluss Betroffener von wirksamen Beschwerdeverfahren.",
+    "note": "Self-review chose zutreffen rather than literal wahr sein for a claim in analytical prose."
+  },
+  {
+    "id": "dec181",
+    "en": "Even if",
+    "category": "concession",
+    "tl": "Selbst wenn",
+    "alts": [],
+    "register": "neutral; introduces a hypothetical concession",
+    "trap": "Selbst wenn sends veröffentlicht to clause-final position; because the entire subordinate clause comes first, the main clause begins with V2 bleibt unklar.",
+    "example_tl": "Selbst wenn die Plattform sämtliche Kennzahlen veröffentlicht, bleibt unklar, nach welchen Kriterien einzelne Beiträge herabgestuft oder vollständig aus Empfehlungen entfernt werden.",
+    "example_en": "Even if the platform publishes all its metrics, it remains unclear by what criteria individual posts are downgraded or removed from recommendations entirely.",
+    "cloze": "{{c1::Selbst wenn}} die Plattform sämtliche Kennzahlen veröffentlicht, bleibt unklar, nach welchen Kriterien einzelne Beiträge herabgestuft oder vollständig aus Empfehlungen entfernt werden.",
+    "note": ""
+  },
+  {
+    "id": "dec183",
+    "en": "In the event that",
+    "category": "condition",
+    "tl": "Für den Fall, dass",
+    "alts": [
+      "Falls"
+    ],
+    "register": "written-formal; Falls is the concise neutral alternative",
+    "trap": "The fixed phrase uses für plus accusative and dass with verb-final ausfallen; the following main clause begins with V2 inversion (muss der Staat).",
+    "example_tl": "Für den Fall, dass zentrale Kommunikationsnetze ausfallen, muss der Staat unabhängige Informationskanäle bereithalten und deren redaktionelle Autonomie gesetzlich schützen.",
+    "example_en": "In the event that central communication networks fail, the state must maintain independent information channels and legally protect their editorial autonomy.",
+    "cloze": "{{c1::Für den Fall, dass}} zentrale Kommunikationsnetze ausfallen, muss der Staat unabhängige Informationskanäle bereithalten und deren redaktionelle Autonomie gesetzlich schützen.",
+    "note": "Materially improves the less idiomatic in dem Fall, dass in old_back. Self-review aligned Informationskanäle semantically with redaktionelle Autonomie."
+  },
+  {
+    "id": "dec184",
+    "en": "In the event that this happens",
+    "category": "condition",
+    "tl": "Sollte dies eintreten",
+    "alts": [],
+    "register": "written-formal; compact contingency language common in policy planning",
+    "trap": "Conditional sollte stands in first position and replaces wenn; after the whole condition, the main clause begins with müsste in V2 order.",
+    "example_tl": "Sollte dies eintreten, müsste die Aufsichtsbehörde sämtliche betroffenen Redaktionen unverzüglich informieren und eine unabhängige Untersuchung der Sicherheitslücke einleiten.",
+    "example_en": "In the event that this happens, the supervisory authority would have to inform all affected newsrooms immediately and initiate an independent investigation of the security flaw.",
+    "cloze": "{{c1::Sollte dies eintreten}}, müsste die Aufsichtsbehörde sämtliche betroffenen Redaktionen unverzüglich informieren und eine unabhängige Untersuchung der Sicherheitslücke einleiten.",
+    "note": "Materially replaces the heavy legacy dass clause with an idiomatic verb-first conditional while preserving the hypothetical force."
+  },
+  {
+    "id": "dec185",
+    "en": "On the condition that",
+    "category": "condition",
+    "tl": "Unter der Voraussetzung, dass",
+    "alts": [
+      "Sofern"
+    ],
+    "register": "written-formal; Sofern is a compact neutral-formal alternative",
+    "trap": "Unter takes the dative in this fixed phrase; dass sends werden to the end, and the following main clause starts with V2 kann.",
+    "example_tl": "Unter der Voraussetzung, dass alle Prüfberichte veröffentlicht werden, kann das Verfahren Vertrauen schaffen, ohne berechtigte Geschäftsgeheimnisse der beteiligten Unternehmen offenzulegen.",
+    "example_en": "On the condition that all audit reports are published, the procedure can build trust without disclosing legitimate trade secrets of the companies involved.",
+    "cloze": "{{c1::Unter der Voraussetzung, dass}} alle Prüfberichte veröffentlicht werden, kann das Verfahren Vertrauen schaffen, ohne berechtigte Geschäftsgeheimnisse der beteiligten Unternehmen offenzulegen.",
+    "note": "The legacy Bedingung is possible; Voraussetzung is the more idiomatic collocation for a prerequisite."
+  },
+  {
+    "id": "dec186",
+    "en": "Only if",
+    "category": "condition",
+    "tl": "Nur wenn",
+    "alts": [],
+    "register": "neutral; states a necessary condition",
+    "trap": "Nur wenn introduces verb-final erhalten; because the condition occupies the prefield, the main clause must begin können sie, not sie können.",
+    "example_tl": "Nur wenn Forschende vollständigen Datenzugang erhalten, können sie systematische Benachteiligungen nachweisen und belastbare Empfehlungen für eine wirksame Regulierung entwickeln.",
+    "example_en": "Only if researchers receive full data access can they demonstrate systematic disadvantage and develop robust recommendations for effective regulation.",
+    "cloze": "{{c1::Nur wenn}} Forschende vollständigen Datenzugang erhalten, können sie systematische Benachteiligungen nachweisen und belastbare Empfehlungen für eine wirksame Regulierung entwickeln.",
+    "note": ""
+  },
+  {
+    "id": "dec189",
+    "en": "Unless",
+    "category": "condition",
+    "tl": "es sei denn",
+    "alts": [],
+    "register": "neutral; introduces the exception to a preceding negative or general proposition",
+    "trap": "Es sei denn is normally followed by an independent V2 clause (die Betroffenen haben); with dass, the alternative pattern would be verb-final.",
+    "example_tl": "Die Plattform darf politische Profildaten nicht weitergeben, es sei denn, die Betroffenen haben zuvor ausdrücklich und nachweisbar in diese Nutzung eingewilligt.",
+    "example_en": "The platform must not share political profile data unless the affected people have previously consented to this use explicitly and verifiably.",
+    "cloze": "Die Plattform darf politische Profildaten nicht weitergeben, {{c1::es sei denn}}, die Betroffenen haben zuvor ausdrücklich und nachweisbar in diese Nutzung eingewilligt.",
+    "note": "Old_back Es sei denn is correct but needed a complete V2 construction rather than a bare label."
+  },
+  {
+    "id": "dec192",
+    "en": "Whenever",
+    "category": "condition",
+    "tl": "Immer wenn",
+    "alts": [
+      "Wann immer"
+    ],
+    "register": "neutral; marks a recurring condition rather than a one-time event",
+    "trap": "Both forms introduce a verb-final clause (Regeln ändern); when that clause comes first, the main clause begins with V2 verlieren.",
+    "example_tl": "Immer wenn Plattformen ihre Moderationsregeln kurzfristig ändern, müssen kleinere Redaktionen ihre Veröffentlichungspläne revidieren und laufende Kampagnen unter erheblichem Kostenaufwand neu ausrichten.",
+    "example_en": "Whenever platforms change their moderation rules at short notice, smaller newsrooms must revise their publication plans and reconfigure ongoing campaigns at considerable expense.",
+    "cloze": "{{c1::Immer wenn}} Plattformen ihre Moderationsregeln kurzfristig ändern, müssen kleinere Redaktionen ihre Veröffentlichungspläne revidieren und laufende Kampagnen unter erheblichem Kostenaufwand neu ausrichten.",
+    "note": "The alternative plugs into the same verb-final clause. Hostile self-review replaced an unnatural reach reference and then polished the costly realignment in both languages."
+  },
+  {
+    "id": "dec193",
+    "en": "Admittedly",
+    "category": "concession",
+    "tl": "Zugegebenermaßen",
+    "alts": [],
+    "register": "written-neutral to formal; explicitly concedes a limited point before a qualification",
+    "trap": "Zugegebenermaßen is a V2 sentence adverb (hat die Vereinbarung), not a subordinator; a following obwohl clause would instead be verb-final.",
+    "example_tl": "Zugegebenermaßen hat die freiwillige Vereinbarung einzelne Verbesserungen bewirkt; eine unabhängige Kontrolle der zugrunde liegenden Empfehlungssysteme ersetzt sie jedoch nicht.",
+    "example_en": "Admittedly, the voluntary agreement has produced some specific improvements; however, it is no substitute for independent oversight of the underlying recommendation systems.",
+    "cloze": "{{c1::Zugegebenermaßen}} hat die freiwillige Vereinbarung einzelne Verbesserungen bewirkt; eine unabhängige Kontrolle der zugrunde liegenden Empfehlungssysteme ersetzt sie jedoch nicht.",
+    "note": "Hostile self-review replaced the literal individual improvements with idiomatic some specific improvements in the English translation."
+  },
+  {
+    "id": "dec194",
+    "en": "Albeit",
+    "category": "concession",
+    "tl": "wenn auch",
+    "alts": [],
+    "register": "written-neutral to formal; especially natural in a reduced concessive phrase",
+    "trap": "Reduced wenn auch can introduce an adjective or adverb without a finite verb; do not force the full obwohl clause pattern into this compact construction.",
+    "example_tl": "Die Reform verbessert den Datenzugang, wenn auch nur schrittweise, und schafft erstmals verbindliche Fristen für Beschwerden unabhängiger Forschungseinrichtungen.",
+    "example_en": "The reform improves data access, albeit only gradually, and for the first time creates binding deadlines for complaints from independent research institutions.",
+    "cloze": "Die Reform verbessert den Datenzugang, {{c1::wenn auch}} nur schrittweise, und schafft erstmals verbindliche Fristen für Beschwerden unabhängiger Forschungseinrichtungen.",
+    "note": "Old_back identifies the right form but leaves it unusably bare; self-review supplied the idiomatic reduced construction."
+  },
+  {
+    "id": "dec195",
+    "en": "All the same",
+    "category": "concession",
+    "tl": "Trotz alledem",
+    "alts": [
+      "Dennoch",
+      "Trotzdem"
+    ],
+    "register": "neutral and emphatic; Dennoch is slightly more formal, Trotzdem slightly more conversational",
+    "trap": "Gleich und gleich gesellt sich gern means ‘birds of a feather flock together’ and is wholly unrelated; all three listed adverbials take V2 order.",
+    "example_tl": "Trotz alledem hält die Redaktion an der Recherche fest, weil die vorliegenden Dokumente ein systematisches Versagen der internen Kontrollen erkennen lassen.",
+    "example_en": "All the same, the newsroom is continuing the investigation because the available documents indicate a systematic failure of internal controls.",
+    "cloze": "{{c1::Trotz alledem}} hält die Redaktion an der Recherche fest, weil die vorliegenden Dokumente ein systematisches Versagen der internen Kontrollen erkennen lassen.",
+    "note": "Materially repairs an entirely unrelated legacy proverb. This note consolidates the chunk's duplicate counterexpectation adverbs as plug-in alternatives."
+  },
+  {
+    "id": "dec196",
+    "en": "Although",
+    "category": "concession",
+    "tl": "Obwohl",
+    "alts": [],
+    "register": "neutral; the standard finite concessive subordinator",
+    "trap": "Obwohl sends hat to the end of its clause; because that subordinate clause comes first, the main clause begins with V2 verweigert sie.",
+    "example_tl": "Obwohl die Plattform mehr Transparenz versprochen hat, verweigert sie unabhängigen Forschenden weiterhin den Zugang zu aussagekräftigen Daten über die politische Reichweite ihrer Empfehlungen.",
+    "example_en": "Although the platform promised greater transparency, it continues to deny independent researchers access to meaningful data on the political reach of its recommendations.",
+    "cloze": "{{c1::Obwohl}} die Plattform mehr Transparenz versprochen hat, verweigert sie unabhängigen Forschenden weiterhin den Zugang zu aussagekräftigen Daten über die politische Reichweite ihrer Empfehlungen.",
+    "note": "Self-review replaced höhere Transparenz with mehr Transparenz and clarified the vague plural politische Reichweiten."
+  },
+  {
+    "id": "dec199",
+    "en": "And yet",
+    "category": "contrast",
+    "tl": "Und doch",
+    "alts": [],
+    "register": "neutral and mildly rhetorical; foregrounds a striking unresolved contrast",
+    "trap": "Und doch does not subordinate the clause: the finite verb remains in V2 after the connective (Und doch bleibt ...).",
+    "example_tl": "Und doch bleibt die zentrale Frage unbeantwortet, wer die privaten Regelsetzer kontrolliert, wenn ihre Entscheidungen den öffentlichen Diskurs faktisch strukturieren.",
+    "example_en": "And yet the central question remains unanswered: who controls the private rule-makers when their decisions effectively structure public discourse?",
+    "cloze": "{{c1::Und doch}} bleibt die zentrale Frage unbeantwortet, wer die privaten Regelsetzer kontrolliert, wenn ihre Entscheidungen den öffentlichen Diskurs faktisch strukturieren.",
+    "note": ""
+  },
+  {
+    "id": "dec200",
+    "en": "Be that as it may",
+    "category": "concession",
+    "tl": "Wie dem auch sei",
+    "alts": [],
+    "register": "neutral to formal; a detached concessive pivot that closes debate on the preceding point",
+    "trap": "The fossilized formula uses dative dem and subjunctive sei; the following independent clause stays subject-first V2, unlike a fronted obwohl clause.",
+    "example_tl": "Wie dem auch sei, die Bundesregierung muss erklären, weshalb sie öffentliche Infrastruktur weiterhin von den proprietären Diensten weniger Konzerne abhängig macht.",
+    "example_en": "Be that as it may, the German government must explain why it continues to make public infrastructure dependent on the proprietary services of a few corporations.",
+    "cloze": "{{c1::Wie dem auch sei}}, die Bundesregierung muss erklären, weshalb sie öffentliche Infrastruktur weiterhin von den proprietären Diensten weniger Konzerne abhängig macht.",
+    "note": "Old_back is correct. Self-review treated the phrase as a detached pivot, not as a fronted subordinate clause."
+  },
+  {
+    "id": "dec201",
+    "en": "Even though",
+    "category": "concession",
+    "tl": "Obwohl",
+    "alts": [],
+    "register": "neutral; the standard finite subordinator for a factual concession",
+    "trap": "Obwohl sends hat to the end of its clause; because that subordinate clause comes first, the main clause begins with V2 verweigert sie.",
+    "example_tl": "Obwohl die Plattform wiederholt Transparenz versprochen hat, verweigert sie unabhängigen Forschenden weiterhin den Zugang zu aussagekräftigen Daten über politische Werbekampagnen.",
+    "example_en": "Even though the platform repeatedly promised transparency, it continues to deny independent researchers access to meaningful data about political advertising campaigns.",
+    "cloze": "{{c1::Obwohl}} die Plattform wiederholt Transparenz versprochen hat, verweigert sie unabhängigen Forschenden weiterhin den Zugang zu aussagekräftigen Daten über politische Werbekampagnen.",
+    "note": "Old_back Auch wenn is possible but can sound more hypothetical; self-review chose Obwohl to preserve the factual force of even though."
+  },
+  {
+    "id": "dec202",
+    "en": "In spite of",
+    "category": "concession",
+    "tl": "Trotz",
+    "alts": [],
+    "register": "neutral; edited formal German generally uses the genitive after trotz",
+    "trap": "Trotz takes a noun phrase and permits main-clause V2 (führte die Behörde); obwohl would require a finite verb-final clause.",
+    "example_tl": "Trotz der wiederholten Warnungen führte die Behörde das System landesweit ein, ohne zuvor seine Auswirkungen auf marginalisierte Bevölkerungsgruppen unabhängig prüfen zu lassen.",
+    "example_en": "In spite of repeated warnings, the authority introduced the system nationwide without first having its effects on marginalized population groups independently assessed.",
+    "cloze": "{{c1::Trotz}} der wiederholten Warnungen führte die Behörde das System landesweit ein, ohne zuvor seine Auswirkungen auf marginalisierte Bevölkerungsgruppen unabhängig prüfen zu lassen.",
+    "note": "Materially repairs old_back: Trotz alledem means ‘despite all that’ and cannot take the source's following of-complement."
+  },
+  {
+    "id": "dec203",
+    "en": "Regardless of this",
+    "category": "concession",
+    "tl": "Unabhängig davon",
+    "alts": [
+      "Ungeachtet dessen"
+    ],
+    "register": "written-neutral; the alternative is more formal",
+    "trap": "The anaphoric forms are davon and dessen, not von diesem without a noun; both phrases take V2 order (muss das Parlament).",
+    "example_tl": "Unabhängig davon muss das Parlament klären, wer für fehlerhafte automatisierte Entscheidungen haftet und wie Betroffene wirksam Entschädigung verlangen können.",
+    "example_en": "Regardless of this, parliament must clarify who is liable for faulty automated decisions and how affected people can effectively claim compensation.",
+    "cloze": "{{c1::Unabhängig davon}} muss das Parlament klären, wer für fehlerhafte automatisierte Entscheidungen haftet und wie Betroffene wirksam Entschädigung verlangen können.",
+    "note": "Old_back is a valid, more formal plug-in alternative."
+  },
+  {
+    "id": "dec204",
+    "en": "Up to a point",
+    "category": "concession",
+    "tl": "Bis zu einem gewissen Grad",
+    "alts": [],
+    "register": "neutral; concedes limited validity before drawing a boundary",
+    "trap": "For an abstract degree, Grad is more idiomatic than literal Punkt; zu governs the dative, and the full phrase is followed by V2 lässt.",
+    "example_tl": "Bis zu einem gewissen Grad lässt sich die Zurückhaltung der Behörde erklären, doch dauerhafte Untätigkeit rechtfertigt die technische Komplexität keineswegs.",
+    "example_en": "Up to a point, the authority's restraint can be explained, but technical complexity by no means justifies permanent inaction.",
+    "cloze": "{{c1::Bis zu einem gewissen Grad}} lässt sich die Zurückhaltung der Behörde erklären, doch dauerhafte Untätigkeit rechtfertigt die technische Komplexität keineswegs.",
+    "note": "Materially improves the literal legacy rendering for an abstract qualification."
+  },
+  {
+    "id": "dec205",
+    "en": "As a rule",
+    "category": "generalization",
+    "tl": "In der Regel",
+    "alts": [],
+    "register": "neutral; states a usual pattern while allowing exceptions",
+    "trap": "In der Regel means ‘usually’ here, not als Regel; it takes V2 (reagieren Plattformen), while the following wenn clause is verb-final.",
+    "example_tl": "In der Regel reagieren Plattformen erst auf öffentlichen Druck, wenn interne Warnungen bereits dokumentiert und durch investigative Recherchen bestätigt worden sind.",
+    "example_en": "As a rule, platforms respond only to public pressure once internal warnings have already been documented and confirmed by investigative reporting.",
+    "cloze": "{{c1::In der Regel}} reagieren Plattformen erst auf öffentlichen Druck, wenn interne Warnungen bereits dokumentiert und durch investigative Recherchen bestätigt worden sind.",
+    "note": ""
+  },
+  {
+    "id": "dec206",
+    "en": "Broadly speaking",
+    "category": "generalization",
+    "tl": "Allgemein gesprochen",
+    "alts": [],
+    "register": "written-neutral; frames a deliberately broad characterization rather than a precise empirical frequency claim",
+    "trap": "Grob gesagt can sound imprecise or blunt; Allgemein gesprochen sets scope, occupies the prefield, and is followed by V2 verschiebt.",
+    "example_tl": "Allgemein gesprochen verschiebt die Plattformökonomie politische Macht von demokratisch kontrollierten Institutionen zu privaten Infrastrukturanbietern, deren Entscheidungen kaum öffentlich überprüft werden.",
+    "example_en": "Broadly speaking, the platform economy shifts political power from democratically controlled institutions to private infrastructure providers whose decisions receive scarcely any public scrutiny.",
+    "cloze": "{{c1::Allgemein gesprochen}} verschiebt die Plattformökonomie politische Macht von demokratisch kontrollierten Institutionen zu privaten Infrastrukturanbietern, deren Entscheidungen kaum öffentlich überprüft werden.",
+    "note": "Material register correction from old_back: the main rendering is more measured in professional analysis."
+  },
+  {
+    "id": "dec208",
+    "en": "For the most part",
+    "category": "generalization",
+    "tl": "weitgehend",
+    "alts": [],
+    "register": "written-neutral; marks the extent to which a proposition holds",
+    "trap": "Weitgehend scopes the degree of control here; Im Großen und Ganzen instead qualifies an overall assessment and is not always interchangeable.",
+    "example_tl": "Die Plattformen bestimmen weitgehend selbst, welche politischen Inhalte sichtbar bleiben, obwohl ihre internen Kriterien weder demokratisch beschlossen noch unabhängig kontrolliert werden.",
+    "example_en": "For the most part, the platforms themselves determine which political content remains visible, although their internal criteria are neither democratically adopted nor independently overseen.",
+    "cloze": "Die Plattformen bestimmen {{c1::weitgehend}} selbst, welche politischen Inhalte sichtbar bleiben, obwohl ihre internen Kriterien weder demokratisch beschlossen noch unabhängig kontrolliert werden.",
+    "note": "Materially selects the degree reading rather than copying old_back's broader evaluative idiom."
+  },
+  {
+    "id": "dec212",
+    "en": "More often than not",
+    "category": "generalization",
+    "tl": "Meistens",
+    "alts": [],
+    "register": "neutral; states that something happens in a majority of instances",
+    "trap": "Öfter als sonst means ‘more often than usual’; it compares periods, whereas more often than not simply means meistens and takes V2.",
+    "example_tl": "Meistens erfahren betroffene Redaktionen erst durch plötzliche Reichweitenverluste, dass eine Plattform ihre Moderationsregeln ohne öffentliche Ankündigung grundlegend geändert hat.",
+    "example_en": "More often than not, affected newsrooms learn only from sudden losses of reach that a platform has fundamentally changed its moderation rules without public notice.",
+    "cloze": "{{c1::Meistens}} erfahren betroffene Redaktionen erst durch plötzliche Reichweitenverluste, dass eine Plattform ihre Moderationsregeln ohne öffentliche Ankündigung grundlegend geändert hat.",
+    "note": "Materially repairs old_back's incorrect comparison with a previous norm."
+  },
+  {
+    "id": "dec218",
+    "en": "Typically",
+    "category": "generalization",
+    "tl": "Typischerweise",
+    "alts": [],
+    "register": "neutral; marks a characteristic recurring pattern",
+    "trap": "Typisch is normally an adjective or a colloquial evaluative fragment; the sentence adverb is typischerweise and takes V2 (veröffentlichen Plattformen).",
+    "example_tl": "Typischerweise veröffentlichen Plattformen nur aggregierte Kennzahlen, während unabhängige Forschende dauerhaft keinen Zugang zu den zugrunde liegenden Einzelfalldaten erhalten.",
+    "example_en": "Typically, platforms publish only aggregate figures, while independent researchers are permanently denied access to the underlying individual-case data.",
+    "cloze": "{{c1::Typischerweise}} veröffentlichen Plattformen nur aggregierte Kennzahlen, während unabhängige Forschende dauerhaft keinen Zugang zu den zugrunde liegenden Einzelfalldaten erhalten.",
+    "note": "Materially turns old_back's adjective into the required sentence adverb."
+  },
+  {
+    "id": "dec219",
+    "en": "Alternatively stated",
+    "category": "reformulation",
+    "tl": "Oder anders formuliert",
+    "alts": [],
+    "register": "written-neutral; offers an explicitly alternative formulation of the same claim",
+    "trap": "Alternativ angegeben sounds like a technical parameter was specified differently; the discourse move is Oder anders formuliert, naturally followed by a colon.",
+    "example_tl": "Oder anders formuliert: Die Plattform verkauft nicht bloß Werbung, sondern die Möglichkeit, politische Aufmerksamkeit nach undurchsichtigen Kriterien gezielt zu verteilen.",
+    "example_en": "Alternatively stated: the platform sells not merely advertising but the ability to distribute political attention selectively according to opaque criteria.",
+    "cloze": "{{c1::Oder anders formuliert}}: Die Plattform verkauft nicht bloß Werbung, sondern die Möglichkeit, politische Aufmerksamkeit nach undurchsichtigen Kriterien gezielt zu verteilen.",
+    "note": "Materially repairs the technical-sounding legacy calque."
+  },
+  {
+    "id": "dec221",
+    "en": "In a nutshell",
+    "category": "reformulation",
+    "tl": "Auf den Punkt gebracht",
+    "alts": [
+      "Kurz gesagt"
+    ],
+    "register": "neutral; concise and idiomatic in analytical speech and journalistic writing",
+    "trap": "The fixed phrase is a compact summary move, not a literal reference to a physical point; both forms plug naturally before the colon.",
+    "example_tl": "Auf den Punkt gebracht: Die neue Verordnung verteilt Dokumentationspflichten neu, verändert aber nicht die grundlegenden wirtschaftlichen Anreize datengetriebener Plattformen.",
+    "example_en": "In a nutshell: the new regulation redistributes documentation duties but does not change the fundamental economic incentives of data-driven platforms.",
+    "cloze": "{{c1::Auf den Punkt gebracht}}: Die neue Verordnung verteilt Dokumentationspflichten neu, verändert aber nicht die grundlegenden wirtschaftlichen Anreize datengetriebener Plattformen.",
+    "note": ""
+  },
+  {
+    "id": "dec222",
+    "en": "In other words",
+    "category": "reformulation",
+    "tl": "Mit anderen Worten",
+    "alts": [],
+    "register": "neutral; directly restates the preceding proposition",
+    "trap": "The idiom uses mit plus dative plural Worten, not a word-for-word form such as in anderen Wörtern.",
+    "example_tl": "Mit anderen Worten: Die behauptete Neutralität des Algorithmus entlastet weder seine Entwickler noch das Unternehmen von politischer und rechtlicher Verantwortung.",
+    "example_en": "In other words: the algorithm's claimed neutrality absolves neither its developers nor the company of political and legal responsibility.",
+    "cloze": "{{c1::Mit anderen Worten}}: Die behauptete Neutralität des Algorithmus entlastet weder seine Entwickler noch das Unternehmen von politischer und rechtlicher Verantwortung.",
+    "note": ""
+  },
+  {
+    "id": "dec225",
+    "en": "In summation",
+    "category": "structuring",
+    "tl": "Zusammenfassend",
+    "alts": [],
+    "register": "written-formal; explicitly introduces a synthesis of preceding findings",
+    "trap": "Auf den Punkt gebracht means ‘in a nutshell’; in summation is a structural summary marker followed by V2 zeigt and then dass verb-final.",
+    "example_tl": "Zusammenfassend zeigt der Bericht, dass freiwillige Leitlinien einzelne Abläufe verbessert, die grundlegenden Interessenkonflikte der Plattformökonomie jedoch nicht beseitigt haben.",
+    "example_en": "In summation, the report shows that voluntary guidelines have improved individual processes but have not eliminated the platform economy's fundamental conflicts of interest.",
+    "cloze": "{{c1::Zusammenfassend}} zeigt der Bericht, dass freiwillige Leitlinien einzelne Abläufe verbessert, die grundlegenden Interessenkonflikte der Plattformökonomie jedoch nicht beseitigt haben.",
+    "note": "Materially corrects old_back by preserving the source's structural summary function."
+  },
+  {
+    "id": "dec226",
+    "en": "Put differently",
+    "category": "reformulation",
+    "tl": "Anders ausgedrückt",
+    "alts": [
+      "Anders formuliert"
+    ],
+    "register": "neutral; introduces a direct rephrasing, often before a colon",
+    "trap": "Anders is the adverb ‘differently’; andere would modify a noun. Both listed participial formulas plug naturally before the colon.",
+    "example_tl": "Anders ausgedrückt: Die Regulierung scheitert nicht an fehlenden Daten, sondern daran, dass unabhängige Stellen keinen verlässlichen Zugang zu ihnen erhalten.",
+    "example_en": "Put differently: regulation is failing not because data is unavailable but because independent bodies do not receive reliable access to it.",
+    "cloze": "{{c1::Anders ausgedrückt}}: Die Regulierung scheitert nicht an fehlenden Daten, sondern daran, dass unabhängige Stellen keinen verlässlichen Zugang zu ihnen erhalten.",
+    "note": ""
+  },
+  {
+    "id": "dec230",
+    "en": "Simplified",
+    "category": "reformulation",
+    "tl": "Vereinfacht dargestellt",
+    "alts": [],
+    "register": "written-neutral; signals a deliberately reduced model rather than merely simpler wording",
+    "trap": "Bare Vereinfacht is an adjective or participle fragment; the complete discourse frame needs a participle such as dargestellt and a following proposition.",
+    "example_tl": "Vereinfacht dargestellt, verarbeitet das System vergangene Entscheidungen zu statistischen Mustern, die anschließend als scheinbar neutrale Prognosen zukünftige Entscheidungen beeinflussen.",
+    "example_en": "Simplified, the system processes past decisions into statistical patterns that then influence future decisions as ostensibly neutral predictions.",
+    "cloze": "{{c1::Vereinfacht dargestellt}}, verarbeitet das System vergangene Entscheidungen zu statistischen Mustern, die anschließend als scheinbar neutrale Prognosen zukünftige Entscheidungen beeinflussen.",
+    "note": "Materially completes the fragment in old_back."
+  },
+  {
+    "id": "dec231",
+    "en": "Simply put",
+    "category": "reformulation",
+    "tl": "Einfach gesagt",
+    "alts": [],
+    "register": "neutral; strips away complexity before a direct restatement",
+    "trap": "Einfach means ‘simply’ in this fixed formula, not necessarily ‘easy’; the phrase naturally stands before a colon rather than subordinating a clause.",
+    "example_tl": "Einfach gesagt: Wer die digitale Infrastruktur kontrolliert, bestimmt zunehmend auch, welche politischen Stimmen sichtbar werden und welche dauerhaft an Reichweite verlieren.",
+    "example_en": "Simply put: whoever controls digital infrastructure increasingly determines which political voices become visible and which permanently lose reach.",
+    "cloze": "{{c1::Einfach gesagt}}: Wer die digitale Infrastruktur kontrolliert, bestimmt zunehmend auch, welche politischen Stimmen sichtbar werden und welche dauerhaft an Reichweite verlieren.",
+    "note": ""
+  },
+  {
+    "id": "dec233",
+    "en": "That is to say",
+    "category": "reformulation",
+    "tl": "Das heißt",
+    "alts": [
+      "Das bedeutet"
+    ],
+    "register": "neutral; introduces a clarification or consequence of the preceding statement",
+    "trap": "Das soll heißen can question or qualify intended meaning; neutral that is to say is Das heißt, with no modal sollen.",
+    "example_tl": "Das heißt: Selbst vollständige Transparenzberichte schaffen keine Rechenschaftspflicht, solange unabhängige Behörden Verstöße weder wirksam untersuchen noch spürbar sanktionieren können.",
+    "example_en": "That is to say: even complete transparency reports create no accountability as long as independent authorities can neither investigate violations effectively nor sanction them meaningfully.",
+    "cloze": "{{c1::Das heißt}}: Selbst vollständige Transparenzberichte schaffen keine Rechenschaftspflicht, solange unabhängige Behörden Verstöße weder wirksam untersuchen noch spürbar sanktionieren können.",
+    "note": "Materially removes the unintended modal nuance from old_back."
+  },
+  {
+    "id": "dec235",
+    "en": "As applied to",
+    "category": "structuring",
+    "tl": "Angewandt auf",
+    "alts": [],
+    "register": "written-formal; transfers a general principle to a specific domain",
+    "trap": "The German frame has no wie; auf governs the accusative, and the preposed phrase is followed by V2 verlangt before the dass clause.",
+    "example_tl": "Angewandt auf digitale Plattformen verlangt dieses Prinzip, dass Unternehmen nicht nur Risiken dokumentieren, sondern auch nachvollziehbare Abhilfemaßnahmen finanzieren.",
+    "example_en": "As applied to digital platforms, this principle requires companies not only to document risks but also to fund transparent remedial measures.",
+    "cloze": "{{c1::Angewandt auf}} digitale Plattformen verlangt dieses Prinzip, dass Unternehmen nicht nur Risiken dokumentieren, sondern auch nachvollziehbare Abhilfemaßnahmen finanzieren.",
+    "note": "Materially repairs the legacy calque Wie angewandt auf."
+  },
+  {
+    "id": "dec237",
+    "en": "As far as this topic is concerned,",
+    "category": "structuring",
+    "tl": "Was dieses Thema betrifft",
+    "alts": [],
+    "register": "neutral; explicitly sets the topic for the following claim",
+    "trap": "The idiomatic frame is Was X betrifft, with betrifft at the clause end; the following main clause begins with V2 inversion fehlt.",
+    "example_tl": "Was dieses Thema betrifft, fehlt der Bundesregierung bislang eine konsistente Strategie, die technische Souveränität mit offenen Märkten und demokratischer Kontrolle verbindet.",
+    "example_en": "As far as this topic is concerned, the German government still lacks a coherent strategy combining technological sovereignty with open markets and democratic oversight.",
+    "cloze": "{{c1::Was dieses Thema betrifft}}, fehlt der Bundesregierung bislang eine konsistente Strategie, die technische Souveränität mit offenen Märkten und demokratischer Kontrolle verbindet.",
+    "note": "Materially replaces the passive English calque in old_back with the standard German topic frame."
+  },
+  {
+    "id": "dec239",
+    "en": "Considering",
+    "category": "condition",
+    "tl": "Angesichts",
+    "alts": [],
+    "register": "written-neutral to formal; frames circumstances relevant to a judgment",
+    "trap": "Considering as a premise is angesichts plus genitive, not topical in Bezug auf; the phrase takes V2, while bevor sends zulässt to the end.",
+    "example_tl": "Angesichts der erheblichen gesellschaftlichen Risiken muss die Behörde ihre zurückhaltende Position begründen, bevor sie weitere automatisierte Entscheidungssysteme landesweit zulässt.",
+    "example_en": "Considering the considerable social risks, the authority must justify its cautious position before approving further automated decision systems nationwide.",
+    "cloze": "{{c1::Angesichts}} der erheblichen gesellschaftlichen Risiken muss die Behörde ihre zurückhaltende Position begründen, bevor sie weitere automatisierte Entscheidungssysteme landesweit zulässt.",
+    "note": "Materially corrects old_back, which expressed topic rather than circumstantial consideration."
+  },
+  {
+    "id": "dec240",
+    "en": "In connection to",
+    "category": "structuring",
+    "tl": "Im Zusammenhang mit",
+    "alts": [],
+    "register": "written-neutral; identifies a substantive relation or context",
+    "trap": "Mit governs the dative; Verbindung can imply a more direct linkage, while Zusammenhang is the idiomatic topical or analytical relation here.",
+    "example_tl": "Im Zusammenhang mit der geplanten Datenreform untersucht der Ausschuss, wie ausländische Plattformen politische Werbung finanzieren und ihre Auftraggeber gegenüber der Öffentlichkeit verschleiern.",
+    "example_en": "In connection with the planned data reform, the committee is examining how foreign platforms finance political advertising and conceal their clients from the public.",
+    "cloze": "{{c1::Im Zusammenhang mit}} der geplanten Datenreform untersucht der Ausschuss, wie ausländische Plattformen politische Werbung finanzieren und ihre Auftraggeber gegenüber der Öffentlichkeit verschleiern.",
+    "note": "Materially chooses Zusammenhang over the more literal legacy Verbindung for this analytical relation."
+  },
+  {
+    "id": "dec241",
+    "en": "In terms of",
+    "category": "stance",
+    "tl": "Hinsichtlich",
+    "alts": [],
+    "register": "written-formal; restricts an assessment to a particular dimension",
+    "trap": "Hinsichtlich governs the genitive and is not a universal replacement for topical in Bezug auf; initial placement takes V2, while weil is verb-final.",
+    "example_tl": "Hinsichtlich der redaktionellen Unabhängigkeit bleibt der Entwurf unzureichend, weil er zentrale Kontrollbefugnisse weiterhin unmittelbar beim zuständigen Ministerium belässt.",
+    "example_en": "In terms of editorial independence, the draft remains inadequate because it continues to leave key oversight powers directly with the responsible ministry.",
+    "cloze": "{{c1::Hinsichtlich}} der redaktionellen Unabhängigkeit bleibt der Entwurf unzureichend, weil er zentrale Kontrollbefugnisse weiterhin unmittelbar beim zuständigen Ministerium belässt.",
+    "note": "Old_back is possible but less compact; no alternative is listed because its accusative government would not plug into this genitive example."
+  },
+  {
+    "id": "dec243",
+    "en": "Regarding",
+    "category": "structuring",
+    "tl": "In Bezug auf",
+    "alts": [],
+    "register": "neutral to formal; a broad topic-setting prepositional frame",
+    "trap": "In Bezug auf governs the accusative; betreffend is possible but often bureaucratic and cannot be treated as a universal plug-in alternative.",
+    "example_tl": "In Bezug auf die Finanzierung politischer Werbung fordert der Bericht strengere Offenlegungspflichten, nennt jedoch keine konkreten Schwellenwerte für kleinere Kampagnen.",
+    "example_en": "Regarding the financing of political advertising, the report calls for stricter disclosure requirements but gives no concrete thresholds for smaller campaigns.",
+    "cloze": "{{c1::In Bezug auf}} die Finanzierung politischer Werbung fordert der Bericht strengere Offenlegungspflichten, nennt jedoch keine konkreten Schwellenwerte für kleinere Kampagnen.",
+    "note": "Material register correction from old_back; the main rendering is more natural in analytical prose."
+  },
+  {
+    "id": "dec245",
+    "en": "The fact that",
+    "category": "stance",
+    "tl": "Die Tatsache, dass",
+    "alts": [],
+    "register": "written-neutral; use when the fact itself is being made the topic, not as automatic padding before every dass clause",
+    "trap": "Dass sends verkaufen to the clause end; German often prefers bare dass, so retain Die Tatsache only when the fact is explicitly topical as here.",
+    "example_tl": "Die Tatsache, dass Plattformen politische Reichweite verkaufen, macht ihre internen Moderationsentscheidungen zu einer Frage demokratischer Kontrolle und nicht bloß privater Vertragsfreiheit.",
+    "example_en": "The fact that platforms sell political reach makes their internal moderation decisions a matter of democratic oversight, not merely private freedom of contract.",
+    "cloze": "{{c1::Die Tatsache, dass}} Plattformen politische Reichweite verkaufen, macht ihre internen Moderationsentscheidungen zu einer Frage demokratischer Kontrolle und nicht bloß privater Vertragsfreiheit.",
+    "note": "Old_back is correct. Self-review retained the potentially padded nominal frame only because Tatsache is the grammatical subject and argumentative focus here."
+  },
+  {
+    "id": "dec249",
+    "en": "In lay terms",
+    "category": "reformulation",
+    "tl": "Laienverständlich ausgedrückt",
+    "alts": [],
+    "register": "written-neutral; explicitly makes a technical account accessible to non-specialists",
+    "trap": "Laienhaft can mean amateurish or technically poor; laienverständlich means comprehensible to laypeople without disparaging the explanation.",
+    "example_tl": "Laienverständlich ausgedrückt, entscheidet der Algorithmus nicht selbst, sondern setzt statistische Prioritäten um, die Menschen durch Datenwahl und Zielvorgaben festgelegt haben.",
+    "example_en": "In lay terms, the algorithm does not decide by itself but implements statistical priorities that people established through data selection and target specifications.",
+    "cloze": "{{c1::Laienverständlich ausgedrückt}}, entscheidet der Algorithmus nicht selbst, sondern setzt statistische Prioritäten um, die Menschen durch Datenwahl und Zielvorgaben festgelegt haben.",
+    "note": "Materially removes the potentially pejorative implication of old_back."
+  },
+  {
+    "id": "dec251",
+    "en": "To break it down",
+    "category": "structuring",
+    "tl": "Im Einzelnen bedeutet das",
+    "alts": [],
+    "register": "neutral; introduces a component-by-component explanation",
+    "trap": "Um es aufzuschlüsseln is a dangling purpose clause in this use; the complete discourse frame needs a finite proposition and naturally precedes a colon.",
+    "example_tl": "Im Einzelnen bedeutet das: Plattformen müssen Datenzugriffe protokollieren, externe Prüfungen ermöglichen und jede automatisierte Sanktion gegenüber Betroffenen nachvollziehbar begründen.",
+    "example_en": "To break it down: platforms must log data access, enable external audits, and transparently justify every automated sanction to affected people.",
+    "cloze": "{{c1::Im Einzelnen bedeutet das}}: Plattformen müssen Datenzugriffe protokollieren, externe Prüfungen ermöglichen und jede automatisierte Sanktion gegenüber Betroffenen nachvollziehbar begründen.",
+    "note": "Materially completes the legacy fragment in a professional register."
+  },
+  {
+    "id": "dec253",
+    "en": "To explain",
+    "category": "reformulation",
+    "tl": "Zur Erläuterung",
+    "alts": [
+      "Zur Erklärung"
+    ],
+    "register": "written-formal; introduces an explanatory clarification",
+    "trap": "Zu erklären means ‘to be explained’ or forms part of an infinitive clause; it does not independently perform this discourse move.",
+    "example_tl": "Zur Erläuterung: Der Prüfwert misst nicht gesellschaftliche Gefährlichkeit, sondern lediglich die statistische Ähnlichkeit eines Beitrags mit früher beanstandeten Inhalten.",
+    "example_en": "To explain: the assessment score measures not social dangerousness but merely the statistical similarity of a post to previously flagged content.",
+    "cloze": "{{c1::Zur Erläuterung}}: Der Prüfwert misst nicht gesellschaftliche Gefährlichkeit, sondern lediglich die statistische Ähnlichkeit eines Beitrags mit früher beanstandeten Inhalten.",
+    "note": "Materially turns the legacy infinitive fragment into a usable explanatory frame."
+  },
+  {
+    "id": "dec274",
+    "en": "on the contrary",
+    "category": "contrast",
+    "tl": "Im Gegenteil",
+    "alts": [],
+    "register": "neutral and emphatic; directly rejects and reverses a preceding proposition",
+    "trap": "Im Gegenteil contradicts a claim; Im Gegensatz dazu merely contrasts two things or cases and is not automatically interchangeable.",
+    "example_tl": "Im Gegenteil: Zusätzliche Geheimhaltung stärkt das Vertrauen nicht, sondern erschwert eine sachliche Bewertung der gesellschaftlichen Risiken automatisierter Entscheidungen.",
+    "example_en": "On the contrary: additional secrecy does not strengthen trust but makes a factual assessment of the social risks of automated decisions more difficult.",
+    "cloze": "{{c1::Im Gegenteil}}: Zusätzliche Geheimhaltung stärkt das Vertrauen nicht, sondern erschwert eine sachliche Bewertung der gesellschaftlichen Risiken automatisierter Entscheidungen.",
+    "note": ""
+  },
+  {
+    "id": "dec277",
+    "en": "interestingly",
+    "category": "stance",
+    "tl": "Interessanterweise",
+    "alts": [],
+    "register": "written-neutral; marks a result as analytically noteworthy rather than merely personally interesting",
+    "trap": "Interessanterweise is a V2 sentence adverb (stieg das Vertrauen); the later nachdem and obwohl clauses both place their verbs at the end.",
+    "example_tl": "Interessanterweise stieg das Vertrauen in die Behörde erst, nachdem sie sämtliche Prüfberichte veröffentlichte, obwohl diese mehrere erhebliche institutionelle Versäumnisse dokumentierten.",
+    "example_en": "Interestingly, trust in the authority rose only after it published all audit reports, even though these documented several serious institutional failures.",
+    "cloze": "{{c1::Interessanterweise}} stieg das Vertrauen in die Behörde erst, nachdem sie sämtliche Prüfberichte veröffentlichte, obwohl diese mehrere erhebliche institutionelle Versäumnisse dokumentierten.",
+    "note": ""
+  },
+  {
+    "id": "dec279",
+    "en": "more importantly",
+    "category": "stance",
+    "tl": "Noch wichtiger ist, dass",
+    "alts": [],
+    "register": "neutral; explicitly ranks the following point above one already made",
+    "trap": "The comparative is noch wichtiger, not mehr wichtig; the full frame includes dass and sends können to the clause end.",
+    "example_tl": "Noch wichtiger ist, dass unabhängige Forschende nicht nur Daten einsehen, sondern auch die methodischen Annahmen automatisierter Risikomodelle öffentlich prüfen können.",
+    "example_en": "More importantly, independent researchers must be able not only to inspect data but also to publicly examine the methodological assumptions of automated risk models.",
+    "cloze": "{{c1::Noch wichtiger ist, dass}} unabhängige Forschende nicht nur Daten einsehen, sondern auch die methodischen Annahmen automatisierter Risikomodelle öffentlich prüfen können.",
+    "note": "Self-review clozed the complete source-strength frame, including dass, rather than only the comparative adjective."
+  },
+  {
+    "id": "dec280",
+    "en": "most importantly",
+    "category": "stance",
+    "tl": "Am wichtigsten ist, dass",
+    "alts": [],
+    "register": "neutral; gives the following point explicit superlative priority",
+    "trap": "Do not weaken the superlative to wichtig or noch wichtiger; dass sends können to the end, as does bevor with beschränken.",
+    "example_tl": "Am wichtigsten ist, dass Betroffene automatisierte Entscheidungen rechtzeitig anfechten können, bevor fehlerhafte Bewertungen ihren Zugang zu Arbeit oder Wohnraum dauerhaft beschränken.",
+    "example_en": "Most importantly, affected people must be able to challenge automated decisions before faulty assessments permanently restrict their access to work or housing.",
+    "cloze": "{{c1::Am wichtigsten ist, dass}} Betroffene automatisierte Entscheidungen rechtzeitig anfechten können, bevor fehlerhafte Bewertungen ihren Zugang zu Arbeit oder Wohnraum dauerhaft beschränken.",
+    "note": "Retained separately from dec279 to preserve the source's stronger superlative claim."
+  },
+  {
+    "id": "dec282",
+    "en": "It's important to note that...",
+    "category": "stance",
+    "tl": "Wichtig ist festzuhalten, dass",
+    "alts": [],
+    "register": "written-neutral; flags an important qualification for the record",
+    "trap": "Es ist wichtig zu bemerken is translation-heavy and bemerken often means ‘notice’; festhalten performs the textual move, followed by dass verb-final.",
+    "example_tl": "Wichtig ist festzuhalten, dass die veröffentlichten Zahlen nur gemeldete Fälle erfassen und deshalb keinen vollständigen Überblick über systematische Einschüchterung bieten.",
+    "example_en": "It is important to note that the published figures record only reported cases and therefore provide no complete overview of systematic intimidation.",
+    "cloze": "{{c1::Wichtig ist festzuhalten, dass}} die veröffentlichten Zahlen nur gemeldete Fälle erfassen und deshalb keinen vollständigen Überblick über systematische Einschüchterung bieten.",
+    "note": "Materially replaces the legacy calque with a complete professional-register frame."
+  },
+  {
+    "id": "dec283",
+    "en": "I firmly believe that...",
+    "category": "stance",
+    "tl": "Ich bin fest davon überzeugt, dass",
+    "alts": [],
+    "register": "neutral to formal; an explicit first-person statement of strong conviction",
+    "trap": "Ich glaube fest daran is possible but less idiomatic in professional argument; davon überzeugt preserves the source's firm commitment, followed by dass verb-final.",
+    "example_tl": "Ich bin fest davon überzeugt, dass demokratische Kontrolle nur gelingt, wenn unabhängige Institutionen ausreichende Ressourcen und rechtlich gesicherten Datenzugang erhalten.",
+    "example_en": "I firmly believe that democratic oversight succeeds only when independent institutions receive sufficient resources and legally guaranteed data access.",
+    "cloze": "{{c1::Ich bin fest davon überzeugt, dass}} demokratische Kontrolle nur gelingt, wenn unabhängige Institutionen ausreichende Ressourcen und rechtlich gesicherten Datenzugang erhalten.",
+    "note": "Materially improves the collocation in old_back while preserving first person and strong conviction."
+  },
+  {
+    "id": "dec284",
+    "en": "One cannot overlook the fact that...",
+    "category": "stance",
+    "tl": "Man darf nicht übersehen, dass",
+    "alts": [],
+    "register": "written-neutral; strongly directs attention to a consequential fact",
+    "trap": "German normally omits padded die Tatsache here; the idiomatic admonition is Man darf nicht übersehen, dass with verb-final belastet.",
+    "example_tl": "Man darf nicht übersehen, dass die neue Meldepflicht kleinere Redaktionen verhältnismäßig stärker belastet als global operierende Plattformen mit eigenen Rechtsabteilungen.",
+    "example_en": "One cannot overlook the fact that the new reporting obligation burdens smaller newsrooms proportionally more than globally operating platforms with their own legal departments.",
+    "cloze": "{{c1::Man darf nicht übersehen, dass}} die neue Meldepflicht kleinere Redaktionen verhältnismäßig stärker belastet als global operierende Plattformen mit eigenen Rechtsabteilungen.",
+    "note": "Materially removes a padded nominal calque while retaining the source's admonitory force."
+  },
+  {
+    "id": "dec285",
+    "en": "In my view...",
+    "category": "stance",
+    "tl": "Meines Erachtens",
+    "alts": [
+      "Meiner Ansicht nach"
+    ],
+    "register": "written-neutral to formal; the alternative is slightly less formal",
+    "trap": "Meines Erachtens is a fixed genitive stance phrase and takes V2 (sollte die Regulierung); avoid the English calque in meiner Sicht.",
+    "example_tl": "Meines Erachtens sollte die Regulierung nicht einzelne technische Verfahren vorschreiben, sondern überprüfbare Ziele, klare Haftungsregeln und wirksame Beschwerdewege festlegen.",
+    "example_en": "In my view, regulation should not prescribe individual technical procedures but should set verifiable goals, clear liability rules, and effective complaint mechanisms.",
+    "cloze": "{{c1::Meines Erachtens}} sollte die Regulierung nicht einzelne technische Verfahren vorschreiben, sondern überprüfbare Ziele, klare Haftungsregeln und wirksame Beschwerdewege festlegen.",
+    "note": "Old_back remains a valid plug-in alternative."
+  },
+  {
+    "id": "dec287",
+    "en": "On the other hand...",
+    "category": "contrast",
+    "tl": "Andererseits",
+    "alts": [],
+    "register": "neutral; balances a preceding consideration in structured argument",
+    "trap": "Andererseits is a V2 adverb (könnte eine Regulierung); the following contrastive während clause sends nutzen to the end.",
+    "example_tl": "Andererseits könnte eine zu starre Regulierung kleinere Anbieter überfordern, während globale Plattformen die zusätzlichen Kosten problemlos tragen und strategisch nutzen.",
+    "example_en": "On the other hand, overly rigid regulation could overwhelm smaller providers, while global platforms can easily absorb and strategically exploit the additional costs.",
+    "cloze": "{{c1::Andererseits}} könnte eine zu starre Regulierung kleinere Anbieter überfordern, während globale Plattformen die zusätzlichen Kosten problemlos tragen und strategisch nutzen.",
+    "note": "The spatial-looking old_back is possible, but Andererseits is unambiguously argumentative."
+  },
+  {
+    "id": "dec288",
+    "en": "Contrary to popular belief...",
+    "category": "contrast",
+    "tl": "Entgegen der landläufigen Meinung",
+    "alts": [],
+    "register": "written-neutral; challenges a widely held assumption",
+    "trap": "Entgegen governs the dative (der Meinung); the resulting prefield phrase takes V2, here sind algorithmische Entscheidungen.",
+    "example_tl": "Entgegen der landläufigen Meinung sind algorithmische Entscheidungen nicht objektiv, sondern spiegeln die politischen Prioritäten, Datenlücken und institutionellen Anreize ihrer Entwickler wider.",
+    "example_en": "Contrary to popular belief, algorithmic decisions are not objective but reflect their developers' political priorities, data gaps, and institutional incentives.",
+    "cloze": "{{c1::Entgegen der landläufigen Meinung}} sind algorithmische Entscheidungen nicht objektiv, sondern spiegeln die politischen Prioritäten, Datenlücken und institutionellen Anreize ihrer Entwickler wider.",
+    "note": ""
+  },
+  {
+    "id": "dec289",
+    "en": "While many argue that..., I contend that...",
+    "category": "contrast",
+    "tl": "während viele argumentieren, dass …, vertrete ich die Auffassung, dass …",
+    "alts": [],
+    "register": "written-formal; explicitly contrasts a common claim with the author's position",
+    "trap": "The während clause is verb-final (behindere); the main clause begins vertrete ich, and its nested dass clause ends with verschaffen.",
+    "example_tl": "Während viele argumentieren, dass strengere Aufsicht Innovation behindere, vertrete ich die Auffassung, dass klare Regeln gerade kleineren Anbietern Planungssicherheit verschaffen.",
+    "example_en": "While many argue that stricter oversight inhibits innovation, I contend that clear rules provide smaller providers in particular with planning certainty.",
+    "cloze": "{{c1::Während viele argumentieren, dass}} strengere Aufsicht Innovation behindere, {{c1::vertrete ich die Auffassung, dass}} klare Regeln gerade kleineren Anbietern Planungssicherheit verschaffen.",
+    "note": "Materially replaces the overly blunt behaupte ich in old_back. Self-review aligned both fixed source arms with separate clozes."
+  },
+  {
+    "id": "dec290",
+    "en": "There's a strong case to be made for...",
+    "category": "stance",
+    "tl": "Vieles spricht dafür, dass",
+    "alts": [
+      "Es spricht viel dafür, dass"
+    ],
+    "register": "written-neutral; signals substantial supporting reasons without claiming proof",
+    "trap": "Use dafür, dass before a finite proposition but für plus accusative before a noun; dass sends sichern to the clause end.",
+    "example_tl": "Vieles spricht dafür, dass öffentliche Forschungseinrichtungen direkten Datenzugang erhalten, solange verbindliche Schutzvorkehrungen die Privatsphäre der betroffenen Nutzerinnen und Nutzer sichern.",
+    "example_en": "There is a strong case for public research institutions receiving direct data access, provided binding safeguards protect the privacy of the users concerned.",
+    "cloze": "{{c1::Vieles spricht dafür, dass}} öffentliche Forschungseinrichtungen direkten Datenzugang erhalten, solange verbindliche Schutzvorkehrungen die Privatsphäre der betroffenen Nutzerinnen und Nutzer sichern.",
+    "note": "Old_back is grammatical; the main rendering is the more idiomatic information structure."
+  },
+  {
+    "id": "dec291",
+    "en": "It stands to reason that...",
+    "category": "stance",
+    "tl": "Es liegt nahe, dass",
+    "alts": [
+      "Es ist naheliegend, dass"
+    ],
+    "register": "written-neutral; presents a strong but still inferential conclusion",
+    "trap": "Es liegt auf der Hand asserts obviousness more categorically; the measured frame here still requires dass and clause-final kann.",
+    "example_tl": "Es liegt nahe, dass eine Behörde ohne eigenes technisches Personal komplexe Empfehlungssysteme weder regelmäßig prüfen noch wirksam sanktionieren kann.",
+    "example_en": "It stands to reason that an authority without its own technical staff can neither audit complex recommendation systems regularly nor sanction them effectively.",
+    "cloze": "{{c1::Es liegt nahe, dass}} eine Behörde ohne eigenes technisches Personal komplexe Empfehlungssysteme weder regelmäßig prüfen noch wirksam sanktionieren kann.",
+    "note": "Materially moderates old_back's stronger obviousness claim while retaining a well-supported inference."
+  },
+  {
+    "id": "dec292",
+    "en": "It's worth pointing out that...",
+    "category": "stance",
+    "tl": "Hervorzuheben ist, dass",
+    "alts": [],
+    "register": "written-formal; marks a point as especially salient",
+    "trap": "Erwähnenswert means merely worth mentioning; Hervorzuheben preserves pointing out as emphasis, with dass and clause-final dokumentiert haben.",
+    "example_tl": "Hervorzuheben ist, dass mehrere Regionalzeitungen trotz begrenzter Ressourcen eigene Prüfverfahren entwickelt und deren Ergebnisse vollständig öffentlich dokumentiert haben.",
+    "example_en": "It is worth pointing out that several regional newspapers developed their own audit procedures despite limited resources and fully documented their results publicly.",
+    "cloze": "{{c1::Hervorzuheben ist, dass}} mehrere Regionalzeitungen trotz begrenzter Ressourcen eigene Prüfverfahren entwickelt und deren Ergebnisse vollständig öffentlich dokumentiert haben.",
+    "note": "Materially preserves the source's emphasis rather than reducing it to mere mention."
+  },
+  {
+    "id": "dec293",
+    "en": "I'd argue that...",
+    "category": "stance",
+    "tl": "Ich würde die Auffassung vertreten, dass",
+    "alts": [],
+    "register": "written-formal; a hedged first-person argumentative claim",
+    "trap": "Ich würde sagen is conversational and weaker; die Auffassung vertreten captures an argued position, followed by dass and sofern verb-final clauses.",
+    "example_tl": "Ich würde die Auffassung vertreten, dass verpflichtende Schnittstellen den Wettbewerb stärken, sofern ihre Sicherheitsstandards transparent festgelegt und öffentlich überprüft werden.",
+    "example_en": "I would argue that mandatory interfaces strengthen competition, provided their security standards are transparently defined and publicly verifiable.",
+    "cloze": "{{c1::Ich würde die Auffassung vertreten, dass}} verpflichtende Schnittstellen den Wettbewerb stärken, sofern ihre Sicherheitsstandards transparent festgelegt und öffentlich überprüft werden.",
+    "note": "Materially raises old_back from a casual opinion to the source's argumentative stance without removing its hedge."
+  },
+  {
+    "id": "dec294",
+    "en": "One might reasonably conclude...",
+    "category": "result",
+    "tl": "Daraus ließe sich mit guten Gründen schließen, dass",
+    "alts": [],
+    "register": "written-formal; a cautious, evidence-based inference",
+    "trap": "The Konjunktiv II ließe preserves might; indicative lässt would strengthen the claim, while vernünftigerweise is less idiomatic in this frame.",
+    "example_tl": "Daraus ließe sich mit guten Gründen schließen, dass freiwillige Selbstkontrolle allein nicht genügt, um strukturelle Interessenkonflikte dauerhaft und nachvollziehbar zu begrenzen.",
+    "example_en": "One might reasonably conclude from this that voluntary self-regulation alone is insufficient to limit structural conflicts of interest permanently and transparently.",
+    "cloze": "{{c1::Daraus ließe sich mit guten Gründen schließen, dass}} freiwillige Selbstkontrolle allein nicht genügt, um strukturelle Interessenkonflikte dauerhaft und nachvollziehbar zu begrenzen.",
+    "note": "Materially improves the collocation in old_back and preserves the source's modal caution."
+  },
+  {
+    "id": "dec295",
+    "en": "Conversely...",
+    "category": "contrast",
+    "tl": "Umgekehrt",
+    "alts": [],
+    "register": "written-neutral; reverses the direction of a preceding relation",
+    "trap": "Umgekehrt marks a reverse relation and takes V2 (gilt); Im Gegenteil instead rejects a preceding proposition and is not interchangeable.",
+    "example_tl": "Umgekehrt gilt aber auch: Ohne verlässliche Einnahmen können unabhängige Medien weder langwierige Recherchen finanzieren noch dem politischen Druck mächtiger Eigentümer widerstehen.",
+    "example_en": "Conversely, the reverse also holds: without reliable revenue, independent media can neither finance lengthy investigations nor withstand pressure from powerful owners.",
+    "cloze": "{{c1::Umgekehrt}} gilt aber auch: Ohne verlässliche Einnahmen können unabhängige Medien weder langwierige Recherchen finanzieren noch dem politischen Druck mächtiger Eigentümer widerstehen.",
+    "note": ""
+  },
+  {
+    "id": "dec297",
+    "en": "Drawing upon the evidence, one might suggest that...",
+    "category": "stance",
+    "tl": "Die Belege legen nahe, dass",
+    "alts": [],
+    "register": "written-neutral; an evidence-based but explicitly non-conclusive inference",
+    "trap": "Belege are evidence, not conclusive Beweise; nahelegen preserves might suggest, while the dass clause sends schwächen to the end.",
+    "example_tl": "Die Belege legen nahe, dass koordinierte Meldekampagnen gezielt oppositionelle Medien schwächen, auch wenn einzelne Sperrentscheidungen für sich genommen plausibel erscheinen.",
+    "example_en": "Drawing upon the evidence, one might suggest that coordinated reporting campaigns deliberately weaken opposition media, even if individual blocking decisions appear plausible in isolation.",
+    "cloze": "{{c1::Die Belege legen nahe, dass}} koordinierte Meldekampagnen gezielt oppositionelle Medien schwächen, auch wenn einzelne Sperrentscheidungen für sich genommen plausibel erscheinen.",
+    "note": "Materially replaces the heavy legacy frame and avoids upgrading evidence to proof."
+  },
+  {
+    "id": "dec298",
+    "en": "Although there's some truth in..., it's crucial to remember that...",
+    "category": "concession",
+    "tl": "auch wenn … teilweise zutrifft, darf nicht vergessen werden, dass …",
+    "alts": [],
+    "register": "written-neutral; concedes limited validity before asserting a crucial qualification",
+    "trap": "Auch wenn ends its clause with zutrifft; the fronted concession forces main-clause V2 darf, and the nested dass clause is verb-final.",
+    "example_tl": "Auch wenn diese Kritik teilweise zutrifft, darf nicht vergessen werden, dass freiwillige Transparenz ohne unabhängige Kontrolle jederzeit strategisch begrenzt werden kann.",
+    "example_en": "Although there is some truth in this criticism, it is crucial to remember that voluntary transparency without independent oversight can be strategically limited at any time.",
+    "cloze": "{{c1::Auch wenn}} diese Kritik {{c1::teilweise zutrifft}}, {{c1::darf nicht vergessen werden, dass}} freiwillige Transparenz ohne unabhängige Kontrolle jederzeit strategisch begrenzt werden kann.",
+    "note": "Materially replaces old_back's colloquial and redundant etwas Wahres ... dran. Self-review aligned all three fixed source arms with the cloze."
+  },
+  {
+    "id": "dec299",
+    "en": "I have reservations about...",
+    "category": "stance",
+    "tl": "Ich habe Vorbehalte gegen",
+    "alts": [],
+    "register": "neutral to formal; expresses substantive concern without categorical rejection",
+    "trap": "Gegen governs the accusative, here eine Regelung; Vorbehalte gegen is not case-compatible with the alternative Vorbehalte gegenüber plus dative.",
+    "example_tl": "Ich habe Vorbehalte gegen eine Regelung, die zentrale Prüfkompetenzen ausgerechnet jener Behörde überträgt, deren Leitung unmittelbar von der Regierung ernannt wird.",
+    "example_en": "I have reservations about a rule that assigns key audit powers to the very authority whose leadership is appointed directly by the government.",
+    "cloze": "{{c1::Ich habe Vorbehalte gegen}} eine Regelung, die zentrale Prüfkompetenzen ausgerechnet jener Behörde überträgt, deren Leitung unmittelbar von der Regierung ernannt wird.",
+    "note": "Old_back is correct; the example supplies the required accusative complement."
+  },
+  {
+    "id": "dec300",
+    "en": "It's hard to deny that...",
+    "category": "stance",
+    "tl": "Es lässt sich kaum bestreiten, dass",
+    "alts": [],
+    "register": "written-neutral; a strong impersonal claim that still stops short of absolute certainty",
+    "trap": "The idiomatic impersonal frame uses sich lassen; dass sends the coordinated predicates verteilen and ausüben to their clause-final positions.",
+    "example_tl": "Es lässt sich kaum bestreiten, dass personalisierte Empfehlungssysteme politische Aufmerksamkeit verteilen und damit erheblichen Einfluss auf demokratische Öffentlichkeit ausüben.",
+    "example_en": "It is hard to deny that personalized recommendation systems distribute political attention and thereby exert considerable influence on the democratic public sphere.",
+    "cloze": "{{c1::Es lässt sich kaum bestreiten, dass}} personalisierte Empfehlungssysteme politische Aufmerksamkeit verteilen und damit erheblichen Einfluss auf demokratische Öffentlichkeit ausüben.",
+    "note": "Materially improves the legacy collocation without strengthening the source to absolute certainty."
   }
 ]
