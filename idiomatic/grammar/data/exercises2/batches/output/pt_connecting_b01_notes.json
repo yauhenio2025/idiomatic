@@ -5,12 +5,12 @@
     "category": "result",
     "tl": "em consequência de",
     "alts": ["em decorrência de"],
-    "register": "Neutro-formal e sobretudo escrito; em decorrência de é ligeiramente mais institucional.",
-    "trap": "Como consequência de também é correto, mas o espanhol como consecuencia de pode fazê-lo prevalecer mesmo quando em consequência de seria mais conciso.",
+    "register": "Neutral-formal and chiefly written; em decorrência de is slightly more institutional.",
+    "trap": "Como consequência de is also correct, but Spanish como consecuencia de may cause it to be favored even when em consequência de would be more concise.",
     "example_tl": "Em consequência de sucessivos cortes orçamentários, emissoras públicas perderam capacidade investigativa justamente quando a desinformação passou a exigir cobertura mais robusta.",
     "example_en": "As a consequence of successive budget cuts, public broadcasters lost investigative capacity just when disinformation began to require more robust coverage.",
     "cloze": "{{c1::Em consequência de}} sucessivos cortes orçamentários, emissoras públicas perderam capacidade investigativa justamente quando a desinformação passou a exigir cobertura mais robusta.",
-    "note": "Autorrevisão: a nota foi suavizada para não condenar como consequência de, forma correta embora mais longa neste contexto."
+    "note": "Self-review: the note was softened to avoid condemning como consequência de, which is correct but longer in this context."
   },
   {
     "id": "ptc004",
@@ -18,8 +18,8 @@
     "category": "result",
     "tl": "por conseguinte",
     "alts": ["consequentemente"],
-    "register": "Escrito-formal; consequentemente é um pouco menos marcado e também ocorre na fala monitorada.",
-    "trap": "O cognato espanhol é por consiguiente; em português, a forma fixa termina em -guinte: por conseguinte.",
+    "register": "Formal and primarily written; consequentemente is slightly less marked and also occurs in careful speech.",
+    "trap": "The Spanish cognate is por consiguiente; in Portuguese, the fixed form ends in -guinte: por conseguinte.",
     "example_tl": "Por conseguinte, qualquer política de transparência que ignore os sistemas de recomendação deixará intacto o principal mecanismo de amplificação das plataformas.",
     "example_en": "Consequently, any transparency policy that ignores recommendation systems will leave the platforms' main amplification mechanism intact.",
     "cloze": "{{c1::Por conseguinte}}, qualquer política de transparência que ignore os sistemas de recomendação deixará intacto o principal mecanismo de amplificação das plataformas.",
@@ -31,12 +31,12 @@
     "category": "result",
     "tl": "devido a",
     "alts": ["em razão de"],
-    "register": "Neutro; em razão de soa mais formal e institucional.",
-    "trap": "Antes de artigo feminino, devido a exige crase: devido à falta, não devido a falta, ponto frequentemente mascarado pelo espanhol debido a la.",
+    "register": "Neutral; em razão de sounds more formal and institutional.",
+    "trap": "Before a feminine article, devido a requires a grave accent: devido à falta, not devido a falta, a point often obscured by Spanish debido a la.",
     "example_tl": "Devido a falhas recorrentes de supervisão, a empresa apresentou como moderação efetiva uma política que pouco alterou seus incentivos comerciais.",
     "example_en": "Due to recurring oversight failures, the company presented as effective moderation a policy that barely changed its commercial incentives.",
     "cloze": "{{c1::Devido a}} falhas recorrentes de supervisão, a empresa apresentou como moderação efetiva uma política que pouco alterou seus incentivos comerciais.",
-    "note": "Evita a expansão burocrática devido ao fato de oferecida no old_back."
+    "note": "Avoids the bureaucratic expansion devido ao fato de offered in old_back."
   },
   {
     "id": "ptc007",
@@ -44,12 +44,12 @@
     "category": "structuring",
     "tl": "sem demora",
     "alts": ["imediatamente"],
-    "register": "Formal; o original inglês é jurídico ou arcaizante, enquanto sem demora é idiomático em decisões e normas brasileiras.",
-    "trap": "A partir de agora e a partir daí significam continuidade desde um marco, não a execução imediata expressa por forthwith.",
+    "register": "Formal; the English original is legalistic or archaic, while sem demora is idiomatic in Brazilian rulings and regulations.",
+    "trap": "A partir de agora and a partir daí mean continuation from a reference point, not the immediate execution expressed by forthwith.",
     "example_tl": "A decisão determinou que os dados fossem preservados sem demora, antes que uma atualização automática apagasse registros essenciais para a investigação parlamentar.",
     "example_en": "The ruling ordered the data to be preserved forthwith, before an automatic update erased records essential to the parliamentary investigation.",
     "cloze": "A decisão determinou que os dados fossem preservados {{c1::sem demora}}, antes que uma atualização automática apagasse registros essenciais para a investigação parlamentar.",
-    "note": "Diverge materialmente das duas opções temporais imprecisas do old_back."
+    "note": "Differs materially from the two imprecise temporal options in old_back."
   },
   {
     "id": "ptc008",
@@ -57,12 +57,12 @@
     "category": "result",
     "tl": "daí",
     "alts": [],
-    "register": "Neutro no padrão daí resulta; daí seguido diretamente de sintagma nominal é mais enxuto e retórico.",
-    "trap": "O espanhol de ahí corresponde aqui a daí, sem preposição separada; daí que é bem menos corrente no português brasileiro.",
+    "register": "Neutral in the pattern daí resulta; daí followed directly by a noun phrase is leaner and more rhetorical.",
+    "trap": "Spanish de ahí corresponds here to daí, with no separate preposition; daí que is far less common in Brazilian Portuguese.",
     "example_tl": "Daí resulta a necessidade de submeter os modelos usados pelo setor público a auditorias que não dependam dos próprios fornecedores.",
     "example_en": "Hence arises the need to subject the models used by the public sector to audits that do not depend on the vendors themselves.",
     "cloze": "{{c1::Daí}} resulta a necessidade de submeter os modelos usados pelo setor público a auditorias que não dependam dos próprios fornecedores.",
-    "note": "A construção escolhida preserva o valor inferencial de hence sem confundi-lo com mera sequência."
+    "note": "The chosen construction preserves the inferential value of hence without confusing it with mere sequence."
   },
   {
     "id": "ptc010",
@@ -70,8 +70,8 @@
     "category": "result",
     "tl": "portanto",
     "alts": ["logo"],
-    "register": "Neutro-formal; logo é mais compacto e pode soar mais lógico-dedutivo.",
-    "trap": "Ao contrário do espanhol por tanto, o conector português portanto se escreve em uma só palavra.",
+    "register": "Neutral-formal; logo is more compact and may sound more logically deductive.",
+    "trap": "Unlike Spanish por tanto, the Portuguese connector portanto is written as one word.",
     "example_tl": "Portanto, ampliar a coleta de dados sem limitar sua finalidade apenas torna a vigilância comercial mais eficiente, não mais legítima.",
     "example_en": "Therefore, expanding data collection without limiting its purpose merely makes commercial surveillance more efficient, not more legitimate.",
     "cloze": "{{c1::Portanto}}, ampliar a coleta de dados sem limitar sua finalidade apenas torna a vigilância comercial mais eficiente, não mais legítima.",
@@ -83,12 +83,12 @@
     "category": "result",
     "tl": "diante disso",
     "alts": [],
-    "register": "Neutro-formal; traduz a reação imediata a um fato anterior sem imitar o tom arcaico do inglês.",
-    "trap": "Então pode indicar apenas sequência, e a partir daí indica continuidade; nenhuma das formas necessariamente expressa a consequência responsiva de thereupon.",
+    "register": "Neutral-formal; conveys an immediate reaction to a previous event without imitating the English term's archaic tone.",
+    "trap": "Então may indicate mere sequence, while a partir daí indicates continuation; neither necessarily expresses the responsive consequence of thereupon.",
     "example_tl": "Diante disso, o conselho suspendeu a parceria e exigiu uma auditoria independente antes de autorizar qualquer novo compartilhamento de dados.",
     "example_en": "Thereupon, the board suspended the partnership and required an independent audit before authorizing any further data sharing.",
     "cloze": "{{c1::Diante disso}}, o conselho suspendeu a parceria e exigiu uma auditoria independente antes de autorizar qualquer novo compartilhamento de dados.",
-    "note": "Diverge do old_back para explicitar que a segunda ação responde ao acontecimento anterior."
+    "note": "Differs from old_back to make clear that the second action responds to the preceding event."
   },
   {
     "id": "ptc012",
@@ -96,8 +96,8 @@
     "category": "result",
     "tl": "desse modo",
     "alts": ["assim"],
-    "register": "Neutro e comum em análise escrita; assim é mais conciso.",
-    "trap": "Ao retomar uma ideia já mencionada, o português brasileiro tende a desse modo, enquanto o espanhol favorece de este modo.",
+    "register": "Neutral and common in written analysis; assim is more concise.",
+    "trap": "When referring back to an idea already mentioned, Brazilian Portuguese tends to use desse modo, while Spanish favors de este modo.",
     "example_tl": "Desse modo, o governo transferiu aos fornecedores a definição prática de interesse público que a própria lei havia evitado formular.",
     "example_en": "Thus, the government transferred to vendors the practical definition of public interest that the law itself had avoided formulating.",
     "cloze": "{{c1::Desse modo}}, o governo transferiu aos fornecedores a definição prática de interesse público que a própria lei havia evitado formular.",
@@ -109,12 +109,12 @@
     "category": "stance",
     "tl": "sobretudo",
     "alts": ["acima de tudo"],
-    "register": "Neutro; sobretudo é especialmente frequente na prosa argumentativa.",
-    "trap": "O espanhol sobre todo corresponde a sobretudo, junto; sobre tudo, separado, significa acerca de tudo e muda a análise sintática.",
+    "register": "Neutral; sobretudo is especially common in argumentative prose.",
+    "trap": "Spanish sobre todo corresponds to sobretudo, written together; sobre tudo, written separately, means acerca de tudo and changes the syntactic analysis.",
     "example_tl": "Sobretudo, a política industrial precisa reduzir dependências estratégicas sem transformar segurança nacional em pretexto permanente para favorecer grupos domésticos.",
     "example_en": "Above all, industrial policy must reduce strategic dependencies without turning national security into a permanent pretext for favoring domestic groups.",
     "cloze": "{{c1::Sobretudo}}, a política industrial precisa reduzir dependências estratégicas sem transformar segurança nacional em pretexto permanente para favorecer grupos domésticos.",
-    "note": "Corrige o primeiro item do old_back, sobre tudo, que é inadequado neste uso adverbial."
+    "note": "Corrects the first old_back item, sobre tudo, which is unsuitable in this adverbial use."
   },
   {
     "id": "ptc019",
@@ -122,8 +122,8 @@
     "category": "addition",
     "tl": "até mesmo",
     "alts": ["mesmo"],
-    "register": "Neutro; até mesmo dá relevo explícito ao caso inesperado, enquanto mesmo é mais compacto.",
-    "trap": "O espanhol incluso nem sempre pede inclusive; para destacar um caso contra a expectativa, até mesmo costuma ser mais inequívoco.",
+    "register": "Neutral; até mesmo explicitly highlights the unexpected case, while mesmo is more compact.",
+    "trap": "Spanish incluso does not always call for inclusive; to highlight a case that runs against expectations, até mesmo is usually less ambiguous.",
     "example_tl": "Até mesmo pesquisadores favoráveis à autorregulação admitem que as plataformas não oferecem dados suficientes para avaliar seus próprios compromissos públicos.",
     "example_en": "Even researchers who support self-regulation admit that platforms do not provide enough data to assess their own public commitments.",
     "cloze": "{{c1::Até mesmo}} pesquisadores favoráveis à autorregulação admitem que as plataformas não oferecem dados suficientes para avaliar seus próprios compromissos públicos.",
@@ -135,12 +135,12 @@
     "category": "stance",
     "tl": "é importante destacar que",
     "alts": [],
-    "register": "Neutro-formal; a oração impessoal integra naturalmente a avaliação ao argumento em prosa analítica.",
-    "trap": "Importantemente é um decalque pouco idiomático; o português normalmente recorre a uma oração como é importante destacar que.",
+    "register": "Neutral-formal; the impersonal clause naturally integrates the evaluation into an argument in analytical prose.",
+    "trap": "Importantemente is an unidiomatic calque; Portuguese normally uses a clause such as é importante destacar que.",
     "example_tl": "É importante destacar que a proposta não explica quem fiscalizará os sistemas adquiridos pelo Estado quando o fornecedor alegar sigilo comercial.",
     "example_en": "Importantly, the proposal does not explain who will oversee systems purchased by the state when the vendor claims commercial secrecy.",
     "cloze": "{{c1::É importante destacar que}} a proposta não explica quem fiscalizará os sistemas adquiridos pelo Estado quando o fornecedor alegar sigilo comercial.",
-    "note": "Autorrevisão: substituído Mais importante por É importante destacar que, construção mais natural como comentário oracional no português brasileiro."
+    "note": "Self-review: Mais importante was replaced with É importante destacar que, a more natural construction for a clausal comment in Brazilian Portuguese."
   },
   {
     "id": "ptc022",
@@ -148,12 +148,12 @@
     "category": "reformulation",
     "tl": "a bem da verdade",
     "alts": ["na verdade"],
-    "register": "Escrito-formal e retórico; na verdade é a opção neutra na fala e na escrita.",
-    "trap": "Em verdade existe, mas no português brasileiro contemporâneo costuma soar solene ou bíblico, embora decalque diretamente o espanhol en verdad.",
+    "register": "Formal, written, and rhetorical; na verdade is the neutral option in speech and writing.",
+    "trap": "Em verdade exists, but in contemporary Brazilian Portuguese it usually sounds solemn or biblical, though it directly calques Spanish en verdad.",
     "example_tl": "A bem da verdade, a suposta abertura do mercado apenas substituiu um monopólio estatal por três intermediários privados igualmente opacos.",
     "example_en": "In truth, the supposed opening of the market merely replaced a state monopoly with three equally opaque private intermediaries.",
     "cloze": "{{c1::A bem da verdade}}, a suposta abertura do mercado apenas substituiu um monopólio estatal por três intermediários privados igualmente opacos.",
-    "note": "Diverge de em verdade, opção excessivamente solene do old_back, e preserva o gesto retórico do inglês."
+    "note": "Departs from em verdade, the excessively solemn old_back option, while preserving the English term's rhetorical move."
   },
   {
     "id": "ptc023",
@@ -161,12 +161,12 @@
     "category": "stance",
     "tl": "com efeito",
     "alts": ["de fato"],
-    "register": "Escrito-formal e ligeiramente retórico; de fato é a alternativa neutra.",
-    "trap": "O espanhol en efecto não corresponde a em efeito; a locução portuguesa de confirmação é com efeito.",
+    "register": "Formal, written, and slightly rhetorical; de fato is the neutral alternative.",
+    "trap": "Spanish en efecto does not correspond to em efeito; the Portuguese confirmatory expression is com efeito.",
     "example_tl": "Com efeito, os arquivos recém-abertos mostram que a campanha de influência começou anos antes do episódio apontado pelos historiadores.",
     "example_en": "Indeed, the newly opened archives show that the influence campaign began years before the episode identified by historians.",
     "cloze": "{{c1::Com efeito}}, os arquivos recém-abertos mostram que a campanha de influência começou anos antes do episódio apontado pelos historiadores.",
-    "note": "Autorrevisão: trocado De fato por Com efeito para reproduzir com maior precisão o indeed confirmatório e registrar a interferência de en efecto."
+    "note": "Self-review: De fato was replaced with Com efeito to convey confirmatory indeed more precisely and record interference from en efecto."
   },
   {
     "id": "ptc024",
@@ -174,12 +174,12 @@
     "category": "stance",
     "tl": "cabe observar que",
     "alts": ["convém notar que"],
-    "register": "Formal e próprio de análise escrita; convém notar que acrescenta leve valor de recomendação ao leitor.",
-    "trap": "Deve ser observado reproduz a passiva inglesa e pode sugerir obrigação; cabe observar que funciona naturalmente como marcador discursivo.",
+    "register": "Formal and suited to written analysis; convém notar que adds a slight sense of recommendation to the reader.",
+    "trap": "Deve ser observado reproduces the English passive and may suggest obligation; cabe observar que works naturally as a discourse marker.",
     "example_tl": "Cabe observar que os números divulgados pela empresa excluem contas automatizadas removidas antes do encerramento de cada trimestre.",
     "example_en": "It should be noted that the figures released by the company exclude automated accounts removed before the end of each quarter.",
     "cloze": "{{c1::Cabe observar que}} os números divulgados pela empresa excluem contas automatizadas removidas antes do encerramento de cada trimestre.",
-    "note": "Substitui a passiva pouco idiomática e a forma truncada presentes no old_back."
+    "note": "Replaces the unidiomatic passive and truncated form in old_back."
   },
   {
     "id": "ptc032",
@@ -187,12 +187,12 @@
     "category": "reformulation",
     "tl": "para deixar claro",
     "alts": ["para esclarecer"],
-    "register": "Neutro e adequado tanto à fala monitorada quanto à escrita argumentativa.",
-    "trap": "Aclarar existe em português, mas é raro e marcado; o espanhol aclarar não deve substituir automaticamente esclarecer ou deixar claro.",
+    "register": "Neutral and suitable for both careful speech and argumentative writing.",
+    "trap": "Aclarar exists in Portuguese but is rare and marked; Spanish aclarar should not automatically replace esclarecer or deixar claro.",
     "example_tl": "Para deixar claro, a crítica não é ao uso de modelos estatísticos, mas à ausência de mecanismos públicos de contestação.",
     "example_en": "To clarify, the criticism is not of the use of statistical models, but of the absence of public appeal mechanisms.",
     "cloze": "{{c1::Para deixar claro}}, a crítica não é ao uso de modelos estatísticos, mas à ausência de mecanismos públicos de contestação.",
-    "note": "O infinitivo isolado esclarecer no old_back não reproduz sozinho o enquadramento discursivo."
+    "note": "The isolated infinitive esclarecer in old_back does not reproduce the discourse framing on its own."
   },
   {
     "id": "ptc033",
@@ -200,12 +200,12 @@
     "category": "stance",
     "tl": "vale ressaltar que",
     "alts": ["cumpre destacar que"],
-    "register": "Neutro-formal; cumpre destacar que é mais solene e tipicamente escrito.",
-    "trap": "O cognato do espanhol resaltar leva ss em português: ressaltar; resaltar não é a grafia padrão brasileira.",
+    "register": "Neutral-formal; cumpre destacar que is more solemn and typically written.",
+    "trap": "The cognate of Spanish resaltar takes ss in Portuguese: ressaltar; resaltar is not the standard Brazilian spelling.",
     "example_tl": "Vale ressaltar que a redução de postagens removidas não prova menor circulação de boatos, pois o alcance também depende da recomendação.",
     "example_en": "It is worth emphasizing that the reduction in removed posts does not prove that rumors circulated less, since reach also depends on recommendation.",
     "cloze": "{{c1::Vale ressaltar que}} a redução de postagens removidas não prova menor circulação de boatos, pois o alcance também depende da recomendação.",
-    "note": "Converte os verbos soltos do old_back em um movimento argumentativo completo."
+    "note": "Turns the standalone old_back verbs into a complete argumentative move."
   },
   {
     "id": "ptc034",
@@ -213,12 +213,12 @@
     "category": "reformulation",
     "tl": "repito",
     "alts": [],
-    "register": "Neutro e enfático; a primeira pessoa é natural em comentário autoral, mas não em texto institucional impessoal.",
-    "trap": "Para repetir costuma introduzir uma finalidade literal; como retomada retórica, o português prefere repito ou vale reiterar.",
+    "register": "Neutral and emphatic; the first person is natural in authorial commentary but not in impersonal institutional text.",
+    "trap": "Para repetir usually introduces a literal purpose; as a rhetorical reprise, Portuguese prefers repito or vale reiterar.",
     "example_tl": "Repito: regular conteúdo sem alterar os incentivos de distribuição pode produzir relatórios vistosos, mas dificilmente mudará o funcionamento das plataformas.",
     "example_en": "To repeat: regulating content without changing distribution incentives may produce impressive reports, but it will hardly change how platforms operate.",
     "cloze": "{{c1::Repito}}: regular conteúdo sem alterar os incentivos de distribuição pode produzir relatórios vistosos, mas dificilmente mudará o funcionamento das plataformas.",
-    "note": "Diverge do infinitivo nu repetir no old_back, que não funciona aqui como marcador autônomo."
+    "note": "Departs from the bare infinitive repetir in old_back, which does not work here as a standalone marker."
   },
   {
     "id": "ptc036",
@@ -226,8 +226,8 @@
     "category": "stance",
     "tl": "sem dúvida",
     "alts": ["indubitavelmente"],
-    "register": "Neutro-formal; indubitavelmente é mais enfático e pesado na prosa contemporânea.",
-    "trap": "O espanhol sin duda corresponde a sem dúvida; indudablemente não autoriza formas híbridas como indudavelmente.",
+    "register": "Neutral-formal; indubitavelmente is more emphatic and ponderous in contemporary prose.",
+    "trap": "Spanish sin duda corresponds to sem dúvida; indudablemente does not license hybrid forms such as indudavelmente.",
     "example_tl": "Sem dúvida, a abertura dos arquivos alterará o debate, embora documentos isolados não resolvam todas as controvérsias sobre a operação.",
     "example_en": "Undoubtedly, opening the archives will change the debate, although isolated documents will not settle every controversy about the operation.",
     "cloze": "{{c1::Sem dúvida}}, a abertura dos arquivos alterará o debate, embora documentos isolados não resolvam todas as controvérsias sobre a operação.",
@@ -239,12 +239,12 @@
     "category": "addition",
     "tl": "além disso",
     "alts": ["ademais"],
-    "register": "Neutro-formal; ademais é mais marcado e predominantemente escrito.",
-    "trap": "Adicionalmente é gramatical, mas pode soar burocrático sob influência de additionally e adicionalmente; além disso é a transição idiomática comum.",
+    "register": "Neutral-formal; ademais is more marked and predominantly written.",
+    "trap": "Adicionalmente is grammatical but may sound bureaucratic under the influence of additionally and adicionalmente; além disso is the usual idiomatic transition.",
     "example_tl": "Além disso, a agência não dispõe de especialistas suficientes para auditar sistemas que mudam várias vezes durante o mesmo processo regulatório.",
     "example_en": "Additionally, the agency lacks enough specialists to audit systems that change several times during the same regulatory process.",
     "cloze": "{{c1::Além disso}}, a agência não dispõe de especialistas suficientes para auditar sistemas que mudam várias vezes durante o mesmo processo regulatório.",
-    "note": "Prioriza a segunda opção do old_back por naturalidade discursiva."
+    "note": "Prioritizes the second old_back option for naturalness in discourse."
   },
   {
     "id": "ptc041",
@@ -252,8 +252,8 @@
     "category": "addition",
     "tl": "junto com",
     "alts": ["juntamente com"],
-    "register": "Neutro; juntamente com é ligeiramente mais formal e frequente na escrita institucional.",
-    "trap": "O espanhol junto con não transfere a preposição: em português brasileiro diz-se junto com, não junto con.",
+    "register": "Neutral; juntamente com is slightly more formal and common in institutional writing.",
+    "trap": "Spanish junto con does not transfer its preposition: Brazilian Portuguese uses junto com, not junto con.",
     "example_tl": "Junto com a concentração econômica, cresceu a capacidade das plataformas de impor às redações métricas alheias ao interesse público.",
     "example_en": "Along with economic concentration, platforms' ability to impose metrics unrelated to the public interest on newsrooms grew.",
     "cloze": "{{c1::Junto com}} a concentração econômica, cresceu a capacidade das plataformas de impor às redações métricas alheias ao interesse público.",
@@ -265,12 +265,12 @@
     "category": "contrast",
     "tl": "fora isso",
     "alts": ["de resto"],
-    "register": "Neutro; de resto é mais escrito e pode introduzir uma avaliação global do que sobra.",
-    "trap": "Apart from this é ambíguo: pode ser aditivo, como aqui, ou exceptivo, caso em que a tradução seria exceto isso.",
+    "register": "Neutral; de resto is more characteristic of writing and may introduce an overall assessment of what remains.",
+    "trap": "Apart from this is ambiguous: it may be additive, as here, or exceptive, in which case the translation would be exceto isso.",
     "example_tl": "Fora isso, o relatório oferece uma reconstrução convincente das negociações e distingue com cuidado documentos oficiais de relatos posteriores.",
     "example_en": "Apart from this, the report offers a convincing reconstruction of the negotiations and carefully distinguishes official documents from later accounts.",
     "cloze": "{{c1::Fora isso}}, o relatório oferece uma reconstrução convincente das negociações e distingue com cuidado documentos oficiais de relatos posteriores.",
-    "note": "Item dependente de contexto; mantido pelo contraste pedagógico entre as leituras aditiva e exceptiva."
+    "note": "Context-dependent item, retained for the pedagogical contrast between its additive and exceptive readings."
   },
   {
     "id": "ptc045",
@@ -278,8 +278,8 @@
     "category": "addition",
     "tl": "bem como",
     "alts": ["assim como"],
-    "register": "Neutro-formal e comum em enumerações escritas; assim como pode também introduzir comparação.",
-    "trap": "O espanhol favorece así como; em português aditivo, bem como costuma ser mais inequívoco que o cognato assim como.",
+    "register": "Neutral-formal and common in written lists; assim como may also introduce a comparison.",
+    "trap": "Spanish favors así como; in additive Portuguese, bem como is usually less ambiguous than the cognate assim como.",
     "example_tl": "A reforma exige transparência algorítmica, bem como mecanismos acessíveis para que pesquisadores e cidadãos contestem decisões automatizadas de alto impacto.",
     "example_en": "The reform requires algorithmic transparency, as well as accessible mechanisms for researchers and citizens to challenge high-impact automated decisions.",
     "cloze": "A reforma exige transparência algorítmica, {{c1::bem como}} mecanismos acessíveis para que pesquisadores e cidadãos contestem decisões automatizadas de alto impacto.",
@@ -291,12 +291,12 @@
     "category": "addition",
     "tl": "aliado a",
     "alts": ["somado a"],
-    "register": "Neutro-formal; ambas as formas são comuns ao apresentar fatores que atuam conjuntamente.",
-    "trap": "Acoplado a é literal e técnico; no sentido abstrato, use aliado a ou somado a, com concordância e eventual crase.",
+    "register": "Neutral-formal; both forms are common when presenting factors that act jointly.",
+    "trap": "Acoplado a is literal and technical; in the abstract sense, use aliado a or somado a, with agreement and a grave accent where required.",
     "example_tl": "O sigilo comercial, aliado à fiscalização precária, permitiu que contratos públicos incorporassem sistemas cuja eficácia jamais foi demonstrada de forma independente.",
     "example_en": "Commercial secrecy, coupled with weak oversight, allowed public contracts to incorporate systems whose effectiveness was never independently demonstrated.",
     "cloze": "O sigilo comercial, {{c1::aliado à}} fiscalização precária, permitiu que contratos públicos incorporassem sistemas cuja eficácia jamais foi demonstrada de forma independente.",
-    "note": "A forma do exemplo flexiona o lema aliado a no masculino e contrai a preposição com o artigo feminino."
+    "note": "The example inflects the headword aliado a in the masculine and contracts the preposition with the feminine article."
   },
   {
     "id": "ptc049",
@@ -304,12 +304,12 @@
     "category": "structuring",
     "tl": "por fim",
     "alts": ["finalmente"],
-    "register": "Neutro; por fim encerra uma enumeração sem sugerir necessariamente que algo demorou a acontecer.",
-    "trap": "Finalmente, favorecido pelo espanhol finalmente e pelo inglês finally, é correto, mas também pode significar enfim ou até que enfim.",
+    "register": "Neutral; por fim closes a list without necessarily suggesting that something took a long time to happen.",
+    "trap": "Finalmente, encouraged by Spanish finalmente and English finally, is correct but may also mean enfim or até que enfim.",
     "example_tl": "Por fim, a comissão recomenda criar uma autoridade independente capaz de impor sanções proporcionais e publicar suas decisões com transparência.",
     "example_en": "Finally, the commission recommends creating an independent authority capable of imposing proportionate sanctions and publishing its decisions transparently.",
     "cloze": "{{c1::Por fim}}, a comissão recomenda criar uma autoridade independente capaz de impor sanções proporcionais e publicar suas decisões com transparência.",
-    "note": "Mantido porque a escolha entre encerramento enumerativo e sentido temporal evita uma ambiguidade recorrente."
+    "note": "Retained because choosing between list closure and a temporal meaning avoids a recurring ambiguity."
   },
   {
     "id": "ptc051",
@@ -317,12 +317,12 @@
     "category": "addition",
     "tl": "além do mais",
     "alts": ["ademais"],
-    "register": "Neutro-formal e enfático; ademais é mais marcado e quase exclusivamente escrito.",
-    "trap": "Avançar, dado no old_back, é o verbo to advance; não traduz further quando este acrescenta um argumento à discussão.",
+    "register": "Neutral-formal and emphatic; ademais is more marked and almost exclusively written.",
+    "trap": "Avançar, given in old_back, is the verb to advance; it does not translate further when the latter adds an argument to the discussion.",
     "example_tl": "Além do mais, o parecer ignora custos de conformidade que podem excluir justamente os veículos locais que a reforma pretende proteger.",
     "example_en": "Further, the opinion ignores compliance costs that may exclude precisely the local outlets the reform is intended to protect.",
     "cloze": "{{c1::Além do mais}}, o parecer ignora custos de conformidade que podem excluir justamente os veículos locais que a reforma pretende proteger.",
-    "note": "Mantido apesar da proximidade com outros aditivos porque corrige um erro lexical inequívoco do legado."
+    "note": "Retained despite its similarity to other additives because it corrects an unambiguous lexical error in the legacy data."
   },
   {
     "id": "ptc055",
@@ -330,12 +330,12 @@
     "category": "structuring",
     "tl": "da mesma forma",
     "alts": ["do mesmo modo"],
-    "register": "Neutro-formal; estabelece paralelismo entre processos ou argumentos, sobretudo na escrita.",
+    "register": "Neutral-formal; establishes parallelism between processes or arguments, especially in writing.",
     "trap": "",
     "example_tl": "Da mesma forma, subsídios à infraestrutura podem aprofundar a dependência de fornecedores privados quando o Estado financia redes sem conservar capacidade técnica própria.",
     "example_en": "In the same fashion, infrastructure subsidies can deepen dependence on private suppliers when the state funds networks without retaining its own technical capacity.",
     "cloze": "{{c1::Da mesma forma}}, subsídios à infraestrutura podem aprofundar a dependência de fornecedores privados quando o Estado financia redes sem conservar capacidade técnica própria.",
-    "note": "Autorrevisão: aprofundar a dependência de fornecedores privados substitui a formulação abstrata menos natural ampliar dependências privadas."
+    "note": "Self-review: aprofundar a dependência de fornecedores privados replaces the less natural abstract wording ampliar dependências privadas."
   },
   {
     "id": "ptc058",
@@ -343,8 +343,8 @@
     "category": "addition",
     "tl": "não só… mas também",
     "alts": ["não apenas… mas também"],
-    "register": "Neutro; a correlação é corrente na fala monitorada e na escrita, desde que os dois termos tenham estrutura paralela.",
-    "trap": "O espanhol usa no solo… sino también; em português, o segundo braço é mas também, não sino também nem senão também.",
+    "register": "Neutral; the correlative is common in careful speech and writing, provided the two terms have parallel structures.",
+    "trap": "Spanish uses no solo… sino también; in Portuguese, the second arm is mas também, not sino também or senão também.",
     "example_tl": "A opacidade não só impede a fiscalização pública, mas também protege modelos de negócio que transformam discriminação previsível em custo externo.",
     "example_en": "Opacity not only prevents public oversight but also protects business models that turn predictable discrimination into an external cost.",
     "cloze": "A opacidade {{c1::não só}} impede a fiscalização pública, {{c1::mas também}} protege modelos de negócio que transformam discriminação previsível em custo externo.",
@@ -356,8 +356,8 @@
     "category": "addition",
     "tl": "sem falar que",
     "alts": ["sem contar que"],
-    "register": "Neutro e ligeiramente enfático; natural em comentário e também aceitável em prosa ensaística.",
-    "trap": "Para não mencionar é possível, mas frequentemente decalca o inglês; o português brasileiro prefere sem falar em ou sem falar que.",
+    "register": "Neutral and slightly emphatic; natural in commentary and also acceptable in essayistic prose.",
+    "trap": "Para não mencionar is possible but often calques English; Brazilian Portuguese prefers sem falar em or sem falar que.",
     "example_tl": "A medida elevaria os custos das redações locais, sem falar que reforçaria a dependência de ferramentas controladas pelas grandes plataformas.",
     "example_en": "The measure would raise costs for local newsrooms, not to mention that it would deepen dependence on tools controlled by major platforms.",
     "cloze": "A medida elevaria os custos das redações locais, {{c1::sem falar que}} reforçaria a dependência de ferramentas controladas pelas grandes plataformas.",
@@ -369,12 +369,12 @@
     "category": "condition",
     "tl": "para fins de",
     "alts": [],
-    "register": "Formal e institucional; especialmente comum ao delimitar a finalidade jurídica, administrativa ou analítica de algo.",
-    "trap": "Para o propósito de é compreensível, mas soa como decalque; para fins de é a fórmula consolidada quando se classifica uma finalidade institucional.",
+    "register": "Formal and institutional; especially common when delimiting something's legal, administrative, or analytical purpose.",
+    "trap": "Para o propósito de is understandable but sounds like a calque; para fins de is the established formula for classifying an institutional purpose.",
     "example_tl": "Para fins de fiscalização, mensagens publicitárias impulsionadas por agentes políticos devem permanecer acessíveis mesmo depois do encerramento da campanha.",
     "example_en": "For oversight purposes, advertising messages promoted by political actors must remain accessible even after the campaign has ended.",
     "cloze": "{{c1::Para fins de}} fiscalização, mensagens publicitárias impulsionadas por agentes políticos devem permanecer acessíveis mesmo depois do encerramento da campanha.",
-    "note": "A categoria condition é a aproximação disponível para uma locução de finalidade; o inventário não oferece purpose."
+    "note": "The category condition is the available approximation for a purpose expression; the inventory has no purpose category."
   },
   {
     "id": "ptc067",
@@ -382,12 +382,12 @@
     "category": "result",
     "tl": "dado que",
     "alts": ["uma vez que"],
-    "register": "Neutro-formal; dado que é frequente em argumentação escrita, e uma vez que soa um pouco menos compacto.",
+    "register": "Neutral-formal; dado que is common in written argument, while uma vez que sounds slightly less compact.",
     "trap": "",
     "example_tl": "Dado que os dados foram coletados sem consentimento válido, abri-los posteriormente a pesquisadores não elimina o problema de origem.",
     "example_en": "Given that the data were collected without valid consent, opening them to researchers later does not eliminate the original problem.",
     "cloze": "{{c1::Dado que}} os dados foram coletados sem consentimento válido, abri-los posteriormente a pesquisadores não elimina o problema de origem.",
-    "note": "Autorrevisão: a retomada pronominal ambígua sua abertura foi substituída pelo infinitivo abri-los."
+    "note": "Self-review: the ambiguous pronominal reference sua abertura was replaced with the infinitive abri-los."
   },
   {
     "id": "ptc068",
@@ -395,12 +395,12 @@
     "category": "concession",
     "tl": "é certo que",
     "alts": ["é verdade que"],
-    "register": "Neutro-formal; introduz uma concessão que normalmente será limitada ou contraposta em seguida.",
-    "trap": "Concedeu isso traduz uma ação passada, não o marcador concessivo; concedido que também não é a solução idiomática neste contexto.",
+    "register": "Neutral-formal; introduces a concession that will normally be limited or countered afterward.",
+    "trap": "Concedeu isso translates a past action, not the concessive marker; concedido que is not idiomatic in this context either.",
     "example_tl": "É certo que a lei ampliou a transparência, mas seus mecanismos de recurso continuam inacessíveis para organizações pequenas e cidadãos comuns.",
     "example_en": "Granted, the law increased transparency, but its appeal mechanisms remain inaccessible to small organizations and ordinary citizens.",
     "cloze": "{{c1::É certo que}} a lei ampliou a transparência, mas seus mecanismos de recurso continuam inacessíveis para organizações pequenas e cidadãos comuns.",
-    "note": "Corrige o erro semântico Concedeu isso do old_back."
+    "note": "Corrects the semantic error Concedeu isso in old_back."
   },
   {
     "id": "ptc069",
@@ -408,12 +408,12 @@
     "category": "reformulation",
     "tl": "na verdade",
     "alts": [],
-    "register": "Neutro; nesta leitura, corrige ou substitui uma caracterização anterior.",
-    "trap": "O espanhol de hecho pode induzir de fato; para corrigir uma premissa, como no exemplo, o português prefere na verdade.",
+    "register": "Neutral; in this reading, corrects or replaces a previous characterization.",
+    "trap": "Spanish de hecho may prompt de fato; to correct a premise, as in the example, Portuguese prefers na verdade.",
     "example_tl": "A medida não descentralizou a infraestrutura; na verdade, apenas distribuiu contratos entre empresas que dependem do mesmo provedor estrangeiro.",
     "example_en": "The measure did not decentralize the infrastructure; in fact, it merely distributed contracts among companies that depend on the same foreign provider.",
     "cloze": "A medida não descentralizou a infraestrutura; {{c1::na verdade}}, apenas distribuiu contratos entre empresas que dependem do mesmo provedor estrangeiro.",
-    "note": "In fact também pode confirmar uma afirmação, caso em que de fato seria preferível; o exemplo fixa a leitura corretiva."
+    "note": "In fact may also confirm a statement, in which case de fato would be preferable; the example fixes the corrective reading."
   },
   {
     "id": "ptc070",
@@ -421,12 +421,12 @@
     "category": "condition",
     "tl": "a fim de",
     "alts": ["para"],
-    "register": "Neutro-formal e mais explícito que para; comum em textos de política pública.",
-    "trap": "A fim de introduz infinitivo; para que e a fim de que exigem oração finita, normalmente no subjuntivo.",
+    "register": "Neutral-formal and more explicit than para; common in public-policy texts.",
+    "trap": "A fim de introduces an infinitive; para que and a fim de que require a finite clause, normally in the subjunctive.",
     "example_tl": "A fim de preservar evidências, a comissão solicitou cópias integrais dos bancos de dados antes de notificar oficialmente as empresas investigadas.",
     "example_en": "In order to preserve evidence, the commission requested complete copies of the databases before officially notifying the companies under investigation.",
     "cloze": "{{c1::A fim de}} preservar evidências, a comissão solicitou cópias integrais dos bancos de dados antes de notificar oficialmente as empresas investigadas.",
-    "note": "O old_back mistura a construção infinitiva a fim de com a construção finita para que. Autorrevisão: notificar substitui comunicar por exigir menos complemento implícito."
+    "note": "The old_back entry mixes the infinitival construction a fim de with the finite construction para que. Self-review: notificar replaces comunicar because it requires less implicit complementation."
   },
   {
     "id": "ptc071",
@@ -434,12 +434,12 @@
     "category": "result",
     "tl": "diante de",
     "alts": ["tendo em vista"],
-    "register": "Neutro-formal; tendo em vista é mais institucional e ligeiramente mais longo.",
-    "trap": "O espanhol en vista de favorece a transferência mecânica em vista de; na prosa brasileira, diante de e tendo em vista são opções mais correntes.",
+    "register": "Neutral-formal; tendo em vista is more institutional and slightly longer.",
+    "trap": "Spanish en vista de encourages the mechanical transfer em vista de; in Brazilian prose, diante de and tendo em vista are more common.",
     "example_tl": "Diante de novas evidências documentais, o comitê adiou a votação e reabriu a consulta a especialistas independentes e entidades da sociedade civil.",
     "example_en": "In view of new documentary evidence, the committee postponed the vote and reopened consultation with independent experts and civil society organizations.",
     "cloze": "{{c1::Diante de}} novas evidências documentais, o comitê adiou a votação e reabriu a consulta a especialistas independentes e entidades da sociedade civil.",
-    "note": "Autorrevisão: entidades da sociedade civil substitui a formulação menos idiomática organizações civis."
+    "note": "Self-review: entidades da sociedade civil replaces the less idiomatic wording organizações civis."
   },
   {
     "id": "ptc073",
@@ -447,12 +447,12 @@
     "category": "condition",
     "tl": "desde que",
     "alts": ["contanto que"],
-    "register": "Neutro; contanto que explicita mais fortemente a condição e é um pouco mais formal.",
-    "trap": "Desde que também pode ser temporal; na leitura condicional de provided that, pede subjuntivo, ao contrário do temporal desde que chegou.",
+    "register": "Neutral; contanto que makes the condition more explicit and is slightly more formal.",
+    "trap": "Desde que may also be temporal; in the conditional reading of provided that, it takes the subjunctive, unlike temporal desde que chegou.",
     "example_tl": "Os dados poderão ser compartilhados, desde que sejam anonimizados por uma entidade independente e usados exclusivamente para pesquisa de interesse público.",
     "example_en": "The data may be shared, provided that they are anonymized by an independent entity and used exclusively for public-interest research.",
     "cloze": "Os dados poderão ser compartilhados, {{c1::desde que}} sejam anonimizados por uma entidade independente e usados exclusivamente para pesquisa de interesse público.",
-    "note": "Corrige a tradução verbal sem sentido Providenciou que do old_back."
+    "note": "Corrects the nonsensical verbal translation Providenciou que in old_back."
   },
   {
     "id": "ptc074",
@@ -460,12 +460,12 @@
     "category": "result",
     "tl": "já que",
     "alts": ["visto que"],
-    "register": "Neutro; visto que é um pouco mais formal e frequente na escrita analítica.",
-    "trap": "Vendo que descreve percepção concreta e normalmente não funciona como o conector causal inglês; use já que ou visto que.",
+    "register": "Neutral; visto que is slightly more formal and common in analytical writing.",
+    "trap": "Vendo que describes concrete perception and normally does not work as the English causal connector; use já que or visto que.",
     "example_tl": "Já que a plataforma se recusa a publicar os critérios, não há razão para tratar suas estimativas internas como evidência independente.",
     "example_en": "Seeing that the platform refuses to publish the criteria, there is no reason to treat its internal estimates as independent evidence.",
     "cloze": "{{c1::Já que}} a plataforma se recusa a publicar os critérios, não há razão para tratar suas estimativas internas como evidência independente.",
-    "note": "Diverge das traduções literais Vendo isso e Vendo que no old_back."
+    "note": "Departs from the literal translations Vendo isso and Vendo que in old_back."
   },
   {
     "id": "ptc075",
@@ -473,12 +473,12 @@
     "category": "condition",
     "tl": "para que",
     "alts": ["a fim de que"],
-    "register": "Neutro; a fim de que é mais formal e pesado.",
-    "trap": "Na leitura de finalidade, para que rege subjuntivo; não confunda com de modo que, que frequentemente introduz uma consequência já ocorrida.",
+    "register": "Neutral; a fim de que is more formal and ponderous.",
+    "trap": "In the purpose reading, para que takes the subjunctive; do not confuse it with de modo que, which often introduces a consequence that has already occurred.",
     "example_tl": "A lei exige registros públicos para que jornalistas possam identificar anúncios políticos coordenados antes que eles desapareçam após a eleição.",
     "example_en": "The law requires public records so that journalists can identify coordinated political advertisements before they disappear after the election.",
     "cloze": "A lei exige registros públicos {{c1::para que}} jornalistas possam identificar anúncios políticos coordenados antes que eles desapareçam após a eleição.",
-    "note": "So that também admite leitura consecutiva; a nota e o exemplo tratam explicitamente da leitura final indicada pelo old_back."
+    "note": "So that also allows a result reading; the note and example explicitly address the purpose reading indicated by old_back."
   },
   {
     "id": "ptc076",
@@ -486,12 +486,12 @@
     "category": "stance",
     "tl": "levando isso em conta",
     "alts": ["tendo isso em mente"],
-    "register": "Neutro; levando isso em conta é corrente em análise, enquanto tendo isso em mente conserva uma metáfora cognitiva mais explícita.",
+    "register": "Neutral; levando isso em conta is common in analysis, while tendo isso em mente retains a more explicit cognitive metaphor.",
     "trap": "",
     "example_tl": "Levando isso em conta, qualquer cronograma de transição deve prever apoio técnico aos municípios com menor capacidade administrativa e fiscal.",
     "example_en": "With this in mind, any transition timetable must provide technical support to municipalities with less administrative and fiscal capacity.",
     "cloze": "{{c1::Levando isso em conta}}, qualquer cronograma de transição deve prever apoio técnico aos municípios com menor capacidade administrativa e fiscal.",
-    "note": "Autorrevisão: removida uma ressalva excessiva; as duas opções do old_back são naturais, e levando isso em conta é apenas outra forma corrente no Brasil."
+    "note": "Self-review: an excessive caveat was removed; both old_back options are natural, and levando isso em conta is simply another common form in Brazil."
   },
   {
     "id": "ptc077",
@@ -499,8 +499,8 @@
     "category": "stance",
     "tl": "com esse intuito",
     "alts": ["com essa intenção"],
-    "register": "Neutro-formal; intuito é especialmente comum ao explicitar a finalidade de uma medida ou decisão anterior.",
-    "trap": "Ao retomar uma intenção já mencionada, o português brasileiro normalmente usa esse, enquanto o espanhol tende a este em con esta intención.",
+    "register": "Neutral-formal; intuito is especially common when making the purpose of a previous measure or decision explicit.",
+    "trap": "When referring back to an intention already mentioned, Brazilian Portuguese normally uses esse, while Spanish tends to use este in con esta intención.",
     "example_tl": "Com esse intuito, o projeto reserva recursos para auditorias locais e impede que toda a capacidade técnica permaneça concentrada no governo federal.",
     "example_en": "With this intention, the bill reserves funds for local audits and prevents all technical capacity from remaining concentrated in the federal government.",
     "cloze": "{{c1::Com esse intuito}}, o projeto reserva recursos para auditorias locais e impede que toda a capacidade técnica permaneça concentrada no governo federal.",
@@ -512,12 +512,12 @@
     "category": "structuring",
     "tl": "para começar",
     "alts": ["em primeiro lugar"],
-    "register": "Neutro; para começar anuncia uma primeira razão sem obrigar uma estrutura binária rígida.",
-    "trap": "O espanhol por una parte favorece por um lado, mas essa forma cria expectativa de por outro lado; para começar funciona melhor isoladamente.",
+    "register": "Neutral; para começar announces a first reason without requiring a rigid binary structure.",
+    "trap": "Spanish por una parte encourages por um lado, but that form creates an expectation of por outro lado; para começar works better on its own.",
     "example_tl": "Para começar, a proposta pressupõe uma capacidade de fiscalização que nenhuma das agências envolvidas possui atualmente em escala nacional.",
     "example_en": "For one thing, the proposal assumes an oversight capacity that none of the agencies involved currently possesses nationwide.",
     "cloze": "{{c1::Para começar}}, a proposta pressupõe uma capacidade de fiscalização que nenhuma das agências envolvidas possui atualmente em escala nacional.",
-    "note": "O old_back reconhece as duas leituras; escolhe-se a que não exige um segundo braço explícito."
+    "note": "The old_back entry recognizes both readings; this selects the one that does not require an explicit second arm."
   },
   {
     "id": "ptc089",
@@ -525,12 +525,12 @@
     "category": "reformulation",
     "tl": "a saber",
     "alts": [],
-    "register": "Escrito-formal; isto é é neutro, mas pode reformular sem necessariamente introduzir uma identificação ou lista exaustiva.",
-    "trap": "Ou seja costuma parafrasear; quando namely anuncia precisamente quais elementos estão em jogo, a saber é mais específico.",
+    "register": "Formal written; isto é is neutral but may reformulate without necessarily introducing an identification or exhaustive list.",
+    "trap": "Ou seja usually paraphrases; when namely announces precisely which elements are at issue, a saber is more specific.",
     "example_tl": "A norma alcança dois intermediários essenciais, a saber: as lojas de aplicativos e os sistemas de pagamento controlados pelas plataformas.",
     "example_en": "The rule covers two essential intermediaries, namely app stores and payment systems controlled by the platforms.",
     "cloze": "A norma alcança dois intermediários essenciais, {{c1::a saber}}: as lojas de aplicativos e os sistemas de pagamento controlados pelas plataformas.",
-    "note": "Autorrevisão: adotados dois-pontos e retirada a alternativa isto é, que exigiria outra pontuação e não sinaliza tão precisamente uma lista exaustiva."
+    "note": "Self-review: a colon was adopted and the alternative isto é removed because it would require different punctuation and does not signal an exhaustive list as precisely."
   },
   {
     "id": "ptc091",
@@ -538,12 +538,12 @@
     "category": "stance",
     "tl": "prova disso é que",
     "alts": ["a prova disso é que"],
-    "register": "Neutro-formal; estrutura argumentativa enfática que apresenta uma evidência como confirmação direta da tese anterior.",
-    "trap": "O espanhol prueba de ello não pede um pronome pessoal em português; retoma-se a tese com disso, e o quadro completo exige é que.",
+    "register": "Neutral-formal; an emphatic argumentative structure that presents evidence as direct confirmation of the preceding claim.",
+    "trap": "Spanish prueba de ello does not call for a personal pronoun in Portuguese; the claim is resumed with disso, and the complete frame requires é que.",
     "example_tl": "Prova disso é que as empresas alteraram seus relatórios somente depois que jornalistas compararam versões arquivadas das mesmas páginas.",
     "example_en": "Proof of this is that the companies changed their reports only after journalists compared archived versions of the same pages.",
     "cloze": "{{c1::Prova disso é que}} as empresas alteraram seus relatórios somente depois que jornalistas compararam versões arquivadas das mesmas páginas.",
-    "note": "Completa o fragmento Prova disso do old_back para formar um conector que introduz oração."
+    "note": "Completes the old_back fragment Prova disso to form a connector that introduces a clause."
   },
   {
     "id": "ptc092",
@@ -551,12 +551,12 @@
     "category": "reformulation",
     "tl": "mais especificamente",
     "alts": [],
-    "register": "Neutro-formal; usado para estreitar uma afirmação geral e indicar com precisão o aspecto relevante.",
-    "trap": "Especificamente é possível, mas pode descrever o modo de uma ação; mais especificamente sinaliza sem ambiguidade o estreitamento discursivo.",
+    "register": "Neutral-formal; used to narrow a general statement and identify the relevant aspect precisely.",
+    "trap": "Especificamente is possible but may describe how an action is performed; mais especificamente unambiguously signals discursive narrowing.",
     "example_tl": "A pesquisa revela uma queda de confiança; mais especificamente, jovens usuários passaram a desconfiar das notícias recomendadas automaticamente.",
     "example_en": "The survey reveals a decline in trust; specifically, young users have become distrustful of automatically recommended news.",
     "cloze": "A pesquisa revela uma queda de confiança; {{c1::mais especificamente}}, jovens usuários passaram a desconfiar das notícias recomendadas automaticamente.",
-    "note": "Escolha funcionalmente mais precisa que o advérbio isolado do old_back neste exemplo."
+    "note": "Functionally more precise than the isolated adverb in old_back for this example."
   },
   {
     "id": "ptc095",
@@ -564,8 +564,8 @@
     "category": "contrast",
     "tl": "como alternativa",
     "alts": ["alternativamente"],
-    "register": "Neutro; alternativamente é mais formal e pode soar administrativo.",
-    "trap": "Alternadamente significa em turnos ou de maneira alternada; não traduz alternatively quando se apresenta outra opção argumentativa.",
+    "register": "Neutral; alternativamente is more formal and may sound administrative.",
+    "trap": "Alternadamente means em turnos or de maneira alternada; it does not translate alternatively when presenting another argumentative option.",
     "example_tl": "Como alternativa, o governo poderia financiar uma infraestrutura pública interoperável, disponível a veículos menores sem exigir a cessão de seus dados.",
     "example_en": "Alternatively, the government could fund interoperable public infrastructure available to smaller outlets without requiring them to surrender their data.",
     "cloze": "{{c1::Como alternativa}}, o governo poderia financiar uma infraestrutura pública interoperável, disponível a veículos menores sem exigir a cessão de seus dados.",
@@ -577,12 +577,12 @@
     "category": "contrast",
     "tl": "em vez de",
     "alts": [],
-    "register": "Neutro; adequado quando o contraste apresenta uma escolha ou substituição, como no exemplo.",
-    "trap": "Em oposição a é literal e mais forte; ao invés de é tradicionalmente reservado a opostos, enquanto em vez de cobre substituição e contraste.",
+    "register": "Neutral; suitable when the contrast presents a choice or substitution, as in the example.",
+    "trap": "Em oposição a is literal and stronger; ao invés de is traditionally reserved for opposites, while em vez de covers substitution and contrast.",
     "example_tl": "A proposta concentra recursos em remover publicações, em vez de alterar os mecanismos que recompensam sua circulação rápida e coordenada.",
     "example_en": "The proposal focuses resources on removing posts, as opposed to changing the mechanisms that reward their rapid, coordinated circulation.",
     "cloze": "A proposta concentra recursos em remover publicações, {{c1::em vez de}} alterar os mecanismos que recompensam sua circulação rápida e coordenada.",
-    "note": "As opposed to também pode marcar oposição estrita; o exemplo fixa a leitura de alternativa contrastada."
+    "note": "As opposed to may also mark strict opposition; the example fixes the reading of a contrasting alternative."
   },
   {
     "id": "ptc098",
@@ -590,12 +590,12 @@
     "category": "contrast",
     "tl": "ao contrário de",
     "alts": ["contrariamente a"],
-    "register": "Neutro-formal; contrariamente a é mais escrito e pode soar jurídico.",
-    "trap": "O espanhol admite contrario a sem artigo; a locução portuguesa corrente é ao contrário de, com artigo e preposição.",
+    "register": "Neutral-formal; contrariamente a is more characteristic of writing and may sound legalistic.",
+    "trap": "Spanish allows contrario a without an article; the usual Portuguese expression is ao contrário de, with an article and preposition.",
     "example_tl": "Ao contrário do discurso oficial, os documentos mostram que a agência conhecia os riscos antes de autorizar o sistema.",
     "example_en": "Contrary to the official account, the documents show that the agency knew the risks before authorizing the system.",
     "cloze": "{{c1::Ao contrário do}} discurso oficial, os documentos mostram que a agência conhecia os riscos antes de autorizar o sistema.",
-    "note": "No exemplo, de contrai-se com o artigo de discurso; o lema registra a locução não flexionada."
+    "note": "In the example, de contracts with the article in do discurso; the headword records the uninflected expression."
   },
   {
     "id": "ptc099",
@@ -603,12 +603,12 @@
     "category": "contrast",
     "tl": "inversamente",
     "alts": [],
-    "register": "Formal e analítico; adequado quando as duas relações têm direção realmente inversa, não apenas quando há contraste.",
-    "trap": "Por outro lado apenas contrapõe; não expressa necessariamente a reversão lógica de conversely, apesar da sugestão no old_back.",
+    "register": "Formal and analytical; suitable when the two relationships truly run in opposite directions, not merely when they contrast.",
+    "trap": "Por outro lado merely contrasts; despite the suggestion in old_back, it does not necessarily express the logical reversal of conversely.",
     "example_tl": "As plataformas alegam que mais personalização amplia a escolha; inversamente, quanto maior o direcionamento, menor tende a ser a autonomia informacional.",
     "example_en": "Platforms claim that greater personalization expands choice; conversely, the greater the targeting, the lower informational autonomy tends to be.",
     "cloze": "As plataformas alegam que mais personalização amplia a escolha; {{c1::inversamente}}, quanto maior o direcionamento, menor tende a ser a autonomia informacional.",
-    "note": "Mantém-se apenas a leitura estritamente inversiva; em contraste frouxo, por outro lado seria melhor."
+    "note": "Only the strictly inverse reading is retained; for a loose contrast, por outro lado would be better."
   },
   {
     "id": "ptc100",
@@ -616,11 +616,11 @@
     "category": "concession",
     "tl": "apesar de",
     "alts": ["a despeito de"],
-    "register": "Neutro; a despeito de é mais formal e predominantemente escrito.",
-    "trap": "Por influência do espanhol a pesar de, não separe apesar: em português, a locução se escreve apesar de.",
+    "register": "Neutral; a despeito de is more formal and predominantly written.",
+    "trap": "Under the influence of Spanish a pesar de, do not split apesar: in Portuguese, the expression is written apesar de.",
     "example_tl": "Apesar das promessas de abertura, os pesquisadores continuam impedidos de consultar os dados necessários para verificar alegações centrais da empresa.",
     "example_en": "Despite promises of openness, researchers are still prevented from consulting the data needed to verify the company's central claims.",
     "cloze": "{{c1::Apesar das}} promessas de abertura, os pesquisadores continuam impedidos de consultar os dados necessários para verificar alegações centrais da empresa.",
-    "note": "No exemplo, de contrai-se com o artigo plural; a alternativa mantém a mesma regência."
+    "note": "In the example, de contracts with the plural article; the alternative has the same complementation pattern."
   }
 ]
