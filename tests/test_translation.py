@@ -324,3 +324,68 @@ def test_silence_marked_en_clip_ships_card_without_en_audio(tmp_path: Path):
         assert values[8] == "[sound:idg_es_101.mp3]"
     finally:
         connection.close()
+
+
+def test_sentence_audio_prefers_cached_constituent_and_heals(tmp_path: Path):
+    """Back audio is the sentence-only clip: cached _work constituents are
+    reused, missing ones are synthesized, silence-marked ones fall back."""
+    from types import SimpleNamespace
+
+    from idiomatic import gemini
+
+    items = [
+        tr.TranslationItem(
+            item_id=1, lang="it", topic="t", en_text="one",
+            tl_html="<b>x</b>", tl_text="Frase uno completa.", why="",
+            tl_clip="idg_it_1.mp3"),
+        tr.TranslationItem(
+            item_id=2, lang="it", topic="t", en_text="two",
+            tl_html="<b>y</b>", tl_text="Frase due completa.", why="",
+            tl_clip="idg_it_2.mp3"),
+        tr.TranslationItem(
+            item_id=3, lang="it", topic="t", en_text="three",
+            tl_html="<b>z</b>", tl_text="Frase tre completa.", why="",
+            tl_clip="idg_it_3.mp3"),
+    ]
+    audio_dir = tmp_path / "it"
+    work = audio_dir / "_work"
+    work.mkdir(parents=True)
+    (work / "1_sentence.mp3").write_bytes(b"cached-sentence")
+
+    async def fake_synthesize(text, *, voice, out, lang):
+        out.parent.mkdir(parents=True, exist_ok=True)
+        if text == "Frase tre completa.":
+            out.write_bytes(b"x")
+            gemini.silence_marker(out).touch()
+        else:
+            out.write_bytes(b"synth:" + text.encode())
+
+    settings = SimpleNamespace(data_dir=str(tmp_path))
+    tl_audio, synthesized, fallback = asyncio.run(
+        tr._ensure_sentence_audio(
+            items, lang="it", settings=settings, audio_dir=audio_dir,
+            synthesize_fn=fake_synthesize, level_fn=lambda clip: clip,
+        )
+    )
+    assert synthesized == 2          # items 2 and 3 attempted
+    assert fallback == 1             # item 3 silence-marked -> stitched fallback
+    assert tl_audio[1].read_bytes() == b"cached-sentence"
+    assert tl_audio[2].read_bytes().startswith(b"synth:")
+    assert 3 not in tl_audio
+
+    # Packaging: item 3 falls back to the stitched drill clip.
+    (audio_dir / "idg_it_3.mp3").write_bytes(b"stitched")
+    (audio_dir / "idg_it_1.mp3").write_bytes(b"stitched1")
+    (audio_dir / "idg_it_2.mp3").write_bytes(b"stitched2")
+    out = tmp_path / "o.apkg"
+    tr.build_translation_apkg(
+        out_path=out, lang="it", items=items, audio_dir=audio_dir,
+        en_audio={}, tl_audio=tl_audio,
+    )
+    import json as _json
+    import zipfile as _zip
+    with _zip.ZipFile(out) as archive:
+        media = set(_json.loads(archive.read("media")).values())
+    assert "1_sentence.mp3" in media and "2_sentence.mp3" in media
+    assert "idg_it_3.mp3" in media
+    assert "idg_it_1.mp3" not in media

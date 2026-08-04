@@ -46,7 +46,7 @@ import genanki
 import structlog
 
 from .. import db, gemini
-from ..pipeline.audio import EN_VOICE
+from ..pipeline.audio import EN_VOICE, LANG_VOICE
 from ..settings import get_settings
 from .apkg import _full_html
 from .audio import _media_name, full_sentence_text
@@ -290,16 +290,67 @@ async def _synthesize_en_audio(
     return result, len(pending), failed
 
 
+async def _ensure_sentence_audio(
+    items: list[TranslationItem],
+    *,
+    lang: str,
+    settings: Any,
+    audio_dir: Path,
+    synthesize_fn: Callable[..., Awaitable[None]] | None = None,
+    level_fn: Callable[[Path], Path] | None = None,
+) -> tuple[dict[int, Path], int, int]:
+    """Sentence-ONLY back audio (user feedback 2026-08-04: no isolated
+    drilled form before the sentence on translation cards).
+
+    The drill pipeline already caches the sentence constituent at
+    ``_work/{id}_sentence.mp3`` before stitching, so this is normally pure
+    reuse; a missing/failed constituent is re-synthesized (the one narrow
+    exception to the reuse-only rule — sentence text, TL voice, cached).
+    Clips are loudness-leveled to match the EN fronts. An item whose
+    sentence clip is unusable falls back to the stitched drill clip at
+    packaging time (absent from the returned map).
+    """
+    synthesize_fn = synthesize_fn or gemini.synthesize
+    level_fn = level_fn or leveled_speech_clip
+    work = audio_dir / "_work"
+    work.mkdir(parents=True, exist_ok=True)
+    voice = LANG_VOICE.get(lang, "Charon")
+
+    targets = {item.item_id: work / f"{item.item_id}_sentence.mp3"
+               for item in items}
+    pending = [
+        (clip, item) for item, clip in
+        ((item, targets[item.item_id]) for item in items)
+        if not _usable_clip(clip)
+    ]
+    await asyncio.gather(
+        *(synthesize_fn(item.tl_text, voice=voice, out=clip, lang=lang)
+          for clip, item in pending)
+    )
+    usable = {item_id: clip for item_id, clip in targets.items()
+              if _usable_clip(clip)}
+    leveled_list = await asyncio.gather(
+        *(asyncio.to_thread(level_fn, clip) for clip in usable.values())
+    )
+    result = dict(zip(usable, leveled_list, strict=True))
+    return result, len(pending), len(targets) - len(usable)
+
+
 def build_translation_apkg(
     *, out_path: Path, lang: str, items: list[TranslationItem],
     audio_dir: Path,
     en_audio: dict[int, Path | None] | None = None,
+    tl_audio: dict[int, Path] | None = None,
     topic_labels: dict[str, tuple[str, str]] | None = None,
     topic_clusters: dict[str, str] | None = None,
 ) -> int:
-    """Package selected items (1 card each) into an APKG."""
+    """Package selected items (1 card each) into an APKG.
+
+    ``tl_audio`` maps item_id → sentence-only leveled clip; items absent
+    from it fall back to the stitched drill clip (``item.tl_clip``)."""
     model = make_model()
     en_audio = en_audio or {}
+    tl_audio = tl_audio or {}
     topic_labels = topic_labels or {}
     topic_clusters = topic_clusters or {}
     decks: dict[str, genanki.Deck] = {}
@@ -326,7 +377,9 @@ def build_translation_apkg(
         if deck is None:
             deck = decks[deck_name] = genanki.Deck(_deck_id(deck_name), deck_name)
 
-        tl_sound = _pack(audio_dir / item.tl_clip)
+        sentence_clip = tl_audio.get(item.item_id)
+        tl_sound = _pack(sentence_clip if sentence_clip is not None
+                         else audio_dir / item.tl_clip)
         en_clip = en_audio.get(item.item_id)
         en_sound = _pack(Path(en_clip)) if en_clip is not None else ""
 
@@ -385,6 +438,10 @@ async def build_language(
         selected, lang=lang, settings=settings,
         synthesize_fn=synthesize_fn, level_fn=level_fn,
     )
+    tl_audio, tl_synthesized, tl_fallback = await _ensure_sentence_audio(
+        selected, lang=lang, settings=settings, audio_dir=audio_dir,
+        synthesize_fn=synthesize_fn, level_fn=level_fn,
+    )
     labels = {t.key: (t.label, t.symbol) for t in topics_for(lang)}
     clusters = {t.key: t.cluster for t in topics_for(lang)}
     apkg_root = Path(settings.data_dir) / "apkgs" / lang
@@ -393,7 +450,8 @@ async def build_language(
     note_count = await asyncio.to_thread(
         lambda: build_translation_apkg(
             out_path=out, lang=lang, items=selected, audio_dir=audio_dir,
-            en_audio=en_audio, topic_labels=labels, topic_clusters=clusters,
+            en_audio=en_audio, tl_audio=tl_audio,
+            topic_labels=labels, topic_clusters=clusters,
         )
     )
     relative = out.relative_to(Path(settings.data_dir))
@@ -410,6 +468,8 @@ async def build_language(
         "apkg_id": apkg_id,
         "en_synthesized": synthesized,
         "en_failed": failed,
+        "tl_sentence_synthesized": tl_synthesized,
+        "tl_stitched_fallback": tl_fallback,
         **stats,
     }
     log.info("grammar.translation.built", **result)
