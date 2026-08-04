@@ -64,6 +64,8 @@ FIELDS = [
 CATEGORIES = frozenset({
     "result", "concession", "contrast", "condition", "reformulation",
     "generalization", "stance", "structuring", "addition",
+    # sentence-level conditional types (CONDITIONALS topic, 2026-08-04)
+    "real-condition", "counterfactual", "mixed-condition", "habitual",
 })
 
 # Deck label per (topic, lang); unlisted combinations fall back to the
