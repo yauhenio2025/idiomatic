@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "name": "rescue-pilot-1",
+    "date": "2026-08-05",
+    "selection": "top-3 failed idioms per language from the 2026-08-05 morning iPad session (287 reviews), ranked by Agains today then 14-day Agains",
+    "formats": {
+      "video": "one per language, MiniMax-H3 6s 768P — concrete visual-metaphor scene tied to the failed sentence",
+      "comic": "one per language, Nano Banana 3-panel strip — narrative/humor encoding",
+      "svg": "one per language, hand-authored diagram — structural/morphological encoding",
+      "baseline": "every expression: anchor line (mnemonic hook), 3 personalized sentences (user's world: tech criticism, media, geopolitics) with EN gloss + ElevenLabs audio (same voices as main decks), 2 exercises (cloze + EN→TL production)"
+    }
+  },
+  "expressions": [
+    {
+      "id": "es1", "lang": "es", "idiom": "se desbloquee",
+      "gloss": "becomes unblocked / gets unstuck (subjunctive)",
+      "hero": "svg",
+      "failed_sentence": "Una vez que la negociación se desbloquee, firmaremos el contrato.",
+      "fails": "6 Agains today, 6 in 14 days",
+      "anchor": "des·BLOQUE·e — picture a concrete BLOCK (bloque) crumbling. The final -e is the subjunctive flag: after «una vez que / hasta que / cuando» pointing at the FUTURE, the unblocking hasn't happened yet — so it takes -e, not -a.",
+      "sentences": [
+        {"tl": "Cuando el acuerdo sobre los chips se desbloquee, las dos potencias volverán a fingir que se llevan bien.", "en": "When the chip agreement gets unblocked, the two powers will go back to pretending they get along."},
+        {"tl": "No publiques la investigación hasta que se desbloquee el embargo de prensa.", "en": "Don't publish the investigation until the press embargo is lifted."},
+        {"tl": "Dudo que el debate sobre la regulación de las plataformas se desbloquee antes de las elecciones.", "en": "I doubt the platform-regulation debate will get unstuck before the elections."}
+      ],
+      "exercises": [
+        {"type": "cloze", "prompt": "Una vez que la negociación ______ (desbloquearse), firmaremos el contrato.", "answer": "se desbloquee", "why": "«una vez que» + future event → subjunctive"},
+        {"type": "production", "prompt": "Once the funding gets unstuck, we'll relaunch the project.", "answer": "Una vez que la financiación se desbloquee, relanzaremos el proyecto.", "trap": "Not «se desbloquea» — the event is still pending, so subjunctive."}
+      ]
+    },
+    {
+      "id": "es2", "lang": "es", "idiom": "está tirado",
+      "gloss": "is lying around / abandoned (thrown down)",
+      "hero": "video",
+      "failed_sentence": "Tu abrigo está tirado en el suelo.",
+      "fails": "3 Agains today, 7 in 14 days",
+      "anchor": "From tirar (to throw): thrown down and LEFT there. Watch the polysemy: «¡está tirado!» can also mean “it's dirt cheap” or “it's a piece of cake” — context decides; with places (en el suelo, en un cajón) it means lying abandoned.",
+      "sentences": [
+        {"tl": "El informe del regulador está tirado en un cajón desde marzo.", "en": "The regulator's report has been lying in a drawer since March."},
+        {"tl": "Su viejo smartphone está tirado en el fondo de un armario, lleno de datos personales.", "en": "His old smartphone is lying at the bottom of a closet, full of personal data."},
+        {"tl": "Después de la mudanza, la mitad de mis libros sigue tirada por el suelo.", "en": "After the move, half of my books are still lying around on the floor."}
+      ],
+      "exercises": [
+        {"type": "cloze", "prompt": "Tu abrigo ______ ______ en el suelo. (two words: to be + thrown down)", "answer": "está tirado", "why": "estar + participle of tirar — a state resulting from being thrown"},
+        {"type": "production", "prompt": "The documents are lying on the table, and nobody reads them.", "answer": "Los documentos están tirados en la mesa y nadie los lee.", "trap": "Participle agrees: documentos → tiradOS."}
+      ]
+    },
+    {
+      "id": "es3", "lang": "es", "idiom": "dar por terminada",
+      "gloss": "to consider (it) over / declare finished",
+      "hero": "comic",
+      "failed_sentence": "Dieron por terminada la relación.",
+      "fails": "3 Agains today, 3 in 14 days",
+      "anchor": "«dar por X» = to FILE it under X. You hand (dar) the thing over to the category “finished”. The participle agrees with the noun: la relación → terminadA, el debate → terminadO.",
+      "sentences": [
+        {"tl": "El moderador dio por terminada la entrevista cuando empezaron los insultos.", "en": "The moderator declared the interview over when the insults started."},
+        {"tl": "La comisión dio por terminada la investigación sin publicar sus conclusiones.", "en": "The commission considered the investigation closed without publishing its findings."},
+        {"tl": "Doy por terminada esta discusión en los comentarios.", "en": "I'm declaring this comment-section argument over."}
+      ],
+      "exercises": [
+        {"type": "cloze", "prompt": "Dieron ______ ______ la relación. (consider it over)", "answer": "por terminada", "why": "dar por + participle, feminine agreement with «la relación»"},
+        {"type": "production", "prompt": "The referee declared the match over.", "answer": "El árbitro dio por terminado el partido.", "trap": "el partido → terminadO (masculine)."}
+      ]
+    },
+    {
+      "id": "pt1", "lang": "pt", "idiom": "estava por dentro",
+      "gloss": "was in the loop / in the know",
+      "hero": "video",
+      "failed_sentence": "Eles não estavam por dentro do que acontecia.",
+      "fails": "2 Agains today, 9 in 14 days — worst PT repeat offender",
+      "anchor": "por DENTRO = on the INSIDE — inside the glass room where the real conversation happens. Opposite: «estar por fora» = out of the loop. estar por dentro DE algo.",
+      "sentences": [
+        {"tl": "Poucos jornalistas estavam por dentro das negociações entre o governo e as plataformas.", "en": "Few journalists were in the loop on the negotiations between the government and the platforms."},
+        {"tl": "Ele sempre está por dentro das últimas polêmicas do Vale do Silício.", "en": "He's always up to speed on the latest Silicon Valley controversies."},
+        {"tl": "Quem não estava por dentro do acordo ficou sabendo pela imprensa.", "en": "Whoever wasn't in the know about the deal found out from the press."}
+      ],
+      "exercises": [
+        {"type": "cloze", "prompt": "Eles não estavam ______ ______ do que acontecia. (in the loop)", "answer": "por dentro", "why": "estar por dentro de = to be informed about"},
+        {"type": "production", "prompt": "Are you up to speed on the new privacy rules?", "answer": "Você está por dentro das novas regras de privacidade?", "trap": "Preposition: por dentro DE (das regras)."}
+      ]
+    },
+    {
+      "id": "pt2", "lang": "pt", "idiom": "não tem esse negócio de",
+      "gloss": "there's no such thing as / none of that … here",
+      "hero": "comic",
+      "failed_sentence": "Com ela, não tem esse negócio de meio-termo.",
+      "fails": "2 Agains today, 3 in 14 days",
+      "anchor": "negócio = literally “business”, colloquially “thing/stuff”. «Não tem esse negócio de X» = “there's no this-business-of X around here” — a door slammed on a whole category. Grandma energy.",
+      "sentences": [
+        {"tl": "Na redação dela, não tem esse negócio de matéria patrocinada.", "en": "In her newsroom, there's no such thing as sponsored content."},
+        {"tl": "Não tem esse negócio de algoritmo neutro — alguém sempre escolhe os critérios.", "en": "There's no such thing as a neutral algorithm — someone always picks the criteria."},
+        {"tl": "Aqui em casa não tem esse negócio de celular na mesa do jantar.", "en": "In this house there's none of that phone-at-the-dinner-table business."}
+      ],
+      "exercises": [
+        {"type": "cloze", "prompt": "Com ela, não tem esse ______ de meio-termo. (thing/business)", "answer": "negócio", "why": "fixed colloquial chunk: não tem esse negócio de + noun"},
+        {"type": "production", "prompt": "With my boss, there's no such thing as a short meeting.", "answer": "Com o meu chefe, não tem esse negócio de reunião curta.", "trap": "Keep it singular and bare: «de reunião curta», no article."}
+      ]
+    },
+    {
+      "id": "pt3", "lang": "pt", "idiom": "afinal de contas",
+      "gloss": "after all / at the end of the day",
+      "hero": "svg",
+      "failed_sentence": "Você não deveria ser tão duro com ele; afinal de contas, ele é só uma criança.",
+      "fails": "1 Again today, 5 in 14 days — chronic",
+      "anchor": "Literally “at the END of the ACCOUNTS”: when the ledger is tallied, this is what remains. Use it to play the trump card of an argument.",
+      "sentences": [
+        {"tl": "Afinal de contas, quem lucra com a atenção dos usuários?", "en": "At the end of the day, who profits from users' attention?"},
+        {"tl": "Não seja tão duro com o estagiário; afinal de contas, é o primeiro emprego dele.", "en": "Don't be so hard on the intern; after all, it's his first job."},
+        {"tl": "Afinal de contas, o debate sobre IA é um debate sobre poder.", "en": "After all, the debate about AI is a debate about power."}
+      ],
+      "exercises": [
+        {"type": "cloze", "prompt": "______ de ______, ele é só uma criança. (after all)", "answer": "Afinal / contas", "why": "fixed discourse marker: afinal de contas"},
+        {"type": "production", "prompt": "After all, nobody reads the terms of service.", "answer": "Afinal de contas, ninguém lê os termos de uso.", "trap": "Don't translate word-by-word from «after all» — the chunk is afinal de contas."}
+      ]
+    },
+    {
+      "id": "it1", "lang": "it", "idiom": "coni d'ombra",
+      "gloss": "shadow zones / blind spots (lit. cones of shadow)",
+      "hero": "comic",
+      "failed_sentence": "La nuova legge sulla privacy lascia alcuni coni d'ombra che vanno chiariti.",
+      "fails": "3 Agains today, 4 in 14 days",
+      "anchor": "A flashlight throws a CONE of light — everything behind an obstacle sits in a cono d'ombra. Journalistic staple: laws, inquiries and algorithms all “lasciano coni d'ombra”.",
+      "sentences": [
+        {"tl": "L'inchiesta ha chiarito molto, ma restano alcuni coni d'ombra sul finanziamento.", "en": "The investigation clarified a lot, but some gray areas remain around the funding."},
+        {"tl": "Ogni algoritmo di raccomandazione ha i suoi coni d'ombra, invisibili perfino a chi lo progetta.", "en": "Every recommendation algorithm has its blind spots, invisible even to its designers."},
+        {"tl": "La nuova legge sull'IA lascia coni d'ombra che le piattaforme sapranno sfruttare.", "en": "The new AI law leaves gray areas that the platforms will know how to exploit."}
+      ],
+      "exercises": [
+        {"type": "cloze", "prompt": "La legge lascia alcuni ______ d'______ che vanno chiariti. (blind spots)", "answer": "coni / ombra", "why": "fixed metaphor: coni d'ombra, plural of cono d'ombra"},
+        {"type": "production", "prompt": "The report leaves some gray areas about the contracts.", "answer": "Il rapporto lascia alcuni coni d'ombra sui contratti.", "trap": "Collocates with lasciare/restare; preposition su for the topic."}
+      ]
+    },
+    {
+      "id": "it2", "lang": "it", "idiom": "andare insieme",
+      "gloss": "to go hand in hand / belong together",
+      "hero": "svg",
+      "failed_sentence": "La teoria e la pratica devono andare insieme per ottenere buoni risultati.",
+      "fails": "3 Agains today, 3 in 14 days",
+      "anchor": "Two gears meshing: X e Y VANNO INSIEME — they turn together or not at all. Plural verb: due cose vanno insieme.",
+      "sentences": [
+        {"tl": "Innovazione e regolamentazione devono andare insieme, altrimenti vince il più furbo.", "en": "Innovation and regulation must go hand in hand, otherwise the craftiest one wins."},
+        {"tl": "Nel giornalismo, velocità e accuratezza raramente vanno insieme.", "en": "In journalism, speed and accuracy rarely go together."},
+        {"tl": "Vino e formaggio vanno insieme; social media e sonno, molto meno.", "en": "Wine and cheese go together; social media and sleep, much less so."}
+      ],
+      "exercises": [
+        {"type": "cloze", "prompt": "La teoria e la pratica devono ______ ______ . (go hand in hand)", "answer": "andare insieme", "why": "fixed pairing: andare insieme"},
+        {"type": "production", "prompt": "Power and responsibility should go hand in hand.", "answer": "Potere e responsabilità dovrebbero andare insieme.", "trap": "Plural subject → plural verb (vanno/dovrebbero)."}
+      ]
+    },
+    {
+      "id": "it3", "lang": "it", "idiom": "giocare in casa",
+      "gloss": "to play on home turf / have home advantage",
+      "hero": "video",
+      "failed_sentence": "La nostra squadra stasera gioca in casa, quindi abbiamo ottime possibilità.",
+      "fails": "3 Agains today, 3 in 14 days",
+      "anchor": "Home stadium, your crowd, your rules: giocare IN CASA (no article!). Figuratively: any topic where you're strongest. Opposite: giocare in trasferta (away).",
+      "sentences": [
+        {"tl": "Quando il dibattito si sposta sulla tecnologia, gioco in casa.", "en": "When the debate moves to technology, I'm playing on home turf."},
+        {"tl": "Alla conferenza di Limes sul Mediterraneo, i geopolitici giocano in casa.", "en": "At the Limes conference on the Mediterranean, the geopolitics crowd is playing at home."},
+        {"tl": "La squadra stasera gioca in casa e i biglietti sono esauriti.", "en": "The team plays at home tonight and the tickets are sold out."}
+      ],
+      "exercises": [
+        {"type": "cloze", "prompt": "Stasera la squadra gioca ______ ______, quindi abbiamo ottime possibilità. (at home)", "answer": "in casa", "why": "fixed: giocare in casa, no article"},
+        {"type": "production", "prompt": "In this negotiation, the lawyers are playing on home turf.", "answer": "In questa trattativa, gli avvocati giocano in casa.", "trap": "Not «nella casa» — the idiom drops the article."}
+      ]
+    }
+  ],
+  "video_prompts": {
+    "es2": "Interior, modern minimalist apartment, late afternoon golden light. A stylish wool coat lies crumpled in the middle of an otherwise immaculate wooden floor. Slow orbiting camera around the abandoned coat. A woman enters the frame, stops, points at the coat with theatrical exasperation, looking toward someone off-screen. Mood: gentle domestic comedy. Clean composition, shallow depth of field, cinematic. No on-screen text.",
+    "pt1": "Modern newsroom at night. Inside a glass-walled meeting room, four editors huddle close over a single laptop, whispering, faces lit by the screen glow. Outside the glass, a young journalist stands in the dim open-plan office holding a coffee, watching them, clearly excluded from the secret. Camera slowly pushes in toward the glass wall that separates them. Mood: intrigue, quiet tension. Cinematic, shallow depth of field. No on-screen text.",
+    "it3": "Evening football stadium, packed home stands roaring with flags and scarves. A confident player in the home kit steps onto the pitch, arms spread wide, soaking in the applause as the chanting grows louder. Camera: low tracking shot behind the player facing the wall of fans, then a slow tilt up the stands. Mood: triumphant, electric. Cinematic sports footage. No on-screen text."
+  },
+  "comic_prompts": {
+    "es3": "A crisp 3-panel comic strip in one image, clean European ligne claire style, warm muted colors, panels side by side with thin gutters. Panel 1: a couple sits at a small café table, tense silence; she looks away, he stares into his cup. Panel 2: she stands up, coat over her arm, calm and final, and says in a speech bubble: «La doy por terminada.» Panel 3: he sits alone at the table; a waiter discreetly takes away her untouched cup. The ONLY text in the whole image is the panel-2 speech bubble, EXACTLY: La doy por terminada.",
+    "pt2": "A warm 3-panel comic strip in one image, ligne claire style, cozy colors, panels side by side with thin gutters. Panel 1: a Brazilian family dinner table; a teenager slides a smartphone toward the table edge under a napkin. Panel 2: the grandmother, stern but loving, holds up a big glass jar and declares in a speech bubble: «Não tem esse negócio de celular na mesa!» Panel 3: three smartphones sit inside the glass jar on a shelf while the family eats and laughs in the background. The ONLY text in the whole image is the panel-2 speech bubble, EXACTLY: Não tem esse negócio de celular na mesa!",
+    "it1": "A noir 3-panel comic strip in one image, dramatic chiaroscuro, deep blues and amber, panels side by side with thin gutters. Panel 1: a detective's desk at night; a massive stack of documents labeled LEGGE under a desk lamp. Panel 2: the detective aims a flashlight across the pages; the beam illuminates some paragraphs while long cone-shaped shadows stretch dramatically behind others. Panel 3: close-up of the detective's face half in shadow, pensive; a rectangular caption box reads: Restano coni d'ombra. The only text in the image: LEGGE on the stack (panel 1) and the caption Restano coni d'ombra. (panel 3)."
+  }
+}

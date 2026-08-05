@@ -1,4 +1,16 @@
-# Idiom Rescue Pilot №1 (2026-08-05) — round 2 under review
+# Idiom Rescue Pilot №1 (2026-08-05) — round 2 APPROVED, Rescue Lab commissioned
+
+## ROUND-2 VERDICT (user, 2026-08-05 evening)
+
+**"Your ideas are brilliant and we need to incorporate them."** All five
+word-centered formats are in. One design correction from the polysemy
+map: the user only knew one of tirado's three senses — so **every door
+must be taught, not just labeled** (gloss + micro-example per sense is
+now a hard rule; enforced in the Rescue Lab data model). Next step
+commissioned: an operating dashboard —
+`docs/commissions/RESCUE_LAB_COMMISSION.md` (experiment tracking, asset
+exploration, cost accounting, switchable image models). Pilot source
+data preserved in `docs/research/rescue_pilot1/`.
 
 ## ROUND-1 VERDICT (user, 2026-08-05 afternoon)
 

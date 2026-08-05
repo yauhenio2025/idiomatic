@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "round": 2,
+    "date": "2026-08-05",
+    "verdict_round1": "comics > SVG diagrams > videos (dropped)",
+    "principle": "Round 1 heroes illustrated one sentence. Round 2 formats encode the EXPRESSION ITSELF — its spatial logic, its polysemy, its morphology, its iconic core — because the user's failure is un-mastered expressions, not forgotten sentences."
+  },
+  "exemplars": [
+    {
+      "key": "bridge_pt1",
+      "format": "Inside/Outside contrast — the idiom's spatial logic",
+      "expression": "estava por dentro (pt)",
+      "targets": "form→meaning: makes the preposition itself the picture. Bonus: teaches the opposite (estar por fora) in the same glance.",
+      "prompt": "A single wide editorial illustration, contemporary flat style with rich warm/cool contrast. A huge transparent glass circle dominates the composition. INSIDE the circle: warm amber light, three people leaning in close sharing a secret over documents, relaxed and knowing; a small elegant label inside reads: por dentro. OUTSIDE the circle: cool blue dusk, one person standing alone straining to hear, hands cupped to the glass; a small label near them reads: por fora. At the bottom, one clean caption line: estar por dentro = estar informado. Only these three pieces of text, nothing else."
+    },
+    {
+      "key": "polysemy_es2",
+      "format": "Polysemy map — one word, three doors",
+      "expression": "está tirado (es)",
+      "targets": "confusability: tirado has three everyday readings; failing the card may be door-confusion, not vocabulary absence. One image holds all three so the brain files them as siblings. DESIGN RULE (user feedback): every door must be TAUGHT, not just labeled — gloss + micro-example under the image.",
+      "senses": [
+        {"label": "en el suelo", "gloss": "lying around, thrown down & abandoned", "example": "Tu abrigo está tirado en el suelo. — Your coat is lying on the floor."},
+        {"label": "baratísimo", "gloss": "dirt cheap, a steal", "example": "¿Solo un euro? ¡Está tirado! — Only one euro? That's a steal!"},
+        {"label": "facilísimo", "gloss": "dead easy, a piece of cake", "example": "El examen estaba tirado. — The exam was a piece of cake."}
+      ],
+      "prompt": "One wide image divided into three equal arched doorways, museum-poster flat style, warm palette. Above all three arches, one large elegant banner reads: ESTÁ TIRADO. Through the LEFT arch: a wool coat crumpled on a wooden floor of a tidy room; small label below: en el suelo. Through the MIDDLE arch: a street-market stall with a huge slashed price tag showing 1€; small label below: baratísimo. Through the RIGHT arch: a person lounging in an armchair finishing a crossword with one pen stroke, feet up; small label below: facilísimo. Only these text elements: the banner and the three small labels."
+    },
+    {
+      "key": "anatomy_es1",
+      "format": "Morphology anatomy — the word as an exploded machine",
+      "expression": "se desbloquee (es)",
+      "targets": "meaning→form production: the failed direction is producing the subjunctive -e. The word itself becomes the object: BLOQUE as concrete blocks, des- as the chisel, the final -e as the pending golden switch.",
+      "prompt": "A technical-poster style illustration, annotated diagram aesthetic on deep slate background. The Spanish word 'se desbloquee' rendered huge as physical 3D letterforms in the center: the letters of BLOQUE are built from grey concrete blocks, cracking apart with dust; the prefix letters 'des' form a steel chisel prying the first block loose; the final letter 'e' is separate, glowing warm gold, hovering above a closed gate. A thin annotation line points to the golden e with the small label: todavía no. One caption line at the bottom: una vez que se desbloquee… The only text: the central word, the label todavía no, and the caption."
+    },
+    {
+      "key": "poster_it3",
+      "format": "Iconic poster — the metaphor's source domain as one emblem",
+      "expression": "giocare in casa (it)",
+      "targets": "what the video tried and failed at: one still, iconic composition beats six seconds of footage. Flat poster language, instantly re-recognizable at review time.",
+      "prompt": "A minimalist mid-century sports poster, flat vector style, only four colors: cream, deep green pitch, warm red, charcoal. Seen from high above: a football stadium bowl whose outer wall is shaped like the outline of a HOUSE with a pitched roof. Inside, the glowing green pitch; one tiny bright red player stands confidently at the center circle while a cluster of tiny grey opposing players huddles near a corner, small and out of place. Bold poster lettering at the bottom: GIOCARE IN CASA. No other text."
+    },
+    {
+      "key": "glyphs",
+      "format": "Idiom glyphs — a permanent logo per expression",
+      "expression": "coni d'ombra · por dentro · tirado",
+      "targets": "the escalation system: each rescued idiom gets ONE fixed pictographic stamp that then reappears on every future card of that idiom (new sentences, new exercises) — the constant identity across changing content.",
+      "prompt": "A sticker sheet of three bold circular glyphs on a neutral light background, evenly spaced in a row, app-icon style, thick outlines, two colors per glyph, no gradients, no text anywhere. Glyph 1: a flashlight projecting a bright amber cone of light onto an obstacle, with a sharp dark cone of shadow stretching behind it. Glyph 2: a circle with three dots snug INSIDE it and one lone dot excluded outside the rim. Glyph 3: an empty coat lying crumpled flat on the ground, viewed from above, one sleeve flung out. Clean, minimal, instantly readable at small size."
+    }
+  ],
+  "ladder": {
+    "principle": "A repeat failure is evidence that the CURRENT encoding didn't bind — so never regenerate a harder version of the same association; switch the encoding axis. One thing stays constant: the idiom's glyph, stamped on every card so all encounters accrue to one identity.",
+    "diagnosis": "The revlog grain says WHICH direction fails: e2t card failing = production problem (meaning→form); t2e = recognition; cloze failing on grammar = form problem (agreement/subjunctive); fails clustered on one sense = polysemy confusion. The follow-up format is chosen by failure type, not rotated blindly.",
+    "strikes": [
+      {"strike": 1, "trigger": "idiom enters the struggle list (≥3 Agains/14d)", "response": "Rescue card v1: comic (scene encoding) + anchor + 3 fresh personalized sentences + cloze/production exercises. Glyph is minted and stamped."},
+      {"strike": 2, "trigger": "still failing 7+ days after rescue v1 delivered", "response": "Switch axis, by diagnosis: production failure → morphology anatomy + production-heavy exercises; recognition failure → inside/outside-style contrast or iconic poster; polysemy confusion → polysemy map. ALL sentences replaced with new ones (never let the card be memorized instead of the idiom)."},
+      {"strike": 3, "trigger": "still failing 7+ days after v2", "response": "Personal-max: keyword mnemonic built on the user's other languages (ru/en/…), plus a metacognitive card that names the confusion explicitly ('you keep reading X as Y — here is the fork'), plus the idiom seeded into the next grammar/exercises2 wave so it recurs in other decks' contexts."},
+      {"strike": "release", "trigger": "Again-rate of the parent idiom drops below threshold for 21 days", "response": "Rescue cards auto-retire (deck stays lean); glyph stays in the archive for any future relapse."}
+    ]
+  }
+}
