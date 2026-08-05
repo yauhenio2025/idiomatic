@@ -314,6 +314,30 @@ async def admin_backfill_v2_status(
     return backfill_v2.get_state()
 
 
+@app.get("/admin/anki-guids")
+async def admin_anki_guids(_: None = Depends(authed_admin)) -> dict:
+    """Every note guid the CURRENT catalog generates, per kind — computed
+    with the builders' own _guid/_norm code so a client can diff its
+    Anki collection against the live content (orphan detection)."""
+    from .pipeline import adoption
+    return await adoption.current_guids()
+
+
+@app.post("/admin/adopt-orphans")
+async def admin_adopt_orphans(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Upsert studied orphan notes from the user's collection into
+    adopted_notes. Body: {"notes": [{guid, lang, model, deck, fields,
+    tags, reps, lapses, last_review_ms}, ...]}."""
+    from .pipeline import adoption
+    notes = body.get("notes")
+    if not isinstance(notes, list) or not notes:
+        raise HTTPException(400, "need a non-empty notes list")
+    n = await adoption.adopt_notes(notes)
+    return {"adopted": n, "received": len(notes)}
+
+
 @app.post("/admin/rebuild-pools")
 async def admin_rebuild_pools(
     lang: str, _: None = Depends(authed_admin),

@@ -458,6 +458,39 @@ async def fetch_pool_idioms(lang: str) -> list[dict]:
     return out
 
 
+async def expression_langs() -> list[str]:
+    pool = await get_pool()
+    rows = await pool.fetch(
+        "SELECT DISTINCT lang FROM expression_idioms ORDER BY lang")
+    return [r["lang"] for r in rows]
+
+
+async def upsert_adopted_notes(rows: list[dict]) -> int:
+    """Upsert re-adopted orphan notes from the user's Anki collection."""
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        await conn.executemany(
+            """
+            INSERT INTO adopted_notes
+              (guid, lang, model, deck, fields, tags, reps, lapses,
+               last_review_at)
+            VALUES ($1, $2, $3, $4, $5::jsonb, $6, $7, $8,
+                    to_timestamp($9::double precision / 1000.0))
+            ON CONFLICT (guid) DO UPDATE SET
+              lang = EXCLUDED.lang, model = EXCLUDED.model,
+              deck = EXCLUDED.deck, fields = EXCLUDED.fields,
+              tags = EXCLUDED.tags, reps = EXCLUDED.reps,
+              lapses = EXCLUDED.lapses,
+              last_review_at = EXCLUDED.last_review_at,
+              adopted_at = NOW()
+            """,
+            [(r["guid"], r["lang"], r["model"], r["deck"], r["fields"],
+              r["tags"], r["reps"], r["lapses"], r["last_review_ms"])
+             for r in rows],
+        )
+    return len(rows)
+
+
 async def video_apkgs_eligible_for_cleanup(retention_days: int) -> list[dict[str, Any]]:
     """Video apkgs older than the retention window whose file can be
     deleted: every agent subscribed to the language has acked ok, and at

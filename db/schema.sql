@@ -398,3 +398,21 @@ CREATE TABLE IF NOT EXISTS agent_acks (
 );
 -- Migration for pre-existing deployments.
 ALTER TABLE agent_acks ADD COLUMN IF NOT EXISTS attempts INTEGER NOT NULL DEFAULT 1;
+
+-- Studied orphan notes re-adopted from the user's Anki collection
+-- (2026-08-05): idiomatic-generated cards whose source rows were purged
+-- or regenerated server-side but which the user has review history on.
+-- The remediation pipeline treats these as first-class content alongside
+-- expressions. fields = the note's field list verbatim (JSON array).
+CREATE TABLE IF NOT EXISTS adopted_notes (
+  guid           TEXT PRIMARY KEY,               -- Anki note guid
+  lang           TEXT,
+  model          TEXT NOT NULL,                  -- Anki notetype name
+  deck           TEXT,                           -- deck at adoption time
+  fields         JSONB NOT NULL,
+  tags           TEXT[] NOT NULL DEFAULT '{}',
+  reps           INTEGER NOT NULL DEFAULT 0,
+  lapses         INTEGER NOT NULL DEFAULT 0,
+  last_review_at TIMESTAMPTZ,
+  adopted_at     TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
