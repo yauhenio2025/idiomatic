@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import asyncio
 import contextlib
+import json
 import re
 import secrets
 from pathlib import Path
@@ -1206,6 +1207,317 @@ async def admin_purge_video(
             "idioms_purged": len(idiom_ids),
             "expressions_orphaned": len(orphaned),
             "apkgs_deleted": len(apkg_rows), "requeued": requeue}
+
+
+# --- admin: Rescue Lab (docs/commissions/RESCUE_LAB_COMMISSION.md) ----------
+# The dashboard's /rescue pages mutate ONLY through these endpoints —
+# the same exception pattern the Grammar section established.
+
+def _parse_jsonb(value):
+    """asyncpg returns jsonb as str unless a codec is registered."""
+    if isinstance(value, str):
+        try:
+            return json.loads(value)
+        except ValueError:
+            return None
+    return value
+
+
+def _rescue_item_dict(row) -> dict:
+    """Row → JSON-friendly dict (items AND assets: parses the jsonb
+    columns, floats the NUMERIC cost)."""
+    d = dict(row)
+    for jsonb_col in ("struggle_snapshot", "params"):
+        if jsonb_col in d:
+            d[jsonb_col] = _parse_jsonb(d.get(jsonb_col))
+    if d.get("cost_usd") is not None:
+        d["cost_usd"] = float(d["cost_usd"])
+    return d
+
+
+@app.post("/admin/rescue/struggles")
+async def admin_rescue_struggles(
+    request: Request, _: None = Depends(authed_admin),
+) -> dict:
+    """Upload a struggle snapshot (computed off-server from the AnkiWeb
+    pull — see docs/research/ANKI_STATS_POC.md). Body: JSON list of
+    {lang, idiom, gloss?, fails_today, fails_14d, failed_sentences[]}.
+    Upserts rescue_items as candidates; an existing item keeps its
+    status/strike/anchor and gets a fresh snapshot."""
+    from . import rescue
+    try:
+        payload = json.loads((await request.body()).decode("utf-8"))
+    except ValueError:
+        raise HTTPException(400, "body must be JSON")
+    rows, errors = rescue.validate_struggles(payload)
+    if errors:
+        raise HTTPException(400, {"n_errors": len(errors),
+                                  "first_errors": errors[:10]})
+    pool = await db.get_pool()
+    inserted = updated = 0
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            for r in rows:
+                row = await conn.fetchrow(
+                    """
+                    INSERT INTO rescue_items (lang, idiom, gloss,
+                                              struggle_snapshot)
+                    VALUES ($1, $2, $3, $4::jsonb)
+                    ON CONFLICT (lang, idiom) DO UPDATE SET
+                        gloss = COALESCE(EXCLUDED.gloss, rescue_items.gloss),
+                        struggle_snapshot = EXCLUDED.struggle_snapshot,
+                        updated_at = NOW()
+                    RETURNING (xmax = 0) AS inserted
+                    """,
+                    r["lang"], r["idiom"], r["gloss"],
+                    json.dumps(r["snapshot"], ensure_ascii=False))
+                if row["inserted"]:
+                    inserted += 1
+                else:
+                    updated += 1
+    return {"ok": True, "inserted": inserted, "updated": updated}
+
+
+@app.post("/admin/rescue/generate")
+async def admin_rescue_generate(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Generate one image asset for an item. Body: {item_id, format,
+    provider, prompt?, params?}. Without a prompt, the format template
+    is filled from the item's fields (idiomatic/rescue.py — templates
+    seeded from the approved pilot prompts). Stages the file under
+    /data/rescue_assets/, inserts a draft rescue_assets row AND a
+    gen_ledger row (cost from the genmedia registry at call time).
+
+    Synchronous on purpose: one image is bounded (~5-15 s) and the
+    dashboard wants the draft back for immediate review."""
+    from . import genmedia, rescue
+
+    item_id = body.get("item_id")
+    fmt = body.get("format")
+    provider = body.get("provider")
+    prompt = str(body.get("prompt") or "").strip()
+    params = body.get("params") if isinstance(body.get("params"), dict) else {}
+    if not isinstance(item_id, int):
+        raise HTTPException(400, "need item_id (int)")
+    if fmt not in rescue.ALL_FORMATS:
+        raise HTTPException(400, f"format must be one of {rescue.ALL_FORMATS}"
+                                 " (video does not exist here)")
+    if fmt not in rescue.IMAGE_FORMATS:
+        raise HTTPException(400, f"format {fmt!r} is authored manually, "
+                                 "not generated through image providers")
+    if provider not in genmedia.PROVIDERS:
+        raise HTTPException(400, f"provider must be one of "
+                                 f"{sorted(genmedia.PROVIDERS)}")
+
+    pool = await db.get_pool()
+    item = await pool.fetchrow(
+        "SELECT * FROM rescue_items WHERE id = $1", item_id)
+    if not item:
+        raise HTTPException(404, "unknown item")
+    senses = [dict(r) for r in await pool.fetch(
+        "SELECT label, gloss, example_tl, example_en, ord "
+        "FROM rescue_senses WHERE item_id = $1 ORDER BY ord", item_id)]
+    if not prompt:
+        try:
+            prompt = rescue.fill_template(fmt, _rescue_item_dict(item), senses)
+        except ValueError as e:
+            raise HTTPException(409, str(e))
+
+    try:
+        image, cost_usd = await genmedia.generate_image(
+            provider, prompt, params=params)
+    except genmedia.UnknownProvider as e:
+        raise HTTPException(400, str(e))
+    except Exception as e:  # noqa: BLE001 — surface provider failures as 502
+        log.warning("admin.rescue_generate.failed", item_id=item_id,
+                    fmt=fmt, provider=provider, err=repr(e)[:300])
+        raise HTTPException(502, f"generation failed: {str(e)[:300]}")
+
+    mime = genmedia.sniff_mime(image)
+    ext = {"image/png": "png", "image/jpeg": "jpg",
+           "image/webp": "webp"}.get(mime, "bin")
+    rel = f"{item_id}/{fmt}_{secrets.token_hex(4)}.{ext}"
+    path = Path(get_settings().data_dir) / "rescue_assets" / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(image)
+
+    info = genmedia.PROVIDERS[provider]
+    asset = await pool.fetchrow(
+        """
+        INSERT INTO rescue_assets (item_id, format, provider, model, prompt,
+                                   params, file_path, mime, cost_usd)
+        VALUES ($1, $2, $3, $4, $5, $6::jsonb, $7, $8, $9)
+        RETURNING *
+        """,
+        item_id, fmt, provider, info["model"], prompt,
+        json.dumps(params, ensure_ascii=False), rel, mime, cost_usd)
+    await pool.execute(
+        """
+        INSERT INTO gen_ledger (provider, model, kind, units, unit_kind,
+                                cost_usd, item_id, asset_id)
+        VALUES ($1, $2, 'image', 1, 'image', $3, $4, $5)
+        """,
+        provider, info["model"], cost_usd, item_id, asset["id"])
+    return {"ok": True, "asset": _rescue_item_dict(asset)}
+
+
+@app.post("/admin/rescue/asset/{asset_id}/verdict")
+async def admin_rescue_asset_verdict(
+    asset_id: int, body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Approve or reject one asset. Body: {status: approved|rejected,
+    note?}. Enforces the polysemy rule (a polysemy_map cannot be
+    approved for an item with < 2 senses) and glyph permanence
+    (approving a glyph pins rescue_items.glyph_asset_id; a second glyph
+    can't be approved while an approved one is pinned)."""
+    from . import rescue
+    status = body.get("status")
+    note = str(body.get("note") or "").strip() or None
+    if status not in ("approved", "rejected"):
+        raise HTTPException(400, "status must be approved|rejected")
+    pool = await db.get_pool()
+    asset = await pool.fetchrow(
+        "SELECT * FROM rescue_assets WHERE id = $1", asset_id)
+    if not asset:
+        raise HTTPException(404, "unknown asset")
+    item_id = asset["item_id"]
+
+    if status == "approved":
+        n_senses = await pool.fetchval(
+            "SELECT COUNT(*) FROM rescue_senses WHERE item_id = $1", item_id)
+        err = rescue.polysemy_approval_error(asset["format"], n_senses)
+        if err:
+            raise HTTPException(409, err)
+        if asset["format"] == "glyph":
+            current = await pool.fetchrow(
+                """
+                SELECT i.glyph_asset_id, a.status AS glyph_status
+                FROM rescue_items i
+                LEFT JOIN rescue_assets a ON a.id = i.glyph_asset_id
+                WHERE i.id = $1
+                """, item_id)
+            if (current and current["glyph_asset_id"] not in (None, asset_id)
+                    and current["glyph_status"] == "approved"):
+                raise HTTPException(
+                    409, "the glyph is permanent — this item already has an "
+                         f"approved glyph (asset {current['glyph_asset_id']}); "
+                         "reject that one first if it truly must change")
+
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            updated = await conn.fetchrow(
+                """
+                UPDATE rescue_assets SET status = $2, verdict_note = $3
+                WHERE id = $1 RETURNING *
+                """, asset_id, status, note)
+            if asset["format"] == "glyph":
+                if status == "approved":
+                    await conn.execute(
+                        """UPDATE rescue_items SET glyph_asset_id = $2,
+                           updated_at = NOW() WHERE id = $1""",
+                        item_id, asset_id)
+                else:
+                    await conn.execute(
+                        """UPDATE rescue_items SET glyph_asset_id = NULL,
+                           updated_at = NOW()
+                           WHERE id = $1 AND glyph_asset_id = $2""",
+                        item_id, asset_id)
+    return {"ok": True, "asset": _rescue_item_dict(updated)}
+
+
+@app.post("/admin/rescue/item/{item_id}")
+async def admin_rescue_item_patch(
+    item_id: int, patch: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Patch an item's mutable state from the dashboard. Body JSON:
+    {status?, strike?, anchor?, gloss?, senses?}. senses replaces the
+    whole list; every sense must carry label + gloss + example_tl +
+    example_en (the data-level polysemy rule)."""
+    from . import rescue
+    allowed = {"status", "strike", "anchor", "gloss", "senses"}
+    unknown = set(patch) - allowed
+    if unknown:
+        raise HTTPException(400, f"unknown fields: {sorted(unknown)}")
+    status = patch.get("status")
+    if status is not None and status not in ("candidate", "active", "retired"):
+        raise HTTPException(400, "status must be candidate|active|retired")
+    strike = patch.get("strike")
+    if strike is not None and not (isinstance(strike, int) and 1 <= strike <= 3):
+        raise HTTPException(400, "strike must be an int in 1..3")
+    senses_rows = None
+    if "senses" in patch:
+        senses_rows, errors = rescue.validate_senses(patch["senses"])
+        if errors:
+            raise HTTPException(400, {"n_errors": len(errors),
+                                      "first_errors": errors[:10]})
+
+    pool = await db.get_pool()
+    sets, args = ["updated_at = NOW()"], [item_id]
+
+    def arg(v) -> str:
+        args.append(v)
+        return f"${len(args)}"
+
+    if status is not None:
+        sets.append(f"status = {arg(status)}")
+    if strike is not None:
+        sets.append(f"strike = {arg(strike)}")
+    for field in ("anchor", "gloss"):
+        if field in patch:
+            value = str(patch[field] or "").strip() or None
+            sets.append(f"{field} = {arg(value)}")
+
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            row = await conn.fetchrow(
+                f"UPDATE rescue_items SET {', '.join(sets)} "
+                f"WHERE id = $1 RETURNING *", *args)
+            if row is None:
+                raise HTTPException(404, "unknown item")
+            if senses_rows is not None:
+                await conn.execute(
+                    "DELETE FROM rescue_senses WHERE item_id = $1", item_id)
+                for s in senses_rows:
+                    await conn.execute(
+                        """INSERT INTO rescue_senses
+                           (item_id, label, gloss, example_tl, example_en, ord)
+                           VALUES ($1, $2, $3, $4, $5, $6)""",
+                        item_id, s["label"], s["gloss"], s["example_tl"],
+                        s["example_en"], s["ord"])
+    senses = [dict(r) for r in await pool.fetch(
+        "SELECT id, label, gloss, example_tl, example_en, ord "
+        "FROM rescue_senses WHERE item_id = $1 ORDER BY ord", item_id)]
+    return {"ok": True, "item": _rescue_item_dict(row), "senses": senses}
+
+
+@app.get("/admin/rescue/export/{item_id}")
+async def admin_rescue_export(
+    item_id: int, _: None = Depends(authed_admin),
+) -> dict:
+    """Bundle one item's approved assets + senses + snapshot sentences
+    as JSON — the future deck-builder's input (building the apkg itself
+    is out of scope here)."""
+    pool = await db.get_pool()
+    item = await pool.fetchrow(
+        "SELECT * FROM rescue_items WHERE id = $1", item_id)
+    if not item:
+        raise HTTPException(404, "unknown item")
+    senses = [dict(r) for r in await pool.fetch(
+        "SELECT label, gloss, example_tl, example_en, ord "
+        "FROM rescue_senses WHERE item_id = $1 ORDER BY ord", item_id)]
+    assets = [_rescue_item_dict(r) for r in await pool.fetch(
+        """
+        SELECT id, format, provider, model, prompt, params, file_path,
+               mime, cost_usd, verdict_note, created_at
+        FROM rescue_assets
+        WHERE item_id = $1 AND status = 'approved'
+        ORDER BY format, created_at
+        """, item_id)]
+    for a in assets:
+        a["params"] = _parse_jsonb(a.get("params"))
+    return {"item": _rescue_item_dict(item), "senses": senses,
+            "approved_assets": assets}
 
 
 # --- admin: rotate an agent's bearer token ----------------------------------

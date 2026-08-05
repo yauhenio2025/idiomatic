@@ -399,6 +399,96 @@ CREATE TABLE IF NOT EXISTS agent_acks (
 -- Migration for pre-existing deployments.
 ALTER TABLE agent_acks ADD COLUMN IF NOT EXISTS attempts INTEGER NOT NULL DEFAULT 1;
 
+-- ============================================================================
+-- Rescue Lab (docs/commissions/RESCUE_LAB_COMMISSION.md): struggle idioms
+-- from the AnkiWeb revlog pull get rescue assets (comics, word-centered
+-- images, glyphs) generated through switchable image providers, with full
+-- cost accounting. rescue_items.status: candidate (uploaded, not yet
+-- worked) | active (being rescued) | retired (released). strike = the
+-- escalation-ladder rung (docs/research/RESCUE_PILOT.md).
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS rescue_items (
+  id                 BIGSERIAL PRIMARY KEY,
+  lang               TEXT NOT NULL,
+  idiom              TEXT NOT NULL,
+  gloss              TEXT,
+  anchor             TEXT,
+  status             TEXT NOT NULL DEFAULT 'candidate',
+  strike             SMALLINT NOT NULL DEFAULT 1,
+  -- The one permanent glyph for this idiom (FK added below — the column
+  -- references rescue_assets, which is created after this table).
+  struggle_snapshot  JSONB,
+  created_at         TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at         TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  UNIQUE (lang, idiom),
+  CHECK (status IN ('candidate', 'active', 'retired')),
+  CHECK (strike BETWEEN 1 AND 3)
+);
+CREATE INDEX IF NOT EXISTS rescue_items_lang_status ON rescue_items(lang, status);
+
+-- Every generated/authored asset of an item. file_path is relative to
+-- DATA_DIR/rescue_assets/. Video is deliberately NOT a legal format
+-- (round-1 verdict: dropped, never offer it).
+CREATE TABLE IF NOT EXISTS rescue_assets (
+  id            BIGSERIAL PRIMARY KEY,
+  item_id       BIGINT NOT NULL REFERENCES rescue_items(id) ON DELETE CASCADE,
+  format        TEXT NOT NULL,
+  provider      TEXT,
+  model         TEXT,
+  prompt        TEXT,
+  params        JSONB,
+  file_path     TEXT,
+  mime          TEXT,
+  cost_usd      NUMERIC(10, 5) NOT NULL DEFAULT 0,
+  status        TEXT NOT NULL DEFAULT 'draft',
+  verdict_note  TEXT,
+  created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  CHECK (format IN ('comic', 'contrast', 'polysemy_map', 'anatomy',
+                    'poster', 'glyph', 'svg', 'sentence_audio')),
+  CHECK (status IN ('draft', 'approved', 'rejected'))
+);
+CREATE INDEX IF NOT EXISTS rescue_assets_item_idx ON rescue_assets(item_id, format);
+
+-- Circular FK, added after both tables exist. ADD COLUMN IF NOT EXISTS
+-- keeps re-application idempotent.
+ALTER TABLE rescue_items ADD COLUMN IF NOT EXISTS glyph_asset_id
+  BIGINT REFERENCES rescue_assets(id) ON DELETE SET NULL;
+
+-- The polysemy "teach every door" rule lives on this table: approving a
+-- polysemy_map asset requires >= 2 rows here (enforced in the verdict
+-- endpoint). Every sense carries a gloss AND a micro-example — a door
+-- that is only labeled is refused at the data level (NOT NULLs below).
+CREATE TABLE IF NOT EXISTS rescue_senses (
+  id          BIGSERIAL PRIMARY KEY,
+  item_id     BIGINT NOT NULL REFERENCES rescue_items(id) ON DELETE CASCADE,
+  label       TEXT NOT NULL,
+  gloss       TEXT NOT NULL,
+  example_tl  TEXT NOT NULL,
+  example_en  TEXT NOT NULL,
+  ord         SMALLINT NOT NULL DEFAULT 1,
+  UNIQUE (item_id, ord)
+);
+
+-- Cost ledger: one row per PAID generation call, written at call time
+-- whether or not the produced asset survives review — deleting/rejecting
+-- an asset never un-spends the money, so month totals stay honest.
+CREATE TABLE IF NOT EXISTS gen_ledger (
+  id          BIGSERIAL PRIMARY KEY,
+  provider    TEXT NOT NULL,
+  model       TEXT NOT NULL,
+  kind        TEXT NOT NULL,
+  units       NUMERIC NOT NULL,
+  unit_kind   TEXT NOT NULL,
+  cost_usd    NUMERIC(10, 5) NOT NULL,
+  item_id     BIGINT REFERENCES rescue_items(id) ON DELETE SET NULL,
+  asset_id    BIGINT REFERENCES rescue_assets(id) ON DELETE SET NULL,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  CHECK (kind IN ('image', 'tts')),
+  CHECK (unit_kind IN ('image', 'char'))
+);
+CREATE INDEX IF NOT EXISTS gen_ledger_created_idx ON gen_ledger(created_at);
+
 -- Studied orphan notes re-adopted from the user's Anki collection
 -- (2026-08-05): idiomatic-generated cards whose source rows were purged
 -- or regenerated server-side but which the user has review history on.

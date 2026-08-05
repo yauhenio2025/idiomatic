@@ -602,6 +602,199 @@ async def grammar_audio(
     return FileResponse(p, media_type="audio/mpeg")
 
 
+# --- rescue lab (read-only; mutations go through /admin/rescue/*) ------------
+
+def _rescue_json(d: dict) -> dict:
+    for col in ("struggle_snapshot", "params"):
+        if col in d:
+            d[col] = _parse_structured(d.get(col))
+    for col in ("cost_usd", "spend"):
+        if d.get(col) is not None:
+            d[col] = float(d[col])
+    return d
+
+
+@router.get("/rescue/items")
+async def rescue_items(
+    _: None = Depends(authed_ui),
+    lang: str | None = None,
+    status: str | None = None,
+) -> dict:
+    conds, args = [], []
+
+    def arg(v) -> str:
+        args.append(v)
+        return f"${len(args)}"
+
+    if lang:
+        conds.append(f"i.lang = {arg(lang)}")
+    if status:
+        conds.append(f"i.status = {arg(status)}")
+    where = ("WHERE " + " AND ".join(conds)) if conds else ""
+    pool = await db.get_pool()
+    rows = await pool.fetch(
+        f"""
+        SELECT i.id, i.lang, i.idiom, i.gloss, i.anchor, i.status, i.strike,
+               i.glyph_asset_id, i.struggle_snapshot, i.created_at,
+               i.updated_at,
+               a.n_assets, a.n_approved, a.n_draft,
+               COALESCE(l.spend, 0) AS spend,
+               s.n_senses
+        FROM rescue_items i
+        LEFT JOIN LATERAL (
+            SELECT COUNT(*) AS n_assets,
+                   COUNT(*) FILTER (WHERE status = 'approved') AS n_approved,
+                   COUNT(*) FILTER (WHERE status = 'draft') AS n_draft
+            FROM rescue_assets WHERE item_id = i.id) a ON TRUE
+        LEFT JOIN LATERAL (
+            SELECT SUM(cost_usd) AS spend
+            FROM gen_ledger WHERE item_id = i.id) l ON TRUE
+        LEFT JOIN LATERAL (
+            SELECT COUNT(*) AS n_senses
+            FROM rescue_senses WHERE item_id = i.id) s ON TRUE
+        {where}
+        ORDER BY (i.status = 'retired'), i.updated_at DESC
+        """,
+        *args)
+    return {"rows": [_rescue_json(dict(r)) for r in rows],
+            "lang_names": LANG_NAMES}
+
+
+@router.get("/rescue/item/{item_id}")
+async def rescue_item_detail(
+    item_id: int, _: None = Depends(authed_ui),
+) -> dict:
+    from . import rescue
+    pool = await db.get_pool()
+    row = await pool.fetchrow(
+        """
+        SELECT i.*, COALESCE(l.spend, 0) AS spend
+        FROM rescue_items i
+        LEFT JOIN LATERAL (
+            SELECT SUM(cost_usd) AS spend
+            FROM gen_ledger WHERE item_id = i.id) l ON TRUE
+        WHERE i.id = $1
+        """, item_id)
+    if not row:
+        raise HTTPException(404, "unknown item")
+    item = _rescue_json(dict(row))
+    senses = [dict(r) for r in await pool.fetch(
+        "SELECT id, label, gloss, example_tl, example_en, ord "
+        "FROM rescue_senses WHERE item_id = $1 ORDER BY ord", item_id)]
+    assets = [_rescue_json(dict(r)) for r in await pool.fetch(
+        "SELECT * FROM rescue_assets WHERE item_id = $1 "
+        "ORDER BY format, created_at DESC", item_id)]
+
+    # Server-side canonical template fill for the Generate panel's
+    # prefill — the same code path the generate endpoint uses, so what
+    # the user sees is what would run.
+    prompts: dict[str, dict] = {}
+    for fmt in rescue.IMAGE_FORMATS:
+        try:
+            prompts[fmt] = {"prompt": rescue.fill_template(fmt, item, senses)}
+        except ValueError as e:
+            prompts[fmt] = {"error": str(e)}
+    return {"item": item, "senses": senses, "assets": assets,
+            "prompts": prompts, "lang_names": LANG_NAMES}
+
+
+@router.get("/rescue/costs")
+async def rescue_costs(_: None = Depends(authed_ui)) -> dict:
+    """Cost aggregates off gen_ledger — every paid call, including ones
+    whose asset was later discarded (asset_id NULL after delete)."""
+    pool = await db.get_pool()
+    totals = await pool.fetchrow(
+        """
+        SELECT COALESCE(SUM(cost_usd), 0) AS all_time,
+               COALESCE(SUM(cost_usd) FILTER (
+                   WHERE created_at >= date_trunc('month', NOW())), 0)
+                   AS this_month,
+               COUNT(*) AS n_calls
+        FROM gen_ledger
+        """)
+    by_day = [dict(r) for r in await pool.fetch(
+        """
+        SELECT created_at::date AS day, SUM(cost_usd) AS usd, COUNT(*) AS n
+        FROM gen_ledger
+        WHERE created_at >= NOW() - INTERVAL '30 days'
+        GROUP BY 1 ORDER BY 1
+        """)]
+    by_provider = [dict(r) for r in await pool.fetch(
+        """
+        SELECT provider, model, SUM(cost_usd) AS usd, COUNT(*) AS n,
+               SUM(cost_usd) FILTER (
+                   WHERE created_at >= date_trunc('month', NOW())) AS usd_month
+        FROM gen_ledger GROUP BY 1, 2 ORDER BY 3 DESC
+        """)]
+    by_format = [dict(r) for r in await pool.fetch(
+        """
+        SELECT COALESCE(a.format, 'discarded') AS format,
+               SUM(g.cost_usd) AS usd, COUNT(*) AS n
+        FROM gen_ledger g
+        LEFT JOIN rescue_assets a ON a.id = g.asset_id
+        GROUP BY 1 ORDER BY 2 DESC
+        """)]
+
+    def _f(rows: list[dict]) -> list[dict]:
+        for r in rows:
+            for k in ("usd", "usd_month"):
+                if k in r:
+                    r[k] = float(r[k] or 0)
+        return rows
+
+    return {
+        "this_month": float(totals["this_month"]),
+        "all_time": float(totals["all_time"]),
+        "n_calls": totals["n_calls"],
+        "by_day": _f(by_day),
+        "by_provider": _f(by_provider),
+        "by_format": _f(by_format),
+    }
+
+
+@router.get("/rescue/formats")
+async def rescue_formats(_: None = Depends(authed_ui)) -> dict:
+    """The format taxonomy + provider registry, for the Formats page and
+    the Generate panel (provider dropdown with per-image cost estimates
+    shown BEFORE the call)."""
+    from . import genmedia, rescue
+    formats = [
+        {"key": key, **{k: v for k, v in spec.items()},
+         "placeholders": rescue.format_placeholders(key)}
+        for key, spec in rescue.FORMATS.items()
+    ]
+    providers = [
+        {"key": key, "api": info["api"], "model": info["model"],
+         "label": info["label"], "usd_per_image": info["usd_per_image"]}
+        for key, info in genmedia.PROVIDERS.items()
+    ]
+    return {"formats": formats, "providers": providers,
+            "image_formats": list(rescue.IMAGE_FORMATS)}
+
+
+@router.get("/rescue/asset-file/{asset_id}")
+async def rescue_asset_file(
+    asset_id: int,
+    x_admin_token: str | None = Header(default=None),
+    token: str | None = Query(default=None),
+):
+    """Stream one rescue asset file (same auth pattern as the audio
+    streamer: header or ?token= for direct <img>/<a> links)."""
+    _check_token(x_admin_token or token)
+    pool = await db.get_pool()
+    row = await pool.fetchrow(
+        "SELECT file_path, mime FROM rescue_assets WHERE id = $1", asset_id)
+    if not row or not row["file_path"]:
+        raise HTTPException(404, "not found")
+    root = (Path(get_settings().data_dir) / "rescue_assets").resolve()
+    p = (root / row["file_path"]).resolve()
+    if not p.is_relative_to(root):
+        raise HTTPException(400, "bad path")
+    if not p.is_file():
+        raise HTTPException(404, "file gone")
+    return FileResponse(p, media_type=row["mime"] or "application/octet-stream")
+
+
 # --- context-clip upload (local alignment pipeline) -------------------------
 
 @router.post("/upload-context/{idiom_id}")

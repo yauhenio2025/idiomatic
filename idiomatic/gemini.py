@@ -207,8 +207,17 @@ async def generate_image(prompt: str, *, out: Path,
     A 400 response gets one compatibility retry without ``imageConfig``;
     image generation otherwise fails loudly rather than creating a placeholder.
     """
+    image = await generate_image_bytes(prompt, aspect_ratio=aspect_ratio)
+    _write_image_atomic(out, image)
+
+
+async def generate_image_bytes(prompt: str, *, model: str | None = None,
+                                aspect_ratio: str = "4:3") -> bytes:
+    """Generate one image and return its bytes. ``model`` overrides
+    settings.gemini_image_model — genmedia's provider registry picks the
+    model per call; the pipeline default stays settings-driven."""
     s = get_settings()
-    url = _model_url(s.gemini_image_model)
+    url = _model_url(model or s.gemini_image_model)
     generation_config: dict[str, Any] = {
         "responseModalities": ["IMAGE"],
         "imageConfig": {"aspectRatio": aspect_ratio},
@@ -282,7 +291,7 @@ async def generate_image(prompt: str, *, out: Path,
             f"Gemini image generation returned only {len(image)} bytes: "
             f"{_response_excerpt(response)}")
 
-    _write_image_atomic(out, image)
+    return image
 
 
 # ============================================================================
