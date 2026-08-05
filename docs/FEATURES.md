@@ -70,6 +70,20 @@
 - **Dependencies**: `ADMIN_TOKEN` env; `adopted_notes` table (db/schema.sql)
 - **Added**: 2026-08-05
 
+### Rescue autopilot (autonomous struggle → draft-asset loop)
+- **Status**: Active
+- **Description**: Daily worker-scheduled loop: headless download-only AnkiWeb pull on Render → struggle list from revlog (≥3 Agains/14d) → snapshot upsert + auto-activation → ladder-driven draft generation (glyph + strike-1 comic) on autopilot-approved Chinese image providers under a hard per-run budget → report to kv_store + dashboard Autopilot card. Never approves assets; never uploads to AnkiWeb.
+- **Entry Points**:
+  - `idiomatic/rescue_autopilot.py` - pull, struggle computer, planner, run loop
+  - `idiomatic/rescue_ops.py` - shared generate-and-store path (endpoint + autopilot)
+  - `idiomatic/genmedia.py` - provider registry incl. qwen-image-3.0-pro (default, $0.037), qwen-image-2.0, qwen-image-2.0-pro, seedream-5.0-pro; Nano Banana manual-only
+  - `idiomatic/worker.py:592` - scheduling hook (janitor cadence)
+  - `idiomatic/api.py` - `POST /admin/rescue/autopilot-run`
+  - `idiomatic/ui_api.py` - `GET /ui/api/rescue/autopilot`
+  - `frontend/src/pages/RescueLab.tsx` - Autopilot card
+- **Dependencies**: `ANKIWEB_HKEY`/`ANKIWEB_ENDPOINT`, `DASHSCOPE_API_KEY`, `ARK_API_KEY` (Render env); `anki` pip package
+- **Added**: 2026-08-05
+
 ### Admin API + dashboard
 - **Status**: Active
 - **Description**: Admin-token endpoints (backfills, retts, rebuild-pools, rotate-agent-token) + React SPA dashboard with read-only `/ui/api/*`.
