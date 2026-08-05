@@ -458,6 +458,22 @@ async def fetch_pool_idioms(lang: str) -> list[dict]:
     return out
 
 
+async def kv_get(key: str) -> str | None:
+    pool = await get_pool()
+    row = await pool.fetchrow("SELECT value FROM kv_store WHERE key = $1", key)
+    return row["value"] if row else None
+
+
+async def kv_set(key: str, value: str) -> None:
+    pool = await get_pool()
+    await pool.execute(
+        """
+        INSERT INTO kv_store (key, value) VALUES ($1, $2)
+        ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value,
+                                        updated_at = NOW()
+        """, key, value)
+
+
 async def expression_langs() -> list[str]:
     pool = await get_pool()
     rows = await pool.fetch(

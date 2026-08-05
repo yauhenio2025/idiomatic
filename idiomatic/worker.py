@@ -594,6 +594,11 @@ async def loop(once: bool = False) -> None:
                     _t.monotonic() - last_janitor > JANITOR_INTERVAL_SEC:
                 last_janitor = _t.monotonic()
                 await run_janitor()
+                # Rescue autopilot rides the janitor cadence (6h checks);
+                # it self-gates on rescue_autopilot_interval_hours via
+                # kv_store and never raises.
+                from . import rescue_autopilot
+                await rescue_autopilot.maybe_run_autopilot()
             try:
                 n_reaped = await db.fail_exhausted_stale_processing(
                     settings.worker_max_attempts)

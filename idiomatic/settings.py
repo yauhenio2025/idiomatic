@@ -26,6 +26,22 @@ class Settings(BaseSettings):
     gemini_tts_model: str = "gemini-3.1-flash-tts-preview"
     gemini_image_model: str = "gemini-3-pro-image-preview"
 
+    # --- Rescue Lab image providers (Chinese models, user directive) ---
+    dashscope_api_key: str | None = None      # Qwen image family
+    ark_api_key: str | None = None            # Seedream (Volcengine Ark)
+
+    # --- Rescue autopilot (see idiomatic/rescue_autopilot.py) ----------
+    # AnkiWeb download-only sync credentials (the hkey from the desktop
+    # profile — full-account credential, env only, never in the repo).
+    ankiweb_hkey: str | None = None
+    ankiweb_endpoint: str = "https://sync31.ankiweb.net/"
+    rescue_autopilot_enabled: bool = True
+    rescue_autopilot_interval_hours: int = 24
+    rescue_autopilot_provider: str = "qwen-image-3.0-pro"
+    rescue_autopilot_budget_usd: float = 1.50   # per run, hard stop
+    rescue_autopilot_max_new_items: int = 3     # auto-activated per run
+    rescue_struggle_min_fails_14d: int = 3      # struggle-list threshold
+
     # Primary TTS provider. "elevenlabs" (default) is ~40× cheaper per
     # character than the Gemini TTS preview (July 2026 audit: Gemini billed
     # ~€2/1k chars vs ElevenLabs turbo at $0.05/1k) and doesn't safety-block

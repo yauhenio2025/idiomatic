@@ -1324,41 +1324,16 @@ async def admin_rescue_generate(
         except ValueError as e:
             raise HTTPException(409, str(e))
 
+    from . import rescue_ops
     try:
-        image, cost_usd = await genmedia.generate_image(
-            provider, prompt, params=params)
+        asset = await rescue_ops.generate_asset(
+            item_id, fmt, provider, prompt, params)
     except genmedia.UnknownProvider as e:
         raise HTTPException(400, str(e))
     except Exception as e:  # noqa: BLE001 — surface provider failures as 502
         log.warning("admin.rescue_generate.failed", item_id=item_id,
                     fmt=fmt, provider=provider, err=repr(e)[:300])
         raise HTTPException(502, f"generation failed: {str(e)[:300]}")
-
-    mime = genmedia.sniff_mime(image)
-    ext = {"image/png": "png", "image/jpeg": "jpg",
-           "image/webp": "webp"}.get(mime, "bin")
-    rel = f"{item_id}/{fmt}_{secrets.token_hex(4)}.{ext}"
-    path = Path(get_settings().data_dir) / "rescue_assets" / rel
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(image)
-
-    info = genmedia.PROVIDERS[provider]
-    asset = await pool.fetchrow(
-        """
-        INSERT INTO rescue_assets (item_id, format, provider, model, prompt,
-                                   params, file_path, mime, cost_usd)
-        VALUES ($1, $2, $3, $4, $5, $6::jsonb, $7, $8, $9)
-        RETURNING *
-        """,
-        item_id, fmt, provider, info["model"], prompt,
-        json.dumps(params, ensure_ascii=False), rel, mime, cost_usd)
-    await pool.execute(
-        """
-        INSERT INTO gen_ledger (provider, model, kind, units, unit_kind,
-                                cost_usd, item_id, asset_id)
-        VALUES ($1, $2, 'image', 1, 'image', $3, $4, $5)
-        """,
-        provider, info["model"], cost_usd, item_id, asset["id"])
     return {"ok": True, "asset": _rescue_item_dict(asset)}
 
 
@@ -1489,6 +1464,25 @@ async def admin_rescue_item_patch(
         "SELECT id, label, gloss, example_tl, example_en, ord "
         "FROM rescue_senses WHERE item_id = $1 ORDER BY ord", item_id)]
     return {"ok": True, "item": _rescue_item_dict(row), "senses": senses}
+
+
+@app.post("/admin/rescue/autopilot-run")
+async def admin_rescue_autopilot_run(
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Force an autopilot run now (pull → struggle refresh → draft
+    generation under budget). Runs in the background; read the result at
+    /ui/api/rescue/autopilot when it lands."""
+    from . import rescue_autopilot
+
+    async def _run() -> None:
+        try:
+            await rescue_autopilot.run_autopilot(force=True)
+        except Exception as e:  # noqa: BLE001
+            log.warning("admin.rescue_autopilot.failed", err=repr(e)[:300])
+
+    _spawn_bg(_run())
+    return {"started": True}
 
 
 @app.get("/admin/rescue/export/{item_id}")

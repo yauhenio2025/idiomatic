@@ -11,6 +11,77 @@ import { Card, Empty, ErrorBox, LangBadge, Spinner, StatTile, Td, Th } from "../
 import { fmtAgo, fmtUsd } from "../format";
 import { useApi } from "../hooks";
 
+type AutopilotStatus = {
+  enabled: boolean;
+  interval_hours: number;
+  provider: string;
+  budget_usd_per_run: number;
+  ankiweb_configured: boolean;
+  last_run_epoch: number | null;
+  last_report: {
+    ran_at: string;
+    pull: string | null;
+    struggles: { found: number; new_items: number; refreshed: number } | null;
+    activated: string[];
+    generated: { item: string; format: string; asset_id: number; cost_usd: number }[];
+    notes: string[];
+    errors: string[];
+    spent_usd: number;
+  } | null;
+};
+
+function AutopilotCard() {
+  const { data: ap } = useApi<AutopilotStatus>("/rescue/autopilot");
+  if (!ap) return null;
+  const r = ap.last_report;
+  return (
+    <Card
+      title="Autopilot"
+      aside={
+        <span className="text-xs text-muted">
+          {ap.enabled ? `every ${ap.interval_hours}h` : "disabled"} ·{" "}
+          {ap.provider} · budget {fmtUsd(ap.budget_usd_per_run)}/run
+          {!ap.ankiweb_configured && (
+            <span className="ml-2 text-critical">AnkiWeb key missing</span>
+          )}
+        </span>
+      }
+    >
+      {!r ? (
+        <Empty>No run yet — POST /admin/rescue/autopilot-run to force one.</Empty>
+      ) : (
+        <div className="flex flex-col gap-1.5 text-xs">
+          <div>
+            <span className="text-muted">Last run {fmtAgo(r.ran_at)}: </span>
+            pull {r.pull ?? "skipped"}
+            {r.struggles &&
+              ` · ${r.struggles.found} struggle idioms (${r.struggles.new_items} new, ${r.struggles.refreshed} refreshed)`}
+            {r.activated.length > 0 && ` · activated ${r.activated.join(", ")}`}
+          </div>
+          <div>
+            generated {r.generated.length} draft
+            {r.generated.length === 1 ? "" : "s"} · spent{" "}
+            <span className="tnum">{fmtUsd(r.spent_usd)}</span>
+            {r.errors.length > 0 && (
+              <span className="text-critical"> · {r.errors.length} errors</span>
+            )}
+          </div>
+          {r.generated.length > 0 && (
+            <div className="text-muted">
+              {r.generated.map((g) => `${g.item} (${g.format})`).join(" · ")}
+            </div>
+          )}
+          {[...r.errors, ...r.notes].slice(0, 4).map((n, i) => (
+            <div key={i} className="text-muted">
+              — {n}
+            </div>
+          ))}
+        </div>
+      )}
+    </Card>
+  );
+}
+
 export default function RescueLab() {
   const [lang, setLang] = useState("");
   const [status, setStatus] = useState("");
@@ -60,6 +131,8 @@ export default function RescueLab() {
           sub={`${data.rows.filter((r) => r.status === "active").length} active`}
         />
       </div>
+
+      <AutopilotCard />
 
       {c && (c.by_provider.length > 0 || c.by_format.length > 0) && (
         <div className="grid gap-3 lg:grid-cols-2">

@@ -752,6 +752,30 @@ async def rescue_costs(_: None = Depends(authed_ui)) -> dict:
     }
 
 
+@router.get("/rescue/autopilot")
+async def rescue_autopilot_status(_: None = Depends(authed_ui)) -> dict:
+    """Last autopilot run report (kv_store) + schedule state, for the
+    overview's Autopilot card."""
+    import json as _json
+
+    from . import db as _db
+    from .rescue_autopilot import KV_LAST, KV_LAST_RUN_TS
+    from .settings import get_settings as _gs
+
+    s = _gs()
+    raw = await _db.kv_get(KV_LAST)
+    last_ts = await _db.kv_get(KV_LAST_RUN_TS)
+    return {
+        "enabled": s.rescue_autopilot_enabled,
+        "interval_hours": s.rescue_autopilot_interval_hours,
+        "provider": s.rescue_autopilot_provider,
+        "budget_usd_per_run": s.rescue_autopilot_budget_usd,
+        "ankiweb_configured": bool(s.ankiweb_hkey),
+        "last_run_epoch": int(last_ts) if last_ts else None,
+        "last_report": _json.loads(raw) if raw else None,
+    }
+
+
 @router.get("/rescue/formats")
 async def rescue_formats(_: None = Depends(authed_ui)) -> dict:
     """The format taxonomy + provider registry, for the Formats page and

@@ -21,7 +21,9 @@ from idiomatic import genmedia, rescue
 # --- provider registry ------------------------------------------------------
 
 def test_registry_entries_are_complete_and_image_only():
-    assert set(genmedia.PROVIDERS) == {"nano-banana", "nano-banana-lite"}
+    assert set(genmedia.PROVIDERS) == {
+        "qwen-image-3.0-pro", "qwen-image-2.0", "qwen-image-2.0-pro",
+        "seedream-5.0-pro", "nano-banana", "nano-banana-lite"}
     for key, info in genmedia.PROVIDERS.items():
         assert info["api"] in genmedia._ADAPTERS, key
         assert isinstance(info["model"], str) and info["model"]
