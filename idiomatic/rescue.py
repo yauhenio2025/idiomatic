@@ -233,10 +233,12 @@ def fill_template(fmt: str, item: Mapping[str, Any],
                          "no generation template")
     idiom = (item.get("idiom") or "").strip()
     gloss = (item.get("gloss") or "").strip() or "meaning unknown"
-    anchor = (item.get("anchor") or "").strip() or gloss
+    # Trailing periods come off — the templates place their own
+    # sentence-ending punctuation after these slots.
+    anchor = ((item.get("anchor") or "").strip() or gloss).rstrip(".")
     snapshot = item.get("struggle_snapshot") or {}
     sentences = snapshot.get("failed_sentences") or []
-    scene_hint = (sentences[0] if sentences else anchor)
+    scene_hint = (sentences[0].strip() if sentences else anchor).rstrip(".")
     values = {
         "idiom": idiom,
         "idiom_upper": idiom.upper(),

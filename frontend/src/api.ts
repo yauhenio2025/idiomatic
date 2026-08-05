@@ -102,6 +102,22 @@ export async function audioUrl(relPath: string): Promise<string> {
   return url;
 }
 
+// Rescue asset images ride the same authed-blob pattern (an <img> can't
+// send the token header), cached per asset id for the session.
+const assetCache = new Map<number, string>();
+
+export async function assetFileUrl(assetId: number): Promise<string> {
+  const cached = assetCache.get(assetId);
+  if (cached) return cached;
+  const res = await fetch(`/ui/api/rescue/asset-file/${assetId}`, {
+    headers: { "X-Admin-Token": getToken() ?? "" },
+  });
+  if (!res.ok) throw new ApiError(res.status, "asset fetch failed");
+  const url = URL.createObjectURL(await res.blob());
+  assetCache.set(assetId, url);
+  return url;
+}
+
 // ---- shared types ---------------------------------------------------------
 
 export const LANG_COLORS: Record<string, string> = {

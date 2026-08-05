@@ -11,6 +11,9 @@ import ExpressionDetail from "./pages/ExpressionDetail";
 import Channels from "./pages/Channels";
 import Grammar from "./pages/Grammar";
 import GrammarUnit from "./pages/GrammarUnit";
+import RescueLab from "./pages/RescueLab";
+import RescueItem from "./pages/RescueItem";
+import RescueFormats from "./pages/RescueFormats";
 import Delivery from "./pages/Delivery";
 
 export default function App() {
@@ -65,6 +68,9 @@ export default function App() {
         <Route path="/channels" element={<Channels />} />
         <Route path="/grammar" element={<Grammar />} />
         <Route path="/grammar/unit/:key" element={<GrammarUnit />} />
+        <Route path="/rescue" element={<RescueLab />} />
+        <Route path="/rescue/item/:id" element={<RescueItem />} />
+        <Route path="/rescue/formats" element={<RescueFormats />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>

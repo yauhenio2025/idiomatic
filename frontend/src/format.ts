@@ -42,6 +42,13 @@ export function fmtAgo(iso: string | null | undefined): string {
   return `${Math.floor(h / 24)}d ago`;
 }
 
+export function fmtUsd(n: number | null | undefined): string {
+  if (n == null) return "—";
+  if (n === 0) return "$0";
+  // Per-image costs are cents; keep a third decimal below $1.
+  return n >= 1 ? `$${n.toFixed(2)}` : `$${n.toFixed(3)}`;
+}
+
 export const LANG_NAMES: Record<string, string> = {
   de: "German",
   es: "Spanish",
