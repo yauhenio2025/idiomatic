@@ -51,12 +51,24 @@
 
 ### Agent API + Anki add-on
 - **Status**: Active
-- **Description**: Add-on (local, not in git) polls `/apkgs/pending`, downloads, imports on Qt main thread, acks; one-shot `cleanup.json` purge mechanism.
+- **Description**: Add-on (local, not in git) polls `/apkgs/pending`, downloads, imports on Qt main thread, acks; one-shot `cleanup.json` purge mechanism. Since 2026-08-05 the add-on also auto-syncs with AnkiWeb programmatically (after every import batch + every 30 min, full-sync conflicts never auto-answered) — desktop Anki needs no manual open/close.
 - **Entry Points**:
-  - `idiomatic/api.py:99` - `/apkgs/pending`
-  - `idiomatic/api.py:125` - `/apkgs/{id}/download`
-  - `idiomatic/api.py:141` - `/apkgs/{id}/ack`
+  - `idiomatic/api.py:109` - `/apkgs/pending`
+  - `idiomatic/api.py:135` - `/apkgs/{id}/download`
+  - `idiomatic/api.py:151` - `/apkgs/{id}/ack`
 - **Dependencies**: agent bearer token (DB `agents` row)
+- **Added**: pre-2026-07 | **Modified**: 2026-08-05
+
+### Anki collection reconciliation (orphan adoption)
+- **Status**: Active
+- **Description**: Diff the user's Anki collection against the live catalog and re-adopt studied orphan notes (cards whose server rows were purged/superseded) into `adopted_notes`; never-studied orphans are deleted via the add-on's cleanup.json. Feeds the adaptive-study initiative (docs/research/ANKI_STATS_POC.md).
+- **Entry Points**:
+  - `idiomatic/api.py:317` - `GET /admin/anki-guids` (current guid export per kind)
+  - `idiomatic/api.py:326` - `POST /admin/adopt-orphans`
+  - `idiomatic/pipeline/adoption.py` - guid computation + adoption logic
+  - `idiomatic/db.py:468` - `upsert_adopted_notes`
+- **Dependencies**: `ADMIN_TOKEN` env; `adopted_notes` table (db/schema.sql)
+- **Added**: 2026-08-05
 
 ### Admin API + dashboard
 - **Status**: Active

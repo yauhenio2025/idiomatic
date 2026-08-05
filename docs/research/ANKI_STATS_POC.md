@@ -58,6 +58,21 @@ end**; no production code yet.
   delete). The recommender must tolerate orphans — card fields carry
   enough content (idiom, gloss, 6 sentence pairs, source) to generate
   remediation without the DB row.
+  **RESOLVED 2026-08-05 (user directive):** censused 33,012 YT-pipeline
+  notes → 8,217 orphans; the 4,752 studied ones now live in the
+  `adopted_notes` table (full fields + reps/lapses/last_review, via
+  `POST /admin/adopt-orphans`); the 3,465 never-studied ones were
+  deleted from the collection via cleanup.json. `GET /admin/anki-guids`
+  exports the current per-kind guid catalog for future re-runs. The
+  remediation pipeline should read expressions ∪ adopted_notes.
+  Old-generation models (Audio Phrase v3, Idiom Card v2/v3, Cloud Card
+  v1) were included; the grammar family (Drill/Exercises/Podcast/
+  Translation) is curated content and stays out of orphan logic.
+- **Desktop staleness SOLVED 2026-08-05:** the idiomatic_puller add-on
+  now auto-syncs (after imports + every 30 min, `sync_status`-gated so
+  full-sync conflicts are never auto-answered), and Anki autostarts at
+  login. The AnkiWeb pull recipe above stays the right read path for
+  analytics — it needs no desktop at all.
 - **Deck names are not a reliable key.** The user reorganized some
   idiomatic decks into their own `Languages::<Lang>::…` hierarchy
   (de/es/pt) while it stayed under `Idiomatic::…`. Use tags
