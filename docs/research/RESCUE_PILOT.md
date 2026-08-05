@@ -1,4 +1,56 @@
-# Idiom Rescue Pilot №1 (2026-08-05) — awaiting user approval
+# Idiom Rescue Pilot №1 (2026-08-05) — round 2 under review
+
+## ROUND-1 VERDICT (user, 2026-08-05 afternoon)
+
+**Comics > SVG diagrams > videos (dropped — "not helpful at all").**
+Sentences and cloze exercises confirmed "very good". The winning
+moments made the *expression itself* visible (the cone of shadow),
+not just a scene from one sentence — the user's framing: the failure
+is an un-mastered expression, not a forgotten sentence. MiniMax video
+is out of the pipeline.
+
+## ROUND 2 — word-centered image formats (exemplars generated, in review)
+
+Five formats that encode the expression rather than illustrate a
+sentence (exemplars on the same artifact page, all Nano Banana except
+where noted):
+
+1. **Inside/outside contrast** — the idiom's spatial logic as one
+   image, teaching the opposite for free (estar por dentro / por fora).
+2. **Polysemy map** — one word, three doors (está tirado: en el suelo /
+   baratísimo / facilísimo); targets door-confusion failures.
+3. **Morphology anatomy** — the word as an exploded machine (se
+   desbloquee: steel se·des + concrete BLOQUE cracking + golden
+   pending -e over a closed gate). Needed a strict letter-order
+   prompt on retry — word must read cleanly left-to-right or the
+   format is void.
+4. **Iconic poster** — the metaphor's source domain as one flat emblem
+   (giocare in casa: house-shaped stadium). Replaces what video tried.
+5. **Idiom glyphs** — a permanent minimal logo per expression, stamped
+   on every future card of that idiom: the constant identity across
+   changing content.
+
+## Repeat-failure escalation ladder (proposed)
+
+Principle: a repeat failure means the current encoding didn't bind —
+switch the encoding axis, never regenerate a harder same-axis version.
+The glyph stays constant. Diagnose the failure type from revlog grain
+(e2t fail = production, t2e = recognition, cloze-grammar = form,
+one-sense clustering = polysemy) and pick the follow-up format by
+type:
+
+- **Strike 1** (enters struggle list, ≥3 Agains/14d): comic + anchor +
+  3 personalized sentences + cloze/production. Glyph minted.
+- **Strike 2** (still failing 7d after v1): switch axis by diagnosis —
+  production→morphology anatomy; recognition→contrast/poster;
+  polysemy→polysemy map. All sentences replaced (never let the card
+  be memorized instead of the idiom).
+- **Strike 3** (still failing 7d after v2): keyword mnemonic on the
+  user's other languages + metacognitive "here is the fork" card +
+  seed the idiom into the next exercises2/grammar wave.
+- **Release**: parent idiom's Again-rate below threshold 21 days →
+  rescue cards auto-retire; glyph archived for relapse.
+
 
 The first personalization experiment built on the Anki study-data POC
 (ANKI_STATS_POC.md): take the idioms the user actually failed **this
