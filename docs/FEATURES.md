@@ -1,6 +1,6 @@
 # Feature Inventory
 
-> Auto-maintained by Claude Code. Last updated: 2026-08-03
+> Auto-maintained by Claude Code. Last updated: 2026-08-05
 
 ## Ingestion
 
@@ -147,6 +147,25 @@
   - `tests/test_translation.py` - model/GUID/selection/bolding/cache/apkg/silence coverage (16 tests)
 - **Dependencies**: grammar drill audio stage (`idiomatic/grammar/audio.py` naming + reuse check), `_full_html` bolding (`idiomatic/grammar/apkg.py`), cluster strings (`idiomatic/grammar/curriculum.py`), `gemini.synthesize` provider chain, `leveled_speech_clip` + voice fingerprint (`idiomatic/grammar/explainers.py`), `EN_VOICE` (`idiomatic/pipeline/audio.py`), genanki
 - **Added**: 2026-08-04
+
+## Rescue Lab
+
+### Rescue Lab (struggle-idiom experiment tracker + asset generation)
+- **Status**: Active
+- **Description**: Operating surface for the rescue initiative (docs/research/RESCUE_PILOT.md): struggle snapshots (from the AnkiWeb revlog pull, uploaded off-server) become `rescue_items`; per-item image assets (comic, contrast, polysemy map, morphology anatomy, poster, glyph — NO video, user verdict) are generated through switchable providers with full cost accounting in `gen_ledger`. Hard rules enforced in code: polysemy_map unapprovable without ≥2 fully-taught senses (gloss + micro-example each), anatomy templates demand strict left-to-right letter order, one permanent glyph per idiom (approval pins `glyph_asset_id`; a second approved glyph is refused).
+- **Entry Points**:
+  - `idiomatic/genmedia.py` - provider registry (`nano-banana`/`nano-banana-lite`, prices verified against official docs 2026-08-05) + `generate_image()` → (bytes, cost)
+  - `idiomatic/rescue.py` - format taxonomy + prompt templates (seeded from the pilot's approved prompts), template fill, polysemy guard, snapshot/senses validation
+  - `idiomatic/api.py:1212-1520` - `/admin/rescue/struggles|generate|asset/{id}/verdict|item/{id}|export/{item_id}`
+  - `idiomatic/ui_api.py:605-795` - `/ui/api/rescue/items|item/{id}|costs|formats|asset-file/{id}`
+  - `frontend/src/pages/RescueLab.tsx` - overview (cost tiles, spend by provider/format, struggle table)
+  - `frontend/src/pages/RescueItem.tsx` - item page (senses editor, asset gallery with verdicts, Generate panel with pre-call cost estimate)
+  - `frontend/src/pages/RescueFormats.tsx` - format taxonomy page
+  - `tools/seed_rescue_pilot.py` - idempotent pilot-cohort seeder (9 items from docs/research/rescue_pilot1/)
+  - `db/schema.sql` - `rescue_items`, `rescue_assets`, `rescue_senses`, `gen_ledger`
+  - `tests/test_rescue.py` - registry/templates/guards + schema round-trip on ephemeral Postgres
+- **Dependencies**: `GEMINI_API_KEY` (image models), Admin API + dashboard; asset files under `/data/rescue_assets/`
+- **Added**: 2026-08-05
 
 ### LingQ vocabulary mirror
 - **Status**: Active

@@ -3,13 +3,15 @@
 https://idiomatic-app.onrender.com/ — served by the same FastAPI app that
 runs the pipeline; log in with the admin token (local copy:
 `~/.config/idiomatic-admin.env`). Read-only — EXCEPT the Grammar section
-(amended 2026-07-31 by the Wave-6 commission): grammar pages may trigger
-generation/rebuild runs and edit curriculum-unit state via `/admin/*`
+(amended 2026-07-31 by the Wave-6 commission) and the Rescue Lab section
+(amended 2026-08-05 by the Rescue Lab commission): those pages may
+trigger generation runs and edit their own state via `/admin/*`
 endpoints. Everything else still cannot mutate pipeline state.
 
 ## What each page answers
 
-Navigation: Overview · Videos · Expressions · Channels · Grammar · Delivery.
+Navigation: Overview · Videos · Expressions · Channels · Grammar ·
+Rescue Lab · Delivery.
 
 **Overview** — "is the machine alive, and what has it been producing?"
 Health strip: worker state (idle/processing/stalled — stalled means work
@@ -62,6 +64,31 @@ mini-card with audio playback and a retire control (retired cards drop
 from the deck at the next rebuild; the note stays in Anki until a
 cleanup.json purge), and the full reject list with verifier reasons.
 Unit settings (target size, status, notes) are editable in place.
+
+**Rescue Lab** — "which idioms am I failing, what are we trying against
+each one, and what does it cost?" The operating surface for the rescue
+initiative (docs/research/RESCUE_PILOT.md). Overview: cost tiles (this
+month / all-time / top provider, from `gen_ledger` — every paid call is
+counted even if its asset was later rejected or deleted) plus spend by
+provider and by format, then the struggle-item table (lang, idiom,
+fails today/14d from the uploaded snapshot, escalation strike ●○○,
+status, senses count, approved/total assets, per-item spend). Items
+arrive via `POST /admin/rescue/struggles` — the snapshot is computed
+off-server from the AnkiWeb revlog pull. The item page holds the whole
+loop: editable status/strike/gloss/anchor, the senses editor (the
+polysemy rule's surface — a polysemy map cannot be APPROVED until the
+item has ≥2 senses each carrying gloss + micro-example), the assets
+gallery grouped by format for side-by-side provider comparison with
+per-asset approve/reject + note, and the Generate panel: format picker
+(comic/contrast/polysemy_map/anatomy/poster/glyph — video does not
+exist here, by user verdict), provider/model dropdown, prompt textarea
+prefilled server-side from the format template with the item's fields
+substituted, and the estimated cost shown BEFORE the call. Approving a
+glyph pins it as the idiom's permanent glyph; approving a second one is
+refused while the first stands. The Formats page renders the taxonomy
+(when-to-use, design rules, template, placeholders) plus the provider
+registry with per-image prices. Images stream authed via
+`/ui/api/rescue/asset-file/{id}`; files live under /data/rescue_assets/.
 
 **Delivery** — "did it reach Anki?" Agent liveness (the add-on's
 last_seen), then every apkg with kind, size, built time, and ack state:
