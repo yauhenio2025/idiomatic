@@ -241,6 +241,9 @@ async def run_autopilot(force: bool = False) -> dict:
     if not s.rescue_autopilot_enabled and not force:
         report["notes"].append("autopilot disabled (rescue_autopilot_enabled)")
         return report
+    # Stamp the run at START so an overlapping instance (deploy overlap,
+    # worker restart) doesn't kick off a second concurrent run.
+    await db.kv_set(KV_LAST_RUN_TS, str(int(time.time())))
 
     # -- 1. PULL + 2. DIFF -------------------------------------------------
     if not s.ankiweb_hkey:
@@ -272,9 +275,20 @@ async def run_autopilot(force: bool = False) -> dict:
 
     if provider:
         pool = await db.get_pool()
-        items = [dict(r) for r in await pool.fetch(
-            "SELECT * FROM rescue_items WHERE status = 'active' "
-            "ORDER BY (struggle_snapshot->>'fails_14d')::int DESC NULLS LAST")]
+        items = []
+        for r in await pool.fetch(
+                "SELECT * FROM rescue_items WHERE status = 'active' "
+                "ORDER BY (struggle_snapshot->>'fails_14d')::int "
+                "DESC NULLS LAST"):
+            d = dict(r)
+            # asyncpg hands jsonb back as a string unless a codec is
+            # registered — fill_template needs the parsed dict.
+            if isinstance(d.get("struggle_snapshot"), str):
+                try:
+                    d["struggle_snapshot"] = json.loads(d["struggle_snapshot"])
+                except ValueError:
+                    d["struggle_snapshot"] = None
+            items.append(d)
         assets_by_item: dict[int, list[dict]] = {}
         for a in await pool.fetch(
                 "SELECT id, item_id, format, status FROM rescue_assets"):
