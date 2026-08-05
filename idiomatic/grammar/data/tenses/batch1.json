@@ -1,0 +1,1258 @@
+{
+ "meta": {
+  "batch": 1,
+  "date": "2026-08-05",
+  "source": "docs/research/tenses-profiles/ (old-account _tenses_old corpus, 2015-2022); selections = top-3 per language by lapses, with one exception: fr #1 coudre·imparfait du subjonctif parked as a museum tense — fr takes ranks 2-4.",
+  "verified": "table-backed forms via grammar/morphology.py; 'attested' = the corpus's own deck backs (fr obéir/valoir + de verbs + imperatives absent from the vendored tables)"
+ },
+ "verbs": [
+  {
+   "lang": "de",
+   "verb": "lügen",
+   "gloss": "to (tell a) lie",
+   "tense_key": "praeteritum",
+   "tense_label": "Präteritum",
+   "verify": "attested",
+   "history": {
+    "lapses": 108,
+    "reps": 449
+   },
+   "fork": "Strong verb: ü→o and NO -te — the pull toward „lügte“ is the weak pattern misapplying itself. Twins: ich log · er log (no -t in the 3rd). Anchor rail: lügen · log · gelogen.",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "ich",
+     "form": "log",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "du",
+     "form": "logst",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "er/sie/es",
+     "form": "log",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "wir",
+     "form": "logen",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "ihr",
+     "form": "logt",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "sie/Sie",
+     "form": "logen",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "In my first draft, I lied about the source of the leak.",
+     "tl": "In meinem ersten Entwurf log ich über die Quelle des Leaks."
+    },
+    {
+     "person": "2s",
+     "en": "You lied about the algorithm — and I have the emails.",
+     "tl": "Du logst über den Algorithmus – und ich habe die E-Mails."
+    },
+    {
+     "person": "3s",
+     "en": "The CEO lied under oath about the data sales.",
+     "tl": "Der CEO log unter Eid über die Datenverkäufe.",
+     "trap": "1st and 3rd singular are twins: ich log · er log."
+    },
+    {
+     "person": "1p",
+     "en": "We lied when we claimed the platform was neutral.",
+     "tl": "Wir logen, als wir behaupteten, die Plattform sei neutral."
+    },
+    {
+     "person": "2p",
+     "en": "Back then you all lied in every press release.",
+     "tl": "Damals logt ihr in jeder Pressemitteilung."
+    },
+    {
+     "person": "3p",
+     "en": "The lobbyists lied about the study's funding.",
+     "tl": "Die Lobbyisten logen über die Finanzierung der Studie."
+    }
+   ]
+  },
+  {
+   "lang": "de",
+   "verb": "schaffen",
+   "gloss": "to manage (schaffte) / to create (schuf)",
+   "tense_key": "konjunktiv_ii",
+   "tense_label": "Konjunktiv II",
+   "verify": "attested",
+   "history": {
+    "lapses": 84,
+    "reps": 351
+   },
+   "fork": "TWO verbs share this spelling: weak schaffen·schaffte = to manage; strong schaffen·schuf/schüfe = to create. Your old deck drilled schuf on one card and schaffte on the other — competing paradigms for seven years. Weak K II is identical to the Präteritum, which is why spoken German bypasses it with würde schaffen.",
+   "answer_note": "spoken escape: würde … schaffen · ‘to create’ rail: schüfe",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "ich",
+     "form": "schaffte",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "du",
+     "form": "schafftest",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "er/sie/es",
+     "form": "schaffte",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "wir",
+     "form": "schafften",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "ihr",
+     "form": "schafftet",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "sie/Sie",
+     "form": "schafften",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "If I had more time, I'd manage the deadline.",
+     "tl": "Wenn ich mehr Zeit hätte, schaffte ich die Deadline."
+    },
+    {
+     "person": "2s",
+     "en": "Without Twitter, you'd get twice as much done.",
+     "tl": "Ohne Twitter schafftest du doppelt so viel."
+    },
+    {
+     "person": "3s",
+     "en": "Even an intern could handle this migration — if anyone let them.",
+     "tl": "Selbst ein Praktikant schaffte diese Migration, wenn man ihn ließe.",
+     "trap": "Looks exactly like Präteritum — only the wenn-frame marks it as K II."
+    },
+    {
+     "person": "1p",
+     "en": "Together we could manage the relaunch before the elections.",
+     "tl": "Zusammen schafften wir den Relaunch noch vor den Wahlen."
+    },
+    {
+     "person": "2p",
+     "en": "You'd manage it even without the consultants.",
+     "tl": "Ihr schafftet es auch ohne die Berater."
+    },
+    {
+     "person": "3p",
+     "en": "The regulators would never manage to read all the filings.",
+     "tl": "Die Regulierer schafften es nie, alle Eingaben zu lesen."
+    }
+   ]
+  },
+  {
+   "lang": "de",
+   "verb": "liegen",
+   "gloss": "to lie / be situated",
+   "tense_key": "praeteritum",
+   "tense_label": "Präteritum",
+   "verify": "attested",
+   "history": {
+    "lapses": 67,
+    "reps": 281
+   },
+   "fork": "The liegen/legen minimal pair fills four of your top-8 German rows: liegen (strong) → lag; legen (weak) → legte. And your #1 and #3 are one vowel apart: log (lied) vs lag (lay). Position verbs: lag = state, legte = action.",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "ich",
+     "form": "lag",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "du",
+     "form": "lagst",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "er/sie/es",
+     "form": "lag",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "wir",
+     "form": "lagen",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "ihr",
+     "form": "lagt",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "sie/Sie",
+     "form": "lagen",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "I lay on the newsroom sofa with my laptop yesterday.",
+     "tl": "Ich lag gestern mit dem Laptop auf dem Redaktionssofa."
+    },
+    {
+     "person": "2s",
+     "en": "You were lying sick in bed during the server outage.",
+     "tl": "Du lagst während des Serverausfalls krank im Bett."
+    },
+    {
+     "person": "3s",
+     "en": "The confidential report lay open on her desk.",
+     "tl": "Der vertrauliche Bericht lag offen auf ihrem Schreibtisch."
+    },
+    {
+     "person": "1p",
+     "en": "We were far off the official figures with our forecast.",
+     "tl": "Wir lagen mit unserer Prognose deutlich neben den offiziellen Zahlen."
+    },
+    {
+     "person": "2p",
+     "en": "You all lay exhausted in the break room after the night shift.",
+     "tl": "Ihr lagt nach der Nachtschicht erschöpft im Ruheraum."
+    },
+    {
+     "person": "3p",
+     "en": "The files lay unchecked at the regulator's office on Monday.",
+     "tl": "Die Akten lagen am Montag ungeprüft bei der Aufsichtsbehörde."
+    }
+   ]
+  },
+  {
+   "lang": "es",
+   "verb": "saber",
+   "gloss": "to know",
+   "tense_key": "presente_subjuntivo",
+   "tense_label": "Presente de subjuntivo",
+   "verify": {
+    "mood": "subjuntivo",
+    "tense": "presente"
+   },
+   "history": {
+    "lapses": 60,
+    "reps": 221
+   },
+   "answer_prefix": "que",
+   "fork": "sep- is its own stem — sepa is neither sé nor sabe. Watch the ser collision: que yo sea (ser) vs que yo sepa (saber). Fixed phrase to anchor it: «que yo sepa» = as far as I know.",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "yo",
+     "form": "sepa",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tú",
+     "form": "sepas",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "él/ella/Ud.",
+     "form": "sepa",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "nosotros",
+     "form": "sepamos",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "vosotros",
+     "form": "sepáis",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "ellos/Uds.",
+     "form": "sepan",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "The editor doubts that I know who leaked the report.",
+     "tl": "La editora duda que yo sepa quién filtró el informe."
+    },
+    {
+     "person": "2s",
+     "en": "It is vital that you know how this app tracks data.",
+     "tl": "Es vital que tú sepas cómo rastrea datos esta aplicación."
+    },
+    {
+     "person": "3s",
+     "en": "The regulator requires that she know who finances the platform.",
+     "tl": "El regulador exige que ella sepa quién financia la plataforma."
+    },
+    {
+     "person": "1p",
+     "en": "It is advisable that we know when they will publish the new sanctions.",
+     "tl": "Conviene que nosotros sepamos cuándo publicarán las nuevas sanciones."
+    },
+    {
+     "person": "2p",
+     "en": "The director wants you all to know how to spot manipulated headlines.",
+     "tl": "La directora quiere que vosotros sepáis detectar titulares manipulados."
+    },
+    {
+     "person": "3p",
+     "en": "The judges insist that they know how to protect their sources.",
+     "tl": "Los jueces insisten en que ellos sepan proteger sus fuentes."
+    }
+   ]
+  },
+  {
+   "lang": "es",
+   "verb": "decir",
+   "gloss": "to say",
+   "tense_key": "imperfecto_subjuntivo",
+   "tense_label": "Imperfecto de subjuntivo",
+   "verify": {
+    "mood": "subjuntivo",
+    "tense": "imperfecto"
+   },
+   "history": {
+    "lapses": 45,
+    "reps": 219
+   },
+   "answer_prefix": "si",
+   "fork": "Built on the j-preterite: dije → dijera. Never *diciera — the j-stem family (dije, traje, conduje) drops -ie- in the -ra forms: dijera, trajera, condujera.",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "yo",
+     "form": "dijera",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tú",
+     "form": "dijeras",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "él/ella/Ud.",
+     "form": "dijera",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "nosotros",
+     "form": "dijéramos",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "vosotros",
+     "form": "dijerais",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "ellos/Uds.",
+     "form": "dijeran",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "The boss expected me to tell the truth about the failure.",
+     "tl": "El jefe esperaba que yo dijera la verdad sobre el fallo."
+    },
+    {
+     "person": "2s",
+     "en": "Nobody would believe the rumor even if you said who warned you.",
+     "tl": "Nadie creería el rumor aunque tú dijeras quién te avisó."
+    },
+    {
+     "person": "3s",
+     "en": "The network denied that she said that during the interview.",
+     "tl": "La cadena negó que ella dijera eso durante la entrevista."
+    },
+    {
+     "person": "1p",
+     "en": "The minister preferred us to say less about the negotiations.",
+     "tl": "El ministro prefería que nosotros dijéramos menos sobre las negociaciones."
+    },
+    {
+     "person": "2p",
+     "en": "It would be better if you all clearly said who approved the algorithm.",
+     "tl": "Sería mejor que vosotros dijerais claramente quién aprobó el algoritmo."
+    },
+    {
+     "person": "3p",
+     "en": "The lawyer doubted that they told the committee the whole truth.",
+     "tl": "El abogado dudaba que ellos dijeran toda la verdad al comité."
+    }
+   ]
+  },
+  {
+   "lang": "es",
+   "verb": "ver",
+   "gloss": "to see",
+   "tense_key": "presente_subjuntivo",
+   "tense_label": "Presente de subjuntivo",
+   "verify": {
+    "mood": "subjuntivo",
+    "tense": "presente"
+   },
+   "history": {
+    "lapses": 32,
+    "reps": 137
+   },
+   "answer_prefix": "que",
+   "fork": "vea (ver, to see) keeps colliding with vaya (ir, to go) — two three-letter subjunctives, both from your struggle list. ve- + a: vea, veas, veamos.",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "yo",
+     "form": "vea",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tú",
+     "form": "veas",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "él/ella/Ud.",
+     "form": "vea",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "nosotros",
+     "form": "veamos",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "vosotros",
+     "form": "veáis",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "ellos/Uds.",
+     "form": "vean",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "The producer asks me to view the cut before the news bulletin.",
+     "tl": "La productora pide que yo vea el montaje antes del informativo."
+    },
+    {
+     "person": "2s",
+     "en": "I hope you soon see how the platform manipulates your preferences.",
+     "tl": "Ojalá tú veas pronto cómo la plataforma manipula tus preferencias."
+    },
+    {
+     "person": "3s",
+     "en": "The committee wants him to see the evidence without filters.",
+     "tl": "El comité quiere que él vea las pruebas sin filtros."
+    },
+    {
+     "person": "1p",
+     "en": "It is crucial that we see who buys political advertising.",
+     "tl": "Es crucial que nosotros veamos quién compra publicidad política."
+    },
+    {
+     "person": "2p",
+     "en": "The editor orders you all to watch the complete documentary.",
+     "tl": "La editora ordena que vosotros veáis el documental completo."
+    },
+    {
+     "person": "3p",
+     "en": "I doubt they see the risks of automating the newsroom.",
+     "tl": "Dudo que ellos vean los riesgos de automatizar la redacción."
+    }
+   ]
+  },
+  {
+   "lang": "fr",
+   "verb": "vouloir",
+   "gloss": "to want",
+   "tense_key": "subjonctif_present",
+   "tense_label": "Subjonctif présent",
+   "verify": {
+    "mood": "subjonctif",
+    "tense": "présent"
+   },
+   "history": {
+    "lapses": 39,
+    "reps": 177
+   },
+   "answer_prefix": "que",
+   "fork": "Two stems: stressed veuill- (je veuille, ils veuillent) vs unstressed voul- (nous voulions, vous vouliez) — the boot pattern. The polite fossil «Veuillez agréer…» is this very paradigm.",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "je",
+     "form": "veuille",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tu",
+     "form": "veuilles",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "il/elle",
+     "form": "veuille",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "nous",
+     "form": "voulions",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "vous",
+     "form": "vouliez",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "ils/elles",
+     "form": "veuillent",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "The board doubts that I want to censor this embarrassing report.",
+     "tl": "Le conseil doute que je veuille censurer ce reportage embarrassant."
+    },
+    {
+     "person": "2s",
+     "en": "I doubt that you want to entrust your data to this platform.",
+     "tl": "Je doute que tu veuilles confier tes données à cette plateforme."
+    },
+    {
+     "person": "3s",
+     "en": "Nobody believes that she wants to buy this failing media outlet.",
+     "tl": "Personne ne croit qu'elle veuille racheter ce média déficitaire."
+    },
+    {
+     "person": "1p",
+     "en": "The editor doubts that we want to publish these violent images.",
+     "tl": "Le rédacteur doute que nous voulions publier ces images violentes."
+    },
+    {
+     "person": "2p",
+     "en": "It seems unlikely that you want to defend this opaque algorithm.",
+     "tl": "Il semble improbable que vous vouliez défendre cet algorithme opaque."
+    },
+    {
+     "person": "3p",
+     "en": "Regulators doubt that they truly want to limit biometric surveillance.",
+     "tl": "Les régulateurs doutent qu'ils veuillent réellement limiter la surveillance biométrique."
+    }
+   ]
+  },
+  {
+   "lang": "fr",
+   "verb": "obéir",
+   "gloss": "to obey",
+   "tense_key": "imparfait",
+   "tense_label": "Imparfait",
+   "verify": "attested",
+   "history": {
+    "lapses": 33,
+    "reps": 146
+   },
+   "fork": "Second-group verb: the -iss- infix appears in every imparfait form — obéissais, never *obéais. Same machine as finir → finissais, réfléchir → réfléchissais.",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "je",
+     "form": "obéissais",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tu",
+     "form": "obéissais",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "il/elle",
+     "form": "obéissait",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "nous",
+     "form": "obéissions",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "vous",
+     "form": "obéissiez",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "ils/elles",
+     "form": "obéissaient",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "I used to obey algorithmic alerts, but now I check every source.",
+     "tl": "Moi qui obéissais aux alertes algorithmiques, je vérifie désormais chaque source."
+    },
+    {
+     "person": "2s",
+     "en": "You used to obey the platform's deadlines without arguing.",
+     "tl": "Tu obéissais sans discuter aux délais imposés par la plateforme."
+    },
+    {
+     "person": "3s",
+     "en": "The moderator used to obey management's secret instructions.",
+     "tl": "Le modérateur obéissait autrefois aux consignes secrètes de la direction."
+    },
+    {
+     "person": "1p",
+     "en": "We routinely obeyed the editorial rules, even during diplomatic crises.",
+     "tl": "Nous obéissions aux règles éditoriales même pendant les crises diplomatiques."
+    },
+    {
+     "person": "2p",
+     "en": "You still obeyed the alerts before disabling the application.",
+     "tl": "Vous obéissiez encore aux alertes avant de désactiver l'application."
+    },
+    {
+     "person": "3p",
+     "en": "The newsroom reporters rarely obeyed the algorithm's automated recommendations.",
+     "tl": "Les rédacteurs obéissaient rarement aux recommandations automatiques de l'algorithme."
+    }
+   ]
+  },
+  {
+   "lang": "fr",
+   "verb": "valoir",
+   "gloss": "to be worth",
+   "tense_key": "futur",
+   "tense_label": "Futur simple",
+   "verify": "attested",
+   "history": {
+    "lapses": 33,
+    "reps": 140
+   },
+   "fork": "Irregular future stem vaudr- : je vaudrai, il vaudra. Anchor on the editorial staple «il vaudra mieux…» (it will be better to…).",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "je",
+     "form": "vaudrai",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tu",
+     "form": "vaudras",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "il/elle",
+     "form": "vaudra",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "nous",
+     "form": "vaudrons",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "vous",
+     "form": "vaudrez",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "ils/elles",
+     "form": "vaudront",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "With this exclusive investigation, I will be worth more on the market.",
+     "tl": "Avec cette enquête exclusive, je vaudrai davantage sur le marché."
+    },
+    {
+     "person": "2s",
+     "en": "After this certification, you will be worth more to recruiters.",
+     "tl": "Après cette certification, tu vaudras davantage aux yeux des recruteurs."
+    },
+    {
+     "person": "3s",
+     "en": "In five years, this platform will be worth several billion euros.",
+     "tl": "Dans cinq ans, cette plateforme vaudra plusieurs milliards d'euros."
+    },
+    {
+     "person": "1p",
+     "en": "We will be worth two billion after merging with our main competitor.",
+     "tl": "Nous vaudrons deux milliards après la fusion avec notre principal concurrent."
+    },
+    {
+     "person": "2p",
+     "en": "After this investigation, you will be worth a lot on the job market.",
+     "tl": "Après cette enquête, vous vaudrez cher sur le marché du travail."
+    },
+    {
+     "person": "3p",
+     "en": "These patents will be worth millions after the new regulation passes.",
+     "tl": "Ces brevets vaudront des millions après l'adoption du nouveau règlement."
+    }
+   ]
+  },
+  {
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense_key": "imperativo",
+   "tense_label": "Imperativo",
+   "verify": "attested",
+   "history": {
+    "lapses": 63,
+    "reps": 275
+   },
+   "fork": "A courtesy paradigm more than a command: voglia (Lei) and vogliate (voi) live in formal letters — «vogliate gradire…». The tu form vuoi is rare (variant: vogli); the polite forms are the ones Italian actually uses.",
+   "paradigm": [
+    {
+     "key": "2s",
+     "pronoun": "tu",
+     "form": "vuoi",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "Lei",
+     "form": "voglia",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "noi",
+     "form": "vogliamo",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "voi",
+     "form": "vogliate",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "loro",
+     "form": "vogliano",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "2s",
+     "en": "Would you check the sources before publishing this accusation, please?",
+     "tl": "Per favore, vuoi controllare le fonti prima di pubblicare questa accusa?",
+     "trap": "identical to the presente — real imperative usage lives in the courtesy forms voglia/vogliate"
+    },
+    {
+     "person": "3s",
+     "en": "Director, please verify the data personally before the live broadcast.",
+     "tl": "Direttrice, voglia verificare personalmente i dati prima della diretta."
+    },
+    {
+     "person": "1p",
+     "en": "Shall we verify these figures before alarming the public?",
+     "tl": "Allora, vogliamo verificare questi numeri prima di allarmare il pubblico?"
+    },
+    {
+     "person": "2p",
+     "en": "Colleagues, please flag every conflict of interest in the shared document.",
+     "tl": "Colleghi, vogliate segnalare ogni conflitto d'interessi nel documento condiviso."
+    },
+    {
+     "person": "3p",
+     "en": "Let the delegates hand in their phones before the confidential meeting.",
+     "tl": "I delegati vogliano consegnare i telefoni prima della riunione riservata."
+    }
+   ]
+  },
+  {
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense_key": "futuro",
+   "tense_label": "Futuro semplice",
+   "verify": {
+    "mood": "indicativo",
+    "tense": "futuro"
+   },
+   "history": {
+    "lapses": 39,
+    "reps": 142
+   },
+   "fork": "Syncopated stem vorr- : vorrò, vorrà. The trap is venire: verrò (I will come) vs vorrò (I will want) — one letter, two verbs, and venire sits at #5 of your Italian list for exactly this reason.",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "io",
+     "form": "vorrò",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tu",
+     "form": "vorrai",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "lui/lei",
+     "form": "vorrà",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "noi",
+     "form": "vorremo",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "voi",
+     "form": "vorrete",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "loro",
+     "form": "vorranno",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "I will want concrete guarantees before entrusting sensitive data to the platform.",
+     "tl": "Io vorrò garanzie concrete prima di affidare dati sensibili alla piattaforma."
+    },
+    {
+     "person": "2s",
+     "en": "You will want to read the contract before the algorithm analyzes your messages.",
+     "tl": "Tu vorrai leggere il contratto prima che l'algoritmo analizzi i tuoi messaggi."
+    },
+    {
+     "person": "3s",
+     "en": "He will want explanations when the newspaper silently corrects the article.",
+     "tl": "Lui vorrà spiegazioni quando il giornale correggerà silenziosamente l'articolo."
+    },
+    {
+     "person": "1p",
+     "en": "We will want independent evidence before supporting the new regulation.",
+     "tl": "Noi vorremo prove indipendenti prima di sostenere il nuovo regolamento."
+    },
+    {
+     "person": "2p",
+     "en": "You all will want to know the risks before approving that merger.",
+     "tl": "Voi vorrete conoscere i rischi prima di approvare quella fusione."
+    },
+    {
+     "person": "3p",
+     "en": "They will want to check the facts before the press conference.",
+     "tl": "Loro vorranno controllare i fatti prima della conferenza stampa."
+    }
+   ]
+  },
+  {
+   "lang": "it",
+   "verb": "sapere",
+   "gloss": "to know",
+   "tense_key": "passato_remoto",
+   "tense_label": "Passato remoto",
+   "verify": {
+    "mood": "indicativo",
+    "tense": "passato remoto"
+   },
+   "history": {
+    "lapses": 38,
+    "reps": 194
+   },
+   "fork": "The 1-3-3 strong pattern: seppi, seppe, seppero take the pp-stem; sapesti, sapemmo, sapeste stay weak. In narrative prose seppe = «came to know / learned», not «knew».",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "io",
+     "form": "seppi",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tu",
+     "form": "sapesti",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "lui/lei",
+     "form": "seppe",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "noi",
+     "form": "sapemmo",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "voi",
+     "form": "sapeste",
+     "drill": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "loro",
+     "form": "seppero",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "I learned about the data leak only after publication.",
+     "tl": "Io seppi della fuga di dati soltanto dopo la pubblicazione."
+    },
+    {
+     "person": "2s",
+     "en": "You learned about the secret deal when the minister left Brussels.",
+     "tl": "Tu sapesti dell'accordo segreto quando il ministro lasciò Bruxelles."
+    },
+    {
+     "person": "3s",
+     "en": "She managed to manipulate the algorithm without leaving visible traces.",
+     "tl": "Lei seppe manipolare l'algoritmo senza lasciare tracce visibili."
+    },
+    {
+     "person": "1p",
+     "en": "We learned about the censorship through a diplomatic source.",
+     "tl": "Noi sapemmo della censura grazie a una fonte diplomatica."
+    },
+    {
+     "person": "2p",
+     "en": "You all managed to anticipate the crisis better than government analysts.",
+     "tl": "Voi sapeste anticipare la crisi meglio degli analisti governativi."
+    },
+    {
+     "person": "3p",
+     "en": "They learned about the information blackout through local journalists.",
+     "tl": "Loro seppero del blocco informativo attraverso i giornalisti locali."
+    }
+   ]
+  },
+  {
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense_key": "presente",
+   "tense_label": "Presente",
+   "verify": {
+    "mood": "indicativo",
+    "tense": "presente"
+   },
+   "history": {
+    "lapses": 76,
+    "reps": 344
+   },
+   "fork": "vir keeps crashing into ver (to see): nós vimos is both «we come» (vir, present) and «we saw» (ver, preterite) — context is the only referee. Third person splits three ways: vem (he comes) · vêm (they come) · veem (they see).",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "eu",
+     "form": "venho",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tu",
+     "form": "vens",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "ele/você",
+     "form": "vem",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "nós",
+     "form": "vimos",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "vós",
+     "form": "vindes",
+     "drill": false,
+     "archaic": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "eles/vocês",
+     "form": "vêm",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "I come to this debate as a skeptic.",
+     "tl": "Eu venho a este debate como cético.",
+     "trap": "nasal stem: venho — like tenho (ter), ponho (pôr)"
+    },
+    {
+     "person": "2s",
+     "en": "Do you come to the newsroom on Fridays?",
+     "tl": "Tu vens à redação às sextas?",
+     "trap": "Brazilian register: você vem"
+    },
+    {
+     "person": "3s",
+     "en": "This pressure comes straight from the board.",
+     "tl": "Esta pressão vem diretamente do conselho.",
+     "trap": "no accent: vem (one) · vêm (many)"
+    },
+    {
+     "person": "1p",
+     "en": "We come from an era of open protocols.",
+     "tl": "Nós vimos de uma era de protocolos abertos.",
+     "trap": "THE collision: vimos is also «we saw» (ver, pretérito)"
+    },
+    {
+     "person": "3p",
+     "en": "The best critiques come from outside the industry.",
+     "tl": "As melhores críticas vêm de fora da indústria.",
+     "trap": "three-way: vêm they come · vem he comes · veem they see"
+    }
+   ]
+  },
+  {
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense_key": "imperativo",
+   "tense_label": "Imperativo",
+   "verify": "attested",
+   "history": {
+    "lapses": 69,
+    "reps": 297
+   },
+   "fork": "Register split: vem! (tu, informal) vs venha! (você, the everyday Brazilian imperative). Trap: vem is simultaneously the tu-imperative AND the 3rd-person present — «ele vem».",
+   "paradigm": [
+    {
+     "key": "2s",
+     "pronoun": "tu",
+     "form": "vem",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "você",
+     "form": "venha",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "nós",
+     "form": "venhamos",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "vós",
+     "form": "vinde",
+     "drill": false,
+     "archaic": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "vocês",
+     "form": "venham",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "2s",
+     "en": "Rui, come to the newsroom before the platform deletes the records.",
+     "tl": "Rui, vem à redação antes que a plataforma apague os registos."
+    },
+    {
+     "person": "3s",
+     "en": "Director, come see the data before the press conference.",
+     "tl": "Senhora diretora, venha ver os dados antes da conferência de imprensa."
+    },
+    {
+     "person": "1p",
+     "en": "Colleagues, let us come prepared to discuss the law with regulators.",
+     "tl": "Colegas, venhamos preparados para discutir a nova lei com os reguladores."
+    },
+    {
+     "person": "3p",
+     "en": "Members of parliament, come hear the journalists before the vote.",
+     "tl": "Senhores deputados, venham ouvir os jornalistas antes da votação."
+    }
+   ]
+  },
+  {
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense_key": "imperfeito",
+   "tense_label": "Pretérito imperfeito",
+   "verify": {
+    "mood": "indicativo",
+    "tense": "pretérito imperfeito"
+   },
+   "history": {
+    "lapses": 64,
+    "reps": 270
+   },
+   "fork": "vinha = used to come; vim = I came (perfect) — one habitual, one completed, and your revlog says they blur. Bonus homograph: a vinha = the vineyard. Nasal chain: vinha, vínhamos, vinham.",
+   "paradigm": [
+    {
+     "key": "1s",
+     "pronoun": "eu",
+     "form": "vinha",
+     "drill": true
+    },
+    {
+     "key": "2s",
+     "pronoun": "tu",
+     "form": "vinhas",
+     "drill": true
+    },
+    {
+     "key": "3s",
+     "pronoun": "ele/você",
+     "form": "vinha",
+     "drill": true
+    },
+    {
+     "key": "1p",
+     "pronoun": "nós",
+     "form": "vínhamos",
+     "drill": true
+    },
+    {
+     "key": "2p",
+     "pronoun": "vós",
+     "form": "vínheis",
+     "drill": false,
+     "archaic": true
+    },
+    {
+     "key": "3p",
+     "pronoun": "eles/vocês",
+     "form": "vinham",
+     "drill": true
+    }
+   ],
+   "items": [
+    {
+     "person": "1s",
+     "en": "I used to come early to review the international headlines.",
+     "tl": "Eu vinha cedo à redação para rever os títulos internacionais."
+    },
+    {
+     "person": "2s",
+     "en": "You used to come to meetings with data contradicting the algorithm.",
+     "tl": "Tu vinhas às reuniões com dados que contradiziam o algoritmo."
+    },
+    {
+     "person": "3s",
+     "en": "He used to come every Friday to inspect server security.",
+     "tl": "Ele vinha todas as sextas-feiras verificar a segurança dos servidores."
+    },
+    {
+     "person": "1p",
+     "en": "We used to come prepared to challenge the platform's forecasts.",
+     "tl": "Nós vínhamos preparados para contestar as previsões da plataforma."
+    },
+    {
+     "person": "3p",
+     "en": "They came from Brussels whenever a regulatory crisis arose.",
+     "tl": "Eles vinham de Bruxelas sempre que surgia uma crise regulatória."
+    }
+   ]
+  }
+ ]
+}

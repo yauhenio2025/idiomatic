@@ -51,6 +51,14 @@ class Settings(BaseSettings):
     # Turbo v2.5: 0.5 credit/char, supports language_code enforcement.
     elevenlabs_model: str = "eleven_turbo_v2_5"
 
+    # ElevenLabs voice for the Tenses Rescue decks' SPANISH audio — the
+    # user vetoed the house George voice for these decks (2026-08-05).
+    # Default: Jessica (premade). Audition candidates + listen URLs via
+    # POST /admin/tenses-voice-audition; set the winner here (env
+    # TENSES_ES_VOICE_ID) and rebuild es. Other languages keep
+    # gemini.ELEVEN_LANG_VOICE.
+    tenses_es_voice_id: str = "cgSgspJ2msm6clMCkdW9"
+
     # YouTube Data API v3 — the cron uses it to pre-filter videos by
     # duration BEFORE any Oxylabs spend (official API, no bot wall; a full
     # 24-channel walk costs ~5 quota units of the 10k/day free tier).

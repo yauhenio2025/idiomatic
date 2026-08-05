@@ -882,6 +882,54 @@ async def admin_translation_build(
     return {"started": True, "lang": lang}
 
 
+@app.post("/admin/tenses-build")
+async def admin_tenses_build(
+    lang: str, _: None = Depends(authed_admin),
+) -> dict:
+    """Build one language's Tenses Rescue decks (production + exercises,
+    TTS + 2 APKGs) in the background. Content: grammar/data/tenses/."""
+    from .grammar import service as grammar_service
+    from .grammar import tenses
+
+    if lang not in tenses.SUPPORTED_LANGS:
+        raise HTTPException(400, "lang must be de|es|fr|it|pt")
+    if not grammar_service.claim_grammar_job(f"tenses-{lang}", "tenses"):
+        return {"error": "busy", **grammar_service.get_state()}
+
+    async def _run() -> None:
+        try:
+            result = await tenses.build_language(lang)
+            grammar_service._state["tenses"] = result
+        except Exception as e:  # noqa: BLE001
+            log.warning("admin.tenses_build.failed", lang=lang,
+                        err=repr(e)[:200])
+            grammar_service._state["error"] = repr(e)[:200]
+        finally:
+            grammar_service._state["running"] = False
+
+    _spawn_bg(_run())
+    return {"started": True, "lang": lang}
+
+
+@app.get("/admin/tenses-list")
+async def admin_tenses_list(_: None = Depends(authed_admin)) -> dict:
+    """Tenses content inventory: per verb×tense, drilled slots vs items."""
+    from .grammar import tenses
+    return {"content": tenses.list_content()}
+
+
+@app.post("/admin/tenses-voice-audition")
+async def admin_tenses_voice_audition(
+    body: dict | None = None, _: None = Depends(authed_admin),
+) -> dict:
+    """Render one Spanish sample sentence in every candidate ElevenLabs
+    voice (the user vetoed George for the tenses decks). Synchronous —
+    a few seconds. Body (optional): {"text": "..."}."""
+    from .grammar import tenses
+    text = (body or {}).get("text")
+    return await tenses.voice_audition("es", text)
+
+
 @app.get("/admin/disk-usage")
 async def admin_disk_usage(
     path: str = "", _: None = Depends(authed_admin),

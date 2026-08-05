@@ -1,0 +1,684 @@
+{
+ "items": [
+  {
+   "id": "de_liegen_praeteritum_1s",
+   "lang": "de",
+   "verb": "liegen",
+   "gloss": "to lie / be situated",
+   "tense": "Präteritum",
+   "person": "1s",
+   "pronoun": "ich",
+   "target_form": "lag"
+  },
+  {
+   "id": "de_liegen_praeteritum_2s",
+   "lang": "de",
+   "verb": "liegen",
+   "gloss": "to lie / be situated",
+   "tense": "Präteritum",
+   "person": "2s",
+   "pronoun": "du",
+   "target_form": "lagst"
+  },
+  {
+   "id": "de_liegen_praeteritum_3s",
+   "lang": "de",
+   "verb": "liegen",
+   "gloss": "to lie / be situated",
+   "tense": "Präteritum",
+   "person": "3s",
+   "pronoun": "er/sie/es",
+   "target_form": "lag"
+  },
+  {
+   "id": "de_liegen_praeteritum_1p",
+   "lang": "de",
+   "verb": "liegen",
+   "gloss": "to lie / be situated",
+   "tense": "Präteritum",
+   "person": "1p",
+   "pronoun": "wir",
+   "target_form": "lagen"
+  },
+  {
+   "id": "de_liegen_praeteritum_2p",
+   "lang": "de",
+   "verb": "liegen",
+   "gloss": "to lie / be situated",
+   "tense": "Präteritum",
+   "person": "2p",
+   "pronoun": "ihr",
+   "target_form": "lagt"
+  },
+  {
+   "id": "de_liegen_praeteritum_3p",
+   "lang": "de",
+   "verb": "liegen",
+   "gloss": "to lie / be situated",
+   "tense": "Präteritum",
+   "person": "3p",
+   "pronoun": "sie/Sie",
+   "target_form": "lagen"
+  },
+  {
+   "id": "es_saber_presente_subjuntivo_1s",
+   "lang": "es",
+   "verb": "saber",
+   "gloss": "to know",
+   "tense": "Presente de subjuntivo",
+   "person": "1s",
+   "pronoun": "yo",
+   "target_form": "sepa"
+  },
+  {
+   "id": "es_saber_presente_subjuntivo_2s",
+   "lang": "es",
+   "verb": "saber",
+   "gloss": "to know",
+   "tense": "Presente de subjuntivo",
+   "person": "2s",
+   "pronoun": "tú",
+   "target_form": "sepas"
+  },
+  {
+   "id": "es_saber_presente_subjuntivo_3s",
+   "lang": "es",
+   "verb": "saber",
+   "gloss": "to know",
+   "tense": "Presente de subjuntivo",
+   "person": "3s",
+   "pronoun": "él/ella/Ud.",
+   "target_form": "sepa"
+  },
+  {
+   "id": "es_saber_presente_subjuntivo_1p",
+   "lang": "es",
+   "verb": "saber",
+   "gloss": "to know",
+   "tense": "Presente de subjuntivo",
+   "person": "1p",
+   "pronoun": "nosotros",
+   "target_form": "sepamos"
+  },
+  {
+   "id": "es_saber_presente_subjuntivo_2p",
+   "lang": "es",
+   "verb": "saber",
+   "gloss": "to know",
+   "tense": "Presente de subjuntivo",
+   "person": "2p",
+   "pronoun": "vosotros",
+   "target_form": "sepáis"
+  },
+  {
+   "id": "es_saber_presente_subjuntivo_3p",
+   "lang": "es",
+   "verb": "saber",
+   "gloss": "to know",
+   "tense": "Presente de subjuntivo",
+   "person": "3p",
+   "pronoun": "ellos/Uds.",
+   "target_form": "sepan"
+  },
+  {
+   "id": "es_decir_imperfecto_subjuntivo_1s",
+   "lang": "es",
+   "verb": "decir",
+   "gloss": "to say",
+   "tense": "Imperfecto de subjuntivo",
+   "person": "1s",
+   "pronoun": "yo",
+   "target_form": "dijera"
+  },
+  {
+   "id": "es_decir_imperfecto_subjuntivo_2s",
+   "lang": "es",
+   "verb": "decir",
+   "gloss": "to say",
+   "tense": "Imperfecto de subjuntivo",
+   "person": "2s",
+   "pronoun": "tú",
+   "target_form": "dijeras"
+  },
+  {
+   "id": "es_decir_imperfecto_subjuntivo_3s",
+   "lang": "es",
+   "verb": "decir",
+   "gloss": "to say",
+   "tense": "Imperfecto de subjuntivo",
+   "person": "3s",
+   "pronoun": "él/ella/Ud.",
+   "target_form": "dijera"
+  },
+  {
+   "id": "es_decir_imperfecto_subjuntivo_1p",
+   "lang": "es",
+   "verb": "decir",
+   "gloss": "to say",
+   "tense": "Imperfecto de subjuntivo",
+   "person": "1p",
+   "pronoun": "nosotros",
+   "target_form": "dijéramos"
+  },
+  {
+   "id": "es_decir_imperfecto_subjuntivo_2p",
+   "lang": "es",
+   "verb": "decir",
+   "gloss": "to say",
+   "tense": "Imperfecto de subjuntivo",
+   "person": "2p",
+   "pronoun": "vosotros",
+   "target_form": "dijerais"
+  },
+  {
+   "id": "es_decir_imperfecto_subjuntivo_3p",
+   "lang": "es",
+   "verb": "decir",
+   "gloss": "to say",
+   "tense": "Imperfecto de subjuntivo",
+   "person": "3p",
+   "pronoun": "ellos/Uds.",
+   "target_form": "dijeran"
+  },
+  {
+   "id": "es_ver_presente_subjuntivo_1s",
+   "lang": "es",
+   "verb": "ver",
+   "gloss": "to see",
+   "tense": "Presente de subjuntivo",
+   "person": "1s",
+   "pronoun": "yo",
+   "target_form": "vea"
+  },
+  {
+   "id": "es_ver_presente_subjuntivo_2s",
+   "lang": "es",
+   "verb": "ver",
+   "gloss": "to see",
+   "tense": "Presente de subjuntivo",
+   "person": "2s",
+   "pronoun": "tú",
+   "target_form": "veas"
+  },
+  {
+   "id": "es_ver_presente_subjuntivo_3s",
+   "lang": "es",
+   "verb": "ver",
+   "gloss": "to see",
+   "tense": "Presente de subjuntivo",
+   "person": "3s",
+   "pronoun": "él/ella/Ud.",
+   "target_form": "vea"
+  },
+  {
+   "id": "es_ver_presente_subjuntivo_1p",
+   "lang": "es",
+   "verb": "ver",
+   "gloss": "to see",
+   "tense": "Presente de subjuntivo",
+   "person": "1p",
+   "pronoun": "nosotros",
+   "target_form": "veamos"
+  },
+  {
+   "id": "es_ver_presente_subjuntivo_2p",
+   "lang": "es",
+   "verb": "ver",
+   "gloss": "to see",
+   "tense": "Presente de subjuntivo",
+   "person": "2p",
+   "pronoun": "vosotros",
+   "target_form": "veáis"
+  },
+  {
+   "id": "es_ver_presente_subjuntivo_3p",
+   "lang": "es",
+   "verb": "ver",
+   "gloss": "to see",
+   "tense": "Presente de subjuntivo",
+   "person": "3p",
+   "pronoun": "ellos/Uds.",
+   "target_form": "vean"
+  },
+  {
+   "id": "fr_vouloir_subjonctif_present_1s",
+   "lang": "fr",
+   "verb": "vouloir",
+   "gloss": "to want",
+   "tense": "Subjonctif présent",
+   "person": "1s",
+   "pronoun": "je",
+   "target_form": "veuille"
+  },
+  {
+   "id": "fr_vouloir_subjonctif_present_2s",
+   "lang": "fr",
+   "verb": "vouloir",
+   "gloss": "to want",
+   "tense": "Subjonctif présent",
+   "person": "2s",
+   "pronoun": "tu",
+   "target_form": "veuilles"
+  },
+  {
+   "id": "fr_vouloir_subjonctif_present_3s",
+   "lang": "fr",
+   "verb": "vouloir",
+   "gloss": "to want",
+   "tense": "Subjonctif présent",
+   "person": "3s",
+   "pronoun": "il/elle",
+   "target_form": "veuille"
+  },
+  {
+   "id": "fr_vouloir_subjonctif_present_1p",
+   "lang": "fr",
+   "verb": "vouloir",
+   "gloss": "to want",
+   "tense": "Subjonctif présent",
+   "person": "1p",
+   "pronoun": "nous",
+   "target_form": "voulions"
+  },
+  {
+   "id": "fr_vouloir_subjonctif_present_2p",
+   "lang": "fr",
+   "verb": "vouloir",
+   "gloss": "to want",
+   "tense": "Subjonctif présent",
+   "person": "2p",
+   "pronoun": "vous",
+   "target_form": "vouliez"
+  },
+  {
+   "id": "fr_vouloir_subjonctif_present_3p",
+   "lang": "fr",
+   "verb": "vouloir",
+   "gloss": "to want",
+   "tense": "Subjonctif présent",
+   "person": "3p",
+   "pronoun": "ils/elles",
+   "target_form": "veuillent"
+  },
+  {
+   "id": "fr_obéir_imparfait_1s",
+   "lang": "fr",
+   "verb": "obéir",
+   "gloss": "to obey",
+   "tense": "Imparfait",
+   "person": "1s",
+   "pronoun": "je",
+   "target_form": "obéissais"
+  },
+  {
+   "id": "fr_obéir_imparfait_2s",
+   "lang": "fr",
+   "verb": "obéir",
+   "gloss": "to obey",
+   "tense": "Imparfait",
+   "person": "2s",
+   "pronoun": "tu",
+   "target_form": "obéissais"
+  },
+  {
+   "id": "fr_obéir_imparfait_3s",
+   "lang": "fr",
+   "verb": "obéir",
+   "gloss": "to obey",
+   "tense": "Imparfait",
+   "person": "3s",
+   "pronoun": "il/elle",
+   "target_form": "obéissait"
+  },
+  {
+   "id": "fr_obéir_imparfait_1p",
+   "lang": "fr",
+   "verb": "obéir",
+   "gloss": "to obey",
+   "tense": "Imparfait",
+   "person": "1p",
+   "pronoun": "nous",
+   "target_form": "obéissions"
+  },
+  {
+   "id": "fr_obéir_imparfait_2p",
+   "lang": "fr",
+   "verb": "obéir",
+   "gloss": "to obey",
+   "tense": "Imparfait",
+   "person": "2p",
+   "pronoun": "vous",
+   "target_form": "obéissiez"
+  },
+  {
+   "id": "fr_obéir_imparfait_3p",
+   "lang": "fr",
+   "verb": "obéir",
+   "gloss": "to obey",
+   "tense": "Imparfait",
+   "person": "3p",
+   "pronoun": "ils/elles",
+   "target_form": "obéissaient"
+  },
+  {
+   "id": "fr_valoir_futur_1s",
+   "lang": "fr",
+   "verb": "valoir",
+   "gloss": "to be worth",
+   "tense": "Futur simple",
+   "person": "1s",
+   "pronoun": "je",
+   "target_form": "vaudrai"
+  },
+  {
+   "id": "fr_valoir_futur_2s",
+   "lang": "fr",
+   "verb": "valoir",
+   "gloss": "to be worth",
+   "tense": "Futur simple",
+   "person": "2s",
+   "pronoun": "tu",
+   "target_form": "vaudras"
+  },
+  {
+   "id": "fr_valoir_futur_3s",
+   "lang": "fr",
+   "verb": "valoir",
+   "gloss": "to be worth",
+   "tense": "Futur simple",
+   "person": "3s",
+   "pronoun": "il/elle",
+   "target_form": "vaudra"
+  },
+  {
+   "id": "fr_valoir_futur_1p",
+   "lang": "fr",
+   "verb": "valoir",
+   "gloss": "to be worth",
+   "tense": "Futur simple",
+   "person": "1p",
+   "pronoun": "nous",
+   "target_form": "vaudrons"
+  },
+  {
+   "id": "fr_valoir_futur_2p",
+   "lang": "fr",
+   "verb": "valoir",
+   "gloss": "to be worth",
+   "tense": "Futur simple",
+   "person": "2p",
+   "pronoun": "vous",
+   "target_form": "vaudrez"
+  },
+  {
+   "id": "fr_valoir_futur_3p",
+   "lang": "fr",
+   "verb": "valoir",
+   "gloss": "to be worth",
+   "tense": "Futur simple",
+   "person": "3p",
+   "pronoun": "ils/elles",
+   "target_form": "vaudront"
+  },
+  {
+   "id": "it_volere_imperativo_2s",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Imperativo",
+   "person": "2s",
+   "pronoun": "tu",
+   "target_form": "vuoi"
+  },
+  {
+   "id": "it_volere_imperativo_3s",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Imperativo",
+   "person": "3s",
+   "pronoun": "Lei",
+   "target_form": "voglia"
+  },
+  {
+   "id": "it_volere_imperativo_1p",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Imperativo",
+   "person": "1p",
+   "pronoun": "noi",
+   "target_form": "vogliamo"
+  },
+  {
+   "id": "it_volere_imperativo_2p",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Imperativo",
+   "person": "2p",
+   "pronoun": "voi",
+   "target_form": "vogliate"
+  },
+  {
+   "id": "it_volere_imperativo_3p",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Imperativo",
+   "person": "3p",
+   "pronoun": "loro",
+   "target_form": "vogliano"
+  },
+  {
+   "id": "it_volere_futuro_1s",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Futuro semplice",
+   "person": "1s",
+   "pronoun": "io",
+   "target_form": "vorrò"
+  },
+  {
+   "id": "it_volere_futuro_2s",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Futuro semplice",
+   "person": "2s",
+   "pronoun": "tu",
+   "target_form": "vorrai"
+  },
+  {
+   "id": "it_volere_futuro_3s",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Futuro semplice",
+   "person": "3s",
+   "pronoun": "lui/lei",
+   "target_form": "vorrà"
+  },
+  {
+   "id": "it_volere_futuro_1p",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Futuro semplice",
+   "person": "1p",
+   "pronoun": "noi",
+   "target_form": "vorremo"
+  },
+  {
+   "id": "it_volere_futuro_2p",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Futuro semplice",
+   "person": "2p",
+   "pronoun": "voi",
+   "target_form": "vorrete"
+  },
+  {
+   "id": "it_volere_futuro_3p",
+   "lang": "it",
+   "verb": "volere",
+   "gloss": "to want",
+   "tense": "Futuro semplice",
+   "person": "3p",
+   "pronoun": "loro",
+   "target_form": "vorranno"
+  },
+  {
+   "id": "it_sapere_passato_remoto_1s",
+   "lang": "it",
+   "verb": "sapere",
+   "gloss": "to know",
+   "tense": "Passato remoto",
+   "person": "1s",
+   "pronoun": "io",
+   "target_form": "seppi"
+  },
+  {
+   "id": "it_sapere_passato_remoto_2s",
+   "lang": "it",
+   "verb": "sapere",
+   "gloss": "to know",
+   "tense": "Passato remoto",
+   "person": "2s",
+   "pronoun": "tu",
+   "target_form": "sapesti"
+  },
+  {
+   "id": "it_sapere_passato_remoto_3s",
+   "lang": "it",
+   "verb": "sapere",
+   "gloss": "to know",
+   "tense": "Passato remoto",
+   "person": "3s",
+   "pronoun": "lui/lei",
+   "target_form": "seppe"
+  },
+  {
+   "id": "it_sapere_passato_remoto_1p",
+   "lang": "it",
+   "verb": "sapere",
+   "gloss": "to know",
+   "tense": "Passato remoto",
+   "person": "1p",
+   "pronoun": "noi",
+   "target_form": "sapemmo"
+  },
+  {
+   "id": "it_sapere_passato_remoto_2p",
+   "lang": "it",
+   "verb": "sapere",
+   "gloss": "to know",
+   "tense": "Passato remoto",
+   "person": "2p",
+   "pronoun": "voi",
+   "target_form": "sapeste"
+  },
+  {
+   "id": "it_sapere_passato_remoto_3p",
+   "lang": "it",
+   "verb": "sapere",
+   "gloss": "to know",
+   "tense": "Passato remoto",
+   "person": "3p",
+   "pronoun": "loro",
+   "target_form": "seppero"
+  },
+  {
+   "id": "pt_vir_imperativo_2s",
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense": "Imperativo",
+   "person": "2s",
+   "pronoun": "tu",
+   "target_form": "vem"
+  },
+  {
+   "id": "pt_vir_imperativo_3s",
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense": "Imperativo",
+   "person": "3s",
+   "pronoun": "você",
+   "target_form": "venha"
+  },
+  {
+   "id": "pt_vir_imperativo_1p",
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense": "Imperativo",
+   "person": "1p",
+   "pronoun": "nós",
+   "target_form": "venhamos"
+  },
+  {
+   "id": "pt_vir_imperativo_3p",
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense": "Imperativo",
+   "person": "3p",
+   "pronoun": "vocês",
+   "target_form": "venham"
+  },
+  {
+   "id": "pt_vir_imperfeito_1s",
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense": "Pretérito imperfeito",
+   "person": "1s",
+   "pronoun": "eu",
+   "target_form": "vinha"
+  },
+  {
+   "id": "pt_vir_imperfeito_2s",
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense": "Pretérito imperfeito",
+   "person": "2s",
+   "pronoun": "tu",
+   "target_form": "vinhas"
+  },
+  {
+   "id": "pt_vir_imperfeito_3s",
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense": "Pretérito imperfeito",
+   "person": "3s",
+   "pronoun": "ele/você",
+   "target_form": "vinha"
+  },
+  {
+   "id": "pt_vir_imperfeito_1p",
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense": "Pretérito imperfeito",
+   "person": "1p",
+   "pronoun": "nós",
+   "target_form": "vínhamos"
+  },
+  {
+   "id": "pt_vir_imperfeito_3p",
+   "lang": "pt",
+   "verb": "vir",
+   "gloss": "to come",
+   "tense": "Pretérito imperfeito",
+   "person": "3p",
+   "pronoun": "eles/vocês",
+   "target_form": "vinham"
+  }
+ ]
+}

@@ -591,7 +591,7 @@ async def upsert_pool_apkg(
     'grammar' rides the same one-row-per-(lang,kind) mechanics."""
     assert kind in ("pool_idioms", "pool_expr", "pool_idiom_t2e",
                     "pool_idiom_e2t", "grammar", "podcast_lesson", "exercises2",
-                    "translation")
+                    "translation", "tenses", "tenses_ex")
     pool = await get_pool()
     async with pool.acquire() as conn:
         async with conn.transaction():

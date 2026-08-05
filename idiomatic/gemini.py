@@ -538,7 +538,8 @@ async def _tts_call_fast(text: str, voice: str) -> dict:
 
 
 async def synthesize(text: str, *, voice: str, out: Path,
-                      lang: str = "en") -> None:
+                      lang: str = "en",
+                      eleven_voice_id: str | None = None) -> None:
     """TTS. Primary provider is settings.tts_provider:
 
     - "elevenlabs" (default): ElevenLabs turbo v2.5, per-language voice from
@@ -570,7 +571,8 @@ async def synthesize(text: str, *, voice: str, out: Path,
 
     if s.tts_provider == "elevenlabs" and s.elevenlabs_api_key:
         try:
-            await _elevenlabs_tts(text, out, s.elevenlabs_api_key, lang=lang)
+            await _elevenlabs_tts(text, out, s.elevenlabs_api_key, lang=lang,
+                                  voice_id=eleven_voice_id)
             return
         except Exception as e:
             # Quota exhaustion / 5xx / network — Gemini TTS below is the
@@ -630,10 +632,12 @@ async def synthesize(text: str, *, voice: str, out: Path,
 
 
 async def _elevenlabs_tts(text: str, out: Path, api_key: str, *,
-                            lang: str = "en") -> None:
-    """ElevenLabs TTS (turbo v2.5). Voice from ELEVEN_LANG_VOICE by lang;
-    language_code enforced where supported so short snippets can't get
-    misread in the wrong language.
+                            lang: str = "en",
+                            voice_id: str | None = None) -> None:
+    """ElevenLabs TTS (turbo v2.5). Voice from ELEVEN_LANG_VOICE by lang,
+    unless ``voice_id`` overrides it (the tenses decks pick their own
+    Spanish voice); language_code enforced where supported so short
+    snippets can't get misread in the wrong language.
 
     Re-encoded to 24 kHz mono so it matches the Gemini-TTS/silence concat
     inputs (the concat demuxer -c copy path needs homogeneous params).
@@ -641,7 +645,7 @@ async def _elevenlabs_tts(text: str, out: Path, api_key: str, *,
     Shares the TTS semaphore with the Gemini path — ElevenLabs Pro allows
     10 concurrent requests; tts_concurrency=8 stays under it."""
     s = get_settings()
-    voice_id = ELEVEN_LANG_VOICE.get(lang, _SARAH_VOICE_ID)
+    voice_id = voice_id or ELEVEN_LANG_VOICE.get(lang, _SARAH_VOICE_ID)
     body: dict[str, Any] = {
         "text": text, "model_id": s.elevenlabs_model,
         "voice_settings": {"stability": 0.5, "similarity_boost": 0.75},
