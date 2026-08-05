@@ -181,6 +181,18 @@
 - **Dependencies**: `GEMINI_API_KEY` (image models), Admin API + dashboard; asset files under `/data/rescue_assets/`
 - **Added**: 2026-08-05
 
+### Tenses Rescue decks (per-person conjugation drills from the 2015-2022 corpus)
+- **Status**: Active (batch 1: top-3 verb×tense per language; pilot format user-approved 2026-08-05)
+- **Description**: The old account's `_tenses_old` struggle data (docs/research/tenses-profiles/) turned into two rolling apkgs per language: `kind='tenses'` (EN→form production: EN sentence front; form + marked TL sentence + full paradigm with drilled row highlighted + fork note + personal lapse history on the back) and `kind='tenses_ex'` (fill-the-blank recycling the same sentences and audio). One card per PERSON (the old cards drilled whole paradigms — per-person failure was unmeasurable); archaic vós displayed dimmed, never drilled. Forms verified at build time (morphology truth tables where covered, corpus-attested otherwise). Spanish audio uses its own ElevenLabs voice (`tenses_es_voice_id`, George vetoed) with a listen-and-pick audition endpoint.
+- **Entry Points**:
+  - `idiomatic/grammar/tenses.py` - batch parser + verification, frozen models (1_820_170_001/2), audio cache, `build_language()`, `voice_audition()`
+  - `idiomatic/grammar/data/tenses/batch1.json` - 15 offenders / 85 drilled forms (17 authored + 68 codex-gated sentences)
+  - `idiomatic/api.py` - `POST /admin/tenses-build?lang`, `GET /admin/tenses-list`, `POST /admin/tenses-voice-audition`
+  - `idiomatic/gemini.py` - `synthesize(eleven_voice_id=…)` voice override
+  - `tests/test_tenses.py` - 14 deterministic tests
+- **Dependencies**: tenses profiles (docs/research/tenses-profiles/), morphology truth tables, ElevenLabs TTS, genanki
+- **Added**: 2026-08-05
+
 ### LingQ vocabulary mirror
 - **Status**: Active
 - **Description**: The user's saved LingQ vocabulary (10 languages incl. not-yet-active sv/da/nl/no/zh) mirrored into `lingq_terms`; grammar generation weaves a per-topic sample of still-learning terms into drill sentences (optional material, never the blank); daily cron auto-sync; `/admin/lingq-sample` feeds local agents (codex).
