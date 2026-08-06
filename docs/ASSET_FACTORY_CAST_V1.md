@@ -1,6 +1,6 @@
 # Asset Factory — Cast v1 (user-approved 2026-08-06)
 
-> Read from the user's cast-approval clicks (29/30; screenshots, exclusion-
+> Read from the user's cast-approval clicks (30/30; screenshots + user confirmation, exclusion-
 > checked against the Mandarin-palace registry — all OK; "Fernando Haddad"
 > shares only a first-name token with palace's Fernando Flores, cleared).
 > Every face still passes the per-face gate before enrollment: max-quality
@@ -12,7 +12,7 @@
 | slot | ES | DE | FR | IT | PT |
 |---|---|---|---|---|---|
 | woman ~35 | Penélope Cruz | **Juju** (write-in, rapper) | Marion Cotillard | **Elodie** (write-in, singer) | Anitta |
-| man ~35 | Javier Bardem | ⚠ UNCONFIRMED (Thomas Müller?) | Timothée Chalamet | **Fedez** (write-in, rapper) | Wagner Moura |
+| man ~35 | Javier Bardem | **Capital Bra** (write-in, rapper) | Timothée Chalamet | **Fedez** (write-in, rapper) | Wagner Moura |
 | woman ~70 | Cristina Kirchner | Angela Merkel | Catherine Deneuve | Sophia Loren (+ note: Emma Bonino) | Dilma Rousseff |
 | young ~19 | Rosalía | **Luisa Neubauer** (write-in) | Kylian Mbappé | Jannik Sinner | **Kevinho** (write-in, funk singer) |
 | prof. woman ~50 | Nadia Calviño | Sahra Wagenknecht | Christine Lagarde | Giorgia Meloni | Marina Silva |

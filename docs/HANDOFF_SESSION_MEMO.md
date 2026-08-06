@@ -1,153 +1,121 @@
-# Session handoff memo — idiomatic grammar initiative (as of 2026-08-03)
+# Session handoff memo — 2026-08-06 (Exercises 2.0 / Asset Factory orchestrator)
 
-> Paste this into a fresh session to replace the 2026-07-31→08-03
-> marathon session. Read CLAUDE.md alongside; auto-memory files exist
-> under the project memory dir and largely agree with this memo. Where
-> they conflict, this memo is newer.
+> Supersedes the 2026-08-03 memo (git history keeps it). Written at
+> context exhaustion by the session that ran 2026-08-03→06: legacy audit
+> → Exercises 2.0 waves 1+2 → translation decks → comic pipeline →
+> Asset Factory strategy → famous cast. Read this + CLAUDE.md +
+> auto-memory (legacy-excercises, exercises2-roadmap) and you can take
+> over completely. Everything below is committed unless marked.
 
-## What this project is
+## Where everything stands (all shipped & verified)
 
-Cloud service (Render) turning YouTube into Anki idiom decks, extended
-since 2026-07 into a personalized 5-language GRAMMAR system
-(es/de/fr/it/pt). Plan of record: docs/GRAMMAR_STRATEGY.md §8 (wave
-checklist). The user studies grammar in the evgeny@the-syllabus.com
-Anki profile; idioms live in evgeny.morozov+2@gmail.com; the add-on
-delivers to whichever profile is open.
+- **Exercises 2.0**: Waves 1 (CONNECTING) + 2 (CONDITIONALS) live in all
+  five languages — 1,772 notes / 3,544 cards (apkgs through 1521).
+  Machinery: `idiomatic/grammar/exercises2.py`, content in
+  `data/exercises2/notes/<lang>_<topic>.json`, per-chunk codex authoring
+  via `docs/commissions/EXERCISES2_BATCH_COMMISSION.md` (+ CONDITIONALS
+  addendum), gate `tools/x2_batch_gate.py`, `/admin/exercises2-build`.
+- **Translation decks** ×5 (732 cards, sentence-only back audio):
+  `idiomatic/grammar/translation.py`, `/admin/translation-build`.
+- **Delivery**: SYLLABUS-ONLY policy (add-on `_IMPORT_PROFILES`
+  allowlist; +2 profile is legacy, purge FIRED 2026-08-06 — old account
+  clean). Render disk upsized to 26 GB (16.8 free). ENOSPC-era fixes:
+  orphan-apkg janitor sweep, 12-day retention, `/admin/disk-usage`.
+- **Asset Factory**: strategy + famous-cast amendment committed
+  (`docs/ASSET_FACTORY_STRATEGY.md`, `…_FAMOUS_CAST.md`), **cast v1
+  APPROVED 30/30** (`docs/ASSET_FACTORY_CAST_V1.md` — incl. user
+  write-ins Juju/Capital Bra/Elodie/Fedez/Kevinho/Neubauer/Haddad; all
+  exclusion-checked vs the Mandarin palace; Capital Bra added last —
+  spot-check it with the famous-cast doc §1.3 checker before sheets).
+- **Comic pipeline (proven on the Fedora box)**: t2i settings →
+  Edit-2511 character insertion (sheet as image2) → bubbles TYPESET IN
+  CODE (never model-rendered — this rule is load-bearing) → PIL stitch.
+  ~4.5 min/strip, $0. Stack doc: `~/llms/qwen-image/LOCAL_QWEN_IMAGE.md`
+  (read before any generation; batch-by-model, `/free` after, OOM
+  history). Artifacts: worked examples …7e47d809…, head-to-head
+  …f78fffec…, cast console …37ccf0c7….
 
-## Current state (all live in prod)
+## The task queue for the successor (dependency order)
 
-- **Decks**: es 288 / fr 185 / pt 165 / it 146 / de 101 = 885 cards,
-  all with audio except F4 (text-only by design). One subdeck per
-  topic cluster (`Idiomatic Grammar ES::1 Tiempos`; cluster strings
-  FINAL — renaming orphans user subdecks). Cluster conventions:
-  0 = listening ("0 Écoute"...), 9 = the user's own errors (F3),
-  10 = interference (F4).
-- **Curriculum**: 67 active units + 4 F4 units in grammar_units
-  (code-owned cols re-seeded on boot from curriculum.py; status/
-  target_size/notes are DB-mutable; PLANNED_UNITS is empty — all
-  promoted). Card formats: F1 cloze, F3 attested-error (fmt='f3',
-  from personal_errors), F4 interference (fmt='f4', DB-staged private
-  pairs), explainer audio cards (fmt='explainer'). F2 interpretation
-  is DESIGNED with 5×50-item banks (f2_*.json + F2_DESIGN.md) but NOT
-  implemented.
-- **Personal data layer** (~/projects/idiomatic-data/, NEVER in the
-  public repo): errmine/ (personal_errors.jsonl registry, 11,481
-  rows — also ingested into the DB), interference/ (F4 pair banks +
-  matrix), vocab/ (clusters/goldlists/weave lists — weave lists match
-  generate.py's extra_vocab shape, not yet wired), tuning/ (reject
-  dumps), podcasts/ (local MP3 copies).
-- **Podcasts**: 10 scripts in grammar/data/podcasts/. Episodes
-  1,4,5,6,7,8,9 are v1 format (user REJECTED it: wall-of-text, LLM
-  register — see memory content-pilot-first.md); ep03 (fr quantities)
-  is the v2 PILOT: teacher voice, ear-training for de/des/du,
-  3 practice rounds with [THINK:ms] piano under 6-8 s answer gaps,
-  [CHIME] sections, [MUSIC:intro|outro] (CC BY assets in
-  grammar/data/audio_assets/, attribution in LICENSES.md). Episodes
-  2+10 (lang: x) need per-line TL-language markers before synthesis.
-  v2 pilot AWAITS USER VERDICT; only after approval do the other nine
-  get rewritten. NEXT CONCEPT (commissioned, not built):
-  docs/commissions/PODCAST_CARDS_COMMISSION.md — episodes as ~10-card
-  Anki lessons with generated images.
-- **Renderer capabilities** (grammar/explainers.py, shared by
-  explainer cards + podcasts.py): TL:-routed dual-voice TTS
-  (ElevenLabs primary — overage billing ON, so Gemini-TTS fallback
-  only fires on outages), [PAUSE:ms], [THINK:ms], [CHIME],
-  [MUSIC:intro|outro], content-addressed clip cache, all ffmpeg via
-  to_thread.
-- **Other live systems**: LingQ mirror (~52k terms, cron-synced,
-  woven into generation prompts); SUBTLEX freq weights
-  (freq_weights_*.json, NOT yet consumed by generate.py); CEFR
-  roadmap + Italian taxonomy (docs/research/CURRICULUM_ROADMAP.md,
-  ~90 candidate units); grammar reader (docs/reader/, ~32 CC-BY
-  chapters); dashboard /grammar + /grammar/unit/:key (the ONE
-  dashboard surface allowed to mutate; admin token in
-  ~/.config/idiomatic-admin.env).
+1. **Swapfile on the Fedora box** — the ONE undone user item; blocks
+   unattended overnights. Nag once:
+   `sudo fallocate -l 32G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile && echo '/swapfile none swap defaults 0 0' | sudo tee -a /etc/fstab`
+2. **Cast sheets**: ~45 faces (30 slots + wings). Max-quality mode
+   (no-LoRA, 40 steps, ~7 min/face), refs from Wikimedia into
+   `/srv/ai-models/outputs/factory/refs/` (MACHINE-LOCAL, never
+   uploaded/committed — living-person policy, famous-cast doc §1.4).
+   Gate: user names each face cold; 2 fails → recast (approved rule).
+   Falco already failed the fast tier; retry only at max-quality.
+3. **Mac Studio second node** (specs in CAST_V1 doc; 96 GB unified = no
+   OOM problem): install ComfyUI + the same GGUFs, benchmark s/image,
+   then run the same pull-based runner. **The user is AWAY ~10-11 days
+   soon** — both machines should pregenerate maximally in that window:
+   settings library (~70 views incl. BOTH Brazil AND Portugal
+   pt-flavors), cast sheets, then corpus strips.
+4. **Factory build-out**: commissions A–H in ASSET_FACTORY_STRATEGY §7,
+   amended by user verdicts: NO per-comic approval (model-judge QA,
+   N-best allowed), rescue deck DAILY + comic on back, combined back
+   APPROVED, escalation 10 videos/mo cap, weirdness 1-in-6. Registry
+   backend (B) first — it also fixes rescue's lease/history defects.
+5. **Telemetry system** (user: "a must!!!"): per-topic review metrics
+   from real Anki results driving generation targets; European langs
+   first; a SEPARATE deeper Mandarin version later. Also the
+   prerequisite of the comics→video escalation clock.
+6. **Podcast eps 2/10**: scripts already have per-line `TL: [lang]`
+   markers; `podcasts.py` hard-skips `lang: x` — build mixed-language
+   parser/voice switching, render 2 MP3s, author 10 cards + 20 SVGs.
+7. **Wave 3 TENSES**: verdict = RAW lapse order INCL. literary tenses
+   (user explicitly wants passato remoto mastery). Needs its own
+   addendum (like conditionals), canonical tense/person adapters, and
+   morphology revalidation — the mined priors contain corrupt forms
+   (STATE_OF_PLAY open loop 10). Then the same 15-chunk codex run.
+8. **Rescue autopilot**: fix the no-lease concurrency bug; comic drafts
+   migrate to the local pipeline "in the next few days" (user). Don't
+   pause it; don't let it double-spend.
 
-## How work gets done here (user directives)
+## Mechanics a successor must know (hard-won)
 
-1. **codex fleet pattern**: bulk work → `codex exec` at
-   `-c model_reasoning_effort="ultra"` ("ultra" IS the top tier, not
-   xhigh). Write the full spec as docs/commissions/CODEX_X_*.md, run
-   codex against it (code in isolated git worktrees under
-   ~/projects/idiomatic-wt/, data in ~/projects/idiomatic-data/,
-   `--skip-git-repo-check` outside git), NO git ops for codex, the
-   supervising session reviews EVERYTHING and merges. Commissions A-R
-   all shipped this way; review catches real bugs every time.
-2. **Pilot-first** (user directive after the podcast v1 failure): ONE
-   pilot of any new content format → approval → batch. Never batch
-   unapproved formats again.
-3. Premium session does: architecture, verification design, merges/
-   review, incident response, user-facing content craft.
+- **Codex delegation works**: 30+ chunks authored, 100% gate pass, zero
+  linguistic errors found in sampling. Commission files + per-chunk
+  `codex exec -s workspace-write` + orchestrator audit. Sessions REVISE
+  landed outputs — always re-merge idempotently from latest outputs,
+  never append.
+- **Gate false-positives**: Romance elisions (l'/d') and circumflexes
+  trip the wrong-language heuristic on it/pt — adjudicate by reading;
+  the gate over-flags by design.
+- **Never let a diffusion model render sentence text.** Typeset it.
+- **Batch by model** (all t2i, then all edits), `/free` between phases;
+  check `curl :8199/queue` before using the shared ComfyUI server —
+  other sessions use it too. The server dies with its terminal; restart
+  via `~/llms/qwen-image/start_comfy.sh`.
+- **Decision flow with the user**: they hate typing AND hate jargon —
+  plain human language only. The working pattern: clickable artifact
+  console → `downloads` capability saves `idiomatic-verdicts*.json` to
+  ~/Downloads → watch with the Monitor tool (NOT bash sleep loops —
+  those get killed). Files sometimes land between watchers: CHECK
+  ~/Downloads DIRECTLY before assuming nothing arrived. Screenshots of
+  the console are readable as a fallback.
+- **cleanup.json is single-slot** and was displaced TWICE by other
+  sessions' jobs — verify existence before relying on it; queued
+  cleanups are a commission-B deliverable.
+- **The repo is the only shared brain** — the user runs many parallel
+  sessions. Write everything durable into auto-memory, CHANGELOG,
+  and the roadmap docs immediately.
+- **Mandarin stays in mandarin-videos** (user directive): it is the
+  primary Mandarin entry point; don't pull Mandarin work into
+  idiomatic. Its sentence-format work is parked pending format
+  decisions; its actor registry is the CAST EXCLUSION LIST here.
 
-## Ops rules — each learned the hard way
+## Open user decisions
 
-- NEVER git-push while a grammar run is live (redeploy kills it;
-  check /admin/grammar-status). Docs-only pushes count.
-- Wait for deploys to SETTLE before calling new endpoints — the old
-  instance's SPA fallback answers unknown /admin paths with HTML 200.
-- Event loop: no synchronous ffmpeg/bulk work in the web process
-  (docs/incidents/2026-07-31-web-hangs.md — this caused 3 outages;
-  fixed with to_thread + per-lang rebuild locks + per-card stitch
-  try/except).
-- Bulk DB writes go cron-side: web stages ONE blob row, cron ingests
-  (personal_errors + f4_pairs pattern). The cron container cannot see
-  /data (only idiomatic-app mounts it).
-- .gitignore `*.mp3` and `/data/` silently swallow new assets —
-  scoped negations needed (bit us twice: Jehle DB, music assets).
-- Disk: 10 GB, filled twice. Janitor sweeps media_stage + _pool_stage
-  + delivered apkgs and logs disk usage each cycle; pool rebuilds
-  clean their stage dir. Watch janitor.disk logs if adding big media.
-- Pool rebuilds legitimately take 30-45 min/lang and run alongside a
-  live API; a push during one kills it (harmless, next rebuild
-  redoes it).
-- The verifier-is-the-bug pattern: when a unit's rejection rate is an
-  outlier, READ /admin/grammar-rejects before blaming the model
-  (es_cmd_tu, de noun table, it_genere_plurali all verifier bugs;
-  zero bad cards have ever shipped).
-- Frozen model: `Idiomatic Grammar Drill v1` (MODEL_ID 1_820_130_001,
-  14 fields) must NEVER change fields/templates; GUIDs =
-  sha1("idiomatic-grammar::{lang}::{item_id}")[:16]. New content
-  types get NEW models.
-- Render MCP workspace "caii" (tea-cvnpo9c9c44c73agogo0); web
-  srv-d8nbs7reo5us73epeehg, cron crn-d8nbs7reo5us73epeeh0, DB
-  dpg-d8nbrtjeo5us73epe49g-a (read-only SQL via MCP works; NEVER
-  restart the DB). Agent token: only in DB + add-on config.json
-  (readable locally for testing agent-authed endpoints).
+None blocking. Corpus-walk SCALE is decided after Mac integration
+(model-judge QA + N-best already pre-authorized). All verdict rounds
+are recorded in memory + CHANGELOG — do NOT re-ask answered questions.
 
-## Open threads, in priority order
+## Quick verification commands
 
-1. **Podcast v2 pilot verdict** (user listening) → then: rewrite the
-   other 9 episodes to v2 (codex vs approved template), mark TL lines
-   in eps 2+10, and/or jump straight to the card-lesson concept
-   (PODCAST_CARDS_COMMISSION.md — likely supersedes plain episodes).
-2. **Wave 5 telemetry + planner** — the last unbuilt strategy pillar:
-   add-on pushes revlog (note GUID keyed) → planner adjusts targets.
-   Design notes in GRAMMAR_STRATEGY §6-7. The add-on is LOCAL code
-   (not in git): ~/.var/app/net.ankiweb.Anki/data/Anki2/addons21/
-   idiomatic_puller/__init__.py.
-3. **F2 implementation** (banks + design ready).
-4. Wire freq weights + vocab weave lists into generate.py prompts.
-5. it_reggenze_verbali batch was killed by a Gemini malformed-JSON
-   error and pt_regencia_verbal had all candidates rejected → both
-   "6" clusters were empty until the 2026-08-03 re-run (verify they
-   filled; pt may need the strictness tuning below first). Known
-   cosmetic quirk: cluster "10" sorts between "1" and "2" in Anki
-   (lexicographic) — renaming shipped clusters orphans subdecks, so
-   only do it deliberately with an add-on reorganize pass.
-6. pt_regencia/pt_clitic verifier strictness: read rejects, tune à la
-   commission J (dumps pattern in idiomatic-data/tuning/).
-7. CEFR roadmap → next new-unit batches (N's ~90 candidates).
-8. Explainer/podcast season 2 from reader chapters (flagged in
-   docs/reader/README.md).
-
-## Style notes for the successor
-
-The user: thinks big, delegates decisions ("take the decisions you
-think are necessary"), wants idle codex capacity USED, gives frank
-content feedback (act on it, record it in memory), timezone +08. Be
-direct, lead with outcomes, verify everything before claiming it
-works — this session's credibility came from catching codex/self
-mistakes before the user did (three prod incidents root-caused, wrong
-theories revised in public). Commit+push frequently (respecting the
-live-run rule); update CHANGELOG/FEATURES; keep personal data out of
-the public repo.
+- Suite: `.venv/bin/python -m pytest tests/ -q` (374 green at handoff)
+- Prod: `/admin/grammar-status`, `/admin/exercises2-list`,
+  `/admin/disk-usage` (token: `source ~/.config/idiomatic-admin.env`)
+- Batch gate: `.venv/bin/python tools/x2_batch_gate.py <chunks>`
+- Exclusion check: script embedded in ASSET_FACTORY_FAMOUS_CAST.md §1.3
