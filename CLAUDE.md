@@ -26,9 +26,12 @@ For feature inventory see @docs/FEATURES.md, for change history see
   grammar decks" step (moves existing cards into subdecks by unit tag,
   preserves scheduling; auto-runs on profile open, marker file
   grammar_reorg.done.json, skips profiles without grammar cards).
-- The user studies grammar in the **evgeny@the-syllabus.com** Anki
-  profile (idiom decks live in evgeny.morozov+2@gmail.com). The add-on
-  delivers to whichever profile is open.
+- **SYLLABUS-ONLY DELIVERY (user directive 2026-08-06): nothing imports
+  into evgeny.morozov+2@gmail.com anymore — ALL decks go to
+  evgeny@the-syllabus.com.** The add-on enforces this (_IMPORT_PROFILES
+  allowlist: polling/import runs only in the syllabus profile; cleanup/
+  reorganize hooks stay active everywhere so the +2 legacy purge can
+  still fire). The +2 profile is legacy-only, pending its purge.
 - Deck model is FROZEN (14 fields, Extra1 = back audio) — never change
   field count/order or template count; spares Extra2-4 remain.
 - Verification is non-negotiable: no generated form ships unverified
