@@ -6,6 +6,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- **Console verdicts round 2 executed** (all non-cast decisions resolved): telemetry system = next milestone; TENSES Wave 3 = raw-lapse order incl. literary tenses; podcast eps 2/10 approved to build; ES FALSE_FRIENDS added to armed purge; combined card back approved; 10 videos/mo escalation cap; rescue deck daily/comic-on-back; corpus-scale comics with model-judge QA (no per-item user approval); pt settings flavored for BOTH Brazil and Portugal; Mac Studio (M3 Ultra/96GB) to be integrated as second render node with a max-pregen push during the user's ~10-day absence.
 - **Wave 2 (CONDITIONALS) LAUNCHED** per user verdict "Go now" (decision console): 15 chunks × 5 languages authoring via codex; audit → merge → build to follow.
 - **Syllabus-only delivery policy** (user directive via decision console): the local add-on now hard-gates polling/import to evgeny@the-syllabus.com (`_IMPORT_PROFILES` allowlist; cleanup/reorganize hooks unchanged so the +2 purge can still fire); the +2 profile is legacy-only. Purge spec re-armed after a SECOND single-slot displacement (the 08-05 orphan job overwrote it) — queued cleanup jobs remain a factory commission-B requirement.
 - **First cast verdicts recorded**: ES woman ~35 = Penélope Cruz (M survival → max-quality sheet + gate), ES man ~35 = Javier Bardem, ES young = Rosalía; ES woman ~70 slot returned "don't know any of them" — needs new candidates.
