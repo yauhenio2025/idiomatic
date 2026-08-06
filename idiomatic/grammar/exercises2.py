@@ -76,6 +76,11 @@ TOPIC_LABELS = {
     ("connecting", "fr"): "Connecteurs",
     ("connecting", "it"): "Connettivi",
     ("connecting", "de"): "Konnektoren",
+    ("conditionals", "es"): "Condicionales",
+    ("conditionals", "pt"): "Condicionais",
+    ("conditionals", "fr"): "Conditionnels",
+    ("conditionals", "it"): "Periodo ipotetico",
+    ("conditionals", "de"): "Konditionalsätze",
 }
 
 CSS = """

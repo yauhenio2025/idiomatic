@@ -1,0 +1,596 @@
+[
+  {
+    "id": "ded201",
+    "en": "She was the main critic of Big Tech during the 1990s.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded202",
+    "en": "I was at the Cold War museum when I received your message.",
+    "verdict": "drop",
+    "reason": "One-off temporal when-clause, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded203",
+    "en": "This theory was the dominant perspective in the early stages of neoliberalism.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded204",
+    "en": "He was very concerned about Big Tech's influence on democracy.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded205",
+    "en": "The Berlin Wall was a symbol of the Cold War's division.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded206",
+    "en": "When I arrived, she was presenting her critiques on neoliberal policies.",
+    "verdict": "drop",
+    "reason": "One-off temporal when-clause, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded207",
+    "en": "That was the moment when the world realized the Cold War had truly ended.",
+    "verdict": "drop",
+    "reason": "Factual relative time clause with no conditional architecture."
+  },
+  {
+    "id": "ded208",
+    "en": "The Internet's foundation was a military project during the Cold War era.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded209",
+    "en": "She was at a seminar when the news about Big Tech's scandal broke.",
+    "verdict": "drop",
+    "reason": "One-off temporal when-clause, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded210",
+    "en": "The first instance of internet censorship was in the early 2000s.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded211",
+    "en": "Their strategy was based on neoliberal principles.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded212",
+    "en": "I was reading about the Cold War when the power went out.",
+    "verdict": "drop",
+    "reason": "One-off temporal interruption, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded213",
+    "en": "The meeting was at the main headquarters of the tech giant last week.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded214",
+    "en": "The essence of his argument was that neoliberalism benefits only the elite.",
+    "verdict": "drop",
+    "reason": "Factual complement clause, not a conditional sentence."
+  },
+  {
+    "id": "ded215",
+    "en": "She was feeling uneasy about Big Tech's data collection practices.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded216",
+    "en": "The spy exchange during the Cold War was on the Glienicke Bridge in 1962.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded217",
+    "en": "He was the primary voice against unregulated tech monopolies.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded218",
+    "en": "The satellite was the Cold War's way of ensuring mutual destruction.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded219",
+    "en": "I was researching neoliberal critiques when I stumbled upon her work.",
+    "verdict": "drop",
+    "reason": "One-off temporal interruption, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded220",
+    "en": "The first time I understood the Cold War's impact was during my visit to Berlin.",
+    "verdict": "drop",
+    "reason": "Factual time statement with no conditional architecture."
+  },
+  {
+    "id": "ded221",
+    "en": "The ideology behind the movement was fundamentally neoliberal.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded222",
+    "en": "The children were playing in the garden when they heard the news about the end of the Cold War.",
+    "verdict": "drop",
+    "reason": "One-off temporal interruption, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded223",
+    "en": "That conference was the turning point in global perceptions about Big Tech.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded224",
+    "en": "Her stance on the issue was always clear and consistent.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded225",
+    "en": "The soldiers were on high alert during the missile crisis.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded226",
+    "en": "The main criticism against him was his blind support for neoliberalism.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded227",
+    "en": "The rally was in the main square last Sunday.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded228",
+    "en": "The essence of the Cold War was an ideological battle.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded229",
+    "en": "While the debate was ongoing, he was writing his rebuttal.",
+    "verdict": "drop",
+    "reason": "Simultaneous past-time while-clause, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded230",
+    "en": "The culmination of the Cold War was in 1989 with the fall of the Berlin Wall.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded231",
+    "en": "He was at the forefront of critiques against Big Tech's monopolistic behaviors.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded232",
+    "en": "The diplomats were negotiating for hours before they reached a consensus.",
+    "verdict": "drop",
+    "reason": "Past temporal sequence, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded233",
+    "en": "The first time I heard about Big Tech's controversies was in a documentary.",
+    "verdict": "drop",
+    "reason": "Factual time statement with no conditional architecture."
+  },
+  {
+    "id": "ded234",
+    "en": "This doctrine was the cornerstone of American foreign policy during the Cold War.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded235",
+    "en": "She was feeling optimistic about the reforms in Big Tech.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded236",
+    "en": "The treaty was signed in 1991, marking the end of the Cold War.",
+    "verdict": "drop",
+    "reason": "Factual passive statement with no condition-result architecture."
+  },
+  {
+    "id": "ded237",
+    "en": "His identity was that of a staunch neoliberal economist.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded238",
+    "en": "The employees were in a meeting when the announcement was made.",
+    "verdict": "drop",
+    "reason": "One-off temporal when-clause, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded239",
+    "en": "The most significant event of the Cold War was the Cuban Missile Crisis.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded240",
+    "en": "The policy was rooted in pure neoliberal ideals.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded241",
+    "en": "The tech leaders were discussing new privacy policies at the summit.",
+    "verdict": "drop",
+    "reason": "Plain past-progressive statement with no condition-result architecture."
+  },
+  {
+    "id": "ded242",
+    "en": "The summit was a defining moment in Cold War history.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded243",
+    "en": "His main argument was that neoliberalism perpetuates inequality.",
+    "verdict": "drop",
+    "reason": "Factual complement clause, not a conditional sentence."
+  },
+  {
+    "id": "ded244",
+    "en": "They were feeling hopeful about the future after the Cold War.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded245",
+    "en": "The announcement was made at the height of the Cold War.",
+    "verdict": "drop",
+    "reason": "Factual passive statement with no condition-result architecture."
+  },
+  {
+    "id": "ded246",
+    "en": "The strategy was deeply influenced by neoliberal thought.",
+    "verdict": "drop",
+    "reason": "Factual passive statement with no condition-result architecture."
+  },
+  {
+    "id": "ded247",
+    "en": "The spies were transmitting information when they were caught.",
+    "verdict": "drop",
+    "reason": "One-off temporal interruption, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded248",
+    "en": "The final agreement was a product of intense negotiations.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded249",
+    "en": "Her role was pivotal in shaping the debates around neoliberalism.",
+    "verdict": "drop",
+    "reason": "Plain past-tense statement with no condition-result architecture."
+  },
+  {
+    "id": "ded250",
+    "en": "I had spoken with the professor about neoliberalism.",
+    "verdict": "drop",
+    "reason": "Standalone past-perfect statement with no condition-result architecture."
+  },
+  {
+    "id": "ded251",
+    "en": "If they knew about the Cold War, they would understand better.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded252",
+    "en": "She had been thinking about Big Tech's influence for days.",
+    "verdict": "drop",
+    "reason": "Standalone past-perfect-progressive statement, not a conditional sentence."
+  },
+  {
+    "id": "ded253",
+    "en": "Whenever I go to the museum, I learn something new.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded254",
+    "en": "They would have told us if they had found out about the scandal.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded255",
+    "en": "If you were a historian, you would analyze the Cold War differently.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded256",
+    "en": "I doubt he reads all the terms and conditions of the apps.",
+    "verdict": "drop",
+    "reason": "Doubt construction with a content clause, not a conditional sentence."
+  },
+  {
+    "id": "ded257",
+    "en": "He told me that he had been to Berlin before the Wall fell.",
+    "verdict": "drop",
+    "reason": "Reported statement with a temporal clause, not a conditional sentence."
+  },
+  {
+    "id": "ded258",
+    "en": "I would buy the book if it were cheaper.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded259",
+    "en": "If she spoke at the conference, many would listen.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded260",
+    "en": "I hope that he studies the effects of neoliberal policies.",
+    "verdict": "drop",
+    "reason": "Hope construction with a content clause, not a conditional sentence."
+  },
+  {
+    "id": "ded261",
+    "en": "Had you seen this Cold War documentary before?",
+    "verdict": "drop",
+    "reason": "Past-perfect question; initial Had is interrogative, not an inverted condition."
+  },
+  {
+    "id": "ded262",
+    "en": "I wish she were more critical of Big Tech's practices.",
+    "verdict": "drop",
+    "reason": "Present wish with no condition-result architecture."
+  },
+  {
+    "id": "ded263",
+    "en": "By next year, they will have completed their research on the Cold War.",
+    "verdict": "drop",
+    "reason": "Standalone future-perfect statement, not a conditional sentence."
+  },
+  {
+    "id": "ded264",
+    "en": "If we had known about the meeting, we would have attended.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded265",
+    "en": "You will understand better when you have studied all the theories.",
+    "verdict": "drop",
+    "reason": "Future temporal when-clause referring to one completed stage, not an open or habitual condition."
+  },
+  {
+    "id": "ded266",
+    "en": "Had they told us, we would have prepared a presentation.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded267",
+    "en": "I thought she had been researching this topic for years.",
+    "verdict": "drop",
+    "reason": "Reported thought with no condition-result architecture."
+  },
+  {
+    "id": "ded268",
+    "en": "Whenever he speaks about the Cold War, everyone listens intently.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded269",
+    "en": "If they had been aware, they would have protested against Big Tech's data collection.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded270",
+    "en": "By the time you arrive, the seminar will have already started.",
+    "verdict": "drop",
+    "reason": "By-the-time temporal sequence, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded271",
+    "en": "If she were the professor, she would emphasize the role of neoliberalism.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded272",
+    "en": "He wished he had met the veterans of the Cold War.",
+    "verdict": "drop",
+    "reason": "Past wish with no condition-result architecture."
+  },
+  {
+    "id": "ded273",
+    "en": "I doubt they bring their phones to the tech-free retreats.",
+    "verdict": "drop",
+    "reason": "Doubt construction with a content clause, not a conditional sentence."
+  },
+  {
+    "id": "ded274",
+    "en": "If you had warned me, I would have been more careful about sharing my data.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded275",
+    "en": "She hopes that the tech industry changes its practices.",
+    "verdict": "drop",
+    "reason": "Hope construction with a content clause, not a conditional sentence."
+  },
+  {
+    "id": "ded276",
+    "en": "Whenever we go to the tech conference, we network with industry leaders.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded277",
+    "en": "They would have been more influential if they had written about the Cold War.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded278",
+    "en": "By the time he realizes, it might be too late to critique Big Tech.",
+    "verdict": "drop",
+    "reason": "By-the-time temporal sequence with a modal result, not a conditional sentence."
+  },
+  {
+    "id": "ded279",
+    "en": "He thought that she would write a book about neoliberalism.",
+    "verdict": "drop",
+    "reason": "Reported future-in-the-past, not a conditional sentence."
+  },
+  {
+    "id": "ded280",
+    "en": "Had I been aware, I would have attended the Cold War reunion.",
+    "verdict": "drop",
+    "reason": "Duplicate of kept ded264: the same unreal-past lack of awareness leads to attendance at an event, with no new tense architecture or content function."
+  },
+  {
+    "id": "ded281",
+    "en": "I wish you were attending the tech summit next month.",
+    "verdict": "drop",
+    "reason": "Future-oriented wish with no condition-result architecture."
+  },
+  {
+    "id": "ded282",
+    "en": "If he speaks at the event, it will draw a lot of attention.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded283",
+    "en": "You would have been famous if you had predicted the rise of Big Tech.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded284",
+    "en": "They hope you understand the nuances of the Cold War.",
+    "verdict": "drop",
+    "reason": "Hope construction with a content clause, not a conditional sentence."
+  },
+  {
+    "id": "ded285",
+    "en": "I doubted that she had been to a tech-free zone.",
+    "verdict": "drop",
+    "reason": "Doubt construction with a content clause, not a conditional sentence."
+  },
+  {
+    "id": "ded286",
+    "en": "Whenever she writes about neoliberalism, her articles go viral.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded287",
+    "en": "By next month, the report on Big Tech's influence will have been published.",
+    "verdict": "drop",
+    "reason": "Standalone future-perfect passive statement, not a conditional sentence."
+  },
+  {
+    "id": "ded288",
+    "en": "If they went to the Cold War sites, they would learn a lot.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded289",
+    "en": "She wished she spoke at the last tech conference.",
+    "verdict": "drop",
+    "reason": "Past wish with no condition-result architecture; the English tense is also malformed for the intended past regret."
+  },
+  {
+    "id": "ded290",
+    "en": "If I had known about the debate, I would have participated.",
+    "verdict": "drop",
+    "reason": "Duplicate of kept ded264: the same unreal-past knowledge of an event leads to attendance or participation, with no distinct architecture."
+  },
+  {
+    "id": "ded291",
+    "en": "He hopes that she reads his book on neoliberalism.",
+    "verdict": "drop",
+    "reason": "Hope construction with a content clause, not a conditional sentence."
+  },
+  {
+    "id": "ded292",
+    "en": "Had you warned them, they would have been cautious.",
+    "verdict": "drop",
+    "reason": "Duplicate of kept ded274: the same unreal-past warning leads to greater caution, with no new tense architecture or content function."
+  },
+  {
+    "id": "ded293",
+    "en": "By the time we finish this course, we will have covered the entire history of the Cold War.",
+    "verdict": "drop",
+    "reason": "By-the-time temporal sequence, not a conditional or habitual sentence."
+  },
+  {
+    "id": "ded294",
+    "en": "Whenever you talk about Big Tech, ensure you have your facts right.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded295",
+    "en": "I doubt he goes offline for more than a day.",
+    "verdict": "drop",
+    "reason": "Doubt construction with a content clause, not a conditional sentence."
+  },
+  {
+    "id": "ded296",
+    "en": "Had they been more proactive, they would have critiqued Big Tech earlier.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded297",
+    "en": "If she writes her thesis on the Cold War, she will need many sources.",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "ded298",
+    "en": "They hoped he had researched neoliberal policies.",
+    "verdict": "drop",
+    "reason": "Reported hope with no condition-result architecture."
+  },
+  {
+    "id": "ded299",
+    "en": "Whenever you critique neoliberalism, make sure to cite your references.",
+    "verdict": "drop",
+    "reason": "Duplicate of kept ded294: the same habitual public-commentary frame requires an evidence-checking instruction, with no distinct tense architecture or content function."
+  }
+]

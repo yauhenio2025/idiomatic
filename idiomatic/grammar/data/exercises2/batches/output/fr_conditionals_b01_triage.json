@@ -1,0 +1,602 @@
+[
+  {
+    "id": "frd001",
+    "en": "If the US had not competed with the USSR, the arms race might not have escalated.",
+    "verdict": "keep",
+    "reason": "Distinct unreal-past geopolitical causal chain with a modal negative result."
+  },
+  {
+    "id": "frd002",
+    "en": "If neoliberal policies were not implemented, some argue there would have been fewer income disparities.",
+    "verdict": "keep",
+    "reason": "Useful unreal-past passive condition plus an attributed existential result."
+  },
+  {
+    "id": "frd003",
+    "en": "If I had been alive during the Cold War, I would have protested nuclear proliferation.",
+    "verdict": "keep",
+    "reason": "Best version of the lived-Cold-War family, with a clear personal unreal-past response."
+  },
+  {
+    "id": "frd004",
+    "en": "Had Big Tech companies been more transparent, they would have faced fewer criticisms.",
+    "verdict": "keep",
+    "reason": "Teaches English had-inversion and a useful Big Tech transparency counterfactual."
+  },
+  {
+    "id": "frd005",
+    "en": "If countries had collaborated more during the Cold War, tensions might have decreased.",
+    "verdict": "keep",
+    "reason": "Useful unreal-past modal result with distinct diplomacy vocabulary."
+  },
+  {
+    "id": "frd006",
+    "en": "If you were a tech CEO, you could prioritize user privacy over profits.",
+    "verdict": "keep",
+    "reason": "Concrete present counterfactual and a valuable correction to the legacy past-conditional result."
+  },
+  {
+    "id": "frd007",
+    "en": "If neoliberalism had not emphasized deregulation, perhaps some economies would have been more stable.",
+    "verdict": "keep",
+    "reason": "Distinct unreal-past economic-policy causal claim."
+  },
+  {
+    "id": "frd008",
+    "en": "Were I in charge of Big Tech, I would make significant changes to address public concerns.",
+    "verdict": "drop",
+    "reason": "Near-duplicate of frd006's hypothetical tech-leadership architecture, but with vaguer content."
+  },
+  {
+    "id": "frd009",
+    "en": "If governments had regulated tech companies earlier, there might have been fewer monopolies.",
+    "verdict": "keep",
+    "reason": "High-value unreal-past regulation scenario with an existential conditional-past result."
+  },
+  {
+    "id": "frd010",
+    "en": "If I were studying the Cold War now, I would focus on the role of propaganda.",
+    "verdict": "drop",
+    "reason": "Near-duplicate of frd020's present Cold War research hypothesis; frd020 also repairs a materially wrong legacy tense."
+  },
+  {
+    "id": "frd011",
+    "en": "Had the Berlin Wall not fallen, Europe would have looked very different today.",
+    "verdict": "keep",
+    "reason": "Clear high-value mixed condition: unreal past event leading to a present European result."
+  },
+  {
+    "id": "frd012",
+    "en": "If the internet were a utility, more people could afford access.",
+    "verdict": "keep",
+    "reason": "Distinct present policy counterfactual with essential-service vocabulary."
+  },
+  {
+    "id": "frd013",
+    "en": "If neoliberal principles were more balanced, critics might find fewer reasons to oppose them.",
+    "verdict": "keep",
+    "reason": "Useful present counterfactual pairing doctrinal balance with modal criticism."
+  },
+  {
+    "id": "frd014",
+    "en": "If you had lived in the Cold War era, you would have experienced the constant fear of nuclear war.",
+    "verdict": "drop",
+    "reason": "Duplicates frd003's lived-Cold-War unreal-past architecture and overlaps frd044's fear content."
+  },
+  {
+    "id": "frd015",
+    "en": "Had Big Tech been more socially responsible, public trust would not have eroded so quickly.",
+    "verdict": "keep",
+    "reason": "Distinct negative reflexive result and valuable trust/accountability vocabulary."
+  },
+  {
+    "id": "frd016",
+    "en": "If countries were not so entrenched in their ideologies during the Cold War, a peaceful resolution could have been reached earlier.",
+    "verdict": "keep",
+    "reason": "Valuable closed-past tense repair despite English were, with a passive modal result."
+  },
+  {
+    "id": "frd017",
+    "en": "If she were a tech executive, she would push for more ethical algorithms.",
+    "verdict": "drop",
+    "reason": "Near-duplicate of frd006's hypothetical tech-executive role, with no additional tense distinction."
+  },
+  {
+    "id": "frd018",
+    "en": "If neoliberalism were not so dominant in the 1990s, other economic ideologies might have gained prominence.",
+    "verdict": "keep",
+    "reason": "Useful English-were to French closed-past conversion in a specific historical period."
+  },
+  {
+    "id": "frd019",
+    "en": "Had social media companies not prioritized ad revenue, they might have avoided some ethical dilemmas.",
+    "verdict": "keep",
+    "reason": "Distinct platform-incentive counterfactual with modal conditional past."
+  },
+  {
+    "id": "frd020",
+    "en": "If I were researching the Cold War, I could provide more insights into its nuances.",
+    "verdict": "keep",
+    "reason": "Present ongoing counterfactual whose legacy gloss incorrectly changed both time frame and meaning."
+  },
+  {
+    "id": "frd021",
+    "en": "If he had known the extent of data breaches, he would have deleted his accounts earlier.",
+    "verdict": "keep",
+    "reason": "Concrete unreal-past digital-privacy consequence with useful breach vocabulary."
+  },
+  {
+    "id": "frd022",
+    "en": "If nations were more focused on diplomacy, the Cold War could have taken a different path.",
+    "verdict": "keep",
+    "reason": "English surface tense masks a closed historical counterfactual, creating genuine teaching value."
+  },
+  {
+    "id": "frd023",
+    "en": "Were I an economist, I might challenge some of the tenets of neoliberalism.",
+    "verdict": "keep",
+    "reason": "Strong English inversion prompt with a modal present counterfactual in economic criticism."
+  },
+  {
+    "id": "frd024",
+    "en": "Had tech giants focused more on user rights, the narrative would have been different today.",
+    "verdict": "keep",
+    "reason": "High-value mixed condition plus a material narrative/situation correction to the legacy gloss."
+  },
+  {
+    "id": "frd025",
+    "en": "If the space race were not fueled by Cold War tensions, our progress in space exploration could be slower.",
+    "verdict": "keep",
+    "reason": "Mixed historical-cause to present-result architecture obscured by the English surface tense."
+  },
+  {
+    "id": "frd026",
+    "en": "If you had been more aware of Big Tech's influence, you would have approached digital platforms differently.",
+    "verdict": "keep",
+    "reason": "Distinct unreal-past awareness and behavior sequence in the learner's target domain."
+  },
+  {
+    "id": "frd027",
+    "en": "If the principles of neoliberalism were adjusted for today's challenges, they could be more effective.",
+    "verdict": "keep",
+    "reason": "Useful present passive-style hypothesis that benefits from an idiomatic French recast."
+  },
+  {
+    "id": "frd028",
+    "en": "Had she lived through the Cold War, her opinions might have been different.",
+    "verdict": "drop",
+    "reason": "Duplicates frd003's lived-Cold-War unreal-past architecture with a less specific result."
+  },
+  {
+    "id": "frd029",
+    "en": "If tech companies were more collaborative, we could see more open-source innovations.",
+    "verdict": "keep",
+    "reason": "Distinct present counterfactual and a useful repair of the legacy open-source calque."
+  },
+  {
+    "id": "frd030",
+    "en": "If he were to critique neoliberalism, he would highlight its impact on labor rights.",
+    "verdict": "keep",
+    "reason": "Best of the were-to-critique pair, with substantive labor-rights vocabulary."
+  },
+  {
+    "id": "frd031",
+    "en": "Had nations prioritized peace over power, the Cold War might not have lasted so long.",
+    "verdict": "keep",
+    "reason": "Distinct negative modal result and high-value had-inversion."
+  },
+  {
+    "id": "frd032",
+    "en": "If I were a software developer, I could design more privacy-centric apps.",
+    "verdict": "drop",
+    "reason": "Near-duplicate of frd006's hypothetical technology role and privacy-over-business content."
+  },
+  {
+    "id": "frd033",
+    "en": "If people had been more skeptical of Big Tech's promises, trust would not have been broken so easily.",
+    "verdict": "keep",
+    "reason": "Useful reflexive plus-que-parfait and negative passive conditional-past architecture."
+  },
+  {
+    "id": "frd034",
+    "en": "Were she an historian, she might argue that the Cold War was more nuanced than typically portrayed.",
+    "verdict": "keep",
+    "reason": "Strong inverted-role prompt with a layered reported historical judgment."
+  },
+  {
+    "id": "frd035",
+    "en": "If you had seen the economic upheavals neoliberal policies caused in some countries, you might have reconsidered its merits.",
+    "verdict": "keep",
+    "reason": "Worth keeping to repair the source's mismatched antecedent while drilling an unreal-past judgment."
+  },
+  {
+    "id": "frd036",
+    "en": "Had tech companies been established in a different era, their values and missions might have been different.",
+    "verdict": "keep",
+    "reason": "Distinct founding-era counterfactual with a plural conditional-past result."
+  },
+  {
+    "id": "frd037",
+    "en": "If I were a regulator, Big Tech would be under more scrutiny.",
+    "verdict": "drop",
+    "reason": "Duplicates the hypothetical-profession pattern; frd055 drills regulation directly with richer content."
+  },
+  {
+    "id": "frd038",
+    "en": "If scholars had more access to Cold War archives, our understanding would be more comprehensive.",
+    "verdict": "keep",
+    "reason": "Valuable contrast between imperfect avaient and a superficially similar pluperfect auxiliary."
+  },
+  {
+    "id": "frd039",
+    "en": "If you were a journalist today, you could investigate the true cost of neoliberalism on local economies.",
+    "verdict": "keep",
+    "reason": "Concrete professional present counterfactual aligned with the learner's media register."
+  },
+  {
+    "id": "frd040",
+    "en": "Had governments intervened sooner, Big Tech monopolies might not have arisen.",
+    "verdict": "keep",
+    "reason": "Useful être-auxiliary plus-que-parfait and negative modal outcome in competition policy."
+  },
+  {
+    "id": "frd041",
+    "en": "If the Cold War had not occurred, global politics might look very different today.",
+    "verdict": "keep",
+    "reason": "Clear mixed condition from unreal history to a present geopolitical landscape."
+  },
+  {
+    "id": "frd042",
+    "en": "Were I in the position to advise, I would caution against the unchecked power of tech giants.",
+    "verdict": "keep",
+    "reason": "Distinct advisory stance and useful mettre en garde construction within an inverted counterfactual."
+  },
+  {
+    "id": "frd043",
+    "en": "If neoliberalism were less market-centric, it could better address societal needs.",
+    "verdict": "keep",
+    "reason": "Concise present policy counterfactual with a meaningful anti-calque lexical choice."
+  },
+  {
+    "id": "frd044",
+    "en": "If he had experienced the propaganda during the Cold War, he would have understood the fear.",
+    "verdict": "drop",
+    "reason": "Duplicates the lived-Cold-War family represented by frd003 and overlaps frd014's fear consequence."
+  },
+  {
+    "id": "frd045",
+    "en": "Had tech leaders embraced ethical considerations early on, their platforms could have been more trusted.",
+    "verdict": "keep",
+    "reason": "Valuable correction of the legacy lexical calque plus a modal past passive meaning."
+  },
+  {
+    "id": "frd046",
+    "en": "If the Cold War were to happen today, digital warfare would play a significant role.",
+    "verdict": "keep",
+    "reason": "Best version of the Cold-War-in-the-digital-age scenario and a useful present hypothetical."
+  },
+  {
+    "id": "frd047",
+    "en": "If she were to critique Big Tech, she would emphasize the need for digital literacy.",
+    "verdict": "drop",
+    "reason": "Exact were-to-critique architecture of frd030, with no new tense distinction."
+  },
+  {
+    "id": "frd048",
+    "en": "Had world leaders understood the long-term consequences of their Cold War decisions, they might have acted differently.",
+    "verdict": "keep",
+    "reason": "Distinct unreal-past cognition-to-action chain with had-inversion."
+  },
+  {
+    "id": "frd049",
+    "en": "If you were a teacher, you could impart the importance of understanding the implications of neoliberalism to your students.",
+    "verdict": "drop",
+    "reason": "Repetitive hypothetical-profession architecture and brokenly redundant wording around impart and understanding."
+  },
+  {
+    "id": "frd050",
+    "en": "Were I to dive deep into any of these topics, I would first assess the biases and narratives surrounding them.",
+    "verdict": "keep",
+    "reason": "Distinct were-to research-method frame with strong professional-register vocabulary."
+  },
+  {
+    "id": "frd051",
+    "en": "If the Cold War were still ongoing, we would see a different geopolitical landscape.",
+    "verdict": "keep",
+    "reason": "Clear unreal-present persistence condition, distinct from past-to-present mixed conditions."
+  },
+  {
+    "id": "frd052",
+    "en": "If Big Tech respected user privacy, users would trust them more.",
+    "verdict": "drop",
+    "reason": "Content overlap with frd006's privacy priority and frd015's platform-responsibility-to-trust consequence."
+  },
+  {
+    "id": "frd053",
+    "en": "If neoliberal policies were more equitable, there would be fewer protests against them.",
+    "verdict": "keep",
+    "reason": "Useful present counterfactual linking distributive policy to collective protest."
+  },
+  {
+    "id": "frd054",
+    "en": "If I were a historian, I would focus on untold stories of the Cold War.",
+    "verdict": "drop",
+    "reason": "Duplicates frd034's historian-role and Cold War interpretation architecture with less syntactic depth."
+  },
+  {
+    "id": "frd055",
+    "en": "If governments regulated Big Tech effectively, we would see less data exploitation.",
+    "verdict": "keep",
+    "reason": "Distinct present regulatory counterfactual and an idiomatic nonliteral treatment of we would see."
+  },
+  {
+    "id": "frd056",
+    "en": "If neoliberalism took environmental issues into account, it would be more relevant today.",
+    "verdict": "keep",
+    "reason": "Distinct environmental-policy premise and explicitly present evaluation."
+  },
+  {
+    "id": "frd057",
+    "en": "If the Berlin Wall still stood, European relations would be drastically different.",
+    "verdict": "drop",
+    "reason": "Near-exact scenario duplicate of frd011; frd011 offers the richer past-to-present mixed architecture."
+  },
+  {
+    "id": "frd058",
+    "en": "If tech companies were transparent about their algorithms, there would be fewer conspiracy theories.",
+    "verdict": "keep",
+    "reason": "Distinct algorithmic-transparency premise with an existential conditional result."
+  },
+  {
+    "id": "frd059",
+    "en": "If you were to ask people about the Cold War, many would recount tales of fear and suspicion.",
+    "verdict": "keep",
+    "reason": "Useful were-to interview frame and oral-history vocabulary."
+  },
+  {
+    "id": "frd060",
+    "en": "If social media platforms prioritized well-being over engagement, users would have a healthier online experience.",
+    "verdict": "keep",
+    "reason": "Concrete present platform-design counterfactual with standard industry vocabulary."
+  },
+  {
+    "id": "frd061",
+    "en": "If the space race were happening now, it would likely involve private corporations.",
+    "verdict": "keep",
+    "reason": "Distinct present relocation of a historical competition with a probabilistic result."
+  },
+  {
+    "id": "frd062",
+    "en": "If you were a policy maker, you would face challenges in regulating Big Tech.",
+    "verdict": "drop",
+    "reason": "Generic profession-role duplicate; frd055 provides the same regulation domain with a more teachable causal result."
+  },
+  {
+    "id": "frd063",
+    "en": "If neoliberal economies focused more on welfare, they would likely face less criticism.",
+    "verdict": "keep",
+    "reason": "Distinct institutional welfare vocabulary and a useful probabilistic present result."
+  },
+  {
+    "id": "frd064",
+    "en": "If the Cold War took place in the digital age, cyber warfare would be a significant factor.",
+    "verdict": "drop",
+    "reason": "Near-exact scenario and architecture duplicate of frd046's Cold War occurring in today's digital environment."
+  },
+  {
+    "id": "frd065",
+    "en": "If tech companies were more accountable, public trust would be higher.",
+    "verdict": "drop",
+    "reason": "Duplicates frd015's technology-accountability-to-public-trust content with a less distinctive tense frame."
+  },
+  {
+    "id": "frd066",
+    "en": "If I were an educator, I would emphasize the importance of digital literacy.",
+    "verdict": "drop",
+    "reason": "Duplicates the hypothetical-profession pattern and overlaps frd047's digital-literacy content."
+  },
+  {
+    "id": "frd067",
+    "en": "If countries revisited Cold War treaties, they would find lessons for today's diplomacy.",
+    "verdict": "keep",
+    "reason": "Distinct present treaty-review counterfactual with useful diplomatic-learning vocabulary."
+  },
+  {
+    "id": "frd068",
+    "en": "If social media were not so prevalent, Big Tech would have less influence on daily lives.",
+    "verdict": "keep",
+    "reason": "Distinct negative present premise linking platform prevalence to everyday influence."
+  },
+  {
+    "id": "frd069",
+    "en": "If you were to analyze neoliberalism's impact, you would find both positive and negative outcomes.",
+    "verdict": "keep",
+    "reason": "Useful were-to analytical frame with a balanced evidentiary result."
+  },
+  {
+    "id": "frd070",
+    "en": "If Cold War leaders used today's communication tools, strategies would be drastically different.",
+    "verdict": "keep",
+    "reason": "Valuable conversion from ambiguous English simple past to a closed French historical counterfactual."
+  },
+  {
+    "id": "frd071",
+    "en": "If Big Tech invested more in ethical practices, they would have a stronger reputation.",
+    "verdict": "keep",
+    "reason": "Distinct present investment-to-reputation causal frame in professional technology criticism."
+  },
+  {
+    "id": "frd072",
+    "en": "If neoliberal principles were applied without checks, economic disparities would increase.",
+    "verdict": "keep",
+    "reason": "Useful passive present condition and institutional safeguards vocabulary."
+  },
+  {
+    "id": "frd073",
+    "en": "If I were to study the Cold War, I would focus on its cultural impacts.",
+    "verdict": "drop",
+    "reason": "Duplicates frd010 and kept frd020's present Cold War research architecture."
+  },
+  {
+    "id": "frd074",
+    "en": "If you were a tech entrepreneur, you would face dilemmas about user data.",
+    "verdict": "drop",
+    "reason": "Another generic hypothetical-technology-profession prompt, overlapping frd006's privacy dilemma."
+  },
+  {
+    "id": "frd075",
+    "en": "If governments took a hard stance on neoliberalism, global trade dynamics would change.",
+    "verdict": "keep",
+    "reason": "Distinct government-stance premise with a global trade consequence."
+  },
+  {
+    "id": "frd076",
+    "en": "If she were a tech critic, she would advocate for decentralized platforms.",
+    "verdict": "drop",
+    "reason": "Duplicates the hypothetical-profession pattern; frd082 retains decentralization with a substantive security consequence."
+  },
+  {
+    "id": "frd077",
+    "en": "If the Cold War dynamics resurfaced, global alliances would shift.",
+    "verdict": "keep",
+    "reason": "Distinct unlikely-present resurgence and geopolitical realignment scenario."
+  },
+  {
+    "id": "frd078",
+    "en": "If Big Tech listened more to its users, its products would be more user-friendly.",
+    "verdict": "keep",
+    "reason": "Distinct user-feedback-to-usability premise and a useful correction to convivial."
+  },
+  {
+    "id": "frd079",
+    "en": "If you were to assess neoliberalism's long-term effects, you would need to consider various regions separately.",
+    "verdict": "keep",
+    "reason": "High-value were-to methodological frame with conditional devoir."
+  },
+  {
+    "id": "frd080",
+    "en": "If I were to critique Big Tech, I would start with their monopolistic tendencies.",
+    "verdict": "drop",
+    "reason": "Exact were-to-critique architecture already represented by frd030; the Big Tech variant adds no tense distinction."
+  },
+  {
+    "id": "frd081",
+    "en": "If Cold War aesthetics came back in style, we would see more retro designs in media.",
+    "verdict": "keep",
+    "reason": "Distinct cultural-media hypothetical with a worthwhile anti-Anglicism lexical repair."
+  },
+  {
+    "id": "frd082",
+    "en": "If tech platforms were more decentralized, user information would be more secure.",
+    "verdict": "keep",
+    "reason": "Distinct architecture-to-data-security premise in the technology policy domain."
+  },
+  {
+    "id": "frd083",
+    "en": "If governments reviewed neoliberal policies regularly, they would be more adaptive.",
+    "verdict": "keep",
+    "reason": "Useful recurring-review counterfactual and an idiomatic French recast of adaptive."
+  },
+  {
+    "id": "frd084",
+    "en": "If the Cold War were taught more comprehensively in schools, students would have a better grasp of post-war geopolitics.",
+    "verdict": "keep",
+    "reason": "Distinct passive education condition and a France-French élèves versus étudiants correction."
+  },
+  {
+    "id": "frd085",
+    "en": "If Big Tech were more localized, services would cater better to regional needs.",
+    "verdict": "keep",
+    "reason": "Distinct localization-to-regional-service consequence requiring idiomatic interpretation."
+  },
+  {
+    "id": "frd086",
+    "en": "If you were an economist, you would likely have strong opinions on neoliberalism.",
+    "verdict": "drop",
+    "reason": "Duplicates frd023's economist-role and neoliberalism-opinion architecture with a vaguer result."
+  },
+  {
+    "id": "frd087",
+    "en": "If the Cold War narratives were not so polarized, history books would be more nuanced.",
+    "verdict": "keep",
+    "reason": "Distinct historiographical counterfactual and a useful semantic recast of nuanced books."
+  },
+  {
+    "id": "frd088",
+    "en": "If Big Tech promoted more indie developers, the digital ecosystem would be more diverse.",
+    "verdict": "keep",
+    "reason": "Distinct developer-support-to-ecosystem-diversity causal frame."
+  },
+  {
+    "id": "frd089",
+    "en": "If neoliberalism were more inclusive, it would find more acceptance globally.",
+    "verdict": "keep",
+    "reason": "Concise present counterfactual with a global acceptance result."
+  },
+  {
+    "id": "frd090",
+    "en": "If I were to reimagine the Cold War, technology would play a crucial role.",
+    "verdict": "drop",
+    "reason": "Overlaps frd046's modernized Cold War and technology-role scenario with less concrete content."
+  },
+  {
+    "id": "frd091",
+    "en": "If Big Tech were less commercial, we would see fewer ads online.",
+    "verdict": "keep",
+    "reason": "Distinct business-model-to-advertising result and a necessary clarification of commercial."
+  },
+  {
+    "id": "frd092",
+    "en": "If countries applied lessons from the Cold War, modern diplomacy would be more effective.",
+    "verdict": "keep",
+    "reason": "Distinct present application-to-effectiveness condition with formal diplomatic collocations."
+  },
+  {
+    "id": "frd093",
+    "en": "If tech companies were more responsible, digital landscapes would be safer for children.",
+    "verdict": "keep",
+    "reason": "Distinct child-safety consequence and a useful repair of the landscapes calque."
+  },
+  {
+    "id": "frd094",
+    "en": "If neoliberalism addressed social welfare directly, it would reduce societal fractures.",
+    "verdict": "keep",
+    "reason": "Worth retaining to correct the potentially reversed meaning of s'attaquer à la protection sociale."
+  },
+  {
+    "id": "frd095",
+    "en": "If the Cold War had different outcomes, global superpowers would be different today.",
+    "verdict": "keep",
+    "reason": "Clear mixed condition from an unreal historical outcome to today's power hierarchy."
+  },
+  {
+    "id": "frd096",
+    "en": "If Big Tech were more open-source, innovation would spread more rapidly.",
+    "verdict": "drop",
+    "reason": "Overlaps frd029's technology-company collaboration and open-source innovation consequence."
+  },
+  {
+    "id": "frd097",
+    "en": "If you were to design a tech product, user privacy would be a top concern.",
+    "verdict": "drop",
+    "reason": "Duplicates frd006's hypothetical technology role and user-privacy priority content."
+  },
+  {
+    "id": "frd098",
+    "en": "If people understood the Cold War complexities, they would approach geopolitics more empathetically.",
+    "verdict": "keep",
+    "reason": "Distinct understanding-to-interpretive-stance counterfactual in geopolitical education."
+  },
+  {
+    "id": "frd099",
+    "en": "If Big Tech were more regulated, startups would have a better chance at success.",
+    "verdict": "keep",
+    "reason": "Distinct present regulation-to-market-entry result complementing the unreal-past monopoly item."
+  },
+  {
+    "id": "frd100",
+    "en": "If I were to lead a movement, it would be about rebalancing the effects of neoliberalism.",
+    "verdict": "keep",
+    "reason": "Distinct were-to leadership frame whose awkward source meaning benefits from an idiomatic programmatic recast."
+  }
+]

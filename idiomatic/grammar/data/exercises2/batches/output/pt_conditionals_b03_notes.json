@@ -1,0 +1,347 @@
+[
+  {
+    "id": "ptd251",
+    "en": "If they knew about the Cold War, they would understand better.",
+    "category": "counterfactual",
+    "tl": "Se eles conhecessem a história da Guerra Fria, entenderiam melhor.",
+    "alts": [
+      "Se eles soubessem mais sobre a Guerra Fria, entenderiam melhor."
+    ],
+    "register": "Neutro; a omissão do pronome antes de entenderiam também é natural no português brasileiro escrito.",
+    "trap": "A hipótese presente remota exige imperfeito do subjuntivo: conhecessem, não o futuro conhecerem, que tornaria a condição aberta.",
+    "example_tl": "Se os reguladores conhecessem melhor a arquitetura das plataformas, identificariam com mais rapidez os incentivos que transformam moderação em censura privada.",
+    "example_en": "If regulators understood platform architecture better, they would identify more quickly the incentives that turn moderation into private censorship.",
+    "cloze": "Se os reguladores {{c1::conhecessem}} melhor a arquitetura das plataformas, {{c1::identificariam}} com mais rapidez os incentivos que transformam moderação em censura privada.",
+    "note": "O old_back é aceitável; tl explicita história para que conhecer tenha um objeto mais idiomático. Autorrevisão: troquei soubessem sobre por conhecessem a história, evitando um complemento menos elegante em registro profissional."
+  },
+  {
+    "id": "ptd253",
+    "en": "Whenever I go to the museum, I learn something new.",
+    "category": "habitual",
+    "tl": "Sempre que vou ao museu, aprendo algo novo.",
+    "alts": [
+      "Toda vez que vou ao museu, aprendo algo novo."
+    ],
+    "register": "Neutro; toda vez que é igualmente corrente, mas um pouco mais conversacional.",
+    "trap": "Apesar de o português usar futuro do subjuntivo em condições futuras, a leitura habitual pede presente do indicativo: vou e aprendo, como voy e aprendo em espanhol.",
+    "example_tl": "Sempre que uma plataforma altera suas regras de recomendação, pesquisadores independentes descobrem novos mecanismos de amplificação política e assimetrias de acesso.",
+    "example_en": "Whenever a platform changes its recommendation rules, independent researchers discover new mechanisms of political amplification and access asymmetries.",
+    "cloze": "Sempre que uma plataforma {{c1::altera}} suas regras de recomendação, pesquisadores independentes {{c1::descobrem}} novos mecanismos de amplificação política e assimetrias de acesso.",
+    "note": "O old_back já oferece a melhor tradução."
+  },
+  {
+    "id": "ptd254",
+    "en": "They would have told us if they had found out about the scandal.",
+    "category": "counterfactual",
+    "tl": "Eles nos teriam contado se tivessem descoberto o escândalo.",
+    "alts": [
+      "Se tivessem descoberto o escândalo, eles nos teriam contado."
+    ],
+    "register": "Neutro-formal; nos teriam contado segue a colocação pronominal preferida na escrita monitorada brasileira.",
+    "trap": "Como no espanhol si hubieran descubierto, a oração com se leva mais-que-perfeito do subjuntivo: tivessem descoberto, nunca o condicional teriam descoberto.",
+    "example_tl": "Os repórteres teriam publicado a investigação se tivessem confirmado, com fontes independentes, a participação direta dos executivos no esquema de vigilância.",
+    "example_en": "The reporters would have published the investigation if they had confirmed, with independent sources, the executives' direct involvement in the surveillance scheme.",
+    "cloze": "Os repórteres {{c1::teriam publicado}} a investigação se {{c1::tivessem confirmado}}, com fontes independentes, a participação direta dos executivos no esquema de vigilância.",
+    "note": "A arquitetura temporal do old_back está correta; tl apenas ajusta a colocação de nos ao registro escrito."
+  },
+  {
+    "id": "ptd255",
+    "en": "If you were a historian, you would analyze the Cold War differently.",
+    "category": "counterfactual",
+    "tl": "Se você fosse historiador, analisaria a Guerra Fria de outra forma.",
+    "alts": [
+      "Se você fosse historiador, analisaria a Guerra Fria de modo diferente."
+    ],
+    "register": "Neutro; em português brasileiro, a profissão após ser normalmente aparece sem artigo neste contexto.",
+    "trap": "O cognato espanhol si fueras corresponde aqui a se você fosse; se você for usaria o futuro do subjuntivo e mudaria a frase para uma condição aberta.",
+    "example_tl": "Se o conselho fosse realmente independente, examinaria os contratos de nuvem sem aceitar como inevitável a concentração imposta pelas grandes provedoras.",
+    "example_en": "If the board were truly independent, it would examine cloud contracts without accepting as inevitable the concentration imposed by the large providers.",
+    "cloze": "Se o conselho {{c1::fosse}} realmente independente, {{c1::examinaria}} os contratos de nuvem sem aceitar como inevitável a concentração imposta pelas grandes provedoras.",
+    "note": "Diverge do old_back ao retirar um antes da profissão, opção mais idiomática para uma condição sobre papel ou ocupação."
+  },
+  {
+    "id": "ptd258",
+    "en": "I would buy the book if it were cheaper.",
+    "category": "counterfactual",
+    "tl": "Eu compraria o livro se fosse mais barato.",
+    "alts": [
+      "Se o livro fosse mais barato, eu o compraria."
+    ],
+    "register": "Neutro; a alternativa com o compraria é mais monitorada do que a colocação pronominal comum na fala brasileira.",
+    "trap": "O espanhol si fuera más barato coincide com se fosse mais barato; o português se for mais barato expressaria uma possibilidade futura aberta, não esta hipótese remota.",
+    "example_tl": "O jornal manteria correspondentes permanentes na região se a direção considerasse a cobertura internacional um investimento, e não apenas uma despesa.",
+    "example_en": "The newspaper would keep permanent correspondents in the region if management considered international coverage an investment rather than merely an expense.",
+    "cloze": "O jornal {{c1::manteria}} correspondentes permanentes na região se a direção {{c1::considerasse}} a cobertura internacional um investimento, e não apenas uma despesa.",
+    "note": "O old_back é correto; tl omite ele, pronome redundante e menos natural nesta construção."
+  },
+  {
+    "id": "ptd259",
+    "en": "If she spoke at the conference, many would listen.",
+    "category": "counterfactual",
+    "tl": "Se ela falasse na conferência, muitos a escutariam.",
+    "alts": [
+      "Se ela discursasse na conferência, muita gente a ouviria."
+    ],
+    "register": "Neutro-formal; a retomada por a elimina a ambiguidade de ouvir ou escutar sem objeto expresso.",
+    "trap": "A forma falasse, paralela ao espanhol hablara ou hablase, marca hipótese remota; falar, futuro do subjuntivo, exigiria uma leitura futura aberta e outro resultado.",
+    "example_tl": "Se a pesquisadora apresentasse os dados sem eufemismos, muitos investidores reconheceriam que o modelo de publicidade depende de vigilância sistemática.",
+    "example_en": "If the researcher presented the data without euphemisms, many investors would recognize that the advertising model depends on systematic surveillance.",
+    "cloze": "Se a pesquisadora {{c1::apresentasse}} os dados sem eufemismos, muitos investidores {{c1::reconheceriam}} que o modelo de publicidade depende de vigilância sistemática.",
+    "note": "A frase inglesa é interpretada como uma hipótese presente ou futura remota, não como hábito passado. Autorrevisão: acrescentei o objeto a em tl porque muitos ouviriam isolado pode significar apenas que muitos teriam capacidade de ouvir."
+  },
+  {
+    "id": "ptd264",
+    "en": "If we had known about the meeting, we would have attended.",
+    "category": "counterfactual",
+    "tl": "Se tivéssemos sabido da reunião, teríamos comparecido.",
+    "alts": [
+      "Teríamos comparecido se tivéssemos sabido da reunião."
+    ],
+    "register": "Neutro-formal; comparecer é mais monitorado, enquanto teríamos ido é a escolha corrente na conversa.",
+    "trap": "Por influência de si hubiéramos sabido, pode surgir haver como auxiliar; se houvéssemos sabido é gramatical, mas se tivéssemos sabido é a forma neutra no português brasileiro.",
+    "example_tl": "Se o governo tivesse divulgado os contratos antes da votação, os jornalistas teriam identificado as cláusulas que transferiam dados públicos às plataformas.",
+    "example_en": "If the government had disclosed the contracts before the vote, journalists would have identified the clauses that transferred public data to the platforms.",
+    "cloze": "Se o governo {{c1::tivesse divulgado}} os contratos antes da votação, os jornalistas {{c1::teriam identificado}} as cláusulas que transferiam dados públicos às plataformas.",
+    "note": "Diverge materialmente do old_back: tivéssemos sabido torna explícita a anterioridade contrafactual do inglês had known; soubéssemos é possível no uso, mas menos preciso para este treino."
+  },
+  {
+    "id": "ptd266",
+    "en": "Had they told us, we would have prepared a presentation.",
+    "category": "counterfactual",
+    "tl": "Se eles nos tivessem avisado, teríamos preparado uma apresentação.",
+    "alts": [
+      "Se eles nos tivessem informado, teríamos preparado uma apresentação."
+    ],
+    "register": "Neutro; avisado é natural no português brasileiro, enquanto informado soa um pouco mais institucional.",
+    "trap": "A inversão inglesa Had they told us vira se + mais-que-perfeito do subjuntivo; por influência de hubieran, não se deve preferir automaticamente haver ao auxiliar ter.",
+    "example_tl": "Se os editores nos tivessem avisado sobre o embargo, teríamos preparado uma análise mais cuidadosa dos documentos e de suas implicações geopolíticas.",
+    "example_en": "If the editors had warned us about the embargo, we would have prepared a more careful analysis of the documents and their geopolitical implications.",
+    "cloze": "Se os editores {{c1::nos tivessem avisado}} sobre o embargo, {{c1::teríamos preparado}} uma análise mais cuidadosa dos documentos e de suas implicações geopolíticas.",
+    "note": "O old_back é correto; tl prefere avisado, equivalente mais direto de told neste contexto."
+  },
+  {
+    "id": "ptd268",
+    "en": "Whenever he speaks about the Cold War, everyone listens intently.",
+    "category": "habitual",
+    "tl": "Sempre que ele fala sobre a Guerra Fria, todos escutam atentamente.",
+    "alts": [
+      "Toda vez que ele fala sobre a Guerra Fria, todos ouvem com atenção."
+    ],
+    "register": "Neutro; toda vez que é ligeiramente mais conversacional, e ouvir com atenção evita qualquer rigidez de atentamente.",
+    "trap": "A repetição factual pede presente do indicativo, fala e escutam; o futuro do subjuntivo falar mudaria a leitura para ocasiões futuras ainda não realizadas.",
+    "example_tl": "Sempre que o ministério divulga novos dados sobre desinformação, pesquisadores independentes identificam mudanças metodológicas que alteram silenciosamente as séries históricas nacionais.",
+    "example_en": "Whenever the ministry releases new data on disinformation, independent researchers identify methodological changes that silently alter the national historical series.",
+    "cloze": "Sempre que o ministério {{c1::divulga}} novos dados sobre desinformação, pesquisadores independentes {{c1::identificam}} mudanças metodológicas que alteram silenciosamente as séries históricas nacionais.",
+    "note": "O old_back é correto; tl usa escutam para tornar explícita a atenção deliberada."
+  },
+  {
+    "id": "ptd269",
+    "en": "If they had been aware, they would have protested against Big Tech's data collection.",
+    "category": "counterfactual",
+    "tl": "Se eles estivessem cientes disso, teriam protestado contra a coleta de dados pelas grandes empresas de tecnologia.",
+    "alts": [
+      "Se eles soubessem disso, teriam protestado contra a coleta de dados pelas grandes empresas de tecnologia."
+    ],
+    "register": "Neutro-formal; estar ciente é mais monitorado do que saber, sem soar burocrático neste contexto.",
+    "trap": "O espanhol tende a explicitar a anterioridade com si hubieran estado al tanto; em português, o estado simultâneo relevante aparece naturalmente como se estivessem cientes.",
+    "example_tl": "Se os parlamentares estivessem cientes do alcance do sistema, teriam exigido auditorias independentes antes de autorizar a coleta massiva de dados.",
+    "example_en": "If the lawmakers had been aware of the system's reach, they would have demanded independent audits before authorizing mass data collection.",
+    "cloze": "Se os parlamentares {{c1::estivessem}} cientes do alcance do sistema, {{c1::teriam exigido}} auditorias independentes antes de autorizar a coleta massiva de dados.",
+    "note": "O estado contrafactual é passado pelo contexto e pelo resultado composto; o imperfeito do subjuntivo é idiomático com estar ciente. Autorrevisão: mantive estivessem em vez do pesado tivessem estado e usei pelas para explicitar o agente da coleta."
+  },
+  {
+    "id": "ptd271",
+    "en": "If she were the professor, she would emphasize the role of neoliberalism.",
+    "category": "counterfactual",
+    "tl": "Se ela fosse a professora, enfatizaria o papel do neoliberalismo.",
+    "alts": [
+      "Caso ela fosse a professora, destacaria o papel do neoliberalismo."
+    ],
+    "register": "Neutro; enfatizar e destacar são naturais na escrita acadêmica e jornalística.",
+    "trap": "Fosse corresponde ao espanhol fuera nesta hipótese remota; se ela for empregaria o futuro do subjuntivo e apresentaria a condição como aberta.",
+    "example_tl": "Se ela fosse a relatora, destacaria o risco de a nova lei consolidar a dependência estatal de infraestruturas privadas estrangeiras.",
+    "example_en": "If she were the rapporteur, she would highlight the risk that the new law could consolidate state dependence on private foreign infrastructure.",
+    "cloze": "Se ela {{c1::fosse}} a relatora, {{c1::destacaria}} o risco de a nova lei consolidar a dependência estatal de infraestruturas privadas estrangeiras.",
+    "note": "O old_back já oferece a melhor tradução."
+  },
+  {
+    "id": "ptd274",
+    "en": "If you had warned me, I would have been more careful about sharing my data.",
+    "category": "counterfactual",
+    "tl": "Se você tivesse me avisado, eu teria tomado mais cuidado ao compartilhar meus dados.",
+    "alts": [
+      "Se você me tivesse alertado, eu teria sido mais cuidadoso ao compartilhar meus dados."
+    ],
+    "register": "Neutro; tivesse me avisado é colocação corrente no português brasileiro, e me tivesse alertado é mais monitorado.",
+    "trap": "O espanhol usa si me hubieras avisado; no português brasileiro, ter é o auxiliar neutro, e o clítico pode ocorrer naturalmente entre auxiliar e particípio.",
+    "example_tl": "Se a assessoria nos tivesse alertado sobre a falha, teríamos suspendido a publicação antes de expor as fontes a riscos desnecessários.",
+    "example_en": "If the press office had alerted us to the flaw, we would have suspended publication before exposing the sources to unnecessary risks.",
+    "cloze": "Se a assessoria {{c1::nos tivesse alertado}} sobre a falha, {{c1::teríamos suspendido}} a publicação antes de expor as fontes a riscos desnecessários.",
+    "note": "Tl substitui a tradução adjetival do old_back pela expressão brasileira mais idiomática tomar mais cuidado."
+  },
+  {
+    "id": "ptd276",
+    "en": "Whenever we go to the tech conference, we network with industry leaders.",
+    "category": "habitual",
+    "tl": "Sempre que vamos à conferência de tecnologia, fazemos contatos com líderes do setor.",
+    "alts": [
+      "Toda vez que participamos da conferência de tecnologia, ampliamos nossa rede de contatos com líderes do setor."
+    ],
+    "register": "Neutro-profissional; fazer contatos evita o anglicismo networking sem soar excessivamente formal.",
+    "trap": "Como a repetição já é factual, use presente do indicativo, vamos e fazemos; formos projetaria a série para ocasiões futuras.",
+    "example_tl": "Sempre que representantes das plataformas participam da audiência, organizações civis confrontam suas promessas voluntárias com dados sobre violações recorrentes de direitos.",
+    "example_en": "Whenever platform representatives take part in the hearing, civil-society organizations compare their voluntary promises with data on recurring rights violations.",
+    "cloze": "Sempre que representantes das plataformas {{c1::participam}} da audiência, organizações civis {{c1::confrontam}} suas promessas voluntárias com dados sobre violações recorrentes de direitos.",
+    "note": "Diverge do old_back ao preservar o artigo definido de the tech conference e evitar uma, que sugere qualquer conferência."
+  },
+  {
+    "id": "ptd277",
+    "en": "They would have been more influential if they had written about the Cold War.",
+    "category": "counterfactual",
+    "tl": "Eles teriam sido mais influentes se tivessem escrito sobre a Guerra Fria.",
+    "alts": [
+      "Se tivessem escrito sobre a Guerra Fria, eles teriam sido mais influentes."
+    ],
+    "register": "Neutro; a ordem resultado-condição acompanha o foco informacional do original.",
+    "trap": "O espanhol usa habrían sido e hubieran escrito; o português brasileiro prefere ter nos dois compostos: teriam sido e tivessem escrito.",
+    "example_tl": "Os pesquisadores teriam sido mais influentes se tivessem publicado suas descobertas antes que as plataformas definissem sozinhas os parâmetros do debate.",
+    "example_en": "The researchers would have been more influential if they had published their findings before the platforms defined the terms of the debate by themselves.",
+    "cloze": "Os pesquisadores {{c1::teriam sido}} mais influentes se {{c1::tivessem publicado}} suas descobertas antes que as plataformas definissem sozinhas os parâmetros do debate.",
+    "note": "O old_back já oferece a melhor tradução."
+  },
+  {
+    "id": "ptd280",
+    "en": "Had I been aware, I would have attended the Cold War reunion.",
+    "category": "counterfactual",
+    "tl": "Se eu tivesse sabido disso, teria participado do encontro sobre a Guerra Fria.",
+    "alts": [
+      "Se eu soubesse disso, teria comparecido ao encontro sobre a Guerra Fria."
+    ],
+    "register": "Neutro; participar do encontro é mais corrente, enquanto comparecer ao encontro é um pouco mais formal.",
+    "trap": "Had I been aware é uma condicional inglesa invertida, não uma pergunta; em português, restaure se e use tivesse sabido, com ter em vez do haber espanhol.",
+    "example_tl": "Se a correspondente tivesse sabido da entrevista, teria comparecido ao encontro para questionar o ministro sobre a campanha de desinformação.",
+    "example_en": "If the correspondent had known about the interview, she would have attended the meeting to question the minister about the disinformation campaign.",
+    "cloze": "Se a correspondente {{c1::tivesse sabido}} da entrevista, {{c1::teria comparecido}} ao encontro para questionar o ministro sobre a campanha de desinformação.",
+    "note": "Reunion é subespecificado no original; encontro preserva a ideia de reunião sem inventar participantes. O old_back reduz a anterioridade com estivesse ciente."
+  },
+  {
+    "id": "ptd282",
+    "en": "If he speaks at the event, it will draw a lot of attention.",
+    "category": "real-condition",
+    "tl": "Se ele falar no evento, isso chamará muita atenção.",
+    "alts": [
+      "Caso ele fale no evento, isso atrairá muita atenção."
+    ],
+    "register": "Neutro; chamará muita atenção é corrente, e atrairá muita atenção soa ligeiramente mais formal.",
+    "trap": "Ao contrário do espanhol si habla, a condição futura aberta com se pede futuro do subjuntivo em português: se ele falar, não se ele fala.",
+    "example_tl": "Se o governo adiar a votação novamente, a imprensa internacional interpretará a decisão como sinal de divisão dentro da coalizão.",
+    "example_en": "If the government postpones the vote again, the international press will interpret the decision as a sign of division within the coalition.",
+    "cloze": "Se o governo {{c1::adiar}} a votação novamente, a imprensa internacional {{c1::interpretará}} a decisão como sinal de divisão dentro da coalizão.",
+    "note": "Corrige erro material do old_back, que troca he por você."
+  },
+  {
+    "id": "ptd283",
+    "en": "You would have been famous if you had predicted the rise of Big Tech.",
+    "category": "counterfactual",
+    "tl": "Você teria ficado famoso se tivesse previsto a ascensão da Big Tech.",
+    "alts": [
+      "Se tivesse previsto a ascensão da Big Tech, você teria ficado famoso."
+    ],
+    "register": "Neutro; ficar famoso é a construção idiomática para mudança de estado.",
+    "trap": "A prótase exige tivesse previsto, não teria previsto; o português usa ter onde o espanhol forma o composto com haber: si hubieras previsto.",
+    "example_tl": "A analista teria ganhado projeção internacional se tivesse antecipado o impacto geopolítico dos semicondutores antes que a disputa chegasse às manchetes.",
+    "example_en": "The analyst would have gained international prominence if she had anticipated the geopolitical impact of semiconductors before the dispute reached the headlines.",
+    "cloze": "A analista {{c1::teria ganhado}} projeção internacional se {{c1::tivesse antecipado}} o impacto geopolítico dos semicondutores antes que a disputa chegasse às manchetes.",
+    "note": "Tl prefere ascensão a surgimento porque rise descreve crescimento de poder, não mero aparecimento."
+  },
+  {
+    "id": "ptd286",
+    "en": "Whenever she writes about neoliberalism, her articles go viral.",
+    "category": "habitual",
+    "tl": "Sempre que ela escreve sobre neoliberalismo, seus artigos viralizam.",
+    "alts": [
+      "Toda vez que ela escreve sobre neoliberalismo, seus artigos ganham enorme repercussão."
+    ],
+    "register": "Neutro-contemporâneo; viralizar é corrente no jornalismo digital, enquanto ganhar enorme repercussão é mais formal.",
+    "trap": "A recorrência observada seleciona presente do indicativo, escreve e viralizam; escrever, no futuro do subjuntivo, apontaria para ocorrências futuras.",
+    "example_tl": "Sempre que a colunista publica documentos internos, suas análises viralizam porque revelam a distância entre o discurso público e as práticas corporativas.",
+    "example_en": "Whenever the columnist publishes internal documents, her analyses go viral because they reveal the gap between public discourse and corporate practices.",
+    "cloze": "Sempre que a colunista {{c1::publica}} documentos internos, suas análises {{c1::viralizam}} porque revelam a distância entre o discurso público e as práticas corporativas.",
+    "note": "Tl evita se tornam virais, possível mas menos enxuto do que o verbo já lexicalizado viralizar."
+  },
+  {
+    "id": "ptd288",
+    "en": "If they went to the Cold War sites, they would learn a lot.",
+    "category": "counterfactual",
+    "tl": "Se eles visitassem os locais históricos da Guerra Fria, aprenderiam muito.",
+    "alts": [
+      "Se eles fossem aos locais históricos da Guerra Fria, aprenderiam muito."
+    ],
+    "register": "Neutro; visitar é mais específico e idiomático para locais históricos, enquanto ir a preserva o movimento do original.",
+    "trap": "O espanhol si fueran corresponde a se fossem; em português, se forem usaria o futuro do subjuntivo e transformaria a hipótese remota em condição aberta.",
+    "example_tl": "Se os estudantes visitassem os arquivos diplomáticos, perceberiam como decisões aparentemente técnicas reproduziram hierarquias coloniais nas instituições multilaterais.",
+    "example_en": "If the students visited the diplomatic archives, they would realize how apparently technical decisions reproduced colonial hierarchies in multilateral institutions.",
+    "cloze": "Se os estudantes {{c1::visitassem}} os arquivos diplomáticos, {{c1::perceberiam}} como decisões aparentemente técnicas reproduziram hierarquias coloniais nas instituições multilaterais.",
+    "note": "Tl explicita históricos, implícito em Cold War sites, e prefere visitassem ao genérico fossem."
+  },
+  {
+    "id": "ptd292",
+    "en": "Had you warned them, they would have been cautious.",
+    "category": "counterfactual",
+    "tl": "Se você os tivesse avisado, eles teriam sido cautelosos.",
+    "alts": [
+      "Caso você os tivesse alertado, eles teriam agido com cautela."
+    ],
+    "register": "Neutro; a primeira versão é enxuta e adequada à escrita monitorada brasileira.",
+    "trap": "A inversão inglesa Had you warned them requer se os tivesse avisado; nunca use futuro do pretérito na oração com se, e inclua o objeto os.",
+    "example_tl": "Se a agência os tivesse alertado, os municípios teriam sido mais cautelosos ao contratar sistemas preditivos sem auditoria pública independente.",
+    "example_en": "If the agency had alerted them, the municipalities would have been more cautious when procuring predictive systems without an independent public audit.",
+    "cloze": "Se a agência {{c1::os tivesse alertado}}, os municípios {{c1::teriam sido}} mais cautelosos ao contratar sistemas preditivos sem auditoria pública independente.",
+    "note": "O old_back já oferece uma tradução correta e idiomática."
+  },
+  {
+    "id": "ptd294",
+    "en": "Whenever you talk about Big Tech, ensure you have your facts right.",
+    "category": "habitual",
+    "tl": "Sempre que você falar sobre a Big Tech, certifique-se de que suas informações estejam corretas.",
+    "alts": [
+      "Toda vez que abordar a Big Tech, confira se os fatos estão corretos."
+    ],
+    "register": "Neutro-profissional; certifique-se é monitorado, enquanto confira é mais direto e corrente.",
+    "trap": "O espanhol usa siempre que hables, com presente do subjuntivo; o português prospectivo emprega futuro do subjuntivo: sempre que você falar, não fale.",
+    "example_tl": "Sempre que analisar uma nova política de moderação, verifique se os dados sustentam as conclusões antes de atribuir causalidade ao algoritmo.",
+    "example_en": "Whenever you analyze a new moderation policy, check whether the data support the conclusions before attributing causality to the algorithm.",
+    "cloze": "Sempre que {{c1::analisar}} uma nova política de moderação, {{c1::verifique}} se os dados sustentam as conclusões antes de atribuir causalidade ao algoritmo.",
+    "note": "Habitual prospectivo: a instrução vale para cada ocorrência futura, por isso o futuro do subjuntivo é natural. Autorrevisão: troquei fatos por informações em tl para evitar a locução calcada ter os fatos certos."
+  },
+  {
+    "id": "ptd296",
+    "en": "Had they been more proactive, they would have critiqued Big Tech earlier.",
+    "category": "counterfactual",
+    "tl": "Se eles tivessem sido mais proativos, teriam criticado a Big Tech mais cedo.",
+    "alts": [
+      "Caso tivessem sido mais proativos, eles teriam criticado a Big Tech anteriormente."
+    ],
+    "register": "Neutro; mais cedo é natural, enquanto anteriormente pertence a um registro mais formal.",
+    "trap": "O espanhol si hubieran sido não deve induzir haver como primeira escolha: no português brasileiro neutro, use se tivessem sido e teriam criticado.",
+    "example_tl": "Se os reguladores tivessem sido mais proativos, teriam investigado a concentração publicitária antes que três plataformas controlassem quase todo o mercado.",
+    "example_en": "Had regulators been more proactive, they would have investigated advertising concentration before three platforms controlled almost the entire market.",
+    "cloze": "Se os reguladores {{c1::tivessem sido}} mais proativos, {{c1::teriam investigado}} a concentração publicitária antes que três plataformas controlassem quase todo o mercado.",
+    "note": "Tl traduz earlier por mais cedo; antes, no old_back, soa incompleto sem um marco comparativo expresso."
+  },
+  {
+    "id": "ptd297",
+    "en": "If she writes her thesis on the Cold War, she will need many sources.",
+    "category": "real-condition",
+    "tl": "Se ela escrever sua tese sobre a Guerra Fria, precisará de muitas fontes.",
+    "alts": [
+      "Caso ela escreva sua tese sobre a Guerra Fria, vai precisar de muitas fontes."
+    ],
+    "register": "Neutro; precisará é adequado à escrita, e vai precisar é mais corrente na fala brasileira.",
+    "trap": "O espanhol diria si escribe, com presente do indicativo; em português, uma condição futura aberta com se exige futuro do subjuntivo: se escrever.",
+    "example_tl": "Se o Congresso aprovar a proposta sem emendas, pesquisadores precisarão de acesso aos relatórios internos para avaliar seus efeitos sobre a concorrência.",
+    "example_en": "If Congress approves the proposal without amendments, researchers will need access to the internal reports to assess its effects on competition.",
+    "cloze": "Se o Congresso {{c1::aprovar}} a proposta sem emendas, pesquisadores {{c1::precisarão}} de acesso aos relatórios internos para avaliar seus efeitos sobre a concorrência.",
+    "note": "O old_back já oferece a melhor arquitetura; tl mantém sua tese, correspondente explícito de her thesis."
+  }
+]
