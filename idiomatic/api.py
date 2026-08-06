@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Any
 
 import structlog
-from fastapi import Depends, FastAPI, Header, HTTPException, Request
+from fastapi import Depends, FastAPI, Header, HTTPException, Request, Response
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -1383,6 +1383,49 @@ async def admin_rescue_generate(
                     fmt=fmt, provider=provider, err=repr(e)[:300])
         raise HTTPException(502, f"generation failed: {str(e)[:300]}")
     return {"ok": True, "asset": _rescue_item_dict(asset)}
+
+
+@app.post("/admin/genmedia-render")
+async def admin_genmedia_render(
+    body: dict, _: None = Depends(authed_admin),
+) -> Response:
+    """Raw cloud-image render for factory asset production (cast sheets,
+    settings): {provider, prompt, image_b64?, size?, model_override?}.
+    Returns the PNG bytes; writes a gen_ledger row (no item/asset — the
+    artifact lives on the render client, e.g. the laptop's factory dirs).
+    The provider keys live only in this service's env, so cloud renders
+    route through here rather than shipping keys to clients."""
+    from . import genmedia
+
+    provider = body.get("provider") or genmedia.DEFAULT_PROVIDER
+    prompt = str(body.get("prompt") or "").strip()
+    if not prompt:
+        raise HTTPException(400, "need prompt")
+    if provider not in genmedia.PROVIDERS:
+        raise HTTPException(400, f"provider must be one of "
+                                 f"{sorted(genmedia.PROVIDERS)}")
+    params: dict = {}
+    for k in ("image_b64", "size", "model_override"):
+        if body.get(k):
+            params[k] = body[k]
+    try:
+        image, cost = await genmedia.generate_image(
+            provider, prompt, params=params)
+    except Exception as e:  # noqa: BLE001 — surface provider failures as 502
+        log.warning("admin.genmedia_render.failed", provider=provider,
+                    err=repr(e)[:300])
+        raise HTTPException(502, f"generation failed: {str(e)[:300]}")
+    pool = await db.get_pool()
+    await pool.execute(
+        """
+        INSERT INTO gen_ledger (provider, model, kind, units, unit_kind,
+                                cost_usd, item_id, asset_id)
+        VALUES ($1, $2, 'image', 1, 'image', $3, NULL, NULL)
+        """,
+        provider, str(params.get("model_override", "") or
+                      genmedia.provider_info(provider)["model"]), cost)
+    return Response(content=image, media_type="image/png",
+                    headers={"X-Cost-USD": str(cost)})
 
 
 @app.post("/admin/rescue/asset/{asset_id}/verdict")

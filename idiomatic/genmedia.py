@@ -148,10 +148,16 @@ async def _dashscope_mm_image(model: str, prompt: str,
     key = get_settings().dashscope_api_key
     if not key:
         raise RuntimeError("DASHSCOPE_API_KEY not configured")
+    content: list[dict[str, str]] = []
+    if params.get("image_b64"):
+        # Reference-image input (factory cast sheets): data-URI in the
+        # same multimodal content list, before the instruction text.
+        content.append(
+            {"image": f"data:image/jpeg;base64,{params['image_b64']}"})
+    content.append({"text": prompt})
     body = {
         "model": model,
-        "input": {"messages": [{"role": "user",
-                                "content": [{"text": prompt}]}]},
+        "input": {"messages": [{"role": "user", "content": content}]},
         "parameters": {"watermark": False,
                        "size": str(params.get("size", "1140*1472")),
                        "prompt_extend": False},
@@ -192,6 +198,8 @@ async def _ark_image(model: str, prompt: str,
     body = {"model": model, "prompt": prompt,
             "size": str(params.get("size", "1328x1770")),
             "watermark": False}
+    if params.get("image_b64"):
+        body["image"] = f"data:image/jpeg;base64,{params['image_b64']}"
     async with httpx.AsyncClient(timeout=300) as client:
         r = await client.post(f"{_ARK_BASE}/images/generations",
                               headers={"Authorization": f"Bearer {key}"},
@@ -231,5 +239,10 @@ async def generate_image(provider_key: str, prompt: str, *,
     """
     info = provider_info(provider_key)
     adapter = _ADAPTERS[info["api"]]
-    image = await adapter(info["model"], prompt, params or {})
+    p = dict(params or {})
+    # Explicit model override rides on the provider's api/pricing entry —
+    # used to probe sibling model slugs (e.g. dashscope edit variants)
+    # without a registry change per experiment.
+    model = str(p.pop("model_override", "") or info["model"])
+    image = await adapter(model, prompt, p)
     return image, float(info["usd_per_image"])

@@ -176,10 +176,17 @@ Commission B should land this as `tools/exclusion_check.py` and wire
 
 ### 1.4 Standing policy (goes in every factory doc)
 
-**Living-person policy:** famous-likeness assets are for the user's private
-study material only — never shared decks, never published artifacts, never
-public anything. Reference photos and likeness renders never leave the
-laptop (§6).
+**Living-person policy (as amended by user verdict 2026-08-06):**
+famous-likeness assets are for the user's private study material only —
+never shared decks, never published artifacts, never public anything.
+
+**Rescinded 2026-08-06:** the original "reference photos and likeness
+renders never leave the laptop" clause. The user explicitly rejected it
+("never gave it") and directed cloud generation of cast sheets for
+quality: refs may be sent to image APIs (DashScope/Qwen first — no
+likeness filter observed; ByteDance untested) via the server's
+`/admin/genmedia-render`. The private-use-only rule above still stands;
+so does the local-lane preference for high-volume insertions (cost).
 
 ### 1.5 What the check vetoed this session
 

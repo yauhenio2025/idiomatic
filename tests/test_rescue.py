@@ -54,6 +54,31 @@ def test_generate_image_returns_table_cost(monkeypatch):
     assert seen["aspect_ratio"] == "1:1"
 
 
+def test_generate_image_model_override_and_image_param(monkeypatch):
+    """model_override reaches the adapter as the model; image_b64 rides
+    through in params (the factory cloud-sheet path); pricing stays the
+    registry's — overrides never invent a price."""
+    seen = {}
+
+    async def fake_adapter(model, prompt, params):
+        seen.update(model=model, prompt=prompt, params=dict(params))
+        return b"\x89PNGfake"
+
+    monkeypatch.setitem(genmedia._ADAPTERS, "dashscope-mm", fake_adapter)
+    image, cost = asyncio.run(genmedia.generate_image(
+        "qwen-image-3.0-pro", "a sheet",
+        params={"image_b64": "QUJD", "size": "1328*1328",
+                "model_override": "qwen-image-edit-x"}))
+    assert image == b"\x89PNGfake"
+    assert cost == pytest.approx(0.037)
+    assert seen["model"] == "qwen-image-edit-x"
+    assert seen["params"]["image_b64"] == "QUJD"
+    assert "model_override" not in seen["params"]
+    # and without the override the registry model is used
+    asyncio.run(genmedia.generate_image("qwen-image-3.0-pro", "p"))
+    assert seen["model"] == "qwen-image-3.0-pro"
+
+
 def test_sniff_mime():
     assert genmedia.sniff_mime(b"\x89PNG\r\n\x1a\n123") == "image/png"
     assert genmedia.sniff_mime(b"\xff\xd8\xff\xe0rest") == "image/jpeg"
