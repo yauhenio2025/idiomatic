@@ -1440,6 +1440,45 @@ def _factory_cast_dir(slug: str) -> Path:
 _SLUG_RE = re.compile(r"^[a-z0-9_]{2,64}$")
 
 
+@app.post("/admin/apkg-upload")
+async def admin_apkg_upload(
+    request: Request, _: None = Depends(authed_admin),
+) -> dict:
+    """Stage an externally built rolling deck (factory/experiment lane —
+    e.g. the rescue-comics deck rendered on the laptop). Multipart: file
+    (.apkg), lang, kind, n_items?. Replaces the (lang, kind) row like every
+    rolling deck, so agents re-pull; with stable note GUIDs a re-upload
+    updates existing cards in place (scheduling preserved)."""
+    form = await request.form()
+    lang = str(form.get("lang") or "").strip().lower()
+    kind = str(form.get("kind") or "").strip()
+    if not re.fullmatch(r"[a-z]{2}", lang):
+        raise HTTPException(400, "need lang (2 letters)")
+    if kind in ("", "video") or not re.fullmatch(r"[a-z0-9_]{3,32}", kind):
+        raise HTTPException(400, "need kind [a-z0-9_]{3,32}, not 'video'")
+    try:
+        n_items = int(form.get("n_items") or 0)
+    except ValueError:
+        n_items = 0
+    f = form.get("file")
+    if f is None or not hasattr(f, "read"):
+        raise HTTPException(400, "need file field 'file'")
+    data = await f.read()
+    if not data or len(data) > 200_000_000:
+        raise HTTPException(400, "empty or too large")
+    apkg_root = Path(get_settings().data_dir) / "apkgs" / lang
+    apkg_root.mkdir(parents=True, exist_ok=True)
+    dest = apkg_root / f"{kind}_{lang}.apkg"
+    dest.write_bytes(data)
+    relative = dest.relative_to(get_settings().data_dir)
+    apkg_id = await db.upsert_pool_apkg(
+        lang=lang, kind=kind, filename=str(relative),
+        size_bytes=len(data), n_idioms=n_items)
+    log.info("admin.apkg_upload", kind=kind, lang=lang, apkg_id=apkg_id,
+             size=len(data))
+    return {"ok": True, "apkg_id": apkg_id, "filename": str(relative)}
+
+
 @app.post("/admin/factory/cast-upsert")
 async def admin_factory_cast_upsert(
     request: Request, _: None = Depends(authed_admin),
