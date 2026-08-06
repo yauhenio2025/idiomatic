@@ -506,3 +506,30 @@ CREATE TABLE IF NOT EXISTS adopted_notes (
   last_review_at TIMESTAMPTZ,
   adopted_at     TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+-- Asset Factory cast registry (commission-B §7 subset, built 2026-08-06
+-- for the Cast Review panel). One row per cast character; the sheet +
+-- ref photo live under /data/factory_cast/<slug>/. A new sheet on an
+-- approved actor demotes status to candidate (staleness rule, famous-cast
+-- doc §2.5) — enforced app-side in the upsert endpoint.
+CREATE TABLE IF NOT EXISTS factory_actors (
+  id                BIGSERIAL PRIMARY KEY,
+  slug              TEXT NOT NULL UNIQUE,
+  real_name         TEXT,
+  lang              TEXT,          -- NULL = shared wing
+  role_key          TEXT,          -- 'woman_35' | 'sopranos' | 'duo' | ...
+  famous_source     TEXT,
+  survival_prior    TEXT,
+  exclusion_checked BOOLEAN NOT NULL DEFAULT FALSE,
+  exclusion_verdict TEXT,
+  status            TEXT NOT NULL DEFAULT 'candidate'
+                    CHECK (status IN ('candidate','approved','retired')),
+  review_flag       TEXT CHECK (review_flag IN ('ok','remake')),
+  review_note       TEXT,
+  ref_photo_path    TEXT,
+  sheet_path        TEXT,
+  sheet_hash        TEXT,
+  prompt_desc       TEXT,
+  created_at        TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at        TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

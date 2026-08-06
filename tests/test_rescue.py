@@ -332,6 +332,24 @@ def test_schema_round_trip(pg_dsn):
                 "SELECT COUNT(*) FROM rescue_senses") == 0
             assert float(await conn.fetchval(
                 "SELECT SUM(cost_usd) FROM gen_ledger")) == pytest.approx(0.067)
+
+            # factory_actors (Cast Review panel): slug unique, review_flag
+            # and status constrained.
+            await conn.execute(
+                """INSERT INTO factory_actors (slug, real_name, lang,
+                       role_key, review_flag)
+                   VALUES ('test_actor', 'Test Actor', 'de', 'man_35', 'ok')""")
+            with pytest.raises(asyncpg.UniqueViolationError):
+                await conn.execute(
+                    "INSERT INTO factory_actors (slug) VALUES ('test_actor')")
+            with pytest.raises(asyncpg.CheckViolationError):
+                await conn.execute(
+                    "INSERT INTO factory_actors (slug, review_flag) "
+                    "VALUES ('bad_flag', 'maybe')")
+            with pytest.raises(asyncpg.CheckViolationError):
+                await conn.execute(
+                    "INSERT INTO factory_actors (slug, status) "
+                    "VALUES ('bad_status', 'shipped')")
         finally:
             await conn.close()
 

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import asyncio
 import contextlib
+import hashlib
 import json
 import re
 import secrets
@@ -1426,6 +1427,159 @@ async def admin_genmedia_render(
                       genmedia.provider_info(provider)["model"]), cost)
     return Response(content=image, media_type="image/png",
                     headers={"X-Cost-USD": str(cost)})
+
+
+def _factory_cast_dir(slug: str) -> Path:
+    root = (Path(get_settings().data_dir) / "factory_cast").resolve()
+    d = (root / slug).resolve()
+    if not d.is_relative_to(root):
+        raise HTTPException(400, "bad slug")
+    return d
+
+
+_SLUG_RE = re.compile(r"^[a-z0-9_]{2,64}$")
+
+
+@app.post("/admin/factory/cast-upsert")
+async def admin_factory_cast_upsert(
+    request: Request, _: None = Depends(authed_admin),
+) -> dict:
+    """Upsert one cast character (Cast Review panel backend; reusable for
+    future cast additions). Multipart form: slug (required), meta (JSON:
+    real_name, lang, role_key, famous_source, survival_prior, prompt_desc,
+    exclusion_checked, exclusion_verdict), ref (image file, optional),
+    sheet (image file, optional). Files land under /data/factory_cast/
+    <slug>/. A new sheet on an approved actor demotes it to candidate
+    (famous-cast §2.5 staleness rule)."""
+    form = await request.form()
+    slug = str(form.get("slug") or "").strip()
+    if not _SLUG_RE.fullmatch(slug):
+        raise HTTPException(400, "need slug [a-z0-9_]{2,64}")
+    try:
+        meta = json.loads(str(form.get("meta") or "{}"))
+    except ValueError:
+        raise HTTPException(400, "meta must be JSON")
+    d = _factory_cast_dir(slug)
+    d.mkdir(parents=True, exist_ok=True)
+    ref_path = sheet_path = sheet_hash = None
+    ref = form.get("ref")
+    if ref is not None and hasattr(ref, "read"):
+        data = await ref.read()
+        (d / "ref.jpg").write_bytes(data)
+        ref_path = f"{slug}/ref.jpg"
+    sheet = form.get("sheet")
+    if sheet is not None and hasattr(sheet, "read"):
+        data = await sheet.read()
+        (d / "sheet.png").write_bytes(data)
+        sheet_path = f"{slug}/sheet.png"
+        sheet_hash = hashlib.sha256(data).hexdigest()[:16]
+    pool = await db.get_pool()
+    row = await pool.fetchrow(
+        """
+        INSERT INTO factory_actors (slug, real_name, lang, role_key,
+            famous_source, survival_prior, exclusion_checked,
+            exclusion_verdict, prompt_desc, ref_photo_path, sheet_path,
+            sheet_hash)
+        VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, FALSE), $8, $9,
+                $10, $11, $12)
+        ON CONFLICT (slug) DO UPDATE SET
+            real_name = COALESCE(EXCLUDED.real_name, factory_actors.real_name),
+            lang = COALESCE(EXCLUDED.lang, factory_actors.lang),
+            role_key = COALESCE(EXCLUDED.role_key, factory_actors.role_key),
+            famous_source = COALESCE(EXCLUDED.famous_source,
+                                     factory_actors.famous_source),
+            survival_prior = COALESCE(EXCLUDED.survival_prior,
+                                      factory_actors.survival_prior),
+            exclusion_checked = factory_actors.exclusion_checked
+                                OR EXCLUDED.exclusion_checked,
+            exclusion_verdict = COALESCE(EXCLUDED.exclusion_verdict,
+                                         factory_actors.exclusion_verdict),
+            prompt_desc = COALESCE(EXCLUDED.prompt_desc,
+                                   factory_actors.prompt_desc),
+            ref_photo_path = COALESCE(EXCLUDED.ref_photo_path,
+                                      factory_actors.ref_photo_path),
+            sheet_path = COALESCE(EXCLUDED.sheet_path,
+                                  factory_actors.sheet_path),
+            sheet_hash = COALESCE(EXCLUDED.sheet_hash,
+                                  factory_actors.sheet_hash),
+            status = CASE WHEN EXCLUDED.sheet_hash IS NOT NULL
+                               AND EXCLUDED.sheet_hash IS DISTINCT FROM
+                                   factory_actors.sheet_hash
+                               AND factory_actors.status = 'approved'
+                          THEN 'candidate' ELSE factory_actors.status END,
+            review_flag = CASE WHEN EXCLUDED.sheet_hash IS NOT NULL
+                                    AND EXCLUDED.sheet_hash IS DISTINCT FROM
+                                        factory_actors.sheet_hash
+                               THEN NULL ELSE factory_actors.review_flag END,
+            updated_at = NOW()
+        RETURNING *
+        """,
+        slug, meta.get("real_name"), meta.get("lang"), meta.get("role_key"),
+        meta.get("famous_source"), meta.get("survival_prior"),
+        meta.get("exclusion_checked"), meta.get("exclusion_verdict"),
+        meta.get("prompt_desc"), ref_path, sheet_path, sheet_hash)
+    return {"ok": True, "actor": {k: (v.isoformat() if hasattr(v, "isoformat")
+                                      else v) for k, v in dict(row).items()}}
+
+
+@app.post("/admin/factory/cast/{slug}/review")
+async def admin_factory_cast_review(
+    slug: str, body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Review verdict from the Cast Review panel. Body: any of
+    {flag: 'ok'|'remake'|None, note, status: candidate|approved|retired}."""
+    sets, args = [], []
+    if "flag" in body:
+        if body["flag"] not in (None, "ok", "remake"):
+            raise HTTPException(400, "flag must be ok|remake|null")
+        args.append(body["flag"])
+        sets.append(f"review_flag = ${len(args)}")
+    if "note" in body:
+        args.append(str(body["note"] or "") or None)
+        sets.append(f"review_note = ${len(args)}")
+    if "status" in body:
+        if body["status"] not in ("candidate", "approved", "retired"):
+            raise HTTPException(400, "bad status")
+        args.append(body["status"])
+        sets.append(f"status = ${len(args)}")
+    if not sets:
+        raise HTTPException(400, "nothing to set")
+    args.append(slug)
+    pool = await db.get_pool()
+    row = await pool.fetchrow(
+        f"UPDATE factory_actors SET {', '.join(sets)}, updated_at = NOW() "
+        f"WHERE slug = ${len(args)} RETURNING slug", *args)
+    if not row:
+        raise HTTPException(404, "unknown slug")
+    return {"ok": True}
+
+
+@app.post("/admin/factory/cast/{slug}/ref")
+async def admin_factory_cast_ref(
+    slug: str, request: Request, _: None = Depends(authed_admin),
+) -> dict:
+    """Replacement reference photo from the review panel (multipart field
+    'ref'). Stored as the actor's ref; the sheet is untouched — flag the
+    actor 'remake' and re-render from the new ref."""
+    form = await request.form()
+    ref = form.get("ref")
+    if ref is None or not hasattr(ref, "read"):
+        raise HTTPException(400, "need file field 'ref'")
+    data = await ref.read()
+    if not data or len(data) > 30_000_000:
+        raise HTTPException(400, "empty or too large")
+    pool = await db.get_pool()
+    exists = await pool.fetchval(
+        "SELECT 1 FROM factory_actors WHERE slug = $1", slug)
+    if not exists:
+        raise HTTPException(404, "unknown slug")
+    d = _factory_cast_dir(slug)
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "ref.jpg").write_bytes(data)
+    await pool.execute(
+        "UPDATE factory_actors SET ref_photo_path = $2, updated_at = NOW() "
+        "WHERE slug = $1", slug, f"{slug}/ref.jpg")
+    return {"ok": True, "ref_photo_path": f"{slug}/ref.jpg"}
 
 
 @app.post("/admin/rescue/asset/{asset_id}/verdict")

@@ -22,7 +22,8 @@ For feature inventory see @docs/FEATURES.md, for change history see
   cols re-seeded from code on boot). Dashboard /grammar +
   /grammar/unit/:key pages control generation (allowed
   dashboard-mutation surface, shared since 2026-08-05 with /rescue —
-  the Rescue Lab, see DASHBOARD.md + docs/research/RESCUE_PILOT.md). The add-on has a one-shot "Reorganize
+  the Rescue Lab — and since 2026-08-06 with /cast — the Asset Factory
+  Cast Review; see DASHBOARD.md + docs/research/RESCUE_PILOT.md). The add-on has a one-shot "Reorganize
   grammar decks" step (moves existing cards into subdecks by unit tag,
   preserves scheduling; auto-runs on profile open, marker file
   grammar_reorg.done.json, skips profiles without grammar cards).

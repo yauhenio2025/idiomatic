@@ -819,6 +819,66 @@ async def rescue_asset_file(
     return FileResponse(p, media_type=row["mime"] or "application/octet-stream")
 
 
+# --- factory cast (read-only; mutations via /admin/factory/*) ---------------
+
+@router.get("/factory/cast")
+async def factory_cast(x_admin_token: str | None = Header(default=None)):
+    """The full cast registry for the Cast Review panel, review-order:
+    unreviewed first, then remakes, then OK; stable by slug within."""
+    _check_token(x_admin_token)
+    pool = await db.get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT slug, real_name, lang, role_key, famous_source,
+               survival_prior, exclusion_checked, exclusion_verdict,
+               status, review_flag, review_note,
+               ref_photo_path IS NOT NULL AS has_ref,
+               sheet_path IS NOT NULL AS has_sheet,
+               sheet_hash, updated_at
+        FROM factory_actors
+        ORDER BY (review_flag IS NOT NULL), (review_flag = 'ok'), slug
+        """)
+    out = []
+    for r in rows:
+        d = dict(r)
+        d["updated_at"] = d["updated_at"].isoformat()
+        out.append(d)
+    counts = {
+        "total": len(out),
+        "unreviewed": sum(1 for r in out if not r["review_flag"]),
+        "remake": sum(1 for r in out if r["review_flag"] == "remake"),
+        "ok": sum(1 for r in out if r["review_flag"] == "ok"),
+    }
+    return {"rows": out, "counts": counts}
+
+
+@router.get("/factory/cast-asset/{slug}/{kind}")
+async def factory_cast_asset(
+    slug: str,
+    kind: str,
+    x_admin_token: str | None = Header(default=None),
+    token: str | None = Query(default=None),
+):
+    """Stream a cast ref photo or sheet (header or ?token= for <img>)."""
+    _check_token(x_admin_token or token)
+    if kind not in ("ref", "sheet"):
+        raise HTTPException(400, "kind must be ref|sheet")
+    col = "ref_photo_path" if kind == "ref" else "sheet_path"
+    pool = await db.get_pool()
+    rel = await pool.fetchval(
+        f"SELECT {col} FROM factory_actors WHERE slug = $1", slug)
+    if not rel:
+        raise HTTPException(404, "not found")
+    root = (Path(get_settings().data_dir) / "factory_cast").resolve()
+    p = (root / rel).resolve()
+    if not p.is_relative_to(root):
+        raise HTTPException(400, "bad path")
+    if not p.is_file():
+        raise HTTPException(404, "file gone")
+    mime = "image/png" if p.suffix == ".png" else "image/jpeg"
+    return FileResponse(p, media_type=mime)
+
+
 # --- context-clip upload (local alignment pipeline) -------------------------
 
 @router.post("/upload-context/{idiom_id}")

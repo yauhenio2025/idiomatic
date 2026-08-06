@@ -3,15 +3,25 @@
 https://idiomatic-app.onrender.com/ — served by the same FastAPI app that
 runs the pipeline; log in with the admin token (local copy:
 `~/.config/idiomatic-admin.env`). Read-only — EXCEPT the Grammar section
-(amended 2026-07-31 by the Wave-6 commission) and the Rescue Lab section
-(amended 2026-08-05 by the Rescue Lab commission): those pages may
-trigger generation runs and edit their own state via `/admin/*`
-endpoints. Everything else still cannot mutate pipeline state.
+(amended 2026-07-31 by the Wave-6 commission), the Rescue Lab section
+(amended 2026-08-05 by the Rescue Lab commission), and the Cast page
+(amended 2026-08-06, Asset Factory): those pages may trigger generation
+runs and edit their own state via `/admin/*` endpoints. Everything else
+still cannot mutate pipeline state.
 
 ## What each page answers
 
 Navigation: Overview · Videos · Expressions · Channels · Grammar ·
-Rescue Lab · Delivery.
+Rescue Lab · Cast · Delivery.
+
+**Cast** (`/cast`) — "which Asset Factory cast sheets pass, which need a
+remake?" Fast-forward review of the famous-cast character sheets: sheet +
+reference photo side by side, keyboard driven (← → navigate, O = OK,
+R = needs-remake), per-actor comment box, and upload of a replacement
+reference photo (auto-flags the actor for remake). Backed by
+`factory_actors` + `/data/factory_cast/`; populated from the render box
+via `~/llms/qwen-image/factory/sync_cast_to_server.py` (machine-local).
+Built for reuse whenever new characters are enrolled.
 
 **Overview** — "is the machine alive, and what has it been producing?"
 Health strip: worker state (idle/processing/stalled — stalled means work

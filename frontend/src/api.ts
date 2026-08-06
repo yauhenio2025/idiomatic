@@ -118,6 +118,43 @@ export async function assetFileUrl(assetId: number): Promise<string> {
   return url;
 }
 
+// Factory cast images: same authed-blob pattern, keyed by slug/kind plus a
+// version salt (sheet_hash / updated_at) so re-uploads bust the cache.
+const castAssetCache = new Map<string, string>();
+
+export async function castAssetUrl(
+  slug: string,
+  kind: "ref" | "sheet",
+  version: string,
+): Promise<string> {
+  const key = `${slug}/${kind}/${version}`;
+  const cached = castAssetCache.get(key);
+  if (cached) return cached;
+  const res = await fetch(`/ui/api/factory/cast-asset/${slug}/${kind}`, {
+    headers: { "X-Admin-Token": getToken() ?? "" },
+  });
+  if (!res.ok) throw new ApiError(res.status, "asset fetch failed");
+  const url = URL.createObjectURL(await res.blob());
+  castAssetCache.set(key, url);
+  return url;
+}
+
+// Multipart admin upload (Cast Review ref replacement). No Content-Type
+// header — the browser sets the multipart boundary itself.
+export async function adminUpload<T>(path: string, form: FormData): Promise<T> {
+  const res = await fetch(path, {
+    method: "POST",
+    headers: { "X-Admin-Token": getToken() ?? "" },
+    body: form,
+  });
+  if (res.status === 401) {
+    onUnauthorized?.();
+    throw new ApiError(401, "unauthorized");
+  }
+  if (!res.ok) throw new ApiError(res.status, `${res.status} ${await res.text()}`);
+  return res.json();
+}
+
 // ---- shared types ---------------------------------------------------------
 
 export const LANG_COLORS: Record<string, string> = {
