@@ -836,6 +836,7 @@ async def factory_cast(x_admin_token: str | None = Header(default=None)):
                sheet_path IS NOT NULL AS has_sheet,
                sheet_hash, updated_at
         FROM factory_actors
+        WHERE status != 'retired'
         ORDER BY (review_flag IS NOT NULL), (review_flag = 'ok'), slug
         """)
     out = []
