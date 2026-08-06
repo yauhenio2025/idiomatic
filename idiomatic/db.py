@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Any
 
 import json
+import time
 
 import asyncpg
 import structlog
@@ -472,6 +473,28 @@ async def kv_set(key: str, value: str) -> None:
         ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value,
                                         updated_at = NOW()
         """, key, value)
+
+
+async def kv_claim_interval(key: str, interval_seconds: int) -> bool:
+    """Atomically stamp `key` with the current epoch and report whether the
+    caller won the slot: True iff the previous stamp was absent, garbled, or
+    older than `interval_seconds`. Concurrent callers serialize on the row —
+    the upsert's WHERE re-checks against the winner's committed value, so
+    exactly one of an overlapping pair proceeds (the rescue-autopilot
+    double-run fix)."""
+    pool = await get_pool()
+    now = int(time.time())
+    row = await pool.fetchrow(
+        """
+        INSERT INTO kv_store (key, value) VALUES ($1, $2)
+        ON CONFLICT (key) DO UPDATE
+            SET value = EXCLUDED.value, updated_at = NOW()
+            WHERE CASE WHEN kv_store.value ~ '^[0-9]+$'
+                       THEN kv_store.value::bigint <= $3
+                       ELSE TRUE END
+        RETURNING key
+        """, key, str(now), now - interval_seconds)
+    return row is not None
 
 
 async def expression_langs() -> list[str]:

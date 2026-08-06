@@ -241,8 +241,9 @@ async def run_autopilot(force: bool = False) -> dict:
     if not s.rescue_autopilot_enabled and not force:
         report["notes"].append("autopilot disabled (rescue_autopilot_enabled)")
         return report
-    # Stamp the run at START so an overlapping instance (deploy overlap,
-    # worker restart) doesn't kick off a second concurrent run.
+    # Refresh the stamp at START so forced/direct runs also push the next
+    # scheduled run out a full interval. (The concurrency guard itself is
+    # the atomic kv_claim_interval in maybe_run_autopilot.)
     await db.kv_set(KV_LAST_RUN_TS, str(int(time.time())))
 
     # -- 1. PULL + 2. DIFF -------------------------------------------------
@@ -344,9 +345,10 @@ async def maybe_run_autopilot() -> None:
         s = get_settings()
         if not s.rescue_autopilot_enabled:
             return
-        last = await db.kv_get(KV_LAST_RUN_TS)
-        if last and time.time() - int(last) < \
-                s.rescue_autopilot_interval_hours * 3600:
+        # Atomic claim: check-and-stamp in one statement so two overlapping
+        # workers (deploy overlap, restart) can't both start a run.
+        if not await db.kv_claim_interval(
+                KV_LAST_RUN_TS, s.rescue_autopilot_interval_hours * 3600):
             return
         await run_autopilot()
     except Exception as e:  # noqa: BLE001 — the worker loop must survive

@@ -311,3 +311,47 @@ def test_schema_round_trip(pg_dsn):
             await conn.close()
 
     asyncio.run(run())
+
+
+def test_kv_claim_interval_single_winner(pg_dsn):
+    """The autopilot's concurrency guard: exactly one of N overlapping
+    claimants wins the interval slot (the double-spend fix)."""
+    import time
+
+    import asyncpg
+
+    from idiomatic import db as idb
+
+    async def run() -> None:
+        pool = await asyncpg.create_pool(**pg_dsn, min_size=2, max_size=6)
+        orig_get_pool = idb.get_pool
+
+        async def fake_get_pool():
+            return pool
+
+        idb.get_pool = fake_get_pool
+        try:
+            await pool.execute(_SCHEMA.read_text(encoding="utf-8"))
+            # Fresh key: first claim wins, immediate second loses.
+            assert await idb.kv_claim_interval("test:claim", 3600) is True
+            assert await idb.kv_claim_interval("test:claim", 3600) is False
+            # Stale stamp: claimable again.
+            await pool.execute(
+                "UPDATE kv_store SET value = $1 WHERE key = 'test:claim'",
+                str(int(time.time()) - 7200))
+            assert await idb.kv_claim_interval("test:claim", 3600) is True
+            # Garbled legacy value never wedges the slot.
+            await pool.execute(
+                "UPDATE kv_store SET value = 'not-a-number' "
+                "WHERE key = 'test:claim'")
+            assert await idb.kv_claim_interval("test:claim", 3600) is True
+            # Concurrent burst on a fresh key: exactly one winner.
+            results = await asyncio.gather(
+                *[idb.kv_claim_interval("test:burst", 3600)
+                  for _ in range(8)])
+            assert sum(results) == 1
+        finally:
+            idb.get_pool = orig_get_pool
+            await pool.close()
+
+    asyncio.run(run())
