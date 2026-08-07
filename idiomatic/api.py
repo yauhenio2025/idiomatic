@@ -1440,6 +1440,31 @@ def _factory_cast_dir(slug: str) -> Path:
 _SLUG_RE = re.compile(r"^[a-z0-9_]{2,64}$")
 
 
+@app.get("/admin/corpus-export")
+async def admin_corpus_export(
+    lang: str, _: None = Depends(authed_admin),
+) -> Response:
+    """Expression corpus as JSONL (one line per example sentence, joined
+    with its expression + idiom metadata) — the input feed for the
+    illustration-prompts codex campaign and the factory planner."""
+    if lang not in await db.expression_langs():
+        raise HTTPException(400, "unknown lang")
+    pool = await db.get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT ex.id AS example_id, e.id AS expression_id, e.lang,
+               e.text AS idiom, ei.source_phrase_en, ei.explanation_en,
+               ex.ord, ex.en_text, ex.target_text
+        FROM expression_examples ex
+        JOIN expression_idioms ei ON ei.id = ex.idiom_id
+        JOIN expressions e ON e.id = ei.expression_id
+        WHERE e.lang = $1
+        ORDER BY e.id, ex.ord
+        """, lang)
+    body = "\n".join(json.dumps(dict(r), ensure_ascii=False) for r in rows)
+    return Response(content=body, media_type="application/x-ndjson")
+
+
 @app.post("/admin/apkg-upload")
 async def admin_apkg_upload(
     request: Request, _: None = Depends(authed_admin),
