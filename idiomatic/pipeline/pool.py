@@ -643,10 +643,15 @@ async def _rebuild_pools_locked(lang: str, force: bool) -> dict:
         stage_root, idioms_apkg)
     expr_n = await asyncio.to_thread(
         _build_expression_pool, lang, idioms, stage_root, expr_apkg)
-    t2e_n = await asyncio.to_thread(
-        _build_idiom_audio_pool, lang, idioms, stage_root, t2e_apkg, "t2e")
-    e2t_n = await asyncio.to_thread(
-        _build_idiom_audio_pool, lang, idioms, stage_root, e2t_apkg, "e2t")
+    if settings.build_audio_pools:
+        t2e_n = await asyncio.to_thread(
+            _build_idiom_audio_pool, lang, idioms, stage_root, t2e_apkg, "t2e")
+        e2t_n = await asyncio.to_thread(
+            _build_idiom_audio_pool, lang, idioms, stage_root, e2t_apkg, "e2t")
+    else:
+        # Discontinued 2026-08-07 (settings.build_audio_pools) — the
+        # listen-and-learn decks stop growing; existing cards stay in Anki.
+        t2e_n = e2t_n = 0
 
     for kind, path, n in (
         ("pool_idioms", idioms_apkg, idioms_n),

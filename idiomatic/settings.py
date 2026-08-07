@@ -87,6 +87,11 @@ class Settings(BaseSettings):
     target_idioms_per_video: int = 12               # rough Gemini extraction target
     worker_poll_interval_sec: int = 10
     worker_max_attempts: int = 3
+    # Long listen-and-learn audio decks (pool_idiom_t2e/e2t) — DISCONTINUED
+    # per user directive 2026-08-07 ("I will never have time to listen to
+    # them"); essential context moves onto main cards in the expression-hub
+    # redesign. Set true to resurrect.
+    build_audio_pools: bool = False
 
     # Soft cap on inflow — keeps daily Anki import manageable.
     # Counted against apkgs created today, not videos processed.
