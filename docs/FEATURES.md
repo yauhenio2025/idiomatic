@@ -1,6 +1,6 @@
 # Feature Inventory
 
-> Auto-maintained by Claude Code. Last updated: 2026-08-05
+> Auto-maintained by Claude Code. Last updated: 2026-08-07
 
 ## Ingestion
 
@@ -31,7 +31,18 @@
   - `idiomatic/pipeline/explain.py` - example-pair + structured-field enrichment
   - `idiomatic/pipeline/audio.py:144` - `render_card_audio` pimsleur stitching
   - `idiomatic/pipeline/apkg.py:193` - `build_apkg` (Idiomatic Cloud Card v2 model)
-- **Dependencies**: Gemini 3.5 Flash, ElevenLabs TTS (primary), Gemini TTS (fallback), ffmpeg
+- **Dependencies**: Gemini 3.5 Flash, TTS provider chain (see below), ffmpeg
+
+### TTS provider chain (qwen-local bridge)
+- **Status**: Active
+- **Description**: All TTS flows through `gemini.synthesize`: qwen-local (self-hosted Qwen3-TTS bridge on the home box, per-language clones of the ElevenLabs deck voices, cost 0) → ElevenLabs turbo v2.5 → Gemini TTS preview → silence marker. Memoized ~60 s health probe gives per-batch (not per-clip) failover; a 503 from the bridge's etiquette gate (ComfyUI rendering, thermals, VRAM) defers the batch to ElevenLabs. qwen usage writes cost-0 `gen_ledger` rows. Explicit `eleven_voice_id` callers (tenses decks, voice bake-offs) always go to ElevenLabs. Default flip to qwen-local gated on the acceptance drills in `docs/commissions/LOCAL_TTS_BRIDGE_COMMISSION.md`; rollback = `TTS_PROVIDER=elevenlabs`. Bridge itself is machine-local (`~/llms/qwen3-tts/server/`, systemd user service `qwen-tts-bridge`, Tailscale Funnel `https://fedora.tail363ee5.ts.net`).
+- **Entry Points**:
+  - `idiomatic/gemini.py:542` - bridge section (`QwenLocalDown`, `_qwen_healthy_url`, `_qwen_local_tts`, `_qwen_serves`)
+  - `idiomatic/gemini.py:660` - `synthesize` provider chain
+  - `idiomatic/settings.py:51` - `tts_provider` + `qwen_tts_*` knobs
+  - `tests/test_tts_routing.py` - routing + failover-memo coverage
+- **Dependencies**: Qwen3-TTS bridge (machine-local), ElevenLabs, Gemini TTS
+- **Added**: 2026-08-07
 
 ### Language pools (4 decks per language)
 - **Status**: Active

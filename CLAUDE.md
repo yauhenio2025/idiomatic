@@ -81,16 +81,27 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
 - `YOUTUBE_API_KEY` — YouTube Data API v3 (GCP project `idiomatic-502204`),
   used by the cron to pre-filter video durations before Oxylabs spend.
   10k quota units/day free; a full walk costs ~5.
-- `ELEVENLABS_API_KEY` — PRIMARY TTS provider since 2026-07-27 (all
-  languages, turbo v2.5, per-lang voices in `gemini.ELEVEN_LANG_VOICE`).
-  Dedicated "idiomatic use" key on the Pro account (1.5M credits/mo,
-  10 concurrent; usage-based overage billing ENABLED per user
-  2026-07-31 — quota exhaustion now bills overage at the same cheap
-  rate instead of failing over to Gemini TTS; the Gemini fallback only
-  triggers on actual ElevenLabs outages). Switched because the
-  July-2026 spend audit showed Gemini TTS preview billing ~€2/1k chars
-  (~€4K/28d, on track for €7-9K/mo) vs ElevenLabs ~$0.05/1k chars.
-  Rollback: set `TTS_PROVIDER=gemini`.
+- TTS chain (since 2026-08-07): `qwen-local` → ElevenLabs → Gemini.
+  Primary is the LOCAL Qwen3-TTS bridge on the user's Fedora box
+  (`~/llms/qwen3-tts/server/`, systemd user service `qwen-tts-bridge`,
+  Tailscale Funnel `https://fedora.tail363ee5.ts.net`, bearer token in
+  `QWEN_TTS_TOKEN` Render env + box-side `server/bridge.env` — never in
+  git; repo is public). Per-language voices are CLONES of the ElevenLabs
+  deck voices (frozen refs kit `server/refs/`); cost 0; usage logged to
+  gen_ledger at cost 0. The bridge 503s when the box is busy (ComfyUI
+  render, thermals) and the chain silently uses ElevenLabs for that
+  batch. Rollback: `TTS_PROVIDER=elevenlabs` = exact July-2026 behavior;
+  `TTS_PROVIDER=gemini` = pre-July.
+- `ELEVENLABS_API_KEY` — FIRST FALLBACK TTS (primary 2026-07-27 →
+  2026-08-07; all languages, turbo v2.5, per-lang voices in
+  `gemini.ELEVEN_LANG_VOICE`). Dedicated "idiomatic use" key on the Pro
+  account (1.5M credits/mo, 10 concurrent; usage-based overage billing
+  ENABLED per user 2026-07-31 — quota exhaustion bills overage at the
+  same cheap rate instead of failing over to Gemini TTS; the Gemini
+  fallback only triggers on actual ElevenLabs outages). ElevenLabs won
+  over Gemini because the July-2026 spend audit showed Gemini TTS
+  preview billing ~€2/1k chars (~€4K/28d, on track for €7-9K/mo) vs
+  ElevenLabs ~$0.05/1k chars.
 - `OXYLABS_USER` / `OXYLABS_PASS` — YouTube Downloader source, pushes
   audio to Cloudflare R2. MUST request `audio_language=original` in the
   job context (set since 2026-07-29): YouTube's auto-dub rollout made the
