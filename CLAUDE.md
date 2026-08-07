@@ -16,7 +16,9 @@ For feature inventory see @docs/FEATURES.md, for change history see
   `idiomatic/grammar/`; admin endpoints `/admin/grammar-generate|status|
   stats|rejects|rebuild|deckmap|unit|topup|retire-item`; one rolling
   apkg per lang (`apkgs.kind='grammar'`) with one SUBDECK per topic
-  cluster (`Idiomatic Grammar ES::1 Tiempos`; map in curriculum.py
+  cluster (`ES Spanish::2 Grammar::1 Tiempos` since the 2026-08-07
+  estate cutover — all deck names compose from `anki_tree.anki_root`;
+  map in curriculum.py
   CLUSTER_BY_KEY + units_fip.json, strings FINAL). `grammar_units`
   table = curriculum state (target_size/status/notes mutable; other
   cols re-seeded from code on boot). Dashboard /grammar +
@@ -50,8 +52,29 @@ Applies project-wide, not just to grammar.
 ## The whole flow, one sentence
 
 Cron polls YouTube channels → worker downloads audio via Oxylabs →
-Gemini extracts idioms → per-video `.apkg` + per-language pool `.apkg`
-land in the DB → the Anki add-on on the user's laptop pulls + imports.
+Gemini extracts idioms → per-video `.apkg` (built for cap accounting,
+NOT delivered since the 2026-08-07 estate cutover) + per-language pool
+`.apkg` land in the DB → the Anki add-on on the user's laptop pulls +
+imports into the estate tree (`<XX Language>::…` roots).
+
+## ANKI ESTATE TREE (since 2026-08-07 — cutover COMPLETE)
+
+The collection uses six language roots (`DE German`, `ES Spanish`,
+`FR French`, `IT Italian`, `PT Portuguese`, `ZH Mandarin`) with numbered
+lanes (`1 Expressions::{1 Fluency,2 Expression Focus}`, `2 Grammar`,
+`3 Tenses::{1 Production,2 Exercises}`, `4 Exercises`, `5 Translation`,
+`6 My Errors`, `7 Rescue`, `8 Pimsleur`) + `zz Dormant`. EVERY builder
+composes deck paths from `idiomatic/anki_tree.py::anki_root(lang)` —
+never bake a root string. Retired deliveries: `kind='video'` apkgs are
+built but excluded from `/apkgs/pending` (`deliver_video_apkgs=False`);
+didactic `pool_idioms` builder off (`build_didactic_pool=False`); audio
+pools off (`build_audio_pools=False`). `2 Expression Focus` and
+`4 Exercises::Diagnosed trouble spots` are RESERVED for the Expression
+Hub (models 1820180001/1820180002) — nothing else may publish there.
+Migration record: docs/research/ANKI_ESTATE_REORG_PLAN.md §Live
+copy-back cutover; journals in anki_reorg_work/live_cutover_*/ (local);
+pre-migration collection kept as collection.anki2.pre-estate-* beside
+the live profile.
 
 ## Repos & paths
 
@@ -158,9 +181,9 @@ land in the DB → the Anki add-on on the user's laptop pulls + imports.
    - `_persist_pool_source` — copies per-card mp3s to
      `/data/staged_audio/<youtube_id>/`, writes `expression_idioms` +
      `expression_examples` rows.
-   - `pipeline/pool.py::rebuild_pools(lang)` — builds ALL FOUR pool
-     apkgs for the language: `pool_idioms` (didactic), `pool_expr`
-     (fluency), `pool_idiom_t2e`, `pool_idiom_e2t`.
+   - `pipeline/pool.py::rebuild_pools(lang)` — since the estate cutover
+     builds ONLY `pool_expr` (fluency → `<ROOT>::1 Expressions::
+     1 Fluency`); `pool_idioms` + audio pools are gated off in settings.
 3. `api.py` — FastAPI. `/apkgs/pending`, `/apkgs/{id}/download`,
    `/apkgs/{id}/ack` for the add-on (agent token). `/health`. Admin
    endpoints (require `X-Admin-Token`):

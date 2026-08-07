@@ -46,7 +46,7 @@
 
 ### Language pools (4 decks per language)
 - **Status**: Active
-- **Description**: `pool_idioms`, `pool_expr`, `pool_idiom_t2e`, `pool_idiom_e2t` rebuilt per language with 30-min debounce.
+- **Description**: `pool_expr` (→ `<ROOT>::1 Expressions::1 Fluency`) rebuilt per language with 30-min debounce; `pool_idioms` + audio pools gated off since the 2026-08-07 estate cutover (settings flags).
 - **Entry Points**:
   - `idiomatic/pipeline/pool.py:563` - `rebuild_pools`
 - **Dependencies**: staged per-card mp3s in `/data/staged_audio/`
@@ -108,7 +108,7 @@
 
 ### Grammar drill pipeline (5 languages)
 - **Status**: Active
-- **Description**: LLM-generated grammar drills (verb morphology + closed-class), deterministically or blind-fill verified, compiled into one rolling `kind='grammar'` apkg per language with **one subdeck per topic cluster** (`Idiomatic Grammar {LANG}::{cluster}`). Strategy: `docs/GRAMMAR_STRATEGY.md`.
+- **Description**: LLM-generated grammar drills (verb morphology + closed-class), deterministically or blind-fill verified, compiled into one rolling `kind='grammar'` apkg per language with **one subdeck per topic cluster** (`<ROOT>::2 Grammar::{cluster}` since the 2026-08-07 estate cutover; `9 …` error clusters → `<ROOT>::6 My Errors`; roots from `idiomatic/anki_tree.py`). Strategy: `docs/GRAMMAR_STRATEGY.md`.
 - **Entry Points**:
   - `idiomatic/grammar/morphology.py` - conjugation truth tables + verifier (Jehle es, verbecc fr/it/pt, german-nouns de)
   - `idiomatic/grammar/curriculum.py` - 61 active units across es/de/fr/it/pt; `cluster` per Topic (`CLUSTER_BY_KEY`), `PLANNED_UNITS`, `unit_seed_rows()`
@@ -136,7 +136,7 @@
 
 ### Podcast lesson cards (pilot: fr episode 3 — format approved)
 - **Status**: Active (episode 3 shipped + user-approved; batching episodes 1, 4-9 is next)
-- **Description**: Grammar-walk episodes decomposed into ~5 two-sided Anki notes: each side has its own stitched narration (shared explainer clip cache), big-font HTML, and an authored SVG diagram inlined into the field (night-mode themed via shared `s-*` CSS palette, no JS/media; generated images remain a per-side `IMG:` option for mood scenes). Spoken flip/next-card cues chain the sides; practice answers are audio-only (`TL-:`). Own frozen 14-field `Idiomatic Podcast Lesson v1` model; delivered as `apkgs.kind='podcast_lesson'` per lang into `Idiomatic Grammar {LANG}::0 <listening>::NN <title>` subdecks with zero add-on changes.
+- **Description**: Grammar-walk episodes decomposed into ~5 two-sided Anki notes: each side has its own stitched narration (shared explainer clip cache), big-font HTML, and an authored SVG diagram inlined into the field (night-mode themed via shared `s-*` CSS palette, no JS/media; generated images remain a per-side `IMG:` option for mood scenes). Spoken flip/next-card cues chain the sides; practice answers are audio-only (`TL-:`). Own frozen 14-field `Idiomatic Podcast Lesson v1` model; delivered as `apkgs.kind='podcast_lesson'` per lang into `<ROOT>::2 Grammar::0 <listening>::NN <title>` subdecks with zero add-on changes.
 - **Entry Points**:
   - `idiomatic/grammar/podcast_cards.py` - markup parser ([CARD]/[SIDE]/TITLE:/SHOW:/TL-:/SVG:/IMG:), side HTML, `load_side_svg` sanitizer, audio/visual staging, model + apkg build, `build_episode()`
   - `idiomatic/grammar/data/podcast_cards/fr_quantity-system.md` - authored pilot source (5 cards × 2 sides)
@@ -149,7 +149,7 @@
 
 ### Exercises 2.0 (rich EN→TL usage notes; pilot: es connecting — format approved)
 - **Status**: Active (ES CONNECTING pilot approved 2026-08-04; IT corpus rebuild + further batches in progress)
-- **Description**: Revival of the 2023 legacy EXCERCISES corpus (see docs/research/legacy-excercises-audit.md) as rich notes: EN prompt → TL main rendering + accepted alternatives, register line, interference trap, in-register example (El País-opinion style), pre-rendered cloze. Content is codex-authored against commissions, audited, then committed as JSON under `data/exercises2/notes/<lang>_<topic>.json`; the builder synthesizes two cached leveled ElevenLabs clips per note (answer + example; silence-marked failures ship text-only), packages one frozen 17-field `Idiomatic Exercises v1` model (2 templates: Production, Cloze) into `Idiomatic Exercises {LANG}::{Topic}` subdecks, and publishes a rolling `apkgs.kind='exercises2'` row per language — zero add-on changes.
+- **Description**: Revival of the 2023 legacy EXCERCISES corpus (see docs/research/legacy-excercises-audit.md) as rich notes: EN prompt → TL main rendering + accepted alternatives, register line, interference trap, in-register example (El País-opinion style), pre-rendered cloze. Content is codex-authored against commissions, audited, then committed as JSON under `data/exercises2/notes/<lang>_<topic>.json`; the builder synthesizes two cached leveled ElevenLabs clips per note (answer + example; silence-marked failures ship text-only), packages one frozen 17-field `Idiomatic Exercises v1` model (2 templates: Production, Cloze) into `<ROOT>::4 Exercises::{Topic}` subdecks, and publishes a rolling `apkgs.kind='exercises2'` row per language — zero add-on changes.
 - **Entry Points**:
   - `idiomatic/grammar/exercises2.py` - schema validation, GUID/deck naming, cloze→mark/blank HTML, TTS cache + leveling, model + apkg build, `build_language()`
   - `idiomatic/grammar/data/exercises2/notes/es_connecting.json` - approved 42-note pilot content
@@ -163,7 +163,7 @@
 
 ### Translation-exercise decks (repurposed grammar drills)
 - **Status**: Active (code merged; first builds pending)
-- **Description**: Verified grammar drill sentences repurposed as EN→TL translation cards: FRONT = the drill's `gloss_en` spoken by the English narrator (new cached leveled TTS under `staged_audio/grammar/translation_en/<lang>/`), BACK = the TL sentence with the drilled form bolded, reusing the existing drill back-audio clip (`idg_<lang>_<id>.mp3`) — zero new TL synthesis (reuse-only guarantee; clip-less items are skipped + counted). Selection excludes f3/f4/explainer formats, sentences under 4 words, and duplicate sentences (first wins, decided before the audio check so GUIDs never flip with disk state). Own frozen 14-field `Idiomatic Translation v1` model (one "Translate" template, id 1_820_160_001); `Idiomatic Translation {LANG}::{cluster}` subdecks share the grammar deck's cluster strings; rolling `apkgs.kind='translation'` per language — zero add-on changes.
+- **Description**: Verified grammar drill sentences repurposed as EN→TL translation cards: FRONT = the drill's `gloss_en` spoken by the English narrator (new cached leveled TTS under `staged_audio/grammar/translation_en/<lang>/`), BACK = the TL sentence with the drilled form bolded, reusing the existing drill back-audio clip (`idg_<lang>_<id>.mp3`) — zero new TL synthesis (reuse-only guarantee; clip-less items are skipped + counted). Selection excludes f3/f4/explainer formats, sentences under 4 words, and duplicate sentences (first wins, decided before the audio check so GUIDs never flip with disk state). Own frozen 14-field `Idiomatic Translation v1` model (one "Translate" template, id 1_820_160_001); `<ROOT>::5 Translation::{cluster}` subdecks share the grammar deck's cluster strings; rolling `apkgs.kind='translation'` per language — zero add-on changes.
 - **Entry Points**:
   - `idiomatic/grammar/translation.py` - selection filters, EN TTS cache, model + apkg build, `build_language()`, `language_inventory()`
   - `idiomatic/api.py:831-863` - `POST /admin/translation-build?lang`, `GET /admin/translation-list`
@@ -208,7 +208,7 @@
 
 ### Tenses Rescue decks (per-person conjugation drills from the 2015-2022 corpus)
 - **Status**: Active (batch 1: top-3 verb×tense per language; pilot format user-approved 2026-08-05)
-- **Description**: The old account's `_tenses_old` struggle data (docs/research/tenses-profiles/) turned into two rolling apkgs per language: `kind='tenses'` (EN→form production: EN sentence front; form + marked TL sentence + full paradigm with drilled row highlighted + fork note + personal lapse history on the back) and `kind='tenses_ex'` (fill-the-blank recycling the same sentences and audio). One card per PERSON (the old cards drilled whole paradigms — per-person failure was unmeasurable); archaic vós displayed dimmed, never drilled. Forms verified at build time (morphology truth tables where covered, corpus-attested otherwise). Spanish audio uses its own ElevenLabs voice (`tenses_es_voice_id`, George vetoed) with a listen-and-pick audition endpoint.
+- **Description**: The old account's `_tenses_old` struggle data (docs/research/tenses-profiles/) turned into two rolling apkgs per language (`<ROOT>::3 Tenses::1 Production::{verb}` / `::2 Exercises::{verb}` since the 2026-08-07 estate cutover): `kind='tenses'` (EN→form production: EN sentence front; form + marked TL sentence + full paradigm with drilled row highlighted + fork note + personal lapse history on the back) and `kind='tenses_ex'` (fill-the-blank recycling the same sentences and audio). One card per PERSON (the old cards drilled whole paradigms — per-person failure was unmeasurable); archaic vós displayed dimmed, never drilled. Forms verified at build time (morphology truth tables where covered, corpus-attested otherwise). Spanish audio uses its own ElevenLabs voice (`tenses_es_voice_id`, George vetoed) with a listen-and-pick audition endpoint.
 - **Entry Points**:
   - `idiomatic/grammar/tenses.py` - batch parser + verification, frozen models (1_820_170_001/2), audio cache, `build_language()`, `voice_audition()`
   - `idiomatic/grammar/data/tenses/batch1.json` - 15 offenders / 85 drilled forms (17 authored + 68 codex-gated sentences)

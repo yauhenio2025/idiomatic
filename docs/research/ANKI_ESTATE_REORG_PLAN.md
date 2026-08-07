@@ -538,6 +538,42 @@ Both drills live in the gitignored work area `docs/research/anki_reorg_work/`:
    shells recreated by a straggler import are removed manually under phase-9
    semantics (empty shells only).
 
+### COMPLETION NOTE (2026-08-07, evening)
+
+The live cutover executed the same day under the procedure above.
+Record of the run:
+
+- Live copy `live_cutover_20260807T072826Z` (source SHA `316065a3…`,
+  79,867,904 bytes — +297 notes/cards over the 12:47 study copy from the
+  day's imports). Fresh evidence pass: 2,665 collision groups / 5,335
+  candidates. Phases 1–9 owner-gated at the terminal: 205 shells; 3,308
+  notes tagged (839 tags / 421 origins); 27,001 moves (20,759 Fluency,
+  6,242 archived+suspended); 5,391 family moves; 19 renames / 38,322
+  cards, zero residual archive moves; 12,667 audio retired; 5,335
+  collision tags; 27 experiment cards demoted; 718 empty shells removed.
+  `10_verify.py` PASS (notes 75,471; cards 83,436; revlog 62,554; mature
+  4,639; reps 61,435; suspended 8+6,242+12,667+27).
+- Swap installed SHA `485a2849…`; original preserved as
+  `collection.anki2.pre-estate-20260807T072826Z`. One post-swap incident:
+  the add-on's startup one-shot poll (fires 4 s after profile open,
+  independent of `poll_interval_sec`) imported six mid-migration
+  packages and recreated `Idiomatic` with 79 new cards (zero reviews);
+  owner deleted the deck, the add-on was re-pointed at an invalid host
+  for the window, and the fr/it pool notes re-deliver post-rename.
+  LESSON: pausing this add-on requires neutering `api_base_url`, not
+  just the interval.
+- Owner completed the deliberate full AnkiWeb upload and verified the
+  iPad pull the same evening, then studied normally on the new tree.
+- Repo cutover commit `393d111`: `anki_tree.anki_root` single source of
+  truth; grammar/exercises2/translation/tenses/pool constants moved
+  under the roots; `kind='video'` no longer offered by `/apkgs/pending`
+  (still built for cap accounting); `pool_idioms` builder gated off.
+  Machine-local rescue builder now targets `<ROOT>::7 Rescue`.
+- Out of scope, flagged for later: Pimsleur scraper builder
+  (`~/projects/pimsleur/scraper/build_apkg.py`) and the Mandarin
+  external builders still bake pre-estate roots — harmless until re-run;
+  update before any re-run. The Expression Hub commission may now start.
+
 ## Exact per-current-deck migration map
 
 Generated from copied collection SHA-256 `200d58857c4422acd041440c2ccadd822f41fdda2a1d0027e51be392ab80e517`. There are 1,038 current deck rows; every row appears once below. Counts are direct, not subtree counts.
