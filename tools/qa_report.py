@@ -91,7 +91,7 @@ def failed_checks(r):
     return [k for k, v in (r.get("checks") or {}).items() if v == 0]
 
 
-def build_spot_review(latest, out_dir, n):
+def build_spot_review(latest, out_dir, n, index=None):
     picked = spot_sample(latest, n)
     entries, lines = [], []
     lines.append("# QA spot review — judge verdicts for your gate\n")
@@ -104,11 +104,12 @@ def build_spot_review(latest, out_dir, n):
         if r.get("fail_classes"):
             cap += " " + ",".join(r["fail_classes"])
         entries.append((r["image"], cap))
+        rec = (index or {}).get(r["example_id"], {})
         lines.append(
             f"| {i} | ex_{r['example_id']} ({r['chunk']}) | {r['verdict']} "
             f"| {', '.join(r.get('fail_classes') or []) or '-'} "
             f"| {', '.join(failed_checks(r)) or '-'} "
-            f"| — | — |")
+            f"| {rec.get('idiom', '—')} | {rec.get('en_text', '—')} |")
     sheet = montage(entries, Path(out_dir) / "spot_review.jpg", cols=4)
     md = Path(out_dir) / "spot_review.md"
     md.write_text("\n".join(lines) + "\n")
@@ -164,6 +165,8 @@ def main():
     ap.add_argument("--human-review-dir", default=None)
     ap.add_argument("--spot", type=int, default=0,
                     help="build spot-review package of N verdicts")
+    ap.add_argument("--prompts-dir", default=None,
+                    help="brief dir; fills idiom/sentence in the spot table")
     args = ap.parse_args()
     out_dir = Path(args.out_dir).expanduser()
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -174,7 +177,14 @@ def main():
         print("empty ledger")
         return
     if args.spot:
-        sheet, md, picked = build_spot_review(latest, out_dir, args.spot)
+        index = None
+        if args.prompts_dir:
+            import sys
+            sys.path.insert(0, str(Path(__file__).parent))
+            import qa_rubric
+            index = qa_rubric.load_brief_index(args.prompts_dir)
+        sheet, md, picked = build_spot_review(latest, out_dir, args.spot,
+                                              index)
         print(f"spot review: {sheet} + {md} ({len(picked)} verdicts)")
     daily, sheet = build_daily(rows, latest, out_dir, hr)
     print(f"daily: {daily}" + (f"  contact sheet: {sheet}" if sheet else ""))
