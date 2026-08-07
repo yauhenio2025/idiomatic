@@ -1,29 +1,30 @@
 # Anki estate inventory
 
-Study snapshot: 2026-08-07. This is an evidence report, not an executed migration. Every collection query below used an immutable SQLite connection to a decompressed **copy** of the newest automatic backup. The live `collection.anki2` was never opened or queried, and no live collection, pipeline, add-on, or media file was changed.
+Study snapshot: 2026-08-07 12:47:46 +0800. This is an evidence report, not an executed migration. Every collection query below used an immutable SQLite connection to a decompressed **copy** of the newest automatic backup. The live `collection.anki2` was never opened or queried, and no live collection, pipeline, add-on, or media file was changed.
 
 ## Snapshot and reproducibility
 
 | Evidence item | Value |
 |---|---|
-| Newest automatic backup | `backup-2026-08-07-10.18.10.colpkg` |
-| Backup modification time | 2026-08-07 10:18:10.779841676 +0800 |
-| Backup bytes / SHA-256 | 15,286,386 / `0ca3c881ec2117cb6531dcc5f9b8bb480b19b7a4ad3a01e1171d9c305595210d` |
-| Decompressed copied DB bytes / SHA-256 | 78,802,944 / `c8410d43ee8183bb1e25cf316717366572d2f5607fa0e5e9f4e4a3d6c2a7e59e` |
+| Newest automatic backup | `backup-2026-08-07-12.47.46.colpkg` |
+| Backup source modification time | 2026-08-07 12:47:46.522632 +0800 |
+| Backup bytes / SHA-256 | 15,429,025 / `07cf2d2fb95cc2a4603b401a4f0d82b3ef2d2112a5eb858025308f694954ec71` |
+| Collection `col.mod` | 2026-08-07 12:46:03.525 +0800 |
+| Decompressed copied DB bytes / SHA-256 | 79,466,496 / `200d58857c4422acd041440c2ccadd822f41fdda2a1d0027e51be392ab80e517` |
 | SQLite validation | `PRAGMA quick_check` = `ok` |
 | Reader | Python `anki` 25.9.2; SQLite immutable/query-only mode |
 | Reproducer | `anki_reorg_scripts/00_inventory.py` |
 
-The `.colpkg` archive passed an archive test and contained `collection.anki21b`, the compatibility `collection.anki2`, `meta`, and a nine-byte media-name map. It carried no media payload. The compressed collection was decompressed under `docs/research/anki_reorg_work/`; that entire scratch tree is ignored by the local `docs/research/.gitignore` and is not a deliverable.
+The `.colpkg` archive passed an archive test and contained `collection.anki21b`, the compatibility `collection.anki2`, `meta`, and a nine-byte media-name map. It carried no media payload. The compressed collection was decompressed under `docs/research/anki_reorg_work/latest_20260807_124746/`; that entire scratch tree is ignored by the local `docs/research/.gitignore` and is not a deliverable.
 
 ## Executive inventory
 
-- 1,031 deck rows contain 74,805 notes and 82,738 cards. There are 218 decks with no direct cards and 67 completely empty subtrees; many are valid container/system decks, so neither number is a deletion list.
-- Scheduling investment is material: 4,623 cards have intervals over 21 days, 10,713 cards are in review state, current cards record 61,195 reps, and the revlog has 62,314 rows. Of those revlog rows, 62,167 refer to current cards and 147 refer to deleted cards.
-- The snapshot has 71,776 new cards, 249 learning/relearning cards, eight suspended cards, no buried cards, and no card currently occupying a filtered deck. All eight suspensions are Mandarin Props relearning cards; together they carry 419 reps and must remain suspended.
+- 1,038 deck rows contain 75,174 notes and 83,139 cards. There are 218 decks with no direct cards and 67 completely empty subtrees; many are valid container/system decks, so neither number is a deletion list.
+- Scheduling investment is material: 4,639 cards have intervals over 21 days, 10,767 cards are in review state, current cards record 61,435 reps, and the revlog has 62,554 rows. Of those revlog rows, 62,407 refer to current cards and 147 refer to deleted cards.
+- The snapshot has 72,117 new cards, 255 learning/relearning cards, eight suspended cards, no buried cards, and no card currently occupying a filtered deck. All eight suspensions are Mandarin Props relearning cards; together they carry 419 reps and must remain suspended.
 - There are 56 note types. Their exact stored field order and templates appear in the generated model catalog; the `Mxx` codes cross-reference every current deck that uses each type in the full tree.
-- Five notes have no cards, all using `ChinesePod Word v3`. Two long-audio notes span Spanish and Portuguese decks even though their content/tag is Portuguese (`por parte de`); subtree note totals are consequently not always additive.
-- All 1,030 normal decks use the `Default` deck options group. `Custom Study Session` is an empty filtered deck. No source template has a real target-deck override; all 56 note types carry a nonzero but explicitly unused/dangling target-deck value. The collection's `curModel` UI setting is also stale.
+- Five notes have no cards, all using `ChinesePod Word v3 (EN→ZH, TTS front)`. Two long-audio notes span Spanish and Portuguese decks even though their content/tag is Portuguese (`por parte de`); subtree note totals are consequently not always additive.
+- All 1,037 normal decks use the `Default` deck options group. `Custom Study Session` is an empty filtered deck. No source template has a real target-deck override; all 56 note types carry a nonzero but explicitly unused/dangling target-deck value. The collection's `curModel` UI setting is also stale.
 - Three archive paths (`de`, `fr`, `it`) lack an explicit intermediate parent row. Anki APIs understand the hierarchy; raw string/SQL renames are therefore unsafe.
 
 ## Where the scheduling mass lives
@@ -32,19 +33,19 @@ The estate is lopsided: most new pipeline material is unseen, while the legacy, 
 
 | Current subtree | Notes | Cards | Mature (`ivl > 21`) | Review-state cards | Card reps |
 |---|---:|---:|---:|---:|---:|
-| `Idiomatic::German` | 5,940 | 6,814 | 0 | 0 | 1 |
-| `Idiomatic::Spanish` | 4,489 | 5,386 | 0 | 0 | 1 |
-| `Idiomatic::French` | 4,343 | 5,128 | 0 | 0 | 0 |
-| `Idiomatic::Italian` | 8,079 | 9,551 | 84 | 689 | 1,343 |
-| `Idiomatic::Portuguese` | 5,188 | 6,163 | 6 | 156 | 310 |
+| `Idiomatic::German` | 6,205 | 7,079 | 0 | 0 | 1 |
+| `Idiomatic::Spanish` | 4,558 | 5,455 | 0 | 0 | 1 |
+| `Idiomatic::French` | 4,348 | 5,133 | 0 | 0 | 0 |
+| `Idiomatic::Italian` | 8,079 | 9,551 | 91 | 703 | 1,378 |
+| `Idiomatic::Portuguese` | 5,218 | 6,225 | 8 | 173 | 350 |
 | `Idiomatic::z-archive` | 236 | 236 | 0 | 2 | 18 |
 | `Languages::German` | 947 | 1,179 | 310 | 935 | 2,591 |
-| `Languages::Spanish` | 527 | 527 | 53 | 512 | 1,099 |
+| `Languages::Spanish` | 527 | 527 | 54 | 504 | 1,160 |
 | `Languages::French` | 1,153 | 1,503 | 380 | 1,114 | 3,544 |
-| `Languages::Italian` | 1,214 | 1,494 | 957 | 1,212 | 6,025 |
-| `Languages::Portuguese` | 884 | 989 | 416 | 860 | 3,451 |
+| `Languages::Italian` | 1,214 | 1,494 | 963 | 1,212 | 6,048 |
+| `Languages::Portuguese` | 884 | 989 | 416 | 860 | 3,481 |
 | `Languages::Mandarin` | 2,600 | 2,614 | 12 | 161 | 270 |
-| Generated grammar/exercises/tenses/translation/rescue families | 3,559 | 5,391 | 0 | 254 | 283 |
+| Generated grammar/exercises/tenses/translation/rescue families | 3,619 | 5,391 | 0 | 223 | 334 |
 | `Pimsleur` (all languages) | 34,211 | 34,211 | 1,776 | 3,005 | 14,184 |
 
 Pimsleur's mature cards are concentrated entirely in Mandarin (1,278) and Italian (498). Course placement counts are:
@@ -77,72 +78,76 @@ The standalone Mandarin families must only acquire a common parent. Their curren
 
 ## Pipeline generations and discontinued audio
 
-The current Idiomatic expression branches contain 348 nonempty per-video decks holding 2,428 Cloud-v2 cards. Every one is still new with zero reviews: DE 477, ES 421, FR 383, IT 744, PT 403. The `z-archive` adds 236 Cloud source cards, including 201 older Cloud-v1 cards.
+Relative to the superseded copy, this snapshot adds 252 all-new German cards: 216 `YouTube Expression Pool v1` cards in `Fluency Expressions` and 36 Cloud-v2 cards in `Idioms`. No scheduling or review-history total changed.
 
-The long Idioms Audio projections are not disposable even though they should stop appearing in study. They contain 12,629 cards across 6,657 notes. The EN→target model has 6,064 cards and 324 mature cards; target→EN has 6,565 cards and 255 mature cards. The proposed migration therefore suspends and demotes these cards while retaining every note, field, GUID, interval, and revlog row.
+The current Idiomatic expression branches contain 355 nonempty per-video decks holding 2,465 Cloud-v2 cards. Every one is still new with zero reviews: DE 490, ES 434, FR 388, IT 744, PT 409. The `z-archive` adds 236 Cloud source cards, including 201 older Cloud-v1 cards.
+
+The long Idioms Audio projections are not disposable even though they should stop appearing in study. They contain 12,667 cards across 6,663 notes. The EN→target model has 6,083 cards and 324 mature cards; target→EN has 6,584 cards and 255 mature cards. The proposed migration therefore suspends and demotes these cards while retaining every note, field, GUID, interval, and revlog row.
 
 ## Provenance and tag taxonomy
 
-The database registers 701 tag names; 688 are assigned to at least one note, and 929 notes are untagged. The dominant assigned tags are `pimsleur` (34,211 notes), `youtube` (33,054), `quickmatch` (20,860), `fluency-pool` (20,231), `flashcard` (13,351), and `idiom-audio` (6,657). Language, system/family, lesson, level, video-ID-like, slug-like, and hierarchical namespaces are counted in the generated taxonomy below.
+The database registers 708 tag names; 695 are assigned to at least one note, and 929 notes are untagged. The dominant assigned tags are `pimsleur` (34,211 notes), `youtube` (33,423), `quickmatch` (20,860), `fluency-pool` (20,513), `flashcard` (13,351), and `idiom-audio` (6,663). Language, system/family, lesson, level, video-ID-like, slug-like, and hierarchical namespaces are counted in the generated taxonomy below.
 
-All 33,054 `youtube` notes have a nonempty `Source` field, covering 3,287 distinct source strings and 425 parsed YouTube IDs. Only 2,664 notes already carry a raw video-ID tag (370 distinct IDs), so deck collapse cannot rely on existing tags alone. The provenance draft adds, before any move:
+All 33,423 `youtube` notes have a nonempty `Source` field, covering 3,338 distinct source strings and 432 parsed YouTube IDs. Only 2,701 notes already carry a raw video-ID tag (377 distinct IDs), so deck collapse cannot rely on existing tags alone. The provenance draft adds, before any move:
 
 - `youtube` where absent;
 - `lang::<code>`;
 - `source::youtube::<video-id>` when the Source URL yields one;
 - `estate::origin::<12-hex>` with a journaled hash-to-original-deck map.
 
-On this copy that phase would add tags to 3,261 notes, creating 413 origin mappings. Raw titles and URLs remain in existing Source fields. All 34,211 Pimsleur notes already have complete source/lesson provenance.
+On this copy that phase would add 9,894 tag assignments to 3,298 notes, creating 420 origin mappings. Raw titles and URLs remain in existing Source fields. All 34,211 Pimsleur notes already have complete source/lesson provenance.
 
-## Duplicate and collision census
+## Exact surface-collision census
 
-The conservative comparison strips media/HTML, HTML-unescapes, applies Unicode NFKC, normalizes curly quote/dash variants, collapses whitespace, and case-folds while preserving accents and punctuation. An automatic collision requires both normalized target text and English gloss to match. A target-only match is a review candidate, never deletion evidence.
+The conservative surface comparison strips media/HTML, HTML-unescapes, applies Unicode NFKC, normalizes curly quote/dash variants, collapses whitespace, and case-folds while preserving accents and punctuation. An exact surface collision requires both normalized target text and English gloss to match. It is evidence of equal normalized bilingual text, not proof that the notes share an expression sense or canonical identity. A target-only match is a review candidate, never deletion evidence.
 
-Across 4,725 unambiguously classified legacy notes and 28,271 Idiomatic notes, exactly four primary bilingual expression keys cross generations; no primary fluency-sentence key does. Counts include the source/pool/audio representations attached to one semantic expression.
+Across 4,725 unambiguously classified legacy notes and 28,640 Idiomatic notes, exactly four primary bilingual surface pairs cross generations; no primary fluency-sentence surface pair does. Counts include the source/pool/audio representations attached to each matching surface.
 
-| Language | Exact bilingual key | Legacy notes / cards / reviews / mature | Idiomatic notes / cards / reviews / mature |
+| Language | Exact bilingual surface pair | Legacy notes / cards / reviews / mature | Idiomatic notes / cards / reviews / mature |
 |---|---|---:|---:|
 | ES | `más bien` ↔ `rather / more like` | 1 / 1 / 1 / 0 | 4 / 6 / 0 / 0 |
 | IT | `quando si tratta di` ↔ `when it comes to` | 3 / 5 / 6 / 1 | 4 / 6 / 0 / 0 |
 | PT | `afinal de contas` ↔ `after all / at the end of the day` | 2 / 3 / 2 / 0 | 4 / 6 / 0 / 0 |
 | PT | `tanto que` ↔ `so much so that` | 2 / 3 / 3 / 0 | 4 / 5 / 0 / 0 |
-| **Total** | **4 keys** | **8 / 12 / 12 / 1** | **16 / 23 / 0 / 0** |
+| **Total** | **4 surface pairs** | **8 / 12 / 12 / 1** | **16 / 23 / 0 / 0** |
 
-No YouTube source ID is shared across generations for these keys: the expressions recur in different videos rather than being reimports of the same source. The only secondary exact sentence atom is `Ella hizo frente a sus miedos y habló en público.` ↔ `She faced her fears and spoke in public.` It is example reuse inside larger notes, not safe note-level dedupe.
+No YouTube source ID is shared across generations for these pairs: the same text recurs in different videos rather than being a reimport of the same source. The only secondary exact sentence atom is `Ella hizo frente a sus miedos y habló en público.` ↔ `She faced her fears and spoke in public.` It is example reuse inside larger notes, not note-level deduplication or expression-identity evidence.
 
-Strict target-only matching produces 23 cross-generation candidates; punctuation relaxation adds one. They cover 53 legacy and 95 Idiomatic notes. Legacy carries 129 reviews and 24 mature cards across them; Idiomatic carries none. The complete manual-review queue is:
+Strict target-only matching produces 24 cross-generation candidates; punctuation relaxation adds one. Together they cover 55 legacy and 96 Idiomatic notes. Legacy carries 132 reviews and 24 mature cards across them; Idiomatic carries none. The complete manual-review queue is:
 
 - DE: `durchgesickert`; `leer stehen`.
 - ES: `al margen de`; `hacer frente a`; `más bien` (exact); `sin duda alguna`.
 - FR: `compte tenu du`; `ne cesse de`; `pour le coup`; `remise en cause`; `à deux doigts de`.
 - IT: `a che punto siamo?` / `a che punto siamo` (punctuation-only); `al di là di`; `guarda caso`; `in funzione di` (likely polysemy); `in parole povere`; `nel senso che`; `quando si tratta di` (exact); `se non fosse che`.
-- PT: `afinal de contas` (exact); `dar certo`; `desde o primeiro momento`; `recorrer a`; `tanto que` (exact).
+- PT: `afinal de contas` (exact); `dar certo`; `desde o primeiro momento`; `meia dúzia`; `recorrer a`; `tanto que` (exact).
 
-The larger deterministic collision is inside the current pipeline: Cloud source notes use a per-video GUID, while pooled notes use a language/expression GUID. Exact source-versus-pool overlap is:
+The larger exact surface overlap is inside the current pipeline: Cloud source notes use a per-video GUID, while pooled notes use a language/expression GUID. Exact target-plus-English source-versus-pool overlap is:
 
-| Language | Exact keys | Source notes | Pool notes | Source reviews | Pool reviews | Mature either side |
+| Language | Exact surface pairs | Source notes | Pool notes | Source reviews | Pool reviews | Mature either side |
 |---|---:|---:|---:|---:|---:|---:|
-| DE | 586 | 586 | 586 | 8 | 0 | 0 |
-| ES | 417 | 417 | 417 | 0 | 0 | 0 |
+| DE | 607 | 607 | 607 | 8 | 0 | 0 |
+| ES | 421 | 421 | 421 | 0 | 0 | 0 |
 | FR | 417 | 417 | 417 | 3 | 0 | 0 |
 | IT | 753 | 754 | 753 | 5 | 0 | 0 |
 | PT | 448 | 448 | 448 | 2 | 0 | 0 |
-| **Total** | **2,621** | **2,622** | **2,621** | **18** | **0** | **0** |
+| **Total** | **2,646** | **2,647** | **2,646** | **18** | **0** | **0** |
 
-This covers 92.0% of 2,849 pool notes and 98.4% of 2,664 per-video/archive source notes. All 201 Cloud-v1 archive notes match a pool note. Sixteen source groups hold the 18 reviews; they are archive cards. A schedule-first dry run selects 2,621 winners and 2,626 loser notes (the extra notes are cross-generation and one duplicated Italian source). The draft only tags and suspends losers; it never deletes notes, rewrites GUIDs, merges revlog, or converts Cloud-v1 to Cloud-v2.
+This covers 91.5% of 2,893 pool notes and 98.0% of 2,701 per-video/archive source notes. All 201 Cloud-v1 archive notes have an exact surface match in the pool. Sixteen source-side surface groups hold the 18 reviews; all are archive cards.
+
+These 2,646 groups cover 5,297 distinct notes and form a surface-collision queue, not 2,646 proven duplicate learning objects. This inventory authorizes no identity, canonical-example, active-card, or suspension decision from surface equality. Under the current [Expression Hub migration contract](EXPRESSION_HUB_MIGRATION.md), identity and disposition are deferred to a lossless, collection-checksummed manifest that resolves durable expression/example IDs, reviewed `(lang, normalized, sense_key)` ownership, source context/gloss, task compatibility, and schedule evidence; ambiguous rows are quarantined. Only after that sense-resolved mapping establishes the same learning object may the Hub manifest choose a canonical example row and retain the most-invested compatible card while keeping any duplicate card and its history intact. It never merges revlog, rewrites identity from a GUID collision, or infers expression identity from surface equality alone.
 
 ## Media reference and orphan estimate
 
-The backup itself contains no media payload, so it can establish references but cannot prove live presence or orphanhood. Copied-note fields contain 147,859 local-media occurrences and 137,554 unique filenames across 74,651 notes: 145,323 `[sound:...]`, 1,427 video `src`, and 1,109 image `src` occurrences. Unique extensions are 135,540 mp3, 954 jpg, 816 webm, 136 png, 100 mp4, seven jpeg, and one webp. No template/config contains a hard-coded local media reference.
+The backup itself contains no media payload, so it can establish references but cannot prove live presence or orphanhood. The newer copied-note fields contain 148,597 local-media occurrences and 138,114 unique filenames across 75,020 notes: 146,061 `[sound:...]`, 1,427 video `src`, and 1,109 image `src` occurrences. Unique extensions are 136,100 mp3, 954 jpg, 816 webm, 136 png, 100 mp4, seven jpeg, and one webp. No template/config contains a hard-coded local media reference.
 
-To provide the requested estimate, one ancillary comparison read **only directory-entry names and stat metadata** from the live `collection.media` at approximately 2026-08-07 10:38:42 +0800. It did not open file contents or the live database. That directory had 295,889 regular files / 17.760 GiB:
+The only directory comparison remains the **prior** name-and-`stat`-only sample taken at approximately 2026-08-07 10:38:42 +0800. It read directory-entry names and stat metadata from the live `collection.media`, but no media content and no live database. That sample contained 295,889 regular files / 17.760 GiB and was compared with the earlier 10:18 copied database, not this 12:47 copy:
 
-- 137,553 of 137,554 copied-DB references had an exact filename match.
-- The one missing reference is `\-2qnze5hq.webm`, on Mandarin Prop note `1775530298029` (`Video` field). Its card has a 2,163-day interval, 28 reps, and 28 revlog rows; companion `420_bs.jpg` is present. This must be repaired, not cleaned away.
-- The raw unreferenced upper bound was 158,336 files / 6.501 GiB. Excluding 47 underscore-prefixed static files and 158 files modified after the collection snapshot leaves **158,131 orphanable candidates / 6.482 GiB**: 53.44% of files and 36.49% of bytes.
-- Of those candidates, 7,037 files / 1.628 GiB reduce to a referenced basename after removing a trailing `-<40 hex>` collision suffix, strong name-level evidence of historical collision-renamed residue.
+- 137,553 of the earlier copy's 137,554 references had an exact filename match.
+- Its one missing reference was `\-2qnze5hq.webm`, on Mandarin Prop note `1775530298029` (`Video` field). The newer copy still references that name, and the card still has a 2,163-day interval, 28 reps, and 28 revlog rows. The companion `420_bs.jpg` was present in the prior sample. This remains a repair candidate, not cleanup evidence.
+- Against the earlier copy, the raw unreferenced upper bound was 158,336 files / 6.501 GiB. Excluding 47 underscore-prefixed static files and 158 files modified after that collection snapshot left **158,131 orphanable candidates / 6.482 GiB**: 53.44% of files and 36.49% of sampled bytes.
+- Of those prior candidates, 7,037 files / 1.628 GiB reduced to a referenced basename after removing a trailing `-<40 hex>` collision suffix, strong name-level evidence of historical collision-renamed residue.
 
-The 158,131 figure is deliberately an upper bound, not a deletion list. Backup/live skew, unreliable mtimes, live-only notes, add-on references, and collision-renamed files can all produce false positives. Any later media cleanup needs a fresh backup copy, preservation of candidates, content hashing, and Anki's own media checker. No media deletion script is part of this commission.
+No frozen filename-level copy of the 10:38 directory sample is available, so the newer copy's 138,114-name reference set cannot be intersected with it without reading live media again. The set is 560 names larger than the earlier copy's, but additions and removals can coexist; this report therefore does **not** subtract 560 from the old candidate count, assert that the new names were present at 10:38, or publish a refreshed orphan count. The historical 158,131 figure is deliberately retained only as the prior upper-bound estimate, never a deletion list. Backup/live skew, unreliable mtimes, live-only notes, add-on references, and collision-renamed files can all produce false positives. Any later media cleanup needs a fresh backup copy, preservation of candidates, content hashing, and Anki's own media checker. No media deletion script is part of this commission.
 
 ## Inventory caveats
 
@@ -156,30 +161,30 @@ The 158,131 figure is deliberately an upper bound, not a deletion list. Backup/l
 
 | Metric | Count |
 |---|---:|
-| decks | 1,031 |
+| decks | 1,038 |
 | empty_direct_decks | 218 |
 | empty_subtree_decks | 67 |
-| notes | 74,805 |
-| notes_with_cards | 74,800 |
-| cards | 82,738 |
-| new_cards | 71,776 |
-| learning_or_relearning_cards | 249 |
-| review_state_cards | 10,713 |
+| notes | 75,174 |
+| notes_with_cards | 75,169 |
+| cards | 83,139 |
+| new_cards | 72,117 |
+| learning_or_relearning_cards | 255 |
+| review_state_cards | 10,767 |
 | suspended_cards | 8 |
 | buried_cards | 0 |
 | filtered_deck_cards | 0 |
-| mature_cards | 4,623 |
-| card_reps | 61,195 |
-| revlog_rows | 62,314 |
-| revlog_rows_for_current_cards | 62,167 |
+| mature_cards | 4,639 |
+| card_reps | 61,435 |
+| revlog_rows | 62,554 |
+| revlog_rows_for_current_cards | 62,407 |
 | orphaned_revlog_rows | 147 |
 | orphan_notes | 5 |
 | note_models | 56 |
-| registered_tags | 701 |
-| used_tags | 688 |
+| registered_tags | 708 |
+| used_tags | 695 |
 | notes_without_tags | 929 |
-| referenced_media_files | 137,554 |
-| media_reference_occurrences | 147,859 |
+| referenced_media_files | 138,114 |
+| media_reference_occurrences | 148,597 |
 
 ## Generated full deck tree
 
@@ -194,10 +199,10 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ EXPERIMENTS-YT::Dia Util | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
 | ↳ EXPERIMENTS-YT::Webtest | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
 | ↳ ↳ EXPERIMENTS-YT::Webtest::CIÚMES DO UBER | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
-| Idiomatic | 0 | 0 | 28,273 | 33,278 | 90 | 1,673 | 1,673 | — |
+| Idiomatic | 0 | 0 | 28,642 | 33,679 | 99 | 1,748 | 1,748 | — |
 | ↳ Idiomatic::de | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
 | ↳ Idiomatic::fr | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
-| ↳ Idiomatic::French | 0 | 0 | 4,343 | 5,128 | 0 | 0 | 0 | — |
+| ↳ Idiomatic::French | 0 | 0 | 4,348 | 5,133 | 0 | 0 | 0 | — |
 | ↳ ↳ Idiomatic::French::2026-07-11 · Comment Bally Bagayoko est intervenu en faveur de deux frères condamnés pour trafic de drogue | 7 | 7 | 7 | 7 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::French::2026-07-11 · Mondial 2026 : la FIFA SOUS INFLUENCE DE TRUMP | 9 | 9 | 9 | 9 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::French::2026-07-11 · MORTALITÉ périnatale : les ALERTES sans réponse | 7 | 7 | 7 | 7 | 0 | 0 | 0 | M05 |
@@ -263,11 +268,12 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ ↳ Idiomatic::French::2026-08-05 · Ebola : le directeur général de l'OMS en visite en RDC • FRANCE 24 | 5 | 5 | 5 | 5 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::French::2026-08-05 · Incendie en Gironde : notre journaliste raconte ce feu immense | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::French::2026-08-05 · La guerre vient de franchir un cap : l’Arabie Saoudite rejoint Trump et frappe | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M05 |
+| ↳ ↳ Idiomatic::French::2026-08-06 · Ebola : un décès suspect sur un bateau en direction de Kinshasa • FRANCE 24 | 5 | 5 | 5 | 5 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::French::Fluency Expressions | 2,640 | 2,640 | 2,640 | 2,640 | 0 | 0 | 0 | M40 |
 | ↳ ↳ Idiomatic::French::Idioms | 440 | 440 | 440 | 440 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::French::Idioms Audio (EN → target) | 440 | 803 | 440 | 803 | 0 | 0 | 0 | M41 |
 | ↳ ↳ Idiomatic::French::Idioms Audio (target → EN) | 440 | 862 | 440 | 862 | 0 | 0 | 0 | M42 |
-| ↳ Idiomatic::German | 0 | 0 | 5,940 | 6,814 | 0 | 1 | 1 | — |
+| ↳ Idiomatic::German | 0 | 0 | 6,205 | 7,079 | 0 | 1 | 1 | — |
 | ↳ ↳ Idiomatic::German::2026-07-11 · Fußfessel für Marine Le Pen: Was das Urteil bedeutet | 7 | 7 | 7 | 7 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::German::2026-07-11 · Kahlschlag bei VW? So könnte es weitergehen | 8 | 8 | 8 | 8 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::German::2026-07-11 · Sachsen-Anhalt: AfD stellt vor Landtagswahl 100-Tage-Programm vor | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M05 |
@@ -341,12 +347,14 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ ↳ Idiomatic::German::2026-08-05 · Russland vor der Duma-Wahl: Hat die Opposition eine Chance? | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::German::2026-08-05 · tagesschau in Einfacher Sprache 19:00 Uhr, 05.08.2026 | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::German::2026-08-05 · Wie die Ukraine Russland in der Todeszone angreift | 7 | 7 | 7 | 7 | 0 | 0 | 0 | M05 |
-| ↳ ↳ Idiomatic::German::Fluency Expressions | 3,642 | 3,642 | 3,642 | 3,642 | 0 | 1 | 1 | M40 |
-| ↳ ↳ Idiomatic::German::Idioms | 607 | 607 | 607 | 607 | 0 | 0 | 0 | M05 |
+| ↳ ↳ Idiomatic::German::2026-08-06 · Probleme durch extremes Niedrigwasser \| 🌍 tagesschau24 Top-Thema, 6.8.2026 | 9 | 9 | 9 | 9 | 0 | 0 | 0 | M05 |
+| ↳ ↳ Idiomatic::German::2026-08-07 · Mangel an amerikanischen Raketen • Selenskyj besucht putinfreundliches Serbien • zweite Fußballbu... | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
+| ↳ ↳ Idiomatic::German::Fluency Expressions | 3,858 | 3,858 | 3,858 | 3,858 | 0 | 1 | 1 | M40 |
+| ↳ ↳ Idiomatic::German::Idioms | 643 | 643 | 643 | 643 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::German::Idioms Audio (EN → target) | 607 | 1,044 | 607 | 1,044 | 0 | 0 | 0 | M41 |
 | ↳ ↳ Idiomatic::German::Idioms Audio (target → EN) | 607 | 1,044 | 607 | 1,044 | 0 | 0 | 0 | M42 |
 | ↳ Idiomatic::it | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
-| ↳ Idiomatic::Italian | 0 | 0 | 8,079 | 9,551 | 84 | 1,343 | 1,343 | — |
+| ↳ Idiomatic::Italian | 0 | 0 | 8,079 | 9,551 | 91 | 1,378 | 1,378 | — |
 | ↳ ↳ Idiomatic::Italian::2026-07-11 · Caracciolo a Mappa Mundi: Vogliamo la guerra totale? / Prima parte | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Italian::2026-07-11 · Gerusalemme, città involucro - di Laura Canali | 10 | 10 | 10 | 10 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Italian::2026-07-11 · Vaccinare invertebrati | 10 | 10 | 10 | 10 | 0 | 0 | 0 | M05 |
@@ -430,11 +438,11 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ ↳ Idiomatic::Italian::2026-08-06 · I viaggi di Brunori Sas, parte 4 | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Italian::2026-08-07 · Crans-Montana, perché la Svizzera ha ESCLUSO l’Italia dal processo sulla strage \| The Essential | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Italian::2026-08-07 · Ep.920 - Francesco Guccini | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
-| ↳ ↳ Idiomatic::Italian::Fluency Expressions | 4,890 | 4,890 | 4,890 | 4,890 | 84 | 1,241 | 1,241 | M40 |
+| ↳ ↳ Idiomatic::Italian::Fluency Expressions | 4,890 | 4,890 | 4,890 | 4,890 | 91 | 1,276 | 1,276 | M40 |
 | ↳ ↳ Idiomatic::Italian::Idioms | 815 | 815 | 815 | 815 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Italian::Idioms Audio (EN → target) | 815 | 1,477 | 815 | 1,477 | 0 | 0 | 0 | M41 |
 | ↳ ↳ Idiomatic::Italian::Idioms Audio (target → EN) | 815 | 1,625 | 815 | 1,625 | 0 | 102 | 102 | M42 |
-| ↳ Idiomatic::Portuguese | 0 | 0 | 5,188 | 6,163 | 6 | 310 | 310 | — |
+| ↳ Idiomatic::Portuguese | 0 | 0 | 5,218 | 6,225 | 8 | 350 | 350 | — |
 | ↳ ↳ Idiomatic::Portuguese::2026-07-11 · 'Solos têm que ser causa nacional': o balanço de quem participou da Escola de Bioinsumos na China | 11 | 11 | 11 | 11 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Portuguese::2026-07-11 · Hamas dissolve governo em Gaza após 20 anos e transfere poder a comitê técnico da ONU | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Portuguese::2026-07-11 · Inteligência artificial e o futuro do trabalho \| Aaron Benanav | 9 | 9 | 9 | 9 | 0 | 0 | 0 | M05 |
@@ -496,12 +504,13 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ ↳ Idiomatic::Portuguese::2026-08-05 · LULA QUER ACABAR COM O TETO DE GASTOS | 5 | 5 | 5 | 5 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Portuguese::2026-08-05 · MICHELLE BOLSONARO USA ATESTADO PARA FICAR LONGE DE FLÁVIO BOLSONARO \| FORA DE ÓRBITA | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Portuguese::2026-08-06 · ENTENDA A PEGADINHA POR TRÁS DA CRÍTICA DE MALAFAIA A VICE DE FLÁVIO \| PLANTÃO | 10 | 10 | 10 | 10 | 0 | 0 | 0 | M05 |
+| ↳ ↳ Idiomatic::Portuguese::2026-08-06 · QUANTIDADE ABSURDA DE BRASILEIROS ACREDITAM QUE LULA FOI SUBSTITUÍDO POR UM CLONE \| PLANTÃO | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Portuguese::2026-08-07 · LULA 3XPLODE E REPERCUTE COM ENTREVISTA AO METEORO BRASIL \| PLANTÃO | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M05 |
-| ↳ ↳ Idiomatic::Portuguese::Fluency Expressions | 3,186 | 3,186 | 3,186 | 3,186 | 6 | 310 | 310 | M40 |
+| ↳ ↳ Idiomatic::Portuguese::Fluency Expressions | 3,204 | 3,204 | 3,204 | 3,204 | 8 | 350 | 350 | M40 |
 | ↳ ↳ Idiomatic::Portuguese::Idioms | 535 | 535 | 535 | 535 | 0 | 0 | 0 | M05 |
-| ↳ ↳ Idiomatic::Portuguese::Idioms Audio (EN → target) | 532 | 988 | 532 | 988 | 0 | 0 | 0 | M41 |
-| ↳ ↳ Idiomatic::Portuguese::Idioms Audio (target → EN) | 532 | 1,051 | 532 | 1,051 | 0 | 0 | 0 | M42 |
-| ↳ Idiomatic::Spanish | 0 | 0 | 4,489 | 5,386 | 0 | 1 | 1 | — |
+| ↳ ↳ Idiomatic::Portuguese::Idioms Audio (EN → target) | 535 | 1,007 | 535 | 1,007 | 0 | 0 | 0 | M41 |
+| ↳ ↳ Idiomatic::Portuguese::Idioms Audio (target → EN) | 535 | 1,070 | 535 | 1,070 | 0 | 0 | 0 | M42 |
+| ↳ Idiomatic::Spanish | 0 | 0 | 4,558 | 5,455 | 0 | 1 | 1 | — |
 | ↳ ↳ Idiomatic::Spanish::2026-07-11 · ADA FERRER, historiadora cubana: "La gente suele hablar de cuba en lemas" \| EL PAÍS | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Spanish::2026-07-11 · Cuba: cinco años después del 11J, persisten la crisis y el exilio | 5 | 5 | 5 | 5 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Spanish::2026-07-11 · DIRECTO SAN FERMÍN 2026 \| Quinto encierro de los Sanfermines 2026 con Escolar Gil \| EL PAÍS | 9 | 9 | 9 | 9 | 0 | 0 | 0 | M05 |
@@ -566,9 +575,12 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ ↳ Idiomatic::Spanish::2026-08-05 · Las noticias del miércoles 5 de agosto en 10 minutos \| RTVE Noticias | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Spanish::2026-08-05 · ☎️ JULIO BUJER, AGVP - INTENSIFICAN DESPEJE DE NIEVE PARA GARANTIZAR LA TRANSITABILIDAD DE LAS RUTAS | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Spanish::2026-08-05 · 🟢Récord de trabajadores en España | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M05 |
+| ↳ ↳ Idiomatic::Spanish::2026-08-06 · 113 proyectiles en un día: Israel bombardea el sur del Líbano en plena ronda de diálogo | 3 | 3 | 3 | 3 | 0 | 0 | 0 | M05 |
+| ↳ ↳ Idiomatic::Spanish::2026-08-06 · Las noticias del jueves 6 de agosto en 10 minutos \| RTVE Noticias | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Spanish::2026-08-06 · 🟢Siemens anuncia récord de ventas y beneficios | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
-| ↳ ↳ Idiomatic::Spanish::Fluency Expressions | 2,712 | 2,712 | 2,712 | 2,712 | 0 | 1 | 1 | M40 |
-| ↳ ↳ Idiomatic::Spanish::Idioms | 452 | 452 | 452 | 452 | 0 | 0 | 0 | M05 |
+| ↳ ↳ Idiomatic::Spanish::2026-08-07 · 🟢Crecen los pedidos industriales en Alemania | 4 | 4 | 4 | 4 | 0 | 0 | 0 | M05 |
+| ↳ ↳ Idiomatic::Spanish::Fluency Expressions | 2,760 | 2,760 | 2,760 | 2,760 | 0 | 1 | 1 | M40 |
+| ↳ ↳ Idiomatic::Spanish::Idioms | 460 | 460 | 460 | 460 | 0 | 0 | 0 | M05 |
 | ↳ ↳ Idiomatic::Spanish::Idioms Audio (EN → target) | 452 | 890 | 452 | 890 | 0 | 0 | 0 | M41 |
 | ↳ ↳ Idiomatic::Spanish::Idioms Audio (target → EN) | 452 | 911 | 452 | 911 | 0 | 0 | 0 | M42 |
 | ↳ Idiomatic::z-archive | 0 | 0 | 236 | 236 | 0 | 18 | 18 | — |
@@ -668,11 +680,11 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ Idiomatic Grammar PT::4 Clíticos | 11 | 11 | 11 | 11 | 0 | 0 | 0 | M07 |
 | ↳ Idiomatic Grammar PT::5 Gênero & Artigos | 22 | 22 | 22 | 22 | 0 | 0 | 0 | M07 |
 | ↳ Idiomatic Grammar PT::9 Meus erros | 20 | 20 | 20 | 20 | 0 | 0 | 0 | M07 |
-| Idiomatic Rescue Comics | 0 | 0 | 10 | 10 | 0 | 28 | 28 | — |
-| ↳ Idiomatic Rescue Comics::DE | 2 | 2 | 2 | 2 | 0 | 4 | 4 | M09 |
-| ↳ Idiomatic Rescue Comics::ES | 4 | 4 | 4 | 4 | 0 | 14 | 14 | M09 |
+| Idiomatic Rescue Comics | 0 | 0 | 10 | 10 | 0 | 31 | 31 | — |
+| ↳ Idiomatic Rescue Comics::DE | 2 | 2 | 2 | 2 | 0 | 5 | 5 | M09 |
+| ↳ Idiomatic Rescue Comics::ES | 4 | 4 | 4 | 4 | 0 | 15 | 15 | M09 |
 | ↳ Idiomatic Rescue Comics::IT | 1 | 1 | 1 | 1 | 0 | 2 | 2 | M09 |
-| ↳ Idiomatic Rescue Comics::PT | 3 | 3 | 3 | 3 | 0 | 8 | 8 | M09 |
+| ↳ Idiomatic Rescue Comics::PT | 3 | 3 | 3 | 3 | 0 | 9 | 9 | M09 |
 | Idiomatic Tenses DE | 0 | 0 | 18 | 18 | 0 | 0 | 0 | — |
 | ↳ Idiomatic Tenses DE::liegen | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M11 |
 | ↳ Idiomatic Tenses DE::lügen | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M11 |
@@ -693,11 +705,11 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ Idiomatic Tenses Exercises FR::obéir | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M10 |
 | ↳ Idiomatic Tenses Exercises FR::valoir | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M10 |
 | ↳ Idiomatic Tenses Exercises FR::vouloir | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M10 |
-| Idiomatic Tenses Exercises IT | 0 | 0 | 17 | 17 | 0 | 0 | 0 | — |
-| ↳ Idiomatic Tenses Exercises IT::sapere | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M10 |
-| ↳ Idiomatic Tenses Exercises IT::volere | 11 | 11 | 11 | 11 | 0 | 0 | 0 | M10 |
-| Idiomatic Tenses Exercises PT | 0 | 0 | 14 | 14 | 0 | 0 | 0 | — |
-| ↳ Idiomatic Tenses Exercises PT::vir | 14 | 14 | 14 | 14 | 0 | 0 | 0 | M10 |
+| Idiomatic Tenses Exercises IT | 0 | 0 | 17 | 17 | 0 | 26 | 26 | — |
+| ↳ Idiomatic Tenses Exercises IT::sapere | 6 | 6 | 6 | 6 | 0 | 15 | 15 | M10 |
+| ↳ Idiomatic Tenses Exercises IT::volere | 11 | 11 | 11 | 11 | 0 | 11 | 11 | M10 |
+| Idiomatic Tenses Exercises PT | 0 | 0 | 14 | 14 | 0 | 22 | 22 | — |
+| ↳ Idiomatic Tenses Exercises PT::vir | 14 | 14 | 14 | 14 | 0 | 22 | 22 | M10 |
 | Idiomatic Tenses FR | 0 | 0 | 18 | 18 | 0 | 0 | 0 | — |
 | ↳ Idiomatic Tenses FR::obéir | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M11 |
 | ↳ Idiomatic Tenses FR::valoir | 6 | 6 | 6 | 6 | 0 | 0 | 0 | M11 |
@@ -743,7 +755,7 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ Idiomatic Translation PT::3 Subjuntivo | 30 | 30 | 30 | 30 | 0 | 0 | 0 | M12 |
 | ↳ Idiomatic Translation PT::4 Clíticos | 11 | 11 | 11 | 11 | 0 | 0 | 0 | M12 |
 | ↳ Idiomatic Translation PT::5 Gênero & Artigos | 22 | 22 | 22 | 22 | 0 | 0 | 0 | M12 |
-| Languages | 0 | 0 | 7,325 | 8,306 | 2,128 | 16,980 | 17,445 | — |
+| Languages | 0 | 0 | 7,325 | 8,306 | 2,135 | 17,094 | 17,559 | — |
 | ↳ Languages::French | 0 | 0 | 1,153 | 1,503 | 380 | 3,544 | 3,544 | — |
 | ↳ ↳ Languages::French::Fluency Expressions | 746 | 746 | 746 | 746 | 129 | 2,329 | 2,329 | M40 |
 | ↳ ↳ Languages::French::Idioms Audio (EN → target) | 175 | 350 | 175 | 350 | 116 | 533 | 533 | M41 |
@@ -820,8 +832,8 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ ↳ ↳ Languages::German::YouTube::Trump verlängert Waffenruhe: Folgen Verhandlungen zwischen USA und Iran? \| tagesthemen-Interview | 59 | 59 | 79 | 79 | 0 | 123 | 123 | M39 |
 | ↳ ↳ ↳ ↳ Languages::German::YouTube::Trump verlängert Waffenruhe: Folgen Verhandlungen zwischen USA und Iran? \| tagesthemen-Interview::Idioms | 20 | 20 | 20 | 20 | 0 | 25 | 25 | M44 |
 | ↳ ↳ ↳ Languages::German::YouTube::Trump verlängert Waffenruhe: Folgen Verhandlungen zwischen USA und Iran? \| tagesthemen-Interview (EN→DE) | 6 | 6 | 6 | 6 | 0 | 14 | 14 | M37 |
-| ↳ Languages::Italian | 0 | 0 | 1,214 | 1,494 | 957 | 6,025 | 6,037 | — |
-| ↳ ↳ Languages::Italian::Fluency Expressions | 840 | 840 | 840 | 840 | 765 | 4,951 | 4,963 | M40 |
+| ↳ Languages::Italian | 0 | 0 | 1,214 | 1,494 | 963 | 6,048 | 6,060 | — |
+| ↳ ↳ Languages::Italian::Fluency Expressions | 840 | 840 | 840 | 840 | 771 | 4,974 | 4,986 | M40 |
 | ↳ ↳ Languages::Italian::Idioms Audio (EN → target) | 140 | 280 | 140 | 280 | 117 | 458 | 458 | M41 |
 | ↳ ↳ Languages::Italian::Idioms Audio (target → EN) | 140 | 280 | 140 | 280 | 75 | 491 | 491 | M42 |
 | ↳ ↳ Languages::Italian::YouTube | 0 | 0 | 94 | 94 | 0 | 125 | 125 | — |
@@ -1109,8 +1121,8 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ ↳ Languages::Mandarin::YouTube | 0 | 0 | 29 | 43 | 0 | 1 | 1 | — |
 | ↳ ↳ ↳ Languages::Mandarin::YouTube::中國的三年抗疫：如何從「清零」走向「與病毒共存」－ BBC News 中文 | 0 | 0 | 29 | 43 | 0 | 1 | 1 | — |
 | ↳ ↳ ↳ ↳ Languages::Mandarin::YouTube::中國的三年抗疫：如何從「清零」走向「與病毒共存」－ BBC News 中文::Phrases v3 | 29 | 43 | 29 | 43 | 0 | 1 | 1 | M19, M20 |
-| ↳ Languages::Portuguese | 0 | 0 | 884 | 989 | 416 | 3,451 | 3,453 | — |
-| ↳ ↳ Languages::Portuguese::Fluency Expressions | 630 | 630 | 630 | 630 | 385 | 3,065 | 3,065 | M40 |
+| ↳ Languages::Portuguese | 0 | 0 | 884 | 989 | 416 | 3,481 | 3,483 | — |
+| ↳ ↳ Languages::Portuguese::Fluency Expressions | 630 | 630 | 630 | 630 | 385 | 3,095 | 3,095 | M40 |
 | ↳ ↳ Languages::Portuguese::Idioms Audio (EN → target) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
 | ↳ ↳ Languages::Portuguese::Idioms Audio (target → EN) | 105 | 210 | 105 | 210 | 0 | 119 | 119 | M42 |
 | ↳ ↳ Languages::Portuguese::Porta dos Fundos | 0 | 0 | 63 | 63 | 12 | 119 | 121 | — |
@@ -1139,8 +1151,8 @@ Counts are attributed to each card's current deck. `Mature` means `ivl > 21`; `r
 | ↳ ↳ ↳ ↳ Languages::Portuguese::YouTube::Qual deve ser a política do Brasil para as terras raras? Embaixador Rubens Barbosa responde::1 Full | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
 | ↳ ↳ ↳ ↳ Languages::Portuguese::YouTube::Qual deve ser a política do Brasil para as terras raras? Embaixador Rubens Barbosa responde::1 Full (EN→PT) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
 | ↳ ↳ ↳ ↳ Languages::Portuguese::YouTube::Qual deve ser a política do Brasil para as terras raras? Embaixador Rubens Barbosa responde::Idioms | 20 | 20 | 20 | 20 | 0 | 26 | 26 | M44 |
-| ↳ Languages::Spanish | 0 | 0 | 527 | 527 | 53 | 1,099 | 1,099 | — |
-| ↳ ↳ Languages::Spanish::Fluency Expressions | 433 | 433 | 433 | 433 | 50 | 962 | 962 | M40 |
+| ↳ Languages::Spanish | 0 | 0 | 527 | 527 | 54 | 1,160 | 1,160 | — |
+| ↳ ↳ Languages::Spanish::Fluency Expressions | 433 | 433 | 433 | 433 | 51 | 1,023 | 1,023 | M40 |
 | ↳ ↳ Languages::Spanish::Idioms Audio (EN → target) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
 | ↳ ↳ Languages::Spanish::Idioms Audio (target → EN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | — |
 | ↳ ↳ Languages::Spanish::YouTube | 0 | 0 | 94 | 94 | 3 | 137 | 137 | — |
@@ -1229,7 +1241,7 @@ The model code is used in the deck-tree table. Full per-deck use remains in the 
 | M02 | ChinesePod Phrase v3 (EN→ZH, TTS front) (1820115014) | 656 | 656 | 12 | PhraseId · Speaker · Hanzi · Pinyin · English · EnglishAudio · ChineseAudio · Source | English → Mandarin |
 | M03 | ChinesePod Word v3 (EN→ZH, TTS front) (1820115015) | 1,920 | 1,915 | 0 | WordId · Hanzi · Pinyin · English · EnglishAudio · ChineseAudio · Source | English → Mandarin |
 | M04 | Idiomatic Cloud Card v1 (1820120000) | 201 | 201 | 0 | PhraseId · Phrase · English · StructuredHTML · ExamplesHTML · FrontAudio · BackAudio · Source | Idiom |
-| M05 | Idiomatic Cloud Card v2 (1820120100) | 5,312 | 5,312 | 0 | IdiomId · Idiom · IdiomEn · Explanation · Example1En · Example1Target · Example2En · Example2Target · Example3En · Example3Target · Example4En · Example4Target · Example5En · Example5Target · Example6En · Example6Target · SourcePhrase · SourceEn · FrontAudio · BackAudio · Source · StructuredHtml | Idiom practice |
+| M05 | Idiomatic Cloud Card v2 (1820120100) | 5,393 | 5,393 | 0 | IdiomId · Idiom · IdiomEn · Explanation · Example1En · Example1Target · Example2En · Example2Target · Example3En · Example3Target · Example4En · Example4Target · Example5En · Example5Target · Example6En · Example6Target · SourcePhrase · SourceEn · FrontAudio · BackAudio · Source · StructuredHtml | Idiom practice |
 | M06 | Idiomatic Exercises v1 (1820150001) | 1,772 | 3,544 | 0 | ItemId · Lang · Topic · Category · EN · TL · Alts · Register · Trap · ExampleTL · ExampleEN · ClozeFront · AudioTL · AudioExample · Extra1 · Extra2 · Extra3 | Production · Cloze |
 | M07 | Idiomatic Grammar Drill v1 (1820130001) | 895 | 895 | 0 | ItemId · Lang · Topic · TenseLabel · Symbol · Sentence · Answer · SentenceFull · GlossEn · Why · Extra1 · Extra2 · Extra3 · Extra4 | Drill |
 | M08 | Idiomatic Podcast Lesson v1 (1820140001) | 40 | 40 | 0 | LessonId · Episode · Seq · Lang · FrontHTML · BackHTML · FrontAudio · BackAudio · FrontImage · BackImage · Extra1 · Extra2 · Extra3 · Extra4 | Lesson |
@@ -1264,9 +1276,9 @@ The model code is used in the deck-tree table. Full per-deck use remains in the 
 | M37 | YouTube Audio Phrase Reverse v1 (1820114400) | 6 | 6 | 0 | PhraseId · Target · English · EnglishAudio · ReverseBackAudio · Source | English → Target (interleaved) |
 | M38 | YouTube Audio Phrase v2 (1820114100) | 0 | 0 | 0 | PhraseId · Target · English · TargetAudio · EnglishAudio · Source | Target audio → EN |
 | M39 | YouTube Audio Phrase v3 (1820114200) | 188 | 188 | 12 | PhraseId · Target · English · TargetAudio · BackAudio · Source | Target audio → EN (interleaved) |
-| M40 | YouTube Expression Pool v1 (1820114700) | 20,231 | 20,231 | 1,577 | English · Target · EnglishAudio · TargetAudio · Idiom · IdiomEn · Source | EN → target |
-| M41 | YouTube Idiom Audio EN→Target v1 (1820114801) | 3,276 | 6,064 | 324 | Target · English · FrontAudio · BackAudio · Source | EN audio → target audio · EN → target |
-| M42 | YouTube Idiom Audio Target→EN v1 (1820114800) | 3,381 | 6,565 | 255 | Target · English · FrontAudio · BackAudio · Source | target audio → EN audio · target → EN |
+| M40 | YouTube Expression Pool v1 (1820114700) | 20,513 | 20,513 | 1,593 | English · Target · EnglishAudio · TargetAudio · Idiom · IdiomEn · Source | EN → target |
+| M41 | YouTube Idiom Audio EN→Target v1 (1820114801) | 3,279 | 6,083 | 324 | Target · English · FrontAudio · BackAudio · Source | EN audio → target audio · EN → target |
+| M42 | YouTube Idiom Audio Target→EN v1 (1820114800) | 3,384 | 6,584 | 255 | Target · English · FrontAudio · BackAudio · Source | target audio → EN audio · target → EN |
 | M43 | YouTube Idiom Card v1 (1820114500) | 0 | 0 | 0 | IdiomId · Idiom · IdiomEn · Explanation · Example1En · Example1Target · Example2En · Example2Target · Example3En · Example3Target · SourcePhrase · SourceEn · FrontAudio · BackAudio · Source | Idiom practice |
 | M44 | YouTube Idiom Card v2 (1820114600) | 171 | 171 | 10 | IdiomId · Idiom · IdiomEn · Explanation · Example1En · Example1Target · Example2En · Example2Target · Example3En · Example3Target · Example4En · Example4Target · Example5En · Example5Target · Example6En · Example6Target · SourcePhrase · SourceEn · FrontAudio · BackAudio · Source | Idiom practice |
 | M45 | YouTube Idiom Card v2 (ElevenLabs Flash) (1820114603) | 0 | 0 | 0 | Idiom · IdiomEn · Explanation · Example1En · Example2En · Example3En · Example4En · Example5En · Example6En · Example1Tg · Example2Tg · Example3Tg · Example4Tg · Example5Tg · Example6Tg · SourcePhrase · SourceEn · FrontAudio · BackAudio · Source · Example1Target · Example6Target · Example3Target · IdiomId · Example4Target · Example2Target · Example5Target | Idiom practice (Flash) |
@@ -1297,45 +1309,45 @@ The model code is used in the deck-tree table. Full per-deck use remains in the 
 | hierarchical::tier | 339 |
 | hierarchical::type | 34 |
 | hierarchical::unlock | 339 |
-| language | 33,433 |
+| language | 33,765 |
 | lesson | 36,787 |
 | level | 34,211 |
-| other-flat | 76,781 |
-| system/family | 105,811 |
+| other-flat | 76,787 |
+| system/family | 106,549 |
 | video-slug-like | 534 |
-| youtube-id-like | 2,785 |
+| youtube-id-like | 2,822 |
 
 Top 200 tags:
 
 | Tag | Notes |
 |---|---:|
 | pimsleur | 34,211 |
-| youtube | 33,054 |
+| youtube | 33,423 |
 | quickmatch | 20,860 |
-| fluency-pool | 20,231 |
+| fluency-pool | 20,513 |
 | flashcard | 13,351 |
 | it | 8,549 |
 | level-5 | 8,174 |
 | level-4 | 7,549 |
 | level-1 | 7,222 |
-| idiom-audio | 6,657 |
-| de | 6,410 |
-| pt | 5,696 |
+| idiom-audio | 6,663 |
+| de | 6,662 |
+| pt | 5,720 |
 | level-2 | 5,653 |
 | level-3 | 5,613 |
 | italian | 5,344 |
 | german | 5,311 |
 | fr | 5,113 |
 | french | 4,693 |
-| es | 4,593 |
+| es | 4,649 |
 | spanish | 4,378 |
 | portuguese | 4,344 |
 | spanish-latam | 4,051 |
-| t2e | 3,381 |
-| e2t | 3,276 |
+| t2e | 3,384 |
+| e2t | 3,279 |
 | mandarin | 3,043 |
-| idiomatic-pool | 2,849 |
-| idiomatic-cloud | 2,664 |
+| idiomatic-pool | 2,893 |
+| idiomatic-cloud | 2,701 |
 | chinesepod | 2,576 |
 | vocab | 1,920 |
 | idiomatic-exercises | 1,772 |

@@ -19,6 +19,7 @@ from _mapping import (
     DORMANT_ROOT,
     LANGUAGES,
     MANDARIN_ROOT,
+    RETIRED_EXPRESSION_TASK_MODELS,
     audio_card_destination,
     expression_card_destination,
     learning_card_destination,
@@ -113,8 +114,13 @@ def main() -> None:
                 mechanism = "Hard constraint: no move and no note-model change."
             elif deck.startswith("EXPERIMENTS-YT"):
                 action = "owner decision"
-                destination_text = "PT Portuguese::1 Expressions::1 Fluency (recommended)"
-                mechanism = "Move cards only, or suspend+demote; never delete reviewed notes."
+                destination_text = (
+                    f"{DORMANT_ROOT}::Experiments::{deck} (recommended)"
+                )
+                mechanism = (
+                    "Suspend and demote intact, or keep in place; Phrase v3 is not "
+                    "direction-compatible with the active EN-to-target Fluency task."
+                )
             elif "UNMAPPED" in destinations:
                 action = "manual review required"
                 destination_text = "; ".join(f"{name} ({count})" for name, count in destinations.items())
@@ -126,12 +132,23 @@ def main() -> None:
                 if all(name.startswith(f"{DORMANT_ROOT}::Retired Idioms Audio") for name in destinations):
                     action = "move + suspend"
                     mechanism = "Anki set_deck + scheduler suspend; fields/GUID/revlog retained."
+                elif models and all(
+                    model in RETIRED_EXPRESSION_TASK_MODELS for model in models
+                ):
+                    action = "archive + suspend old task"
+                    mechanism = (
+                        "Anki set_deck + scheduler suspend; the parallel Hub design "
+                        "reserves Expression Focus for fresh Hub cards."
+                    )
                 elif any(name.startswith(f"{DORMANT_ROOT}::") for name in destinations):
                     action = "demote"
                     mechanism = "Anki set_deck; no note-model or scheduling conversion."
                 elif any("::1 Expressions::" in name for name in destinations):
-                    action = "merge by card move; dedupe separately"
-                    mechanism = "Anki set_deck after provenance tagging; exact collisions are policy-gated."
+                    action = "merge active fluency by card move"
+                    mechanism = (
+                        "Anki set_deck after provenance tagging; surface collisions "
+                        "remain evidence for the sense-resolved Hub manifest."
+                    )
                 else:
                     action = "move"
                     mechanism = "Anki set_deck; note model, GUID, interval, due, reps and revlog unchanged."

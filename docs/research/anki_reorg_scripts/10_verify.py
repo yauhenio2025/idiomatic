@@ -19,7 +19,7 @@ from _common import (
     validated_copy_path,
     validated_work_artifact,
 )
-from _mapping import AUDIO_MODELS, fixed_target_decks
+from _mapping import AUDIO_MODELS, RETIRED_EXPRESSION_TASK_MODELS, fixed_target_decks
 
 
 SACRED_KEYS = (
@@ -32,6 +32,7 @@ SACRED_KEYS = (
     "revlog_sha256",
     "note_identity_sha256",
     "note_content_sha256",
+    "model_schema_sha256",
     "lex_card_deck_sha256",
 )
 EXPECTED_PHASES = (
@@ -111,10 +112,10 @@ def main() -> None:
 
     failures: list[str] = []
     experiment_action = decisions.get("EXPERIMENTS-YT")
-    if experiment_action not in {"merge_pt_fluency", "suspend_and_demote", "keep"}:
+    if experiment_action not in {"suspend_and_demote", "keep"}:
         failures.append("invalid or missing EXPERIMENTS-YT owner decision")
     dedupe_policy = decisions.get("dedupe_policy")
-    if dedupe_policy not in {"schedule-first", "canonical-model-first", "keep-all"}:
+    if dedupe_policy not in {"defer-to-hub-manifest", "keep-all"}:
         failures.append("invalid or missing dedupe_policy owner decision")
     keep_experiments = experiment_action == "keep"
 
@@ -155,6 +156,27 @@ def main() -> None:
             "completed phase order/count differs from the required once-only 01–09 sequence"
         )
 
+    journals_by_phase = {
+        str(payload.get("phase")): payload for _, payload in journals
+    }
+    source_copy_sha256 = baseline.get("source_copy_sha256")
+    if not isinstance(source_copy_sha256, str) or len(source_copy_sha256) != 64:
+        failures.append("phase-1 baseline lacks the pristine source-copy SHA-256")
+    phase_3 = journals_by_phase.get("03_move_expressions", {})
+    phase_7 = journals_by_phase.get("07_resolve_duplicates", {})
+    manifest_keys = (
+        "collision_manifest_source_copy_sha256",
+        "collision_manifest_content_sha256",
+        "collision_manifest_file_sha256",
+    )
+    if phase_3.get("collision_manifest_source_copy_sha256") != source_copy_sha256:
+        failures.append("phase 3 collision manifest is not bound to the phase-1 copy")
+    for key in manifest_keys:
+        if not phase_3.get(key):
+            failures.append(f"phase 3 lacks {key}")
+        if phase_7.get(key) != phase_3.get(key):
+            failures.append(f"phases 3 and 7 did not consume the same {key}")
+
     for (previous_path, previous), (current_path, current) in zip(journals, journals[1:]):
         if previous["after_invariants"] != current["before_invariants"]:
             failures.append(
@@ -176,7 +198,8 @@ def main() -> None:
             }
             for row in connection.execute("SELECT id,name,common,kind FROM decks")
         }
-        missing_targets = sorted(fixed_target_decks() - set(deck_names), key=str.casefold)
+        required_decks = fixed_target_decks() | {"Default", "Custom Study Session"}
+        missing_targets = sorted(required_decks - set(deck_names), key=str.casefold)
         if missing_targets:
             failures.append(f"missing {len(missing_targets)} target deck shells")
 
@@ -198,9 +221,57 @@ def main() -> None:
         if active_audio:
             failures.append(f"{active_audio} discontinued Idioms Audio cards remain active")
 
-        filtered_cards = connection.execute("SELECT COUNT(*) FROM cards WHERE odid != 0").fetchone()[0]
+        retired_models = sorted(RETIRED_EXPRESSION_TASK_MODELS)
+        retired_marks = ",".join("?" for _ in retired_models)
+        active_old_tasks = connection.execute(
+            f"""
+            SELECT COUNT(*)
+              FROM cards c
+              JOIN notes n ON n.id=c.nid
+              JOIN notetypes nt ON nt.id=n.mid
+              JOIN decks d ON d.id=c.did
+             WHERE nt.name IN ({retired_marks}) AND c.queue != -1
+               AND NOT (
+                   ?
+                   AND (d.name = ? OR d.name LIKE ?)
+               )
+            """,
+            [
+                *retired_models,
+                int(keep_experiments),
+                "EXPERIMENTS-YT",
+                "EXPERIMENTS-YT\x1f%",
+            ],
+        ).fetchone()[0]
+        if active_old_tasks:
+            failures.append(f"{active_old_tasks} superseded hub/raw-phrase cards remain active")
+
+        focus_old_tasks = connection.execute(
+            f"""
+            SELECT COUNT(*)
+              FROM cards c
+              JOIN notes n ON n.id=c.nid
+              JOIN notetypes nt ON nt.id=n.mid
+              JOIN decks d ON d.id=c.did
+             WHERE nt.name IN ({retired_marks})
+               AND (d.name LIKE ? OR d.name LIKE ?)
+            """,
+            [
+                *retired_models,
+                "%\x1f1 Expressions\x1f2 Expression Focus",
+                "%\x1f1 Expressions\x1f2 Expression Focus\x1f%",
+            ],
+        ).fetchone()[0]
+        if focus_old_tasks:
+            failures.append(
+                f"{focus_old_tasks} old task cards occupy Hub-only Expression Focus decks"
+            )
+
+        filtered_cards = connection.execute(
+            "SELECT COUNT(*) FROM cards WHERE odid != 0 OR odue != 0"
+        ).fetchone()[0]
         if filtered_cards:
-            failures.append(f"{filtered_cards} cards unexpectedly occupy filtered decks")
+            failures.append(f"{filtered_cards} cards unexpectedly carry filtered-deck state")
 
         lex = connection.execute(
             """

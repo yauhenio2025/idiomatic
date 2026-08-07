@@ -14,6 +14,7 @@ from _common import (
     read_only_connection,
     require_apply_flag,
     require_completed_phase,
+    require_no_filtered_deck_cards,
     validated_copy_path,
     write_json,
 )
@@ -27,6 +28,7 @@ def main() -> None:
     args = parser.parse_args()
     copy_path = validated_copy_path(args.copy_path)
     if args.apply:
+        require_no_filtered_deck_cards(copy_path, "02_tag_provenance")
         require_completed_phase(copy_path, args.journal_dir, "01_create_targets")
 
     connection = read_only_connection(copy_path)

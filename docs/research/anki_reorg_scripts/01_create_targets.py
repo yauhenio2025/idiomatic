@@ -11,11 +11,12 @@ from _common import (
     add_copy_path_argument,
     collection_invariants,
     display_deck_name,
-    ensure_deck,
+    ensure_deck_journaled,
     journal_directory,
     load_owner_decisions,
     read_only_connection,
     require_apply_flag,
+    require_no_filtered_deck_cards,
     validated_copy_path,
     write_json,
     sha256_file,
@@ -44,6 +45,9 @@ def main() -> None:
     args = parser.parse_args()
     copy_path = validated_copy_path(args.copy_path)
     decisions_path, decisions = load_owner_decisions(args.decisions, copy_path)
+    if args.apply:
+        require_no_filtered_deck_cards(copy_path, "01_create_targets")
+    source_copy_sha256 = sha256_file(copy_path)
 
     connection = read_only_connection(copy_path)
     try:
@@ -91,6 +95,7 @@ def main() -> None:
         "status": "prepared",
         "before_invariants": before,
         "created_decks": [],
+        "source_copy_sha256": source_copy_sha256,
         "owner_decisions": decisions,
         "owner_decisions_sha256": sha256_file(decisions_path),
     }
@@ -101,10 +106,7 @@ def main() -> None:
     collection = Collection(str(copy_path))
     try:
         for name in missing:
-            did, created = ensure_deck(collection, name)
-            if created:
-                journal["created_decks"].append({"id": did, "name": name})
-                write_json(journal_path, journal)
+            ensure_deck_journaled(collection, name, journal, journal_path)
     finally:
         collection.close(downgrade=False)
 

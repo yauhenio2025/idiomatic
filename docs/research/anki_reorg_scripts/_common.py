@@ -52,6 +52,8 @@ def validated_copy_path(raw_path: Path) -> Path:
     path = expanded.resolve(strict=True)
     if not path.is_file():
         raise SafetyError(f"copy path is not a regular file: {path}")
+    if path.stat().st_nlink > 1:
+        raise SafetyError(f"copy path must be a physical copy, not a hard link: {path}")
 
     if LIVE_PROFILE_NAME.casefold() in str(path).casefold():
         raise SafetyError("refusing a path containing the live syllabus profile")
@@ -108,6 +110,38 @@ def read_only_connection(copy_path: Path) -> sqlite3.Connection:
     return connection
 
 
+def require_no_filtered_deck_cards(copy_path: Path, operation: str) -> None:
+    """Refuse mutation while any card carries filtered-deck scheduling state."""
+
+    connection = read_only_connection(copy_path)
+    try:
+        count = int(
+            connection.execute(
+                "SELECT COUNT(*) FROM cards WHERE odid != 0 OR odue != 0"
+            ).fetchone()[0]
+        )
+        samples = [
+            f"id={int(row['id'])} odid={int(row['odid'])} odue={int(row['odue'])}"
+            for row in connection.execute(
+                """
+                SELECT id,odid,odue
+                  FROM cards
+                 WHERE odid != 0 OR odue != 0
+                 ORDER BY id
+                 LIMIT 10
+                """
+            )
+        ]
+    finally:
+        connection.close()
+    if count:
+        sample_text = "; ".join(samples)
+        raise SafetyError(
+            f"{operation} refuses mutation: {count:,} card(s) have nonzero odid/odue "
+            f"filtered-deck state; sample: {sample_text}"
+        )
+
+
 def validated_output_path(raw_path: Path, copy_path: Path | None = None) -> Path:
     """Keep generated evidence under ``docs/research`` and away from the DB copy."""
 
@@ -119,10 +153,39 @@ def validated_output_path(raw_path: Path, copy_path: Path | None = None) -> Path
         path.relative_to(RESEARCH_DIRECTORY)
     except ValueError as error:
         raise SafetyError(f"output path must remain under {RESEARCH_DIRECTORY}") from error
-    if copy_path is not None and path == validated_copy_path(copy_path):
+    validated_copy = validated_copy_path(copy_path) if copy_path is not None else None
+    if validated_copy is not None and path == validated_copy:
         raise SafetyError("output path must not overwrite the collection copy")
     if path.exists() and not path.is_file():
         raise SafetyError(f"output path is not a regular file: {path}")
+    if path.exists():
+        # A path comparison is insufficient: an output hard link could alias the
+        # selected database and a later write_text() would truncate its inode.
+        if path.stat().st_nlink > 1:
+            raise SafetyError(f"output path must not be a hard link: {path}")
+        if validated_copy is not None:
+            try:
+                if os.path.samefile(path, validated_copy):
+                    raise SafetyError("output path must not alias the collection copy")
+            except OSError as error:
+                raise SafetyError(
+                    f"could not prove output is distinct from the collection copy: {error}"
+                ) from error
+        live_candidates = (
+            Path.home()
+            / ".var/app/net.ankiweb.Anki/data/Anki2"
+            / LIVE_PROFILE_NAME
+            / "collection.anki2",
+            Path.home() / ".local/share/Anki2" / LIVE_PROFILE_NAME / "collection.anki2",
+        )
+        for live_path in live_candidates:
+            try:
+                if live_path.exists() and os.path.samefile(path, live_path):
+                    raise SafetyError("output path must not alias the live collection")
+            except OSError as error:
+                raise SafetyError(
+                    f"could not prove output is distinct from {live_path}: {error}"
+                ) from error
     if not path.parent.exists() or not path.parent.is_dir():
         raise SafetyError(f"output parent directory does not exist: {path.parent}")
     return path
@@ -210,6 +273,24 @@ def collection_invariants(connection: sqlite3.Connection) -> dict[str, Any]:
                 connection,
                 "SELECT id,guid,mid,flds,sfld,csum,flags,data FROM notes ORDER BY id",
             ),
+            "model_schema_sha256": query_fingerprint(
+                connection,
+                """
+                SELECT row_kind,ntid,ord,name,mtime_secs,usn,config_hex
+                  FROM (
+                        SELECT 'notetype' AS row_kind,id AS ntid,-1 AS ord,name,
+                               mtime_secs,usn,hex(config) AS config_hex
+                          FROM notetypes
+                        UNION ALL
+                        SELECT 'field',ntid,ord,name,0,0,hex(config)
+                          FROM fields
+                        UNION ALL
+                        SELECT 'template',ntid,ord,name,mtime_secs,usn,hex(config)
+                          FROM templates
+                       )
+                 ORDER BY row_kind,ntid,ord
+                """,
+            ),
             "note_tags_sha256": query_fingerprint(
                 connection,
                 "SELECT id,tags FROM notes ORDER BY id",
@@ -249,9 +330,14 @@ def journal_directory(copy_path: Path, requested: Path | None) -> Path:
     """Resolve a journal directory and keep it inside the working-copy tree."""
 
     copy_path = validated_copy_path(copy_path)
-    if requested and requested.expanduser().is_symlink():
+    candidate = (
+        requested.expanduser()
+        if requested
+        else copy_path.parent / "anki_reorg_journals"
+    )
+    if candidate.is_symlink():
         raise SafetyError("journal directory must not be a symlink")
-    directory = requested.expanduser().resolve() if requested else copy_path.parent / "anki_reorg_journals"
+    directory = candidate.resolve()
     try:
         directory.relative_to(copy_path.parent)
     except ValueError as error:
@@ -259,6 +345,8 @@ def journal_directory(copy_path: Path, requested: Path | None) -> Path:
             f"journal directory must remain under this copy tree: {copy_path.parent}"
         ) from error
     directory.mkdir(parents=True, exist_ok=True)
+    if candidate.is_symlink() or candidate.resolve(strict=True) != directory:
+        raise SafetyError("journal directory must not resolve through a symlink")
     if not directory.is_dir():
         raise SafetyError(f"journal path is not a directory: {directory}")
     return directory
@@ -331,14 +419,12 @@ def load_owner_decisions(raw_path: Path, copy_path: Path) -> tuple[Path, dict[st
                 f"draft scripts implement {key}={required!r}; got {payload.get(key)!r}"
             )
     if payload.get("EXPERIMENTS-YT") not in {
-        "merge_pt_fluency",
         "suspend_and_demote",
         "keep",
     }:
         raise SafetyError("invalid or missing EXPERIMENTS-YT owner decision")
     if payload.get("dedupe_policy") not in {
-        "schedule-first",
-        "canonical-model-first",
+        "defer-to-hub-manifest",
         "keep-all",
     }:
         raise SafetyError("invalid or missing dedupe_policy owner decision")
@@ -439,3 +525,25 @@ def ensure_deck(collection: Any, name: str) -> tuple[int, bool]:
     deck.name = name
     result = collection.decks.add_deck(deck)
     return int(result.id), True
+
+
+def ensure_deck_journaled(
+    collection: Any,
+    name: str,
+    journal: dict[str, Any],
+    journal_path: Path,
+) -> tuple[int, bool]:
+    """Create a deck with a durable intent record covering the API-call window."""
+
+    existing = collection.decks.id_for_name(name)
+    if existing is not None:
+        return int(existing), False
+    journal["pending_deck_creation"] = name
+    write_json(journal_path, journal)
+    did, created = ensure_deck(collection, name)
+    if not created:
+        raise RuntimeError(f"deck appeared while creating it: {name}")
+    journal.setdefault("created_decks", []).append({"id": did, "name": name})
+    journal.pop("pending_deck_creation", None)
+    write_json(journal_path, journal)
+    return did, True

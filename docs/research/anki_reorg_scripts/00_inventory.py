@@ -246,7 +246,7 @@ def main() -> None:
                 "SELECT COUNT(*) FROM cards WHERE queue IN (-2,-3)"
             ).fetchone()[0],
             "filtered_deck_cards": connection.execute(
-                "SELECT COUNT(*) FROM cards WHERE odid != 0"
+                "SELECT COUNT(*) FROM cards WHERE odid != 0 OR odue != 0"
             ).fetchone()[0],
             "mature_cards": connection.execute(
                 "SELECT COUNT(*) FROM cards WHERE ivl > 21"

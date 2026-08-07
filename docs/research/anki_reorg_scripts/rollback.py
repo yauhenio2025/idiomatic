@@ -15,6 +15,7 @@ from _common import (
     display_deck_name,
     ensure_deck,
     read_only_connection,
+    require_no_filtered_deck_cards,
     validated_copy_path,
     validated_work_artifact,
     write_json,
@@ -36,10 +37,10 @@ def main() -> None:
     journal = json.loads(journal_path.read_text(encoding="utf-8"))
     if Path(journal["copy_path"]).resolve() != copy_path:
         raise SystemExit("journal belongs to a different collection copy")
-    if journal.get("status") not in {"prepared", "complete"}:
-        raise SystemExit("journal status is neither prepared nor complete")
-    if journal.get("status") == "prepared":
-        print("WARNING: rolling back a partially applied phase journal.")
+    if journal.get("status") not in {"prepared", "complete", "rolling_back"}:
+        raise SystemExit("journal status is not prepared, complete, or rolling_back")
+    if journal.get("status") in {"prepared", "rolling_back"}:
+        print("WARNING: resuming rollback from a potentially partial phase state.")
 
     active_journals: list[tuple[Path, dict]] = []
     for sibling in sorted(journal_path.parent.glob("*.json")):
@@ -48,7 +49,7 @@ def main() -> None:
         except (OSError, json.JSONDecodeError):
             continue
         if (
-            payload.get("status") in {"prepared", "complete"}
+            payload.get("status") in {"prepared", "complete", "rolling_back"}
             and Path(str(payload.get("copy_path", ""))).resolve() == copy_path
             and "phase" in payload
         ):
@@ -62,6 +63,7 @@ def main() -> None:
     if not args.apply:
         print("DRY RUN: no rollback applied.")
         return
+    require_no_filtered_deck_cards(copy_path, f"rollback of {journal['phase']}")
 
     # Resolve the entire rollback before making its first change. This prevents a
     # late conflict from leaving a half-rolled-back collection copy.
@@ -70,6 +72,14 @@ def main() -> None:
     }
     connection = read_only_connection(copy_path)
     try:
+        if journal.get("status") == "complete":
+            expected_after = journal.get("after_invariants")
+            if not isinstance(expected_after, dict):
+                raise RuntimeError("completed journal has no valid after-state invariants")
+            if collection_invariants(connection) != expected_after:
+                raise RuntimeError(
+                    "collection drifted after this phase; refusing rollback before mutation"
+                )
         decks_by_name = {
             display_deck_name(str(row["name"])): {
                 "id": int(row["id"]),
@@ -99,7 +109,17 @@ def main() -> None:
         if missing_state_cards:
             raise RuntimeError(f"rollback cards disappeared: {sorted(missing_state_cards)[:10]}")
 
-        for row in journal.get("created_decks", []):
+        created_decks = list(journal.get("created_decks", []))
+        pending_name = journal.get("pending_deck_creation")
+        if pending_name and not any(
+            str(row["name"]) == str(pending_name) for row in created_decks
+        ):
+            pending = decks_by_name.get(str(pending_name))
+            if pending is not None:
+                created_decks.append(
+                    {"id": int(pending["id"]), "name": str(pending_name)}
+                )
+        for row in created_decks:
             name = str(row["name"])
             current = decks_by_name.get(name)
             if current is None:
@@ -154,6 +174,17 @@ def main() -> None:
     finally:
         connection.close()
 
+    # Persist the rollback intent after the complete preflight but before the
+    # first database mutation. A crash can then resume idempotently without
+    # confusing its own partial rollback with unrelated post-phase drift.
+    if journal.get("status") != "rolling_back":
+        journal["pre_rollback_status"] = journal["status"]
+        journal["status"] = "rolling_back"
+        journal["rollback_started_at"] = dt.datetime.now(dt.UTC).strftime(
+            "%Y%m%dT%H%M%S.%fZ"
+        )
+        write_json(journal_path, journal)
+
     from anki.collection import Collection
 
     collection = Collection(str(copy_path))
@@ -204,7 +235,7 @@ def main() -> None:
                 continue
             raise RuntimeError(f"rename state changed during rollback: {old_name}")
 
-        for row in reversed(journal.get("created_decks", [])):
+        for row in reversed(created_decks):
             did = collection.decks.id_for_name(str(row["name"]))
             if did is None:
                 continue
@@ -241,7 +272,6 @@ def main() -> None:
             raise RuntimeError(
                 f"rollback did not restore renamed deck metadata: {expected['old_name']}"
             )
-    journal["pre_rollback_status"] = journal["status"]
     journal["status"] = "rolled_back"
     journal["rolled_back_at"] = dt.datetime.now(dt.UTC).strftime(
         "%Y%m%dT%H%M%S.%fZ"

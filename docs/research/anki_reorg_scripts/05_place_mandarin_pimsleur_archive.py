@@ -13,11 +13,12 @@ from _common import (
     card_state_rows,
     collection_invariants,
     display_deck_name,
-    ensure_deck,
+    ensure_deck_journaled,
     journal_directory,
     read_only_connection,
     require_apply_flag,
     require_completed_phase,
+    require_no_filtered_deck_cards,
     validated_copy_path,
     write_json,
 )
@@ -40,6 +41,7 @@ def main() -> None:
     args = parser.parse_args()
     copy_path = validated_copy_path(args.copy_path)
     if args.apply:
+        require_no_filtered_deck_cards(copy_path, "05_place_mandarin_pimsleur_archive")
         require_completed_phase(copy_path, args.journal_dir, "04_move_learning_families")
 
     archive_moves = planned_moves(copy_path, lambda deck, model: archive_card_destination(deck))
@@ -143,11 +145,10 @@ def main() -> None:
 
         destination_ids: dict[str, int] = {}
         for destination in sorted({str(move["destination"]) for move in archive_moves}):
-            did, created = ensure_deck(collection, destination)
+            did, _ = ensure_deck_journaled(
+                collection, destination, journal, journal_path
+            )
             destination_ids[destination] = did
-            if created:
-                journal["created_decks"].append({"id": did, "name": destination})
-                write_json(journal_path, journal)
         grouped: dict[str, list[int]] = collections.defaultdict(list)
         for move in archive_moves:
             grouped[str(move["destination"])].append(int(move["card_id"]))

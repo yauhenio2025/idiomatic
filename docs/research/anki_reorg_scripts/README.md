@@ -2,7 +2,9 @@
 
 These are draft migration and verification scripts for a disposable copy of the newest Anki backup. The present commission is study-only: do not run any `--apply` command until the owner approves the plan and the decisions. Never pass the live collection, a symlink, or a hard link to it.
 
-The scripts require `--copy-path` to resolve to an uncompressed SQLite collection beneath `docs/research/anki_reorg_work/`. They reject the live profile name, conventional live `Anki2` collection paths, paths outside the repository work area, active SQLite WAL/journal sidecars, symlinks, and hard links to the known live database. Inputs and journals must live under the selected copy's own run directory. Mutation phases use Anki's public collection APIs; they do not export/reimport cards or change note models. Every phase checks scheduling/history invariants and atomically writes a durable phase journal.
+This is a copy-only structural rehearsal, not a standalone production cutover. A later authorized live change must integrate the reviewed estate placements into Expression Hub phase 5 after the canonical sense/ID/task-direction manifest, complete assets, and frozen models `1820180001`/`1820180002` exist. These drafts deliberately archive old tasks without creating their Hub replacements and therefore must never be aimed at the live profile independently.
+
+The scripts require `--copy-path` to resolve to a single-link, uncompressed SQLite collection beneath `docs/research/anki_reorg_work/`. They reject the live profile name, conventional live `Anki2` collection paths, paths outside the repository work area, active SQLite WAL/journal sidecars, symlinks, and every hard-linked database path. Every mutating apply and rollback path also refuses any collection with nonzero `odid` or `odue` filtered-deck state. Mutation inputs and journals must live under the selected copy's own run directory; read-only reports may be written elsewhere under `docs/research/`. Mutation phases use Anki's public collection APIs; they do not export/reimport cards or change note models. Every phase checks scheduling/history invariants and atomically writes a durable phase journal.
 
 ## Inputs and evidence pass
 
@@ -18,7 +20,7 @@ COLLISION_MANIFEST="$RUN_DIR/duplicate_manifest.json"
 OWNER_DECISIONS="$RUN_DIR/owner_decisions.json"
 ```
 
-First reproduce the read-only inventory and freeze the duplicate manifest against the pristine copy:
+First reproduce the read-only inventory and freeze the surface-collision manifest against the pristine copy:
 
 ```bash
 python "$REORG_SCRIPTS/00_inventory.py" \
@@ -38,7 +40,7 @@ python "$REORG_SCRIPTS/analyze_duplicates.py" \
 cp "$REORG_SCRIPTS/odd_decisions.example.json" "$OWNER_DECISIONS"
 ```
 
-Review the generated collision report and manifest without editing the manifest. It is a conservative exact target-plus-English match set; target-only and punctuation-relaxed candidates are excluded from automatic action. Phases 3 and 7 validate the manifest against the copy's note identity and semantic content. Record the owner's approved choices in `OWNER_DECISIONS`; the value passed to phase 7's `--policy` must be identical to `dedupe_policy` in that JSON.
+Review the generated collision report and manifest without editing the manifest. It is a conservative exact target-plus-English surface-evidence set; the report also emits a separate, non-actionable target-only manual-review queue. Surface equality does not establish expression/sense identity. Phase 1 records the pristine copy's SHA-256; phase 3 requires the manifest's source-copy hash to match it, then records the exact manifest file/content hashes; phase 7 requires that same file and binding. Record the owner's approved choices in `OWNER_DECISIONS`; the value passed to phase 7's `--policy` must be identical to `dedupe_policy` in that JSON.
 
 ## Ordered dry-run and apply sequence
 
@@ -61,7 +63,7 @@ python "$REORG_SCRIPTS/02_tag_provenance.py" --copy-path "$COLLECTION_COPY" --jo
 python "$REORG_SCRIPTS/02_tag_provenance.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --apply
 ```
 
-Phase 3 collapses legacy and per-video expression decks into Fluency and Expression Focus. It validates the frozen collision input but does not resolve duplicates yet.
+On the frozen 12:47 snapshot, phase 3 moves 20,513 compatible `YouTube Expression Pool v1` cards into the five active Fluency lanes. It archives and suspends 6,191 old Cloud/Idiom/Reverse-v1/Phrase-v3 tasks intact, including the old `z-archive` cards. It validates the frozen collision input, makes no canonical-identity decision, and leaves Expression Focus reserved for fresh Hub model `1820180001`. Counts are recomputed from every future copy rather than hard-coded by the script.
 
 ```bash
 python "$REORG_SCRIPTS/03_move_expressions.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --collision-manifest "$COLLISION_MANIFEST"
@@ -75,7 +77,7 @@ python "$REORG_SCRIPTS/04_move_learning_families.py" --copy-path "$COLLECTION_CO
 python "$REORG_SCRIPTS/04_move_learning_families.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --apply
 ```
 
-Phase 5 places Mandarin without changing its internal hierarchy, disaggregates Pimsleur, and collapses `z-archive`.
+Phase 5 places Mandarin without changing its internal hierarchy and disaggregates Pimsleur. Its residual `z-archive` mapper is idempotent; in the ordered recommended run phase 3 has already moved all 236 such cards, so phase 5 reports zero archive card moves.
 
 ```bash
 python "$REORG_SCRIPTS/05_place_mandarin_pimsleur_archive.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR"
@@ -89,14 +91,14 @@ python "$REORG_SCRIPTS/06_discontinue_audio.py" --copy-path "$COLLECTION_COPY" -
 python "$REORG_SCRIPTS/06_discontinue_audio.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --apply
 ```
 
-Phase 7 resolves only manifest-listed exact duplicates. The recommended policy is shown; replace it only with the owner's approved `canonical-model-first` or `keep-all` value, and update `OWNER_DECISIONS` to match.
+Phase 7 does not resolve identity. Under the recommended policy it adds one reversible `estate::surface_collision::<group-id>` evidence tag to each manifest candidate note and changes no card, schedule, queue, or revlog. Use `keep-all` only if the owner wants a journaled no-op with no collision tags; update `OWNER_DECISIONS` to match.
 
 ```bash
-python "$REORG_SCRIPTS/07_resolve_duplicates.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --manifest "$COLLISION_MANIFEST" --decisions "$OWNER_DECISIONS" --policy schedule-first
-python "$REORG_SCRIPTS/07_resolve_duplicates.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --manifest "$COLLISION_MANIFEST" --decisions "$OWNER_DECISIONS" --policy schedule-first --apply
+python "$REORG_SCRIPTS/07_resolve_duplicates.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --manifest "$COLLISION_MANIFEST" --decisions "$OWNER_DECISIONS" --policy defer-to-hub-manifest
+python "$REORG_SCRIPTS/07_resolve_duplicates.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --manifest "$COLLISION_MANIFEST" --decisions "$OWNER_DECISIONS" --policy defer-to-hub-manifest --apply
 ```
 
-Phase 8 applies the approved `EXPERIMENTS-YT` choice.
+Phase 8 applies the approved `EXPERIMENTS-YT` choice. The recommended action suspends and demotes all 27 Phrase-v3 cards; `keep` records a no-op. This draft does not offer the unsafe active-Fluency merge.
 
 ```bash
 python "$REORG_SCRIPTS/08_resolve_odds.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --decisions "$OWNER_DECISIONS"
@@ -110,7 +112,7 @@ python "$REORG_SCRIPTS/09_cleanup_empty_decks.py" --copy-path "$COLLECTION_COPY"
 python "$REORG_SCRIPTS/09_cleanup_empty_decks.py" --copy-path "$COLLECTION_COPY" --journal-dir "$JOURNAL_DIR" --decisions "$OWNER_DECISIONS" --apply
 ```
 
-Finally, run the read-only verifier. It checks the complete journal chain, SQLite integrity, target and obsolete decks, Lex-Stage, intended suspensions, moved-card destinations, decision consistency, and hashes for notes, cards, scheduling, and review history.
+Finally, run the read-only verifier. It checks the complete journal chain and manifest binding, SQLite integrity, target and obsolete decks, Lex-Stage, intended suspensions, moved-card destinations, absence of old tasks in Expression Focus, zero filtered-deck state, decision consistency, and hashes for notes, model schemas, cards, scheduling, and review history.
 
 ```bash
 python "$REORG_SCRIPTS/10_verify.py" \
@@ -120,7 +122,7 @@ python "$REORG_SCRIPTS/10_verify.py" \
   --decisions "$OWNER_DECISIONS"
 ```
 
-Do not treat a successful rehearsal as authorization to run against the live profile. The deliverable remains the verified migrated copy plus its journals for owner inspection.
+Do not treat a successful rehearsal as authorization to run against the live profile. The migrated clone and journals are only owner-inspection evidence; the committed deliverables remain the inventory, plan, draft scripts, and decision list.
 
 ## Rollback and restart
 
@@ -132,7 +134,7 @@ python "$REORG_SCRIPTS/rollback.py" --copy-path "$COLLECTION_COPY" --journal "$L
 python "$REORG_SCRIPTS/rollback.py" --copy-path "$COLLECTION_COPY" --journal "$LATEST_JOURNAL" --apply
 ```
 
-The rollback restores journaled card moves, suspension state, added tags and their registry rows, phase-5 subtree renames, created shells, and the exact IDs/metadata of removed empty decks. It preflights every target before its first mutation and then requires the collection, deck-catalog, tag-catalog, and captured-card fingerprints to equal the phase's pre-state. Discarding the disposable copy and extracting another backup copy remains the simplest restart; never attempt recovery by touching the live collection.
+The rollback restores journaled card moves, suspension state, added tags and their registry rows, phase-5 subtree renames, created shells, and the exact IDs/metadata of removed empty decks. For a completed phase it first requires the whole collection to equal the journaled after-state, then preflights every target and durably marks the journal `rolling_back` before its first mutation. An interrupted run can resume idempotently from that state. It finally requires the collection, deck-catalog, tag-catalog, and captured-card fingerprints to equal the phase's pre-state before marking the journal `rolled_back`. Discarding the disposable copy and extracting another backup copy remains the simplest restart; never attempt recovery by touching the live collection.
 
 ## Read-only media analysis
 

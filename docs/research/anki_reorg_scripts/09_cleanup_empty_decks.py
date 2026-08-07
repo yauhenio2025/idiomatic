@@ -16,6 +16,7 @@ from _common import (
     read_only_connection,
     require_apply_flag,
     require_completed_phase,
+    require_no_filtered_deck_cards,
     validated_copy_path,
     write_json,
 )
@@ -72,10 +73,11 @@ def main() -> None:
     copy_path = validated_copy_path(args.copy_path)
     _, decisions = load_owner_decisions(args.decisions, copy_path)
     experiment_action = decisions.get("EXPERIMENTS-YT")
-    if experiment_action not in {"merge_pt_fluency", "suspend_and_demote", "keep"}:
+    if experiment_action not in {"suspend_and_demote", "keep"}:
         raise SystemExit("invalid or missing EXPERIMENTS-YT owner decision")
     keep_experiments = experiment_action == "keep"
     if args.apply:
+        require_no_filtered_deck_cards(copy_path, "09_cleanup_empty_decks")
         require_completed_phase(copy_path, args.journal_dir, "08_resolve_odds")
 
     connection = read_only_connection(copy_path)

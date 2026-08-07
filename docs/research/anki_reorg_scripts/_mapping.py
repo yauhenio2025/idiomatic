@@ -56,6 +56,7 @@ SENTENCE_MODELS = {
     "YouTube Audio Phrase v3",
     "YouTube Expression Pool v1",
 }
+ACTIVE_FLUENCY_MODELS = {"YouTube Expression Pool v1"}
 EXPRESSION_MODELS = {
     "Idiomatic Cloud Card v1",
     "Idiomatic Cloud Card v2",
@@ -72,6 +73,10 @@ EXPRESSION_MODELS = {
     "YouTube Idiom Card v3 Structured (it)+",
     "YouTube Idiom Card v3 Structured (pt)",
     "YouTube Idiom Card v3 Structured (pt)+",
+}
+RETIRED_EXPRESSION_TASK_MODELS = EXPRESSION_MODELS | {
+    "YouTube Audio Phrase Reverse v1",
+    "YouTube Audio Phrase v3",
 }
 AUDIO_MODELS = {
     "YouTube Idiom Audio EN→Target v1": "EN to target",
@@ -97,19 +102,21 @@ def active_language_for_deck(deck_name: str) -> Language | None:
 
 
 def expression_card_destination(deck_name: str, model_name: str) -> str | None:
-    """Map active Idiomatic/legacy expression cards, excluding retired/archive trees."""
+    """Map active fluency cards and retire old hub/raw-phrase task models."""
 
-    language = active_language_for_deck(deck_name)
+    if deck_name.startswith("Idiomatic::z-archive::"):
+        parts = deck_name.split("::")
+        language = LANGUAGES.get(parts[2].casefold()) if len(parts) > 2 else None
+    else:
+        language = active_language_for_deck(deck_name)
     if language is None:
-        return None
-    if deck_name.startswith("Idiomatic::z-archive"):
         return None
     if not deck_name.startswith(("Idiomatic::", "Languages::")):
         return None
-    if model_name in SENTENCE_MODELS:
+    if model_name in ACTIVE_FLUENCY_MODELS:
         return f"{language.root}::1 Expressions::1 Fluency"
-    if model_name in EXPRESSION_MODELS:
-        return f"{language.root}::1 Expressions::2 Expression Focus"
+    if model_name in RETIRED_EXPRESSION_TASK_MODELS:
+        return f"{DORMANT_ROOT}::z-archive::{language.code.upper()}"
     return None
 
 
@@ -216,6 +223,7 @@ def fixed_target_decks() -> set[str]:
                 f"{root}::3 Tenses::1 Production",
                 f"{root}::3 Tenses::2 Exercises",
                 f"{root}::4 Exercises",
+                f"{root}::4 Exercises::Diagnosed trouble spots",
                 f"{root}::5 Translation",
                 f"{root}::6 My Errors",
                 f"{root}::7 Rescue",
