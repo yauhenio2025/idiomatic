@@ -1,0 +1,14 @@
+{
+  "EXPERIMENTS-YT": "suspend_and_demote",
+  "dedupe_policy": "defer-to-hub-manifest",
+  "deck_label_language": "code-plus-english",
+  "native_branch_labels": "numbered-english",
+  "personal_errors_branch": "6 My Errors",
+  "dormant_root": "zz Dormant",
+  "allowed_values": [
+    "suspend_and_demote",
+    "keep"
+  ],
+  "note": "Copy this file beside the disposable collection copy and record the owner's approved values. Surface collisions are either tagged for the later sense-resolved Hub manifest or left ungrouped; they are never merged by this estate draft. Lex-Stage is always untouched.",
+  "approved_by_owner": "2026-08-07 \u2014 all six recommendations accepted verbatim"
+}

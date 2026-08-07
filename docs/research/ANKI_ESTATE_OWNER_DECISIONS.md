@@ -14,3 +14,15 @@ No migration phase should be applied, even to the disposable collection copy, un
 Record the approved values in a copy of `anki_reorg_scripts/odd_decisions.example.json` beside the disposable collection copy. The recommended structural choices correspond to `native_branch_labels: numbered-english` and `personal_errors_branch: 6 My Errors`. The scripts refuse unsupported structural values, and phase 7's `--policy` must exactly match `dedupe_policy`.
 
 The Expression Hub's four choices are already settled upstream (owner verdict, 2026-08-07): normally six initial examples with no hard cap, Balanced weakness policy, `<Language>::4 Exercises::Diagnosed trouble spots`, and the vertical comic rail. The estate plan reserves those deck destinations; they are not additional open decisions here.
+
+---
+
+## VERDICTS (owner, 2026-08-07)
+
+All six recommendations ACCEPTED verbatim: code-plus-english roots,
+numbered-english branches with native leaves, personal errors to
+`6 My Errors`, `zz Dormant` root, `defer-to-hub-manifest` collisions
+(tag-only), EXPERIMENTS-YT `suspend_and_demote`. Approved values live in
+`anki_reorg_scripts/odd_decisions.approved.json`. With the Expression
+Hub's four upstream verdicts this closes every open decision: the
+migration may be sequenced.
