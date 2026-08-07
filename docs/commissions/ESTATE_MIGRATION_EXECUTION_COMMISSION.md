@@ -1,10 +1,18 @@
 # Anki estate migration — EXECUTION commission (fresh session)
 
 > This is the execution counterpart to two completed, committed studies.
-> Nothing here is design work: every decision is made, every script is
-> rollback-tested on disposable copies. Your job is to run the migration
-> against the REAL collection, carefully, phase by phase, with the owner
-> checkpointing in Anki between phases.
+> Nothing here is design work: every decision is made, and as of 2026-08-07
+> every script is rollback-tested on disposable copies (rehearsal_A phases
+> 1–10 PASS; rehearsal_B full newest-to-oldest rollback, logically identical
+> to pristine — evidence in the gitignored `docs/research/anki_reorg_work/`).
+> Your job is to run the migration against the REAL collection, carefully,
+> phase by phase, with the owner gating every phase.
+>
+> CORRECTION (2026-08-07): as originally written this commission claimed the
+> scripts were already rollback-tested and that the plan documented a
+> live-run override. Neither was true at commissioning time. The rehearsal
+> has since been run (above), and the approved live mechanism — copy-back
+> cutover, not an override — is now documented in the plan; see below.
 
 ## Read first, in this order
 
@@ -16,9 +24,11 @@
 3. `docs/research/EXPRESSION_HUB_DESIGN.md` — you are NOT building the
    hub, but the estate plan reserves deck destinations for it; do not
    repurpose them.
-4. `docs/research/anki_reorg_scripts/README.md` — script usage; the
-   scripts refuse to run on live-profile paths by default: the plan
-   documents the explicit override for the real run.
+4. `docs/research/anki_reorg_scripts/README.md` — script usage. The
+   scripts refuse live-profile paths unconditionally; there is no
+   override. The real run uses the plan's "Live copy-back cutover"
+   section: migrate a physical copy inside the work area, verify, then
+   swap the verified file into the live profile while Anki is closed.
 5. CLAUDE.md — the add-on (auto-import, auto-sync, cleanup.json
    single-slot caveat), SYLLABUS-ONLY policy, deploy mechanics.
 
@@ -33,12 +43,16 @@ window (01:30–09:00) won't overlap your Anki work — Anki itself is
 unaffected by the miner, but don't run migration phases while the owner
 is asleep anyway: every phase gate needs their eyes.
 
-**Phases 1–9 — the plan's own order, on the live collection.** After
-each phase: run the plan's verifier, then STOP and have the owner open
-Anki and confirm the tree looks right and a few known decks study
-normally. Journal files land beside the collection as in the drills;
-never delete them. Any mismatch → run the tested rollback for that
-phase, diagnose in a disposable copy, only then retry.
+**Phases 1–9 — the plan's own order, via the copy-back mechanism.**
+Anki stays closed for the whole migration window; the scripts run on the
+physical copy in the work area. After each phase's dry run: STOP and
+have the owner inspect the printed diff at the terminal before apply.
+Journal files land beside the copy as in the drills; never delete them.
+Any mismatch → run the tested rollback for that phase, diagnose in a
+fresh disposable copy, only then retry. The owner's in-Anki checkpoint
+happens once, after `10_verify.py` passes and the verified file is
+swapped into the live profile (the displaced original is kept as
+`collection.anki2.pre-estate-<ts>` — the live-step rollback).
 
 **Sync discipline.** After phase 9 verifies: AnkiWeb "Upload to
 AnkiWeb" (full upload) once, deliberately — deck moves at this scale

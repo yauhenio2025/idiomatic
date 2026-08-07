@@ -1,6 +1,8 @@
 # Anki estate reorganization plan
 
 > **Study only.** This proposal and its draft scripts operate on disposable copies of an automatic Anki backup. They are deliberately incapable of targeting the live syllabus profile. Nothing in this commission authorizes a live collection change, pipeline deployment, add-on edit, media deletion, or AnkiWeb sync.
+>
+> **Live execution was separately owner-authorized on 2026-08-07** under the conditions and mechanism recorded in [§ Live copy-back cutover](#live-copy-back-cutover-owner-authorized-2026-08-07) below. The script guards remain unchanged: the live collection file is never a script target.
 
 ## Recommendation
 
@@ -448,6 +450,93 @@ The complete short form is [ANKI_ESTATE_OWNER_DECISIONS.md](ANKI_ESTATE_OWNER_DE
 The Expression Hub's four separate choices—normally six initial examples with no hard cap, Balanced weakness policy, the dedicated diagnosis subdeck, and the vertical comic rail—were all accepted on 2026-08-07. They are recorded here as upstream contracts, not reopened estate decisions.
 
 No apply run—even on a disposable clone—should be interpreted as approval for a live run.
+
+## Live copy-back cutover (owner-authorized 2026-08-07)
+
+The owner authorized one live estate migration ahead of the Expression Hub,
+explicitly accepting the plan's "unsafe gap": the archived expression tasks
+stay suspended with `2 Expression Focus` empty until the Hub ships. The
+authorization carried three conditions, all recorded here as satisfied or
+binding:
+
+1. **Activity gate on the archived set (satisfied).** Measured on the frozen
+   12:47 copy: of the 6,191 cards, 5,578 (90%) were never reviewed; 613 ever
+   reviewed (937 lifetime reps, 50 mature). In the trailing 30 days the owner
+   made 11,508 reviews collection-wide, of which exactly 2 touched this set
+   (last on 2026-07-19; last meaningful activity 2026-06-20). The set is the
+   superseded didactic Cloud/Idiom/Phrase family, abandoned since the
+   pipeline redesign. Condition met; all phases run as designed, including
+   the suspensions.
+2. **Deadline.** The full cutover — including the deliberate full AnkiWeb
+   upload and a verified clean pull on the iPad — must complete at least one
+   day before the owner's 2026-08-10 departure, or the live run is parked
+   until they return. Builder-constant deploys follow the same window.
+3. **Presence.** The owner gates every phase in person. No phases during the
+   night image-mining window (01:30–09:00 local); the add-on import timer is
+   paused for the entire window (never run migration and an import
+   concurrently).
+
+### Why copy-back
+
+The script guard (`anki_reorg_scripts/_common.py::validated_copy_path`) is
+intentionally not overridable: it refuses live-profile paths, paths outside
+`anki_reorg_work/`, symlinks, hard links (inode-compared against the live
+candidates), and WAL sidecars. The live run therefore uses the guards as
+designed rather than bypassing them: mutate a **physical copy** inside the
+work area, verify it, then swap the verified file into the live profile
+while Anki is closed. At no point is the live collection file a script
+target.
+
+### Rehearsal evidence (2026-08-07)
+
+Both drills live in the gitignored work area `docs/research/anki_reorg_work/`:
+
+- `rehearsal_A/` — phases 1–9 dry+apply on a SHA-verified clone of the
+  frozen backup; every count landed on the plan's frozen values (205 shells;
+  9,894 tag assignments; 26,704 moves incl. 20,513 Fluency; 5,391 family
+  moves; 38,322 cards over 19 renames, zero residual archive moves; 12,667
+  audio; 5,297 collision tags; 27 experiment cards; 717 shells removed).
+  `10_verify.py` PASS with all sacred invariants. Kept as inspection
+  evidence.
+- `rehearsal_B/` — same phases applied, then `rollback.py` newest-to-oldest
+  through the whole chain; all nine journals durably `rolled_back`, and the
+  rolled-back collection is logically identical to pristine (notes, cards,
+  revlog, deck-catalog fingerprints match).
+
+### Procedure
+
+0. **Owner phase 0**: AnkiWeb sync clean (no pending conflict); File →
+   Create Backup and copy the newest `.colpkg` out of the backups dir to
+   `/srv`; pause the add-on import timer (it stays paused until the builder
+   constants are deployed and one rebuild per family is verified); quit Anki
+   cleanly; confirm no nonzero `collection.anki2-wal`/`-journal` sidecar
+   remains beside the live collection.
+1. **Copy out**: physically copy (never link) the live `collection.anki2`
+   into `docs/research/anki_reorg_work/live_cutover_<UTC-ts>/collection.anki2`;
+   record SHA-256 of source and copy (must match; `nlink=1`).
+2. **Fresh evidence pass on that copy**: `00_inventory`, `generate_deck_map`,
+   `analyze_duplicates` (the collision manifest is frozen against THIS copy —
+   the 12:47 rehearsal counts are not binding and every count is recomputed);
+   `owner_decisions.json` copied from `odd_decisions.approved.json`.
+3. **Phases 1–9**: each phase dry-run → owner inspects the printed diff at
+   the terminal → apply. Journals stay beside the copy forever. Then
+   `10_verify.py` against the phase-1 baseline journal must PASS.
+4. **Swap**: with Anki still closed, rename the live `collection.anki2` to
+   `collection.anki2.pre-estate-<ts>` (kept indefinitely — this file IS the
+   live-step rollback), copy the migrated file into its place, and SHA-verify
+   the installed file equals the migrated work-area file. The media directory
+   is untouched (the migration changes no media reference).
+5. **Owner checkpoint in Anki**: open Anki (imports still paused), confirm
+   the tree, study a few known decks. Any mismatch → close Anki, swap the
+   preserved original back, and diagnose only on copies.
+6. **Sync**: deliberate full "Upload to AnkiWeb" once; then a verified clean
+   pull on the iPad before anything else proceeds.
+7. **Builders**: change every deck-name constant in one commit (plan
+   § Pipeline and add-on compatibility is the inventory), suite green,
+   deploy, force one rebuild per family, verify the next imports land inside
+   the new tree, and only then unpause the add-on import timer. Any old-name
+   shells recreated by a straggler import are removed manually under phase-9
+   semantics (empty shells only).
 
 ## Exact per-current-deck migration map
 
