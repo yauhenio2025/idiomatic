@@ -69,9 +69,19 @@ def load_overrides(path):
 
 
 def scan_pending(image_dirs, index, ledger_rows, overrides, only=None):
-    judged = {(r["example_id"], r.get("sha1")) for r in ledger_rows}
+    judged, errors = set(), {}
+    for r in ledger_rows:
+        key = (r["example_id"], r.get("sha1"))
+        if r.get("verdict") == "judge_error":
+            errors[key] = errors.get(key, 0) + 1
+            if errors[key] >= 2:
+                judged.add(key)  # two strikes: stop retrying this content
+        else:
+            judged.add(key)
     attempts = {}
     for r in ledger_rows:
+        if r.get("verdict") == "judge_error":
+            continue  # errors are not attempts — don't escalate early
         attempts[r["example_id"]] = attempts.get(r["example_id"], 0) + 1
     pending = []
     for owner, d in image_dirs:
