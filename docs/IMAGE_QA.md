@@ -71,15 +71,23 @@ changes (that is how repaired images get their re-verdict).
   ~50 GB of Metal buffers mid-chunk); the memory guard (default 58 GB
   available) defers judge batches to the gaps between render chunks —
   measured 2026-08-07, per the commission's serialize-if-needed clause.
-- **Bookscan coordination contract (2026-08-07):** when judge_batch has
-  pending work and no mint render is active, it touches
+- **Bookscan coordination contract (2026-08-07, tuned 08-08):** when
+  judge_batch has pending work and no mint render is active, it touches
   `~/llms/factory-node/PAUSE_BOOKSCAN` — bookscan holds new book spawns
-  and in-flight books drain within ~15 min, freeing the judge's memory
-  — waits up to 25 min for ≥58 GB, judges, then removes the flag
-  (trap-guaranteed, even on crash). NEVER SIGSTOP bookscan's driver —
-  a stopped driver wedges its children (5 h lost 2026-08-07). While a
-  mint render is active the pause is skipped (no window is possible);
-  the chunk boundary is the deterministic window.
+  while in-flight books finish (measured up to 100+ min for big books,
+  not the contract's optimistic 15) — waits up to 100 min for ≥58 GB,
+  judges, then removes the flag (trap-guaranteed, even on crash). On a
+  failed window it appends a memory census to judge.log. NEVER SIGSTOP
+  bookscan's driver — a stopped driver wedges its children (5 h lost
+  2026-08-07). While a mint render is active the pause is skipped (no
+  window is possible); the chunk boundary is the deterministic window.
+- **Ollama wedge auto-remediation:** twice observed (2026-08-07/08) a
+  model stuck in `Stopping...` for hours holding ~34 GB — a hung unload.
+  During its window wait, judge_batch SIGTERMs the `llama-server`
+  runner iff `Stopping...` persisted ≥10 consecutive minutes AND
+  bookscan produced no output for 10 min (an active generation always
+  shows a live lease, never a stuck `Stopping...`). Ollama respawns the
+  runner on the next request, so clients lose nothing.
 - **Transport (Fedora-initiated, key auth exists this direction):**
   systemd user timer `qa-sync.timer` every 30 min →
   `~/llms/qwen-image/factory/qa_sync.sh`: push Fedora corpus images +
