@@ -173,6 +173,20 @@
 - **Dependencies**: grammar drill audio stage (`idiomatic/grammar/audio.py` naming + reuse check), `_full_html` bolding (`idiomatic/grammar/apkg.py`), cluster strings (`idiomatic/grammar/curriculum.py`), `gemini.synthesize` provider chain, `leveled_speech_clip` + voice fingerprint (`idiomatic/grammar/explainers.py`), `EN_VOICE` (`idiomatic/pipeline/audio.py`), genanki
 - **Added**: 2026-08-04
 
+## Asset Factory QA
+
+### Corpus-image QA loop (Q-Judger judge + classified auto-repair)
+- **Status**: Active (judging); repair loop DISARMED pending user spot-review
+- **Description**: Every corpus illustration (both render machines) is judged by Q-Judger on the Mac against a checklist built from its own brief — person count/genders/distinct identities (merge catcher), per-person action, absurd-element presence, anatomy, focal-point+memorability floor. Failures classified into reroll_full / reroll_inserts / targeted_edit; max 2 repairs then escalation to a human-review folder with daily contact sheets. Human overrides always beat judge verdicts; only pass-verdict images may ship to cards.
+- **Entry Points**:
+  - `tools/qa_rubric.py:1` - brief→checklist prompt builder, verdict classification, repair mapping, partition helpers
+  - `tools/qa_judge.py:1` - batch judge runner (transformers+MPS, content-hash ledger, memory guard)
+  - `tools/qa_report.py:1` - DAILY.md summaries, failure contact sheets, spot-review package (`--spot N`)
+  - `idiomatic/grammar/data/illustration_prompts/PARTITION.json` - chunk→machine ownership (miners skip foreign chunks; keep in step with the Mac's run_queue.sh)
+  - `docs/IMAGE_QA.md` - operations doc (topology, arming procedure, machine-local script inventory)
+- **Dependencies**: illustration-prompt briefs (input+output chunks), Q-Judger weights on the Mac (`~/llms/models/qwen-image-bench/`), machine-local runners (`~/llms/factory-node/qa/` on the Mac; `~/llms/qwen-image/factory/qa_{sync.sh,repair_night.py,arm.sh}` + `qa-sync.timer` on Fedora)
+- **Added**: 2026-08-07
+
 ## Rescue Lab
 
 ### Rescue Lab (struggle-idiom experiment tracker + asset generation)

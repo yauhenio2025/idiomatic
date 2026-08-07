@@ -1,0 +1,8 @@
+{
+  "_comment": "chunk -> render machine. Chunks not listed default to fedora (the night miner). The Mac queue (run_queue.sh) must match its side; the Fedora night miner skips mac-owned chunks. Repairs execute on the owning machine.",
+  "es_illu_b01": "mac",
+  "es_illu_b02": "mac",
+  "es_illu_b04": "mac",
+  "es_illu_b05": "mac",
+  "es_illu_b06": "mac"
+}

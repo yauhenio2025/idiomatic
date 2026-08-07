@@ -1,0 +1,992 @@
+[
+  {
+    "expression_id": 1743,
+    "idiom": "darle sepultura",
+    "anchor": {
+      "semantic_hook": "A colossal stone hand holds out a grave plot in its open palm, making the literal act of giving someone burial concrete.",
+      "setting": "A quiet coastal cemetery adjoins a stone jetty, with cypress trees, an open grave, a closed coffin, and the sea beyond. One colossal stone hand rises from the earth and holds the grave plot in its open palm.",
+      "cast": [
+        "pedro_sanchez",
+        "cristina_kirchner"
+      ],
+      "absurd_element": "a colossal stone hand offering a grave plot in its palm"
+    },
+    "variations": [
+      {
+        "example_id": 10327,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "stands beside the closed coffin as a family mourner, head bowed and both hands resting solemnly on a wreath"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands across the grave from him, holding the grandfather's keepsake close with a solemn expression"
+          }
+        ],
+        "scene_adjust": "fresh earth around the grandfather's grave and several family wreaths"
+      },
+      {
+        "example_id": 10328,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "stands among long rows of flower-covered empty chairs, pressing one hand to his heart as he faces the beloved doctor's coffin"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands in the next aisle with head bowed, placing another town wreath beside the coffin"
+          }
+        ],
+        "scene_adjust": "a doctor's stethoscope rests atop the closed coffin, surrounded by flowers left by the town"
+      },
+      {
+        "example_id": 10329,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "kneels carefully beside the grave, placing the deceased person's chosen keepsake next to the coffin with a respectful, attentive expression"
+          }
+        ],
+        "scene_adjust": "a sealed personal keepsake box and a carefully prepared burial cloth"
+      },
+      {
+        "example_id": 10330,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "stands at the end of the jetty in sailor clothing, solemnly tipping a burial urn toward the open sea"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands beside him in sailor clothing, steadying the urn with one hand and releasing petals with the other"
+          }
+        ],
+        "scene_adjust": "coiled ship rope and a small boat moored beside the jetty"
+      },
+      {
+        "example_id": 10331,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "kneels beside a newly recovered covered stretcher near the grave, clasping his hands with exhausted grief and fragile relief"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "kneels at the other end of the covered stretcher, one hand resting on it while her shoulders shake with relief"
+          }
+        ],
+        "scene_adjust": "search lanterns, muddy boots, and a covered stretcher beside the waiting grave"
+      },
+      {
+        "example_id": 10332,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "presses a handful of homeland soil onto the finished grave, shoulders finally lowered after a long search"
+          }
+        ],
+        "scene_adjust": "a weathered unmarked map, a travel bag, and a sack of local soil beside the grave"
+      }
+    ]
+  },
+  {
+    "expression_id": 1788,
+    "idiom": "respirar más tranquilo",
+    "anchor": {
+      "semantic_hook": "The room itself breathes slowly and calmly through a ceiling formed from an enormous pair of gently expanding lungs.",
+      "setting": "A quiet home study contains a broad desk, a sofa, a front-door table, and a window overlooking a distant airport runway. The ceiling is one colossal pair of translucent lungs that gently expands and contracts above the room.",
+      "cast": [
+        "penelope_cruz",
+        "javier_bardem"
+      ],
+      "absurd_element": "a colossal lung-shaped ceiling that gently expands and contracts"
+    },
+    "variations": [
+      {
+        "example_id": 10597,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "crouches beside the sofa holding up her recovered keys, eyes closed and shoulders dropping in relief"
+          }
+        ],
+        "scene_adjust": "a handbag open beside the sofa cushions"
+      },
+      {
+        "example_id": 10598,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "sits at the desk with an exam paper and gold seal in hand, exhaling deeply while her tense posture melts into joy"
+          }
+        ],
+        "scene_adjust": "an exam paper topped by a plain gold seal and neatly stacked study materials"
+      },
+      {
+        "example_id": 10599,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "sits upright in a doctor's coat, giving a calm reassuring nod across the desk"
+          },
+          {
+            "slug": "penelope_cruz",
+            "action": "leans back opposite him, one hand on her chest and the other relaxing open after hearing the good news"
+          }
+        ],
+        "scene_adjust": "a stethoscope and a closed medical folder on the desk"
+      },
+      {
+        "example_id": 10600,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "stands at the window as a relieved father, lowering binoculars after seeing an airplane safely parked on the runway"
+          }
+        ],
+        "scene_adjust": "an airplane resting safely on the distant runway and a travel bag near the window"
+      },
+      {
+        "example_id": 10601,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "pushes the final work folder away and sinks back in the desk chair, longing and fatigue giving way to an easy breath"
+          }
+        ],
+        "scene_adjust": "completed work folders, a closed laptop, and a nearly empty coffee cup"
+      },
+      {
+        "example_id": 10602,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "steadies a house-shaped savings box with both hands, smiling with cautious relief"
+          },
+          {
+            "slug": "javier_bardem",
+            "action": "drops the final coin into the savings box and exhales beside her"
+          }
+        ],
+        "scene_adjust": "a house-shaped savings box, one final coin, and an empty payment envelope"
+      }
+    ]
+  },
+  {
+    "expression_id": 1789,
+    "idiom": "da igual",
+    "anchor": {
+      "semantic_hook": "Two outstretched hands give a pair of perfectly equal balance pans, turning the literal wording of giving equal into a physical scene.",
+      "setting": "A covered civic courtyard connects a cafe table, an empty meeting room, a small shop counter, a parked car, and a trail gate. Two colossal stone hands extend from opposite walls, each offering one pan of a perfectly level brass balance.",
+      "cast": [
+        "rosalia"
+      ],
+      "absurd_element": "two colossal stone hands offering equal balance pans"
+    },
+    "variations": [
+      {
+        "example_id": 10603,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "sits at the cafe table smiling, one hand hovering evenly between a teacup and a coffee cup"
+          }
+        ],
+        "scene_adjust": "a teacup and a coffee cup placed at equal distance from her"
+      },
+      {
+        "example_id": 10604,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "arrives at the empty meeting-room doorway, glances at the stacked chairs, and gives an unconcerned shrug"
+          }
+        ],
+        "scene_adjust": "stacked meeting chairs and a closed presentation screen"
+      },
+      {
+        "example_id": 10605,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "stands beside the parked car with one hand firmly on its open door, chin raised in a defiant decision to buy it"
+          }
+        ],
+        "scene_adjust": "a gleaming car with a plain key resting on its hood"
+      },
+      {
+        "example_id": 10606,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "strides toward the trail gate under an open umbrella, hiking pack secured and expression cheerfully determined"
+          }
+        ],
+        "scene_adjust": "a dripping umbrella, wet hiking boots, and rainwater pooled by the trail gate"
+      },
+      {
+        "example_id": 10607,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "reaches across the shop counter for an unmarked object while casually pushing a mixed pile of coins aside"
+          }
+        ],
+        "scene_adjust": "an unmarked boxed purchase and a mixed pile of coins on the shop counter"
+      },
+      {
+        "example_id": 10608,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "is shown at childhood age, crouching playfully in the chilly courtyard street, throwing a ball upward with bare hands and ignoring her loosened winter coat"
+          }
+        ],
+        "scene_adjust": "a child's ball, a small winter coat, frosted paving stones, and cold breath in the air"
+      }
+    ]
+  },
+  {
+    "expression_id": 1790,
+    "idiom": "por partida doble",
+    "anchor": {
+      "semantic_hook": "A double-entry ledger becomes the physical ground, with every practical item entered once on each facing side.",
+      "setting": "A plain multipurpose clubhouse contains a long office desk, a celebration table, two bassinets, and an adjoining indoor practice area. The entire floor is one colossal open accounting ledger whose facing blank pages duplicate every loose object once in paired recessed columns.",
+      "cast": [
+        "nadia_calvino"
+      ],
+      "absurd_element": "a colossal ledger floor that duplicates every loose object across paired pages"
+    },
+    "variations": [
+      {
+        "example_id": 10609,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "raises a car key in one hand and blows out the candles on a birthday cake, celebrating both successes at once"
+          }
+        ],
+        "scene_adjust": "a birthday cake without numeric candles, a car key, and a driving wheel prop"
+      },
+      {
+        "example_id": 10610,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "works at the desk with both arms stretched toward two tall folder piles, jaw set despite visible exhaustion"
+          }
+        ],
+        "scene_adjust": "an empty coworker's chair with a thermometer resting on it and two overflowing work trays"
+      },
+      {
+        "example_id": 10611,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "stands between the two bassinets, rocking both with outstretched hands while smiling through heavy sleepless eyes"
+          }
+        ],
+        "scene_adjust": "two matching bassinets, two folded baby blankets, and an untouched pillow"
+      },
+      {
+        "example_id": 10612,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "hunches over the office desk, shielding a nearly empty cash box with one arm while steadying two staff payment envelopes with the other"
+          }
+        ],
+        "scene_adjust": "a nearly empty cash box, two plain payment envelopes, and several vacant employee chairs"
+      },
+      {
+        "example_id": 10613,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "faces the viewer with both hands clasped in gratitude, then gestures from her listening ear toward a small compass offered forward"
+          }
+        ],
+        "scene_adjust": "an empty conversation chair and a small compass resting beside it"
+      },
+      {
+        "example_id": 10614,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "stands triumphantly on the practice floor, raising a soccer ball in one hand and a basketball in the other"
+          }
+        ],
+        "scene_adjust": "a soccer goal, a basketball hoop, and two victory cups"
+      }
+    ]
+  },
+  {
+    "expression_id": 1791,
+    "idiom": "sea cual sea",
+    "anchor": {
+      "semantic_hook": "Two identical archways flank a central selection of possible things, physically staging the repeated be on either side of whichever choice appears.",
+      "setting": "A circular decision chamber has two identical stone archways, a central pedestal, and plain doors leading toward a garden, a study area, and an outdoor path. One unsupported carousel hovers above the pedestal and slowly turns an assortment of possible objects through the space between the arches.",
+      "cast": [
+        "cristina_kirchner",
+        "nadia_calvino"
+      ],
+      "absurd_element": "an unsupported carousel of possible objects hovering between twin arches"
+    },
+    "variations": [
+      {
+        "example_id": 10615,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands beside a forked path with one hand over her heart and the other extended steadily toward Nadia in unconditional support"
+          },
+          {
+            "slug": "nadia_calvino",
+            "action": "stands at the chosen branch of the path, accepting the offered hand while holding the closed decision box"
+          }
+        ],
+        "scene_adjust": "two diverging path tiles and a closed decision box on the pedestal"
+      },
+      {
+        "example_id": 10616,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "kneels at one side of the pedestal, holding one piece of a broken mechanism steady with a determined expression"
+          },
+          {
+            "slug": "nadia_calvino",
+            "action": "kneels opposite her and joins the matching piece into place with both hands"
+          }
+        ],
+        "scene_adjust": "a solvable two-piece mechanism and a shared pair of work gloves"
+      },
+      {
+        "example_id": 10617,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "walks toward the outdoor path with hiking pack ready, carrying an umbrella in one hand and a sun hat in the other"
+          },
+          {
+            "slug": "nadia_calvino",
+            "action": "strides beside her in hiking boots, calmly carrying both a raincoat and a water flask"
+          }
+        ],
+        "scene_adjust": "hiking boots, an umbrella, a sun hat, and a small weather vane"
+      },
+      {
+        "example_id": 10618,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands at the open study-area door with arms spread in welcome"
+          },
+          {
+            "slug": "nadia_calvino",
+            "action": "steps through the door carrying a globe and a student backpack, smiling at the welcome"
+          }
+        ],
+        "scene_adjust": "a globe and a row of varied student backpacks beside the open study door"
+      },
+      {
+        "example_id": 10619,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "grasps a plain-covered book decisively with both hands while nudging an open coin purse away with her elbow"
+          }
+        ],
+        "scene_adjust": "a plain-covered book and an open coin purse on the pedestal"
+      },
+      {
+        "example_id": 10620,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "faces Nadia with an open palm, gaze steady despite her braced posture as she waits for the truth"
+          },
+          {
+            "slug": "nadia_calvino",
+            "action": "opens the small box containing a clear mirror toward her, shoulders squared for the outcome"
+          }
+        ],
+        "scene_adjust": "a closed outcome curtain behind the pedestal and a small open box containing a clear mirror"
+      }
+    ]
+  },
+  {
+    "expression_id": 1792,
+    "idiom": "al hilo de",
+    "anchor": {
+      "semantic_hook": "A single physical thread runs from each prior subject to the next, making every new point follow along the thread.",
+      "setting": "A press and research studio contains a discussion desk, an interview chair, cameras, a projection surface, and tables for documents and small models. One impossibly thick spool thread winds through every work area and passes through the objects in a continuous unbroken path.",
+      "cast": [
+        "javier_bardem"
+      ],
+      "absurd_element": "one impossibly thick thread winding continuously through the entire studio"
+    },
+    "variations": [
+      {
+        "example_id": 10621,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "leans from the discussion chair toward the budget materials, following the thick thread with one finger and tapping the coin trays thoughtfully"
+          }
+        ],
+        "scene_adjust": "coin trays, a calculator with its display turned away, and blank budget folders"
+      },
+      {
+        "example_id": 10622,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "stands between a small government-building model and several home-work desks, tracing the connecting thread from one to the others"
+          }
+        ],
+        "scene_adjust": "a government-building model, closed laptops, and several empty home-office chairs"
+      },
+      {
+        "example_id": 10623,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "sits in the interview chair with one palm raised in hesitation, eyes following the thread from a smooth stone sphere toward an unopened decision box"
+          }
+        ],
+        "scene_adjust": "a smooth stone sphere offered from the interview desk and an unopened decision box"
+      },
+      {
+        "example_id": 10624,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "bends over the research table, examining a dense array of consumer tokens through a magnifying glass with focused surprise"
+          }
+        ],
+        "scene_adjust": "consumer product tokens and a purely graphical arrangement of dots and bars"
+      },
+      {
+        "example_id": 10625,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "sits awake in the interview chair holding a closed proposal folder, chin in hand and gaze fixed on the thread from the conversation desk"
+          }
+        ],
+        "scene_adjust": "two used coffee cups, a closed proposal folder, and a small evening lamp"
+      },
+      {
+        "example_id": 10626,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "sits in the director's interview chair, gesturing animatedly toward several cameras while holding a film reel against his knee"
+          }
+        ],
+        "scene_adjust": "a film reel, a director's chair, several press cameras, and a blank cinema screen"
+      }
+    ]
+  },
+  {
+    "expression_id": 1793,
+    "idiom": "de sequía",
+    "anchor": {
+      "semantic_hook": "A literal drought covers every arena of work and play with cracked earth and an utterly dry sky.",
+      "setting": "A drought-stricken community field adjoins a small studio, an office kiosk, a cafe table, and a soccer goal, all surrounded by cracked soil and dry plants. One enormous cloud made entirely from cracked clay hangs overhead and sheds a stream of dust upward into the sky.",
+      "cast": [
+        "pedro_sanchez"
+      ],
+      "absurd_element": "a cracked-clay cloud shedding dust upward"
+    },
+    "variations": [
+      {
+        "example_id": 10627,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "follows through on a powerful kick and watches the ball hit the goal, arms beginning to rise in long-awaited triumph"
+          }
+        ],
+        "scene_adjust": "a soccer ball inside the net and a striker's discarded training bib"
+      },
+      {
+        "example_id": 10628,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "stands in the studio holding a brush before a newly completed canvas, staring at it with tired pride and relief"
+          }
+        ],
+        "scene_adjust": "a newly completed canvas, used brushes, and a dusty stack of abandoned frames"
+      },
+      {
+        "example_id": 10629,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "leans over the office kiosk, confidently rearranging product samples beside a rising row of wooden sales blocks"
+          }
+        ],
+        "scene_adjust": "fresh product samples, a rising row of plain wooden blocks, and an open strategy folder"
+      },
+      {
+        "example_id": 10630,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "stands inside the soccer goal with one foot on the winning ball and both arms lifting a victory cup overhead"
+          }
+        ],
+        "scene_adjust": "a winning ball in the net, a victory cup, and scattered celebration ribbons"
+      },
+      {
+        "example_id": 10631,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "sits alone at the cafe table with an empty chair opposite, reclining calmly with no urgency and an easy half-smile"
+          }
+        ],
+        "scene_adjust": "a single cup and an empty second chair at the cafe table"
+      },
+      {
+        "example_id": 10632,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "reclines in a hammock between the studio posts, setting a closed sketchbook aside and finally allowing his arms to hang loose"
+          }
+        ],
+        "scene_adjust": "a travel hammock, a closed sketchbook, and a small packed overnight bag"
+      }
+    ]
+  },
+  {
+    "expression_id": 1794,
+    "idiom": "tuvo de todo",
+    "anchor": {
+      "semantic_hook": "A single suitcase physically has one object from every kind of event and experience inside it.",
+      "setting": "A multipurpose community hall contains a low stage, a long gathering table, a viewing screen, meeting chairs, and open floor space. One ordinary-sized suitcase opens onto a full interior landscape packed with celebration, travel, cinema, family, office, and sports objects.",
+      "cast": [
+        "penelope_cruz",
+        "cristina_kirchner"
+      ],
+      "absurd_element": "an ordinary suitcase containing a full landscape of every kind of event"
+    },
+    "variations": [
+      {
+        "example_id": 10633,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "dances beside the birthday table with a plate of food in one hand, turning delightedly toward a magician's hat and musical instruments"
+          }
+        ],
+        "scene_adjust": "a birthday cake, a buffet, musical instruments, and a magician's hat with playing cards"
+      },
+      {
+        "example_id": 10634,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "kneels over an unmarked map with amused frustration, holding a museum figurine while beach gear and mountain boots spill from her travel bag"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "crouches beside her with a compass turned in the wrong direction, laughing at their shared confusion"
+          }
+        ],
+        "scene_adjust": "an unmarked folded map, a museum figurine, a beach towel, and mountain boots"
+      },
+      {
+        "example_id": 10635,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "perches on the edge of a viewing chair, gripping one armrest while reaching toward a rose and staring wide-eyed at an overturned spacecraft model"
+          }
+        ],
+        "scene_adjust": "a spacecraft model, a rose, toppled stunt scenery, and a blank viewing screen"
+      },
+      {
+        "example_id": 10636,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "stands between a broken household object and celebration ribbons, hugging a family keepsake with a tearful smile"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands close beside her, holding one ribbon and one broken piece with the same bittersweet expression"
+          }
+        ],
+        "scene_adjust": "a broken household object, a family keepsake box, and celebration ribbons"
+      },
+      {
+        "example_id": 10637,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "leans intensely across the meeting table with one hand clenched, then uses the other to assemble an inventive project model"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "sits opposite with an argumentative gesture in one hand and a second creative prototype lifted in the other"
+          }
+        ],
+        "scene_adjust": "disordered meeting folders, empty chairs, and several inventive project prototypes"
+      },
+      {
+        "example_id": 10638,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "leaps from a spectator chair with both fists raised, surrounded by a match ball and a referee dismissal card"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands beside the overturned chair, gripping the match ball and reacting breathlessly to the final moment"
+          }
+        ],
+        "scene_adjust": "a soccer goal, a match ball, a referee dismissal card, and an overturned spectator chair"
+      }
+    ]
+  },
+  {
+    "expression_id": 1795,
+    "idiom": "dejar fuera",
+    "anchor": {
+      "semantic_hook": "A single chair is deliberately left outside an immense doorway while everything else remains inside.",
+      "setting": "An institutional campus lobby connects a glass meeting room, a team room, a social hall, and a lecture room around one exterior landing. One colossal doorway fills the outer wall while a single ordinary chair remains conspicuously outside its threshold.",
+      "cast": [
+        "javier_bardem",
+        "rosalia"
+      ],
+      "absurd_element": "a colossal doorway with one ordinary chair left outside"
+    },
+    "variations": [
+      {
+        "example_id": 10639,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "stands in the team-room doorway as the coach, jaw firm and arm extended toward the outside landing"
+          },
+          {
+            "slug": "rosalia",
+            "action": "stands outside the threshold holding the forward's boots, shoulders rigid with frustrated disbelief"
+          }
+        ],
+        "scene_adjust": "a star forward's boots and folded uniform placed outside the team-room threshold"
+      },
+      {
+        "example_id": 10640,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "holds the social-hall door fully open with arms spread wide, smiling in an inclusive welcome"
+          },
+          {
+            "slug": "rosalia",
+            "action": "steps through the open door carrying party food, returning the welcome with an easy smile"
+          }
+        ],
+        "scene_adjust": "a long party table set with a place for every invited friend and no chairs left outside"
+      },
+      {
+        "example_id": 10641,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "reaches outside the meeting-room threshold to retrieve a forgotten bundle of graphical sales sheets and adds them carefully to the report pile"
+          },
+          {
+            "slug": "rosalia",
+            "action": "kneels outside the threshold and hands him the missing sales sheets with an urgent expression"
+          }
+        ],
+        "scene_adjust": "last month's graphical sales sheets outside the threshold and a report pile inside"
+      },
+      {
+        "example_id": 10642,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "sits alone on the exterior chair outside the glass meeting room, shoulders slumped and face hurt as he watches the clustered chairs within"
+          },
+          {
+            "slug": "rosalia",
+            "action": "sits inside the glass room facing the clustered chairs, absorbed in the continuing conversation and unaware of him outside"
+          }
+        ],
+        "scene_adjust": "a tight circle of chairs inside the glass meeting room and the lone exterior chair"
+      },
+      {
+        "example_id": 10643,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "kneels at the threshold, reluctantly moving several activity objects outside while clutching a nearly empty coin purse"
+          }
+        ],
+        "scene_adjust": "a nearly empty coin purse and excluded music, craft, and sports equipment outside the door"
+      },
+      {
+        "example_id": 10644,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "braces himself against the closing lecture-room door, straining to keep the entrance open"
+          },
+          {
+            "slug": "rosalia",
+            "action": "stands at the threshold holding a globe and several student bags close with a worried expression"
+          }
+        ],
+        "scene_adjust": "a globe and varied student bags caught near the lecture-room threshold"
+      }
+    ]
+  },
+  {
+    "expression_id": 1796,
+    "idiom": "sentimientos encontrados",
+    "anchor": {
+      "semantic_hook": "Two immense carved hearts travel toward each other and meet head-on, making the encountered and opposing feelings physically collide.",
+      "setting": "A railway departure concourse contains a luggage bench, a small ceremony platform, a property desk, a viewing alcove, and several empty office seats. Two colossal carved hearts hang overhead on opposing tracks and meet edge to edge above the center of the concourse.",
+      "cast": [
+        "rosalia"
+      ],
+      "absurd_element": "two colossal carved hearts meeting head-on above the concourse"
+    },
+    "variations": [
+      {
+        "example_id": 10645,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "hugs a moving box at the departure point, one foot stepping forward while she looks back with an excited, tearful smile"
+          }
+        ],
+        "scene_adjust": "moving boxes, a city apartment key, and a packed suitcase"
+      },
+      {
+        "example_id": 10646,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "stands on the ceremony platform lifting a graduation cap high while pressing her other hand to her chest, smiling through tears"
+          }
+        ],
+        "scene_adjust": "a graduation cap, a rolled blank certificate, and an open suitcase near the platform"
+      },
+      {
+        "example_id": 10647,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "sits before the viewing alcove with one hand tilted upward and the other downward, eyebrows knotted in uncertainty after the ending"
+          }
+        ],
+        "scene_adjust": "a dim blank viewing screen and an empty snack bowl"
+      },
+      {
+        "example_id": 10648,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "holds an office moving box while reaching toward a new executive chair, then looks back sadly at the row of familiar empty desks"
+          }
+        ],
+        "scene_adjust": "an office moving box, a new executive chair, and several familiar workstations"
+      },
+      {
+        "example_id": 10649,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "stands at the property desk holding old house keys, fingertips lingering on a small family-house model with a conflicted, tender expression"
+          }
+        ],
+        "scene_adjust": "old house keys, a family keepsake, and a small model of the grandparents' house"
+      },
+      {
+        "example_id": 10650,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "stands by the departing train waving proudly, her free hand gripping the strap of a college bag left on the luggage bench"
+          }
+        ],
+        "scene_adjust": "a college bag, a graduation cap, and a departing train at the platform"
+      }
+    ]
+  },
+  {
+    "expression_id": 1797,
+    "idiom": "se vayan de las manos",
+    "anchor": {
+      "semantic_hook": "Everyday responsibilities visibly travel away from a pair of open hands and escape their grasp.",
+      "setting": "A family-office workshop contains a long meeting table, household shelves, a play corner, filing cabinets, and a work desk. A pair of colossal disembodied hands hovers above the table while a stream of everyday objects rises unsupported away from their open palms.",
+      "cast": [
+        "pedro_sanchez",
+        "penelope_cruz"
+      ],
+      "absurd_element": "colossal hands releasing an unsupported upward stream of everyday objects"
+    },
+    "variations": [
+      {
+        "example_id": 10651,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "lunges across the desk with both arms out, desperately trying to catch coins escaping beyond his fingertips"
+          }
+        ],
+        "scene_adjust": "an open household purse, scattered coins, and overflowing expense trays"
+      },
+      {
+        "example_id": 10652,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "leans angrily across the meeting table with a clenched fist as folders tumble beyond his reach"
+          },
+          {
+            "slug": "penelope_cruz",
+            "action": "pushes back from the opposite chair, both hands raised and expression shocked by the escalating meeting"
+          }
+        ],
+        "scene_adjust": "overturned meeting chairs and scattered blank folders"
+      },
+      {
+        "example_id": 10653,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "stands with both palms lowered in a steady calming gesture, posture controlled despite the rising objects"
+          },
+          {
+            "slug": "penelope_cruz",
+            "action": "faces him with tense shoulders and clenched hands, beginning to mirror his slower breathing"
+          }
+        ],
+        "scene_adjust": "two pushed-back chairs and a cup trembling near the table edge"
+      },
+      {
+        "example_id": 10654,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "recoils from a broken prank device with both hands over his mouth, horrified by the harm caused"
+          },
+          {
+            "slug": "penelope_cruz",
+            "action": "sits on the floor holding a newly bandaged knee, wincing beside the overturned chair"
+          }
+        ],
+        "scene_adjust": "a broken prank device, a first-aid box, and an overturned chair"
+      },
+      {
+        "example_id": 10655,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "kneels at the play corner gathering toys with hurried, overwhelmed movements"
+          },
+          {
+            "slug": "penelope_cruz",
+            "action": "reaches for school bags drifting away from the shelves, worry tightening her posture"
+          }
+        ],
+        "scene_adjust": "scattered toys, school bags, and an open household storage box"
+      },
+      {
+        "example_id": 10656,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "sits nearly buried at the work desk, reaching after a mass of escaping folders with an exhausted, overwhelmed expression"
+          }
+        ],
+        "scene_adjust": "towering work folders, a closed laptop, and an overfilled task tray"
+      }
+    ]
+  },
+  {
+    "expression_id": 1798,
+    "idiom": "dejando eso... de lado",
+    "anchor": {
+      "semantic_hook": "The room's side physically opens to receive each object being left aside while the central task remains in front.",
+      "setting": "A practical project workshop contains a central worktable, tool benches, a travel corner, a parked car visible through the open bay, and a clear forward doorway. One entire side wall folds outward into a deep horizontal shelf that holds every object deliberately moved aside.",
+      "cast": [
+        "nadia_calvino"
+      ],
+      "absurd_element": "an entire side wall folded outward into an object-holding shelf"
+    },
+    "variations": [
+      {
+        "example_id": 10657,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "pushes a coin purse onto the side shelf while leaning eagerly toward learning tools arranged on the central worktable"
+          }
+        ],
+        "scene_adjust": "a coin purse on the side shelf and practical learning tools at the center"
+      },
+      {
+        "example_id": 10658,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "places a closed disagreement box on the side shelf and turns back with a warm expression, extending a hand toward the viewer in friendship"
+          }
+        ],
+        "scene_adjust": "a closed disagreement box set apart on the side shelf and two cups together on the worktable"
+      },
+      {
+        "example_id": 10659,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "rolls a flat tire toward the side shelf, laughing as she lifts a travel camera and gestures toward the open road"
+          }
+        ],
+        "scene_adjust": "a flat tire and toolbox on the side shelf, with picnic gear near the parked car"
+      },
+      {
+        "example_id": 10660,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "sweeps small gears and circuit pieces toward the side shelf, then points decisively at the complete project model in the center"
+          }
+        ],
+        "scene_adjust": "small gears and circuit pieces to the side, with one complete project model centered on the table"
+      },
+      {
+        "example_id": 10661,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "moves her own preferred sample onto the side shelf and places another proposal model firmly at the center with an impartial nod"
+          }
+        ],
+        "scene_adjust": "several personal-choice samples on the side shelf and a strong proposal model at the center"
+      },
+      {
+        "example_id": 10662,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "stacks broken past prototypes on the side shelf, turns her whole body away from them, and strides toward the clear forward doorway"
+          }
+        ],
+        "scene_adjust": "broken prototypes on the side shelf and a newly assembled prototype near the forward doorway"
+      }
+    ]
+  }
+]
