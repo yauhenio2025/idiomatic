@@ -388,7 +388,7 @@ def test_apkg_build_packages_notes_fields_media_and_listening_subdeck(tmp_path: 
     assert len(model["tmpls"]) == 1
     assert model["tmpls"][0]["name"] == "Lesson"
     assert {deck["name"] for deck in decks.values()} >= {
-        "Idiomatic Grammar FR::0 Écoute::03 Beaucoup de"
+        "FR French::2 Grammar::0 Écoute::03 Beaucoup de"
     }
 
     assert len(rows) == 5

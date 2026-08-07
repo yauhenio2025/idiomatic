@@ -163,8 +163,8 @@ def test_apkg_subdecks_per_cluster(tmp_path: Path):
     con = sqlite3.connect(tmp_path / "collection.anki2")
     decks = json.loads(con.execute("SELECT decks FROM col").fetchone()[0])
     names = {d["name"] for d in decks.values()}
-    assert "Idiomatic Grammar ES::1 Tiempos" in names
-    assert "Idiomatic Grammar ES::4 Imperativo" in names
+    assert "ES Spanish::2 Grammar::1 Tiempos" in names
+    assert "ES Spanish::2 Grammar::4 Imperativo" in names
     # note GUIDs are unchanged by the subdeck split
     import hashlib
     guids = {g for (g,) in con.execute("SELECT guid FROM notes")}
@@ -173,10 +173,10 @@ def test_apkg_subdecks_per_cluster(tmp_path: Path):
     assert guids == expect
     # deck ids are stable functions of the full deck name
     from idiomatic.grammar.apkg import _deck_id, deck_name_for
-    assert deck_name_for("es", "1 Tiempos") == "Idiomatic Grammar ES::1 Tiempos"
-    assert deck_name_for("es", "") == "Idiomatic Grammar ES"
-    ids = {int(k) for k in decks if decks[k]["name"].startswith("Idiomatic")}
-    assert _deck_id("Idiomatic Grammar ES::1 Tiempos") in ids
+    assert deck_name_for("es", "1 Tiempos") == "ES Spanish::2 Grammar::1 Tiempos"
+    assert deck_name_for("es", "") == "ES Spanish::2 Grammar"
+    ids = {int(k) for k in decks if decks[k]["name"].startswith("ES Spanish")}
+    assert _deck_id("ES Spanish::2 Grammar::1 Tiempos") in ids
 
 
 def test_full_sentence_text():

@@ -30,6 +30,7 @@ import genanki
 import structlog
 
 from .. import db, gemini
+from ..anki_tree import anki_root
 from ..pipeline.audio import LANG_VOICE
 from ..settings import get_settings
 from .explainers import VoiceRoute, _voice_fingerprint, leveled_speech_clip
@@ -297,7 +298,7 @@ def _deck_id(deck_name: str) -> int:
 
 def deck_name_for(lang: str, topic: str) -> str:
     label = TOPIC_LABELS.get((topic, lang), topic.replace("_", " ").title())
-    return f"Idiomatic Exercises {lang.upper()}::{label}"
+    return f"{anki_root(lang)}::4 Exercises::{label}"
 
 
 def make_model() -> genanki.Model:

@@ -113,7 +113,19 @@ async def list_pending(agent: dict = Depends(authed_agent)) -> list[dict]:
 
     Failed acks are transient (network blip, locked collection), so a
     failed-acked apkg is re-offered until its attempts hit the retry
-    budget — only an 'ok' ack (or budget exhaustion) is final."""
+    budget — only an 'ok' ack (or budget exhaustion) is final.
+
+    Retired kinds are never offered: the estate migration (2026-08-07)
+    ended per-video deck delivery and the didactic/audio pools; a stale
+    or resurrected row must not recreate an old-name tree in Anki."""
+    settings = get_settings()
+    excluded_kinds = []
+    if not settings.deliver_video_apkgs:
+        excluded_kinds.append("video")
+    if not settings.build_didactic_pool:
+        excluded_kinds.append("pool_idioms")
+    if not settings.build_audio_pools:
+        excluded_kinds += ["pool_idiom_t2e", "pool_idiom_e2t"]
     pool = await db.get_pool()
     rows = await pool.fetch(
         """
@@ -123,12 +135,14 @@ async def list_pending(agent: dict = Depends(authed_agent)) -> list[dict]:
         LEFT JOIN videos v ON v.id = a.video_id
         LEFT JOIN agent_acks ak ON ak.agent_id = $2 AND ak.apkg_id = a.id
         WHERE a.lang = ANY($1::text[])
+          AND NOT (a.kind = ANY($4::text[]))
           AND (ak.apkg_id IS NULL
                OR (ak.status = 'failed' AND ak.attempts < $3))
         ORDER BY a.created_at
         LIMIT 50
         """,
-        agent["langs"], agent["id"], get_settings().ack_retry_budget,
+        agent["langs"], agent["id"], settings.ack_retry_budget,
+        excluded_kinds,
     )
     return [dict(r) for r in rows]
 

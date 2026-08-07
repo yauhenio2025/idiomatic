@@ -87,9 +87,9 @@ def test_guid_is_stable_and_namespaced():
 
 
 def test_deck_id_range_and_deck_names():
-    assert tr.deck_name_for("es", "1 Tiempos") == "Idiomatic Translation ES::1 Tiempos"
-    assert tr.deck_name_for("es", "") == "Idiomatic Translation ES"
-    for name in ("Idiomatic Translation ES::1 Tiempos", "Idiomatic Translation DE"):
+    assert tr.deck_name_for("es", "1 Tiempos") == "ES Spanish::5 Translation::1 Tiempos"
+    assert tr.deck_name_for("es", "") == "ES Spanish::5 Translation"
+    for name in ("ES Spanish::5 Translation::1 Tiempos", "DE German::5 Translation"):
         deck_id = tr._deck_id(name)
         assert 1_930_000_000 <= deck_id < 1_990_000_000
         assert deck_id == tr._deck_id(name)
@@ -251,8 +251,8 @@ def test_apkg_build_packages_fields_media_and_subdecks(tmp_path: Path):
     try:
         (deck_json,) = connection.execute("SELECT decks FROM col").fetchone()
         deck_names = {deck["name"] for deck in json.loads(deck_json).values()}
-        assert "Idiomatic Translation ES::1 Tiempos" in deck_names
-        assert "Idiomatic Translation ES" in deck_names  # clusterless fallback
+        assert "ES Spanish::5 Translation::1 Tiempos" in deck_names
+        assert "ES Spanish::5 Translation" in deck_names  # clusterless fallback
         rows = connection.execute("SELECT guid, flds FROM notes").fetchall()
         by_id = {fields.split("\x1f")[0]: (guid, fields.split("\x1f"))
                  for guid, fields in rows}

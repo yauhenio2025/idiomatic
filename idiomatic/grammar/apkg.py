@@ -18,6 +18,7 @@ from pathlib import Path
 import genanki
 import structlog
 
+from ..anki_tree import anki_root
 from .explainers import EXPLAINER_UNITS, fossil_tags_for_item
 
 log = structlog.get_logger()
@@ -135,11 +136,19 @@ def _deck_id(deck_name: str) -> int:
 
 
 def deck_name_for(lang: str, cluster: str) -> str:
-    """'::' nests in Anki; a cluster-less topic falls back to the root
-    deck. Shared with /admin/grammar-deckmap so the add-on's reorganize
-    step and the apkg builder can never disagree."""
-    root = f"Idiomatic Grammar {lang.upper()}"
-    return f"{root}::{cluster}" if cluster else root
+    """'::' nests in Anki; a cluster-less topic falls back to the lane
+    root. Shared with /admin/grammar-deckmap so the add-on's reorganize
+    step and the apkg builder can never disagree. Post-estate (2026-08-07)
+    grammar lives under `<ROOT>::2 Grammar`; the native personal-error
+    clusters ("9 …") route to the language's `6 My Errors` lane instead."""
+    root = anki_root(lang)
+    if not cluster:
+        return f"{root}::2 Grammar"
+    if cluster.startswith("9 "):
+        rest = cluster.split("::", 1)
+        return (f"{root}::6 My Errors::{rest[1]}" if len(rest) == 2
+                else f"{root}::6 My Errors")
+    return f"{root}::2 Grammar::{cluster}"
 
 
 def build_grammar_apkg(*, out_path: Path, lang: str,

@@ -38,6 +38,7 @@ import genanki
 import structlog
 
 from .. import db, gemini
+from ..anki_tree import anki_root
 from ..settings import get_settings
 from . import morphology
 from .explainers import leveled_speech_clip
@@ -229,9 +230,8 @@ def tenses_guid(kind: str, lang: str, verb: str, tense_key: str,
 
 
 def deck_name_for(kind: str, lang: str, verb: str) -> str:
-    base = ("Idiomatic Tenses" if kind == "prod"
-            else "Idiomatic Tenses Exercises")
-    return f"{base} {lang.upper()}::{verb}"
+    lane = "1 Production" if kind == "prod" else "2 Exercises"
+    return f"{anki_root(lang)}::3 Tenses::{lane}::{verb}"
 
 
 def _deck_id(name: str) -> int:

@@ -127,8 +127,8 @@ def test_guid_and_deck_id_are_stable_and_namespaced():
 
 
 def test_deck_name_uses_label_map_with_title_fallback():
-    assert x2.deck_name_for("es", "connecting") == "Idiomatic Exercises ES::Conectores"
-    assert x2.deck_name_for("de", "fancy_vocab") == "Idiomatic Exercises DE::Fancy Vocab"
+    assert x2.deck_name_for("es", "connecting") == "ES Spanish::4 Exercises::Conectores"
+    assert x2.deck_name_for("de", "fancy_vocab") == "DE German::4 Exercises::Fancy Vocab"
 
 
 def test_cloze_rendering_escapes_and_marks_multiple_spans():
@@ -241,7 +241,7 @@ def test_apkg_build_packages_fields_media_and_subdeck(tmp_path: Path):
     try:
         (deck_json,) = connection.execute("SELECT decks FROM col").fetchone()
         deck_names = {deck["name"] for deck in json.loads(deck_json).values()}
-        assert "Idiomatic Exercises ES::Conectores" in deck_names
+        assert "ES Spanish::4 Exercises::Conectores" in deck_names
         (fields,) = connection.execute("SELECT flds FROM notes").fetchone()
         values = fields.split("\x1f")
         assert values[0] == "es:connecting:esc01"

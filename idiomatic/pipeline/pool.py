@@ -37,6 +37,7 @@ import genanki
 import structlog
 
 from .. import db
+from ..anki_tree import anki_root
 from ..langs import LANG_NAMES as _LANG_NAMES
 from ..settings import get_settings
 from . import audio as audio_mod
@@ -207,7 +208,7 @@ def _source_html(idiom_text: str, video_title: str | None,
 def _build_expression_pool(lang: str, idioms: list[dict],
                             stage_dir: Path, out: Path) -> int:
     """Returns card count."""
-    deck_name = f"Idiomatic::{_LANG_NAMES.get(lang, lang.upper())}::Fluency Expressions"
+    deck_name = f"{anki_root(lang)}::1 Expressions::1 Fluency"
     deck = genanki.Deck(_deck_id(deck_name), deck_name)
     model = _expr_model()
     media_files: list[str] = []
@@ -638,9 +639,15 @@ async def _rebuild_pools_locked(lang: str, force: bool) -> dict:
     # for 10+ minutes per rebuild once the library grew — the 2026-07-31
     # triple outage (docs/incidents/2026-07-31-web-hangs.md). In a
     # worker thread the event loop keeps serving while ffmpeg grinds.
-    idioms_n = await asyncio.to_thread(
-        _build_idioms_pool, lang, idioms, narration_root,
-        stage_root, idioms_apkg)
+    if settings.build_didactic_pool:
+        idioms_n = await asyncio.to_thread(
+            _build_idioms_pool, lang, idioms, narration_root,
+            stage_root, idioms_apkg)
+    else:
+        # Retired 2026-08-07 with the estate migration: the didactic
+        # family is archived under zz Dormant; the Expression Hub's
+        # model 1820180001 is the replacement producer.
+        idioms_n = 0
     expr_n = await asyncio.to_thread(
         _build_expression_pool, lang, idioms, stage_root, expr_apkg)
     if settings.build_audio_pools:

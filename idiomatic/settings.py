@@ -114,6 +114,15 @@ class Settings(BaseSettings):
     # them"); essential context moves onto main cards in the expression-hub
     # redesign. Set true to resurrect.
     build_audio_pools: bool = False
+    # Per-video didactic decks retired by the estate migration (2026-08-07,
+    # ANKI_ESTATE_REORG_PLAN §Live copy-back cutover). Video apkgs are still
+    # BUILT — the daily cap and retry accounting key on kind='video' rows —
+    # but /apkgs/pending no longer offers them. True resurrects delivery.
+    deliver_video_apkgs: bool = False
+    # Didactic Idioms pools (kind='pool_idioms') retired the same day: that
+    # card family is archived in zz Dormant; the Expression Hub's model
+    # 1820180001 replaces it. True resurrects the builder.
+    build_didactic_pool: bool = False
 
     # Soft cap on inflow — keeps daily Anki import manageable.
     # Counted against apkgs created today, not videos processed.

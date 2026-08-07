@@ -190,7 +190,7 @@ def test_apkg_build_both_kinds(tmp_path: Path):
     try:
         (deck_json,) = con.execute("SELECT decks FROM col").fetchone()
         names = {d["name"] for d in json.loads(deck_json).values()}
-        assert "Idiomatic Tenses Exercises PT::vir" in names
+        assert "PT Portuguese::3 Tenses::2 Exercises::vir" in names
         rows = con.execute("SELECT flds FROM notes").fetchall()
         blanks = [r[0].split("\x1f")[tenses.FIELDS.index("TLBlank")]
                   for r in rows]

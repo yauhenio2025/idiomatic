@@ -46,6 +46,7 @@ import genanki
 import structlog
 
 from .. import db, gemini
+from ..anki_tree import anki_root
 from ..pipeline.audio import EN_VOICE, LANG_VOICE
 from ..settings import get_settings
 from .apkg import _full_html
@@ -147,8 +148,8 @@ def _deck_id(deck_name: str) -> int:
 
 def deck_name_for(lang: str, cluster: str) -> str:
     """Same cluster strings as the grammar deck; clusterless items fall
-    back to the root deck."""
-    root = f"Idiomatic Translation {lang.upper()}"
+    back to the lane root."""
+    root = f"{anki_root(lang)}::5 Translation"
     return f"{root}::{cluster}" if cluster else root
 
 

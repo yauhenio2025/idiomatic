@@ -1076,7 +1076,7 @@ def test_f4_apkg_keeps_frozen_model_guid_subdeck_and_all_shape_directions(
     assert [field["name"] for field in model["flds"]] == _FROZEN_FIELDS
     assert len(model["tmpls"]) == 1
     assert any(
-        deck["name"] == "Idiomatic Grammar FR::10 Interférences"
+        deck["name"] == "FR French::2 Grammar::10 Interférences"
         for deck in decks.values()
     )
 

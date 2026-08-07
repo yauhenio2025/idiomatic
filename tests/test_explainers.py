@@ -618,8 +618,8 @@ def test_explainer_apkg_keeps_frozen_model_subdeck_media_guid_and_tags(tmp_path:
     }
 
     deck_names = {int(deck_id): row["name"] for deck_id, row in decks.items()}
-    assert deck_names[card_decks[radio["id"]]] == "Idiomatic Grammar FR::0 Écoute"
+    assert deck_names[card_decks[radio["id"]]] == "FR French::2 Grammar::0 Écoute"
     assert (
         deck_names[card_decks[notes["102"]["id"]]]
-        == "Idiomatic Grammar FR::9 Mes erreurs"
+        == "FR French::6 My Errors"
     )
