@@ -68,3 +68,13 @@ review/Flag-1 pair and clears Flag 1 only after the server acknowledges the
 diagnosis. With headless pull only, leave Flag 1 set through the next sync/pull
 and clear it after acknowledgement. Old flags are baseline-only and are never
 applied retroactively or auto-cleared.
+
+---
+
+## VERDICTS (user, 2026-08-07)
+
+All four recommendations ACCEPTED: (1) six initial examples, no hard cap,
+subordinate example cards; (2) **Balanced** weakness policy; (3) dedicated
+`<Language>::4 Exercises::Diagnosed trouble spots` subdeck for Flag-1
+diagnoses; (4) **vertical comic rail** hub card. The hub design is fully
+decided; build sequencing follows the estate-reorg plan's phase order.
