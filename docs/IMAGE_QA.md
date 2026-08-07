@@ -65,12 +65,21 @@ changes (that is how repaired images get their re-verdict).
 ## Orchestration
 
 - **Mac judging:** launchd agent `com.idiomatic.qa-judge` (every
-  15 min) → `qa/judge_batch.sh` (mkdir-lock, judge, report, repair
-  loop). BF16 judge + active minting do NOT fit in 96 GB together
-  (ComfyUI holds ~50 GB of Metal buffers mid-chunk); the memory guard
-  (default 58 GB available) defers judge batches to the gaps between
-  render chunks — measured 2026-08-07, per the commission's
-  serialize-if-needed clause.
+  15 min) and `run_queue_v2.sh` (after every render chunk) →
+  `qa/judge_batch.sh` (mkdir-lock, judge, report, repair loop). BF16
+  judge + active minting do NOT fit in 96 GB together (ComfyUI holds
+  ~50 GB of Metal buffers mid-chunk); the memory guard (default 58 GB
+  available) defers judge batches to the gaps between render chunks —
+  measured 2026-08-07, per the commission's serialize-if-needed clause.
+- **Bookscan coordination contract (2026-08-07):** when judge_batch has
+  pending work and no mint render is active, it touches
+  `~/llms/factory-node/PAUSE_BOOKSCAN` — bookscan holds new book spawns
+  and in-flight books drain within ~15 min, freeing the judge's memory
+  — waits up to 25 min for ≥58 GB, judges, then removes the flag
+  (trap-guaranteed, even on crash). NEVER SIGSTOP bookscan's driver —
+  a stopped driver wedges its children (5 h lost 2026-08-07). While a
+  mint render is active the pause is skipped (no window is possible);
+  the chunk boundary is the deterministic window.
 - **Transport (Fedora-initiated, key auth exists this direction):**
   systemd user timer `qa-sync.timer` every 30 min →
   `~/llms/qwen-image/factory/qa_sync.sh`: push Fedora corpus images +
