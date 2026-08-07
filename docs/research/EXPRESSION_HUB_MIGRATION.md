@@ -531,11 +531,11 @@ Source fields and `source::youtube::<id>` tags replace per-video deck branches.
 This study's direction/identity review refines the estate study's generic
 sentence-family move: Phrase v3 is archived or replaced with a fresh EN→TL
 card, while only validated Reverse v1 can keep an active schedule.
-It also supersedes the estate draft's current `EXPRESSION_MODELS` rule, which
-would move old Cloud/Idiom cards into active `Expression Focus`. Before joint
-execution, update that estate mapping/script to archive every old hub model and
-reserve `Expression Focus` for new model `1820180001`; otherwise the two plans
-conflict.
+The estate draft now implements the same boundary: it archives every old
+Cloud/Idiom/raw-phrase task intact, moves only compatible Pool-v1 cards into
+Fluency, and reserves `Expression Focus` for new model `1820180001`. Joint
+phase 0 must still regenerate both checksummed manifests from one post-sync
+copy before any authorized cutover.
 
 ## 9. Migration phases and rollback boundaries
 
