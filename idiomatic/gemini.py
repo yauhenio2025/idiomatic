@@ -14,6 +14,7 @@ import json
 import struct
 import subprocess
 import tempfile
+import time
 from pathlib import Path
 from typing import Any
 
@@ -537,12 +538,135 @@ async def _tts_call_fast(text: str, voice: str) -> dict:
     raise last_exc or GeminiTransient("tts: exhausted attempts")
 
 
+# ============================================================================
+# Local Qwen3-TTS bridge — primary TTS provider since 2026-08-07
+# (docs/commissions/LOCAL_TTS_BRIDGE_COMMISSION.md). Voice-cloned Qwen3-TTS
+# on the home box, reached via Tailscale Funnel; cost 0.
+# ============================================================================
+
+class QwenLocalDown(Exception):
+    """Bridge unreachable or busy (connect error, timeout, 503). Distinct
+    from a per-clip failure: trips the memoized down-flag so the rest of
+    the batch flips to ElevenLabs without re-probing every clip."""
+
+
+# Memoized health state. `url` is the last healthy base URL (None = down);
+# `checked` is when we last probed. One probe per TTL, batch-level failover.
+_QWEN: dict[str, Any] = {"url": None, "checked": 0.0, "lock": None}
+
+
+def _qwen_lock() -> asyncio.Lock:
+    if _QWEN["lock"] is None:
+        _QWEN["lock"] = asyncio.Lock()
+    return _QWEN["lock"]
+
+
+def _qwen_headers(s) -> dict[str, str]:
+    return {"Authorization": f"Bearer {s.qwen_tts_token}"}
+
+
+async def _qwen_healthy_url(s) -> str | None:
+    """First healthy bridge base URL, memoized for qwen_tts_health_ttl_sec.
+    Walks qwen_tts_urls in order (second host later = config, not code)."""
+    if time.monotonic() - _QWEN["checked"] < s.qwen_tts_health_ttl_sec:
+        return _QWEN["url"]
+    async with _qwen_lock():
+        if time.monotonic() - _QWEN["checked"] < s.qwen_tts_health_ttl_sec:
+            return _QWEN["url"]
+        url = None
+        bases = [u.strip().rstrip("/")
+                 for u in s.qwen_tts_urls.split(",") if u.strip()]
+        for base in bases:
+            try:
+                async with httpx.AsyncClient(timeout=8.0) as client:
+                    r = await client.get(f"{base}/health",
+                                         headers=_qwen_headers(s))
+                if r.status_code == 200 and r.json().get("ok"):
+                    url = base
+                    break
+            except Exception:
+                continue
+        _QWEN["url"], _QWEN["checked"] = url, time.monotonic()
+        if url is None:
+            log.warning("qwen_local.no_healthy_bridge", urls=s.qwen_tts_urls)
+        return url
+
+
+def _qwen_mark_down() -> None:
+    _QWEN["url"], _QWEN["checked"] = None, time.monotonic()
+
+
+async def _qwen_ledger(chars: int) -> None:
+    """Best-effort cost-0 audit row — keeps gen_ledger the single place
+    every generation shows up; ElevenLabs fallback stays billed as now."""
+    try:
+        from . import db
+        pool = await db.get_pool()
+        await pool.execute(
+            """
+            INSERT INTO gen_ledger (provider, model, kind, units, unit_kind,
+                                    cost_usd)
+            VALUES ('qwen-local', 'qwen3-tts-1.7b', 'tts', $1, 'char', 0)
+            """,
+            chars)
+    except Exception as e:
+        log.warning("qwen_local.ledger_write_failed", err=repr(e)[:120])
+
+
+async def _qwen_local_tts(text: str, out: Path, lang: str) -> None:
+    """One clip through the bridge. The mp3 arrives already at output
+    parity (−16 LUFS, 24 kHz mono) — written as-is, no re-encode."""
+    s = get_settings()
+    base = await _qwen_healthy_url(s)
+    if base is None:
+        raise QwenLocalDown("no healthy bridge")
+    try:
+        async with _tts_sem():
+            async with httpx.AsyncClient(
+                    timeout=s.qwen_tts_timeout_sec) as client:
+                r = await client.post(f"{base}/synth",
+                                      headers=_qwen_headers(s),
+                                      json={"text": text, "lang": lang})
+    except (httpx.TransportError, asyncio.TimeoutError) as e:
+        _qwen_mark_down()
+        raise QwenLocalDown(f"{type(e).__name__}: {str(e)[:120]}")
+    if r.status_code == 503:
+        # Etiquette gate on the box (ComfyUI rendering, thermals, VRAM):
+        # the whole batch defers to ElevenLabs, never disturbs the box.
+        _qwen_mark_down()
+        raise QwenLocalDown(f"bridge busy: {r.text[:120]}")
+    if r.status_code != 200:
+        raise RuntimeError(f"qwen bridge HTTP {r.status_code}: {r.text[:200]}")
+    if len(r.content) < 1000:
+        raise RuntimeError(f"qwen bridge returned {len(r.content)} bytes")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    tmp = out.with_name(".qwen_" + out.name)
+    tmp.write_bytes(r.content)
+    tmp.replace(out)
+    silence_marker(out).unlink(missing_ok=True)
+    await _qwen_ledger(len(text))
+
+
+def _qwen_serves(s, lang: str, eleven_voice_id: str | None) -> bool:
+    """Route to the bridge only when it can honor the request: provider
+    selected, token configured, language in the frozen-refs set, and no
+    explicit ElevenLabs voice override (tenses decks pick their own)."""
+    return (s.tts_provider == "qwen-local"
+            and bool(s.qwen_tts_token)
+            and eleven_voice_id is None
+            and lang in {x.strip() for x in s.qwen_tts_langs.split(",")})
+
+
 async def synthesize(text: str, *, voice: str, out: Path,
                       lang: str = "en",
                       eleven_voice_id: str | None = None) -> None:
     """TTS. Primary provider is settings.tts_provider:
 
-    - "elevenlabs" (default): ElevenLabs turbo v2.5, per-language voice from
+    - "qwen-local" (default since 2026-08-07): locally-hosted Qwen3-TTS
+      bridge, per-language clones of the ElevenLabs deck voices, cost 0.
+      Down/busy/unreachable → ElevenLabs for the rest of the batch
+      (memoized health, one probe per minute), then Gemini as last resort.
+    - "elevenlabs": ElevenLabs turbo v2.5, per-language voice from
       ELEVEN_LANG_VOICE. ~40× cheaper per char than the Gemini TTS preview
       and no safety blocks on target-language content. On any ElevenLabs
       failure (quota exhausted, 5xx) → fall through to the Gemini path.
@@ -569,7 +693,19 @@ async def synthesize(text: str, *, voice: str, out: Path,
 
     s = get_settings()
 
-    if s.tts_provider == "elevenlabs" and s.elevenlabs_api_key:
+    if _qwen_serves(s, lang, eleven_voice_id):
+        try:
+            await _qwen_local_tts(text, out, lang)
+            return
+        except QwenLocalDown as e:
+            log.warning("qwen_local.down.falling_back_to_elevenlabs",
+                         lang=lang, err=str(e)[:120])
+        except Exception as e:
+            log.warning("qwen_local.tts_failed.falling_back",
+                         lang=lang, err=repr(e)[:150], text_head=text[:60])
+
+    if (s.tts_provider in ("elevenlabs", "qwen-local")
+            and s.elevenlabs_api_key):
         try:
             await _elevenlabs_tts(text, out, s.elevenlabs_api_key, lang=lang,
                                   voice_id=eleven_voice_id)

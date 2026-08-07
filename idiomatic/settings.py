@@ -42,11 +42,33 @@ class Settings(BaseSettings):
     rescue_autopilot_max_new_items: int = 3     # auto-activated per run
     rescue_struggle_min_fails_14d: int = 3      # struggle-list threshold
 
-    # Primary TTS provider. "elevenlabs" (default) is ~40× cheaper per
-    # character than the Gemini TTS preview (July 2026 audit: Gemini billed
-    # ~€2/1k chars vs ElevenLabs turbo at $0.05/1k) and doesn't safety-block
-    # target-language content. Set to "gemini" to roll back instantly.
-    tts_provider: str = "elevenlabs"
+    # Primary TTS provider. "qwen-local" (default since 2026-08-07, user
+    # verdict after A/B listening) is the locally-hosted Qwen3-TTS bridge
+    # on the home box — cost 0, voices cloned from the ElevenLabs deck
+    # voices. Chain: qwen-local → elevenlabs → gemini. Set to
+    # "elevenlabs" to restore the July-2026 behavior exactly, "gemini"
+    # for the pre-July behavior.
+    tts_provider: str = "qwen-local"
+
+    # --- Qwen3-TTS bridge (docs/commissions/LOCAL_TTS_BRIDGE_COMMISSION.md)
+    # Comma-separated base URLs tried in order at health-probe time —
+    # adding the Mac Studio as a second host later is config, not code.
+    qwen_tts_urls: str = "https://fedora.tail363ee5.ts.net"
+    qwen_tts_token: str | None = None
+    # Languages the bridge serves (frozen clone refs + zh premade);
+    # anything else skips straight to ElevenLabs.
+    qwen_tts_langs: str = "en,de,es,fr,it,pt,zh"
+    # A dead/busy box costs one failed probe per TTL — not one per clip —
+    # and a mid-batch death flips the rest of the batch to ElevenLabs.
+    qwen_tts_health_ttl_sec: int = 60
+    # Generous: first clip after idle pays the model load (~30 s) plus
+    # up to ~8 queued clips at 3-5 s each ahead of it.
+    qwen_tts_timeout_sec: float = 120.0
+
+    # ElevenLabs — first fallback. ~40× cheaper per character than the
+    # Gemini TTS preview (July 2026 audit: Gemini billed ~€2/1k chars vs
+    # ElevenLabs turbo at $0.05/1k), no safety blocks on target-language
+    # content.
     elevenlabs_api_key: str | None = None
     # Turbo v2.5: 0.5 credit/char, supports language_code enforcement.
     elevenlabs_model: str = "eleven_turbo_v2_5"

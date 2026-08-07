@@ -953,9 +953,11 @@ async def admin_tts_sample(
     out_dir.mkdir(parents=True, exist_ok=True)
     out = out_dir / f"tts_sample_{name}.mp3"
     out.unlink(missing_ok=True)
-    voice_id = str(body.get("eleven_voice_id") or "") or \
-        gemini.ELEVEN_LANG_VOICE.get(lang) or \
-        gemini.ELEVEN_LANG_VOICE["es"]
+    # No explicit voice → the production chain (qwen-local bridge when
+    # enabled, else per-lang ElevenLabs voice). An explicit
+    # eleven_voice_id forces the ElevenLabs path — that's the voice
+    # bake-off use case.
+    voice_id = str(body.get("eleven_voice_id") or "") or None
     await gemini.synthesize(text, voice="Kore", out=out, lang=lang,
                             eleven_voice_id=voice_id)
     if not out.exists() or gemini.silence_marker(out).exists():
