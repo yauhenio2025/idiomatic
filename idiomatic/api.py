@@ -931,6 +931,39 @@ async def admin_tenses_voice_audition(
     return await tenses.voice_audition("es", text)
 
 
+@app.post("/admin/tts-sample")
+async def admin_tts_sample(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Render one arbitrary TTS sample through the production ElevenLabs
+    path (voice/quality experiments — e.g. the Qwen3-TTS bake-off).
+    Body: {text, lang, name, eleven_voice_id?}. File lands in
+    staged_audio/tts_samples/ and streams via the grammar audio route."""
+    from . import gemini
+
+    text = str(body.get("text") or "").strip()
+    lang = str(body.get("lang") or "").strip()
+    name = re.sub(r"[^a-z0-9_]", "", str(body.get("name") or "sample"))
+    if not text or len(text) > 500:
+        raise HTTPException(400, "need text (<=500 chars)")
+    if lang not in gemini._ELEVEN_LANG_CODES:
+        raise HTTPException(400, f"lang must be one of "
+                                 f"{sorted(gemini._ELEVEN_LANG_CODES)}")
+    out_dir = Path(get_settings().data_dir) / "staged_audio" / "grammar" / lang
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out = out_dir / f"tts_sample_{name}.mp3"
+    out.unlink(missing_ok=True)
+    voice_id = str(body.get("eleven_voice_id") or "") or \
+        gemini.ELEVEN_LANG_VOICE.get(lang) or \
+        gemini.ELEVEN_LANG_VOICE["es"]
+    await gemini.synthesize(text, voice="Kore", out=out, lang=lang,
+                            eleven_voice_id=voice_id)
+    if not out.exists() or gemini.silence_marker(out).exists():
+        raise HTTPException(502, "synthesis produced no audio")
+    return {"ok": True,
+            "url": f"/ui/api/audio/grammar/{lang}/{out.name}"}
+
+
 @app.get("/admin/disk-usage")
 async def admin_disk_usage(
     path: str = "", _: None = Depends(authed_admin),
