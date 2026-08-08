@@ -1,0 +1,929 @@
+[
+  {
+    "expression_id": 2179,
+    "idiom": "fica por aí",
+    "anchor": {
+      "semantic_hook": "Staying around there becomes remaining inside a circular waiting place marked by a huge pointing hand.",
+      "setting": "A multipurpose waiting hall contains an entrance bench, a broadcast desk, a conversation table, a small stage corner, a dining table, and an exit alcove. An enormous stone hand descends from the ceiling and points at the center of a wide circular floor inlay. The hand remains the only impossible feature among the ordinary furnishings.",
+      "cast": [
+        "wagner_moura",
+        "kevinho"
+      ],
+      "absurd_element": "an enormous ceiling-mounted stone hand pointing at the circular place where someone should remain"
+    },
+    "variations": [
+      {
+        "example_id": 12943,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "stands inside the circular inlay, glances eagerly toward the entrance, and raises one hand in greeting"
+          },
+          {
+            "slug": "kevinho",
+            "action": "hurries through the entrance toward Wagner with an apologetic smile and an outstretched arm"
+          }
+        ],
+        "scene_adjust": "an analog clock with its hands five minutes apart and a travel bag sit beside the entrance bench"
+      },
+      {
+        "example_id": 12944,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "stands behind the broadcast desk, gestures for the viewer to remain, and beams with anticipation toward the studio camera"
+          }
+        ],
+        "scene_adjust": "an unmarked studio camera, a blank monitor, and several closed surprise boxes occupy the broadcast station"
+      },
+      {
+        "example_id": 12945,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "sits relaxed at one side of the conversation table, leans forward, and listens with warm attention"
+          },
+          {
+            "slug": "kevinho",
+            "action": "sits opposite Wagner, speaks animatedly with open palms, and settles comfortably into the long conversation"
+          }
+        ],
+        "scene_adjust": "two steaming cups and an idle analog clock rest on the conversation table in the evening"
+      },
+      {
+        "example_id": 12946,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "stands beside the stage after the performance, gestures enthusiastically, and keeps the conversation going"
+          },
+          {
+            "slug": "kevinho",
+            "action": "holds a closed guitar case beside Wagner, listens closely, and answers with an animated smile"
+          }
+        ],
+        "scene_adjust": "closed instrument cases, coiled cables, and an extinguished stage lamp fill the stage corner after the show"
+      },
+      {
+        "example_id": 12947,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "remains inside the circular inlay, removes his coat, and accepts the invitation with a grateful smile"
+          },
+          {
+            "slug": "kevinho",
+            "action": "stands beside the dining table, pulls out a second chair for Wagner, and welcomes him with an open palm"
+          }
+        ],
+        "scene_adjust": "a hot dinner for two and two pulled-out chairs wait at the dining table"
+      },
+      {
+        "example_id": 12948,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "pauses between the circular inlay and the open exit, one hand on his coat and one foot turned uncertainly back toward the room"
+          }
+        ],
+        "scene_adjust": "a coat stand and an open exterior door frame the choice between leaving and remaining"
+      }
+    ]
+  },
+  {
+    "expression_id": 2180,
+    "idiom": "de olho",
+    "anchor": {
+      "semantic_hook": "Keeping an eye on something becomes placing every watched object under one physically watchful eye.",
+      "setting": "A monitoring gallery contains a kitchen counter, an office desk, a poolside station, an electronics display, a subway bench, and a technology workbench. A room-sized floating eyeball pivots above the center and aims its gaze toward whichever station needs attention. All stations and their equipment remain ordinary.",
+      "cast": [
+        "anitta"
+      ],
+      "absurd_element": "a room-sized floating eyeball that pivots toward each watched object"
+    },
+    "variations": [
+      {
+        "example_id": 12949,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "leans toward the oven window, keeps her eyes fixed on the rising cake, and points urgently at the timer"
+          }
+        ],
+        "scene_adjust": "a cake browning inside an oven and a ticking kitchen timer occupy the kitchen counter"
+      },
+      {
+        "example_id": 12950,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "stands beside the office desk, studies the soon-vacant manager chair, and reaches toward it with restrained ambition"
+          }
+        ],
+        "scene_adjust": "a manager chair sits behind a desk beside a packed moving box and a monthly calendar made only of blank squares"
+      },
+      {
+        "example_id": 12951,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "stands alert at the pool edge, scans the water without turning away, and grips a rescue ring at the ready"
+          }
+        ],
+        "scene_adjust": "three small flotation vests, pool toys, a rescue ring, and splashing water occupy the poolside station"
+      },
+      {
+        "example_id": 12952,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "examines the new phone without touching it, holds her wallet closed, and waits with deliberate patience"
+          }
+        ],
+        "scene_adjust": "a new unbranded phone, a closed wallet, and dark seasonal-sale bunting occupy the electronics display"
+      },
+      {
+        "example_id": 12953,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "sits on the subway bench, presses her backpack securely between her feet, and watches it with guarded attention"
+          }
+        ],
+        "scene_adjust": "a plain backpack rests between the subway bench and a set of open train doors"
+      },
+      {
+        "example_id": 12954,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "leans over the technology workbench, compares several devices closely, and selects one with a confident gesture"
+          }
+        ],
+        "scene_adjust": "an unbranded service tablet, a compact headset, a small robot arm, and a blank feedback console cover the technology workbench"
+      }
+    ]
+  },
+  {
+    "expression_id": 2181,
+    "idiom": "causou bastante rebuliço",
+    "anchor": {
+      "semantic_hook": "Causing a great stir becomes a giant utensil physically stirring the surroundings into a commotion.",
+      "setting": "A civic atrium contains an office bay, a school corner, a town model, a phone station, a family table, and a screening desk. At the center, one enormous spoon churns the solid floor into a spiraling wave that tosses loose everyday objects around its rim. The six stations remain fixed beyond the spiral.",
+      "cast": [
+        "kevinho"
+      ],
+      "absurd_element": "one enormous spoon churning a solid floor into a commotion-filled spiral"
+    },
+    "variations": [
+      {
+        "example_id": 12955,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "stands in the office bay, stares at the altered wall clock in disbelief, and throws both hands up in protest"
+          }
+        ],
+        "scene_adjust": "an analog office clock with newly shifted hands, overturned desk chairs, and scattered timecards fill the office bay"
+      },
+      {
+        "example_id": 12956,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "sits at the school corner, grips the sides of his head, and reacts with outraged disappointment toward the canceled trip display"
+          }
+        ],
+        "scene_adjust": "packed excursion bags sit beside a bus model whose wheels have been removed"
+      },
+      {
+        "example_id": 12957,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "kneels beside the town model, points at the incoming supermarket structure, and argues with an alarmed expression"
+          }
+        ],
+        "scene_adjust": "an unfinished supermarket model, miniature construction barriers, and displaced model houses occupy the town station"
+      },
+      {
+        "example_id": 12958,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "holds up his phone at the evening station, recoils from the flood of reactions, and covers his mouth in shock"
+          }
+        ],
+        "scene_adjust": "an unbranded phone displays only clusters of reaction icons while many notification lights surround it at night"
+      },
+      {
+        "example_id": 12959,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "stands at the family table between open suitcases, spreads his palms over a globe, and braces for an emotional uproar"
+          }
+        ],
+        "scene_adjust": "open suitcases, a globe, scattered travel clothes, and several abruptly pushed-back chairs surround the family table"
+      },
+      {
+        "example_id": 12960,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "sits at the screening desk, stares at the final frozen film frame, and gestures in heated disbelief toward the empty critic chairs"
+          }
+        ],
+        "scene_adjust": "a blank cinema screen, a stopped film reel, overturned snack bowls, and several critic chairs occupy the screening bay"
+      }
+    ]
+  },
+  {
+    "expression_id": 2182,
+    "idiom": "sem pé nem cabeça",
+    "anchor": {
+      "semantic_hook": "Without foot or head becomes a body-shaped object visibly missing both its head and its feet.",
+      "setting": "A reasoning chamber contains a cinema seat, an excuse podium, a traffic model, a meeting table, a bedside alcove, and a debate platform. A colossal marble figure stands at the center with an empty neck and both legs ending above the ankles, yet the unsupported torso remains upright. All six stations contain ordinary furnishings.",
+      "cast": [
+        "fernando_haddad"
+      ],
+      "absurd_element": "a colossal upright marble figure with no head and no feet"
+    },
+    "variations": [
+      {
+        "example_id": 12961,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "sits in the cinema seat, watches the disconnected final images, and lifts both palms in total confusion"
+          }
+        ],
+        "scene_adjust": "a film reel unspools into disconnected images of an umbrella, a fishbowl, and a bicycle beside the cinema seat"
+      },
+      {
+        "example_id": 12962,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "stands late at the excuse podium, points between unrelated objects, and winces at his own tangled explanation"
+          }
+        ],
+        "scene_adjust": "an analog clock well past the expected arrival position, a muddy shoe, a deflated balloon, and a cold coffee surround the excuse podium"
+      },
+      {
+        "example_id": 12963,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "crouches beside the traffic model, traces a hopeless route with one finger, and scratches his head in bafflement"
+          }
+        ],
+        "scene_adjust": "toy cars face contradictory directions on disconnected road sections throughout the traffic model"
+      },
+      {
+        "example_id": 12964,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "stands at the meeting table, presents mismatched objects with forced confidence, and falters under their obvious incoherence"
+          }
+        ],
+        "scene_adjust": "a blank presentation board, a watering can, one roller skate, and an unplugged keyboard cover the meeting table"
+      },
+      {
+        "example_id": 12965,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "sits bolt upright in the bedside alcove, clutches the blanket, and stares wide-eyed at the chaotic dream objects"
+          }
+        ],
+        "scene_adjust": "a bedside lamp, a teacup balanced on a bicycle seat, scattered feathers, and a wet umbrella crowd the dream alcove"
+      },
+      {
+        "example_id": 12966,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "stands on the debate platform, points angrily at a trivial broken pencil, and argues with an unseen opponent beyond the frame"
+          }
+        ],
+        "scene_adjust": "a single broken pencil lies between two opposing lecterns at the debate platform"
+      }
+    ]
+  },
+  {
+    "expression_id": 2183,
+    "idiom": "puxar a orelha",
+    "anchor": {
+      "semantic_hook": "Pulling the ear becomes a reprimand delivered beside an ear that is physically stretched.",
+      "setting": "A discipline room contains a homework desk, an office clock station, a pet-care corner, a classroom row, a manager desk, and a friendship bench. A gigantic elastic ear projects from the central wall and stretches across the room whenever its brass handle is pulled. Every other object remains ordinary.",
+      "cast": [
+        "marina_silva"
+      ],
+      "absurd_element": "a gigantic wall-mounted elastic ear that stretches across the room"
+    },
+    "variations": [
+      {
+        "example_id": 12967,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "stands sternly beside the unfinished homework desk, pulls the giant ear's handle, and points at the untouched exercise books"
+          }
+        ],
+        "scene_adjust": "untouched exercise books, loose pencils, and an empty child's chair occupy the homework desk"
+      },
+      {
+        "example_id": 12968,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "hurries past the office clock station, ducks beneath the stretched giant ear, and grimaces at the prospect of another reprimand"
+          }
+        ],
+        "scene_adjust": "an analog clock with its hands well past the starting position, a closed briefcase, and an empty boss chair occupy the office station"
+      },
+      {
+        "example_id": 12969,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "stands beside the empty dog bowl, tugs the giant ear's handle firmly, and scolds toward the vacant chair opposite her"
+          }
+        ],
+        "scene_adjust": "an empty dog bowl, a full scoop of untouched kibble, and a leash occupy the pet-care corner"
+      },
+      {
+        "example_id": 12970,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "stands at the front of the classroom row, pulls the giant ear taut, and fixes the noisy desks with a severe stare"
+          }
+        ],
+        "scene_adjust": "several askew student chairs, bouncing pencils, and rattling desk lids fill the classroom row"
+      },
+      {
+        "example_id": 12971,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "sits contritely before the manager desk, lowers her eyes toward the late report, and winces beneath the stretched giant ear"
+          }
+        ],
+        "scene_adjust": "a thick closed report, an empty manager chair, and an analog deadline clock occupy the manager station"
+      },
+      {
+        "example_id": 12972,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "sits on the friendship bench, accepts the firm rebuke with a humbled expression, and grips the stretched giant ear beside her"
+          }
+        ],
+        "scene_adjust": "two mugs, a shared plate of snacks, and an empty companion seat occupy the friendship bench"
+      }
+    ]
+  },
+  {
+    "expression_id": 2184,
+    "idiom": "saindo pela culatra",
+    "anchor": {
+      "semantic_hook": "A shot leaving through the breech becomes a cannon whose discharge comes out of its rear instead of its barrel.",
+      "setting": "A consequence workshop contains a boss desk, a prank table, a truth corner, a marketing station, a car bay, and a school desk. At its center stands an enormous antique cannon whose rear breech opens into a second muzzle aimed directly backward. The normal forward barrel and all surrounding props remain still.",
+      "cast": [
+        "anitta"
+      ],
+      "absurd_element": "an enormous cannon with a second muzzle opening backward through its breech"
+    },
+    "variations": [
+      {
+        "example_id": 12973,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "poses proudly beside her elaborate presentation, then recoils as the cannon's rear points toward her instead of the boss desk"
+          }
+        ],
+        "scene_adjust": "an overdecorated presentation model and a closed executive briefcase occupy the boss station"
+      },
+      {
+        "example_id": 12974,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "crouches behind the prank table with a mischievous grin, then startles when the harmless mechanism collapses onto her side"
+          }
+        ],
+        "scene_adjust": "a harmless spring-box prank, a loose rubber spider, and a tipped cup cover the prank table"
+      },
+      {
+        "example_id": 12975,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "hides crossed fingers behind her back, glances nervously at the backward breech, and freezes under its returning aim"
+          }
+        ],
+        "scene_adjust": "a cracked disguise mask and two pieces of contradictory evidence sit in the truth corner"
+      },
+      {
+        "example_id": 12976,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "stands at the marketing station, watches customers' abandoned carts roll away, and covers her face in dismay"
+          }
+        ],
+        "scene_adjust": "an unmarked product display, a costly stack of unused flyers with blank faces, and several abandoned shopping carts fill the marketing station"
+      },
+      {
+        "example_id": 12977,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "kneels beside the open car hood, holds the wrong wrench, and stares in horror at the now larger pile of broken parts"
+          }
+        ],
+        "scene_adjust": "an ordinary car with its hood open, mismatched tools, a small savings jar, and newly removed engine parts occupy the car bay"
+      },
+      {
+        "example_id": 12978,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "stands beside the school desk, holds a confiscation basket full of phones, and flinches at the angry reaction beyond the frame"
+          }
+        ],
+        "scene_adjust": "a basket of unbranded phones, several slammed desk lids, and overturned school chairs occupy the school station"
+      }
+    ]
+  },
+  {
+    "expression_id": 2185,
+    "idiom": "virou o xodó",
+    "anchor": {
+      "semantic_hook": "Becoming the darling becomes being physically drawn onto the room's place of greatest affection.",
+      "setting": "An affection gallery contains a home nook, a living-room corner, a nursery alcove, a beach display, an office desk, and a wardrobe bay. A room-sized heart-shaped magnet hangs above a central pedestal and lifts the current favorite object gently toward it. All six surrounding stations remain ordinary.",
+      "cast": [
+        "dilma_rousseff"
+      ],
+      "absurd_element": "a room-sized heart-shaped magnet lifting the favorite object from its station"
+    },
+    "variations": [
+      {
+        "example_id": 12979,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "kneels in the home nook, cups the adopted kitten gently in both hands, and smiles with complete affection"
+          }
+        ],
+        "scene_adjust": "a kitten bed, a small food bowl, an adoption carrier, and a ball of yarn occupy the home nook"
+      },
+      {
+        "example_id": 12980,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "stands beside the new plant, turns its pot toward the central pedestal, and admires it with proud fondness"
+          }
+        ],
+        "scene_adjust": "a lush new houseplant in a ceramic pot occupies the best position in the living-room corner"
+      },
+      {
+        "example_id": 12981,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "leans over the cradle in a grandmotherly posture, clasps her hands near her heart, and gazes down with tender delight"
+          }
+        ],
+        "scene_adjust": "a cradle, tiny booties, a folded baby blanket, and a small wooden rattle occupy the nursery alcove"
+      },
+      {
+        "example_id": 12982,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "rests contentedly on the quiet sand, trails one hand through the clear shallows, and admires the secluded northern shore"
+          }
+        ],
+        "scene_adjust": "a broad tray of quiet beach sand, clear shallow water, smooth rocks, and a folded tourist map with no markings fill the beach display"
+      },
+      {
+        "example_id": 12983,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "stands at the intern desk, cheerfully offers fresh coffee toward the surrounding workstations, and receives the warm welcome with a modest smile"
+          }
+        ],
+        "scene_adjust": "a tidy intern desk, several full coffee cups, a neat closed notebook, and welcoming empty chairs occupy the office bay"
+      },
+      {
+        "example_id": 12984,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "wears the yellow coat before the open wardrobe, hugs its lapels close, and admires her favorite purchase with satisfaction"
+          }
+        ],
+        "scene_adjust": "an open wardrobe of ordinary garments leaves its most prominent hanger empty for the yellow coat"
+      }
+    ]
+  },
+  {
+    "expression_id": 2186,
+    "idiom": "não é brincadeira",
+    "anchor": {
+      "semantic_hook": "No joke becomes a familiar joke toy rendered physically incapable of play.",
+      "setting": "A serious-task hall contains a sickbed, a grocery checkout, a study desk, an outdoor workbench, a car seat, and a childcare corner. At the center sits a room-sized jack-in-the-box carved from one solid block of stone, with its lid sealed and its crank immovable. Every surrounding station remains ordinary and usable.",
+      "cast": [
+        "wagner_moura"
+      ],
+      "absurd_element": "a room-sized stone jack-in-the-box with a sealed lid and immovable crank"
+    },
+    "variations": [
+      {
+        "example_id": 12985,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "lies exhausted in the sickbed beneath a blanket, presses a thermometer under one arm, and reaches weakly toward a box of tissues"
+          }
+        ],
+        "scene_adjust": "a thermometer, a tissue box, seven used bedside cups, and rumpled bedding fill the sickbed station"
+      },
+      {
+        "example_id": 12986,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "stands at the grocery checkout, peers into his nearly empty wallet, and stares at the small basket of food in alarm"
+          }
+        ],
+        "scene_adjust": "a small grocery basket, a nearly empty wallet, and loose produce occupy the grocery station"
+      },
+      {
+        "example_id": 12987,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "hunches over the study desk, rubs his tired eyes, and keeps working through a tall stack of closed study cards"
+          }
+        ],
+        "scene_adjust": "many closed study cards, sharpened pencils, a cold cup, and an analog clock near dawn cover the final-exam desk"
+      },
+      {
+        "example_id": 12988,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "labors at the outdoor workbench, shields his face from the fierce sun, and wipes heavy sweat from his brow"
+          }
+        ],
+        "scene_adjust": "work gloves, heavy tools, a water jug, hard midday shadows, and dry ground surround the outdoor workbench"
+      },
+      {
+        "example_id": 12989,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "grips the steering wheel with both hands, leans forward tensely, and peers through the rain-obscured windshield at night"
+          }
+        ],
+        "scene_adjust": "dense rain covers the dark windshield while ordinary wipers, dim road reflectors, and pooled water define the driving station"
+      },
+      {
+        "example_id": 12990,
+        "inserts": [
+          {
+            "slug": "wagner_moura",
+            "action": "stands overwhelmed between three rocking cradles, balances a bottle and a toy, and reaches urgently toward the third crib"
+          }
+        ],
+        "scene_adjust": "three rocking cradles with raised sides stand amid bottles, blocks, bibs, and scattered blankets"
+      }
+    ]
+  },
+  {
+    "expression_id": 2187,
+    "idiom": "fazer campo",
+    "anchor": {
+      "semantic_hook": "Doing field work becomes a machine physically making a field while evidence is gathered from real terrain.",
+      "setting": "A field-research base contains a forest plot, a village survey station, an interview corner, a coastal model, a report desk, and a dry farmland plot. One enormous workshop press continuously stamps bare soil into living squares of meadow that join into a field across the floor. The research stations and equipment remain ordinary.",
+      "cast": [
+        "marina_silva"
+      ],
+      "absurd_element": "an enormous workshop press manufacturing a living field from bare soil"
+    },
+    "variations": [
+      {
+        "example_id": 12991,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "kneels in the forest plot, clips a leaf specimen carefully, and places it into a sample envelope"
+          }
+        ],
+        "scene_adjust": "ferns, tree roots, sample envelopes with blank faces, pruning shears, and specimen trays fill the forest plot"
+      },
+      {
+        "example_id": 12992,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "stands beside the northern village model, measures a small stone house, and arranges three weeks of collected samples in rows"
+          }
+        ],
+        "scene_adjust": "small stone-house models, survey tools, weathered boots, and twenty-one sample jars occupy the village station"
+      },
+      {
+        "example_id": 12993,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "sits in the interview corner, leans attentively toward an empty guest chair, and holds an unmarked recorder ready for a direct conversation"
+          }
+        ],
+        "scene_adjust": "an unmarked audio recorder, a plain microphone, two chairs, and a closed reporter's notebook occupy the interview corner"
+      },
+      {
+        "example_id": 12994,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "crouches at the coastal model, aligns measuring stakes along the retreating edge, and studies the eroded sand closely"
+          }
+        ],
+        "scene_adjust": "a long sand tray with a visibly eroded edge, measuring stakes, survey string, and coastal rocks fills the coast station"
+      },
+      {
+        "example_id": 12995,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "stands between the incomplete report desk and the open field kit, chooses the field kit, and strides back toward the research plots"
+          }
+        ],
+        "scene_adjust": "an unfinished stack of blank report pages sits beside an open field kit with several empty sample containers"
+      },
+      {
+        "example_id": 12996,
+        "inserts": [
+          {
+            "slug": "marina_silva",
+            "action": "works in the dry farmland plot, examines a soil core, and waves apologetically toward an unanswered meeting device on the distant desk"
+          }
+        ],
+        "scene_adjust": "cork-oak branches, dry soil, a soil corer, sample tubes, and a silent tablet with a blank screen define the Alentejo station"
+      }
+    ]
+  },
+  {
+    "expression_id": 2188,
+    "idiom": "acaba descobrindo",
+    "anchor": {
+      "semantic_hook": "Ending up discovering becomes every route physically ending at a lid that uncovers something hidden.",
+      "setting": "A discovery arcade contains a reading desk, a bedroom storage corner, an office station, a narrow street set, a travel bay, and a language-practice table. One continuous path runs through all six stations, climbs vertically at its end, and terminates beneath an enormous raised floor hatch. Ordinary clues and found objects can be placed at the open end.",
+      "cast": [
+        "kevinho",
+        "anitta"
+      ],
+      "absurd_element": "a continuous floor path climbing vertically and ending beneath an enormous raised floor hatch"
+    },
+    "variations": [
+      {
+        "example_id": 12997,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "sits absorbed at the reading desk, follows the final illustrated clue with one finger, and spots the hidden key before reaching the last page"
+          }
+        ],
+        "scene_adjust": "an open book containing only sequential illustrations conceals a small key-shaped clue several pages before its end"
+      },
+      {
+        "example_id": 12998,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "kneels while cleaning the bedroom corner, lifts an old photograph from beneath a storage box, and smiles in surprised recognition"
+          }
+        ],
+        "scene_adjust": "cleaning cloths, a shifted storage box, and an old photograph showing Kevinho beside Anitta occupy the bedroom corner"
+      },
+      {
+        "example_id": 12999,
+        "inserts": [
+          {
+            "slug": "anitta",
+            "action": "stands uneasily beside the office clock, hides a late file behind her back, and freezes when the evidence is uncovered"
+          },
+          {
+            "slug": "kevinho",
+            "action": "stands behind the office desk, compares the clock with the revealed file, and fixes Anitta with a stern look of realization"
+          }
+        ],
+        "scene_adjust": "an analog clock, a late delivery file with a blank cover, and a revealing sequence of punch holes occupy the office station"
+      },
+      {
+        "example_id": 13000,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "walks through the narrow street set, turns into a hidden courtyard, and spreads his arms in delighted discovery"
+          },
+          {
+            "slug": "anitta",
+            "action": "steps into the courtyard behind Kevinho, inhales the meal's aroma, and points excitedly toward the tucked-away restaurant tables"
+          }
+        ],
+        "scene_adjust": "a tucked-away restaurant courtyard with set tables, steaming dishes, and a narrow unmarked entrance occupies the street station"
+      },
+      {
+        "example_id": 13001,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "emerges from the confusing trail into the coastal corner, drops his route map, and stares at the secluded beach in amazement"
+          },
+          {
+            "slug": "anitta",
+            "action": "steps beside Kevinho, brushes sand from her shoes, and raises both arms in delighted relief"
+          }
+        ],
+        "scene_adjust": "a route map with lines but no markings lies beside a winding path that reaches a secluded sandy beach bay"
+      },
+      {
+        "example_id": 13002,
+        "inserts": [
+          {
+            "slug": "kevinho",
+            "action": "practices aloud at the language table, repeats the exercise with growing ease, and smiles at his own newfound fluency"
+          }
+        ],
+        "scene_adjust": "a set of illustrated object-and-action cards and a row of completed practice tokens cover the language table"
+      }
+    ]
+  },
+  {
+    "expression_id": 2189,
+    "idiom": "de verdade",
+    "anchor": {
+      "semantic_hook": "Being of truth becomes passing through a device that removes a false outer shell and exposes the genuine core.",
+      "setting": "An authenticity hall contains an apology bench, a castle display, a driving rig, an evidence table, a materials counter, and a friendship station. A room-sized transparent prism hangs over the center and causes any object beneath it to shed a hollow imitation shell while its solid genuine core remains. All six stations otherwise contain ordinary objects.",
+      "cast": [
+        "dilma_rousseff"
+      ],
+      "absurd_element": "a room-sized prism that removes hollow imitation shells and exposes genuine cores"
+    },
+    "variations": [
+      {
+        "example_id": 13003,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "sits on the apology bench with lowered eyes and clasped hands, leans forward sincerely, and waits anxiously for forgiveness"
+          }
+        ],
+        "scene_adjust": "a repaired keepsake, a used tissue, and an empty chair facing the apology bench reinforce the serious request for forgiveness"
+      },
+      {
+        "example_id": 13004,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "stands beside the tiny castle, taps its solid stone wall, and reacts with astonishment at the fully functional structure"
+          }
+        ],
+        "scene_adjust": "a tiny complete stone castle with working gates, deep foundations, and furnished rooms occupies the castle display"
+      },
+      {
+        "example_id": 13005,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "sits at the driving rig, grips the wheel correctly, checks both mirrors, and practices the maneuver with focused repetition"
+          }
+        ],
+        "scene_adjust": "an unbranded practice car, traffic cones, mirrors, and worn tire tracks occupy the driving station"
+      },
+      {
+        "example_id": 13006,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "leans over the evidence table, holds up the undeniable object with widened eyes, and turns toward the empty witness chair in stunned confirmation"
+          }
+        ],
+        "scene_adjust": "a muddy key, a broken cup, matching fragments, and an analog clock occupy the evidence table"
+      },
+      {
+        "example_id": 13007,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "stands at the materials counter, bends the plastic bag between both hands, and frowns at the fake leather surface"
+          }
+        ],
+        "scene_adjust": "a plastic handbag with a peeling imitation grain sits beside a genuine hide sample on the materials counter"
+      },
+      {
+        "example_id": 13008,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "kneels at the friendship station, braces the empty companion chair with one hand, and offers practical help with a steady reassuring smile"
+          }
+        ],
+        "scene_adjust": "a fallen grocery bag, gathered belongings, a first-aid pouch, and an empty companion chair occupy the friendship station"
+      }
+    ]
+  },
+  {
+    "expression_id": 2190,
+    "idiom": "o tempo todo",
+    "anchor": {
+      "semantic_hook": "All the time becomes one complete clock face occupying the whole room and moving without pause.",
+      "setting": "A circular daily-life room contains a dinner table, a concentration desk, a beach shelter, a travel display, an office station, and a cat-photo corner. One enormous digit-free clock face covers the entire floor, and its two hands sweep continuously through every station. The furniture remains fixed around its rim.",
+      "cast": [
+        "fernando_haddad",
+        "dilma_rousseff"
+      ],
+      "absurd_element": "an enormous floor clock whose hands sweep continuously through every station"
+    },
+    "variations": [
+      {
+        "example_id": 13009,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "sits at the dinner table with his eyes fixed on his phone, repeatedly scrolls, and ignores the cooling meal"
+          }
+        ],
+        "scene_adjust": "a served dinner, an unbranded phone, and an untouched place setting occupy the dining station"
+      },
+      {
+        "example_id": 13010,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "hunches over the concentration desk, presses his fingers to his temples, and struggles to focus"
+          },
+          {
+            "slug": "dilma_rousseff",
+            "action": "stands beside Fernando, talks continuously with animated hands, and remains oblivious to his growing frustration"
+          }
+        ],
+        "scene_adjust": "a delicate unfinished puzzle and several neatly arranged blank study cards cover the concentration desk"
+      },
+      {
+        "example_id": 13011,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "huddles beneath the beach shelter, wrings out his soaked shirt, and watches the relentless rain with weary resignation"
+          },
+          {
+            "slug": "dilma_rousseff",
+            "action": "sits beside Fernando under the leaking shelter, empties water from a beach shoe, and sighs at the ruined vacation"
+          }
+        ],
+        "scene_adjust": "continuous rain, soaked towels, closed sun umbrellas, and flooded sand surround the beach shelter"
+      },
+      {
+        "example_id": 13012,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "stands at the travel display, holds a treasured trip photograph close, and returns to it with a distant joyful smile"
+          }
+        ],
+        "scene_adjust": "a travel photograph, a worn suitcase, seashells, and a small landmark model occupy the memory display"
+      },
+      {
+        "example_id": 13013,
+        "inserts": [
+          {
+            "slug": "fernando_haddad",
+            "action": "stands at the office station with folded arms, gestures repeatedly at the same pile of work, and complains with an exasperated expression"
+          }
+        ],
+        "scene_adjust": "an ordinary laptop with a blank screen, a recurring stack of closed files, and a cold coffee occupy the office desk"
+      },
+      {
+        "example_id": 13014,
+        "inserts": [
+          {
+            "slug": "dilma_rousseff",
+            "action": "sits in the cat-photo corner, raises her phone for yet another picture, and poses eagerly beside the cat cushions"
+          }
+        ],
+        "scene_adjust": "an unbranded phone shows only a cat image while many printed cat photographs with blank borders cover the nearby table"
+      }
+    ]
+  }
+]
