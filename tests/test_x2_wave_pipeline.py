@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+from pathlib import Path
 
 import pytest
 
@@ -129,6 +130,45 @@ def test_four_adjudicated_language_gate_false_positives(text: str, lang: str):
 def test_language_gate_still_catches_strong_spanish_in_portuguese_output():
     text = "Las plataformas no protegen los datos; la regulación sigue pendiente."
     assert gate._wrong_language(text, "pt") == "es"
+
+
+def test_shadowing_pilot_uses_its_separate_gate_schema(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+):
+    batch_dir = tmp_path / "batches"
+    (batch_dir / "input").mkdir(parents=True)
+    (batch_dir / "output").mkdir()
+    chunk = "pt_big_tech_phrases_pilot_b01"
+    source = [{"id": "it_big_tech_phrases_001", "en": "In light of this", "old_back": ""}]
+    notes = [{
+        "id": "it_big_tech_phrases_001",
+        "en": "In light of this",
+        "category": "context-frame",
+        "tl": "À luz desses fatos, a comissão reavaliará a proposta.",
+        "focus_tl": "À luz desses fatos",
+        "focus_en": "in light of",
+        "register": "Formal institutional framing.",
+        "trap": "Do not calque Spanish a la luz de.",
+        "note": "",
+    }]
+    triage = [{
+        "id": "it_big_tech_phrases_001",
+        "en": "In light of this",
+        "verdict": "keep",
+        "reason": "",
+    }]
+    for directory, suffix, payload in (
+        ("input", "", source),
+        ("output", "_notes", notes),
+        ("output", "_triage", triage),
+    ):
+        (batch_dir / directory / f"{chunk}{suffix}.json").write_text(
+            json.dumps(payload, ensure_ascii=False), encoding="utf-8",
+        )
+    monkeypatch.setattr(gate, "BATCH_DIR", batch_dir)
+    ok, problems, stats = gate.gate_chunk(chunk)
+    assert ok, problems
+    assert stats["notes_parsed"] == 1
 
 
 def test_existing_merges_match_their_keep_triage_and_have_no_cross_topic_copies():

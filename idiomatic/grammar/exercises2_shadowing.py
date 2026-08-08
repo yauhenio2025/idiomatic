@@ -108,6 +108,16 @@ def parse_notes_file(path: Path) -> list[ShadowNote]:
         raw_notes = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
         raise ShadowSourceError(f"{path.name}: invalid JSON: {exc}") from exc
+    return parse_notes_data(raw_notes, lang=match.group(1), source_name=path.name)
+
+
+def parse_notes_data(
+    raw_notes: object, *, lang: str, source_name: str = "shadowing-pilot.json",
+) -> list[ShadowNote]:
+    """Validate in-memory pilot rows for batch gates and preview tooling."""
+    path = Path(source_name)
+    if lang not in SUPPORTED_LANGS:
+        raise ShadowSourceError(f"{path.name}: unsupported language {lang!r}")
     if not isinstance(raw_notes, list) or not raw_notes:
         raise ShadowSourceError(f"{path.name}: expected a nonempty array")
     result: list[ShadowNote] = []
@@ -127,7 +137,7 @@ def parse_notes_file(path: Path) -> list[ShadowNote]:
             raise ShadowSourceError(f"{path.name}: {item_id}: focus_tl must occur in tl")
         result.append(
             ShadowNote(
-                lang=match.group(1),
+                lang=lang,
                 item_id=item_id,
                 en=_text(path, raw, "en"),
                 tl=tl,

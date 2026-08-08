@@ -21,6 +21,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
 from idiomatic.grammar import exercises2 as x2  # noqa: E402
+from idiomatic.grammar import exercises2_shadowing as shadow  # noqa: E402
 
 BATCH_DIR = REPO / "idiomatic" / "grammar" / "data" / "exercises2" / "batches"
 
@@ -119,14 +120,31 @@ def gate_chunk(chunk: str) -> tuple[bool, list[str], dict]:
     parsed = 0
     wrong_lang: list[str] = []
     copied_legacy = 0
-    for raw in notes_raw:
+    if topic == "big_tech_phrases":
         try:
-            note = x2._parse_note(Path(f"{lang}_{topic}.json"), lang, topic, raw)
-        except x2.Ex2SourceError as exc:
+            parsed_notes = shadow.parse_notes_data(
+                notes_raw, lang=lang, source_name=f"{chunk}_notes.json",
+            )
+        except shadow.ShadowSourceError as exc:
             problems.append(str(exc))
-            continue
+            parsed_notes = []
+        texts_by_note = ((note, (note.tl,)) for note in parsed_notes)
+    else:
+        parsed_notes = []
+        for raw in notes_raw:
+            try:
+                parsed_notes.append(
+                    x2._parse_note(Path(f"{lang}_{topic}.json"), lang, topic, raw)
+                )
+            except x2.Ex2SourceError as exc:
+                problems.append(str(exc))
+        texts_by_note = (
+            (note, (note.tl, note.example_tl)) for note in parsed_notes
+        )
+
+    for note, texts in texts_by_note:
         parsed += 1
-        for text in (note.tl, note.example_tl):
+        for text in texts:
             other = _wrong_language(text, lang)
             if other:
                 wrong_lang.append(f"{note.item_id}:{other}:{text[:40]!r}")
@@ -141,7 +159,10 @@ def gate_chunk(chunk: str) -> tuple[bool, list[str], dict]:
         "keep": verdict_counts.get("keep", 0),
         "drop": verdict_counts.get("drop", 0),
         "notes_parsed": parsed,
-        "with_trap": sum(1 for raw in notes_raw if str(raw.get("trap", "")).strip()),
+        "with_trap": sum(
+            1 for raw in notes_raw
+            if isinstance(raw, dict) and str(raw.get("trap", "")).strip()
+        ),
         "same_as_legacy": copied_legacy,
     })
     return not problems, problems, stats

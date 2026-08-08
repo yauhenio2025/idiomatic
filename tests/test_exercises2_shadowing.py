@@ -39,6 +39,17 @@ def test_shadowing_parser_requires_focus_inside_target(tmp_path: Path):
         shadow.parse_notes_file(path)
 
 
+def test_shadowing_in_memory_parser_supports_batch_gate_filename(tmp_path: Path):
+    raw = json.loads(_write(tmp_path / "source.json").read_text(encoding="utf-8"))
+    notes = shadow.parse_notes_data(
+        raw,
+        lang="pt",
+        source_name="pt_big_tech_phrases_pilot_b01_notes.json",
+    )
+    assert len(notes) == 1
+    assert notes[0].lang == "pt"
+
+
 def test_shadowing_model_is_separate_and_existing_model_remains_frozen():
     model = shadow.make_draft_model()
     assert model.model_id == shadow.DRAFT_MODEL_ID
