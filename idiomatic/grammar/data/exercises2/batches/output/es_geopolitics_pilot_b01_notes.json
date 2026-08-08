@@ -1,0 +1,416 @@
+[
+  {
+    "id": "it_geopolitics_001",
+    "en": "Accommodative Monetary Policy - When a central bank (like the Federal Reserve) sets low-interest rates to encourage borrowing and spending.",
+    "category": "term-definition",
+    "tl": "política monetaria acomodaticia",
+    "alts": [],
+    "register": "Macroeconomics and central banking; technical institutional usage.",
+    "trap": "Acomodaticia may look like an English calque, but it is established institutional Spanish; acomodadora is not the standard term.",
+    "example_tl": "Ante la contracción del crédito, el banco central mantuvo una política monetaria acomodaticia para abaratar la financiación y sostener la inversión productiva.",
+    "example_en": "Faced with contracting credit, the central bank maintained an accommodative monetary policy to make financing cheaper and sustain productive investment.",
+    "cloze": "Ante la contracción del crédito, el banco central mantuvo una {{c1::política monetaria acomodaticia}} para abaratar la financiación y sostener la inversión productiva.",
+    "note": "Definición propuesta: Orientación monetaria que mantiene condiciones de financiación laxas para estimular la demanda, el crédito y la actividad económica. Self-review: se retiró política monetaria expansiva de alts porque es un concepto próximo, pero no equivalente en todos los contextos."
+  },
+  {
+    "id": "it_geopolitics_002",
+    "en": "Austerity Measures - Government policies aimed at reducing public sector debt through spending cuts or tax increases.",
+    "category": "term-definition",
+    "tl": "medidas de austeridad",
+    "alts": [
+      "políticas de austeridad"
+    ],
+    "register": "Fiscal policy and political economy; neutral technical term, often evaluative in public debate.",
+    "trap": "Austerity is narrower than general budget discipline: it denotes fiscal tightening, especially through spending cuts or tax increases.",
+    "example_tl": "Tras años de recesión, las medidas de austeridad redujeron el déficit, pero también deterioraron los servicios públicos y agravaron la desigualdad territorial.",
+    "example_en": "After years of recession, the austerity measures reduced the deficit, but they also weakened public services and worsened territorial inequality.",
+    "cloze": "Tras años de recesión, las {{c1::medidas de austeridad}} redujeron el déficit, pero también deterioraron los servicios públicos y agravaron la desigualdad territorial.",
+    "note": "Definición propuesta: Medidas de consolidación fiscal que reducen el gasto público o aumentan los ingresos para contener el déficit y la deuda."
+  },
+  {
+    "id": "it_geopolitics_003",
+    "en": "Balkanization - The process of fragmentation or division of a region or state into smaller regions or states.",
+    "category": "term-definition",
+    "tl": "balcanización",
+    "alts": [],
+    "register": "Geopolitics and political analysis; formal and frequently figurative, with potentially loaded historical associations.",
+    "trap": "Spanish requires balcanización, with c and a written accent; the term can sound pejorative when applied loosely beyond its historical origin.",
+    "example_tl": "La balcanización del espacio informativo permitió a los gobiernos imponer relatos incompatibles y debilitó los canales regionales de cooperación durante la crisis.",
+    "example_en": "The balkanization of the information space allowed governments to impose incompatible narratives and weakened regional channels of cooperation during the crisis.",
+    "cloze": "La {{c1::balcanización}} del espacio informativo permitió a los gobiernos imponer relatos incompatibles y debilitó los canales regionales de cooperación durante la crisis.",
+    "note": "Definición propuesta: Fragmentación de un territorio o una unidad política en entidades menores, a menudo enfrentadas o escasamente cooperativas."
+  },
+  {
+    "id": "it_geopolitics_004",
+    "en": "Belt and Road Initiative - China's ambitious infrastructure project aimed at boosting trade and economic growth across Asia and beyond.",
+    "category": "term-definition",
+    "tl": "Iniciativa de la Franja y la Ruta",
+    "alts": [],
+    "register": "International relations and development finance; official institutional name.",
+    "trap": "The legacy hybrid Iniciativa ‘Belt and Road’ is unnecessary in Spanish; the established institutional name is Iniciativa de la Franja y la Ruta.",
+    "example_tl": "En el marco de la Iniciativa de la Franja y la Ruta se financiaron corredores ferroviarios estratégicos, aunque varios países renegociaron proyectos por sus costes fiscales y ambientales.",
+    "example_en": "Under the Belt and Road Initiative, strategic rail corridors were financed, although several countries renegotiated projects because of their fiscal and environmental costs.",
+    "cloze": "En el marco de la {{c1::Iniciativa de la Franja y la Ruta}} se financiaron corredores ferroviarios estratégicos, aunque varios países renegociaron proyectos por sus costes fiscales y ambientales.",
+    "note": "Definición propuesta: Estrategia china de conectividad e inversión internacional, lanzada en 2013, que articula infraestructuras, comercio y cooperación financiera. Diverge del nombre híbrido de old_back. Self-review: se presentó la iniciativa como marco de financiación, no como agente financiador, y se aclaró la referencia de costes."
+  },
+  {
+    "id": "it_geopolitics_005",
+    "en": "Black Swan Event - An unpredictable event that has massive consequences.",
+    "category": "term-definition",
+    "tl": "cisne negro",
+    "alts": [],
+    "register": "Risk analysis, economics, and journalism; semi-technical and often overused.",
+    "trap": "Not every surprising crisis is a cisne negro: in the stricter sense, it lies outside normal expectations and is rationalized retrospectively.",
+    "example_tl": "El colapso simultáneo de varios sistemas satelitales, no previsto por ningún modelo, constituyó un cisne negro y paralizó durante días las comunicaciones militares.",
+    "example_en": "The simultaneous collapse of several satellite systems, unanticipated by any model, constituted a black swan and paralyzed military communications for days.",
+    "cloze": "El colapso simultáneo de varios sistemas satelitales, no previsto por ningún modelo, constituyó un {{c1::cisne negro}} y paralizó durante días las comunicaciones militares.",
+    "note": "Definición propuesta: Suceso extremo ajeno a las expectativas ordinarias, de gran impacto y explicado retrospectivamente como si hubiera sido previsible. El término simple es más idiomático que old_back. Self-review: se sustituyó una quiebra bancaria meramente sorprendente por un suceso no previsto por ningún modelo y se retiró de alts la perífrasis poco idiomática acontecimiento de cisne negro."
+  },
+  {
+    "id": "it_geopolitics_006",
+    "en": "Blue Economy - Economic benefits and value we realize from the Earth's freshwater and oceans.",
+    "category": "term-definition",
+    "tl": "economía azul",
+    "alts": [],
+    "register": "Marine policy and sustainable development; technical policy usage.",
+    "trap": "Economía azul can also name Gunter Pauli’s broader circular-innovation model; context must distinguish that sense from ocean policy.",
+    "example_tl": "El Gobierno vinculó la economía azul a la pesca sostenible, la restauración costera y la creación de empleo sin comprometer la salud de los ecosistemas marinos.",
+    "example_en": "The government linked the blue economy to sustainable fishing, coastal restoration, and job creation without compromising the health of marine ecosystems.",
+    "cloze": "El Gobierno vinculó la {{c1::economía azul}} a la pesca sostenible, la restauración costera y la creación de empleo sin comprometer la salud de los ecosistemas marinos.",
+    "note": "Definición propuesta: Uso sostenible de recursos oceánicos y costeros para generar actividad y empleo preservando la salud de los ecosistemas marinos. La fuente lo amplía al agua dulce; aquí se adopta el uso predominante en política marítima. Self-review: se sustituyó la coordinación ambigua compatible con ecosistemas marinos saludables por sin comprometer la salud de los ecosistemas marinos."
+  },
+  {
+    "id": "it_geopolitics_007",
+    "en": "Brexit - The UK's historic decision to leave the European Union.",
+    "category": "term-definition",
+    "tl": "Brexit",
+    "alts": [],
+    "register": "European politics and recent history; neutral and fully lexicalized.",
+    "trap": "Spanish normally uses the masculine article in running text—el Brexit—even though the headword is listed without it.",
+    "example_tl": "Tras el Brexit, Londres recuperó competencias regulatorias, pero las empresas británicas afrontaron nuevas fricciones aduaneras al comerciar con el mercado único.",
+    "example_en": "After Brexit, London regained regulatory powers, but British companies faced new customs frictions when trading with the single market.",
+    "cloze": "Tras el {{c1::Brexit}}, Londres recuperó competencias regulatorias, pero las empresas británicas afrontaron nuevas fricciones aduaneras al comerciar con el mercado único.",
+    "note": "Definición propuesta: Salida del Reino Unido de la Unión Europea, decidida en el referéndum de 2016 y efectiva desde 2020. La definición actualiza el enfoque puntual de old_back. Self-review: se retiró una paráfrasis de alts porque no podía sustituir a Brexit tras el artículo masculino del ejemplo."
+  },
+  {
+    "id": "it_geopolitics_008",
+    "en": "Bubble Economy - An economic cycle characterized by a rapid increase in asset prices.",
+    "category": "term-definition",
+    "tl": "burbuja económica",
+    "alts": [
+      "burbuja especulativa"
+    ],
+    "register": "Economics and financial journalism; neutral analytical usage.",
+    "trap": "Economía burbuja in old_back is unidiomatic; Spanish names the phenomenon burbuja económica or, when speculation is foregrounded, burbuja especulativa.",
+    "example_tl": "La burbuja económica elevó artificialmente el precio de la vivienda hasta que el crédito se contrajo y comenzaron las ventas forzosas.",
+    "example_en": "The economic bubble artificially inflated housing prices until credit contracted and forced sales began.",
+    "cloze": "La {{c1::burbuja económica}} elevó artificialmente el precio de la vivienda hasta que el crédito se contrajo y comenzaron las ventas forzosas.",
+    "note": "Definición propuesta: Aumento persistente del precio de ciertos activos por encima de sus fundamentos, alimentado por expectativas de nuevas subidas y seguido de una corrección. Diverge del término de old_back."
+  },
+  {
+    "id": "it_geopolitics_009",
+    "en": "Capital Controls - Measures such as transaction taxes or limits on the amount of money that can be moved across borders.",
+    "category": "term-definition",
+    "tl": "controles de capital",
+    "alts": [
+      "restricciones a los movimientos de capital"
+    ],
+    "register": "International finance and macroeconomic policy; technical.",
+    "trap": "Capital here means cross-border financial flows, not a capital city or merely a firm’s share capital.",
+    "example_tl": "Ante la salida de divisas, el Ejecutivo impuso controles de capital para limitar transferencias al extranjero y estabilizar temporalmente el sistema financiero.",
+    "example_en": "Faced with currency outflows, the executive imposed capital controls to limit transfers abroad and temporarily stabilize the financial system.",
+    "cloze": "Ante la salida de divisas, el Ejecutivo impuso {{c1::controles de capital}} para limitar transferencias al extranjero y estabilizar temporalmente el sistema financiero.",
+    "note": "Definición propuesta: Medidas regulatorias o fiscales que restringen la entrada y salida transfronteriza de capitales o determinadas operaciones en divisas. Self-review: se eliminó la poco natural conversión transfronteriza de capitales."
+  },
+  {
+    "id": "it_geopolitics_010",
+    "en": "Capital Flight - A large-scale exodus of financial assets and capital from a nation due to events such as political or economic instability.",
+    "category": "term-definition",
+    "tl": "fuga de capitales",
+    "alts": [
+      "salida de capitales"
+    ],
+    "register": "International finance and crisis analysis; standard technical usage.",
+    "trap": "The English metaphor flight maps to fuga, not the literal vuelo; salida de capitales is more neutral and does not always imply panic.",
+    "example_tl": "La incertidumbre electoral aceleró la fuga de capitales, encareció la deuda soberana y dejó al banco central con menos reservas internacionales.",
+    "example_en": "Electoral uncertainty accelerated capital flight, made sovereign debt more expensive, and left the central bank with fewer international reserves.",
+    "cloze": "La incertidumbre electoral aceleró la {{c1::fuga de capitales}}, encareció la deuda soberana y dejó al banco central con menos reservas internacionales.",
+    "note": "Definición propuesta: Salida rápida y considerable de activos financieros hacia jurisdicciones percibidas como más seguras ante riesgos económicos o políticos."
+  },
+  {
+    "id": "it_geopolitics_011",
+    "en": "Carbon Footprint - The amount of carbon dioxide emissions for which an individual or organization is responsible.",
+    "category": "term-definition",
+    "tl": "huella de carbono",
+    "alts": [],
+    "register": "Climate policy and corporate sustainability; standard technical usage.",
+    "trap": "Despite the name, the metric normally includes several greenhouse gases converted into CO₂ equivalent, not only carbon dioxide.",
+    "example_tl": "El informe atribuyó la mayor parte de la huella de carbono del grupo tecnológico a sus centros de datos y proveedores asiáticos.",
+    "example_en": "The report attributed most of the technology group’s carbon footprint to its data centers and Asian suppliers.",
+    "cloze": "El informe atribuyó la mayor parte de la {{c1::huella de carbono}} del grupo tecnológico a sus centros de datos y proveedores asiáticos.",
+    "note": "Definición propuesta: Total de emisiones directas e indirectas de gases de efecto invernadero atribuibles a una persona, actividad, producto u organización, expresado en CO₂ equivalente. Corrige la limitación a CO₂ de old_back."
+  },
+  {
+    "id": "it_geopolitics_012",
+    "en": "Climate Diplomacy - Efforts by countries to solve the shared challenge of climate change.",
+    "category": "term-definition",
+    "tl": "diplomacia climática",
+    "alts": [
+      "diplomacia del clima"
+    ],
+    "register": "International relations and climate policy; formal policy usage.",
+    "trap": "The term covers negotiation, coalition-building, finance, and implementation; it is not limited to summit diplomacy.",
+    "example_tl": "La diplomacia climática permitió que países rivales pactaran objetivos de reducción del metano pese al deterioro simultáneo de sus relaciones comerciales y de seguridad.",
+    "example_en": "Climate diplomacy enabled rival countries to agree on methane-reduction targets despite the simultaneous deterioration of their trade and security relations.",
+    "cloze": "La {{c1::diplomacia climática}} permitió que países rivales pactaran objetivos de reducción del metano pese al deterioro simultáneo de sus relaciones comerciales y de seguridad.",
+    "note": "Definición propuesta: Acción diplomática orientada a negociar cooperación internacional frente al cambio climático y sus consecuencias políticas, económicas y de seguridad. Self-review: se precisó objetivos de reducción del metano para evitar la vaga colocación objetivos sobre metano."
+  },
+  {
+    "id": "it_geopolitics_013",
+    "en": "Cold War 2.0 - Referring to the new tensions between the West and Russia/China.",
+    "category": "term-definition",
+    "tl": "Guerra Fría 2.0",
+    "alts": [
+      "nueva Guerra Fría"
+    ],
+    "register": "Geopolitical analysis and journalism; contested framing rather than neutral periodization.",
+    "trap": "Do not silently render 2.0 as segunda Guerra Fría: the latter sounds more like an accepted historical period than a journalistic analogy.",
+    "example_tl": "Algunos analistas invocan la Guerra Fría 2.0 para explicar bloques tecnológicos rivales, pero la analogía oculta la intensa interdependencia económica actual.",
+    "example_en": "Some analysts invoke Cold War 2.0 to explain rival technology blocs, but the analogy obscures today’s intense economic interdependence.",
+    "cloze": "Algunos analistas invocan la {{c1::Guerra Fría 2.0}} para explicar bloques tecnológicos rivales, pero la analogía oculta la intensa interdependencia económica actual.",
+    "note": "Definición propuesta: Etiqueta controvertida que interpreta rivalidades estratégicas contemporáneas, sobre todo entre Estados Unidos, China y Rusia, por analogía con la Guerra Fría. Evita presentar la analogía como hecho asentado."
+  },
+  {
+    "id": "it_geopolitics_014",
+    "en": "Currency Manipulation - When countries devalue their currency to gain an unfair advantage in trade.",
+    "category": "term-definition",
+    "tl": "manipulación del tipo de cambio",
+    "alts": [
+      "manipulación cambiaria"
+    ],
+    "register": "International monetary policy and trade disputes; technical and accusatory.",
+    "trap": "Manipulación de divisas may suggest misconduct in foreign-exchange trading; the state-policy concept is more precisely manipulación del tipo de cambio.",
+    "example_tl": "Washington acusó al Gobierno de haber recurrido a la manipulación del tipo de cambio para abaratar artificialmente sus exportaciones, aunque los datos no demostraban una intervención sostenida.",
+    "example_en": "Washington accused the government of resorting to exchange-rate manipulation to make its exports artificially cheaper, although the data did not show sustained intervention.",
+    "cloze": "Washington acusó al Gobierno de haber recurrido a la {{c1::manipulación del tipo de cambio}} para abaratar artificialmente sus exportaciones, aunque los datos no demostraban una intervención sostenida.",
+    "note": "Definición propuesta: Intervención deliberada de una autoridad sobre el valor de su moneda para obtener una ventaja competitiva externa. La definición no la limita a una devaluación formal. Self-review: se añadió haber recurrido a la para eliminar la ambigüedad del complemento final de finalidad."
+  },
+  {
+    "id": "it_geopolitics_015",
+    "en": "Currency War - Competitive devaluation of currencies by nations to boost their domestic economy.",
+    "category": "term-definition",
+    "tl": "guerra de divisas",
+    "alts": [
+      "guerra cambiaria"
+    ],
+    "register": "International economics and financial journalism; metaphorical, often evaluative.",
+    "trap": "This is a policy metaphor, not an armed conflict; competitive depreciation may occur through several monetary or exchange-rate tools.",
+    "example_tl": "La bajada coordinada de tipos evitó una guerra de divisas en la que cada potencia habría intentado depreciar su moneda frente a las demás.",
+    "example_en": "The coordinated rate cut prevented a currency war in which each power would have tried to depreciate its currency against the others.",
+    "cloze": "La bajada coordinada de tipos evitó una {{c1::guerra de divisas}} en la que cada potencia habría intentado depreciar su moneda frente a las demás.",
+    "note": "Definición propuesta: Dinámica de depreciaciones competitivas con la que varios Estados intentan favorecer su actividad o sus exportaciones a costa de sus socios."
+  },
+  {
+    "id": "it_geopolitics_016",
+    "en": "De-dollarization - The process of reducing reliance on the U.S. dollar in international trade.",
+    "category": "term-definition",
+    "tl": "desdolarización",
+    "alts": [
+      "reducción de la dependencia del dólar"
+    ],
+    "register": "International finance and geopolitics; technical policy usage.",
+    "trap": "Spanish writes desdolarización as one word, without the English hyphen; it does not necessarily mean eliminating all use of the dollar.",
+    "example_tl": "La desdolarización avanzó cuando ambos socios comenzaron a liquidar contratos energéticos en monedas locales y diversificaron gradualmente sus reservas oficiales.",
+    "example_en": "De-dollarization advanced when both partners began settling energy contracts in local currencies and gradually diversified their official reserves.",
+    "cloze": "La {{c1::desdolarización}} avanzó cuando ambos socios comenzaron a liquidar contratos energéticos en monedas locales y diversificaron gradualmente sus reservas oficiales.",
+    "note": "Definición propuesta: Reducción del uso o peso del dólar estadounidense en pagos, comercio, financiación o reservas internacionales. Amplía la definición excesivamente comercial de old_back."
+  },
+  {
+    "id": "it_geopolitics_017",
+    "en": "Debt Ceiling - The upper limit set by Congress on the amount of money the federal government may borrow.",
+    "category": "term-definition",
+    "tl": "techo de deuda",
+    "alts": [
+      "límite de endeudamiento federal"
+    ],
+    "register": "United States public finance and political journalism; technical institutional term.",
+    "trap": "The U.S. debt ceiling is not a cap on new spending or the annual deficit; it limits total federal debt subject to the statute.",
+    "example_tl": "El Congreso elevó el techo de deuda horas antes del impago, sin resolver el desacuerdo sobre impuestos y gasto público.",
+    "example_en": "Congress raised the debt ceiling hours before default, without resolving the disagreement over taxes and public spending.",
+    "cloze": "El Congreso elevó el {{c1::techo de deuda}} horas antes del impago, sin resolver el desacuerdo sobre impuestos y gasto público.",
+    "note": "Definición propuesta: Límite legal fijado por el Congreso estadounidense al volumen total de deuda federal sujeto a dicho límite. Corrige la idea de un simple tope a nuevos préstamos."
+  },
+  {
+    "id": "it_geopolitics_018",
+    "en": "Debt Trap Diplomacy - When countries are forced to default on loan commitments and forfeit key assets to creditor countries.",
+    "category": "term-definition",
+    "tl": "diplomacia de la trampa de la deuda",
+    "alts": [],
+    "register": "Geopolitics and development finance; polemical, accusatory, and empirically disputed.",
+    "trap": "The source presents a disputed allegation as a settled mechanism; in careful Spanish the label should be attributed to a speaker or analytical camp.",
+    "example_tl": "El ministro denunció la supuesta diplomacia de la trampa de la deuda, pero varios investigadores cuestionaron que el acreedor hubiera provocado deliberadamente la insolvencia.",
+    "example_en": "The minister denounced alleged debt-trap diplomacy, but several researchers questioned whether the creditor had deliberately caused the insolvency.",
+    "cloze": "El ministro denunció la supuesta {{c1::diplomacia de la trampa de la deuda}}, pero varios investigadores cuestionaron que el acreedor hubiera provocado deliberadamente la insolvencia.",
+    "note": "Definición propuesta: Etiqueta crítica según la cual un acreedor concede deliberadamente préstamos que el deudor previsiblemente no podrá reembolsar, con el fin de obtener concesiones estratégicas; su aplicación a casos reales es discutida. Corrige el tratamiento categórico de old_back. Self-review: se mantuvo supuesta para atribuir con cautela la tesis y se sustituyeron concesión de deuda y diseñado la insolvencia por formulaciones idiomáticas."
+  },
+  {
+    "id": "it_geopolitics_019",
+    "en": "Decoupling - The idea that two economies, especially the U.S. and China, can grow without being reliant on each other.",
+    "category": "term-definition",
+    "tl": "desacoplamiento económico",
+    "alts": [
+      "desacople económico"
+    ],
+    "register": "Geoeconomics and trade policy; desacoplamiento is more formal than journalistic desacople.",
+    "trap": "Do not equate decoupling with ordinary diversification or risk reduction: it implies a broader severing of economic or technological ties.",
+    "example_tl": "El desacoplamiento económico entre China y Estados Unidos sigue siendo parcial, pues las restricciones tecnológicas conviven con intercambios comerciales de enorme volumen.",
+    "example_en": "Economic decoupling between China and the United States remains partial, since technology restrictions coexist with trade flows of enormous volume.",
+    "cloze": "El {{c1::desacoplamiento económico}} entre China y Estados Unidos sigue siendo parcial, pues las restricciones tecnológicas conviven con intercambios comerciales de enorme volumen.",
+    "note": "Definición propuesta: Proceso de reducción o ruptura de interdependencias comerciales, financieras, productivas o tecnológicas entre economías. Corrige la definición como mera capacidad de crecer por separado."
+  },
+  {
+    "id": "it_geopolitics_020",
+    "en": "Demographic Dividend - Economic growth potential resulting from shifts in a population’s age structure.",
+    "category": "term-definition",
+    "tl": "dividendo demográfico",
+    "alts": [
+      "bono demográfico"
+    ],
+    "register": "Economic demography and development; technical; bono demográfico is frequent in Latin America.",
+    "trap": "The dividend is a potential benefit, not an automatic result of having a young population; employment, health, and education policies mediate it.",
+    "example_tl": "El país solo aprovechará el dividendo demográfico si crea empleo formal para una población en edad de trabajar que crece más deprisa que la dependiente.",
+    "example_en": "The country will reap the demographic dividend only if it creates formal employment for a working-age population growing faster than the dependent population.",
+    "cloze": "El país solo aprovechará el {{c1::dividendo demográfico}} si crea empleo formal para una población en edad de trabajar que crece más deprisa que la dependiente.",
+    "note": "Definición propuesta: Potencial de crecimiento asociado al aumento de la población en edad de trabajar respecto de la población dependiente, si existen condiciones para emplearla productivamente. Self-review: se cambió población activa por población en edad de trabajar para no confundir la cohorte demográfica con la fuerza laboral."
+  },
+  {
+    "id": "it_geopolitics_021",
+    "en": "Digital Currency - Virtual currency used as a medium of exchange, especially in electronic transactions.",
+    "category": "term-definition",
+    "tl": "moneda digital",
+    "alts": [],
+    "register": "Payments, monetary policy, and financial technology; broad technical umbrella term.",
+    "trap": "A moneda digital is not automatically a cryptocurrency: central-bank digital currencies can be centralized and state-issued.",
+    "example_tl": "El banco central probó una moneda digital mayorista para liquidar operaciones entre entidades sin abrir cuentas minoristas a toda la población.",
+    "example_en": "The central bank tested a wholesale digital currency to settle transactions between institutions without opening retail accounts to the whole population.",
+    "cloze": "El banco central probó una {{c1::moneda digital}} mayorista para liquidar operaciones entre entidades sin abrir cuentas minoristas a toda la población.",
+    "note": "Definición propuesta: Forma de dinero o representación de valor en formato electrónico utilizada para pagos o liquidaciones; puede ser emitida por un organismo público o una entidad privada, o funcionar de manera descentralizada. Evita identificar sin más moneda digital y moneda virtual. Self-review: se incorporó la posibilidad de sistemas descentralizados, ausente de la definición anterior."
+  },
+  {
+    "id": "it_geopolitics_022",
+    "en": "Digital Divide - The gap between those who have ready access to computers and the internet, and those who do not.",
+    "category": "term-definition",
+    "tl": "brecha digital",
+    "alts": [],
+    "register": "Digital policy, education, and inequality studies; standard policy term.",
+    "trap": "Access alone is too narrow: current usage also covers affordability, skills, devices, connection quality, and the ability to benefit from technology.",
+    "example_tl": "La brecha digital ya no depende solo de la cobertura: también refleja diferencias de precio, competencias, dispositivos y calidad de conexión.",
+    "example_en": "The digital divide no longer depends only on coverage: it also reflects differences in price, skills, devices, and connection quality.",
+    "cloze": "La {{c1::brecha digital}} ya no depende solo de la cobertura: también refleja diferencias de precio, competencias, dispositivos y calidad de conexión.",
+    "note": "Definición propuesta: Desigualdad en el acceso, la calidad, las competencias o el aprovechamiento efectivo de tecnologías digitales. Amplía la definición binaria de old_back."
+  },
+  {
+    "id": "it_geopolitics_023",
+    "en": "Digital Silk Road - China's initiative to advance its global tech influence.",
+    "category": "term-definition",
+    "tl": "Ruta de la Seda Digital",
+    "alts": [],
+    "register": "China policy, technology, and international infrastructure; established program label.",
+    "trap": "The established Spanish modifier order is Ruta de la Seda Digital, not the word-for-word Ruta Digital de la Seda.",
+    "example_tl": "La Ruta de la Seda Digital ha extendido redes, centros de datos y sistemas de pago chinos en mercados con infraestructuras insuficientes.",
+    "example_en": "The Digital Silk Road has expanded Chinese networks, data centers, and payment systems in markets with insufficient infrastructure.",
+    "cloze": "La {{c1::Ruta de la Seda Digital}} ha extendido redes, centros de datos y sistemas de pago chinos en mercados con infraestructuras insuficientes.",
+    "note": "Definición propuesta: Dimensión tecnológica de la Iniciativa de la Franja y la Ruta, centrada en telecomunicaciones, plataformas, datos, satélites y servicios digitales. Precisa la definición teleológica de old_back."
+  },
+  {
+    "id": "it_geopolitics_024",
+    "en": "Digital Sovereignty - A country's assertion of control over its own internet and data.",
+    "category": "term-definition",
+    "tl": "soberanía digital",
+    "alts": [],
+    "register": "Technology policy and regulation; strategic term with contested scope.",
+    "trap": "Soberanía digital does not normally mean territorial ownership of ‘one’s internet’; it concerns effective capacity, control, and governance.",
+    "example_tl": "La Comisión vinculó la soberanía digital con infraestructuras europeas, capacidad regulatoria y control efectivo sobre datos estratégicos y tecnologías críticas.",
+    "example_en": "The Commission linked digital sovereignty to European infrastructure, regulatory capacity, and effective control over strategic data and critical technologies.",
+    "cloze": "La Comisión vinculó la {{c1::soberanía digital}} con infraestructuras europeas, capacidad regulatoria y control efectivo sobre datos estratégicos y tecnologías críticas.",
+    "note": "Definición propuesta: Capacidad de una comunidad política para decidir y actuar de forma autónoma sobre sus datos, infraestructuras, tecnologías y normas digitales. Corrige la imagen posesiva de old_back."
+  },
+  {
+    "id": "it_geopolitics_025",
+    "en": "Disinformation - Deliberately false information spread to deceive.",
+    "category": "term-definition",
+    "tl": "desinformación",
+    "alts": [],
+    "register": "Media studies, information security, and public policy; standard technical term.",
+    "trap": "Desinformación normally implies deliberate deception; información errónea can be false without intent and is closer to misinformation.",
+    "example_tl": "La campaña combinó documentos falsificados y cuentas coordinadas para sembrar desinformación sobre las elecciones y erosionar la confianza en las autoridades electorales.",
+    "example_en": "The campaign combined forged documents and coordinated accounts to spread disinformation about the elections and erode trust in the electoral authorities.",
+    "cloze": "La campaña combinó documentos falsificados y cuentas coordinadas para sembrar {{c1::desinformación}} sobre las elecciones y erosionar la confianza en las autoridades electorales.",
+    "note": "Definición propuesta: Contenido falso o engañoso creado o difundido deliberadamente para inducir a error, manipular o causar daño."
+  },
+  {
+    "id": "it_geopolitics_026",
+    "en": "Economic Imperialism - Extension of a nation's power and influence through diplomacy or military force to gain control over weaker areas’ economies.",
+    "category": "term-definition",
+    "tl": "imperialismo económico",
+    "alts": [],
+    "register": "Critical political economy and geopolitics; strongly evaluative analytical label.",
+    "trap": "The source definition is closer to imperialism in general; economic imperialism foregrounds domination through economic leverage rather than requiring military force.",
+    "example_tl": "Los críticos calificaron el acuerdo de imperialismo económico porque subordinaba la política industrial local a los intereses financieros de la potencia acreedora.",
+    "example_en": "Critics described the agreement as economic imperialism because it subordinated local industrial policy to the creditor power’s financial interests.",
+    "cloze": "Los críticos calificaron el acuerdo de {{c1::imperialismo económico}} porque subordinaba la política industrial local a los intereses financieros de la potencia acreedora.",
+    "note": "Definición propuesta: Dominación o condicionamiento de una economía por una potencia mediante comercio, inversión, deuda, propiedad empresarial u otras formas de poder económico. Corrige el alcance de old_back."
+  },
+  {
+    "id": "it_geopolitics_027",
+    "en": "Economic Nationalism - Policies and beliefs emphasizing domestic control and self-sufficiency over globalization.",
+    "category": "term-definition",
+    "tl": "nacionalismo económico",
+    "alts": [],
+    "register": "Political economy and trade policy; neutral analytical label that may become evaluative in debate.",
+    "trap": "Nacionalismo económico is broader than protectionism and does not necessarily entail complete autarky or opposition to all foreign investment.",
+    "example_tl": "El Gobierno abrazó el nacionalismo económico al reservar contratos públicos para empresas nacionales y condicionar las inversiones extranjeras en sectores estratégicos.",
+    "example_en": "The government embraced economic nationalism by reserving public contracts for domestic companies and placing conditions on foreign investment in strategic sectors.",
+    "cloze": "El Gobierno abrazó el {{c1::nacionalismo económico}} al reservar contratos públicos para empresas nacionales y condicionar las inversiones extranjeras en sectores estratégicos.",
+    "note": "Definición propuesta: Doctrina y conjunto de políticas que priorizan el control, la producción y los intereses económicos nacionales frente a la integración exterior."
+  },
+  {
+    "id": "it_geopolitics_028",
+    "en": "Economic Sanctions - Penalties imposed by one country (or a group of countries) on another for various reasons.",
+    "category": "term-definition",
+    "tl": "sanciones económicas",
+    "alts": [],
+    "register": "Foreign policy, international relations, and international law; standard formal term.",
+    "trap": "Penalizaciones in old_back is less idiomatic here; states and international organizations impose sanciones, which may be financial, commercial, or sectoral.",
+    "example_tl": "Las sanciones económicas congelaron activos y restringieron exportaciones de tecnología, aunque el Gobierno sancionado desvió parte del comercio mediante terceros países.",
+    "example_en": "The economic sanctions froze assets and restricted technology exports, although the sanctioned government diverted some trade through third countries.",
+    "cloze": "Las {{c1::sanciones económicas}} congelaron activos y restringieron exportaciones de tecnología, aunque el Gobierno sancionado desvió parte del comercio mediante terceros países.",
+    "note": "Definición propuesta: Restricciones financieras o comerciales impuestas por Estados u organizaciones internacionales para presionar a un actor y modificar su conducta. Corrige penalizaciones y el alcance exclusivamente interestatal de old_back."
+  },
+  {
+    "id": "it_geopolitics_029",
+    "en": "Emerging Markets - Nations with social or business activity in the process of rapid industrialization.",
+    "category": "term-definition",
+    "tl": "mercados emergentes",
+    "alts": [],
+    "register": "International finance and development economics; technical classification whose membership varies by institution.",
+    "trap": "The term can denote both a group of economies and a financial asset class; rapid industrialization alone does not define membership.",
+    "example_tl": "Los mercados emergentes recibieron capital cuando bajaron los tipos estadounidenses, pero sufrieron salidas abruptas al repuntar la aversión global al riesgo.",
+    "example_en": "Emerging markets received capital when U.S. rates fell, but suffered abrupt outflows when global risk aversion rose again.",
+    "cloze": "Los {{c1::mercados emergentes}} recibieron capital cuando bajaron los tipos estadounidenses, pero sufrieron salidas abruptas al repuntar la aversión global al riesgo.",
+    "note": "Definición propuesta: Categoría sin definición oficial única aplicada a economías con creciente integración en los mercados mundiales y sistemas financieros en desarrollo; los criterios varían según el organismo. Sustituye la definición imprecisa de old_back. Self-review: se eliminó la vaga expresión rasgos financieros de transición."
+  },
+  {
+    "id": "it_geopolitics_030",
+    "en": "Energy Security - The association between national security and the availability of natural resources for energy consumption.",
+    "category": "term-definition",
+    "tl": "seguridad energética",
+    "alts": [],
+    "register": "Energy policy, economics, and national security; standard technical term.",
+    "trap": "The concept is broader than access to natural resources: it also covers affordability, infrastructure, resilience, and continuity of supply.",
+    "example_tl": "La guerra obligó a revisar la seguridad energética europea, comprometida hasta entonces por la concentración de proveedores, las reservas limitadas y unas redes poco interconectadas.",
+    "example_en": "The war forced a reassessment of European energy security, compromised until then by supplier concentration, limited reserves, and poorly interconnected grids.",
+    "cloze": "La guerra obligó a revisar la {{c1::seguridad energética}} europea, comprometida hasta entonces por la concentración de proveedores, las reservas limitadas y unas redes poco interconectadas.",
+    "note": "Definición propuesta: Capacidad de garantizar un suministro energético suficiente, continuo y asequible mediante fuentes e infraestructuras resilientes a las perturbaciones. Corrige la definición reducida de old_back. Self-review: se reformuló disponibilidad ininterrumpida y resiliente para expresar la resiliencia como propiedad del sistema."
+  }
+]
