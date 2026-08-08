@@ -1,0 +1,978 @@
+[
+  {
+    "expression_id": 2506,
+    "idiom": "se faire un prénom",
+    "anchor": {
+      "semantic_hook": "A fresh personal identity medallion is physically made beside a stack of inherited family crests, turning the literal first name into an object created by hand.",
+      "setting": "An identity-maker's workshop contains a central molding bench, stacks of identical family-crest medallions, and one fresh oval portrait medallion with no inscription. Fine sculpting tools surround the fresh medallion, separating it visually from the inherited crests. A single bench-tall chisel carves the personal medallion by itself without any hand touching it.",
+      "cast": [
+        "marion_cotillard",
+        "emmanuel_macron"
+      ],
+      "absurd_element": "a bench-tall chisel that carves the personal medallion by itself"
+    },
+    "variations": [
+      {
+        "example_id": 14905,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "stands proudly at the molding bench with one hand on his new medallion and the other raising a theater mask above the inherited crests"
+          }
+        ],
+        "scene_adjust": "theater masks, a miniature stage curtain, and a small trophy beside the fresh medallion"
+      },
+      {
+        "example_id": 14906,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "leans over her distinct medallion with determined concentration while presenting a carefully plated dish and turning her back on the inherited crests"
+          }
+        ],
+        "scene_adjust": "a plated restaurant dish, cooking utensils, and inherited culinary trophies on the molding bench"
+      },
+      {
+        "example_id": 14907,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "sets his finished medallion upright after a long effort, shoulders tired but triumphant, beside a miniature parliamentary bench and voting box"
+          }
+        ],
+        "scene_adjust": "worn sculpting tools, a miniature parliamentary bench, and a plain voting box"
+      },
+      {
+        "example_id": 14908,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "holds his new medallion against his chest and reaches toward a tennis racket and globe-topped trophy while ignoring an inherited champion's cup"
+          }
+        ],
+        "scene_adjust": "a tennis racket, a globe-topped tournament trophy, and a larger inherited champion's cup"
+      },
+      {
+        "example_id": 14909,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "places a plain-covered first novel beside her newly carved medallion and shields both from the stack of family crests with a self-reliant smile"
+          }
+        ],
+        "scene_adjust": "a single plain-covered novel, a pen, and an unused family seal"
+      },
+      {
+        "example_id": 14910,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "demonstrates a working mechanical prototype at the bench while his unfinished medallion waits under the chisel, his expression focused and ambitious"
+          }
+        ],
+        "scene_adjust": "an office briefcase, a functional gear prototype, and an unfinished personal medallion"
+      }
+    ]
+  },
+  {
+    "expression_id": 2507,
+    "idiom": "ne cesse de",
+    "anchor": {
+      "semantic_hook": "A brake that never manages to stop a continuously turning wheel makes the literal failure to cease physically visible.",
+      "setting": "A circular machinery room has a central flywheel, a spring brake, a worktable, and a broad window. The brake repeatedly approaches the rim yet never halts its motion. The heavy flywheel spins freely in midair with no axle or support.",
+      "cast": [
+        "jean_paul_sartre",
+        "simone_de_beauvoir"
+      ],
+      "absurd_element": "an axleless heavy flywheel spinning unsupported in midair"
+    },
+    "variations": [
+      {
+        "example_id": 14911,
+        "inserts": [
+          {
+            "slug": "jean_paul_sartre",
+            "action": "stretches upward with mounting alarm toward a fuel can climbing a vertical track while clutching a rapidly shrinking purse"
+          }
+        ],
+        "scene_adjust": "a vertical track of fuel cans, a small pile of plain coins, and an almost empty purse beside the worktable"
+      },
+      {
+        "example_id": 14912,
+        "inserts": [
+          {
+            "slug": "jean_paul_sartre",
+            "action": "sits beside the spinning wheel and gestures wearily from a tabletop globe toward an array of newer household objects"
+          },
+          {
+            "slug": "simone_de_beauvoir",
+            "action": "turns the globe briskly and points across the changing array with the knowing concern of a grandparent"
+          }
+        ],
+        "scene_adjust": "a tabletop globe with a row of old and new household objects arranged beside it"
+      },
+      {
+        "example_id": 14913,
+        "inserts": [
+          {
+            "slug": "jean_paul_sartre",
+            "action": "sits at the meeting table repeatedly twisting his wrist toward his face, impatiently checking the moving hands of his watch"
+          }
+        ],
+        "scene_adjust": "a meeting table with empty chairs and a wristwatch with hands but no dial markings"
+      },
+      {
+        "example_id": 14914,
+        "inserts": [
+          {
+            "slug": "simone_de_beauvoir",
+            "action": "stands at the rain-streaked window with one palm against the glass, watching the unbroken downpour with exhausted resignation"
+          }
+        ],
+        "scene_adjust": "dense morning rain beyond the broad window and a wet umbrella beside the worktable"
+      },
+      {
+        "example_id": 14915,
+        "inserts": [
+          {
+            "slug": "jean_paul_sartre",
+            "action": "wears a doctor's coat and insistently offers a full glass of water with one hand while raising a refill pitcher with the other"
+          },
+          {
+            "slug": "simone_de_beauvoir",
+            "action": "wears a stethoscope and repeats the drinking gesture toward a row of filled glasses with patient urgency"
+          }
+        ],
+        "scene_adjust": "a water pitcher, many filled glasses, a stethoscope, and a small summer fan"
+      },
+      {
+        "example_id": 14916,
+        "inserts": [
+          {
+            "slug": "simone_de_beauvoir",
+            "action": "hugs a packed suitcase and gazes dreamily at a small torii-gate model while the untouched worktable sits behind her"
+          }
+        ],
+        "scene_adjust": "a packed suitcase, a small torii-gate model, and a folded travel jacket"
+      }
+    ]
+  },
+  {
+    "expression_id": 2508,
+    "idiom": "apporte son grain de sel",
+    "anchor": {
+      "semantic_hook": "Offering an opinion becomes the literal act of bringing one grain of salt to the center of a shared discussion table.",
+      "setting": "A multipurpose planning room centers on a round worktable, with adaptable household and meeting props stored in low cabinets. A shallow salt dish occupies the table's center, ready for a single grain to be placed into any discussion. One solitary salt crystal on the dish is the size of a boulder while every other object remains ordinary.",
+      "cast": [
+        "marion_cotillard",
+        "timothee_chalamet"
+      ],
+      "absurd_element": "one solitary salt crystal the size of a boulder"
+    },
+    "variations": [
+      {
+        "example_id": 14917,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "leans intrusively across the table toward the giant salt grain, confidently holding a whisk upside down despite a puzzled expression at the cooking tools"
+          }
+        ],
+        "scene_adjust": "mixing bowls, cooking utensils, an unfinished dish, and the central salt crystal"
+      },
+      {
+        "example_id": 14918,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "leans eagerly into the meeting and places her own project piece beside the giant salt grain"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "reaches across from the opposite side with another project piece, equally determined to contribute"
+          }
+        ],
+        "scene_adjust": "a project model assembled from plain geometric pieces around the central salt dish"
+      },
+      {
+        "example_id": 14919,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "points firmly toward two government-building models while holding her other palm out to stop an unnecessary contribution"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "hovers over the salt crystal with an eager pinching gesture, reluctantly pausing before adding it"
+          }
+        ],
+        "scene_adjust": "two government-building models and voting tokens arranged for a political discussion"
+      },
+      {
+        "example_id": 14920,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "slides the huge salt grain into the middle of the conversation with sisterly confidence even though no invitation has been offered"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "recoils slightly with raised eyebrows and both palms turned upward in unasked-for surprise"
+          }
+        ],
+        "scene_adjust": "two cups and a small conversation-piece arrangement around the salt dish"
+      },
+      {
+        "example_id": 14921,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "enthusiastically brings the giant salt grain toward a party-planning model and points to a clever arrangement of decorations"
+          }
+        ],
+        "scene_adjust": "balloons, streamers, serving trays, and a small party-layout model"
+      },
+      {
+        "example_id": 14922,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "sits cross-legged at one side of the table, excitedly pushing a toy airplane and a tiny salt shard toward a globe"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "kneels at the other side and eagerly points from a toy train to a different point on the globe"
+          }
+        ],
+        "scene_adjust": "a globe, toy airplane, toy train, miniature suitcase, and several destination tokens"
+      }
+    ]
+  },
+  {
+    "expression_id": 2509,
+    "idiom": "à deux doigts de",
+    "anchor": {
+      "semantic_hook": "Being on the brink becomes a task or outcome positioned literally only two fingertips away.",
+      "setting": "An all-purpose threshold studio contains a narrow central gap, a task pedestal on one side, and open work bays on the other. Two sculpted fingertips face each other across the gap, leaving only a sliver of space before the task pedestal. The fingertips are monumental detached stone forms hovering unsupported above the floor.",
+      "cast": [
+        "christine_lagarde",
+        "kylian_mbappe"
+      ],
+      "absurd_element": "two monumental detached stone fingertips hovering unsupported above the floor"
+    },
+    "variations": [
+      {
+        "example_id": 14923,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "stands drained after a meeting with two fingers hovering a hair's breadth from dropping his office badge into a resignation box"
+          }
+        ],
+        "scene_adjust": "an office chair, closed briefcase, meeting folders, and a plain resignation box on the task pedestal"
+      },
+      {
+        "example_id": 14924,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "lunges forward in alarm with two fingers almost touching a tipping water glass, his other hand spread to catch it"
+          }
+        ],
+        "scene_adjust": "a full water glass balanced precariously at the edge of the task pedestal"
+      },
+      {
+        "example_id": 14925,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "wears laboratory gloves and reaches with two fingers toward the final open slot in a treatment apparatus, intensely focused"
+          },
+          {
+            "slug": "kylian_mbappe",
+            "action": "holds the last glass vial just short of the apparatus, eyes wide with cautious anticipation"
+          }
+        ],
+        "scene_adjust": "laboratory glassware, a microscope, one clear vial, and a nearly complete treatment apparatus"
+      },
+      {
+        "example_id": 14926,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "holds two trembling fingers just below one eye, lips tight and eyes glistening while she absorbs the upsetting news"
+          }
+        ],
+        "scene_adjust": "a silent phone lying face down on the task pedestal and a pulled-out chair"
+      },
+      {
+        "example_id": 14927,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "holds two fingers just short of a house key, then twists her torso away with a suddenly doubtful expression"
+          },
+          {
+            "slug": "kylian_mbappe",
+            "action": "withdraws his reaching hand from the same key and shakes his head in last-minute agreement"
+          }
+        ],
+        "scene_adjust": "a house model, a key, an unsigned stack of purchase papers, and a closed pen"
+      },
+      {
+        "example_id": 14928,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "stretches at full reach with his racket while two fingers of his free hand hover just beneath a match ball near the finish marker"
+          }
+        ],
+        "scene_adjust": "a tennis racket, match ball, small net, and winner's cup at the task pedestal"
+      }
+    ]
+  },
+  {
+    "expression_id": 2510,
+    "idiom": "mettre la main sur",
+    "anchor": {
+      "semantic_hook": "Finding or seizing something becomes the literal placement of a hand directly on the sought object.",
+      "setting": "A lost-property archive contains long object shelves, a search table, and an empty retrieval plinth. A hand-shaped mechanical press is mounted above the plinth so any recovered object can sit directly beneath its palm. The single mechanical hand is large enough to cover the entire search table.",
+      "cast": [
+        "catherine_deneuve"
+      ],
+      "absurd_element": "a room-sized mechanical hand mounted above the retrieval plinth"
+    },
+    "variations": [
+      {
+        "example_id": 14929,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "kneels beside the sofa with delighted relief, one hand firmly covering the recovered car keys beneath its edge"
+          }
+        ],
+        "scene_adjust": "a low sofa beside the search table with car keys visible underneath"
+      },
+      {
+        "example_id": 14930,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "searches the high shelves with weary determination, stretching one hand toward a single rare volume tucked behind ordinary books"
+          }
+        ],
+        "scene_adjust": "crowded shelves of plain-covered books with one unusual antique volume partly concealed"
+      },
+      {
+        "example_id": 14931,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "wears a police jacket and waits alertly beneath surveillance cameras, holding open handcuffs ready while following a trail of dropped belongings"
+          }
+        ],
+        "scene_adjust": "several surveillance cameras, a trail of dropped gloves and coins, and an empty evidence tray"
+      },
+      {
+        "example_id": 14932,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "reaches briskly across the search table toward a misplaced file folder while holding a phone ready in her other hand"
+          }
+        ],
+        "scene_adjust": "stacks of plain file folders and a phone beside the retrieval plinth"
+      },
+      {
+        "example_id": 14933,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "stretches both empty hands toward a locked bare ticket case, her shoulders slumped in frustrated disbelief"
+          }
+        ],
+        "scene_adjust": "an empty concert-ticket case, velvet barrier, musical instruments, and no tickets on the surrounding shelves"
+      },
+      {
+        "example_id": 14934,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "places one hand eagerly on a sealed recipe notebook and extends it forward with a conspiratorial sharing gesture"
+          }
+        ],
+        "scene_adjust": "a sealed recipe notebook, cooking utensils, and a covered dish on the retrieval plinth"
+      }
+    ]
+  },
+  {
+    "expression_id": 2511,
+    "idiom": "de nuit comme de jour",
+    "anchor": {
+      "semantic_hook": "Night and day occupy the same continuous view at once, making uninterrupted activity across both periods visible.",
+      "setting": "A glass-walled monitoring hub overlooks an intersection where a clinic entrance, a house, a tree-lined avenue, and a forest edge are all visible. Workstations and camera screens face the same broad panorama. Across the entire view, one half of the sky is moonlit night and the other half is full daylight, divided by a perfectly sharp vertical boundary.",
+      "cast": [
+        "catherine_deneuve"
+      ],
+      "absurd_element": "one sky split by a perfectly sharp boundary between moonlit night and full day"
+    },
+    "variations": [
+      {
+        "example_id": 14935,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "wears a medical coat and stands ready beside an emergency trolley, reaching toward the open clinic entrance at the boundary of night and day"
+          }
+        ],
+        "scene_adjust": "an open clinic entrance, empty treatment bed, medical bag, and emergency trolley"
+      },
+      {
+        "example_id": 14936,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "watches the avenue intently from the monitoring console, tracking one stream of cars crossing from night into day"
+          }
+        ],
+        "scene_adjust": "steady traffic on the broad avenue beneath both halves of the divided sky"
+      },
+      {
+        "example_id": 14937,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "wears a forest-ranger jacket and scans the tree line through binoculars, one hand poised over fire-monitoring controls"
+          }
+        ],
+        "scene_adjust": "forest-fire equipment, binoculars, and camera views of the tree line under night and day"
+      },
+      {
+        "example_id": 14938,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "works intensely at a project model with sleeves rolled up, reaching between tools on the daylight side and completed pieces on the night side"
+          }
+        ],
+        "scene_adjust": "a complex project model, scattered tools, stacked components, and a clock with plain hands"
+      },
+      {
+        "example_id": 14939,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "sits steadily at a computer displaying a purely graphical interface, one hand on the controls while both halves of the sky remain visible behind her"
+          }
+        ],
+        "scene_adjust": "a computer with image tiles and uninterrupted green status lights across its interface"
+      },
+      {
+        "example_id": 14940,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "leans toward a bank of security feeds and points from the night view to the daylight view of the same quiet house"
+          }
+        ],
+        "scene_adjust": "several security cameras and simultaneous exterior views of the house beneath both sky halves"
+      }
+    ]
+  },
+  {
+    "expression_id": 2512,
+    "idiom": "tenu pour responsable",
+    "anchor": {
+      "semantic_hook": "The person deemed answerable is literally held above a scale loaded with the consequences in question.",
+      "setting": "A formal accountability chamber contains a central consequence scale, evidence bays, and a bare hearing table. Two open brass hands are positioned to close over the central standing spot directly above the scale. These room-sized hands float without cables, columns, or any other support.",
+      "cast": [
+        "christine_lagarde",
+        "emmanuel_macron"
+      ],
+      "absurd_element": "two room-sized brass hands floating without support above the consequence scale"
+    },
+    "variations": [
+      {
+        "example_id": 14941,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "stands rigid in a director's suit while the brass hands hold his shoulders over a collapsed project model, his face tense with accountability"
+          }
+        ],
+        "scene_adjust": "a collapsed project model, spilled components, and an abandoned director's briefcase in the evidence bay"
+      },
+      {
+        "example_id": 14942,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "pulls anxiously away from the hovering hands and gestures in refusal toward a dented car, unwilling to be held beneath them"
+          }
+        ],
+        "scene_adjust": "a dented car beside scattered bumper fragments in the evidence bay"
+      },
+      {
+        "example_id": 14943,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "stands beneath one open brass hand and raises both palms in a calm refusal of total blame"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "stands beside her beneath the other hand, gesturing toward many separate child-sized belongings spread beyond their reach"
+          }
+        ],
+        "scene_adjust": "scattered schoolbooks, toys, sports gear, and a toppled lamp distributed across several evidence bays"
+      },
+      {
+        "example_id": 14944,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "is gripped at the shoulders by the brass hands and throws his own hands upward in repeated exasperation over a freshly broken mechanism"
+          }
+        ],
+        "scene_adjust": "a broken gear mechanism and spilled tools on the consequence scale"
+      },
+      {
+        "example_id": 14945,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "stands in corporate attire under one brass hand, looking sternly down at blackened water and factory debris"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "stands in corporate attire under the other hand, shoulders held firmly while pointing toward a smoking factory model"
+          }
+        ],
+        "scene_adjust": "a factory model, soot-covered plants, murky water, and dead fish on the consequence scale"
+      },
+      {
+        "example_id": 14946,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "leans forward to place her pen beside a sealed contract packet while the brass hands begin closing around her shoulders, her expression suddenly cautious"
+          }
+        ],
+        "scene_adjust": "a sealed contract packet, pen, fragile machine, and leaking pipe arranged around the hearing table"
+      }
+    ]
+  },
+  {
+    "expression_id": 2513,
+    "idiom": "fuite en avant",
+    "anchor": {
+      "semantic_hook": "A flight forward becomes a literal rush straight ahead, away from an unresolved problem and toward increasingly risky choices.",
+      "setting": "A decision corridor contains a forward-moving floor track, a problem bay behind it, and increasingly risky tool stations ahead. Every route directs motion forward, away from the unresolved evidence in the rear bay. The corridor's far end continually unfolds new floor faster than the track advances.",
+      "cast": [
+        "kylian_mbappe"
+      ],
+      "absurd_element": "a corridor whose far end continually unfolds new floor ahead of its moving track"
+    },
+    "variations": [
+      {
+        "example_id": 14947,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "rushes forward carrying a fresh sack of plain coins while dragging several empty purses and glancing fearfully at the debt pile behind him"
+          }
+        ],
+        "scene_adjust": "a rear pile of empty purses and chained empty coin sacks with a fresh sack of plain coins at the next station"
+      },
+      {
+        "example_id": 14948,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "wears a government suit and strides toward a row of progressively larger emergency levers while turning his back on two empty negotiating chairs"
+          }
+        ],
+        "scene_adjust": "two negotiating chairs in the rear bay and a forward row of increasingly large emergency levers"
+      },
+      {
+        "example_id": 14949,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "runs beside a malfunctioning machine and bolts a shiny new attachment onto its front while ignoring loose gears falling from the rear"
+          }
+        ],
+        "scene_adjust": "a malfunctioning wheeled machine, loose gears, repair tools, and several unused feature attachments"
+      },
+      {
+        "example_id": 14950,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "hurries forward stacking another theatrical mask over a trail of shattered pottery, his worried glance fixed on the growing mess behind"
+          }
+        ],
+        "scene_adjust": "shattered pottery in the problem bay and a forward trail of concealing theatrical masks"
+      },
+      {
+        "example_id": 14951,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "runs forward lowering a basket of coins farther down a pulley while chasing a line of empty shopping carts, visibly alarmed by the steepening track"
+          }
+        ],
+        "scene_adjust": "a coin basket on a lowering pulley, household goods, and empty shopping carts along the forward track"
+      },
+      {
+        "example_id": 14952,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "sprints at a moving desk while typing with tense shoulders, piling more work folders ahead and ignoring charred folders in the rear bay"
+          }
+        ],
+        "scene_adjust": "a moving desk, laptop, towering work folders, cold coffee cups, and charred folders in the problem bay"
+      }
+    ]
+  },
+  {
+    "expression_id": 2514,
+    "idiom": "haut et fort",
+    "anchor": {
+      "semantic_hook": "Speaking high and strong becomes a declaration delivered from the top of a raised dais through a powerful speaking horn.",
+      "setting": "A public-speaking atrium contains a steep raised dais, a meeting table, and an open gathering floor. At the dais summit, a powerful speaking horn points across the entire room. The single colossal horn floats high above its stand with no attachment or support.",
+      "cast": [
+        "marion_cotillard",
+        "timothee_chalamet"
+      ],
+      "absurd_element": "one colossal speaking horn floating high above its stand"
+    },
+    "variations": [
+      {
+        "example_id": 14953,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "stands at the highest step and cups her hands around her mouth, declaring her view with fearless directness"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "stays lower beside the meeting table with guarded posture, then nods firmly at what she has openly said"
+          }
+        ],
+        "scene_adjust": "a closed suggestion box and several face-down discussion cards on the meeting table"
+      },
+      {
+        "example_id": 14954,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "raises a fist beneath the horn and calls out with a resolute protest stance"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "stands shoulder to shoulder with her, lifting both open hands and projecting his demand across the atrium"
+          }
+        ],
+        "scene_adjust": "plain handheld megaphones and linked barrier rails across the gathering floor"
+      },
+      {
+        "example_id": 14955,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "plants both feet at the dais summit, points decisively to his chosen path, and raises his chin without any trace of regret"
+          }
+        ],
+        "scene_adjust": "two diverging floor paths with a deliberately chosen object placed on one of them"
+      },
+      {
+        "example_id": 14956,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "pushes back from the meeting table, raises one firm hand toward the horn, and voices his disagreement with an unflinching stare"
+          }
+        ],
+        "scene_adjust": "meeting chairs, neutral proposal pieces, and two sharply separated voting-token piles"
+      },
+      {
+        "example_id": 14957,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "faces her partner squarely beneath the horn, hands open and posture steady while stating her expectations directly"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "stands opposite her with attentive eye contact and lowered defensive hands"
+          }
+        ],
+        "scene_adjust": "two facing chairs and a small shared household model between them"
+      },
+      {
+        "example_id": 14958,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "sings proudly into the horn while holding a guitar high and touching an ancestral woven scarf draped over his shoulder"
+          }
+        ],
+        "scene_adjust": "a guitar, an ancestral woven scarf, a small traditional house model, and musical instruments"
+      }
+    ]
+  },
+  {
+    "expression_id": 2515,
+    "idiom": "prennent prétexte de",
+    "anchor": {
+      "semantic_hook": "Using a pretext becomes the literal act of taking an unrelated excuse prop and using it to open an exit.",
+      "setting": "A decision room contains an exit doorway, a shelf of ordinary excuse props, and a curtained alcove for concealed motives. Each prop fits into a receptacle beside the doorway before an exit can be attempted. The doorway has an impossible lock that opens for any unrelated object placed inside it.",
+      "cast": [
+        "catherine_deneuve",
+        "kylian_mbappe"
+      ],
+      "absurd_element": "an impossible door lock that opens for any unrelated excuse prop"
+    },
+    "variations": [
+      {
+        "example_id": 14959,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "arrives late with a dry coat and pushes a dripping umbrella into the door lock, avoiding an embarrassed glance at the clock"
+          },
+          {
+            "slug": "kylian_mbappe",
+            "action": "holds another umbrella toward the lock and shrugs with exaggerated innocence beside a pair of untouched rain boots"
+          }
+        ],
+        "scene_adjust": "a dripping umbrella, dry coats, unused rain boots, and a clock showing late morning with plain hands"
+      },
+      {
+        "example_id": 14960,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "slides a borrowed book into the door lock with one hand while discreetly reaching for a phone behind her back"
+          }
+        ],
+        "scene_adjust": "a borrowed plain-covered book, phone, and small return basket beside the exit"
+      },
+      {
+        "example_id": 14961,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "holds a medical mask toward the lock and turns away from the family gathering setup with controlled reluctance"
+          },
+          {
+            "slug": "kylian_mbappe",
+            "action": "carries a closed medical kit toward the exit while folding away the last gathering chair"
+          }
+        ],
+        "scene_adjust": "medical masks, a closed medical kit, a long table, and folded family-gathering chairs"
+      },
+      {
+        "example_id": 14962,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "sits cross-legged behind an open picture-matching workbook and points busily at it while nudging an untouched broom farther away"
+          },
+          {
+            "slug": "kylian_mbappe",
+            "action": "crouches behind a stack of homework notebooks and guides one toward the lock while ignoring the messy room"
+          }
+        ],
+        "scene_adjust": "picture-matching workbooks, plain homework notebooks, scattered toys, an untouched broom, and an unmade bed"
+      },
+      {
+        "example_id": 14963,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "presses an ice pack to his forehead with theatrical discomfort while slipping it toward the exit lock and edging away from the party"
+          }
+        ],
+        "scene_adjust": "an ice pack, party balloons, untouched refreshments, and a coat ready beside the exit"
+      },
+      {
+        "example_id": 14964,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "pumps up a swelling balloon beside the lock and gestures toward a raised tray of coins above household goods"
+          },
+          {
+            "slug": "kylian_mbappe",
+            "action": "wears a business suit and lifts the coin tray higher with a calculated shrug"
+          }
+        ],
+        "scene_adjust": "a hand pump, swelling balloon, household goods, and a tray of plain coins on an adjustable stand"
+      }
+    ]
+  },
+  {
+    "expression_id": 2516,
+    "idiom": "a intérêt à",
+    "anchor": {
+      "semantic_hook": "Having an interest or advantage becomes a solid benefit weight that tips a decision toward the advisable action.",
+      "setting": "A decision hall contains a forked stone walkway, with each branch forming a broad platform around a central pivot. A brass benefit weight rests on one branch, lowering that option within easy reach while the other rises away. The entire stone floor functions as a colossal balance scale.",
+      "cast": [
+        "christine_lagarde",
+        "emmanuel_macron"
+      ],
+      "absurd_element": "an entire stone floor functioning as a colossal balance scale"
+    },
+    "variations": [
+      {
+        "example_id": 14965,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "sits on the lowered advisable branch reviewing lesson diagrams with intense concentration while glancing toward the exam desk ahead"
+          }
+        ],
+        "scene_adjust": "lesson diagrams, closed books, study tools, and an exam desk positioned beyond the lowered branch"
+      },
+      {
+        "example_id": 14966,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "runs down the lowered branch gripping a suitcase and urgently reaching toward the waiting train door"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "hurries close behind with a travel bag, anxiously checking a station clock with hands but no markings"
+          }
+        ],
+        "scene_adjust": "a waiting train door, two travel bags, and a station clock with plain hands at the branch's end"
+      },
+      {
+        "example_id": 14967,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "stands in a director's suit on the lowered branch, cautiously accepting a proposal folder while eyeing idle factory tools on the raised side"
+          }
+        ],
+        "scene_adjust": "a proposal folder, director's briefcase, idle factory tools, and a silent assembly belt"
+      },
+      {
+        "example_id": 14968,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "kneels securely on the lowered branch and studies a contract packet facing her with its plain back toward the viewer before reaching for the pen"
+          }
+        ],
+        "scene_adjust": "a thick contract packet shown from its plain back, a magnifying glass, closed pen, and document folder on a reading stand"
+      },
+      {
+        "example_id": 14969,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "bows remorsefully on the lowered branch and offers a small peace gift with both hands"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "stands opposite with hurt posture gradually softening, one hand beginning to accept the apology"
+          }
+        ],
+        "scene_adjust": "a small peace gift, two separated chairs, and a repaired keepsake between the branches"
+      },
+      {
+        "example_id": 14970,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "sits cross-legged on the lowered branch completing a picture-matching homework exercise with determined focus while keeping her back to the television"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "kneels beside her finishing the last exercise, one hand holding the television remote safely out of reach"
+          }
+        ],
+        "scene_adjust": "picture-matching homework sheets and pencils on the lowered branch with a dark television and remote on the raised branch"
+      }
+    ]
+  },
+  {
+    "expression_id": 2517,
+    "idiom": "c'est pas tant de... que de...",
+    "anchor": {
+      "semantic_hook": "The literal comparison of not so much one thing as another becomes two situations weighed unequally, with the second bearing the greater weight.",
+      "setting": "A comparison chamber has two facing display bays mounted on the pans of a central balance. The first situation occupies the lighter pan while the second carries visibly heavier counterweights. The balance is so colossal that its central column passes through both the floor and the ceiling.",
+      "cast": [
+        "timothee_chalamet"
+      ],
+      "absurd_element": "a colossal balance whose central column passes through the floor and ceiling"
+    },
+    "variations": [
+      {
+        "example_id": 14971,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "turns away from the lighter pan's overtime clock and braces both shoulders beneath the heavier pan's compression weights, visibly strained by pressure"
+          }
+        ],
+        "scene_adjust": "an overtime clock and work folders on the lighter pan with heavy compression blocks on the lower pan"
+      },
+      {
+        "example_id": 14972,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "steps past the lighter pan's scattered practice-recording discs but freezes before the heavier pan's microphone, mouth tense and hand raised without speaking"
+          }
+        ],
+        "scene_adjust": "scattered practice-recording discs on the lighter pan and a microphone behind a small gate on the heavier pan"
+      },
+      {
+        "example_id": 14973,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "leaves the lighter pan's diet plate untouched and deliberately arranges walking shoes, a water bottle, and a sleep clock across the heavier pan"
+          }
+        ],
+        "scene_adjust": "a measured diet plate on the lighter pan with walking shoes, water bottle, and sleep clock on the heavier pan"
+      },
+      {
+        "example_id": 14974,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "barely glances at the departing train model on the lighter pan and desperately searches the heavier pan's empty luggage rack with both hands"
+          }
+        ],
+        "scene_adjust": "a departing train model on the lighter pan and an open suitcase with an empty luggage rack on the heavier pan"
+      },
+      {
+        "example_id": 14975,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "lowers the lighter pan's peace offering and studies the heavier pan's shattered keepsake with a newly understanding, remorseful expression"
+          }
+        ],
+        "scene_adjust": "a peace offering on the lighter pan and a shattered personal keepsake with repair tools on the heavier pan"
+      },
+      {
+        "example_id": 14976,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "moves past the lighter pan's packed boxes and stands overwhelmed on the heavier pan, slowly rebuilding a bare desk from separate pieces"
+          }
+        ],
+        "scene_adjust": "packed moving boxes on the lighter pan with an empty room setup and disassembled desk on the heavier pan"
+      }
+    ]
+  }
+]

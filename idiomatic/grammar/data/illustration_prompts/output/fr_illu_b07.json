@@ -1,0 +1,956 @@
+[
+  {
+    "expression_id": 409,
+    "idiom": "empoisonnent la vie",
+    "anchor": {
+      "semantic_hook": "The literal poisoning of life is staged as poison seeping across the ordinary objects used throughout a person's day.",
+      "setting": "A combined kitchen and living room contains a dining table, a sofa, a household desk, and shelves of everyday objects. An overturned unmarked vial has spilled across the table, and one poison droplet has swollen to the size of a chandelier while remaining suspended above the daily clutter. That enormous hovering droplet is the room's only impossible feature.",
+      "cast": [
+        "catherine_deneuve",
+        "emmanuel_macron"
+      ],
+      "absurd_element": "a chandelier-sized poison droplet suspended above ordinary objects"
+    },
+    "variations": [
+      {
+        "example_id": 2323,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "sits exhausted at the household desk, opens yet another plain form, and drops her forehead into one hand beside a backlog of unfinished paperwork"
+          }
+        ],
+        "scene_adjust": "plain forms, empty envelopes, filing trays, and a stamp pad crowd the desk"
+      },
+      {
+        "example_id": 2324,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "hunches before a tabletop mirror, hesitates over a simple daily task, and pulls his hands back with a defeated expression"
+          }
+        ],
+        "scene_adjust": "a tabletop mirror, untouched breakfast, unopened briefcase, and abandoned household checklist objects surround him"
+      },
+      {
+        "example_id": 2325,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "shuts a work laptop firmly, pushes a crowded document tray away, and reaches toward a teacup and house slippers with determined relief"
+          }
+        ],
+        "scene_adjust": "a work laptop, ringing desk phone, stacked folders, and tangled charging cables occupy the household desk"
+      },
+      {
+        "example_id": 2326,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "crouches beside the sofa with both hands over her ears and looks up in anguish"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "stands beside her gripping earmuffs, shoulders raised at another heavy thud from overhead"
+          }
+        ],
+        "scene_adjust": "a vibrating ceiling lamp, scattered plaster dust, and a toppled teacup show the constant noise from the apartment above"
+      },
+      {
+        "example_id": 2327,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "kneels among tiny irritating household faults, pinches one loose screw in frustration, and ignores a large intact toolbox beside him"
+          }
+        ],
+        "scene_adjust": "a dripping tap, loose screw, knotted cable, crooked drawer, and other small defects surround a large closed toolbox"
+      },
+      {
+        "example_id": 2328,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "sits rigidly at one end of the dining table, arms folded and gaze turned away"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "sits at the opposite end clutching an old family album, jaw tense and shoulders weary"
+          }
+        ],
+        "scene_adjust": "an old family album and a long-cold shared meal remain between the two parents"
+      }
+    ]
+  },
+  {
+    "expression_id": 921,
+    "idiom": "au cœur du dossier",
+    "anchor": {
+      "semantic_hook": "The literal heart of the file is staged as an anatomical heart lodged at the exact center of an open case folder.",
+      "setting": "A records room contains archive shelves, evidence trays, a broad examination table, and one oversized open folder at its center. A living anatomical heart beats between the folder's plain pages. The beating heart inside the file is the room's sole impossible feature.",
+      "cast": [
+        "christine_lagarde"
+      ],
+      "absurd_element": "a living anatomical heart beating between the pages of a case folder"
+    },
+    "variations": [
+      {
+        "example_id": 5395,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "leans over the open folder, gathers scattered coins into a tight circle around the heart, and studies them with grave concentration"
+          }
+        ],
+        "scene_adjust": "coins, an empty purse, and plain financial evidence sleeves fill the central evidence tray"
+      },
+      {
+        "example_id": 5396,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "crouches beside the folder, reconnects a detached circuit component next to the heart, and reaches urgently for a tool"
+          }
+        ],
+        "scene_adjust": "a faulty circuit module, loose cable, testing probe, and open tool case occupy the examination table"
+      },
+      {
+        "example_id": 5397,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "examines the heart through a magnifying glass, then compares it with photographs and physical evidence spread around the folder"
+          }
+        ],
+        "scene_adjust": "a camera, magnifying glass, audio recorder, and evidence photographs without visible writing surround the folder"
+      },
+      {
+        "example_id": 5398,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "searches every evidence tray, then points in alarm to a clean rectangular gap directly beside the heart"
+          }
+        ],
+        "scene_adjust": "a neatly ordered application stack has one conspicuous empty document slot at its center"
+      },
+      {
+        "example_id": 5399,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "holds an audio recorder close to the heart and listens intently through headphones while guarding one crucial evidence sleeve"
+          }
+        ],
+        "scene_adjust": "a witness chair, audio recorder, headphones, and sealed evidence sleeve stand beside the central folder"
+      },
+      {
+        "example_id": 5400,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "sweeps several minor evidence trays aside, strides directly to the open folder, and plants both hands beside its heart"
+          }
+        ],
+        "scene_adjust": "small peripheral evidence objects are pushed to the table edges, leaving a clear route to the folder's center"
+      }
+    ]
+  },
+  {
+    "expression_id": 922,
+    "idiom": "me suis rendu compte",
+    "anchor": {
+      "semantic_hook": "The literal act of rendering an account to oneself is staged as a plain account ledger being physically delivered through a mirror to the person facing it.",
+      "setting": "A quiet realization room contains a central table, a full-length mirror, a clock, transit props, and cabinets for changing evidence. A closed unmarked account ledger protrudes halfway through the mirror's solid, unbroken glass. The ledger passing through intact glass is the room's only impossible feature.",
+      "cast": [
+        "marion_cotillard",
+        "timothee_chalamet"
+      ],
+      "absurd_element": "an account ledger protruding through the solid glass of a mirror"
+    },
+    "variations": [
+      {
+        "example_id": 5401,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "pats her empty pockets, freezes beside the doorway, and stares back at a set of keys left on the central table"
+          }
+        ],
+        "scene_adjust": "a set of house keys lies alone on the table beside an empty handbag"
+      },
+      {
+        "example_id": 5402,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "studies a wrongly assembled device with dawning embarrassment and points to the component she placed incorrectly"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "stands beside the table after their discussion, calmly holding the correct component and waiting for her response"
+          }
+        ],
+        "scene_adjust": "two recently vacated conversation chairs and a small device assembled with one incorrect component occupy the table"
+      },
+      {
+        "example_id": 5403,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "arrives breathless at a pulled-down shop shutter, checks the late position of a clock's hands, and drops his shoulders in dismay"
+          }
+        ],
+        "scene_adjust": "a model storefront with a closed metal shutter stands beside the clock, with no visible notices or markings"
+      },
+      {
+        "example_id": 5404,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "sits in a train seat, compares her plain ticket with the branching route map, and looks sharply toward the wrong landscape outside"
+          }
+        ],
+        "scene_adjust": "a pair of train seats, a plain ticket, luggage rack, and route map drawn only with branching lines furnish one side of the room"
+      },
+      {
+        "example_id": 5405,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "holds one edge of a road map and traces their repeated route with a worried fingertip"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "holds the opposite edge, looks around at unfamiliar terrain models, and raises both palms in alarm"
+          }
+        ],
+        "scene_adjust": "an unfolded map with roads but no writing covers the table amid a compass and unfamiliar terrain models"
+      },
+      {
+        "example_id": 5406,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "notices water spreading toward loose electrical cables, lunges for the shutoff valve, and glances anxiously at a nearly empty hourglass"
+          }
+        ],
+        "scene_adjust": "a leaking pipe, floor valve, loose electrical cables, and nearly empty hourglass create an urgent but preventable hazard"
+      }
+    ]
+  },
+  {
+    "expression_id": 923,
+    "idiom": "au plus mal",
+    "anchor": {
+      "semantic_hook": "The literal lowest extreme of bad condition is staged as a condition gauge whose needle has reached beyond its bottommost point.",
+      "setting": "A multipurpose recovery room contains a hospital bed, two chairs, a financial desk, a small model stand, and a large unmarked condition gauge. The gauge needle droops below the dial, pierces the casing, and continues into the floor. That impossible descent beyond the gauge's lowest point is the room's sole surreal feature.",
+      "cast": [
+        "catherine_deneuve",
+        "emmanuel_macron"
+      ],
+      "absurd_element": "a condition-gauge needle descending through its casing and into the floor"
+    },
+    "variations": [
+      {
+        "example_id": 5407,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "lies weakly in the hospital bed with eyes closed and one hand resting beside a monitoring clip"
+          },
+          {
+            "slug": "catherine_deneuve",
+            "action": "stands beside him in a medical coat, checks his pulse, and studies the bedside monitor with a deeply worried expression"
+          }
+        ],
+        "scene_adjust": "bedside medical equipment, a folded blanket, and a visitor chair turn the room into a hospital bay"
+      },
+      {
+        "example_id": 5408,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "sits at one end of the room with folded arms, turns away from her partner, and grips a ring with exhausted sadness"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "sits far across from her, studies a divided pair of house keys, and lowers his head"
+          }
+        ],
+        "scene_adjust": "two chairs are separated widely beside divided house keys and an unopened document folder"
+      },
+      {
+        "example_id": 5409,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "kneels beside a packed office box and discarded access card, then braces one foot under himself and begins to rise with cautious determination"
+          }
+        ],
+        "scene_adjust": "a packed office box, cleared desk, discarded access card, and one newly opened employment folder surround him"
+      },
+      {
+        "example_id": 5410,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "leans over a country model, steadies a collapsing stack of factory miniatures, and surveys empty market stalls with grave concern"
+          }
+        ],
+        "scene_adjust": "a country model with shuttered shops, idle factory miniatures, empty market stalls, and medical masks fills the model stand"
+      },
+      {
+        "example_id": 5411,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "lies bundled in the bed, presses a thermometer under one arm, and reaches weakly toward tissues and warm broth"
+          }
+        ],
+        "scene_adjust": "tissues, a thermometer, water, warm broth, and a rumpled blanket surround the bed"
+      },
+      {
+        "example_id": 5412,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "empties the last coins from a company cashbox, crosses out physical expense tokens with a pencil gesture, and removes a costly desk ornament"
+          }
+        ],
+        "scene_adjust": "an almost empty cashbox, shrinking coin stacks, expense tokens, scissors, and removable office equipment crowd the financial desk"
+      }
+    ]
+  },
+  {
+    "expression_id": 924,
+    "idiom": "hors de question",
+    "anchor": {
+      "semantic_hook": "The literal idea of being outside the question is staged as the equipment for asking a question placed beyond a sealed decision boundary.",
+      "setting": "A windowed decision room contains a central table, a firm boundary rail, a door, and cabinets holding situation-specific props. An interrogation microphone passes through an unbroken glass partition and hangs entirely outside the decision area. That microphone crossing solid glass is the room's sole impossible feature.",
+      "cast": [
+        "marion_cotillard"
+      ],
+      "absurd_element": "an interrogation microphone hanging outside a boundary after passing through solid glass"
+    },
+    "variations": [
+      {
+        "example_id": 5413,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "pushes a car key and vehicle model firmly beyond the boundary, then folds her arms at an unaffordable mountain of coins"
+          }
+        ],
+        "scene_adjust": "a car key, vehicle model, empty purse, and very tall coin stack occupy the decision table"
+      },
+      {
+        "example_id": 5414,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "blocks the evening doorway with an outstretched arm and points sternly back toward unfinished schoolwork on the table"
+          }
+        ],
+        "scene_adjust": "unfinished exercises shown only through blank diagrams, open notebooks, pencils, and a closed school satchel cover the table"
+      },
+      {
+        "example_id": 5415,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "shoves a weekend work laptop outside the boundary, displays an empty purse, and shakes her head with an uncompromising stare"
+          }
+        ],
+        "scene_adjust": "a work laptop, office folders, weekend picnic basket, and empty purse sit on opposite sides of the boundary"
+      },
+      {
+        "example_id": 5416,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "plants her feet, grips a climbing rope after a long ascent, and pulls forward with renewed defiance instead of releasing it"
+          }
+        ],
+        "scene_adjust": "a long rope, worn climbing gloves, scattered effort tokens, and a nearly reached summit model fill the room"
+      },
+      {
+        "example_id": 5417,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "locks a boat key in the prop cabinet, braces against wind at the window, and refuses the rain-soaked life jacket with both palms"
+          }
+        ],
+        "scene_adjust": "real storm waves pound the harbor outside the window while a boat key and soaked life jacket remain inside"
+      },
+      {
+        "example_id": 5418,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "clutches her grandfather's old wristwatch to her chest, turns away from an offered stack of coins, and closes her hand protectively around the watch"
+          }
+        ],
+        "scene_adjust": "an old wristwatch, worn presentation case, family photograph, and rejected coins rest on the decision table"
+      }
+    ]
+  },
+  {
+    "expression_id": 925,
+    "idiom": "des tas de",
+    "anchor": {
+      "semantic_hook": "The literal heaps are staged as a large mound of the many objects relevant to each situation.",
+      "setting": "A multipurpose sorting depot contains an open floor, a worktable, an attic trunk, a travel corner, and storage racks for changing collections. At the center, a huge heap of ordinary objects balances upside down on the point of a single pebble. That inverted, impossibly balanced heap is the depot's sole surreal feature.",
+      "cast": [
+        "kylian_mbappe",
+        "catherine_deneuve"
+      ],
+      "absurd_element": "an enormous inverted heap balanced on the point of one pebble"
+    },
+    "variations": [
+      {
+        "example_id": 5419,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "rushes between unfinished chores and an open vacation suitcase, gathering cleaning gloves, a travel hat, and one last parcel with mounting urgency"
+          }
+        ],
+        "scene_adjust": "the heap consists of laundry, cleaning tools, unopened parcels, errands, travel clothes, and suitcase contents"
+      },
+      {
+        "example_id": 5420,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "eagerly sorts bulbs, gears, bridge pieces, and project models into fresh combinations, then presents another improvement with both hands"
+          }
+        ],
+        "scene_adjust": "the heap consists of bulbs, gears, model bridges, interchangeable project pieces, and sketch boards containing only diagrams"
+      },
+      {
+        "example_id": 5421,
+        "inserts": [
+          {
+            "slug": "catherine_deneuve",
+            "action": "opens her grandparents' old trunk, pulls out a dusty volume, and surveys the towering mass of worn books with delighted surprise"
+          }
+        ],
+        "scene_adjust": "the heap consists entirely of old plain-covered books beside grandparents' trunks, a rocking chair, and stored keepsakes"
+      },
+      {
+        "example_id": 5422,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "searches on a laptop, compares useful object diagrams on the screen with matching guides from the heap, and nods appreciatively"
+          }
+        ],
+        "scene_adjust": "the heap contains maps made only of lines, charts made only of shapes, tool guides, recipes shown with pictures, and reference objects beside a laptop"
+      },
+      {
+        "example_id": 5423,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "returns from a journey wearing a backpack and warmly clasps his companion's hand amid a collection of exchanged friendship keepsakes"
+          },
+          {
+            "slug": "catherine_deneuve",
+            "action": "greets him with an open smile, adds another friendship bracelet to the collection, and points toward shared travel souvenirs"
+          }
+        ],
+        "scene_adjust": "the heap consists of exchanged friendship bracelets, paired cups, shared game pieces, Spanish travel souvenirs, and small gift boxes"
+      },
+      {
+        "example_id": 5424,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "sits among university keepsakes, holds a graduation cap and a Lyon landmark miniature, and smiles fondly over an open album"
+          }
+        ],
+        "scene_adjust": "the heap contains a graduation cap, lecture notebooks, student-room objects, Lyon landmark miniatures, event tickets without visible markings, and an album"
+      }
+    ]
+  },
+  {
+    "expression_id": 926,
+    "idiom": "à ce jour",
+    "anchor": {
+      "semantic_hook": "The literal path up to the present day is staged as a trail of past calendar leaves ending at one current-day page.",
+      "setting": "A formal report room contains an archive table, filing shelves, a travel cabinet, a technical bench, and a stand holding one blank current-day page. A continuous ribbon of earlier blank calendar pages rises unsupported from the floor, crosses the ceiling, and descends to that final page. The gravity-defying calendar ribbon is the room's sole impossible feature.",
+      "cast": [
+        "christine_lagarde"
+      ],
+      "absurd_element": "a long ribbon of calendar pages traveling unsupported across the ceiling to the present day"
+    },
+    "variations": [
+      {
+        "example_id": 5425,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "checks the final calendar page, opens an empty incoming tray, and turns both empty palms upward after another unanswered wait"
+          }
+        ],
+        "scene_adjust": "an empty incoming tray, silent telephone, closed mailbox, and untouched correspondence slot occupy the archive table"
+      },
+      {
+        "example_id": 5426,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "holds one beloved book above a long row of finished volumes and presses it proudly to her chest beside the final calendar page"
+          }
+        ],
+        "scene_adjust": "many finished plain-covered books run alongside the past calendar leaves, with one favored volume at the present-day stand"
+      },
+      {
+        "example_id": 5427,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "packs a suitcase for departure, leaves a vaccination kit untouched on the travel cabinet, and gestures toward an unobstructed boarding gate model"
+          }
+        ],
+        "scene_adjust": "a packed suitcase, passport without visible markings, untouched vaccination kit, and boarding gate model occupy the travel cabinet"
+      },
+      {
+        "example_id": 5428,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "adds another plain application folder to several very tall stacks, counts the stacks with a hand tally, and looks impressed by their volume"
+          }
+        ],
+        "scene_adjust": "more than one hundred plain application folders form orderly stacks beside the present-day stand"
+      },
+      {
+        "example_id": 5429,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "tests a still-broken circuit, compares failed replacement parts, and lowers her tools in frustrated disappointment at the final calendar page"
+          }
+        ],
+        "scene_adjust": "an unresolved circuit fault, scattered tools, replacement modules, and discarded repair attempts cover the technical bench"
+      },
+      {
+        "example_id": 5430,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "fills one of two equal coin jars to the brim, leaves its matching jar empty, and carefully checks the halfway balance between them"
+          }
+        ],
+        "scene_adjust": "two equal savings jars, one full and one empty, sit beside a larger purchase model at the present-day stand"
+      }
+    ]
+  },
+  {
+    "expression_id": 927,
+    "idiom": "revient à",
+    "anchor": {
+      "semantic_hook": "The literal return in revient à is staged as every compared object traveling away and coming back to the same appraisal point.",
+      "setting": "A neutral appraisal room contains a workbench, comparison trays, chairs, an hourglass, and a looping conveyor that begins and ends at one brass marker. The loaded conveyor climbs vertically up the wall and crosses the ceiling while its loose objects remain attached without support. That gravity-defying return route is the room's sole impossible feature.",
+      "cast": [
+        "timothee_chalamet"
+      ],
+      "absurd_element": "a loaded return conveyor crossing the wall and ceiling without dropping its objects"
+    },
+    "variations": [
+      {
+        "example_id": 5431,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "places a used-car model on the outgoing conveyor, receives it at the return marker beside half a new-car coin stack, and compares both amounts"
+          }
+        ],
+        "scene_adjust": "used and new car models sit on separate trays beside one full coin stack and one stack of half that height"
+      },
+      {
+        "example_id": 5432,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "sits motionless with folded arms while a sealed decision folder completes the full return route and lands untouched in front of him"
+          }
+        ],
+        "scene_adjust": "a sealed decision folder begins on an outgoing tray and returns to an acceptance tray beside his chair"
+      },
+      {
+        "example_id": 5433,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "carries a packed office box away from an old desk, reaches the return marker, and begins again at a completely bare workbench"
+          }
+        ],
+        "scene_adjust": "an old office setup, packed belongings, and a bare new workbench occupy opposite comparison trays"
+      },
+      {
+        "example_id": 5434,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "counts five individual coins at the return marker, places them beside a monthly calendar token, and accepts the subscription device with satisfaction"
+          }
+        ],
+        "scene_adjust": "a subscription device, discount token, monthly calendar disk without markings, and exactly five coins fill the comparison tray"
+      },
+      {
+        "example_id": 5435,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "gestures emphatically toward an empty conversation chair, then watches a fully drained hourglass return to him and grimaces at the lost time"
+          }
+        ],
+        "scene_adjust": "two conversation chairs and a drained hourglass occupy the workbench while the return path ends beside discarded meeting materials"
+      },
+      {
+        "example_id": 5436,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "opens his hand to release a reconciliation token, but keeps a damaged keepsake in his other hand and studies it with sober resolve"
+          }
+        ],
+        "scene_adjust": "a reconciliation token and a visibly damaged keepsake travel on separate conveyor trays and return separately"
+      }
+    ]
+  },
+  {
+    "expression_id": 928,
+    "idiom": "faire tomber",
+    "anchor": {
+      "semantic_hook": "The literal act of making something fall is staged as a tall institutional block being deliberately pushed from its base.",
+      "setting": "A civic demonstration arena contains a central hinged plinth, press equipment, a sports lane, planning tables, and modular public-building models. One monumental unmarked stone block falls sideways toward the wall instead of downward toward the floor. That sideways fall under impossible gravity is the arena's sole surreal feature.",
+      "cast": [
+        "emmanuel_macron",
+        "kylian_mbappe"
+      ],
+      "absurd_element": "a monumental stone block falling sideways toward a wall under impossible gravity"
+    },
+    "variations": [
+      {
+        "example_id": 5437,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "marches forward with raised fist and pulls a rope attached to an ornate government chair on the hinged plinth"
+          },
+          {
+            "slug": "kylian_mbappe",
+            "action": "strains beside him on the same rope while stepping over discarded crowd barriers"
+          }
+        ],
+        "scene_adjust": "an ornate government chair, crowd barriers, abandoned official briefcases, and a long pulling rope occupy the civic plinth"
+      },
+      {
+        "example_id": 5438,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "drives a ball past his opponent, lands in a victorious athletic stance, and raises one arm in astonished triumph"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "wears the champion's medal, loses his balance beside the goal, and watches the decisive ball pass in disbelief"
+          }
+        ],
+        "scene_adjust": "a compact sports goal, ball, champion's unmarked medal, and team equipment transform the lane into a decisive match"
+      },
+      {
+        "example_id": 5439,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "aims a press camera at concealed structural damage, removes the compromised foundation piece from a construction model, and watches the project collapse"
+          }
+        ],
+        "scene_adjust": "a construction model, exposed faulty foundation, camera, audio recorder, and evidence photographs fill the planning table"
+      },
+      {
+        "example_id": 5440,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "opens a hidden cash compartment beneath the mayoral desk and presents the illicit bundles with a shocked expression"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "recoils from the ceremonial mayoral chair, drops the city key, and grips the tilting plinth for support"
+          }
+        ],
+        "scene_adjust": "a ceremonial city key, mayoral chair, hidden cash compartment, and evidence case occupy the civic plinth"
+      },
+      {
+        "example_id": 5441,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "unveils a polished new device on the planning table and confidently pushes its market token ahead"
+          },
+          {
+            "slug": "emmanuel_macron",
+            "action": "stands beside an older competing device, watches its market tokens tumble from the plinth, and looks alarmed"
+          }
+        ],
+        "scene_adjust": "new and old product devices face each other on separate market plinths with plain comparison tokens"
+      },
+      {
+        "example_id": 5442,
+        "inserts": [
+          {
+            "slug": "emmanuel_macron",
+            "action": "locks arms with his companion and heaves against a rope tied to an authoritarian throne"
+          },
+          {
+            "slug": "kylian_mbappe",
+            "action": "pulls in unison, feet braced against the floor, as the throne begins to topple from the central plinth"
+          }
+        ],
+        "scene_adjust": "an austere authoritarian throne, broken restraints, discarded barriers, and one shared rope fill the civic plinth"
+      }
+    ]
+  },
+  {
+    "expression_id": 929,
+    "idiom": "mis en garde à vue",
+    "anchor": {
+      "semantic_hook": "Police custody under view is staged as a holding enclosure kept continuously visible through an observation window.",
+      "setting": "A police processing suite contains a holding enclosure, interview table, observation wall, property trays, clock, and lawyer's waiting chair. The observation window is one enormous glass eye that slowly blinks while still forming part of the wall. That blinking architectural eye is the suite's sole surreal feature.",
+      "cast": [
+        "marion_cotillard",
+        "timothee_chalamet"
+      ],
+      "absurd_element": "an enormous blinking glass eye serving as the custody observation window"
+    },
+    "variations": [
+      {
+        "example_id": 5443,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "sits inside the holding enclosure after a nighttime arrest, wrists secured in front of him and shoulders tense"
+          },
+          {
+            "slug": "marion_cotillard",
+            "action": "stands outside in a police role, places his confiscated belongings in a property tray, and watches him closely"
+          }
+        ],
+        "scene_adjust": "a dark night window, handcuffs, emptied pocket objects, and a property tray establish the recent arrest"
+      },
+      {
+        "example_id": 5444,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "sits unsteadily at the interview table after questioning, presses her fingertips to her temple, and looks remorsefully at the surrendered car key"
+          }
+        ],
+        "scene_adjust": "a breath-testing tube, surrendered car key, empty drinking glass, and pulled-back interview chair remain after the interrogation"
+      },
+      {
+        "example_id": 5445,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "stands inside the holding enclosure in scuffed protest clothes, catches her breath, and checks a bruised elbow"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "sits beside her with torn sleeve and clenched jaw after the clash"
+          }
+        ],
+        "scene_adjust": "discarded crowd barriers, protective police shields, scuffed clothing, and two property trays show the aftermath of street clashes"
+      },
+      {
+        "example_id": 5446,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "sits alone in custody, lowers his head beside a recovered wallet, and grips the edge of the interview chair"
+          }
+        ],
+        "scene_adjust": "a recovered wallet, evidence sleeve, emptied pockets, and a simple theft property tray occupy the table"
+      },
+      {
+        "example_id": 5447,
+        "inserts": [
+          {
+            "slug": "timothee_chalamet",
+            "action": "sits in a rumpled business suit with jacket removed, studies the clock's hands after a full day, and rubs his tired eyes"
+          }
+        ],
+        "scene_adjust": "a briefcase in the property tray, folded suit jacket, untouched meal, and clock with hands marking a full-day cycle furnish the suite"
+      },
+      {
+        "example_id": 5448,
+        "inserts": [
+          {
+            "slug": "marion_cotillard",
+            "action": "arrives in a lawyer's robe, steps directly to the observation wall, and raises an urgent open hand to request access"
+          },
+          {
+            "slug": "timothee_chalamet",
+            "action": "sits inside the holding enclosure and turns toward his lawyer with immediate relief"
+          }
+        ],
+        "scene_adjust": "a lawyer's case, consultation chair, clock, and closed access door stand beside the occupied holding enclosure"
+      }
+    ]
+  },
+  {
+    "expression_id": 930,
+    "idiom": "tourner en rond",
+    "anchor": {
+      "semantic_hook": "The literal turning in circles is staged as repeated movement around one closed circular route that never reaches an exit.",
+      "setting": "A circular multipurpose room contains a living area, meeting table, office desk, movable neighborhood models, and a continuous ring path in the floor. The ring path climbs the wall, crosses the ceiling, and returns to the floor without breaking its circle. That gravity-defying circular route is the room's sole impossible feature.",
+      "cast": [
+        "kylian_mbappe"
+      ],
+      "absurd_element": "a circular floor path continuing up the wall and across the ceiling"
+    },
+    "variations": [
+      {
+        "example_id": 5449,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "paces another lap around the living area, drags one hand through his hair, and stares helplessly at untouched household tasks"
+          }
+        ],
+        "scene_adjust": "a sofa, breakfast dishes, idle household tools, slippers, and half-open curtains turn the room into an apartment since morning"
+      },
+      {
+        "example_id": 5450,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "sits at the meeting table, passes the same unresolved model around the circular route again, and points urgently toward an empty solution tray"
+          }
+        ],
+        "scene_adjust": "meeting chairs, a drained one-hour sand timer, repeated project pieces, and an empty solution tray surround the round table"
+      },
+      {
+        "example_id": 5451,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "grips a steering wheel during a third pass of the same model houses, checks a route screen made only of lines, and squints in baffled frustration"
+          }
+        ],
+        "scene_adjust": "a compact vehicle seat moves past the same neighborhood models while the navigation screen shows only an unlabeled circular route"
+      },
+      {
+        "example_id": 5452,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "rolls his office chair around the same desk again, reaches toward a different empty workstation, and looks trapped and dissatisfied"
+          }
+        ],
+        "scene_adjust": "one overused workstation, repeated task objects, packed transfer box, and an inviting empty workstation occupy opposite sides of the circle"
+      },
+      {
+        "example_id": 5453,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "studies a helpful route diagram, steps off his repeated circular trail toward the correct puzzle piece, and reacts with grateful relief"
+          }
+        ],
+        "scene_adjust": "a difficult mechanical puzzle, discarded failed pieces, and a newly provided diagram made only of shapes cover the worktable"
+      },
+      {
+        "example_id": 5454,
+        "inserts": [
+          {
+            "slug": "kylian_mbappe",
+            "action": "paces tightly around the living-room rug yet again, wrings his hands, and glances toward an occupied armchair just outside the frame"
+          }
+        ],
+        "scene_adjust": "a living-room rug, sofa, nervous teacup spill, and disturbed cushions emphasize the irritating indoor pacing"
+      }
+    ]
+  },
+  {
+    "expression_id": 931,
+    "idiom": "payer le prix fort",
+    "anchor": {
+      "semantic_hook": "The literal strong price is staged as a payment coin so massive that its weight forces the checkout scale downward.",
+      "setting": "A multipurpose checkout hall contains a stone counter, payment scale, travel desk, service bench, business tray, and shelves for changing purchases. One coin taller than the doorway rests on the payment pan and bends the scale beneath its weight. That impossibly oversized coin is the hall's sole surreal feature.",
+      "cast": [
+        "christine_lagarde"
+      ],
+      "absurd_element": "a doorway-tall payment coin bending a checkout scale under its weight"
+    },
+    "variations": [
+      {
+        "example_id": 5455,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "rushes to the travel desk with a packed suitcase, checks the nearly departed clock hands, and reluctantly empties a heavy purse for a last-minute ticket"
+          }
+        ],
+        "scene_adjust": "a packed suitcase, plain travel ticket, nearly departed clock hands, and depleted purse fill the travel desk"
+      },
+      {
+        "example_id": 5456,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "sits wearily beside neglected exercise gear, takes medicine, and pushes a painful stack of payment coins toward the health tray"
+          }
+        ],
+        "scene_adjust": "unused exercise shoes, discarded healthy food, medicine, medical equipment, and a costly care tray surround the counter"
+      },
+      {
+        "example_id": 5457,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "hands over the entire demanded coin stack without bargaining, receives the service tool case, and winces at her empty purse"
+          }
+        ],
+        "scene_adjust": "a service tool case, untouched negotiation chairs, full-price coin stack, and empty purse occupy the service bench"
+      },
+      {
+        "example_id": 5458,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "examines a badly broken company model, empties the business cashbox onto the scale, and grips her forehead at the consequences"
+          }
+        ],
+        "scene_adjust": "a broken company model, evidence of one serious operational error, an emptying cashbox, and returned products fill the business tray"
+      },
+      {
+        "example_id": 5459,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "stands in summer travel clothes with luggage, accepts a lodging key, and reluctantly feeds many coins onto the payment pan"
+          }
+        ],
+        "scene_adjust": "summer luggage, sun hat, lodging key, room model, and a costly accommodation coin stack fill the travel desk"
+      },
+      {
+        "example_id": 5460,
+        "inserts": [
+          {
+            "slug": "christine_lagarde",
+            "action": "holds a damaged phone in one hand, turns an empty warranty sleeve inside out, and pays the repair coins with a resigned grimace"
+          }
+        ],
+        "scene_adjust": "a damaged unmarked phone, empty warranty sleeve, repair tools, rejected purchase tray, and high repair coin stack occupy the counter"
+      }
+    ]
+  }
+]
