@@ -10,7 +10,8 @@ leased, failed, or expired jobs. The strict builder accepted all 60 current
 hash/path/checksum records and published APKG **1615** as
 `exercises2_pilot`: 30 notes, 60 cards, existing model `1820150001`, existing
 GUIDs and estate deck IDs. It rides the normal ES delivery lane but contains
-the correct five language-root decks.
+the correct five language-root decks. The normal `fedora-laptop` agent imported
+it and acknowledged `ok` on its first attempt at 12:03:39 +08.
 
 The owner must listen to that APKG before `LOCAL_TTS_EXERCISES2_PILOT_APPROVED`
 may become true. It remains false. Render's `TTS_PROVIDER=elevenlabs` pin was
