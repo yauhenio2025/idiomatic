@@ -267,7 +267,7 @@ CREATE TABLE IF NOT EXISTS local_tts_jobs (
   updated_at        TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   CHECK (contract_version > 0),
   CHECK (lang ~ '^[a-z]{2}$'),
-  CHECK (clip_kind IN ('answer', 'example')),
+  CHECK (clip_kind IN ('answer', 'example', 'prompt_en')),
   CHECK (length(text) > 0),
   CHECK (content_hash ~ '^[0-9a-f]{64}$'),
   CHECK (status IN ('queued', 'leased', 'completed', 'failed')),
@@ -286,6 +286,20 @@ CREATE TABLE IF NOT EXISTS local_tts_jobs (
              AND audio_sha256 ~ '^[0-9a-f]{64}$'
              AND completed_at IS NOT NULL))
 );
+-- 2026-08-08: prompt_en clip kind added (English prompt audio, Extra1).
+-- Existing deployments carry the two-kind CHECK; rebuild it in place.
+DO $$
+BEGIN
+  IF EXISTS (
+    SELECT 1 FROM pg_constraint
+    WHERE conname = 'local_tts_jobs_clip_kind_check'
+      AND pg_get_constraintdef(oid) NOT LIKE '%prompt_en%'
+  ) THEN
+    ALTER TABLE local_tts_jobs DROP CONSTRAINT local_tts_jobs_clip_kind_check;
+    ALTER TABLE local_tts_jobs ADD CONSTRAINT local_tts_jobs_clip_kind_check
+      CHECK (clip_kind IN ('answer', 'example', 'prompt_en'));
+  END IF;
+END $$;
 CREATE INDEX IF NOT EXISTS local_tts_jobs_claim_idx
   ON local_tts_jobs(contract_version, status, is_pilot DESC, id);
 CREATE INDEX IF NOT EXISTS local_tts_jobs_lease_idx
