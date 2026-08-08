@@ -104,6 +104,26 @@
   - `frontend/` - React SPA
 - **Dependencies**: `ADMIN_TOKEN` env
 
+## Expression Hub (build track — branch `hub-build`, not deployed)
+
+### Durable-ID schema staging + frozen hub models (owner-approved) + phase-5 toolchain
+- **Status**: Active on branch `hub-build` (models FROZEN by owner verdict 2026-08-09; live cutover coordinator/owner-gated)
+- **Description**: F1-F3 of the Hub build — additive boot-migration staging for canonical expression/sense/example identities, the note-binding crosswalk, and the snapshot/delta release ledger; owner-approved frozen Anki models `1820180001` (hub note, 2 cards: TL-front tile-grid card + amended EN→TL production card, context clips on both backs) and `1820180002` (EN→target fluency example); checksummed phase-5 manifest compiler (C1+C2+server extract) and the copy-only journaled executor/verifier/rollback, rehearsed twice + rollback-drilled on live-cutover clones. Design of record: `docs/research/EXPRESSION_HUB_DESIGN.md` + `EXPRESSION_HUB_DECISIONS.md` (OWNER VERDICT section).
+- **Entry Points**:
+  - `db/schema.sql:643-950` - EXPRESSION HUB durable-ID staging block (identity columns/backfills, aliases, bindings, release ledger)
+  - `idiomatic/hub/identity.py` - frozen GUID/source-key/stable-key/media-name recipes (pilot GUIDs in a separate namespace)
+  - `idiomatic/hub/apkg.py` - frozen models + tile-grid templates + `build_hub_apkg()` (production decks from `anki_root`; pilot routes under `ZZ Hub Pilot (disposable)`)
+  - `idiomatic/hub/phase5.py` - join normalization, manifest compile/load (self-checksummed), conversion field plans, connection-level verifiers, bindings export
+  - `docs/research/anki_reorg_scripts/hub_phase5_compile.py` - expectations-gated manifest compiler
+  - `docs/research/anki_reorg_scripts/hub_phase5_execute.py` - copy-only executor (model install via Anki importer, in-place conversions, hub creation, quarantine archive, gates)
+  - `docs/research/anki_reorg_scripts/hub_phase5_verify.py` - standalone gate re-run
+  - `docs/research/anki_reorg_scripts/hub_phase5_rollback.py` - journal-driven rollback to logical pristine
+  - `tools/build_hub_pilot.py` - pilot selection (admin API) + media staging + offline rebuild (`--out hub_pilot_v2.apkg`)
+  - `docs/research/hub_manifest/PHASE5_REHEARSAL.md` - rehearsal record + gap analysis
+  - `tests/test_hub.py` - recipes, frozen shapes, grid, apkg round-trips, phase-5 compiler, ephemeral-Postgres schema staging
+- **Dependencies**: genanki, anki (executor), asyncpg (tests), admin API + QA verdicts store (pilot refresh only)
+- **Added**: 2026-08-09 | **Modified**: 2026-08-09
+
 ## Grammar
 
 ### Grammar drill pipeline (5 languages)
