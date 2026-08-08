@@ -63,7 +63,11 @@
 - **Memory discipline on the Mac**: one giant at a time (mint ~50GB /
   judge 54GB / gemma 34GB in 96GB). Judge scripts unload ollama + need
   a 66GB cushion — a kernel panic (WindowServer starvation) taught
-  this. Don't lower the cushion.
+  this. Don't lower the cushion. ALSO (2026-08-08 incident): the judge
+  tick now defers while `mac_render_chunk.py` is alive — a start-window
+  check alone let an 11h judge/mint overlap fill 32GB swap and knock
+  the box off the LAN in waves. If the Mac goes "slow but online" +
+  SSH times out, check `vm.swapusage` FIRST, not the network.
 - **Fedora night window** 01:30-09:00 (systemd user timers qwen-miner-*)
   until Aug 10 — the fans annoy the user; don't mint days before then.
   /tmp is RAM: don't park big files there (a 3.5GB tarball once ate the
