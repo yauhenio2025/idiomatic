@@ -104,6 +104,21 @@
   - `frontend/` - React SPA
 - **Dependencies**: `ADMIN_TOKEN` env
 
+## Expression Hub (build track — branch `hub-build`, not deployed)
+
+### Durable-ID schema staging + frozen hub models + disposable pilot
+- **Status**: Planned (coordinator-gated; owner pilot verdict pending)
+- **Description**: F1+F2 of the Hub build — additive boot-migration staging for canonical expression/sense/example identities, the note-binding crosswalk, and the snapshot/delta release ledger; frozen Anki models `1820180001` (hub note, 2 cards: TL-front rail card + amended EN→TL production card, context clips on both backs) and `1820180002` (EN→target fluency example); 30-expression disposable pilot apkg for owner gate 1. Design of record: `docs/research/EXPRESSION_HUB_DESIGN.md` + amendments in `EXPRESSION_HUB_DECISIONS.md`.
+- **Entry Points**:
+  - `db/schema.sql:643-950` - EXPRESSION HUB durable-ID staging block (identity columns/backfills, aliases, bindings, release ledger)
+  - `idiomatic/hub/identity.py` - frozen GUID/source-key/stable-key/media-name recipes (pilot GUIDs in a separate namespace)
+  - `idiomatic/hub/apkg.py` - frozen models + templates + `build_hub_apkg()` (production decks from `anki_root`; pilot routes under `ZZ Hub Pilot (disposable)`)
+  - `tools/build_hub_pilot.py` - pilot selection (admin API) + media staging (QA-verified images, reused clips only) + offline rebuild
+  - `docs/research/hub_manifest/PILOT_NOTES.md` - owner walkthrough + DECISIONS-NEEDED
+  - `tests/test_hub.py` - recipes, frozen shapes, apkg round-trips, ephemeral-Postgres schema staging incl. purge-path regression
+- **Dependencies**: genanki, asyncpg (tests), admin API + QA verdicts store (pilot refresh only)
+- **Added**: 2026-08-09 | **Modified**: 2026-08-09
+
 ## Grammar
 
 ### Grammar drill pipeline (5 languages)
