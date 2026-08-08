@@ -114,8 +114,8 @@ def all_exercises2_notes() -> list[x2.Ex2Note]:
 
 
 def job_source_key(note: x2.Ex2Note, clip_kind: str) -> str:
-    if clip_kind not in ("answer", "example"):
-        raise ValueError("clip_kind must be answer|example")
+    if clip_kind not in ("answer", "example", "prompt_en"):
+        raise ValueError("clip_kind must be answer|example|prompt_en")
     return (
         f"exercises2:v{CONTRACT_VERSION}:{note.lang}:{note.topic}:"
         f"{note.item_id}:{clip_kind}"
@@ -140,7 +140,7 @@ def content_hash(
 
 def canonical_staged_path(source_key: str, lang: str, digest: str) -> str:
     """Server-owned path relative to ``DATA_DIR/staged_audio``."""
-    if lang not in x2.SUPPORTED_LANGS:
+    if lang not in x2.SUPPORTED_LANGS and lang != "en":
         raise ValueError("unsupported local TTS language")
     if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest):
         raise ValueError("content digest must be 64 lowercase hex characters")
@@ -161,28 +161,39 @@ def expression_pool_staged_path(source_key: str, lang: str, digest: str) -> str:
 
 
 def exercises2_job_rows(
-    notes: list[x2.Ex2Note], *, is_pilot: bool,
+    notes: list[x2.Ex2Note], *, is_pilot: bool, include_en_prompt: bool = True,
 ) -> list[dict[str, Any]]:
-    """Create the two clip jobs (answer + example) for each note."""
+    """Create the clip jobs for each note: answer + example, plus the
+    English prompt clip (owner directive 2026-08-08) unless excluded.
+
+    The frozen 60-clip listening pilot and its strict rebuild pass
+    ``include_en_prompt=False`` so the verdicted artifact never changes.
+    """
     note_keys = [x2.exercises_note_key(note) for note in notes]
     if len(note_keys) != len(set(note_keys)):
         raise ValueError("duplicate Exercises2 note identity")
     rows: list[dict[str, Any]] = []
     for note in notes:
-        for clip_kind, text in (("answer", note.tl), ("example", note.example_tl)):
+        clip_plan = [
+            ("answer", note.tl, note.lang),
+            ("example", note.example_tl, note.lang),
+        ]
+        if include_en_prompt:
+            clip_plan.append(("prompt_en", note.en, "en"))
+        for clip_kind, text, voice_lang in clip_plan:
             source_key = job_source_key(note, clip_kind)
-            digest = content_hash(text, note.lang)
+            digest = content_hash(text, voice_lang)
             rows.append({
                 "contract_version": CONTRACT_VERSION,
                 "source_kind": "exercises2",
                 "source_key": source_key,
-                "lang": note.lang,
+                "lang": voice_lang,
                 "note_key": x2.exercises_note_key(note),
                 "clip_kind": clip_kind,
                 "text": text,
                 "voice_version": VOICE_VERSION,
                 "content_hash": digest,
-                "staged_path": canonical_staged_path(source_key, note.lang, digest),
+                "staged_path": canonical_staged_path(source_key, voice_lang, digest),
                 "is_pilot": is_pilot,
             })
     return rows
@@ -309,7 +320,8 @@ def expression_pool_job_rows(
 
 async def seed_exercises2_pilot() -> dict[str, Any]:
     notes = pilot_notes()
-    result = await db.seed_local_tts_jobs(exercises2_job_rows(notes, is_pilot=True))
+    result = await db.seed_local_tts_jobs(
+        exercises2_job_rows(notes, is_pilot=True, include_en_prompt=False))
     return {**result, "notes": len(notes), "jobs": len(notes) * 2,
             "contract_version": CONTRACT_VERSION, "pilot": True}
 
@@ -524,6 +536,10 @@ def _conventional_exercises2_clip(
     expected: dict[str, Any], *, settings: Any, data_dir: Path,
 ) -> tuple[Path | None, bool]:
     """Return a validated conventional clip and whether one was invalid."""
+    if expected["lang"] == "en":
+        # English prompt clips are local-Qwen-only; the conventional lane
+        # never synthesized them (and LANG_VOICE has no "en" route).
+        return None, False
     digest = x2.audio_cache_key(expected["text"], expected["lang"], settings)
     clip = (
         Path(data_dir) / "staged_audio" / "grammar" / "exercises2"
@@ -647,6 +663,7 @@ async def resolve_exercises2_audio(
         x2.exercises_note_key(note): x2.NoteAudio(
             answer=clips.get((x2.exercises_note_key(note), "answer")),
             example=clips.get((x2.exercises_note_key(note), "example")),
+            prompt_en=clips.get((x2.exercises_note_key(note), "prompt_en")),
         )
         for note in notes
     }
@@ -781,8 +798,13 @@ async def seed_expression_pool(lang: str) -> dict[str, Any]:
 async def completed_audio_for_notes(
     notes: list[x2.Ex2Note], *, data_dir: Path | None = None,
 ) -> dict[str, x2.NoteAudio]:
-    """Resolve both completed, current clips for every note or refuse all."""
-    expected_rows = exercises2_job_rows(notes, is_pilot=False)
+    """Resolve both completed, current clips for every note or refuse all.
+
+    Pilot-only strictness: the verdicted 60-clip artifact excludes the
+    later prompt_en lane, so this resolver must too.
+    """
+    expected_rows = exercises2_job_rows(
+        notes, is_pilot=False, include_en_prompt=False)
     completed_rows = await db.completed_local_tts_jobs(
         [row["source_key"] for row in expected_rows]
     )

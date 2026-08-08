@@ -170,6 +170,7 @@ hr#answer {border: 0; border-top: 1px solid #e1e1d8; margin: 18px 0;}
 
 PRODUCTION_FRONT = """<div class="x2-meta">{{Topic}} · {{Category}}</div>
 <div class="x2-en">{{EN}}</div>
+{{Extra1}}
 <div class="x2-hint">→ {{Lang}}</div>"""
 
 PRODUCTION_BACK = """<div class="x2-meta">{{Topic}} · {{Category}}</div>
@@ -398,6 +399,10 @@ def audio_filename(lang: str, digest: str) -> str:
 class NoteAudio:
     answer: Path | None
     example: Path | None
+    # English prompt clip (owner directive 2026-08-08) — rendered by the
+    # local-Qwen lane only; ships in the spare Extra1 field so the frozen
+    # 17-field model keeps its count/order.
+    prompt_en: Path | None = None
 
 
 async def _synthesize_note_audio(
@@ -484,7 +489,7 @@ def _build_exercises2_apkg(
 
         record = audio_for_note(note) or NoteAudio(None, None)
         sounds: list[str] = []
-        for clip in (record.answer, record.example):
+        for clip in (record.answer, record.example, record.prompt_en):
             if clip is None:
                 sounds.append("")
                 continue
@@ -516,7 +521,8 @@ def _build_exercises2_apkg(
                 cloze_front_html(note.cloze),
                 sounds[0],
                 sounds[1],
-                "", "", "",
+                sounds[2],  # Extra1 = English prompt audio (may be empty)
+                "", "",
             ],
             guid=exercises_guid(note.lang, note.topic, note.item_id),
             tags=[

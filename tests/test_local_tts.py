@@ -39,11 +39,15 @@ def test_pilot_selection_is_frozen_30_notes_and_60_jobs():
                 note.item_id for note in chosen if note.topic == topic
             ) == expected_ids
 
-    rows = local_tts.exercises2_job_rows(notes, is_pilot=True)
+    rows = local_tts.exercises2_job_rows(
+        notes, is_pilot=True, include_en_prompt=False)
     assert len(rows) == 60
     assert len({row["source_key"] for row in rows}) == 60
     assert {row["clip_kind"] for row in rows} == {"answer", "example"}
     assert all(row["is_pilot"] and row["contract_version"] == 1 for row in rows)
+    with_en = local_tts.exercises2_job_rows(notes, is_pilot=True)
+    assert len(with_en) == 90
+    assert {r["lang"] for r in with_en if r["clip_kind"] == "prompt_en"} == {"en"}
 
 
 def test_source_edit_keeps_job_identity_but_changes_hash_and_canonical_path():
@@ -251,9 +255,10 @@ def test_full_seed_queues_only_clips_missing_from_both_local_sources(
     assert answer.is_file()
     assert [(row["clip_kind"], row["text"]) for row in seeded] == [
         ("example", note.example_tl),
+        ("prompt_en", note.en),
     ]
-    assert result["jobs"] == result["clips_missing"] == 1
-    assert result["clips_expected"] == 2
+    assert result["jobs"] == result["clips_missing"] == 2
+    assert result["clips_expected"] == 3
     assert result["clips_existing_conventional"] == 1
     assert result["clips_completed_local"] == 0
     assert result["missing_only"] is True
@@ -281,7 +286,8 @@ def test_current_local_completion_wins_when_conventional_cache_also_exists(
     audio = resolution.audio_by_note_key[x2.exercises_note_key(note)]
     assert conventional.is_file()
     assert audio.answer == local_answer
-    assert resolution.stats["clips_completed_local"] == 2
+    assert audio.prompt_en is not None
+    assert resolution.stats["clips_completed_local"] == 3
     assert resolution.stats["clips_existing_conventional"] == 0
     assert resolution.missing_rows == []
 
@@ -315,10 +321,10 @@ def test_corrupt_conventional_clip_is_missing_and_not_silently_reused(
 
     result = asyncio.run(local_tts.seed_exercises2_full())
 
-    assert [row["clip_kind"] for row in seeded] == ["answer"]
+    assert [row["clip_kind"] for row in seeded] == ["answer", "prompt_en"]
     assert result["clips_invalid_conventional"] == 1
     assert result["clips_existing_conventional"] == 1
-    assert result["clips_missing"] == 1
+    assert result["clips_missing"] == 2
 
 
 def test_invalid_current_completion_is_guarded_requeued_then_seeded(
@@ -363,7 +369,7 @@ def test_invalid_current_completion_is_guarded_requeued_then_seeded(
         expected[0]["staged_path"],
     )
     assert "missing staged file" in requeued[0][3]
-    assert result["clips_completed_local"] == 1
+    assert result["clips_completed_local"] == 2
     assert result["clips_invalid_completed_requeued"] == 1
     assert result["clips_missing"] == 1
 
@@ -444,9 +450,10 @@ def test_hybrid_rebuild_uses_conventional_then_local_without_provider(
     conventional_answer = _conventional_clip(tmp_path, note, note.tl, settings)
     completed = _completed_rows(tmp_path, note)
     local_example = tmp_path / "staged_audio" / completed[1]["staged_path"]
+    local_prompt = tmp_path / "staged_audio" / completed[2]["staged_path"]
 
     async def fake_completed(_keys):
-        return [completed[1]]
+        return [completed[1], completed[2]]
 
     async def forbidden_synthesize(*_args, **_kwargs):
         raise AssertionError("paid/provider-chain synthesis was called")
@@ -455,6 +462,7 @@ def test_hybrid_rebuild_uses_conventional_then_local_without_provider(
         assert lang == note.lang and notes == [note]
         assert audio[note.item_id].answer == conventional_answer
         assert audio[note.item_id].example == local_example
+        assert audio[note.item_id].prompt_en == local_prompt
         Path(out_path).parent.mkdir(parents=True, exist_ok=True)
         Path(out_path).write_bytes(b"apkg")
         return 1
@@ -474,7 +482,7 @@ def test_hybrid_rebuild_uses_conventional_then_local_without_provider(
 
     assert result["apkg_id"] == 654
     assert result["clips_existing_conventional"] == 1
-    assert result["clips_completed_local"] == 1
+    assert result["clips_completed_local"] == 2
     assert result["clips_missing"] == 0
 
 
@@ -500,7 +508,7 @@ def test_strict_rebuild_refuses_missing_clip_before_builder_or_provider(
     monkeypatch.setattr(db, "completed_local_tts_jobs", no_completed)
     monkeypatch.setattr(x2, "build_exercises2_apkg", forbidden_builder)
     monkeypatch.setattr(gemini, "synthesize", forbidden_synthesize)
-    with pytest.raises(local_tts.LocalTTSBuildError, match="refused 2 clip"):
+    with pytest.raises(local_tts.LocalTTSBuildError, match="refused 3 clip"):
         asyncio.run(local_tts.rebuild_exercises2_language(note.lang))
 
 

@@ -47,6 +47,16 @@ must never turn a local bridge error into a request to any paid provider.
    Each note creates an `answer` and an `example` job, for 60 clips total.
    Stable note ids are frozen in `idiomatic/local_tts.py::PILOT_NOTE_IDS`.
 
+   Since 2026-08-08 (owner directive, post-verdict) full seeding adds a
+   third `prompt_en` clip per note — the English prompt sentence, voiced
+   with the `en` clone and shipped in the spare `Extra1` field on the
+   Production card front. The frozen pilot and its strict rebuild exclude
+   `prompt_en` so the verdicted 60-clip artifact never changes. Workers
+   need no update: `clip_kind` is opaque to them and `lang` (`en`) drives
+   voice selection as usual. Strict hybrid rebuilds now require the
+   English clip like any other; conventional-cache fallback never applies
+   to `prompt_en` (no conventional English clips exist).
+
 2. Claim a small batch:
 
    ```http
