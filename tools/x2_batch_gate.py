@@ -98,6 +98,7 @@ def gate_chunk(chunk: str) -> tuple[bool, list[str], dict]:
         return False, [f"invalid JSON: {exc}"], stats
 
     input_ids = [row["id"] for row in inputs]
+    input_by_id = {row["id"]: row for row in inputs}
     triage_ids = [row.get("id") for row in triage]
     if sorted(triage_ids) != sorted(input_ids):
         missing = set(input_ids) - set(triage_ids)
@@ -105,6 +106,15 @@ def gate_chunk(chunk: str) -> tuple[bool, list[str], dict]:
         problems.append(
             f"triage id mismatch (missing {sorted(missing)[:5]}, extra {sorted(extra)[:5]})"
         )
+    elif triage_ids != input_ids:
+        problems.append("triage does not preserve input order")
+    changed_triage_en = [
+        row.get("id") for row in triage
+        if row.get("id") in input_by_id
+        and row.get("en") != input_by_id[row["id"]].get("en")
+    ]
+    if changed_triage_en:
+        problems.append(f"triage changed source English: {changed_triage_en[:5]}")
     bad_verdicts = [row["id"] for row in triage
                     if row.get("verdict") not in ("keep", "drop")]
     if bad_verdicts:
@@ -115,10 +125,25 @@ def gate_chunk(chunk: str) -> tuple[bool, list[str], dict]:
         problems.append(
             f"notes/keep mismatch (notes {len(note_ids)}, keeps {len(keep_ids)})"
         )
+    expected_note_order = [
+        row["id"] for row in triage if row.get("verdict") == "keep"
+    ]
+    if note_ids == expected_note_order:
+        pass
+    elif sorted(note_ids) == sorted(keep_ids):
+        problems.append("notes do not preserve kept-input order")
+    changed_note_en = [
+        raw.get("id") for raw in notes_raw
+        if isinstance(raw, dict) and raw.get("id") in input_by_id
+        and raw.get("en") != input_by_id[raw["id"]].get("en")
+    ]
+    if changed_note_en:
+        problems.append(f"notes changed source English: {changed_note_en[:5]}")
 
     old_backs = {row["id"]: row.get("old_back", "") for row in inputs}
     parsed = 0
     wrong_lang: list[str] = []
+    bad_example_lengths: list[str] = []
     copied_legacy = 0
     if topic == "big_tech_phrases":
         try:
@@ -148,10 +173,19 @@ def gate_chunk(chunk: str) -> tuple[bool, list[str], dict]:
             other = _wrong_language(text, lang)
             if other:
                 wrong_lang.append(f"{note.item_id}:{other}:{text[:40]!r}")
+        if topic != "big_tech_phrases":
+            words = re.findall(r"[^\W_]+(?:['’\-][^\W_]+)*", note.example_tl)
+            if topic in {
+                "tenses", "fancy_vocab", "big_tech_vocab",
+                "cold_war_vocab", "geopolitics",
+            } and not 18 <= len(words) <= 30:
+                bad_example_lengths.append(f"{note.item_id}:{len(words)}")
         if note.tl and note.tl == old_backs.get(note.item_id, ""):
             copied_legacy += 1
     if wrong_lang:
         problems.append(f"wrong-language suspects: {wrong_lang[:8]}")
+    if bad_example_lengths:
+        problems.append(f"example word counts outside 18..30: {bad_example_lengths[:8]}")
 
     verdict_counts = Counter(row.get("verdict") for row in triage)
     stats.update({
