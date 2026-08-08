@@ -75,12 +75,15 @@ def _wrong_language(text: str, lang: str) -> str | None:
     return None
 
 
-def gate_chunk(chunk: str) -> tuple[bool, list[str], dict]:
+def gate_chunk(
+    chunk: str, *, batch_dir: Path | None = None,
+) -> tuple[bool, list[str], dict]:
     problems: list[str] = []
     stats: dict = {"chunk": chunk}
-    input_path = BATCH_DIR / "input" / f"{chunk}.json"
-    notes_path = BATCH_DIR / "output" / f"{chunk}_notes.json"
-    triage_path = BATCH_DIR / "output" / f"{chunk}_triage.json"
+    root = Path(batch_dir) if batch_dir is not None else BATCH_DIR
+    input_path = root / "input" / f"{chunk}.json"
+    notes_path = root / "output" / f"{chunk}_notes.json"
+    triage_path = root / "output" / f"{chunk}_triage.json"
     if not input_path.exists():
         return False, [f"unknown chunk {chunk!r}"], stats
     if not notes_path.exists() or not triage_path.exists():
