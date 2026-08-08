@@ -26,10 +26,27 @@ sys.path.insert(0, str(Path(__file__).parent))
 import qa_rubric  # noqa: E402
 
 FIX_PROMPT = (
-    "The anatomy check failed for this image. State, in ONE short "
-    "imperative sentence, the single most important anatomical "
-    "correction (e.g. 'Remove the extra left arm of the woman.'). "
-    "Answer with the sentence only.")
+    "This image failed checks for: {classes}. State the single most "
+    "important correction as ONE short imperative sentence an image-"
+    "editing model can execute (e.g. 'Remove the duplicate woman on "
+    "the right.' or 'Fix the distorted fingers on the left hand.'). "
+    "Do not explain or deliberate. Put the sentence, alone, between "
+    "<fix> and </fix> tags.")
+
+
+def extract_fix(raw):
+    """The judge tends to leak deliberation; keep only the tagged
+    sentence, falling back to the last plausible imperative line."""
+    import re as _re
+    m = _re.search(r"<fix>\s*(.+?)\s*</fix>", raw, _re.S)
+    if m:
+        return " ".join(m.group(1).split())[:300]
+    lines = [ln.strip(" *-#>") for ln in raw.splitlines() if ln.strip(" *-#>")]
+    for ln in reversed(lines):
+        if ln.endswith(".") and len(ln) < 200 and not ln.lower().startswith(
+                ("actually", "let", "re-eval", "refin", "usually", "is ")):
+            return ln[:300]
+    return (lines[-1] if lines else "")[:300]
 
 
 def sha1(path):
@@ -249,10 +266,12 @@ def main():
         if (args.describe_fix and verdict == "fail"
                 and {"anatomy", "identity"} & set(fail_classes)):
             try:
-                fix = judge.ask(img, "# Image\n<image>\n\n" + FIX_PROMPT,
+                fix = judge.ask(img, "# Image\n<image>\n\n"
+                                + FIX_PROMPT.format(
+                                    classes=", ".join(fail_classes)),
                                 max_new_tokens=512)
                 fix = re.sub(r"<think>.*?</think>", "", fix, flags=re.S)
-                row["fix_instruction"] = fix.strip().split("\n")[-1][:300]
+                row["fix_instruction"] = extract_fix(fix)
             except Exception:  # noqa: BLE001
                 pass
         ledger.write(json.dumps(row, ensure_ascii=False) + "\n")
