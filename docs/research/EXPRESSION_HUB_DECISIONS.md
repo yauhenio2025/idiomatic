@@ -78,3 +78,25 @@ subordinate example cards; (2) **Balanced** weakness policy; (3) dedicated
 `<Language>::4 Exercises::Diagnosed trouble spots` subdeck for Flag-1
 diagnoses; (4) **vertical comic rail** hub card. The hub design is fully
 decided; build sequencing follows the estate-reorg plan's phase order.
+
+---
+
+## OWNER AMENDMENTS (2026-08-08, post-estate-cutover) — bind at model freeze
+
+Two additions to the accepted hub card spec, raised by the owner after
+seeing the migrated tree (record: docs/RESTRUCTURE_STATUS.md §2):
+
+1. **EN→TL expression-production card.** The accepted design projects
+   only the TL-front hub card; the retired `e2t` task (English front →
+   expression back) has no successor. The hub note must also project an
+   EN→TL expression card — second template/card on model `1820180001`,
+   exact shape decided when the model freezes. TL→EN recognition is
+   already covered by the hub card front.
+2. **Source-video context clip on card backs.** The accepted hub back
+   lists source titles/URLs as text only, which loses the ability to
+   HEAR the expression in the video where it first appeared. Amend:
+   embed the short per-occurrence context clip
+   (`expression_idioms.audio_context`) on the hub-card back and the new
+   EN→TL card back. The long stitched listen-and-learn compilations
+   remain retired; this is seconds-long occurrence audio already
+   persisted server-side.
