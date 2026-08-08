@@ -1,0 +1,952 @@
+[
+  {
+    "expression_id": 2099,
+    "idiom": "in modo particolare",
+    "anchor": {
+      "semantic_hook": "A particular item is reached by one particular route, visibly singled out from a larger set of equal choices.",
+      "setting": "An empty selection gallery contains six plain display bays reached by six separate floor paths, with a central turntable for interchangeable objects. One path and its connected bay expand to monumental size while the other five remain ordinary, physically isolating a single choice for special attention.",
+      "cast": [
+        "elodie"
+      ],
+      "absurd_element": "one selected path and display bay expanding to monumental size"
+    },
+    "variations": [
+      {
+        "example_id": 12463,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "leans eagerly into the enlarged bay, raises a forkful of fresh pasta toward her mouth, and gestures past the other Italian dishes toward that pasta alone"
+          }
+        ],
+        "scene_adjust": "a spread of Italian dishes in the ordinary bays and a bowl of fresh pasta in the enlarged bay"
+      },
+      {
+        "example_id": 12464,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "fans her flushed face beside the enlarged midsummer display and points to its blazing sun disk while the rest of the seasonal displays sit behind her"
+          }
+        ],
+        "scene_adjust": "a circular sequence of seasonal weather displays, with the hottest midsummer scene in the enlarged bay"
+      },
+      {
+        "example_id": 12465,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "examines a Roman helmet and miniature aqueduct with intense interest, leaving the other historical artifacts untouched in their bays"
+          }
+        ],
+        "scene_adjust": "artifacts from several historical eras, with a Roman helmet, aqueduct model, and laurel wreath in the enlarged bay"
+      },
+      {
+        "example_id": 12466,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "kneels at the enlarged bay to reconnect loose project pieces, glances urgently toward an approaching elevator, and reaches for the final missing piece"
+          }
+        ],
+        "scene_adjust": "a disassembled project model on the turntable, a tray of repair pieces, waiting guest chairs, and closed elevator doors"
+      },
+      {
+        "example_id": 12467,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "holds a travel camera beside the enlarged Siena model, beams at its striped cathedral and shell-shaped square, and turns away from the other Tuscan stops"
+          }
+        ],
+        "scene_adjust": "miniatures of several Tuscan destinations, with Siena's cathedral and shell-shaped central square in the enlarged bay"
+      },
+      {
+        "example_id": 12468,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "sits with drooping eyelids, checks her pulse, and reaches into the enlarged health bay for water and a folded blanket"
+          }
+        ],
+        "scene_adjust": "a health-check kit, a glass of water, a folded blanket, and several daily-life objects in the surrounding bays"
+      }
+    ]
+  },
+  {
+    "expression_id": 2100,
+    "idiom": "in tempi più recenti",
+    "anchor": {
+      "semantic_hook": "More recent times occupy the nearest end of a visible sequence of clock faces progressing from the distant past toward the present.",
+      "setting": "An empty time archive has a long aisle of clock faces without digits, aging objects in distant alcoves, and a clean present-day display platform at the near end. The nearest clock has grown through the ceiling and fills the end of the aisle, making the most recent period physically larger than every earlier one.",
+      "cast": [
+        "giorgia_meloni"
+      ],
+      "absurd_element": "the nearest clock growing through the ceiling and dwarfing all earlier clocks"
+    },
+    "variations": [
+      {
+        "example_id": 12469,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "moves from an old mechanical typewriter toward a laptop and video-call screen beneath the nearest clock, then settles into the modern workstation"
+          }
+        ],
+        "scene_adjust": "an old mechanical typewriter in a distant alcove and a laptop, headset, and video-call grid without writing on the near platform"
+      },
+      {
+        "example_id": 12470,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "steps away from a soot-stained factory model and presents a clean cluster of hotel, museum, and sightseeing miniatures beneath the nearest clock"
+          }
+        ],
+        "scene_adjust": "a distant factory model with smokestacks and a near display of a hotel, museum, camera, and sightseeing bus"
+      },
+      {
+        "example_id": 12471,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "leaves an empty office desk in a distant alcove and works at a home table with a laptop, headset, and mug beneath the nearest clock"
+          }
+        ],
+        "scene_adjust": "an empty shared office workstation in the distance and a compact home office on the near platform"
+      },
+      {
+        "example_id": 12472,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "opens the doors of an ancient castle model beneath the nearest clock and arranges preserved artifacts in its newly fitted exhibition cases"
+          }
+        ],
+        "scene_adjust": "an ancient castle model with modern interior display cases, artifact plinths, and visitor ropes"
+      },
+      {
+        "example_id": 12473,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "wears protective laboratory glasses, compares a row of rising thermometer columns, and points with concern to the tallest recent summer column"
+          }
+        ],
+        "scene_adjust": "weather instruments, sun disks, and a sequence of thermometers with progressively higher liquid columns near the largest clock"
+      },
+      {
+        "example_id": 12474,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "lifts a dust cover from a traditional hand loom beneath the nearest clock and carefully resumes weaving its nearly forgotten pattern"
+          }
+        ],
+        "scene_adjust": "a neglected hand loom in a distant alcove and the same restored loom with fresh thread on the near platform"
+      }
+    ]
+  },
+  {
+    "expression_id": 2101,
+    "idiom": "conosciamo bene",
+    "anchor": {
+      "semantic_hook": "Knowing something well is made visible through two people confidently navigating its exposed details without needing instructions.",
+      "setting": "An empty familiarity workshop contains a central inspection table, modular urban alcoves, tool drawers, and a cutaway wall for interchangeable subjects. Every object and wall in the room is impossibly transparent through its full depth, exposing all hidden routes, joints, and mechanisms at once.",
+      "cast": [
+        "fedez",
+        "jannik_sinner"
+      ],
+      "absurd_element": "every object and wall becoming transparent through its full depth"
+    },
+    "variations": [
+      {
+        "example_id": 12475,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "bumps shoulders warmly with his old friend, points to their neighboring childhood homes, and retraces their shared route with an easy grin"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "returns the grin, taps the same childhood route from the opposite end, and holds up a worn ball from their neighborhood games"
+          }
+        ],
+        "scene_adjust": "a detailed neighborhood model with two adjacent homes, a small playground, and a worn ball"
+      },
+      {
+        "example_id": 12476,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "traces a confident route through the city model and points enthusiastically toward three inviting restaurant interiors"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "sorts miniature restaurant dishes by preference and gestures toward a short route linking the best dining rooms"
+          }
+        ],
+        "scene_adjust": "a detailed city model with winding streets and several distinct restaurant interiors"
+      },
+      {
+        "example_id": 12477,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "calmly removes a device panel, points to the exact faulty component, and reassures his partner with a steady raised palm"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "connects two exposed components with practiced precision and slides the repaired project module into place"
+          }
+        ],
+        "scene_adjust": "a complex electronic project device with exposed components, precision tools, and an empty instruction holder"
+      },
+      {
+        "example_id": 12478,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "quietly presents a calming cup and closes an overflowing task drawer before the stressed boss reaches the inspection table"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "moves a comfortable chair into its familiar position and gives his partner a knowing nod"
+          }
+        ],
+        "scene_adjust": "an executive desk module, a calming cup, a comfortable chair, and an overfilled task drawer"
+      },
+      {
+        "example_id": 12479,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "studies a repeatedly broken mechanism with a weary frown and points to the same worn joint that has failed before"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "tests possible replacement pieces against the exposed joint and sets the promising piece nearest the repair tools"
+          }
+        ],
+        "scene_adjust": "a familiar broken mechanism, a scarred repair tray, replacement pieces, and precision tools"
+      },
+      {
+        "example_id": 12480,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "glances silently toward a loose component and raises one eyebrow, keeping both hands relaxed at his sides"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "immediately catches the loose component, smiles back without speaking, and fits it into the correct opening"
+          }
+        ],
+        "scene_adjust": "a loose mechanical component poised beside its matching opening and two unused speaking horns resting in a drawer"
+      }
+    ]
+  },
+  {
+    "expression_id": 2102,
+    "idiom": "in un certo qual modo",
+    "anchor": {
+      "semantic_hook": "A statement qualified as true in a certain way follows one partly defined route rather than reaching a complete, absolute endpoint.",
+      "setting": "An empty qualification chamber contains several floor routes, a central evidence table, a set of adjustable boundaries, and an unfinished destination platform. One chosen route exists only as separated solid segments suspended over a gap, visibly reaching the conclusion only part of the way.",
+      "cast": [
+        "roberto_saviano"
+      ],
+      "absurd_element": "one chosen route existing as separated solid segments over a gap"
+    },
+    "variations": [
+      {
+        "example_id": 12481,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "rests one hand on his chest, studies the scattered remains of yesterday's mishap, and places one responsibility token on the first route segment"
+          }
+        ],
+        "scene_adjust": "a broken vase, an overturned chair, a stopped clock face without digits, and several plain responsibility tokens"
+      },
+      {
+        "example_id": 12482,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "studies a painting of one isolated commuter among distant apartment towers and traces only the first few suspended route segments beside it"
+          }
+        ],
+        "scene_adjust": "a framed painting containing one solitary commuter, sparse modern towers, and many empty windows"
+      },
+      {
+        "example_id": 12483,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "offers a cautious partial nod, places one agreement token on the route, and keeps a tangled cluster of conflicting evidence close to his other hand"
+          }
+        ],
+        "scene_adjust": "one agreement token, several conflicting evidence objects, and an intricate branching problem model"
+      },
+      {
+        "example_id": 12484,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "rises from beside a battered suitcase, steps carefully across the first suspended segments, and reaches toward a taller measuring post on the far side"
+          }
+        ],
+        "scene_adjust": "a battered suitcase, discarded crutches, a sequence of height markers without writing, and a healthy young tree"
+      },
+      {
+        "example_id": 12485,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "sets two project models side by side, aligns their matching sections, and leaves their visibly different sections separated"
+          }
+        ],
+        "scene_adjust": "two project models with several matching geometric modules and several clearly different modules"
+      },
+      {
+        "example_id": 12486,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "examines a decision fork, places a hand gently on one chosen branch, and holds his other palm back in restrained disagreement"
+          }
+        ],
+        "scene_adjust": "a branching decision model, one chosen branch, an alternative branch, and several uncommitted tokens"
+      }
+    ]
+  },
+  {
+    "expression_id": 2103,
+    "idiom": "sembra essere",
+    "anchor": {
+      "semantic_hook": "Seeming to be is staged as an observed subject whose apparent state remains tentative until it is inspected from beyond a viewing barrier.",
+      "setting": "An empty observation foyer contains a central examination plinth, a viewing rail, evidence trays, and interchangeable room modules beyond a suspended glass veil. The single veil divides every object seen through it into two slightly different physical states, leaving its true condition visibly uncertain.",
+      "cast": [
+        "jannik_sinner",
+        "elodie"
+      ],
+      "absurd_element": "the glass veil dividing each viewed object into two possible physical states"
+    },
+    "variations": [
+      {
+        "example_id": 12487,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "watches a formerly chaotic control board settle into orderly positions, keeps one hand near the emergency lever, and relaxes only slightly"
+          }
+        ],
+        "scene_adjust": "a control console with steady gauges, contained loose cables, and a closed emergency cabinet"
+      },
+      {
+        "example_id": 12488,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "slumps on a bench with heavy eyelids, rubs his face, and lets a work bag hang loosely from one hand"
+          }
+        ],
+        "scene_adjust": "a bench, a work bag, a cold cup, and several clock faces without digits showing late hours"
+      },
+      {
+        "example_id": 12489,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "holds a set of car keys beside a family car model, compares their shape with the ignition slot, and pauses before claiming them"
+          }
+        ],
+        "scene_adjust": "a plain set of car keys, a family car model, an ignition slot, and an older man's driving gloves"
+      },
+      {
+        "example_id": 12490,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "leans over a project model, isolates its largest cracked joint with both hands, and studies it with a tentative frown"
+          }
+        ],
+        "scene_adjust": "a project model with one major cracked joint, several minor intact modules, and repair tools"
+      },
+      {
+        "example_id": 12491,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "peers through the dark restaurant door, tests the locked handle, and shrugs toward the unlit dining room"
+          }
+        ],
+        "scene_adjust": "a restaurant entrance module with a locked door, empty tables, stacked chairs, and extinguished lamps"
+      },
+      {
+        "example_id": 12492,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "offers a warm handshake across the viewing rail and smiles at the helpful arrangement of shared work materials"
+          },
+          {
+            "slug": "elodie",
+            "action": "returns the handshake, slides a needed tool toward her new colleague, and welcomes him with an open-handed gesture"
+          }
+        ],
+        "scene_adjust": "a shared office module with neatly arranged supplies, spare tools, and two adjacent workstations"
+      }
+    ]
+  },
+  {
+    "expression_id": 2104,
+    "idiom": "al suo interno",
+    "anchor": {
+      "semantic_hook": "Inside it is made visible by opening an outer shell and inspecting the components contained within its boundaries.",
+      "setting": "An empty cross-section hall contains a central hinged shell, inspection stairs, modular support cradles, and trays for interior components. The chamber revealed inside the shell is physically larger than the shell's exterior and extends deep beneath the hall floor.",
+      "cast": [
+        "sophia_loren"
+      ],
+      "absurd_element": "an interior chamber physically larger than its outer shell"
+    },
+    "variations": [
+      {
+        "example_id": 12493,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "opens an apparently empty box, reaches deep into its enlarged interior, and lifts out a small ribboned gift with delighted surprise"
+          }
+        ],
+        "scene_adjust": "a plain lidded box and a small ribboned gift resting at the bottom of its interior"
+      },
+      {
+        "example_id": 12494,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "stands on the inspection stairs inside a large company shell and gestures across several distinct departmental work areas"
+          }
+        ],
+        "scene_adjust": "a company-building shell containing several separated work areas with different tools and furniture"
+      },
+      {
+        "example_id": 12495,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "opens a thick book shell, descends into its deep interior, and examines a spread of old photographic prints"
+          }
+        ],
+        "scene_adjust": "a thick book with blank visible pages and many historical photographic prints stored inside"
+      },
+      {
+        "example_id": 12496,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "steps through a weathered castle shell into a completely renewed interior, runs one hand along a polished banister, and admires the fresh rooms"
+          }
+        ],
+        "scene_adjust": "a weathered castle exterior containing renewed floors, stairs, fixtures, and furnished rooms"
+      },
+      {
+        "example_id": 12497,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "opens a computer case, leans into its enlarged interior, and points proudly at a compact drive spinning at high speed"
+          }
+        ],
+        "scene_adjust": "a powerful desktop computer case with cooling fans, circuit boards, and one rapidly spinning internal drive"
+      },
+      {
+        "example_id": 12498,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "peers into a political-party headquarters model, traces several internal cracks and tangled mechanisms, and presses her lips in concern"
+          }
+        ],
+        "scene_adjust": "a headquarters shell containing cracked meeting tables, jammed gears, divided chairs, and tangled internal mechanisms"
+      }
+    ]
+  },
+  {
+    "expression_id": 2105,
+    "idiom": "in alcun modo",
+    "anchor": {
+      "semantic_hook": "In no way is made visible by every possible route toward an unwanted outcome being completely closed.",
+      "setting": "An empty route-control chamber contains a central decision platform, many branching corridors, movable barriers, and neutral prop bays. Whenever an alternate corridor emerges from the floor, the same barrier stretches across it instantly, leaving no physical way through.",
+      "cast": [
+        "giorgia_meloni"
+      ],
+      "absurd_element": "one barrier instantly stretching across every newly emerging corridor"
+    },
+    "variations": [
+      {
+        "example_id": 12499,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "keeps both hands behind her back, steps away from another person's balanced decision scales, and refuses to touch either choice token"
+          }
+        ],
+        "scene_adjust": "balanced decision scales, two untouched choice tokens, and a clear boundary around them"
+      },
+      {
+        "example_id": 12500,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "sets an unexpected broken wheel aside, keeps the packed suitcases on their original route, and points firmly toward the unchanged destination model"
+          }
+        ],
+        "scene_adjust": "packed suitcases, a journey model, one unexpected broken wheel, and an unchanged destination miniature"
+      },
+      {
+        "example_id": 12501,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "bows her head apologetically, presses one hand to her chest, and opens her other palm toward the person she has upset"
+          }
+        ],
+        "scene_adjust": "a tipped chair, an untouched peace offering, and two positions kept apart by a low boundary"
+      },
+      {
+        "example_id": 12502,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "locks a case of personal-data tokens, shields it with both arms, and turns every transfer chute away from the exit corridors"
+          }
+        ],
+        "scene_adjust": "a locked case holding anonymous profile tokens, sealed transfer chutes, and a heavy key"
+      },
+      {
+        "example_id": 12503,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "tries several tools on a stubborn mechanical puzzle, drops her tired hands after each failure, and stares at the still-jammed center"
+          }
+        ],
+        "scene_adjust": "a jammed mechanical puzzle, several unsuitable tools, discarded solution pieces, and an empty repair slot"
+      },
+      {
+        "example_id": 12504,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "sets an explanation model beside evidence of damaged behavior, tests every connecting route, and pushes it back when none reaches the justification platform"
+          }
+        ],
+        "scene_adjust": "an explanation model, a broken conduct mechanism, loose evidence objects, and an unreachable justification platform"
+      }
+    ]
+  },
+  {
+    "expression_id": 2106,
+    "idiom": "continua a mantenere",
+    "anchor": {
+      "semantic_hook": "Continuing to maintain is staged as keeping a valued state or object steady through an unbroken cycle of care.",
+      "setting": "An empty maintenance rotunda contains a central steadying plinth, repair tools, supply drawers, and interchangeable subject modules. One continuous support belt loops vertically through the ceiling and floor and keeps the object on the plinth unchanged through every circuit.",
+      "cast": [
+        "sophia_loren",
+        "brian_cox"
+      ],
+      "absurd_element": "the continuous support belt looping through ceiling and floor while preserving its load"
+    },
+    "variations": [
+      {
+        "example_id": 12505,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "stands upright amid overflowing work folders, breathes evenly, and steadies a perfectly level bowl of water with relaxed hands"
+          }
+        ],
+        "scene_adjust": "overflowing work folders, tangled office equipment, and a level bowl filled to the rim with water"
+      },
+      {
+        "example_id": 12506,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "inspects a finished product with a magnifier, rejects a flawed sample, and places the immaculate sample high on the steadying plinth"
+          }
+        ],
+        "scene_adjust": "precision measuring tools, one immaculate product sample, one flawed sample, and a tall quality pedestal"
+      },
+      {
+        "example_id": 12507,
+        "inserts": [
+          {
+            "slug": "brian_cox",
+            "action": "wears an older man's cardigan, pedals an exercise bicycle energetically, and reaches toward gardening tools ready for his next activity"
+          }
+        ],
+        "scene_adjust": "a retirement gift box, an exercise bicycle, walking shoes, gardening tools, and a healthy potted tree"
+      },
+      {
+        "example_id": 12508,
+        "inserts": [
+          {
+            "slug": "brian_cox",
+            "action": "holds a telephone receiver to his ear, smiles toward framed photos of old friends, and keeps the long connecting cable carefully unbroken"
+          }
+        ],
+        "scene_adjust": "a telephone, a very long coiled cable, and framed group photographs without inscriptions"
+      },
+      {
+        "example_id": 12509,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "grips one side of a large control wheel and braces her feet against a shaking project platform"
+          },
+          {
+            "slug": "brian_cox",
+            "action": "holds the other side of the control wheel, points toward the stabilized mechanism, and keeps his stance firm amid scattered obstacles"
+          }
+        ],
+        "scene_adjust": "a large control wheel, a troubled project mechanism, loose obstacles, and a directors' table"
+      },
+      {
+        "example_id": 12510,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "dusts an ancient village model, carefully straightens its original shutters and stone fountain, and leaves its old contours intact"
+          }
+        ],
+        "scene_adjust": "an ancient village model with stone lanes, original shutters, a small fountain, and careful repair tools"
+      }
+    ]
+  },
+  {
+    "expression_id": 2107,
+    "idiom": "ci sono stati",
+    "anchor": {
+      "semantic_hook": "There have been is made visible by several past occurrences still occupying distinct positions along a receding time aisle.",
+      "setting": "An empty event archive contains a long aisle leading away from a present-day viewing rail, with clock faces without digits and multiple event plinths receding into the past. Several complete slices of earlier moments stand unsupported in the air above those plinths, preserving the plural events where they occurred.",
+      "cast": [
+        "fedez"
+      ],
+      "absurd_element": "complete slices of earlier moments standing unsupported in the air"
+    },
+    "variations": [
+      {
+        "example_id": 12511,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "waits impatiently with a suitcase, checks successive clock hands, and watches several motionless trains trapped in separate past moments"
+          }
+        ],
+        "scene_adjust": "a station platform module, several stopped trains, idle rails, luggage, and many delayed clock faces"
+      },
+      {
+        "example_id": 12512,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "examines multiple broken project components preserved on separate plinths and gathers repair tools with a surprised, worried expression"
+          }
+        ],
+        "scene_adjust": "a project model, several unexpected broken components, spilled fasteners, and repair tools"
+      },
+      {
+        "example_id": 12513,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "wears a raincoat, braces beneath an umbrella, and looks down the aisle at several preserved thunderstorms covering different parts of a regional map relief"
+          }
+        ],
+        "scene_adjust": "a regional terrain relief, bent umbrellas, deep puddles, lightning rods, and multiple storm-cloud scenes"
+      },
+      {
+        "example_id": 12514,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "steps past preserved scenes of a broken bridge and steep obstacle course, raises both arms in relief, and reaches the clear present platform"
+          }
+        ],
+        "scene_adjust": "a broken bridge model, a steep obstacle course, scattered burdens, and a clear finish platform without markings"
+      },
+      {
+        "example_id": 12515,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "walks from an old telephone and bulky computer toward a smartphone, compact computer, and robotic arm, comparing each preserved stage"
+          }
+        ],
+        "scene_adjust": "a decade-long sequence of telephones, computers, digital devices, and a robotic arm"
+      },
+      {
+        "example_id": 12516,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "kneels beside a final report stack, circles several wrong chart shapes with plain rings, and replaces them with correct pieces from a repair tray"
+          }
+        ],
+        "scene_adjust": "a final report stack containing charts without writing, several misplaced chart pieces, plain error rings, and correction tools"
+      }
+    ]
+  },
+  {
+    "expression_id": 2108,
+    "idiom": "ci porta a",
+    "anchor": {
+      "semantic_hook": "Leads us to is staged as a route that physically carries two travelers from a cause at its entrance to a visible outcome at its endpoint.",
+      "setting": "An empty causeway terminal contains a long path beginning at an entry platform, passing several modular prop bays, and ending at a circular destination dais. The path rises from the floor as one moving ribbon and carries everything standing on it toward the endpoint without footsteps.",
+      "cast": [
+        "jannik_sinner",
+        "elodie"
+      ],
+      "absurd_element": "the path rising as a moving ribbon that carries travelers to its endpoint"
+    },
+    "variations": [
+      {
+        "example_id": 12517,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "balances on the moving mountain path, shades his eyes, and points ahead with delight toward the lake"
+          },
+          {
+            "slug": "elodie",
+            "action": "stands beside her companion with a hiking pack, leans eagerly toward the arriving lakeshore, and grips a walking pole"
+          }
+        ],
+        "scene_adjust": "rocky mountain slopes, hiking gear, pines, and a clear alpine lake on the destination dais"
+      },
+      {
+        "example_id": 12518,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "turns away while covering his ears, misses his partner's urgent gesture, and watches loose project pieces slip from his hands"
+          },
+          {
+            "slug": "elodie",
+            "action": "reaches toward her companion with a disconnected telephone receiver, then points in alarm at the accumulating mistakes ahead"
+          }
+        ],
+        "scene_adjust": "a disconnected telephone, separated speaking tubes, a project model, and a heap of incorrectly fitted pieces at the endpoint"
+      },
+      {
+        "example_id": 12519,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "argues with raised palms as the moving path delivers him to the same unresolved puzzle at the empty destination"
+          },
+          {
+            "slug": "elodie",
+            "action": "gestures back in frustration, then points to the empty destination dais and the untouched solution pieces"
+          }
+        ],
+        "scene_adjust": "two facing discussion chairs, an unresolved puzzle, unused solution pieces, and an empty destination dais"
+      },
+      {
+        "example_id": 12520,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "stares down at a smartphone while passing scattered work tools, then reaches too late for a concentration target sliding away"
+          },
+          {
+            "slug": "elodie",
+            "action": "holds another smartphone close to her face, overlooks the task directly beside her, and lets several focus tokens fall from her open hand"
+          }
+        ],
+        "scene_adjust": "smartphones, an unfinished precision task, scattered tools, fallen focus tokens, and a receding target at the endpoint"
+      },
+      {
+        "example_id": 12521,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "lifts one side of a complex project piece, matches his partner's pace, and guides it toward the completed structure"
+          },
+          {
+            "slug": "elodie",
+            "action": "supports the other side of the project piece, smiles toward her partner, and aligns it precisely with the successful structure"
+          }
+        ],
+        "scene_adjust": "a cooperative building task, interlocking project pieces, shared tools, and a completed strong structure at the endpoint"
+      },
+      {
+        "example_id": 12522,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "travels with a small suitcase, examines a traditional handcraft at the endpoint, and watches the artisan tools with fascination"
+          },
+          {
+            "slug": "elodie",
+            "action": "holds a travel camera at her side, studies a folk dance costume and handmade vessel, and reaches carefully toward the old craft tools"
+          }
+        ],
+        "scene_adjust": "Italian travel landmarks, suitcases, artisan tools, a folk dance costume, and a handmade traditional vessel"
+      }
+    ]
+  },
+  {
+    "expression_id": 2109,
+    "idiom": "costantemente precaria",
+    "anchor": {
+      "semantic_hook": "Constantly precarious is made visible by a subject that remains unsteady at every point in an ongoing cycle.",
+      "setting": "An empty stability-testing room contains a central platform, safety rails, balance weights, clock faces without digits, and bays for changing subjects. The entire floor tilts endlessly from side to side without ever reaching a level resting position.",
+      "cast": [
+        "sophia_loren",
+        "brian_cox"
+      ],
+      "absurd_element": "the entire floor tilting endlessly without reaching a level position"
+    },
+    "variations": [
+      {
+        "example_id": 12523,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "balances on a wobbling office chair, clutches a short temporary-work folder, and watches long-range planning blocks slide beyond her reach"
+          }
+        ],
+        "scene_adjust": "an unstable office workstation, a short temporary-work folder, and long-range planning blocks sliding away"
+      },
+      {
+        "example_id": 12524,
+        "inserts": [
+          {
+            "slug": "brian_cox",
+            "action": "wears an older man's cardigan, grips the safety rail with a frail posture, and steadies a medicine case through several passing clock cycles"
+          }
+        ],
+        "scene_adjust": "a medicine case, a walking cane, a cushioned chair, and a sequence of clocks marking several recent years"
+      },
+      {
+        "example_id": 12525,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "tries to balance a national economy model while growing stacks of cost weights burden its market baskets at uneven heights"
+          }
+        ],
+        "scene_adjust": "a national economy model, market baskets, coins, basic goods, and increasingly tall stacks of cost weights"
+      },
+      {
+        "example_id": 12526,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "works at a laptop, reaches repeatedly toward a flickering router, and grimaces as her video-call images break into disconnected tiles"
+          }
+        ],
+        "scene_adjust": "a home workstation, a laptop, an unreliable router, and a video-call screen with blank disconnected portrait tiles"
+      },
+      {
+        "example_id": 12527,
+        "inserts": [
+          {
+            "slug": "brian_cox",
+            "action": "kneels between two separated regional halves, holds a fragile peace dove figure upright, and watches a nearby balance weight creep toward the edge"
+          }
+        ],
+        "scene_adjust": "a divided regional terrain model, damaged homes, a fragile peace dove figure, and a balance weight near the edge"
+      },
+      {
+        "example_id": 12528,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "sits tensely beside wreckage from a bad accident, grips the chair arms during every tilt, and struggles to steady a trembling balance sphere"
+          }
+        ],
+        "scene_adjust": "damaged vehicle pieces, an overturned helmet, a chair, and a trembling sphere on a narrow balance cradle"
+      }
+    ]
+  },
+  {
+    "expression_id": 2110,
+    "idiom": "in contrapposizione a",
+    "anchor": {
+      "semantic_hook": "In opposition to is staged as two subjects placed on directly opposing sides of the same central divide.",
+      "setting": "An empty comparison hall contains two matched display bays facing across a central seam, paired object plinths, and a shared observation rail. The two halves of the hall have broken free and hover upright facing each other from opposite sides of the seam.",
+      "cast": [
+        "giorgia_meloni",
+        "fedez"
+      ],
+      "absurd_element": "the two halves of the hall hovering upright face to face"
+    },
+    "variations": [
+      {
+        "example_id": 12529,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "paints the foreground with warm-hued strokes, then extends his brush toward the cold-hued background on the opposing display half"
+          }
+        ],
+        "scene_adjust": "a canvas divided between a warm-hued foreground and cold-hued background, paint trays, and brushes"
+      },
+      {
+        "example_id": 12530,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "relaxes beside a quiet country cottage and turns his back on the opposing crowded street with tense shoulders and blocked traffic"
+          }
+        ],
+        "scene_adjust": "a quiet countryside model with a cottage and fields opposite a dense city model with traffic and crowded pavements"
+      },
+      {
+        "example_id": 12531,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "carefully inspects a durable product and places it on a high quality plinth, then dismisses a basket of flimsy low-cost alternatives across the divide"
+          }
+        ],
+        "scene_adjust": "one durable precision-made product on a quality plinth opposite a basket of flimsy inexpensive alternatives"
+      },
+      {
+        "example_id": 12532,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "wears a protagonist's plain stage costume, steps firmly against a line of rigid rule barriers, and pushes one barrier away with a defiant stance"
+          }
+        ],
+        "scene_adjust": "a novel-scene stage, a protagonist's plain costume, rigid social barriers, and an opposing open route"
+      },
+      {
+        "example_id": 12533,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "stands alone behind a decisive city model, plants both hands firmly on its control lever, and faces a large opposing cluster of raised vote tokens"
+          }
+        ],
+        "scene_adjust": "a city model with one control lever opposite a large cluster of raised vote tokens and many empty council chairs"
+      },
+      {
+        "example_id": 12534,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "assembles a scientific model from measured components, points to its tested mechanism, and pushes old superstition objects toward the opposing bay"
+          }
+        ],
+        "scene_adjust": "a measured scientific mechanism and laboratory tools opposite old charms, fortune objects, and folk remedies"
+      }
+    ]
+  }
+]

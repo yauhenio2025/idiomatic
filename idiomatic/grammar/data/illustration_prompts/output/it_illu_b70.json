@@ -1,0 +1,101 @@
+[
+  {
+    "expression_id": 3569,
+    "idiom": "giocando con il fuoco",
+    "anchor": {
+      "semantic_hook": "Playing with fire is staged literally through a tabletop game whose board, counters, and dice are all made of flame.",
+      "setting": "An empty recreation room contains a low game table, two chairs, and plain shelving for changing situation props. A complete tabletop game made entirely of steady flame rests on the table without scorching it.",
+      "cast": [
+        "fedez",
+        "roberto_saviano"
+      ],
+      "absurd_element": "a complete playable tabletop game made entirely of steady flame"
+    },
+    "variations": [
+      {
+        "example_id": 21247,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "stands uneasily across the game table from his seated boss, offers two visibly contradictory geometric charts, and hides crossed fingers behind his back"
+          },
+          {
+            "slug": "roberto_saviano",
+            "action": "sits upright in the boss's chair, compares the conflicting charts with a suspicious frown, and points sternly toward the flaming game"
+          }
+        ],
+        "scene_adjust": "a boss's chair, two contradictory geometric charts, a closed office briefcase, and a neat desk tray"
+      },
+      {
+        "example_id": 21248,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "leans over the game table, empties every coin from his savings jar onto one small new-company model beside the flaming pieces, and watches with tense excitement"
+          },
+          {
+            "slug": "roberto_saviano",
+            "action": "reaches urgently across the table to stop the last coins, braces one hand against the empty savings jar, and stares at the single investment with alarm"
+          }
+        ],
+        "scene_adjust": "an empty savings jar, a mound of coins, one small new-company office model, and an otherwise empty investment tray"
+      },
+      {
+        "example_id": 21249,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "sits as Marco beside the flaming game, pushes a dusty stack of untouched tax forms away with one elbow, and pulls a bulging coin pouch protectively to his chest"
+          },
+          {
+            "slug": "roberto_saviano",
+            "action": "stands beside Marco with a grave expression, points from the neglected tax materials to the burning game pieces, and raises one hand in warning"
+          }
+        ],
+        "scene_adjust": "a dusty stack of blank tax forms, several sealed unmarked envelopes, a bulging coin pouch, and a miniature civic office building"
+      },
+      {
+        "example_id": 21250,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "perches eagerly at the table edge, grips a flaming game counter between both hands, and recoils when the fiery dice roll toward him"
+          },
+          {
+            "slug": "roberto_saviano",
+            "action": "leans over the opposite side of the table, reaches excitedly for the flaming dice, and jerks his face back from the sudden heat"
+          }
+        ],
+        "scene_adjust": "the flaming board opened for active play, fiery counters near both chairs, and the flame dice rolling between the two players"
+      },
+      {
+        "example_id": 21251,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "stands beside the game table as a new employee, accepts a ring of work keys with a hesitant hand, and glances anxiously at the completely empty document tray"
+          },
+          {
+            "slug": "roberto_saviano",
+            "action": "faces him as the employer, extends the work keys across the flaming board, and keeps his other hand firmly over an empty contract folder"
+          }
+        ],
+        "scene_adjust": "a ring of work keys, a packed tool case, a completely empty document tray, and an empty contract folder"
+      },
+      {
+        "example_id": 21252,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "slouches in a student chair beside the flaming game, turns away from his closed textbooks, and idly spins a fire counter instead of studying"
+          },
+          {
+            "slug": "roberto_saviano",
+            "action": "leans toward him with an urgent expression, points emphatically at the untouched study materials, and holds one palm toward the burning board in warning"
+          }
+        ],
+        "scene_adjust": "a student chair, closed textbooks, untouched blank flash cards, pencils, and a clock whose hands are close to the exam hour"
+      }
+    ]
+  }
+]

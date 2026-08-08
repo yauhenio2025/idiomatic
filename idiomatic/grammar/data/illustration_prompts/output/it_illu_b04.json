@@ -1,0 +1,992 @@
+[
+  {
+    "expression_id": 370,
+    "idiom": "tenere in piedi",
+    "anchor": {
+      "semantic_hook": "Every changing activity remains physically upright on a platform supported by feet, making the literal wording of 'tenere in piedi' visible.",
+      "setting": "A multipurpose hall has a central platform held above the floor by two colossal stone feet. Plain shelves, an empty worktable, and a wall clock with hands but no digits surround the platform. The feet are vastly larger than the room they support.",
+      "cast": [
+        "fedez",
+        "elodie"
+      ],
+      "absurd_element": "two colossal stone feet supporting the entire activity platform"
+    },
+    "variations": [
+      {
+        "example_id": 2089,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "crouches over a small shop counter, gripping its edges while straining to keep it upright"
+          }
+        ],
+        "scene_adjust": "a nearly empty shop counter, a cashbox with few coins, and several collection trays"
+      },
+      {
+        "example_id": 2090,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "stands at one edge of the platform, holding one end of a long ribbon with a tender but worried expression"
+          },
+          {
+            "slug": "elodie",
+            "action": "stands at the opposite edge, holding the other end of the ribbon and gazing toward the children's belongings between them"
+          }
+        ],
+        "scene_adjust": "two wedding rings and a cluster of children's toys at the center of the platform"
+      },
+      {
+        "example_id": 2091,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "stands with drooping shoulders and heavy eyelids, clutching a steaming coffee cup with both hands"
+          }
+        ],
+        "scene_adjust": "an oversized coffee pot and a work bag beside the platform"
+      },
+      {
+        "example_id": 2092,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "kneels beside an unfinished project model, bracing it with both forearms and staring into an empty cashbox"
+          },
+          {
+            "slug": "elodie",
+            "action": "balances on the other side of the model, holding loose components together with a determined expression"
+          }
+        ],
+        "scene_adjust": "an unfinished project model, scattered tools, and an open empty cashbox"
+      },
+      {
+        "example_id": 2093,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "stands shakily wrapped in a blanket, holding a medicine spoon and fighting to keep his eyes open"
+          }
+        ],
+        "scene_adjust": "a medicine bottle, tissues, and an evening clock with an unnumbered face"
+      },
+      {
+        "example_id": 2094,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "leans forward at the shared worktable, sorting supplies with rolled-up sleeves and focused energy"
+          },
+          {
+            "slug": "elodie",
+            "action": "stands beside him, lifting a heavy box of equipment onto the platform with visible effort"
+          }
+        ],
+        "scene_adjust": "association supplies, donation boxes without markings, and a crowded task board made only of pins and pictures"
+      }
+    ]
+  },
+  {
+    "expression_id": 371,
+    "idiom": "provarci",
+    "anchor": {
+      "semantic_hook": "Trying is made visible through a dedicated attempt bench where the same task can be approached again and again.",
+      "setting": "A practical workshop contains a central attempt bench, an open tool cabinet, and a short practice lane. Scratched test pieces and neatly reset equipment surround the bench. A huge spring-loaded mechanical hand resets every failed object onto the bench by itself.",
+      "cast": [
+        "jannik_sinner"
+      ],
+      "absurd_element": "a huge mechanical hand that automatically resets every failed attempt"
+    },
+    "variations": [
+      {
+        "example_id": 2095,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "sits upright at the bench with a pencil raised over a closed exam booklet, nervous but resolute"
+          }
+        ],
+        "scene_adjust": "a sealed exam booklet, pencils, and an hourglass"
+      },
+      {
+        "example_id": 2096,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "kneels beside a dripping tap with a wrench in hand, soaked and frustrated but raising one shoulder in proud acceptance"
+          }
+        ],
+        "scene_adjust": "a leaking tap, a wrench, a bucket, and several loose washers"
+      },
+      {
+        "example_id": 2097,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "plants both feet at the start of the practice lane, fists lightly clenched and gaze fixed forward"
+          }
+        ],
+        "scene_adjust": "a low obstacle course with padded hurdles and an open path ahead"
+      },
+      {
+        "example_id": 2098,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "stands at the workshop threshold with one hand on a suitcase, glancing from an office key to a globe with eager uncertainty"
+          }
+        ],
+        "scene_adjust": "a travel suitcase, a globe without place names, and an office key"
+      },
+      {
+        "example_id": 2099,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "bends intently over a complicated project model, fitting a stubborn component into place with both hands"
+          }
+        ],
+        "scene_adjust": "a complex project model, many small components, and an orderly set of tools"
+      },
+      {
+        "example_id": 2100,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "rearranges an alarm clock and running shoes into a new sequence, hesitating before firmly reaching for the shoes"
+          }
+        ],
+        "scene_adjust": "an alarm clock with no digits, running shoes, a coffee cup, and a comfortable armchair"
+      }
+    ]
+  },
+  {
+    "expression_id": 372,
+    "idiom": "sul campo",
+    "anchor": {
+      "semantic_hook": "Each real-world task is carried out directly on the ground of a field rather than inside an office or classroom.",
+      "setting": "An open grassy field contains bare worktables, patches of exposed soil, and a clear view of the surrounding countryside. Portable cases and plain equipment trays rest directly on the turf. The entire square of earth hovers several metres above the surrounding land with roots dangling beneath it.",
+      "cast": [
+        "roberto_saviano",
+        "sophia_loren"
+      ],
+      "absurd_element": "the whole field hovering in the air with exposed roots beneath it"
+    },
+    "variations": [
+      {
+        "example_id": 2101,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "kneels with both hands in the soil, studying a sample closely while turning away from a closed stack of books"
+          }
+        ],
+        "scene_adjust": "soil samples, measuring tools, a closed stack of books, and a field notebook kept shut"
+      },
+      {
+        "example_id": 2102,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "crouches beside fresh tire tracks, camera raised and eyes narrowed while checking the scene firsthand"
+          }
+        ],
+        "scene_adjust": "fresh tire tracks, a camera, a recorder, and scattered debris"
+      },
+      {
+        "example_id": 2103,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "kneels at one side of an excavation trench, brushing soil carefully from a buried pot"
+          },
+          {
+            "slug": "sophia_loren",
+            "action": "kneels opposite him, holding a small tray and examining a recovered fragment"
+          }
+        ],
+        "scene_adjust": "an excavation trench, brushes, sieves, pottery fragments, and shade cloth"
+      },
+      {
+        "example_id": 2104,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "lunges toward a football with one leg extended, intensely focused on the play"
+          },
+          {
+            "slug": "sophia_loren",
+            "action": "guards the opposite side of the ball with bent knees and arms spread, equally determined"
+          }
+        ],
+        "scene_adjust": "football goals, boundary lines made from chalk, a ball, and a closed statistics folder beside the turf"
+      },
+      {
+        "example_id": 2105,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "operates a piece of field equipment with both hands while watching its moving parts closely"
+          },
+          {
+            "slug": "roberto_saviano",
+            "action": "stands beside her, pointing toward the next control with an encouraging nod"
+          }
+        ],
+        "scene_adjust": "portable work equipment, safety gear without markings, and a tray of practice components"
+      },
+      {
+        "example_id": 2106,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "carries a heavy water container toward a cluster of household supplies, moving with urgent focus"
+          },
+          {
+            "slug": "sophia_loren",
+            "action": "kneels beside open relief boxes, sorting blankets and medicine with calm concentration"
+          }
+        ],
+        "scene_adjust": "plain relief boxes, water containers, blankets, medicine kits, and damaged household furniture"
+      }
+    ]
+  },
+  {
+    "expression_id": 373,
+    "idiom": "dare lavoro a",
+    "anchor": {
+      "semantic_hook": "Employment becomes a physical gift when practical work tools are handed directly to a recipient.",
+      "setting": "A large employment hall contains an open counter, rows of empty tool racks, and many vacant workstations. Helmets, aprons, keys, and toolboxes wait in orderly groups. A colossal open hand-shaped conveyor reaches through the wall and delivers the work equipment across the counter.",
+      "cast": [
+        "elodie"
+      ],
+      "absurd_element": "a colossal open hand-shaped conveyor delivering work equipment"
+    },
+    "variations": [
+      {
+        "example_id": 2107,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "stands at the head of the vacant workstations, receiving a factory helmet and looking across the vast hall with hopeful amazement"
+          }
+        ],
+        "scene_adjust": "factory machinery, long rows of helmets, and more than a hundred empty workstations"
+      },
+      {
+        "example_id": 2108,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "wears a university backpack and reaches eagerly for a hotel key and serving tray"
+          }
+        ],
+        "scene_adjust": "summer luggage, beach umbrellas, hotel keys without tags, serving trays, and student backpacks"
+      },
+      {
+        "example_id": 2109,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "stands beside humming machinery holding a fresh work apron, proudly surveying equipment that fills the hall"
+          }
+        ],
+        "scene_adjust": "period office machines, boxy vehicles, factory tools, and many commuter bicycles"
+      },
+      {
+        "example_id": 2110,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "leans over a community project model with one hand extended toward a row of ready toolboxes, visibly hopeful"
+          }
+        ],
+        "scene_adjust": "a community project model, youth-sized safety equipment, bicycles, and rows of ready toolboxes"
+      },
+      {
+        "example_id": 2111,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "accepts a cooperative tool case with relief, holding a municipal funding envelope closed against her chest"
+          }
+        ],
+        "scene_adjust": "ten sets of work boots, ten tool cases, a cooperative workbench, and a sealed funding envelope"
+      },
+      {
+        "example_id": 2112,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "stands beside a supermarket checkout, receiving a fresh apron while smiling toward rows of prepared work stations"
+          }
+        ],
+        "scene_adjust": "grocery shelves, checkout stations, shopping baskets, and several sets of household keys"
+      }
+    ]
+  },
+  {
+    "expression_id": 374,
+    "idiom": "andare bene",
+    "anchor": {
+      "semantic_hook": "A smooth moving walkway carries every situation successfully forward without obstruction, making 'andare bene' physically visible.",
+      "setting": "A long open hall contains a smooth moving walkway linking two ordinary platforms. Everyday objects can enter near the start and arrive neatly at the far end. The middle section of the walkway floats unsupported over a deep indoor gap while continuing perfectly level.",
+      "cast": [
+        "sophia_loren"
+      ],
+      "absurd_element": "the moving walkway floating unsupported across a deep indoor gap"
+    },
+    "variations": [
+      {
+        "example_id": 2113,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "rides forward with relaxed shoulders, an assured smile, and one hand calmly extended toward the clear path ahead"
+          }
+        ],
+        "scene_adjust": "keys, an umbrella, and a travel bag arriving neatly on the far platform"
+      },
+      {
+        "example_id": 2114,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "steps off the walkway holding a closed exam booklet, raising one fist in pleased relief"
+          }
+        ],
+        "scene_adjust": "a sealed exam booklet, pencils, and a finished hourglass on the far platform"
+      },
+      {
+        "example_id": 2115,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "waits at the far platform, checking her wristwatch before looking up with a welcoming smile"
+          }
+        ],
+        "scene_adjust": "cinema doors, a reel display without markings, and an unnumbered clock with hands set to the five o'clock position"
+      },
+      {
+        "example_id": 2116,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "sits poised at a small interview table, hands composed over a closed portfolio and expression warmly encouraging"
+          }
+        ],
+        "scene_adjust": "an interview table, two chairs, a closed portfolio, and a briefcase"
+      },
+      {
+        "example_id": 2117,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "settles comfortably into a dining chair, gesturing toward a simple home dinner with an accepting smile"
+          }
+        ],
+        "scene_adjust": "a small domestic dining table, two place settings, slippers, and a folded blanket"
+      },
+      {
+        "example_id": 2118,
+        "inserts": [
+          {
+            "slug": "sophia_loren",
+            "action": "steps away from the disordered start with a tense expression that relaxes as she approaches the orderly far platform"
+          }
+        ],
+        "scene_adjust": "toppled folders and loose objects at the start, with the same objects neatly arranged at the far end"
+      }
+    ]
+  },
+  {
+    "expression_id": 375,
+    "idiom": "negli ultimi tempi",
+    "anchor": {
+      "semantic_hook": "Recent activities take place literally inside the nearest and latest timepieces in a chronological row.",
+      "setting": "A quiet room has a curved row of clocks with hands and no digits, arranged from distant older clocks to the latest three near the camera. The three nearest clock cases are room-sized open alcoves with bare floors and shelves. These enormous inhabitable clock cases are the room's single impossible feature.",
+      "cast": [
+        "fedez"
+      ],
+      "absurd_element": "the latest three clock cases enlarged into inhabitable alcoves"
+    },
+    "variations": [
+      {
+        "example_id": 2119,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "slumps over a crowded desk inside the nearest clock, rubbing tired eyes while reaching toward another unfinished task"
+          }
+        ],
+        "scene_adjust": "a crowded work desk, several closed folders, a cold coffee cup, and a sagging office chair"
+      },
+      {
+        "example_id": 2120,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "stands in short sleeves holding a heavy winter coat, fanning himself and staring outside in confusion"
+          }
+        ],
+        "scene_adjust": "snow piled outside the window under bright winter sun, with a tall thermometer showing a high liquid column and no markings"
+      },
+      {
+        "example_id": 2121,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "holds a steady yoga pose inside the nearest clock alcove, eyes closed and shoulders relaxed"
+          }
+        ],
+        "scene_adjust": "a yoga mat, a folded towel, and a small plant"
+      },
+      {
+        "example_id": 2122,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "sits alone with hands folded and gaze lowered, unusually silent and withdrawn"
+          }
+        ],
+        "scene_adjust": "an untouched coffee cup and an empty chair facing him"
+      },
+      {
+        "example_id": 2123,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "holds a grocery basket and stares in alarm at increasingly tall stacks of coins"
+          }
+        ],
+        "scene_adjust": "identical grocery baskets beside progressively taller stacks of coins in the nearest clock alcoves"
+      },
+      {
+        "example_id": 2124,
+        "inserts": [
+          {
+            "slug": "fedez",
+            "action": "reaches eagerly for a remote facing a row of small sequential screens while turning away from a single large screen"
+          }
+        ],
+        "scene_adjust": "a row of small screens showing consecutive picture-only scenes, one large cinema screen, and a remote"
+      }
+    ]
+  },
+  {
+    "expression_id": 376,
+    "idiom": "un paio di",
+    "anchor": {
+      "semantic_hook": "Each quantity becomes an unmistakable pair by placing exactly two related objects on matching pedestals.",
+      "setting": "A tidy packing room contains two identical pedestals beneath twin alcoves. Empty shelves and an open travel trunk wait around the paired display. A colossal pair of porcelain hands rises from the floor and holds the two pedestals level on its palms.",
+      "cast": [
+        "giorgia_meloni"
+      ],
+      "absurd_element": "a colossal pair of porcelain hands holding the two pedestals"
+    },
+    "variations": [
+      {
+        "example_id": 2125,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "holds one new shoe in each hand, comparing the pair with a pleased smile"
+          }
+        ],
+        "scene_adjust": "two matching new shoes, a formal garment bag, and a small wrapped wedding gift"
+      },
+      {
+        "example_id": 2126,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "leans over an unfinished project, moving one hourglass onto each pedestal with focused urgency"
+          }
+        ],
+        "scene_adjust": "two day-long hourglasses, an unfinished project model, and scattered tools"
+      },
+      {
+        "example_id": 2127,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "holds two peeled garlic cloves above a pot of sauce, poised to drop them in"
+          }
+        ],
+        "scene_adjust": "two garlic cloves, a simmering pot of sauce, a spoon, and a small cutting board"
+      },
+      {
+        "example_id": 2128,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "leans forward inquisitively, raising two fingers toward an office key and briefcase"
+          }
+        ],
+        "scene_adjust": "an office key, a briefcase, and two empty chairs facing each other"
+      },
+      {
+        "example_id": 2129,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "places two travel hourglasses into an open suitcase, smiling toward the summer landscape beyond the window"
+          }
+        ],
+        "scene_adjust": "two week-long hourglasses, an open suitcase, sun hats, and Tuscan hills beyond the window"
+      },
+      {
+        "example_id": 2130,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "packs two thick sweaters into a mountain rucksack, pressing them down firmly with both hands"
+          }
+        ],
+        "scene_adjust": "two thick sweaters, a mountain rucksack, walking boots, and a cold evening view through the window"
+      }
+    ]
+  },
+  {
+    "expression_id": 377,
+    "idiom": "bastare perché",
+    "anchor": {
+      "semantic_hook": "A tiny cause on one platform is sufficient to release a much larger consequence on the connected platform.",
+      "setting": "A bare mechanism room contains a small trigger platform connected to a much larger consequence platform. Levers, ordinary gears, and empty trays make the cause-and-result sequence visible. A seed-sized pebble on the trigger permanently outweighs a massive iron block and releases the entire apparatus.",
+      "cast": [
+        "jannik_sinner",
+        "giorgia_meloni"
+      ],
+      "absurd_element": "a seed-sized pebble permanently outweighing a massive iron block"
+    },
+    "variations": [
+      {
+        "example_id": 2131,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "turns her eyes toward Jannik in one sharp, knowing glance"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "meets her glance and suddenly straightens with wide-eyed understanding, one hand rising in realization"
+          }
+        ],
+        "scene_adjust": "a tangled set of puzzle pieces on the trigger side and a fully assembled picture puzzle on the consequence side"
+      },
+      {
+        "example_id": 2132,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "touches one wrong blank control button with a startled expression while the other hand freezes above the controls"
+          }
+        ],
+        "scene_adjust": "a computer with a dark screen, one displaced blank control button, and a stopped cooling fan"
+      },
+      {
+        "example_id": 2133,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "holds a telephone to her ear and reaches urgently toward Jannik"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "sprints from the consequence platform toward her, gripping a first-aid bag and leaning fully into his run"
+          }
+        ],
+        "scene_adjust": "a telephone on the trigger platform and a first-aid bag on the consequence platform"
+      },
+      {
+        "example_id": 2134,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "kneels beside newly opened flowers, tilting her face toward the sun with delighted surprise"
+          }
+        ],
+        "scene_adjust": "one sunlit trigger tile and a bed of freshly opened flowers on the consequence platform"
+      },
+      {
+        "example_id": 2135,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "points angrily at a fallen teaspoon, jaw tense and shoulders forward"
+          },
+          {
+            "slug": "giorgia_meloni",
+            "action": "stands opposite with arms raised in exasperation, arguing back over the tiny object"
+          }
+        ],
+        "scene_adjust": "a single fallen teaspoon on the trigger platform and two pushed-back chairs on the consequence platform"
+      },
+      {
+        "example_id": 2136,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "offers one project component across the mechanism with an open, cooperative expression"
+          },
+          {
+            "slug": "giorgia_meloni",
+            "action": "accepts the component and fits it into the project model with an encouraging smile"
+          }
+        ],
+        "scene_adjust": "a small offered component on the trigger platform and a functioning project model on the consequence platform"
+      }
+    ]
+  },
+  {
+    "expression_id": 378,
+    "idiom": "rispetto al",
+    "anchor": {
+      "semantic_hook": "Compared items occupy matching side-by-side bays so their differences are directly visible.",
+      "setting": "A comparison hall is divided into two plain bays with identical platforms and matching viewing angles. The bays face each other across a narrow central aisle. The entire two-bay floor rests on a colossal balance scale that tilts even when both bays hold equal physical weight.",
+      "cast": [
+        "roberto_saviano",
+        "fedez"
+      ],
+      "absurd_element": "a room-sized balance scale tilting for differences other than physical weight"
+    },
+    "variations": [
+      {
+        "example_id": 2137,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "stands in the current-year bay holding an overflowing rent purse, staring at the taller coin stack in dismay"
+          },
+          {
+            "slug": "fedez",
+            "action": "stands in the previous-year bay beside a much smaller coin stack, holding an identical apartment key"
+          }
+        ],
+        "scene_adjust": "matching apartment door models and keys, with a tall current coin stack and a short previous coin stack"
+      },
+      {
+        "example_id": 2138,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "shivers in the today bay with arms wrapped tightly around his coat"
+          },
+          {
+            "slug": "fedez",
+            "action": "stands comfortably in the usual-weather bay with his coat open and shoulders relaxed"
+          }
+        ],
+        "scene_adjust": "matching thermometers without markings, one with a very low liquid column and frost, the other with a moderate column"
+      },
+      {
+        "example_id": 2139,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "leans back from the new computer with a task already complete, hands relaxed and expression satisfied"
+          },
+          {
+            "slug": "fedez",
+            "action": "waits tensely at the old computer, fingers hovering while its loading wheel still turns"
+          }
+        ],
+        "scene_adjust": "two computers with picture-only screens, one finished output, and one slowly turning loading wheel"
+      },
+      {
+        "example_id": 2140,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "stands in the current bay speaking confidently with open gestures and an easy smile"
+          },
+          {
+            "slug": "fedez",
+            "action": "listens attentively from the opposite bay, holding a small set of beginner picture cards"
+          }
+        ],
+        "scene_adjust": "a few picture-only beginner cards in the previous-month bay and a lively conversation setup in the current bay"
+      },
+      {
+        "example_id": 2141,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "stands among current equipment, examining the older bay with a serious, reflective expression"
+          },
+          {
+            "slug": "fedez",
+            "action": "occupies the past bay beside worn tools and outdated household objects, looking back across the divide"
+          }
+        ],
+        "scene_adjust": "current equipment in one bay and worn older versions of the same objects in the other"
+      },
+      {
+        "example_id": 2142,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "runs hard in one sports lane, arms pumping and face focused"
+          },
+          {
+            "slug": "fedez",
+            "action": "stands in the brother's lane doing a single mild stretch, watching Roberto pull ahead"
+          }
+        ],
+        "scene_adjust": "two matching exercise lanes, abundant used sports equipment in Roberto's bay, and one untouched ball in the brother's bay"
+      }
+    ]
+  },
+  {
+    "expression_id": 448,
+    "idiom": "non ha bisogno di presentazioni",
+    "anchor": {
+      "semantic_hook": "A direct entrance route bypasses an unused presentation lectern, so the subject arrives without an introduction.",
+      "setting": "A reception hall contains a raised stage, an unused lectern, and a direct entrance ramp from the doorway to the center. Empty award stands and a display table can receive each changing prop. The lectern has folded itself into a tiny suitcase beneath the stage.",
+      "cast": [
+        "elodie",
+        "jannik_sinner"
+      ],
+      "absurd_element": "the presentation lectern folded into a tiny suitcase beneath the stage"
+    },
+    "variations": [
+      {
+        "example_id": 2557,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "strides directly to center stage with arms open, smiling confidently toward the evening audience"
+          }
+        ],
+        "scene_adjust": "evening spotlights, an open stage entrance, and the unused lectern tucked away"
+      },
+      {
+        "example_id": 2558,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "stands beside a detailed model of Rome, opening both arms toward its ancient monuments with effortless familiarity"
+          }
+        ],
+        "scene_adjust": "a detailed model of Rome with the Colosseum, domes, fountains, and ancient stone arches"
+      },
+      {
+        "example_id": 2559,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "stands proudly at one side of the stage holding a plain award trophy"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "stands beside her holding several plain award trophies and greeting the audience with a confident wave"
+          }
+        ],
+        "scene_adjust": "many plain award trophies on empty stands and two places at center stage"
+      },
+      {
+        "example_id": 2560,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "stands at the doorway with a warm smile, beckoning Jannik inside and pointing toward a comfortable chair"
+          },
+          {
+            "slug": "jannik_sinner",
+            "action": "steps in with relaxed familiarity, returning the greeting without approaching the lectern"
+          }
+        ],
+        "scene_adjust": "a domestic doorway, comfortable chairs, and a familiar spare coat hanging near the entrance"
+      },
+      {
+        "example_id": 2561,
+        "inserts": [
+          {
+            "slug": "elodie",
+            "action": "presents a Margherita pizza at center stage with an assured smile, leaving the lectern untouched"
+          }
+        ],
+        "scene_adjust": "a fresh Margherita pizza on the display table and familiar Italian dining utensils"
+      },
+      {
+        "example_id": 2562,
+        "inserts": [
+          {
+            "slug": "jannik_sinner",
+            "action": "walks directly past the unused lectern carrying a well-worn briefcase, greeting the familiar workplace with a calm nod"
+          }
+        ],
+        "scene_adjust": "a director's chair, a well-worn briefcase, office keys, and familiar work equipment"
+      }
+    ]
+  },
+  {
+    "expression_id": 449,
+    "idiom": "la faccio breve",
+    "anchor": {
+      "semantic_hook": "A room-length sequence of pictures is physically compressed into one short picture, making the account brief.",
+      "setting": "A compact conversation room contains two chairs, an hourglass, and a table crossed by a long ribbon of tiny pictures. The ribbon winds around the room before reaching the center of the table. A palm-sized press pulls the entire ribbon through itself and releases one tiny square picture.",
+      "cast": [
+        "giorgia_meloni",
+        "sophia_loren"
+      ],
+      "absurd_element": "a palm-sized press compressing a room-length picture ribbon into one tiny square"
+    },
+    "variations": [
+      {
+        "example_id": 2563,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "glances urgently at the hourglass and thrusts a small trophy onto the project model with a concise triumphant gesture"
+          }
+        ],
+        "scene_adjust": "an almost empty hourglass, a project model, and a small victory trophy"
+      },
+      {
+        "example_id": 2564,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "sits forward and makes one compact hand gesture, keeping an attentive eye on Sophia"
+          },
+          {
+            "slug": "sophia_loren",
+            "action": "slumps tiredly in the opposite chair with heavy eyelids but looks back in appreciation"
+          }
+        ],
+        "scene_adjust": "two facing chairs, a nearly finished hourglass, and the compressed square picture centered between them"
+      },
+      {
+        "example_id": 2565,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "settles into an armchair in slippers, placing her outside shoes aside with a decisive nod"
+          },
+          {
+            "slug": "sophia_loren",
+            "action": "sits comfortably opposite with a blanket over her knees, content to remain indoors"
+          }
+        ],
+        "scene_adjust": "slippers, coats on hooks, a closed front door, and a home refreshment tray on the table"
+      },
+      {
+        "example_id": 2566,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "gathers many small objects into one compact tray while speaking with brisk, economical gestures"
+          },
+          {
+            "slug": "sophia_loren",
+            "action": "sits upright across from her, alert and interested rather than bored"
+          }
+        ],
+        "scene_adjust": "many tiny scene objects around the long ribbon and one compact tray beside the short picture"
+      },
+      {
+        "example_id": 2567,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "stands beside the compressed picture and beckons toward the doorway with a direct questioning gesture"
+          },
+          {
+            "slug": "sophia_loren",
+            "action": "raises one hand eagerly from the opposite chair, volunteering to join her"
+          }
+        ],
+        "scene_adjust": "a packed day bag beside the doorway and a window showing the first light of the next morning"
+      },
+      {
+        "example_id": 2568,
+        "inserts": [
+          {
+            "slug": "giorgia_meloni",
+            "action": "faces Sophia with palms open and an apologetic expression, then gently pushes the party hat back toward her"
+          },
+          {
+            "slug": "sophia_loren",
+            "action": "holds the returned party hat with a disappointed but understanding expression"
+          }
+        ],
+        "scene_adjust": "a party hat, balloons, a wrapped gift, and an evening clock with no digits"
+      }
+    ]
+  },
+  {
+    "expression_id": 450,
+    "idiom": "andare ben oltre",
+    "anchor": {
+      "semantic_hook": "The motion of 'andare' crosses a visible boundary and continues far beyond it.",
+      "setting": "A long gallery contains a clear stone threshold across a path, with ordinary objects arranged before and beyond it. The path continues through an open arch toward a distant horizon. Past the threshold, the stone path stretches unsupported through open air far beyond the end of the building.",
+      "cast": [
+        "roberto_saviano"
+      ],
+      "absurd_element": "the stone path extending unsupported through open air beyond the building"
+    },
+    "variations": [
+      {
+        "example_id": 2569,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "stands far beyond the threshold holding a tiny initial model, staring in amazement at the expansive finished project ahead"
+          }
+        ],
+        "scene_adjust": "a modest initial project model before the threshold and an expansive completed project installation beyond it"
+      },
+      {
+        "example_id": 2570,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "looks back in alarm at one tipped tile near the threshold, then follows the long chain of consequences with his gaze"
+          }
+        ],
+        "scene_adjust": "a single decision token before the boundary and a long chain of ordinary fallen tiles continuing beyond it"
+      },
+      {
+        "example_id": 2571,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "turns away from an idle microphone before the threshold and strides beyond it carrying a toolbox and a brick"
+          }
+        ],
+        "scene_adjust": "an unused microphone before the boundary and practical tools, bricks, and a half-built structure beyond it"
+      },
+      {
+        "example_id": 2572,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "drags a travel suitcase beyond the threshold while anxiously counting a long trail of coins that exceeds a small purse"
+          }
+        ],
+        "scene_adjust": "a travel suitcase, transport tickets kept face down, a small budget purse, and a long trail of coins"
+      },
+      {
+        "example_id": 2573,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "steps past a professional service desk carrying extra blankets and groceries, smiling generously as he continues"
+          }
+        ],
+        "scene_adjust": "a professional service desk at the threshold and extra blankets, groceries, and care packages beyond it"
+      },
+      {
+        "example_id": 2574,
+        "inserts": [
+          {
+            "slug": "roberto_saviano",
+            "action": "studies the painting at first from the threshold, then walks farther along the related objects with growing curiosity"
+          }
+        ],
+        "scene_adjust": "a still-life painting of a locked door before the boundary, with a real key, hinge, and opened lock arranged farther along the path"
+      }
+    ]
+  }
+]
