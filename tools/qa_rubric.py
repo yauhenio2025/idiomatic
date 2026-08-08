@@ -62,14 +62,20 @@ Respond with a valid JSON object only (no markdown code blocks):
 LEVEL1_DIM = "Alignment"
 
 # check key -> (fail class, hard?)  — soft checks fail only as a pair.
+# v2 (2026-08-08, owner calibration on the 15-image spot review): the
+# ONLY hard-fail classes are people-integrity (wrong count, wrong gender
+# mix, merged/duplicated people, mixed-feature "false beard" merges) and
+# anatomy. Action fit, the surreal element, and composition are recorded
+# as soft signals but NEVER fail an image — the owner: "surrealism
+# doesn't matter"; the fails must be things the edit model can fix.
 CHECK_CLASS = {
     ("People", "Person Count"): ("identity", True),
     ("People", "Gender Presence"): ("identity", True),
     ("People", "Distinct Individuals"): ("identity", True),
     ("People", "Identity Coherence"): ("identity", True),
-    ("Action", "Action Person 1"): ("action", True),
-    ("Action", "Action Person 2"): ("action", True),
-    ("Anchor", "Absurd Element"): ("absurd", True),
+    ("Action", "Action Person 1"): ("action", False),
+    ("Action", "Action Person 2"): ("action", False),
+    ("Anchor", "Absurd Element"): ("absurd", False),
     ("Anatomy", "Anatomical Fidelity"): ("anatomy", True),
     ("Composition", "Focal Point"): ("bland", False),
     ("Composition", "Memorability"): ("bland", False),
@@ -294,8 +300,7 @@ def classify(score_json, rec):
                     fail_classes.append(cls)
             else:
                 soft_fails += 1
-    if soft_fails >= 2 and "bland" not in fail_classes:
-        fail_classes.append("bland")
+    # v2: soft fails are informational only — no bland aggregation.
     verdict = "fail" if fail_classes else "pass"
     repair = None
     if fail_classes:

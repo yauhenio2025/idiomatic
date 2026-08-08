@@ -247,7 +247,7 @@ def main():
             "scores": score_json,
         }
         if (args.describe_fix and verdict == "fail"
-                and "anatomy" in fail_classes):
+                and {"anatomy", "identity"} & set(fail_classes)):
             try:
                 fix = judge.ask(img, "# Image\n<image>\n\n" + FIX_PROMPT,
                                 max_new_tokens=512)
