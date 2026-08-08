@@ -640,6 +640,315 @@ CREATE TABLE IF NOT EXISTS adopted_notes (
 -- ref photo live under /data/factory_cast/<slug>/. A new sheet on an
 -- approved actor demotes status to candidate (staleness rule, famous-cast
 -- doc §2.5) — enforced app-side in the upsert endpoint.
+-- ============================================================================
+-- EXPRESSION HUB — durable-ID staging (F1 of docs/commissions/
+-- HUB_BUILD_EXECUTION_COMMISSION.md; data model per
+-- docs/research/EXPRESSION_HUB_DESIGN.md §3/§10 and the migration study's
+-- Phase-1 "expand under the existing physical names" rule).
+--
+-- STRICTLY ADDITIVE. Nothing here renames, drops, or tightens an existing
+-- column, constraint, or FK: the live cascade paths (video purge, example
+-- ownership through idiom_id) keep working unchanged. The design's
+-- ON DELETE RESTRICT ownership, the (lang, normalized) uniqueness handover
+-- to (lang, normalized, sense_key), the ord<=6 ceiling drop, and the
+-- expression_idioms -> expression_sources rename are ALL contraction-phase
+-- work (migration doc Phase 1 steps 3-5) and deliberately NOT done here.
+-- New-column FKs use default NO ACTION (end-of-statement) semantics so the
+-- existing multi-statement purge path (/admin/purge-video: delete examples,
+-- then idiom rows, then orphaned expressions) still passes.
+--
+-- OWNER AMENDMENT (2026-08-08) note: the hub/EN->TL card backs embed the
+-- per-occurrence context clip. That clip already lives in
+-- expression_idioms.audio_context — projections REFERENCE it via the
+-- example/source rows; no new audio column is added (reference, don't
+-- duplicate).
+-- ============================================================================
+
+-- --- expressions: canonical hub identity (design §3.1) ----------------------
+ALTER TABLE expressions ADD COLUMN IF NOT EXISTS citation_form     TEXT;
+ALTER TABLE expressions ADD COLUMN IF NOT EXISTS sense_key         TEXT;
+ALTER TABLE expressions ADD COLUMN IF NOT EXISTS usage_line_en     TEXT;
+ALTER TABLE expressions ADD COLUMN IF NOT EXISTS key_synonym       TEXT;
+ALTER TABLE expressions ADD COLUMN IF NOT EXISTS false_friend_note TEXT;
+ALTER TABLE expressions ADD COLUMN IF NOT EXISTS content_version   INTEGER NOT NULL DEFAULT 1;
+ALTER TABLE expressions ADD COLUMN IF NOT EXISTS status            TEXT NOT NULL DEFAULT 'active';
+ALTER TABLE expressions ADD COLUMN IF NOT EXISTS updated_at        TIMESTAMPTZ NOT NULL DEFAULT NOW();
+-- Backfill: every pre-split row is the primary sense of its surface
+-- (stable opaque discriminator per design §3.1; reviewed polysemy splits
+-- mint NEW opaque keys later — never a mutable gloss slug).
+UPDATE expressions SET sense_key = 'legacy-primary' WHERE sense_key IS NULL;
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_constraint
+                 WHERE conname = 'expressions_status_check') THEN
+    ALTER TABLE expressions ADD CONSTRAINT expressions_status_check
+      CHECK (status IN ('active', 'merged', 'retired'));
+  END IF;
+END $$;
+-- Target uniqueness staged ALONGSIDE the legacy UNIQUE(lang, normalized)
+-- (which stays authoritative until the contraction phase drops it):
+-- trivially satisfiable today because (lang, normalized) is still unique.
+CREATE UNIQUE INDEX IF NOT EXISTS expressions_lang_norm_sense
+  ON expressions (lang, normalized, sense_key) WHERE sense_key IS NOT NULL;
+
+-- Sense-scoped surface aliases (as-spoken, citation, legacy forms).
+-- CASCADE is deliberate: an alias is display data that dies with its
+-- expression (the purge path may hard-delete a single-video expression).
+CREATE TABLE IF NOT EXISTS expression_aliases (
+  id             BIGSERIAL PRIMARY KEY,
+  expression_id  INTEGER NOT NULL REFERENCES expressions(id) ON DELETE CASCADE,
+  lang           TEXT NOT NULL,
+  alias_kind     TEXT NOT NULL,
+  surface        TEXT NOT NULL,
+  normalized     TEXT NOT NULL,
+  created_at     TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  UNIQUE (expression_id, alias_kind, normalized),
+  CHECK (alias_kind IN ('as_spoken', 'citation', 'legacy'))
+);
+CREATE INDEX IF NOT EXISTS expression_aliases_lookup
+  ON expression_aliases (lang, normalized);
+
+-- --- expression_idioms: source-occurrence staging (design §3.2) -------------
+-- Still under the legacy physical name; the expression_sources rename is
+-- contraction-phase. source_key is the durable retry key (recipe v1,
+-- mirrored in idiomatic/hub/identity.py — keep the two in sync):
+--   youtube:v1:<youtube_id>:p<md5[:8] of source_phrase_target>   (phrase known)
+--   youtube:v1:<youtube_id>:r<row id>                            (fallback)
+ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS source_key   TEXT;
+ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS source_title TEXT;
+ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS source_url   TEXT;
+ALTER TABLE expression_idioms ADD COLUMN IF NOT EXISTS status       TEXT NOT NULL DEFAULT 'active';
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_constraint
+                 WHERE conname = 'expression_idioms_status_check') THEN
+    ALTER TABLE expression_idioms ADD CONSTRAINT expression_idioms_status_check
+      CHECK (status IN ('active', 'retired'));
+  END IF;
+END $$;
+-- Backfill title/URL fallback + source key from the (still-present) video
+-- row, so a later video deletion cannot take the provenance text with it.
+UPDATE expression_idioms i
+   SET source_title = COALESCE(i.source_title, v.title),
+       source_url   = COALESCE(i.source_url,
+                               'https://www.youtube.com/watch?v=' || v.youtube_id),
+       source_key   = COALESCE(
+         i.source_key,
+         CASE WHEN i.source_phrase_target IS NOT NULL
+              THEN 'youtube:v1:' || v.youtube_id || ':p'
+                   || substr(md5(i.source_phrase_target), 1, 8)
+              ELSE 'youtube:v1:' || v.youtube_id || ':r' || i.id::text
+         END)
+  FROM videos v
+ WHERE v.id = i.video_id AND (i.source_key IS NULL OR i.source_title IS NULL
+                              OR i.source_url IS NULL);
+-- Durable-retry uniqueness (partial: legacy rows without a video stay out
+-- until reviewed). The design's UNIQUE(expression_id, source_key) replaces
+-- UNIQUE(expression_id, video_id) only at contraction.
+CREATE UNIQUE INDEX IF NOT EXISTS expression_idioms_expr_source_key
+  ON expression_idioms (expression_id, source_key) WHERE source_key IS NOT NULL;
+-- Composite-FK support key for the contraction-phase same-expression FKs.
+CREATE UNIQUE INDEX IF NOT EXISTS expression_idioms_id_expr
+  ON expression_idioms (id, expression_id);
+
+-- --- expression_examples: direct hub ownership staging (design §3.3) --------
+-- idiom_id/ord and the ord<=6 CHECK remain authoritative for current
+-- writers; these columns stage the target model. position is renumbered
+-- deterministically per expression (NULL rows only, past the existing max,
+-- ordered by idiom row then ord) so re-running the boot migration never
+-- reshuffles an already-assigned position.
+ALTER TABLE expression_examples ADD COLUMN IF NOT EXISTS expression_id
+  INTEGER REFERENCES expressions(id);
+ALTER TABLE expression_examples ADD COLUMN IF NOT EXISTS source_id
+  BIGINT REFERENCES expression_idioms(id);
+ALTER TABLE expression_examples ADD COLUMN IF NOT EXISTS position    INTEGER;
+ALTER TABLE expression_examples ADD COLUMN IF NOT EXISTS source_kind TEXT NOT NULL DEFAULT 'initial';
+ALTER TABLE expression_examples ADD COLUMN IF NOT EXISTS stable_key  TEXT;
+ALTER TABLE expression_examples ADD COLUMN IF NOT EXISTS topup_batch_id BIGINT;
+ALTER TABLE expression_examples ADD COLUMN IF NOT EXISTS status      TEXT NOT NULL DEFAULT 'published';
+ALTER TABLE expression_examples ADD COLUMN IF NOT EXISTS canonical_example_id
+  BIGINT REFERENCES expression_examples(id);
+ALTER TABLE expression_examples ADD COLUMN IF NOT EXISTS published_at TIMESTAMPTZ;
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_constraint
+                 WHERE conname = 'expression_examples_source_kind_check') THEN
+    ALTER TABLE expression_examples ADD CONSTRAINT expression_examples_source_kind_check
+      CHECK (source_kind IN ('initial', 'topup', 'legacy_adopted'));
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_constraint
+                 WHERE conname = 'expression_examples_status_check') THEN
+    ALTER TABLE expression_examples ADD CONSTRAINT expression_examples_status_check
+      CHECK (status IN ('draft', 'ready', 'published', 'retired'));
+  END IF;
+END $$;
+-- Backfills (idempotent: NULL rows only; every existing row was delivered,
+-- hence status default 'published' is correct for them).
+UPDATE expression_examples e
+   SET expression_id = i.expression_id
+  FROM expression_idioms i
+ WHERE i.id = e.idiom_id AND e.expression_id IS NULL;
+UPDATE expression_examples SET source_id = idiom_id WHERE source_id IS NULL;
+UPDATE expression_examples SET stable_key = 'legacy:' || id::text
+ WHERE stable_key IS NULL;
+WITH mx AS (
+  SELECT expression_id, MAX(position) AS maxpos
+    FROM expression_examples
+   WHERE position IS NOT NULL GROUP BY expression_id
+), ranked AS (
+  SELECT e.id,
+         COALESCE(m.maxpos, 0)
+         + ROW_NUMBER() OVER (PARTITION BY e.expression_id
+                              ORDER BY e.idiom_id, e.ord, e.id) AS pos
+    FROM expression_examples e
+    LEFT JOIN mx m ON m.expression_id = e.expression_id
+   WHERE e.position IS NULL AND e.expression_id IS NOT NULL
+)
+UPDATE expression_examples e SET position = r.pos
+  FROM ranked r WHERE e.id = r.id;
+-- A retried generation returns the same row -> the same durable example id.
+CREATE UNIQUE INDEX IF NOT EXISTS expression_examples_stable_key
+  ON expression_examples (stable_key) WHERE stable_key IS NOT NULL;
+-- Deterministic compiled rail: canonical (non-retired, non-duplicate) rows
+-- hold one position each; retained duplicates are exempt.
+CREATE UNIQUE INDEX IF NOT EXISTS expression_examples_expr_position
+  ON expression_examples (expression_id, position)
+  WHERE status <> 'retired' AND canonical_example_id IS NULL
+    AND position IS NOT NULL;
+CREATE INDEX IF NOT EXISTS expression_examples_expr_idx
+  ON expression_examples (expression_id);
+-- Composite-FK support key (same-expression source/canonical FKs are
+-- contraction-phase; the support index is additive and ready).
+CREATE UNIQUE INDEX IF NOT EXISTS expression_examples_id_expr
+  ON expression_examples (id, expression_id);
+
+-- --- anki_note_bindings: profile-scoped projection crosswalk (design §3.5) --
+-- Keyed by (profile_key, note_id), NOT guid — the inspected collection has
+-- duplicate legacy GUIDs. RESTRICT here is deliberate and safe: rows exist
+-- only from the controlled migration forward, and a bound expression/
+-- example must never be hard-deleted out from under its collection note.
+CREATE TABLE IF NOT EXISTS anki_note_bindings (
+  profile_key    TEXT NOT NULL,
+  note_id        BIGINT NOT NULL,
+  note_guid      TEXT NOT NULL,
+  card_kind      TEXT NOT NULL,
+  model_version  TEXT,
+  expression_id  INTEGER REFERENCES expressions(id) ON DELETE RESTRICT,
+  example_id     BIGINT REFERENCES expression_examples(id) ON DELETE RESTRICT,
+  legacy_model   TEXT,
+  legacy_guid    TEXT,
+  active         BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at     TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at     TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  PRIMARY KEY (profile_key, note_id),
+  CHECK (card_kind IN ('hub', 'fluency', 'diagnosis',
+                       'legacy_hub', 'legacy_audio', 'legacy_phrase',
+                       'legacy_other')),
+  CHECK (card_kind NOT IN ('hub', 'fluency') OR expression_id IS NOT NULL),
+  CHECK (card_kind <> 'fluency' OR example_id IS NOT NULL)
+);
+-- Active target notes: GUID unique per profile; retired legacy duplicates
+-- stay recorded as inactive evidence.
+CREATE UNIQUE INDEX IF NOT EXISTS anki_note_bindings_active_guid
+  ON anki_note_bindings (profile_key, note_guid) WHERE active;
+-- One active hub note per expression, one active fluency note per example,
+-- per profile (explicit partial indexes; no reliance on NULL composites).
+CREATE UNIQUE INDEX IF NOT EXISTS anki_note_bindings_active_hub
+  ON anki_note_bindings (profile_key, expression_id)
+  WHERE active AND card_kind = 'hub';
+CREATE UNIQUE INDEX IF NOT EXISTS anki_note_bindings_active_fluency
+  ON anki_note_bindings (profile_key, example_id)
+  WHERE active AND card_kind = 'fluency';
+CREATE INDEX IF NOT EXISTS anki_note_bindings_expr_idx
+  ON anki_note_bindings (expression_id) WHERE expression_id IS NOT NULL;
+
+-- --- release ledger: snapshot/delta manifests (design §10) ------------------
+-- Replaces (at cutover, not yet) the overwritten pool apkg with an ordered,
+-- acknowledged, hash-chained release sequence per (collection_key, lang).
+-- Sequence allocation is serialized through anki_release_sequence: the row
+-- is locked at finalize; MAX(sequence)+1 is never used.
+CREATE TABLE IF NOT EXISTS anki_release_sequence (
+  collection_key     TEXT NOT NULL,
+  lang               TEXT NOT NULL,
+  next_sequence      BIGINT NOT NULL DEFAULT 1,
+  last_manifest_hash TEXT,
+  updated_at         TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  PRIMARY KEY (collection_key, lang),
+  CHECK (next_sequence >= 1)
+);
+
+CREATE TABLE IF NOT EXISTS anki_releases (
+  id                  BIGSERIAL PRIMARY KEY,
+  collection_key      TEXT NOT NULL,
+  lang                TEXT NOT NULL,
+  kind                TEXT NOT NULL,
+  status              TEXT NOT NULL DEFAULT 'building',
+  -- NULL while building; CAS-assigned from anki_release_sequence in the
+  -- finalize transaction, never before the artifact bytes are durable.
+  sequence            BIGINT,
+  prev_manifest_hash  TEXT,
+  manifest_hash       TEXT,
+  manifest            JSONB,
+  artifact_uri        TEXT,
+  artifact_sha256     TEXT,
+  content_cutoff_at   TIMESTAMPTZ,
+  builder_lease_owner TEXT,
+  builder_lease_expires_at TIMESTAMPTZ,
+  created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  finalized_at        TIMESTAMPTZ,
+  CHECK (kind IN ('snapshot', 'delta')),
+  CHECK (status IN ('building', 'finalized', 'aborted')),
+  -- A finalized row can never point at missing/unverified bytes.
+  CHECK (status <> 'finalized'
+         OR (sequence IS NOT NULL AND manifest_hash IS NOT NULL
+             AND artifact_uri IS NOT NULL AND artifact_sha256 IS NOT NULL
+             AND finalized_at IS NOT NULL))
+);
+CREATE UNIQUE INDEX IF NOT EXISTS anki_releases_sequence
+  ON anki_releases (collection_key, lang, sequence) WHERE sequence IS NOT NULL;
+-- Only one in-flight build per (collection, lang); daily and urgent
+-- builders coalesce or wait instead of racing.
+CREATE UNIQUE INDEX IF NOT EXISTS anki_releases_one_building
+  ON anki_releases (collection_key, lang) WHERE status = 'building';
+CREATE INDEX IF NOT EXISTS anki_releases_lang_idx
+  ON anki_releases (collection_key, lang, created_at);
+
+-- Membership: which note operations / media / hub revisions ride in which
+-- release. Items of an aborted build are deleted with it and rebound.
+CREATE TABLE IF NOT EXISTS anki_release_items (
+  id            BIGSERIAL PRIMARY KEY,
+  release_id    BIGINT NOT NULL REFERENCES anki_releases(id) ON DELETE CASCADE,
+  item_kind     TEXT NOT NULL,
+  item_key      TEXT NOT NULL,
+  expression_id INTEGER,
+  example_id    BIGINT,
+  payload       JSONB,
+  created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  CHECK (item_kind IN ('note_create', 'note_update', 'media', 'hub_update',
+                       'model_gate', 'deck_gate')),
+  UNIQUE (release_id, item_kind, item_key)
+);
+CREATE INDEX IF NOT EXISTS anki_release_items_release_idx
+  ON anki_release_items (release_id);
+
+-- Per-client acknowledgement. Only the profile's one authoritative client
+-- marks content delivered (enforced app-side at cutover); secondary
+-- devices are visibility only.
+CREATE TABLE IF NOT EXISTS anki_release_acknowledgements (
+  id              BIGSERIAL PRIMARY KEY,
+  release_id      BIGINT NOT NULL REFERENCES anki_releases(id) ON DELETE CASCADE,
+  client_id       TEXT NOT NULL,
+  profile_key     TEXT,
+  collection_key  TEXT,
+  import_result   TEXT NOT NULL,
+  notes_verified  BOOLEAN,
+  media_verified  BOOLEAN,
+  authoritative   BOOLEAN NOT NULL DEFAULT FALSE,
+  acked_at        TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  CHECK (import_result IN ('ok', 'failed', 'partial')),
+  UNIQUE (release_id, client_id)
+);
+
 CREATE TABLE IF NOT EXISTS factory_actors (
   id                BIGSERIAL PRIMARY KEY,
   slug              TEXT NOT NULL UNIQUE,
