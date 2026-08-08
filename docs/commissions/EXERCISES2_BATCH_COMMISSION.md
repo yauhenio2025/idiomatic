@@ -9,6 +9,14 @@
 > media. Target varieties: European Spanish, Brazilian Portuguese, standard
 > France French, standard German.
 
+Topic-specific addenda override these generic rules where the source shape
+changes. Read the matching addendum before authoring:
+
+- `EXERCISES2_CONDITIONALS_ADDENDUM.md`
+- `EXERCISES2_TENSES_ADDENDUM.md`
+- `EXERCISES2_VOCAB_ADDENDUM.md`
+- `EXERCISES2_BIG_TECH_PHRASES_ADDENDUM.md`
+
 ## Input
 
 `idiomatic/grammar/data/exercises2/batches/input/<chunk>.json` — an array of
@@ -16,6 +24,9 @@
 topic (`pt_connecting_b02.json` → lang `pt`, topic `connecting`). `old_back`
 is the unreliable 2023 gloss: reference only, never copy without deciding
 independently that it is right.
+
+Canonical `it_<topic>_NNN` IDs in Wave 3 onward are intentional shared source
+IDs; language and topic already namespace shipping GUIDs. Never rewrite them.
 
 ## Step 1 — Triage every item
 

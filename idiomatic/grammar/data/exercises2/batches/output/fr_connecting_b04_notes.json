@@ -17,7 +17,9 @@
     "en": "I'm inclined to believe that...",
     "category": "stance",
     "tl": "J'incline à penser que",
-    "alts": ["J'aurais tendance à croire que"],
+    "alts": [
+      "J'aurais tendance à croire que"
+    ],
     "register": "Written-formal and cautiously assertive; the alternative is more common in speech.",
     "trap": "Incliner à means 'to be disposed to' in this formal stance frame; s'incliner means to bow or yield and is not interchangeable.",
     "example_tl": "J'incline à penser que la commission sous-estime les conséquences politiques d'une dépendance prolongée à l'égard de fournisseurs étrangers.",
@@ -69,7 +71,9 @@
     "en": "Despite conventional wisdom...",
     "category": "concession",
     "tl": "Contrairement aux idées reçues",
-    "alts": ["N'en déplaise aux tenants des idées reçues"],
+    "alts": [
+      "N'en déplaise aux tenants des idées reçues"
+    ],
     "register": "Neutral-formal; the alternative is more pointed and rhetorically marked.",
     "trap": "Contrairement governs à; n'en déplaise à literally points to whoever might object, though rhetorical personification such as aux idées reçues is also attested.",
     "example_tl": "Contrairement aux idées reçues, la concurrence ne garantit pas à elle seule une gouvernance démocratique des infrastructures numériques sans obligations contraignantes d'intérêt public.",
@@ -95,7 +99,9 @@
     "en": "There's a significant amount of evidence suggesting...",
     "category": "stance",
     "tl": "De nombreux éléments donnent à penser que",
-    "alts": ["Un faisceau d'indices suggère que"],
+    "alts": [
+      "Un faisceau d'indices suggère que"
+    ],
     "register": "Written-formal and epistemically cautious; avoids claiming that the evidence constitutes definitive proof.",
     "trap": "Preuves is too categorical when the evidence merely suggests; éléments or faisceau d'indices preserves the uncertainty in the English claim.",
     "example_tl": "De nombreux éléments donnent à penser que la plateforme connaissait les effets discriminatoires du système bien avant la publication du rapport.",
@@ -108,7 +114,9 @@
     "en": "I have my doubts about...",
     "category": "stance",
     "tl": "J'ai des doutes quant à",
-    "alts": ["Je doute de"],
+    "alts": [
+      "Je doute de"
+    ],
     "register": "Neutral-formal; expresses skepticism without categorical rejection.",
     "trap": "Use douter de before a noun phrase but douter que plus subjunctive before a clause; quant à is the formal noun-phrase link here.",
     "example_tl": "J'ai des doutes quant à la capacité des audits volontaires à modifier durablement les pratiques commerciales des plateformes dominantes.",
@@ -134,7 +142,9 @@
     "en": "One might posit that…",
     "category": "stance",
     "tl": "On pourrait avancer que",
-    "alts": ["On peut poser l'hypothèse que"],
+    "alts": [
+      "On peut poser l'hypothèse que"
+    ],
     "register": "Written-formal and cautious; introduces a claim for consideration rather than as settled fact.",
     "trap": "Positer que is rare specialist jargon and often an English calque; avancer que or poser l'hypothèse que is natural analytical French.",
     "example_tl": "On pourrait avancer que la centralisation des données constitue moins un choix technique qu'une stratégie de contrôle du marché.",
@@ -154,6 +164,21 @@
     "example_en": "It is crucial to distinguish publishing information from its independent verification by researchers with full access to the data.",
     "cloze": "{{c1::Il est essentiel de distinguer}} la publication d'informations {{c1::de}} leur vérification indépendante par des chercheurs disposant d'un accès complet aux données.",
     "note": "The two fixed arms of the French X-de-Y construction are clozed separately."
+  },
+  {
+    "id": "frc318",
+    "en": "Let's not forget that...",
+    "category": "stance",
+    "tl": "N'oublions pas que",
+    "alts": [
+      "Rappelons que"
+    ],
+    "register": "Neutral-formal; an inclusive editorial imperative that restores a relevant consideration.",
+    "trap": "The first-person plural imperative ends in -ons and retains pas around oublier; do not use the infinitive oublier as a discourse instruction.",
+    "example_tl": "N'oublions pas que les administrations restent juridiquement responsables des décisions prises par les systèmes qu'elles achètent à des prestataires privés.",
+    "example_en": "Let us not forget that public administrations remain legally responsible for decisions made by systems they buy from private providers.",
+    "cloze": "{{c1::N'oublions pas que}} les administrations restent juridiquement responsables des décisions prises par les systèmes qu'elles achètent à des prestataires privés.",
+    "note": "The alternative is a slightly less insistent reminder and can replace the head phrase directly."
   },
   {
     "id": "frc320",
@@ -186,7 +211,9 @@
     "en": "Shifting the focus slightly...",
     "category": "structuring",
     "tl": "Changeons légèrement de focale",
-    "alts": ["Déplaçons légèrement le regard"],
+    "alts": [
+      "Déplaçons légèrement le regard"
+    ],
     "register": "Journalistic and analytical; a controlled metaphor for changing the scale or object of attention.",
     "trap": "Déplacer l'attention is understandable but English-influenced; changer de focale or déplacer le regard is more idiomatic commentary.",
     "example_tl": "Changeons légèrement de focale : le véritable enjeu n'est pas la quantité de données, mais le pouvoir de les interpréter.",
@@ -225,7 +252,9 @@
     "en": "Weighing the pros and cons...",
     "category": "stance",
     "tl": "Tout bien pesé",
-    "alts": ["Tout compte fait"],
+    "alts": [
+      "Tout compte fait"
+    ],
     "register": "Neutral-formal; introduces a balanced judgment after considering advantages and disadvantages.",
     "trap": "Peser le pour et le contre is a fixed expression with singular le before both nouns; tout bien pesé is the compact conclusion marker.",
     "example_tl": "Tout bien pesé, le coût démocratique d'une surveillance opaque dépasse largement les gains d'efficacité administrative qu'elle pourrait procurer.",
@@ -238,7 +267,9 @@
     "en": "From another vantage point...",
     "category": "structuring",
     "tl": "Sous un autre angle",
-    "alts": ["D'un autre point de vue"],
+    "alts": [
+      "D'un autre point de vue"
+    ],
     "register": "Neutral; reframes the same issue through a different analytical perspective.",
     "trap": "Point de vue takes de, not depuis; sous un autre angle is figurative and does not require a spatial complement.",
     "example_tl": "Sous un autre angle, la mutualisation des données pourrait réduire la dépendance des chercheurs à l'égard de quelques entreprises privées dominantes.",
@@ -264,7 +295,9 @@
     "en": "Drawing a parallel to another situation...",
     "category": "addition",
     "tl": "Par analogie avec",
-    "alts": ["En établissant un parallèle avec"],
+    "alts": [
+      "En établissant un parallèle avec"
+    ],
     "register": "Written-formal; explicitly transfers a line of analysis from a comparable domain.",
     "trap": "Établir un parallèle takes avec, not à; par analogie avec is the compact discourse form.",
     "example_tl": "Par analogie avec la régulation bancaire, le législateur pourrait imposer aux plateformes de constituer des réserves destinées à couvrir leurs risques systémiques.",
@@ -303,7 +336,9 @@
     "en": "Taking a step back for a moment...",
     "category": "structuring",
     "tl": "Prenons un instant de recul",
-    "alts": ["Prenons un peu de hauteur"],
+    "alts": [
+      "Prenons un peu de hauteur"
+    ],
     "register": "Neutral; an inclusive invitation to widen the analytical frame.",
     "trap": "Prendre du recul is the fixed figurative expression; prendre un pas en arrière is a spatial English calque.",
     "example_tl": "Prenons un instant de recul : cette controverse s'inscrit dans un processus de privatisation progressive des infrastructures publiques engagé depuis plusieurs années.",
@@ -316,7 +351,9 @@
     "en": "Without oversimplifying the matter...",
     "category": "stance",
     "tl": "Sans vouloir simplifier à l'excès",
-    "alts": ["Sans caricaturer le débat"],
+    "alts": [
+      "Sans caricaturer le débat"
+    ],
     "register": "Neutral-formal; hedges a compressed account by acknowledging omitted complexity.",
     "trap": "Sursimplifier is an English-influenced formation; standard French prefers simplifier à l'excès or simplifier abusivement.",
     "example_tl": "Sans vouloir simplifier à l'excès, nous pouvons dire que la réforme oppose deux visions incompatibles de la souveraineté : le contrôle public et l'autonomie privée.",
@@ -342,7 +379,9 @@
     "en": "On a related note...",
     "category": "addition",
     "tl": "Dans le même ordre d'idées",
-    "alts": ["Dans le prolongement de cette réflexion"],
+    "alts": [
+      "Dans le prolongement de cette réflexion"
+    ],
     "register": "Neutral-formal; introduces a related point without claiming a strict logical consequence.",
     "trap": "Note is not a literal written note here; the French connector refers to the same line or order of ideas.",
     "example_tl": "Dans le même ordre d'idées, la mutualisation des compétences techniques permettrait aux petites collectivités de mieux contrôler leurs fournisseurs.",
@@ -355,7 +394,9 @@
     "en": "By contrast...",
     "category": "contrast",
     "tl": "Par contraste",
-    "alts": ["En revanche"],
+    "alts": [
+      "En revanche"
+    ],
     "register": "Written-formal; sets the following case against the preceding one.",
     "trap": "Par contraste is the standard detached form; en contraste is generally a translated choice in this argumentative use.",
     "example_tl": "Par contraste, les infrastructures ouvertes permettent à plusieurs acteurs de contrôler de manière indépendante l'application des règles et de proposer des services concurrents aux usagers.",
@@ -368,7 +409,9 @@
     "en": "In a different vein...",
     "category": "structuring",
     "tl": "Dans un autre ordre d'idées",
-    "alts": ["Sur un autre registre"],
+    "alts": [
+      "Sur un autre registre"
+    ],
     "register": "Neutral-formal; openly marks a shift to a different line of discussion.",
     "trap": "Veine is not used literally for this English discourse metaphor; ordre d'idées or registre is idiomatic French.",
     "example_tl": "Dans un autre ordre d'idées, la concentration du marché publicitaire menace directement le financement durable des médias locaux.",
@@ -394,7 +437,9 @@
     "en": "Let's now turn our focus to...",
     "category": "structuring",
     "tl": "Penchons-nous maintenant sur",
-    "alts": ["Intéressons-nous maintenant à"],
+    "alts": [
+      "Intéressons-nous maintenant à"
+    ],
     "register": "Neutral-formal; an inclusive editorial transition to the next object of analysis.",
     "trap": "Se pencher sur is the fixed figurative construction; pencher sur without the reflexive pronoun describes physical leaning.",
     "example_tl": "Penchons-nous maintenant sur la manière dont les plateformes déterminent quels systèmes elles acceptent de soumettre à un audit externe.",
@@ -414,6 +459,19 @@
     "example_en": "Leaving that behind for a moment, the immediate question is who will fund the new oversight mechanisms in practice.",
     "cloze": "{{c1::Laissons cela de côté un instant}} : la question immédiate est de savoir qui financera les nouveaux mécanismes de contrôle en pratique.",
     "note": "The time phrase makes the suspension temporary rather than dismissing the preceding issue altogether."
+  },
+  {
+    "id": "frc360",
+    "en": "With that said, it's also crucial to look at...",
+    "category": "concession",
+    "tl": "cela étant… il faut aussi examiner",
+    "alts": [],
+    "register": "Written-formal; concedes what precedes while restoring an additional necessary line of inquiry.",
+    "trap": "Ceci étant dit is widespread but often mirrors English and is redundant; cela étant is the concise concessive pivot.",
+    "example_tl": "Cela étant, il faut aussi examiner la capacité réelle des autorités locales à faire respecter des obligations techniques complexes.",
+    "example_en": "With that said, it is also crucial to examine local authorities' actual ability to enforce complex technical obligations.",
+    "cloze": "{{c1::Cela étant}}, {{c1::il faut aussi examiner}} la capacité réelle des autorités locales à faire respecter des obligations techniques complexes.",
+    "note": "Materially removes the translated dit and tempers the source's inflated crucial; both arms are clozed."
   },
   {
     "id": "frc363",
@@ -485,7 +543,9 @@
     "en": "Broadening our scope, let's pivot to...",
     "category": "structuring",
     "tl": "Élargissons maintenant l'analyse à",
-    "alts": ["Étendons maintenant notre analyse à"],
+    "alts": [
+      "Étendons maintenant notre analyse à"
+    ],
     "register": "Neutral-formal; an inclusive editorial transition to a wider domain.",
     "trap": "Champ d'action denotes an operational remit, not analytical scope; analyse is the natural object of élargir or étendre here.",
     "example_tl": "Élargissons maintenant l'analyse à la dépendance énergétique des centres de données et à ses conséquences pour les politiques climatiques.",
@@ -498,7 +558,9 @@
     "en": "In any event,",
     "category": "concession",
     "tl": "En tout état de cause",
-    "alts": ["Quoi qu'il en soit"],
+    "alts": [
+      "Quoi qu'il en soit"
+    ],
     "register": "Formal and legal-administrative; the alternative is neutral-formal.",
     "trap": "En tout état de cause is fixed and means the conclusion holds whatever the circumstances; en tout cas is less formal and broader.",
     "example_tl": "En tout état de cause, l'autorité publique demeure responsable des sanctions prononcées sur la base d'une évaluation automatisée.",
@@ -537,7 +599,9 @@
     "en": "For whatever reason, we can't accept this.",
     "category": "concession",
     "tl": "Pour quelque raison que ce soit",
-    "alts": ["Quelle qu'en soit la raison"],
+    "alts": [
+      "Quelle qu'en soit la raison"
+    ],
     "register": "Neutral-formal; dismisses the relevance of any possible reason to the conclusion.",
     "trap": "Quelque is an indefinite determiner here and agrees in number with raison; it is singular in this phrase, and que ce soit is subjunctive.",
     "example_tl": "Pour quelque raison que ce soit, nous ne pouvons accepter un dispositif qui soustrait durablement les décisions publiques à tout contrôle judiciaire effectif et indépendant.",
@@ -576,7 +640,9 @@
     "en": "The crux of the matter is that",
     "category": "stance",
     "tl": "Le nœud du problème, c'est que",
-    "alts": ["Le cœur du problème tient au fait que"],
+    "alts": [
+      "Le cœur du problème tient au fait que"
+    ],
     "register": "Neutral and emphatic; natural in opinion writing and serious speech.",
     "trap": "Nœud is figurative here; le nœud du problème est que is also idiomatic, while the dislocated c'est que form is more emphatic.",
     "example_tl": "Le nœud du problème, c'est que la plateforme produit elle-même les données utilisées pour évaluer sa conformité réglementaire.",
@@ -589,7 +655,9 @@
     "en": "it's time that we confront this problem",
     "category": "stance",
     "tl": "Il est temps que nous affrontions",
-    "alts": ["Il est temps d'affronter"],
+    "alts": [
+      "Il est temps d'affronter"
+    ],
     "register": "Neutral-formal and urgent; calls for action without the source's English that-clause syntax.",
     "trap": "Il est temps que takes the subjunctive, here affrontions; use il est temps de plus infinitive when the subject is understood generically.",
     "example_tl": "Il est temps que nous affrontions la dépendance des institutions publiques à l'égard d'infrastructures qu'elles ne peuvent ni auditer ni remplacer.",
@@ -615,7 +683,9 @@
     "en": "Drawing upon historical precedents, it's evident that",
     "category": "stance",
     "tl": "Les précédents historiques montrent que",
-    "alts": ["L'histoire montre que"],
+    "alts": [
+      "L'histoire montre que"
+    ],
     "register": "Written-formal; lets the evidence serve as the grammatical subject, avoiding a dangling gerund.",
     "trap": "A French en s'appuyant gerund must share the main clause's subject; impersonal il est évident creates a dangling construction in the legacy frame.",
     "example_tl": "Les précédents historiques montrent que les régimes d'exception temporaires tendent, avec le temps, à devenir permanents lorsque le contrôle parlementaire reste faible.",
@@ -635,6 +705,21 @@
     "example_en": "It is within this framework that we must emphasize the role of public research in independently assessing digital infrastructure.",
     "cloze": "{{c1::C'est dans ce cadre qu'il faut souligner le rôle de}} la recherche publique dans l'évaluation indépendante des infrastructures numériques.",
     "note": "Materially condenses the inflated source frame and removes unrelated content inserted by old_back."
+  },
+  {
+    "id": "frc393",
+    "en": "When one takes a step back to assess the broader picture, it becomes evident that",
+    "category": "stance",
+    "tl": "avec le recul… il apparaît que",
+    "alts": [
+      "Si l'on prend du recul, on constate que"
+    ],
+    "register": "Written-formal; moves from immediate detail to a broader retrospective assessment.",
+    "trap": "Prendre du recul is the fixed figurative expression; évaluer l'image plus large is an English calque for assessing the broader picture.",
+    "example_tl": "Avec le recul, il apparaît que les accords volontaires ont surtout retardé l'adoption de règles publiques véritablement contraignantes.",
+    "example_en": "When one steps back to assess the broader picture, it becomes evident that voluntary agreements mainly delayed genuinely binding public rules.",
+    "cloze": "{{c1::Avec le recul}}, {{c1::il apparaît que}} les accords volontaires ont surtout retardé l'adoption de règles publiques véritablement contraignantes.",
+    "note": "Materially compresses the verbose source frame; both fixed arms are clozed."
   },
   {
     "id": "frc400",

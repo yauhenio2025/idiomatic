@@ -67,6 +67,12 @@ CATEGORIES = frozenset({
     "generalization", "stance", "structuring", "addition",
     # sentence-level conditional types (CONDITIONALS topic, 2026-08-04)
     "real-condition", "counterfactual", "mixed-condition", "habitual",
+    # sentence-sequencing types (TENSES topic, Wave 3)
+    "past-anteriority", "ongoing-to-present", "modal-construction",
+    "counterfactual-sequence", "future-perfect", "literary-sequence",
+    # lexical-note types (FANCY/specialist vocab pilots, Waves 4--5)
+    "lexical-verb", "lexical-noun", "lexical-adjective", "lexical-adverb",
+    "lexical-expression", "term-definition",
 })
 
 # Deck label per (topic, lang); unlisted combinations fall back to the
@@ -82,6 +88,31 @@ TOPIC_LABELS = {
     ("conditionals", "fr"): "Conditionnels",
     ("conditionals", "it"): "Periodo ipotetico",
     ("conditionals", "de"): "Konditionalsätze",
+    ("tenses", "es"): "Secuencias temporales",
+    ("tenses", "pt"): "Sequência de tempos",
+    ("tenses", "fr"): "Concordance des temps",
+    ("tenses", "it"): "Concordanza dei tempi",
+    ("tenses", "de"): "Zeitenfolge",
+    ("fancy_vocab", "es"): "Vocabulario académico",
+    ("fancy_vocab", "pt"): "Vocabulário acadêmico",
+    ("fancy_vocab", "fr"): "Vocabulaire académique",
+    ("fancy_vocab", "it"): "Lessico accademico",
+    ("fancy_vocab", "de"): "Akademischer Wortschatz",
+    ("big_tech_vocab", "es"): "Vocabulario de Big Tech",
+    ("big_tech_vocab", "pt"): "Vocabulário de Big Tech",
+    ("big_tech_vocab", "fr"): "Vocabulaire des Big Tech",
+    ("big_tech_vocab", "it"): "Lessico delle Big Tech",
+    ("big_tech_vocab", "de"): "Big-Tech-Wortschatz",
+    ("cold_war_vocab", "es"): "Vocabulario de la Guerra Fría",
+    ("cold_war_vocab", "pt"): "Vocabulário da Guerra Fria",
+    ("cold_war_vocab", "fr"): "Vocabulaire de la guerre froide",
+    ("cold_war_vocab", "it"): "Lessico della guerra fredda",
+    ("cold_war_vocab", "de"): "Wortschatz des Kalten Krieges",
+    ("geopolitics", "es"): "Geopolítica",
+    ("geopolitics", "pt"): "Geopolítica",
+    ("geopolitics", "fr"): "Géopolitique",
+    ("geopolitics", "it"): "Geopolitica",
+    ("geopolitics", "de"): "Geopolitik",
 }
 
 CSS = """

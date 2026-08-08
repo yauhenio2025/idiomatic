@@ -128,7 +128,25 @@ def test_guid_and_deck_id_are_stable_and_namespaced():
 
 def test_deck_name_uses_label_map_with_title_fallback():
     assert x2.deck_name_for("es", "connecting") == "ES Spanish::4 Exercises::Conectores"
-    assert x2.deck_name_for("de", "fancy_vocab") == "DE German::4 Exercises::Fancy Vocab"
+    assert x2.deck_name_for("de", "fancy_vocab") == (
+        "DE German::4 Exercises::Akademischer Wortschatz"
+    )
+
+
+@pytest.mark.parametrize(
+    ("topic", "category"),
+    [
+        ("tenses", "past-anteriority"),
+        ("tenses", "literary-sequence"),
+        ("fancy_vocab", "lexical-verb"),
+        ("geopolitics", "term-definition"),
+    ],
+)
+def test_parser_accepts_wave3_and_vocab_pilot_categories(
+    tmp_path: Path, topic: str, category: str
+):
+    path = _write(tmp_path, f"es_{topic}.json", [_note_dict(category=category)])
+    assert x2.parse_notes_file(path)[0].category == category
 
 
 def test_cloze_rendering_escapes_and_marks_multiple_spans():

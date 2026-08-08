@@ -25,12 +25,30 @@ from idiomatic.grammar import exercises2 as x2  # noqa: E402
 BATCH_DIR = REPO / "idiomatic" / "grammar" / "data" / "exercises2" / "batches"
 
 _LANG_HINTS = {
-    "es": (r"[¿¡]|ción\b|\bel\b|\blas?\b|\blos\b|\bsin embargo\b|ñ", r""),
+    # Bare ``la`` is shared by Spanish, French, and Italian.  It supplied all
+    # three "Spanish" votes in two known false positives, so only the
+    # Spanish-exclusive plural articles remain evidence here.
+    "es": (r"[¿¡]|ción\b|\bel\b|\blas\b|\blos\b|\bsin embargo\b|ñ", r""),
     "pt": (r"ção\b|ções\b|[ãõ]|\bnão\b|\buma\b|\bos\b|\bas\b", r""),
-    "fr": (r"\bles\b|\bdes\b|\bdans\b|\bpas\b|[àâêîôû]|qu'|l'|d'", r""),
+    # ``à`` is productive Italian too (dipenderà, disponibilità).  French
+    # circumflexes and function words remain the useful discriminators.
+    "fr": (r"\bles\b|\bdes\b|\bdans\b|\bpas\b|[âêîôû]|qu'|l'|d'", r""),
     "de": (r"[äöüß]|\bnicht\b|\bund\b|\bdie\b|\bder\b|\bdas\b|\bsich\b", r""),
     "it": (r"zione\b|\bperché\b|\bpiù\b|\bgli\b|\bnon\b|\bche\b|\bè\b", r""),
 }
+
+_CHUNK_RE = re.compile(
+    r"^(?P<lang>de|es|fr|it|pt)_(?P<topic>[a-z0-9]+(?:_[a-z0-9]+)*?)"
+    r"(?:_pilot)?_b[0-9]{2}$"
+)
+
+
+def _chunk_lang_topic(chunk: str) -> tuple[str, str]:
+    """Parse the full topic slug, including multiword wave 4--6 topics."""
+    match = _CHUNK_RE.fullmatch(chunk)
+    if match is None:
+        raise ValueError(f"invalid chunk name {chunk!r}")
+    return match.group("lang"), match.group("topic")
 
 
 def _lang_score(text: str, lang: str) -> int:
@@ -67,7 +85,10 @@ def gate_chunk(chunk: str) -> tuple[bool, list[str], dict]:
     if not notes_path.exists() or not triage_path.exists():
         return False, ["output pair not landed yet"], stats
 
-    lang, topic = chunk.split("_")[0], chunk.split("_")[1]
+    try:
+        lang, topic = _chunk_lang_topic(chunk)
+    except ValueError as exc:
+        return False, [str(exc)], stats
     inputs = json.loads(input_path.read_text(encoding="utf-8"))
     try:
         notes_raw = json.loads(notes_path.read_text(encoding="utf-8"))

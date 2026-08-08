@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "generated_by": "tools/x2_wave_pipeline.py",
+  "plan": "wave3",
+  "chunk_size": 100,
+  "id_policy": "preserve canonical it_rebuild source IDs exactly",
+  "order_policy": "preserve canonical source order; pilots preserve relative order",
+  "topics": [
+    {
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "languages": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt"
+      ],
+      "source_rows": 300,
+      "selected_rows": 300,
+      "selected_ids_sha256": "ab5974f38b092c8bc4379d923beedb6f5448b79c15b5f8ce950c574ff9206c43",
+      "owner_gate": null
+    }
+  ],
+  "source_files": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/tenses_01.json",
+      "sha256": "4583b5b6de14de6c6f1224b6717afb53d09f6ab42882d6247fa31ed7f674d37c"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/tenses_02.json",
+      "sha256": "2e68d6ad123c0c2e7dffb96bd02f6f65d403296c2357b9a26cee40f62002b8af"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/tenses_03.json",
+      "sha256": "15b98043a18be134b8737bed961c42b9739034610a10d0656e89727480a7a026"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/tenses_01.json",
+      "sha256": "b3d4a1b7bc7528bef43190ad2b4c045b865f565da1f00f5cee1ce67bb239c918"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/tenses_02.json",
+      "sha256": "f0106b73f94a38a6c4f406d3d0dca10900e91358fcd812123856605ed1d716a8"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/tenses_03.json",
+      "sha256": "d9c5e256f086ba48cc18ed1bd08d80ba771fc2d23e12629cd62e444ed5e7bb59"
+    }
+  ],
+  "chunks": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/de_tenses_b01.json",
+      "lang": "de",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_001",
+      "last_id": "it_tenses_100",
+      "missing_ref_ids": [],
+      "sha256": "c73ff15deb534815657faab1e2b727b448d2d6a74d0270182850f989fdb8be9a"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/de_tenses_b02.json",
+      "lang": "de",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_101",
+      "last_id": "it_tenses_200",
+      "missing_ref_ids": [],
+      "sha256": "799cc7a4ba629325b7a08b6b54726cbbb2496adafc190dc5782e3b290d40bdbb"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/de_tenses_b03.json",
+      "lang": "de",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_201",
+      "last_id": "it_tenses_300",
+      "missing_ref_ids": [],
+      "sha256": "2f07055701a9b17c4f836109997412e25be69c3f42e6b1d06015064aef4d235c"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/es_tenses_b01.json",
+      "lang": "es",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_001",
+      "last_id": "it_tenses_100",
+      "missing_ref_ids": [
+        "it_tenses_001"
+      ],
+      "sha256": "e2d2f723f95d4c31f75905da3f19edb9e992b5341a492292fafd9b57bd61f5fb"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/es_tenses_b02.json",
+      "lang": "es",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_101",
+      "last_id": "it_tenses_200",
+      "missing_ref_ids": [],
+      "sha256": "fe61f05ebf8b7f0a5e113a918f7efed1849863057efa04a4a79476f7a4babef4"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/es_tenses_b03.json",
+      "lang": "es",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_201",
+      "last_id": "it_tenses_300",
+      "missing_ref_ids": [],
+      "sha256": "110e3924fd00d16f50ac9e4de23239d9666fdd88c94d18ea9071ee48e497f265"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/fr_tenses_b01.json",
+      "lang": "fr",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_001",
+      "last_id": "it_tenses_100",
+      "missing_ref_ids": [],
+      "sha256": "2c128fcedc922929e0b4a55b8f42724d7fd97455d6e4cc129054ee925feb6e4a"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/fr_tenses_b02.json",
+      "lang": "fr",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_101",
+      "last_id": "it_tenses_200",
+      "missing_ref_ids": [],
+      "sha256": "5d57c3214598203c83417fa039a6886ccf5d14b8b8d421eb7bf2b01f5007fd66"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/fr_tenses_b03.json",
+      "lang": "fr",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_201",
+      "last_id": "it_tenses_300",
+      "missing_ref_ids": [],
+      "sha256": "790b60f776d2edd1017b5ceafaa1f7ecb8bbc6ffde1e6be53a31929186730a61"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/it_tenses_b01.json",
+      "lang": "it",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_001",
+      "last_id": "it_tenses_100",
+      "missing_ref_ids": [],
+      "sha256": "f6e2c305c80d6a0bedbe86caa1bf34cdedd4e0cd38b17225f760f26c236e908d"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/it_tenses_b02.json",
+      "lang": "it",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_101",
+      "last_id": "it_tenses_200",
+      "missing_ref_ids": [],
+      "sha256": "10ad9795c4ed5f474ce1109d6cfb250ef6001d40e199c81391ac1342e7ed3f35"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/it_tenses_b03.json",
+      "lang": "it",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_201",
+      "last_id": "it_tenses_300",
+      "missing_ref_ids": [],
+      "sha256": "155c73894b38c5289f16513086f746853f1b66286ea215f280a48adbb89116f4"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/pt_tenses_b01.json",
+      "lang": "pt",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_001",
+      "last_id": "it_tenses_100",
+      "missing_ref_ids": [],
+      "sha256": "3001ae355ebc33922fe2d4b50453a78e8bdabafbcd699413eff2c7ef00e1ff1e"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/pt_tenses_b02.json",
+      "lang": "pt",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_101",
+      "last_id": "it_tenses_200",
+      "missing_ref_ids": [],
+      "sha256": "f48ea8f0e6376a01e3781c516e670081d4ae993e8d5019bb13baac5c306d66ee"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/pt_tenses_b03.json",
+      "lang": "pt",
+      "topic": "tenses",
+      "mode": "approved-full-wave",
+      "rows": 100,
+      "first_id": "it_tenses_201",
+      "last_id": "it_tenses_300",
+      "missing_ref_ids": [],
+      "sha256": "3478612c763c22fe447b8ceae6ad052cbf96827f903b55f5bf60ec7a4530def9"
+    }
+  ]
+}

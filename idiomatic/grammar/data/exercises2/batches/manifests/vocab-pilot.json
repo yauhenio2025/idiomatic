@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "generated_by": "tools/x2_wave_pipeline.py",
+  "plan": "vocab-pilot",
+  "chunk_size": 100,
+  "id_policy": "preserve canonical it_rebuild source IDs exactly",
+  "order_policy": "preserve canonical source order; pilots preserve relative order",
+  "topics": [
+    {
+      "topic": "fancy_vocab",
+      "mode": "pilot",
+      "languages": [
+        "es"
+      ],
+      "source_rows": 582,
+      "selected_rows": 30,
+      "selected_ids_sha256": "69a00ccdcf1a9725b40c21a3eba76ef4ad73ebb48ec78d5ba7799dbf533db3a8",
+      "owner_gate": "fancy_vocab-format-pilot-verdict"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/fancy_vocab_01.json",
+      "sha256": "8d4ab95e4357f638459e83747dd8766c3b380d9e9dd8d74f169a12810ca98af9"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/fancy_vocab_02.json",
+      "sha256": "694ced7f90ffa05228caaa51d2bb2ff9c01c14e30c947f0e8918ac22dfd05463"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/fancy_vocab_03.json",
+      "sha256": "7ba909bd25b249072c1933a512c7ccf79746b398dc672321ea7b6b53db1fe475"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/fancy_vocab_04.json",
+      "sha256": "a063124bf6eeda3effd1a7483ba1d154f1da3e51789e0c8be05fff4ed25b2c8a"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/fancy_vocab_05.json",
+      "sha256": "a6317fd1a044c2a45cd1f74d23584f1bb978bbcd8af947d7c528ea384aa2feca"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/fancy_vocab_01.json",
+      "sha256": "1597771d60b12e27f32ebd7ff8c5beeac07df96c440de623aeb035a240b8d363"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/fancy_vocab_02.json",
+      "sha256": "0cb2b210817e668c0ceab9489a67479d61142320621572578df70b99a2639eed"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/fancy_vocab_03.json",
+      "sha256": "3032b20f5b1b780f8d12a20025a90d2c07166e8e577a548baef9bfa4f7bd26b6"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/fancy_vocab_04.json",
+      "sha256": "aad055a5a6c66f9517a847b71e1021419209cb5bfce8fca90df283f38398dde5"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/fancy_vocab_05.json",
+      "sha256": "4344f6c444cbd923af7d5e3a42cce8d869b948507e4d87105deef10f0f5b34a8"
+    }
+  ],
+  "chunks": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/es_fancy_vocab_pilot_b01.json",
+      "lang": "es",
+      "topic": "fancy_vocab",
+      "mode": "pilot",
+      "rows": 30,
+      "first_id": "it_fancy_vocab_001",
+      "last_id": "it_fancy_vocab_493",
+      "missing_ref_ids": [],
+      "sha256": "c1712992470f0ac9e3e4097346775b8c1d5a030e19c6ea693bc736c7c42774ac"
+    }
+  ]
+}

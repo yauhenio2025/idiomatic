@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "generated_by": "tools/x2_wave_pipeline.py",
+  "plan": "phrases-pilot",
+  "chunk_size": 100,
+  "id_policy": "preserve canonical it_rebuild source IDs exactly",
+  "order_policy": "preserve canonical source order; pilots preserve relative order",
+  "topics": [
+    {
+      "topic": "big_tech_phrases",
+      "mode": "pilot",
+      "languages": [
+        "pt"
+      ],
+      "source_rows": 90,
+      "selected_rows": 30,
+      "selected_ids_sha256": "fcb77e761b84c9b2e2153bfda8fbd7a23b09b4a7be87270ed919bf3bfb760bbf",
+      "owner_gate": "big_tech_phrases-format-pilot-verdict"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/big_tech_phrases_01.json",
+      "sha256": "ebee1da28696108d57be186a5d8c8cfa34cbff03a3c2ec188c6d9a5fc1770bdc"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/big_tech_phrases_01.json",
+      "sha256": "0ba3a2224cbdc4d7d401272acdc85998f198149959d2f59c62e0b41559ac94d4"
+    }
+  ],
+  "chunks": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/pt_big_tech_phrases_pilot_b01.json",
+      "lang": "pt",
+      "topic": "big_tech_phrases",
+      "mode": "pilot",
+      "rows": 30,
+      "first_id": "it_big_tech_phrases_001",
+      "last_id": "it_big_tech_phrases_030",
+      "missing_ref_ids": [
+        "it_big_tech_phrases_001",
+        "it_big_tech_phrases_002",
+        "it_big_tech_phrases_003",
+        "it_big_tech_phrases_004",
+        "it_big_tech_phrases_005",
+        "it_big_tech_phrases_006",
+        "it_big_tech_phrases_007",
+        "it_big_tech_phrases_008",
+        "it_big_tech_phrases_009",
+        "it_big_tech_phrases_010",
+        "it_big_tech_phrases_011",
+        "it_big_tech_phrases_012",
+        "it_big_tech_phrases_013",
+        "it_big_tech_phrases_014",
+        "it_big_tech_phrases_015",
+        "it_big_tech_phrases_016",
+        "it_big_tech_phrases_017",
+        "it_big_tech_phrases_018",
+        "it_big_tech_phrases_019",
+        "it_big_tech_phrases_020",
+        "it_big_tech_phrases_021",
+        "it_big_tech_phrases_022",
+        "it_big_tech_phrases_023",
+        "it_big_tech_phrases_024",
+        "it_big_tech_phrases_025",
+        "it_big_tech_phrases_026",
+        "it_big_tech_phrases_027",
+        "it_big_tech_phrases_028",
+        "it_big_tech_phrases_029",
+        "it_big_tech_phrases_030"
+      ],
+      "sha256": "78c13f6773b1d9d6c4affb3df9efec9883bb9ad3815053154408bdc8d34bcba2"
+    }
+  ]
+}

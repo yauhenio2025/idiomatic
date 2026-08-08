@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "generated_by": "tools/x2_wave_pipeline.py",
+  "plan": "geopolitics-pilot",
+  "chunk_size": 100,
+  "id_policy": "preserve canonical it_rebuild source IDs exactly",
+  "order_policy": "preserve canonical source order; pilots preserve relative order",
+  "topics": [
+    {
+      "topic": "geopolitics",
+      "mode": "pilot",
+      "languages": [
+        "es"
+      ],
+      "source_rows": 150,
+      "selected_rows": 30,
+      "selected_ids_sha256": "fe1c1d1d3f3576d9cc8b608fe57332c143a205d452fc33f8ae1b51f97ea980a3",
+      "owner_gate": "geopolitics-format-pilot-verdict"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/geopolitics_01.json",
+      "sha256": "f599d9dea92383b6766edfa1d152034b7a791b6b9e0f787e608a5d5b178c8fbc"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/geopolitics_02.json",
+      "sha256": "5a1f49d4736a239647c6330273254a7c98b8c46cdd6541aa87d8b4d1cfc9f640"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/geopolitics_01.json",
+      "sha256": "6087d2ed4616574768ff932afe2a4e285d1362be5ffa8b0a67224d5c44f8f8d3"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/geopolitics_02.json",
+      "sha256": "2060bceceb7aae95ad8d4ffe9fec76c07df00db7d078e9ad1899d27dba8750cb"
+    }
+  ],
+  "chunks": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/es_geopolitics_pilot_b01.json",
+      "lang": "es",
+      "topic": "geopolitics",
+      "mode": "pilot",
+      "rows": 30,
+      "first_id": "it_geopolitics_001",
+      "last_id": "it_geopolitics_030",
+      "missing_ref_ids": [],
+      "sha256": "f107b7f74f6222e7eeac32844f253f3dc88f2b78d2efdfc0ecc995edef5121d8"
+    }
+  ]
+}
