@@ -1,0 +1,135 @@
+{
+  "contract_version": 1,
+  "run_started_at": "2026-08-08T11:52:48+08:00",
+  "run_finished_at": "2026-08-08T12:02:22+08:00",
+  "condition": "guaranteed-miner-paused",
+  "pilot": {
+    "notes": 30,
+    "clips": 60,
+    "clips_per_language": 12,
+    "languages": [
+      "de",
+      "es",
+      "fr",
+      "it",
+      "pt"
+    ],
+    "clip_kinds": [
+      "answer",
+      "example"
+    ],
+    "voice_version": "qwen3-tts-clone-v1"
+  },
+  "delivery": {
+    "apkg_id": 1615,
+    "kind": "exercises2_pilot",
+    "delivery_lang": "es",
+    "filename": "apkgs/es/_exercises2_local_qwen_pilot_v1.apkg",
+    "model_id": 1820150001,
+    "notes": 30,
+    "cards": 60
+  },
+  "totals": {
+    "successful_clips": 60,
+    "unique_jobs": 60,
+    "characters": 6467,
+    "mp3_bytes": 3092232,
+    "audio_duration_seconds": 382.2,
+    "generation_seconds": 272.0,
+    "active_worker_wall_seconds": 429.883,
+    "generation_clips_per_hour": 794.1,
+    "end_to_end_clips_per_hour": 502.5
+  },
+  "stable_segment": {
+    "clips": 34,
+    "deferred": 0,
+    "generation_seconds": 132.3,
+    "wall_seconds": 225.851,
+    "generation_clips_per_hour": 925.2,
+    "end_to_end_clips_per_hour": 542.0
+  },
+  "per_language": {
+    "de": {
+      "clips": 12,
+      "generation_p50_seconds": 4.9,
+      "generation_p95_seconds": 14.9,
+      "audio_seconds": 89.184
+    },
+    "es": {
+      "clips": 12,
+      "generation_p50_seconds": 4.8,
+      "generation_p95_seconds": 17.2,
+      "audio_seconds": 78.672
+    },
+    "fr": {
+      "clips": 12,
+      "generation_p50_seconds": 4.1,
+      "generation_p95_seconds": 12.3,
+      "audio_seconds": 68.976
+    },
+    "it": {
+      "clips": 12,
+      "generation_p50_seconds": 4.1,
+      "generation_p95_seconds": 5.3,
+      "audio_seconds": 69.576
+    },
+    "pt": {
+      "clips": 12,
+      "generation_p50_seconds": 4.6,
+      "generation_p95_seconds": 6.1,
+      "audio_seconds": 75.792
+    }
+  },
+  "media_validation": {
+    "codecs": [
+      "mp3"
+    ],
+    "sample_rates_hz": [
+      24000
+    ],
+    "channels": [
+      1
+    ],
+    "minimum_bytes": 5084,
+    "maximum_bytes": 92708,
+    "mean_integrated_loudness_lufs": -16.92,
+    "minimum_integrated_loudness_lufs": -24.22,
+    "maximum_integrated_loudness_lufs": -15.94,
+    "maximum_true_peak_dbtp": -1.09,
+    "artifact_manifest_sha256": "268d07ce5bea5160122785e1b3afb4e68f4b52380b65be8b0dd1b6645fe3021a"
+  },
+  "safety_events": [
+    {
+      "event": "resident-comfy-ram-gate",
+      "result": "deferred-before-synthesis",
+      "detail": "Idle ComfyUI left only about 8.2 GiB MemAvailable; the 10 GiB batch floor correctly rejected admission."
+    },
+    {
+      "event": "legacy-vram-heuristic-false-positive",
+      "result": "all-untouched-jobs-requeued",
+      "detail": "The bridge's guessed own-VRAM subtraction misclassified Qwen as foreign work; replaced with per-process nvidia-smi accounting."
+    },
+    {
+      "event": "cpu-thermal-boundary",
+      "result": "all-untouched-jobs-requeued",
+      "detail": "The hottest CPU sensor reached 86 C against an 85 C limit; Qwen unloaded and the host cooled to 75.9 C before resumption."
+    }
+  ],
+  "queue_after": {
+    "completed": 60,
+    "queued": 0,
+    "leased": 0,
+    "failed": 0,
+    "expired_leases": 0,
+    "full_exercises2_approved": false
+  },
+  "schedule": {
+    "proposed_window": "09:00-11:00 Asia/Singapore",
+    "conservative_clips_per_two_hours": 1000,
+    "conservative_two_clip_notes_per_two_hours": 500,
+    "timer_installed": false,
+    "timer_enabled": false,
+    "owner_approval_required": true
+  },
+  "owner_gate": "pending-listening-verdict"
+}

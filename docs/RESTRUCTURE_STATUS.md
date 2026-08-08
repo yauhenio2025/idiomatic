@@ -16,7 +16,8 @@ Rationale: structure all source material BEFORE the hub's model freeze,
 so nothing needs re-importing after. The Hub then holds every remaining
 user-visible deliverable.
 
-**Sweep progress (2026-08-08 11:30 +0800): Part A audit shipped.** A fresh
+**Sweep progress (2026-08-08 12:05 +0800): Part A audit and Part C listening
+pilot shipped; Part B Wave 3 authoring is active.** A fresh
 download-only +2 snapshot is fully inventoried in
 `docs/research/legacy_estate/` (238 deck rows; 228,413 notes; 282,976 cards),
 seeded into the idempotent `legacy_estate` table, and visible read-only at
@@ -24,8 +25,11 @@ seeded into the idempotent `legacy_estate` table, and visible read-only at
 verdict remains the Part-A gate. The snapshot confirms the settled targeted
 cleanup (fake IT exercises, toxic ES false-friends, and 30 contaminated PT
 phrase rows) is already reflected; this audit did not touch cleanup.json or
-the remaining +2 purge track. Parts B/C are still ahead of the Hub and retain
-their pilot/listening/GPU-window gates.
+the remaining +2 purge track. The durable local-only Qwen queue completed its
+30-note / 60-clip mixed-language pilot and published APKG 1615; the owner
+listening verdict and the proposed 09:00--11:00 GPU split remain closed gates,
+and no timer is enabled. Wave 3's 15 source-hashed TENSES inputs are staged and
+authoring is under way; the Wave 4--6 new formats remain pilot-gated.
 
 ## 1. DONE — estate migration (closed 2026-08-08 morning)
 
@@ -80,7 +84,7 @@ User-visible gaps that are the Hub's explicit deliverables:
 
 | Item | State | Trigger |
 |---|---|---|
-| Qwen local TTS default flip | Render still pins `TTS_PROVIDER=elevenlabs`; bridge idle | Run bridge acceptance drills (advised: after the trip) |
+| Qwen local TTS default flip | Estate pilot APKG 1615 delivered; Render still pins `TTS_PROVIDER=elevenlabs`; bulk + timer closed | Owner listens, then verdicts pilot and 09:00--11:00 GPU split |
 | Pimsleur scraper + Mandarin external builders | Still bake old deck roots | Update before any re-run (flagged in plan completion note) |
 | Media cleanup (~6.5 GiB orphan estimate) | Deliberately out of scope | Copied media dir + missing Mandarin `.webm` repair + owner approval |
 | +2 legacy profile purge | cleanup.json single-slot pending | Factory commission-B queued-cleanup requirement |

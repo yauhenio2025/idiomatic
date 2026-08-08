@@ -6,8 +6,10 @@ the Fedora machine against its loopback Qwen3-TTS bridge. This lane never calls
 `gemini.synthesize`, ElevenLabs, or Gemini TTS, and it does not depend on (or
 change) Render's `TTS_PROVIDER` setting.
 
-No scheduler or production call is enabled by this change. The machine-local
-worker and its timer live beside `~/llms/qwen3-tts/server/`, outside this repo.
+The machine-local worker now lives beside `~/llms/qwen3-tts/server/`, outside
+this repo. Its one-owner window wrapper cooperatively drains the image lane,
+stops only the exact idle ComfyUI unit, runs the queue, unloads Qwen, and then
+releases images. No daily service or timer is installed or enabled.
 
 ## Authentication and version
 
@@ -183,10 +185,13 @@ keeps the source identity but generates a new canonical path and resets the job
 to `queued`, clearing its old completion metadata. Old clip files become inert:
 strict rebuilds only accept the current row/hash/path.
 
-## Benchmark handoff
+## Benchmark result
 
-The first unscheduled pilot run should record, outside this repo, wall time per
-successful clip, Qwen bridge `503` deferrals, GPU-idle versus miner-paused
-conditions, and total clips/hour. Use that observed throughput to size the
-proposed daily miner pause. Do not install or enable a timer from this API
-change; the owner approves the final GPU split separately.
+The first unscheduled pilot completed 60/60 clips and shipped APKG 1615. Its
+stable segment measured 542 end-to-end clips/hour; use 1,000 clips (500
+two-clip notes) as the conservative two-hour capacity. The complete metrics,
+safety deferrals, media validation, and still-closed owner gates are recorded
+in
+[`research/legacy_estate/LOCAL_QWEN_PILOT_BENCHMARK.md`](research/legacy_estate/LOCAL_QWEN_PILOT_BENCHMARK.md).
+Do not install or enable a timer until the owner approves the listening pilot
+and final GPU split.
