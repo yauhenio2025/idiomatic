@@ -1,0 +1,926 @@
+[
+  {
+    "expression_id": 945,
+    "idiom": "im Sekundentakt",
+    "anchor": {
+      "semantic_hook": "Intervals of seconds become visible as a second hand that releases one fresh event at each tick.",
+      "setting": "A cavernous timing hall joins an office desk, a subway track, a carpeted entrance strip, a packing counter, and tall storm windows. Above the central floor, one colossal stopwatch without digits hangs in midair, and its sweeping second hand releases a fresh object from a hatch at every tick.",
+      "cast": [
+        "luisa_neubauer"
+      ],
+      "absurd_element": "colossal stopwatch releasing one object at every sweep of its second hand"
+    },
+    "variations": [
+      {
+        "example_id": 5539,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "stands at the office desk gripping a vibrating phone, eyes wide as her free hand tries to catch the rapid stream of blank notification tiles piling around it"
+          }
+        ],
+        "scene_adjust": "a smartphone displaying only notification icons and a growing pile of blank notification tiles"
+      },
+      {
+        "example_id": 5540,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "leans over the platform edge with one hand raised, tracking successive subway cars rushing past almost nose-to-tail"
+          }
+        ],
+        "scene_adjust": "several subway cars following one another at exceptionally short intervals along the track"
+      },
+      {
+        "example_id": 5541,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "twists from her chair toward the office phone and reaches urgently for the receiver while the bell housing trembles again"
+          }
+        ],
+        "scene_adjust": "an office phone beside untouched morning coffee and a window showing early daylight"
+      },
+      {
+        "example_id": 5542,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "kneels beside the carpeted entrance with a camera pressed to her eye, finger repeatedly depressing the shutter and body pitched forward for the next shot"
+          }
+        ],
+        "scene_adjust": "camera flashes, a velvet rope, and a plain red carpet along the entrance strip"
+      },
+      {
+        "example_id": 5543,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "stands behind the packing counter with both arms extended, catching one blank order slip while many more slide toward her in quick succession"
+          }
+        ],
+        "scene_adjust": "open parcel boxes, a shopping-basket icon on the terminal, and a dense stream of blank order slips"
+      },
+      {
+        "example_id": 5544,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "braces both palms against the storm-window frame, shoulders tense and face illuminated by repeated lightning flashes outside"
+          }
+        ],
+        "scene_adjust": "driving rain and many closely spaced lightning bolts crossing the sky beyond the windows"
+      }
+    ]
+  },
+  {
+    "expression_id": 970,
+    "idiom": "am Hungertuch nagen",
+    "anchor": {
+      "semantic_hook": "The literal hunger cloth is a real cloth whose edge must be gnawed when money and food run short.",
+      "setting": "A sparse apartment dining room contains a bare table, an easel, moving boxes, and a household budget tray. One enormous tablecloth descends from the ceiling to the tabletop, its lower edge marked by a single set of fresh human bite marks.",
+      "cast": [
+        "juju",
+        "capital_bra"
+      ],
+      "absurd_element": "ceiling-high hunger cloth bearing fresh bite marks"
+    },
+    "variations": [
+      {
+        "example_id": 5689,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stands beside a discarded office briefcase and firmly pushes the hanging cloth away, relieved as he weighs a still-full coin pouch in his other hand"
+          }
+        ],
+        "scene_adjust": "a discarded office briefcase, a full coin pouch, and a basket of groceries"
+      },
+      {
+        "example_id": 5690,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "sits close to the bare table and bites one corner of the hanging cloth, shoulders drawn inward"
+          },
+          {
+            "slug": "capital_bra",
+            "action": "kneels beside her with an empty bowl in one hand and grips another edge of the cloth between his teeth"
+          }
+        ],
+        "scene_adjust": "two empty bowls and an open coin pouch containing only a few coins"
+      },
+      {
+        "example_id": 5691,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "gestures dramatically at a small stack of coins while turning her face away from the cloth and holding its bitten edge at arm's length"
+          }
+        ],
+        "scene_adjust": "full grocery bags and a well-stocked fruit bowl behind the small coin stack"
+      },
+      {
+        "example_id": 5692,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "bites the cloth edge while continuing to paint at the easel with one hand, her tired face brightening toward the canvas"
+          }
+        ],
+        "scene_adjust": "finished canvases, paintbrushes, a nearly empty coin tray, and a simple landscape on the easel"
+      },
+      {
+        "example_id": 5693,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "leans over the budget tray with a worried frown and pulls the cloth edge toward her mouth"
+          },
+          {
+            "slug": "capital_bra",
+            "action": "holds an empty coin pouch upside down above the table and reaches reluctantly for the same cloth"
+          }
+        ],
+        "scene_adjust": "a model apartment block, an empty coin pouch, and a balance scale tipped heavily toward a stack of house keys"
+      },
+      {
+        "example_id": 5694,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "stands beside the collapsed project model and pulls the cloth away from both of them with a confident smile"
+          },
+          {
+            "slug": "capital_bra",
+            "action": "holds a reserve coin box securely against his chest and gives a reassuring raised thumb"
+          }
+        ],
+        "scene_adjust": "a collapsed project model beside a sturdy box filled with reserve coins"
+      }
+    ]
+  },
+  {
+    "expression_id": 971,
+    "idiom": "einen Blick werfen",
+    "anchor": {
+      "semantic_hook": "A glance becomes a tangible glass eye-shaped token that can be thrown toward anything being inspected.",
+      "setting": "A long indoor arcade contains an office desk, an analog departure display, a shop doorway, a house window, a report stand, and a photo table. One enormous glass eye-shaped token rests at the start of a curved throwing lane that reaches every inspection surface.",
+      "cast": [
+        "sahra_wagenknecht"
+      ],
+      "absurd_element": "enormous throwable glass eye-shaped glance token"
+    },
+    "variations": [
+      {
+        "example_id": 5695,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "leans across the office desk and flicks the glass glance token toward the open résumé folder, face attentive and one hand waiting to catch it"
+          }
+        ],
+        "scene_adjust": "an open résumé folder containing a portrait, plain divider lines, and geometric skill markers without lettering"
+      },
+      {
+        "example_id": 5696,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "snatches the returning glance token beside the departure display, brows knitted and free hand raised in lingering uncertainty"
+          }
+        ],
+        "scene_adjust": "a departure display made only of clock hands, route colors, and train icons"
+      },
+      {
+        "example_id": 5697,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "stands in the arcade and tosses the glance token through the open shop doorway, stretching forward eagerly to see the displays inside"
+          }
+        ],
+        "scene_adjust": "an open new shop doorway with unmarked shelves, folded clothes, and household objects visible within"
+      },
+      {
+        "example_id": 5698,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "wears her coat and holds a door key ready while casting the glance token out the house window for one final look"
+          }
+        ],
+        "scene_adjust": "a coat stand, a house key, and a quiet street visible outside the window"
+      },
+      {
+        "example_id": 5699,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "stands at the report stand in afternoon daylight and catches the glance token above an open report, concentrating on its diagrams"
+          }
+        ],
+        "scene_adjust": "an open report showing only charts and geometric diagrams, with afternoon sun crossing the stand"
+      },
+      {
+        "example_id": 5700,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "sits at the photo table, rolls the glance token from one vacation photograph to the next, and smiles toward the empty chair beside her"
+          }
+        ],
+        "scene_adjust": "vacation photographs showing a beach, mountains, and suitcases spread beside a second chair"
+      }
+    ]
+  },
+  {
+    "expression_id": 972,
+    "idiom": "milliardenschwer",
+    "anchor": {
+      "semantic_hook": "The compound billion-heavy becomes literal when countless units of wealth make each subject physically crushing on a scale.",
+      "setting": "A reinforced weighing hall contains a crane, a city-model bench, a package bay, a takeover table, an inheritance chest, and a game display. One city-block-sized balance scale has sunk deep into the concrete beneath a mountain of identical coins.",
+      "cast": [
+        "angela_merkel",
+        "jurgen_klopp"
+      ],
+      "absurd_element": "city-block-sized balance scale sinking under a mountain of coins"
+    },
+    "variations": [
+      {
+        "example_id": 5701,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands at the city-model bench and guides a crane hook toward a new headquarters model while studying the deeply lowered coin pan"
+          }
+        ],
+        "scene_adjust": "a technology campus model and a Berlin city model with its familiar columned gate monument"
+      },
+      {
+        "example_id": 5702,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "plants one polished shoe on a model tower, holds a ring of property keys, and strains proudly to lift a coin sack from the sunken scale"
+          }
+        ],
+        "scene_adjust": "several real-estate tower models, property keys, and heavy coin sacks"
+      },
+      {
+        "example_id": 5703,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "lowers both palms decisively onto a sealed support package resting on the scale, then gestures toward small factory and shop models"
+          }
+        ],
+        "scene_adjust": "a huge sealed package surrounded by factory, shop, and household models"
+      },
+      {
+        "example_id": 5704,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "draws two rival company towers together across the takeover table and locks them into one base while the scale groans below"
+          }
+        ],
+        "scene_adjust": "two distinct company-tower models, interlocking ownership pieces, and coin pallets"
+      },
+      {
+        "example_id": 5705,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands solemnly beside an empty high-backed chair and takes the key to an inheritance chest whose weight pins the scale down"
+          }
+        ],
+        "scene_adjust": "an empty high-backed chair, a closed inheritance chest, an old house model, and coin trays"
+      },
+      {
+        "example_id": 5706,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "stands at the game display surrounded by controllers, raises one controller triumphantly, and points down at the vast coin load beneath the industry models"
+          }
+        ],
+        "scene_adjust": "game controllers, arcade cabinets without markings, handheld consoles, and studio-building models"
+      }
+    ]
+  },
+  {
+    "expression_id": 973,
+    "idiom": "Teufelskreis",
+    "anchor": {
+      "semantic_hook": "The devil's circle is a real closed loop fitted with horns and a pointed tail, forcing every problem back toward its own beginning.",
+      "setting": "A circular training chamber contains a work desk, a bed, a finance counter, a car bay, a snack table, conversation chairs, and an exam desk. One colossal circular conveyor with two horns and a pointed tail locks into its own loop around the entire room.",
+      "cast": [
+        "capital_bra"
+      ],
+      "absurd_element": "colossal horned conveyor whose pointed tail closes its endless loop"
+    },
+    "variations": [
+      {
+        "example_id": 5707,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "hunches exhausted over the work desk, reaches backward toward the untouched bed, and watches another stack of tasks return around the loop"
+          }
+        ],
+        "scene_adjust": "overflowing task folders, a rumpled bed, a cold coffee cup, and a stress ball arranged along the loop"
+      },
+      {
+        "example_id": 5708,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "kneels between the finance counter and car bay, reaches toward a distant car key, and turns an empty coin pouch upside down in frustration"
+          }
+        ],
+        "scene_adjust": "a vacant office chair, closed coin box, empty coin pouch, car key, and small car positioned around the loop"
+      },
+      {
+        "example_id": 5709,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "sits slumped at the snack table, drops an empty sweet wrapper with a guilty frown, then reaches toward another tray arriving behind him"
+          }
+        ],
+        "scene_adjust": "sweet trays and empty wrappers circulating repeatedly between the snack table and his chair"
+      },
+      {
+        "example_id": 5710,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "turns away from the conversation chairs with arms folded, then glances nervously at the same empty chairs returning around the loop"
+          }
+        ],
+        "scene_adjust": "two empty conversation chairs and several blank speech-bubble shapes moving around the conveyor"
+      },
+      {
+        "example_id": 5711,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stands in graduation robes between a locked office briefcase and an empty experience folder, tugging helplessly at each in turn"
+          }
+        ],
+        "scene_adjust": "a plain diploma scroll, a locked office briefcase, and an empty experience folder chasing one another around the loop"
+      },
+      {
+        "example_id": 5712,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stands at the exam desk with trembling hands, knocks over a row of task pieces, and recoils as the fallen pieces circle back toward him"
+          }
+        ],
+        "scene_adjust": "scattered task pieces, an eraser, and a nervous grip exerciser circulating on the loop"
+      }
+    ]
+  },
+  {
+    "expression_id": 974,
+    "idiom": "keine Selbstverständlichkeit war",
+    "anchor": {
+      "semantic_hook": "An outcome expected to complete and deliver itself is visibly halted before the finish, so it cannot be taken for granted.",
+      "setting": "A large public workshop contains a project bench, a moving trolley, a travel gate, therapy rails, a support chair, and a rural network cabinet. Across the ceiling runs one impossible self-operating conveyor that nearly delivers finished objects to a presentation plinth but ends at a wide gap.",
+      "cast": [
+        "angela_merkel",
+        "jurgen_klopp"
+      ],
+      "absurd_element": "self-operating ceiling conveyor ending just before its destination"
+    },
+    "variations": [
+      {
+        "example_id": 5713,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "leans across the conveyor gap and pulls the finished project model toward the plinth with both hands"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "braces behind the project model and pushes hard while watching an analog deadline clock"
+          }
+        ],
+        "scene_adjust": "a completed project model and an analog clock with its hands close to the deadline marker"
+      },
+      {
+        "example_id": 5714,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "balances a heavy moving box across the conveyor gap, arms shaking but expression warmly determined"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "receives the box from the far side and grips her forearm in heartfelt thanks"
+          }
+        ],
+        "scene_adjust": "moving boxes, a hand trolley, rolled rugs, and a house key"
+      },
+      {
+        "example_id": 5715,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "lifts a suitcase over the broken conveyor span and steps confidently through the travel gate"
+          }
+        ],
+        "scene_adjust": "a suitcase, several plain passport-sized booklets, an open barrier, and an unlabeled map of connected European land shapes"
+      },
+      {
+        "example_id": 5716,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "walks carefully between the therapy rails without a chair, jaw set and one hand just above the rail for balance"
+          }
+        ],
+        "scene_adjust": "therapy rails, a folded wheelchair, crutches set aside, and a clear path across the gap"
+      },
+      {
+        "example_id": 5717,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands beside the support chair and holds both of his hands steadily, face calm and attentive"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "sits with lowered shoulders and grips her hands, his strained expression beginning to soften"
+          }
+        ],
+        "scene_adjust": "a support chair, tissues, a warm drink, and a heavy stone set down beside them"
+      },
+      {
+        "example_id": 5718,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "kneels at the rural network cabinet and pushes the final cable firmly into place, smiling at the newly active connection lights"
+          }
+        ],
+        "scene_adjust": "a rural cottage model, an old dusty modem, a fiber cable, and a network cabinet with icon-only indicator lights"
+      }
+    ]
+  },
+  {
+    "expression_id": 975,
+    "idiom": "geht es um viel",
+    "anchor": {
+      "semantic_hook": "The literal wording it goes around much becomes a decision bead physically traveling around a huge quantity of valuable things.",
+      "setting": "A circular civic decision chamber contains an interview table, a football strip, a ballot station, a planning bench, and a negotiation table. At its center, one unsupported rail carries a tiny decision bead endlessly around a mountain of keys, tools, medicine, food, and coins.",
+      "cast": [
+        "sahra_wagenknecht"
+      ],
+      "absurd_element": "unsupported orbiting rail carrying a decision bead around a mountain of valuables"
+    },
+    "variations": [
+      {
+        "example_id": 5719,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "sits rigidly upright at the interview table, grips her portfolio with both hands, and watches the decision bead approach the job key"
+          }
+        ],
+        "scene_adjust": "an empty interviewer chair, a portfolio of work samples, a briefcase, and a prominent job key within the central pile"
+      },
+      {
+        "example_id": 5720,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "plants one foot beside a football on the pitch strip, crouches ready for the final, and follows the orbiting bead with fierce concentration"
+          }
+        ],
+        "scene_adjust": "a football, goal frame, two sets of plain team pennants, and a trophy within the central pile"
+      },
+      {
+        "example_id": 5721,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "holds a blank ballot above the box and gazes past it toward the country-shaped model in the center, her face grave"
+          }
+        ],
+        "scene_adjust": "an unmarked ballot box, a blank ballot, and a country-shaped landscape model surrounded by homes and saplings"
+      },
+      {
+        "example_id": 5722,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "leans over the planning bench and lowers one fragile project piece with both hands, moving slowly while the decision bead circles close by"
+          }
+        ],
+        "scene_adjust": "a delicate bridge project model, loose support pieces, and a large reserve coin chest in the central pile"
+      },
+      {
+        "example_id": 5723,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "sits at the negotiation table and presses two interlocking agreement pieces together, shoulders finally relaxing as they click into place"
+          }
+        ],
+        "scene_adjust": "two interlocking agreement pieces, two plain folders, and a closed dispute barrier pushed aside"
+      },
+      {
+        "example_id": 5724,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "holds the decision bead between finger and thumb before releasing it onto the rail, studying several possible paths with deliberate caution"
+          }
+        ],
+        "scene_adjust": "several branching model paths leading toward a house key, a medical kit, and a reserve coin box"
+      }
+    ]
+  },
+  {
+    "expression_id": 976,
+    "idiom": "auf dem Gewissen haben",
+    "anchor": {
+      "semantic_hook": "Having something on one's conscience becomes literal when the harmful consequence is placed on top of a tangible conscience.",
+      "setting": "A stark ethics chamber contains an evidence table, a road model, a career ladder, a project model, a disguise tray, and a silent microphone. In the center, one colossal translucent heart-shaped conscience platform bends beneath the objects placed on its surface.",
+      "cast": [
+        "juju",
+        "capital_bra"
+      ],
+      "absurd_element": "colossal translucent conscience platform bending under physical consequences"
+    },
+    "variations": [
+      {
+        "example_id": 5725,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "stops her hand just before placing a cracked project piece onto the conscience platform, recoiling with a worried expression"
+          }
+        ],
+        "scene_adjust": "a cracked project piece, an intact replacement, and a warning-colored control button without markings"
+      },
+      {
+        "example_id": 5726,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "crouches beside the road model with head bowed, one hand hovering over the speeding car and the other gripping the platform edge in remorse"
+          }
+        ],
+        "scene_adjust": "two damaged model cars, a speedometer without digits, wet tire marks, and a fast-moving car model on the platform"
+      },
+      {
+        "example_id": 5727,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "reaches hesitantly toward the lever beneath his career ladder, eyes fixed on him and jaw tense"
+          },
+          {
+            "slug": "capital_bra",
+            "action": "clings to the upper rung of the career ladder while his office briefcase begins sliding toward the conscience platform"
+          }
+        ],
+        "scene_adjust": "a tall career ladder, an office briefcase, and a lever that would tip both onto the platform"
+      },
+      {
+        "example_id": 5728,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "catches one side of the collapsing project model before it lands on the conscience platform, face strained"
+          },
+          {
+            "slug": "capital_bra",
+            "action": "grabs the other side of the model and pushes upward with both arms, determined to prevent the failure"
+          }
+        ],
+        "scene_adjust": "a collapsing project model suspended just above the platform and scattered repair tools"
+      },
+      {
+        "example_id": 5729,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "stands beneath a heap of discarded disguise masks on the platform, shoulders hunched and eyes lowered as another mask slips from her hand"
+          }
+        ],
+        "scene_adjust": "many plain disguise masks piled across the conscience platform and an empty trust bowl on the evidence table"
+      },
+      {
+        "example_id": 5730,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stands at the silent microphone with lips pressed shut, staring at a sealed evidence box settling heavily onto the conscience platform"
+          }
+        ],
+        "scene_adjust": "a switched-off microphone, a sealed evidence box, and an untouched release lever"
+      }
+    ]
+  },
+  {
+    "expression_id": 977,
+    "idiom": "die Sektkorken knallen",
+    "anchor": {
+      "semantic_hook": "The champagne corks pop literally, turning every success or milestone into the moment a cork blasts free.",
+      "setting": "A spacious reception hall contains an exam table, an analog clock, a project display, a wedding arch, a lottery drum, and a cake table. One room-height champagne bottle has just fired its enormous cork through the ceiling, leaving a clean round opening above it.",
+      "cast": [
+        "angela_merkel"
+      ],
+      "absurd_element": "room-height champagne bottle firing an enormous cork through the ceiling"
+    },
+    "variations": [
+      {
+        "example_id": 5731,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands beside the exam table in evening clothes, holds up a plain certificate with one hand, and twists a bottle cork free with a jubilant smile"
+          }
+        ],
+        "scene_adjust": "a plain exam certificate, closed study books, glasses, and evening darkness beyond the windows"
+      },
+      {
+        "example_id": 5732,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands beneath the analog clock at midnight, raises a freshly opened bottle, and ducks joyfully as corks cross the hall"
+          }
+        ],
+        "scene_adjust": "an analog clock with both hands pointing straight upward, scattered streamers, and many airborne corks"
+      },
+      {
+        "example_id": 5733,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "kneels at the project display to secure its final piece, then reaches eagerly toward the unopened celebration bottle"
+          }
+        ],
+        "scene_adjust": "a nearly completed project model, one final loose piece, and a chilled unopened bottle waiting nearby"
+      },
+      {
+        "example_id": 5734,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands under the wedding arch holding a bottle at a safe outward angle, smiling broadly as her thumb starts the cork moving"
+          }
+        ],
+        "scene_adjust": "a plain wedding arch, joined rings, flower arrangements, and rows of reception glasses"
+      },
+      {
+        "example_id": 5735,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "clutches a lottery ticket with blank patterned panels to her chest and yanks the cork from a bottle, mouth open in sudden delight"
+          }
+        ],
+        "scene_adjust": "a lottery drum, a ticket with blank patterned panels, tumbling balls, and an opened bottle"
+      },
+      {
+        "example_id": 5736,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "leans across the cake table toward the birthday guest's empty chair, laughing as she sends a cork upward"
+          }
+        ],
+        "scene_adjust": "a birthday cake crowded with thirty candles, wrapped gifts without markings, and a bottle beside an empty guest chair"
+      }
+    ]
+  },
+  {
+    "expression_id": 978,
+    "idiom": "zum Verhängnis wurden",
+    "anchor": {
+      "semantic_hook": "A disastrous fate becomes a physical doom weight poised to fall when one specific weakness touches its trigger.",
+      "setting": "A consequence-testing arena contains a boxing corner, a wet road strip, a company model, a vault-planning table, an exam desk, and a climbing wall. One colossal doom weight hangs above all six stations from a single fraying cord, ready to drop when a small trigger is disturbed.",
+      "cast": [
+        "jurgen_klopp"
+      ],
+      "absurd_element": "colossal suspended doom weight connected to every small trigger"
+    },
+    "variations": [
+      {
+        "example_id": 5737,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "stands in the boxing corner with chin raised, arms spread boastfully and guard completely lowered beneath the swaying weight"
+          }
+        ],
+        "scene_adjust": "boxing gloves hanging unused, a final-round bell, and an exposed trigger beside his unguarded stance"
+      },
+      {
+        "example_id": 5738,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "grips the wheel of a test car on the wet road strip, leans urgently into the skid, and watches a tire slide toward the doom trigger"
+          }
+        ],
+        "scene_adjust": "a rain-soaked road strip, several abandoned cars at its edge, deep night beyond the windows, and slick tire tracks"
+      },
+      {
+        "example_id": 5739,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "stacks expansion blocks onto the small company model too quickly, eyes widening as its spreading base presses the trigger"
+          }
+        ],
+        "scene_adjust": "a small office model buried beneath rapidly added wings, delivery vans, and machinery"
+      },
+      {
+        "example_id": 5740,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "crouches over the vault-planning table, freezes with one tiny gear still misplaced, and looks up toward the descending weight"
+          }
+        ],
+        "scene_adjust": "a vault model, masks, rope, scattered planning pieces, and one incorrect gear resting on the trigger"
+      },
+      {
+        "example_id": 5741,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "sits hunched at the exam desk, grips his head, and stares helplessly at a dense array of difficult geometric puzzles"
+          }
+        ],
+        "scene_adjust": "an exam sheet filled only with complex geometric puzzles, snapped pencils, and several empty student desks"
+      },
+      {
+        "example_id": 5742,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "clings awkwardly to the climbing wall with a loose rope knot, one boot on an unsafe hold and alarm rising across his face"
+          }
+        ],
+        "scene_adjust": "a rain-lashed climbing wall, strong wind, an incorrectly tied rope, and unused safety equipment"
+      }
+    ]
+  },
+  {
+    "expression_id": 979,
+    "idiom": "halten ... in Atem",
+    "anchor": {
+      "semantic_hook": "Keeping someone in breath becomes literal when that person's visible breath is held away from them while demands keep arriving.",
+      "setting": "A round crisis-control room contains a puppy pen, a project console, rescue equipment, a ballot station, a family play area, and a server rack. Above the central chair, one enormous transparent glass hand pinches and holds a single cloud of visible breath.",
+      "cast": [
+        "luisa_neubauer"
+      ],
+      "absurd_element": "enormous glass hand holding a visible cloud of breath"
+    },
+    "variations": [
+      {
+        "example_id": 5743,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "lunges across the puppy pen after an energetic puppy, one hand grabbing a fallen cushion while the other reaches for a chewed slipper"
+          }
+        ],
+        "scene_adjust": "an energetic puppy, scattered chew toys, an overturned water bowl, and family slippers"
+      },
+      {
+        "example_id": 5744,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "balances on tiptoe between several unfinished project pieces, stretching both arms toward separate controls with intense concentration"
+          }
+        ],
+        "scene_adjust": "multiple unfinished project modules, blinking icon-only controls, folders, and a fast-turning task wheel"
+      },
+      {
+        "example_id": 5745,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "crouches at the rescue console through the night, grips a radio receiver, and reaches toward a coiled rescue rope while staring at the storm windows"
+          }
+        ],
+        "scene_adjust": "driving rain beyond the windows, rescue ropes, helmets without emblems, flashlights, and a radio console"
+      },
+      {
+        "example_id": 5746,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "stands rigid beside the ballot station, clasps both hands at her chest, and watches the final blank ballot hover over the box"
+          }
+        ],
+        "scene_adjust": "an unmarked ballot box, blank ballots, a country-shaped puzzle, and rows of empty waiting chairs"
+      },
+      {
+        "example_id": 5747,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "kneels in the family play area gathering small clothes with one arm while lunging after two rolling toy balls with the other"
+          }
+        ],
+        "scene_adjust": "two small bicycles, scattered building blocks, small clothes, finger-painted pictures without lettering, and rolling toy balls"
+      },
+      {
+        "example_id": 5748,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "kneels beneath the server rack with a bundle of cables across both arms, grimaces at another failed monitor, and reaches for a repair tool"
+          }
+        ],
+        "scene_adjust": "several malfunctioning computers, tangled cables, warning icons without words, and repair tools spread around the server rack"
+      }
+    ]
+  },
+  {
+    "expression_id": 980,
+    "idiom": "sich sehen lassen können",
+    "anchor": {
+      "semantic_hook": "Being able to let itself be seen becomes a completed result placed openly before an eye for proud inspection.",
+      "setting": "A showcase hall contains an inspection table, a buffet counter, a training lane, an apartment mock-up, a school desk, and a sales display. One building-sized freestanding eye gazes directly at the central presentation plinth where each finished result is revealed.",
+      "cast": [
+        "sahra_wagenknecht"
+      ],
+      "absurd_element": "building-sized freestanding eye inspecting the result plinth"
+    },
+    "variations": [
+      {
+        "example_id": 5749,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "stands beside the inspection table and opens the finished report toward the giant eye, smiling with modest pride at its clean charts"
+          }
+        ],
+        "scene_adjust": "a bound report containing clear charts and diagrams without lettering"
+      },
+      {
+        "example_id": 5750,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "sweeps both arms proudly across the completed buffet and lifts one silver cover to reveal the final dish"
+          }
+        ],
+        "scene_adjust": "a finished party buffet with breads, fruit, pastries, salads, plates, and neatly aligned serving dishes"
+      },
+      {
+        "example_id": 5751,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "stands at the end of the training lane after a sprint, shoulders strong and posture upright as she proudly compares her progress tokens"
+          }
+        ],
+        "scene_adjust": "training shoes, exercise weights, three moon-phase markers for elapsed months, and a rising row of performance tokens"
+      },
+      {
+        "example_id": 5752,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "stands inside the apartment mock-up with dust on her sleeves, pulls away the final protective sheet, and beams at the renovated room"
+          }
+        ],
+        "scene_adjust": "fresh walls, fitted cabinets, new flooring, arranged furniture, and renovation tools packed away"
+      },
+      {
+        "example_id": 5753,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "holds the report card open toward the giant eye and points proudly to a full row of top-position result symbols"
+          }
+        ],
+        "scene_adjust": "a report card using only ranked medal symbols, with every marker in the top position"
+      },
+      {
+        "example_id": 5754,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "stands at the sales display, places the final rising bar onto a complete chart, and steps back with a satisfied smile"
+          }
+        ],
+        "scene_adjust": "a physical bar chart without digits or lettering, coin trays, product boxes without markings, and the latest bar standing high"
+      }
+    ]
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "expression_id": 3615,
+    "idiom": "bevormunden lassen",
+    "anchor": {
+      "semantic_hook": "Allowing oneself to be put under a guardian's control is staged literally by letting a guardian glove seize an adult decision chair and steer every choice made there.",
+      "setting": "A circular decision chamber contains a central adult chair, a waist-high control console, two empty choice trays, and six bays of ordinary personal, office, relationship, family, civic, and friendship objects. One bodyless, room-sized guardian glove descends from the ceiling around the chair, with articulated fingers connected to the console levers. The levers swivel the chair and divert blank choice tiles between the trays.",
+      "cast": [
+        "angela_merkel",
+        "jurgen_klopp"
+      ],
+      "absurd_element": "a bodyless, room-sized guardian glove that seizes and steers the decision chair"
+    },
+    "variations": [
+      {
+        "example_id": 21523,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands fully upright outside the decision chair, forces the glove's fingers away with one forearm, and firmly places her own blank choice tile into the selected tray"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "recoils from the control console with both hands raised, watching her take back the choice with a chastened expression"
+          }
+        ],
+        "scene_adjust": "place an adult coat, a house keyring, a plain bank card, and two alternative choice tiles in the personal bay"
+      },
+      {
+        "example_id": 21524,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands rigidly behind the office control console, one hand frozen on its lever, and stares in surprise toward the open exit"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "strides away from the released decision chair carrying a box of personal desk objects, leaves his office key and tie on the console, and looks relieved"
+          }
+        ],
+        "scene_adjust": "fill the office bay with a worn swivel chair, several stacks of blank calendar sheets, an office key, a tie, and a box of personal desk objects beside an open exit"
+      },
+      {
+        "example_id": 21525,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands beside one of two equal chairs, pulls her hand away from the control lever, and offers two open palms toward the shared choice trays"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "steps free of the guardian glove, pushes its nearest finger back with a firm palm, and meets his partner's gaze at equal height"
+          }
+        ],
+        "scene_adjust": "place two equal chairs, paired house keys, two interlocked plain rings, and evenly divided household objects in the relationship bay"
+      },
+      {
+        "example_id": 21526,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands between the two parental armchairs with both palms turned upward in exasperation, staring directly at the compliant adult in the nursery chair"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "hunches in the undersized nursery chair while the guardian glove fastens a bib around his adult clothes, obediently holds out both arms, and looks embarrassed"
+          }
+        ],
+        "scene_adjust": "place two matching parental armchairs, two pairs of house slippers, a childhood toy box, a bib, and an undersized nursery chair in the family bay"
+      },
+      {
+        "example_id": 21527,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "plants both feet beside the civic choice trays, grips one giant finger with both hands, and pushes it away from their decision with a defiant expression"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "braces shoulder to shoulder with her, forces the opposite giant finger off the chair, and holds their chosen tile beyond the glove's reach"
+          }
+        ],
+        "scene_adjust": "place two adult coats, two keyrings, a sealed document folder, and two identical blank choice tiles in the civic bay"
+      },
+      {
+        "example_id": 21528,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "sits relaxed inside the glove, gazes fondly at a paired friendship bracelet on her wrist, and absent-mindedly passes each of her choice tiles toward her friend"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "wears the matching friendship bracelet, quietly works the control lever, and rearranges all of her choice tiles while she looks away"
+          }
+        ],
+        "scene_adjust": "place paired friendship bracelets, two coffee cups, a shared keepsake box, and several personal choice tiles in the friendship bay"
+      }
+    ]
+  }
+]

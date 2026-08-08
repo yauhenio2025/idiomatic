@@ -1,0 +1,934 @@
+[
+  {
+    "expression_id": 2089,
+    "idiom": "lichterloh brennen",
+    "anchor": {
+      "semantic_hook": "Burning lichterloh is staged literally as a fire blazing at full height and brightness around each sentence-specific object.",
+      "setting": "A broad emergency training yard contains six clear bays for a house, trees, a vehicle, a barn, a campfire, and an industrial structure. At the active bay, one unbroken column of flame rises from the burning object all the way into the clouds.",
+      "cast": [
+        "juju"
+      ],
+      "absurd_element": "an unbroken flame column reaching from the burning object into the clouds"
+    },
+    "variations": [
+      {
+        "example_id": 12403,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "arrives in firefighting gear, braces a hose toward the old wooden house, and stares up at the towering blaze with urgent concentration"
+          }
+        ],
+        "scene_adjust": "an old wooden house burns in the active bay beside a fire engine and a coiled hose"
+      },
+      {
+        "example_id": 12404,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "kneels at the edge of the burning trees, crumbles parched soil between her fingers, and shields her face from the intense heat"
+          }
+        ],
+        "scene_adjust": "a dense stand of drought-dried northern woodland fills the active bay beneath a cloudless sky"
+      },
+      {
+        "example_id": 12405,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "stands behind the highway barrier, holds an emergency extinguisher ready, and watches the crashed car burn with alarm"
+          }
+        ],
+        "scene_adjust": "a dented car burns beside a bent highway barrier, scattered glass, and a loose wheel"
+      },
+      {
+        "example_id": 12406,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "recoils beside a farm gate, points suddenly toward the burning barn, and raises her other hand to alert the neighboring houses"
+          }
+        ],
+        "scene_adjust": "a timber barn burns beyond a farm gate with hay bales and an empty wheelbarrow nearby"
+      },
+      {
+        "example_id": 12407,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "crouches beside the campfire, sets down the last armful of dry branches, and grins at how quickly the fire has caught"
+          }
+        ],
+        "scene_adjust": "a campfire of freshly gathered dry wood burns inside a stone ring beside several empty bedrolls"
+      },
+      {
+        "example_id": 12408,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "stands at the factory safety barrier, grips a radio, and watches dense smoke climb above the fully burning industrial hall"
+          }
+        ],
+        "scene_adjust": "an industrial hall burns behind a safety barrier while dense smoke gathers above its roof"
+      }
+    ]
+  },
+  {
+    "expression_id": 2090,
+    "idiom": "zu kurz gedacht",
+    "anchor": {
+      "semantic_hook": "Thinking too short is staged literally as entering a thinking corridor that ends after a single stride, before the relevant evidence can be reached.",
+      "setting": "A planning hall contains bays for a project budget, climate technology, training, problem solving, health, and investment. Its central thinking corridor stops at a solid wall after one floor tile, leaving every bay of additional evidence visible on the far side.",
+      "cast": [
+        "luisa_neubauer"
+      ],
+      "absurd_element": "a thinking corridor that ends at a wall after one floor tile"
+    },
+    "variations": [
+      {
+        "example_id": 12409,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "stops at the corridor wall holding a single coin, then peers over it toward the unfinished project model and its many missing resources"
+          }
+        ],
+        "scene_adjust": "one coin lies before the wall while tools, materials, schedules shown by clock hands, and an unfinished project model fill the bay beyond it"
+      },
+      {
+        "example_id": 12410,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "sets a small machine at the corridor entrance, presses both palms against the abrupt wall, and studies the dry soil and heat-damaged plants beyond"
+          }
+        ],
+        "scene_adjust": "a compact clean-energy machine sits before the wall while dry soil, a flooded house model, damaged crops, and a public transit model occupy the climate bay"
+      },
+      {
+        "example_id": 12411,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "removes training equipment from the near side of the corridor, reaches the wall immediately, and grimaces toward the unprepared work station beyond"
+          }
+        ],
+        "scene_adjust": "an emptied training rack stands before the wall while unfamiliar tools and an unfinished practice model wait beyond it"
+      },
+      {
+        "example_id": 12412,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "places one neat puzzle piece at the corridor entrance, nods at first, then leans around the wall and frowns at the many unmatched pieces beyond"
+          }
+        ],
+        "scene_adjust": "one fitted puzzle piece lies before the wall and a broad field of incompatible pieces and tangled mechanisms fills the problem-solving bay"
+      },
+      {
+        "example_id": 12413,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "pushes away half a meal at the corridor entrance, reaches the wall, and studies the exercise shoes, sleep mask, medicine, and balanced foods beyond"
+          }
+        ],
+        "scene_adjust": "a half-finished meal sits before the wall while exercise shoes, a sleep mask, medical tools, and varied foods occupy the health bay"
+      },
+      {
+        "example_id": 12414,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "grabs a quick handful of coins before the wall, then notices the cracked long-term investment model waiting beyond the corridor's abrupt end"
+          }
+        ],
+        "scene_adjust": "loose coins cover the near tile while a damaged factory model, exhausted soil, and an empty future reserve jar occupy the investment bay"
+      }
+    ]
+  },
+  {
+    "expression_id": 2091,
+    "idiom": "auf eigene Faust",
+    "anchor": {
+      "semantic_hook": "Acting auf eigene Faust is staged literally as doing every task while standing on one's own enormous clenched fist.",
+      "setting": "An independent-work hall contains bays for travel, office problem solving, language study, renovation, a new business, and neighborhood investigation. A colossal clenched fist rises from the floor as the only platform from which the work can be done.",
+      "cast": [
+        "capital_bra",
+        "juju"
+      ],
+      "absurd_element": "a colossal clenched fist serving as the sole work platform"
+    },
+    "variations": [
+      {
+        "example_id": 12415,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "balances alone on the giant fist with a backpack and compass, chooses his own route, and waves away an empty tour bus"
+          }
+        ],
+        "scene_adjust": "a branching landscape model, a compass, a backpack, and an empty tour bus occupy the travel bay"
+      },
+      {
+        "example_id": 12416,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "kneels on the fist, repairs the jammed office mechanism without waiting, and glances past the untouched approval bell with quiet satisfaction"
+          }
+        ],
+        "scene_adjust": "a jammed office mechanism, tools, an untouched approval bell, and an empty executive chair fill the problem-solving bay"
+      },
+      {
+        "example_id": 12417,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "sits cross-legged on the fist, practices Spanish sounds into a mirror, and sorts image cards without entering the empty classroom"
+          }
+        ],
+        "scene_adjust": "a handheld mirror, headphones, image-only study cards, and a closed classroom doorway occupy the language bay"
+      },
+      {
+        "example_id": 12418,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stands wide-legged on the fist, fits a cabinet door into place with his own tools, and surveys the half-renovated kitchen"
+          },
+          {
+            "slug": "juju",
+            "action": "kneels beside him on the fist, aligns the next cabinet door, and reaches for another renovation tool"
+          }
+        ],
+        "scene_adjust": "flat-packed cabinets, loose tiles, plumbing tools, and a half-renovated kitchen fill the renovation bay"
+      },
+      {
+        "example_id": 12419,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "steps from an agency desk onto the fist, opens his own small market stall, and arranges its first products with determined pride"
+          }
+        ],
+        "scene_adjust": "an abandoned agency desk, a small independent market stall, packaged products, and a coin tray occupy the business bay"
+      },
+      {
+        "example_id": 12420,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "crouches on the fist with a magnifying glass, compares muddy footprints, and points toward a trail while an unused police barrier remains folded"
+          },
+          {
+            "slug": "juju",
+            "action": "balances beside him on the fist, examines the dropped glove, and follows his gesture toward the same trail"
+          }
+        ],
+        "scene_adjust": "muddy footprints, a dropped glove, a magnifying glass, and a folded police barrier occupy the investigation bay"
+      }
+    ]
+  },
+  {
+    "expression_id": 2092,
+    "idiom": "jemandem recht geben",
+    "anchor": {
+      "semantic_hook": "Giving someone right is staged literally as handing that person an enormous right-hand glove.",
+      "setting": "An agreement hall contains a restaurant table, a meeting table, an idea bench, an evidence desk, and open floor for settling disputes. An enormous right-hand glove rests on a wheeled presentation cushion between the two sides, ready to be physically given across.",
+      "cast": [
+        "jurgen_klopp",
+        "angela_merkel"
+      ],
+      "absurd_element": "an enormous right-hand glove presented as a transferable object"
+    },
+    "variations": [
+      {
+        "example_id": 12421,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "sits at the restaurant table, examines a tiny meal beside a towering pile of coins, and reluctantly pushes the giant glove across"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "receives the glove with one hand and points to the excessive coin pile with a firm confirming nod"
+          }
+        ],
+        "scene_adjust": "a tiny plated meal and an excessive pile of coins occupy the restaurant table"
+      },
+      {
+        "example_id": 12422,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "stands at the head of the meeting table, slides the giant glove toward his colleague, and nods decisively at the proposed model"
+          },
+          {
+            "slug": "angela_merkel",
+            "action": "sits beside the proposed model, accepts the glove, and smiles with relieved surprise"
+          }
+        ],
+        "scene_adjust": "a meeting table holds a proposed project model, several plain folders, and a clock with hands showing late afternoon"
+      },
+      {
+        "example_id": 12423,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "uncrosses his arms after a long pause, takes the giant glove from its cushion, and finally extends it with a conceding nod"
+          },
+          {
+            "slug": "angela_merkel",
+            "action": "waits opposite with her open palm above the completed evidence arrangement and receives the glove calmly"
+          }
+        ],
+        "scene_adjust": "a completed arrangement of physical evidence and two chairs angled cautiously apart occupy the open floor"
+      },
+      {
+        "example_id": 12424,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "grimaces, compares her small unstable model with the stronger model opposite, and hands over the giant glove despite visible reluctance"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "steadies the stronger model, accepts the glove without triumph, and meets his colleague's gaze"
+          }
+        ],
+        "scene_adjust": "one small unstable model and one stronger complete model sit side by side on the idea bench"
+      },
+      {
+        "example_id": 12425,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "pushes the giant glove across quickly with a calming gesture and lowers his tense shoulders to end the dispute"
+          },
+          {
+            "slug": "angela_merkel",
+            "action": "takes the glove, releases her clenched jaw, and lets her raised arguing hand fall to her side"
+          }
+        ],
+        "scene_adjust": "two overturned chairs and two untouched cups mark a heated dispute on the open floor"
+      },
+      {
+        "example_id": 12426,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands behind the evidence desk, displays a clear chain of matching objects, and reaches hopefully for the giant glove"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "turns away with folded arms, keeps the glove pinned behind his back, and refuses to hand it over"
+          }
+        ],
+        "scene_adjust": "matching keys, footprints, clock hands, and linked physical clues form a clear evidence chain across the desk"
+      }
+    ]
+  },
+  {
+    "expression_id": 2093,
+    "idiom": "auf die Tagesordnung setzen",
+    "anchor": {
+      "semantic_hook": "Putting something on the order of the day is staged literally as placing its physical object onto a day dial arranged in sequence.",
+      "setting": "A conference hall contains six meeting bays around one central table. The tabletop is an enormous horizontal day dial with moving clock hands and empty object slots arranged around its rim.",
+      "cast": [
+        "sahra_wagenknecht"
+      ],
+      "absurd_element": "an enormous working day dial replacing the conference table"
+    },
+    "variations": [
+      {
+        "example_id": 12427,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "lifts the topic model with both hands, studies the future position of the clock hands, and places it into the next open slot"
+          }
+        ],
+        "scene_adjust": "a neutral discussion model and a small future calendar wheel with blank segments wait beside the dial"
+      },
+      {
+        "example_id": 12428,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "leans over the dial, searches each object slot, and points questioningly at the item already seated beneath the clock hands"
+          }
+        ],
+        "scene_adjust": "a small geometric item already occupies one slot while the remaining slots stay empty"
+      },
+      {
+        "example_id": 12429,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "stands in the executive position, lowers a new project model onto today's active slot, and gestures decisively toward it"
+          }
+        ],
+        "scene_adjust": "a newly assembled project model and a clock whose hands mark the active daytime segment occupy the central bay"
+      },
+      {
+        "example_id": 12430,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "counts a stack of coins, sets the financial model onto the next open slot, and checks the surrounding club chairs"
+          }
+        ],
+        "scene_adjust": "a club emblem made only from geometric shapes, coin stacks, and a balance model wait beside the dial"
+      },
+      {
+        "example_id": 12431,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "holds out her proposal model with an earnest expression and guides another empty slot toward it as the dial turns"
+          }
+        ],
+        "scene_adjust": "a carefully built proposal model and several closed plain folders occupy the request bay"
+      },
+      {
+        "example_id": 12432,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "holds the important object above the table, points accusingly at the empty active slot, and raises both eyebrows in disbelief"
+          }
+        ],
+        "scene_adjust": "an urgent warning beacon object remains beside the dial while the active slot is conspicuously empty"
+      }
+    ]
+  },
+  {
+    "expression_id": 2139,
+    "idiom": "mit Beigeschmack",
+    "anchor": {
+      "semantic_hook": "Having an aftertaste is staged literally as every main item being followed by a second small cup that must be tasted afterward.",
+      "setting": "A formal tasting room contains bays for sport, promotion, politics, travel, gifts, and government compromise around a central serving track. A small cup of bitter tonic hovers one pace behind whichever sentence-specific item occupies the track and follows it through every turn.",
+      "cast": [
+        "capital_bra",
+        "sahra_wagenknecht"
+      ],
+      "absurd_element": "a bitter aftertaste cup that hovers behind and follows every main item"
+    },
+    "variations": [
+      {
+        "example_id": 12703,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "raises a championship trophy with a restrained smile, then sips from the following cup and winces at the bitter finish"
+          }
+        ],
+        "scene_adjust": "a championship trophy, a ball, and scattered celebration ribbons occupy the sport bay"
+      },
+      {
+        "example_id": 12704,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "settles into the newly raised office chair, notices the matching executive chair behind it, and tastes the following cup with a suspicious frown"
+          }
+        ],
+        "scene_adjust": "a newly elevated office chair sits directly before a larger matching executive chair with a family keepsake placed between them"
+      },
+      {
+        "example_id": 12705,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stands at the political podium with one hand on his chest, offers a shallow apologetic bow, then sips the following cup with an unconvinced stare"
+          }
+        ],
+        "scene_adjust": "an unmarked political podium, a fallen trust scale, and several empty press microphones occupy the politics bay"
+      },
+      {
+        "example_id": 12706,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "holds up a bargain coin beside the vacation model, then studies its broken bed and dripping ceiling while reluctantly tasting the following cup"
+          }
+        ],
+        "scene_adjust": "a cheap vacation model reveals a broken hotel bed, a dripping ceiling, a dirty pool, and a tiny payment tray"
+      },
+      {
+        "example_id": 12707,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "accepts an expensive jewel box, notices an open demanding hand-shaped tray waiting beyond it, and tastes the following cup with narrowed eyes"
+          }
+        ],
+        "scene_adjust": "an expensive jewel box sits before an empty hand-shaped return tray and a poised balance scale"
+      },
+      {
+        "example_id": 12708,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "joins two mismatched pieces of a government model, surveys their unstable fit, and drinks from the following cup with a dissatisfied grimace"
+          }
+        ],
+        "scene_adjust": "two mismatched halves of a government building model meet unsteadily above a balance scale tilted away from both sides"
+      }
+    ]
+  },
+  {
+    "expression_id": 2140,
+    "idiom": "zur Belastungsprobe",
+    "anchor": {
+      "semantic_hook": "Becoming a Belastungsprobe is staged literally as placing each situation on an industrial platform for a severe load test.",
+      "setting": "A testing hangar contains bays for travel, computers, traffic, home life, repairs, and rail travel around a central load platform. A room-sized stone weight hangs above the platform from a spring as thin as a hair, ready to press down on each test object.",
+      "cast": [
+        "sahra_wagenknecht",
+        "luisa_neubauer"
+      ],
+      "absurd_element": "a room-sized stone load suspended from a hair-thin spring"
+    },
+    "variations": [
+      {
+        "example_id": 12709,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "struggles up the platform ramp beneath a heavy travel pack and reaches back to keep hold of her friend's hand"
+          },
+          {
+            "slug": "luisa_neubauer",
+            "action": "pulls a second overfilled suitcase, grips her friend's hand, and forces a weary encouraging smile under the descending load"
+          }
+        ],
+        "scene_adjust": "two overfilled suitcases, two travel packs, a long winding route model, and worn shoes cover the travel bay"
+      },
+      {
+        "example_id": 12710,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "sits rigidly at the new computer console on the platform, juggles unfamiliar controls, and rubs her forehead as the load bears down"
+          }
+        ],
+        "scene_adjust": "a new computer console with unfamiliar icon-only controls, tangled cables, and a queue of unfinished tasks occupies the platform"
+      },
+      {
+        "example_id": 12711,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "grips a steering wheel at the traffic bay, leans forward through the heavy snowfall, and strains to keep the vehicle model moving"
+          }
+        ],
+        "scene_adjust": "thick morning snow buries a miniature road network crowded with stalled vehicle models"
+      },
+      {
+        "example_id": 12712,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "balances a laptop and household chores on the platform, hunches beneath the load, and reaches toward her equally overwhelmed family partner"
+          },
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "holds a cooking pan and a pile of laundry, steadies the shared work table, and grimaces at the weeks of accumulated tasks"
+          }
+        ],
+        "scene_adjust": "a shared home-office table is crowded with two laptops, laundry, cookware, household tools, and many spent calendar tiles"
+      },
+      {
+        "example_id": 12713,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "kneels beside the broken household model, holds an empty coin purse open, and braces herself as repair parts pile onto the load platform"
+          }
+        ],
+        "scene_adjust": "broken pipes, cracked roof tiles, repair tools, invoices shown only by coin piles, and an empty purse occupy the repairs bay"
+      },
+      {
+        "example_id": 12714,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "waits beside the stationary train model, clenches two delay tokens in tense fists, and presses her fingers to her temples beneath the load"
+          }
+        ],
+        "scene_adjust": "a stationary train model, an overflowing clock-hand delay gauge, and repeated empty platform benches fill the rail bay"
+      }
+    ]
+  },
+  {
+    "expression_id": 2141,
+    "idiom": "Rückendeckung",
+    "anchor": {
+      "semantic_hook": "Rückendeckung is staged literally as a protective covering placed directly behind a person's back.",
+      "setting": "A support hall contains bays for a project, family decisions, a presentation, city politics, a client meeting, and personal finance. At its center stands a back-shaped shield so enormous that it can cover an entire work bay from floor to ceiling.",
+      "cast": [
+        "jurgen_klopp"
+      ],
+      "absurd_element": "a back-shaped shield large enough to cover an entire work bay"
+    },
+    "variations": [
+      {
+        "example_id": 12715,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "waits at the project starting line with tools ready, glances toward the empty executive chair, and keeps the giant shield positioned behind him before taking the first step"
+          }
+        ],
+        "scene_adjust": "an unfinished project model, a starting line, tools, and an empty executive chair occupy the project bay"
+      },
+      {
+        "example_id": 12716,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "stands confidently before several branching life paths, rests his back against the giant shield, and holds his chosen path marker without hesitation"
+          }
+        ],
+        "scene_adjust": "family keepsakes, house keys, and several branching path models fill the decision bay behind the shield"
+      },
+      {
+        "example_id": 12717,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "finishes a presentation gesture at the front of the platform, exhales with relief, and leans back against the shield while team tools remain braced behind it"
+          }
+        ],
+        "scene_adjust": "physical demonstration models, several team toolkits, empty colleague chairs, and a completed presentation platform occupy the bay"
+      },
+      {
+        "example_id": 12718,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "holds a new city model toward a semicircle of empty council chairs, searches behind him, and finds the giant shield rolled away out of reach"
+          }
+        ],
+        "scene_adjust": "a new city plan model faces a semicircle of empty council chairs while the shield rests far from the speaking position"
+      },
+      {
+        "example_id": 12719,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "faces the client table with composed posture, keeps the giant shield firmly against his back, and gives an unseen colleague's empty chair a reassuring backward tap"
+          }
+        ],
+        "scene_adjust": "a client table with two proposal models and an empty colleague chair stands directly before the protective shield"
+      },
+      {
+        "example_id": 12720,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "stands before an exit door with a resignation box, stacks savings jars behind the giant shield, and tests their support before reaching for the handle"
+          }
+        ],
+        "scene_adjust": "a packed resignation box, several savings jars, an office chair, and an exit door occupy the finance bay"
+      }
+    ]
+  },
+  {
+    "expression_id": 2142,
+    "idiom": "hinter sich zu lassen",
+    "anchor": {
+      "semantic_hook": "Leaving something behind oneself is staged literally as walking forward while the unwanted objects recede behind one's back.",
+      "setting": "A long transition hall contains bays for a hard period, a hometown, a mistake, an argument, an old household, and weekend work. Its central walkway moves forward while every object placed past its midpoint slides backward in the opposite direction on the same surface.",
+      "cast": [
+        "capital_bra"
+      ],
+      "absurd_element": "one walkway carrying the traveler forward while discarded objects slide backward"
+    },
+    "variations": [
+      {
+        "example_id": 12721,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "walks toward the bright end of the hall with relieved shoulders and watches a cluster of worn belongings recede behind his back"
+          }
+        ],
+        "scene_adjust": "a broken umbrella, empty medicine bottle, overdue clock, and worn blanket form the difficult-period cluster behind him"
+      },
+      {
+        "example_id": 12722,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "carries one packed suitcase forward, keeps his gaze on the open route ahead, and lets the hometown model and old keepsakes slide away behind him"
+          }
+        ],
+        "scene_adjust": "a small hometown model, childhood keepsakes, old house keys, and a station bench occupy the departing bay"
+      },
+      {
+        "example_id": 12723,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "sets a cracked project piece behind his heels, turns forward immediately, and strides toward a fresh complete model without looking back"
+          }
+        ],
+        "scene_adjust": "one cracked project piece lies behind him while a fresh complete model and clear tools wait farther ahead"
+      },
+      {
+        "example_id": 12724,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "places two broken halves of a shared keepsake behind his back, releases his clenched fists, and walks away from the argument with a calmer face"
+          }
+        ],
+        "scene_adjust": "two tipped chairs, two cold cups, and a shared keepsake split into two pieces mark the sibling argument bay"
+      },
+      {
+        "example_id": 12725,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "pulls packed suitcases toward the hall exit, steps firmly forward, and lets old furniture and house keys slide into the distance behind him"
+          }
+        ],
+        "scene_adjust": "packed suitcases face the exit while old furniture, house keys, and an emptied room occupy the receding household bay"
+      },
+      {
+        "example_id": 12726,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "walks toward a weekend picnic basket, tries to relax his shoulders, and glances back uneasily as the laptop and work tools refuse to recede quickly"
+          }
+        ],
+        "scene_adjust": "a closed laptop, bulging work bag, tools, and a fast clock sit behind him while a picnic basket and walking shoes wait ahead"
+      }
+    ]
+  },
+  {
+    "expression_id": 2143,
+    "idiom": "unter Druck",
+    "anchor": {
+      "semantic_hook": "Being under pressure is staged literally as working beneath a physical pressure plate that bears down from above.",
+      "setting": "A pressure chamber contains bays for project work, a sales decision, focused work, exam preparation, a deadline, and social expectations. A room-sized metal press plate hangs just above the active bay and visibly compresses every object beneath it.",
+      "cast": [
+        "juju"
+      ],
+      "absurd_element": "a room-sized pressure plate compressing an ordinary work bay"
+    },
+    "variations": [
+      {
+        "example_id": 12727,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "hunches at the crowded workbench beneath the descending plate, tightens the final project component, and checks the nearly empty hourglass"
+          }
+        ],
+        "scene_adjust": "an important project model, scattered tools, unfinished components, and a nearly empty hourglass crowd the work bay"
+      },
+      {
+        "example_id": 12728,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "pushes a sales sample and payment tray away, steps out from beneath the plate, and holds up a calm delaying palm"
+          }
+        ],
+        "scene_adjust": "a sales sample, a payment tray, an urgent hourglass, and an empty salesperson chair occupy the decision bay"
+      },
+      {
+        "example_id": 12729,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "works rapidly and precisely beneath the low plate, aligns every project piece, and smiles only as the final mechanism clicks into place"
+          }
+        ],
+        "scene_adjust": "a complex assembly task, neatly ordered tools, and a fast-draining hourglass fill the focused-work bay"
+      },
+      {
+        "example_id": 12730,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "sits at the exam desk with tense shoulders under the plate, grips a pencil, and glances toward two empty family chairs behind her"
+          }
+        ],
+        "scene_adjust": "geometric exam problems, a pencil, an eraser, family keepsakes, and two empty family chairs surround the desk"
+      },
+      {
+        "example_id": 12731,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "reaches across several linked team tasks beneath the plate, turns the final clock hand toward its limit, and grimaces at the remaining workload"
+          }
+        ],
+        "scene_adjust": "linked project modules, several empty team chairs, an almost-complete clock dial, and unfinished work cover the deadline bay"
+      },
+      {
+        "example_id": 12732,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "stands beneath the plate surrounded by mirrors, tries to straighten every detail of her appearance and work, and finally lowers her exhausted hands"
+          }
+        ],
+        "scene_adjust": "mirrors, achievement trophies, exercise gear, beauty tools, and flawless model objects crowd the social-expectations bay"
+      }
+    ]
+  },
+  {
+    "expression_id": 2169,
+    "idiom": "zum Stimmungstest werden",
+    "anchor": {
+      "semantic_hook": "Becoming a mood test is staged literally as feeding each public decision into a machine that tests the surrounding mood.",
+      "setting": "A civic testing hall contains bays for an election, working hours, a board vote, school rules, city construction, and customer pricing. A room-sized mood meter dominates the hall, with one clock hand sweeping between a smiling face at one end and a frowning face at the other.",
+      "cast": [
+        "jurgen_klopp"
+      ],
+      "absurd_element": "a room-sized mood meter measuring decisions between a smile and a frown"
+    },
+    "variations": [
+      {
+        "example_id": 12883,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "places a state-shaped ballot token into the meter, watches the hand swing, and compares the result with a federal government building model"
+          }
+        ],
+        "scene_adjust": "an autumn branch, a ballot box, a state-shaped token, and a federal government building model occupy the election bay"
+      },
+      {
+        "example_id": 12884,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "turns the work clock hands to their proposed positions, feeds the clock into the meter, and studies its reaction with the alert posture of a new boss"
+          }
+        ],
+        "scene_adjust": "a workplace clock, shifted clock hands, staff tools, and several empty employee chairs fill the working-hours bay"
+      },
+      {
+        "example_id": 12885,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "drops today's project ballot token into the machine, grips the edge of the board table, and watches the mood hand with measured concern"
+          }
+        ],
+        "scene_adjust": "a project model, a ballot box, unmarked voting tokens, and empty board chairs occupy the board-vote bay"
+      },
+      {
+        "example_id": 12886,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "feeds a bundle of new rule shapes into the meter, looks from its wavering hand to the empty school desks, and waits tensely for the result"
+          }
+        ],
+        "scene_adjust": "a school building model, uniform geometric rule shapes, classroom tools, and empty desks occupy the school bay"
+      },
+      {
+        "example_id": 12887,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "guides a large construction model onto the testing tray, steadies a mayoral chain at his collar, and watches the hand swing toward public displeasure"
+          }
+        ],
+        "scene_adjust": "a large city-center construction model, cranes, road barriers, and a mayoral chain occupy the construction bay"
+      },
+      {
+        "example_id": 12888,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "adds a taller coin stack beside a familiar product, slides both into the meter, and winces as the hand moves toward the frowning face"
+          }
+        ],
+        "scene_adjust": "a familiar product, old and new coin stacks, loyalty tokens, and an empty customer basket fill the pricing bay"
+      }
+    ]
+  },
+  {
+    "expression_id": 2170,
+    "idiom": "über die Bühne bringen",
+    "anchor": {
+      "semantic_hook": "Bringing something over the stage is staged literally as pushing each task from one side of a theater stage to the other.",
+      "setting": "A theater workshop contains preparation bays for a presentation, exam, party, meeting, move, and project, with a completion platform opposite them. The connecting stage rises over the ceiling and returns to the floor while every prop remains attached to its surface through the inverted section.",
+      "cast": [
+        "angela_merkel"
+      ],
+      "absurd_element": "a stage that crosses the ceiling while its props remain attached upside down"
+    },
+    "variations": [
+      {
+        "example_id": 12889,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "pushes a presentation cart onto the rising stage, keeps its demonstration models steady, and strains toward today's completion platform"
+          }
+        ],
+        "scene_adjust": "a presentation cart holds physical demonstration models, a pointer, a glass of water, and a clock with hands showing late afternoon"
+      },
+      {
+        "example_id": 12890,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "drags an exam desk across the final downward section, steps onto the completion platform, and throws both hands up in exhausted relief"
+          }
+        ],
+        "scene_adjust": "an exam desk carries geometric problems, used pencils, an eraser, and a nearly empty hourglass"
+      },
+      {
+        "example_id": 12891,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "steadies a huge party cake and a bundle of decorations on a wheeled table, then pushes them determinedly up the stage despite the steep curve"
+          }
+        ],
+        "scene_adjust": "a wheeled party table carries a large cake, candles, ribbons, serving plates, and a stack of party hats"
+      },
+      {
+        "example_id": 12892,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "slides a compact meeting table rapidly across the shortest stage section, folds its chairs, and steps off with a brisk satisfied nod"
+          }
+        ],
+        "scene_adjust": "a compact meeting table holds two plain folders, a small decision model, folded chairs, and a fast clock"
+      },
+      {
+        "example_id": 12893,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "hauls a handcart of moving boxes up the stage, braces a wobbling lamp with one shoulder, and looks anxiously toward the weekend finish"
+          }
+        ],
+        "scene_adjust": "moving boxes, a lamp, a rolled rug, household plants, and a weekend calendar wheel with blank segments crowd the handcart"
+      },
+      {
+        "example_id": 12894,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "pushes the nearly complete project model across the stage at a steady pace, checks the clock hands, and steers around loose obstacles to avoid delay"
+          }
+        ],
+        "scene_adjust": "a nearly complete project model, remaining tools, loose obstacles, and a clock dial occupy the project cart"
+      }
+    ]
+  }
+]

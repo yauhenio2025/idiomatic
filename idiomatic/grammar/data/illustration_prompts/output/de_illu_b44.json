@@ -1,0 +1,921 @@
+[
+  {
+    "expression_id": 2837,
+    "idiom": "das schon mal vorweg",
+    "anchor": {
+      "semantic_hook": "Saying something beforehand is staged literally as placing one important object out in front before everything else.",
+      "setting": "A preparation hall has a meeting table, travel bench, hiring desk, kitchen counter, help station, and bicycle stand beside one long floor rail. One colossal tray floats permanently at the very front of the rail, several meters ahead of every ordinary object waiting behind it.",
+      "cast": [
+        "angela_merkel"
+      ],
+      "absurd_element": "a colossal tray floating several meters ahead of every other object"
+    },
+    "variations": [
+      {
+        "example_id": 16855,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands at the meeting table, places a slow-running hourglass on the forward tray, and gestures apologetically toward the long row of occupied-looking chairs"
+          }
+        ],
+        "scene_adjust": "add a large hourglass, extra chairs, and several thick blank folders at the meeting table"
+      },
+      {
+        "example_id": 16856,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands between a suitcase and the forward tray, pushes a folded tent firmly aside, and points with an agreeable smile toward the other travel gear"
+          }
+        ],
+        "scene_adjust": "add a suitcase, sun hat, walking shoes, and a folded tent at the travel bench"
+      },
+      {
+        "example_id": 16857,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "waits beside the hiring desk, sets a future-positioned calendar marker on the forward tray, and points regretfully toward the still-empty office chair"
+          }
+        ],
+        "scene_adjust": "add an unmarked calendar grid with its movable marker pushed to the next section, plus an empty office chair and a key"
+      },
+      {
+        "example_id": 16858,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "rolls up her sleeves at the kitchen counter, places a full hourglass on the forward tray, and patiently reaches toward the mixing bowl"
+          }
+        ],
+        "scene_adjust": "add cake ingredients, a mixing bowl, an empty cake tin, and a full hourglass at the kitchen counter"
+      },
+      {
+        "example_id": 16859,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "offers one hand warmly across the help station while setting a nearly empty hourglass on the forward tray and glancing toward the evening clock hand"
+          }
+        ],
+        "scene_adjust": "add a nearly empty hourglass, a clock with its hand near evening, and a small stack of unfinished tasks"
+      },
+      {
+        "example_id": 16860,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "holds the old bicycle steady, squeezes a loose brake lever with concern, and places the detached brake pad prominently on the forward tray"
+          }
+        ],
+        "scene_adjust": "add an old bicycle with a loose brake cable, a detached brake pad, and a compact repair kit"
+      }
+    ]
+  },
+  {
+    "expression_id": 2838,
+    "idiom": "abgespielt hat",
+    "anchor": {
+      "semantic_hook": "Events taking place are staged literally as scenes being played out along a physical film reel.",
+      "setting": "A single production hall contains a house facade, a short action platform, a curtained backstage bay, an indoor garden plot, a story corner, and an office bay. One enormous film reel unspools through every bay, with each stretch of film serving as the floor where events have played out.",
+      "cast": [
+        "luisa_neubauer"
+      ],
+      "absurd_element": "an enormous film reel whose unspooled film forms the floor through every bay"
+    },
+    "variations": [
+      {
+        "example_id": 16861,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "kneels just inside the house facade, studies an overturned chair and broken vase with puzzled concentration, and peers cautiously toward the dark doorway"
+          }
+        ],
+        "scene_adjust": "add an overturned chair, a broken vase, muddy footprints, and a clock with its hands just past midnight inside the house facade"
+      },
+      {
+        "example_id": 16862,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "lunges across the short action platform, reaches toward the last falling domino, and stares in shock at the timer hand completing its sweep"
+          }
+        ],
+        "scene_adjust": "add a row of fallen dominoes, a toppled cup, and a spring timer with its hand at the end of a very short arc"
+      },
+      {
+        "example_id": 16863,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "pulls one curtain wide with both hands, leans into the backstage bay, and examines the abandoned props with intense curiosity"
+          }
+        ],
+        "scene_adjust": "add open prop trunks, discarded masks, coiled rope, and a recently moved chair behind the curtains"
+      },
+      {
+        "example_id": 16864,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "crouches at the garden plot, traces the disturbed soil with one finger, and surveys the flattened plants in baffled silence"
+          }
+        ],
+        "scene_adjust": "add flattened flower beds, a dropped watering can, scattered garden tools, and fresh tracks in the soil"
+      },
+      {
+        "example_id": 16865,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "stands in the story corner amid the aftermath, raises both hands in disbelief, and turns slowly between the unrelated abandoned objects"
+          }
+        ],
+        "scene_adjust": "add a smashed umbrella, an open suitcase, a toppled table, and an intact teacup balanced on the table edge"
+      },
+      {
+        "example_id": 16866,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "leans over the office desk, points between a spilled cup and a displaced chair, and looks expectantly toward the empty visitor seat"
+          }
+        ],
+        "scene_adjust": "add a spilled morning drink, an open blank folder, a displaced office chair, and a clock with an early-morning hand position"
+      }
+    ]
+  },
+  {
+    "expression_id": 2839,
+    "idiom": "seinen Fuß auf ... gesetzt hat",
+    "anchor": {
+      "semantic_hook": "Entering a place is staged literally as setting a foot onto its threshold.",
+      "setting": "A threshold gallery contains fixed bays of island sand, planted earth, solid stone, dense woodland, a ship gangway, and a theater platform around one central crossing. One colossal sculpted foot descends from the ceiling and rests across all six thresholds at once.",
+      "cast": [
+        "juju",
+        "capital_bra"
+      ],
+      "absurd_element": "a colossal sculpted foot resting across six different thresholds at once"
+    },
+    "variations": [
+      {
+        "example_id": 16867,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "steps from a small boat onto the island sand for the first time, throws his arms wide, and beams with excitement"
+          }
+        ],
+        "scene_adjust": "add a small moored boat, untouched sand, shells, and a travel bag at the island bay"
+      },
+      {
+        "example_id": 16868,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "sets one foot firmly onto the planted earth, holds a stack of blank study cards close, and concentrates on another card in her raised hand"
+          }
+        ],
+        "scene_adjust": "add a neat bed of German soil, a travel case, blank study cards, and several closed language books without visible markings"
+      },
+      {
+        "example_id": 16869,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stumbles off an unsteady deck onto the solid stone bay, plants both feet wide, and exhales with visible relief"
+          }
+        ],
+        "scene_adjust": "add a tilting wooden deck, a wet rope, and a broad slab of firm stone at the threshold"
+      },
+      {
+        "example_id": 16870,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stops outside the dense woodland bay, keeps his lifted boot behind the untouched moss line, and peers into the deep trees with awe"
+          }
+        ],
+        "scene_adjust": "add thick ferns, undisturbed moss, fallen branches, and an unbroken layer of leaves inside the woodland bay"
+      },
+      {
+        "example_id": 16871,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "steps onto the gangway with an eager forward lean and grips the rail while gazing toward the ship"
+          },
+          {
+            "slug": "capital_bra",
+            "action": "sets his foot beside hers, shoulders the shared travel bag, and points ahead with an adventurous grin"
+          }
+        ],
+        "scene_adjust": "add a ship gangway, coiled mooring rope, two compact travel bags, and nautical gear"
+      },
+      {
+        "example_id": 16872,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "places one hesitant foot on the theater platform, grips the curtain edge with tense fingers, and faces the empty seats with wide-eyed nerves"
+          }
+        ],
+        "scene_adjust": "add an open stage curtain, empty rows of seats, and a lone unmarked microphone at the theater platform"
+      }
+    ]
+  },
+  {
+    "expression_id": 2840,
+    "idiom": "längst angekommen",
+    "anchor": {
+      "semantic_hook": "Being accepted or settled for a long time is staged literally as luggage that arrived so long ago it became part of the arrival hall.",
+      "setting": "An arrivals concourse contains a home-work desk, dining nook, Hamburg apartment corner, reading lounge, civic garden, and team table. One enormous old suitcase is embedded halfway into the stone floor, with established vines growing around its handle after its very long stay.",
+      "cast": [
+        "sahra_wagenknecht"
+      ],
+      "absurd_element": "an enormous old suitcase embedded in the stone floor with established vines around its handle"
+    },
+    "variations": [
+      {
+        "example_id": 16873,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "works comfortably at the home-work desk in slippers, swivels between a laptop and office files, and relaxes into the familiar chair"
+          }
+        ],
+        "scene_adjust": "add a laptop with a blank screen, an office chair, household slippers, and neatly arranged work equipment"
+      },
+      {
+        "example_id": 16874,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "sits casually at the dining nook, serves herself vegetables from a familiar shared platter, and eats with everyday ease"
+          }
+        ],
+        "scene_adjust": "add a vegetable meal, ordinary place settings, a reusable lunch container, and a well-used recipe stand holding a blank card"
+      },
+      {
+        "example_id": 16875,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "settles deeply into the apartment armchair, places her keys in their worn bowl, and surveys the fully unpacked room with contentment"
+          }
+        ],
+        "scene_adjust": "add a fully unpacked apartment corner, a key bowl, familiar houseplants, and a small harbor model"
+      },
+      {
+        "example_id": 16876,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "reclines in the reading lounge, holds an e-reader naturally in one hand, and reaches without looking toward its well-used charging stand"
+          }
+        ],
+        "scene_adjust": "add several unbranded e-readers with blank screens, a charging stand, and comfortable reading chairs"
+      },
+      {
+        "example_id": 16877,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "kneels confidently in the civic garden, sorts reusable materials into plain containers, and tends a healthy young tree"
+          }
+        ],
+        "scene_adjust": "add reusable containers, a bicycle rack, rain barrels, mature garden beds, and a healthy young tree"
+      },
+      {
+        "example_id": 16878,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "sits naturally in the central team chair, fits the final workpiece into the shared project model, and smiles with settled confidence"
+          }
+        ],
+        "scene_adjust": "add a completed project model, several well-used tools, matching cups, and empty neighboring team chairs"
+      }
+    ]
+  },
+  {
+    "expression_id": 2841,
+    "idiom": "mit dem Nötigsten versorgt werden",
+    "anchor": {
+      "semantic_hook": "Receiving the bare essentials is staged literally as being supplied from one container holding only food, water, warmth, and shelter equipment.",
+      "setting": "A relief depot has an earthquake bay, hiking rack, shelter cot, family pantry, hospital bay, and remote-village well around a central supply platform. One house-sized emergency crate stands open on the platform, its compartments holding only ordinary water, food, blankets, and basic medical supplies.",
+      "cast": [
+        "jurgen_klopp"
+      ],
+      "absurd_element": "a house-sized emergency crate divided into compartments for the bare essentials"
+    },
+    "variations": [
+      {
+        "example_id": 16879,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "carries water and folded blankets from the giant crate toward the earthquake bay, steps carefully around rubble, and offers the supplies with urgent focus"
+          }
+        ],
+        "scene_adjust": "add broken masonry, family-sized water containers, food parcels, folded blankets, and a temporary canopy at the earthquake bay"
+      },
+      {
+        "example_id": 16880,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "stands at the hiking rack, weighs a very small pack in one hand, removes a spare luxury item with the other, and nods at the lighter load"
+          }
+        ],
+        "scene_adjust": "add a compact backpack containing only water, simple food, a blanket, and a first-aid pouch, with optional heavy gear set aside"
+      },
+      {
+        "example_id": 16881,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "sits on the shelter cot immediately after arrival, wraps a fresh blanket around his shoulders, and accepts a water cup with visible relief"
+          }
+        ],
+        "scene_adjust": "add a clean shelter cot, folded blanket, water cup, simple meal, and basic hygiene kit"
+      },
+      {
+        "example_id": 16882,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "kneels at the family pantry, divides the last food and warm clothing carefully between two small place settings, and checks the nearly empty purse"
+          }
+        ],
+        "scene_adjust": "add two child-sized place settings, two folded small coats, staple food, and a nearly empty coin purse at the family pantry"
+      },
+      {
+        "example_id": 16883,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "rests calmly on the hospital cot, accepts a water cup and folded blanket, and looks reassured by the basic care arranged within reach"
+          }
+        ],
+        "scene_adjust": "add a hospital cot, water cup, simple meal tray, folded blanket, and basic medical equipment"
+      },
+      {
+        "example_id": 16884,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "waits beside the remote-village well with an empty container, searches the nearly bare supply shelf, and raises one palm in worried uncertainty"
+          }
+        ],
+        "scene_adjust": "add a nearly dry well, one empty food shelf, an empty water container, and a long unused delivery cart"
+      }
+    ]
+  },
+  {
+    "expression_id": 2842,
+    "idiom": "sich auf den Weg gemacht",
+    "anchor": {
+      "semantic_hook": "Starting a journey is staged literally as placing oneself onto a road that is already moving outward.",
+      "setting": "A transit atrium contains a traffic exit, breakfast nook, family doorway, tourist rack, home alcove, and station platform along one continuous road. One long section of the road lifts from the floor as a solid ribbon and rolls its leading edge forward under its own power.",
+      "cast": [
+        "juju",
+        "capital_bra"
+      ],
+      "absurd_element": "a solid ribbon of road rolling itself forward through the atrium"
+    },
+    "variations": [
+      {
+        "example_id": 16885,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "steps briskly onto the moving road at dawn, shoulders a small bag, and glances back at the empty traffic lanes with satisfaction"
+          }
+        ],
+        "scene_adjust": "add an early clock-hand position, an open traffic exit, empty lanes, and a compact travel bag"
+      },
+      {
+        "example_id": 16886,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "pushes back from the breakfast nook and steps directly onto the moving road while fastening her small backpack"
+          },
+          {
+            "slug": "capital_bra",
+            "action": "finishes the last bite, rises immediately behind her, and swings his bag onto one shoulder"
+          }
+        ],
+        "scene_adjust": "add two finished breakfast plates, two cups, two small backpacks, and chairs pushed back from the nook"
+      },
+      {
+        "example_id": 16887,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "walks steadily along the road away from the family doorway, carries a wrapped gift, and waves warmly back over his shoulder"
+          }
+        ],
+        "scene_adjust": "add a family doorway, a wrapped gift, a small overnight bag, and a wall clock with a previous-day hand marker"
+      },
+      {
+        "example_id": 16888,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "leans into the wind on the moving road, holds her rain hood tightly, and advances with determined steps"
+          },
+          {
+            "slug": "capital_bra",
+            "action": "follows close behind under a bent umbrella, braces his backpack with both hands, and squints through the heavy rain"
+          }
+        ],
+        "scene_adjust": "add wet tourist packs, a bent umbrella, rain gear, and windblown puddles at the tourist rack"
+      },
+      {
+        "example_id": 16889,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "stands with one foot on the moving road and one foot inside the home alcove, holds a travel bag uncertainly, and glances between the exit and the sofa"
+          }
+        ],
+        "scene_adjust": "add a packed travel bag beside a home sofa, an open doorway, and outdoor shoes waiting at the road edge"
+      },
+      {
+        "example_id": 16890,
+        "inserts": [
+          {
+            "slug": "juju",
+            "action": "strides confidently along the moving road toward the station platform, pulls a wheeled case, and checks the approaching clock hand"
+          }
+        ],
+        "scene_adjust": "add a station clock with its hand near arrival, a wheeled case, a bench, and waiting rail equipment"
+      }
+    ]
+  },
+  {
+    "expression_id": 2843,
+    "idiom": "jegliche Lebensgrundlage verwehrt",
+    "anchor": {
+      "semantic_hook": "Denying every basis of existence is staged literally as barring access to a physical foundation that supports food, shelter, and work.",
+      "setting": "A civic resource hall contains a farm plot, art stall, fishing dock, home gateway, employment desk, and rental doorway facing one central barrier. Beyond that barrier, one enormous stone foundation floats out of reach while carrying ordinary food, water, shelter materials, and work tools.",
+      "cast": [
+        "sahra_wagenknecht"
+      ],
+      "absurd_element": "an enormous survival-supply foundation floating out of reach beyond a barrier"
+    },
+    "variations": [
+      {
+        "example_id": 16891,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "kneels beside the small farm plot, reaches through the barrier toward seeds and tools on the floating foundation, and looks back at her failing crops in distress"
+          }
+        ],
+        "scene_adjust": "add failing crops, an empty seed sack, a balance scale beside a wax seal without markings, and farm tools stranded beyond the barrier"
+      },
+      {
+        "example_id": 16892,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "stands alone at the art stall, holds unused brushes at her side, and reaches toward a row of turned-away empty work chairs beyond the barrier"
+          }
+        ],
+        "scene_adjust": "add packed art materials, unsold blank canvases, an empty coin bowl, and several work chairs turned away"
+      },
+      {
+        "example_id": 16893,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "pulls an empty fishing net from the dry dock, stares toward the blocked water with alarm, and stretches one hand toward the inaccessible supply foundation"
+          }
+        ],
+        "scene_adjust": "add a massive dam wall beyond the indoor dock, stranded fishing boats, an empty net, and dry baskets"
+      },
+      {
+        "example_id": 16894,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "walks away from the closed home gateway with a suitcase, turns for one last distressed glance, and extends a hand toward the barred food and shelter supplies"
+          }
+        ],
+        "scene_adjust": "add a closed home gateway, one packed suitcase, abandoned household basics, and an exit path from the hall"
+      },
+      {
+        "example_id": 16895,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "stands abruptly pushed back from the employment desk, clutches an empty purse, and reaches anxiously toward two small place settings and supplies beyond the barrier"
+          }
+        ],
+        "scene_adjust": "add an emptied work desk, a closed pay box, an empty purse, and two small family place settings near the inaccessible supplies"
+      },
+      {
+        "example_id": 16896,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "waits at the rental doorway with nearly empty pockets, tries a key that cannot reach the distant lock, and slumps beside packed family boxes"
+          }
+        ],
+        "scene_adjust": "add an unreachable apartment lock, a tiny coin purse, packed family boxes, and several closed rental doors"
+      }
+    ]
+  },
+  {
+    "expression_id": 2844,
+    "idiom": "am Ende ihrer Nerven und Kräfte",
+    "anchor": {
+      "semantic_hook": "Reaching the end of one's nerves and strength is staged literally as arriving where physical nerve cords and strength ropes run out.",
+      "setting": "A recovery hall contains a nursery station, overtime desk, marathon finish lane, moving bay, customer-service desk, and rest cot along one central cable route. One colossal bundle of nerve cords and muscular ropes runs through every station and ends abruptly in frayed tips at the center of the hall.",
+      "cast": [
+        "luisa_neubauer"
+      ],
+      "absurd_element": "a colossal bundle of nerve cords and muscular ropes ending in frayed tips inside the hall"
+    },
+    "variations": [
+      {
+        "example_id": 16897,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "sits slumped beside the nursery station after a sleepless night, cradles an empty feeding bottle, and presses one hand to her exhausted face"
+          }
+        ],
+        "scene_adjust": "add a cradle, scattered blankets, an empty feeding bottle, a cold cup, and a clock whose hands have completed a full night"
+      },
+      {
+        "example_id": 16898,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "hunches over the overtime desk, lets her arms fall beside the final frayed cords, and stares wearily at the towering stack of unfinished files"
+          }
+        ],
+        "scene_adjust": "add several clocks with late hand positions, many plain folders, cold cups, and an overfilled task tray"
+      },
+      {
+        "example_id": 16899,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "lies exhausted just beyond the marathon finish lane, stretches one hand toward the frayed rope ends, and raises the other fist with a joyful smile"
+          }
+        ],
+        "scene_adjust": "add a finish ribbon without markings, running shoes, a medal without engraving, and an empty water cup"
+      },
+      {
+        "example_id": 16900,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "sinks onto the last moving box after three days of carrying, rests both limp arms on her knees, and gazes at the unpacked furniture with utter fatigue"
+          }
+        ],
+        "scene_adjust": "add stacks of moving boxes, wrapped furniture, a hand cart, scattered packing material, and three spent candles"
+      },
+      {
+        "example_id": 16901,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "slumps at the customer-service desk beneath tangled headset cords, holds her head in both hands, and recoils from the many ringing telephones"
+          }
+        ],
+        "scene_adjust": "add several ringing telephones, tangled headsets, an overflowing tray of plain complaint folders, and untouched water"
+      },
+      {
+        "example_id": 16902,
+        "inserts": [
+          {
+            "slug": "luisa_neubauer",
+            "action": "lies fully clothed on the rest cot beside the final frayed cord tips, closes her exhausted eyes, and lets both arms hang loose"
+          }
+        ],
+        "scene_adjust": "add a simple rest cot, a folded blanket, a water glass, and an unused alarm clock"
+      }
+    ]
+  },
+  {
+    "expression_id": 2845,
+    "idiom": "auf das Schlimmste gefasst sein",
+    "anchor": {
+      "semantic_hook": "Being braced for the worst is staged literally as having every station held tight in one physical brace before trouble arrives.",
+      "setting": "A preparedness room contains a hospital waiting area, storm shelter, negotiation table, business bench, exam desk, and government cabinet table. One colossal safety brace wraps around the entire room and grips every station tightly against a central support.",
+      "cast": [
+        "angela_merkel"
+      ],
+      "absurd_element": "a colossal safety brace gripping every station in the room at once"
+    },
+    "variations": [
+      {
+        "example_id": 16903,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "sits beside the hospital bay with hands still tightly clasped, shoulders relaxed, and a relieved smile directed toward the calm recovery equipment"
+          }
+        ],
+        "scene_adjust": "add a hospital waiting chair, unused emergency equipment, a neatly closed surgical kit, and calm recovery monitors without visible characters"
+      },
+      {
+        "example_id": 16904,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "braces both feet inside the storm shelter, pulls a shutter closed, and keeps one hand firmly on the prepared emergency bag"
+          }
+        ],
+        "scene_adjust": "add reinforced shutters, heavy rain outside, a charged lantern, water containers, blankets, and an emergency bag"
+      },
+      {
+        "example_id": 16905,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "sits rigidly at the negotiation table, grips the chair arms, and watches the opposite empty seat with guarded readiness"
+          }
+        ],
+        "scene_adjust": "add two closed briefcases, a balance scale, plain contingency folders, and untouched cups at the negotiation table"
+      },
+      {
+        "example_id": 16906,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands behind the new business bench, steadies a small cash box with one hand, and reaches cautiously toward backup tools with the other"
+          }
+        ],
+        "scene_adjust": "add a modest cash box, backup tools, a spare key, an empty customer chair, and a reserve supply crate"
+      },
+      {
+        "example_id": 16907,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "sits at the exam desk with tense shoulders, holds the returned blank-covered paper at arm's length, and keeps a packed consolation snack beside her"
+          }
+        ],
+        "scene_adjust": "add a returned paper with its surface turned away, pencils, closed study books, and a packed consolation snack"
+      },
+      {
+        "example_id": 16908,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands at the government cabinet table as the crisis begins, plants both palms firmly, and surveys the prepared relief gear with controlled concern"
+          }
+        ],
+        "scene_adjust": "add sealed plain folders, relief supplies, a map made only of shapes, medical cases, and an emergency telephone"
+      }
+    ]
+  },
+  {
+    "expression_id": 2846,
+    "idiom": "wir machen keinen Hehl daraus",
+    "anchor": {
+      "semantic_hook": "Making no secret of something is staged literally as leaving a container of concealed matters completely open and visible.",
+      "setting": "An open-discussion gallery has a government desk, job corner, project table, exam station, conservation bench, and boss's office around a central display area. One house-sized safe made entirely of clear ice stands there with its thick door permanently wide open and every ordinary object inside exposed.",
+      "cast": [
+        "angela_merkel",
+        "jurgen_klopp"
+      ],
+      "absurd_element": "a house-sized safe made entirely of clear ice with its door permanently open"
+    },
+    "variations": [
+      {
+        "example_id": 16909,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands openly beside the government desk, pushes a sealed decision folder away with a dissatisfied frown, and keeps her posture square to the room"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "faces the room beside her, crosses his arms in clear disapproval, and points firmly toward the rejected folder"
+          }
+        ],
+        "scene_adjust": "add a sealed decision folder, empty official chairs, and a balance scale at the government desk"
+      },
+      {
+        "example_id": 16910,
+        "inserts": [
+          {
+            "slug": "jurgen_klopp",
+            "action": "stands in full view at the job corner, packs his portfolio into a case, and reaches confidently toward a different empty office chair"
+          }
+        ],
+        "scene_adjust": "add a packed portfolio, an open case, a key, and a second empty office chair at the job corner"
+      },
+      {
+        "example_id": 16911,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands at one side of the project table, sweeps unused materials toward a waste bin, and grimaces openly at the unfinished model"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "stands at the other side, points at the stopped clock with exasperation, and drops another abandoned component into the bin"
+          }
+        ],
+        "scene_adjust": "add an unfinished project model, a stopped clock, discarded components, and a waste bin at the project table"
+      },
+      {
+        "example_id": 16912,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "sits visibly tense at the exam station, grips a pencil with both hands, and openly wipes nervous sweat from her brow"
+          }
+        ],
+        "scene_adjust": "add a blank exam sheet, pencils, a ticking clock, closed study books, and a glass of water"
+      },
+      {
+        "example_id": 16913,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "kneels openly at the conservation bench, tends a young tree, and holds reusable equipment forward with determined pride"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "waters the same tree beside her, sorts reusable containers in plain view, and smiles with firm commitment"
+          }
+        ],
+        "scene_adjust": "add a healthy young tree, reusable containers, gardening tools, a water can, and a bicycle wheel at the conservation bench"
+      },
+      {
+        "example_id": 16914,
+        "inserts": [
+          {
+            "slug": "angela_merkel",
+            "action": "stands opposite the boss's desk, shakes her head calmly, and holds both palms outward in frank disagreement"
+          },
+          {
+            "slug": "jurgen_klopp",
+            "action": "sits behind the desk, leans back with raised brows, and listens while keeping his own proposal folder closed"
+          }
+        ],
+        "scene_adjust": "add two contrasting project models, a closed proposal folder, and two chairs facing each other in the boss's office"
+      }
+    ]
+  },
+  {
+    "expression_id": 2847,
+    "idiom": "nicht übermannen lassen",
+    "anchor": {
+      "semantic_hook": "Refusing to be overpowered is staged literally as resisting a huge person-shaped weight descending from above.",
+      "setting": "A resilience hall contains a memorial chair, exam desk, coffee station, dispute table, crisis locker, and farewell platform around one central mat. One colossal person-shaped iron weight hangs overhead, lowered close enough to threaten every station at once.",
+      "cast": [
+        "capital_bra"
+      ],
+      "absurd_element": "a colossal person-shaped iron weight descending over the resilience hall"
+    },
+    "variations": [
+      {
+        "example_id": 16915,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "sits beside the memorial chair with wet eyes, presses one palm upward against the descending weight, and holds himself upright despite his grief"
+          }
+        ],
+        "scene_adjust": "add a framed portrait with no markings, a wilted flower, tissues, and an empty chair at the memorial station"
+      },
+      {
+        "example_id": 16916,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "sits at the difficult exam with tense shoulders, steadies his breathing, and raises one firm forearm against the weight while continuing with his pencil"
+          }
+        ],
+        "scene_adjust": "add a dense blank exam sheet turned mostly away, several pencils, a clock, and closed study books"
+      },
+      {
+        "example_id": 16917,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stands drowsily at the coffee station, drinks from a steaming cup, straightens his posture, and pushes upward against the weight with renewed alertness"
+          }
+        ],
+        "scene_adjust": "add a steaming coffee cup, an unused pillow, a clock with late hands, and a stable counter"
+      },
+      {
+        "example_id": 16918,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stands at the dispute table with jaw tight, lowers his clenched fists deliberately, and holds the weight away with one controlled open palm"
+          }
+        ],
+        "scene_adjust": "add two pushed-back chairs, one cracked cup, scattered plain folders, and an untouched water glass at the dispute table"
+      },
+      {
+        "example_id": 16919,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "crouches beside the open crisis locker with alarmed eyes, plants both feet, and drives his shoulders upward against the descending weight"
+          }
+        ],
+        "scene_adjust": "add an open crisis locker, first-aid supplies, a lantern, water containers, and scattered debris"
+      },
+      {
+        "example_id": 16920,
+        "inserts": [
+          {
+            "slug": "capital_bra",
+            "action": "stands at the farewell platform with trembling lips, waves toward the departing empty carriage, and braces his free hand under the weight"
+          }
+        ],
+        "scene_adjust": "add a departing empty rail carriage, a suitcase, a handkerchief, and a platform clock"
+      }
+    ]
+  },
+  {
+    "expression_id": 2885,
+    "idiom": "früher oder später",
+    "anchor": {
+      "semantic_hook": "Sooner or later is staged literally as an early clock hand and a late clock hand traveling toward the same unavoidable endpoint.",
+      "setting": "A long time corridor contains a project table, truth lantern, sleep station, technology desk, garage bay, and language practice booth beside one track. Two colossal clock hands detached from any dial slide from opposite ends of the track toward the same closed archway.",
+      "cast": [
+        "sahra_wagenknecht"
+      ],
+      "absurd_element": "two colossal detached clock hands sliding toward the same archway"
+    },
+    "variations": [
+      {
+        "example_id": 17143,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "sits between two project choices, watches both giant hands approach the archway, and finally reaches decisively toward one model"
+          }
+        ],
+        "scene_adjust": "add two alternative project models, a balance scale, plain folders, and a decision token at the project table"
+      },
+      {
+        "example_id": 17144,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "waits beside the covered truth lantern until the clock hands meet, then pulls away its cloth and squints into the revealed light"
+          }
+        ],
+        "scene_adjust": "add a bright lantern beneath a removable cloth, an open empty box, and scattered concealment props"
+      },
+      {
+        "example_id": 17145,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "sits sleepless beside the untouched cot, droops with fatigue as the hands advance, and reaches weakly toward tissues and a thermometer"
+          }
+        ],
+        "scene_adjust": "add an untouched cot, several empty cups, a thermometer, tissues, and a pillow left on the floor"
+      },
+      {
+        "example_id": 17146,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "sits at the technology desk while the hands converge, holds an unfamiliar computer controller with tentative concentration, and keeps her other hand poised over the controls"
+          }
+        ],
+        "scene_adjust": "add a computer with an icon-only interface, a small robot arm, a controller, and ordinary office tools"
+      },
+      {
+        "example_id": 17147,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "kneels beside the old car with greasy hands, watches another failed part fall loose, and reluctantly reaches toward a new car key near the meeting hands"
+          }
+        ],
+        "scene_adjust": "add an old unbranded car, detached engine parts, repair tools, a worn key, and a new unmarked key"
+      },
+      {
+        "example_id": 17148,
+        "inserts": [
+          {
+            "slug": "sahra_wagenknecht",
+            "action": "speaks confidently into a microphone, holds an upright practiced posture, and advances the final bead as the clock hands reach the archway"
+          }
+        ],
+        "scene_adjust": "add a microphone, blank study cards, a bead frame for daily repetition, and closed German study books without visible markings"
+      }
+    ]
+  }
+]
