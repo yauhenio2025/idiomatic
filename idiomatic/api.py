@@ -882,6 +882,159 @@ async def admin_exercises2_list(_: None = Depends(authed_admin)) -> dict:
     return {"sources": exercises2.list_sources()}
 
 
+# --- admin: versioned local-only Qwen queue (legacy-estate Part C) ---------
+
+@app.post("/admin/local-tts/v1/exercises2/seed-pilot")
+async def admin_local_tts_v1_seed_pilot(
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Idempotently seed the frozen 30-note / 60-clip listening pilot."""
+    from . import local_tts
+    return await local_tts.seed_exercises2_pilot()
+
+
+@app.post("/admin/local-tts/v1/exercises2/seed-full")
+async def admin_local_tts_v1_seed_full(
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Seed all Exercises2 clips only after the config-level pilot gate."""
+    from . import local_tts
+    try:
+        return await local_tts.seed_exercises2_full()
+    except local_tts.PilotApprovalRequired as exc:
+        raise HTTPException(409, str(exc)) from exc
+
+
+@app.post("/admin/local-tts/v1/jobs/claim")
+async def admin_local_tts_v1_claim(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Atomically lease at most 16 clips to one machine-local worker."""
+    worker_id = body.get("worker_id")
+    try:
+        limit = int(body.get("limit", 8))
+        lease_seconds = int(body.get("lease_seconds", 900))
+    except (TypeError, ValueError) as exc:
+        raise HTTPException(400, "limit and lease_seconds must be integers") from exc
+    try:
+        batch = await db.claim_local_tts_jobs(
+            worker_id=worker_id, limit=limit, lease_seconds=lease_seconds,
+            contract_version=1,
+        )
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    for job in batch["jobs"]:
+        job["upload_path"] = f"/admin/local-tts/v1/jobs/{job['id']}/upload"
+        job["failure_path"] = f"/admin/local-tts/v1/jobs/{job['id']}/fail"
+    return {"contract_version": 1, **batch}
+
+
+@app.post("/admin/local-tts/v1/jobs/{job_id}/fail")
+async def admin_local_tts_v1_fail(
+    job_id: int,
+    body: dict,
+    x_local_tts_lease: str | None = Header(default=None),
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Release a live lease; failures requeue by default, with no fallback."""
+    if not x_local_tts_lease:
+        raise HTTPException(400, "missing X-Local-TTS-Lease")
+    error = body.get("error")
+    if not isinstance(error, str) or not error.strip():
+        raise HTTPException(400, "need a nonempty error string")
+    requeue = body.get("requeue", True)
+    if not isinstance(requeue, bool):
+        raise HTTPException(400, "requeue must be boolean")
+    row = await db.fail_local_tts_job(
+        job_id, lease_token=x_local_tts_lease, error=error.strip(),
+        requeue=requeue,
+    )
+    if row is None:
+        raise HTTPException(409, "unknown, stale or expired local-TTS lease")
+    return {"ok": True, **row}
+
+
+@app.post("/admin/local-tts/v1/jobs/{job_id}/upload")
+async def admin_local_tts_v1_upload(
+    job_id: int,
+    request: Request,
+    x_local_tts_lease: str | None = Header(default=None),
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Validate and atomically stage one MP3 at its server-chosen path."""
+    from . import local_tts
+
+    if not x_local_tts_lease:
+        raise HTTPException(400, "missing X-Local-TTS-Lease")
+    content_type = request.headers.get("content-type", "").split(";", 1)[0].lower()
+    if content_type not in ("audio/mpeg", "audio/mp3", "application/octet-stream"):
+        raise HTTPException(415, "body must be audio/mpeg")
+    length = request.headers.get("content-length")
+    if length:
+        try:
+            if int(length) > local_tts.MAX_MP3_BYTES:
+                raise HTTPException(413, "clip too large")
+        except ValueError as exc:
+            raise HTTPException(400, "invalid Content-Length") from exc
+    body = bytearray()
+    async for chunk in request.stream():
+        body.extend(chunk)
+        if len(body) > local_tts.MAX_MP3_BYTES:
+            raise HTTPException(413, "clip too large")
+    data = bytes(body)
+    try:
+        result = await local_tts.accept_upload(
+            job_id, lease_token=x_local_tts_lease, data=data,
+        )
+    except local_tts.LocalTTSUploadError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    except local_tts.LocalTTSLeaseError as exc:
+        raise HTTPException(409, str(exc)) from exc
+    # Do not expose the absolute /data path in the worker contract.
+    result.pop("file", None)
+    return result
+
+
+@app.get("/admin/local-tts/v1/status")
+async def admin_local_tts_v1_status(
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Queue progress plus the explicit full-corpus approval gate."""
+    status = await db.local_tts_status(contract_version=1)
+    status["full_exercises2_approved"] = bool(
+        get_settings().local_tts_exercises2_pilot_approved
+    )
+    return status
+
+
+@app.post("/admin/local-tts/v1/exercises2/build-pilot")
+async def admin_local_tts_v1_build_pilot(
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Build one mixed-language APKG, refusing even one missing clip."""
+    from . import local_tts
+    try:
+        return await local_tts.build_pilot_apkg()
+    except local_tts.LocalTTSBuildError as exc:
+        raise HTTPException(409, str(exc)) from exc
+
+
+@app.post("/admin/local-tts/v1/exercises2/rebuild")
+async def admin_local_tts_v1_rebuild(
+    lang: str, _: None = Depends(authed_admin),
+) -> dict:
+    """Strict local-only full rebuild; config-gated after pilot verdict."""
+    from . import local_tts
+    try:
+        return await local_tts.rebuild_exercises2_language(lang)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    except local_tts.PilotApprovalRequired as exc:
+        raise HTTPException(409, str(exc)) from exc
+    except local_tts.LocalTTSBuildError as exc:
+        raise HTTPException(409, str(exc)) from exc
+
+
 @app.post("/admin/translation-build")
 async def admin_translation_build(
     lang: str, _: None = Depends(authed_admin),

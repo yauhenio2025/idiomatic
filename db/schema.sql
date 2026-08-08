@@ -233,6 +233,67 @@ CREATE TABLE IF NOT EXISTS grammar_units (
 CREATE INDEX IF NOT EXISTS grammar_units_lang_idx ON grammar_units(lang, sort_order);
 
 -- ============================================================================
+-- Versioned local-only TTS queue (legacy-estate Part C).  Render only brokers
+-- work and stores validated clips: synthesis happens on the operator's local
+-- Qwen bridge, never through the paid provider chain.  A source edit changes
+-- content_hash and the idempotent seeder resets that job to queued.
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS local_tts_jobs (
+  id                BIGSERIAL PRIMARY KEY,
+  contract_version  SMALLINT NOT NULL,
+  source_kind       TEXT NOT NULL,
+  source_key        TEXT NOT NULL UNIQUE,
+  lang              TEXT NOT NULL,
+  note_key          TEXT NOT NULL,
+  clip_kind         TEXT NOT NULL,
+  text              TEXT NOT NULL,
+  voice_version     TEXT NOT NULL,
+  content_hash      TEXT NOT NULL,
+  staged_path       TEXT NOT NULL UNIQUE, -- relative to DATA_DIR/staged_audio
+  is_pilot          BOOLEAN NOT NULL DEFAULT FALSE,
+  status            TEXT NOT NULL DEFAULT 'queued',
+  attempts          INTEGER NOT NULL DEFAULT 0,
+  lease_token       TEXT,
+  worker_id         TEXT,
+  lease_started_at  TIMESTAMPTZ,
+  lease_expires_at  TIMESTAMPTZ,
+  last_error        TEXT,
+  last_failed_at    TIMESTAMPTZ,
+  audio_size_bytes  BIGINT,
+  audio_sha256      TEXT,
+  completed_at      TIMESTAMPTZ,
+  created_at        TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at        TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  CHECK (contract_version > 0),
+  CHECK (lang ~ '^[a-z]{2}$'),
+  CHECK (clip_kind IN ('answer', 'example')),
+  CHECK (length(text) > 0),
+  CHECK (content_hash ~ '^[0-9a-f]{64}$'),
+  CHECK (status IN ('queued', 'leased', 'completed', 'failed')),
+  CHECK (attempts >= 0),
+  CHECK (
+    (status = 'leased' AND lease_token IS NOT NULL
+                       AND lease_started_at IS NOT NULL
+                       AND lease_expires_at IS NOT NULL)
+    OR
+    (status <> 'leased' AND lease_token IS NULL
+                        AND lease_expires_at IS NULL)
+  ),
+  CHECK (status <> 'completed'
+         OR (audio_size_bytes IS NOT NULL AND audio_size_bytes > 0
+             AND audio_sha256 IS NOT NULL
+             AND audio_sha256 ~ '^[0-9a-f]{64}$'
+             AND completed_at IS NOT NULL))
+);
+CREATE INDEX IF NOT EXISTS local_tts_jobs_claim_idx
+  ON local_tts_jobs(contract_version, status, is_pilot DESC, id);
+CREATE INDEX IF NOT EXISTS local_tts_jobs_lease_idx
+  ON local_tts_jobs(lease_expires_at) WHERE status = 'leased';
+CREATE INDEX IF NOT EXISTS local_tts_jobs_note_idx
+  ON local_tts_jobs(source_kind, note_key, clip_kind);
+
+-- ============================================================================
 -- LingQ vocabulary mirror (user's saved words/phrases from lingq.com, all
 -- learning languages incl. not-yet-active ones). Source for vocab-aware
 -- exercise generation; synced via idiomatic/lingq.py (cron-triggered +

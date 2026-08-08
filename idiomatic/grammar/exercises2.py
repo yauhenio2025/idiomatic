@@ -318,6 +318,11 @@ def exercises_guid(lang: str, topic: str, item_id: str) -> str:
     ).hexdigest()[:16]
 
 
+def exercises_note_key(note: Ex2Note) -> str:
+    """Stable note identity shared by APKG GUIDs and the local-TTS queue."""
+    return f"{note.lang}:{note.topic}:{note.item_id}"
+
+
 def _deck_id(deck_name: str) -> int:
     """Stable id from the full deck name, in a range disjoint from the
     grammar/pool formulas."""
@@ -459,26 +464,25 @@ async def _synthesize_note_audio(
     return result, len(pending), failed
 
 
-def build_exercises2_apkg(
-    *, out_path: Path, lang: str, notes: list[Ex2Note],
-    audio: dict[str, NoteAudio] | None = None,
+def _build_exercises2_apkg(
+    *, out_path: Path, notes: list[Ex2Note],
+    audio_for_note: Callable[[Ex2Note], NoteAudio | None],
 ) -> int:
-    """Package one language's validated notes (2 cards each) into an APKG."""
+    """Shared frozen-model packager for single-language and mixed pilots."""
+    if not notes:
+        raise ValueError("cannot build an empty exercises2 APKG")
     model = make_model()
-    audio = audio or {}
     decks: dict[str, genanki.Deck] = {}
     media: list[str] = []
     media_seen: set[str] = set()
 
     for note in notes:
-        if note.lang != lang:
-            raise ValueError(f"note {note.item_id} lang {note.lang!r} != {lang!r}")
-        deck_name = deck_name_for(lang, note.topic)
+        deck_name = deck_name_for(note.lang, note.topic)
         deck = decks.get(deck_name)
         if deck is None:
             deck = decks[deck_name] = genanki.Deck(_deck_id(deck_name), deck_name)
 
-        record = audio.get(note.item_id) or NoteAudio(None, None)
+        record = audio_for_note(note) or NoteAudio(None, None)
         sounds: list[str] = []
         for clip in (record.answer, record.example):
             if clip is None:
@@ -493,13 +497,13 @@ def build_exercises2_apkg(
                 media.append(str(clip))
                 media_seen.add(key)
 
-        label = TOPIC_LABELS.get((note.topic, lang),
+        label = TOPIC_LABELS.get((note.topic, note.lang),
                                  note.topic.replace("_", " ").title())
         deck.add_note(genanki.Note(
             model=model,
             fields=[
-                f"{lang}:{note.topic}:{note.item_id}",
-                lang,
+                exercises_note_key(note),
+                note.lang,
                 label,
                 note.category,
                 html.escape(note.en),
@@ -514,10 +518,10 @@ def build_exercises2_apkg(
                 sounds[1],
                 "", "", "",
             ],
-            guid=exercises_guid(lang, note.topic, note.item_id),
+            guid=exercises_guid(note.lang, note.topic, note.item_id),
             tags=[
                 "idiomatic-exercises",
-                f"idiomatic-exercises::{lang}::{note.topic}",
+                f"idiomatic-exercises::{note.lang}::{note.topic}",
             ],
         ))
 
@@ -532,6 +536,43 @@ def build_exercises2_apkg(
         size_kb=round(out_path.stat().st_size / 1e3),
     )
     return len(notes)
+
+
+def build_exercises2_apkg(
+    *, out_path: Path, lang: str, notes: list[Ex2Note],
+    audio: dict[str, NoteAudio] | None = None,
+) -> int:
+    """Package one language's validated notes (2 cards each) into an APKG."""
+    for note in notes:
+        if note.lang != lang:
+            raise ValueError(f"note {note.item_id} lang {note.lang!r} != {lang!r}")
+    audio = audio or {}
+    return _build_exercises2_apkg(
+        out_path=out_path,
+        notes=notes,
+        audio_for_note=lambda note: audio.get(note.item_id),
+    )
+
+
+def build_exercises2_mixed_apkg(
+    *, out_path: Path, notes: list[Ex2Note],
+    audio: dict[str, NoteAudio] | None = None,
+) -> int:
+    """Package a mixed-language pilot without changing model/GUID/deck IDs.
+
+    The mapping is keyed by ``<lang>:<topic>:<item_id>`` because item ids are
+    only guaranteed unique inside a source file.  This is an ordinary APKG
+    and can ride the existing rolling-deck upload/delivery machinery.
+    """
+    audio = audio or {}
+    keys = [exercises_note_key(note) for note in notes]
+    if len(keys) != len(set(keys)):
+        raise ValueError("duplicate exercises2 note identity in mixed APKG")
+    return _build_exercises2_apkg(
+        out_path=out_path,
+        notes=notes,
+        audio_for_note=lambda note: audio.get(exercises_note_key(note)),
+    )
 
 
 async def build_language(

@@ -65,6 +65,13 @@ class Settings(BaseSettings):
     # up to ~8 queued clips at 3-5 s each ahead of it.
     qwen_tts_timeout_sec: float = 120.0
 
+    # Legacy-estate Part C bulk gate.  The versioned local-Qwen queue may
+    # always seed/build its 30-note listening pilot.  Full Exercises2 seeding
+    # and strict rebuilds stay disabled until the owner approves that pilot.
+    # This is intentionally independent of TTS_PROVIDER: Render's provider
+    # pin is not used by (or changed for) the local-only lane.
+    local_tts_exercises2_pilot_approved: bool = False
+
     # ElevenLabs — first fallback. ~40× cheaper per character than the
     # Gemini TTS preview (July 2026 audit: Gemini billed ~€2/1k chars vs
     # ElevenLabs turbo at $0.05/1k), no safety blocks on target-language

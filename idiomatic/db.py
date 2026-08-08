@@ -6,6 +6,7 @@ from datetime import datetime
 from typing import Any
 
 import json
+import secrets
 import time
 
 import asyncpg
@@ -728,7 +729,8 @@ async def upsert_pool_apkg(
     'grammar' rides the same one-row-per-(lang,kind) mechanics."""
     assert kind in ("pool_idioms", "pool_expr", "pool_idiom_t2e",
                     "pool_idiom_e2t", "grammar", "podcast_lesson", "exercises2",
-                    "translation", "tenses", "tenses_ex", "rescue_comics")
+                    "exercises2_pilot", "translation", "tenses", "tenses_ex",
+                    "rescue_comics")
     pool = await get_pool()
     async with pool.acquire() as conn:
         async with conn.transaction():
@@ -744,6 +746,312 @@ async def upsert_pool_apkg(
                 """,
                 lang, filename, size_bytes, n_idioms, kind,
             )
+
+
+# ---------------------------------------------------------------------------
+# Versioned local-only TTS queue (legacy-estate Part C)
+# ---------------------------------------------------------------------------
+
+async def seed_local_tts_jobs(rows: list[dict[str, Any]]) -> dict[str, int]:
+    """Idempotently seed local TTS work.
+
+    ``source_key`` is the durable identity.  Re-seeding identical content
+    preserves its status, lease and completed clip.  Any contract/content/path
+    change resets that identity to a clean queued job; this is what makes an
+    authored text edit self-healing without minting duplicate work.
+    """
+    if not rows:
+        return {"total": 0, "inserted": 0, "reset": 0, "unchanged": 0}
+    source_keys = [row.get("source_key") for row in rows]
+    if any(not isinstance(key, str) or not key for key in source_keys):
+        raise ValueError("every local TTS row needs a source_key")
+    if len(source_keys) != len(set(source_keys)):
+        raise ValueError("duplicate local TTS source_key in seed batch")
+
+    pool = await get_pool()
+    result = await pool.fetchrow(
+        """
+        WITH incoming AS (
+          SELECT * FROM jsonb_to_recordset($1::jsonb) AS x(
+            contract_version smallint,
+            source_kind text,
+            source_key text,
+            lang text,
+            note_key text,
+            clip_kind text,
+            text text,
+            voice_version text,
+            content_hash text,
+            staged_path text,
+            is_pilot boolean
+          )
+        ), classified AS (
+          SELECT i.*,
+                 CASE
+                   WHEN j.id IS NULL THEN 'inserted'
+                   WHEN j.content_hash IS DISTINCT FROM i.content_hash
+                     OR j.staged_path IS DISTINCT FROM i.staged_path
+                   THEN 'reset'
+                   ELSE 'unchanged'
+                 END AS seed_action
+          FROM incoming i
+          LEFT JOIN local_tts_jobs j ON j.source_key = i.source_key
+        ), upserted AS (
+          INSERT INTO local_tts_jobs
+            (contract_version, source_kind, source_key, lang, note_key,
+             clip_kind, text, voice_version, content_hash, staged_path,
+             is_pilot)
+          SELECT contract_version, source_kind, source_key, lang, note_key,
+                 clip_kind, text, voice_version, content_hash, staged_path,
+                 is_pilot
+          FROM classified
+          ON CONFLICT (source_key) DO UPDATE SET
+            contract_version = EXCLUDED.contract_version,
+            source_kind = EXCLUDED.source_kind,
+            lang = EXCLUDED.lang,
+            note_key = EXCLUDED.note_key,
+            clip_kind = EXCLUDED.clip_kind,
+            text = EXCLUDED.text,
+            voice_version = EXCLUDED.voice_version,
+            content_hash = EXCLUDED.content_hash,
+            staged_path = EXCLUDED.staged_path,
+            is_pilot = local_tts_jobs.is_pilot OR EXCLUDED.is_pilot,
+            status = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN 'queued' ELSE local_tts_jobs.status END,
+            attempts = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN 0 ELSE local_tts_jobs.attempts END,
+            lease_token = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN NULL ELSE local_tts_jobs.lease_token END,
+            worker_id = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN NULL ELSE local_tts_jobs.worker_id END,
+            lease_started_at = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN NULL ELSE local_tts_jobs.lease_started_at END,
+            lease_expires_at = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN NULL ELSE local_tts_jobs.lease_expires_at END,
+            last_error = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN NULL ELSE local_tts_jobs.last_error END,
+            last_failed_at = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN NULL ELSE local_tts_jobs.last_failed_at END,
+            audio_size_bytes = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN NULL ELSE local_tts_jobs.audio_size_bytes END,
+            audio_sha256 = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN NULL ELSE local_tts_jobs.audio_sha256 END,
+            completed_at = CASE WHEN
+              local_tts_jobs.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+              OR local_tts_jobs.staged_path IS DISTINCT FROM EXCLUDED.staged_path
+              THEN NULL ELSE local_tts_jobs.completed_at END,
+            updated_at = NOW()
+          RETURNING source_key
+        )
+        SELECT COUNT(*)::int AS total,
+               COUNT(*) FILTER (WHERE seed_action = 'inserted')::int AS inserted,
+               COUNT(*) FILTER (WHERE seed_action = 'reset')::int AS reset,
+               COUNT(*) FILTER (WHERE seed_action = 'unchanged')::int AS unchanged,
+               (SELECT COUNT(*) FROM upserted)::int AS written
+        FROM classified
+        """,
+        json.dumps(rows, ensure_ascii=False),
+    )
+    if result is None:
+        raise RuntimeError("local TTS seed returned no result")
+    return {key: int(result[key]) for key in ("total", "inserted", "reset", "unchanged")}
+
+
+async def claim_local_tts_jobs(
+    *, worker_id: str, limit: int = 8, lease_seconds: int = 900,
+    contract_version: int = 1,
+) -> dict[str, Any]:
+    """Atomically lease a small batch, reclaiming expired leases.
+
+    One opaque token covers the returned batch.  Every fail/upload mutation
+    additionally checks the job id, live lease and token, so a stale local
+    worker cannot overwrite a later worker's result.
+    """
+    if not isinstance(worker_id, str) or not worker_id or len(worker_id) > 100:
+        raise ValueError("worker_id must be 1..100 characters")
+    if limit < 1 or limit > 16:
+        raise ValueError("limit must be 1..16")
+    if lease_seconds < 60 or lease_seconds > 3600:
+        raise ValueError("lease_seconds must be 60..3600")
+    lease_token = secrets.token_urlsafe(32)
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        WITH picked AS (
+          SELECT id
+          FROM local_tts_jobs
+          WHERE contract_version = $1
+            AND (status = 'queued'
+                 OR (status = 'leased' AND lease_expires_at <= NOW()))
+          ORDER BY is_pilot DESC, id
+          FOR UPDATE SKIP LOCKED
+          LIMIT $2
+        )
+        UPDATE local_tts_jobs j
+        SET status = 'leased',
+            lease_token = $3,
+            worker_id = $4,
+            lease_started_at = NOW(),
+            lease_expires_at = NOW() + make_interval(secs => $5),
+            attempts = j.attempts + 1,
+            updated_at = NOW()
+        FROM picked
+        WHERE j.id = picked.id
+        RETURNING j.id, j.contract_version, j.source_kind, j.source_key,
+                  j.lang, j.note_key, j.clip_kind, j.text, j.voice_version,
+                  j.content_hash, j.staged_path, j.is_pilot, j.attempts,
+                  j.lease_expires_at
+        """,
+        contract_version, limit, lease_token, worker_id, lease_seconds,
+    )
+    return {"lease_token": lease_token, "jobs": [dict(row) for row in rows]}
+
+
+async def fail_local_tts_job(
+    job_id: int, *, lease_token: str, error: str, requeue: bool = True,
+) -> dict[str, Any] | None:
+    """Release a live lease after local synthesis failure.
+
+    Requeue is the default Part-C policy: bridge contention or a bad clip
+    waits for the next local window and never falls through to a paid TTS
+    provider.  ``requeue=False`` is an explicit operator quarantine.
+    """
+    pool = await get_pool()
+    row = await pool.fetchrow(
+        """
+        UPDATE local_tts_jobs
+        SET status = CASE WHEN $3 THEN 'queued' ELSE 'failed' END,
+            lease_token = NULL,
+            lease_started_at = NULL,
+            lease_expires_at = NULL,
+            last_error = LEFT($4, 1000),
+            last_failed_at = NOW(),
+            updated_at = NOW()
+        WHERE id = $1 AND status = 'leased' AND lease_token = $2
+          AND lease_expires_at > NOW()
+        RETURNING id, status, attempts
+        """,
+        job_id, lease_token, requeue, error,
+    )
+    return dict(row) if row else None
+
+
+async def leased_local_tts_job(
+    job_id: int, *, lease_token: str,
+) -> dict[str, Any] | None:
+    """Resolve a live lease before accepting its upload."""
+    pool = await get_pool()
+    row = await pool.fetchrow(
+        """
+        SELECT id, contract_version, source_key, lang, note_key, clip_kind,
+               text, voice_version, content_hash, staged_path, attempts
+        FROM local_tts_jobs
+        WHERE id = $1 AND status = 'leased' AND lease_token = $2
+          AND lease_expires_at > NOW()
+        """,
+        job_id, lease_token,
+    )
+    return dict(row) if row else None
+
+
+async def complete_local_tts_job(
+    job_id: int, *, lease_token: str, audio_size_bytes: int, audio_sha256: str,
+) -> dict[str, Any] | None:
+    """Mark a validated, atomically staged upload complete under its lease."""
+    pool = await get_pool()
+    row = await pool.fetchrow(
+        """
+        UPDATE local_tts_jobs
+        SET status = 'completed',
+            lease_token = NULL,
+            lease_started_at = NULL,
+            lease_expires_at = NULL,
+            audio_size_bytes = $3,
+            audio_sha256 = $4,
+            completed_at = NOW(),
+            last_error = NULL,
+            updated_at = NOW()
+        WHERE id = $1 AND status = 'leased' AND lease_token = $2
+          AND lease_expires_at > NOW()
+        RETURNING id, status, staged_path, audio_size_bytes, audio_sha256,
+                  completed_at
+        """,
+        job_id, lease_token, audio_size_bytes, audio_sha256,
+    )
+    return dict(row) if row else None
+
+
+async def completed_local_tts_jobs(source_keys: list[str]) -> list[dict[str, Any]]:
+    """Completed current rows used by the strict local Exercises2 builder."""
+    if not source_keys:
+        return []
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT id, source_key, content_hash, staged_path, audio_size_bytes,
+               audio_sha256, completed_at
+        FROM local_tts_jobs
+        WHERE source_key = ANY($1::text[]) AND status = 'completed'
+        """,
+        source_keys,
+    )
+    return [dict(row) for row in rows]
+
+
+async def local_tts_status(contract_version: int = 1) -> dict[str, Any]:
+    """Aggregate queue state without returning authored text."""
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT status, is_pilot, COUNT(*)::int AS n
+        FROM local_tts_jobs
+        WHERE contract_version = $1
+        GROUP BY status, is_pilot
+        ORDER BY status, is_pilot DESC
+        """,
+        contract_version,
+    )
+    expired = await pool.fetchval(
+        """
+        SELECT COUNT(*)::int FROM local_tts_jobs
+        WHERE contract_version = $1 AND status = 'leased'
+          AND lease_expires_at <= NOW()
+        """,
+        contract_version,
+    )
+    counts: dict[str, int] = {}
+    pilot_counts: dict[str, int] = {}
+    for row in rows:
+        counts[row["status"]] = counts.get(row["status"], 0) + int(row["n"])
+        if row["is_pilot"]:
+            pilot_counts[row["status"]] = int(row["n"])
+    return {
+        "contract_version": contract_version,
+        "counts": counts,
+        "pilot_counts": pilot_counts,
+        "total": sum(counts.values()),
+        "expired_leases": int(expired or 0),
+    }
 
 
 # ---------------------------------------------------------------------------
