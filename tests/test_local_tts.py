@@ -1176,3 +1176,35 @@ def test_real_postgres_seed_edit_reset_lease_reclaim_and_constraints(monkeypatch
             await connection.close()
 
     asyncio.run(exercise())
+
+
+def test_conventional_lookup_finds_legacy_elevenlabs_fingerprint(
+    tmp_path: Path, monkeypatch,
+):
+    """Clips cached while ElevenLabs was primary must stay visible after
+    the qwen-local promotion (2026-08-09 regression: five strict rebuilds
+    refused ~700 clips each because the live fingerprint changed)."""
+    note = local_tts.pilot_notes()[0]
+    live = SimpleNamespace(
+        data_dir=tmp_path, local_tts_exercises2_pilot_approved=True,
+        tts_provider="qwen-local", elevenlabs_api_key="k",
+        elevenlabs_model="eleven_turbo_v2_5", gemini_tts_model="g-tts",
+    )
+    legacy_view = local_tts._LegacyElevenSettingsView(live)
+    assert legacy_view.tts_provider == "elevenlabs"
+    # Cache the answer clip under the LEGACY (elevenlabs) fingerprint only.
+    legacy_clip = _conventional_clip(tmp_path, note, note.tl, legacy_view)
+    live_digest = x2.audio_cache_key(note.tl, note.lang, live)
+    legacy_digest = x2.audio_cache_key(note.tl, note.lang, legacy_view)
+    assert live_digest != legacy_digest
+
+    async def no_completed(_keys):
+        return []
+
+    monkeypatch.setattr(local_tts, "get_settings", lambda: live)
+    monkeypatch.setattr(db, "completed_local_tts_jobs", no_completed)
+
+    resolution = asyncio.run(local_tts.resolve_exercises2_audio([note]))
+    audio = resolution.audio_by_note_key[x2.exercises_note_key(note)]
+    assert audio.answer == legacy_clip
+    assert resolution.stats["clips_existing_conventional"] == 1

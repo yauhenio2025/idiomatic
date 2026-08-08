@@ -540,7 +540,47 @@ def _conventional_exercises2_clip(
         # English prompt clips are local-Qwen-only; the conventional lane
         # never synthesized them (and LANG_VOICE has no "en" route).
         return None, False
-    digest = x2.audio_cache_key(expected["text"], expected["lang"], settings)
+    for digest in _conventional_digest_candidates(expected, settings):
+        clip, invalid = _conventional_clip_at(expected, digest,
+                                              settings=settings,
+                                              data_dir=data_dir)
+        if clip is not None or invalid:
+            return clip, invalid
+    return None, False
+
+
+class _LegacyElevenSettingsView:
+    """Settings proxy pinning the pre-2026-08-08 ElevenLabs voice route.
+
+    All conventional Exercises2 clips were synthesized while ElevenLabs
+    was the primary provider; after the qwen-local promotion the live
+    fingerprint no longer matches those files. Cache LOOKUP must keep
+    seeing them — new synthesis never uses this view.
+    """
+
+    def __init__(self, settings: Any) -> None:
+        self._settings = settings
+
+    def __getattr__(self, name: str) -> Any:
+        if name == "tts_provider":
+            return "elevenlabs"
+        return getattr(self._settings, name)
+
+
+def _conventional_digest_candidates(
+    expected: dict[str, Any], settings: Any,
+) -> list[str]:
+    digests = [x2.audio_cache_key(expected["text"], expected["lang"], settings)]
+    legacy = x2.audio_cache_key(
+        expected["text"], expected["lang"], _LegacyElevenSettingsView(settings))
+    if legacy not in digests:
+        digests.append(legacy)
+    return digests
+
+
+def _conventional_clip_at(
+    expected: dict[str, Any], digest: str, *, settings: Any, data_dir: Path,
+) -> tuple[Path | None, bool]:
     clip = (
         Path(data_dir) / "staged_audio" / "grammar" / "exercises2"
         / expected["lang"] / x2.audio_filename(expected["lang"], digest)
