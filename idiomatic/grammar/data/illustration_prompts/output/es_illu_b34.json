@@ -1,0 +1,990 @@
+[
+  {
+    "expression_id": 2976,
+    "idiom": "quedó claro",
+    "anchor": {
+      "semantic_hook": "A cloudy glass wall is wiped until it remains completely clear, exposing the concrete situation on its far side.",
+      "setting": "A quiet meeting room contains a long table, two chairs, and a cloudy glass wall dividing the room. The room-wide glass wall absurdly hangs unsupported, with one freshly cleared area revealing the objects beyond it.",
+      "cast": ["nadia_calvino", "cristina_kirchner"],
+      "absurd_element": "a room-wide glass wall hanging unsupported"
+    },
+    "variations": [
+      {
+        "example_id": 17689,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "stands beside the meeting table gathering closed folders, then points through the cleared glass toward the only chair placed behind a project model"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "leans toward the cleared area with an attentive expression and nods toward the singled-out chair"
+          }
+        ],
+        "scene_adjust": "closed meeting folders, a project model, and one chair set at its head"
+      },
+      {
+        "example_id": 17690,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "faces her companion across the table with relaxed shoulders, holding one end of a cord that has just been untangled"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "holds the other end of the straightened cord and offers an apologetic smile through the cleared glass"
+          }
+        ],
+        "scene_adjust": "two overturned chairs restored upright and a formerly tangled cord now straight"
+      },
+      {
+        "example_id": 17691,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands beside a packed suitcase and gestures firmly through the cleared glass toward three household tasks arranged in sequence"
+          },
+          {
+            "slug": "nadia_calvino",
+            "action": "looks through the cleared area, follows the gesture across the tasks, and nods with focused understanding"
+          }
+        ],
+        "scene_adjust": "a packed suitcase, a key, a watering can, and folded laundry arranged in sequence"
+      },
+      {
+        "example_id": 17692,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "uses three simple wooden blocks to demonstrate the solution on the table, pointing to their completed arrangement"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "peers through the cleared glass at the finished block arrangement and lifts both hands in sudden understanding"
+          }
+        ],
+        "scene_adjust": "three simple wooden blocks fitted into one completed shape"
+      },
+      {
+        "example_id": 17693,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands rigidly before the cleared glass with a stern expression, raises a stopping palm, and pushes a pile of false masks away"
+          },
+          {
+            "slug": "nadia_calvino",
+            "action": "faces the warning with lowered eyes and places the last false mask on the rejected pile"
+          }
+        ],
+        "scene_adjust": "a pile of discarded false masks at the edge of the table"
+      },
+      {
+        "example_id": 17694,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "holds an open unmarked contract against the cleared glass, frowning as she compares a nearly empty coin purse with a heavy key"
+          }
+        ],
+        "scene_adjust": "an unmarked contract, a nearly empty coin purse, and a heavy key attached to a chain"
+      }
+    ]
+  },
+  {
+    "expression_id": 2977,
+    "idiom": "al fin y al cabo",
+    "anchor": {
+      "semantic_hook": "The final end of a long rope reaches the far end of a decision table where each matter is settled.",
+      "setting": "A covered decision courtyard contains a round table at the end of a long stone path, with domestic and work alcoves around it. A rope as thick as a tree trunk runs the full path and places its final tip on the table, an absurd scale distortion that makes both ends unmistakable.",
+      "cast": ["penelope_cruz", "javier_bardem"],
+      "absurd_element": "a tree-trunk-thick rope ending on the decision table"
+    },
+    "variations": [
+      {
+        "example_id": 17695,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "stands calmly at the rope tip with her hands resting on her own house key and travel keepsakes, turning away from several abandoned speaking trumpets"
+          }
+        ],
+        "scene_adjust": "a personal house key, travel keepsakes, and several unused speaking trumpets"
+      },
+      {
+        "example_id": 17696,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "crouches beside a used compact car at the end of the path, checks a worn tire, and gives a practical nod"
+          },
+          {
+            "slug": "javier_bardem",
+            "action": "stands beside the driver's door holding a work briefcase and extends the car key toward his companion"
+          }
+        ],
+        "scene_adjust": "a used compact car, a work briefcase, and a plain car key"
+      },
+      {
+        "example_id": 17697,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "stands at the rope tip with a hesitant expression, then opens her arms toward her brother"
+          },
+          {
+            "slug": "javier_bardem",
+            "action": "faces his sister with remorse, holding out a shared childhood photograph turned away from the camera"
+          }
+        ],
+        "scene_adjust": "a framed childhood photograph and two matching family lockets"
+      },
+      {
+        "example_id": 17698,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "sets an unclaimed prize cup aside and proudly holds up a completed learning model"
+          },
+          {
+            "slug": "javier_bardem",
+            "action": "kneels beside the model at the rope tip and points with satisfaction to the parts they assembled together"
+          }
+        ],
+        "scene_adjust": "an unclaimed prize cup, study materials, and a completed learning model"
+      },
+      {
+        "example_id": 17699,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "sits contentedly in the sheltered home alcove at the rope's end, wraps a blanket around her shoulders, and watches the rain beyond the courtyard"
+          },
+          {
+            "slug": "javier_bardem",
+            "action": "rests beside her with dry slippers and a warm cup, smiling at the soaked umbrella left near the path"
+          }
+        ],
+        "scene_adjust": "a home alcove with a sofa, dry slippers, warm cups, a soaked umbrella, and heavy rain outside"
+      },
+      {
+        "example_id": 17700,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "sits at the decision table comparing two objects at an unhurried pace, her chin resting thoughtfully on one hand"
+          },
+          {
+            "slug": "javier_bardem",
+            "action": "reclines beside the rope tip with an easy expression and slowly turns a large hourglass"
+          }
+        ],
+        "scene_adjust": "two undecided objects and a large hourglass with plenty of sand remaining"
+      }
+    ]
+  },
+  {
+    "expression_id": 2978,
+    "idiom": "se ha cobrado las vidas de",
+    "anchor": {
+      "semantic_hook": "A disaster tollgate physically collects human-shaped life counters as the toll demanded by each catastrophe.",
+      "setting": "An open disaster-assessment yard contains a plain tollbooth, a lowered barrier, an empty response table, and a collection basket for human-shaped counters. The collection basket is absurdly large enough to hold hundreds of counters while every other object remains ordinary in scale.",
+      "cast": ["cristina_kirchner"],
+      "absurd_element": "a toll basket large enough to collect hundreds of life counters"
+    },
+    "variations": [
+      {
+        "example_id": 17701,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "kneels beside fresh earthquake rubble with a grave expression and pours more than a hundred small human-shaped counters into the toll basket"
+          }
+        ],
+        "scene_adjust": "cracked masonry, a stopped clock dial, and more than a hundred plain human-shaped counters"
+      },
+      {
+        "example_id": 17702,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands beside a crushed roadside barrier, bows her head, and places three young human-shaped counters into the toll basket"
+          }
+        ],
+        "scene_adjust": "a bent highway barrier, a damaged wheel, and three human-shaped counters with small backpacks"
+      },
+      {
+        "example_id": 17703,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "wears protective gloves and solemnly transfers many elderly human-shaped counters from beside medicine bottles into the toll basket"
+          }
+        ],
+        "scene_adjust": "medicine bottles, several walking canes, a regional map without markings, and many elderly human-shaped counters"
+      },
+      {
+        "example_id": 17704,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "braces against coastal wind near the lowered barrier and sadly gathers several rain-soaked human-shaped counters into the toll basket"
+          }
+        ],
+        "scene_adjust": "storm-bent palm fronds, wet fishing rope, shells, and several rain-soaked human-shaped counters"
+      },
+      {
+        "example_id": 17705,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "kneels amid scorched branches and carefully sets two human-shaped counters wearing firefighter helmets into the toll basket"
+          }
+        ],
+        "scene_adjust": "scorched branches, a fire hose, two small firefighter helmets, and two human-shaped counters"
+      },
+      {
+        "example_id": 17706,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands before a vast spread of civilian household tokens with a stricken expression and guides a stream of human-shaped counters into the toll basket"
+          }
+        ],
+        "scene_adjust": "damaged household objects, discarded toys, thousands of tiny human-shaped counters, and distant smoke"
+      }
+    ]
+  },
+  {
+    "expression_id": 3073,
+    "idiom": "cayó con fuerza",
+    "anchor": {
+      "semantic_hook": "A vertical drop shaft pulls its contents down hard onto a dented impact plate, making a forceful fall visible.",
+      "setting": "A high testing hall contains a steep drop shaft, a reinforced viewing rail, and a dented impact plate at floor level. A single gravity funnel hangs in midair above the shaft and absurdly yanks anything beneath it straight downward.",
+      "cast": ["javier_bardem"],
+      "absurd_element": "a suspended gravity funnel that yanks objects downward"
+    },
+    "variations": [
+      {
+        "example_id": 18271,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "stands ankle-deep beside the impact plate, hunches beneath an umbrella, and struggles to keep his footing under the heavy afternoon rain"
+          }
+        ],
+        "scene_adjust": "a storm opening above the shaft, heavy rain, clogged drains, and water spreading across model downtown streets"
+      },
+      {
+        "example_id": 18272,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "leans over the viewing rail with alarm, holding an open unmarked quarterly folder while a stack of plain share tokens plunges toward the impact plate"
+          }
+        ],
+        "scene_adjust": "an unmarked quarterly folder and a stack of plain share tokens descending the shaft"
+      },
+      {
+        "example_id": 18273,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "shivers at the rail in sunset light and urgently turns the dial of a portable heater while watching thermometer fluid plunge"
+          }
+        ],
+        "scene_adjust": "a thermometer without digits, a portable heater, and sunset visible through the high windows"
+      },
+      {
+        "example_id": 18274,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "crouches beside the shaft with a worried expression and reaches toward a row of new model cars being dragged sharply downward"
+          }
+        ],
+        "scene_adjust": "new model cars, an empty coin purse, and a bare sales display platform"
+      },
+      {
+        "example_id": 18275,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "wears a cycling helmet, loses control on the curved practice strip, and falls shoulder-first toward the padded impact plate"
+          }
+        ],
+        "scene_adjust": "a bicycle, a sharply curved practice strip, and a padded cover on the impact plate"
+      },
+      {
+        "example_id": 18276,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "watches anxiously from the rail as a stack of local unmarked coins drops far below a stable stack of differently shaped foreign coins"
+          }
+        ],
+        "scene_adjust": "two distinct sets of unmarked coins, with the local stack descending the shaft and the foreign stack on the rail"
+      }
+    ]
+  },
+  {
+    "expression_id": 3074,
+    "idiom": "dio impulso",
+    "anchor": {
+      "semantic_hook": "A coiled spring gives a physical push to each object placed on a launch lane, sending it forward with momentum.",
+      "setting": "A civic workshop contains a straight launch lane, a loading tray, and shelves for project models. The lane begins at one absurdly enormous coiled spring that can propel objects across the entire room.",
+      "cast": ["rosalia"],
+      "absurd_element": "a room-sized coiled spring powering the launch lane"
+    },
+    "variations": [
+      {
+        "example_id": 18277,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "releases the spring with an unmarked legal folder on the tray and watches a model hotel, shop, and coin cart surge forward with satisfaction"
+          }
+        ],
+        "scene_adjust": "an unmarked legal folder, a model hotel, a local shop model, summer travel gear, and a coin cart"
+      },
+      {
+        "example_id": 18278,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "stands at a low lectern making an energetic speaking gesture, then drives a nearly completed project model down the launch lane"
+          }
+        ],
+        "scene_adjust": "a low lectern, a nearly completed project model, tools, and a clock dial nearing its deadline position"
+      },
+      {
+        "example_id": 18279,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "loads public coin stacks beside a circuit-board model and releases the spring, following the accelerating technology model with an excited gaze"
+          }
+        ],
+        "scene_adjust": "public coin stacks, a circuit-board model, small robots, and research tools"
+      },
+      {
+        "example_id": 18280,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "raises a football in celebration after a first victory, then sets a row of player pieces moving together along the launch lane"
+          }
+        ],
+        "scene_adjust": "a football, a small victory cup, and a row of plain player pieces"
+      },
+      {
+        "example_id": 18281,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "kneels beside stacks of books at a fair stall and delightedly releases book carts toward rows of small youth-sized chairs"
+          }
+        ],
+        "scene_adjust": "stacks of books, an open fair stall, book carts, and rows of small youth-sized chairs"
+      },
+      {
+        "example_id": 18282,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "taps an image-only phone screen, releases the spring, and watches product boxes and a sales coin cart speed along the lane"
+          }
+        ],
+        "scene_adjust": "image-only phone screens, plain product boxes, and a sales coin cart"
+      }
+    ]
+  },
+  {
+    "expression_id": 3075,
+    "idiom": "cerró al alza",
+    "anchor": {
+      "semantic_hook": "A market finishes by closing a pair of doors around goods that have reached the high landing of an upward ramp.",
+      "setting": "An indoor market hall contains a broad rising ramp, rows of plain trade tokens, a handbell, and a high landing for the final close. At the landing, a pair of market doors absurdly floats without any supporting wall and closes around the elevated goods.",
+      "cast": ["pedro_sanchez"],
+      "absurd_element": "unsupported market doors floating at the ramp's high landing"
+    },
+    "variations": [
+      {
+        "example_id": 18283,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "rings the closing handbell at the high landing and smiles at bank-vault models and full coin trays gathered between the doors"
+          }
+        ],
+        "scene_adjust": "a Madrid skyline model, small bank vaults, and full coin trays"
+      },
+      {
+        "example_id": 18284,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "rolls the final oil barrel up to the high landing, glances at an almost empty supply rack, and pulls the doors closed"
+          }
+        ],
+        "scene_adjust": "oil barrels and an almost empty supply rack"
+      },
+      {
+        "example_id": 18285,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "holds up a newly unveiled unmarked device, guides a tray of technology share tokens to the high landing, and closes the doors behind them"
+          }
+        ],
+        "scene_adjust": "an unmarked new device, circuit-board parts, and plain technology share tokens"
+      },
+      {
+        "example_id": 18286,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "stands at the last-session bell and lifts one round European coin above a differently shaped foreign coin before shutting the high doors"
+          }
+        ],
+        "scene_adjust": "two distinct unmarked currency pieces and a handbell at the final trading position"
+      },
+      {
+        "example_id": 18287,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "pushes coffee sacks through the high doors and rings the closing bell with a pleased expression for a second time"
+          }
+        ],
+        "scene_adjust": "coffee sacks, loose coffee beans, and two side-by-side closing bells"
+      },
+      {
+        "example_id": 18288,
+        "inserts": [
+          {
+            "slug": "pedro_sanchez",
+            "action": "gathers models from many economic sectors on the high landing and pulls the market doors closed at the quarter's final position"
+          }
+        ],
+        "scene_adjust": "small factory, farm, house, gear, shop, and transport models gathered together"
+      }
+    ]
+  },
+  {
+    "expression_id": 3076,
+    "idiom": "de cara",
+    "anchor": {
+      "semantic_hook": "Every preparation table directly faces a concrete face at the far end of the room, keeping future goals physically in view.",
+      "setting": "A multipurpose preparation hall contains worktables, storage shelves, exercise space, and a clear forward aisle. The entire far wall is one absurdly enormous stone face with open eyes, and every table and object is turned directly toward it.",
+      "cast": ["nadia_calvino"],
+      "absurd_element": "an enormous stone face occupying the far wall"
+    },
+    "variations": [
+      {
+        "example_id": 18289,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "faces the stone face while placing coins into a savings jar and comparing the growing jar with an unopened future budget ledger"
+          }
+        ],
+        "scene_adjust": "a savings jar, loose coins, an unopened budget ledger, and a future cycle of seasonal tokens"
+      },
+      {
+        "example_id": 18290,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "studies intensely at a table turned toward the stone face, surrounded by closed books and practice materials, with a determined expression"
+          }
+        ],
+        "scene_adjust": "closed study books, unmarked practice sheets, exam supplies, and spring flowers for May"
+      },
+      {
+        "example_id": 18291,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "trains hard along the forward aisle, dribbling a football toward a goal set directly before the stone face"
+          }
+        ],
+        "scene_adjust": "training cones, a football, a goal, and a bright sun disk for Sunday"
+      },
+      {
+        "example_id": 18292,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "faces forward while practicing with a globe, headphones, and several conversation mouthpieces, then reaches toward a waiting briefcase"
+          }
+        ],
+        "scene_adjust": "a globe, headphones, conversation mouthpieces, a passport, and a professional briefcase"
+      },
+      {
+        "example_id": 18293,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "stands at the forward-facing table arranging new policy tools around a ballot box, studying them with serious concentration"
+          }
+        ],
+        "scene_adjust": "an unmarked ballot box, blank ballot sheets, policy tool models, and an approaching calendar wheel without digits"
+      },
+      {
+        "example_id": 18294,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "kneels beside a house-wall model facing the stone face, fitting insulation into it and checking a heater before winter"
+          }
+        ],
+        "scene_adjust": "a house-wall model, insulation rolls, renovation tools, a heater, and frost on the windows"
+      }
+    ]
+  },
+  {
+    "expression_id": 3077,
+    "idiom": "han llevado a cabo",
+    "anchor": {
+      "semantic_hook": "Completed work is physically carried along a work route to its far end and placed on a finishing pedestal.",
+      "setting": "A project-completion workshop contains a long work route running from supply benches to a finishing pedestal at the far end. The route absurdly climbs the wall and crosses the ceiling while every carried object stays firmly on its surface.",
+      "cast": ["rosalia", "penelope_cruz"],
+      "absurd_element": "a work route that climbs the wall and crosses the ceiling"
+    },
+    "variations": [
+      {
+        "example_id": 18295,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "wears an engineer's hard hat and carries one end of a completed bridge model toward the finishing pedestal with a triumphant smile"
+          },
+          {
+            "slug": "penelope_cruz",
+            "action": "wears an engineer's hard hat, carries the other end of the bridge model, and steadies it with confident focus"
+          }
+        ],
+        "scene_adjust": "a completed bridge model, engineering tools, and neatly fitted structural parts"
+      },
+      {
+        "example_id": 18296,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "wears laboratory gloves and carries a tray of completed experiment vessels along the route with careful concentration"
+          },
+          {
+            "slug": "penelope_cruz",
+            "action": "walks beside the tray holding test apparatus and watches the settled results with satisfaction"
+          }
+        ],
+        "scene_adjust": "experiment vessels, protective gloves, test apparatus, and a theory model made of interlocking shapes"
+      },
+      {
+        "example_id": 18297,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "carries a deep evidence tray toward the pedestal and examines damaged vehicle parts through a magnifying lens"
+          },
+          {
+            "slug": "rosalia",
+            "action": "follows with a serious expression, holding a model of the accident scene and a sealed evidence container"
+          }
+        ],
+        "scene_adjust": "damaged vehicle parts, a magnifying lens, an accident model, and sealed evidence containers"
+      },
+      {
+        "example_id": 18298,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "wears a school backpack and carries a full recycling sack toward the route's end with energetic pride"
+          },
+          {
+            "slug": "penelope_cruz",
+            "action": "carries a rake and a basket of collected litter beside her companion, smiling at the cleaned park model"
+          }
+        ],
+        "scene_adjust": "school backpacks, recycling sacks, a rake, collected litter, and a clean park model"
+      },
+      {
+        "example_id": 18299,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "wears surgical clothing and carries a closed surgical tray toward the finishing pedestal with calm relief"
+          },
+          {
+            "slug": "rosalia",
+            "action": "walks beside her in surgical clothing, checks a steady monitor dial, and raises a relieved thumb"
+          }
+        ],
+        "scene_adjust": "a closed surgical tray, surgical tools, clean cloths, and a monitor dial with a steady hand"
+      },
+      {
+        "example_id": 18300,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "carries a rebuilt company gear assembly toward the pedestal and points to its smoothly meshing parts"
+          },
+          {
+            "slug": "penelope_cruz",
+            "action": "walks beside her with an office model rearranged into an efficient layout, looking pleased with the reform"
+          }
+        ],
+        "scene_adjust": "a rebuilt gear assembly, an improved office model, tools, and old parts set aside"
+      }
+    ]
+  },
+  {
+    "expression_id": 3078,
+    "idiom": "acude al rescate",
+    "anchor": {
+      "semantic_hook": "A responder promptly travels down a rescue ramp into a central distress zone and delivers the exact aid needed there.",
+      "setting": "A multipurpose rescue depot contains a circular distress zone, supply shelves, an approach ramp, and sheltered space for emergencies. The approach ramp absurdly telescopes across any gap from the depot while remaining attached at one end.",
+      "cast": ["nadia_calvino", "pedro_sanchez"],
+      "absurd_element": "a rescue ramp that telescopes across any gap"
+    },
+    "variations": [
+      {
+        "example_id": 18301,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "stands worried beside her broken car in the distress zone, holding packed travel bags and an unusable key"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "hurries down the rescue ramp as her brother, offering his working car key with an encouraging smile"
+          }
+        ],
+        "scene_adjust": "a broken car, packed travel bags, and a second working car at the ramp"
+      },
+      {
+        "example_id": 18302,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "sits at a desk in the distress zone with an unfinished unmarked report and watches the deadline clock anxiously"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "rushes down the ramp carrying a laptop and new digital tools, then places them beside the unfinished report"
+          }
+        ],
+        "scene_adjust": "an unfinished unmarked report, a deadline clock without digits, a laptop, and several digital tools"
+      },
+      {
+        "example_id": 18303,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "recoils from a burned dinner pan in the distress zone and raises both hands in dismay"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "hurries down the ramp carrying a fresh prepared meal in plain containers and presents it with a reassuring grin"
+          }
+        ],
+        "scene_adjust": "a burned dinner pan, light kitchen smoke, and a fresh meal in plain delivery containers"
+      },
+      {
+        "example_id": 18304,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "sits in the distress zone halfway along a monthly row of moon tokens, turning an empty purse upside down with a worried face"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "arrives down the ramp in a protective parental role and places a full grocery basket and coin pouch beside her"
+          }
+        ],
+        "scene_adjust": "an empty purse, a half-finished row of moon tokens, a grocery basket, and a coin pouch"
+      },
+      {
+        "example_id": 18305,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "stands soaked in the distress zone under heavy rain, hunching her shoulders and shielding her head with her hands"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "runs down the ramp as a stranger and leans a broad umbrella over both of them"
+          }
+        ],
+        "scene_adjust": "heavy rain, puddles, and a broad umbrella"
+      },
+      {
+        "example_id": 18306,
+        "inserts": [
+          {
+            "slug": "nadia_calvino",
+            "action": "stands behind a service desk in the distress zone, recoiling from an unseen angry customer beyond the frame"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "strides down the ramp as her boss, positions himself beside the desk, and raises calm open palms to de-escalate the confrontation"
+          }
+        ],
+        "scene_adjust": "a service desk, a returned product box, and an overturned chair near the outer edge"
+      }
+    ]
+  },
+  {
+    "expression_id": 3079,
+    "idiom": "Dios no lo permita",
+    "anchor": {
+      "semantic_hook": "A heavenly barrier physically forbids feared events from crossing into the safe side of a planning terrace.",
+      "setting": "A sheltered planning terrace contains a safe table, an open path toward possible hazards, and a high gate set among ordinary clouds. One absurdly colossal stone hand is hinged across the gate as its barrier, firmly blocking the hazardous side.",
+      "cast": ["cristina_kirchner", "rosalia"],
+      "absurd_element": "a colossal stone hand blocking the heavenly gate"
+    },
+    "variations": [
+      {
+        "example_id": 18307,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands safely before the barrier, gestures anxiously toward a damaged car beyond it, and holds an unmarked health-insurance folder beside a full medical coin bowl"
+          }
+        ],
+        "scene_adjust": "a damaged car on the hazardous side, an unmarked health-insurance folder, a medical kit, and a full expense bowl"
+      },
+      {
+        "example_id": 18308,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "looks fearfully toward an empty office chair beyond the barrier while clutching a work briefcase"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "stands firmly beside her on the safe side and offers a supportive hand together with a full grocery basket"
+          }
+        ],
+        "scene_adjust": "an empty office chair and closed work box beyond the barrier, plus a grocery basket on the safe side"
+      },
+      {
+        "example_id": 18309,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "packs travel gear at the safe table but pauses warily, watching a darkening weather globe beyond the blocked gate"
+          },
+          {
+            "slug": "rosalia",
+            "action": "holds an open suitcase and keeps one hand poised above it, waiting to see whether the hazardous conditions worsen"
+          }
+        ],
+        "scene_adjust": "open suitcases, travel gear, a next-cycle moon token, and a darkening weather globe beyond the barrier"
+      },
+      {
+        "example_id": 18310,
+        "inserts": [
+          {
+            "slug": "rosalia",
+            "action": "sits weakly beside a travel suitcase with a blanket around her shoulders and a thermometer in one hand"
+          },
+          {
+            "slug": "cristina_kirchner",
+            "action": "supports her companion with one arm and urgently holds out a phone with its screen turned away"
+          }
+        ],
+        "scene_adjust": "a travel suitcase, a blanket, a thermometer without digits, a medical kit, and a phone"
+      },
+      {
+        "example_id": 18311,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "studies a failing shop model beyond the barrier with concern and reaches toward an alternate toolkit on the safe table"
+          },
+          {
+            "slug": "rosalia",
+            "action": "closes an empty cash box, then turns with determined focus toward a second project model and fresh tools"
+          }
+        ],
+        "scene_adjust": "a failing shop model, an empty cash box, a second project model, and an alternate toolkit"
+      },
+      {
+        "example_id": 18312,
+        "inserts": [
+          {
+            "slug": "cristina_kirchner",
+            "action": "places a bundle of unmarked documents into a strong safe and turns the key with a vigilant expression"
+          },
+          {
+            "slug": "rosalia",
+            "action": "holds the safe door steady and glances nervously toward an empty document case beyond the barrier"
+          }
+        ],
+        "scene_adjust": "unmarked documents, a strong safe with a key, and an empty document case on the hazardous side"
+      }
+    ]
+  },
+  {
+    "expression_id": 3080,
+    "idiom": "ponemos punto y final",
+    "anchor": {
+      "semantic_hook": "A round full stop is physically placed at the final end of a long blank paper path to close it.",
+      "setting": "A multipurpose closing stage contains a long blank paper roll running from a worktable to a raised final edge. One boulder-sized full-stop sphere rests beside that edge, an absurd enlargement ready to be placed at the end.",
+      "cast": ["penelope_cruz", "pedro_sanchez"],
+      "absurd_element": "a boulder-sized full-stop sphere beside the paper's end"
+    },
+    "variations": [
+      {
+        "example_id": 18313,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "finishes one last song at the front of the stage, lowers her microphone, and rolls the full-stop sphere onto the paper's final edge"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "stands beside the final instrument, releases its last chord, and gives a closing bow"
+          }
+        ],
+        "scene_adjust": "a microphone, musical instruments, an evening clock dial, and closed curtains"
+      },
+      {
+        "example_id": 18314,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "stands on one side of the paper path, sets down her wedding ring with composed sadness, and extends a friendly hand"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "stands opposite her, sets down his wedding ring, accepts the handshake, and helps move the full-stop sphere into place"
+          }
+        ],
+        "scene_adjust": "two wedding rings, a long chain of yearly tokens, and two packed boxes"
+      },
+      {
+        "example_id": 18315,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "pushes back from one debate chair with an exhausted expression and places both palms against the full-stop sphere"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "relaxes his tense shoulders, leaves the opposite debate chair, and helps roll the sphere between them to the paper's end"
+          }
+        ],
+        "scene_adjust": "two debate chairs facing each other and a tangled cord left behind"
+      },
+      {
+        "example_id": 18316,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "closes a project model inside a plain storage case, sets an empty coin tray beside it, and decisively pushes the full-stop sphere into place"
+          }
+        ],
+        "scene_adjust": "a company project model, a plain storage case, and an empty profit tray"
+      },
+      {
+        "example_id": 18317,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "wears a graduation cap, places an unmarked diploma scroll before the full-stop sphere, and reaches toward a waiting work briefcase with excitement"
+          }
+        ],
+        "scene_adjust": "a graduation cap, an unmarked diploma scroll, closed study books, and a work briefcase"
+      },
+      {
+        "example_id": 18318,
+        "inserts": [
+          {
+            "slug": "penelope_cruz",
+            "action": "unpacks travel keepsakes beside the paper's end and rolls the full-stop sphere past the last suitcase with relief"
+          },
+          {
+            "slug": "pedro_sanchez",
+            "action": "sets a home key on the worktable, closes an old travel trunk, and turns toward the home alcove"
+          }
+        ],
+        "scene_adjust": "worn suitcases, travel keepsakes, a closed travel trunk, and a home key"
+      }
+    ]
+  },
+  {
+    "expression_id": 3082,
+    "idiom": "al alza",
+    "anchor": {
+      "semantic_hook": "A market lift carries each measured object visibly upward from floor level to a higher platform.",
+      "setting": "A measurement hall contains a ground-level loading bay, vertical guide rails, comparison pedestals, and an open roof above a broad lift. The loaded lift platform absurdly rises along the rails without cables or machinery.",
+      "cast": ["javier_bardem"],
+      "absurd_element": "a loaded lift platform rising without cables or machinery"
+    },
+    "variations": [
+      {
+        "example_id": 18325,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "stands beside the rising lift and reaches upward toward city-center apartment models balanced above increasingly tall rent coin stacks"
+          }
+        ],
+        "scene_adjust": "city-center apartment models, house keys, and ascending stacks of rent coins"
+      },
+      {
+        "example_id": 18326,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "loads suitcases, cameras, and a regional hotel model onto the lift, then watches them rise with growing enthusiasm"
+          }
+        ],
+        "scene_adjust": "suitcases, cameras, scenic photographs, and a regional hotel model"
+      },
+      {
+        "example_id": 18327,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "compares an increasing row of technology worker pieces on the lift with a lower row on the ground and points upward confidently"
+          }
+        ],
+        "scene_adjust": "laptops, circuit boards, work briefcases, and an increasing row of plain worker pieces"
+      },
+      {
+        "example_id": 18328,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "watches thermometer fluid climb beside the rising lift, wipes his brow, and reaches for a fan in anticipation of the hot weekend"
+          }
+        ],
+        "scene_adjust": "a thermometer without digits, two sun disks, a hand fan, and weekend leisure gear"
+      },
+      {
+        "example_id": 18329,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "connects a charging cable to a new electric car model on the lift and watches its plain share tokens rise during the day's trading"
+          }
+        ],
+        "scene_adjust": "an electric car model, a charging cable, a battery model, and plain share tokens"
+      },
+      {
+        "example_id": 18330,
+        "inserts": [
+          {
+            "slug": "javier_bardem",
+            "action": "stands at a laptop displaying only a globe and microphone shapes, adds books and headphones to the lift, and follows its steady climb"
+          }
+        ],
+        "scene_adjust": "a laptop with image-only icons, language books, headphones, a globe, and two large hourglasses"
+      }
+    ]
+  }
+]
