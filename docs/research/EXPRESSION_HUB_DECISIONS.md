@@ -136,3 +136,13 @@ are not yet QA-judged) must look intentional in the same grid. Sources
 footer and context clip stay below the grid. Rebuilt for eyeballing as
 `hub_pilot_v2.apkg` (same selection, same GUIDs — imports update the
 pilot deck in place).
+
+**C1 quarantine skim (owner, 2026-08-09): all seven quarantine
+dispositions ACCEPTED** — `más bien` (both group entries,
+`52b6d3aa46640cd6` + `e383b8e3acddf900`), `al margen de`
+(`df8b53300f2ff97b`), `pour le coup` (`763bc565b9c4c14f`),
+`al di là di` (`77dbf86af6dcc45a`), `se non fosse che`
+(`e170261d13bb53dc`), and `meia dúzia` (`201ece0192435e5f`) stay
+archived and unconverted, pending later sense-splitting as Hub top-ups.
+The phase-5 manifest compiler's quarantine exclusion is therefore
+owner-ratified, not just policy.
