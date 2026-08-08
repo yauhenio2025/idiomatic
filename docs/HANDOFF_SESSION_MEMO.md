@@ -1,121 +1,89 @@
-# Session handoff memo — 2026-08-06 (Exercises 2.0 / Asset Factory orchestrator)
+# Session handoff memo — 2026-08-08 evening (image factory / QA loop / estate)
 
-> Supersedes the 2026-08-03 memo (git history keeps it). Written at
-> context exhaustion by the session that ran 2026-08-03→06: legacy audit
-> → Exercises 2.0 waves 1+2 → translation decks → comic pipeline →
-> Asset Factory strategy → famous cast. Read this + CLAUDE.md +
-> auto-memory (legacy-excercises, exercises2-roadmap) and you can take
-> over completely. Everything below is committed unless marked.
+> Supersedes the 2026-08-06 memo (git history keeps it). Read this +
+> CLAUDE.md + auto-memory and take over. Everything below is committed
+> or machine-local at the stated paths. The user leaves 2026-08-10 for
+> ~10-11 days (iPad studying only; machines pregenerate).
 
-## Where everything stands (all shipped & verified)
+## What shipped since the last memo (all user-approved)
 
-- **Exercises 2.0**: Waves 1 (CONNECTING) + 2 (CONDITIONALS) live in all
-  five languages — 1,772 notes / 3,544 cards (apkgs through 1521).
-  Machinery: `idiomatic/grammar/exercises2.py`, content in
-  `data/exercises2/notes/<lang>_<topic>.json`, per-chunk codex authoring
-  via `docs/commissions/EXERCISES2_BATCH_COMMISSION.md` (+ CONDITIONALS
-  addendum), gate `tools/x2_batch_gate.py`, `/admin/exercises2-build`.
-- **Translation decks** ×5 (732 cards, sentence-only back audio):
-  `idiomatic/grammar/translation.py`, `/admin/translation-build`.
-- **Delivery**: SYLLABUS-ONLY policy (add-on `_IMPORT_PROFILES`
-  allowlist; +2 profile is legacy, purge FIRED 2026-08-06 — old account
-  clean). Render disk upsized to 26 GB (16.8 free). ENOSPC-era fixes:
-  orphan-apkg janitor sweep, 12-day retention, `/admin/disk-usage`.
-- **Asset Factory**: strategy + famous-cast amendment committed
-  (`docs/ASSET_FACTORY_STRATEGY.md`, `…_FAMOUS_CAST.md`), **cast v1
-  APPROVED 30/30** (`docs/ASSET_FACTORY_CAST_V1.md` — incl. user
-  write-ins Juju/Capital Bra/Elodie/Fedez/Kevinho/Neubauer/Haddad; all
-  exclusion-checked vs the Mandarin palace; Capital Bra added last —
-  spot-check it with the famous-cast doc §1.3 checker before sheets).
-- **Comic pipeline (proven on the Fedora box)**: t2i settings →
-  Edit-2511 character insertion (sheet as image2) → bubbles TYPESET IN
-  CODE (never model-rendered — this rule is load-bearing) → PIL stitch.
-  ~4.5 min/strip, $0. Stack doc: `~/llms/qwen-image/LOCAL_QWEN_IMAGE.md`
-  (read before any generation; batch-by-model, `/free` after, OOM
-  history). Artifacts: worked examples …7e47d809…, head-to-head
-  …f78fffec…, cast console …37ccf0c7….
+- **Estate cutover COMPLETE** — live collection migrated to the six
+  language roots, builders compose from `anki_tree.anki_root()`,
+  video/didactic/audio deliveries retired. Tree contract in CLAUDE.md.
+- **Hub + estate decisions ALL CLOSED** (docs/research/*_DECISIONS.md).
+  Hub BUILD not started; user inserted a pre-Hub priority: the legacy
+  estate sweep (LEGACY_ESTATE_AUDIT_COMMISSION — partial: legacy_estate
+  table + /legacy page live via another session).
+- **Cast: 49 sheets, cloud lane (Qwen-Image 3.0 via /admin/
+  genmedia-render), /cast review panel.** Remake loop proven.
+- **Corpus illustration campaign**: ES briefs authored+gated through
+  b18 (~1,300 of 2,712 sentences; chunks b19+ NOT yet authored — keep
+  the codex conveyor going, then de/fr/it/pt exports). Renders on both
+  machines, split by PARTITION.json (mac: b01-06+b10-18; fedora: rest).
+- **Image QA loop ARMED 2026-08-08** after user calibration+demo:
+  rubric v2 = hard fails ONLY people-integrity (count/gender/
+  merge/duplicate) + anatomy; surrealism/action = soft ("surrealism
+  doesn't matter" — user). Repairs live: judge work orders (tagged
+  one-liners) → Edit-2511; 2 strikes → qa/human_review. Approved demos:
+  qa_mirror/repair_demo.html. Morning report: qa_mirror/DAILY.md.
+- **TTS**: qwen-local is the LIVE default on Render (bridge on this box,
+  Tailscale Funnel). ElevenLabs = fallback. Rollback = env pin.
 
-## The task queue for the successor (dependency order)
+## Successor task queue
 
-1. **Swapfile on the Fedora box** — the ONE undone user item; blocks
-   unattended overnights. Nag once:
-   `sudo fallocate -l 32G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile && echo '/swapfile none swap defaults 0 0' | sudo tee -a /etc/fstab`
-2. **Cast sheets**: ~45 faces (30 slots + wings). Max-quality mode
-   (no-LoRA, 40 steps, ~7 min/face), refs from Wikimedia into
-   `/srv/ai-models/outputs/factory/refs/` (MACHINE-LOCAL, never
-   uploaded/committed — living-person policy, famous-cast doc §1.4).
-   Gate: user names each face cold; 2 fails → recast (approved rule).
-   Falco already failed the fast tier; retry only at max-quality.
-3. **Mac Studio second node** (specs in CAST_V1 doc; 96 GB unified = no
-   OOM problem): install ComfyUI + the same GGUFs, benchmark s/image,
-   then run the same pull-based runner. **The user is AWAY ~10-11 days
-   soon** — both machines should pregenerate maximally in that window:
-   settings library (~70 views incl. BOTH Brazil AND Portugal
-   pt-flavors), cast sheets, then corpus strips.
-4. **Factory build-out**: commissions A–H in ASSET_FACTORY_STRATEGY §7,
-   amended by user verdicts: NO per-comic approval (model-judge QA,
-   N-best allowed), rescue deck DAILY + comic on back, combined back
-   APPROVED, escalation 10 videos/mo cap, weirdness 1-in-6. Registry
-   backend (B) first — it also fixes rescue's lease/history defects.
-5. **Telemetry system** (user: "a must!!!"): per-topic review metrics
-   from real Anki results driving generation targets; European langs
-   first; a SEPARATE deeper Mandarin version later. Also the
-   prerequisite of the comics→video escalation clock.
-6. **Podcast eps 2/10**: scripts already have per-line `TL: [lang]`
-   markers; `podcasts.py` hard-skips `lang: x` — build mixed-language
-   parser/voice switching, render 2 MP3s, author 10 cards + 20 SVGs.
-7. **Wave 3 TENSES**: verdict = RAW lapse order INCL. literary tenses
-   (user explicitly wants passato remoto mastery). Needs its own
-   addendum (like conditionals), canonical tense/person adapters, and
-   morphology revalidation — the mined priors contain corrupt forms
-   (STATE_OF_PLAY open loop 10). Then the same 15-chunk codex run.
-8. **Rescue autopilot**: fix the no-lease concurrency bug; comic drafts
-   migrate to the local pipeline "in the next few days" (user). Don't
-   pause it; don't let it double-spend.
+1. **Mornings**: read /srv/ai-models/outputs/factory/qa_mirror/DAILY.md;
+   check human_review contact sheet; fix systemic failure modes at the
+   RENDERER (prompt), not by softening the judge.
+2. **Prompt conveyor**: author ES b19-b38 (codex, 4 parallel, gate must
+   PASS), then export/chunk/author de,fr,it,pt
+   (/admin/corpus-export?lang=X → tools/illu_chunk.py → codex). Update
+   PARTITION.json when assigning chunks to the Mac (24/7 node gets the
+   bulk); commit so the Fedora miner sees it.
+3. **Aug 10**: confirm Fedora miner went 24/7 (miner_stop no-ops from
+   that date). Both boxes then pregenerate through the trip.
+4. **After legacy sweep verdicts**: the Expression Hub build (its own
+   commission needed; design docs are complete) — includes embedding
+   images into cards (images key on expression_examples.id — restructure
+   safe) and the Flag-1 telemetry.
+5. Rescue Comics deck: rolling kind='rescue_comics', rebuild via
+   ~/llms/qwen-image/factory/build_rescue_comics_deck.py (GUID-stable
+   in-place updates).
 
-## Mechanics a successor must know (hard-won)
+## Hard-won mechanics (violate at your peril)
 
-- **Codex delegation works**: 30+ chunks authored, 100% gate pass, zero
-  linguistic errors found in sampling. Commission files + per-chunk
-  `codex exec -s workspace-write` + orchestrator audit. Sessions REVISE
-  landed outputs — always re-merge idempotently from latest outputs,
-  never append.
-- **Gate false-positives**: Romance elisions (l'/d') and circumflexes
-  trip the wrong-language heuristic on it/pt — adjudicate by reading;
-  the gate over-flags by design.
-- **Never let a diffusion model render sentence text.** Typeset it.
-- **Batch by model** (all t2i, then all edits), `/free` between phases;
-  check `curl :8199/queue` before using the shared ComfyUI server —
-  other sessions use it too. The server dies with its terminal; restart
-  via `~/llms/qwen-image/start_comfy.sh`.
-- **Decision flow with the user**: they hate typing AND hate jargon —
-  plain human language only. The working pattern: clickable artifact
-  console → `downloads` capability saves `idiomatic-verdicts*.json` to
-  ~/Downloads → watch with the Monitor tool (NOT bash sleep loops —
-  those get killed). Files sometimes land between watchers: CHECK
-  ~/Downloads DIRECTLY before assuming nothing arrived. Screenshots of
-  the console are readable as a fallback.
-- **cleanup.json is single-slot** and was displaced TWICE by other
-  sessions' jobs — verify existence before relying on it; queued
-  cleanups are a commission-B deliverable.
-- **The repo is the only shared brain** — the user runs many parallel
-  sessions. Write everything durable into auto-memory, CHANGELOG,
-  and the roadmap docs immediately.
-- **Mandarin stays in mandarin-videos** (user directive): it is the
-  primary Mandarin entry point; don't pull Mandarin work into
-  idiomatic. Its sentence-format work is parked pending format
-  decisions; its actor registry is the CAST EXCLUSION LIST here.
+- **Mac**: ssh evgeny2026@192.168.110.65 (mac.lan mDNS flaky after
+  reboots). Renders/QA live in ~/llms/factory-node/. After ANY Mac
+  reboot: clear stranded ~/llms/factory-node/PAUSE_BOOKSCAN, restart
+  comfy (~/llms/qwen-image-edit/start_comfy.sh, dies with terminal),
+  relaunch run_queue_v2.sh + the b10_18 chain, check launchd qa tick.
+- **PAUSE_BOOKSCAN flag = the only way to pause bookscan.** NEVER
+  SIGSTOP its driver (wedges children; cost 5h once). Judge batches
+  raise/release it themselves and won't release a hold they didn't
+  create.
+- **Memory discipline on the Mac**: one giant at a time (mint ~50GB /
+  judge 54GB / gemma 34GB in 96GB). Judge scripts unload ollama + need
+  a 66GB cushion — a kernel panic (WindowServer starvation) taught
+  this. Don't lower the cushion.
+- **Fedora night window** 01:30-09:00 (systemd user timers qwen-miner-*)
+  until Aug 10 — the fans annoy the user; don't mint days before then.
+  /tmp is RAM: don't park big files there (a 3.5GB tarball once ate the
+  render headroom).
+- **Don't deploy idiomatic-app while a cloud batch rides the server**
+  (502s it). Announce deploys via CHANGELOG commits.
+- **Edit-model prompting**: one change per edit pass, no
+  "keep-everything" hedging alongside a structural change; never
+  describe objects "like a <being>" (draws the being); second inserts
+  must say IN-ADDITION/don't-duplicate/don't-replace.
+- **User's working style**: plain language, no jargon; clickable local
+  HTML consoles for decisions (pattern: page → verdict JSON to
+  ~/Downloads → watcher applies); show files/paths for every claim;
+  pilot-first before batching; they will call out lazy demos — pick the
+  dramatic example.
+- The repo is the shared brain across many parallel sessions — commit
+  docs/CHANGELOG as you land things; coordinate via commissions.
 
-## Open user decisions
+## Live watchers/automation at handoff
 
-None blocking. Corpus-walk SCALE is decided after Mac integration
-(model-judge QA + N-best already pre-authorized). All verdict rounds
-are recorded in memory + CHANGELOG — do NOT re-ask answered questions.
-
-## Quick verification commands
-
-- Suite: `.venv/bin/python -m pytest tests/ -q` (374 green at handoff)
-- Prod: `/admin/grammar-status`, `/admin/exercises2-list`,
-  `/admin/disk-usage` (token: `source ~/.config/idiomatic-admin.env`)
-- Batch gate: `.venv/bin/python tools/x2_batch_gate.py <chunks>`
-- Exclusion check: script embedded in ASSET_FACTORY_FAMOUS_CAST.md §1.3
+Fedora: qwen-miner timers; qa-sync.timer (30 min). Mac: launchd judge
+tick (15 min) + minting queue chain (b10-18 pending). Rescue autopilot
+daily on Render. No unfulfilled promises to other sessions.
