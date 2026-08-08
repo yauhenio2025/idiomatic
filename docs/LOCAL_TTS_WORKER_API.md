@@ -9,7 +9,10 @@ change) Render's `TTS_PROVIDER` setting.
 The machine-local worker now lives beside `~/llms/qwen3-tts/server/`, outside
 this repo. Its one-owner window wrapper cooperatively drains the image lane,
 stops only the exact idle ComfyUI unit, runs the queue, unloads Qwen, and then
-releases images. No daily service or timer is installed or enabled.
+releases images. A batch that requeues after a bridge or safety failure exits
+the worker for that invocation, so it cannot immediately reclaim the same
+clip; the job waits for the next opportunistic run or approved window. No
+daily service or timer is installed or enabled.
 
 ## Authentication and version
 
@@ -127,7 +130,8 @@ must never turn a local bridge error into a request to any paid provider.
    `requeue` defaults to `true`. `false` is an explicit operator quarantine;
    ordinary generation failures must remain queued for the next local window.
    If a worker disappears, a later claim automatically reclaims its expired
-   lease with `FOR UPDATE SKIP LOCKED`.
+   lease with `FOR UPDATE SKIP LOCKED`. The estate worker treats a requeued
+   batch as the end of its current invocation rather than spinning on it.
 
 6. Inspect progress:
 
@@ -154,7 +158,7 @@ must never turn a local bridge error into a request to any paid provider.
 
 The owner listens to this APKG before any full seed or rebuild.
 
-## Full corpus gate
+## Bulk gate and missing-only Exercises2 lane
 
 Bulk routes are closed by default. Only after the owner approves the pilot,
 set this separate config flag:
@@ -168,13 +172,61 @@ Then these explicit admin calls become available:
 ```http
 POST /admin/local-tts/v1/exercises2/seed-full
 POST /admin/local-tts/v1/exercises2/rebuild?lang=de
+POST /admin/exercises2-build?lang=de&local_only=true
 ```
 
-The first seeds all current Exercises2 source files idempotently. The second
-replaces that language's ordinary `kind=exercises2` rolling APKG, but only
-after every expected current-content clip has been completed locally. Neither
-route synthesizes on the server. Leave the approval flag false until the
-listening verdict.
+`seed-full` scans every current Exercises2 note but does **not** blindly queue
+every field. For each answer and example it uses a current, checksum-verified
+local completion first, then a conventional cached clip only when the file is
+a valid MP3 and has no silence marker. Only the unresolved rows are seeded.
+Its response separates `clips_completed_local`,
+`clips_existing_conventional`, `clips_invalid_conventional`,
+`clips_invalid_completed_requeued`, and `clips_missing`.
+
+The other two calls are synchronous compatibility and normal background entry
+points for the same strict hybrid rebuild. The build prefers verified local
+audio and reuses valid conventional cache audio, levels the conventional
+subset, and refuses the entire APKG if even one expected clip remains missing.
+It replaces that language's ordinary rolling `kind=exercises2` APKG only after
+the refusal gate passes. `local_only=true` means no TTS provider call; the
+ordinary endpoint without that flag remains unchanged. Neither seed nor build
+synthesizes on the server. Leave the approval flag false until the listening
+verdict.
+
+## Missing-only expression Fluency lane
+
+The same owner flag also guards the active expression-pool adapter:
+
+```http
+POST /admin/local-tts/v1/expression-pool/seed?lang=de
+POST /admin/rebuild-pools?lang=de&local_only=true
+```
+
+The seed reads the current pool rows and creates jobs only for unresolved
+TTS-backed fields:
+
+- target-language idiom;
+- English idiom/gloss;
+- English explanation; and
+- target-language and English audio for every example.
+
+English fields use the frozen English voice while target fields use the
+requested DE/ES/FR/IT/PT voice. Existing DB-owned audio references are reused
+only after staged-root confinement, file, MP3, and silence-marker validation.
+Current local completions are overlaid on an in-memory copy of the pool rows;
+the source tables are never rewritten. `audio_context` is deliberately
+excluded because it is source-video speech, not TTS.
+
+The `local_only=true` rebuild refuses before package creation if any eligible
+field is unresolved and skips the normal explanation-audio provider-on-miss
+path. It therefore publishes the normal Fluency artifact only from existing
+validated audio plus verified local-Qwen completions. Retired didactic and
+listen-and-learn pool kinds remain governed by their existing feature flags.
+
+No Part-A proposal has been imported, so there is intentionally no generic
+adapter for hypothetical legacy note models. After the owner authorizes a
+specific import, its wave-style schema must define stable source identities
+and eligible audio fields before that family can enter this queue.
 
 ## Idempotence and edits
 
@@ -183,7 +235,11 @@ language, frozen voice version, and exact text. Re-seeding unchanged content
 preserves completed state and leases. An authored text/voice/contract change
 keeps the source identity but generates a new canonical path and resets the job
 to `queued`, clearing its old completion metadata. Old clip files become inert:
-strict rebuilds only accept the current row/hash/path.
+strict rebuilds only accept the current row/hash/path. If a current completed
+row points to a missing, corrupt, size-mismatched, or checksum-mismatched file,
+the resolver requeues it only when the exact content hash and canonical path
+still match; a concurrent revision causes the build to fail rather than
+clobber newer state.
 
 ## Benchmark result
 

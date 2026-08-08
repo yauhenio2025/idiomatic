@@ -16,20 +16,35 @@ Rationale: structure all source material BEFORE the hub's model freeze,
 so nothing needs re-importing after. The Hub then holds every remaining
 user-visible deliverable.
 
-**Sweep progress (2026-08-08 12:05 +0800): Part A audit and Part C listening
-pilot shipped; Part B Wave 3 authoring is active.** A fresh
-download-only +2 snapshot is fully inventoried in
-`docs/research/legacy_estate/` (238 deck rows; 228,413 notes; 282,976 cards),
-seeded into the idempotent `legacy_estate` table, and visible read-only at
-`/legacy`. Codex proposals are not import authority: the one-sitting owner
-verdict remains the Part-A gate. The snapshot confirms the settled targeted
-cleanup (fake IT exercises, toxic ES false-friends, and 30 contaminated PT
-phrase rows) is already reflected; this audit did not touch cleanup.json or
-the remaining +2 purge track. The durable local-only Qwen queue completed its
-30-note / 60-clip mixed-language pilot and published APKG 1615; the owner
-listening verdict and the proposed 09:00--11:00 GPU split remain closed gates,
-and no timer is enabled. Wave 3's 15 source-hashed TENSES inputs are staged and
-authoring is under way; the Wave 4--6 new formats remain pilot-gated.
+**Sweep progress (2026-08-08 14:30 +0800): all work permitted before the
+owner gates is complete.** A fresh download-only +2 snapshot is fully
+inventoried in `docs/research/legacy_estate/` (238 deck rows; 228,413 notes;
+282,976 cards), including conservative 2023-contamination flags and exact
+sentence/gloss/pair overlap against the committed Exercises2, tenses, and
+grammar corpora. It is seeded into the idempotent `legacy_estate` table and
+visible read-only at `/legacy`. Codex proposals are not import authority: the
+one-sitting owner verdict remains the Part-A gate. The snapshot confirms the
+settled targeted cleanup (fake IT exercises, toxic ES false-friends, and 30
+contaminated PT phrase rows) is already reflected; this audit did not touch
+cleanup.json or the remaining +2 purge track.
+
+Wave 3 TENSES is content-complete: all 15 source-hashed chunks passed hostile
+linguistic audit and the hardened gate, then merged as 300 notes per language
+(1,500 notes / 3,000 cards). Its audio build and release wait only for the
+local-Qwen verdict. Wave 4 V1, Wave 5 V2, and Wave 6 P1 have audited static
+pilot packets and remain owner-gated; no bulk content was authored. The
+COMMANDS / PRONOUNS / REFLEXIVE gap audit is complete without imports, and
+FALSE_FRIENDS remains a rebuild.
+
+The durable local-only Qwen queue completed its 30-note / 60-clip
+mixed-language pilot and published APKG 1615. The dormant post-verdict lane now
+seeds only genuinely missing audio, can build Exercises2 from validated
+conventional-cache plus local clips without any provider call, and covers the
+active expression Fluency pool through an ephemeral local-audio overlay. Bad
+completed clips are revision-guarded back to the queue, and the machine worker
+defers a requeued batch until the next invocation/window. The listening
+verdict and proposed 09:00--11:00 GPU split remain closed gates: the approval
+flag is false, no bulk seed/build ran, and no timer is installed or enabled.
 
 ## 1. DONE — estate migration (closed 2026-08-08 morning)
 
@@ -84,11 +99,15 @@ User-visible gaps that are the Hub's explicit deliverables:
 
 | Item | State | Trigger |
 |---|---|---|
-| Qwen local TTS default flip | Estate pilot APKG 1615 delivered; Render still pins `TTS_PROVIDER=elevenlabs`; bulk + timer closed | Owner listens, then verdicts pilot and 09:00--11:00 GPU split |
+| Legacy-estate import proposals | 238-row read-only tree complete at `/legacy`; no import executed | Owner verdicts `import \| partial \| skip \| already-covered` in one sitting |
+| Qwen local TTS estate lane | APKG 1615 delivered; missing-only Exercises2 + Fluency-pool adapters ready; Render still pins `TTS_PROVIDER=elevenlabs`; approval flag, bulk, and timer closed | Owner listens (especially `frc002`), then verdicts pilot and 09:00--11:00 GPU split |
+| Exercises2 Wave 3 TENSES | 1,500 notes / 3,000 cards audited and merged; no audio build or APKG | Qwen listening verdict, then missing-only local run and normal rolling build |
+| Exercises2 Waves 4--6 | V1/V2/P1 static pilots audited; all bulk states closed | Owner verdict on each proposed format |
+| COMMANDS / PRONOUNS / REFLEXIVE | Gap audit complete; no imports or cards created | Feed approved future objectives to the grammar pipeline, not legacy imports |
 | Pimsleur scraper + Mandarin external builders | Still bake old deck roots | Update before any re-run (flagged in plan completion note) |
 | Media cleanup (~6.5 GiB orphan estimate) | Deliberately out of scope | Copied media dir + missing Mandarin `.webm` repair + owner approval |
 | +2 legacy profile purge | cleanup.json single-slot pending | Factory commission-B queued-cleanup requirement |
-| Exercises 2.0 remaining topic waves | Standing nag | docs/EXERCISES2_ROADMAP.md |
+| Exercises 2.0 remaining topic waves | Wave 3 content complete; Waves 4--6 owner-gated; FALSE_FRIENDS rebuild pending | docs/EXERCISES2_ROADMAP.md |
 | Error-mine Wave 7 | Proposal pending owner decisions | docs/research (error profiles) |
 | Stall-popup cap-idle false alarm | Heuristic fires on fully-capped days | Owner opts in to the fix |
 

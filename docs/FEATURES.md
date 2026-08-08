@@ -148,18 +148,34 @@
 - **Added**: 2026-08-03 | **Modified**: 2026-08-03
 
 ### Exercises 2.0 (rich EN→TL usage notes; pilot: es connecting — format approved)
-- **Status**: Active (ES CONNECTING pilot approved 2026-08-04; IT corpus rebuild + further batches in progress)
-- **Description**: Revival of the 2023 legacy EXCERCISES corpus (see docs/research/legacy-excercises-audit.md) as rich notes: EN prompt → TL main rendering + accepted alternatives, register line, interference trap, in-register example (El País-opinion style), pre-rendered cloze. Content is codex-authored against commissions, audited, then committed as JSON under `data/exercises2/notes/<lang>_<topic>.json`; the builder synthesizes two cached leveled ElevenLabs clips per note (answer + example; silence-marked failures ship text-only), packages one frozen 17-field `Idiomatic Exercises v1` model (2 templates: Production, Cloze) into `<ROOT>::4 Exercises::{Topic}` subdecks, and publishes a rolling `apkgs.kind='exercises2'` row per language — zero add-on changes.
+- **Status**: Active (Waves 1–2 shipped; Wave 3 TENSES audited and merged but audio build/release gated on the local-Qwen pilot verdict; Waves 4–6 format-gated)
+- **Description**: Revival of the 2023 legacy EXCERCISES corpus (see docs/research/legacy-excercises-audit.md) as rich notes: EN prompt → TL main rendering + accepted alternatives, register line, interference trap, in-register example, pre-rendered cloze. Content is codex-authored against commissions, independently audited, mechanically gated, and committed as JSON under `data/exercises2/notes/<lang>_<topic>.json`. The normal builder retains the configured provider/cache path; the explicit owner-gated `local_only=true` lane instead resolves a current verified local-Qwen clip first, safely reuses a valid conventional cache clip second, refuses any unresolved clip, and never calls a provider. Both paths package the frozen 17-field `Idiomatic Exercises v1` model (2 templates: Production, Cloze) into `<ROOT>::4 Exercises::{Topic}` subdecks and publish the rolling `apkgs.kind='exercises2'` row. Waves 1–2 account for 1,772 shipped notes / 3,544 cards; Wave 3 adds five merged 300-note TENSES files, bringing authored totals to 3,272 / 6,544 without publishing an APKG yet.
 - **Entry Points**:
   - `idiomatic/grammar/exercises2.py` - schema validation, GUID/deck naming, cloze→mark/blank HTML, TTS cache + leveling, model + apkg build, `build_language()`
-  - `idiomatic/grammar/data/exercises2/notes/es_connecting.json` - approved 42-note pilot content
+  - `idiomatic/local_tts.py` - missing-only queue resolver, exact-revision media validation/requeue, strict hybrid local rebuild
+  - `idiomatic/grammar/data/exercises2/notes/*_tenses.json` - Wave 3's five audited 300-note merges
   - `idiomatic/grammar/data/exercises2/it_rebuild/` - IT corpus rebuild inputs/outputs (2,589 EN prompts with es/fr/pt/de refs)
-  - `idiomatic/api.py:796-830` - `POST /admin/exercises2-build?lang`, `GET /admin/exercises2-list`
+  - `idiomatic/api.py` - `POST /admin/exercises2-build?lang[&local_only=true]`, `GET /admin/exercises2-list`, versioned local-queue endpoints
+  - `tools/x2_wave_pipeline.py`, `tools/x2_batch_gate.py` - source-hashed staging, duplicate checks, strict batch gate, merge verification
+  - `docs/EXERCISES2_ROADMAP.md`, `docs/research/legacy_estate/EXERCISES2_WAVE3_AUDIT.md` - wave accounting and final Wave 3 evidence
   - `docs/commissions/EXERCISES2_PILOT_COMMISSION.md`, `docs/commissions/EXERCISES2_IT_REBUILD_COMMISSION.md` - codex authoring contracts
   - `tools/it_rebuild_driver.sh` - resumable parallel codex driver for the IT rebuild
-  - `tests/test_exercises2.py` - schema/GUID/cloze/TTS-cache/apkg coverage
-- **Dependencies**: `gemini.synthesize` provider chain (ElevenLabs primary), `leveled_speech_clip` + voice fingerprint (`idiomatic/grammar/explainers.py`), `LANG_VOICE` (`idiomatic/pipeline/audio.py`), genanki, codex CLI (authoring)
-- **Added**: 2026-08-04
+  - `tests/test_exercises2.py`, `tests/test_local_tts.py`, `tests/test_x2_wave_pipeline.py` - model/content, provider-free local lane, and pipeline/gate coverage
+- **Dependencies**: normal route: configured `gemini.synthesize` provider chain + cache; local-only route: versioned `local_tts_jobs` queue and validated staged MP3s; both: `leveled_speech_clip`, voice fingerprints, genanki; codex CLI for authoring
+- **Added**: 2026-08-04 | **Modified**: 2026-08-08
+
+### Local Qwen estate-voicing queue
+- **Status**: Pilot delivered; post-pilot adapters deployed but disarmed pending owner verdict (`LOCAL_TTS_EXERCISES2_PILOT_APPROVED=false`)
+- **Description**: Durable, versioned, lease-based queue for cost-0 machine-local Qwen synthesis. The cloud accepts and validates canonical MP3 uploads but never synthesizes a queue job. Full Exercises2 seeding queues only audio missing from both current local completions and the conventional cache. The expression-pool adapter similarly covers target idiom, English gloss, English explanation, and both target/English example audio, leaves source-video `audio_context` untouched, overlays results on copied rows, and refuses a local-only Fluency rebuild while anything is missing. Invalid completed clips return to the queue under exact content-hash/path guards. No provider fallback, source-row mutation, bulk seed/build, service, or timer is active before the owner gate.
+- **Entry Points**:
+  - `idiomatic/local_tts.py` - queue identities, resolvers, missing-only seeders, upload validation, strict builders
+  - `idiomatic/db.py` - idempotent seed, lease/claim/fail/complete, exact-revision completed-job requeue
+  - `idiomatic/api.py` - `/admin/local-tts/v1/*`, `POST /admin/exercises2-build?local_only=true`, `POST /admin/rebuild-pools?local_only=true`
+  - `idiomatic/pipeline/pool.py` - ephemeral expression-row audio overlay and provider-free strict rebuild
+  - `docs/LOCAL_TTS_WORKER_API.md` - worker and operator contract
+  - `tests/test_local_tts.py` - queue, validation, hybrid resolution, API gate, and expression-pool coverage
+- **Dependencies**: loopback machine-local Qwen3-TTS bridge and worker; server-side staged-audio store; owner listening verdict before any bulk action
+- **Added**: 2026-08-08
 
 ### Translation-exercise decks (repurposed grammar drills)
 - **Status**: Active (code merged; first builds pending)
