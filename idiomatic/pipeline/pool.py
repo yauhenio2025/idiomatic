@@ -400,37 +400,46 @@ def _stitch_pool_card_audio(*, lang: str, idiom: dict, narration_root: Path,
     # stub (e.g. 8kF0yFI_5vU/context_006.mp3, 236 B) that makes ffmpeg
     # concat error out — degrade that card to no-context instead.
     if ctx_path and ctx_path.exists() and ctx_path.stat().st_size > 1000:
-        if listen_context: front_pieces += [listen_context, sh]
+        if listen_context:
+            front_pieces += [listen_context, sh]
         front_pieces += [ctx_path, md]
-    if here_it_is: front_pieces += [here_it_is, sh]
+    if here_it_is:
+        front_pieces += [here_it_is, sh]
     front_pieces += [idiom_tgt, md]
-    if meaning: front_pieces += [meaning, sh]
+    if meaning:
+        front_pieces += [meaning, sh]
     front_pieces += [idiom_en, md]
     # Explanation audio ("how to use it") — persisted by the worker for
     # new videos, TTS'd on miss by rebuild_pools for older rows.
     expl_rel = idiom.get("audio_explanation")
     expl_path = data_root / expl_rel if expl_rel else None
     if expl_path and expl_path.exists() and expl_path.stat().st_size > 0:
-        if how_to_use: front_pieces += [how_to_use, sh]
+        if how_to_use:
+            front_pieces += [how_to_use, sh]
         front_pieces += [expl_path, md]
     if teach and any(en and tg for en, tg in teach):
-        if examples_intro: front_pieces += [examples_intro, sh]
+        if examples_intro:
+            front_pieces += [examples_intro, sh]
         for i, (en_p, tgt_p) in enumerate(teach):
             if not (en_p and tgt_p):
                 continue
-            if i > 0: front_pieces.append(md)
+            if i > 0:
+                front_pieces.append(md)
             front_pieces += [en_p, sh, tgt_p]
 
     # Back audio
     back_pieces: list[Path] = []
-    if practice_intro: back_pieces += [practice_intro, md]
+    if practice_intro:
+        back_pieces += [practice_intro, md]
     drilled = 0
     for i, (en_p, tgt_p) in enumerate(drill):
         if not (en_p and tgt_p):
             continue
-        if drilled > 0: back_pieces.append(lg)
+        if drilled > 0:
+            back_pieces.append(lg)
         lead = sentence_leads[i] if i < 3 else None
-        if lead: back_pieces += [lead, sh]
+        if lead:
+            back_pieces += [lead, sh]
         back_pieces += [en_p, think, tgt_p]
         drilled += 1
 
@@ -584,7 +593,9 @@ async def _ensure_explanation_audio(lang: str, idioms: list[dict]) -> None:
 _REBUILD_LOCKS: dict[str, asyncio.Lock] = {}
 
 
-async def rebuild_pools(lang: str, force: bool = False) -> dict:
+async def rebuild_pools(
+    lang: str, force: bool = False, *, local_only: bool = False,
+) -> dict:
     """Builds ALL four pool apkgs for the language and upserts their rows
     in the apkgs table. Returns a stats dict.
 
@@ -592,15 +603,24 @@ async def rebuild_pools(lang: str, force: bool = False) -> dict:
     last `pool_rebuild_debounce_min` minutes, unless force=True
     (/admin/rebuild-pools). A skipped rebuild is harmless — the next
     non-debounced one reads the full DB and picks everything up.
-    Serialized per language (see _REBUILD_LOCKS)."""
+    Serialized per language (see _REBUILD_LOCKS).  ``local_only`` overlays
+    verified local-Qwen completions and refuses missing clips without calling
+    the explanation TTS-on-miss provider path."""
+    if local_only:
+        from .. import local_tts
+        local_tts.require_bulk_approval()
+        if lang not in local_tts.EXPRESSION_POOL_LANGS:
+            raise ValueError("pool lang must be de|es|fr|it|pt")
     lock = _REBUILD_LOCKS.setdefault(lang, asyncio.Lock())
     if lock.locked():
         log.info("pool.rebuild_waiting", lang=lang)
     async with lock:
-        return await _rebuild_pools_locked(lang, force)
+        return await _rebuild_pools_locked(lang, force, local_only=local_only)
 
 
-async def _rebuild_pools_locked(lang: str, force: bool) -> dict:
+async def _rebuild_pools_locked(
+    lang: str, force: bool, *, local_only: bool = False,
+) -> dict:
     settings = get_settings()
     if not force and await db.pool_rebuilt_within(
             lang, settings.pool_rebuild_debounce_min):
@@ -612,7 +632,27 @@ async def _rebuild_pools_locked(lang: str, force: bool) -> dict:
         log.info("pool.skip_empty", lang=lang)
         return {"lang": lang, "n_idioms": 0,
                 "idioms_cards": 0, "expr_cards": 0,
-                "t2e_cards": 0, "e2t_cards": 0}
+                "t2e_cards": 0, "e2t_cards": 0,
+                "local_only": local_only}
+
+    local_stats: dict = {}
+    if local_only:
+        from .. import local_tts
+        resolution = await local_tts.resolve_expression_pool_audio(lang, idioms)
+        if resolution.missing_rows:
+            preview = "; ".join(
+                row["source_key"] for row in resolution.missing_rows[:10]
+            )
+            suffix = (
+                f"; plus {len(resolution.missing_rows) - 10} more"
+                if len(resolution.missing_rows) > 10 else ""
+            )
+            raise local_tts.LocalTTSBuildError(
+                "local-only expression-pool rebuild refused "
+                f"{len(resolution.missing_rows)} clip(s): {preview}{suffix}"
+            )
+        idioms = resolution.idioms
+        local_stats = resolution.stats
 
     apkg_root = Path(settings.data_dir) / "apkgs" / lang
     apkg_root.mkdir(parents=True, exist_ok=True)
@@ -625,8 +665,11 @@ async def _rebuild_pools_locked(lang: str, force: bool) -> dict:
     narration_root = Path(settings.data_dir) / "narration"
 
     # Fill in missing explanation audio before stitching (older rows have
-    # the text but were never TTS'd — see F-008).
-    await _ensure_explanation_audio(lang, idioms)
+    # the text but were never TTS'd — see F-008). The explicit local-only
+    # lane has already overlaid a verified local clip and must never enter
+    # this paid-provider path.
+    if not local_only:
+        await _ensure_explanation_audio(lang, idioms)
 
     idioms_apkg = apkg_root / "_pool_idioms.apkg"
     expr_apkg = apkg_root / "_pool_expressions.apkg"
@@ -690,4 +733,6 @@ async def _rebuild_pools_locked(lang: str, force: bool) -> dict:
             "idioms_cards": idioms_n,
             "expr_cards": expr_n,
             "t2e_cards": t2e_n,
-            "e2t_cards": e2t_n}
+            "e2t_cards": e2t_n,
+            "local_only": local_only,
+            **local_stats}

@@ -963,8 +963,8 @@ async def leased_local_tts_job(
     pool = await get_pool()
     row = await pool.fetchrow(
         """
-        SELECT id, contract_version, source_key, lang, note_key, clip_kind,
-               text, voice_version, content_hash, staged_path, attempts
+        SELECT id, contract_version, source_kind, source_key, lang, note_key,
+               clip_kind, text, voice_version, content_hash, staged_path, attempts
         FROM local_tts_jobs
         WHERE id = $1 AND status = 'leased' AND lease_token = $2
           AND lease_expires_at > NOW()
@@ -1016,6 +1016,42 @@ async def completed_local_tts_jobs(source_keys: list[str]) -> list[dict[str, Any
         source_keys,
     )
     return [dict(row) for row in rows]
+
+
+async def requeue_completed_local_tts_job(
+    source_key: str, *, content_hash: str, staged_path: str, error: str,
+) -> bool:
+    """Requeue one invalid completion only if its exact revision is current.
+
+    The revision guards keep a verifier from resetting a row that was edited,
+    re-seeded, or leased after it was read.  Callers must treat ``False`` as a
+    consistency conflict and re-read instead of weakening the predicate.
+    """
+    pool = await get_pool()
+    row = await pool.fetchrow(
+        """
+        UPDATE local_tts_jobs
+        SET status = 'queued',
+            attempts = 0,
+            lease_token = NULL,
+            worker_id = NULL,
+            lease_started_at = NULL,
+            lease_expires_at = NULL,
+            last_error = LEFT($4, 1000),
+            last_failed_at = NOW(),
+            audio_size_bytes = NULL,
+            audio_sha256 = NULL,
+            completed_at = NULL,
+            updated_at = NOW()
+        WHERE source_key = $1
+          AND content_hash = $2
+          AND staged_path = $3
+          AND status = 'completed'
+        RETURNING id
+        """,
+        source_key, content_hash, staged_path, error,
+    )
+    return row is not None
 
 
 async def local_tts_status(contract_version: int = 1) -> dict[str, Any]:

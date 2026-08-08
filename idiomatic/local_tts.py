@@ -13,8 +13,9 @@ import hashlib
 import json
 import os
 import tempfile
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import structlog
 
@@ -27,6 +28,9 @@ log = structlog.get_logger()
 CONTRACT_VERSION = 1
 VOICE_VERSION = "qwen3-tts-clone-v1"
 PILOT_APKG_KIND = "exercises2_pilot"
+EXPRESSION_POOL_SOURCE_KIND = "expression_pool"
+EXPRESSION_POOL_LANGS = x2.SUPPORTED_LANGS
+LOCAL_TTS_LANGS = frozenset((*x2.SUPPORTED_LANGS, "en"))
 # ``apkgs.lang`` is delivery-routing metadata and accepts one language.  The
 # operator's normal agent subscribes to Spanish as well as the other pilot
 # languages, so one mixed artifact rides that lane instead of five APKGs.
@@ -145,6 +149,17 @@ def canonical_staged_path(source_key: str, lang: str, digest: str) -> str:
     return f"grammar/exercises2/local_qwen/v{CONTRACT_VERSION}/{lang}/{name}"
 
 
+def expression_pool_staged_path(source_key: str, lang: str, digest: str) -> str:
+    """Canonical local-Qwen path for expression-pool overlay clips."""
+    if lang not in LOCAL_TTS_LANGS:
+        raise ValueError("unsupported local TTS language")
+    if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest):
+        raise ValueError("content digest must be 64 lowercase hex characters")
+    identity = hashlib.sha256(source_key.encode("utf-8")).hexdigest()[:12]
+    name = f"idxpq_v{CONTRACT_VERSION}_{lang}_{identity}_{digest[:20]}.mp3"
+    return f"expressions/pool/local_qwen/v{CONTRACT_VERSION}/{lang}/{name}"
+
+
 def exercises2_job_rows(
     notes: list[x2.Ex2Note], *, is_pilot: bool,
 ) -> list[dict[str, Any]]:
@@ -173,6 +188,125 @@ def exercises2_job_rows(
     return rows
 
 
+@dataclass(frozen=True)
+class _ExpressionPoolClipSpec:
+    row: dict[str, Any]
+    idiom_id: int
+    audio_field: str
+    example_ord: int | None = None
+
+
+def _expression_pool_clip_specs(
+    lang: str, idioms: list[dict[str, Any]],
+) -> list[_ExpressionPoolClipSpec]:
+    """Map writable pool audio fields to deterministic virtual queue notes.
+
+    ``answer`` is the target/primary side and ``example`` is the English side.
+    An optional explanation is its own one-clip virtual note.  This stays
+    within the queue's frozen answer/example constraint; ``source_key`` and
+    ``audio_field`` retain the unambiguous destination identity.
+    """
+    if lang not in EXPRESSION_POOL_LANGS:
+        raise ValueError("pool lang must be de|es|fr|it|pt")
+    specs: list[_ExpressionPoolClipSpec] = []
+
+    def add(
+        *, idiom_id: int, note_key: str, clip_kind: str, text: Any,
+        voice_lang: str, audio_field: str, example_ord: int | None = None,
+    ) -> None:
+        if not isinstance(text, str) or not text.strip():
+            raise LocalTTSBuildError(
+                f"expression-pool source has empty text: {note_key}:{audio_field}"
+            )
+        source_key = f"{note_key}:{clip_kind}"
+        digest = content_hash(text, voice_lang)
+        specs.append(_ExpressionPoolClipSpec(
+            row={
+                "contract_version": CONTRACT_VERSION,
+                "source_kind": EXPRESSION_POOL_SOURCE_KIND,
+                "source_key": source_key,
+                "lang": voice_lang,
+                "note_key": note_key,
+                "clip_kind": clip_kind,
+                "text": text,
+                "voice_version": VOICE_VERSION,
+                "content_hash": digest,
+                "staged_path": expression_pool_staged_path(
+                    source_key, voice_lang, digest,
+                ),
+                "is_pilot": False,
+            },
+            idiom_id=idiom_id,
+            audio_field=audio_field,
+            example_ord=example_ord,
+        ))
+
+    seen_idioms: set[int] = set()
+    for idiom in idioms:
+        try:
+            idiom_id = int(idiom["id"])
+        except (KeyError, TypeError, ValueError) as exc:
+            raise LocalTTSBuildError("expression-pool row needs an integer id") from exc
+        if idiom_id in seen_idioms:
+            raise LocalTTSBuildError(f"duplicate expression-pool idiom id: {idiom_id}")
+        seen_idioms.add(idiom_id)
+        base = f"expression_pool:v{CONTRACT_VERSION}:{lang}:idiom:{idiom_id}"
+        add(
+            idiom_id=idiom_id, note_key=base, clip_kind="answer",
+            text=idiom.get("idiom_text"), voice_lang=lang,
+            audio_field="audio_idiom_tgt",
+        )
+        add(
+            idiom_id=idiom_id, note_key=base, clip_kind="example",
+            text=idiom.get("english_gloss"), voice_lang="en",
+            audio_field="audio_idiom_en",
+        )
+        explanation = idiom.get("explanation_en")
+        if isinstance(explanation, str) and explanation.strip():
+            add(
+                idiom_id=idiom_id, note_key=f"{base}:explanation",
+                clip_kind="answer", text=explanation, voice_lang="en",
+                audio_field="audio_explanation",
+            )
+
+        seen_ords: set[int] = set()
+        for example in idiom.get("examples") or []:
+            try:
+                order = int(example["ord"])
+            except (KeyError, TypeError, ValueError) as exc:
+                raise LocalTTSBuildError(
+                    f"expression-pool idiom {idiom_id} has invalid example ord"
+                ) from exc
+            if order in seen_ords:
+                raise LocalTTSBuildError(
+                    f"expression-pool idiom {idiom_id} repeats example ord {order}"
+                )
+            seen_ords.add(order)
+            example_key = f"{base}:example:{order}"
+            add(
+                idiom_id=idiom_id, note_key=example_key, clip_kind="answer",
+                text=example.get("target_text"), voice_lang=lang,
+                audio_field="audio_target", example_ord=order,
+            )
+            add(
+                idiom_id=idiom_id, note_key=example_key, clip_kind="example",
+                text=example.get("en_text"), voice_lang="en",
+                audio_field="audio_en", example_ord=order,
+            )
+
+    source_keys = [spec.row["source_key"] for spec in specs]
+    if len(source_keys) != len(set(source_keys)):
+        raise LocalTTSBuildError("duplicate expression-pool local-TTS identity")
+    return specs
+
+
+def expression_pool_job_rows(
+    lang: str, idioms: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Public, deterministic queue rows for pool fields except context audio."""
+    return [spec.row for spec in _expression_pool_clip_specs(lang, idioms)]
+
+
 async def seed_exercises2_pilot() -> dict[str, Any]:
     notes = pilot_notes()
     result = await db.seed_local_tts_jobs(exercises2_job_rows(notes, is_pilot=True))
@@ -191,9 +325,17 @@ def require_bulk_approval() -> None:
 async def seed_exercises2_full() -> dict[str, Any]:
     require_bulk_approval()
     notes = all_exercises2_notes()
-    result = await db.seed_local_tts_jobs(exercises2_job_rows(notes, is_pilot=False))
-    return {**result, "notes": len(notes), "jobs": len(notes) * 2,
-            "contract_version": CONTRACT_VERSION, "pilot": False}
+    resolution = await resolve_exercises2_audio(notes)
+    result = await db.seed_local_tts_jobs(resolution.missing_rows)
+    return {
+        **result,
+        **resolution.stats,
+        "notes": len(notes),
+        "jobs": len(resolution.missing_rows),
+        "contract_version": CONTRACT_VERSION,
+        "pilot": False,
+        "missing_only": True,
+    }
 
 
 def _is_mp3_frame_header(header: bytes) -> bool:
@@ -244,7 +386,14 @@ def _expected_path_for_job(job: dict[str, Any]) -> str:
     )
     if expected_hash != job["content_hash"]:
         raise LocalTTSUploadError("job content hash is inconsistent")
-    return canonical_staged_path(job["source_key"], job["lang"], expected_hash)
+    source_kind = job.get("source_kind")
+    if source_kind == "exercises2":
+        return canonical_staged_path(job["source_key"], job["lang"], expected_hash)
+    if source_kind == EXPRESSION_POOL_SOURCE_KIND:
+        return expression_pool_staged_path(
+            job["source_key"], job["lang"], expected_hash,
+        )
+    raise LocalTTSUploadError(f"unsupported local-TTS source kind: {source_kind!r}")
 
 
 def _staged_audio_root(data_dir: Path, *, create: bool) -> Path:
@@ -353,6 +502,282 @@ def _verified_completed_clip(
     return clip
 
 
+@dataclass(frozen=True)
+class Exercises2AudioResolution:
+    """Current local audio plus the exact Exercises2 rows still missing."""
+
+    audio_by_note_key: dict[str, x2.NoteAudio]
+    missing_rows: list[dict[str, Any]]
+    stats: dict[str, int]
+
+
+@dataclass(frozen=True)
+class ExpressionPoolAudioResolution:
+    """Ephemeral pool-row overlay plus the exact queue rows still missing."""
+
+    idioms: list[dict[str, Any]]
+    missing_rows: list[dict[str, Any]]
+    stats: dict[str, int]
+
+
+def _conventional_exercises2_clip(
+    expected: dict[str, Any], *, settings: Any, data_dir: Path,
+) -> tuple[Path | None, bool]:
+    """Return a validated conventional clip and whether one was invalid."""
+    digest = x2.audio_cache_key(expected["text"], expected["lang"], settings)
+    clip = (
+        Path(data_dir) / "staged_audio" / "grammar" / "exercises2"
+        / expected["lang"] / x2.audio_filename(expected["lang"], digest)
+    )
+    marker = x2.gemini.silence_marker(clip)
+    if not clip.is_file():
+        return None, marker.exists()
+    if marker.exists():
+        return None, True
+    try:
+        validate_mp3(clip.read_bytes())
+    except (OSError, LocalTTSUploadError):
+        return None, True
+    return clip, False
+
+
+async def _guarded_requeue_invalid_completion(
+    expected: dict[str, Any], *, reason: str,
+) -> None:
+    requeued = await db.requeue_completed_local_tts_job(
+        expected["source_key"],
+        content_hash=expected["content_hash"],
+        staged_path=expected["staged_path"],
+        error=reason,
+    )
+    if not requeued:
+        raise LocalTTSBuildError(
+            "completed local-TTS row changed during verification: "
+            f"{expected['source_key']}"
+        )
+
+
+async def resolve_exercises2_audio(
+    notes: list[x2.Ex2Note],
+    *,
+    data_dir: Path | None = None,
+    level_conventional: bool = False,
+    level_fn: Callable[[Path], Path] | None = None,
+) -> Exercises2AudioResolution:
+    """Resolve current local completions first, then conventional cache.
+
+    Only unresolved rows are returned for seeding.  A completion whose
+    revision is current but whose staged file is absent, corrupt, or has the
+    wrong checksum is atomically requeued under exact revision guards.
+    Conventional clips still suppress missing work, but a matching verified
+    Qwen completion wins when both sources exist. Conventional clips are
+    levelled only for a complete, buildable result; local-Qwen uploads are
+    already normalized by the bridge contract.
+    """
+    expected_rows = exercises2_job_rows(notes, is_pilot=False)
+    completed_rows = await db.completed_local_tts_jobs(
+        [row["source_key"] for row in expected_rows]
+    )
+    completed = {row["source_key"]: row for row in completed_rows}
+    settings = get_settings()
+    root = Path(data_dir) if data_dir is not None else Path(settings.data_dir)
+
+    clips: dict[tuple[str, str], Path] = {}
+    conventional_keys: set[tuple[str, str]] = set()
+    missing_rows: list[dict[str, Any]] = []
+    stats = {
+        "clips_expected": len(expected_rows),
+        "clips_existing_conventional": 0,
+        "clips_invalid_conventional": 0,
+        "clips_completed_local": 0,
+        "clips_missing": 0,
+        "clips_stale_completed": 0,
+        "clips_invalid_completed_requeued": 0,
+    }
+
+    for expected in expected_rows:
+        key = (expected["note_key"], expected["clip_kind"])
+        current = completed.get(expected["source_key"])
+        current_matches = current is not None and (
+            current["content_hash"] == expected["content_hash"]
+            and current["staged_path"] == expected["staged_path"]
+        )
+        if current_matches:
+            try:
+                clips[key] = _verified_completed_clip(expected, current, data_dir=root)
+            except LocalTTSBuildError as exc:
+                await _guarded_requeue_invalid_completion(expected, reason=str(exc))
+                stats["clips_invalid_completed_requeued"] += 1
+            else:
+                stats["clips_completed_local"] += 1
+                continue
+        elif current is not None:
+            stats["clips_stale_completed"] += 1
+
+        conventional, conventional_invalid = _conventional_exercises2_clip(
+            expected, settings=settings, data_dir=root,
+        )
+        if conventional is not None:
+            clips[key] = conventional
+            conventional_keys.add(key)
+            stats["clips_existing_conventional"] += 1
+            continue
+        if conventional_invalid:
+            stats["clips_invalid_conventional"] += 1
+        missing_rows.append(expected)
+
+    stats["clips_missing"] = len(missing_rows)
+
+    if level_conventional and not missing_rows and conventional_keys:
+        converter = level_fn or x2.leveled_speech_clip
+        raw_paths = list(dict.fromkeys(clips[key] for key in conventional_keys))
+        try:
+            leveled_paths = await asyncio.gather(*(
+                asyncio.to_thread(converter, path) for path in raw_paths
+            ))
+        except Exception as exc:  # noqa: BLE001
+            raise LocalTTSBuildError(
+                f"failed to level conventional Exercises2 audio: {exc}"
+            ) from exc
+        leveled = dict(zip(raw_paths, leveled_paths, strict=True))
+        for key in conventional_keys:
+            clips[key] = Path(leveled[clips[key]])
+
+    audio = {
+        x2.exercises_note_key(note): x2.NoteAudio(
+            answer=clips.get((x2.exercises_note_key(note), "answer")),
+            example=clips.get((x2.exercises_note_key(note), "example")),
+        )
+        for note in notes
+    }
+    return Exercises2AudioResolution(
+        audio_by_note_key=audio, missing_rows=missing_rows, stats=stats,
+    )
+
+
+def _verified_existing_pool_clip(
+    audio_ref: Any, *, data_dir: Path,
+) -> Path | None:
+    """Validate one DB-owned path under the established staged-audio root."""
+    if not isinstance(audio_ref, str) or not audio_ref.strip():
+        return None
+    try:
+        root = _staged_audio_root(Path(data_dir), create=False)
+    except LocalTTSUploadError as exc:
+        raise LocalTTSBuildError(str(exc)) from exc
+    clip = (root / audio_ref).resolve()
+    if not clip.is_relative_to(root) or not clip.is_file():
+        return None
+    if clip.stat().st_size <= 0 or x2.gemini.silence_marker(clip).exists():
+        return None
+    try:
+        validate_mp3(clip.read_bytes())
+    except (OSError, LocalTTSUploadError):
+        return None
+    return clip
+
+
+async def resolve_expression_pool_audio(
+    lang: str,
+    idioms: list[dict[str, Any]],
+    *,
+    data_dir: Path | None = None,
+) -> ExpressionPoolAudioResolution:
+    """Overlay current local-Qwen completions onto copied pool source rows.
+
+    Existing valid audio references win, so the adapter never revoices them.
+    ``audio_context`` is deliberately neither inspected nor overwritten: it
+    is source-video audio, not a TTS destination.
+    """
+    specs = _expression_pool_clip_specs(lang, idioms)
+    completed_rows = await db.completed_local_tts_jobs(
+        [spec.row["source_key"] for spec in specs]
+    )
+    completed = {row["source_key"]: row for row in completed_rows}
+    root = Path(data_dir) if data_dir is not None else Path(get_settings().data_dir)
+    overlay = [
+        {**idiom, "examples": [dict(example) for example in idiom.get("examples") or []]}
+        for idiom in idioms
+    ]
+    idioms_by_id = {int(idiom["id"]): idiom for idiom in overlay}
+    examples_by_key = {
+        (int(idiom["id"]), int(example["ord"])): example
+        for idiom in overlay
+        for example in idiom["examples"]
+    }
+    missing_rows: list[dict[str, Any]] = []
+    stats = {
+        "clips_expected": len(specs),
+        "clips_existing_conventional": 0,
+        "clips_invalid_conventional": 0,
+        "clips_completed_local": 0,
+        "clips_missing": 0,
+        "clips_stale_completed": 0,
+        "clips_invalid_completed_requeued": 0,
+    }
+
+    for spec in specs:
+        expected = spec.row
+        target = (
+            idioms_by_id[spec.idiom_id]
+            if spec.example_ord is None
+            else examples_by_key[(spec.idiom_id, spec.example_ord)]
+        )
+        existing_ref = target.get(spec.audio_field)
+        if _verified_existing_pool_clip(existing_ref, data_dir=root) is not None:
+            stats["clips_existing_conventional"] += 1
+            continue
+        if existing_ref:
+            stats["clips_invalid_conventional"] += 1
+
+        current = completed.get(expected["source_key"])
+        if current is None:
+            missing_rows.append(expected)
+            continue
+        if (
+            current["content_hash"] != expected["content_hash"]
+            or current["staged_path"] != expected["staged_path"]
+        ):
+            stats["clips_stale_completed"] += 1
+            missing_rows.append(expected)
+            continue
+        try:
+            _verified_completed_clip(expected, current, data_dir=root)
+        except LocalTTSBuildError as exc:
+            await _guarded_requeue_invalid_completion(expected, reason=str(exc))
+            stats["clips_invalid_completed_requeued"] += 1
+            missing_rows.append(expected)
+        else:
+            target[spec.audio_field] = expected["staged_path"]
+            stats["clips_completed_local"] += 1
+
+    stats["clips_missing"] = len(missing_rows)
+    return ExpressionPoolAudioResolution(
+        idioms=overlay, missing_rows=missing_rows, stats=stats,
+    )
+
+
+async def seed_expression_pool(lang: str) -> dict[str, Any]:
+    """Gate and seed only unvoiced expression-pool fields for one language."""
+    require_bulk_approval()
+    if lang not in EXPRESSION_POOL_LANGS:
+        raise ValueError("pool lang must be de|es|fr|it|pt")
+    idioms = await db.fetch_pool_idioms(lang)
+    resolution = await resolve_expression_pool_audio(lang, idioms)
+    result = await db.seed_local_tts_jobs(resolution.missing_rows)
+    return {
+        **result,
+        **resolution.stats,
+        "lang": lang,
+        "idioms": len(idioms),
+        "jobs": len(resolution.missing_rows),
+        "contract_version": CONTRACT_VERSION,
+        "source_kind": EXPRESSION_POOL_SOURCE_KIND,
+        "missing_only": True,
+        "audio_context_excluded": True,
+    }
+
+
 async def completed_audio_for_notes(
     notes: list[x2.Ex2Note], *, data_dir: Path | None = None,
 ) -> dict[str, x2.NoteAudio]:
@@ -367,11 +792,24 @@ async def completed_audio_for_notes(
     clips: dict[tuple[str, str], Path] = {}
     problems: list[str] = []
     for expected in expected_rows:
+        current = completed.get(expected["source_key"])
         try:
             clip = _verified_completed_clip(
-                expected, completed.get(expected["source_key"]), data_dir=root,
+                expected, current, data_dir=root,
             )
         except LocalTTSBuildError as exc:
+            if (
+                current is not None
+                and current["content_hash"] == expected["content_hash"]
+                and current["staged_path"] == expected["staged_path"]
+            ):
+                try:
+                    await _guarded_requeue_invalid_completion(
+                        expected, reason=str(exc),
+                    )
+                except LocalTTSBuildError as conflict:
+                    problems.append(str(conflict))
+                    continue
             problems.append(str(exc))
         else:
             clips[(expected["note_key"], expected["clip_kind"])] = clip
@@ -422,7 +860,7 @@ async def build_pilot_apkg() -> dict[str, Any]:
 
 
 async def rebuild_exercises2_language(lang: str) -> dict[str, Any]:
-    """Strictly rebuild one full rolling deck from completed local clips."""
+    """Strictly rebuild from conventional cache plus local-Qwen completions."""
     require_bulk_approval()
     if lang not in x2.SUPPORTED_LANGS:
         raise ValueError("lang must be de|es|fr|it|pt")
@@ -430,11 +868,24 @@ async def rebuild_exercises2_language(lang: str) -> dict[str, Any]:
     if not notes:
         raise LocalTTSBuildError(f"no Exercises2 notes for {lang}")
     settings = get_settings()
-    by_note_key = await completed_audio_for_notes(
-        notes, data_dir=Path(settings.data_dir),
+    resolution = await resolve_exercises2_audio(
+        notes, data_dir=Path(settings.data_dir), level_conventional=True,
     )
+    if resolution.missing_rows:
+        preview = "; ".join(
+            row["source_key"] for row in resolution.missing_rows[:10]
+        )
+        suffix = (
+            f"; plus {len(resolution.missing_rows) - 10} more"
+            if len(resolution.missing_rows) > 10 else ""
+        )
+        raise LocalTTSBuildError(
+            "hybrid local rebuild refused "
+            f"{len(resolution.missing_rows)} clip(s): {preview}{suffix}"
+        )
     by_item_id = {
-        note.item_id: by_note_key[x2.exercises_note_key(note)] for note in notes
+        note.item_id: resolution.audio_by_note_key[x2.exercises_note_key(note)]
+        for note in notes
     }
     out = Path(settings.data_dir) / "apkgs" / lang / "_exercises2.apkg"
     n = await asyncio.to_thread(
@@ -455,4 +906,5 @@ async def rebuild_exercises2_language(lang: str) -> dict[str, Any]:
         "apkg_id": apkg_id,
         "filename": str(relative),
         "local_only": True,
+        **resolution.stats,
     }

@@ -369,23 +369,39 @@ async def admin_adopt_orphans(
 
 @app.post("/admin/rebuild-pools")
 async def admin_rebuild_pools(
-    lang: str, _: None = Depends(authed_admin),
+    lang: str, _: None = Depends(authed_admin), local_only: bool = False,
 ) -> dict:
     """Force a pool rebuild for one language, bypassing the 30-min
     debounce. Runs in the background (a big language re-stitches a lot of
     audio); watch the pool.* log lines for the result."""
     from .pipeline import pool as pool_mod
 
+    if local_only:
+        from . import local_tts
+        try:
+            local_tts.require_bulk_approval()
+            if lang not in local_tts.EXPRESSION_POOL_LANGS:
+                raise ValueError("pool lang must be de|es|fr|it|pt")
+        except ValueError as exc:
+            raise HTTPException(400, str(exc)) from exc
+        except local_tts.PilotApprovalRequired as exc:
+            raise HTTPException(409, str(exc)) from exc
+
     async def _run() -> None:
         try:
-            stats = await pool_mod.rebuild_pools(lang, force=True)
+            stats = await pool_mod.rebuild_pools(
+                lang, force=True, local_only=local_only,
+            )
             log.info("admin.rebuild_pools.done", **stats)
         except Exception as e:
             log.warning("admin.rebuild_pools.failed", lang=lang,
                          err=repr(e)[:200])
 
     _spawn_bg(_run())
-    return {"started": True, "lang": lang, "forced": True}
+    return {
+        "started": True, "lang": lang, "forced": True,
+        "local_only": local_only,
+    }
 
 
 # --- admin: grammar drills (docs/GRAMMAR_STRATEGY.md) ----------------------
@@ -849,20 +865,31 @@ async def admin_podcast_cards_list(_: None = Depends(authed_admin)) -> dict:
 
 @app.post("/admin/exercises2-build")
 async def admin_exercises2_build(
-    lang: str, _: None = Depends(authed_admin),
+    lang: str, _: None = Depends(authed_admin), local_only: bool = False,
 ) -> dict:
-    """Build one language's Exercises 2.0 deck (TTS + APKG) in the background."""
+    """Build Exercises2 through the provider or explicit local-only lane."""
     from .grammar import exercises2
     from .grammar import service as grammar_service
 
     if lang not in exercises2.SUPPORTED_LANGS:
         raise HTTPException(400, "lang must be de|es|fr|it|pt")
+    local_tts = None
+    if local_only:
+        from . import local_tts as local_tts_module
+        local_tts = local_tts_module
+        try:
+            local_tts.require_bulk_approval()
+        except local_tts.PilotApprovalRequired as exc:
+            raise HTTPException(409, str(exc)) from exc
     if not grammar_service.claim_grammar_job(f"exercises2-{lang}", "exercises2"):
         return {"error": "busy", **grammar_service.get_state()}
 
     async def _run() -> None:
         try:
-            result = await exercises2.build_language(lang)
+            if local_tts is not None:
+                result = await local_tts.rebuild_exercises2_language(lang)
+            else:
+                result = await exercises2.build_language(lang)
             grammar_service._state["exercises2"] = result
         except Exception as e:  # noqa: BLE001
             log.warning("admin.exercises2_build.failed", lang=lang,
@@ -872,7 +899,7 @@ async def admin_exercises2_build(
             grammar_service._state["running"] = False
 
     _spawn_bg(_run())
-    return {"started": True, "lang": lang}
+    return {"started": True, "lang": lang, "local_only": local_only}
 
 
 @app.get("/admin/exercises2-list")
@@ -902,6 +929,22 @@ async def admin_local_tts_v1_seed_full(
     try:
         return await local_tts.seed_exercises2_full()
     except local_tts.PilotApprovalRequired as exc:
+        raise HTTPException(409, str(exc)) from exc
+
+
+@app.post("/admin/local-tts/v1/expression-pool/seed")
+async def admin_local_tts_v1_seed_expression_pool(
+    lang: str, _: None = Depends(authed_admin),
+) -> dict:
+    """Seed only missing TTS-backed pool fields; source context is excluded."""
+    from . import local_tts
+    try:
+        return await local_tts.seed_expression_pool(lang)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    except local_tts.PilotApprovalRequired as exc:
+        raise HTTPException(409, str(exc)) from exc
+    except local_tts.LocalTTSBuildError as exc:
         raise HTTPException(409, str(exc)) from exc
 
 
