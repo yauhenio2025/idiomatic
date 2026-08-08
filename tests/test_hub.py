@@ -253,6 +253,165 @@ def test_production_build_routes_to_estate_decks_and_prod_guids(tmp_path: Path):
     assert guids == {identity.hub_guid("es", 439), identity.example_guid(2503)}
 
 
+# --- phase-5 manifest compiler (F3) ------------------------------------------
+
+from idiomatic.hub import phase5  # noqa: E402
+
+
+def test_normalize_join_estate_rules():
+    assert phase5.normalize_join(
+        "[sound:x.mp3] <b>Œuvre</b>&nbsp; “d’été” — fin…  ") == \
+        "œuvre \"d'été\" - fin..."
+    # NFKC + casefold, accents preserved, whitespace collapsed
+    assert phase5.normalize_join("  Ça  VA bien ") == "ça va bien"
+    assert phase5.normalize_join("ﬁn") == "fin"  # NFKC ligature
+
+
+def test_pool_to_example_fmap_covers_all_seven_legacy_fields():
+    fmap = phase5.pool_to_example_fmap()
+    assert len(fmap) == 7
+    ex = hub_apkg.EXAMPLE_FIELDS
+    assert fmap[0] == ex.index("English")
+    assert fmap[4] == ex.index("Expression")
+    assert fmap[6] == ex.index("SourceHTML")
+    # target ID/spare fields are never fmap targets — they are filled
+    # after the supported conversion.
+    for name in ("ExpressionId", "ExampleId", "Lang", "Image", "Origin",
+                 "Extra1", "Extra2", "Extra3"):
+        assert ex.index(name) not in fmap.values()
+
+
+def _fake_inputs():
+    c1 = {"groups": [
+        {"group_id": "g-quar", "disposition": "quarantine",
+         "language": "es", "survivor": {"normalized_surface": "más bien"},
+         "members": [{"note_id": 901}, {"note_id": 902}]},
+        {"group_id": "g-merge", "disposition": "same-sense-merge",
+         "language": "es", "survivor": {"normalized_surface": "x"},
+         "members": [{"note_id": 903}]},
+    ]}
+    extract = {"expressions": [
+        {"expression_id": 439, "lang": "es", "idiom": "a primera hora",
+         "explanation_en": "Early.", "examples": [
+             {"example_id": 2503, "en_text": "He left first thing.",
+              "target_text": "Salió a primera hora."},
+             {"example_id": 2504, "en_text": "Second.",
+              "target_text": "Segunda frase."}]},
+    ]}
+
+    def card(cid, nid, tl, en, verdict="fresh-trivial", reps=0,
+             cardinality=1):
+        return {"card_id": cid, "note_id": nid, "note_guid": f"g{cid}",
+                "language": "es", "model_id": 1820114700,
+                "normalized_target": phase5.normalize_join(tl),
+                "normalized_english": phase5.normalize_join(en),
+                "verdict": verdict, "reps": reps, "revlog_rows": reps,
+                "last_review_id": None,
+                "join_key_cardinality": cardinality,
+                "join_key_peer_card_ids": [],
+                "type": 0, "queue": 0, "due": 100, "ivl": 0, "factor": 0,
+                "lapses": 0, "left": 0, "odue": 0, "odid": 0}
+
+    c2 = {"source_sha256": "s" * 64, "cards": [
+        card(11, 21, "Salió a primera hora.", "He left first thing.",
+             verdict="adoptable", reps=8),
+        # duplicate binding for the same example — fewer reps, must defer
+        card(12, 22, "SALIÓ a primera hora.", "He left first thing."),
+        card(13, 23, "Segunda frase.", "Second."),
+        card(14, 24, "No such sentence.", "Unjoined."),          # unjoined
+        card(15, 25, "Par x.", "Pair x.", cardinality=2),        # join-key
+    ]}
+    return c1, c2, extract
+
+
+def test_compile_manifest_joins_and_exclusions():
+    c1, c2, extract = _fake_inputs()
+    manifest = phase5.compile_manifest(
+        c1=c1, c2=c2, extract=extract,
+        input_checksums={"C1": "a" * 64, "C2": "b" * 64,
+                         "server_extract": "c" * 64})
+    counts = manifest["counts"]
+    assert counts["conversions"] == 2
+    assert counts["conversions_adoptable"] == 1
+    assert counts["adopted_reps"] == 8
+    assert counts["hub_notes"] == 1
+    assert counts["joinkey_quarantine_cards"] == 1
+    assert counts["c1_quarantine_groups"] == 1
+    # the most-invested card won the duplicate example binding
+    by_card = {c["card_id"]: c for c in manifest["conversions"]}
+    assert 11 in by_card and by_card[11]["example_id"] == 2503
+    reasons = {g["card_id"]: g["reason"]
+               for g in manifest["gaps"]["deferred_cards"]}
+    assert reasons[12] == "duplicate-example-binding"
+    assert reasons[14] == "unjoined-bilingual-pair"
+    # hub row: server example set, deterministic production GUID
+    hub = manifest["hubs"][0]
+    assert hub["expression_id"] == 439
+    assert [e["example_id"] for e in hub["examples"]] == [2503, 2504]
+    assert hub["target_guid"] == identity.hub_guid("es", 439)
+    # C1 quarantine members recorded, never converted
+    assert manifest["quarantine"]["c1_groups"][0]["member_note_ids"] == \
+        [901, 902]
+    # manifest self-checksum round-trips
+    assert phase5.manifest_content_sha256(manifest) == \
+        manifest["content_sha256"]
+
+
+def test_compile_manifest_is_deterministic_apart_from_timestamp():
+    c1, c2, extract = _fake_inputs()
+    kwargs = dict(c1=c1, c2=c2, extract=extract,
+                  input_checksums={"C1": "a" * 64})
+    m1 = phase5.compile_manifest(**kwargs)
+    m2 = phase5.compile_manifest(**kwargs)
+    for m in (m1, m2):
+        m.pop("generated_at"), m.pop("content_sha256")
+    assert m1 == m2
+
+
+def test_expectations_gate():
+    phase5.check_expectations({"a": "1" * 64}, {"a": "1" * 64})
+    with pytest.raises(phase5.ExpectationError):
+        phase5.check_expectations({"a": "1" * 64}, {"a": "2" * 64})
+    with pytest.raises(phase5.ExpectationError):
+        phase5.check_expectations({"a": "1" * 64},
+                                  {"a": "1" * 64, "b": "3" * 64})
+
+
+def test_hub_fields_and_example_fill_shapes():
+    c1, c2, extract = _fake_inputs()
+    manifest = phase5.compile_manifest(c1=c1, c2=c2, extract=extract,
+                                       input_checksums={})
+    conv = manifest["conversions"][0]
+    fill = phase5.example_field_fill(conv)
+    assert fill == {"ExpressionId": "439", "ExampleId": "2503",
+                    "Lang": "es", "Origin": "initial"}
+    assert f"example::{conv['example_id']}" in phase5.example_tags(conv)
+    fields = phase5.hub_fields(manifest["hubs"][0], gloss_en="early",
+                               sources_html="<div class='src'>x</div>")
+    assert len(fields) == len(hub_apkg.HUB_FIELDS)
+    assert fields[hub_apkg.HUB_FIELDS.index("GlossEN")] == "early"
+    assert 'data-example-id="2504"' in \
+        fields[hub_apkg.HUB_FIELDS.index("ExamplesHTML")]
+    # spares + amendment audio stay blank in phase 5 (media enrichment
+    # happens at release build, not collection migration)
+    for name in ("ContextAudio", "ExpressionAudio", "Extra1", "Extra2",
+                 "Extra3"):
+        assert fields[hub_apkg.HUB_FIELDS.index(name)] == ""
+
+
+def test_manifest_load_rejects_tampering(tmp_path: Path):
+    c1, c2, extract = _fake_inputs()
+    manifest = phase5.compile_manifest(c1=c1, c2=c2, extract=extract,
+                                       input_checksums={})
+    path = tmp_path / "m.json"
+    path.write_text(json.dumps(manifest), encoding="utf-8")
+    assert phase5.load_manifest(path)["counts"]["conversions"] == 2
+    manifest["conversions"][0]["example_id"] = 9999
+    path.write_text(json.dumps(manifest), encoding="utf-8")
+    with pytest.raises(ValueError, match="checksum"):
+        phase5.load_manifest(path)
+
+
 # --- durable-ID schema staging (ephemeral Postgres) --------------------------
 
 _SCHEMA = Path(__file__).resolve().parent.parent / "db" / "schema.sql"
