@@ -1,0 +1,1174 @@
+{
+  "schema_version": 1,
+  "audit_id": "exercises2-commands-pronouns-relfexive-grammar-gap-2026-08-08",
+  "audit_as_of": "2026-08-08T04:41:49Z",
+  "scope": {
+    "commission": "docs/commissions/LEGACY_ESTATE_AUDIT_COMMISSION.md",
+    "roadmap_lane": "COMMANDS / PRONOUNS / REFLEXIVE gap audit only",
+    "languages": [
+      "de",
+      "es",
+      "fr",
+      "it",
+      "pt"
+    ],
+    "canonical_topics": [
+      {
+        "topic": "commands",
+        "rows": 100,
+        "id_prefix": "it_commands_"
+      },
+      {
+        "topic": "pronouns",
+        "rows": 150,
+        "id_prefix": "it_pronouns_"
+      },
+      {
+        "topic": "relfexive",
+        "display_name": "reflexive",
+        "rows": 150,
+        "id_prefix": "it_relfexive_",
+        "note": "The misspelling is part of the canonical source identifier and filename."
+      }
+    ],
+    "canonical_rows_total": 400,
+    "legacy_estate_rows_total": 1600,
+    "excluded_actions": [
+      "author",
+      "import",
+      "build",
+      "voice",
+      "deliver"
+    ]
+  },
+  "disposition": {
+    "decision": "no-import",
+    "applies_to": "all 400 canonical rows and all 1,600 matching legacy estate notes",
+    "reason": "The source is structurally useful as gap evidence but is not a production content source: coverage is already partial or complete in several live units, the English and reference translations have material quality and register defects, and 50 RELFEXIVE rows are misfiled commands.",
+    "allowed_follow_up": "Author new, independently verified curriculum items only after the recommended unit scopes are approved. Do not copy or lightly edit these legacy rows.",
+    "rows_selected_for_import": 0,
+    "rows_selected_for_authoring": 0
+  },
+  "canonical_source_ledger": [
+    {
+      "role": "canonical_shared_source_with_de_es_fr_pt_references",
+      "topic": "commands",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/commands_01.json",
+      "sha256": "3b953f3fd7c601e1cb4537b61b33942d6a3b7eed5ce0904f9958e1f0b0d47cee",
+      "rows": 100,
+      "first_id": "it_commands_001",
+      "last_id": "it_commands_100"
+    },
+    {
+      "role": "repaired_italian_secondary_evidence",
+      "topic": "commands",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/commands_01.json",
+      "sha256": "f1bbbdb5c11c8b494f320ff8b264cfc39c29d17cceab59042adda24c131ecd72",
+      "rows": 100,
+      "first_id": "it_commands_001",
+      "last_id": "it_commands_100"
+    },
+    {
+      "role": "canonical_shared_source_with_de_es_fr_pt_references",
+      "topic": "pronouns",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/pronouns_01.json",
+      "sha256": "8fa81c465f4eede82ebd6c0e2ff9ad00af6d9c8c5b077ff74c8ae0c2899115a0",
+      "rows": 130,
+      "first_id": "it_pronouns_001",
+      "last_id": "it_pronouns_130"
+    },
+    {
+      "role": "canonical_shared_source_with_de_es_fr_pt_references",
+      "topic": "pronouns",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/pronouns_02.json",
+      "sha256": "eedba0e9c90306d8249981c149f34b08dc52651b56c5f2ebbc36ca20a7085031",
+      "rows": 20,
+      "first_id": "it_pronouns_131",
+      "last_id": "it_pronouns_150"
+    },
+    {
+      "role": "repaired_italian_secondary_evidence",
+      "topic": "pronouns",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/pronouns_01.json",
+      "sha256": "2333ca319f2709be71e05b8d36050242de88423025a43b34998b643732572a3a",
+      "rows": 130,
+      "first_id": "it_pronouns_001",
+      "last_id": "it_pronouns_130"
+    },
+    {
+      "role": "repaired_italian_secondary_evidence",
+      "topic": "pronouns",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/pronouns_02.json",
+      "sha256": "20f8b299a3503061e35c2925cf6538bc1ebb0bdcf2bc7f759282b0782c5189cd",
+      "rows": 20,
+      "first_id": "it_pronouns_131",
+      "last_id": "it_pronouns_150"
+    },
+    {
+      "role": "canonical_shared_source_with_de_es_fr_pt_references",
+      "topic": "relfexive",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/relfexive_01.json",
+      "sha256": "e9f4d641021b5f13e34191c6822e664bbbb657fc6af5391c72f6a2ec74bbd119",
+      "rows": 130,
+      "first_id": "it_relfexive_001",
+      "last_id": "it_relfexive_130"
+    },
+    {
+      "role": "canonical_shared_source_with_de_es_fr_pt_references",
+      "topic": "relfexive",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/relfexive_02.json",
+      "sha256": "f1b3dabb0e1caef90ed1b6d8a13988661eae09bbf90d6063467335edd756ac1e",
+      "rows": 20,
+      "first_id": "it_relfexive_131",
+      "last_id": "it_relfexive_150"
+    },
+    {
+      "role": "repaired_italian_secondary_evidence",
+      "topic": "relfexive",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/relfexive_01.json",
+      "sha256": "a22429852303bf6eaad67639379b1e268ef58ea9618605744a8159803c1dc489",
+      "rows": 130,
+      "first_id": "it_relfexive_001",
+      "last_id": "it_relfexive_130"
+    },
+    {
+      "role": "repaired_italian_secondary_evidence",
+      "topic": "relfexive",
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/relfexive_02.json",
+      "sha256": "4256297e47134e119c2905c4cf7cca96a83898dedf92ea375b2715d7df551dc3",
+      "rows": 20,
+      "first_id": "it_relfexive_131",
+      "last_id": "it_relfexive_150"
+    }
+  ],
+  "evidence_ledger": [
+    {
+      "path": "docs/commissions/LEGACY_ESTATE_AUDIT_COMMISSION.md",
+      "sha256": "df868e84d2ce3fa438d6427823d3a4c6f43a90f8d61ee648524e019a2621373a",
+      "lines": 107
+    },
+    {
+      "path": "docs/EXERCISES2_ROADMAP.md",
+      "sha256": "880eb321fad4a68ece73016f6860b06d94a86723b518bd66854f76da09179a60",
+      "lines": 27
+    },
+    {
+      "path": "docs/research/legacy-excercises-audit.md",
+      "sha256": "63fa2203cbd4b970a230f823d5dcf35fbb3e5c6fb0973b98bf14a3332ade1c81",
+      "lines": 137
+    },
+    {
+      "path": "docs/research/legacy_estate/manifest.json",
+      "sha256": "bd1bb767a8e55d6239900b60e2783050b0950e593149dc588290367cab7a2321",
+      "kind": "json"
+    },
+    {
+      "path": "idiomatic/grammar/curriculum.py",
+      "sha256": "9164b26f3554b22f09f58d97adb6d66649b1efb97a6adf03dee78b1689093f29",
+      "kind": "python"
+    },
+    {
+      "path": "idiomatic/grammar/data/units_fip.json",
+      "sha256": "39b94b77c7dfc91e91025a3c5bb5d97dc8bf97fa8cdadec336e8fc8dbc76196c",
+      "kind": "json"
+    },
+    {
+      "path": "idiomatic/grammar/translation.py",
+      "sha256": "ace88f89e310e0ac7152f79eaae7f5b506a89d54a03b9f17ec721d56e58f95dd",
+      "kind": "python"
+    },
+    {
+      "path": "idiomatic/grammar/tenses.py",
+      "sha256": "c98e6c7090c1437f01cb81e24a4dfa4172415eaef795f1b4372d2e9495adc90a",
+      "kind": "python"
+    },
+    {
+      "path": "idiomatic/grammar/data/tenses/batch1.json",
+      "sha256": "9deae900cb3a641d5da32cb01f7c98461f6003b7e0c9054f519383a06fd7d20c",
+      "verbs_tenses": 15,
+      "production_cards": 85
+    },
+    {
+      "path": "idiomatic/grammar/data/de_dativ_verben.json",
+      "sha256": "f08508e17c8c46d9f83164d41ee2a8d660f74dbacf15e7cae15a1fee8ada955c",
+      "rows_excluding_meta": 81
+    },
+    {
+      "path": "idiomatic/grammar/data/it_clitici_ci_ne.json",
+      "sha256": "b20a575dd64845e84fdf3b5922a342af937c2e2d86e3735055ad8faae0910bb9",
+      "rows_excluding_meta": 40
+    },
+    {
+      "path": "idiomatic/grammar/data/pt_clitic_placement.json",
+      "sha256": "e2c87a5aed549fd52b3be616df421ce9c5c4a4657586f328f689dbae5534876a",
+      "rows_excluding_meta": 40
+    },
+    {
+      "path": "docs/research/it-grammar-taxonomy.yaml",
+      "sha256": "6bc1ebb4996fda896befe5d59e4ee3deb0794a53daca4574344bae441d0a8fc0",
+      "lines": 693
+    },
+    {
+      "path": "docs/research/error-profiles/de.md",
+      "sha256": "4378ecd51003bc3ede0c31207667a7f2cf9ae9c7099b05eab7060b412dd13bab",
+      "lines": 315
+    },
+    {
+      "path": "docs/research/error-profiles/es.md",
+      "sha256": "7ceb93900219188423ba81a4a43ddb659c89b3622147aeff820dc85d74998bd4",
+      "lines": 407
+    },
+    {
+      "path": "docs/research/error-profiles/fr.md",
+      "sha256": "929656e54a4b32d29c12fb9b7e06e3d6c97831bcb2f3bf6110be8da334ca1423",
+      "lines": 382
+    },
+    {
+      "path": "docs/research/error-profiles/it.md",
+      "sha256": "a39122ad683f605c4c4ea59523eea5b4529442e2e5fa702b88459c54ffe933f1",
+      "lines": 230
+    },
+    {
+      "path": "docs/research/error-profiles/pt.md",
+      "sha256": "faf6318e356b9e502ff45abb0f5dc444c2b53f105f8916e74c75228b7db98615",
+      "lines": 339
+    }
+  ],
+  "integrity": {
+    "canonical_input_files": 5,
+    "canonical_input_rows": 400,
+    "unique_ids": 400,
+    "contiguous_id_sequences": true,
+    "nonempty_english_prompts": 400,
+    "rows_with_all_four_reference_languages": 400,
+    "repaired_italian_files": 5,
+    "repaired_italian_rows": 400,
+    "repaired_italian_ids_joined_one_to_one": 400,
+    "exact_english_duplicate_groups_within_scope": 0,
+    "exact_english_rows_in_duplicate_groups": 0
+  },
+  "estate_snapshot": {
+    "manifest_path": "docs/research/legacy_estate/manifest.json",
+    "source_account": "evgeny.morozov+2@gmail.com",
+    "source_sha256": "988b919f5beee4acb54da24bfcb43eeb872df01afefc9ba461db687db40d3e5f",
+    "audited_at": "2026-08-08T11:02:53+08:00",
+    "quick_check": "ok",
+    "matching_decks": 12,
+    "matching_notes": 1600,
+    "matching_cards": 1600,
+    "matching_reps": 0,
+    "matching_reviews": 0,
+    "matching_sound_tags": 0,
+    "languages": [
+      {
+        "lang": "de",
+        "deck_labels": [
+          "COMMANDS",
+          "PRONOUNS",
+          "RELFEXIVE"
+        ],
+        "notes": 400,
+        "normalized_exact_canonical_prompt_matches": 400,
+        "normalized_exact_canonical_pair_matches": 400
+      },
+      {
+        "lang": "es",
+        "deck_labels": [
+          "COMMANDS",
+          "PRONOUNS",
+          "REFLEXIV"
+        ],
+        "notes": 400,
+        "normalized_exact_canonical_prompt_matches": 400,
+        "normalized_exact_canonical_pair_matches": 400
+      },
+      {
+        "lang": "fr",
+        "deck_labels": [
+          "COMMANDS",
+          "PRONOUNS",
+          "RELFEXIVE"
+        ],
+        "notes": 400,
+        "normalized_exact_canonical_prompt_matches": 400,
+        "normalized_exact_canonical_pair_matches": 400
+      },
+      {
+        "lang": "it",
+        "deck_labels": [],
+        "notes": 0,
+        "settled_fact": "The old IT exercise backs were all byte-identical French copies; the fresh estate has no EXCERCISES::IT tree. Repaired Italian is secondary structural evidence only."
+      },
+      {
+        "lang": "pt",
+        "deck_labels": [
+          "COMMANDS",
+          "PRONOUNS",
+          "REFLEXIVE"
+        ],
+        "notes": 400,
+        "normalized_exact_canonical_prompt_matches": 400,
+        "normalized_exact_canonical_pair_matches": 400
+      }
+    ]
+  },
+  "live_snapshot": {
+    "retrieved_at": "2026-08-08T04:41:49Z",
+    "base_url": "https://idiomatic-app.onrender.com",
+    "read_only_endpoints": [
+      "/ui/api/grammar/overview",
+      "/ui/api/delivery?limit=500"
+    ],
+    "auth": "X-Admin-Token from local credential; token value is not recorded",
+    "grammar": [
+      {
+        "lang": "de",
+        "curriculum_units": 7,
+        "deck_cards": 101,
+        "deck_built_at": "2026-08-07T15:18:09.607861Z",
+        "ack_status": "ok",
+        "relevant_units": [
+          {
+            "key": "de_dativ_verben",
+            "verified": 7,
+            "coverage": "Dative-governing verbs and full dative noun phrases; it does not drill personal-pronoun paradigms or imperatives."
+          }
+        ]
+      },
+      {
+        "lang": "es",
+        "curriculum_units": 22,
+        "deck_cards": 288,
+        "deck_built_at": "2026-08-07T15:17:54.009843Z",
+        "ack_status": "ok",
+        "relevant_units": [
+          {
+            "key": "es_cmd_tu",
+            "verified": 21
+          },
+          {
+            "key": "es_cmd_usted",
+            "verified": 12
+          },
+          {
+            "key": "es_cmd_neg",
+            "verified": 12
+          },
+          {
+            "key": "es_clitics_dir",
+            "verified": 11
+          },
+          {
+            "key": "es_clitics_ind",
+            "verified": 12
+          },
+          {
+            "key": "es_clitics_selo",
+            "verified": 17
+          }
+        ]
+      },
+      {
+        "lang": "fr",
+        "curriculum_units": 14,
+        "deck_cards": 185,
+        "deck_built_at": "2026-08-07T15:18:33.628484Z",
+        "ack_status": "ok",
+        "relevant_units": [
+          {
+            "key": "fr_pronoms_y_en",
+            "verified": 12,
+            "coverage": "Only y/en with recoverable non-human or place antecedents; not the direct, indirect, double-object, or reflexive clitic system."
+          }
+        ]
+      },
+      {
+        "lang": "it",
+        "curriculum_units": 12,
+        "deck_cards": 156,
+        "deck_built_at": "2026-08-07T15:18:53.765566Z",
+        "ack_status": "ok",
+        "relevant_units": [
+          {
+            "key": "it_clitici_ci_ne",
+            "verified": 11,
+            "coverage": "ci/ne/ce ne and selected procomplementary frames; not the basic direct/indirect or complete double-clitic system."
+          }
+        ]
+      },
+      {
+        "lang": "pt",
+        "curriculum_units": 12,
+        "deck_cards": 165,
+        "deck_built_at": "2026-08-07T15:19:14.271881Z",
+        "ack_status": "ok",
+        "relevant_units": [
+          {
+            "key": "pt_clitic_placement",
+            "verified": 11,
+            "coverage": "Brazilian Portuguese infinitive enclisis, comigo/conosco, and selected proclisis frames; not a complete recipient/double-clitic or pronominal-verb system."
+          }
+        ]
+      }
+    ],
+    "translation": {
+      "semantics": "A filtered mirror of verified grammar items. It excludes F3, F4, and explainer formats, requires text, at least four target-language words, deduplication, and existing target-language drill audio. It reinforces but never adds a structural objective. The DE/FR/IT/PT translation builds predate the current grammar builds, so no current-unit inclusion is inferred from their deck totals.",
+      "decks": [
+        {
+          "lang": "de",
+          "cards": 79,
+          "built_at": "2026-08-04T08:09:03.902401Z",
+          "ack_status": "ok",
+          "freshness_vs_current_grammar": "predates-current-grammar"
+        },
+        {
+          "lang": "es",
+          "cards": 250,
+          "built_at": "2026-08-07T15:20:20.940791Z",
+          "ack_status": "ok",
+          "freshness_vs_current_grammar": "built-after-current-grammar"
+        },
+        {
+          "lang": "fr",
+          "cards": 146,
+          "built_at": "2026-08-04T08:09:56.389982Z",
+          "ack_status": "ok",
+          "freshness_vs_current_grammar": "predates-current-grammar"
+        },
+        {
+          "lang": "it",
+          "cards": 130,
+          "built_at": "2026-08-04T08:10:54.710542Z",
+          "ack_status": "ok",
+          "freshness_vs_current_grammar": "predates-current-grammar"
+        },
+        {
+          "lang": "pt",
+          "cards": 127,
+          "built_at": "2026-08-04T08:11:43.076582Z",
+          "ack_status": "ok",
+          "freshness_vs_current_grammar": "predates-current-grammar"
+        }
+      ]
+    },
+    "tenses": [
+      {
+        "lang": "de",
+        "production_cards": 18,
+        "exercise_cards": 18,
+        "production_built_at": "2026-08-05T08:03:24.185352Z",
+        "exercise_built_at": "2026-08-05T08:03:24.308555Z",
+        "ack_status": "ok",
+        "imperative_cards": 0,
+        "pronoun_or_reflexive_objective_cards": 0
+      },
+      {
+        "lang": "es",
+        "production_cards": 18,
+        "exercise_cards": 18,
+        "production_built_at": "2026-08-05T08:03:46.057484Z",
+        "exercise_built_at": "2026-08-05T08:03:46.174158Z",
+        "ack_status": "ok",
+        "imperative_cards": 0,
+        "pronoun_or_reflexive_objective_cards": 0
+      },
+      {
+        "lang": "fr",
+        "production_cards": 18,
+        "exercise_cards": 18,
+        "production_built_at": "2026-08-05T08:04:07.981957Z",
+        "exercise_built_at": "2026-08-05T08:04:08.100799Z",
+        "ack_status": "ok",
+        "imperative_cards": 0,
+        "pronoun_or_reflexive_objective_cards": 0
+      },
+      {
+        "lang": "it",
+        "production_cards": 17,
+        "exercise_cards": 17,
+        "production_built_at": "2026-08-05T08:04:29.361069Z",
+        "exercise_built_at": "2026-08-05T08:04:29.480527Z",
+        "ack_status": "ok",
+        "imperative_cards": 5,
+        "imperative_scope": "volere: 2s, 3s, 1p, 2p, 3p",
+        "pronoun_or_reflexive_objective_cards": 0
+      },
+      {
+        "lang": "pt",
+        "production_cards": 14,
+        "exercise_cards": 14,
+        "production_built_at": "2026-08-07T15:19:31.631430Z",
+        "exercise_built_at": "2026-08-07T15:19:31.761575Z",
+        "ack_status": "ok",
+        "imperative_cards": 4,
+        "imperative_scope": "vir: 2s, 3s, 1p, 3p",
+        "pronoun_or_reflexive_objective_cards": 0
+      }
+    ]
+  },
+  "row_buckets": {
+    "commands": [
+      {
+        "key": "C1",
+        "id_start": "it_commands_001",
+        "id_end": "it_commands_050",
+        "rows": 50,
+        "objective": "Imperatives combined with human recipients, direct objects, indirect objects, and in Romance languages clitic placement or clusters.",
+        "measured_traits": {
+          "negative_english_commands": 26,
+          "affirmative_english_commands": 24
+        }
+      },
+      {
+        "key": "C2",
+        "id_start": "it_commands_051",
+        "id_end": "it_commands_100",
+        "rows": 50,
+        "objective": "General affirmative and negative commands in topical discourse, with occasional hortative first-person-plural intent.",
+        "measured_traits": {
+          "negative_english_commands": 6,
+          "english_rows_containing_lets": 2
+        }
+      }
+    ],
+    "pronouns": [
+      {
+        "key": "P1",
+        "id_start": "it_pronouns_001",
+        "id_end": "it_pronouns_050",
+        "rows": 50,
+        "objective": "Recipient, direct-object, indirect-object, and double-object pronouns across varied finite and modal clauses."
+      },
+      {
+        "key": "P2",
+        "id_start": "it_pronouns_051",
+        "id_end": "it_pronouns_100",
+        "rows": 50,
+        "objective": "A human matrix object plus an embedded non-human object in object-control, infinitive, or finite-complement constructions.",
+        "measured_traits": {
+          "rows_containing_english_it": 50
+        }
+      },
+      {
+        "key": "P3",
+        "id_start": "it_pronouns_101",
+        "id_end": "it_pronouns_150",
+        "rows": 50,
+        "objective": "Singular recipients, tonic/prepositional complements, and explicit formal-address contrasts.",
+        "measured_traits": {
+          "rows_explicitly_marked_formal_in_english": 11
+        }
+      }
+    ],
+    "relfexive": [
+      {
+        "key": "R1",
+        "id_start": "it_relfexive_001",
+        "id_end": "it_relfexive_050",
+        "rows": 50,
+        "objective": "Finite self-directed or lexically pronominal constructions across persons.",
+        "measured_traits": {
+          "rows_with_explicit_english_reflexive_pronoun": 50
+        }
+      },
+      {
+        "key": "R2",
+        "id_start": "it_relfexive_051",
+        "id_end": "it_relfexive_100",
+        "rows": 50,
+        "objective": "Infinitive and lexical pronominality choices, often signaled only by the target-language references.",
+        "measured_traits": {
+          "rows_with_explicit_english_reflexive_pronoun": 1,
+          "explicit_reflexive_id": "it_relfexive_089"
+        },
+        "quality_note": "The remaining 49 English prompts are not explicit reflexive cues; many are underspecified or unidiomatic as English."
+      },
+      {
+        "key": "R3",
+        "id_start": "it_relfexive_101",
+        "id_end": "it_relfexive_150",
+        "rows": 50,
+        "objective": "Vocative plural commands, not a reflexive block.",
+        "scope_status": "misfiled",
+        "reroute_to_topic": "commands",
+        "measured_traits": {
+          "vocative_plural_commands": 50,
+          "rows_with_explicit_english_reflexive_pronoun": 2,
+          "explicit_reflexive_ids": [
+            "it_relfexive_108",
+            "it_relfexive_144"
+          ]
+        }
+      }
+    ]
+  },
+  "status_definitions": {
+    "covered": "A currently delivered, verified objective directly teaches every core structural axis of the entire source-row bucket.",
+    "partial": "At least one core structural axis of the bucket is currently delivered, but another material axis is absent or only narrowly sampled.",
+    "gap": "No currently delivered objective teaches the bucket's defining structure.",
+    "misfiled": "The rows belong to another structural topic and are excluded from the named topic's coverage denominator.",
+    "counting_rule": "Counts are bucket-sized source-row equivalents, not counts of legacy rows approved for reuse. Every bucket is assigned as a whole to avoid false row-level precision from defective reference translations."
+  },
+  "findings": [
+    {
+      "topic": "commands",
+      "lang": "de",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 50,
+        "gap": 50,
+        "misfiled": 0,
+        "total": 100
+      },
+      "bucket_status": {
+        "C1": "partial",
+        "C2": "gap"
+      },
+      "existing_mappings": [
+        "de_dativ_verben: recipient case selection only"
+      ],
+      "uncovered_axes": [
+        "du/ihr/Sie imperative morphology",
+        "affirmative versus negative command formation",
+        "separable-verb and pronoun placement in commands"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "de_imperativ",
+        "priority": "medium",
+        "scope": "Verified du, ihr, and Sie commands; negation; separable verbs; then bounded integration with accusative/dative recipients.",
+        "evidence_strength": "Curriculum gap is clear; learner error data contains no imperative opportunities, so priority is genre-driven rather than error-frequency-driven."
+      }
+    },
+    {
+      "topic": "commands",
+      "lang": "es",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 50,
+        "partial": 50,
+        "gap": 0,
+        "misfiled": 0,
+        "total": 100
+      },
+      "bucket_status": {
+        "C1": "partial",
+        "C2": "covered"
+      },
+      "existing_mappings": [
+        "es_cmd_tu",
+        "es_cmd_usted",
+        "es_cmd_neg",
+        "es_clitics_dir",
+        "es_clitics_ind",
+        "es_clitics_selo"
+      ],
+      "uncovered_axes": [
+        "integrated affirmative-command enclisis",
+        "integrated negative-command proclisis",
+        "accent and le+object to se+object behavior inside commands"
+      ],
+      "recommendation": {
+        "action": "extend-existing-units",
+        "unit_key": "es_cmd_clitics_integration",
+        "priority": "medium",
+        "scope": "A bounded integration slice joining the three command units to direct, indirect, and double clitics; do not create another general-command deck.",
+        "evidence_strength": "The learner corpus has zero command opportunities, explicitly a genre gap; the late le lo to se lo error validates the clitic-integration axis."
+      }
+    },
+    {
+      "topic": "commands",
+      "lang": "fr",
+      "overall_status": "gap",
+      "row_counts": {
+        "covered": 0,
+        "partial": 0,
+        "gap": 100,
+        "misfiled": 0,
+        "total": 100
+      },
+      "bucket_status": {
+        "C1": "gap",
+        "C2": "gap"
+      },
+      "existing_mappings": [],
+      "uncovered_axes": [
+        "tu/nous/vous imperative morphology",
+        "affirmative and negative imperative",
+        "imperative clitic order and hyphenation"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "fr_imperatif",
+        "priority": "medium",
+        "scope": "tu, nous, and vous commands, polarity, irregular high-frequency forms, and a later verified clitic-order extension.",
+        "evidence_strength": "Curriculum gap is clear; the error profile does not quantify command opportunities."
+      }
+    },
+    {
+      "topic": "commands",
+      "lang": "it",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 100,
+        "gap": 0,
+        "misfiled": 0,
+        "total": 100
+      },
+      "bucket_status": {
+        "C1": "partial",
+        "C2": "partial"
+      },
+      "existing_mappings": [
+        "Tenses Rescue: volere imperativo, 5 production cards and 5 exercise cards",
+        "it_clitici_ci_ne: only selected ci/ne/procomplementary overlap"
+      ],
+      "uncovered_axes": [
+        "productive regular and irregular imperative beyond volere",
+        "affirmative and negative tu/noi/voi commands",
+        "direct, indirect, and double-clitic placement with imperatives"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "it_imperativo",
+        "priority": "medium",
+        "scope": "Implement the taxonomy's it_a2_future_imperative command slice, then integrate the it_b1_double_clitics placement axis.",
+        "taxonomy_mapping": [
+          "it_a2_future_imperative",
+          "it_b1_double_clitics"
+        ],
+        "evidence_strength": "Taxonomy-backed; the learner profile is too thin to rank command errors."
+      }
+    },
+    {
+      "topic": "commands",
+      "lang": "pt",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 100,
+        "gap": 0,
+        "misfiled": 0,
+        "total": 100
+      },
+      "bucket_status": {
+        "C1": "partial",
+        "C2": "partial"
+      },
+      "existing_mappings": [
+        "Tenses Rescue: vir imperativo, 4 production cards and 4 exercise cards",
+        "pt_clitic_placement: selected proclisis/enclisis frames"
+      ],
+      "uncovered_axes": [
+        "productive Brazilian command system beyond vir",
+        "consistent voce/voces/nos register policy",
+        "command-specific clitic placement"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "pt_imperativo_br",
+        "priority": "medium",
+        "scope": "Brazilian Portuguese voce, voces, and nos commands, affirmative/negative contrast, followed by integration with pt_clitic_placement.",
+        "evidence_strength": "Curriculum gap is clear; legacy PT mixes imperative and bare infinitive and cannot decide the register policy."
+      }
+    },
+    {
+      "topic": "pronouns",
+      "lang": "de",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 100,
+        "gap": 50,
+        "misfiled": 0,
+        "total": 150
+      },
+      "bucket_status": {
+        "P1": "partial",
+        "P2": "gap",
+        "P3": "partial"
+      },
+      "existing_mappings": [
+        "de_dativ_verben: dative-verb and recipient case selection, but full noun phrases rather than pronouns"
+      ],
+      "uncovered_axes": [
+        "personal pronoun accusative/dative paradigms",
+        "accusative versus dative pronoun selection",
+        "two-object and object-control word order"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "de_objektpronomen_akk_dat",
+        "priority": "high",
+        "scope": "Personal object pronouns with explicit case cues, jemandem/jemanden contrasts, recipient plus thing order, and a later embedded-clause slice.",
+        "evidence_strength": "Four verbatim object-case errors plus repeated dative-verb remediation support the case axis."
+      }
+    },
+    {
+      "topic": "pronouns",
+      "lang": "es",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 100,
+        "partial": 50,
+        "gap": 0,
+        "misfiled": 0,
+        "total": 150
+      },
+      "bucket_status": {
+        "P1": "covered",
+        "P2": "partial",
+        "P3": "covered"
+      },
+      "existing_mappings": [
+        "es_clitics_dir",
+        "es_clitics_ind",
+        "es_clitics_selo"
+      ],
+      "uncovered_axes": [
+        "clitic placement across infinitive, gerund, and affirmative command",
+        "matrix-object plus embedded-object constructions"
+      ],
+      "recommendation": {
+        "action": "extend-existing-units",
+        "unit_key": "es_clitics_placement_integration",
+        "priority": "high",
+        "scope": "Add deterministic placement and cluster cards to the existing clitic units, especially infinitive enclisis and le plus lo to se lo.",
+        "evidence_strength": "A late, verbatim comprar le lo to comprar selo error directly validates this integration gap."
+      }
+    },
+    {
+      "topic": "pronouns",
+      "lang": "fr",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 100,
+        "gap": 50,
+        "misfiled": 0,
+        "total": 150
+      },
+      "bucket_status": {
+        "P1": "partial",
+        "P2": "partial",
+        "P3": "gap"
+      },
+      "existing_mappings": [
+        "fr_pronoms_y_en: y/en only"
+      ],
+      "uncovered_axes": [
+        "direct and indirect object clitics",
+        "double-clitic ordering",
+        "tonic versus clitic person complements",
+        "clitic order in infinitives and imperatives"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "fr_pronoms_objets",
+        "priority": "high",
+        "scope": "Direct, indirect, tonic, and ordered double-object pronouns; preserve fr_pronoms_y_en as a narrower prerequisite or sibling.",
+        "evidence_strength": "The error profile records a missing object clitic and about 95 pronoun-family errors overall; y/en alone is explicitly insufficient."
+      }
+    },
+    {
+      "topic": "pronouns",
+      "lang": "it",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 100,
+        "gap": 50,
+        "misfiled": 0,
+        "total": 150
+      },
+      "bucket_status": {
+        "P1": "partial",
+        "P2": "partial",
+        "P3": "gap"
+      },
+      "existing_mappings": [
+        "it_clitici_ci_ne"
+      ],
+      "uncovered_axes": [
+        "basic direct and indirect unstressed pronouns",
+        "tonic complements after prepositions",
+        "double clitics and glielo-type clusters",
+        "placement with infinitives, imperatives, and modal verbs"
+      ],
+      "recommendation": {
+        "action": "propose-new-units",
+        "unit_keys": [
+          "it_pronomi_diretti_indiretti",
+          "it_doppi_clitici"
+        ],
+        "priority": "high",
+        "scope": "Build the taxonomy's A2 basic system before its B1 double-clitic and placement system; retain it_clitici_ci_ne as the B1 ci/ne branch.",
+        "taxonomy_mapping": [
+          "it_a2_pronouns_clitics",
+          "it_b1_ci_ne",
+          "it_b1_double_clitics"
+        ],
+        "evidence_strength": "Taxonomy-backed; learner-specific evidence is strongest for ci/ne/procomplementaries and thin for the missing basic system."
+      }
+    },
+    {
+      "topic": "pronouns",
+      "lang": "pt",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 150,
+        "gap": 0,
+        "misfiled": 0,
+        "total": 150
+      },
+      "bucket_status": {
+        "P1": "partial",
+        "P2": "partial",
+        "P3": "partial"
+      },
+      "existing_mappings": [
+        "pt_clitic_placement"
+      ],
+      "uncovered_axes": [
+        "complete direct versus indirect recipient inventory",
+        "lhe versus o/a and register-sensitive Brazilian choices",
+        "double objects and command-specific placement"
+      ],
+      "recommendation": {
+        "action": "extend-existing-unit",
+        "unit_key": "pt_clitic_placement",
+        "priority": "high",
+        "scope": "Add separately verified recipient and double-object frames under an explicit Brazilian register policy; keep the current infinitive spelling and proclisis bank intact.",
+        "evidence_strength": "About 21 learner-error/remediation rows directly support infinitive enclisis, comigo/conosco, and Brazilian proclisis; the broader recipient inventory is curriculum-driven."
+      }
+    },
+    {
+      "topic": "relfexive",
+      "display_topic": "reflexive",
+      "lang": "de",
+      "overall_status": "gap",
+      "row_counts": {
+        "covered": 0,
+        "partial": 0,
+        "gap": 100,
+        "misfiled": 50,
+        "total": 150
+      },
+      "bucket_status": {
+        "R1": "gap",
+        "R2": "gap",
+        "R3": "misfiled"
+      },
+      "routed_R3_command_status": "gap",
+      "existing_mappings": [],
+      "uncovered_axes": [
+        "lexically reflexive versus non-reflexive verbs",
+        "accusative versus dative reflexive pronouns",
+        "reflexive placement in infinitives and clauses"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "de_reflexive_verben",
+        "priority": "low",
+        "scope": "A small lexical/pronominal contrast unit with explicit non-reflexive traps; do not prioritize ahead of the better-evidenced case units.",
+        "evidence_strength": "Only one direct learner error, a spurious sich in Auswirkungen haben, so the gap is clear but priority is low."
+      }
+    },
+    {
+      "topic": "relfexive",
+      "display_topic": "reflexive",
+      "lang": "es",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 100,
+        "gap": 0,
+        "misfiled": 50,
+        "total": 150
+      },
+      "bucket_status": {
+        "R1": "partial",
+        "R2": "partial",
+        "R3": "misfiled"
+      },
+      "routed_R3_command_status": "partial",
+      "existing_mappings": [
+        "es_clitics_dir: overlapping me/te/nos/os forms but direct-object guidance, not lexical reflexivity",
+        "es_cmd_tu",
+        "es_cmd_usted",
+        "es_cmd_neg"
+      ],
+      "uncovered_axes": [
+        "lexically pronominal versus non-pronominal verb choice",
+        "meaning changes with se",
+        "reflexive placement with infinitives and affirmative/negative commands"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "es_verbos_pronominales",
+        "priority": "medium",
+        "scope": "Lexical se contrasts, person agreement, infinitive placement, and later command integration; do not relabel direct-object clitic cards as reflexive coverage.",
+        "evidence_strength": "The learner profile includes me fue to me fui and repeated motion/irse remediation, but not a broad quantified reflexive corpus."
+      }
+    },
+    {
+      "topic": "relfexive",
+      "display_topic": "reflexive",
+      "lang": "fr",
+      "overall_status": "gap",
+      "row_counts": {
+        "covered": 0,
+        "partial": 0,
+        "gap": 100,
+        "misfiled": 50,
+        "total": 150
+      },
+      "bucket_status": {
+        "R1": "gap",
+        "R2": "gap",
+        "R3": "misfiled"
+      },
+      "routed_R3_command_status": "gap",
+      "existing_mappings": [],
+      "uncovered_axes": [
+        "lexical pronominal verbs and false se insertion",
+        "reflexive infinitives",
+        "auxiliary and agreement interactions",
+        "pronominal imperatives"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "fr_verbes_pronominaux",
+        "priority": "high",
+        "scope": "Dropped versus spurious se, infinitive placement, and passe-compose auxiliary/agreement; command integration follows fr_imperatif.",
+        "evidence_strength": "The error profile identifies at least 15 dropped or spurious se cases and already proposes this unit."
+      }
+    },
+    {
+      "topic": "relfexive",
+      "display_topic": "reflexive",
+      "lang": "it",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 100,
+        "gap": 0,
+        "misfiled": 50,
+        "total": 150
+      },
+      "bucket_status": {
+        "R1": "partial",
+        "R2": "partial",
+        "R3": "misfiled"
+      },
+      "routed_R3_command_status": "partial",
+      "existing_mappings": [
+        "it_clitici_ci_ne: selected reflexive procomplementary clusters",
+        "Tenses Rescue: volere imperativo narrow sample"
+      ],
+      "uncovered_axes": [
+        "basic A2 reflexive paradigm and lexical verb inventory",
+        "distinction between simple reflexives and advanced procomplementaries",
+        "reflexive placement with infinitives and ordinary imperatives"
+      ],
+      "recommendation": {
+        "action": "propose-new-unit",
+        "unit_key": "it_verbi_riflessivi",
+        "priority": "medium",
+        "scope": "Build the A2 basic reflexive slice before extending the current B1/B2 procomplementary material; coordinate with it_imperativo and it_doppi_clitici.",
+        "taxonomy_mapping": [
+          "it_a2_pronouns_clitics",
+          "it_b1_double_clitics",
+          "it_b2_procomplementary_clitics"
+        ],
+        "evidence_strength": "Taxonomy-backed; the learner's 74-row remedial block strongly supports procomplementaries, not broad basic-reflexive frequency."
+      }
+    },
+    {
+      "topic": "relfexive",
+      "display_topic": "reflexive",
+      "lang": "pt",
+      "overall_status": "partial",
+      "row_counts": {
+        "covered": 0,
+        "partial": 100,
+        "gap": 0,
+        "misfiled": 50,
+        "total": 150
+      },
+      "bucket_status": {
+        "R1": "partial",
+        "R2": "partial",
+        "R3": "misfiled"
+      },
+      "routed_R3_command_status": "partial",
+      "existing_mappings": [
+        "pt_clitic_placement: selected se lembra/se chama and placement frames",
+        "Tenses Rescue: vir imperativo narrow sample"
+      ],
+      "uncovered_axes": [
+        "broader lexical pronominal-verb inventory",
+        "reflexive infinitive placement",
+        "reflexive commands under a Brazilian register policy"
+      ],
+      "recommendation": {
+        "action": "extend-then-reassess",
+        "unit_key": "pt_clitic_placement",
+        "candidate_unit_key": "pt_verbos_pronominais",
+        "priority": "medium",
+        "scope": "First add explicit lexical-se contrasts and infinitive/command frames to the placement unit; split a dedicated pronominal-verb unit only if lapse data warrants it.",
+        "evidence_strength": "Current learner evidence strongly supports placement mechanics but is thin for a broad lexical reflexive inventory."
+      }
+    }
+  ],
+  "quality_caveats": [
+    {
+      "code": "english_and_reference_quality",
+      "finding": "The prior audit estimates 5-10 percent defects in old translations and documents machine-English, literal calques, and register inconsistency. Exact source references are therefore diagnostic evidence, never authoritative answers."
+    },
+    {
+      "code": "register_inconsistency",
+      "finding": "Spanish COMMANDS use formal usted while Spanish PRONOUNS use informal tu; Portuguese COMMANDS mix imperative and bare infinitive. A new unit must choose its register independently."
+    },
+    {
+      "code": "formulaic_pronoun_block",
+      "finding": "P2 repeats an embedded English it in all 50 rows, while P3 is a 50-row recipient template with recurring unidiomatic English double-object frames. These blocks show objectives, not reusable prose."
+    },
+    {
+      "code": "relfexive_topic_contamination",
+      "finding": "R3 contains 50 vocative plural commands and only two explicit English reflexive pronouns. R2 contains only one explicit English reflexive pronoun. Target-language pronominal forms cannot repair an underspecified English cue."
+    },
+    {
+      "code": "italian_source_settled",
+      "finding": "The old Italian estate was a French copy and is absent from the fresh snapshot. The repaired Italian output is valuable for identifying structural intent but has no estate-study provenance and is not an import source."
+    },
+    {
+      "code": "no_study_or_audio_signal",
+      "finding": "All 12 matching DE/ES/FR/PT legacy decks have zero reps, zero reviews, zero mature cards, and zero sound tags. There is no scheduling or audio value to preserve."
+    }
+  ],
+  "methodology": [
+    "Hash and parse the five canonical input files and five repaired-Italian output files; require contiguous IDs, 400 unique canonical rows, four nonempty reference translations per input row, and a one-to-one 400-ID Italian join.",
+    "Inspect every canonical English prompt in ID order. Use DE/ES/FR/PT references and repaired Italian only to disambiguate the intended target-language construction, never to certify wording or correctness.",
+    "Assign contiguous 50-row authored blocks to the structural buckets C1-C2, P1-P3, and R1-R3. Record mechanically reproducible traits such as negative commands, explicit formal markers, explicit reflexive pronouns, and the 50-row command contamination.",
+    "Read the committed curriculum, relevant deterministic banks, translation selector, Tenses Rescue profile, five learner error profiles, Italian taxonomy, estate manifest, roadmap, prior audit, and commission at the hashes in this artifact.",
+    "Retrieve the live production grammar overview and delivery inventory read-only. Treat only verified, delivered, acked objectives as live coverage. Translation cards inherit their grammar topics and cannot increase structural coverage. Tenses Rescue counts only when the profile explicitly drills an imperative.",
+    "Classify coverage at bucket granularity using the definitions above. Counts report source rows carried by each bucket classification, not rows safe to reuse.",
+    "Recommend curriculum scopes from uncovered axes and learner/taxonomy evidence. Do not author, import, build, synthesize audio, or deliver anything in this audit."
+  ],
+  "validation_contract": {
+    "expected_canonical_rows": 400,
+    "expected_topic_rows": {
+      "commands": 100,
+      "pronouns": 150,
+      "relfexive": 150
+    },
+    "expected_findings": 15,
+    "finding_count_identity": "covered + partial + gap + misfiled = total",
+    "expected_rows_selected_for_import": 0,
+    "deterministic_serialization": "UTF-8 JSON, two-space indentation, stable array order, newline at EOF"
+  }
+}
