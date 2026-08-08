@@ -39,6 +39,7 @@ VERDICTS = ("import", "partial", "skip", "already-covered")
 SOUND_RE = re.compile(r"\[sound:([^\]\r\n]+)\]", re.IGNORECASE)
 HTML_RE = re.compile(r"<[^>]*>")
 SPACE_RE = re.compile(r"\s+")
+WORD_RE = re.compile(r"[^\W\d_]+", re.UNICODE)
 TENSE_FRONT_RE = re.compile(
     r"^\s*(?P<verb>[^;]+?)\s*;\s*_(?P<lang>[a-z]{2})"
     r"(?:\s*_?(?P<tense>[\w'’]+))?\s*$",
@@ -63,6 +64,169 @@ LANG_ALIASES = {
     "swedish": "sv",
     "norwegian": "no",
 }
+
+CURRICULUM_LANGS = ("de", "es", "fr", "it", "pt")
+
+# These are deliberately language-distinct function words/forms.  This is not
+# a general language detector: a back is only flagged when it has at least two
+# distinct markers for one non-target language, none for the target language,
+# and enough words to avoid short-gloss guesses.
+WRONG_LANGUAGE_MARKERS = {
+    "de": frozenset(
+        {
+            "der",
+            "den",
+            "dem",
+            "des",
+            "das",
+            "die",
+            "eine",
+            "einen",
+            "einem",
+            "einer",
+            "eines",
+            "nicht",
+            "für",
+            "über",
+            "unter",
+            "zwischen",
+            "beim",
+            "zum",
+            "zur",
+            "wird",
+            "werden",
+            "sind",
+            "kann",
+            "können",
+            "muss",
+            "müssen",
+        }
+    ),
+    "es": frozenset(
+        {
+            "el",
+            "los",
+            "las",
+            "usted",
+            "ustedes",
+            "ellos",
+            "ellas",
+            "hay",
+            "aunque",
+            "mientras",
+            "tiene",
+            "tienen",
+            "hemos",
+            "han",
+            "está",
+            "están",
+            "fue",
+            "fueron",
+        }
+    ),
+    "fr": frozenset(
+        {
+            "aux",
+            "avec",
+            "pour",
+            "dans",
+            "cette",
+            "ces",
+            "nous",
+            "vous",
+            "ils",
+            "elles",
+            "sont",
+            "pas",
+            "ont",
+            "était",
+            "été",
+        }
+    ),
+    "it": frozenset(
+        {
+            "gli",
+            "dello",
+            "della",
+            "delle",
+            "degli",
+            "nel",
+            "nella",
+            "nei",
+            "nelle",
+            "perché",
+            "questo",
+            "questa",
+            "questi",
+            "queste",
+            "sono",
+            "siamo",
+            "anche",
+            "aveva",
+            "hanno",
+        }
+    ),
+    "pt": frozenset(
+        {
+            "os",
+            "uma",
+            "umas",
+            "não",
+            "você",
+            "vocês",
+            "eles",
+            "elas",
+            "aos",
+            "num",
+            "numa",
+            "pelo",
+            "pela",
+            "pelos",
+            "pelas",
+            "são",
+            "estão",
+            "têm",
+            "temos",
+            "foram",
+            "isso",
+        }
+    ),
+}
+
+# Explicit curriculum allowlist.  It excludes exercises2, tenses, morphology
+# lookup tables, private banks, and explanatory prose by construction.
+GRAMMAR_BANK_FILES = {
+    "de": ("de_preps.json", "de_dativ_verben.json", "f2_de_case_roles.json"),
+    "es": ("es_verb_prep.json", "es_muy_mucho.json", "f2_es_pret_impf.json"),
+    "fr": (
+        "fr_quantites_de.json",
+        "fr_prep_lieux.json",
+        "fr_genre_noyau.json",
+        "fr_an_annee.json",
+        "f2_fr_pc_imparfait.json",
+    ),
+    "it": (
+        "it_clitici_ci_ne.json",
+        "it_genere_plurali.json",
+        "it_reggenze_verbali.json",
+        "f2_it_pp_imperfetto.json",
+    ),
+    "pt": (
+        "pt_clitic_placement.json",
+        "pt_gender_core.json",
+        "pt_regencia_verbal.json",
+        "f2_pt_person_aspect.json",
+    ),
+}
+GRAMMAR_SENTENCE_FIELDS = (
+    "sentence",
+    "contrast_form",
+    "example",
+    "example_es",
+    "example_dat_or_fixed",
+    "example_akk",
+)
+GRAMMAR_GLOSS_FIELDS = ("example_en", "gloss_en", "en")
 
 EXERCISE_TOPIC_STATUS = {
     "CONNECTING": ("shipped", "wave-1"),
@@ -172,6 +336,9 @@ class DeckAccumulator:
 class ContentIndex:
     exercise_prompts: dict[str, frozenset[str]]
     exercise_pairs: dict[str, frozenset[tuple[str, str]]]
+    grammar_sentences: dict[str, frozenset[str]]
+    grammar_glosses: dict[str, frozenset[str]]
+    grammar_pairs: dict[str, frozenset[tuple[str, str]]]
     tenses: frozenset[tuple[str, str, str]]
 
 
@@ -183,6 +350,12 @@ def normalize_text(value: str) -> str:
     value = html.unescape(value).replace("\xa0", " ")
     value = unicodedata.normalize("NFKC", value).casefold()
     return SPACE_RE.sub(" ", value).strip()
+
+
+def _lexical_text(value: str) -> str:
+    """Return normalized letter tokens, ignoring punctuation deterministically."""
+
+    return " ".join(WORD_RE.findall(normalize_text(value)))
 
 
 def sha256_file(path: Path) -> str:
@@ -245,8 +418,9 @@ def read_only_connection(path: Path) -> sqlite3.Connection:
     connection.execute("PRAGMA query_only=ON")
     connection.create_collation(
         "unicase",
-        lambda left, right: (left.casefold() > right.casefold())
-        - (left.casefold() < right.casefold()),
+        lambda left, right: (
+            (left.casefold() > right.casefold()) - (left.casefold() < right.casefold())
+        ),
     )
     return connection
 
@@ -259,10 +433,7 @@ def _validate_schema(connection: sqlite3.Connection) -> None:
     for table, required in REQUIRED_TABLE_COLUMNS.items():
         if table not in tables:
             raise AuditError(f"collection is missing current-schema table {table!r}")
-        present = {
-            str(row["name"])
-            for row in connection.execute(f'PRAGMA table_info("{table}")')
-        }
+        present = {str(row["name"]) for row in connection.execute(f'PRAGMA table_info("{table}")')}
         missing = sorted(required - present)
         if missing:
             raise AuditError(f"collection table {table!r} lacks columns: {missing}")
@@ -382,6 +553,88 @@ def _add_exercise_row(
                 pairs[lang].add((en, normalized_target))
 
 
+def _completed_frame(row: dict, frame_field: str, answer_field: str) -> str:
+    frame = row.get(frame_field)
+    answer = row.get(answer_field)
+    if not isinstance(frame, str) or not isinstance(answer, str):
+        return ""
+    if frame.count("___") != 1:
+        return ""
+    # German citation hints belong to the exercise prompt, not the completed
+    # sentence: ``___ (das Ministerium)`` becomes ``dem Ministerium``.
+    with_answer = re.sub(r"___\s*\([^()]++\)", answer, frame, count=1)
+    if with_answer == frame:
+        with_answer = frame.replace("___", answer, 1)
+    return normalize_text(with_answer)
+
+
+def _load_grammar_content(
+    repo_root: Path,
+) -> tuple[
+    dict[str, frozenset[str]],
+    dict[str, frozenset[str]],
+    dict[str, frozenset[tuple[str, str]]],
+]:
+    sentences: dict[str, set[str]] = {lang: set() for lang in CURRICULUM_LANGS}
+    glosses: dict[str, set[str]] = {lang: set() for lang in CURRICULUM_LANGS}
+    pairs: dict[str, set[tuple[str, str]]] = {lang: set() for lang in CURRICULUM_LANGS}
+    base = repo_root / "idiomatic" / "grammar" / "data"
+    for lang in CURRICULUM_LANGS:
+        for filename in GRAMMAR_BANK_FILES[lang]:
+            path = base / filename
+            if not path.is_file():
+                raise AuditError(f"committed grammar bank is missing: {path}")
+            data = _load_json(path)
+            if not isinstance(data, list):
+                raise AuditError(f"committed grammar bank is not a JSON array: {path}")
+            for row in data:
+                if not isinstance(row, dict) or "_meta" in row:
+                    continue
+
+                row_sentences: set[str] = set()
+                for field in GRAMMAR_SENTENCE_FIELDS:
+                    value = row.get(field)
+                    if isinstance(value, str) and (normalized := normalize_text(value)):
+                        row_sentences.add(normalized)
+                for frame_field, answer_field in (
+                    ("frame", "correct"),
+                    ("example_frame", "example_answer"),
+                ):
+                    if completed := _completed_frame(row, frame_field, answer_field):
+                        row_sentences.add(completed)
+                sentences[lang].update(row_sentences)
+
+                row_glosses = {
+                    normalize_text(value)
+                    for field in GRAMMAR_GLOSS_FIELDS
+                    if isinstance((value := row.get(field)), str) and normalize_text(value)
+                }
+                glosses[lang].update(row_glosses)
+
+                # Only pair fields that are explicitly aligned translations;
+                # short lexical `en` glosses are not paired with full examples.
+                aligned_target = row.get("example_es", row.get("example"))
+                aligned_gloss = row.get("example_en")
+                if isinstance(aligned_target, str) and isinstance(aligned_gloss, str):
+                    target = normalize_text(aligned_target)
+                    gloss = normalize_text(aligned_gloss)
+                    if target and gloss:
+                        pairs[lang].add((gloss, target))
+                sentence = row.get("sentence")
+                gloss_en = row.get("gloss_en")
+                if isinstance(sentence, str) and isinstance(gloss_en, str):
+                    target = normalize_text(sentence)
+                    gloss = normalize_text(gloss_en)
+                    if target and gloss:
+                        pairs[lang].add((gloss, target))
+
+    return (
+        {lang: frozenset(values) for lang, values in sentences.items()},
+        {lang: frozenset(values) for lang, values in glosses.items()},
+        {lang: frozenset(values) for lang, values in pairs.items()},
+    )
+
+
 def load_content_index(repo_root: Path = REPO_ROOT) -> ContentIndex:
     """Load conservative exact-match keys from committed content only."""
 
@@ -458,6 +711,8 @@ def load_content_index(repo_root: Path = REPO_ROOT) -> ContentIndex:
                     targets={"it": row.get("it")},
                 )
 
+    grammar_sentences, grammar_glosses, grammar_pairs = _load_grammar_content(repo_root)
+
     tense_path = repo_root / "docs" / "research" / "tenses-profiles" / "tenses_priors.json"
     tense_data = _load_json(tense_path)
     tense_keys: set[tuple[str, str, str]] = set()
@@ -476,6 +731,9 @@ def load_content_index(repo_root: Path = REPO_ROOT) -> ContentIndex:
     return ContentIndex(
         exercise_prompts={key: frozenset(value) for key, value in prompts.items()},
         exercise_pairs={key: frozenset(value) for key, value in pairs.items()},
+        grammar_sentences=grammar_sentences,
+        grammar_glosses=grammar_glosses,
+        grammar_pairs=grammar_pairs,
         tenses=frozenset(tense_keys),
     )
 
@@ -484,10 +742,16 @@ def _quality_flags(
     note_ids: set[int],
     note_info: dict[int, NoteInfo],
     *,
+    lang: str,
     scope: str,
 ) -> list[dict]:
     empty_front = 0
     empty_back = 0
+    exact_front_back_suspects = 0
+    wrong_language_suspects: collections.Counter[str] = collections.Counter()
+    machine_english_suspects: collections.Counter[str] = collections.Counter()
+    drift_suspects: collections.Counter[str] = collections.Counter()
+    literal_traps: collections.Counter[str] = collections.Counter()
     by_front: dict[str, collections.Counter[str]] = collections.defaultdict(collections.Counter)
     for note_id in note_ids:
         info = note_info[note_id]
@@ -495,6 +759,66 @@ def _quality_flags(
         empty_back += int(not info.back)
         if info.front:
             by_front[info.front][info.back] += 1
+
+        front_words = _lexical_text(info.front)
+        back_words = _lexical_text(info.back)
+        if info.front and info.front == info.back and len(front_words.split()) >= 2:
+            exact_front_back_suspects += 1
+
+        if lang in WRONG_LANGUAGE_MARKERS and len(back_words.split()) >= 4:
+            tokens = set(back_words.split())
+            if not tokens.intersection(WRONG_LANGUAGE_MARKERS[lang]):
+                scores = {
+                    candidate: len(tokens.intersection(markers))
+                    for candidate, markers in WRONG_LANGUAGE_MARKERS.items()
+                    if candidate != lang
+                }
+                best_score = max(scores.values(), default=0)
+                best = [code for code, score in scores.items() if score == best_score]
+                if best_score >= 2 and len(best) == 1:
+                    wrong_language_suspects[best[0]] += 1
+
+        machine_pattern = None
+        if front_words == "the technological solutionism":
+            machine_pattern = "the-technological-solutionism"
+        elif re.match(
+            r"^recommend (?:him|her|me|us|them|you) "
+            r"(?:that|this|these|those|the|a|an)\b",
+            front_words,
+        ):
+            machine_pattern = "recommend-indirect-object"
+        elif re.search(
+            r"\bexplain (?:him|her|me|us|them|you) "
+            r"(?:that|this|these|those|the|a|an)\b",
+            front_words,
+        ):
+            machine_pattern = "explain-indirect-object"
+        if machine_pattern:
+            machine_english_suspects[machine_pattern] += 1
+
+        if (
+            lang == "pt"
+            and front_words.startswith(("they have been championing", "they ve been championing"))
+            and back_words.startswith(("os senhores têm defendido", "as senhoras têm defendido"))
+        ):
+            drift_suspects["pt-they-to-formal-you"] += 1
+        elif (
+            lang == "es"
+            and front_words.startswith(("they have instructed us", "they ve instructed us"))
+            and back_words.startswith("nos ha pedido")
+        ):
+            drift_suspects["es-they-to-singular-verb"] += 1
+
+        literal_key = (lang, front_words, back_words)
+        if literal_key in {
+            ("es", "nuclear fallout", "la caída nuclear"),
+            ("es", "the nuclear fallout", "la caída nuclear"),
+        }:
+            literal_traps["es-nuclear-fallout"] += 1
+        elif literal_key == ("fr", "to fail", "pour échouer"):
+            literal_traps["fr-to-fail"] += 1
+        elif lang == "pt" and front_words == "accordingly" and back_words.startswith("de acordo"):
+            literal_traps["pt-accordingly"] += 1
 
     duplicate_groups = 0
     duplicate_notes = 0
@@ -531,6 +855,40 @@ def _quality_flags(
             "exact_duplicate",
             exact_duplicate_groups,
             f"{exact_duplicate_notes} notes",
+        ),
+        (
+            "exact_front_back_suspect",
+            exact_front_back_suspects,
+            "normalized identical fields with >=2 words; untranslated suspect",
+        ),
+        (
+            "suspected_wrong_target_language_back",
+            sum(wrong_language_suspects.values()),
+            "heuristic suspects by inferred back language: "
+            + ", ".join(
+                f"{code}={count}" for code, count in sorted(wrong_language_suspects.items())
+            )
+            + "; requires >=4 words, >=2 distinct markers, and no target-language marker",
+        ),
+        (
+            "documented_machine_english_front_suspect",
+            sum(machine_english_suspects.values()),
+            "exact §2.4 pattern suspects: "
+            + ", ".join(
+                f"{code}={count}" for code, count in sorted(machine_english_suspects.items())
+            ),
+        ),
+        (
+            "documented_subject_drift_suspect",
+            sum(drift_suspects.values()),
+            "exact §2.4 subject/number-drift pattern suspects: "
+            + ", ".join(f"{code}={count}" for code, count in sorted(drift_suspects.items())),
+        ),
+        (
+            "documented_literal_translation_trap",
+            sum(literal_traps.values()),
+            "documented §2.4 trap patterns: "
+            + ", ".join(f"{code}={count}" for code, count in sorted(literal_traps.items())),
         ),
     ):
         if count:
@@ -585,7 +943,9 @@ def _exercise_match_counts(
     for note_id in note_ids:
         info = note_info[note_id]
         matching_langs = [
-            code for code in languages if info.front and info.front in content.exercise_prompts[code]
+            code
+            for code in languages
+            if info.front and info.front in content.exercise_prompts[code]
         ]
         if matching_langs:
             prompt_matches += 1
@@ -618,14 +978,39 @@ def _tense_matches(
     return matches
 
 
+def _grammar_match_counts(
+    note_ids: set[int],
+    note_info: dict[int, NoteInfo],
+    *,
+    lang: str,
+    content: ContentIndex,
+) -> dict[str, tuple[int, int, int]]:
+    languages = (lang,) if lang in content.grammar_sentences else CURRICULUM_LANGS
+    counts: dict[str, tuple[int, int, int]] = {}
+    for code in languages:
+        sentence_matches = 0
+        gloss_matches = 0
+        pair_matches = 0
+        for note_id in note_ids:
+            info = note_info[note_id]
+            fields = {value for value in (info.front, info.back) if value}
+            sentence_matches += int(bool(fields.intersection(content.grammar_sentences[code])))
+            gloss_matches += int(bool(fields.intersection(content.grammar_glosses[code])))
+            pair_matches += int(
+                (info.front, info.back) in content.grammar_pairs[code]
+                or (info.back, info.front) in content.grammar_pairs[code]
+            )
+        counts[code] = (sentence_matches, gloss_matches, pair_matches)
+    return counts
+
+
 def _exercise_topics(deck_path: str, descendant_paths: Iterable[str]) -> list[str]:
     if not deck_path.startswith("EXCERCISES"):
         return []
     topics = {
         path.rsplit("::", 1)[-1]
         for path in descendant_paths
-        if path.startswith("EXCERCISES::")
-        and path.rsplit("::", 1)[-1] in EXERCISE_TOPIC_STATUS
+        if path.startswith("EXCERCISES::") and path.rsplit("::", 1)[-1] in EXERCISE_TOPIC_STATUS
     }
     if deck_path.rsplit("::", 1)[-1] in EXERCISE_TOPIC_STATUS:
         topics.add(deck_path.rsplit("::", 1)[-1])
@@ -670,6 +1055,28 @@ def _overlap_rows(
         if count:
             overlaps.append({"kind": kind, "status": "exact", "scope": scope, "count": count})
 
+    for scope, note_ids in (
+        ("direct", direct_note_ids),
+        ("subtree", subtree_note_ids),
+    ):
+        grammar_counts = _grammar_match_counts(note_ids, note_info, lang=lang, content=content)
+        for code, (sentence_count, gloss_count, pair_count) in grammar_counts.items():
+            for kind, count in (
+                ("normalized-grammar-sentence", sentence_count),
+                ("normalized-grammar-gloss", gloss_count),
+                ("normalized-grammar-pair", pair_count),
+            ):
+                if count:
+                    overlaps.append(
+                        {
+                            "kind": kind,
+                            "status": "exact",
+                            "scope": scope,
+                            "lang": code,
+                            "count": count,
+                        }
+                    )
+
     if deck_path.startswith("_tenses_old"):
         overlaps.append(
             {
@@ -680,7 +1087,7 @@ def _overlap_rows(
                 "details": "top-60 verb×tense priors per language",
             }
         )
-    elif (count := _tense_matches(subtree_note_ids, note_info, content)):
+    elif count := _tense_matches(subtree_note_ids, note_info, content):
         overlaps.append(
             {
                 "kind": "normalized-tenses-prior",
@@ -772,7 +1179,10 @@ def _proposed_verdict(deck_path: str, subtree: DeckAccumulator) -> tuple[str, st
             "Mass MT-labeled corpus with negligible study history; retain only audit evidence.",
         )
     if folded.startswith("a frequency dictionary of"):
-        return "skip", "Generic frequency-deck corpus; no meaningful study history justifies estate import."
+        return (
+            "skip",
+            "Generic frequency-deck corpus; no meaningful study history justifies estate import.",
+        )
     if folded in {"default", "custom study session"} or folded.startswith("recovered"):
         return "skip", "System/recovery residue rather than a coherent import family."
     if folded.startswith("_errors"):
@@ -786,7 +1196,10 @@ def _proposed_verdict(deck_path: str, subtree: DeckAccumulator) -> tuple[str, st
             "Teacher-authored dated material is unique learner evidence and merits a provenance-preserving import wave.",
         )
     if not subtree.reviews:
-        return "skip", "Never reviewed in the source account; no study-history signal supports importing it wholesale."
+        return (
+            "skip",
+            "Never reviewed in the source account; no study-history signal supports importing it wholesale.",
+        )
     return (
         "partial",
         "The family has source-account study history, but its size/heterogeneity calls for a studied-and-quality-filtered subset.",
@@ -864,9 +1277,7 @@ def analyze_collection(
                 if (name := "::".join(parts[:length])) in path_to_id
             ]
 
-        for row in connection.execute(
-            "SELECT id,nid,did,ivl,reps FROM cards ORDER BY id"
-        ):
+        for row in connection.execute("SELECT id,nid,did,ivl,reps FROM cards ORDER BY id"):
             card_id = int(row["id"])
             note_id = int(row["nid"])
             deck_id = int(row["did"])
@@ -932,7 +1343,9 @@ def analyze_collection(
             global_model_cards[int(row["mid"])] = int(row["cards"])
 
         models = []
-        for model_id, name in sorted(model_names.items(), key=lambda item: (item[1].casefold(), item[0])):
+        for model_id, name in sorted(
+            model_names.items(), key=lambda item: (item[1].casefold(), item[0])
+        ):
             models.append(
                 {
                     "id": model_id,
@@ -946,7 +1359,9 @@ def analyze_collection(
             )
 
         rows = []
-        all_paths = sorted(deck_paths.values(), key=lambda value: [part.casefold() for part in value.split("::")])
+        all_paths = sorted(
+            deck_paths.values(), key=lambda value: [part.casefold() for part in value.split("::")]
+        )
         for deck_id, deck_path in sorted(
             deck_paths.items(), key=lambda item: [part.casefold() for part in item[1].split("::")]
         ):
@@ -988,9 +1403,17 @@ def analyze_collection(
                 {
                     "note_models": note_models,
                     "quality_flags": _quality_flags(
-                        direct[deck_id].note_ids, note_info, scope="direct"
+                        direct[deck_id].note_ids,
+                        note_info,
+                        lang=language,
+                        scope="direct",
                     )
-                    + _quality_flags(subtree[deck_id].note_ids, note_info, scope="subtree"),
+                    + _quality_flags(
+                        subtree[deck_id].note_ids,
+                        note_info,
+                        lang=language,
+                        scope="subtree",
+                    ),
                     "overlap": _overlap_rows(
                         deck_path=deck_path,
                         descendant_paths=descendant_paths,
@@ -1086,16 +1509,15 @@ def _md(value: object) -> str:
 
 
 def _flag_summary(flags: list[dict]) -> str:
-    return "; ".join(
-        f"{flag['scope'][0]}:{flag['code']}={flag['count']}"
-        for flag in flags
-    ) or "—"
+    return "; ".join(f"{flag['scope'][0]}:{flag['code']}={flag['count']}" for flag in flags) or "—"
 
 
 def _overlap_summary(overlaps: list[dict]) -> str:
     items = []
     for overlap in overlaps:
         label = f"{overlap['kind']}:{overlap['status']}"
+        if "lang" in overlap:
+            label += f":{overlap['lang']}"
         if "topic" in overlap:
             label += f":{overlap['topic']}"
         if "count" in overlap:
@@ -1191,8 +1613,10 @@ def render_decks(manifest: dict) -> str:
         f"Generated from source SHA-256 `{manifest['snapshot']['source_sha256']}`. "
         f"All {manifest['totals']['deck_rows']:,} Anki deck rows appear exactly once.",
         "",
-        "`d:` and `s:` in Quality mean direct and subtree scope. Exact normalized overlap is "
-        "mechanical evidence, not a semantic identity claim.",
+        "`d:` and `s:` in Quality mean direct and subtree scope. Suspect/heuristic flags are "
+        "triage signals, not automated translation verdicts. Exact normalized overlap is "
+        "mechanical evidence, not a semantic identity claim; grammar overlap labels include "
+        "their indexed language.",
         "",
         "| Deck | Lang | Direct notes/cards | Subtree notes/cards | Mature | Reps | Reviews | Audio notes / sound tags | Last review | Models | Quality | Overlap | Proposal | Reason |",
         "|---|---|---:|---:|---:|---:|---:|---:|---|---|---|---|---|---|",

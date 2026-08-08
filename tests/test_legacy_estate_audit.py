@@ -111,9 +111,7 @@ def _row(manifest: dict, path: str) -> dict:
 
 def _flag(row: dict, code: str, scope: str) -> dict:
     return next(
-        flag
-        for flag in row["quality_flags"]
-        if flag["code"] == code and flag["scope"] == scope
+        flag for flag in row["quality_flags"] if flag["code"] == code and flag["scope"] == scope
     )
 
 
@@ -123,6 +121,23 @@ def _overlap(row: dict, kind: str, scope: str | None = None) -> list[dict]:
         for value in row["overlap"]
         if value["kind"] == kind and (scope is None or value["scope"] == scope)
     ]
+
+
+def _note(front: str, back: str) -> audit.NoteInfo:
+    return audit.NoteInfo(
+        mid=1,
+        front=audit.normalize_text(front),
+        back=audit.normalize_text(back),
+        sound_tags=0,
+        tag_langs=frozenset(),
+    )
+
+
+def _quality(note_info: dict[int, audit.NoteInfo], lang: str) -> dict[str, dict]:
+    return {
+        flag["code"]: flag
+        for flag in audit._quality_flags(set(note_info), note_info, lang=lang, scope="direct")
+    }
 
 
 def test_manifest_has_hierarchy_history_audio_quality_overlap_and_verdicts(estate_copy):
@@ -233,9 +248,7 @@ def test_manifest_and_markdown_are_deterministic_and_complete(estate_copy, tmp_p
     assert all(row["deck_path"] in decks for row in first["rows"])
 
 
-def test_validation_refuses_outside_symlink_hardlink_and_active_wal(
-    estate_copy, tmp_path
-):
+def test_validation_refuses_outside_symlink_hardlink_and_active_wal(estate_copy, tmp_path):
     work_root, collection = estate_copy
     outside = _make_collection(tmp_path / "outside" / "collection.anki2")
     with pytest.raises(audit.AuditError, match="beneath"):
@@ -281,3 +294,205 @@ def test_audited_at_requires_a_real_timezone(value):
 def test_exercises_verdicts_follow_the_frozen_roadmap(path, verdict):
     accumulator = audit.DeckAccumulator(cards=1)
     assert audit._proposed_verdict(path, accumulator)[0] == verdict
+
+
+def test_quality_flags_wrong_language_and_exact_front_back_are_conservative():
+    for lang, markers in audit.WRONG_LANGUAGE_MARKERS.items():
+        other_markers = set().union(
+            *(
+                candidate_markers
+                for candidate, candidate_markers in audit.WRONG_LANGUAGE_MARKERS.items()
+                if candidate != lang
+            )
+        )
+        assert markers.isdisjoint(other_markers)
+
+    notes = {
+        1: _note("The media have no influence.", "Los medios no tienen influencia."),
+        2: _note("The media have no influence.", "Os meios não têm influência."),
+        3: _note("A platform", "Los tienen"),
+        4: _note("Open source", "Open source"),
+        5: _note("Internet", "Internet"),
+    }
+    flags = _quality(notes, "pt")
+
+    assert flags["suspected_wrong_target_language_back"] == {
+        "code": "suspected_wrong_target_language_back",
+        "scope": "direct",
+        "count": 1,
+        "details": (
+            "heuristic suspects by inferred back language: es=1; requires >=4 words, "
+            ">=2 distinct markers, and no target-language marker"
+        ),
+    }
+    assert flags["exact_front_back_suspect"]["count"] == 1
+    assert ">=2 words" in flags["exact_front_back_suspect"]["details"]
+
+    italian_paradigm = _quality(
+        {
+            1: _note(
+                "accadere; _it_future",
+                "to happen; esso, essa accadrà; essi, esse accadranno",
+            )
+        },
+        "it",
+    )
+    assert "suspected_wrong_target_language_back" not in italian_paradigm
+
+
+def test_quality_flags_only_the_documented_machine_english_patterns():
+    notes = {
+        1: _note("the Technological solutionism", "el solucionismo tecnológico"),
+        2: _note("Recommend her that documentary!", "Recomiéndele ese documental."),
+        3: _note(
+            "The professor will explain her the theory",
+            "La profesora le explicará la teoría.",
+        ),
+        4: _note(
+            "The professor will explain the theory to her",
+            "La profesora le explicará la teoría.",
+        ),
+        5: _note("Recommend that documentary to her!", "Recomiéndele ese documental."),
+    }
+    flag = _quality(notes, "es")["documented_machine_english_front_suspect"]
+
+    assert flag["count"] == 3
+    assert "explain-indirect-object=1" in flag["details"]
+    assert "recommend-indirect-object=1" in flag["details"]
+    assert "the-technological-solutionism=1" in flag["details"]
+
+
+@pytest.mark.parametrize(
+    ("lang", "front", "back", "safe_back"),
+    [
+        (
+            "pt",
+            "They have been championing the proposal for months.",
+            "Os senhores têm defendido a proposta há meses.",
+            "Eles têm defendido a proposta há meses.",
+        ),
+        (
+            "es",
+            "They've instructed us to publish the report.",
+            "Nos ha pedido que publiquemos el informe.",
+            "Nos han pedido que publiquemos el informe.",
+        ),
+    ],
+)
+def test_quality_flags_only_documented_subject_drift_patterns(lang, front, back, safe_back):
+    assert _quality({1: _note(front, back)}, lang)["documented_subject_drift_suspect"]["count"] == 1
+    assert "documented_subject_drift_suspect" not in _quality({1: _note(front, safe_back)}, lang)
+
+
+@pytest.mark.parametrize(
+    ("lang", "front", "back", "safe_back"),
+    [
+        ("es", "The nuclear fallout", "La caída nuclear", "La lluvia radiactiva"),
+        ("fr", "to fail", "pour échouer", "échouer"),
+        ("pt", "Accordingly,", "De acordo; assim sendo", "Por conseguinte"),
+    ],
+)
+def test_quality_flags_only_documented_literal_translation_pairs(lang, front, back, safe_back):
+    assert (
+        _quality({1: _note(front, back)}, lang)["documented_literal_translation_trap"]["count"] == 1
+    )
+    assert "documented_literal_translation_trap" not in _quality({1: _note(front, safe_back)}, lang)
+
+
+def test_grammar_content_index_and_overlap_are_exact_and_per_language(tmp_path):
+    data_dir = tmp_path / "idiomatic" / "grammar" / "data"
+    data_dir.mkdir(parents=True)
+    for filenames in audit.GRAMMAR_BANK_FILES.values():
+        for filename in filenames:
+            (data_dir / filename).write_text("[]\n", encoding="utf-8")
+
+    (data_dir / "es_verb_prep.json").write_text(
+        json.dumps(
+            [
+                {
+                    "en": "to depend on",
+                    "trap": "metadata must not be indexed",
+                    "example_es": "La plataforma procesa datos.",
+                    "example_en": "The platform processes data.",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (data_dir / "es_muy_mucho.json").write_text(
+        json.dumps(
+            [
+                {
+                    "frame": "La afirmación es ___ difícil.",
+                    "correct": "muy",
+                    "rule_en": "Rule prose must not be indexed.",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (data_dir / "f2_es_pret_impf.json").write_text(
+        json.dumps(
+            [
+                {
+                    "sentence": "La autoridad supervisaba el proceso.",
+                    "contrast_form": "La autoridad supervisó el proceso.",
+                    "why": "Feedback must not be indexed.",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (data_dir / "pt_regencia_verbal.json").write_text(
+        json.dumps(
+            [
+                {
+                    "en": "to analyze",
+                    "example_es": "A equipe analisou o relatório.",
+                    "example_en": "The team analyzed the report.",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    tenses_dir = tmp_path / "docs" / "research" / "tenses-profiles"
+    tenses_dir.mkdir(parents=True)
+    (tenses_dir / "tenses_priors.json").write_text('{"langs": {}}\n', encoding="utf-8")
+
+    content = audit.load_content_index(tmp_path)
+    assert audit.normalize_text("La afirmación es muy difícil.") in content.grammar_sentences["es"]
+    assert (
+        audit.normalize_text("Rule prose must not be indexed.") not in content.grammar_glosses["es"]
+    )
+    assert (
+        audit.normalize_text("The platform processes data."),
+        audit.normalize_text("La plataforma procesa datos."),
+    ) in content.grammar_pairs["es"]
+
+    notes = {
+        1: _note("The platform processes data.", "La plataforma procesa datos."),
+        2: _note("La afirmación es muy difícil.", "A grammar drill"),
+        3: _note("La autoridad supervisaba el proceso.", "A bounded reading"),
+        4: _note("A equipe analisou o relatório.", "The team analyzed the report."),
+    }
+    overlaps = audit._overlap_rows(
+        deck_path="Grammar corpus",
+        descendant_paths=("Grammar corpus",),
+        lang="multi",
+        direct_note_ids={1, 2},
+        subtree_note_ids=set(notes),
+        note_info=notes,
+        content=content,
+    )
+    keyed = {(row["kind"], row["scope"], row.get("lang")): row["count"] for row in overlaps}
+    assert keyed == {
+        ("normalized-grammar-sentence", "direct", "es"): 2,
+        ("normalized-grammar-gloss", "direct", "es"): 1,
+        ("normalized-grammar-pair", "direct", "es"): 1,
+        ("normalized-grammar-sentence", "subtree", "es"): 3,
+        ("normalized-grammar-gloss", "subtree", "es"): 1,
+        ("normalized-grammar-pair", "subtree", "es"): 1,
+        ("normalized-grammar-sentence", "subtree", "pt"): 1,
+        ("normalized-grammar-gloss", "subtree", "pt"): 1,
+        ("normalized-grammar-pair", "subtree", "pt"): 1,
+    }

@@ -53,7 +53,7 @@ The full evidence ledger, including hashes for the commission, roadmap, prior au
 
 | Evidence | SHA-256 |
 |---|---|
-| `docs/research/legacy_estate/manifest.json` | `bd1bb767a8e55d6239900b60e2783050b0950e593149dc588290367cab7a2321` |
+| `docs/research/legacy_estate/manifest.json` | `65aed9b0b7bb10452c74f90514010d9b07c83d165a9da87f20ae31d6b046291b` |
 | `idiomatic/grammar/curriculum.py` | `9164b26f3554b22f09f58d97adb6d66649b1efb97a6adf03dee78b1689093f29` |
 | `idiomatic/grammar/data/units_fip.json` | `39b94b77c7dfc91e91025a3c5bb5d97dc8bf97fa8cdadec336e8fc8dbc76196c` |
 | `idiomatic/grammar/translation.py` | `ace88f89e310e0ac7152f79eaae7f5b506a89d54a03b9f17ec721d56e58f95dd` |
