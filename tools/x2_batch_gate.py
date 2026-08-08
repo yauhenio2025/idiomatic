@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter
 from pathlib import Path
 
@@ -42,6 +43,202 @@ _CHUNK_RE = re.compile(
     r"^(?P<lang>de|es|fr|it|pt)_(?P<topic>[a-z0-9]+(?:_[a-z0-9]+)*?)"
     r"(?:_pilot)?_b[0-9]{2}$"
 )
+
+_TENSES_INPUT_KEYS = frozenset({"id", "en", "old_back"})
+_TENSES_TRIAGE_KEYS = frozenset({"id", "en", "verdict", "reason"})
+_TENSES_NOTE_KEYS = frozenset({
+    "id", "en", "category", "tl", "alts", "register", "trap",
+    "example_tl", "example_en", "cloze", "note",
+})
+# docs/commissions/EXERCISES2_TENSES_ADDENDUM.md, Note contract §1.
+# Keep this narrower than exercises2.CATEGORIES: Wave 4--6 lexical categories
+# are valid globally but must never leak into a Wave 3 Tenses chunk.
+_TENSES_CATEGORIES = frozenset({
+    "past-anteriority",
+    "ongoing-to-present",
+    "modal-construction",
+    "counterfactual-sequence",
+    "future-perfect",
+    "literary-sequence",
+})
+
+
+def _strict_tenses_rows(
+    rows: object,
+    *,
+    label: str,
+    exact_keys: frozenset[str],
+    list_keys: frozenset[str] = frozenset(),
+) -> list[str]:
+    """Validate the non-coercing Wave 3 JSON surface before normal parsing."""
+
+    if not isinstance(rows, list):
+        return [f"Tenses {label} must be a JSON array"]
+    problems: list[str] = []
+    ids: list[str] = []
+    for index, row in enumerate(rows):
+        location = f"Tenses {label}[{index}]"
+        if not isinstance(row, dict):
+            problems.append(f"{location} must be an object")
+            continue
+        present = set(row)
+        if present != exact_keys:
+            missing = sorted(exact_keys - present)
+            extra = sorted(present - exact_keys)
+            problems.append(
+                f"{location} keys mismatch (missing {missing}, extra {extra})"
+            )
+        for key in sorted(present & exact_keys):
+            value = row[key]
+            if key in list_keys:
+                if not isinstance(value, list) or any(
+                    not isinstance(item, str) for item in value
+                ):
+                    problems.append(f"{location}.{key} must be a list of strings")
+            elif not isinstance(value, str):
+                problems.append(f"{location}.{key} must be a string")
+        if isinstance(row.get("id"), str):
+            ids.append(row["id"])
+    duplicates = sorted(item_id for item_id, count in Counter(ids).items() if count > 1)
+    if duplicates:
+        problems.append(f"Tenses {label} has duplicate ids: {duplicates[:5]}")
+    return problems
+
+
+def _exact_text(value: object) -> str:
+    if not isinstance(value, str):
+        return ""
+    return unicodedata.normalize("NFC", value).strip()
+
+
+def _example_tl(row: dict, lang: str) -> str:
+    """Read current or legacy-pilot target-example spelling."""
+
+    value = row.get("example_tl")
+    if not isinstance(value, str):
+        value = row.get(f"example_{lang}")
+    return _exact_text(value)
+
+
+def _tenses_example_duplicate_problems(
+    *,
+    lang: str,
+    notes_raw: list[dict],
+    root: Path,
+    notes_path: Path,
+) -> list[str]:
+    """Reject exact reuse of a Tenses practice example within one language.
+
+    A Wave 3 example must be a new sentence.  Compare it with production
+    answers/source prompts and examples from every other landed Tenses chunk,
+    as well as already merged Exercises2 topics.  A future merged copy of the
+    same Tenses note is ignored so re-gating after merge remains idempotent.
+    """
+
+    # side -> normalized text -> human-readable origins
+    primary: dict[str, dict[str, list[tuple[str, str, str, str]]]] = {
+        "tl": {}, "en": {},
+    }
+    examples: dict[str, dict[str, list[tuple[str, str, str, str]]]] = {
+        "tl": {}, "en": {},
+    }
+
+    def add(
+        target: dict[str, dict[str, list[tuple[str, str, str, str]]]],
+        side: str,
+        value: object,
+        origin: tuple[str, str, str, str],
+    ) -> None:
+        normalized = _exact_text(value)
+        if normalized:
+            target[side].setdefault(normalized, []).append(origin)
+
+    def add_external_rows(
+        rows: object, *, kind: str, topic: str, source: str,
+    ) -> None:
+        if not isinstance(rows, list):
+            return
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            item_id = row.get("id")
+            if not isinstance(item_id, str):
+                continue
+            add(primary, "tl", row.get("tl", row.get(f"{lang}_main")),
+                (kind, topic, item_id, f"{source}:tl"))
+            add(primary, "en", row.get("en"),
+                (kind, topic, item_id, f"{source}:en"))
+            add(examples, "tl", _example_tl(row, lang),
+                (kind, topic, item_id, f"{source}:example_tl"))
+            add(examples, "en", row.get("example_en"),
+                (kind, topic, item_id, f"{source}:example_en"))
+
+    for path in sorted((root / "output").glob(f"{lang}_tenses_b*_notes.json")):
+        if path.resolve() == notes_path.resolve():
+            continue
+        try:
+            rows = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            # That chunk's own gate reports malformed output.  It must not make
+            # an otherwise valid neighbouring chunk impossible to inspect.
+            continue
+        add_external_rows(rows, kind="landed", topic="tenses", source=path.name)
+
+    merged_dir = root.parent / "notes"
+    for path in sorted(merged_dir.glob(f"{lang}_*.json")):
+        topic = path.stem[len(lang) + 1:]
+        try:
+            rows = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        add_external_rows(rows, kind="merged", topic=topic, source=path.name)
+
+    # Index every current answer/source before inspecting its examples so an
+    # example cannot copy a later row's primary sentence and escape the gate.
+    for row in notes_raw:
+        item_id = row["id"]
+        add(primary, "tl", row["tl"], ("current", "tenses", item_id, "tl"))
+        add(primary, "en", row["en"], ("current", "tenses", item_id, "en"))
+
+    current_examples: dict[str, dict[str, list[str]]] = {"tl": {}, "en": {}}
+    for row in notes_raw:
+        for side, key in (("tl", "example_tl"), ("en", "example_en")):
+            normalized = _exact_text(row[key])
+            current_examples[side].setdefault(normalized, []).append(row["id"])
+
+    conflicts: list[str] = []
+    for row in notes_raw:
+        item_id = row["id"]
+        for side, key in (("tl", "example_tl"), ("en", "example_en")):
+            normalized = _exact_text(row[key])
+            origins = list(primary[side].get(normalized, ()))
+            origins.extend(examples[side].get(normalized, ()))
+            for other_id in current_examples[side].get(normalized, ()):
+                if other_id != item_id:
+                    origins.append(("current", "tenses", other_id, key))
+
+            filtered = []
+            for origin in origins:
+                kind, topic, origin_id, detail = origin
+                # A merged Wave 3 row is the expected durable copy of this same
+                # authored note, not an independent duplicate.
+                if kind == "merged" and topic == "tenses" and origin_id == item_id:
+                    continue
+                # Do not compare the current example with itself.  Current
+                # primary fields remain intentionally visible to catch a
+                # supposed example that simply repeats its own answer/source.
+                if kind == "current" and origin_id == item_id and detail == key:
+                    continue
+                filtered.append(origin)
+            if filtered:
+                labels = sorted({
+                    f"{kind}:{topic}:{origin_id}:{detail}"
+                    for kind, topic, origin_id, detail in filtered
+                })
+                conflicts.append(f"{item_id}:{key} duplicates {labels[0]}")
+    if conflicts:
+        return [f"exact duplicate Tenses examples: {conflicts[:8]}"]
+    return []
 
 
 def _chunk_lang_topic(chunk: str) -> tuple[str, str]:
@@ -93,12 +290,29 @@ def gate_chunk(
         lang, topic = _chunk_lang_topic(chunk)
     except ValueError as exc:
         return False, [str(exc)], stats
-    inputs = json.loads(input_path.read_text(encoding="utf-8"))
     try:
+        inputs = json.loads(input_path.read_text(encoding="utf-8"))
         notes_raw = json.loads(notes_path.read_text(encoding="utf-8"))
         triage = json.loads(triage_path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
         return False, [f"invalid JSON: {exc}"], stats
+
+    if topic == "tenses":
+        problems.extend(_strict_tenses_rows(
+            inputs, label="input", exact_keys=_TENSES_INPUT_KEYS,
+        ))
+        problems.extend(_strict_tenses_rows(
+            triage, label="triage", exact_keys=_TENSES_TRIAGE_KEYS,
+        ))
+        problems.extend(_strict_tenses_rows(
+            notes_raw, label="notes", exact_keys=_TENSES_NOTE_KEYS,
+            list_keys=frozenset({"alts"}),
+        ))
+        # Stop before the legacy/general checks index malformed rows.  The
+        # complete schema/type diagnostics above are more useful than a crash
+        # or a cascade of misleading ID mismatches.
+        if problems:
+            return False, problems, stats
 
     input_ids = [row["id"] for row in inputs]
     input_by_id = {row["id"]: row for row in inputs}
@@ -122,6 +336,24 @@ def gate_chunk(
                     if row.get("verdict") not in ("keep", "drop")]
     if bad_verdicts:
         problems.append(f"invalid verdicts: {bad_verdicts[:5]}")
+    if topic == "tenses":
+        blank_drop_reasons = [
+            row["id"] for row in triage
+            if row["verdict"] == "drop" and not row["reason"].strip()
+        ]
+        multiline_drop_reasons = [
+            row["id"] for row in triage
+            if row["verdict"] == "drop"
+            and ("\n" in row["reason"] or "\r" in row["reason"])
+        ]
+        if blank_drop_reasons:
+            problems.append(
+                f"Tenses drop reasons must be nonempty: {blank_drop_reasons[:5]}"
+            )
+        if multiline_drop_reasons:
+            problems.append(
+                f"Tenses drop reasons must be single-line: {multiline_drop_reasons[:5]}"
+            )
     keep_ids = {row["id"] for row in triage if row.get("verdict") == "keep"}
     note_ids = [row.get("id") for row in notes_raw]
     if sorted(note_ids) != sorted(keep_ids):
@@ -142,6 +374,19 @@ def gate_chunk(
     ]
     if changed_note_en:
         problems.append(f"notes changed source English: {changed_note_en[:5]}")
+
+    if topic == "tenses":
+        bad_categories = [
+            f"{row['id']}:{row['category']}" for row in notes_raw
+            if row["category"] not in _TENSES_CATEGORIES
+        ]
+        if bad_categories:
+            problems.append(
+                f"invalid Tenses categories: {bad_categories[:8]}"
+            )
+        problems.extend(_tenses_example_duplicate_problems(
+            lang=lang, notes_raw=notes_raw, root=root, notes_path=notes_path,
+        ))
 
     old_backs = {row["id"]: row.get("old_back", "") for row in inputs}
     parsed = 0
