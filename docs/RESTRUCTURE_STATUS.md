@@ -6,8 +6,15 @@
 
 The 2026-08-07 architecture session split the restructure into two
 sequenced commissions: the **estate reorganization** (the tree) and the
-**Expression Hub** (the content model). Estate is DONE; the Hub is next
-and holds every remaining user-visible deliverable.
+**Expression Hub** (the content model). Estate is DONE.
+
+**PRIORITY CHANGE (owner, 2026-08-08): before the Hub comes the legacy
+estate sweep** — full inventory of the old +2 account, completion of the
+planned exercises imports, and cost-0 local Qwen voicing of everything
+un-voiced ([LEGACY_ESTATE_AUDIT_COMMISSION](commissions/LEGACY_ESTATE_AUDIT_COMMISSION.md)).
+Rationale: structure all source material BEFORE the hub's model freeze,
+so nothing needs re-importing after. The Hub then holds every remaining
+user-visible deliverable.
 
 ## 1. DONE — estate migration (closed 2026-08-08 morning)
 
