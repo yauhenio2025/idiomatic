@@ -38,3 +38,8 @@ idiomatic/grammar/data/exercises2/it_rebuild/logs/
 
 # Read-only AnkiWeb scratch copy for the legacy-estate audit commission.
 docs/research/legacy_estate_work/
+# Hub manifest machine artifacts: local evidence, too large for the public
+# deploy repo (MD summaries are committed; JSONs regenerate from briefs).
+docs/research/hub_manifest/C1_sense_resolution.json
+docs/research/hub_manifest/C2_schedule_dossiers.json
+docs/research/hub_manifest/C3_server_examples_extract.json
