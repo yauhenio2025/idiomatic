@@ -386,7 +386,8 @@ def refresh() -> None:
           f"{coverage['images_staged']} images")
 
 
-def build() -> None:
+def build(out_name: str = "hub_pilot.apkg") -> None:
+    out_path = HUB_DIR / out_name
     if not SELECTION.exists():
         _die(f"{SELECTION} missing — run with --refresh first")
     sel = json.loads(SELECTION.read_text(encoding="utf-8"))
@@ -407,11 +408,11 @@ def build() -> None:
             _die(f"staged media missing: {p} — rerun --refresh")
         media_files.append(p)
     n_hub, n_ex = hub_apkg.build_hub_apkg(
-        out_path=OUT_APKG, hub_notes=sel["hub_notes"],
+        out_path=out_path, hub_notes=sel["hub_notes"],
         example_notes=sel["example_notes"], media_files=media_files,
         pilot=True)
-    sha = hashlib.sha256(OUT_APKG.read_bytes()).hexdigest()
-    print(f"built {OUT_APKG}")
+    sha = hashlib.sha256(out_path.read_bytes()).hexdigest()
+    print(f"built {out_path}")
     print(f"  hub notes {n_hub} (x2 cards), example notes {n_ex}, "
           f"media {len(media_files)}, sha256 {sha[:16]}…")
 
@@ -420,7 +421,9 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--refresh", action="store_true",
                     help="reselect from the server + refetch media first")
+    ap.add_argument("--out", default="hub_pilot.apkg",
+                    help="output apkg basename inside hub_manifest/")
     args = ap.parse_args()
     if args.refresh:
         refresh()
-    build()
+    build(args.out)

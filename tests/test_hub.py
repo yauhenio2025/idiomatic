@@ -123,7 +123,7 @@ def test_deck_names_compose_from_anki_root():
 
 # --- field compilation ------------------------------------------------------
 
-def test_examples_html_rail():
+def test_examples_html_grid():
     html_out = hub_apkg.build_examples_html([
         {"example_id": 2503, "target_text": "Trabaja <en> la sombra.",
          "en_text": "He works in the shadows.",
@@ -138,6 +138,19 @@ def test_examples_html_rail():
     assert '<img src="idh_ex_2503_a1b2c3d4.jpg"' in html_out
     assert html_out.count("<img") == 1  # no placeholder for the imageless row
     assert "&lt;en&gt;" in html_out     # text is escaped
+    # Tile layout (owner verdict 2026-08-09): image ABOVE the sentence pair.
+    first_tile = html_out.split("</div>\n")[0]
+    assert first_tile.index("<img") < first_tile.index("rail-tl")
+
+
+def test_hub_css_is_a_tile_grid():
+    """Owner verdict 2026-08-09: ~3 tiles per row, responsive to 2/1."""
+    css = hub_apkg.make_hub_model().css
+    assert "display: grid" in css
+    assert "repeat(3, 1fr)" in css
+    assert "repeat(2, 1fr)" in css      # tablet/phone step-down
+    assert css.count("@media") >= 2     # and a narrow-phone step-down
+    assert ".card.night_mode .rail-item" in css
 
 
 def test_sources_html_visible_title_and_url():

@@ -99,14 +99,22 @@ _CSS = """
             padding: 8px 12px;}
 .note-line.syn {background: #eef4fb; color: #23486b;}
 .note-line.ff {background: #fbf0ee; color: #7a2e20;}
-.rail {margin: 18px auto 0; max-width: 620px;}
-.rail-item {margin: 20px 0; text-align: center;}
-.rail-tl {font-size: clamp(17px, 3.8vw, 24px); font-weight: 600;
-          line-height: 1.4;}
-.rail-en {font-size: clamp(13px, 2.8vw, 17px); color: #888; margin-top: 2px;
-          line-height: 1.4;}
-.rail-item img {width: 100%; max-width: 620px; border-radius: 10px;
-                margin-top: 8px;}
+/* Example grid (owner verdict 2026-08-09): tiles, ~3 per row, image on
+   top, compact sentence pair beneath; 2 columns on tablets/phones, 1 on
+   narrow phones. Text-only tiles share the same tile chrome so
+   image-less languages look intentional, not broken. */
+.rail {margin: 18px auto 0; max-width: 760px; display: grid;
+       grid-template-columns: repeat(3, 1fr); gap: 12px;}
+.rail-item {margin: 0; background: #f5f7f7; border-radius: 10px;
+            padding: 10px; display: flex; flex-direction: column;
+            gap: 6px; text-align: center;}
+.rail-item img {width: 100%; border-radius: 8px; display: block;}
+.rail-tl {font-size: clamp(13px, 2.6vw, 17px); font-weight: 600;
+          line-height: 1.35;}
+.rail-en {font-size: clamp(11px, 2.2vw, 14px); color: #888;
+          line-height: 1.35;}
+@media (max-width: 640px) {.rail {grid-template-columns: repeat(2, 1fr);}}
+@media (max-width: 400px) {.rail {grid-template-columns: 1fr;}}
 .ctx {font-size: clamp(12px, 2.5vw, 15px); color: #666; margin-top: 10px;}
 .sources {margin-top: 22px; font-size: clamp(10px, 2vw, 13px); color: #888;}
 .src {margin-top: 6px;}
@@ -138,6 +146,7 @@ hr#answer {border: 0; border-top: 1px solid #bbb; margin: 18px auto;
 .card.night_mode .note-line.ff, .card.nightMode .note-line.ff
   {background: #3a2b28; color: #eec2b8;}
 .card.night_mode .rail-en, .card.nightMode .rail-en {color: #9aa0a6;}
+.card.night_mode .rail-item, .card.nightMode .rail-item {background: #2e3438;}
 """
 
 # Card 1 — the accepted TL-front hub card (design §5.2): front is the
@@ -233,10 +242,11 @@ def _deck_id(deck_name: str) -> int:
 # --- field compilation ------------------------------------------------------
 
 def build_examples_html(examples: list[dict]) -> str:
-    """Compile the hub's vertical comic rail (accepted verdict 4).
+    """Compile the hub's example grid (verdict 4 as amended 2026-08-09:
+    tiles ~3 per row instead of a single vertical column).
 
-    One item per canonical published example: target sentence, muted
-    English line, then that sentence's image (when approved bytes exist).
+    One tile per canonical published example: the sentence's image on
+    top (when approved bytes exist), target sentence, muted English line.
     ``data-example-id`` is the projection audit hook — the set of IDs must
     equal the canonical published example set (design acceptance checks).
     """
@@ -248,9 +258,10 @@ def build_examples_html(examples: list[dict]) -> str:
                    f' alt="">')
         items.append(
             f'<div class="rail-item" data-example-id="{int(ex["example_id"])}">'
+            f'{img}'
             f'<div class="rail-tl">{html.escape(ex["target_text"])}</div>'
             f'<div class="rail-en">{html.escape(ex["en_text"])}</div>'
-            f'{img}</div>')
+            f'</div>')
     return "\n".join(items)
 
 

@@ -1,5 +1,15 @@
 # Expression Hub pilot — what you will see (owner gate 1)
 
+> **v2 (2026-08-09, post-verdict): `hub_pilot_v2.apkg`.** The owner
+> approved v1 and ratified the model freeze, with one template
+> amendment: the hub back's example rail is now a responsive TILE GRID
+> (~3 per row on desktop webviews, 2 on tablets/phones, 1 on narrow
+> phones) — illustration on top, target sentence, muted English line
+> beneath; text-only tiles share the same tile chrome. v2 differs from
+> v1 ONLY in that rail layout (same selection, same GUIDs, same model
+> IDs) — importing v2 updates the existing pilot deck's cards in place.
+> Everything below otherwise still applies; read "rail" as "grid".
+
 > Built 2026-08-09 on branch `hub-build` (F2 of
 > HUB_BUILD_EXECUTION_COMMISSION.md). The deck is DISPOSABLE by design:
 > everything lives under **"ZZ Hub Pilot (disposable)"**, uses a pilot-only

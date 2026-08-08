@@ -100,3 +100,39 @@ seeing the migrated tree (record: docs/RESTRUCTURE_STATUS.md §2):
    EN→TL card back. The long stitched listen-and-learn compilations
    remain retired; this is seconds-long occurrence audio already
    persisted server-side.
+
+---
+
+## OWNER VERDICT (2026-08-09) — pilot APPROVED, models FROZEN
+
+The owner imported the 30-expression pilot (`docs/research/hub_manifest/
+hub_pilot.apkg`, branch `hub-build`) into the live Anki and approved it:
+"all is good in that trial deck."
+
+**Model freeze is ratified as shipped in the pilot:**
+
+- model IDs `1820180001` (Idiomatic Expression Hub v1, 2 cards) and
+  `1820180002` (Idiomatic Expression Example v1, 1 card);
+- exact field sets/order as implemented in `idiomatic/hub/apkg.py`
+  (design §4 fields + dedicated `ContextAudio`/`ExpressionAudio`
+  amendment fields + three spares per model);
+- the eight recorded pilot defaults in
+  `docs/research/hub_manifest/PILOT_NOTES.md` §DECISIONS-NEEDED,
+  including the EN→TL gloss-only front and `ExpressionAudio` on the
+  EN→TL back.
+
+From here on, field count/order/names and template count of both models
+are immutable; `Extra1..Extra3` are the only escape hatches.
+
+**One template amendment (template text/CSS only — legal post-freeze):**
+the hub back's example rail must not be a single vertical column.
+Re-lay it as a responsive GRID of tiles, roughly three per row
+("we need to position them partly horizontally so that we have like
+tiles in that grid or 3 items on each row — otherwise it gets hard to
+read"): illustration on top, target sentence, muted English line
+beneath, compact type; 3 columns on desktop-width webviews dropping to
+2 and then 1 on narrow phones; text-only tiles (languages whose images
+are not yet QA-judged) must look intentional in the same grid. Sources
+footer and context clip stay below the grid. Rebuilt for eyeballing as
+`hub_pilot_v2.apkg` (same selection, same GUIDs — imports update the
+pilot deck in place).
