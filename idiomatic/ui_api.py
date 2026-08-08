@@ -491,6 +491,99 @@ async def delivery(
     }
 
 
+# --- legacy estate (read-only inventory + owner-gate evidence) --------------
+
+@router.get("/legacy")
+async def legacy_estate(_: None = Depends(authed_ui)) -> dict:
+    """Full +2-account deck tree with Codex proposals and owner overrides.
+
+    This route is deliberately read-only.  The audit seed owns evidence and
+    proposals; an owner verdict, once recorded in Postgres, takes precedence
+    and is preserved across manifest reseeds.
+    """
+
+    pool = await db.get_pool()
+    records = await pool.fetch(
+        """
+        SELECT deck_path, source_deck_id, parent_path, depth, top_level, lang,
+               direct_notes, direct_cards, direct_mature, direct_reps,
+               direct_reviews, direct_audio_notes, direct_sound_tags,
+               direct_last_review,
+               subtree_notes, subtree_cards, subtree_mature, subtree_reps,
+               subtree_reviews, subtree_audio_notes, subtree_sound_tags,
+               subtree_last_review,
+               note_models, quality_flags, overlap,
+               proposed_verdict, proposal_reason, owner_verdict, owner_note,
+               COALESCE(owner_verdict, proposed_verdict) AS verdict,
+               CASE WHEN owner_verdict IS NULL THEN 'codex' ELSE 'owner' END
+                 AS verdict_source,
+               source_sha256, audited_at
+        FROM legacy_estate
+        ORDER BY LOWER(deck_path), deck_path
+        """
+    )
+    rows = []
+    for record in records:
+        row = dict(record)
+        for field in ("note_models", "quality_flags", "overlap"):
+            row[field] = _parse_structured(row[field]) or []
+        rows.append(row)
+
+    # Exact collection-level note totals cannot be reconstructed by summing
+    # per-deck distinct-note counts: multi-template notes may place cards in
+    # different decks.  The checksummed manifest carries the source totals
+    # produced in the same immutable query pass as these rows.
+    manifest_totals: dict = {}
+    try:
+        from .legacy_estate import load_manifest
+
+        manifest_snapshot, _ = load_manifest()
+        manifest_totals = manifest_snapshot["totals"]
+    except Exception:  # noqa: BLE001 — dashboard remains useful from DB alone
+        pass
+
+    verdict_counts: dict[str, int] = {}
+    for row in rows:
+        verdict_counts[row["verdict"]] = verdict_counts.get(row["verdict"], 0) + 1
+    direct_rows = [row for row in rows if row["direct_cards"]]
+    return {
+        "snapshot": {
+            "source_sha256": rows[0]["source_sha256"] if rows else None,
+            "audited_at": rows[0]["audited_at"] if rows else None,
+        },
+        "totals": {
+            "deck_rows": len(rows),
+            "nonempty_decks": len(direct_rows),
+            "notes": manifest_totals.get(
+                "notes", sum(row["direct_notes"] for row in rows)
+            ),
+            "cards": manifest_totals.get(
+                "cards", sum(row["direct_cards"] for row in rows)
+            ),
+            "mature": manifest_totals.get(
+                "mature_cards", sum(row["direct_mature"] for row in rows)
+            ),
+            "reps": manifest_totals.get(
+                "card_reps", sum(row["direct_reps"] for row in rows)
+            ),
+            "reviews": manifest_totals.get(
+                "review_rows", sum(row["direct_reviews"] for row in rows)
+            ),
+            "audio_notes": manifest_totals.get(
+                "audio_notes", sum(row["direct_audio_notes"] for row in rows)
+            ),
+            "last_review": manifest_totals.get("last_review") or max(
+                (row["direct_last_review"] for row in rows
+                 if row["direct_last_review"] is not None),
+                default=None,
+            ),
+            "owner_pending": sum(row["owner_verdict"] is None for row in rows),
+            "verdicts": verdict_counts,
+        },
+        "rows": rows,
+    }
+
+
 # --- grammar (Wave 6: curriculum tree + unit detail) -------------------------
 
 def _grammar_audio_rel(lang: str, item_id: int) -> str | None:

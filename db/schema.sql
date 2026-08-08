@@ -370,6 +370,59 @@ CREATE TABLE IF NOT EXISTS f4_pairs_staging (
   note         TEXT
 );
 
+-- ============================================================================
+-- Legacy +2 estate audit (docs/commissions/LEGACY_ESTATE_AUDIT_COMMISSION.md).
+-- One row per source deck, including empty/container rows, from a checksummed
+-- download-only AnkiWeb snapshot.  Audit-owned columns are reseeded from the
+-- committed manifest on boot; owner_verdict/owner_note are deliberately not
+-- overwritten by reseeding so the one-sitting owner gate remains durable.
+-- This table is inventory only: no import worker consumes it.
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS legacy_estate (
+  deck_path             TEXT PRIMARY KEY,
+  source_deck_id        BIGINT NOT NULL,
+  parent_path           TEXT,
+  depth                 SMALLINT NOT NULL CHECK (depth >= 0),
+  top_level             TEXT NOT NULL,
+  lang                  TEXT,
+  direct_notes          INTEGER NOT NULL CHECK (direct_notes >= 0),
+  direct_cards          INTEGER NOT NULL CHECK (direct_cards >= 0),
+  direct_mature         INTEGER NOT NULL CHECK (direct_mature >= 0),
+  direct_reps           BIGINT NOT NULL CHECK (direct_reps >= 0),
+  direct_reviews        BIGINT NOT NULL CHECK (direct_reviews >= 0),
+  direct_audio_notes    INTEGER NOT NULL CHECK (direct_audio_notes >= 0),
+  direct_sound_tags     INTEGER NOT NULL CHECK (direct_sound_tags >= 0),
+  direct_last_review    TIMESTAMPTZ,
+  subtree_notes         INTEGER NOT NULL CHECK (subtree_notes >= 0),
+  subtree_cards         INTEGER NOT NULL CHECK (subtree_cards >= 0),
+  subtree_mature        INTEGER NOT NULL CHECK (subtree_mature >= 0),
+  subtree_reps          BIGINT NOT NULL CHECK (subtree_reps >= 0),
+  subtree_reviews       BIGINT NOT NULL CHECK (subtree_reviews >= 0),
+  subtree_audio_notes   INTEGER NOT NULL CHECK (subtree_audio_notes >= 0),
+  subtree_sound_tags    INTEGER NOT NULL CHECK (subtree_sound_tags >= 0),
+  subtree_last_review   TIMESTAMPTZ,
+  note_models           JSONB NOT NULL DEFAULT '[]'::jsonb,
+  quality_flags         JSONB NOT NULL DEFAULT '[]'::jsonb,
+  overlap               JSONB NOT NULL DEFAULT '[]'::jsonb,
+  proposed_verdict      TEXT NOT NULL CHECK (
+    proposed_verdict IN ('import', 'partial', 'skip', 'already-covered')
+  ),
+  proposal_reason       TEXT NOT NULL,
+  owner_verdict         TEXT CHECK (
+    owner_verdict IS NULL OR
+    owner_verdict IN ('import', 'partial', 'skip', 'already-covered')
+  ),
+  owner_note            TEXT,
+  source_sha256         TEXT NOT NULL CHECK (source_sha256 ~ '^[0-9a-f]{64}$'),
+  audited_at            TIMESTAMPTZ NOT NULL,
+  seeded_at             TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS legacy_estate_tree_idx
+  ON legacy_estate (top_level, deck_path);
+CREATE INDEX IF NOT EXISTS legacy_estate_verdict_idx
+  ON legacy_estate (COALESCE(owner_verdict, proposed_verdict));
+
 -- Tiny generic KV: external service tokens + sync state stamps.
 CREATE TABLE IF NOT EXISTS kv_store (
   key        TEXT PRIMARY KEY,

@@ -16,6 +16,17 @@ Rationale: structure all source material BEFORE the hub's model freeze,
 so nothing needs re-importing after. The Hub then holds every remaining
 user-visible deliverable.
 
+**Sweep progress (2026-08-08 11:30 +0800): Part A audit shipped.** A fresh
+download-only +2 snapshot is fully inventoried in
+`docs/research/legacy_estate/` (238 deck rows; 228,413 notes; 282,976 cards),
+seeded into the idempotent `legacy_estate` table, and visible read-only at
+`/legacy`. Codex proposals are not import authority: the one-sitting owner
+verdict remains the Part-A gate. The snapshot confirms the settled targeted
+cleanup (fake IT exercises, toxic ES false-friends, and 30 contaminated PT
+phrase rows) is already reflected; this audit did not touch cleanup.json or
+the remaining +2 purge track. Parts B/C are still ahead of the Hub and retain
+their pilot/listening/GPU-window gates.
+
 ## 1. DONE — estate migration (closed 2026-08-08 morning)
 
 - Live collection migrated to six language roots + numbered lanes +

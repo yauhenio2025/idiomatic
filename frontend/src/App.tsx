@@ -16,6 +16,7 @@ import RescueLab from "./pages/RescueLab";
 import RescueItem from "./pages/RescueItem";
 import RescueFormats from "./pages/RescueFormats";
 import Delivery from "./pages/Delivery";
+import Legacy from "./pages/Legacy";
 
 export default function App() {
   const [authed, setAuthed] = useState<boolean | null>(getToken() ? null : false);
@@ -74,6 +75,7 @@ export default function App() {
         <Route path="/rescue/item/:id" element={<RescueItem />} />
         <Route path="/rescue/formats" element={<RescueFormats />} />
         <Route path="/delivery" element={<Delivery />} />
+        <Route path="/legacy" element={<Legacy />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import datetime
 from typing import Any
 
 import json
@@ -46,6 +47,119 @@ async def close_pool() -> None:
     if _pool is not None:
         await _pool.close()
         _pool = None
+
+
+# ---- Legacy-estate audit ---------------------------------------------------
+
+async def seed_legacy_estate(
+    rows: list[dict[str, Any]], *, source_sha256: str, audited_at: datetime,
+) -> None:
+    """Idempotently seed audit-owned columns while preserving owner verdicts.
+
+    The manifest is committed, but the owner gate happens later and writes to
+    Postgres.  Consequently the conflict update intentionally excludes
+    ``owner_verdict`` and ``owner_note``.
+    """
+
+    def _dt(value: Any) -> datetime | None:
+        if value in (None, ""):
+            return None
+        if isinstance(value, datetime):
+            return value
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            raise ValueError("legacy estate review timestamps must include timezone")
+        return parsed
+
+    values = [
+        (
+            row["deck_path"],
+            row["source_deck_id"],
+            row["parent_path"],
+            row["depth"],
+            row["top_level"],
+            row["lang"],
+            row["direct_notes"],
+            row["direct_cards"],
+            row["direct_mature"],
+            row["direct_reps"],
+            row["direct_reviews"],
+            row["direct_audio_notes"],
+            row["direct_sound_tags"],
+            _dt(row["direct_last_review"]),
+            row["subtree_notes"],
+            row["subtree_cards"],
+            row["subtree_mature"],
+            row["subtree_reps"],
+            row["subtree_reviews"],
+            row["subtree_audio_notes"],
+            row["subtree_sound_tags"],
+            _dt(row["subtree_last_review"]),
+            json.dumps(row["note_models"], ensure_ascii=False),
+            json.dumps(row["quality_flags"], ensure_ascii=False),
+            json.dumps(row["overlap"], ensure_ascii=False),
+            row["proposed_verdict"],
+            row["proposal_reason"],
+            source_sha256,
+            audited_at,
+        )
+        for row in rows
+    ]
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            await conn.executemany(
+                """
+                INSERT INTO legacy_estate (
+                  deck_path, source_deck_id, parent_path, depth, top_level, lang,
+                  direct_notes, direct_cards, direct_mature, direct_reps,
+                  direct_reviews, direct_audio_notes, direct_sound_tags,
+                  direct_last_review,
+                  subtree_notes, subtree_cards, subtree_mature, subtree_reps,
+                  subtree_reviews, subtree_audio_notes, subtree_sound_tags,
+                  subtree_last_review,
+                  note_models, quality_flags, overlap,
+                  proposed_verdict, proposal_reason, source_sha256, audited_at
+                ) VALUES (
+                  $1, $2, $3, $4, $5, $6,
+                  $7, $8, $9, $10, $11, $12, $13, $14,
+                  $15, $16, $17, $18, $19, $20, $21, $22,
+                  $23::jsonb, $24::jsonb, $25::jsonb,
+                  $26, $27, $28, $29
+                )
+                ON CONFLICT (deck_path) DO UPDATE SET
+                  source_deck_id = EXCLUDED.source_deck_id,
+                  parent_path = EXCLUDED.parent_path,
+                  depth = EXCLUDED.depth,
+                  top_level = EXCLUDED.top_level,
+                  lang = EXCLUDED.lang,
+                  direct_notes = EXCLUDED.direct_notes,
+                  direct_cards = EXCLUDED.direct_cards,
+                  direct_mature = EXCLUDED.direct_mature,
+                  direct_reps = EXCLUDED.direct_reps,
+                  direct_reviews = EXCLUDED.direct_reviews,
+                  direct_audio_notes = EXCLUDED.direct_audio_notes,
+                  direct_sound_tags = EXCLUDED.direct_sound_tags,
+                  direct_last_review = EXCLUDED.direct_last_review,
+                  subtree_notes = EXCLUDED.subtree_notes,
+                  subtree_cards = EXCLUDED.subtree_cards,
+                  subtree_mature = EXCLUDED.subtree_mature,
+                  subtree_reps = EXCLUDED.subtree_reps,
+                  subtree_reviews = EXCLUDED.subtree_reviews,
+                  subtree_audio_notes = EXCLUDED.subtree_audio_notes,
+                  subtree_sound_tags = EXCLUDED.subtree_sound_tags,
+                  subtree_last_review = EXCLUDED.subtree_last_review,
+                  note_models = EXCLUDED.note_models,
+                  quality_flags = EXCLUDED.quality_flags,
+                  overlap = EXCLUDED.overlap,
+                  proposed_verdict = EXCLUDED.proposed_verdict,
+                  proposal_reason = EXCLUDED.proposal_reason,
+                  source_sha256 = EXCLUDED.source_sha256,
+                  audited_at = EXCLUDED.audited_at,
+                  seeded_at = NOW()
+                """,
+                values,
+            )
 
 
 # ---- Channel helpers -------------------------------------------------------

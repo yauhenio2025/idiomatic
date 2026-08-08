@@ -16,7 +16,6 @@ import json
 import re
 import secrets
 from pathlib import Path
-from typing import Any
 
 import structlog
 from fastapi import Depends, FastAPI, Header, HTTPException, Request, Response
@@ -50,6 +49,20 @@ async def lifespan(app: FastAPI):
         )
     except Exception as e:
         log.warning("api.grammar_units_seed_failed", err=repr(e)[:300])
+    # Load the committed +2-account audit into its read-only dashboard table.
+    # The seed updates audit evidence only; later owner verdicts survive every
+    # deploy because db.seed_legacy_estate excludes those columns on conflict.
+    try:
+        from .legacy_estate import load_manifest
+
+        snapshot, estate_rows = load_manifest()
+        await db.seed_legacy_estate(
+            estate_rows,
+            source_sha256=snapshot["source_sha256"],
+            audited_at=snapshot["audited_at_parsed"],
+        )
+    except Exception as e:
+        log.warning("api.legacy_estate_seed_failed", err=repr(e)[:300])
     worker_task = asyncio.create_task(worker_loop(once=False))
     log.info("api.lifespan.started", worker_task=str(worker_task))
     try:
