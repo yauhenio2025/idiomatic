@@ -1,0 +1,17 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Giving triangle: the giver in the nominative passes the accusative thing to the receiver in the dative">
+  <rect x="60" y="80" width="220" height="90" rx="14" class="s-teal"/>
+  <text x="170" y="118" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">der junge Mann</text>
+  <text x="170" y="150" text-anchor="middle" font-size="17" fill="#ffffff">NOMINATIV — gives</text>
+  <rect x="310" y="230" width="220" height="90" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="268" text-anchor="middle" font-size="22" font-weight="800" class="s-ink">den Koffer</text>
+  <text x="420" y="300" text-anchor="middle" font-size="17" class="s-muted">AKKUSATIV — the thing</text>
+  <rect x="560" y="80" width="220" height="90" rx="14" class="s-coral"/>
+  <text x="670" y="118" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">seinem Freund</text>
+  <text x="670" y="150" text-anchor="middle" font-size="17" fill="#ffffff">DATIV — receives</text>
+  <line x1="220" y1="180" x2="340" y2="240" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="358,249 330,247 344,222" class="s-teal"/>
+  <line x1="500" y1="250" x2="620" y2="185" class="s-stroke-coral" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="640,174 613,178 626,203" class="s-coral"/>
+  <text x="420" y="200" text-anchor="middle" font-size="20" font-weight="700" class="s-muted">geben · zeigen · schicken · erklären</text>
+  <text x="420" y="400" text-anchor="middle" font-size="20" class="s-muted">the thing stays accusative — the receiver takes the dative</text>
+</svg>

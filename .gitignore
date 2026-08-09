@@ -38,6 +38,10 @@ idiomatic/grammar/data/exercises2/it_rebuild/logs/
 
 # Read-only AnkiWeb scratch copy for the legacy-estate audit commission.
 docs/research/legacy_estate_work/
+# Grammar Course book-derived content (copyright hard rule: transcribed
+# workbook/reference text never enters this public repo — see
+# docs/GRAMMAR_COURSE_DESIGN.md §Copyright).
+idiomatic/grammar/data/course/book_local/
 # Hub manifest machine artifacts: local evidence, too large for the public
 # deploy repo (MD summaries are committed; JSONs regenerate from briefs).
 docs/research/hub_manifest/C1_sense_resolution.json
