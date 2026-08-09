@@ -1,0 +1,30 @@
+{
+ "lang": "de",
+ "unit": "kasus",
+ "chapter": 2,
+ "unit_label": "Kasus (cases)",
+ "comment": "Retired course_select_de_kasus.py SELECTIONS as a plan. Its ex-1 row (copular double nominative, card 2) is deliberately absent: every ex-1 item carries a Pass-2 flag, so it never produced output — the selector's empty-block gate now makes that loud instead of silent.",
+ "blocks": [
+  {"block": 1, "card_seq": 3, "exercise_sets": ["4"], "max_items": null,
+   "hammer_refs": ["2.2", "6.1"],
+   "note": "accusative direct object endings"},
+  {"block": 2, "card_seq": 4, "exercise_sets": ["5"], "max_items": null,
+   "hammer_refs": ["2.2.2", "2.3.3"],
+   "note": "bare accusative time/measure phrases"},
+  {"block": 3, "card_seq": 5, "exercise_sets": ["12"], "max_items": null,
+   "hammer_refs": ["2.5"],
+   "note": "dative objects with giving verbs"},
+  {"block": 4, "card_seq": 6, "exercise_sets": ["10:key"], "max_items": null,
+   "hammer_refs": ["2.5.2"],
+   "note": "free dative constructions — construct-sentence set, printed key"},
+  {"block": 5, "card_seq": 8, "exercise_sets": ["9"], "max_items": null,
+   "hammer_refs": ["2.4"],
+   "note": "genitive vs von decisions"},
+  {"block": 6, "card_seq": 9, "exercise_sets": ["14"], "max_items": null,
+   "hammer_refs": ["2.6"],
+   "note": "apposition case matching"},
+  {"block": 7, "card_seq": 10, "exercise_sets": ["17"], "max_items": null,
+   "hammer_refs": ["2.7"],
+   "note": "measurement phrase case"}
+ ]
+}

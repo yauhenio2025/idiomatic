@@ -50,7 +50,13 @@ def main() -> int:
                         help="seed lesson narration only")
     parser.add_argument("--pilot-priority", action="store_true",
                         help="claim ahead of bulk queue backlog")
+    parser.add_argument("--production", action="store_true",
+                        help="batch-production seeding: explicit "
+                             "is_pilot=false (excludes --pilot-priority)")
     args = parser.parse_args()
+    if args.production and args.pilot_priority:
+        parser.error("--production and --pilot-priority are mutually "
+                     "exclusive")
 
     body: dict = {"lang": args.lang, "unit": args.unit,
                   "is_pilot": args.pilot_priority}

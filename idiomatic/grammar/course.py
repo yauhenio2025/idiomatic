@@ -60,6 +60,48 @@ BOOK_LOCAL_DIR = DATA_DIR / "book_local"
 SUPPORTED_LANGS = frozenset({"de", "es", "fr", "it", "pt"})
 
 # ---------------------------------------------------------------------------
+# DE course units registry (batch generation, 2026-08-10): unit key →
+# (workbook/Hammer chapter, learner-facing unit_label deck segment).
+# One unit per chapter of Practising German Grammar; kasus (ch02) is the
+# shipped pilot.  unit_label strings are deck-name segments — never "::" .
+# ---------------------------------------------------------------------------
+
+DE_UNITS: dict[str, tuple[int, str]] = {
+    "substantive": (1, "Substantive (nouns)"),
+    "kasus": (2, "Kasus (cases)"),
+    "pronomen": (3, "Pronomen (pronouns)"),
+    "artikel": (4, "Artikel (articles)"),
+    "determinative": (5, "Determinative (determiners)"),
+    "adjektive": (6, "Adjektive (adjectives)"),
+    "adverbien": (7, "Adverbien (adverbs)"),
+    "zahlen": (8, "Zahlwörter (numerals)"),
+    "partikeln": (9, "Modalpartikeln (modal particles)"),
+    "konjugation": (10, "Konjugation (conjugation)"),
+    "infinitiv": (11, "Infinitiv & Partizipien"),
+    "tempora": (12, "Tempora (tenses)"),
+    "passiv": (13, "Passiv (passive)"),
+    "konjunktiv": (14, "Imperativ & Konjunktiv"),
+    "modalverben": (15, "Modalverben (modal auxiliaries)"),
+    "valenz": (16, "Valenz (verb valency)"),
+    "konjunktionen": (17, "Konjunktionen (conjunctions)"),
+    "praepositionen": (18, "Präpositionen (prepositions)"),
+    "wortstellung": (19, "Wortstellung (word order)"),
+    "wortbildung": (20, "Wortbildung (word formation)"),
+    "rechtschreibung": (21, "Rechtschreibung (spelling)"),
+}
+
+
+def de_unit(unit: str) -> tuple[int, str]:
+    """(chapter, unit_label) for a DE unit key; loud error otherwise."""
+    try:
+        return DE_UNITS[unit]
+    except KeyError:
+        known = ", ".join(sorted(DE_UNITS))
+        raise ValueError(
+            f"unknown DE course unit {unit!r}; known units: {known}"
+        ) from None
+
+# ---------------------------------------------------------------------------
 # Frozen models (1_820_190_0xx — the Grammar Course range)
 # ---------------------------------------------------------------------------
 
