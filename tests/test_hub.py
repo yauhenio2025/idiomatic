@@ -677,6 +677,112 @@ def test_adoption_apply_idempotent_and_insert_only(pg_dsn):
     asyncio.run(run())
 
 
+def test_pool_guard_excludes_adopted_rows(pg_dsn):
+    """POOL GUARD (F4): a pool rebuild must never see adopted/legacy
+    NULL-video occurrences, legacy_adopted examples, or retired sources —
+    verdict (b) made a rebuild an IN-PLACE UPDATE of the studied orphan
+    notes, which would blank their working audio fields. Executes the
+    exact SQL constants the production builder runs."""
+    import asyncio
+
+    import asyncpg
+
+    from idiomatic import db as idb
+
+    async def run() -> None:
+        conn = await asyncpg.connect(**pg_dsn)
+        try:
+            await conn.execute(_SCHEMA.read_text(encoding="utf-8"))
+            v1 = await conn.fetchval(
+                "INSERT INTO videos (youtube_id, lang, title) "
+                "VALUES ('guardA', 'xx', 'Video A') RETURNING id")
+            expr = await conn.fetchval(
+                "INSERT INTO expressions (lang, text, normalized) "
+                "VALUES ('xx', 'guard idiom', 'guard idiom') RETURNING id")
+            expr2 = await conn.fetchval(
+                "INSERT INTO expressions (lang, text, normalized) "
+                "VALUES ('xx', 'lonely idiom', 'lonely idiom') RETURNING id")
+            i_normal = await conn.fetchval(
+                """INSERT INTO expression_idioms (expression_id, video_id,
+                       lang, idiom_text, english_gloss)
+                   VALUES ($1, $2, 'xx', 'guard idiom', 'gloss')
+                   RETURNING id""", expr, v1)
+            i_lonely = await conn.fetchval(
+                """INSERT INTO expression_idioms (expression_id, video_id,
+                       lang, idiom_text, english_gloss)
+                   VALUES ($1, $2, 'xx', 'lonely idiom', 'gloss')
+                   RETURNING id""", expr2, v1)
+            i_adopted = await conn.fetchval(
+                """INSERT INTO expression_idioms (expression_id, video_id,
+                       lang, idiom_text, english_gloss, source_key)
+                   VALUES ($1, NULL, 'xx', 'guard idiom', 'gloss',
+                           'anki:v1:syllabus:424242')
+                   RETURNING id""", expr)
+            expr3 = await conn.fetchval(
+                "INSERT INTO expressions (lang, text, normalized) "
+                "VALUES ('xx', 'retired idiom', 'retired idiom') RETURNING id")
+            i_retired = await conn.fetchval(
+                """INSERT INTO expression_idioms (expression_id, video_id,
+                       lang, idiom_text, english_gloss, status,
+                       source_phrase_target)
+                   VALUES ($1, $2, 'xx', 'guard idiom retired', 'gloss',
+                           'retired', 'unique-phrase-r')
+                   RETURNING id""", expr3, v1)
+            await conn.execute(
+                """INSERT INTO expression_examples (idiom_id, ord, en_text,
+                       target_text) VALUES ($1, 1, 'normal en', 'normal tl')""",
+                i_normal)
+            await conn.execute(
+                """INSERT INTO expression_examples (idiom_id, ord, en_text,
+                       target_text, source_kind, stable_key, expression_id,
+                       source_id)
+                   VALUES ($1, 1, 'adopted en', 'adopted tl',
+                           'legacy_adopted', 'anki-adopt:v1:syllabus:424242',
+                           $2, $1)""", i_adopted, expr)
+
+            # idiom-side guard: only the active, video-backed rows
+            idiom_rows = await conn.fetch(idb.POOL_IDIOMS_SQL, "xx")
+            returned = {r["id"] for r in idiom_rows}
+            assert i_normal in returned and i_lonely in returned
+            assert i_adopted not in returned, "NULL-video occurrence leaked"
+            assert i_retired not in returned, "retired source leaked"
+
+            # example-side guard: legacy_adopted never ships to pools
+            example_rows = await conn.fetch(
+                idb.POOL_EXAMPLES_SQL, [i_normal, i_adopted])
+            texts = {r["target_text"] for r in example_rows}
+            assert texts == {"normal tl"}, texts
+
+            # purge-video orphan check: the adopted occurrence keeps its
+            # expression alive; the lonely expression stays orphaned.
+            orphans = {r["id"] for r in await conn.fetch(
+                """SELECT e.id FROM expressions e
+                   WHERE e.id = ANY($1::bigint[])
+                     AND NOT EXISTS (SELECT 1 FROM expression_idioms ei
+                                     WHERE ei.expression_id = e.id
+                                       AND ei.video_id IS DISTINCT FROM $2)""",
+                [expr, expr2], v1)}
+            assert expr not in orphans, \
+                "expression with adopted occurrence wrongly orphaned"
+            assert expr2 in orphans
+
+            # cleanup for the shared module-scoped DB
+            await conn.execute(
+                "DELETE FROM expression_examples WHERE idiom_id = ANY($1::bigint[])",
+                [i_normal, i_adopted])
+            await conn.execute(
+                "DELETE FROM expression_idioms WHERE id = ANY($1::bigint[])",
+                [i_normal, i_lonely, i_adopted, i_retired])
+            await conn.execute(
+                "DELETE FROM expressions WHERE id = ANY($1::bigint[])",
+                [expr, expr2, expr3])
+            await conn.execute("DELETE FROM videos WHERE id = $1", v1)
+        finally:
+            await conn.close()
+
+    asyncio.run(run())
+
+
 # --- durable-ID schema staging (ephemeral Postgres) --------------------------
 
 _SCHEMA = Path(__file__).resolve().parent.parent / "db" / "schema.sql"
@@ -873,7 +979,7 @@ def test_hub_schema_staging_round_trip(pg_dsn):
             await conn.execute(
                 "DELETE FROM expressions WHERE id = $1", expr)
             assert await conn.fetchval(
-                "SELECT COUNT(*) FROM expressions") == 0
+                "SELECT COUNT(*) FROM expressions WHERE id = $1", expr) == 0
         finally:
             await conn.close()
 

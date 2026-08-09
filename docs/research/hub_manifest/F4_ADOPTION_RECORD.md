@@ -106,3 +106,42 @@ Caveat for the live run: the corpus moved twice during this session
 (+36 rows in ~30 min — the pipeline mints daily); the analyzer, plan,
 and recompile must come from ONE corpus snapshot in the same sitting,
 which the plan's per-language corpus checksums enforce.
+
+## Pool-rebuild interaction (coordinator pre-gate question) — verdict (b), guard shipped anyway
+
+Question: after `--apply`, what does the next `pool_expr` rebuild emit
+for the 120 adopted sentences?
+
+**Verdict: (b), proven empirically — 120/120 exact GUID matches, 0
+new.** The pool GUID recipe (`_guid("yt-pool", _norm(idiom_text),
+_norm(target_text))`) closes over exactly the texts the adoption
+preserves verbatim from the orphan notes' own fields, so the rebuild
+re-emits precisely the orphan notes' existing GUIDs (compared against
+every C2 `note_guid`): an in-place update, zero duplicates.
+
+**But (b) was still harmful**: adopted rows carry NULL audio and no
+video, so the in-place update would have BLANKED the studied orphans'
+working `[sound:]` fields and degraded their source line. Shipped
+guards:
+
+1. **Pool guard** — `db.fetch_pool_idioms` (the single chokepoint
+   feeding pool_expr, the retired didactic/audio builders, AND the
+   local-TTS fluency overlay seeder) now excludes NULL-video
+   occurrences, non-active sources, `legacy_adopted` examples, and
+   non-published examples. SQL extracted to constants
+   (`POOL_IDIOMS_SQL` / `POOL_EXAMPLES_SQL`); regression test executes
+   them verbatim on ephemeral Postgres. Zero behavior change for
+   current prod data (0 NULL-video rows in the live snapshot).
+2. **Purge orphan-check fix** — `/admin/purge-video`'s
+   `ei.video_id <> $2` was NULL-false for adopted occurrences, so a
+   purge touching an expression with adopted rows would have wrongly
+   classified it orphaned and then failed on the examples' FK.
+   `IS DISTINCT FROM` now counts a NULL-video occurrence as the
+   keep-alive it is (regression-tested).
+
+Other consumers audited: **retts** enqueues only non-NULL audio paths —
+adopted rows invisible; **audio-audit** walks staged files only;
+**corpus-export** WILL include adopted examples (intended — they enter
+the illustration/enrichment lane); the admin citation backfill's
+backlog count will include adopted rows (operator-gated run, eventually
+wanted). Grammar/translation/exercises2 never touch these tables.

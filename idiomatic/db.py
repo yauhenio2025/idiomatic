@@ -528,34 +528,46 @@ async def get_expression_id(lang: str, normalized: str) -> int | None:
     )
 
 
+# POOL GUARD (Hub F4, 2026-08-09): pool decks are the YouTube-derived
+# fluency stream. Adopted/legacy source occurrences (video_id IS NULL,
+# e.g. the F4 `anki:v1:*` rows) and retired sources exist for the Hub
+# manifest, NEVER for pool delivery — without this filter a pool_expr
+# rebuild would re-emit the studied orphan notes' GUIDs with EMPTY audio
+# fields and blank their working audio on import. Same chokepoint feeds
+# the local-TTS fluency overlay, which must not seed adopted rows either.
+# The SQL lives in constants so the regression test executes it verbatim.
+POOL_IDIOMS_SQL = """
+    SELECT i.id, i.idiom_text, i.english_gloss,
+           i.audio_idiom_tgt, i.audio_idiom_en, i.audio_explanation,
+           i.audio_context, i.citation_form,
+           i.source_phrase_target, i.source_phrase_en, i.explanation_en,
+           i.structured,
+           v.youtube_id, v.title AS video_title
+    FROM expression_idioms i
+    LEFT JOIN videos v ON v.id = i.video_id
+    WHERE i.lang = $1
+      AND i.video_id IS NOT NULL
+      AND COALESCE(i.status, 'active') = 'active'
+    ORDER BY i.id
+"""
+
+POOL_EXAMPLES_SQL = """
+    SELECT idiom_id, ord, en_text, target_text, audio_en, audio_target
+    FROM expression_examples
+    WHERE idiom_id = ANY($1::bigint[])
+      AND COALESCE(source_kind, 'initial') <> 'legacy_adopted'
+      AND COALESCE(status, 'published') = 'published'
+    ORDER BY idiom_id, ord
+"""
+
+
 async def fetch_pool_idioms(lang: str) -> list[dict]:
-    """All idiom records for a language, with their examples nested."""
+    """Active, video-backed idiom records for a language, with their
+    non-adopted published examples nested (see POOL GUARD above)."""
     pool = await get_pool()
-    rows = await pool.fetch(
-        """
-        SELECT i.id, i.idiom_text, i.english_gloss,
-               i.audio_idiom_tgt, i.audio_idiom_en, i.audio_explanation,
-               i.audio_context, i.citation_form,
-               i.source_phrase_target, i.source_phrase_en, i.explanation_en,
-               i.structured,
-               v.youtube_id, v.title AS video_title
-        FROM expression_idioms i
-        LEFT JOIN videos v ON v.id = i.video_id
-        WHERE i.lang = $1
-        ORDER BY i.id
-        """,
-        lang,
-    )
+    rows = await pool.fetch(POOL_IDIOMS_SQL, lang)
     idiom_ids = [r["id"] for r in rows]
-    examples = await pool.fetch(
-        """
-        SELECT idiom_id, ord, en_text, target_text, audio_en, audio_target
-        FROM expression_examples
-        WHERE idiom_id = ANY($1::bigint[])
-        ORDER BY idiom_id, ord
-        """,
-        idiom_ids,
-    )
+    examples = await pool.fetch(POOL_EXAMPLES_SQL, idiom_ids)
     by_idiom: dict[int, list[dict]] = {i: [] for i in idiom_ids}
     for ex in examples:
         by_idiom[ex["idiom_id"]].append(dict(ex))
