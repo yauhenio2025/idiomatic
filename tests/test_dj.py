@@ -207,10 +207,10 @@ def test_plan_overflow_flagged_never_dropped():
     (lang,) = plan["languages"]
     assert lang["due"]["overflow"] is True
     assert lang["due"]["overflow_minutes"] == 5.0     # 10 est − 5 budget
-    assert lang["due"]["cards"] == 60                 # all dues kept
-    assert lang["due"]["limit"] == 60
+    assert lang["due"]["cards"] == 60                 # full debt reported
+    assert lang["due"]["limit"] == 30                 # amortized: 5min/10s
+    assert any("AMORTIZING" in n for n in lang["notes"])
     assert lang["new"]["mix"] == []                   # no new cards today
-    assert any("OVERFLOW" in n for n in lang["notes"])
     assert plan["totals"]["langs_overflowing"] == ["it"]
 
 
