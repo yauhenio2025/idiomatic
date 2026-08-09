@@ -93,3 +93,17 @@ Desktop Anki stays OPEN (add-on = delivery + future 0 Today builder).
 Miners go 24/7 from 08-10 (fan rule suspended). 09:00 voicing window
 daily. DJ replans nightly. Coordinator sessions keep lanes moving and
 report; owner reads summaries, taps consoles from the iPad if moved.
+
+## LAST UPDATE (2026-08-10 ~02:30, end of predecessor's context)
+- Geopolitics: repetition rewrite + independent re-audit SHIPPED
+  (845ba77); 783 stale clips queued; 09:00 window voices; a monitor
+  fires "run rebuild chain" → exercises2-build local_only ×5 +
+  course_build_pilot de kasus --audio.
+- German corpus v2 SEALED (sweep report in de_hammer_work/; splice +
+  and→und repairs); Kasus pilot re-selected/rebuilt vs v2; its changed
+  clips queued with the 783.
+- DJ slice 3 shipped in the add-on, flag OFF; 9-step arming test plan
+  in its report. Owner gates unchanged: voiced Kasus verdict, cutover
+  hour, /triage taps, arm dj_today_enabled. Hammer REFERENCE prose is
+  fully extracted (pass 4) — lesson authoring converts tables→SVG+
+  narration per unit; extraction is NOT the bottleneck.
