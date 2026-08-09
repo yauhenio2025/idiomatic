@@ -1,0 +1,24 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision tree: can anything in the phrase take a genitive ending? No means von is required; yes but stacked -s genitives means von is welcome; otherwise writing prefers the genitive">
+  <rect x="250" y="40" width="340" height="70" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="72" text-anchor="middle" font-size="19" font-weight="700" class="s-ink">can anything decline?</text>
+  <text x="420" y="97" text-anchor="middle" font-size="15" class="s-muted">article · adjective · -s on the noun</text>
+  <line x1="330" y1="115" x2="180" y2="175" class="s-stroke-coral" stroke-width="5" stroke-linecap="round"/>
+  <text x="230" y="135" text-anchor="middle" font-size="17" font-weight="700" class="s-coral">no</text>
+  <line x1="420" y1="115" x2="420" y2="175" class="s-stroke-line" stroke-width="5" stroke-linecap="round"/>
+  <text x="455" y="150" text-anchor="middle" font-size="17" font-weight="700" class="s-muted">-s + -s</text>
+  <line x1="510" y1="115" x2="660" y2="175" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <text x="610" y="135" text-anchor="middle" font-size="17" font-weight="700" class="s-teal">yes</text>
+  <rect x="60" y="185" width="240" height="110" rx="14" class="s-coral"/>
+  <text x="180" y="222" text-anchor="middle" font-size="21" font-weight="800" fill="#ffffff">von required</text>
+  <text x="180" y="252" text-anchor="middle" font-size="17" fill="#ffffff">der Bau von Kraftwerken</text>
+  <text x="180" y="278" text-anchor="middle" font-size="17" fill="#ffffff">die Wirkung von wenig Wein</text>
+  <rect x="310" y="185" width="220" height="110" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="222" text-anchor="middle" font-size="21" font-weight="800" class="s-ink">von welcome</text>
+  <text x="420" y="252" text-anchor="middle" font-size="16" class="s-muted">der Turm vom Palast</text>
+  <text x="420" y="276" text-anchor="middle" font-size="16" class="s-muted">des Königs</text>
+  <rect x="540" y="185" width="240" height="110" rx="14" class="s-teal"/>
+  <text x="660" y="222" text-anchor="middle" font-size="21" font-weight="800" fill="#ffffff">genitive in writing</text>
+  <text x="660" y="252" text-anchor="middle" font-size="17" fill="#ffffff">das Dach des Hauses</text>
+  <text x="660" y="278" text-anchor="middle" font-size="17" fill="#ffffff">der Ring seiner Frau</text>
+  <text x="420" y="360" text-anchor="middle" font-size="18" class="s-muted">speech reaches for von either way — writing earns style points with the genitive</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three lanes for quantity phrases: measures take apposition, vague amounts with adjectives take the genitive in writing, plural number nouns take von">
+  <rect x="55" y="60" width="230" height="70" rx="14" class="s-teal"/>
+  <text x="170" y="90" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff">measure word</text>
+  <text x="170" y="116" text-anchor="middle" font-size="16" fill="#ffffff">Flasche · Kilo · Tonne</text>
+  <rect x="305" y="60" width="230" height="70" rx="14" class="s-sun"/>
+  <text x="420" y="90" text-anchor="middle" font-size="20" font-weight="800" class="s-ink">vague amount</text>
+  <text x="420" y="116" text-anchor="middle" font-size="16" class="s-ink">Gruppe · Menge · Reihe</text>
+  <rect x="555" y="60" width="230" height="70" rx="14" class="s-coral"/>
+  <text x="670" y="90" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff">number noun, plural</text>
+  <text x="670" y="116" text-anchor="middle" font-size="16" fill="#ffffff">Dutzende · Millionen</text>
+  <line x1="170" y1="135" x2="170" y2="185" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <line x1="420" y1="135" x2="420" y2="185" class="s-stroke-line" stroke-width="5" stroke-linecap="round"/>
+  <line x1="670" y1="135" x2="670" y2="185" class="s-stroke-coral" stroke-width="5" stroke-linecap="round"/>
+  <rect x="55" y="190" width="230" height="100" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="170" y="225" text-anchor="middle" font-size="19" font-weight="800" class="s-teal">apposition</text>
+  <text x="170" y="253" text-anchor="middle" font-size="16" class="s-ink">eine Flasche deutscher Wein</text>
+  <text x="170" y="277" text-anchor="middle" font-size="16" class="s-ink">ein Dutzend Eier</text>
+  <rect x="305" y="190" width="230" height="100" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="225" text-anchor="middle" font-size="19" font-weight="800" class="s-ink">genitive (written)</text>
+  <text x="420" y="253" text-anchor="middle" font-size="16" class="s-ink">zwei Gruppen junger Arbeiter</text>
+  <text x="420" y="277" text-anchor="middle" font-size="16" class="s-muted">speech: von + dative</text>
+  <rect x="555" y="190" width="230" height="100" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="670" y="225" text-anchor="middle" font-size="19" font-weight="800" class="s-coral">von</text>
+  <text x="670" y="253" text-anchor="middle" font-size="16" class="s-ink">Dutzende von Anfragen</text>
+  <text x="670" y="277" text-anchor="middle" font-size="16" class="s-ink">Millionen von Menschen</text>
+  <text x="420" y="360" text-anchor="middle" font-size="18" class="s-muted">a numeral in front pulls number nouns back to apposition: ein Dutzend Eier</text>
+</svg>

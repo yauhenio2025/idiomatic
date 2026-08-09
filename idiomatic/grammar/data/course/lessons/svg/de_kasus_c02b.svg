@@ -1,0 +1,19 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Copular verbs work like an equals sign: Robert ist mein Freund, nominative on both sides; transitive verbs shoot an arrow at an accusative object">
+  <text x="420" y="60" text-anchor="middle" font-size="22" font-weight="700" class="s-muted">a normal verb acts on an object</text>
+  <rect x="130" y="85" width="200" height="66" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="230" y="127" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">ich</text>
+  <line x1="340" y1="118" x2="480" y2="118" class="s-stroke-coral" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="502,118 477,104 477,132" class="s-coral"/>
+  <text x="420" y="100" text-anchor="middle" font-size="18" class="s-coral">esse</text>
+  <rect x="510" y="85" width="220" height="66" rx="14" class="s-coral"/>
+  <text x="620" y="127" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">einen Salat</text>
+  <text x="620" y="175" text-anchor="middle" font-size="17" class="s-muted">accusative — it gets eaten</text>
+  <text x="420" y="235" text-anchor="middle" font-size="22" font-weight="700" class="s-muted">a copular verb only describes</text>
+  <rect x="130" y="260" width="200" height="66" rx="14" class="s-teal"/>
+  <text x="230" y="302" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Robert</text>
+  <text x="420" y="305" text-anchor="middle" font-size="42" font-weight="800" class="s-teal">=</text>
+  <text x="420" y="345" text-anchor="middle" font-size="18" class="s-muted">ist · wird · bleibt</text>
+  <rect x="510" y="260" width="220" height="66" rx="14" class="s-teal"/>
+  <text x="620" y="302" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">mein Freund</text>
+  <text x="420" y="400" text-anchor="middle" font-size="20" class="s-muted">equals sign, not arrow — nominative on both sides</text>
+</svg>

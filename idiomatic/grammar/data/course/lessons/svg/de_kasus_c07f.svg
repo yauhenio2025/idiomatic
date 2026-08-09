@@ -1,0 +1,14 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Genitive chain link: das Haus is linked to meines Bruders the way English links house of my brother; three uses share one mechanism">
+  <rect x="130" y="90" width="220" height="80" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="240" y="140" text-anchor="middle" font-size="26" font-weight="700" class="s-ink">das Haus</text>
+  <rect x="490" y="90" width="240" height="80" rx="14" class="s-teal"/>
+  <text x="610" y="140" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">meines Bruders</text>
+  <path d="M 360 130 C 390 100, 450 100, 480 130" class="s-stroke-teal" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 360 130 C 390 160, 450 160, 480 130" class="s-stroke-teal" stroke-width="6" stroke-linecap="round"/>
+  <text x="420" y="200" text-anchor="middle" font-size="18" class="s-muted">the -es endings are the link — English says “of”</text>
+  <text x="220" y="270" text-anchor="middle" font-size="20" font-weight="700" class="s-ink">die Hälfte <tspan class="s-teal">des Kuchens</tspan></text>
+  <text x="220" y="300" text-anchor="middle" font-size="16" class="s-muted">part of a whole</text>
+  <text x="610" y="270" text-anchor="middle" font-size="20" font-weight="700" class="s-ink">die Abfahrt <tspan class="s-teal">des Zuges</tspan></text>
+  <text x="610" y="300" text-anchor="middle" font-size="16" class="s-muted">subject of a happening</text>
+  <text x="420" y="400" text-anchor="middle" font-size="20" class="s-muted">one linking mechanism — possession is only the start</text>
+</svg>
