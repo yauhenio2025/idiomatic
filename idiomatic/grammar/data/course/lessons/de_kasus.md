@@ -15,6 +15,7 @@ REF: 2
 
 German has four cases — nominative, accusative, genitive, dative — and they all do one job: the ending tells you what a noun is doing in the sentence. English shows function through word order; German pins it to the words themselves. Listen to the roles:
 TL: Der junge Mann hat seinem Freund den Koffer gegeben.
+EN: The young man gave his friend the suitcase.
 [PAUSE:1200]
 Der junge Mann — nominative, the one giving. Seinem Freund — dative, the one receiving. Den Koffer — accusative, the thing handed over. Three endings, three roles, no ambiguity.
 SHOW: der = who acts · seinem = who receives · den = what moves
@@ -26,6 +27,7 @@ REF: 2, Ch. 19
 
 Because the endings carry the roles, German can reshuffle the sentence without changing who does what. Same sentence, receiver first:
 TL: Seinem Freund hat der junge Mann den Koffer gegeben.
+EN: To his friend, the young man gave the suitcase.
 [PAUSE:1200]
 Still the young man giving, still the friend receiving. Try that reshuffle in English — his friend has given the young man the suitcase — and the roles flip completely. That is the deal this unit teaches: in German, trust the endings, not the position.
 SHOW: English trusts order — German trusts endings
@@ -37,12 +39,15 @@ REF: 2.1.1, 2.1.2
 
 The nominative marks the subject — the noun the finite verb agrees with. This is its defining use:
 TL: Der Zug war nicht pünktlich.
+EN: The train was not on time.
 [PAUSE:1000]
 Der Zug — nominative, so the verb belongs to it, wherever the subject stands:
 TL: Heute war ausnahmsweise der Mittagszug nicht pünktlich.
+EN: Today, for once, the midday train was not on time.
 [PAUSE:1200]
 The nominative is also the neutral, naming case — for nouns standing outside any sentence frame:
 TL: Und dein Freund, wann siehst du ihn wieder?
+EN: And your friend — when will you see him again?
 SHOW: subject case — and the case of naming things
 Flip for the trap English speakers fall into.
 
@@ -53,8 +58,10 @@ REF: 2.1.3, 16.6
 
 Here is the trap. After sein, werden, bleiben, heißen and scheinen, the noun that follows is not an object — it describes the subject, so it stays nominative:
 TL: Robert ist mein Freund.
+EN: Robert is my friend.
 [PAUSE:1000]
 TL: Er bleibt ein Optimist.
+EN: He remains an optimist.
 [PAUSE:1000]
 Not einen Optimisten — bleiben is not doing anything to anyone. These copular verbs work like an equals sign: nominative on both sides.
 SHOW: sein · werden · bleiben · heißen · scheinen = both sides nominative
@@ -67,11 +74,14 @@ REF: 2.2.1
 
 The accusative's defining job: it marks the direct object of a transitive verb — the person or thing directly affected by the action:
 TL: Ich habe einen Salat gegessen.
+EN: I ate a salad.
 [PAUSE:1000]
 TL: Die Putzfrau hat den Fußboden gebohnert.
+EN: The cleaning lady polished the floor.
 [PAUSE:1000]
 For masculine nouns you hear it loudly — der becomes den, ein becomes einen. Feminine and neuter keep their nominative shape, so the masculine forms are your clearest signal:
 TL: Sie hat mir den Inhalt erklärt.
+EN: She explained the contents to me.
 SHOW: transitive verb → object in the accusative
 Flip for two special cases worth knowing.
 
@@ -81,11 +91,14 @@ REF: 2.2.1, 16.3.3
 
 Two refinements. A very few verbs — kosten, lehren — take two accusative objects at once:
 TL: Das kostet mich keinen Pfennig.
+EN: That won't cost me a penny.
 [PAUSE:1000]
 And some intransitive verbs allow a so-called inner object: an accusative that repeats the verb's own idea instead of naming something affected:
 TL: Er starb einen gewaltsamen Tod.
+EN: He died a violent death.
 [PAUSE:1200]
 TL: Sie schlief den Schlaf der Gerechten.
+EN: She slept the sleep of the just.
 He died a violent death, she slept the sleep of the just — the accusative echoes the verb rather than receiving the action.
 SHOW: kosten/lehren: two accusatives · inner objects echo the verb
 Twenty-two quick möchte-exercises next: definite, then indefinite.
@@ -96,11 +109,14 @@ REF: 2.2.2a
 
 German drops the preposition in many time phrases and puts the phrase straight into the accusative:
 TL: Er kommt nächsten Dienstag.
+EN: He is coming next Tuesday.
 [PAUSE:1000]
 TL: Ich habe ihn den ganzen Tag noch nicht gesehen.
+EN: I haven't seen him all day.
 [PAUSE:1000]
 The bare accusative is the everyday spoken pattern; am Dienstag, in der nächsten Woche with a preposition lean written. And Anfang, Mitte, Ende plus a time phrase go bare too:
 TL: Er ist Anfang Januar gestorben.
+EN: He died at the beginning of January.
 SHOW: nächsten Dienstag · jeden Tag · Anfang Januar — accusative, bare
 Flip for distance, measure and greetings.
 
@@ -110,13 +126,17 @@ REF: 2.2.2b, 2.2.2c, 2.2.3a
 
 The same bare accusative covers distance travelled:
 TL: Ich bin den ganzen Weg zu Fuß gegangen.
+EN: I walked the whole way.
 [PAUSE:1000]
 Measurements and values, with an adjective following:
 TL: Der Tisch ist einen Meter breit.
+EN: The table is one metre wide.
 [PAUSE:1000]
 TL: Das Kind ist vier Jahre alt.
+EN: The child is four years old.
 And here is why greetings sound the way they do — they are accusative wishes with the verb left unsaid:
 TL: Guten Morgen! Schönen Sonntag!
+EN: Good morning! Have a nice Sunday!
 SHOW: distance · measure · greetings — all accusative
 Ten fill-ins on time and measure phrases coming up.
 
@@ -127,6 +147,7 @@ REF: 2.5, 2.5.1
 
 The dative has the widest range of all four cases, and one thread runs through it: it marks a person concerned or affected by the event. Its core use — the indirect object with verbs of giving, showing, telling:
 TL: Der junge Mann hat seinem Freund den Koffer gegeben.
+EN: The young man gave his friend the suitcase.
 [PAUSE:1200]
 Our suitcase sentence again: the receiver sits in the dative — seinem Freund — while the thing given stays accusative. Give, show, send, explain, tell: whoever the action is directed at takes the dative.
 SHOW: giving verbs: thing = accusative · receiver = dative
@@ -138,11 +159,14 @@ REF: 2.5.1, 2.5.4a
 
 A set of verbs takes the dative as its only object — helfen, danken, folgen, gehören among them. No accusative anywhere:
 TL: Sie hilft ihrem Bruder.
+EN: She is helping her brother.
 [PAUSE:1000]
 And the dative is the standard case with adjectives that need a person:
 TL: Er ist seinem Bruder sehr ähnlich.
+EN: He is very like his brother.
 [PAUSE:1000]
 TL: Das rote Kleid passt der jungen Frau sehr gut.
+EN: The red dress fits the young woman very well.
 Similar to him, fits her — where English reaches for a preposition, German often just uses the dative.
 SHOW: helfen · danken · folgen · gehören — dative only
 Seventeen sentence-building exercises on these verbs next.
@@ -154,9 +178,11 @@ REF: 2.5.2
 
 German can slip a dative into a sentence whose verb never asked for one — the free dative. It marks the person the event matters to:
 TL: Das Auto ist meiner Schwester zu teuer.
+EN: The car is too expensive for my sister.
 [PAUSE:1200]
 The car is too expensive for my sister. No giving verb — the grammar simply points at the affected person. On whose behalf, to whose advantage or loss:
 TL: Der Teller fiel ihr aus der Hand.
+EN: The plate fell out of her hand.
 The plate fell out of her hand — and the dative ihr says who it happened to.
 SHOW: free dative = the person the event concerns
 Flip for the possession pattern.
@@ -167,9 +193,11 @@ REF: 2.5.3
 
 With body parts and clothing, German prefers a dative plus the definite article where English uses a possessive:
 TL: Ich wasche mir die Hände.
+EN: I am washing my hands.
 [PAUSE:1000]
 Literally: I wash to-me the hands. The dative names the owner once; the article stays plain:
 TL: Sie hat sich beim Skifahren das Bein gebrochen.
+EN: She broke her leg skiing.
 [PAUSE:1000]
 Not meine Hände, not ihr Bein — the dative already settled whose they are.
 SHOW: body parts & clothing: dative owner + definite article
@@ -182,10 +210,13 @@ REF: 2.3, 2.3.1
 
 The genitive links one noun phrase to another — where English says of or uses apostrophe-s. Possession is only the start:
 TL: das Haus meines Bruders
+EN: my brother's house
 [PAUSE:1000]
 TL: die Hälfte des Kuchens
+EN: half of the cake
 [PAUSE:1000]
 TL: die Abfahrt des Zuges
+EN: the departure of the train
 Possession, a part of a whole, the subject of a happening — one linking mechanism. Register matters: the genitive is at home in writing and formal speech, and everyday conversation often walks around it.
 SHOW: noun → noun link · the written-register case
 Flip for where the genitive stands.
@@ -196,10 +227,13 @@ REF: 2.3.2, 2.3.3
 
 The genitive phrase normally follows the noun it depends on — die Gefahr eines Erdbebens. Proper names are the exception; they step in front:
 TL: Roberts Freund
+EN: Robert's friend
 [PAUSE:800]
 TL: Annas Smartphone
+EN: Anna's smartphone
 Written German also allows names to follow — die Werke Heinrich Bölls. And the genitive survives in set adverbial phrases, especially time:
 TL: Eines Tages wird er es verstehen.
+EN: One day he will understand it.
 [PAUSE:1000]
 Plus a handful of genitive-object verbs in formal registers: bedürfen, gedenken.
 SHOW: genitive follows its noun — names go first
@@ -211,8 +245,10 @@ REF: 2.4
 
 Everyday spoken German routinely replaces the genitive with von plus dative:
 TL: das Dach vom Haus
+EN: the roof of the house
 [PAUSE:1000]
 TL: das Dach des Hauses
+EN: the roof of the house
 Same meaning. The first is conversation, the second is print. Using the genitive well is considered a mark of good written style, so the real question is: when is von not just casual, but actually required?
 SHOW: speech: von + dative · writing: genitive
 Flip for the answer.
@@ -224,10 +260,13 @@ REF: 2.4.1, 2.4.2
 
 Von becomes obligatory when nothing in the phrase can carry a genitive ending — a bare noun, or a word that does not decline:
 TL: der Bau von Kraftwerken
+EN: the building of power stations
 [PAUSE:1000]
 TL: die Wirkung von wenig Wein
+EN: the effect of a little wine
 No article, no adjective — nothing to bend, so von steps in. And von is welcome even in writing to break up stacked genitives:
 TL: der Turm vom Palast des Königs
+EN: the tower of the king's palace
 [PAUSE:1000]
 Two s-genitives in a row read as clumsy; one von clears the chain.
 SHOW: nothing declinable → von required · stacked -s → von welcome
@@ -240,9 +279,11 @@ REF: 2.6
 
 An apposition renames the noun before it — and it copies that noun's case, whatever it is:
 TL: Es spricht Herbert Werner, der Vorsitzende des Vereins.
+EN: This is Herbert Werner speaking, the chairman of the club.
 [PAUSE:1200]
 Nominative speaker, nominative apposition. Now inside a mit-phrase, everything turns dative:
 TL: Wir sprachen mit Maria Simon, der deutschen Filmschauspielerin.
+EN: We spoke with Maria Simon, the German film actress.
 [PAUSE:1200]
 Mit put Maria Simon in the dative, so the renaming phrase — der deutschen Filmschauspielerin — goes dative with her.
 SHOW: the renaming phrase mirrors the case of its noun
@@ -254,11 +295,14 @@ REF: 2.6
 
 Phrases introduced by als and wie are apposition too, so they match the case of the noun they qualify:
 TL: Er gilt als großer Staatsmann.
+EN: He is regarded as a great statesman.
 [PAUSE:1000]
 Er is nominative, so als großer Staatsmann is nominative.
 TL: ein Tag wie jeder andere
+EN: a day like any other
 [PAUSE:800]
 TL: Jürgen ist größer als du.
+EN: Jürgen is taller than you.
 Größer als du, not als dich — the comparison mirrors the nominative Jürgen. Case-match, always.
 SHOW: als / wie phrases take the case of the noun they describe
 Nine apposition exercises next — endings included.
@@ -269,9 +313,11 @@ REF: 2.7.1
 
 Eine Flasche Wein — why no case marking between bottle and wine? Because the measured thing normally stands in apposition: same case as the measure word:
 TL: eine Flasche deutscher Wein
+EN: a bottle of German wine
 [PAUSE:1000]
 Nominative bottle, nominative wine. Push the whole phrase into the dative and both travel together:
 TL: mit zweihundert Tonnen russischem Eisenerz
+EN: with two hundred tonnes of Russian iron ore
 [PAUSE:1200]
 That is the default for measures: Flasche, Glas, Kilo, Tonne — apposition, case shared.
 SHOW: measure + noun = same case (apposition)
@@ -284,11 +330,14 @@ REF: 2.7.2, 2.7.3
 
 With vaguer quantity words — Gruppe, Menge, Reihe, Haufen — written German likes the genitive when an adjective is present:
 TL: zwei Gruppen junger Arbeiter
+EN: two groups of young workers
 [PAUSE:1000]
 while speech prefers von: zwei Gruppen von jungen Arbeitern. Number nouns in the plural without a numeral take von:
 TL: Dutzende von Anfragen
+EN: dozens of enquiries
 [PAUSE:1000]
 But with a numeral in front, back to apposition:
 TL: ein Dutzend Eier
+EN: a dozen eggs
 SHOW: vague amount + adjective → genitive · Dutzende → von · ein Dutzend → apposition
 Six measurement fill-ins close the unit.
