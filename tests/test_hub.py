@@ -412,6 +412,377 @@ def test_manifest_load_rejects_tampering(tmp_path: Path):
         phase5.load_manifest(path)
 
 
+def test_asset_coverage_enrichment(tmp_path: Path):
+    c1, c2, extract = _fake_inputs()
+    manifest = phase5.compile_manifest(c1=c1, c2=c2, extract=extract,
+                                       input_checksums={})
+    coverage_file = tmp_path / "c3.json"
+    coverage_file.write_text(json.dumps({
+        "generated_at": "t", "content_sha256": "s" * 64,
+        "examples": [
+            {"example_id": 2503, "final_status": "qa-passed",
+             "qa": {"content_hash": {"algorithm": "sha1",
+                                     "value": "a" * 40}}},
+            {"example_id": 2504, "final_status": "brief-only", "qa": None},
+        ]}), encoding="utf-8")
+    coverage = phase5.load_asset_coverage(coverage_file)
+    manifest = phase5.apply_asset_coverage(manifest, coverage)
+    hub = manifest["hubs"][0]
+    by_id = {e["example_id"]: e for e in hub["examples"]}
+    assert by_id[2503]["asset_status"] == "qa-passed"
+    assert by_id[2503]["asset_sha1"] == "a" * 40
+    assert by_id[2504]["asset_status"] == "brief-only"
+    assert "asset_sha1" not in by_id[2504]
+    assert manifest["counts"]["asset_qa_passed_examples"] == 1
+    # the manifest is re-sealed after enrichment
+    assert phase5.manifest_content_sha256(manifest) == \
+        manifest["content_sha256"]
+
+
+# --- F4 adoption analyzer/applier --------------------------------------------
+
+from idiomatic.hub import adoption  # noqa: E402
+
+
+def _adoption_fixture():
+    corpus = [
+        {"example_id": 100, "expression_id": 10, "lang": "de",
+         "idiom": "leer stehen", "en_text": "The house stands empty.",
+         "target_text": "Das Haus steht leer.", "ord": 1,
+         "explanation_en": "x"},
+        # two expressions sharing one surface -> ambiguous
+        {"example_id": 200, "expression_id": 20, "lang": "es",
+         "idiom": "más o menos", "en_text": "More or less one.",
+         "target_text": "Más o menos uno.", "ord": 1,
+         "explanation_en": "x"},
+        {"example_id": 201, "expression_id": 21, "lang": "es",
+         "idiom": "más o menos", "en_text": "More or less two.",
+         "target_text": "Más o menos dos.", "ord": 1,
+         "explanation_en": "x"},
+        # quarantined surface (C1)
+        {"example_id": 300, "expression_id": 30, "lang": "es",
+         "idiom": "más bien", "en_text": "Rather so.",
+         "target_text": "Más bien así.", "ord": 1, "explanation_en": "x"},
+    ]
+    manifest = {"quarantine": {"c1_groups": [
+        {"group_id": "q1", "language": "es", "surface": "más bien",
+         "member_note_ids": [1]}], "join_key_cards": []}}
+
+    def deferred(cid, nid, lang, verdict="adoptable", reps=3):
+        return {"card_id": cid, "note_id": nid, "language": lang,
+                "verdict": verdict, "reps": reps,
+                "reason": "unjoined-bilingual-pair"}
+
+    def note(idiom, gloss, tl, en):
+        return {"Idiom": idiom, "IdiomEn": gloss, "Target": tl,
+                "English": en}
+
+    deferred_cards = [
+        deferred(1, 11, "de"),   # exact sentence now in fresh corpus
+        deferred(2, 12, "de"),   # adoptable via unique surface
+        deferred(3, 13, "es"),   # ambiguous surface
+        deferred(4, 14, "es"),   # quarantined surface
+        deferred(5, 15, "de"),   # no surface match
+        deferred(6, 16, "de"),   # missing gloss
+        deferred(7, 17, "de", reps=1),  # duplicate pair vs card 2
+        deferred(8, 18, "de"),   # C2 normalization diverges from ours
+    ]
+    note_fields = {
+        11: note("leer stehen", "to stand empty", "Das Haus  steht leer.",
+                 "The house stands empty."),
+        12: note("leer stehen", "to stand empty",
+                 "Die Wohnung stand jahrelang leer.",
+                 "The flat stood empty for years."),
+        13: note("más o menos", "more or less", "Frase nueva.",
+                 "New sentence."),
+        14: note("más bien", "rather", "Frase más bien rara.",
+                 "A rather odd sentence."),
+        15: note("unbekanntes idiom", "unknown", "Satz eins.",
+                 "Sentence one."),
+        16: note("leer stehen", "", "Noch ein Satz.", "Another sentence."),
+        17: note("leer stehen", "to stand empty",
+                 "Die Wohnung stand JAHRELANG leer.",
+                 "The flat stood empty for years."),
+        18: note("leer stehen", "to stand empty", "Der Saal steht leer.",
+                 "The hall stands empty."),
+    }
+    # C2 dossier side: the compiler's join uses THESE normalized pairs.
+    from idiomatic.hub import phase5 as _p5
+
+    def c2row(nid_note, tl, en):
+        return {"normalized_target": _p5.normalize_join(tl),
+                "normalized_english": _p5.normalize_join(en)}
+
+    c2_cards = {
+        1: c2row(11, "Das Haus steht leer.", "The house stands empty."),
+        2: c2row(12, "Die Wohnung stand jahrelang leer.",
+                 "The flat stood empty for years."),
+        3: c2row(13, "Frase nueva.", "New sentence."),
+        4: c2row(14, "Frase más bien rara.", "A rather odd sentence."),
+        5: c2row(15, "Satz eins.", "Sentence one."),
+        6: c2row(16, "Noch ein Satz.", "Another sentence."),
+        7: c2row(17, "Die Wohnung stand jahrelang leer.",
+                 "The flat stood empty for years."),
+        # divergent C2 normalization (simulates their different HTML/
+        # entity handling on old notes)
+        8: {"normalized_target": "der saal steht leer. [extra]",
+            "normalized_english": "the hall stands empty."},
+    }
+    return deferred_cards, note_fields, corpus, manifest, c2_cards
+
+
+def test_adoption_plan_resolution_matrix():
+    deferred_cards, note_fields, corpus, manifest, c2_cards = \
+        _adoption_fixture()
+    plan = adoption.build_plan(
+        deferred_cards=deferred_cards, note_fields=note_fields,
+        corpus_rows=corpus, manifest=manifest, c2_cards=c2_cards,
+        profile_key="syllabus",
+        inputs={"test": "x"})
+    counts = plan["counts"]
+    assert counts["resolved_existing"] == 1
+    assert plan["resolved_existing"][0]["example_id"] == 100
+    assert counts["adoptions"] == 1
+    adopt = plan["adoptions"][0]
+    assert adopt["note_id"] == 12
+    assert adopt["expression_id"] == 10
+    assert adopt["source_key"] == "anki:v1:syllabus:12"
+    assert adopt["stable_key"] == "anki-adopt:v1:syllabus:12"
+    reasons = {d["note_id"]: d["reason"] for d in plan["deferred"]}
+    assert reasons[13] == "ambiguous-expression-surface"
+    assert reasons[14] == "c1-quarantined-surface"
+    assert reasons[15] == "no-expression-match"
+    assert reasons[16] == "missing-gloss"
+    assert reasons[17] == "duplicate-proposed-pair"
+    # join parity: a card whose C2 normalization diverges from ours can
+    # never rejoin its adopted row -> deferred, never inserted
+    assert reasons[18] == "normalization-mismatch"
+    # identity is never guessed: every input card is accounted for exactly once
+    assert counts["resolved_existing"] + counts["adoptions"] \
+        + counts["still_deferred"] == len(deferred_cards)
+
+
+def test_adoption_plan_checksum_tamper(tmp_path: Path):
+    deferred_cards, note_fields, corpus, manifest, c2_cards = \
+        _adoption_fixture()
+    plan = adoption.build_plan(
+        deferred_cards=deferred_cards, note_fields=note_fields,
+        corpus_rows=corpus, manifest=manifest, c2_cards=c2_cards,
+        profile_key="syllabus",
+        inputs={})
+    path = tmp_path / "plan.json"
+    path.write_text(json.dumps(plan), encoding="utf-8")
+    assert adoption.load_plan(path)["counts"]["adoptions"] == 1
+    plan["adoptions"][0]["expression_id"] = 999
+    path.write_text(json.dumps(plan), encoding="utf-8")
+    with pytest.raises(ValueError, match="checksum"):
+        adoption.load_plan(path)
+
+
+def test_merge_adoption_results_into_extract():
+    extract = {"expressions": [
+        {"expression_id": 10, "lang": "de", "idiom": "leer stehen",
+         "explanation_en": "", "examples": [
+             {"example_id": 100, "en_text": "a", "target_text": "b"}]}]}
+    results = [
+        {"stable_key": "anki-adopt:v1:syllabus:12", "example_id": 500,
+         "expression_id": 10, "lang": "de", "en_text": "c",
+         "target_text": "d"},
+        {"stable_key": "anki-adopt:v1:syllabus:99", "example_id": 501,
+         "expression_id": 77, "lang": "fr", "en_text": "e",
+         "target_text": "f"},
+    ]
+    merged = adoption.merge_adoption_results_into_extract(extract, results)
+    entry10 = next(e for e in merged["expressions"]
+                   if e["expression_id"] == 10)
+    assert [e["example_id"] for e in entry10["examples"]] == [100, 500]
+    entry77 = next(e for e in merged["expressions"]
+                   if e["expression_id"] == 77)
+    assert [e["example_id"] for e in entry77["examples"]] == [501]
+    # merging twice adds nothing
+    again = adoption.merge_adoption_results_into_extract(merged, results)
+    assert len(next(e for e in again["expressions"]
+                    if e["expression_id"] == 10)["examples"]) == 2
+
+
+def test_adoption_apply_idempotent_and_insert_only(pg_dsn):
+    import asyncio
+
+    import asyncpg
+
+    deferred_cards, note_fields, corpus, manifest, c2_cards = \
+        _adoption_fixture()
+    plan = adoption.build_plan(
+        deferred_cards=deferred_cards, note_fields=note_fields,
+        corpus_rows=corpus, manifest=manifest, c2_cards=c2_cards,
+        profile_key="syllabus",
+        inputs={})
+    assert plan["counts"]["adoptions"] == 1
+    for statement in (adoption.INSERT_SOURCE_SQL,
+                      adoption.INSERT_EXAMPLE_SQL):
+        assert "UPDATE" not in statement.upper().replace(
+            "ON CONFLICT", "") and "DELETE" not in statement.upper()
+
+    async def run() -> None:
+        conn = await asyncpg.connect(**pg_dsn)
+        try:
+            await conn.execute(_SCHEMA.read_text(encoding="utf-8"))
+            await conn.execute(
+                """INSERT INTO expressions (id, lang, text, normalized)
+                   VALUES (10, 'de', 'leer stehen', 'leer stehen')
+                   ON CONFLICT (id) DO NOTHING""")
+            first = await adoption.apply_plan(conn, plan)
+            assert first["inserted_sources"] == 1
+            assert first["inserted_examples"] == 1
+            second = await adoption.apply_plan(conn, plan)
+            assert second["inserted_sources"] == 0
+            assert second["inserted_examples"] == 0
+
+            row = await conn.fetchrow(
+                """SELECT ex.ord, ex.source_kind, ex.status, ex.stable_key,
+                          ex.expression_id, ei.video_id, ei.source_key,
+                          ei.english_gloss
+                     FROM expression_examples ex
+                     JOIN expression_idioms ei ON ei.id = ex.idiom_id
+                    WHERE ex.stable_key = 'anki-adopt:v1:syllabus:12'""")
+            assert row is not None
+            assert row["ord"] == 1
+            assert row["source_kind"] == "legacy_adopted"
+            assert row["status"] == "published"
+            assert row["expression_id"] == 10
+            assert row["video_id"] is None
+            assert row["source_key"] == "anki:v1:syllabus:12"
+
+            # boot migration re-run appends position after existing rows
+            await conn.execute(_SCHEMA.read_text(encoding="utf-8"))
+            position = await conn.fetchval(
+                """SELECT position FROM expression_examples
+                    WHERE stable_key = 'anki-adopt:v1:syllabus:12'""")
+            assert position == 1  # only example under expression 10 here
+
+            results = await adoption.export_results(conn, "syllabus")
+            assert len(results) == 1
+            assert results[0]["lang"] == "de"
+            # cleanup so the shared module-scoped DB stays reusable
+            await conn.execute(
+                "DELETE FROM expression_examples WHERE stable_key LIKE "
+                "'anki-adopt:v1:%'")
+            await conn.execute(
+                "DELETE FROM expression_idioms WHERE source_key LIKE "
+                "'anki:v1:%'")
+            await conn.execute("DELETE FROM expressions WHERE id = 10")
+        finally:
+            await conn.close()
+
+    asyncio.run(run())
+
+
+def test_pool_guard_excludes_adopted_rows(pg_dsn):
+    """POOL GUARD (F4): a pool rebuild must never see adopted/legacy
+    NULL-video occurrences, legacy_adopted examples, or retired sources —
+    verdict (b) made a rebuild an IN-PLACE UPDATE of the studied orphan
+    notes, which would blank their working audio fields. Executes the
+    exact SQL constants the production builder runs."""
+    import asyncio
+
+    import asyncpg
+
+    from idiomatic import db as idb
+
+    async def run() -> None:
+        conn = await asyncpg.connect(**pg_dsn)
+        try:
+            await conn.execute(_SCHEMA.read_text(encoding="utf-8"))
+            v1 = await conn.fetchval(
+                "INSERT INTO videos (youtube_id, lang, title) "
+                "VALUES ('guardA', 'xx', 'Video A') RETURNING id")
+            expr = await conn.fetchval(
+                "INSERT INTO expressions (lang, text, normalized) "
+                "VALUES ('xx', 'guard idiom', 'guard idiom') RETURNING id")
+            expr2 = await conn.fetchval(
+                "INSERT INTO expressions (lang, text, normalized) "
+                "VALUES ('xx', 'lonely idiom', 'lonely idiom') RETURNING id")
+            i_normal = await conn.fetchval(
+                """INSERT INTO expression_idioms (expression_id, video_id,
+                       lang, idiom_text, english_gloss)
+                   VALUES ($1, $2, 'xx', 'guard idiom', 'gloss')
+                   RETURNING id""", expr, v1)
+            i_lonely = await conn.fetchval(
+                """INSERT INTO expression_idioms (expression_id, video_id,
+                       lang, idiom_text, english_gloss)
+                   VALUES ($1, $2, 'xx', 'lonely idiom', 'gloss')
+                   RETURNING id""", expr2, v1)
+            i_adopted = await conn.fetchval(
+                """INSERT INTO expression_idioms (expression_id, video_id,
+                       lang, idiom_text, english_gloss, source_key)
+                   VALUES ($1, NULL, 'xx', 'guard idiom', 'gloss',
+                           'anki:v1:syllabus:424242')
+                   RETURNING id""", expr)
+            expr3 = await conn.fetchval(
+                "INSERT INTO expressions (lang, text, normalized) "
+                "VALUES ('xx', 'retired idiom', 'retired idiom') RETURNING id")
+            i_retired = await conn.fetchval(
+                """INSERT INTO expression_idioms (expression_id, video_id,
+                       lang, idiom_text, english_gloss, status,
+                       source_phrase_target)
+                   VALUES ($1, $2, 'xx', 'guard idiom retired', 'gloss',
+                           'retired', 'unique-phrase-r')
+                   RETURNING id""", expr3, v1)
+            await conn.execute(
+                """INSERT INTO expression_examples (idiom_id, ord, en_text,
+                       target_text) VALUES ($1, 1, 'normal en', 'normal tl')""",
+                i_normal)
+            await conn.execute(
+                """INSERT INTO expression_examples (idiom_id, ord, en_text,
+                       target_text, source_kind, stable_key, expression_id,
+                       source_id)
+                   VALUES ($1, 1, 'adopted en', 'adopted tl',
+                           'legacy_adopted', 'anki-adopt:v1:syllabus:424242',
+                           $2, $1)""", i_adopted, expr)
+
+            # idiom-side guard: only the active, video-backed rows
+            idiom_rows = await conn.fetch(idb.POOL_IDIOMS_SQL, "xx")
+            returned = {r["id"] for r in idiom_rows}
+            assert i_normal in returned and i_lonely in returned
+            assert i_adopted not in returned, "NULL-video occurrence leaked"
+            assert i_retired not in returned, "retired source leaked"
+
+            # example-side guard: legacy_adopted never ships to pools
+            example_rows = await conn.fetch(
+                idb.POOL_EXAMPLES_SQL, [i_normal, i_adopted])
+            texts = {r["target_text"] for r in example_rows}
+            assert texts == {"normal tl"}, texts
+
+            # purge-video orphan check: the adopted occurrence keeps its
+            # expression alive; the lonely expression stays orphaned.
+            orphans = {r["id"] for r in await conn.fetch(
+                """SELECT e.id FROM expressions e
+                   WHERE e.id = ANY($1::bigint[])
+                     AND NOT EXISTS (SELECT 1 FROM expression_idioms ei
+                                     WHERE ei.expression_id = e.id
+                                       AND ei.video_id IS DISTINCT FROM $2)""",
+                [expr, expr2], v1)}
+            assert expr not in orphans, \
+                "expression with adopted occurrence wrongly orphaned"
+            assert expr2 in orphans
+
+            # cleanup for the shared module-scoped DB
+            await conn.execute(
+                "DELETE FROM expression_examples WHERE idiom_id = ANY($1::bigint[])",
+                [i_normal, i_adopted])
+            await conn.execute(
+                "DELETE FROM expression_idioms WHERE id = ANY($1::bigint[])",
+                [i_normal, i_lonely, i_adopted, i_retired])
+            await conn.execute(
+                "DELETE FROM expressions WHERE id = ANY($1::bigint[])",
+                [expr, expr2, expr3])
+            await conn.execute("DELETE FROM videos WHERE id = $1", v1)
+        finally:
+            await conn.close()
+
+    asyncio.run(run())
+
+
 # --- durable-ID schema staging (ephemeral Postgres) --------------------------
 
 _SCHEMA = Path(__file__).resolve().parent.parent / "db" / "schema.sql"
@@ -608,7 +979,7 @@ def test_hub_schema_staging_round_trip(pg_dsn):
             await conn.execute(
                 "DELETE FROM expressions WHERE id = $1", expr)
             assert await conn.fetchval(
-                "SELECT COUNT(*) FROM expressions") == 0
+                "SELECT COUNT(*) FROM expressions WHERE id = $1", expr) == 0
         finally:
             await conn.close()
 

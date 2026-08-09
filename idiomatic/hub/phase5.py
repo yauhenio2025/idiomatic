@@ -390,6 +390,57 @@ def load_manifest(path: Path) -> dict:
     return manifest
 
 
+# --- asset-coverage enrichment (C3) ------------------------------------------
+# Assets are an ENRICHMENT LAYER, never a blocker: the manifest records
+# per-example asset status (only `qa-passed` counts as an approved image);
+# the phase-5 executor still leaves the Image field blank — bytes ship
+# through the release builder against the recorded hashes.
+
+def load_asset_coverage(path: Path) -> dict:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if "examples" not in data:
+        raise ValueError("asset coverage file has no 'examples'")
+    by_example: dict[int, dict] = {}
+    for row in data["examples"]:
+        example_id = int(row["example_id"])
+        entry = {"status": row["final_status"]}
+        qa_hash = ((row.get("qa") or {}).get("content_hash") or {}).get("value")
+        if qa_hash:
+            entry["qa_sha1"] = qa_hash
+        by_example[example_id] = entry
+    return {
+        "source_generated_at": data.get("generated_at"),
+        "source_content_sha256": data.get("content_sha256"),
+        "by_example": by_example,
+    }
+
+
+def apply_asset_coverage(manifest: dict, coverage: dict) -> dict:
+    """Annotate hub examples with asset status and re-seal the manifest."""
+    by_example = coverage["by_example"]
+    qa_passed = missing = 0
+    for hub in manifest["hubs"]:
+        for example in hub["examples"]:
+            info = by_example.get(int(example["example_id"]))
+            if info is None:
+                example["asset_status"] = "no-coverage-row"
+                missing += 1
+                continue
+            example["asset_status"] = info["status"]
+            if info["status"] == "qa-passed":
+                example["asset_sha1"] = info.get("qa_sha1")
+                qa_passed += 1
+    manifest["asset_coverage"] = {
+        "source_generated_at": coverage.get("source_generated_at"),
+        "source_content_sha256": coverage.get("source_content_sha256"),
+        "qa_passed_examples": qa_passed,
+        "examples_missing_coverage": missing,
+    }
+    manifest["counts"]["asset_qa_passed_examples"] = qa_passed
+    manifest["content_sha256"] = manifest_content_sha256(manifest)
+    return manifest
+
+
 # --- execution field plans ---------------------------------------------------
 
 def example_field_fill(conversion: dict) -> dict[str, str]:

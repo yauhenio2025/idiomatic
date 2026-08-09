@@ -59,7 +59,26 @@ flag is false, no bulk seed/build ran, and no timer is installed or enabled.
   COMPLETION NOTE. Rollback file: `collection.anki2.pre-estate-*`
   beside the live profile.
 
-## 2. PARKED → Expression Hub commission (unblocked, not started)
+## 2. Expression Hub — IN BUILD (2026-08-09, coordinated tranche)
+
+Progress ledger (see HUB_BUILD_EXECUTION_COMMISSION.md):
+- C1 sense evidence DONE + owner-ratified (7 quarantines accepted).
+- C2 schedule dossiers DONE (3,969 adoptable / 14,534 reps).
+- C3 asset coverage: owner-run codex sweep in flight.
+- F1 durable-ID schema: LIVE in production (merge 1129d1e, boot-applied
+  clean). F2 models 1820180001/2 FROZEN — owner pilot verdict PASSED,
+  tile-grid rail amendment shipped (hub_pilot_v2).
+- F3 compiler + executor: rehearsed twice PASS + rollback drill +
+  coordinator-independent verifier PASS. Manifest: 17,530 conversions /
+  2,925 hub notes; 3,161 studied orphans (12,906 reps) deferred.
+- F4 example adoption (the deferred-orphan fix): analyzer/applier in
+  build on branch hub-adoption; prod writes double-gated (INSERT-only,
+  plan checksum + coordinator go-token; owner delegated this call
+  2026-08-09 "make big decisions on your own").
+- REMAINING to cutover: F4 apply + recompile, phase-0 recensus on a
+  fresh post-sync copy, then owner-at-keyboard copy-back execution.
+
+Original gap list (all now owned by the lanes above):
 
 User-visible gaps that are the Hub's explicit deliverables:
 

@@ -1442,12 +1442,17 @@ async def admin_purge_video(
                      if r["expression_id"] is not None})
     orphaned: set = set()
     if expr_ids:
+        # NULL-video occurrences (F4 adopted/legacy sources) keep their
+        # expression ALIVE: `ei.video_id <> $2` is NULL-false for them,
+        # which would wrongly orphan the expression and then trip the
+        # examples' FK on DELETE. IS DISTINCT FROM counts them as the
+        # other occurrences they are.
         rows = await pool.fetch(
             """SELECT e.id FROM expressions e
                WHERE e.id = ANY($1::bigint[])
                  AND NOT EXISTS (SELECT 1 FROM expression_idioms ei
                                  WHERE ei.expression_id = e.id
-                                   AND ei.video_id <> $2)""",
+                                   AND ei.video_id IS DISTINCT FROM $2)""",
             expr_ids, v["id"])
         orphaned = {r["id"] for r in rows}
 
