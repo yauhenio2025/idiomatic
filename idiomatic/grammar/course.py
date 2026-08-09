@@ -96,10 +96,19 @@ EXERCISE_FIELDS = [
     "HammerRefs",
     "Provenance",
     "SolutionAudio",
-    "Extra1",
-    "Extra2",
-    "Extra3",
+    # Spare fields, semantically assigned by the 2026-08-10 exercise-card
+    # redesign (enrichment sidecar). Field NAMES stay frozen — the
+    # EXERCISE_*_FIELD constants below pin what each spare carries so no
+    # other feature may reuse them:
+    "Extra1",  # example_html — the block's worked example (front)
+    "Extra2",  # solution_en — English gloss of the solution (back)
+    "Extra3",  # why_en — one-line grammar "why" (back)
 ]
+
+# Enrichment sidecar → spare-field mapping (names FROZEN, see above).
+EXERCISE_EXAMPLE_FIELD = "Extra1"      # example_html (front worked example)
+EXERCISE_SOLUTION_EN_FIELD = "Extra2"  # solution_en (EN gloss, back)
+EXERCISE_WHY_FIELD = "Extra3"          # why_en (grammar why, back)
 
 PROVENANCES = frozenset({"book-verbatim"})  # "llm-generated" reserved for v2
 
@@ -170,29 +179,60 @@ EXERCISE_CSS = """
        color: #1f2023; text-align: center; padding: 24px 16px;}
 .cx-meta {font-size: clamp(11px, 2.5vw, 14px); color: #6c6d66;
           letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;}
-.cx-instr {font-size: clamp(13px, 3vw, 17px); color: #6c6d66;
+.cx-instr {font-size: clamp(13px, 3vw, 17px); color: #3d3e38;
            line-height: 1.45; margin: 10px auto; max-width: 620px;}
+/* German inside English instruction/example/why text: serif italic, the
+   same voice as the prompt, so the two languages never blur together. */
+.cx-instr i, .cx-example i, .cx-why i
+  {font-family: Georgia, 'Times New Roman', serif; font-style: italic;}
 .cx-prompt {font-family: Georgia, 'Times New Roman', serif;
             font-size: clamp(20px, 4.8vw, 28px); line-height: 1.5;
             margin: 16px auto; max-width: 640px;}
+.cx-example {font-size: clamp(13px, 3vw, 16px); color: #6c6d66;
+             line-height: 1.5; margin: 18px auto 0; max-width: 620px;
+             padding-top: 10px; border-top: 1px dotted #d6d6cb;}
+.cx-example-label {display: block; font-size: 11px; color: #9b978e;
+                   letter-spacing: 0.14em; text-transform: uppercase;
+                   margin-bottom: 4px;}
+.cx-prompt-echo {font-family: Georgia, 'Times New Roman', serif;
+                 font-size: clamp(14px, 3.2vw, 17px); color: #6c6d66;
+                 line-height: 1.45; margin: 0 auto 8px; max-width: 640px;}
 .cx-solution {font-family: Georgia, 'Times New Roman', serif;
               font-size: clamp(20px, 4.8vw, 28px); line-height: 1.5;
               margin: 16px auto; max-width: 640px;}
 .cx-solution mark {background: #f4dfe0; color: inherit; padding: 0 3px;
                    border-radius: 3px; font-weight: 600;}
+.cx-gloss {font-size: clamp(14px, 3.2vw, 18px); color: #52534d;
+           line-height: 1.45; margin: 2px auto 14px; max-width: 620px;}
+.cx-gloss::before {content: "= "; color: #9b978e;}
 .cx-alts {font-size: clamp(13px, 3vw, 16px); color: #6c6d66; margin: 4px auto 10px;}
 .cx-alts span {display: inline-block; border: 1px solid #e1e1d8;
                border-radius: 999px; padding: 1px 10px; margin: 2px 3px;
                color: #1f2023;}
+.cx-why {font-size: clamp(13px, 3vw, 16px); color: #3d3e38; text-align: left;
+         line-height: 1.5; margin: 16px auto 0; max-width: 600px;
+         padding: 10px 12px; background: #f0f0ea; border-radius: 4px;
+         border-left: 3px solid #0a9c76;}
 .cx-refs {font-size: clamp(11px, 2.4vw, 13px); color: #9b978e;
           letter-spacing: 0.03em; margin-top: 16px;}
 hr#answer {border: 0; border-top: 1px solid #e1e1d8; margin: 18px 0;}
 .card.night_mode, .card.nightMode {background: #1b1a19; color: #edeae4;}
 .card.night_mode .cx-meta, .card.nightMode .cx-meta {color: #9b978e;}
-.card.night_mode .cx-instr, .card.nightMode .cx-instr {color: #9b978e;}
+.card.night_mode .cx-instr, .card.nightMode .cx-instr {color: #c9c6bd;}
+.card.night_mode .cx-example, .card.nightMode .cx-example
+  {color: #9b978e; border-top-color: #3a3835;}
+.card.night_mode .cx-example-label, .card.nightMode .cx-example-label
+  {color: #7d7a72;}
+.card.night_mode .cx-prompt-echo, .card.nightMode .cx-prompt-echo
+  {color: #9b978e;}
+.card.night_mode .cx-gloss, .card.nightMode .cx-gloss {color: #b8b5ac;}
+.card.night_mode .cx-gloss::before, .card.nightMode .cx-gloss::before
+  {color: #7d7a72;}
 .card.night_mode .cx-alts, .card.nightMode .cx-alts {color: #9b978e;}
 .card.night_mode .cx-alts span, .card.nightMode .cx-alts span
   {border-color: #343230; color: #edeae4;}
+.card.night_mode .cx-why, .card.nightMode .cx-why
+  {color: #c9c6bd; background: #22211f; border-left-color: #2fc296;}
 .card.night_mode .cx-solution mark, .card.nightMode .cx-solution mark
   {background: #4a3032; color: #edeae4;}
 .card.night_mode .cx-refs, .card.nightMode .cx-refs {color: #7d7a72;}
@@ -202,12 +242,17 @@ hr#answer {border: 0; border-top: 1px solid #e1e1d8; margin: 18px 0;}
 
 EXERCISE_FRONT = """<div class="cx-meta">{{Unit}} · {{Block}}</div>
 <div class="cx-instr">{{Instruction}}</div>
-<div class="cx-prompt">{{PromptHTML}}</div>"""
+<div class="cx-prompt">{{PromptHTML}}</div>
+{{#Extra1}}<div class="cx-example">\
+<span class="cx-example-label">Example</span>{{Extra1}}</div>{{/Extra1}}"""
 
 EXERCISE_BACK = """<div class="cx-meta">{{Unit}} · {{Block}}</div>
+<div class="cx-prompt-echo">{{PromptHTML}}</div>
 <div class="cx-solution">{{SolutionHTML}}</div>
+{{#Extra2}}<div class="cx-gloss">{{Extra2}}</div>{{/Extra2}}
 {{SolutionAudio}}
 {{#AltsHTML}}<div class="cx-alts">{{AltsHTML}}</div>{{/AltsHTML}}
+{{#Extra3}}<div class="cx-why">{{Extra3}}</div>{{/Extra3}}
 <hr id="answer">
 <div class="cx-refs">{{HammerRefs}} · {{SourceRef}} · {{Provenance}}</div>"""
 
@@ -702,6 +747,273 @@ def parse_exercises_payload(data: Any, *, name: str) -> list[CourseExercise]:
 
 
 # ---------------------------------------------------------------------------
+# Enrichment sidecar (codex-authored, machine-local, contract 1)
+#
+# ``<lang>_<unit>.enrichment.json`` beside the exercises file re-authors each
+# block's repeated book rubric as ONE short task line (+ optional worked
+# example) and adds a per-exercise English gloss + "why".  It may be ABSENT —
+# units then build exactly as before.  Hard rule: codex may only COPY German
+# from the block's own source text, never write its own; every ``<i>`` span
+# is mechanically checked against the block source (validate_enrichment).
+# ---------------------------------------------------------------------------
+
+ENRICHMENT_CONTRACT = 1
+
+_I_SPAN = re.compile(r"<i>(.*?)</i>", re.DOTALL)
+_ANY_TAG = re.compile(r"<[^>]*>")
+_SRC_OR_HREF = re.compile(r"\b(?:src|href)\s*=", re.IGNORECASE)
+_TASK_TAGS = re.compile(r"</?(?:i|b)>|<br\s*/?>")     # task_html whitelist
+_EXAMPLE_TAGS = re.compile(r"</?i>|<br\s*/?>")        # example_html whitelist
+_WHY_TAGS = re.compile(r"</?i>")                      # why_en whitelist
+
+
+@dataclass(frozen=True)
+class BlockEnrichment:
+    block: int
+    task_html: str            # short re-authored task line (tags: i, b, br)
+    example_html: str | None  # worked example from the rubric (tags: i, br)
+
+
+@dataclass(frozen=True)
+class ExerciseEnrichment:
+    item_id: str
+    solution_en: str  # plain-text English gloss of the solution
+    why_en: str       # one-line grammar why (tags: i)
+
+
+@dataclass(frozen=True)
+class CourseEnrichment:
+    lang: str
+    unit: str
+    block_tasks: dict[int, BlockEnrichment]
+    exercises: dict[str, ExerciseEnrichment]
+
+
+def _enrichment_error(path: Path, context: str,
+                      message: str) -> CourseSourceError:
+    return CourseSourceError(f"{path.name}: {context}: {message}")
+
+
+def _checked_markup(path: Path, context: str, key: str, value: str,
+                    tag_re: re.Pattern[str], allowed: str) -> str:
+    """Whitelist-check one enrichment HTML field, return it unchanged.
+
+    Same posture as the SVG guard: scripts, event handlers and resource
+    references must be structurally impossible.  Attributes on allowed
+    tags always leave ``<`` residue, so ``<i onclick=…>`` fails even
+    before the explicit handler check.
+    """
+    lowered = value.lower()
+    if _SVG_EVENT_HANDLER.search(lowered) or "javascript:" in lowered:
+        raise _enrichment_error(
+            path, context, f"{key} contains a script/event-handler pattern"
+        )
+    if _SRC_OR_HREF.search(lowered):
+        raise _enrichment_error(
+            path, context, f"{key} must not carry src/href attributes"
+        )
+    residue = tag_re.sub("", value)
+    if "<" in residue or ">" in residue:
+        raise _enrichment_error(
+            path, context, f"{key} may contain only {allowed} markup"
+        )
+    return value
+
+
+def parse_enrichment_file(path: Path) -> CourseEnrichment:
+    """Parse one ``<lang>_<unit>.enrichment.json`` sidecar (contract 1)."""
+    path = Path(path)
+    match = re.fullmatch(
+        r"([a-z]{2})_([a-z0-9]+(?:-[a-z0-9]+)*)\.enrichment\.json", path.name
+    )
+    if match is None or match.group(1) not in SUPPORTED_LANGS:
+        raise CourseSourceError(
+            f"{path.name}: filename must be <lang>_<unit>.enrichment.json"
+        )
+    lang, unit = match.group(1), match.group(2)
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise CourseSourceError(f"{path.name}: expected a JSON object")
+    if data.get("lang") != lang or data.get("unit") != unit:
+        raise CourseSourceError(
+            f"{path.name}: lang/unit fields must match the filename"
+        )
+    if data.get("contract") != ENRICHMENT_CONTRACT:
+        raise CourseSourceError(
+            f"{path.name}: contract must be {ENRICHMENT_CONTRACT}, "
+            f"got {data.get('contract')!r}"
+        )
+
+    blocks_raw = data.get("blocks")
+    if not isinstance(blocks_raw, list) or not blocks_raw:
+        raise CourseSourceError(f"{path.name}: blocks must be a nonempty array")
+    block_tasks: dict[int, BlockEnrichment] = {}
+    for raw in blocks_raw:
+        if not isinstance(raw, dict):
+            raise CourseSourceError(f"{path.name}: every block must be an object")
+        block_no = raw.get("block")
+        if not isinstance(block_no, int) or isinstance(block_no, bool) \
+                or block_no < 1:
+            raise CourseSourceError(f"{path.name}: block must be an integer >= 1")
+        if block_no in block_tasks:
+            raise CourseSourceError(f"{path.name}: duplicate block {block_no}")
+        context = f"block {block_no}"
+        task_html = raw.get("task_html")
+        if not isinstance(task_html, str) or not task_html.strip():
+            raise _enrichment_error(
+                path, context, "task_html must be a nonempty string"
+            )
+        task_html = _checked_markup(
+            path, context, "task_html", task_html.strip(),
+            _TASK_TAGS, "<i>/<b>/<br>",
+        )
+        example_html = raw.get("example_html")
+        if example_html is not None:
+            if not isinstance(example_html, str) or not example_html.strip():
+                raise _enrichment_error(
+                    path, context, "example_html must be null or a nonempty string"
+                )
+            example_html = _checked_markup(
+                path, context, "example_html", example_html.strip(),
+                _EXAMPLE_TAGS, "<i>/<br>",
+            )
+        block_tasks[block_no] = BlockEnrichment(
+            block=block_no, task_html=task_html, example_html=example_html
+        )
+
+    exercises_raw = data.get("exercises")
+    if not isinstance(exercises_raw, list) or not exercises_raw:
+        raise CourseSourceError(
+            f"{path.name}: exercises must be a nonempty array"
+        )
+    exercises: dict[str, ExerciseEnrichment] = {}
+    for raw in exercises_raw:
+        if not isinstance(raw, dict):
+            raise CourseSourceError(
+                f"{path.name}: every exercise must be an object"
+            )
+        item_id = str(raw.get("id", "")).strip()
+        if not re.fullmatch(r"[a-z0-9][a-z0-9_\-]*", item_id):
+            raise CourseSourceError(
+                f"{path.name}: invalid or missing exercise id {item_id!r}"
+            )
+        if item_id in exercises:
+            raise CourseSourceError(
+                f"{path.name}: duplicate exercise id {item_id!r}"
+            )
+        solution_en = raw.get("solution_en")
+        if not isinstance(solution_en, str) or not solution_en.strip():
+            raise _enrichment_error(
+                path, item_id, "solution_en must be a nonempty string"
+            )
+        solution_en = solution_en.strip()
+        if "<" in solution_en:
+            raise _enrichment_error(
+                path, item_id, "solution_en must be plain text (no '<')"
+            )
+        why_en = raw.get("why_en")
+        if not isinstance(why_en, str) or not why_en.strip():
+            raise _enrichment_error(
+                path, item_id, "why_en must be a nonempty string"
+            )
+        why_en = _checked_markup(
+            path, item_id, "why_en", why_en.strip(), _WHY_TAGS, "<i>"
+        )
+        exercises[item_id] = ExerciseEnrichment(
+            item_id=item_id, solution_en=solution_en, why_en=why_en
+        )
+
+    return CourseEnrichment(
+        lang=lang, unit=unit, block_tasks=block_tasks, exercises=exercises
+    )
+
+
+def _normalized_text(text: str) -> str:
+    """Whitespace-collapsed, entity-unescaped, tag-stripped plain text."""
+    return " ".join(html.unescape(_ANY_TAG.sub(" ", text)).split())
+
+
+def validate_enrichment(
+    exercises: Sequence[CourseExercise], enrichment: CourseEnrichment
+) -> None:
+    """Cross-check a sidecar against its unit's parsed exercises.
+
+    Enforces set EQUALITY on exercise ids and block numbers, plus the
+    NO-INVENTED-GERMAN rule: every ``<i>`` span in task_html/example_html/
+    why_en must appear verbatim (whitespace-normalized, tags stripped) in
+    the concatenation of that block's source texts — instructions,
+    prompts, solutions, alternatives.  This is the mechanical guarantee
+    that codex only copied German from the book material, never wrote
+    its own.
+    """
+    name = f"{enrichment.lang}_{enrichment.unit}.enrichment.json"
+    if not exercises:
+        raise CourseSourceError(f"{name}: no exercises to enrich")
+    if exercises[0].lang != enrichment.lang \
+            or exercises[0].unit != enrichment.unit:
+        raise CourseSourceError(
+            f"{name}: enrichment is for {enrichment.lang}:{enrichment.unit}, "
+            f"exercises are {exercises[0].lang}:{exercises[0].unit}"
+        )
+
+    exercise_ids = {exercise.item_id for exercise in exercises}
+    unknown = sorted(set(enrichment.exercises) - exercise_ids)
+    if unknown:
+        raise CourseSourceError(
+            f"{name}: unknown exercise id(s): {', '.join(unknown)}"
+        )
+    missing = sorted(exercise_ids - set(enrichment.exercises))
+    if missing:
+        raise CourseSourceError(
+            f"{name}: missing enrichment for exercise id(s): "
+            f"{', '.join(missing)}"
+        )
+
+    blocks = {exercise.block for exercise in exercises}
+    unknown_blocks = sorted(set(enrichment.block_tasks) - blocks)
+    if unknown_blocks:
+        raise CourseSourceError(f"{name}: unknown block(s): {unknown_blocks}")
+    missing_blocks = sorted(blocks - set(enrichment.block_tasks))
+    if missing_blocks:
+        raise CourseSourceError(
+            f"{name}: missing enrichment for block(s): {missing_blocks}"
+        )
+
+    pools: dict[int, str] = {}
+    for block_no in blocks:
+        parts: list[str] = []
+        for exercise in exercises:
+            if exercise.block != block_no:
+                continue
+            parts.extend((exercise.instruction, exercise.prompt,
+                          exercise.solution_html, *exercise.alternatives))
+        pools[block_no] = _normalized_text(" ".join(parts))
+
+    def check_spans(context: str, key: str, value: str, pool: str) -> None:
+        for span in _I_SPAN.findall(value):
+            span_text = _normalized_text(span)
+            if span_text and span_text not in pool:
+                raise CourseSourceError(
+                    f"{name}: {context}: {key} <i> span {span_text!r} is not "
+                    "verbatim source text of its block "
+                    "(no-invented-German rule)"
+                )
+
+    for block_no, block in enrichment.block_tasks.items():
+        pool = pools[block_no]
+        check_spans(f"block {block_no}", "task_html", block.task_html, pool)
+        if block.example_html:
+            check_spans(
+                f"block {block_no}", "example_html", block.example_html, pool
+            )
+    for exercise in exercises:
+        extra = enrichment.exercises[exercise.item_id]
+        check_spans(
+            exercise.item_id, "why_en", extra.why_en, pools[exercise.block]
+        )
+
+
+# ---------------------------------------------------------------------------
 # Identity, decks, interleave
 # ---------------------------------------------------------------------------
 
@@ -860,6 +1172,50 @@ def exercise_solution_html(exercise: CourseExercise) -> str:
     return "".join(parts)
 
 
+def exercise_note_fields(
+    exercise: CourseExercise,
+    *,
+    unit_label: str,
+    solution_sound: str = "",
+    enrichment: CourseEnrichment | None = None,
+) -> list[str]:
+    """The 15 EXERCISE_FIELDS values for one exercise note.
+
+    With an enrichment sidecar, Instruction carries the block's short
+    task_html (validated markup, inserted verbatim) and the spare fields
+    carry example/gloss/why; without one, Instruction falls back to the
+    full book rubric and the spares stay empty — legacy behavior.
+    Solution handling is IDENTICAL in both modes: nothing here may shift
+    solution_spoken_text or the audio content hashes.
+    """
+    instruction = html.escape(exercise.instruction)
+    example = solution_en = why = ""
+    if enrichment is not None:
+        block = enrichment.block_tasks[exercise.block]
+        extra = enrichment.exercises[exercise.item_id]
+        instruction = block.task_html
+        example = block.example_html or ""
+        solution_en = html.escape(extra.solution_en)
+        why = extra.why_en
+    return [
+        f"course:{exercise.lang}:{exercise.unit}:{exercise.item_id}",
+        exercise.lang,
+        unit_label,
+        f"c{exercise.block:02d}",
+        instruction,
+        html.escape(exercise.prompt),
+        exercise_solution_html(exercise),
+        alts_html(exercise),
+        html.escape(exercise.source_ref),
+        "Hammer " + html.escape(refs_html(exercise.hammer_refs)),
+        exercise.provenance,
+        solution_sound,
+        example,      # EXERCISE_EXAMPLE_FIELD (Extra1)
+        solution_en,  # EXERCISE_SOLUTION_EN_FIELD (Extra2)
+        why,          # EXERCISE_WHY_FIELD (Extra3)
+    ]
+
+
 def make_lesson_model() -> genanki.Model:
     return genanki.Model(
         LESSON_MODEL_ID,
@@ -909,6 +1265,7 @@ def build_course_apkg(
     root_override: str | None = None,
     lesson_audio: dict[tuple[int, str], SideAudio] | None = None,
     exercise_audio: dict[str, Path] | None = None,
+    enrichment: CourseEnrichment | None = None,
 ) -> dict[str, Any]:
     """Package one unit — lesson + exercises — with interleaved due positions.
 
@@ -916,9 +1273,15 @@ def build_course_apkg(
     tag the note ``idiomatic-course-audio-pending`` (the local-TTS seeding
     contract is the documented follow-up; GUIDs are stable, so a rebuild
     with audio updates fields in place and preserves scheduling).
+
+    ``enrichment`` is the optional sidecar (see parse_enrichment_file); it
+    is cross-validated here so a bad sidecar can never half-ship through
+    ANY caller.  Audio identity is untouched in both modes.
     """
     lesson_audio = lesson_audio or {}
     exercise_audio = exercise_audio or {}
+    if enrichment is not None:
+        validate_enrichment(exercises, enrichment)
     plan = interleave_plan(lesson, exercises)
     dues = {(kind, key): due for kind, key, due in plan}
 
@@ -994,21 +1357,12 @@ def build_course_apkg(
             tags.append(AUDIO_PENDING_TAG)
         exercise_deck.add_note(genanki.Note(
             model=make_exercise_model(),
-            fields=[
-                f"course:{exercise.lang}:{exercise.unit}:{exercise.item_id}",
-                exercise.lang,
-                lesson.unit_label,
-                f"c{exercise.block:02d}",
-                html.escape(exercise.instruction),
-                html.escape(exercise.prompt),
-                exercise_solution_html(exercise),
-                alts_html(exercise),
-                html.escape(exercise.source_ref),
-                "Hammer " + html.escape(refs_html(exercise.hammer_refs)),
-                exercise.provenance,
-                solution_sound,
-                "", "", "",
-            ],
+            fields=exercise_note_fields(
+                exercise,
+                unit_label=lesson.unit_label,
+                solution_sound=solution_sound,
+                enrichment=enrichment,
+            ),
             guid=exercise_guid(exercise.lang, exercise.unit, exercise.item_id),
             tags=tags,
             due=dues[("exercise", exercise.item_id)],
@@ -1026,6 +1380,7 @@ def build_course_apkg(
         "exercises": len(exercises),
         "notes": len(lesson.cards) + len(exercises),
         "audio_pending": audio_pending,
+        "enriched": enrichment is not None,
         "decks": [lesson_deck_name, exercise_deck_name],
         "size_kb": round(out_path.stat().st_size / 1e3),
     }
