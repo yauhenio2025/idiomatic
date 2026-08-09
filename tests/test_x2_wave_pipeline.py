@@ -499,4 +499,4 @@ def test_existing_merges_match_their_keep_triage_and_have_no_cross_topic_copies(
     results = wave.verify_all_merges()
     assert results["fr_connecting"] == 191
     assert results["es_conditionals"] == 168
-    assert wave.check_merged_duplicates() == 3272
+    assert wave.check_merged_duplicates() == 4022  # +750 geopolitics (2026-08-09)
