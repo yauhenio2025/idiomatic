@@ -5,16 +5,17 @@ runs the pipeline; log in with the admin token (local copy:
 `~/.config/idiomatic-admin.env`). Read-only — EXCEPT the Grammar section
 (amended 2026-07-31 by the Wave-6 commission), the Rescue Lab section
 (amended 2026-08-05 by the Rescue Lab commission), the Cast page
-(amended 2026-08-06, Asset Factory), and the Study DJ page (amended
-2026-08-09, Personal DJ commission — budget edits + forced runs only):
-those pages may trigger generation runs and edit their own state via
-`/admin/*` endpoints. Everything else still cannot mutate pipeline
-state.
+(amended 2026-08-06, Asset Factory), the Study DJ page (amended
+2026-08-09, Personal DJ commission — budget edits + forced runs only),
+and the Triage page (amended 2026-08-09, DJ-C2 — verdict recording
+only, never disposition application): those pages may trigger
+generation runs and edit their own state via `/admin/*` endpoints.
+Everything else still cannot mutate pipeline state.
 
 ## What each page answers
 
 Navigation: Overview · Videos · Expressions · Channels · Grammar ·
-Rescue Lab · Cast · Study DJ · Delivery · Legacy.
+Rescue Lab · Cast · Study DJ · Triage · Delivery · Legacy.
 
 **Study DJ** (`/dj`) — "what should I study today, and why exactly?"
 The Personal Study DJ panel (docs/commissions/PERSONAL_DJ_COMMISSION.md,
@@ -33,6 +34,28 @@ per language × population, due backlog, new-card reservoir, secs/rep
 (flagged `prior` until 20 observed reps), and the last 7 days' actual
 reps + minutes. Populations come from the estate deck lanes
 (1 Expressions … 8 Pimsleur) plus the `idiomatic-podcast` tag.
+
+**Triage** (`/triage`) — "of everything in the collection, what is
+actually worth studying at my level?" The DJ-C2 curation console
+(docs/commissions/CODEX_DJ_C2_CURATION_TRIAGE.md): all 178 census
+subtrees grouped by language then lane — Pimsleur as per-level rows
+(owner steer 2026-08-09) — each with its one-line rationale, evidence
+chips (due, easy/again rate, last touch, provenance, minutes impact),
+the census-proposed disposition pre-highlighted, and one-tap verdict
+buttons (Accept proposal / Keep / Suspend / Sample hardest / Defer)
+plus an optional note; phone-friendly targets throughout. Sticky bar:
+verdict progress and per-language due-minutes before → under-current-
+verdicts (lane verdicts cascade to unverdicted subdecks; a subdeck's
+own verdict wins; undecided projects unchanged). "Accept all
+proposals" bulk-verdicts the unverdicted set for the accept-then-
+override flow. Verdicts land in `dj_triage` via `POST
+/admin/triage-verdict[-bulk]`; the table is seeded from the committed
+census evidence only while empty, and reseeds never touch owner
+verdict columns (legacy_estate doctrine). A banner states the
+boundary: this page records decisions ONLY — no suspension, deletion,
+or any collection mutation happens here or server-side; a separate
+owner-present collection window (the executor lane) applies accepted
+verdicts.
 
 **Cast** (`/cast`) — "which Asset Factory cast sheets pass, which need a
 remake?" Fast-forward review of the famous-cast character sheets: sheet +
