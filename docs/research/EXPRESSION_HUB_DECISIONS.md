@@ -137,6 +137,39 @@ footer and context clip stay below the grid. Rebuilt for eyeballing as
 `hub_pilot_v2.apkg` (same selection, same GUIDs — imports update the
 pilot deck in place).
 
+---
+
+## OWNER AMENDMENT 3 (2026-08-09, after approving the v2 grid — "design is fine")
+
+The source-video context clip on the card backs must carry its
+TRANSCRIPT alongside the player — the sentence as spoken in the
+original language plus its English translation — so the owner can
+listen first, then verify comprehension ("train our ear... understand
+if we're grabbing it correctly").
+
+Implementation (frozen fields respected):
+
+- the transcript CONSUMES the `Extra1` spare on model `1820180001`
+  (both formatted lines in one field; `Extra2`/`Extra3` remain the free
+  escape hatches) — recorded in `idiomatic/hub/apkg.py`'s field docs;
+- applies to BOTH backs that carry the clip (hub card and EN→TL card);
+- collapsed by default behind a `<details>` tap-to-reveal ("WHAT WAS
+  SAID"), target line first, muted English beneath, house night-mode
+  styles. `<details>` is native in all three current Anki webviews
+  (desktop Chromium / AnkiMobile WKWebView / AnkiDroid system WebView);
+  an engine without it renders the block expanded — the sanctioned
+  visible-but-subordinate fallback;
+- PAIRING RULE: the transcript shown must belong to the EXACT
+  occurrence whose `audio_context` clip is embedded
+  (`source_phrase_target`/`source_phrase_en` of that same
+  `expression_idioms` row) — the builder refuses a transcript without
+  its clip, and multi-source hubs (e.g. es 439) never mix occurrences;
+- phase-5 collection migration keeps `Extra1` blank: transcript and
+  clip ship TOGETHER at release build, preserving the pairing
+  atomically;
+- pilot rebuilt as `hub_pilot_v3.apkg` (same selection + GUIDs;
+  in-place update; 21 clip-bearing hubs carry transcripts).
+
 **C1 quarantine skim (owner, 2026-08-09): all seven quarantine
 dispositions ACCEPTED** — `más bien` (both group entries,
 `52b6d3aa46640cd6` + `e383b8e3acddf900`), `al margen de`

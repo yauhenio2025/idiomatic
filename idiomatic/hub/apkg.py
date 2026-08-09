@@ -12,6 +12,15 @@ at model-freeze time, as they bind:
    embedded on the hub-card back AND the EN→TL card back (ContextAudio
    field; seconds-long occurrence audio — the long stitched compilations
    stay retired).
+3. (2026-08-09, post-v2 approval) The context clip carries its paired
+   TRANSCRIPT — the sentence as spoken plus its English translation,
+   collapsed behind a tap-to-reveal so the owner can listen first and
+   then verify comprehension. Fields are frozen, so the transcript
+   CONSUMES the Extra1 spare (both formatted lines in one field; Extra2/
+   Extra3 remain free). PAIRING RULE: the transcript must come from the
+   EXACT occurrence whose clip is embedded — the builder refuses to set
+   Extra1 without a context clip, and callers must pass the phrases of
+   the clip's own source row (source_phrase_target / source_phrase_en).
 
 Deck names always compose from idiomatic/anki_tree.py::anki_root; the
 disposable pilot overrides them with PILOT_DECK_ROOT and uses the separate
@@ -53,7 +62,8 @@ HUB_FIELDS = [
     "SourcesHTML",      # visible titles + full URL text
     "ContextAudio",     # [sound:] per-occurrence source clip (amendment 2)
     "ExpressionAudio",  # [sound:] atomic expression clip (EN→TL back)
-    "Extra1", "Extra2", "Extra3",
+    "Extra1",           # CONSUMED (amendment 3): paired context transcript
+    "Extra2", "Extra3",
 ]
 
 EXAMPLE_FIELDS = [
@@ -116,6 +126,21 @@ _CSS = """
 @media (max-width: 640px) {.rail {grid-template-columns: repeat(2, 1fr);}}
 @media (max-width: 400px) {.rail {grid-template-columns: 1fr;}}
 .ctx {font-size: clamp(12px, 2.5vw, 15px); color: #666; margin-top: 10px;}
+/* Amendment 3: collapsed transcript under the context player. <details>
+   is native in every current Anki webview (desktop Chromium, AnkiMobile
+   WKWebView, AnkiDroid system WebView); an ancient engine without it
+   renders the content expanded — exactly the sanctioned fallback
+   (visible but visually subordinate). */
+.ctx-transcript {margin: 8px auto 0; max-width: 560px; text-align: center;}
+.ctx-transcript summary {cursor: pointer; font-size: clamp(11px, 2.2vw, 14px);
+                         color: #888; letter-spacing: 0.06em;
+                         text-transform: uppercase;
+                         list-style-position: inside;}
+.ctx-transcript[open] summary {color: #666;}
+.ctx-tl {font-size: clamp(15px, 3.2vw, 20px); font-weight: 600;
+         line-height: 1.4; margin-top: 6px; color: #111;}
+.ctx-en {font-size: clamp(12px, 2.5vw, 15px); color: #888;
+         line-height: 1.4; margin-top: 2px;}
 .sources {margin-top: 22px; font-size: clamp(10px, 2vw, 13px); color: #888;}
 .src {margin-top: 6px;}
 .src-title {font-weight: 600;}
@@ -147,6 +172,8 @@ hr#answer {border: 0; border-top: 1px solid #bbb; margin: 18px auto;
   {background: #3a2b28; color: #eec2b8;}
 .card.night_mode .rail-en, .card.nightMode .rail-en {color: #9aa0a6;}
 .card.night_mode .rail-item, .card.nightMode .rail-item {background: #2e3438;}
+.card.night_mode .ctx-tl, .card.nightMode .ctx-tl {color: #e8e8e8;}
+.card.night_mode .ctx-en, .card.nightMode .ctx-en {color: #9aa0a6;}
 """
 
 # Card 1 — the accepted TL-front hub card (design §5.2): front is the
@@ -161,7 +188,8 @@ _HUB_BACK = """<div class="hub-expr">{{Expression}}</div>
 {{#FalseFriend}}<div class="note-line ff">&#9888; {{FalseFriend}}</div>{{/FalseFriend}}
 <div class="rail">{{ExamplesHTML}}</div>
 <div class="sources">{{SourcesHTML}}
-{{#ContextAudio}}<div class="ctx">In the source video: {{ContextAudio}}</div>{{/ContextAudio}}
+{{#ContextAudio}}<div class="ctx">In the source video: {{ContextAudio}}</div>
+{{#Extra1}}<details class="ctx-transcript"><summary>What was said</summary>{{Extra1}}</details>{{/Extra1}}{{/ContextAudio}}
 </div>"""
 
 # Card 2 — the amended EN→TL expression-production card (owner amendment 1):
@@ -176,7 +204,8 @@ _EN2TL_BACK = """<div class="lang-badge">{{Lang}}</div>
 <div class="hub-expr">{{Expression}}</div>
 {{#ExpressionAudio}}<div>{{ExpressionAudio}}</div>{{/ExpressionAudio}}
 <div class="hub-gloss">{{GlossEN}}</div>
-{{#ContextAudio}}<div class="ctx">In the source video: {{ContextAudio}}</div>{{/ContextAudio}}
+{{#ContextAudio}}<div class="ctx">In the source video: {{ContextAudio}}</div>
+{{#Extra1}}<details class="ctx-transcript"><summary>What was said</summary>{{Extra1}}</details>{{/Extra1}}{{/ContextAudio}}
 <div class="sources">{{SourcesHTML}}</div>"""
 
 # Fluency card (design §5.1): English prompt front — no image, no
@@ -278,6 +307,22 @@ def build_sources_html(sources: list[dict]) -> str:
     return "\n".join(parts)
 
 
+def build_context_transcript(transcript: dict | None) -> str:
+    """Amendment 3: the Extra1 payload — target line first, muted English
+    under it. Returns "" for missing/blank input; the builder addition-
+    ally refuses to emit it without a paired context clip."""
+    if not transcript:
+        return ""
+    target = (transcript.get("target_text") or "").strip()
+    english = (transcript.get("en_text") or "").strip()
+    if not target:
+        return ""
+    out = f'<div class="ctx-tl">{html.escape(target)}</div>'
+    if english:
+        out += f'<div class="ctx-en">{html.escape(english)}</div>'
+    return out
+
+
 def _sound(name: str | None) -> str:
     return f"[sound:{name}]" if name else ""
 
@@ -300,7 +345,10 @@ def build_hub_apkg(*, out_path: Path, hub_notes: list[dict],
       usage_line_en, key_synonym, false_friend,
       examples: [{example_id, target_text, en_text, image_media}],
       sources: [{title, url, youtube_id}],
-      context_audio_media, expression_audio_media}
+      context_audio_media, expression_audio_media,
+      context_transcript: {target_text, en_text} | None — MUST be the
+      phrases of the exact occurrence whose clip is embedded (amendment
+      3 pairing rule); ignored when there is no context clip}
     example_notes rows: {expression_id, example_id, lang, en_text,
       target_text, en_audio_media, tl_audio_media, image_media,
       expression, gloss_en, source: {title, url}, origin}
@@ -350,7 +398,11 @@ def build_hub_apkg(*, out_path: Path, hub_notes: list[dict],
                 build_sources_html(h.get("sources", [])),
                 _sound(h.get("context_audio_media")),
                 _sound(h.get("expression_audio_media")),
-                "", "", "",
+                # Extra1 (amendment 3): paired transcript, only ever
+                # alongside its own clip.
+                (build_context_transcript(h.get("context_transcript"))
+                 if h.get("context_audio_media") else ""),
+                "", "",
             ],
             guid=guid,
             tags=tags,

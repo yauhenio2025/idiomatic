@@ -343,6 +343,12 @@ def compile_manifest(*, c1: dict, c2: dict, extract: dict,
         "generated_at": dt.datetime.now(dt.UTC).isoformat(),
         "input_checksums": dict(input_checksums),
         "collection_source_sha256": c2.get("source_sha256"),
+        # Owner amendment 3 (2026-08-09): Extra1 on model 1820180001 is
+        # consumed by the paired context transcript; phase 5 leaves it
+        # blank (release build fills transcript + clip together).
+        "hub_model_spare_consumption": {
+            "Extra1": "context-transcript (owner amendment 3; "
+                      "paired with ContextAudio at release build)"},
         "counts": {
             "c2_cards": len(c2["cards"]),
             "conversions": len(conversions),
@@ -483,6 +489,10 @@ def hub_fields(hub: dict, *, gloss_en: str, sources_html: str) -> list[str]:
         "SourcesHTML": sources_html,
         "ContextAudio": "",
         "ExpressionAudio": "",
+        # Extra1 is CONSUMED by owner amendment 3 (paired context
+        # transcript) but stays blank at phase 5: transcript and clip
+        # ship TOGETHER in the release build, from the same occurrence
+        # row, so the pairing can never split.
         "Extra1": "", "Extra2": "", "Extra3": "",
     }
     return [values[name] for name in hub_apkg.HUB_FIELDS]

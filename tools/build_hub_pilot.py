@@ -341,8 +341,17 @@ def compose_notes(chosen, media_map) -> tuple[list[dict], list[dict]]:
                 "origin": "initial",
             })
 
+        # Amendment 3 pairing: the transcript is THIS occurrence's own
+        # source sentence — the same row (rid) whose clip we embed.
+        context_transcript = None
+        if med("ctx", rid) and d.get("source_phrase_target"):
+            context_transcript = {
+                "target_text": d["source_phrase_target"],
+                "en_text": d.get("source_phrase_en") or "",
+            }
         hub_notes.append({
             "expression_id": expr_id, "lang": lang,
+            "context_transcript": context_transcript,
             "expression": d.get("citation_form") or d["idiom_text"],
             "gloss_en": d.get("english_gloss") or "",
             # PILOT ONLY: the full explanation stands in for the future

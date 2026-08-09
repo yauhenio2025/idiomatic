@@ -1,5 +1,16 @@
 # Expression Hub pilot — what you will see (owner gate 1)
 
+> **v3 (2026-08-09, owner amendment 3): `hub_pilot_v3.apkg`.** Same
+> selection + GUIDs (in-place update). New: on the 21 clip-bearing
+> hubs, both backs now show a collapsed "WHAT WAS SAID" reveal under
+> the context player — tap it to see the exact sentence as spoken (TL)
+> with its muted English translation, paired to the embedded clip's own
+> occurrence. Inspect on `es 439 a primera hora` (multi-source card:
+> the transcript matches the PLAYING clip, not another listed source)
+> and on any clipless card (fr `coup de cœur`: no player, no
+> transcript block). Correction to the v1 table below: context clips
+> are on **21**/30 expressions, not 22.
+>
 > **v2 (2026-08-09, post-verdict): `hub_pilot_v2.apkg`.** The owner
 > approved v1 and ratified the model freeze, with one template
 > amendment: the hub back's example rail is now a responsive TILE GRID
