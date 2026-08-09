@@ -12,6 +12,7 @@ import asyncio
 import hashlib
 import json
 import os
+import re
 import tempfile
 from dataclasses import dataclass
 from pathlib import Path
@@ -20,6 +21,7 @@ from typing import Any, Callable
 import structlog
 
 from . import db
+from .grammar import course
 from .grammar import exercises2 as x2
 from .settings import get_settings
 
@@ -350,6 +352,284 @@ async def seed_exercises2_full() -> dict[str, Any]:
     }
 
 
+# ---------------------------------------------------------------------------
+# Grammar Course narration (docs/GRAMMAR_COURSE_DESIGN.md §6)
+# ---------------------------------------------------------------------------
+
+COURSE_LESSON_SOURCE_KIND = "course_lesson_segment"
+COURSE_EXERCISE_SOURCE_KIND = "course_exercise"
+# Mirrors the schema CHECK on local_tts_jobs.clip_kind — keep in sync with
+# db/schema.sql when either side changes.
+COURSE_CLIP_KIND = re.compile(r"^(?:solution|seg[0-9]{3})$")
+
+
+def course_staged_path(source_key: str, lang: str, digest: str) -> str:
+    """Canonical local-Qwen path for Grammar Course narration clips."""
+    if lang not in LOCAL_TTS_LANGS:
+        raise ValueError("unsupported local TTS language")
+    if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest):
+        raise ValueError("content digest must be 64 lowercase hex characters")
+    identity = hashlib.sha256(source_key.encode("utf-8")).hexdigest()[:12]
+    name = f"idcrs_v{CONTRACT_VERSION}_{lang}_{identity}_{digest[:20]}.mp3"
+    return f"grammar/course/local_qwen/v{CONTRACT_VERSION}/{lang}/{name}"
+
+
+def course_lesson_note_key(lesson_lang: str, unit: str, seq: int,
+                           side: str) -> str:
+    if side not in ("front", "back"):
+        raise ValueError("side must be front|back")
+    return f"course:{lesson_lang}:{unit}:{seq}:{side}"
+
+
+def _course_job_row(
+    *, source_kind: str, source_key: str, note_key: str, clip_kind: str,
+    text: str, voice_lang: str, is_pilot: bool,
+) -> dict[str, Any]:
+    if voice_lang not in LOCAL_TTS_LANGS:
+        raise LocalTTSBuildError(
+            f"course clip {source_key} routes to unsupported voice "
+            f"{voice_lang!r}"
+        )
+    if not COURSE_CLIP_KIND.fullmatch(clip_kind):
+        raise LocalTTSBuildError(
+            f"course clip kind {clip_kind!r} violates the queue contract"
+        )
+    digest = content_hash(text, voice_lang)
+    return {
+        "contract_version": CONTRACT_VERSION,
+        "source_kind": source_kind,
+        "source_key": source_key,
+        "lang": voice_lang,
+        "note_key": note_key,
+        "clip_kind": clip_kind,
+        "text": text,
+        "voice_version": VOICE_VERSION,
+        "content_hash": digest,
+        "staged_path": course_staged_path(source_key, voice_lang, digest),
+        "is_pilot": is_pilot,
+    }
+
+
+def course_lesson_job_rows(
+    lesson: course.CourseLesson, *, is_pilot: bool = False,
+) -> list[dict[str, Any]]:
+    """One queue job per SPEECH segment of every lesson side.
+
+    Sides are multi-voice (EN narration + TL examples), which the
+    one-clip-one-voice queue cannot express as one job; the builder later
+    stitches completed segment clips in script order (course.
+    stitch_side_narration). ``clip_kind = segNNN`` is the zero-based
+    ordinal among the side's speech segments; ``lang`` is the segment's
+    routed voice, so the machine worker needs no course knowledge.
+    """
+    rows: list[dict[str, Any]] = []
+    for card in sorted(lesson.cards, key=lambda card: card.seq):
+        for side in (card.front, card.back):
+            speech = course.speech_segments(side)
+            if len(speech) > 1000:
+                raise LocalTTSBuildError(
+                    f"card {card.seq} {side.side} exceeds the segNNN range"
+                )
+            note_key = course_lesson_note_key(
+                lesson.lang, lesson.unit, card.seq, side.side
+            )
+            for index, segment in enumerate(speech):
+                clip_kind = f"seg{index:03d}"
+                rows.append(_course_job_row(
+                    source_kind=COURSE_LESSON_SOURCE_KIND,
+                    source_key=(
+                        f"course:v{CONTRACT_VERSION}:{lesson.lang}:"
+                        f"{lesson.unit}:{card.seq}:{side.side}:{clip_kind}"
+                    ),
+                    note_key=note_key,
+                    clip_kind=clip_kind,
+                    text=segment.text,
+                    voice_lang=segment.lang or "en",
+                    is_pilot=is_pilot,
+                ))
+    _require_unique_source_keys(rows)
+    return rows
+
+
+def course_exercise_job_rows(
+    exercises: list[course.CourseExercise], *, is_pilot: bool = False,
+) -> list[dict[str, Any]]:
+    """One TL solution clip per exercise card (owner directive 2026-08-09:
+    'we can voice the back of these cards too')."""
+    rows: list[dict[str, Any]] = []
+    for exercise in exercises:
+        try:
+            text = course.solution_spoken_text(exercise)
+        except ValueError as exc:
+            raise LocalTTSBuildError(str(exc)) from exc
+        rows.append(_course_job_row(
+            source_kind=COURSE_EXERCISE_SOURCE_KIND,
+            source_key=(
+                f"course:v{CONTRACT_VERSION}:{exercise.lang}:{exercise.unit}:"
+                f"{exercise.item_id}:solution"
+            ),
+            note_key=f"course:{exercise.lang}:{exercise.unit}:"
+                     f"{exercise.item_id}",
+            clip_kind="solution",
+            text=text,
+            voice_lang=exercise.lang,
+            is_pilot=is_pilot,
+        ))
+    _require_unique_source_keys(rows)
+    return rows
+
+
+def _require_unique_source_keys(rows: list[dict[str, Any]]) -> None:
+    keys = [row["source_key"] for row in rows]
+    if len(keys) != len(set(keys)):
+        raise LocalTTSBuildError("duplicate course clip source key")
+
+
+def _validated_course_unit(lang: Any, unit: Any) -> tuple[str, str]:
+    """Path-safety gate: these values reach a repo path join."""
+    if not isinstance(lang, str) or lang not in course.SUPPORTED_LANGS:
+        raise ValueError("lang must be de|es|fr|it|pt")
+    if not isinstance(unit, str) or not re.fullmatch(
+        r"[a-z0-9]+(?:-[a-z0-9]+)*", unit
+    ):
+        raise ValueError(f"invalid unit {unit!r}")
+    return lang, unit
+
+
+def course_expected_job_rows(
+    lesson: course.CourseLesson,
+    exercises: list[course.CourseExercise] | None,
+    *, is_pilot: bool = False,
+) -> list[dict[str, Any]]:
+    """The unit's full clip plan — shared by seeding and build resolution."""
+    rows = course_lesson_job_rows(lesson, is_pilot=is_pilot)
+    if exercises:
+        course.interleave_plan(lesson, exercises)  # identity + block check
+        rows += course_exercise_job_rows(exercises, is_pilot=is_pilot)
+    _require_unique_source_keys(rows)
+    return rows
+
+
+async def seed_course_audio(
+    lang: str,
+    unit: str,
+    *,
+    exercises_payload: Any | None = None,
+    is_pilot: bool = False,
+    lesson_dir: Path | None = None,
+) -> dict[str, Any]:
+    """Seed the unit's narration jobs; idempotent (missing-only by upsert).
+
+    The lesson script ships in the repo, so the server parses it locally;
+    exercises are book-derived and arrive as the POSTed payload (they never
+    ride the public repo). ``db.seed_local_tts_jobs`` requeues a job only
+    when its text/staged path changed, so re-seeding never disturbs
+    completed, current clips.
+    """
+    lang, unit = _validated_course_unit(lang, unit)
+    root = Path(lesson_dir) if lesson_dir is not None else course.LESSON_DIR
+    lesson = course.parse_course_lesson(root / f"{lang}_{unit}.md")
+    exercises: list[course.CourseExercise] | None = None
+    if exercises_payload is not None:
+        exercises = course.parse_exercises_payload(
+            exercises_payload, name=f"{lang}_{unit}.exercises.json"
+        )
+        if exercises[0].lang != lang or exercises[0].unit != unit:
+            raise ValueError("exercises payload lang/unit mismatch")
+    rows = course_expected_job_rows(lesson, exercises, is_pilot=is_pilot)
+    n_exercises = sum(
+        row["source_kind"] == COURSE_EXERCISE_SOURCE_KIND for row in rows
+    )
+    result = await db.seed_local_tts_jobs(rows)
+    summary = {
+        **result,
+        "lang": lang,
+        "unit": unit,
+        "lesson_cards": len(lesson.cards),
+        "lesson_segment_jobs": len(rows) - n_exercises,
+        "exercise_solution_jobs": n_exercises,
+        "jobs": len(rows),
+        "contract_version": CONTRACT_VERSION,
+        "is_pilot": is_pilot,
+    }
+    log.info("local_tts.course.seeded", **summary)
+    return summary
+
+
+async def course_audio_status(lang: str, unit: str) -> dict[str, Any]:
+    """Queue progress for one unit plus the completed-clip manifest.
+
+    The manifest (source_key, staged_path, hashes) is what the machine-
+    local pilot rebuild consumes: it matches rows against its own expected
+    plan and downloads exactly the verified clips.
+    """
+    lang, unit = _validated_course_unit(lang, unit)
+    rows = await db.local_tts_jobs_for_note_prefix(
+        f"course:{lang}:{unit}:", contract_version=CONTRACT_VERSION,
+    )
+    counts: dict[str, dict[str, int]] = {}
+    completed: list[dict[str, Any]] = []
+    failed: list[dict[str, Any]] = []
+    for row in rows:
+        kind_counts = counts.setdefault(row["source_kind"], {})
+        kind_counts[row["status"]] = kind_counts.get(row["status"], 0) + 1
+        if row["status"] == "completed":
+            completed.append({
+                "source_kind": row["source_kind"],
+                "source_key": row["source_key"],
+                "note_key": row["note_key"],
+                "clip_kind": row["clip_kind"],
+                "lang": row["lang"],
+                "content_hash": row["content_hash"],
+                "staged_path": row["staged_path"],
+                "audio_sha256": row["audio_sha256"],
+                "audio_size_bytes": row["audio_size_bytes"],
+            })
+        elif row["status"] == "failed":
+            failed.append({
+                "source_key": row["source_key"],
+                "attempts": row["attempts"],
+                "last_error": (row.get("last_error") or "")[:200],
+            })
+    return {
+        "lang": lang,
+        "unit": unit,
+        "contract_version": CONTRACT_VERSION,
+        "jobs": len(rows),
+        "counts": counts,
+        "completed": completed,
+        "failed": failed,
+    }
+
+
+def match_course_completions(
+    expected_rows: list[dict[str, Any]],
+    completed_rows: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Partition a unit's clip plan against the server's completed manifest.
+
+    - matched: completed at the EXACT expected revision (content hash and
+      canonical path agree) — safe to download and use;
+    - stale: completed, but for different text/path — the script changed
+      after voicing; treated as missing (graceful) and reported;
+    - missing: no usable completion yet.
+    """
+    by_key = {row["source_key"]: row for row in completed_rows}
+    matched: dict[str, dict[str, Any]] = {}
+    stale: list[str] = []
+    missing: list[str] = []
+    for expected in expected_rows:
+        row = by_key.get(expected["source_key"])
+        if row is None:
+            missing.append(expected["source_key"])
+        elif (row["content_hash"] == expected["content_hash"]
+                and row["staged_path"] == expected["staged_path"]):
+            matched[expected["source_key"]] = row
+        else:
+            stale.append(expected["source_key"])
+    return {"matched": matched, "stale": stale, "missing": missing}
+
+
 def _is_mp3_frame_header(header: bytes) -> bool:
     if len(header) < 4:
         return False
@@ -405,6 +685,8 @@ def _expected_path_for_job(job: dict[str, Any]) -> str:
         return expression_pool_staged_path(
             job["source_key"], job["lang"], expected_hash,
         )
+    if source_kind in (COURSE_LESSON_SOURCE_KIND, COURSE_EXERCISE_SOURCE_KIND):
+        return course_staged_path(job["source_key"], job["lang"], expected_hash)
     raise LocalTTSUploadError(f"unsupported local-TTS source kind: {source_kind!r}")
 
 

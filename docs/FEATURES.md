@@ -207,17 +207,22 @@
 - **Dependencies**: explainer renderer + clip cache (`idiomatic/grammar/explainers.py`), season-1 podcast sources/stage dir (`idiomatic/grammar/podcasts.py`), `gemini_image_model` setting (`gemini-3-pro-image-preview`), genanki
 - **Added**: 2026-08-03 | **Modified**: 2026-08-03
 
-### Grammar Course units (pilot: de kasus — awaiting owner verdict)
-- **Status**: Active (engine + DE Kasus pilot built 2026-08-09; audio-pending; owner review next)
+### Grammar Course units (pilot: de kasus — format approved; audio lane live)
+- **Status**: Active (engine + DE Kasus pilot built 2026-08-09; owner approved format same day and ordered audio — narration lane implemented; voicing window + `--audio` rebuild run by coordinator)
 - **Description**: Book-grounded course units per docs/commissions/GRAMMAR_COURSE_COMMISSION.md: ~10 two-sided lesson cards (audio-first EN narration + TL examples, authored SVG diagrams, per-side Hammer `REF:` Sources footer) plus a distinct population of ATOMIC book-derived exercise cards (German prompt → full solution with `<mark>` highlight + §-refs). Two frozen models: `Idiomatic Course Lesson v1` (1_820_190_001, 14 fields) and `Idiomatic Book Exercise v1` (1_820_190_002, 15 fields). First exposure sequenced by new-card due positions (lesson card → its exercise block); units land at `<ROOT>::2 Grammar::<unit>::{1 Lesson,2 Exercises}`, pilots under a disposable root. Book content (Practising German Grammar / Hammer corpora) confined to gitignored `data/course/book_local/` — the public repo never carries it. Telemetry keys are tags (`idiomatic-course-block::<lang>::<unit>::cNN`, `idiomatic-course-src::<provenance>`). Design of record: docs/GRAMMAR_COURSE_DESIGN.md; pilot review sheet: docs/GRAMMAR_COURSE_PILOT_NOTES.md.
 - **Entry Points**:
   - `idiomatic/grammar/course.py` - frozen models, lesson parser (`[CARD]`/`[SIDE]`/`TITLE:`/`REF:`/`SVG:`/`SHOW:`/`TL:`), exercise loader + structural hygiene gate, `interleave_plan()`, `build_course_apkg()`
   - `idiomatic/grammar/data/course/lessons/de_kasus.md` - authored 10-card Kasus lesson (Hammer ch. 2 grounded)
   - `idiomatic/grammar/data/course/lessons/svg/` - 9 authored diagram sidecars (house `s-*` palette)
   - `tools/course_select_de_kasus.py` - sealed-corpus selector (flags-only + structural gate, verified GGU §-refs, key-fallback mode)
-  - `tools/course_build_pilot.py` - disposable-pilot APKG build
-  - `tests/test_course.py` - frozen shape, GUIDs, interleave arithmetic, build output, copyright gitignore guard
-- **Dependencies**: `explainers._segments` narration routing, `anki_tree.anki_root`, genanki (per-note `due`); extracted `docs/research/grammar_books/de_hammer_v1` + `de_hammer_ref_v1` corpora (machine-local); local-TTS queue for the audio follow-up (design §6)
+  - `tools/course_build_pilot.py` - disposable-pilot APKG build; `--audio` resolves the unit's clips via the admin API (strict checksums, graceful audio-pending), stitches sides, drops the pending tag per voiced note
+  - `tools/course_seed_audio.py` - POSTs the unit's seeding request (exercises as payload)
+  - `idiomatic/local_tts.py` - course seeding contract: `course_lesson_job_rows` (one job per speech segment, `segNNN`, per-segment voice routing), `course_exercise_job_rows` (`solution` clips), `seed_course_audio`, `course_audio_status`, `match_course_completions`, `course_staged_path`
+  - `idiomatic/grammar/course.py` - `stitch_side_narration` (house leveling/pauses/gaps, uniform 24 kHz transcode), `solution_spoken_text`, `parse_exercises_payload`
+  - `idiomatic/api.py` - `POST /admin/local-tts/v1/course/seed`, `GET /admin/local-tts/v1/course/status`, `GET /admin/local-tts/v1/clip`
+  - `db/schema.sql` - `local_tts_jobs.clip_kind` CHECK extended (`solution`, `seg[0-9]{3}`) via the DO-block boot migration
+  - `tests/test_course.py`, `tests/test_course_audio.py` - frozen shape, GUIDs, interleave arithmetic, build output, copyright gitignore guard; seeding contract, spoken-text rules, stitch plan, partial-voicing build
+- **Dependencies**: `explainers._segments` narration routing + leveling helpers, `pipeline/audio.py` silence/concat, `anki_tree.anki_root`, genanki (per-note `due`); extracted `docs/research/grammar_books/de_hammer_v1` + `de_hammer_ref_v1` corpora (machine-local); local-Qwen queue (worker untouched — clip_kind opaque, lang drives voice)
 - **Added**: 2026-08-09 | **Modified**: 2026-08-09
 
 ### Exercises 2.0 (rich EN→TL usage notes; pilot: es connecting — format approved)

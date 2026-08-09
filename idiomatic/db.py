@@ -1124,6 +1124,32 @@ async def complete_local_tts_job(
     return dict(row) if row else None
 
 
+async def local_tts_jobs_for_note_prefix(
+    prefix: str, *, contract_version: int = 1,
+) -> list[dict[str, Any]]:
+    """All queue rows whose note_key starts with a literal prefix.
+
+    Serves the Grammar Course status endpoint (prefix ``course:<lang>:
+    <unit>:``). Callers pass validated lang/unit values, which cannot
+    contain LIKE wildcards.
+    """
+    if not prefix or "%" in prefix or "_" in prefix:
+        raise ValueError("prefix must be nonempty and wildcard-free")
+    pool = await get_pool()
+    rows = await pool.fetch(
+        """
+        SELECT id, source_kind, source_key, lang, note_key, clip_kind,
+               status, attempts, last_error, content_hash, staged_path,
+               audio_size_bytes, audio_sha256, completed_at
+        FROM local_tts_jobs
+        WHERE contract_version = $1 AND note_key LIKE $2 || '%'
+        ORDER BY id
+        """,
+        contract_version, prefix,
+    )
+    return [dict(row) for row in rows]
+
+
 async def completed_local_tts_jobs(source_keys: list[str]) -> list[dict[str, Any]]:
     """Completed current rows used by the strict local Exercises2 builder."""
     if not source_keys:

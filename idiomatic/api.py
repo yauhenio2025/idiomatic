@@ -1090,6 +1090,71 @@ async def admin_local_tts_v1_rebuild(
         raise HTTPException(409, str(exc)) from exc
 
 
+@app.post("/admin/local-tts/v1/course/seed")
+async def admin_local_tts_v1_course_seed(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Seed one Grammar Course unit's narration jobs (idempotent).
+
+    The lesson script is read from the deployed repo; the book-derived
+    exercises arrive in the body (`exercises` = the exercises-file JSON
+    object) because that content never rides the public repo.
+    """
+    from . import local_tts
+    from .grammar import course as course_mod
+
+    try:
+        return await local_tts.seed_course_audio(
+            body.get("lang"),
+            body.get("unit"),
+            exercises_payload=body.get("exercises"),
+            is_pilot=bool(body.get("is_pilot", False)),
+        )
+    except FileNotFoundError as exc:
+        raise HTTPException(404, f"no lesson script: {exc}") from exc
+    except (ValueError, course_mod.CourseSourceError) as exc:
+        raise HTTPException(400, str(exc)) from exc
+    except local_tts.LocalTTSBuildError as exc:
+        raise HTTPException(409, str(exc)) from exc
+
+
+@app.get("/admin/local-tts/v1/course/status")
+async def admin_local_tts_v1_course_status(
+    lang: str, unit: str, _: None = Depends(authed_admin),
+) -> dict:
+    """Unit queue progress + the completed-clip manifest for local rebuilds."""
+    from . import local_tts
+    try:
+        return await local_tts.course_audio_status(lang, unit)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+
+
+@app.get("/admin/local-tts/v1/clip")
+async def admin_local_tts_v1_clip(
+    path: str, _: None = Depends(authed_admin),
+) -> FileResponse:
+    """Serve one staged clip by its queue-relative path (admin only).
+
+    Lets the machine-local pilot rebuild download verified completions;
+    confined to DATA_DIR/staged_audio exactly like uploads are.
+    """
+    from . import local_tts
+
+    try:
+        root = local_tts._staged_audio_root(
+            Path(get_settings().data_dir), create=False,
+        )
+    except local_tts.LocalTTSUploadError as exc:
+        raise HTTPException(404, "no staged audio root") from exc
+    if path.startswith(("/", "\\")) or ".." in path:
+        raise HTTPException(404, "no such staged clip")
+    target = (root / path).resolve()
+    if not target.is_relative_to(root) or not target.is_file():
+        raise HTTPException(404, "no such staged clip")
+    return FileResponse(target, media_type="audio/mpeg")
+
+
 @app.post("/admin/translation-build")
 async def admin_translation_build(
     lang: str, _: None = Depends(authed_admin),

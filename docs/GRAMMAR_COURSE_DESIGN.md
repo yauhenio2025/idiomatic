@@ -149,32 +149,57 @@ token, stored in a `course_exercises` table) — the same trust boundary
 as the dashboard mutation surfaces. Until then, units build locally via
 `tools/course_build_pilot.py` and can be delivered as ordinary APKGs.
 
-## 6. Audio pipeline (local-TTS seeding contract — immediate follow-up)
+## 6. Audio pipeline (local-TTS lane — IMPLEMENTED 2026-08-09)
 
-The pilot ships audio-pending by design. The wiring below follows the
-exercises2 seeding pattern in `idiomatic/local_tts.py` and is the
-immediate follow-up after pilot approval:
+Owner verdict on the pilot: audio is non-negotiable ("narrate this shit
+so that I can listen to this at the gym … and watch the SVGs"), and the
+exercise backs get voiced too. The lane follows the exercises2 pattern
+in `idiomatic/local_tts.py`:
 
 - **Lesson narration** — `source_kind="course_lesson_segment"`. Lesson
   sides are multi-voice (EN narration + TL examples), which the
-  one-clip-one-voice queue cannot express as a single job; so seed ONE
-  JOB PER SPEECH SEGMENT, mirroring `render_explainer`'s per-segment
-  clip cache: `note_key = course:<lang>:<unit>:<seq>:<side>`,
-  `clip_kind = seg<NNN>` (zero-based segment index), `lang` = the
-  segment's routed voice (`en` or the TL), `text` = the segment text,
-  `content_hash = content_hash(text, voice_lang)`, staged path via
-  `canonical_staged_path`. The builder stitches completed segment clips
-  in script order with the script's `[PAUSE:ms]` gaps, levels to the
-  house loudness, stages the two per-side MP3s, and rebuilds the APKG —
-  same GUIDs, so scheduling survives and the audio-pending tag drops.
-- **Exercise solutions** — `source_kind="course_exercise"`,
-  `note_key = course:<lang>:<unit>:<item_id>`, `clip_kind="solution"`,
-  `text` = the solution plain text: `<mark>` unwrapped, bracketed
+  one-clip-one-voice queue cannot express as a single job; so we seed
+  ONE JOB PER SPEECH SEGMENT (`local_tts.course_lesson_job_rows`):
+  `note_key = course:<lang>:<unit>:<seq>:<side>`, `clip_kind = segNNN`
+  (zero-based ordinal among the side's speech segments), `lang` = the
+  segment's routed voice (`en` or the TL — the machine worker needs no
+  course knowledge), `content_hash = content_hash(text, voice_lang)`,
+  staged path via `course_staged_path` (`grammar/course/local_qwen/v1/
+  <lang>/idcrs_v1_…`). The rebuild stitches completed segment clips in
+  script order (`course.stitch_side_narration`): per-clip leveling,
+  24 kHz-mono uniform transcode (the concat demuxer needs homogeneous
+  params), `[PAUSE:ms]` silences, 200 ms breathing gap between
+  consecutive speech segments, loudnorm on the result.
+- **Exercise solutions** — `source_kind="course_exercise"`, `note_key =
+  course:<lang>:<unit>:<item_id>`, `clip_kind="solution"`, `text` =
+  `course.solution_spoken_text`: `<mark>` unwrapped, bracketed
   original-prompt fragments (`[der weite Weg]`) and parenthetical key
-  commentary stripped, whitespace collapsed. One clip per exercise into
-  `SolutionAudio`. (No prompt audio in v1: prompts contain blanks.)
+  commentary stripped, whitespace collapsed. One TL clip per exercise
+  into `SolutionAudio`. (No prompt audio in v1: prompts contain blanks.)
+- **Schema**: `local_tts_jobs.clip_kind` CHECK extended to
+  `('answer','example','prompt_en','solution') OR ~ '^seg[0-9]{3}$'`
+  via the boot-migration DO-block pattern (db/schema.sql, keep in sync
+  with `local_tts.COURSE_CLIP_KIND`).
+- **Endpoints** (admin bearer):
+  `POST /admin/local-tts/v1/course/seed` — body `{lang, unit,
+  exercises?, is_pilot?}`; the lesson script is read from the deployed
+  repo, the book-derived exercises arrive AS THE PAYLOAD (the public
+  repo never carries them), and their text is persisted only in the
+  private DB queue. Idempotent: the seed upsert requeues only changed
+  text. `GET /admin/local-tts/v1/course/status?lang&unit` — queue
+  counts + the completed-clip manifest (source_key, staged_path,
+  hashes). `GET /admin/local-tts/v1/clip?path=…` — downloads one staged
+  clip, confined to `DATA_DIR/staged_audio`.
+- **Rebuild** (machine-local): `tools/course_build_pilot.py --audio`
+  matches its locally-derived clip plan against the status manifest
+  (`local_tts.match_course_completions`), downloads matched clips
+  sha256-verified into `book_local/clips/`, stitches complete sides,
+  and builds. STRICT for completed clips (checksum mismatch aborts),
+  GRACEFUL for missing/stale ones (cards ship audio-pending, tag drops
+  per note as clips resolve — GUIDs stable, scheduling survives).
+  Seeding helper: `tools/course_seed_audio.py`.
 - Both kinds ride the existing lease/upload/validate machinery
-  (`CONTRACT_VERSION`, `VOICE_VERSION`, MP3 size gates) — the module's
+  (`CONTRACT_VERSION`, `VOICE_VERSION`, MP3 gates) — the module's
   "no silent fallback" stance applies: a missing clip keeps the note
   audio-pending rather than falling through to ElevenLabs.
 

@@ -66,10 +66,17 @@ set the deck preset's new-card gather order to **Ascending position**
 
 ## Known limitations (deliberate, not oversights)
 
-1. **Audio-pending**: all cards ship without audio; every note is
-   tagged `idiomatic-course-audio-pending`. The local-TTS seeding
-   contract is specified (design doc §6) as the immediate follow-up;
-   rebuilding with audio preserves scheduling (stable GUIDs).
+1. **Audio** (owner verdict 2026-08-09: wanted now — implemented): the
+   local-TTS lane voices lesson narration per segment (EN clone for
+   explanation, DE clone for examples; 121 clips for this unit) and
+   every exercise's full solution sentence (92 clips) — 213 clips
+   total. Flow: seed via `tools/course_seed_audio.py de kasus`
+   (idempotent), voice during the night window, rebuild via
+   `tools/course_build_pilot.py de kasus --audio`. Partial voicing
+   builds fine; unvoiced cards keep the
+   `idiomatic-course-audio-pending` tag and lose it on the next rebuild
+   (stable GUIDs — reimporting updates cards in place, scheduling
+   survives).
 2. Üb. 1 and Üb. 10 solutions display as one whole-sentence highlight
    (the printed key verbatim) because those are
    construct-the-whole-sentence exercises — the extraction's per-word
@@ -80,8 +87,10 @@ set the deck preset's new-card gather order to **Ascending position**
 
 ## Decisions needed (multiple choice; comment boxes welcome)
 
-1. **Pilot verdict**: (a) approve format → wire audio + production
-   delivery; (b) approve with changes (say which); (c) reject.
+1. ~~**Pilot verdict**~~ — ANSWERED 2026-08-09: format approved; audio
+   non-negotiable and wanted now (lesson narration + voiced exercise
+   backs). Audio lane implemented the same night; see Known
+   limitations #1 for the flow.
 2. **Exercise volume per unit**: keep all clean items (92 here), or cap
    per block (~10) and bank the rest for the telemetry lane's
    remediation top-ups?
