@@ -119,9 +119,13 @@
   - `docs/research/anki_reorg_scripts/hub_phase5_verify.py` - standalone gate re-run
   - `docs/research/anki_reorg_scripts/hub_phase5_rollback.py` - journal-driven rollback to logical pristine
   - `tools/build_hub_pilot.py` - pilot selection (admin API) + media staging + offline rebuild (`--out hub_pilot_v2.apkg`)
-  - `docs/research/hub_manifest/PHASE5_REHEARSAL.md` - rehearsal record + gap analysis
-  - `tests/test_hub.py` - recipes, frozen shapes, grid, apkg round-trips, phase-5 compiler, ephemeral-Postgres schema staging
-- **Dependencies**: genanki, anki (executor), asyncpg (tests), admin API + QA verdicts store (pilot refresh only)
+  - `idiomatic/hub/adoption.py` - F4 adoption plan builder (C2 join parity, deterministic anki:v1 keys), INSERT-only applier SQL, results export, extract merge
+  - `docs/research/anki_reorg_scripts/hub_adoption_analyze.py` - read-only adoption analyzer (fresh corpus + collection copy -> checksummed plan)
+  - `tools/hub_adoption_apply.py` - triple-gated INSERT-only applier (plan sha, F1 staging probes, --apply + coordinator go-token)
+  - `tools/hub_adoption_rehearse.py` - full adopt->recompile loop on ephemeral Postgres
+  - `docs/research/hub_manifest/PHASE5_REHEARSAL.md` + `F4_ADOPTION_RECORD.md` - rehearsal records + gap analysis
+  - `tests/test_hub.py` - recipes, frozen shapes, grid, apkg round-trips, phase-5 compiler, adoption matrix, asset enrichment, ephemeral-Postgres schema staging
+- **Dependencies**: genanki, anki (executor), asyncpg (tests/applier), admin API + QA verdicts store (pilot/analyzer refresh only)
 - **Added**: 2026-08-09 | **Modified**: 2026-08-09
 
 ## Grammar

@@ -46,6 +46,17 @@ def main() -> None:
     parser.add_argument("--record-expectations", action="store_true",
                         help="write the observed input checksums as the new "
                              "expectations (reviewed act; commit the file)")
+    parser.add_argument("--adoption-results", type=Path, default=None,
+                        help="post-apply adoption_results.json — merges the "
+                             "adopted example identities into the extract "
+                             "so formerly deferred cards join")
+    parser.add_argument("--asset-coverage", type=Path, default=None,
+                        help="C3 asset-coverage JSON — annotates hub "
+                             "examples with per-asset status (enrichment "
+                             "layer, never a blocker)")
+    parser.add_argument("--expect-deferred-max", type=int, default=None,
+                        help="fail if the compiled manifest defers more "
+                             "cards than this")
     args = parser.parse_args()
 
     actual = {
@@ -57,6 +68,11 @@ def main() -> None:
     else:
         actual["server_extract"] = phase5.directory_extract_sha256(
             ILLU_INPUT, "*_illu_b*.json")
+    if args.adoption_results is not None:
+        actual["adoption_results"] = phase5.sha256_file(
+            args.adoption_results)
+    if args.asset_coverage is not None:
+        actual["asset_coverage"] = phase5.sha256_file(args.asset_coverage)
 
     if args.record_expectations:
         args.expectations.write_text(
@@ -78,9 +94,25 @@ def main() -> None:
     else:
         extract = phase5.load_server_extract_from_illustration_inputs(
             ILLU_INPUT)
+    if args.adoption_results is not None:
+        from idiomatic.hub import adoption  # noqa: E402
+        results = json.loads(
+            args.adoption_results.read_text(encoding="utf-8"))
+        extract = adoption.merge_adoption_results_into_extract(
+            extract, results["rows"])
+        print(f"merged {len(results['rows']):,} adopted example "
+              f"identities into the extract")
 
     manifest = phase5.compile_manifest(c1=c1, c2=c2, extract=extract,
                                        input_checksums=actual)
+    if args.asset_coverage is not None:
+        coverage = phase5.load_asset_coverage(args.asset_coverage)
+        manifest = phase5.apply_asset_coverage(manifest, coverage)
+        print(f"asset coverage applied: "
+              f"{manifest['counts']['asset_qa_passed_examples']:,} "
+              f"qa-passed examples, "
+              f"{manifest['asset_coverage']['examples_missing_coverage']:,} "
+              f"missing coverage rows")
     args.out.write_text(json.dumps(manifest, ensure_ascii=False, indent=1),
                         encoding="utf-8")
     (args.out.parent / (args.out.name + ".sha256")).write_text(
@@ -99,6 +131,10 @@ def main() -> None:
         reasons[gap["reason"]] = reasons.get(gap["reason"], 0) + 1
     for reason, count in sorted(reasons.items()):
         print(f"  deferred[{reason}]: {count:,}")
+    if args.expect_deferred_max is not None and \
+            counts["deferred"] > args.expect_deferred_max:
+        raise SystemExit(f"deferred {counts['deferred']} exceeds "
+                         f"--expect-deferred-max {args.expect_deferred_max}")
 
 
 if __name__ == "__main__":
