@@ -117,8 +117,13 @@ def resolve_audio(
     api_base: str,
     lesson: course.CourseLesson,
     exercises: list[course.CourseExercise],
+    enrichment: course.CourseEnrichment | None = None,
 ) -> tuple[dict[tuple[int, str], course.SideAudio], dict[str, Path], dict]:
-    expected = local_tts.course_expected_job_rows(lesson, exercises)
+    # The clip plan follows the EFFECTIVE solutions (contract-2 full
+    # sentences), so voicing tracks the display via content-hash change.
+    expected = local_tts.course_expected_job_rows(
+        lesson, course.apply_effective_solutions(exercises, enrichment)
+    )
     status = fetch_status(api_base, lesson.lang, lesson.unit)
     match = local_tts.match_course_completions(expected, status["completed"])
     matched = match["matched"]
@@ -238,7 +243,7 @@ def main() -> int:
     exercise_audio: dict[str, Path] = {}
     if args.audio:
         lesson_audio, exercise_audio, report = resolve_audio(
-            args.api_base.rstrip("/"), lesson, exercises
+            args.api_base.rstrip("/"), lesson, exercises, enrichment
         )
         print(json.dumps(report, indent=1, ensure_ascii=False))
 

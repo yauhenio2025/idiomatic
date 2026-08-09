@@ -23,12 +23,13 @@ sections) and are committed like any other original content.
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import html
 import json
 import re
 from collections.abc import Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any, Literal
 
@@ -747,17 +748,21 @@ def parse_exercises_payload(data: Any, *, name: str) -> list[CourseExercise]:
 
 
 # ---------------------------------------------------------------------------
-# Enrichment sidecar (codex-authored, machine-local, contract 1)
+# Enrichment sidecar (codex-authored, machine-local, contract 2)
 #
 # ``<lang>_<unit>.enrichment.json`` beside the exercises file re-authors each
 # block's repeated book rubric as ONE short task line (+ optional worked
-# example) and adds a per-exercise English gloss + "why".  It may be ABSENT —
-# units then build exactly as before.  Hard rule: codex may only COPY German
-# from the block's own source text, never write its own; every ``<i>`` span
-# is mechanically checked against the block source (validate_enrichment).
+# example) and adds a per-exercise English gloss + "why" + the COMPLETE
+# production sentence (solution_full_html — what the back displays and
+# voices; null when the original solution already IS the full production).
+# It may be ABSENT — units then build exactly as before.  Hard rule: codex
+# may only COPY German from the block's own source text, never write its
+# own; every ``<i>`` span is mechanically checked against the block source
+# (validate_enrichment; solution_full_html glue is gated by the mark-span
+# rules there instead — the sentence frame comes from rubric patterns).
 # ---------------------------------------------------------------------------
 
-ENRICHMENT_CONTRACT = 1
+ENRICHMENT_CONTRACT = 2
 
 _I_SPAN = re.compile(r"<i>(.*?)</i>", re.DOTALL)
 _ANY_TAG = re.compile(r"<[^>]*>")
@@ -765,6 +770,9 @@ _SRC_OR_HREF = re.compile(r"\b(?:src|href)\s*=", re.IGNORECASE)
 _TASK_TAGS = re.compile(r"</?(?:i|b)>|<br\s*/?>")     # task_html whitelist
 _EXAMPLE_TAGS = re.compile(r"</?i>|<br\s*/?>")        # example_html whitelist
 _WHY_TAGS = re.compile(r"</?i>")                      # why_en whitelist
+_FULL_SOLUTION_TAGS = re.compile(r"</?(?:mark|i)>|<br\s*/?>")
+_ITAL_TAG = re.compile(r"</?i>")
+_BR_TAG = re.compile(r"<br\s*/?>")
 
 
 @dataclass(frozen=True)
@@ -779,6 +787,9 @@ class ExerciseEnrichment:
     item_id: str
     solution_en: str  # plain-text English gloss of the solution
     why_en: str       # one-line grammar why (tags: i)
+    solution_full_html: str | None  # complete sentence(s) (tags: mark, i,
+    #   br), answer spans in <mark>; None = original solution is already
+    #   the complete production
 
 
 @dataclass(frozen=True)
@@ -821,7 +832,7 @@ def _checked_markup(path: Path, context: str, key: str, value: str,
 
 
 def parse_enrichment_file(path: Path) -> CourseEnrichment:
-    """Parse one ``<lang>_<unit>.enrichment.json`` sidecar (contract 1)."""
+    """Parse one ``<lang>_<unit>.enrichment.json`` sidecar (contract 2)."""
     path = Path(path)
     match = re.fullmatch(
         r"([a-z]{2})_([a-z0-9]+(?:-[a-z0-9]+)*)\.enrichment\.json", path.name
@@ -919,8 +930,43 @@ def parse_enrichment_file(path: Path) -> CourseEnrichment:
         why_en = _checked_markup(
             path, item_id, "why_en", why_en.strip(), _WHY_TAGS, "<i>"
         )
+        if "solution_full_html" not in raw:
+            raise _enrichment_error(
+                path, item_id,
+                "solution_full_html is required (string or null)",
+            )
+        full = raw.get("solution_full_html")
+        if full is not None:
+            if not isinstance(full, str) or not full.strip():
+                raise _enrichment_error(
+                    path, item_id,
+                    "solution_full_html must be null or a nonempty string",
+                )
+            full = _checked_markup(
+                path, item_id, "solution_full_html", full.strip(),
+                _FULL_SOLUTION_TAGS, "<mark>/<i>/<br>",
+            )
+            spans = _MARK_SPAN.findall(full)
+            if not spans or any(not span.strip() for span in spans):
+                raise _enrichment_error(
+                    path, item_id,
+                    "solution_full_html needs at least one nonempty <mark>",
+                )
+            if "___" in full:
+                raise _enrichment_error(
+                    path, item_id,
+                    "solution_full_html still contains a blank placeholder",
+                )
+            text = _normalized_text(full)
+            if not text or text[-1] not in ".!?":
+                raise _enrichment_error(
+                    path, item_id,
+                    "solution_full_html must end with terminal "
+                    "punctuation (./!/?)",
+                )
         exercises[item_id] = ExerciseEnrichment(
-            item_id=item_id, solution_en=solution_en, why_en=why_en
+            item_id=item_id, solution_en=solution_en, why_en=why_en,
+            solution_full_html=full,
         )
 
     return CourseEnrichment(
@@ -979,6 +1025,33 @@ def validate_enrichment(
             f"{name}: missing enrichment for block(s): {missing_blocks}"
         )
 
+    # solution_full_html mark-span rules: the full sentence may add glue,
+    # but every highlighted span must BE an original answer span, and every
+    # original answer span must survive into the full sentence.
+    for exercise in exercises:
+        extra = enrichment.exercises[exercise.item_id]
+        if extra.solution_full_html is None:
+            continue
+        original_spans = {
+            _normalized_text(span)
+            for span in _MARK_SPAN.findall(exercise.solution_html)
+        }
+        for span in _MARK_SPAN.findall(extra.solution_full_html):
+            span_text = _normalized_text(span)
+            if span_text not in original_spans:
+                raise CourseSourceError(
+                    f"{name}: {exercise.item_id}: solution_full_html <mark> "
+                    f"span {span_text!r} does not match any <mark> span of "
+                    "the original solution_html"
+                )
+        full_text = _normalized_text(extra.solution_full_html)
+        for span_text in sorted(original_spans):
+            if span_text not in full_text:
+                raise CourseSourceError(
+                    f"{name}: {exercise.item_id}: original solution <mark> "
+                    f"span {span_text!r} is missing from solution_full_html"
+                )
+
     pools: dict[int, str] = {}
     for block_no in blocks:
         parts: list[str] = []
@@ -1011,6 +1084,75 @@ def validate_enrichment(
         check_spans(
             exercise.item_id, "why_en", extra.why_en, pools[exercise.block]
         )
+
+
+def speakable_solution_html(full_html: str) -> str:
+    """A full solution reduced to ``<mark>``-only markup for the TTS lane.
+
+    ``<i>`` unwrapped, ``<br>`` becomes a space, whitespace collapsed.
+    This form passes validate_solution_html on the (already deployed)
+    server and keeps solution_spoken_text free of tag noise, while still
+    carrying the complete sentence — so the content hash, and therefore
+    the voiced clip, follows the displayed solution automatically.
+    """
+    text = _ITAL_TAG.sub("", full_html)
+    text = _BR_TAG.sub(" ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def apply_effective_solutions(
+    exercises: Sequence[CourseExercise],
+    enrichment: CourseEnrichment | None,
+) -> list[CourseExercise]:
+    """Exercises whose solution_html carries the speakable EFFECTIVE form.
+
+    Feed the result to the TTS clip plan (local_tts.course_expected_job_
+    rows) so voicing follows the display: content hashes shift exactly for
+    the exercises that gained a full sentence, everything else keeps its
+    completed clip.  Display/build code must keep using the ORIGINAL
+    exercises + enrichment.
+    """
+    if enrichment is None:
+        return list(exercises)
+    effective: list[CourseExercise] = []
+    for exercise in exercises:
+        extra = enrichment.exercises.get(exercise.item_id)
+        if extra is None or extra.solution_full_html is None:
+            effective.append(exercise)
+        else:
+            effective.append(replace(
+                exercise,
+                solution_html=speakable_solution_html(
+                    extra.solution_full_html
+                ),
+            ))
+    return effective
+
+
+def enrich_seed_payload(payload: Any, enrichment: CourseEnrichment) -> Any:
+    """Deep-copied exercises payload with effective speakable solutions.
+
+    The seed server derives spoken text from the POSTed payload
+    (parse_exercises_payload → solution_spoken_text), so substituting each
+    row's solution_html here is the whole voicing change — no server-side
+    change needed.  The caller MUST have parsed the payload and run
+    validate_enrichment first; a bad sidecar aborts the seed.
+    """
+    substituted = copy.deepcopy(payload)
+    if not isinstance(substituted, dict):
+        return substituted
+    for block in substituted.get("blocks") or []:
+        if not isinstance(block, dict):
+            continue
+        for raw in block.get("exercises") or []:
+            if not isinstance(raw, dict):
+                continue
+            extra = enrichment.exercises.get(str(raw.get("id", "")).strip())
+            if extra is not None and extra.solution_full_html is not None:
+                raw["solution_html"] = speakable_solution_html(
+                    extra.solution_full_html
+                )
+    return substituted
 
 
 # ---------------------------------------------------------------------------
@@ -1172,6 +1314,23 @@ def exercise_solution_html(exercise: CourseExercise) -> str:
     return "".join(parts)
 
 
+def effective_solution_html(
+    exercise: CourseExercise, enrichment: CourseEnrichment | None
+) -> str:
+    """What the back DISPLAYS: the complete production sentence.
+
+    When the enrichment carries a solution_full_html string for this
+    exercise, that markup is display-ready (whitelist-validated: mark, i,
+    br) and is returned verbatim; otherwise the original solution renders
+    exactly as before (everything outside its <mark> spans escaped).
+    """
+    if enrichment is not None:
+        extra = enrichment.exercises.get(exercise.item_id)
+        if extra is not None and extra.solution_full_html is not None:
+            return extra.solution_full_html
+    return exercise_solution_html(exercise)
+
+
 def exercise_note_fields(
     exercise: CourseExercise,
     *,
@@ -1182,11 +1341,14 @@ def exercise_note_fields(
     """The 15 EXERCISE_FIELDS values for one exercise note.
 
     With an enrichment sidecar, Instruction carries the block's short
-    task_html (validated markup, inserted verbatim) and the spare fields
-    carry example/gloss/why; without one, Instruction falls back to the
-    full book rubric and the spares stay empty — legacy behavior.
-    Solution handling is IDENTICAL in both modes: nothing here may shift
-    solution_spoken_text or the audio content hashes.
+    task_html (validated markup, inserted verbatim), the spare fields
+    carry example/gloss/why, and SolutionHTML carries the EFFECTIVE
+    solution — the complete production sentence when solution_full_html
+    exists, the original solution otherwise (the field semantic is "what
+    the back displays").  Without a sidecar everything is byte-identical
+    to the legacy build.  Voicing follows the same effective solution via
+    apply_effective_solutions in the TTS lane, never through this
+    function.
     """
     instruction = html.escape(exercise.instruction)
     example = solution_en = why = ""
@@ -1204,7 +1366,7 @@ def exercise_note_fields(
         f"c{exercise.block:02d}",
         instruction,
         html.escape(exercise.prompt),
-        exercise_solution_html(exercise),
+        effective_solution_html(exercise, enrichment),
         alts_html(exercise),
         html.escape(exercise.source_ref),
         "Hammer " + html.escape(refs_html(exercise.hammer_refs)),

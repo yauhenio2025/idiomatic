@@ -143,14 +143,23 @@ def _exercise_enrichment(item_id: str, **overrides: object) -> dict:
         "id": item_id,
         "solution_en": "We spoke with Maria Simon, the film actress.",
         "why_en": "Apposition copies the case: <i>mit</i> takes the dative.",
+        "solution_full_html": None,
     }
     raw.update(overrides)
     return raw
 
 
+# A complete-production form of the default _exercise solution: glue added,
+# the answer span still <mark>der</mark>, terminal punctuation present.
+_FULL_SOLUTION = (
+    "Gestern sprachen wir mit Maria Simon, "
+    "<mark>der</mark> Filmschauspielerin."
+)
+
+
 def _enrichment_payload(blocks: list[dict], exercises: list[dict], *,
                         lang: str = "de", unit: str = "kasus",
-                        contract: object = 1) -> dict:
+                        contract: object = 2) -> dict:
     return {"lang": lang, "unit": unit, "contract": contract,
             "blocks": blocks, "exercises": exercises}
 
@@ -399,11 +408,23 @@ class TestEnrichmentParsing:
         assert set(enrichment.exercises) == {"x1", "x2"}
         assert enrichment.exercises["x1"].solution_en.startswith("We spoke")
 
-    def test_rejects_wrong_contract(self, tmp_path: Path) -> None:
+    def test_rejects_contract_one_with_clear_error(
+        self, tmp_path: Path
+    ) -> None:
         payload = _enrichment_payload(
-            [_block_enrichment(1)], [_exercise_enrichment("x1")], contract=2
+            [_block_enrichment(1)], [_exercise_enrichment("x1")], contract=1
         )
-        with pytest.raises(course.CourseSourceError, match="contract"):
+        with pytest.raises(course.CourseSourceError,
+                           match=r"contract must be 2, got 1"):
+            course.parse_enrichment_file(_write_enrichment(tmp_path, payload))
+
+    def test_rejects_missing_contract(self, tmp_path: Path) -> None:
+        payload = _enrichment_payload(
+            [_block_enrichment(1)], [_exercise_enrichment("x1")]
+        )
+        del payload["contract"]
+        with pytest.raises(course.CourseSourceError,
+                           match="contract must be 2"):
             course.parse_enrichment_file(_write_enrichment(tmp_path, payload))
 
     def test_rejects_lang_unit_mismatch_with_filename(
@@ -482,6 +503,65 @@ class TestEnrichmentParsing:
         payload = _enrichment_payload(
             [_block_enrichment(1)],
             [_exercise_enrichment("x1", why_en="Use the <b>dative</b>.")],
+        )
+        with pytest.raises(course.CourseSourceError, match="only"):
+            course.parse_enrichment_file(_write_enrichment(tmp_path, payload))
+
+    def test_parses_full_solution_string_and_null(
+        self, tmp_path: Path
+    ) -> None:
+        payload = _enrichment_payload(
+            [_block_enrichment(1)],
+            [_exercise_enrichment("x1", solution_full_html=_FULL_SOLUTION),
+             _exercise_enrichment("x2")],
+        )
+        enrichment = course.parse_enrichment_file(
+            _write_enrichment(tmp_path, payload)
+        )
+        assert enrichment.exercises["x1"].solution_full_html == _FULL_SOLUTION
+        assert enrichment.exercises["x2"].solution_full_html is None
+
+    def test_rejects_missing_full_solution_key(self, tmp_path: Path) -> None:
+        item = _exercise_enrichment("x1")
+        del item["solution_full_html"]
+        payload = _enrichment_payload([_block_enrichment(1)], [item])
+        with pytest.raises(course.CourseSourceError,
+                           match="solution_full_html is required"):
+            course.parse_enrichment_file(_write_enrichment(tmp_path, payload))
+
+    def test_rejects_full_solution_without_terminal_punctuation(
+        self, tmp_path: Path
+    ) -> None:
+        payload = _enrichment_payload(
+            [_block_enrichment(1)],
+            [_exercise_enrichment(
+                "x1",
+                solution_full_html="Ich möchte <mark>den</mark> Wein",
+            )],
+        )
+        with pytest.raises(course.CourseSourceError,
+                           match="terminal punctuation"):
+            course.parse_enrichment_file(_write_enrichment(tmp_path, payload))
+
+    def test_rejects_full_solution_without_mark(self, tmp_path: Path) -> None:
+        payload = _enrichment_payload(
+            [_block_enrichment(1)],
+            [_exercise_enrichment(
+                "x1", solution_full_html="Ich möchte den Wein."
+            )],
+        )
+        with pytest.raises(course.CourseSourceError, match="nonempty <mark>"):
+            course.parse_enrichment_file(_write_enrichment(tmp_path, payload))
+
+    def test_rejects_disallowed_tag_in_full_solution(
+        self, tmp_path: Path
+    ) -> None:
+        payload = _enrichment_payload(
+            [_block_enrichment(1)],
+            [_exercise_enrichment(
+                "x1",
+                solution_full_html="<b>Ich</b> möchte <mark>den</mark> Wein.",
+            )],
         )
         with pytest.raises(course.CourseSourceError, match="only"):
             course.parse_enrichment_file(_write_enrichment(tmp_path, payload))
@@ -589,6 +669,81 @@ class TestEnrichmentValidation:
             [_exercise_enrichment(
                 "x1",
                 why_en="The apposition takes <i>der Filmschauspielerin</i>.",
+            )],
+        )
+        course.validate_enrichment(exercises, enrichment)
+
+    def test_full_solution_passes_when_spans_match(
+        self, tmp_path: Path
+    ) -> None:
+        exercises = self._exercises(tmp_path, {1: [_exercise("x1")]})
+        enrichment = self._enrichment(
+            tmp_path, [_block_enrichment(1)],
+            [_exercise_enrichment("x1", solution_full_html=_FULL_SOLUTION)],
+        )
+        course.validate_enrichment(exercises, enrichment)
+
+    def test_full_solution_null_passes(self, tmp_path: Path) -> None:
+        exercises = self._exercises(tmp_path, {1: [_exercise("x1")]})
+        enrichment = self._enrichment(
+            tmp_path, [_block_enrichment(1)], [_exercise_enrichment("x1")]
+        )
+        assert enrichment.exercises["x1"].solution_full_html is None
+        course.validate_enrichment(exercises, enrichment)
+
+    def test_full_solution_mark_not_in_original_rejected(
+        self, tmp_path: Path
+    ) -> None:
+        exercises = self._exercises(tmp_path, {1: [_exercise("x1")]})
+        enrichment = self._enrichment(
+            tmp_path, [_block_enrichment(1)],
+            [_exercise_enrichment(
+                "x1",
+                solution_full_html=(
+                    "Wir sprachen mit <mark>einer falschen</mark> Frau."
+                ),
+            )],
+        )
+        with pytest.raises(course.CourseSourceError,
+                           match="does not match any <mark> span"):
+            course.validate_enrichment(exercises, enrichment)
+
+    def test_original_mark_missing_from_full_rejected(
+        self, tmp_path: Path
+    ) -> None:
+        # Original has TWO answer spans; the full sentence only carries one.
+        exercises = self._exercises(tmp_path, {1: [_exercise(
+            "x1",
+            solution_html=(
+                "Ich möchte <mark>den französischen</mark> Wein; "
+                "<mark>einen französischen</mark> Wein."
+            ),
+        )]})
+        enrichment = self._enrichment(
+            tmp_path, [_block_enrichment(1)],
+            [_exercise_enrichment(
+                "x1",
+                solution_full_html=(
+                    "Ich möchte <mark>den französischen</mark> Wein."
+                ),
+            )],
+        )
+        with pytest.raises(course.CourseSourceError,
+                           match="missing from solution_full_html"):
+            course.validate_enrichment(exercises, enrichment)
+
+    def test_full_solution_span_whitespace_normalized(
+        self, tmp_path: Path
+    ) -> None:
+        exercises = self._exercises(tmp_path, {1: [_exercise("x1")]})
+        enrichment = self._enrichment(
+            tmp_path, [_block_enrichment(1)],
+            [_exercise_enrichment(
+                "x1",
+                solution_full_html=(
+                    "Gestern sprachen wir mit Maria Simon, "
+                    "<mark> der\n</mark> Filmschauspielerin."
+                ),
             )],
         )
         course.validate_enrichment(exercises, enrichment)
@@ -704,6 +859,122 @@ class TestEnrichedFields:
                 root_override="ZZ Grammar Course Pilot (disposable)",
                 enrichment=bad,
             )
+
+
+# ---------------------------------------------------------------------------
+# Effective solution (contract 2): display + voicing follow the full form
+# ---------------------------------------------------------------------------
+
+
+class TestEffectiveSolution:
+    def _fixture(self, tmp_path: Path, *, full: object = _FULL_SOLUTION):
+        exercises = course.parse_exercises_file(_write_exercises(
+            tmp_path, _exercises_payload({1: [_exercise("x1")]})
+        ))
+        enrichment = course.parse_enrichment_file(_write_enrichment(
+            tmp_path, _enrichment_payload(
+                [_block_enrichment(1)],
+                [_exercise_enrichment("x1", solution_full_html=full)],
+            )
+        ))
+        course.validate_enrichment(exercises, enrichment)
+        return exercises, enrichment
+
+    def test_effective_is_full_when_present(self, tmp_path: Path) -> None:
+        exercises, enrichment = self._fixture(tmp_path)
+        assert course.effective_solution_html(exercises[0], enrichment) == \
+            _FULL_SOLUTION
+
+    def test_effective_is_original_when_null(self, tmp_path: Path) -> None:
+        exercises, enrichment = self._fixture(tmp_path, full=None)
+        assert course.effective_solution_html(exercises[0], enrichment) == \
+            course.exercise_solution_html(exercises[0])
+
+    def test_effective_is_original_without_enrichment(
+        self, tmp_path: Path
+    ) -> None:
+        exercises, _enrichment = self._fixture(tmp_path)
+        assert course.effective_solution_html(exercises[0], None) == \
+            course.exercise_solution_html(exercises[0])
+
+    def test_note_solution_field_carries_full(self, tmp_path: Path) -> None:
+        exercises, enrichment = self._fixture(tmp_path)
+        fields = course.exercise_note_fields(
+            exercises[0], unit_label="Kasus (cases)", enrichment=enrichment
+        )
+        idx = course.EXERCISE_FIELDS.index
+        assert fields[idx("SolutionHTML")] == _FULL_SOLUTION
+        # front side + audio identity fields stay untouched
+        assert fields[idx("PromptHTML")] == html.escape(exercises[0].prompt)
+        assert fields[idx("SolutionAudio")] == ""
+
+    def test_note_solution_field_original_when_null(
+        self, tmp_path: Path
+    ) -> None:
+        exercises, enrichment = self._fixture(tmp_path, full=None)
+        fields = course.exercise_note_fields(
+            exercises[0], unit_label="Kasus (cases)", enrichment=enrichment
+        )
+        legacy = course.exercise_note_fields(
+            exercises[0], unit_label="Kasus (cases)"
+        )
+        idx = course.EXERCISE_FIELDS.index
+        assert fields[idx("SolutionHTML")] == legacy[idx("SolutionHTML")]
+
+    def test_speakable_form_strips_ital_and_br(self) -> None:
+        assert course.speakable_solution_html(
+            "Ich möchte <mark>den</mark> <i>Wein</i>.<br>Danke."
+        ) == "Ich möchte <mark>den</mark> Wein. Danke."
+
+    def test_apply_effective_solutions_shifts_spoken_text(
+        self, tmp_path: Path
+    ) -> None:
+        exercises, enrichment = self._fixture(tmp_path)
+        effective = course.apply_effective_solutions(exercises, enrichment)
+        assert course.solution_spoken_text(effective[0]) == (
+            "Gestern sprachen wir mit Maria Simon, der Filmschauspielerin."
+        )
+        # the parsed originals are untouched (frozen dataclass, replace)
+        assert exercises[0].solution_html.startswith("Wir sprachen")
+
+    def test_apply_effective_solutions_null_and_absent_are_noops(
+        self, tmp_path: Path
+    ) -> None:
+        exercises, enrichment = self._fixture(tmp_path, full=None)
+        assert course.apply_effective_solutions(exercises, enrichment) == \
+            list(exercises)
+        assert course.apply_effective_solutions(exercises, None) == \
+            list(exercises)
+
+    def test_enrich_seed_payload_substitutes_speakable_form(
+        self, tmp_path: Path
+    ) -> None:
+        full = ("Gestern sprachen wir mit <i>Maria Simon</i>, "
+                "<mark>der</mark> Filmschauspielerin.")
+        exercises, enrichment = self._fixture(tmp_path, full=full)
+        payload = _exercises_payload({1: [_exercise("x1")]})
+        substituted = course.enrich_seed_payload(payload, enrichment)
+        row = substituted["blocks"][0]["exercises"][0]
+        assert row["solution_html"] == (
+            "Gestern sprachen wir mit Maria Simon, "
+            "<mark>der</mark> Filmschauspielerin."
+        )
+        # deep copy — the caller's payload is untouched
+        assert payload["blocks"][0]["exercises"][0]["solution_html"] \
+            .startswith("Wir sprachen")
+        # the substituted row still satisfies the seed server's own
+        # solution hygiene gate (mark-only markup)
+        course.validate_solution_html(
+            Path("de_kasus.exercises.json"), "x1", row["solution_html"]
+        )
+
+    def test_enrich_seed_payload_leaves_null_rows_alone(
+        self, tmp_path: Path
+    ) -> None:
+        exercises, enrichment = self._fixture(tmp_path, full=None)
+        payload = _exercises_payload({1: [_exercise("x1")]})
+        substituted = course.enrich_seed_payload(payload, enrichment)
+        assert substituted == payload
 
 
 # ---------------------------------------------------------------------------

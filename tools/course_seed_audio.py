@@ -13,6 +13,13 @@ is sent in the request body because that content never rides the public
 repo. Seeding is idempotent — completed, current clips are never
 disturbed; only new/changed texts queue.
 
+If the contract-2 enrichment sidecar (…/<lang>_<unit>.enrichment.json)
+exists, each payload row's solution_html is substituted with the
+effective speakable solution (the complete production sentence) before
+POSTing — the server derives spoken text from the payload, so this alone
+re-voices exactly the exercises that gained a full sentence.  An invalid
+sidecar ABORTS the seed (same policy as the build).
+
 ``--pilot-priority`` marks the jobs is_pilot so the machine worker claims
 them ahead of bulk backlog (e.g. an in-flight expression-pool render).
 
@@ -54,6 +61,22 @@ def main() -> int:
         body["exercises"] = json.loads(
             exercises_path.read_text(encoding="utf-8")
         )
+        enrichment_path = (
+            course.BOOK_LOCAL_DIR / f"{args.lang}_{args.unit}.enrichment.json"
+        )
+        if enrichment_path.is_file():
+            exercises = course.parse_exercises_file(exercises_path)
+            try:
+                enrichment = course.parse_enrichment_file(enrichment_path)
+                course.validate_enrichment(exercises, enrichment)
+            except course.CourseSourceError as exc:
+                raise SystemExit(
+                    f"enrichment sidecar invalid — aborting seed: {exc}"
+                ) from exc
+            body["exercises"] = course.enrich_seed_payload(
+                body["exercises"], enrichment
+            )
+            print("enrichment: effective solutions substituted into payload")
 
     import httpx
 
