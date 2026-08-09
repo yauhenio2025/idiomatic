@@ -3,7 +3,14 @@
 
 Usage:
     .venv/bin/python tools/course_build_pilot.py de kasus [--audio]
-        [--api-base https://idiomatic-app.onrender.com]
+        [--api-base https://idiomatic-app.onrender.com] [--production]
+
+``--production`` routes the decks into the estate tree —
+``anki_root(lang)::2 Grammar::<unit_label>::{1 Lesson,2 Exercises}`` via
+course.course_deck_names (unit_label authority: course.DE_UNITS; a
+mismatch with the lesson frontmatter aborts) and writes
+``course_<lang>_<unit>.apkg``. Default (no flag) stays the disposable
+ZZ pilot root, unchanged.
 
 Reads the committed lesson script (idiomatic/grammar/data/course/lessons/)
 and the machine-local, gitignored exercise file (…/course/book_local/),
@@ -54,6 +61,29 @@ log = structlog.get_logger()
 PILOT_ROOT = "ZZ Grammar Course Pilot (disposable)"
 DEFAULT_API_BASE = "https://idiomatic-app.onrender.com"
 STITCH_REVISION = "stitch-v1"
+
+
+def resolve_deck_root(lang: str, unit: str, lesson_unit_label: str,
+                      production: bool) -> str | None:
+    """The build's root_override: ZZ pilot root by default, None under
+    --production (deck names then compose from anki_tree.anki_root via
+    course.course_deck_names — never a baked root string).  For DE
+    production the unit must exist in course.DE_UNITS and the lesson's
+    unit_label must match the registry (DE_UNITS is the authority for
+    deck naming)."""
+    if not production:
+        return PILOT_ROOT
+    if lang == "de":
+        try:
+            _chapter, label = course.de_unit(unit)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
+        if lesson_unit_label != label:
+            raise SystemExit(
+                f"lesson unit_label {lesson_unit_label!r} does not match "
+                f"DE_UNITS {label!r} — fix the lesson frontmatter"
+            )
+    return None
 
 
 def admin_token() -> str:
@@ -203,6 +233,11 @@ def main() -> int:
     parser.add_argument("--audio", action="store_true",
                         help="resolve narration clips via the admin API")
     parser.add_argument("--api-base", default=DEFAULT_API_BASE)
+    parser.add_argument(
+        "--production", action="store_true",
+        help="build for the estate tree (anki_root::2 Grammar::<unit_label>)"
+             " instead of the disposable ZZ pilot root",
+    )
     args = parser.parse_args()
 
     lesson = course.parse_course_lesson(
@@ -247,12 +282,16 @@ def main() -> int:
         )
         print(json.dumps(report, indent=1, ensure_ascii=False))
 
-    out = course.BOOK_LOCAL_DIR / f"ZZ_pilot_{args.lang}_{args.unit}.apkg"
+    root_override = resolve_deck_root(
+        args.lang, args.unit, lesson.unit_label, args.production
+    )
+    stem = ("course" if args.production else "ZZ_pilot")
+    out = course.BOOK_LOCAL_DIR / f"{stem}_{args.lang}_{args.unit}.apkg"
     result = course.build_course_apkg(
         out_path=out,
         lesson=lesson,
         exercises=exercises,
-        root_override=PILOT_ROOT,
+        root_override=root_override,
         lesson_audio=lesson_audio,
         exercise_audio=exercise_audio,
         enrichment=enrichment,
