@@ -11,6 +11,12 @@ then writes ``…/course/book_local/ZZ_pilot_<lang>_<unit>.apkg`` — also
 gitignored (*.apkg) — under the disposable review root
 ``ZZ Grammar Course Pilot (disposable)``.
 
+If ``…/course/book_local/<lang>_<unit>.enrichment.json`` exists (the
+codex-authored sidecar, contract 1), it is parsed and cross-validated —
+an invalid sidecar ABORTS the build — and the cards get the redesigned
+layout: short task line in Instruction, worked example / English gloss /
+grammar-why in the spare fields.  Absent sidecar → legacy build.
+
 With ``--audio`` the tool resolves the unit's narration through the
 local-TTS lane (docs/GRAMMAR_COURSE_DESIGN.md §6): it fetches the
 completed-clip manifest from `/admin/local-tts/v1/course/status`,
@@ -38,8 +44,12 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
+import structlog  # noqa: E402
+
 from idiomatic import local_tts  # noqa: E402
 from idiomatic.grammar import course  # noqa: E402
+
+log = structlog.get_logger()
 
 PILOT_ROOT = "ZZ Grammar Course Pilot (disposable)"
 DEFAULT_API_BASE = "https://idiomatic-app.onrender.com"
@@ -197,6 +207,33 @@ def main() -> int:
         course.BOOK_LOCAL_DIR / f"{args.lang}_{args.unit}.exercises.json"
     )
 
+    # Optional enrichment sidecar: present+valid → short task line + spare
+    # fields; invalid → HARD abort (a bad sidecar must never half-ship);
+    # absent → legacy build exactly as before.
+    enrichment: course.CourseEnrichment | None = None
+    enrichment_path = (
+        course.BOOK_LOCAL_DIR / f"{args.lang}_{args.unit}.enrichment.json"
+    )
+    if enrichment_path.is_file():
+        try:
+            enrichment = course.parse_enrichment_file(enrichment_path)
+            course.validate_enrichment(exercises, enrichment)
+        except course.CourseSourceError as exc:
+            raise SystemExit(
+                f"enrichment sidecar invalid — aborting build: {exc}"
+            ) from exc
+        log.info(
+            "course.pilot.enrichment", mode="enriched",
+            path=str(enrichment_path),
+            blocks=len(enrichment.block_tasks),
+            exercises=len(enrichment.exercises),
+        )
+    else:
+        log.info(
+            "course.pilot.enrichment", mode="legacy",
+            reason="sidecar absent", path=str(enrichment_path),
+        )
+
     lesson_audio: dict[tuple[int, str], course.SideAudio] = {}
     exercise_audio: dict[str, Path] = {}
     if args.audio:
@@ -213,6 +250,7 @@ def main() -> int:
         root_override=PILOT_ROOT,
         lesson_audio=lesson_audio,
         exercise_audio=exercise_audio,
+        enrichment=enrichment,
     )
     print(json.dumps(result, indent=1, ensure_ascii=False))
     print(f"apkg: {out}")
