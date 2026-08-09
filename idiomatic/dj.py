@@ -150,6 +150,16 @@ _LANE_POPULATION = {
     "5": "translation", "6": "my_errors", "7": "rescue", "8": "pimsleur",
 }
 
+def _due_search(root: str, exclude_populations: frozenset[str] = frozenset()) -> str:
+    """Due search spec for a language root, minus owner-excluded lanes."""
+    terms = [f'deck:"{root}"', "is:due", "-is:suspended"]
+    for pop in sorted(exclude_populations):
+        lane = _POP_DECK.get(pop)
+        if lane:
+            terms.append(f'-deck:"{root}::{lane}"')
+    return " ".join(terms)
+
+
 # Population → lane deck component, for composing search specs.
 _POP_DECK = {
     "expressions": "1 Expressions", "grammar": "2 Grammar",
@@ -362,9 +372,18 @@ def _new_search(root: str, pop: str) -> str:
 
 
 def build_plan(observations: dict, budgets_min: dict[str, int], for_day: str,
-               generated_at: str | None = None) -> dict:
+               generated_at: str | None = None,
+               exclude_populations: frozenset[str] = frozenset()) -> dict:
     """Observations + budgets → the session plan (schema in the module
-    docstring). Pure and deterministic given its inputs."""
+    docstring). Pure and deterministic given its inputs.
+
+    ``exclude_populations`` (owner curation, settings
+    ``dj_exclude_populations``): populations the owner has ruled out of
+    study entirely — their dues are REPORTED in a note but never
+    planned, and their decks are subtracted from the due search spec.
+    First entry (2026-08-09): pimsleur — batch-imported, beneath level,
+    never opted in ("we don't need to study everything there —
+    certainly not pimsleur")."""
     generated_at = generated_at or datetime.now(timezone.utc).isoformat(
         timespec="seconds")
     languages = []
@@ -384,11 +403,22 @@ def build_plan(observations: dict, budgets_min: dict[str, int], for_day: str,
         due_by_pop = {}
         due_cards = 0
         due_minutes = 0.0
+        excluded_due = 0
         for pop, n in sorted((obs.get("due") or {}).items()):
+            if pop in exclude_populations:
+                excluded_due += n
+                continue
             est = n * _spr(obs, pop) / 60
             due_by_pop[pop] = {"cards": n, "est_minutes": round(est, 1)}
             due_cards += n
             due_minutes += est
+        if excluded_due:
+            excluded_names = ", ".join(sorted(
+                p for p in exclude_populations
+                if (obs.get("due") or {}).get(p)))
+            notes.append(
+                f"excluded by owner curation ({excluded_names}): "
+                f"{excluded_due} due cards not planned")
         due_minutes = round(due_minutes, 1)
         overflow = due_minutes > budget
         overflow_minutes = round(due_minutes - budget, 1) if overflow else 0
@@ -459,7 +489,7 @@ def build_plan(observations: dict, budgets_min: dict[str, int], for_day: str,
                 "overflow": overflow,
                 "overflow_minutes": overflow_minutes,
                 "by_population": due_by_pop,
-                "search": f'deck:"{root}" is:due -is:suspended',
+                "search": _due_search(root, exclude_populations),
                 "limit": due_cards,
                 "order": "due",
             },
@@ -610,9 +640,13 @@ async def run_dj(force: bool = False) -> dict:
         report["errors"].append("no observations available — no plan built")
     else:
         budgets = await load_budgets()
+        excluded = frozenset(
+            p.strip() for p in
+            get_settings().dj_exclude_populations.split(",") if p.strip())
         plan = build_plan(
             observations, budgets,
-            for_day=datetime.now(timezone.utc).date().isoformat())
+            for_day=datetime.now(timezone.utc).date().isoformat(),
+            exclude_populations=excluded)
         await save_plan(plan)
         report["plan_day"] = plan["for_day"]
         report["totals"] = plan["totals"]

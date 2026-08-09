@@ -273,3 +273,24 @@ def test_validate_budgets():
                 {"it": -1}, {"it": True}]:
         with pytest.raises(ValueError):
             validate_budgets(bad)
+
+
+def test_owner_exclusions_drop_dues_and_amend_search():
+    """Excluded populations (owner curation, e.g. pimsleur) are reported
+    but never planned, and the due search subtracts their lanes."""
+    from idiomatic import dj
+    obs = {"langs": {"it": {
+        "due": {"pimsleur": 1500, "expressions": 40},
+        "new_reservoir": {},
+        "secs_per_rep": {},
+        "recent": {},
+    }}}
+    plan = dj.build_plan(obs, {"it": 25}, for_day="2026-08-09",
+                         exclude_populations=frozenset({"pimsleur"}))
+    (lang,) = plan["languages"]
+    assert "pimsleur" not in lang["due"]["by_population"]
+    assert lang["due"]["cards"] == 40
+    assert any("excluded by owner curation" in n and "1500" in n
+               for n in lang["notes"])
+    assert '-deck:"IT Italian::8 Pimsleur"' in lang["due"]["search"]
+    assert not lang["due"]["overflow"]

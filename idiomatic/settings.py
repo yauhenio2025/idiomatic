@@ -48,6 +48,10 @@ class Settings(BaseSettings):
     # (owner-editable via POST /admin/dj-budgets), not here.
     dj_enabled: bool = True
     dj_interval_hours: int = 24
+    # Owner curation: populations ruled out of study entirely (comma-
+    # separated). Their dues are reported in plan notes but never
+    # planned. 2026-08-09: pimsleur — batch-imported, beneath level.
+    dj_exclude_populations: str = "pimsleur"
 
     # Primary TTS provider. "qwen-local" (default since 2026-08-07, user
     # verdict after A/B listening) is the locally-hosted Qwen3-TTS bridge
