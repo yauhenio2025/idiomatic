@@ -9,6 +9,7 @@ const NAV = [
   { to: "/rescue", label: "Rescue Lab", icon: "✚" },
   { to: "/cast", label: "Cast", icon: "☻" },
   { to: "/dj", label: "Study DJ", icon: "♫" },
+  { to: "/triage", label: "Triage", icon: "⚖" },
   { to: "/delivery", label: "Delivery", icon: "⇣" },
   { to: "/legacy", label: "Legacy", icon: "⌁" },
 ];

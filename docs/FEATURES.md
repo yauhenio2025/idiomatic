@@ -113,6 +113,24 @@
 - **Dependencies**: `ANKIWEB_HKEY`/`ANKIWEB_ENDPOINT` (Render env; without them plans build from cached observations), `anki` pip package, kv_store (`dj_budgets`, `dj_observations_last`, `dj_last_report`, `dj_last_run_ts`)
 - **Added**: 2026-08-09
 
+### DJ-C2 curation triage console (decisions only — executor lane applies)
+- **Status**: Active
+- **Description**: Owner verdict surface over the committed DJ-C2 census (178 subtrees incl. per-level Pimsleur): `/triage` page grouped language → lane with rationale, evidence chips, census proposal pre-highlighted, one-tap verdicts (accept-proposal / keep-active / suspend-reference / sample-hardest / defer) + notes, bulk accept-all, sticky per-language due-minutes projection recomputed under current verdicts (most-specific wins, lane cascades, undecided unchanged — validated to reproduce the census projections exactly). Boot seeds `dj_triage` only while empty; reseeds never touch owner verdict columns (legacy_estate doctrine). NOTHING here applies dispositions to any collection — the executor lane does, owner-present.
+- **Entry Points**:
+  - `idiomatic/dj_triage.py:45` - `load_evidence` (census loader/validator + row flattener)
+  - `idiomatic/dj_triage.py:157` - `resolve_disposition` (verdict cascade rule)
+  - `idiomatic/dj_triage.py:199` - `project_languages` (per-language minutes under verdicts)
+  - `idiomatic/db.py:173` - `seed_dj_triage` (upsert, owner columns excluded)
+  - `idiomatic/db.py:267` - `seed_dj_triage_if_empty` (boot path)
+  - `idiomatic/api.py:2180` - `POST /admin/triage-verdict` (single verdict/note)
+  - `idiomatic/api.py:2217` - `POST /admin/triage-verdict-bulk` (accept-all-unverdicted)
+  - `idiomatic/ui_api.py:920` - `GET /ui/api/triage` (rows + summary + projections)
+  - `frontend/src/pages/Triage.tsx` - the /triage console page
+  - `db/schema.sql:997` - `dj_triage` table
+  - `docs/research/dj_census/triage_evidence.json` - committed census evidence (seed source)
+- **Dependencies**: DJ-C2 census artifact (committed), admin token
+- **Added**: 2026-08-09
+
 ### Admin API + dashboard
 - **Status**: Active
 - **Description**: Admin-token endpoints (backfills, retts, rebuild-pools, rotate-agent-token) + React SPA dashboard with read-only `/ui/api/*`.
