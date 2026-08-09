@@ -124,6 +124,18 @@ LESSON_CSS = """
            line-height: 1.25; margin: 12px auto; max-width: 680px;}
 .cl-tl {font-size: clamp(24px, 5.5vw, 40px); color: #0a7;
         line-height: 1.35; margin: 12px auto; max-width: 680px;}
+.cl-en {font-size: clamp(12px, 2.6vw, 15px); color: #9a9b95;
+        line-height: 1.4; margin: 2px auto 0; max-width: 620px;}
+.cl-tl-list {list-style: none; margin: 14px auto; padding: 0;
+             max-width: 620px; text-align: left;}
+.cl-tl-item {position: relative; padding-left: 26px; margin: 13px 0;
+             font-size: clamp(20px, 4.5vw, 32px);}
+.cl-tl-item::before {content: ""; position: absolute; left: 6px; top: 0.42em;
+                     width: 8px; height: 8px; border-radius: 50%;
+                     background: #b9c2be;}
+.cl-tl-list .cl-tl {font-size: 1em; margin: 0; max-width: none;
+                    text-align: left;}
+.cl-tl-list .cl-en {margin: 2px 0 0; max-width: none; text-align: left;}
 .cl-note {font-size: clamp(15px, 3.2vw, 20px); color: #666;
           line-height: 1.45; margin: 9px auto; max-width: 620px;}
 .cl-refs {font-size: clamp(11px, 2.4vw, 13px); color: #999;
@@ -149,6 +161,9 @@ svg .s-stroke-line {stroke: #e3ddd0; fill: none;}
 .card.night_mode .cl-note, .card.nightMode .cl-note {color: #bbb;}
 .card.night_mode .cl-refs, .card.nightMode .cl-refs {color: #888;}
 .card.night_mode .cl-tl, .card.nightMode .cl-tl {color: #20c997;}
+.card.night_mode .cl-en, .card.nightMode .cl-en {color: #7f8a86;}
+.card.night_mode .cl-tl-item::before, .card.nightMode .cl-tl-item::before
+  {background: #55625d;}
 .card.night_mode svg .s-ink, .card.nightMode svg .s-ink {fill: #e8ece9;}
 .card.night_mode svg .s-muted, .card.nightMode svg .s-muted {fill: #97a49f;}
 .card.night_mode svg .s-teal, .card.nightMode svg .s-teal {fill: #2fc296;}
@@ -262,6 +277,7 @@ AUDIO_PENDING_TAG = "idiomatic-course-audio-pending"
 _REF_ID = re.compile(r"(?:\d{1,2}(?:\.\d{1,3}){0,3}[a-z]?|Ch\.\s?\d{1,2})")
 _MARK_SPAN = re.compile(r"<mark>(.*?)</mark>", re.DOTALL)
 _SVG_EVENT_HANDLER = re.compile(r"\son[a-z]+\s*=")
+_PAUSE_LINE = re.compile(r"\[PAUSE(?::\d+)?\]")  # the segment grammar's forms
 
 
 class CourseSourceError(ValueError):
@@ -277,6 +293,10 @@ class CourseSourceError(ValueError):
 class DisplayItem:
     kind: Literal["show", "tl"]
     text: str
+    # English gloss for a TL sentence (``EN:`` line). DISPLAY-ONLY: it is
+    # never spoken, never becomes a speech segment, and cannot shift the
+    # narration clip ordinals.
+    gloss: str | None = None
 
 
 @dataclass(frozen=True)
@@ -383,28 +403,57 @@ def _parse_side(
 
     display: list[DisplayItem] = []
     spoken_lines: list[str] = []
+    # ``EN:`` glosses attach to the most recent TL: line; only [PAUSE]
+    # lines (and blanks) may sit between a TL and its EN.  ``pending_tl``
+    # is the display index of that still-glossable TL.
+    pending_tl: int | None = None
     for line_no, raw in physical_lines:
         line = raw.strip()
         if line.startswith(("TITLE:", "SVG:", "REF:")):
             spoken_lines.append("")
+            pending_tl = None
         elif line.startswith("SHOW:"):
             text = line[5:].strip()
             if not text:
                 raise _source_error(path, line_no, "SHOW: must be nonempty")
             display.append(DisplayItem("show", text))
             spoken_lines.append("")
+            pending_tl = None
         elif line.startswith("TL-:"):
             text = line[4:].strip()
             if not text:
                 raise _source_error(path, line_no, "empty TL- segment")
             spoken_lines.append(f"TL: {text}")
+            pending_tl = None
         elif line.startswith("TL:"):
             text = line[3:].strip()
             if not text:
                 raise _source_error(path, line_no, "empty TL segment")
             display.append(DisplayItem("tl", text))
             spoken_lines.append(f"TL: {text}")
+            pending_tl = len(display) - 1
+        elif line.startswith("EN:"):
+            # Display-only English gloss — contributes NO spoken line, so
+            # the speech-segment plan (and every clip ordinal/content
+            # hash) is byte-identical with or without EN: lines.
+            text = line[3:].strip()
+            if not text:
+                raise _source_error(path, line_no, "EN: must be nonempty")
+            if pending_tl is None:
+                raise _source_error(
+                    path, line_no,
+                    "EN: must directly follow its TL: line "
+                    "(only [PAUSE] lines may sit between)",
+                )
+            if display[pending_tl].gloss is not None:
+                raise _source_error(
+                    path, line_no, "TL: line already has an EN: gloss"
+                )
+            display[pending_tl] = replace(display[pending_tl], gloss=text)
+            spoken_lines.append("")
         else:
+            if line and not _PAUSE_LINE.fullmatch(line):
+                pending_tl = None
             spoken_lines.append(raw)
 
     if not display:
@@ -1254,11 +1303,48 @@ def refs_html(refs: Sequence[str]) -> str:
 
 
 def side_html(side: CourseSide) -> str:
-    """Display markup for one lesson slide, Sources footer included."""
+    """Display markup for one lesson slide, Sources footer included.
+
+    A side with 2+ TL sentences renders them as a left-aligned example
+    list (house dot markers, EN gloss in small light type under each
+    sentence); a single TL keeps the classic centered rendering, with
+    its gloss underneath in the same small light style.  SHOW notes
+    break a list run and render as before.
+    """
     parts = [f'<div class="cl-title">{_inline_markup(side.title)}</div>']
+    list_mode = sum(1 for item in side.display if item.kind == "tl") >= 2
+
+    def gloss_div(item: DisplayItem) -> str:
+        if item.gloss is None:
+            return ""
+        return f'<div class="cl-en">{_inline_markup(item.gloss)}</div>'
+
+    run: list[str] = []
+
+    def flush_run() -> None:
+        if run:
+            parts.append(
+                '<ul class="cl-tl-list">' + "".join(run) + "</ul>"
+            )
+            run.clear()
+
     for item in side.display:
-        css_class = "cl-tl" if item.kind == "tl" else "cl-note"
-        parts.append(f'<div class="{css_class}">{_inline_markup(item.text)}</div>')
+        if item.kind == "tl":
+            tl_div = f'<div class="cl-tl">{_inline_markup(item.text)}</div>'
+            if list_mode:
+                run.append(
+                    f'<li class="cl-tl-item">{tl_div}{gloss_div(item)}</li>'
+                )
+            else:
+                parts.append(tl_div)
+                if item.gloss is not None:
+                    parts.append(gloss_div(item))
+        else:
+            flush_run()
+            parts.append(
+                f'<div class="cl-note">{_inline_markup(item.text)}</div>'
+            )
+    flush_run()
     parts.append(
         f'<div class="cl-refs">Hammer {html.escape(refs_html(side.refs))}</div>'
     )

@@ -306,6 +306,179 @@ class TestLessonParsing:
 
 
 # ---------------------------------------------------------------------------
+# EN: display glosses (display-only — narration must never move)
+# ---------------------------------------------------------------------------
+
+
+class TestEnGlosses:
+    def _parse(self, tmp_path: Path,
+               card1_front: str | None = None) -> course.CourseLesson:
+        if card1_front is not None:
+            first = f"""[CARD]
+TITLE: Front 1
+REF: 2.1
+{card1_front}[SIDE]
+TITLE: Back 1
+REF: 2.1
+Narrate back 1.
+SHOW: Back note 1
+TL-: Der Zug war nicht pünktlich.
+"""
+            cards = first + "".join(_card(seq) for seq in range(2, 9))
+            source = _frontmatter() + "\n## SCRIPT\n" + cards
+        else:
+            source = _lesson_source(8)
+        return course.parse_course_lesson(_write_lesson(tmp_path, source))
+
+    def test_en_attaches_to_preceding_tl(self, tmp_path: Path) -> None:
+        lesson = self._parse(tmp_path, card1_front=(
+            "Narrate front 1.\n"
+            "TL: Der Zug war nicht pünktlich.\n"
+            "EN: The train was not on time.\n"
+        ))
+        item = lesson.cards[0].front.display[0]
+        assert item.kind == "tl"
+        assert item.gloss == "The train was not on time."
+
+    def test_en_attaches_across_pause(self, tmp_path: Path) -> None:
+        lesson = self._parse(tmp_path, card1_front=(
+            "Narrate front 1.\n"
+            "TL: Der Zug war nicht pünktlich.\n"
+            "[PAUSE:1000]\n"
+            "EN: The train was not on time.\n"
+        ))
+        assert lesson.cards[0].front.display[0].gloss == \
+            "The train was not on time."
+
+    def test_orphan_en_rejected(self, tmp_path: Path) -> None:
+        with pytest.raises(course.CourseSourceError,
+                           match="EN: must directly follow"):
+            self._parse(tmp_path, card1_front=(
+                "EN: An orphan gloss.\n"
+                "Narrate front 1.\n"
+                "TL: Der Zug war nicht pünktlich.\n"
+            ))
+
+    def test_en_after_intervening_narration_rejected(
+        self, tmp_path: Path
+    ) -> None:
+        with pytest.raises(course.CourseSourceError,
+                           match="EN: must directly follow"):
+            self._parse(tmp_path, card1_front=(
+                "Narrate front 1.\n"
+                "TL: Der Zug war nicht pünktlich.\n"
+                "More narration in between.\n"
+                "EN: The train was not on time.\n"
+            ))
+
+    def test_duplicate_en_rejected(self, tmp_path: Path) -> None:
+        with pytest.raises(course.CourseSourceError,
+                           match="already has an EN: gloss"):
+            self._parse(tmp_path, card1_front=(
+                "Narrate front 1.\n"
+                "TL: Der Zug war nicht pünktlich.\n"
+                "EN: The train was not on time.\n"
+                "EN: A second gloss.\n"
+            ))
+
+    def test_en_produces_no_speech_segment(self, tmp_path: Path) -> None:
+        """The narration-identity invariant: EN: lines are display-only."""
+        without = self._parse(tmp_path, card1_front=(
+            "Narrate front 1.\n"
+            "TL: Der Zug war nicht pünktlich.\n"
+            "[PAUSE:1000]\n"
+            "More narration.\n"
+        ))
+        with_en = self._parse(tmp_path, card1_front=(
+            "Narrate front 1.\n"
+            "TL: Der Zug war nicht pünktlich.\n"
+            "EN: The train was not on time.\n"
+            "[PAUSE:1000]\n"
+            "More narration.\n"
+        ))
+
+        def plan(lesson: course.CourseLesson) -> list[tuple]:
+            return [
+                (card.seq, side.side, i, seg.lang, seg.text)
+                for card in lesson.cards
+                for side in (card.front, card.back)
+                for i, seg in enumerate(course.speech_segments(side))
+            ]
+
+        assert plan(with_en) == plan(without)
+        # the full segment tuple (pauses included) is also unchanged
+        assert [
+            (seg.kind, seg.text)
+            for seg in with_en.cards[0].front.segments
+        ] == [
+            (seg.kind, seg.text)
+            for seg in without.cards[0].front.segments
+        ]
+
+    def test_single_tl_renders_centered_with_gloss(
+        self, tmp_path: Path
+    ) -> None:
+        lesson = self._parse(tmp_path, card1_front=(
+            "Narrate front 1.\n"
+            "TL: Der Zug war nicht pünktlich.\n"
+            "EN: The train was not on time.\n"
+        ))
+        html_out = course.side_html(lesson.cards[0].front)
+        assert "cl-tl-list" not in html_out
+        assert '<div class="cl-tl">Der Zug war nicht pünktlich.</div>' \
+            in html_out
+        assert '<div class="cl-en">The train was not on time.</div>' \
+            in html_out
+
+    def test_two_tls_render_as_list_with_glosses(
+        self, tmp_path: Path
+    ) -> None:
+        lesson = self._parse(tmp_path, card1_front=(
+            "Narrate front 1.\n"
+            "TL: Der Zug war nicht pünktlich.\n"
+            "EN: The train was not on time.\n"
+            "TL: Robert ist mein Freund.\n"
+            "EN: Robert is my friend.\n"
+            "SHOW: a closing note\n"
+        ))
+        html_out = course.side_html(lesson.cards[0].front)
+        assert html_out.count('<li class="cl-tl-item">') == 2
+        assert '<ul class="cl-tl-list">' in html_out
+        assert '<div class="cl-en">Robert is my friend.</div>' in html_out
+        # SHOW note stays outside the list and after it
+        assert html_out.index("</ul>") < html_out.index("a closing note")
+
+    def test_gloss_is_optional_and_absent_by_default(
+        self, tmp_path: Path
+    ) -> None:
+        lesson = self._parse(tmp_path)
+        item = lesson.cards[0].front.display[0]
+        assert item.gloss is None
+        assert "cl-en" not in course.side_html(lesson.cards[0].front)
+
+    def test_lesson_css_has_gloss_and_list_classes(self) -> None:
+        for cls in ("cl-en", "cl-tl-list", "cl-tl-item"):
+            assert f".{cls}" in course.LESSON_CSS
+        assert ".cl-tl-item::before" in course.LESSON_CSS
+        assert ".card.night_mode .cl-en" in course.LESSON_CSS
+        assert ".card.nightMode .cl-en" in course.LESSON_CSS
+        assert ".card.night_mode .cl-tl-item::before" in course.LESSON_CSS
+        assert ".card.nightMode .cl-tl-item::before" in course.LESSON_CSS
+
+    def test_de_kasus_every_tl_has_a_gloss(self) -> None:
+        """Content guard for the shipped unit: authoring completeness."""
+        lesson = course.parse_course_lesson(course.LESSON_DIR / "de_kasus.md")
+        missing = [
+            (card.seq, side.side, item.text)
+            for card in lesson.cards
+            for side in (card.front, card.back)
+            for item in side.display
+            if item.kind == "tl" and item.gloss is None
+        ]
+        assert missing == []
+
+
+# ---------------------------------------------------------------------------
 # Exercise parsing + hygiene gate
 # ---------------------------------------------------------------------------
 
