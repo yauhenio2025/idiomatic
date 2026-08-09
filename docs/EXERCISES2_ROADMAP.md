@@ -7,18 +7,20 @@
 > → linguistic audit → merge to notes/ → `/admin/exercises2-build`.
 > Check waves off as they ship. STATUS LINE: **Waves 1+2+3 SHIPPED in all
 > five languages (3,272 notes / 6,544 cards, apkgs 1621-25, 2026-08-09) —
-> pilot verdict passed, full local-Qwen audio incl. NEW English prompt
-> fronts on every Production card. Next: owner verdicts on the V1/V2/P1
-> formats for Waves 4-6 (V1's 14/30 keep rate needs real scrutiny).**
+> full local-Qwen audio incl. NEW English prompt fronts on every Production
+> card. V1/V2/P1 format verdicts APPROVED 2026-08-09 ("this looks good to
+> me too - all three formats"); Waves 4-6 bulk inputs STAGED the same day
+> (160 forty-row chunks, manifests wave4/wave5/wave6) — authoring begins
+> via the codex lane (EXERCISES2_BATCH_COMMISSION.md + addenda).**
 
 | # | Wave | Size/lang | Status | Notes |
 |---|------|-----------|--------|-------|
 | 1 | ✅ CONNECTING | ~400 | **SHIPPED 2026-08-04** — es 207 / fr 191 / de 179 / pt 175 / it 201 (apkg 1396) | highest C1→C2 value; format = approved pilot |
 | 2 | ✅ CONDITIONALS | 299 | **SHIPPED 2026-08-06** — es 168 / pt 160 / fr 162 / de 163 / it 166 (apkgs 1517-21); tail-chunk pollution correctly triaged out | five languages incl. IT from the start |
 | 3 | ✅ TENSES | 300 | **SHIPPED 2026-08-09** — full Waves 1+2+3 rebuilds published with local-Qwen audio incl. English prompt fronts (apkgs 1621-25) | [audit](research/legacy_estate/EXERCISES2_WAVE3_AUDIT.md); raw order incl. literary tenses; `_tenses_old` priors adapt new examples, not the source or Tenses Rescue |
-| 4 | FANCY_VOCAB | 582 | **Audited 30-row ES pilot: 14 keep / 16 drop; owner gate V1 open** | no bulk outputs until generic vocab format verdict |
-| 5 | vocab trio: BIG_TECH_VOCAB + COLD_WAR_VOCAB + GEOPOLITICS | 517 committed deduped prompts | **Audited 30-row ES GEOPOLITICS pilot: 30 keep; owner gate V2 open** | V1 also gates BIG_TECH/COLD_WAR vocab; GEOPOLITICS keeps term–definition shape |
-| 6 | BIG_TECH_PHRASES | 90 | **Audited 30-row PT shadowing pilot: 30 keep; owner gate P1 open** | separate draft model only; no bulk output/build/TTS |
+| 4 | FANCY_VOCAB | 582 | **format APPROVED 2026-08-09 — bulk staging ready; authoring begins** (75 staged chunks, 15/lang × ~40 rows, `wave4` manifest) | 20 committed cross-topic copies stay staged, flagged per chunk for triage-drop; V1 pilot's 14/30 keep rate predicts heavy triage |
+| 5 | vocab trio: BIG_TECH_VOCAB + COLD_WAR_VOCAB + GEOPOLITICS | 517 committed deduped prompts | **format APPROVED 2026-08-09 — bulk staging ready; authoring begins** (70 staged chunks, 14/lang: 4+6+4, `wave5` manifest) | GEOPOLITICS keeps term–definition shape (V2); the trio owns its duplicate groups — zero expected drops |
+| 6 | BIG_TECH_PHRASES | 90 | **format APPROVED 2026-08-09 — bulk staging ready; authoring begins** (15 staged chunks, 3/lang, `wave6` manifest) | production/shadowing draft model per P1 — NOT Exercises v1 translation cards; pt rows 1-30 staged with quarantined-empty backs |
 | 7 | FALSE_FRIENDS rebuild | — | not started | verified 5-language interference matrix; ties into F4; the legacy ES deck was toxic and is NOT source material |
 | — | COMMANDS / PRONOUNS / REFLEXIVE | 400 | **GAP AUDIT COMPLETE 2026-08-08; no imports** | [language-by-language findings](research/legacy_estate/EXERCISES2_GRAMMAR_GAP_AUDIT.md); route future work to verified grammar objectives |
 
