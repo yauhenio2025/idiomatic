@@ -91,6 +91,27 @@ What the executor proved, gate by gate:
   join-key cards archived + suspended with prior state journaled;
 - deferred cards byte-untouched (row compare per card).
 
+## Amendment-3 re-run (2026-08-09, post-F4-apply)
+
+Owner amendment 3 (paired context transcript behind a `<details>`
+reveal, consuming the Extra1 spare) changed the frozen model's
+templates/CSS, and the coordinator's F4 apply changed the manifest of
+record (126 production adoptions). Both rehearsals were re-run from
+fresh clones against the re-sealed manifest:
+
+| run | result |
+|---|---|
+| A | **17,704 conversions (933 adopted schedules / 2,180 reps)**, 2,935 hub notes / 5,870 cards, 14 archived, 3,041 deferred untouched; gates + standalone verifier PASS (0 problems) |
+| B | same; verifier PASS; **rollback drill PASS** (all invariant fingerprints back to pristine) |
+
+Amendment-specific checks: the executor-installed hub model carries the
+`<details>` transcript reveal in BOTH back templates; phase-5 `Extra1`
+stays blank by design — transcript + clip ship TOGETHER at release
+build from the same occurrence row, so the pairing can never split.
+Compiler expectations were re-verified unchanged (same pinned inputs as
+the coordinator's post-apply seal); only the manifest's amendment
+annotation and timestamp moved its content sha.
+
 ## Between rehearsal-pass and live execution
 
 1. **Server-side adoption phase** (not built): allocate durable

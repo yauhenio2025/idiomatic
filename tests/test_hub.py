@@ -79,8 +79,15 @@ def test_hub_model_frozen_shape():
     # production card (owner amendment 1, binds at model freeze).
     assert [t["name"] for t in m.templates] == ["Hub", "EN -> expression"]
     # Amendment 2: the context clip is embedded on BOTH backs.
+    # Amendment 3: its paired transcript (Extra1) rides collapsed behind
+    # a <details> reveal, nested INSIDE the clip conditional so it can
+    # never show without its own clip.
     for t in m.templates:
         assert "{{#ContextAudio}}" in t["afmt"]
+        clip_block = t["afmt"].split("{{#ContextAudio}}", 1)[1] \
+                              .split("{{/ContextAudio}}", 1)[0]
+        assert "{{#Extra1}}" in clip_block
+        assert "<details" in clip_block and "<summary>" in clip_block
     # The TL-front card leaks nothing: expression only on the front.
     hub_front = m.templates[0]["qfmt"]
     assert "{{Expression}}" in hub_front
@@ -151,6 +158,55 @@ def test_hub_css_is_a_tile_grid():
     assert "repeat(2, 1fr)" in css      # tablet/phone step-down
     assert css.count("@media") >= 2     # and a narrow-phone step-down
     assert ".card.night_mode .rail-item" in css
+
+
+def test_context_transcript_compile_and_pairing_gate(tmp_path: Path):
+    """Amendment 3: transcript formatting, escaping, and the rule that
+    Extra1 is only ever emitted alongside its own context clip."""
+    out = hub_apkg.build_context_transcript(
+        {"target_text": "Se juega <en> la sombra.",
+         "en_text": "It plays out in the shadows."})
+    assert out.startswith('<div class="ctx-tl">')
+    assert "&lt;en&gt;" in out                      # escaped
+    assert '<div class="ctx-en">' in out
+    assert hub_apkg.build_context_transcript(None) == ""
+    assert hub_apkg.build_context_transcript(
+        {"target_text": " ", "en_text": "x"}) == ""
+
+    hub, example, media = _pilot_fixture(tmp_path)
+    hub["context_transcript"] = {"target_text": "La frase original.",
+                                 "en_text": "The original sentence."}
+    out_path = tmp_path / "t.apkg"
+    hub_apkg.build_hub_apkg(out_path=out_path, hub_notes=[hub],
+                            example_notes=[example], media_files=media,
+                            pilot=True)
+    with zipfile.ZipFile(out_path) as z:
+        z.extract("collection.anki2", tmp_path / "t")
+    con = sqlite3.connect(tmp_path / "t" / "collection.anki2")
+    flds = con.execute(
+        "SELECT flds FROM notes WHERE guid = ?",
+        (identity.pilot_hub_guid("es", 439),)).fetchone()[0]
+    assert '<div class="ctx-tl">La frase original.</div>' in flds
+    assert "The original sentence." in flds
+
+    # pairing gate: no clip -> Extra1 stays blank even if a transcript
+    # is (wrongly) supplied.
+    hub2 = dict(hub, context_audio_media=None, expression_id=440)
+    out2 = tmp_path / "t2.apkg"
+    hub_apkg.build_hub_apkg(out_path=out2, hub_notes=[hub2],
+                            example_notes=[], media_files=[], pilot=True)
+    with zipfile.ZipFile(out2) as z:
+        z.extract("collection.anki2", tmp_path / "t2")
+    con2 = sqlite3.connect(tmp_path / "t2" / "collection.anki2")
+    flds2 = con2.execute("SELECT flds FROM notes").fetchone()[0]
+    assert "ctx-tl" not in flds2
+
+
+def test_hub_css_has_transcript_styles():
+    css = hub_apkg.make_hub_model().css
+    assert ".ctx-transcript" in css
+    assert ".ctx-transcript summary" in css
+    assert ".card.night_mode .ctx-tl" in css
 
 
 def test_sources_html_visible_title_and_url():
