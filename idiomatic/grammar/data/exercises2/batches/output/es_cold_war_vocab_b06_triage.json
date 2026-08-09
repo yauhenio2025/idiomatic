@@ -1,0 +1,134 @@
+[
+  {
+    "id": "it_cold_war_vocab_201",
+    "en": "to invest",
+    "verdict": "drop",
+    "reason": "Invertir is transparent, high-frequency vocabulary already expected at C1, and the bare prompt does not select a financial, developmental, or figurative frame."
+  },
+  {
+    "id": "it_cold_war_vocab_202",
+    "en": "to subvert",
+    "verdict": "keep",
+    "reason": "Subvertir has useful stem-changing morphology and denotes direct alteration of an established order, allowing a consequential contrast with socavar in item 222."
+  },
+  {
+    "id": "it_cold_war_vocab_203",
+    "en": "to control",
+    "verdict": "drop",
+    "reason": "Controlar is transparent core vocabulary, while the isolated English prompt does not distinguish supervision, restraint, command, checking, or territorial control."
+  },
+  {
+    "id": "it_cold_war_vocab_204",
+    "en": "to modernize",
+    "verdict": "drop",
+    "reason": "Modernizar is a transparent regular cognate, and the source supplies no specialist object or transitive-versus-pronominal contrast to teach."
+  },
+  {
+    "id": "it_cold_war_vocab_205",
+    "en": "to urbanize",
+    "verdict": "drop",
+    "reason": "Urbanizar is a transparent formal cognate, and the prompt leaves causative urban development and the pronominal demographic process unresolved."
+  },
+  {
+    "id": "it_cold_war_vocab_206",
+    "en": "to deforest",
+    "verdict": "drop",
+    "reason": "Deforestar is a transparent regular cognate with ordinary transitive syntax; the source gives no basis for contrasting it with talar or clearing land."
+  },
+  {
+    "id": "it_cold_war_vocab_207",
+    "en": "to restrict",
+    "verdict": "drop",
+    "reason": "Restringir is high-frequency productive vocabulary at C1, and the generic prompt selects no object, specialist restriction, or non-obvious construction."
+  },
+  {
+    "id": "it_cold_war_vocab_208",
+    "en": "to broadcast",
+    "verdict": "keep",
+    "reason": "Spanish distinguishes emitir or transmitir broadcast content from merely difundir it and from retransmitting another source's signal."
+  },
+  {
+    "id": "it_cold_war_vocab_209",
+    "en": "to innovate",
+    "verdict": "drop",
+    "reason": "Innovar is a transparent, high-frequency cognate, and the bare source does not identify what changes or whether the verb is used absolutely or transitively."
+  },
+  {
+    "id": "it_cold_war_vocab_210",
+    "en": "to impose",
+    "verdict": "keep",
+    "reason": "The productive political frame imponer algo a alguien adds useful argument structure for sanctions, restrictions, obligations, and costs."
+  },
+  {
+    "id": "it_cold_war_vocab_211",
+    "en": "to manipulate",
+    "verdict": "drop",
+    "reason": "Manipular is a transparent, high-frequency cognate, and the source provides no object or domain that would select a distinct advanced sense."
+  },
+  {
+    "id": "it_cold_war_vocab_212",
+    "en": "to retaliate",
+    "verdict": "keep",
+    "reason": "Spanish uses the support-verb expression tomar represalias contra, which also guards against the English and Portuguese calque *retaliar."
+  },
+  {
+    "id": "it_cold_war_vocab_213",
+    "en": "to colonize",
+    "verdict": "drop",
+    "reason": "Colonizar is a transparent geopolitical cognate with ordinary transitive syntax, and the source does not select imperial rule, settlement, or a figurative extension."
+  },
+  {
+    "id": "it_cold_war_vocab_214",
+    "en": "to annex",
+    "verdict": "keep",
+    "reason": "The territorial term supports the normative anexionar/anexar pair and a genuine spelling trap from English and French."
+  },
+  {
+    "id": "it_cold_war_vocab_215",
+    "en": "to advocate",
+    "verdict": "keep",
+    "reason": "Formal Spanish uses the governed frame abogar por, avoiding a tempting English calque and adding precision beyond generic defender."
+  },
+  {
+    "id": "it_cold_war_vocab_216",
+    "en": "to penetrate",
+    "verdict": "keep",
+    "reason": "In the Cold War intelligence sense, infiltrarse en supplies a pronominal governed frame and distinguishes covert entry from generic physical penetration."
+  },
+  {
+    "id": "it_cold_war_vocab_217",
+    "en": "to strategize",
+    "verdict": "keep",
+    "reason": "Idiomatic formal Spanish normally uses elaborar or trazar una estrategia rather than reproducing the English denominal verb."
+  },
+  {
+    "id": "it_cold_war_vocab_218",
+    "en": "to expand",
+    "verdict": "drop",
+    "reason": "The basic prompt is too broad to choose among ampliar, expandir, extender and their pronominal or intransitive counterparts without inventing a sense."
+  },
+  {
+    "id": "it_cold_war_vocab_219",
+    "en": "to delegate",
+    "verdict": "keep",
+    "reason": "The task-recipient construction delegar algo en alguien teaches a consequential preposition that differs from English to and from encomendar algo a alguien."
+  },
+  {
+    "id": "it_cold_war_vocab_220",
+    "en": "to intimidate",
+    "verdict": "drop",
+    "reason": "Intimidar is a transparent, high-frequency cognate with ordinary transitive syntax, and the prompt supplies no coercive complement or distinct specialist use."
+  },
+  {
+    "id": "it_cold_war_vocab_221",
+    "en": "to revolutionize",
+    "verdict": "drop",
+    "reason": "Revolucionar is a transparent regular cognate, and the isolated source gives no object or evaluative context that would create an advanced lexical lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_222",
+    "en": "to undermine",
+    "verdict": "keep",
+    "reason": "Socavar expresses gradual institutional erosion and merits an explicit contrast with the more direct disruption conveyed by subvertir."
+  }
+]

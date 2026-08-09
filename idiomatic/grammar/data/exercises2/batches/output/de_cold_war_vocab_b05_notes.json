@@ -1,0 +1,294 @@
+[
+  {
+    "id": "it_cold_war_vocab_163",
+    "en": "the Summits",
+    "category": "lexical-noun",
+    "tl": "die Gipfeltreffen",
+    "alts": [
+      "die Treffen auf höchster Ebene"
+    ],
+    "register": "Neutral-formal diplomatic and journalistic term for meetings between heads of state or government; the plural has no additional ending.",
+    "trap": "A diplomatic summit is normally a Gipfeltreffen; bare Gipfel is possible by metonymy but also denotes a mountain peak and is less explicit as a headword.",
+    "example_tl": "Die Gipfeltreffen boten beiden Supermächten Gelegenheit, Rüstungskontrolle zu erörtern, ohne die tiefen Konflikte über Stellvertreterkriege und Einflusszonen zu lösen.",
+    "example_en": "The summits gave both superpowers an opportunity to discuss arms control without resolving the deep conflicts over proxy wars and spheres of influence.",
+    "cloze": "Die {{c1::Gipfeltreffen}} boten beiden Supermächten Gelegenheit, Rüstungskontrolle zu erörtern, ohne die tiefen Konflikte über Stellvertreterkriege und Einflusszonen zu lösen.",
+    "note": "The legacy rendering is accurate; the card makes the diplomatic sense and invariant plural explicit."
+  },
+  {
+    "id": "it_cold_war_vocab_164",
+    "en": "the Nuclear testing",
+    "category": "lexical-noun",
+    "tl": "die Kernwaffentests",
+    "alts": [
+      "die Atomwaffentests"
+    ],
+    "register": "Standard historical and security-policy plural for tests of nuclear weapons; Atomwaffentests is equally established and somewhat more journalistic.",
+    "trap": "Nuclear testing in Cold War history means testing nuclear weapons, so Kernwaffentests is more precise than the formally possible but less explicit Nukleartests.",
+    "example_tl": "Die Kernwaffentests verseuchten abgelegene Regionen, während Regierungen gesundheitliche Folgen herunterspielten und betroffene Gemeinschaften jahrzehntelang ohne angemessene Entschädigung ließen.",
+    "example_en": "Nuclear testing contaminated remote regions while governments played down the health consequences and left affected communities without adequate compensation for decades.",
+    "cloze": "Die {{c1::Kernwaffentests}} verseuchten abgelegene Regionen, während Regierungen gesundheitliche Folgen herunterspielten und betroffene Gemeinschaften jahrzehntelang ohne angemessene Entschädigung ließen.",
+    "note": "Sharpens old_back by naming nuclear weapons explicitly; Nukleartests remains understandable in a firmly established weapons context."
+  },
+  {
+    "id": "it_cold_war_vocab_167",
+    "en": "the Conventional forces",
+    "category": "lexical-expression",
+    "tl": "die konventionellen Streitkräfte",
+    "alts": [],
+    "register": "Established security-policy term for armed forces and capabilities other than nuclear forces, with the precise scope depending on the strategic context.",
+    "trap": "Konventionell here contrasts with nuklear and does not merely mean customary or traditional; the adjective remains lowercase inside the noun phrase.",
+    "example_tl": "Die konventionellen Streitkräfte blieben trotz nuklearer Abschreckung zentral, weil Bündnisse glaubwürdige Verteidigungspläne für begrenzte Konflikte und regionale Krisen benötigten.",
+    "example_en": "Conventional forces remained central despite nuclear deterrence because alliances needed credible defense plans for limited conflicts and regional crises.",
+    "cloze": "Die {{c1::konventionellen Streitkräfte}} blieben trotz nuklearer Abschreckung zentral, weil Bündnisse glaubwürdige Verteidigungspläne für begrenzte Konflikte und regionale Krisen benötigten.",
+    "note": "Self-review corrected the legacy capitalization of Konventionellen and fixed the non-nuclear strategic sense in the example."
+  },
+  {
+    "id": "it_cold_war_vocab_168",
+    "en": "the Rearmament",
+    "category": "lexical-noun",
+    "tl": "die Wiederbewaffnung",
+    "alts": [
+      "die Wiederaufrüstung"
+    ],
+    "register": "Established historical term for restoring armed forces after demilitarization; Wiederaufrüstung more strongly foregrounds a renewed military buildup.",
+    "trap": "Aufrüstung can expand an existing arsenal, whereas Wiederbewaffnung presupposes that military capacity had previously been removed or severely restricted.",
+    "example_tl": "Die Wiederbewaffnung Westdeutschlands spaltete die Öffentlichkeit, da Befürworter Bündnisfähigkeit versprachen und Gegner eine erneute Militarisierung der jungen Republik befürchteten.",
+    "example_en": "The rearmament of West Germany divided the public, as supporters promised alliance capability and opponents feared the renewed militarization of the young republic.",
+    "cloze": "Die {{c1::Wiederbewaffnung}} Westdeutschlands spaltete die Öffentlichkeit, da Befürworter Bündnisfähigkeit versprachen und Gegner eine erneute Militarisierung der jungen Republik befürchteten.",
+    "note": "Selects the conventional term for the West German historical debate; old_back is valid when renewed arms buildup rather than restoration of armed forces is foregrounded."
+  },
+  {
+    "id": "it_cold_war_vocab_170",
+    "en": "the Nuclear fallout",
+    "category": "lexical-expression",
+    "tl": "der radioaktive Niederschlag",
+    "alts": [
+      "der Fallout"
+    ],
+    "register": "Standard scientific and policy expression for radioactive particles deposited after a nuclear explosion; Fallout is common in journalistic prose.",
+    "trap": "Fallout here is physical radioactive deposition, not the generic Folgen of an event; nuklearer Fallout is understandable but less idiomatic than radioaktiver Niederschlag.",
+    "example_tl": "Der radioaktive Niederschlag atmosphärischer Tests gelangte über weite Entfernungen in Böden und Nahrungsketten, obwohl die Behörden das grenzüberschreitende Risiko zunächst bestritten.",
+    "example_en": "Radioactive fallout from atmospheric tests traveled great distances into soils and food chains, although the authorities initially denied the cross-border risk.",
+    "cloze": "Der {{c1::radioaktive Niederschlag}} atmosphärischer Tests gelangte über weite Entfernungen in Böden und Nahrungsketten, obwohl die Behörden das grenzüberschreitende Risiko zunächst bestritten.",
+    "note": "Materially replaces the Anglicized legacy phrase with the established descriptive German term. Self-review changed große to the more idiomatic weite Entfernungen."
+  },
+  {
+    "id": "it_cold_war_vocab_171",
+    "en": "the Nuclear umbrella",
+    "category": "lexical-expression",
+    "tl": "der nukleare Schutzschirm",
+    "alts": [
+      "der atomare Schutzschirm"
+    ],
+    "register": "Established security-policy metaphor for extended nuclear deterrence provided by a nuclear-armed ally.",
+    "trap": "A nuklearer Schutzschirm is a deterrence guarantee, not a Raketenschirm, which denotes systems intended to intercept incoming missiles.",
+    "example_tl": "Der nukleare Schutzschirm sollte Verbündete schützen, beruhte jedoch auf der umstrittenen Annahme, Washington werde zur Verteidigung Europas selbst einen Atomkrieg riskieren.",
+    "example_en": "The nuclear umbrella was intended to protect allies but rested on the contested assumption that Washington would itself risk nuclear war to defend Europe.",
+    "cloze": "Der {{c1::nukleare Schutzschirm}} sollte Verbündete schützen, beruhte jedoch auf der umstrittenen Annahme, Washington werde zur Verteidigung Europas selbst einen Atomkrieg riskieren.",
+    "note": "The legacy rendering is accurate. Self-review added the missile-defense contrast and replaced the ambiguous phrase einen Gegenschlag riskieren with the clearer Atomkrieg riskieren."
+  },
+  {
+    "id": "it_cold_war_vocab_173",
+    "en": "Cold peace",
+    "category": "lexical-expression",
+    "tl": "der kalte Frieden",
+    "alts": [],
+    "register": "Journalistic and political-analysis expression for formal peace without normalized relations, mutual trust or substantial social contact.",
+    "trap": "In an ordinary noun phrase the adjective is lowercase: ein kalter Frieden; capitalized Kalter Frieden is reserved for title-like or explicitly named use.",
+    "example_tl": "Der kalte Frieden zwischen den Nachbarstaaten verhinderte offene Kämpfe, brachte aber weder diplomatische Normalisierung noch regelmäßige Kontakte zwischen ihren Gesellschaften.",
+    "example_en": "The cold peace between the neighboring states prevented open fighting but brought neither diplomatic normalization nor regular contact between their societies.",
+    "cloze": "Der {{c1::kalte Frieden}} zwischen den Nachbarstaaten verhinderte offene Kämpfe, brachte aber weder diplomatische Normalisierung noch regelmäßige Kontakte zwischen ihren Gesellschaften.",
+    "note": "Materially expands the articleless legacy label into a production-ready noun phrase and fixes its ordinary lowercase inflection."
+  },
+  {
+    "id": "it_cold_war_vocab_174",
+    "en": "to confront",
+    "category": "lexical-verb",
+    "tl": "sich jdm./etw. stellen",
+    "alts": [
+      "sich mit etw. auseinandersetzen"
+    ],
+    "register": "Neutral-formal for facing a person, threat, responsibility or difficult issue directly rather than avoiding it.",
+    "trap": "English confront takes a direct object, but this German frame is reflexive and governs the dative; jdn. mit etw. konfrontieren instead presents someone with a fact or problem.",
+    "example_tl": "Die Regierung musste sich der Vergangenheit stellen, nachdem freigegebene Akten ihre Beteiligung an geheimen Haftprogrammen und politischen Säuberungen belegten.",
+    "example_en": "The government had to confront the past after declassified files documented its involvement in secret detention programs and political purges.",
+    "cloze": "Die Regierung musste {{c1::sich der Vergangenheit stellen}}, nachdem freigegebene Akten ihre Beteiligung an geheimen Haftprogrammen und politischen Säuberungen belegten.",
+    "note": "The isolated source is polysemous. This card selects facing a difficult issue; old_back covers confronting someone with something but omits that construction's required complements. Self-review replaced an alternative that did not collocate naturally with Vergangenheit."
+  },
+  {
+    "id": "it_cold_war_vocab_175",
+    "en": "to oppose",
+    "category": "lexical-verb",
+    "tl": "sich gegen etw. aussprechen",
+    "alts": [
+      "etw. ablehnen"
+    ],
+    "register": "Neutral-formal political and diplomatic usage for publicly stating opposition to a proposal, policy or action.",
+    "trap": "The construction is reflexive and takes gegen plus the accusative; widersprechen takes a dative object and more often means contradicting or disagreeing with someone or something said.",
+    "example_tl": "Mehrere Diplomaten sprachen sich gegen neue Sanktionen aus, weil diese nach ihrer Einschätzung vor allem die Zivilbevölkerung und unabhängige Medien schwächen würden.",
+    "example_en": "Several diplomats opposed new sanctions because, in their assessment, these would primarily weaken the civilian population and independent media.",
+    "cloze": "Mehrere Diplomaten {{c1::sprachen sich}} {{c1::gegen}} neue Sanktionen {{c1::aus}}, weil diese nach ihrer Einschätzung vor allem die Zivilbevölkerung und unabhängige Medien schwächen würden.",
+    "note": "Narrows the underspecified source to publicly expressed policy opposition; legacy sich widersetzen is stronger and foregrounds active resistance."
+  },
+  {
+    "id": "it_cold_war_vocab_176",
+    "en": "to align",
+    "category": "lexical-verb",
+    "tl": "sich einem Lager anschließen",
+    "alts": [
+      "sich auf die Seite eines Lagers stellen"
+    ],
+    "register": "Neutral-formal foreign-policy usage for joining or taking the side of a geopolitical camp.",
+    "trap": "Sich angleichen means becoming similar or adapting to a standard; political alignment with a camp is sich einem Lager anschließen, with the camp in the dative.",
+    "example_tl": "Viele neu unabhängige Staaten wollten sich keinem Lager anschließen und suchten stattdessen durch Blockfreiheit außenpolitischen Spielraum zwischen den rivalisierenden Supermächten.",
+    "example_en": "Many newly independent states did not want to align with either camp and instead sought foreign-policy room for maneuver between the rival superpowers through non-alignment.",
+    "cloze": "Viele neu unabhängige Staaten wollten {{c1::sich}} keinem Lager {{c1::anschließen}} und suchten stattdessen durch Blockfreiheit außenpolitischen Spielraum zwischen den rivalisierenden Supermächten.",
+    "note": "Materially corrects old_back, which describes assimilation rather than geopolitical alignment."
+  },
+  {
+    "id": "it_cold_war_vocab_184",
+    "en": "to repress",
+    "category": "lexical-verb",
+    "tl": "jdn./etw. unterdrücken",
+    "alts": [],
+    "register": "Neutral-critical political usage for systematically preventing people, organizations or dissent from acting or being expressed.",
+    "trap": "English repress changes translation by object: memories are often verdrängt, while an uprising violently suppressed is niedergeschlagen; political actors or networks can be unterdrückt.",
+    "example_tl": "Die Geheimpolizei unterdrückte oppositionelle Netzwerke, indem sie Versammlungen auflöste, Druckereien beschlagnahmte und bekannte Organisatoren monatelang ohne Anklage festhielt.",
+    "example_en": "The secret police repressed opposition networks by breaking up meetings, confiscating printing presses and holding prominent organizers for months without charge.",
+    "cloze": "Die Geheimpolizei {{c1::unterdrückte}} oppositionelle Netzwerke, indem sie Versammlungen auflöste, Druckereien beschlagnahmte und bekannte Organisatoren monatelang ohne Anklage festhielt.",
+    "note": "The legacy verb is accurate for the political sense; the card is retained because the English verb's psychological and violent-suppression senses require different German choices."
+  },
+  {
+    "id": "it_cold_war_vocab_185",
+    "en": "to embargo",
+    "category": "lexical-expression",
+    "tl": "ein Embargo gegen etw. verhängen",
+    "alts": [
+      "etw. mit einem Embargo belegen"
+    ],
+    "register": "Formal diplomatic and legal construction for imposing an official ban on trade or specified transfers.",
+    "trap": "German normally uses Embargo with verhängen or mit einem Embargo belegen; embargoisieren is rare and sounds bureaucratic rather than like the unmarked verb.",
+    "example_tl": "Der Sicherheitsrat konnte ein Embargo gegen das Regime verhängen, nachdem Inspektoren wiederholt geheime Waffenlieferungen an verbündete Milizen dokumentiert hatten.",
+    "example_en": "The Security Council was able to impose an embargo on the regime after inspectors repeatedly documented secret arms deliveries to allied militias.",
+    "cloze": "Der Sicherheitsrat konnte {{c1::ein Embargo gegen}} das Regime {{c1::verhängen}}, nachdem Inspektoren wiederholt geheime Waffenlieferungen an verbündete Milizen dokumentiert hatten.",
+    "note": "Materially replaces the marked legacy verb with the idiomatic German support-verb construction. Self-review made the English translation idiomatic without changing its source sense."
+  },
+  {
+    "id": "it_cold_war_vocab_187",
+    "en": "to negotiate",
+    "category": "lexical-verb",
+    "tl": "mit jdm. über etw. verhandeln",
+    "alts": [
+      "Verhandlungen mit jdm. über etw. führen"
+    ],
+    "register": "Neutral-formal diplomatic usage; the counterpart follows mit plus dative and the subject of negotiation über plus accusative.",
+    "trap": "Verhandeln does not normally take the desired agreement as a direct object; a concrete treaty or settlement is einen Vertrag beziehungsweise eine Einigung aushandeln.",
+    "example_tl": "Die Unterhändler verhandelten mit der Gegenseite über Gefangenenaustausche, während beide Regierungen öffentlich bestritten, überhaupt direkte Gespräche miteinander zu führen.",
+    "example_en": "The negotiators negotiated with the other side over prisoner exchanges while both governments publicly denied that they were holding direct talks at all.",
+    "cloze": "Die Unterhändler {{c1::verhandelten mit}} der Gegenseite {{c1::über}} Gefangenenaustausche, während beide Regierungen öffentlich bestritten, überhaupt direkte Gespräche miteinander zu führen.",
+    "note": "The legacy headword is accurate but omits both governed complements needed for productive diplomatic use."
+  },
+  {
+    "id": "it_cold_war_vocab_189",
+    "en": "to radicalize",
+    "category": "lexical-verb",
+    "tl": "sich radikalisieren",
+    "alts": [
+      "radikaler werden"
+    ],
+    "register": "Neutral analytical in political and social-science prose for an actor's movement toward more radical positions or methods.",
+    "trap": "When the subject becomes more radical, German uses sich radikalisieren; bare jdn. radikalisieren is transitive and presents an external actor as the cause.",
+    "example_tl": "Teile der Studentenbewegung radikalisierten sich, als staatliche Gewalt zunahm und legale Möglichkeiten für wirksamen politischen Protest systematisch eingeschränkt wurden.",
+    "example_en": "Parts of the student movement radicalized as state violence increased and legal opportunities for effective political protest were systematically restricted.",
+    "cloze": "Teile der Studentenbewegung {{c1::radikalisierten sich}}, als staatliche Gewalt zunahm und legale Möglichkeiten für wirksamen politischen Protest systematisch eingeschränkt wurden.",
+    "note": "The source does not specify transitivity. This card selects the common intransitive reading and materially adds the reflexive marker missing from old_back."
+  },
+  {
+    "id": "it_cold_war_vocab_193",
+    "en": "to exile",
+    "category": "lexical-verb",
+    "tl": "jdn. ins Exil verbannen",
+    "alts": [
+      "jdn. ins Exil schicken"
+    ],
+    "register": "Neutral-formal historical and political construction for forcing a person to live outside their country; verbannen foregrounds coercion.",
+    "trap": "Bildungssprachliches exilieren is possible but uncommon and should not be treated as an unmarked cognate; the productive directional phrase is ins Exil.",
+    "example_tl": "Das Regime verbannte kritische Schriftsteller ins Exil, entzog ihnen die Staatsbürgerschaft und ließ ihre Werke aus Bibliotheken und Lehrplänen entfernen.",
+    "example_en": "The regime exiled critical writers, stripped them of their citizenship and had their works removed from libraries and curricula.",
+    "cloze": "Das Regime {{c1::verbannte}} kritische Schriftsteller {{c1::ins Exil}}, entzog ihnen die Staatsbürgerschaft und ließ ihre Werke aus Bibliotheken und Lehrplänen entfernen.",
+    "note": "The legacy phrase is valid; the main rendering selects the more concise formal verb and preserves the required directional phrase. Self-review corrected the trap to acknowledge valid but low-frequency exilieren."
+  },
+  {
+    "id": "it_cold_war_vocab_195",
+    "en": "to disarm",
+    "category": "lexical-verb",
+    "tl": "abrüsten",
+    "alts": [
+      "Waffenbestände abbauen"
+    ],
+    "register": "Standard intransitive security-policy verb for a state or armed actor reducing or eliminating its armaments.",
+    "trap": "Entwaffnen means taking weapons away from a person, unit or immediate opponent; a state reducing its own military arsenal rüstet ab.",
+    "example_tl": "Keine Seite wollte vollständig abrüsten, solange sie die gegnerischen Inspektionszusagen für unzureichend hielt und einen verdeckten technologischen Vorsprung befürchtete.",
+    "example_en": "Neither side wanted to disarm completely as long as it considered the adversary's inspection commitments inadequate and feared a covert technological advantage.",
+    "cloze": "Keine Seite wollte vollständig {{c1::abrüsten}}, solange sie die gegnerischen Inspektionszusagen für unzureichend hielt und einen verdeckten technologischen Vorsprung befürchtete.",
+    "note": "The isolated source is ambiguous. The Cold War context selects strategic disarmament; old_back is correct only for depriving a person or unit of weapons."
+  },
+  {
+    "id": "it_cold_war_vocab_196",
+    "en": "to deter",
+    "category": "lexical-verb",
+    "tl": "jdn. von etw. abschrecken",
+    "alts": [],
+    "register": "Standard security-policy construction for preventing an action by credibly threatening unacceptable costs.",
+    "trap": "The person deterred is accusative, while the prevented action follows von plus dative; abhalten is broader and does not itself encode threatened costs.",
+    "example_tl": "Glaubwürdige Vergeltungsdrohungen sollten den Gegner von einem Angriff abschrecken, konnten jedoch Fehlwahrnehmungen, technische Störungen und eigenmächtige Entscheidungen lokaler Befehlshaber nicht ausschließen.",
+    "example_en": "Credible threats of retaliation were intended to deter the adversary from attacking but could not rule out misperceptions, technical failures or unilateral decisions by local commanders.",
+    "cloze": "Glaubwürdige Vergeltungsdrohungen sollten den Gegner von einem Angriff {{c1::abschrecken}}, konnten jedoch Fehlwahrnehmungen, technische Störungen und eigenmächtige Entscheidungen lokaler Befehlshaber nicht ausschließen.",
+    "note": "The legacy verb is accurate; the card adds the two-object government required for productive strategic use."
+  },
+  {
+    "id": "it_cold_war_vocab_197",
+    "en": "to escalate",
+    "category": "lexical-verb",
+    "tl": "eskalieren",
+    "alts": [
+      "sich zuspitzen"
+    ],
+    "register": "Neutral analytical usage; the example selects the common intransitive frame in which a crisis or conflict becomes more intense.",
+    "trap": "German permits transitive and intransitive eskalieren, but never reflexive *sich eskalieren; the intransitive perfect allows ist or hat eskaliert, while the transitive perfect uses hat.",
+    "example_tl": "Die Krise eskalierte, nachdem ein fehlinterpretiertes Radarsignal Alarm ausgelöst hatte und beide Seiten ihre strategischen Bomber in erhöhte Bereitschaft versetzten.",
+    "example_en": "The crisis escalated after a misinterpreted radar signal triggered an alert and both sides placed their strategic bombers on heightened readiness.",
+    "cloze": "Die Krise {{c1::eskalierte}}, nachdem ein fehlinterpretiertes Radarsignal Alarm ausgelöst hatte und beide Seiten ihre strategischen Bomber in erhöhte Bereitschaft versetzten.",
+    "note": "The source does not specify transitivity, so the example chooses the intransitive frame. Old_back incorrectly capitalizes the infinitive. Self-review removed an inaccurate claim that transitive eskalieren is disfavored."
+  },
+  {
+    "id": "it_cold_war_vocab_198",
+    "en": "to proliferate",
+    "category": "lexical-verb",
+    "tl": "sich weiterverbreiten",
+    "alts": [
+      "sich ausbreiten"
+    ],
+    "register": "Neutral-formal security-policy usage for weapons, technology or knowledge spreading to additional actors; proliferieren is more specialist.",
+    "trap": "Wuchern describes rampant growth, often of tissue, plants or an uncontrolled phenomenon; it is not the normal verb for nuclear technology spreading between actors.",
+    "example_tl": "Westliche Regierungen fürchteten, Kernwaffentechnologie könne sich weiterverbreiten, wenn zivile Nuklearprogramme ohne wirksame Kontrollen sensibles Wissen und Material zugänglich machten.",
+    "example_en": "Western governments feared that nuclear-weapons technology could proliferate if civilian nuclear programs made sensitive knowledge and material accessible without effective controls.",
+    "cloze": "Westliche Regierungen fürchteten, Kernwaffentechnologie könne {{c1::sich weiterverbreiten}}, wenn zivile Nuklearprogramme ohne wirksame Kontrollen sensibles Wissen und Material zugänglich machten.",
+    "note": "Materially corrects old_back, whose growth metaphor does not express spread to additional actors."
+  },
+  {
+    "id": "it_cold_war_vocab_200",
+    "en": "to transition",
+    "category": "lexical-expression",
+    "tl": "den Übergang zu etw. vollziehen",
+    "alts": [
+      "zu etw. übergehen"
+    ],
+    "register": "Formal political and historical construction for completing or undergoing a structural transition to another system.",
+    "trap": "English transition is readily used as a verb; German political prose normally uses a support-noun construction, while transitionieren is specialized and unsuitable here.",
+    "example_tl": "Mehrere ehemalige Einparteienstaaten vollzogen den Übergang zur Demokratie, ohne dass alte Sicherheitsapparate ihre wirtschaftlichen Netzwerke oder ihren politischen Einfluss vollständig verloren.",
+    "example_en": "Several former one-party states transitioned to democracy without the old security apparatuses completely losing their economic networks or political influence.",
+    "cloze": "Mehrere ehemalige Einparteienstaaten {{c1::vollzogen den Übergang zur Demokratie}}, ohne dass alte Sicherheitsapparate ihre wirtschaftlichen Netzwerke oder ihren politischen Einfluss vollständig verloren.",
+    "note": "Materially corrects old_back, which supplies only a noun and therefore does not answer the verbal source prompt."
+  }
+]

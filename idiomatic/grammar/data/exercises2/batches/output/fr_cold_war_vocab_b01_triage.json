@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_cold_war_vocab_001",
+    "en": "the Military coup",
+    "verdict": "keep",
+    "reason": "Established political expression whose fixed d’État complement, capitalization, and distinction from a generic coup create real French production value."
+  },
+  {
+    "id": "it_cold_war_vocab_002",
+    "en": "the U.S. intervention",
+    "verdict": "drop",
+    "reason": "Intervention américaine is a transparent compositional phrase with no distinct C1 sense, government, or morphology issue in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_003",
+    "en": "the Communism",
+    "verdict": "drop",
+    "reason": "Communisme is a transparent, high-frequency ideological cognate already expected at C1."
+  },
+  {
+    "id": "it_cold_war_vocab_004",
+    "en": "the Democracy",
+    "verdict": "drop",
+    "reason": "Démocratie is transparent core political vocabulary with no narrower sense or production issue supplied by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_005",
+    "en": "the CIA",
+    "verdict": "drop",
+    "reason": "The international initialism is unchanged in French; feminine article agreement alone is too thin a C1 lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_006",
+    "en": "the Guerillas",
+    "verdict": "keep",
+    "reason": "French usefully distinguishes individual guérilleros from collective guérilla, materially correcting the legacy plural."
+  },
+  {
+    "id": "it_cold_war_vocab_007",
+    "en": "the Embargo",
+    "verdict": "drop",
+    "reason": "Embargo is a transparent, established political-economic loanword already owned at C1, and the prompt selects no narrower sense."
+  },
+  {
+    "id": "it_cold_war_vocab_008",
+    "en": "the Revolution",
+    "verdict": "drop",
+    "reason": "Révolution is a transparent, high-frequency historical cognate with no additional lexical lesson in the isolated prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_009",
+    "en": "the Dictatorship",
+    "verdict": "drop",
+    "reason": "Dictature is core political vocabulary already expected at C1, and the legacy rendering is accurate."
+  },
+  {
+    "id": "it_cold_war_vocab_010",
+    "en": "the Marxism",
+    "verdict": "drop",
+    "reason": "Marxisme is a transparent, high-frequency ideological cognate; lowercase spelling alone does not justify a C1 card."
+  },
+  {
+    "id": "it_cold_war_vocab_011",
+    "en": "the Capitalism",
+    "verdict": "keep",
+    "reason": "The exact-duplicate report assigns this item to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_012",
+    "en": "the Torture",
+    "verdict": "drop",
+    "reason": "Torture is a transparent, high-frequency legal and human-rights cognate with no narrower sense in the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_013",
+    "en": "the Dissidents",
+    "verdict": "drop",
+    "reason": "Dissidents is a transparent political cognate whose regular plural supplies no distinct C1 production lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_014",
+    "en": "the Regime",
+    "verdict": "keep",
+    "reason": "French régime is broader and less inherently authoritarian than English regime often suggests, creating a useful semantic and accent lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_015",
+    "en": "the Soviet influence",
+    "verdict": "drop",
+    "reason": "Influence soviétique is a transparent compositional phrase with regular agreement and no distinct usage issue for a C1 learner."
+  },
+  {
+    "id": "it_cold_war_vocab_016",
+    "en": "Authoritarian",
+    "verdict": "keep",
+    "reason": "The duplicate report assigns the item here, and the legacy noun autoritarisme must be corrected to the requested adjective autoritaire."
+  },
+  {
+    "id": "it_cold_war_vocab_017",
+    "en": "the Opposition",
+    "verdict": "drop",
+    "reason": "Opposition is transparent, high-frequency political vocabulary with no special government or sense selected by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_018",
+    "en": "the Exile",
+    "verdict": "keep",
+    "reason": "The exil/exilé distinction and the articleless fixed phrase en exil provide genuine production value."
+  },
+  {
+    "id": "it_cold_war_vocab_019",
+    "en": "the Nationalization",
+    "verdict": "drop",
+    "reason": "Nationalisation is a transparent academic-policy cognate with regular morphology and no distinct sense issue in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_020",
+    "en": "the Junta",
+    "verdict": "keep",
+    "reason": "French junte has a narrower, strongly political scope than Spanish or Portuguese junta, and junte militaire fixes the intended sense."
+  },
+  {
+    "id": "it_cold_war_vocab_021",
+    "en": "the Counterinsurgency",
+    "verdict": "keep",
+    "reason": "Specialist security term whose integrated political, intelligence, policing, and military scope is not recoverable from a generic counterattack."
+  },
+  {
+    "id": "it_cold_war_vocab_022",
+    "en": "the OAS (Organization of American States)",
+    "verdict": "keep",
+    "reason": "French localizes both the official institutional name and its acronym as Organisation des États américains (OEA)."
+  },
+  {
+    "id": "it_cold_war_vocab_023",
+    "en": "the Proxy wars",
+    "verdict": "keep",
+    "reason": "Established geopolitical term with the nonliteral fixed construction par procuration and an important distinction between sponsorship and local agency."
+  },
+  {
+    "id": "it_cold_war_vocab_024",
+    "en": "the Destabilization",
+    "verdict": "drop",
+    "reason": "Déstabilisation is a transparent academic cognate with regular derivation and no additional scope supplied by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_025",
+    "en": "the Repression",
+    "verdict": "drop",
+    "reason": "Répression is a transparent, high-frequency political cognate already expected at C1; the prompt supplies no narrower analytical contrast."
+  },
+  {
+    "id": "it_cold_war_vocab_026",
+    "en": "the Diplomacy",
+    "verdict": "keep",
+    "reason": "The exact-duplicate report assigns this prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_027",
+    "en": "the Human rights",
+    "verdict": "drop",
+    "reason": "Droits de l’homme is transparent, high-frequency policy vocabulary already firmly expected at C1."
+  },
+  {
+    "id": "it_cold_war_vocab_028",
+    "en": "the Embassies",
+    "verdict": "drop",
+    "reason": "Ambassades is a transparent, regular plural with no distinct lexical or institutional naming issue in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_029",
+    "en": "the Trade barriers",
+    "verdict": "keep",
+    "reason": "Obstacles au commerce is a precise institutional collocation whose scope extends usefully beyond tariffs alone."
+  },
+  {
+    "id": "it_cold_war_vocab_030",
+    "en": "the Censorship",
+    "verdict": "keep",
+    "reason": "The duplicate report assigns the item here, and the cross-language censure/censorship reversal supplies a genuine interference warning."
+  },
+  {
+    "id": "it_cold_war_vocab_031",
+    "en": "the Refugees",
+    "verdict": "drop",
+    "reason": "Réfugiés is transparent, high-frequency humanitarian vocabulary with regular morphology and no distinct scope issue in the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_032",
+    "en": "the Neoliberalism",
+    "verdict": "keep",
+    "reason": "The exact-duplicate report explicitly assigns this political-economy term to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_033",
+    "en": "the Propaganda",
+    "verdict": "drop",
+    "reason": "Propagande is a transparent, high-frequency international noun with no distinct French usage issue selected by the isolated prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_034",
+    "en": "the Cold War alliances",
+    "verdict": "drop",
+    "reason": "Alliances de la guerre froide is a transparent compositional phrase with no distinct C1 production lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_035",
+    "en": "the Containment",
+    "verdict": "keep",
+    "reason": "The Cold War context selects the strategic politique d’endiguement rather than generic confinement or contention."
+  },
+  {
+    "id": "it_cold_war_vocab_036",
+    "en": "the Mobilization",
+    "verdict": "drop",
+    "reason": "Mobilisation is a transparent cognate whose military, political, and social senses remain underspecified by the bare prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_037",
+    "en": "the Pro-U.S. factions",
+    "verdict": "keep",
+    "reason": "The item teaches the geopolitical alignment sense and the standard closed, agreeing French adjective proaméricaines."
+  },
+  {
+    "id": "it_cold_war_vocab_038",
+    "en": "the Pro-Soviet factions",
+    "verdict": "drop",
+    "reason": "Constructional duplicate of the kept pro-U.S. factions item; prosoviétiques adds no distinct French morphology, register, or government lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_039",
+    "en": "Disappeared",
+    "verdict": "keep",
+    "reason": "The Cold War context selects the substantivized human-rights plural les disparus, materially correcting the bare feminine adjective in old_back."
+  },
+  {
+    "id": "it_cold_war_vocab_040",
+    "en": "the Economic sanctions",
+    "verdict": "keep",
+    "reason": "The coercive international-relations sense usefully contrasts with the rarer formal French sense of sanctionner as ratifying or approving."
+  }
+]

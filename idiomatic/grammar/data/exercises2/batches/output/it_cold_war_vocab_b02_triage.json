@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_cold_war_vocab_041",
+    "en": "the Resistance",
+    "verdict": "drop",
+    "reason": "La resistenza is high-frequency core vocabulary already expected at C1, and the isolated prompt does not identify a specific historical resistance movement."
+  },
+  {
+    "id": "it_cold_war_vocab_042",
+    "en": "the KGB",
+    "verdict": "drop",
+    "reason": "The international proper-name initialism is unchanged; masculine article agreement alone is too thin a standalone C1 lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_043",
+    "en": "the Land reforms",
+    "verdict": "drop",
+    "reason": "Constructional duplicate of the more precise kept Agrarian reform item; plural number adds no distinct Italian lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_044",
+    "en": "the Ideology",
+    "verdict": "keep",
+    "reason": "The exact-duplicate report assigns this prompt to COLD_WAR_VOCAB, and its neutral analytical scope supplies a real semantic lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_045",
+    "en": "the Arms race",
+    "verdict": "keep",
+    "reason": "Corsa agli armamenti is an established geopolitical expression with fixed plural government that resists a literal English calque."
+  },
+  {
+    "id": "it_cold_war_vocab_046",
+    "en": "Interventionism",
+    "verdict": "keep",
+    "reason": "The doctrine noun has foreign-policy, economic, and historically Italian First World War readings that context must disambiguate."
+  },
+  {
+    "id": "it_cold_war_vocab_047",
+    "en": "the Coup d'état",
+    "verdict": "drop",
+    "reason": "Near-duplicate of the retained Military coup card in the preceding chunk, which already teaches colpo di Stato, its capitalization, and the narrower military qualifier."
+  },
+  {
+    "id": "it_cold_war_vocab_048",
+    "en": "the Reform",
+    "verdict": "drop",
+    "reason": "La riforma is a transparent, high-frequency cognate with no object, subtype, or usage issue supplied by the bare prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_049",
+    "en": "the Copper",
+    "verdict": "drop",
+    "reason": "Il rame is basic concrete vocabulary, and its historical importance in Chile does not create a distinct lexical lesson in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_050",
+    "en": "the Socialism",
+    "verdict": "drop",
+    "reason": "Il socialismo is a transparent, high-frequency ideological cognate already expected at C1, with no subtype selected by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_051",
+    "en": "the Christian Democracy",
+    "verdict": "keep",
+    "reason": "The Chilean context selects a party label whose capitalization and distinction from the generic political current are pedagogically useful."
+  },
+  {
+    "id": "it_cold_war_vocab_052",
+    "en": "the Land redistribution",
+    "verdict": "keep",
+    "reason": "Redistribuzione delle terre names the transfer of land itself and is analytically narrower than the broader kept Agrarian reform item."
+  },
+  {
+    "id": "it_cold_war_vocab_053",
+    "en": "the Inflation",
+    "verdict": "drop",
+    "reason": "L'inflazione is transparent, high-frequency economics vocabulary already firmly expected at C1, with no special collocation selected."
+  },
+  {
+    "id": "it_cold_war_vocab_054",
+    "en": "the Expropriation",
+    "verdict": "keep",
+    "reason": "The legal term supports a substantive distinction from punitive confiscation and sector-wide nationalization, especially concerning scope and compensation."
+  },
+  {
+    "id": "it_cold_war_vocab_055",
+    "en": "the Coalition",
+    "verdict": "drop",
+    "reason": "La coalizione is a transparent, high-frequency political cognate with regular morphology and no narrower sense in the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_056",
+    "en": "the Economic policy",
+    "verdict": "drop",
+    "reason": "La politica economica is a transparent productive phrase with no special government, register, or scope issue for a C1 learner."
+  },
+  {
+    "id": "it_cold_war_vocab_057",
+    "en": "the Peasants",
+    "verdict": "keep",
+    "reason": "The historical social category contadini must be distinguished from occupational agricoltori and landless wage laborers, the braccianti."
+  },
+  {
+    "id": "it_cold_war_vocab_058",
+    "en": "the Elections",
+    "verdict": "drop",
+    "reason": "Le elezioni is core political vocabulary learned well below C1, and the plural prompt supplies no additional production lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_059",
+    "en": "the Radicalization",
+    "verdict": "drop",
+    "reason": "La radicalizzazione is a transparent academic cognate with regular derivation and no actor, direction, or construction to disambiguate."
+  },
+  {
+    "id": "it_cold_war_vocab_060",
+    "en": "Authoritarianism",
+    "verdict": "drop",
+    "reason": "Autoritarismo is the transparent derivational counterpart of the retained Authoritarian card in the preceding chunk and adds no distinct lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_061",
+    "en": "the Militancy",
+    "verdict": "keep",
+    "reason": "Italian militanza usually denotes organized political participation, whereas English militancy often foregrounds combativeness, creating a genuine false parallel."
+  },
+  {
+    "id": "it_cold_war_vocab_062",
+    "en": "the Industrialization",
+    "verdict": "drop",
+    "reason": "L'industrializzazione is a transparent academic cognate already expected at C1, with no phase, agent, or special collocation selected."
+  },
+  {
+    "id": "it_cold_war_vocab_063",
+    "en": "the Agrarian reform",
+    "verdict": "keep",
+    "reason": "Best item in the land-reform family; riforma agraria names the broader policy package and teaches the important agrario versus agricolo distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_064",
+    "en": "the Urbanization",
+    "verdict": "keep",
+    "reason": "Urbanizzazione has a broader demographic and territorial scope than inurbamento and also carries a technical planning sense in Italian."
+  },
+  {
+    "id": "it_cold_war_vocab_065",
+    "en": "the Strike",
+    "verdict": "drop",
+    "reason": "Lo sciopero is high-frequency core labor vocabulary already expected well below C1, and the isolated singular adds no advanced issue."
+  },
+  {
+    "id": "it_cold_war_vocab_066",
+    "en": "the Trade unions",
+    "verdict": "drop",
+    "reason": "I sindacati is core labor vocabulary shared transparently with the learner's other Romance languages and supplies no distinct advanced lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_067",
+    "en": "the Workers",
+    "verdict": "drop",
+    "reason": "I lavoratori is basic high-frequency vocabulary, and the generic plural provides no sector, class, or register distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_068",
+    "en": "the Redistribution",
+    "verdict": "drop",
+    "reason": "La redistribuzione is a transparent generic cognate; the land-specific item retained in this batch offers the more precise production target."
+  },
+  {
+    "id": "it_cold_war_vocab_069",
+    "en": "the Inequality",
+    "verdict": "drop",
+    "reason": "La disuguaglianza is high-frequency core social and economic vocabulary already expected at C1, with no subtype specified."
+  },
+  {
+    "id": "it_cold_war_vocab_070",
+    "en": "Left-wing",
+    "verdict": "keep",
+    "reason": "The invariant adjectival phrase di sinistra and the misleading temptation to use sinistro create genuine Italian production value."
+  },
+  {
+    "id": "it_cold_war_vocab_071",
+    "en": "Right-wing",
+    "verdict": "drop",
+    "reason": "Constructional mirror of the kept Left-wing item; di destra follows the same invariant pattern and adds no distinct production lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_072",
+    "en": "Centrism",
+    "verdict": "drop",
+    "reason": "Centrismo is a transparent political cognate with regular derivation; the bare prompt does not select its historically specific Italian use."
+  },
+  {
+    "id": "it_cold_war_vocab_073",
+    "en": "the Protest",
+    "verdict": "drop",
+    "reason": "La protesta is transparent, high-frequency vocabulary already owned at C1, and the prompt supplies no construction or institutional sense."
+  },
+  {
+    "id": "it_cold_war_vocab_074",
+    "en": "the Dissent",
+    "verdict": "keep",
+    "reason": "Dissenso, disaccordo, and the stronger sustained opposition encoded by dissidenza require a useful semantic distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_075",
+    "en": "the Social justice",
+    "verdict": "drop",
+    "reason": "La giustizia sociale is a transparent, high-frequency political set phrase that an advanced learner can form directly."
+  },
+  {
+    "id": "it_cold_war_vocab_076",
+    "en": "the Economic growth",
+    "verdict": "drop",
+    "reason": "La crescita economica is transparent core economics vocabulary, with no subtype or collocational problem selected by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_077",
+    "en": "the Popular unity",
+    "verdict": "keep",
+    "reason": "The Chilean context selects the proper coalition name Unità Popolare, whose capitalization distinguishes it from a generic description."
+  },
+  {
+    "id": "it_cold_war_vocab_078",
+    "en": "the Divestment",
+    "verdict": "keep",
+    "reason": "Disinvestimento is a formal economics term whose macroeconomic sense must be distinguished from asset disposal, capital flight, and ethical divestment."
+  },
+  {
+    "id": "it_cold_war_vocab_079",
+    "en": "the Polarization",
+    "verdict": "drop",
+    "reason": "La polarizzazione is a transparent, high-frequency political cognate with regular derivation and no special sense supplied by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_080",
+    "en": "the Foreign relations",
+    "verdict": "keep",
+    "reason": "Relazioni internazionali and rapporti con l'estero are idiomatic state-level terms that must be distinguished from the strategy named by politica estera."
+  }
+]

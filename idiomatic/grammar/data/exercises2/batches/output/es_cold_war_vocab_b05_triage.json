@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_cold_war_vocab_161",
+    "en": "the Berlin Wall",
+    "verdict": "drop",
+    "reason": "Muro de Berlín is an iconic, transparent proper name already expected at C1, and the isolated prompt offers no additional usage distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_162",
+    "en": "the Diplomatic tension",
+    "verdict": "drop",
+    "reason": "Tensión diplomática is a transparent adjective-noun combination with an accurate legacy rendering and no separate advanced production issue."
+  },
+  {
+    "id": "it_cold_war_vocab_163",
+    "en": "the Summits",
+    "verdict": "drop",
+    "reason": "Cumbres is high-frequency political vocabulary already expected at C1; the generic plural supplies no institutional name or collocation to teach."
+  },
+  {
+    "id": "it_cold_war_vocab_164",
+    "en": "the Nuclear testing",
+    "verdict": "keep",
+    "reason": "The weapons context calls for the established collocation ensayos nucleares and a distinction from generic testing of nuclear technology."
+  },
+  {
+    "id": "it_cold_war_vocab_165",
+    "en": "the Cold War frontiers",
+    "verdict": "drop",
+    "reason": "The phrase is both compositional and underspecified: frontiers could denote geopolitical boundaries, ideological fault lines, or limits of scholarship."
+  },
+  {
+    "id": "it_cold_war_vocab_166",
+    "en": "the Ideological expansion",
+    "verdict": "drop",
+    "reason": "Expansión ideológica is a transparent academic collocation whose bare source provides no doctrine, agent, or distinct sense to resolve."
+  },
+  {
+    "id": "it_cold_war_vocab_167",
+    "en": "the Conventional forces",
+    "verdict": "keep",
+    "reason": "Fuerzas convencionales is a strategic term whose technical contrast with nuclear forces is not recoverable from the everyday sense of convencional alone."
+  },
+  {
+    "id": "it_cold_war_vocab_168",
+    "en": "the Rearmament",
+    "verdict": "keep",
+    "reason": "Spanish rearme is a compact established noun and guards against the less idiomatic cross-language formation rearmamento."
+  },
+  {
+    "id": "it_cold_war_vocab_169",
+    "en": "the De-escalation",
+    "verdict": "keep",
+    "reason": "Desescalada is an established military and institutional process term whose gradual meaning and spelling merit explicit treatment."
+  },
+  {
+    "id": "it_cold_war_vocab_170",
+    "en": "the Nuclear fallout",
+    "verdict": "keep",
+    "reason": "Old_back's caída nuclear is a serious literal mistranslation; the physical term is lluvia radiactiva, distinct from figurative consequences."
+  },
+  {
+    "id": "it_cold_war_vocab_171",
+    "en": "the Nuclear umbrella",
+    "verdict": "keep",
+    "reason": "Paraguas nuclear is a specialist deterrence metaphor that must be distinguished from physical missile defence."
+  },
+  {
+    "id": "it_cold_war_vocab_172",
+    "en": "the Military parade",
+    "verdict": "drop",
+    "reason": "Desfile militar is a transparent, high-frequency phrase with no government, false-friend, or specialist-sense issue."
+  },
+  {
+    "id": "it_cold_war_vocab_173",
+    "en": "Cold peace",
+    "verdict": "keep",
+    "reason": "Paz fría is an analytical label whose post-conflict meaning must be distinguished from the historically specific Guerra Fría."
+  },
+  {
+    "id": "it_cold_war_vocab_174",
+    "en": "to confront",
+    "verdict": "keep",
+    "reason": "The adversarial sense requires enfrentarse a, while the tempting cognate confrontar often expresses careo, comparison, or contrast."
+  },
+  {
+    "id": "it_cold_war_vocab_175",
+    "en": "to oppose",
+    "verdict": "keep",
+    "reason": "Spanish recasts the English transitive verb as the pronominal frame oponerse a, making government the teaching value."
+  },
+  {
+    "id": "it_cold_war_vocab_176",
+    "en": "to align",
+    "verdict": "keep",
+    "reason": "Geopolitical alignment requires the pronominal frame alinearse con and presents a genuine interference risk from French s'aligner sur."
+  },
+  {
+    "id": "it_cold_war_vocab_177",
+    "en": "to infiltrate",
+    "verdict": "keep",
+    "reason": "The card can teach the contrast between infiltrarse en una organización and infiltrar a un agente en ella, which old_back leaves unresolved."
+  },
+  {
+    "id": "it_cold_war_vocab_178",
+    "en": "to destabilize",
+    "verdict": "drop",
+    "reason": "Desestabilizar is a transparent formal cognate with ordinary transitive syntax, and the bare prompt offers no distinct advanced lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_179",
+    "en": "to censor",
+    "verdict": "drop",
+    "reason": "Censurar is a transparent, high-frequency political cognate with an accurate legacy rendering and no constructional issue in the bare prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_180",
+    "en": "to expropriate",
+    "verdict": "drop",
+    "reason": "Expropiar is a transparent formal cognate already expected at C1; the prompt gives no property, beneficiary, or legal construction to disambiguate."
+  },
+  {
+    "id": "it_cold_war_vocab_181",
+    "en": "to nationalize",
+    "verdict": "drop",
+    "reason": "Nacionalizar is a transparent political-economic cognate with ordinary transitive use and no additional sense selected by the source."
+  },
+  {
+    "id": "it_cold_war_vocab_182",
+    "en": "to mobilize",
+    "verdict": "drop",
+    "reason": "The bare prompt is too broad to choose among mobilizar troops or resources, movilizar a supporters, and the intransitive movilizarse."
+  },
+  {
+    "id": "it_cold_war_vocab_183",
+    "en": "to resist",
+    "verdict": "keep",
+    "reason": "Spanish distinguishes transitive resistir una presión from pronominal resistirse a hacer algo, a consequential valency contrast absent from old_back."
+  },
+  {
+    "id": "it_cold_war_vocab_184",
+    "en": "to repress",
+    "verdict": "drop",
+    "reason": "Reprimir is a transparent, high-frequency political cognate, and the generic prompt supplies no distinction among suppressing protests, emotions, or information."
+  },
+  {
+    "id": "it_cold_war_vocab_185",
+    "en": "to embargo",
+    "verdict": "keep",
+    "reason": "Imponer un embargo a un Estado fixes the trade-sanctions sense and avoids the judicial-seizure reading readily activated by bare embargar."
+  },
+  {
+    "id": "it_cold_war_vocab_186",
+    "en": "to elect",
+    "verdict": "drop",
+    "reason": "Elegir is core vocabulary with ordinary transitive syntax; the source does not select an office, procedure, or construction that would justify a C1 card."
+  },
+  {
+    "id": "it_cold_war_vocab_187",
+    "en": "to negotiate",
+    "verdict": "drop",
+    "reason": "Negociar is a transparent, high-frequency cognate, and the bare prompt gives no basis for choosing among negotiating terms, with a party, or over an issue."
+  },
+  {
+    "id": "it_cold_war_vocab_188",
+    "en": "to protest",
+    "verdict": "keep",
+    "reason": "Unlike English protest something, the selected Spanish objection sense normally uses protestar contra or por, creating a useful government lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_189",
+    "en": "to radicalize",
+    "verdict": "drop",
+    "reason": "Radicalizar is a transparent cognate, while the bare source does not decide between causing radicalisation and the pronominal radicalizarse."
+  },
+  {
+    "id": "it_cold_war_vocab_190",
+    "en": "to industrialize",
+    "verdict": "drop",
+    "reason": "Industrializar is a transparent formal cognate, and the generic prompt does not distinguish a transitive development policy from industrializarse."
+  },
+  {
+    "id": "it_cold_war_vocab_191",
+    "en": "to accelerate",
+    "verdict": "drop",
+    "reason": "Acelerar is a transparent, high-frequency cognate, and no specialist object or transitive-versus-pronominal reading is selected."
+  },
+  {
+    "id": "it_cold_war_vocab_192",
+    "en": "to dissent",
+    "verdict": "keep",
+    "reason": "Disentir de is a formal argumentative verb with governed de and a natural noncognate alternative, discrepar de."
+  },
+  {
+    "id": "it_cold_war_vocab_193",
+    "en": "to exile",
+    "verdict": "keep",
+    "reason": "Old_back is malformed, and the transitive exiliar a alguien must be distinguished from the subject-changing pronominal exiliarse."
+  },
+  {
+    "id": "it_cold_war_vocab_194",
+    "en": "to surveil",
+    "verdict": "keep",
+    "reason": "Spanish requires vigilar or mantener bajo vigilancia rather than an English/French-shaped calque, and old_back contains a spurious purpose marker."
+  },
+  {
+    "id": "it_cold_war_vocab_195",
+    "en": "to disarm",
+    "verdict": "drop",
+    "reason": "Desarmar is familiar, transparent vocabulary; the richer distinction between arms control and disarmament is already taught in the preceding batch."
+  },
+  {
+    "id": "it_cold_war_vocab_196",
+    "en": "to deter",
+    "verdict": "keep",
+    "reason": "Disuadir a alguien de hacer algo has a multi-part government pattern and a strategic meaning distinct from ordinary persuasion."
+  },
+  {
+    "id": "it_cold_war_vocab_197",
+    "en": "to escalate",
+    "verdict": "keep",
+    "reason": "Conflict-related escalar is an accepted contemporary use whose transitive and intransitive patterns, register, and relation to intensificar merit treatment."
+  },
+  {
+    "id": "it_cold_war_vocab_198",
+    "en": "to proliferate",
+    "verdict": "keep",
+    "reason": "Spanish proliferar is intransitive, unlike the causative use available in English, so its valency supplies real production value despite the cognate form."
+  },
+  {
+    "id": "it_cold_war_vocab_199",
+    "en": "to integrate",
+    "verdict": "drop",
+    "reason": "The preceding retained Integration card already teaches integración en/de, and this underspecified cognate adds no distinct sense beyond that word family."
+  },
+  {
+    "id": "it_cold_war_vocab_200",
+    "en": "to transition",
+    "verdict": "keep",
+    "reason": "Old_back is malformed and nominal; the idiomatic frame pasar de ... a ... teaches both endpoints without requiring the neologism transicionar."
+  }
+]

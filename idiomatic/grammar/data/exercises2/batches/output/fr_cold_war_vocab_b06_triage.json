@@ -1,0 +1,134 @@
+[
+  {
+    "id": "it_cold_war_vocab_201",
+    "en": "to invest",
+    "verdict": "drop",
+    "reason": "Investir is transparent, high-frequency vocabulary already expected at C1, and the bare prompt does not select a financial, developmental, military, or figurative frame."
+  },
+  {
+    "id": "it_cold_war_vocab_202",
+    "en": "to subvert",
+    "verdict": "keep",
+    "reason": "Subvertir is a marked formal verb whose direct alteration of an established order supports a useful semantic contrast with the gradual weakening expressed by saper in item 222."
+  },
+  {
+    "id": "it_cold_war_vocab_203",
+    "en": "to control",
+    "verdict": "drop",
+    "reason": "Contrôler is core vocabulary, while the isolated prompt cannot choose among checking, supervision, command, restraint, territorial control, and the result-oriented maîtriser."
+  },
+  {
+    "id": "it_cold_war_vocab_204",
+    "en": "to modernize",
+    "verdict": "drop",
+    "reason": "Moderniser is a transparent regular cognate, and the source supplies no specialist object or transitive-versus-pronominal distinction that would create an advanced lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_205",
+    "en": "to urbanize",
+    "verdict": "drop",
+    "reason": "Urbaniser is a transparent formal cognate, and the prompt leaves a transitive planning action and the pronominal demographic process s’urbaniser unresolved."
+  },
+  {
+    "id": "it_cold_war_vocab_206",
+    "en": "to deforest",
+    "verdict": "keep",
+    "reason": "French favors the noncognate déboiser, while a useful object-sensitive distinction separates removing forest cover from purpose-driven clearing expressed by défricher."
+  },
+  {
+    "id": "it_cold_war_vocab_207",
+    "en": "to restrict",
+    "verdict": "drop",
+    "reason": "Restreindre is familiar productive vocabulary at C1, and the generic prompt selects no specialist restriction, argument pattern, or less obvious French rendering."
+  },
+  {
+    "id": "it_cold_war_vocab_208",
+    "en": "to broadcast",
+    "verdict": "keep",
+    "reason": "French media usage distinguishes diffuser or émettre original content from retransmettre a relayed signal, program, or event."
+  },
+  {
+    "id": "it_cold_war_vocab_209",
+    "en": "to innovate",
+    "verdict": "keep",
+    "reason": "Although the lemma is transparent, careful French normally uses innover intransitively or with a field complement, creating a real production contrast with transitive English uses."
+  },
+  {
+    "id": "it_cold_war_vocab_210",
+    "en": "to impose",
+    "verdict": "keep",
+    "reason": "The productive political frame imposer quelque chose à quelqu’un adds consequential recipient government for sanctions, restrictions, obligations, and costs."
+  },
+  {
+    "id": "it_cold_war_vocab_211",
+    "en": "to manipulate",
+    "verdict": "drop",
+    "reason": "Manipuler is a transparent, high-frequency cognate with ordinary transitive syntax, and the source provides no object or domain that would select a distinct advanced sense."
+  },
+  {
+    "id": "it_cold_war_vocab_212",
+    "en": "to retaliate",
+    "verdict": "keep",
+    "reason": "Riposter à supplies useful government for retaliation triggered by an act, while actor-directed reprisals require a different French construction."
+  },
+  {
+    "id": "it_cold_war_vocab_213",
+    "en": "to colonize",
+    "verdict": "drop",
+    "reason": "Coloniser is a transparent geopolitical cognate with ordinary transitive syntax, and the source does not select imperial rule, settlement, biological growth, or a figurative extension."
+  },
+  {
+    "id": "it_cold_war_vocab_214",
+    "en": "to annex",
+    "verdict": "drop",
+    "reason": "Annexer is a transparent, familiar specialist verb in political history, and the isolated prompt adds no legal, territorial, morphological, or constructional distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_215",
+    "en": "to advocate",
+    "verdict": "keep",
+    "reason": "Plaider pour provides an idiomatic formal advocacy frame and distinguishes active support from the narrower recommendation often conveyed by préconiser."
+  },
+  {
+    "id": "it_cold_war_vocab_216",
+    "en": "to penetrate",
+    "verdict": "drop",
+    "reason": "The bare source is too polysemous to choose among pénétrer, entrer dans, and intelligence-related infiltrer, whose specialist construction was already retained in item 177."
+  },
+  {
+    "id": "it_cold_war_vocab_217",
+    "en": "to strategize",
+    "verdict": "keep",
+    "reason": "Idiomatic careful French normally uses élaborer or mettre au point une stratégie rather than reproducing the English denominal verb."
+  },
+  {
+    "id": "it_cold_war_vocab_218",
+    "en": "to expand",
+    "verdict": "drop",
+    "reason": "The basic prompt is too broad to choose among étendre, développer, élargir, s’étendre, and prendre de l’ampleur without inventing a sense or argument structure."
+  },
+  {
+    "id": "it_cold_war_vocab_219",
+    "en": "to delegate",
+    "verdict": "drop",
+    "reason": "Déléguer is a transparent, high-frequency formal cognate, and the bare prompt does not distinguish assigning a task or authority from sending someone as a representative."
+  },
+  {
+    "id": "it_cold_war_vocab_220",
+    "en": "to intimidate",
+    "verdict": "drop",
+    "reason": "Intimider is a transparent, high-frequency cognate with ordinary transitive syntax, and the prompt supplies no coercive complement or distinct specialist use."
+  },
+  {
+    "id": "it_cold_war_vocab_221",
+    "en": "to revolutionize",
+    "verdict": "drop",
+    "reason": "Révolutionner is a transparent regular cognate, and the isolated source supplies no object or evaluative context that would create advanced lexical value."
+  },
+  {
+    "id": "it_cold_war_vocab_222",
+    "en": "to undermine",
+    "verdict": "keep",
+    "reason": "Saper expresses gradual institutional or epistemic erosion and supports a consequential contrast with the more direct disruption conveyed by subvertir."
+  }
+]

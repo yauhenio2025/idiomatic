@@ -1,0 +1,387 @@
+[
+  {
+    "id": "it_cold_war_vocab_121",
+    "en": "the Patron-client relations",
+    "category": "lexical-expression",
+    "tl": "die Patron-Klient-Beziehungen",
+    "alts": [
+      "die Patronagebeziehungen"
+    ],
+    "register": "Formal political-science term for asymmetric reciprocal ties in which a patron grants resources or protection in return for loyalty and support.",
+    "trap": "Patronage alone can mean the distribution of favors; Patron-Klient-Beziehungen explicitly names the durable relationship and takes hyphens between its nominal components.",
+    "example_tl": "Die Patron-Klient-Beziehungen sicherten lokalen Machthabern Loyalität, während staatliche Aufträge, Kredite und Ämter gezielt an politisch abhängige Gefolgsleute verteilt wurden.",
+    "example_en": "Patron-client relations secured loyalty for local power holders, while state contracts, loans and offices were deliberately distributed to politically dependent followers.",
+    "cloze": "Die {{c1::Patron-Klient-Beziehungen}} sicherten lokalen Machthabern Loyalität, während staatliche Aufträge, Kredite und Ämter gezielt an politisch abhängige Gefolgsleute verteilt wurden.",
+    "note": "The legacy rendering is accurate; the card adds the exchange structure that distinguishes the term from isolated favoritism."
+  },
+  {
+    "id": "it_cold_war_vocab_122",
+    "en": "the Amazon deforestation",
+    "category": "lexical-expression",
+    "tl": "die Entwaldung Amazoniens",
+    "alts": [
+      "die Abholzung im Amazonasgebiet"
+    ],
+    "register": "Neutral-formal environmental and policy expression; Entwaldung covers lasting forest loss, whereas Abholzung focuses more narrowly on tree clearing.",
+    "trap": "Der Amazonas normally names the river; the region is Amazonien or das Amazonasgebiet, so Abholzung des Amazonas is semantically misleading.",
+    "example_tl": "Die Entwaldung Amazoniens beschleunigte sich, als Straßenbau, Viehzucht und Landspekulation immer tiefer in zuvor schwer zugängliche Waldgebiete vordrangen.",
+    "example_en": "Amazon deforestation accelerated as road construction, cattle ranching and land speculation pushed ever deeper into previously hard-to-reach forest areas.",
+    "cloze": "Die {{c1::Entwaldung Amazoniens}} beschleunigte sich, als Straßenbau, Viehzucht und Landspekulation immer tiefer in zuvor schwer zugängliche Waldgebiete vordrangen.",
+    "note": "Materially corrects old_back, whose genitive can make the river rather than the Amazon region the object of deforestation."
+  },
+  {
+    "id": "it_cold_war_vocab_123",
+    "en": "the Integration",
+    "category": "lexical-noun",
+    "tl": "die Integration in + Akk.",
+    "alts": [
+      "die Eingliederung in + Akk."
+    ],
+    "register": "Neutral-formal institutional term; Integration stresses incorporation into a larger political, economic or social structure.",
+    "trap": "German expresses the destination with in plus accusative: die Integration in einen Staatenbund, not a calque with *zu or *mit.",
+    "example_tl": "Die Integration in regionale Bündnisse versprach wirtschaftliche Stabilität, schränkte aber den außenpolitischen Spielraum jener Staaten ein, die zwischen den Machtblöcken lavierten.",
+    "example_en": "Integration into regional alliances promised economic stability but restricted the foreign-policy room for maneuver of states navigating between the power blocs.",
+    "cloze": "Die {{c1::Integration in}} regionale Bündnisse versprach wirtschaftliche Stabilität, schränkte aber den außenpolitischen Spielraum jener Staaten ein, die zwischen den Machtblöcken lavierten.",
+    "note": "Retained here under the cross-topic duplicate report, which assigns this exact prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_124",
+    "en": "the Literacy",
+    "category": "lexical-expression",
+    "tl": "die Lese- und Schreibkompetenz",
+    "alts": [
+      "die Schriftsprachkompetenz"
+    ],
+    "register": "Neutral educational and policy expression for the acquired ability to read and write; Schriftsprachkompetenz is more technical and can imply a broader competence continuum.",
+    "trap": "Alphabetisierung usually denotes the process or policy of teaching literacy, not the ability already possessed; Alphabetisierungsgrad is a population rate.",
+    "example_tl": "Eine höhere Lese- und Schreibkompetenz erweiterte den Zugang zu politischen Informationen, beseitigte jedoch weder soziale Ungleichheit noch die staatliche Kontrolle der Presse.",
+    "example_en": "Higher literacy expanded access to political information but eliminated neither social inequality nor state control of the press.",
+    "cloze": "Eine höhere {{c1::Lese- und Schreibkompetenz}} erweiterte den Zugang zu politischen Informationen, beseitigte jedoch weder soziale Ungleichheit noch die staatliche Kontrolle der Presse.",
+    "note": "Materially corrects old_back by selecting the ability rather than the process of teaching people to read and write."
+  },
+  {
+    "id": "it_cold_war_vocab_130",
+    "en": "the Evangelical rise",
+    "category": "lexical-expression",
+    "tl": "das Erstarken evangelikaler Kirchen",
+    "alts": [
+      "der Aufstieg evangelikaler Bewegungen"
+    ],
+    "register": "Neutral-formal sociological expression for the growing membership and influence of evangelical churches or movements, particularly in Latin America.",
+    "trap": "Evangelikal refers to evangelical currents, while evangelisch is the broad German label for Protestant churches and is not equivalent here.",
+    "example_tl": "Das Erstarken evangelikaler Kirchen veränderte Brasiliens Parteienlandschaft, weil gut organisierte Gemeinden zunehmend Kandidaten unterstützten und eigene Mediennetzwerke aufbauten.",
+    "example_en": "The rise of evangelical churches changed Brazil's party landscape as well-organized congregations increasingly supported candidates and built their own media networks.",
+    "cloze": "Das {{c1::Erstarken evangelikaler Kirchen}} veränderte Brasiliens Parteienlandschaft, weil gut organisierte Gemeinden zunehmend Kandidaten unterstützten und eigene Mediennetzwerke aufbauten.",
+    "note": "Materially sharpens old_back: Aufstieg der Evangelikalen foregrounds people, while the source context concerns the institutional growth of churches and movements."
+  },
+  {
+    "id": "it_cold_war_vocab_131",
+    "en": "the Illiteracy",
+    "category": "lexical-noun",
+    "tl": "der Analphabetismus",
+    "alts": [
+      "die fehlende Lese- und Schreibkompetenz"
+    ],
+    "register": "Neutral-formal policy term for the social phenomenon; person-centered prose often prefers descriptions of limited or absent literacy skills.",
+    "trap": "Analphabetismus names the phenomenon, whereas Analphabet or Analphabetin labels a person; funktionaler Analphabetismus refers specifically to severely limited everyday literacy.",
+    "example_tl": "Der Analphabetismus blieb in ländlichen Regionen hoch, obwohl nationale Bildungsprogramme mehr Schulen eröffneten und die Schulpflicht formal längst ausgeweitet worden war.",
+    "example_en": "Illiteracy remained high in rural regions although national education programs had opened more schools and compulsory schooling had formally been extended long before.",
+    "cloze": "Der {{c1::Analphabetismus}} blieb in ländlichen Regionen hoch, obwohl nationale Bildungsprogramme mehr Schulen eröffneten und die Schulpflicht formal längst ausgeweitet worden war.",
+    "note": "Selects the established policy term over legacy Analphabetentum and records a more person-centered descriptive alternative."
+  },
+  {
+    "id": "it_cold_war_vocab_132",
+    "en": "the Frontier expansion",
+    "category": "lexical-expression",
+    "tl": "die Ausweitung der Agrargrenze",
+    "alts": [
+      "die Expansion der landwirtschaftlichen Nutzungsgrenze"
+    ],
+    "register": "Formal development and environmental-history term for agriculture and settlement advancing into previously uncultivated territory.",
+    "trap": "Here frontier is a moving agricultural settlement boundary, not a national border; Ausdehnung der Grenzen wrongly suggests territorial enlargement of a state.",
+    "example_tl": "Die Ausweitung der Agrargrenze verdrängte indigene Gemeinschaften, beschleunigte die Entwaldung und machte abgelegene Regionen stärker von globalen Rohstoffpreisen abhängig.",
+    "example_en": "Frontier expansion displaced Indigenous communities, accelerated deforestation and made remote regions more dependent on global commodity prices.",
+    "cloze": "Die {{c1::Ausweitung der Agrargrenze}} verdrängte indigene Gemeinschaften, beschleunigte die Entwaldung und machte abgelegene Regionen stärker von globalen Rohstoffpreisen abhängig.",
+    "note": "Materially corrects old_back, which interprets frontier as a state's borders and loses the Latin American land-use concept."
+  },
+  {
+    "id": "it_cold_war_vocab_133",
+    "en": "the Detente",
+    "category": "lexical-noun",
+    "tl": "die Entspannungspolitik",
+    "alts": [
+      "die Entspannung"
+    ],
+    "register": "Established historical and diplomatic term for policies intended to ease East-West tensions; Entspannung can also name the resulting phase or process.",
+    "trap": "The French loanword Détente occurs in specialist German, but Entspannungspolitik is the normal production term when the policy rather than merely a calmer condition is meant.",
+    "example_tl": "Die Entspannungspolitik schuf neue Gesprächskanäle zwischen den Supermächten, ohne ihre ideologische Rivalität oder die gewaltsamen Stellvertreterkonflikte in der Peripherie zu beenden.",
+    "example_en": "Détente created new channels of communication between the superpowers without ending their ideological rivalry or the violent proxy conflicts on the periphery.",
+    "cloze": "Die {{c1::Entspannungspolitik}} schuf neue Gesprächskanäle zwischen den Supermächten, ohne ihre ideologische Rivalität oder die gewaltsamen Stellvertreterkonflikte in der Peripherie zu beenden.",
+    "note": "The legacy rendering is accurate; the alternative covers cases where English détente refers to the broader period or condition rather than a deliberate policy."
+  },
+  {
+    "id": "it_cold_war_vocab_134",
+    "en": "the Espionage",
+    "category": "lexical-noun",
+    "tl": "die Spionage",
+    "alts": [],
+    "register": "Neutral-formal security and historical term for covertly obtaining protected information; it normally carries a hostile or unlawful implication.",
+    "trap": "Spionage is the activity, while Geheimdienst or Nachrichtendienst names an organization; German idiom is Spionage betreiben, not mechanically *Spionage machen.",
+    "example_tl": "Die Spionage verlagerte sich zunehmend auf technische Aufklärung, doch menschliche Quellen blieben entscheidend, wenn politische Absichten hinter militärischen Signalen erkannt werden sollten.",
+    "example_en": "Espionage increasingly shifted toward technical intelligence, but human sources remained crucial when political intentions behind military signals had to be discerned.",
+    "cloze": "Die {{c1::Spionage}} verlagerte sich zunehmend auf technische Aufklärung, doch menschliche Quellen blieben entscheidend, wenn politische Absichten hinter militärischen Signalen erkannt werden sollten.",
+    "note": "Retained here under the cross-topic duplicate report, which assigns this exact prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_135",
+    "en": "the Proxy war",
+    "category": "lexical-noun",
+    "tl": "der Stellvertreterkrieg",
+    "alts": [
+      "der Proxykrieg"
+    ],
+    "register": "Established political and historical term; Proxykrieg is a newer anglicism used in current commentary but is less traditional.",
+    "trap": "A Stellvertreterkrieg is fought by local parties backed by outside powers; Stellvertreter here does not mean a formally appointed deputy.",
+    "example_tl": "Der Stellvertreterkrieg in Angola verband lokale Machtkämpfe mit globaler Systemkonkurrenz, während ausländische Mächte Waffen, Berater und finanzielle Unterstützung bereitstellten.",
+    "example_en": "The proxy war in Angola linked local power struggles with global systemic rivalry while foreign powers supplied weapons, advisers and financial support.",
+    "cloze": "Der {{c1::Stellvertreterkrieg}} in Angola verband lokale Machtkämpfe mit globaler Systemkonkurrenz, während ausländische Mächte Waffen, Berater und finanzielle Unterstützung bereitstellten.",
+    "note": "The legacy rendering is accurate; the card distinguishes the established German compound from its literal nonpolitical reading."
+  },
+  {
+    "id": "it_cold_war_vocab_137",
+    "en": "the Nuclear arms race",
+    "category": "lexical-expression",
+    "tl": "das nukleare Wettrüsten",
+    "alts": [
+      "das atomare Wettrüsten"
+    ],
+    "register": "Neutral-formal historical and security-policy expression; nuklear is standard in contemporary analytical prose, while atomar remains common in established compounds.",
+    "trap": "English arms race maps idiomatically to Wettrüsten, not to a literal *Rüstungsrennen; the noun is neuter and normally singular.",
+    "example_tl": "Das nukleare Wettrüsten band enorme Ressourcen, erhöhte das Risiko von Fehlkalkulationen und machte technische Frühwarnsysteme zu einem zentralen Bestandteil strategischer Planung.",
+    "example_en": "The nuclear arms race consumed enormous resources, increased the risk of miscalculation and made technical early-warning systems a central component of strategic planning.",
+    "cloze": "Das {{c1::nukleare Wettrüsten}} band enorme Ressourcen, erhöhte das Risiko von Fehlkalkulationen und machte technische Frühwarnsysteme zu einem zentralen Bestandteil strategischer Planung.",
+    "note": "The legacy atomare Wettrüsten is also idiomatic; the main form adopts the currently prevalent analytical adjective nuklear."
+  },
+  {
+    "id": "it_cold_war_vocab_139",
+    "en": "the Domino theory",
+    "category": "lexical-noun",
+    "tl": "die Dominotheorie",
+    "alts": [],
+    "register": "Established historical and political-science label, often used critically for a strategic assumption in United States Cold War policy.",
+    "trap": "German normally forms the closed compound Dominotheorie; the concept concerns a presumed chain of political regime changes, not literal domino pieces.",
+    "example_tl": "Die Dominotheorie prägte Washingtons Interventionen in Südostasien, weil Entscheidungsträger lokale Revolutionen als zwangsläufige Glieder einer weltweiten kommunistischen Expansion deuteten.",
+    "example_en": "Domino theory shaped Washington's interventions in Southeast Asia because decision-makers interpreted local revolutions as inevitable links in a worldwide communist expansion.",
+    "cloze": "Die {{c1::Dominotheorie}} prägte Washingtons Interventionen in Südostasien, weil Entscheidungsträger lokale Revolutionen als zwangsläufige Glieder einer weltweiten kommunistischen Expansion deuteten.",
+    "note": "Self-review normalized the acceptable legacy hyphenation to the conventional closed German compound and made the disputed causal premise explicit in the example."
+  },
+  {
+    "id": "it_cold_war_vocab_140",
+    "en": "the Mutually Assured Destruction (MAD)",
+    "category": "lexical-expression",
+    "tl": "die gegenseitige gesicherte Zerstörung (MAD)",
+    "alts": [
+      "die wechselseitig gesicherte Zerstörung"
+    ],
+    "register": "Formal nuclear-strategy term; German discussions usually retain the English acronym MAD even when translating the full expression.",
+    "trap": "Assured here means made certain by survivable retaliation, so gesichert is correct; the legacy zugesichert wrongly suggests that destruction was verbally promised.",
+    "example_tl": "Die gegenseitige gesicherte Zerstörung beruhte auf der Fähigkeit beider Supermächte, selbst nach einem nuklearen Erstschlag noch vernichtend zurückzuschlagen.",
+    "example_en": "Mutually assured destruction rested on both superpowers' ability to retaliate devastatingly even after suffering a nuclear first strike.",
+    "cloze": "Die {{c1::gegenseitige gesicherte Zerstörung}} beruhte auf der Fähigkeit beider Supermächte, selbst nach einem nuklearen Erstschlag noch vernichtend zurückzuschlagen.",
+    "note": "Materially corrects old_back to the established German strategic term; the headword retains MAD as the conventional identifying acronym."
+  },
+  {
+    "id": "it_cold_war_vocab_142",
+    "en": "the Deterrence",
+    "category": "lexical-noun",
+    "tl": "die Abschreckung",
+    "alts": [
+      "die Deterrenz"
+    ],
+    "register": "Standard security-policy term for preventing action through a credible threat of unacceptable costs; Deterrenz is a rarer specialist synonym.",
+    "trap": "Abschreckung is prevention through threatened costs, whereas Abwehr means defending against an attack once attempted; the two are not interchangeable.",
+    "example_tl": "Die nukleare Abschreckung setzte voraus, dass jede Seite die gegnerische Vergeltungsfähigkeit für glaubwürdig hielt und zugleich unbeabsichtigte Eskalationen vermeiden konnte.",
+    "example_en": "Nuclear deterrence presupposed that each side considered the adversary's retaliatory capability credible and could simultaneously avoid unintended escalation.",
+    "cloze": "Die nukleare {{c1::Abschreckung}} setzte voraus, dass jede Seite die gegnerische Vergeltungsfähigkeit für glaubwürdig hielt und zugleich unbeabsichtigte Eskalationen vermeiden konnte.",
+    "note": "The legacy rendering is accurate; the example fixes the strategic sense rather than the everyday act of frightening someone off."
+  },
+  {
+    "id": "it_cold_war_vocab_143",
+    "en": "the Non-aligned movement",
+    "category": "lexical-expression",
+    "tl": "die Bewegung der Blockfreien",
+    "alts": [
+      "die Blockfreienbewegung"
+    ],
+    "register": "Established name in diplomatic and historical prose for the international movement founded by states outside the Cold War alliance blocs.",
+    "trap": "Blockfrei does not necessarily mean neutral or equally distant from both blocs; members could take strong positions while rejecting formal bloc alignment.",
+    "example_tl": "Die Bewegung der Blockfreien beanspruchte außenpolitische Eigenständigkeit, obwohl ihre Mitglieder wirtschaftlich und militärisch sehr unterschiedlich eng an die Machtblöcke gebunden blieben.",
+    "example_en": "The Non-Aligned Movement claimed foreign-policy autonomy even though its members remained tied to the power blocs to widely differing economic and military degrees.",
+    "cloze": "Die {{c1::Bewegung der Blockfreien}} beanspruchte außenpolitische Eigenständigkeit, obwohl ihre Mitglieder wirtschaftlich und militärisch sehr unterschiedlich eng an die Machtblöcke gebunden blieben.",
+    "note": "The legacy rendering and the compact alternative are both established; self-review removed any implication that non-alignment required political neutrality."
+  },
+  {
+    "id": "it_cold_war_vocab_144",
+    "en": "the Satellite state",
+    "category": "lexical-noun",
+    "tl": "der Satellitenstaat",
+    "alts": [],
+    "register": "Historical and political term, usually critical, for a formally sovereign state under the decisive influence of a stronger power.",
+    "trap": "Satellitenstaat is an evaluative dependency label, not a neutral constitutional category and not a state associated with spaceflight or communications satellites.",
+    "example_tl": "Als Satellitenstaat blieb die Republik formal souverän, doch ihre Außenpolitik, Sicherheitsorgane und wirtschaftlichen Prioritäten wurden maßgeblich von Moskau bestimmt.",
+    "example_en": "As a satellite state, the republic remained formally sovereign, but its foreign policy, security organs and economic priorities were largely determined by Moscow.",
+    "cloze": "Als {{c1::Satellitenstaat}} blieb die Republik formal souverän, doch ihre Außenpolitik, Sicherheitsorgane und wirtschaftlichen Prioritäten wurden maßgeblich von Moskau bestimmt.",
+    "note": "The legacy rendering is accurate; the register warning prevents the historical label from being presented as a value-neutral legal status."
+  },
+  {
+    "id": "it_cold_war_vocab_145",
+    "en": "the Sphere of influence",
+    "category": "lexical-noun",
+    "tl": "die Einflusssphäre",
+    "alts": [
+      "der Einflussbereich"
+    ],
+    "register": "Neutral-formal geopolitical term; Einflussbereich is broader and can also refer to an individual's or institution's ordinary remit.",
+    "trap": "Use the lexicalized compound Einflusssphäre rather than the English-shaped *Sphäre des Einflusses; the influencing power commonly follows in the genitive.",
+    "example_tl": "Die Einflusssphäre einer Großmacht entstand nicht nur durch Militärbündnisse, sondern auch durch Kredite, Parteikontakte, Geheimdienstkooperation und wirtschaftliche Abhängigkeiten.",
+    "example_en": "A great power's sphere of influence arose not only through military alliances but also through loans, party contacts, intelligence cooperation and economic dependencies.",
+    "cloze": "Die {{c1::Einflusssphäre}} einer Großmacht entstand nicht nur durch Militärbündnisse, sondern auch durch Kredite, Parteikontakte, Geheimdienstkooperation und wirtschaftliche Abhängigkeiten.",
+    "note": "The legacy rendering is accurate; the card adds the productive genitive pattern and distinguishes the geopolitical compound from broader Einflussbereich."
+  },
+  {
+    "id": "it_cold_war_vocab_146",
+    "en": "the Defectors",
+    "category": "lexical-noun",
+    "tl": "die Überläufer",
+    "alts": [],
+    "register": "Historical and intelligence term for people who abandon one side for an opposing side; it can sound judgmental from the abandoned side's perspective.",
+    "trap": "The underlying separable verb is überlaufen and forms the perfect with sein: er ist zum Gegner übergelaufen; Aussteiger does not imply changing sides.",
+    "example_tl": "Die Überläufer lieferten westlichen Diensten wertvolle Informationen, doch ihre Aussagen wurden häufig von Eigeninteressen, Erinnerungslücken und Erwartungen der Befrager geprägt.",
+    "example_en": "The defectors provided Western services with valuable information, but their statements were often shaped by self-interest, memory gaps and interviewers' expectations.",
+    "cloze": "Die {{c1::Überläufer}} lieferten westlichen Diensten wertvolle Informationen, doch ihre Aussagen wurden häufig von Eigeninteressen, Erinnerungslücken und Erwartungen der Befrager geprägt.",
+    "note": "The legacy plural is accurate; the card supplies the verbal construction and flags the term's perspective-dependent evaluation."
+  },
+  {
+    "id": "it_cold_war_vocab_147",
+    "en": "the Intelligence",
+    "category": "lexical-expression",
+    "tl": "die nachrichtendienstliche Aufklärung",
+    "alts": [],
+    "register": "Formal security term for the collection and analysis side of intelligence; German selects different words for the activity, its products and the responsible organization.",
+    "trap": "English intelligence is polysemous: German Intelligenz means intellect or intelligentsia, while Geheimdienst names an organization rather than the information-gathering activity.",
+    "example_tl": "Die nachrichtendienstliche Aufklärung kombinierte abgefangene Funksprüche mit Agentenberichten, damit politische Entscheidungsträger militärische Fähigkeiten und Absichten der Gegenseite getrennt bewerten konnten.",
+    "example_en": "Intelligence work combined intercepted radio messages with agent reports so that political decision-makers could assess the adversary's military capabilities and intentions separately.",
+    "cloze": "Die {{c1::nachrichtendienstliche Aufklärung}} kombinierte abgefangene Funksprüche mit Agentenberichten, damit politische Entscheidungsträger militärische Fähigkeiten und Absichten der Gegenseite getrennt bewerten konnten.",
+    "note": "The English source is genuinely underspecified. This card selects intelligence activity; if an agency is intended, use Nachrichtendienst or Geheimdienst, and for the product use nachrichtendienstliche Erkenntnisse."
+  },
+  {
+    "id": "it_cold_war_vocab_149",
+    "en": "the Disinformation",
+    "category": "lexical-noun",
+    "tl": "die Desinformation",
+    "alts": [],
+    "register": "Neutral-formal media, security and political term for deliberately created or spread false or misleading information.",
+    "trap": "Desinformation conventionally implies intent to deceive; Fehlinformation can be false by mistake and therefore is not an exact substitute.",
+    "example_tl": "Die Desinformation zielte darauf, Misstrauen zwischen Verbündeten zu säen, oppositionelle Gruppen zu diskreditieren und die Urheberschaft manipulierter Berichte glaubhaft zu verschleiern.",
+    "example_en": "Disinformation aimed to sow mistrust between allies, discredit opposition groups and plausibly conceal the authorship of manipulated reports.",
+    "cloze": "Die {{c1::Desinformation}} zielte darauf, Misstrauen zwischen Verbündeten zu säen, oppositionelle Gruppen zu diskreditieren und die Urheberschaft manipulierter Berichte glaubhaft zu verschleiern.",
+    "note": "Retained here under the cross-topic duplicate report, which assigns this exact prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_151",
+    "en": "the Arms control",
+    "category": "lexical-noun",
+    "tl": "die Rüstungskontrolle",
+    "alts": [],
+    "register": "Established diplomatic and security-policy term for negotiated limits, transparency measures and verification concerning forces or weapon systems.",
+    "trap": "Waffenkontrolle can mean inspecting or controlling weapons, while Abrüstung aims at reduction or elimination; strategic arms control is Rüstungskontrolle.",
+    "example_tl": "Die Rüstungskontrolle begrenzte bestimmte Waffensysteme und schuf Inspektionsregeln, ohne notwendigerweise eine umfassende Abrüstung oder das Ende strategischer Konkurrenz anzustreben.",
+    "example_en": "Arms control limited particular weapon systems and created inspection rules without necessarily seeking comprehensive disarmament or an end to strategic competition.",
+    "cloze": "Die {{c1::Rüstungskontrolle}} begrenzte bestimmte Waffensysteme und schuf Inspektionsregeln, ohne notwendigerweise eine umfassende Abrüstung oder das Ende strategischer Konkurrenz anzustreben.",
+    "note": "Materially corrects old_back, which uses Waffenkontrolle and misses the established strategic distinction between arms control and disarmament."
+  },
+  {
+    "id": "it_cold_war_vocab_152",
+    "en": "the Space race",
+    "category": "lexical-expression",
+    "tl": "der Wettlauf ins All",
+    "alts": [],
+    "register": "Established journalistic and historical expression for United States-Soviet competition in spaceflight and its associated technological prestige.",
+    "trap": "The conventional directional phrase is Wettlauf ins All; Wettrennen im Weltraum suggests a literal race taking place in space and is not the historical label.",
+    "example_tl": "Der Wettlauf ins All verband wissenschaftliche Forschung mit militärischer Raketenentwicklung und verwandelte technische Erfolge in weithin sichtbare Beweise staatlicher Leistungsfähigkeit.",
+    "example_en": "The space race linked scientific research with military missile development and turned technical achievements into highly visible evidence of state capability.",
+    "cloze": "Der {{c1::Wettlauf ins All}} verband wissenschaftliche Forschung mit militärischer Raketenentwicklung und verwandelte technische Erfolge in weithin sichtbare Beweise staatlicher Leistungsfähigkeit.",
+    "note": "Materially replaces the understandable but unidiomatic legacy phrase with the established German historical label."
+  },
+  {
+    "id": "it_cold_war_vocab_155",
+    "en": "the Nuclear proliferation",
+    "category": "lexical-expression",
+    "tl": "die Weiterverbreitung von Kernwaffen",
+    "alts": [
+      "die nukleare Proliferation"
+    ],
+    "register": "Formal security and nonproliferation-policy expression; the German descriptive form is especially clear in institutional prose, while the cognate is common among specialists.",
+    "trap": "Proliferation is the spread of weapons, material or know-how to additional actors, not simply enlargement of an existing arsenal, which is Aufrüstung.",
+    "example_tl": "Die Weiterverbreitung von Kernwaffen gefährdete die strategische Stabilität, weil zusätzliche Atommächte regionale Konflikte verschärfen und bestehende Abschreckungsmodelle unberechenbarer machen konnten.",
+    "example_en": "Nuclear proliferation threatened strategic stability because additional nuclear powers could intensify regional conflicts and make existing deterrence models less predictable.",
+    "cloze": "Die {{c1::Weiterverbreitung von Kernwaffen}} gefährdete die strategische Stabilität, weil zusätzliche Atommächte regionale Konflikte verschärfen und bestehende Abschreckungsmodelle unberechenbarer machen konnten.",
+    "note": "The legacy cognate is valid specialist German; the main rendering selects the clearer institutional expression and the example fixes the spread-to-new-actors sense."
+  },
+  {
+    "id": "it_cold_war_vocab_156",
+    "en": "the Infiltration",
+    "category": "lexical-noun",
+    "tl": "die Unterwanderung",
+    "alts": [
+      "die Infiltration"
+    ],
+    "register": "Political and security term for covert penetration of an organization; Unterwanderung is often accusatory and should be attributed in critical historical prose.",
+    "trap": "In political German, Infiltration can sound technical or operational; Unterwanderung is idiomatic for covert institutional influence but carries the accuser's framing.",
+    "example_tl": "Die behauptete Unterwanderung staatlicher Institutionen diente Sicherheitsbehörden häufig als Vorwand, um Gewerkschaften zu überwachen, Berufsverbote zu verhängen und legitime Opposition zu kriminalisieren.",
+    "example_en": "The alleged infiltration of state institutions often served security authorities as a pretext to monitor trade unions, impose employment bans and criminalize legitimate opposition.",
+    "cloze": "Die behauptete {{c1::Unterwanderung}} staatlicher Institutionen diente Sicherheitsbehörden häufig als Vorwand, um Gewerkschaften zu überwachen, Berufsverbote zu verhängen und legitime Opposition zu kriminalisieren.",
+    "note": "Materially improves the legacy cognate for the political sense. Self-review added behauptete to keep the example from endorsing a historically loaded allegation."
+  },
+  {
+    "id": "it_cold_war_vocab_157",
+    "en": "Glasnost (openness)",
+    "category": "lexical-noun",
+    "tl": "die Glasnost",
+    "alts": [],
+    "register": "Established historical name for Gorbachev's policy of greater openness, public discussion and access to information in the Soviet Union.",
+    "trap": "Use the capitalized loanword Glasnost for the named reform policy; generic Offenheit explains its meaning but loses the specific historical referent.",
+    "example_tl": "Die Glasnost erweiterte den öffentlichen Debattenraum, sodass Journalisten historische Verbrechen thematisierten und Bürger die Glaubwürdigkeit offizieller Darstellungen zunehmend infrage stellten.",
+    "example_en": "Glasnost widened the space for public debate, allowing journalists to address historical crimes and citizens increasingly to question the credibility of official accounts.",
+    "cloze": "Die {{c1::Glasnost}} erweiterte den öffentlichen Debattenraum, sodass Journalisten historische Verbrechen thematisierten und Bürger die Glaubwürdigkeit offizieller Darstellungen zunehmend infrage stellten.",
+    "note": "The legacy headword is accurate; the explanatory parenthesis belongs in the teaching fields rather than in the production headword. Self-review removed a redundant adverb from the example."
+  },
+  {
+    "id": "it_cold_war_vocab_158",
+    "en": "Perestroika (restructuring)",
+    "category": "lexical-noun",
+    "tl": "die Perestroika",
+    "alts": [],
+    "register": "Established historical name for Gorbachev's program of restructuring the Soviet economy and political system.",
+    "trap": "Generic Umstrukturierung is only an explanatory gloss; translating the named Soviet reform this way erases its historical specificity.",
+    "example_tl": "Die Perestroika sollte die sowjetische Wirtschaft erneuern, legte jedoch institutionelle Widersprüche offen, die weder administrative Reformen noch begrenzte Marktmechanismen rasch lösen konnten.",
+    "example_en": "Perestroika was intended to renew the Soviet economy but exposed institutional contradictions that neither administrative reforms nor limited market mechanisms could quickly resolve.",
+    "cloze": "Die {{c1::Perestroika}} sollte die sowjetische Wirtschaft erneuern, legte jedoch institutionelle Widersprüche offen, die weder administrative Reformen noch begrenzte Marktmechanismen rasch lösen konnten.",
+    "note": "The legacy headword is accurate; the explanatory parenthesis is omitted from the production form and supplied through the usage fields."
+  },
+  {
+    "id": "it_cold_war_vocab_159",
+    "en": "the Hotline",
+    "category": "lexical-expression",
+    "tl": "der heiße Draht",
+    "alts": [
+      "die Direktverbindung"
+    ],
+    "register": "Established journalistic and historical expression for the direct crisis-communication link between governments; Direktverbindung is more neutral and technical.",
+    "trap": "Modern German Hotline usually suggests a public service telephone number; the Cold War link is der heiße Draht and was not necessarily a voice call.",
+    "example_tl": "Der heiße Draht zwischen Washington und Moskau sollte in akuten Krisen Missverständnisse verhindern und den Regierungschefs eine rasche, direkte Kommunikation ermöglichen.",
+    "example_en": "The hotline between Washington and Moscow was intended to prevent misunderstandings during acute crises and enable rapid, direct communication between the two leaders.",
+    "cloze": "Der {{c1::heiße Draht}} zwischen Washington und Moskau sollte in akuten Krisen Missverständnisse verhindern und den Regierungschefs eine rasche, direkte Kommunikation ermöglichen.",
+    "note": "Materially corrects the modern-service connotation of old_back by selecting the established Cold War expression."
+  }
+]

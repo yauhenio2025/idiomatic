@@ -1,0 +1,286 @@
+[
+  {
+    "id": "it_cold_war_vocab_163",
+    "en": "the Summits",
+    "category": "lexical-noun",
+    "tl": "as reuniões de cúpula",
+    "alts": [
+      "as cúpulas"
+    ],
+    "register": "Reunião de cúpula é a formulação diplomática explícita; cúpula é a forma jornalística compacta para um encontro de dirigentes.",
+    "trap": "Cúpula também pode designar o grupo dirigente ou uma estrutura arquitetônica; cimeira é corrente no português europeu, mas não é a opção neutra no Brasil.",
+    "example_tl": "Após meses de tensão, as reuniões de cúpula entre Washington e Moscou restabeleceram canais diplomáticos, mas não produziram acordos duradouros sobre armas estratégicas.",
+    "example_en": "After months of tension, the summits between Washington and Moscow restored diplomatic channels but did not produce lasting agreements on strategic weapons.",
+    "cloze": "Após meses de tensão, {{c1::as reuniões de cúpula}} entre Washington e Moscou restabeleceram canais diplomáticos, mas não produziram acordos duradouros sobre armas estratégicas.",
+    "note": "Materially expands old_back's as cúpulas to select the meeting sense unambiguously; the legacy rendering remains a valid compact alternative in context."
+  },
+  {
+    "id": "it_cold_war_vocab_164",
+    "en": "the Nuclear testing",
+    "category": "lexical-noun",
+    "tl": "os testes nucleares",
+    "alts": [
+      "os ensaios nucleares"
+    ],
+    "register": "Termo neutro-formal para explosões experimentais de armas nucleares; ensaios nucleares é uma alternativa mais técnica e institucional.",
+    "trap": "No contexto armamentista, nuclear testing costuma aparecer no plural como testes ou ensaios nucleares; testagem nuclear sugere avaliação técnica de outro tipo.",
+    "example_tl": "Os testes nucleares no Pacífico demonstraram novas capacidades destrutivas, contaminaram comunidades insulares e alimentaram campanhas internacionais pela proibição de explosões atmosféricas.",
+    "example_en": "Nuclear tests in the Pacific demonstrated new destructive capabilities, contaminated island communities, and fueled international campaigns to ban atmospheric explosions.",
+    "cloze": "{{c1::Os testes nucleares}} no Pacífico demonstraram novas capacidades destrutivas, contaminaram comunidades insulares e alimentaram campanhas internacionais pela proibição de explosões atmosféricas.",
+    "note": "Old_back is accurate. Self-review retained the plural weapon-testing sense and excluded testagem, which is not interchangeable in this historical context."
+  },
+  {
+    "id": "it_cold_war_vocab_167",
+    "en": "the Conventional forces",
+    "category": "lexical-noun",
+    "tl": "as forças convencionais",
+    "alts": [],
+    "register": "Termo técnico de defesa para forças e capacidades militares não nucleares, especialmente quando contrastadas com forças nucleares estratégicas ou táticas.",
+    "trap": "Convencionais não significa antiquadas, irregulares ou pouco sofisticadas; neste contraste estratégico, significa armadas com meios não nucleares.",
+    "example_tl": "As forças convencionais permaneceram centrais nos conflitos por procuração, embora a retórica das superpotências privilegiasse mísseis, ogivas e cenários de retaliação.",
+    "example_en": "Conventional forces remained central to proxy conflicts, although superpower rhetoric privileged missiles, warheads, and retaliation scenarios.",
+    "cloze": "{{c1::As forças convencionais}} permaneceram centrais nos conflitos por procuração, embora a retórica das superpotências privilegiasse mísseis, ogivas e cenários de retaliação.",
+    "note": "Old_back supplies the established term; the card fixes its specialist non-nuclear sense rather than the everyday meaning of convencional."
+  },
+  {
+    "id": "it_cold_war_vocab_169",
+    "en": "the De-escalation",
+    "category": "lexical-noun",
+    "tl": "a desescalada",
+    "alts": [
+      "a redução das tensões"
+    ],
+    "register": "Desescalada é um termo formal de diplomacia e defesa para a redução progressiva da hostilidade; a alternativa é mais transparente e menos técnica.",
+    "trap": "A grafia portuguesa é desescalada, sem hífen; uma pausa isolada nos combates não constitui necessariamente um processo de desescalada.",
+    "example_tl": "A desescalada começou com a retirada de artilharia da fronteira e avançou quando observadores internacionais passaram a verificar os compromissos assumidos.",
+    "example_en": "De-escalation began with the withdrawal of artillery from the border and progressed when international observers began verifying the commitments made.",
+    "cloze": "{{c1::A desescalada}} começou com a retirada de artilharia da fronteira e avançou quando observadores internacionais passaram a verificar os compromissos assumidos.",
+    "note": "Old_back has the right lexeme apart from unnecessary capitalization. Self-review retained desescalada after confirming current Brazilian military usage and rejected distensão as a full alternative because it is broader."
+  },
+  {
+    "id": "it_cold_war_vocab_170",
+    "en": "the Nuclear fallout",
+    "category": "lexical-noun",
+    "tl": "a precipitação radioativa",
+    "alts": [
+      "a chuva radioativa"
+    ],
+    "register": "Precipitação radioativa é o termo técnico para material radioativo que retorna à superfície; chuva radioativa é mais acessível, porém menos precisa.",
+    "trap": "O fallout físico é radioativo, não simplesmente nuclear; em sentido figurado, fallout costuma exigir consequências ou repercussões, não precipitação.",
+    "example_tl": "A precipitação radioativa contaminou plantações muito além da área de testes, expondo populações que jamais haviam sido informadas sobre os riscos.",
+    "example_en": "Radioactive fallout contaminated crops far beyond the testing area, exposing populations that had never been informed about the risks.",
+    "cloze": "{{c1::A precipitação radioativa}} contaminou plantações muito além da área de testes, expondo populações que jamais haviam sido informadas sobre os riscos.",
+    "note": "Materially corrects old_back's less precise precipitação nuclear. Self-review selected the physical sense and kept the figurative sense out of the alternatives."
+  },
+  {
+    "id": "it_cold_war_vocab_171",
+    "en": "the Nuclear umbrella",
+    "category": "lexical-noun",
+    "tl": "o guarda-chuva nuclear",
+    "alts": [],
+    "register": "Metáfora técnica de segurança internacional para a garantia nuclear estendida por uma potência a aliados que dependem de sua capacidade de retaliação.",
+    "trap": "Guarda-chuva nuclear não designa uma defesa física contra mísseis; designa uma promessa de dissuasão e eventual retaliação em favor de aliados.",
+    "example_tl": "O guarda-chuva nuclear dos Estados Unidos tranquilizou alguns aliados, mas também os tornou dependentes da credibilidade de uma retaliação cuja decisão caberia a Washington.",
+    "example_en": "The United States' nuclear umbrella reassured some allies but also made them dependent on the credibility of retaliation whose authorization would rest with Washington.",
+    "cloze": "{{c1::O guarda-chuva nuclear}} dos Estados Unidos tranquilizou alguns aliados, mas também os tornou dependentes da credibilidade de uma retaliação cuja decisão caberia a Washington.",
+    "note": "Old_back gives the established Brazilian Portuguese metaphor; the card supplies the extended-deterrence sense that the literal image does not reveal. Self-review recast the final clause to remove an unnatural passive."
+  },
+  {
+    "id": "it_cold_war_vocab_173",
+    "en": "Cold peace",
+    "category": "lexical-noun",
+    "tl": "a paz fria",
+    "alts": [],
+    "register": "Expressão analítica de relações internacionais para uma paz formal marcada por hostilidade persistente e ausência de normalização substantiva.",
+    "trap": "Paz fria não é sinônimo de Guerra Fria nem simples cessar-fogo: há paz formal, mas as relações continuam tensas e hostis.",
+    "example_tl": "A paz fria preservou relações diplomáticas mínimas entre os países vizinhos, enquanto disputas territoriais, sanções e campanhas hostis impediam uma normalização efetiva.",
+    "example_en": "The cold peace preserved minimal diplomatic relations between the neighboring states, while territorial disputes, sanctions, and hostile campaigns prevented effective normalization.",
+    "cloze": "{{c1::A paz fria}} preservou relações diplomáticas mínimas entre os países vizinhos, enquanto disputas territoriais, sanções e campanhas hostis impediam uma normalização efetiva.",
+    "note": "Old_back gives the correct expression but omits the pedagogically useful article and unnecessarily capitalizes a descriptive common phrase. Self-review made the neighboring-state referent explicit."
+  },
+  {
+    "id": "it_cold_war_vocab_174",
+    "en": "to confront",
+    "category": "lexical-verb",
+    "tl": "enfrentar",
+    "alts": [
+      "fazer frente a"
+    ],
+    "register": "Enfrentar é neutro e abrange oposição a adversários, problemas ou riscos; fazer frente a é um pouco mais formal e enfatiza resistência ativa.",
+    "trap": "Confrontar é possível para desafiar ou pôr frente a frente, mas frequentemente significa comparar; enfrentar é mais seguro para lidar diretamente com um adversário ou problema.",
+    "example_tl": "Durante a greve, os sindicatos enfrentaram o governo e mantiveram suas reivindicações mesmo após prisões, censura e ameaças contra suas lideranças.",
+    "example_en": "During the strike, the unions confronted the government and maintained their demands even after arrests, censorship, and threats against their leaders.",
+    "cloze": "Durante a greve, os sindicatos {{c1::enfrentaram}} o governo e mantiveram suas reivindicações mesmo após prisões, censura e ameaças contra suas lideranças.",
+    "note": "Materially replaces old_back's context-sensitive cognate with the neutral Brazilian Portuguese choice for the adversarial sense selected by the example."
+  },
+  {
+    "id": "it_cold_war_vocab_175",
+    "en": "to oppose",
+    "category": "lexical-verb",
+    "tl": "opor-se a",
+    "alts": [
+      "ser contra"
+    ],
+    "register": "Opor-se a é neutro-formal em política e argumentação; ser contra é mais direto e menos formal.",
+    "trap": "O alvo da oposição normalmente vem com a: opor-se à medida ou a fazer algo; opor algo a algo é outra construção, transitiva.",
+    "example_tl": "Deputados da coalizão se opuseram à instalação de novos mísseis, alegando que a medida transformaria cidades aliadas em alvos prioritários.",
+    "example_en": "Coalition legislators opposed the installation of new missiles, arguing that the measure would turn allied cities into priority targets.",
+    "cloze": "Deputados da coalizão {{c1::se opuseram à}} instalação de novos mísseis, alegando que a medida transformaria cidades aliadas em alvos prioritários.",
+    "note": "Materially repairs old_back's purpose phrase para se opor and adds the governed preposition. Self-review used a contracted complement so the cloze tests the complete frame."
+  },
+  {
+    "id": "it_cold_war_vocab_176",
+    "en": "to align",
+    "category": "lexical-verb",
+    "tl": "alinhar-se com",
+    "alts": [],
+    "register": "Verbo neutro-formal de política externa para aproximar a orientação estratégica de um ator daquela adotada por outro Estado, bloco ou coalizão.",
+    "trap": "Um ator se alinha com outro, mas pode alinhar-se a uma posição ou diretriz; o complemento depende de se mencionar o ator ou sua linha política.",
+    "example_tl": "Após o golpe, a junta se alinhou com Washington e recebeu crédito, armamentos e apoio diplomático em votações multilaterais decisivas.",
+    "example_en": "After the coup, the junta aligned itself with Washington and received credit, weapons, and diplomatic support in decisive multilateral votes.",
+    "cloze": "Após o golpe, a junta {{c1::se alinhou com}} Washington e recebeu crédito, armamentos e apoio diplomático em votações multilaterais decisivas.",
+    "note": "Old_back has the correct pronominal verb but omits its complement. The card selects geopolitical alignment rather than the transitive arrangement of objects."
+  },
+  {
+    "id": "it_cold_war_vocab_177",
+    "en": "to infiltrate",
+    "category": "lexical-verb",
+    "tl": "infiltrar-se em",
+    "alts": [
+      "penetrar clandestinamente em"
+    ],
+    "register": "Verbo neutro de segurança e inteligência para a entrada encoberta de um agente em uma organização, rede ou território.",
+    "trap": "O agente se infiltra em uma organização; na construção transitiva, uma organização infiltra um agente em outra, mudando o sujeito e o objeto.",
+    "example_tl": "Agentes da polícia política se infiltraram em sindicatos independentes para identificar dirigentes, antecipar greves e semear desconfiança entre grupos de oposição.",
+    "example_en": "Political police agents infiltrated independent unions to identify leaders, anticipate strikes, and sow distrust among opposition groups.",
+    "cloze": "Agentes da polícia política {{c1::se infiltraram em}} sindicatos independentes para identificar dirigentes, antecipar greves e semear desconfiança entre grupos de oposição.",
+    "note": "The bare English source is ambiguous about transitivity. This card selects agents entering an organization; old_back omits the governed em required by that reading."
+  },
+  {
+    "id": "it_cold_war_vocab_183",
+    "en": "to resist",
+    "category": "lexical-verb",
+    "tl": "resistir a",
+    "alts": [],
+    "register": "Verbo neutro-formal para suportar ou combater uma pressão, força ou medida sem ceder; o complemento explicita aquilo a que se resiste.",
+    "trap": "Ao contrário do inglês resist e do espanhol resistir transitivos, o português normalmente exige a: resistir à pressão, a uma ordem ou a fazer algo.",
+    "example_tl": "Os jornais independentes resistiram à pressão oficial durante meses e continuaram publicando denúncias, apesar do fechamento de gráficas e da prisão de repórteres.",
+    "example_en": "Independent newspapers resisted official pressure for months and continued publishing exposés despite printing-plant closures and the imprisonment of reporters.",
+    "cloze": "Os jornais independentes {{c1::resistiram à}} pressão oficial durante meses e continuaram publicando denúncias, apesar do fechamento de gráficas e da prisão de repórteres.",
+    "note": "Old_back gives only the infinitive. This verbal card is retained despite the earlier dropped Resistance noun because the governed preposition creates a separate production lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_185",
+    "en": "to embargo",
+    "category": "lexical-expression",
+    "tl": "impor um embargo a",
+    "alts": [],
+    "register": "Construção formal de diplomacia e comércio para proibir ou restringir intercâmbios com um Estado, entidade ou território.",
+    "trap": "Embargar no português brasileiro frequentemente evoca suspensão ou apreensão judicial; impor um embargo a torna inequívoco o sentido de sanção comercial.",
+    "example_tl": "Após a invasão, vários governos impuseram um embargo ao regime, restringindo exportações de petróleo, componentes eletrônicos e equipamentos de uso militar.",
+    "example_en": "After the invasion, several governments imposed an embargo on the regime, restricting exports of oil, electronic components, and military-use equipment.",
+    "cloze": "Após a invasão, vários governos {{c1::impuseram um embargo ao}} regime, restringindo exportações de petróleo, componentes eletrônicos e equipamentos de uso militar.",
+    "note": "Materially sharpens old_back's embargar, which is possible in context but readily activates a judicial sense in Brazilian Portuguese."
+  },
+  {
+    "id": "it_cold_war_vocab_188",
+    "en": "to protest",
+    "category": "lexical-verb",
+    "tl": "protestar contra",
+    "alts": [
+      "manifestar-se contra"
+    ],
+    "register": "Protestar contra é neutro para oposição pública; manifestar-se contra especifica mais claramente uma mobilização coletiva.",
+    "trap": "O inglês admite protest a decision sem preposição; no sentido político selecionado, o português brasileiro normalmente usa protestar contra algo.",
+    "example_tl": "Milhares de estudantes protestaram contra a intervenção militar e obrigaram o Congresso a discutir publicamente os custos políticos da aliança.",
+    "example_en": "Thousands of students protested against the military intervention and forced Congress to discuss the political costs of the alliance publicly.",
+    "cloze": "Milhares de estudantes {{c1::protestaram contra}} a intervenção militar e obrigaram o Congresso a discutir publicamente os custos políticos da aliança.",
+    "note": "Old_back gives only the verb. The card adds the preposition required by the selected objection sense, a lesson not supplied by the earlier dropped Protest noun."
+  },
+  {
+    "id": "it_cold_war_vocab_192",
+    "en": "to dissent",
+    "category": "lexical-verb",
+    "tl": "divergir de",
+    "alts": [
+      "discordar de"
+    ],
+    "register": "Divergir de é formal e frequente em análise política e deliberação institucional; discordar de é mais corrente e um pouco menos marcado.",
+    "trap": "Não se deve importar automaticamente o espanhol disentir ou o italiano dissentire; dissidir existe, mas é raro no português brasileiro contemporâneo.",
+    "example_tl": "Dois diplomatas divergiram da linha oficial e advertiram que novas sanções poderiam bloquear negociações sem alterar o cálculo estratégico do adversário.",
+    "example_en": "Two diplomats dissented from the official line and warned that new sanctions could block negotiations without changing the adversary's strategic calculation.",
+    "cloze": "Dois diplomatas {{c1::divergiram da}} linha oficial e advertiram que novas sanções poderiam bloquear negociações sem alterar o cálculo estratégico do adversário.",
+    "note": "Materially replaces old_back's rare dissidir with the idiomatic formal frame. The earlier Dissent noun card teaches dissidência, while this card supplies verbal government."
+  },
+  {
+    "id": "it_cold_war_vocab_193",
+    "en": "to exile",
+    "category": "lexical-verb",
+    "tl": "exilar",
+    "alts": [
+      "desterrar"
+    ],
+    "register": "Exilar é neutro-formal na história política; desterrar enfatiza expulsão territorial e costuma soar mais histórico ou literário.",
+    "trap": "Exilar alguém é transitivo; exilar-se muda o sujeito e descreve quem parte ou passa a viver no exílio.",
+    "example_tl": "O regime exilou intelectuais que denunciavam a tortura, esperando silenciar críticas que depois alcançaram audiências maiores por meio de editoras estrangeiras.",
+    "example_en": "The regime exiled intellectuals who denounced torture, hoping to silence criticism that later reached larger audiences through foreign publishing houses.",
+    "cloze": "O regime {{c1::exilou}} intelectuais que denunciavam a tortura, esperando silenciar críticas que depois alcançaram audiências maiores por meio de editoras estrangeiras.",
+    "note": "Old_back is accurate. This card is distinct from the earlier Exile noun because it fixes the subject-changing transitive-versus-pronominal contrast."
+  },
+  {
+    "id": "it_cold_war_vocab_196",
+    "en": "to deter",
+    "category": "lexical-verb",
+    "tl": "dissuadir alguém de",
+    "alts": [],
+    "register": "Verbo formal de estratégia para impedir uma ação mediante a ameaça crível de custos superiores aos possíveis benefícios.",
+    "trap": "A estrutura é dissuadir alguém de fazer algo; persuadir normalmente leva alguém a agir, enquanto dissuadir procura fazê-lo desistir.",
+    "example_tl": "A ameaça de retaliação pretendia dissuadir o adversário de lançar um ataque preventivo, embora falhas de comunicação tornassem qualquer compromisso menos crível.",
+    "example_en": "The threat of retaliation was intended to deter the adversary from launching a preemptive attack, although communication failures made any commitment less credible.",
+    "cloze": "A ameaça de retaliação pretendia {{c1::dissuadir}} o adversário {{c1::de}} lançar um ataque preventivo, embora falhas de comunicação tornassem qualquer compromisso menos crível.",
+    "note": "Old_back supplies the verb but omits both arguments. Self-review clozed the separated fixed arms independently so the learner must produce the governed de."
+  },
+  {
+    "id": "it_cold_war_vocab_197",
+    "en": "to escalate",
+    "category": "lexical-verb",
+    "tl": "agravar",
+    "alts": [
+      "intensificar"
+    ],
+    "register": "Agravar é neutro-formal para aumentar a gravidade de uma crise; intensificar destaca o aumento de intensidade, e escalar ocorre no jargão de defesa.",
+    "trap": "Escalar uma crise é atestado no uso militar brasileiro, mas pode soar técnico ou anglicizado fora dele; aumentar é correto, porém pouco específico.",
+    "example_tl": "O envio de bombardeiros agravou a crise ao encurtar o tempo de resposta e aumentar o receio de um ataque preventivo.",
+    "example_en": "The deployment of bombers escalated the crisis by shortening response time and increasing fears of a preemptive attack.",
+    "cloze": "O envio de bombardeiros {{c1::agravou}} a crise ao encurtar o tempo de resposta e aumentar o receio de um ataque preventivo.",
+    "note": "Materially sharpens old_back's generic aumentar. Self-review selected the transitive crisis sense and treated technical escalar as register information rather than declaring it incorrect."
+  },
+  {
+    "id": "it_cold_war_vocab_198",
+    "en": "to proliferate",
+    "category": "lexical-verb",
+    "tl": "proliferar",
+    "alts": [],
+    "register": "Verbo formal para entidades, práticas ou fenômenos que se multiplicam e se difundem rapidamente, muitas vezes sem controle central.",
+    "trap": "No uso português mais natural, proliferar aparece sem objeto direto: proliferam as redes; um ator favorece a proliferação, em vez de proliferar redes.",
+    "example_tl": "Após o colapso do controle central, proliferaram redes clandestinas que transferiam componentes sensíveis por meio de empresas de fachada e intermediários comerciais.",
+    "example_en": "After central control collapsed, clandestine networks proliferated, transferring sensitive components through shell companies and commercial intermediaries.",
+    "cloze": "Após o colapso do controle central, {{c1::proliferaram}} redes clandestinas que transferiam componentes sensíveis por meio de empresas de fachada e intermediários comerciais.",
+    "note": "Old_back is accurate as an infinitive. This card remains distinct from the earlier Nuclear proliferation noun because it teaches verbal valency and postverbal plural agreement."
+  },
+  {
+    "id": "it_cold_war_vocab_200",
+    "en": "to transition",
+    "category": "lexical-expression",
+    "tl": "passar de ... para ...",
+    "alts": [
+      "fazer a transição de ... para ..."
+    ],
+    "register": "Passar de ... para ... é a construção neutra e idiomática para mudança de sistema ou estado; a alternativa é mais nominal e institucional.",
+    "trap": "O verbo inglês não exige transicionar; essa forma ocorre em usos especializados, mas permanece marcada em prosa política brasileira geral.",
+    "example_tl": "Depois da morte do ditador, o país passou de um regime autoritário para uma democracia pactuada que preservou importantes continuidades institucionais.",
+    "example_en": "After the dictator's death, the country transitioned from an authoritarian regime to a negotiated democracy that preserved important institutional continuities.",
+    "cloze": "Depois da morte do ditador, o país {{c1::passou de}} um regime autoritário {{c1::para}} uma democracia pactuada que preservou importantes continuidades institucionais.",
+    "note": "Old_back's fazer a transição is valid and retained as an alternative. Self-review chose the lighter verbal frame and exposed both endpoints in separate clozes."
+  }
+]

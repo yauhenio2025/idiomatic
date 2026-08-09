@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_cold_war_vocab_161",
+    "en": "the Berlin Wall",
+    "verdict": "drop",
+    "reason": "Berliner Mauer is a universally familiar fixed historical name already expected at C1, with no additional construction or sense selected by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_162",
+    "en": "the Diplomatic tension",
+    "verdict": "drop",
+    "reason": "Diplomatische Spannungen is a transparent phrase built from core political vocabulary; the source's number mismatch does not create a substantive advanced lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_163",
+    "en": "the Summits",
+    "verdict": "keep",
+    "reason": "The diplomatic sense favors Gipfeltreffen over a literal mountain-related Gipfel, and the invariant plural is useful production morphology."
+  },
+  {
+    "id": "it_cold_war_vocab_164",
+    "en": "the Nuclear testing",
+    "verdict": "keep",
+    "reason": "Cold War German can name weapons explicitly with Kernwaffentests, avoiding the less precise legacy Nukleartests."
+  },
+  {
+    "id": "it_cold_war_vocab_165",
+    "en": "the Cold War frontiers",
+    "verdict": "drop",
+    "reason": "The isolated prompt is too ambiguous to choose among borders, peripheral theaters, frontier zones and the conceptual limits of the Cold War without inventing a sense."
+  },
+  {
+    "id": "it_cold_war_vocab_166",
+    "en": "the Ideological expansion",
+    "verdict": "drop",
+    "reason": "Ideologische Expansion is a transparent academic cognate phrase, and the source supplies no actor, doctrine or mechanism that would sharpen it."
+  },
+  {
+    "id": "it_cold_war_vocab_167",
+    "en": "the Conventional forces",
+    "verdict": "keep",
+    "reason": "The established security term encodes the strategic contrast with nuclear forces, while the legacy rendering also incorrectly capitalizes the adjective."
+  },
+  {
+    "id": "it_cold_war_vocab_168",
+    "en": "the Rearmament",
+    "verdict": "keep",
+    "reason": "Wiederbewaffnung is the conventional term for restoring armed forces and must be distinguished from the broader process of Aufrüstung."
+  },
+  {
+    "id": "it_cold_war_vocab_169",
+    "en": "the De-escalation",
+    "verdict": "drop",
+    "reason": "Deeskalation is a transparent, high-frequency policy cognate with ordinary gender and no further construction selected by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_170",
+    "en": "the Nuclear fallout",
+    "verdict": "keep",
+    "reason": "The established physical term radioaktiver Niederschlag materially improves the Anglicized legacy phrase and distinguishes fallout from generic consequences."
+  },
+  {
+    "id": "it_cold_war_vocab_171",
+    "en": "the Nuclear umbrella",
+    "verdict": "keep",
+    "reason": "The lexicalized metaphor nuklearer Schutzschirm names extended deterrence and supports an important contrast with missile defense or Raketenschirm."
+  },
+  {
+    "id": "it_cold_war_vocab_172",
+    "en": "the Military parade",
+    "verdict": "drop",
+    "reason": "Militärparade is a transparent compound that an advanced learner can form directly, with no distinct morphology or usage issue in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_173",
+    "en": "Cold peace",
+    "verdict": "keep",
+    "reason": "The political metaphor names formal peace without normalized relations and needs a production-ready article plus context-sensitive adjective capitalization."
+  },
+  {
+    "id": "it_cold_war_vocab_174",
+    "en": "to confront",
+    "verdict": "keep",
+    "reason": "The English verb is structurally deceptive: facing an issue is sich einer Sache stellen, while jdn. mit etw. konfrontieren selects a different frame."
+  },
+  {
+    "id": "it_cold_war_vocab_175",
+    "en": "to oppose",
+    "verdict": "keep",
+    "reason": "Public policy opposition uses the teachable reflexive frame sich gegen etw. aussprechen and differs from both contradicting and active resistance."
+  },
+  {
+    "id": "it_cold_war_vocab_176",
+    "en": "to align",
+    "verdict": "keep",
+    "reason": "The Cold War sense requires sich einem Lager anschließen; legacy sich angleichen means becoming similar rather than taking a geopolitical side."
+  },
+  {
+    "id": "it_cold_war_vocab_177",
+    "en": "to infiltrate",
+    "verdict": "drop",
+    "reason": "The retained Infiltration card in the preceding Cold War chunk already teaches political Unterwanderung versus technical Infiltration; the regular verb adds no separate lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_178",
+    "en": "to destabilize",
+    "verdict": "drop",
+    "reason": "Destabilisieren is a transparent academic cognate with regular morphology, and the isolated source offers no object-specific distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_179",
+    "en": "to censor",
+    "verdict": "drop",
+    "reason": "Zensieren is a transparent regular verb, while the retained Censorship noun card already owns the relevant Cold War concept."
+  },
+  {
+    "id": "it_cold_war_vocab_180",
+    "en": "to expropriate",
+    "verdict": "drop",
+    "reason": "The retained Expropriation card already teaches Enteignung and its legal distinctions; regular enteignen adds no new government or morphology."
+  },
+  {
+    "id": "it_cold_war_vocab_181",
+    "en": "to nationalize",
+    "verdict": "drop",
+    "reason": "The retained Nationalization card already teaches Verstaatlichung and the ownership-transfer sense; regular verstaatlichen is only its transparent derivational counterpart."
+  },
+  {
+    "id": "it_cold_war_vocab_182",
+    "en": "to mobilize",
+    "verdict": "drop",
+    "reason": "Mobilisieren is a transparent cognate whose military, political and social readings remain underspecified by the isolated prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_183",
+    "en": "to resist",
+    "verdict": "drop",
+    "reason": "A retained German FANCY_VOCAB card already teaches the same verb widerstehen and its dative government; capitalization alone does not justify a duplicate."
+  },
+  {
+    "id": "it_cold_war_vocab_184",
+    "en": "to repress",
+    "verdict": "keep",
+    "reason": "The verb requires object-sensitive choices among unterdrücken, niederschlagen and verdrängen, creating a distinct lesson beyond the retained abstract noun."
+  },
+  {
+    "id": "it_cold_war_vocab_185",
+    "en": "to embargo",
+    "verdict": "keep",
+    "reason": "Idiomatic German uses an Embargo verhängen or mit einem Embargo belegen rather than the marked legacy verb embargoisieren."
+  },
+  {
+    "id": "it_cold_war_vocab_186",
+    "en": "to elect",
+    "verdict": "drop",
+    "reason": "Wählen is core high-frequency political vocabulary already owned well below C1, and the source selects no office or electoral construction."
+  },
+  {
+    "id": "it_cold_war_vocab_187",
+    "en": "to negotiate",
+    "verdict": "keep",
+    "reason": "The productive diplomatic frame requires mit plus dative for the counterpart and über plus accusative for the subject of negotiation."
+  },
+  {
+    "id": "it_cold_war_vocab_188",
+    "en": "to protest",
+    "verdict": "drop",
+    "reason": "Protestieren is a transparent, high-frequency verb, and gegen plus accusative is already ordinary vocabulary at this learner level."
+  },
+  {
+    "id": "it_cold_war_vocab_189",
+    "en": "to radicalize",
+    "verdict": "keep",
+    "reason": "German marks the intransitive reading reflexively as sich radikalisieren, whereas the bare form is transitive and assigns an external cause."
+  },
+  {
+    "id": "it_cold_war_vocab_190",
+    "en": "to industrialize",
+    "verdict": "drop",
+    "reason": "Industrialisieren is a transparent regular cognate, and the source gives no transitivity or development-policy distinction to deepen it."
+  },
+  {
+    "id": "it_cold_war_vocab_191",
+    "en": "to accelerate",
+    "verdict": "drop",
+    "reason": "Beschleunigen is basic productive vocabulary with ordinary transitive morphology and no specialized Cold War sense in the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_192",
+    "en": "to dissent",
+    "verdict": "drop",
+    "reason": "The retained Dissent noun card already distinguishes Dissens, political Widerspruch and Dissidenz; the isolated verb adds no stable German frame beyond that lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_193",
+    "en": "to exile",
+    "verdict": "keep",
+    "reason": "German normally uses the noncognate construction jdn. ins Exil verbannen, with a directional case frame and a useful register distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_194",
+    "en": "to surveil",
+    "verdict": "drop",
+    "reason": "Überwachen is a basic unambiguous verb, while the retained Surveillance noun card already owns the noncognate Cold War concept."
+  },
+  {
+    "id": "it_cold_war_vocab_195",
+    "en": "to disarm",
+    "verdict": "keep",
+    "reason": "Strategic German distinguishes a state that abrüstet from a person or unit that is entwaffnet, which the legacy gloss misses."
+  },
+  {
+    "id": "it_cold_war_vocab_196",
+    "en": "to deter",
+    "verdict": "keep",
+    "reason": "The strategic verb has a productive two-object frame, jdn. von etw. abschrecken, and must be distinguished from broader abhalten."
+  },
+  {
+    "id": "it_cold_war_vocab_197",
+    "en": "to escalate",
+    "verdict": "keep",
+    "reason": "The verb supports a genuine advanced morphology lesson: it is never reflexive, and its intransitive perfect permits sein or haben while the transitive perfect uses haben."
+  },
+  {
+    "id": "it_cold_war_vocab_198",
+    "en": "to proliferate",
+    "verdict": "keep",
+    "reason": "Security-policy German uses sich weiterverbreiten or specialist proliferieren; legacy wuchern expresses rampant growth rather than spread to new actors."
+  },
+  {
+    "id": "it_cold_war_vocab_199",
+    "en": "to integrate",
+    "verdict": "drop",
+    "reason": "The retained Integration noun card already teaches integration into a structure and its governed preposition, while the generic verb remains underspecified for transitivity."
+  },
+  {
+    "id": "it_cold_war_vocab_200",
+    "en": "to transition",
+    "verdict": "keep",
+    "reason": "The source is verbal but old_back supplies only a noun; idiomatic political German uses the support-noun frame den Übergang zu etw. vollziehen."
+  }
+]

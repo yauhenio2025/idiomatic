@@ -1,0 +1,131 @@
+[
+  {
+    "id": "it_cold_war_vocab_202",
+    "en": "to subvert",
+    "category": "lexical-verb",
+    "tl": "subvertir",
+    "alts": [],
+    "register": "Formal political and institutional verb for overturning an established order or corrupting an organization’s operation from within.",
+    "trap": "Subvertir suggests a fundamental alteration of an established order; saper in item 222 instead emphasizes gradual weakening, while renverser denotes outright overthrow.",
+    "example_tl": "Des réseaux clandestins cherchaient à subvertir l’ordre constitutionnel en infiltrant les syndicats, les médias et les administrations encore fragilisées par la guerre.",
+    "example_en": "Clandestine networks sought to subvert the constitutional order by infiltrating trade unions, media outlets, and government departments still weakened by the war.",
+    "cloze": "Des réseaux clandestins cherchaient à {{c1::subvertir}} l’ordre constitutionnel en infiltrant les syndicats, les médias et les administrations encore fragilisées par la guerre.",
+    "note": "Old_back is accurate. Self-review retained this formal verb because its direct alteration of an established order contrasts materially with the gradual erosion expressed by saper in item 222."
+  },
+  {
+    "id": "it_cold_war_vocab_206",
+    "en": "to deforest",
+    "category": "lexical-verb",
+    "tl": "déboiser",
+    "alts": [
+      "déforester"
+    ],
+    "register": "Neutral environmental and land-use verb for removing forest cover from an area; déforester is a more technical alternative, especially for large-scale forest loss.",
+    "trap": "Défricher adds the idea of clearing land for cultivation or development and is therefore not interchangeable with déboiser in every context.",
+    "example_tl": "Le régime a déboisé de vastes zones frontalières pour ouvrir des routes militaires, accélérant l’érosion et le déplacement de communautés rurales.",
+    "example_en": "The regime deforested vast border areas to open military roads, accelerating erosion and the displacement of rural communities.",
+    "cloze": "Le régime a {{c1::déboisé}} de vastes zones frontalières pour ouvrir des routes militaires, accélérant l’érosion et le déplacement de communautés rurales.",
+    "note": "Old_back supplies the idiomatic neutral verb. Self-review retained déforester only as a contextually interchangeable technical alternative and separated both terms from the purpose-specific défricher."
+  },
+  {
+    "id": "it_cold_war_vocab_208",
+    "en": "to broadcast",
+    "category": "lexical-verb",
+    "tl": "diffuser",
+    "alts": [
+      "émettre"
+    ],
+    "register": "Neutral media verb for broadcasting content to an audience; émettre is equally natural here but foregrounds the station’s transmission activity.",
+    "trap": "Retransmettre normally means to relay or rebroadcast a signal, program, or event and should not replace the generic English broadcast automatically.",
+    "example_tl": "Pendant la crise, la station clandestine diffusait chaque soir des bulletins codés afin de coordonner l’opposition et de contourner la censure officielle.",
+    "example_en": "During the crisis, the clandestine station broadcast coded bulletins every evening to coordinate the opposition and circumvent official censorship.",
+    "cloze": "Pendant la crise, la station clandestine {{c1::diffusait}} chaque soir des bulletins codés afin de coordonner l’opposition et de contourner la censure officielle.",
+    "note": "Old_back is accurate. Self-review kept émettre because it fits the same radio-station example and excluded retransmettre, which would imply relaying an event or another source’s signal."
+  },
+  {
+    "id": "it_cold_war_vocab_209",
+    "en": "to innovate",
+    "category": "lexical-verb",
+    "tl": "innover",
+    "alts": [],
+    "register": "Neutral-formal verb, commonly used absolutely or with dans or en matière de to specify the field in which innovation occurs.",
+    "trap": "In careful French, innover is normally intransitive: one innove dans un domaine rather than mechanically calquing English innovate a technology with a direct object.",
+    "example_tl": "Pour réduire sa dépendance technologique, le programme spatial devait innover dans les télécommunications sans importer de composants soumis aux contrôles occidentaux.",
+    "example_en": "To reduce its technological dependence, the space program had to innovate in telecommunications without importing components subject to Western controls.",
+    "cloze": "Pour réduire sa dépendance technologique, le programme spatial devait {{c1::innover}} dans les télécommunications sans importer de composants soumis aux contrôles occidentaux.",
+    "note": "Old_back gives the correct lemma but not its construction. Self-review retained the item for its consequential intransitive pattern and avoided claiming that every contemporary transitive use is impossible."
+  },
+  {
+    "id": "it_cold_war_vocab_210",
+    "en": "to impose",
+    "category": "lexical-verb",
+    "tl": "imposer quelque chose à quelqu’un",
+    "alts": [],
+    "register": "Neutral-formal and highly productive in political prose for sanctions, restrictions, conditions, obligations, and financial burdens.",
+    "trap": "English impose sanctions on a country maps to imposer des sanctions à un pays; sur cannot mechanically replace à before the affected recipient.",
+    "example_tl": "Après l’essai nucléaire, plusieurs gouvernements ont imposé de nouvelles restrictions commerciales au régime, malgré les réserves de leurs industriels les plus exposés.",
+    "example_en": "After the nuclear test, several governments imposed new trade restrictions on the regime, despite reservations from the industrial firms in their countries most exposed to the measures.",
+    "cloze": "Après l’essai nucléaire, plusieurs gouvernements ont {{c1::imposé}} de nouvelles restrictions commerciales {{c1::au}} régime, malgré les réserves de leurs industriels les plus exposés.",
+    "note": "Old_back supplies only the verb. Self-review retained the broader political frame beyond the earlier embargo expression and clozed the inflected verb and recipient preposition separately."
+  },
+  {
+    "id": "it_cold_war_vocab_212",
+    "en": "to retaliate",
+    "category": "lexical-verb",
+    "tl": "riposter à",
+    "alts": [],
+    "register": "Neutral-formal verb for responding forcefully to an attack, sanction, or hostile act; common in diplomatic and military reporting.",
+    "trap": "French riposte à an act or measure; retaliation against an actor may instead require exercer des représailles contre, while se venger de sounds more personal.",
+    "example_tl": "Le gouvernement a riposté aux sanctions économiques en expulsant deux diplomates, tout en évitant les mesures militaires susceptibles d’élargir la crise.",
+    "example_en": "The government retaliated against the economic sanctions by expelling two diplomats while avoiding military measures liable to widen the crisis.",
+    "cloze": "Le gouvernement {{c1::a riposté aux}} sanctions économiques en expulsant deux diplomates, tout en évitant les mesures militaires susceptibles d’élargir la crise.",
+    "note": "Materially improves old_back ('pour riposter'), which includes a purpose marker rather than a production-ready headword. Self-review selected the trigger construction riposter à and kept actor-directed reprisals as a contrast."
+  },
+  {
+    "id": "it_cold_war_vocab_215",
+    "en": "to advocate",
+    "category": "lexical-verb",
+    "tl": "plaider pour",
+    "alts": [
+      "préconiser",
+      "défendre"
+    ],
+    "register": "Formal argumentative expression for publicly supporting a policy or course of action; préconiser recommends it, while défendre foregrounds active support.",
+    "trap": "Plaider requires pour in this sense, whereas préconiser and défendre take a direct object; carrying pour over to either alternative produces the wrong construction.",
+    "example_tl": "Plusieurs diplomates ont plaidé pour une levée progressive des sanctions, conditionnée à des inspections indépendantes et au démantèlement vérifiable des installations secrètes.",
+    "example_en": "Several diplomats advocated a gradual lifting of sanctions, conditional on independent inspections and the verifiable dismantling of secret facilities.",
+    "cloze": "Plusieurs diplomates {{c1::ont plaidé pour}} une levée progressive des sanctions, conditionnée à des inspections indépendantes et au démantèlement vérifiable des installations secrètes.",
+    "note": "Materially refines old_back ('préconiser'): that verb fits the policy example, but plaider pour better teaches the advocacy frame. Self-review verified both direct-object alternatives in the same sentence after normal inflection."
+  },
+  {
+    "id": "it_cold_war_vocab_217",
+    "en": "to strategize",
+    "category": "lexical-expression",
+    "tl": "élaborer une stratégie",
+    "alts": [
+      "mettre au point une stratégie"
+    ],
+    "register": "Neutral-formal support-verb expression for deliberately formulating a plan; the alternative emphasizes refining it until it is operational.",
+    "trap": "English strategize normally becomes a support-verb expression in careful French; agir stratégiquement means to act strategically, not to formulate a strategy.",
+    "example_tl": "Avant le sommet, les conseillers ont élaboré une stratégie commune pour exploiter les divisions adverses sans compromettre la reprise des négociations.",
+    "example_en": "Before the summit, the advisers devised a common strategy to exploit divisions among their adversaries without jeopardizing the resumption of negotiations.",
+    "cloze": "Avant le sommet, les conseillers {{c1::ont élaboré une stratégie}} commune pour exploiter les divisions adverses sans compromettre la reprise des négociations.",
+    "note": "Old_back is accurate. Self-review retained the support-verb treatment, verified that the alternative fits before commune, and distinguished planning from merely acting in a strategic manner."
+  },
+  {
+    "id": "it_cold_war_vocab_222",
+    "en": "to undermine",
+    "category": "lexical-verb",
+    "tl": "saper",
+    "alts": [
+      "miner",
+      "affaiblir"
+    ],
+    "register": "Saper and miner are formal figurative verbs suggesting progressive erosion; affaiblir is neutral and states the weakening without that metaphorical nuance.",
+    "trap": "Saper does not always equal subvertir: undermine often weakens trust or capacity gradually, whereas subvertir in item 202 alters an established order more directly.",
+    "example_tl": "Des campagnes de désinformation ont sapé la confiance dans les institutions électorales, transformant chaque défaite en preuve supposée d’une ingérence étrangère.",
+    "example_en": "Disinformation campaigns undermined trust in electoral institutions, turning every defeat into supposed evidence of foreign interference.",
+    "cloze": "Des campagnes de désinformation ont {{c1::sapé}} la confiance dans les institutions électorales, transformant chaque défaite en preuve supposée d’une ingérence étrangère.",
+    "note": "Old_back is accurate. Self-review removed subvertir as an alternative because item 202 tests a distinct sense and verified that miner and affaiblir both fit the example after inflection."
+  }
+]

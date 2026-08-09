@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_cold_war_vocab_161",
+    "en": "the Berlin Wall",
+    "verdict": "drop",
+    "reason": "Muro di Berlino is an iconic, transparent proper name already expected at C1, and the isolated prompt adds no production distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_162",
+    "en": "the Diplomatic tension",
+    "verdict": "drop",
+    "reason": "Tensione diplomatica is a transparent adjective-noun combination with no specialist sense, government, or interference trap beyond its familiar components."
+  },
+  {
+    "id": "it_cold_war_vocab_163",
+    "en": "the Summits",
+    "verdict": "drop",
+    "reason": "Vertici in the diplomatic sense is high-frequency political vocabulary already expected at C1; the generic plural supplies no distinct institutional collocation."
+  },
+  {
+    "id": "it_cold_war_vocab_164",
+    "en": "the Nuclear testing",
+    "verdict": "keep",
+    "reason": "The weapons context selects the established collocation test nucleari, whose invariant loan morphology and distinction from civilian nuclear testing merit treatment."
+  },
+  {
+    "id": "it_cold_war_vocab_165",
+    "en": "the Cold War frontiers",
+    "verdict": "drop",
+    "reason": "The phrase is compositional and underspecified: frontiers could mean state borders, peripheral theaters, ideological fault lines, or limits of scholarship."
+  },
+  {
+    "id": "it_cold_war_vocab_166",
+    "en": "the Ideological expansion",
+    "verdict": "drop",
+    "reason": "Espansione ideologica is a transparent academic collocation whose bare source supplies no doctrine, agent, mechanism, or construction to resolve."
+  },
+  {
+    "id": "it_cold_war_vocab_167",
+    "en": "the Conventional forces",
+    "verdict": "keep",
+    "reason": "Forze convenzionali is a strategic term whose technical contrast with nuclear forces is not recoverable from the everyday sense of convenzionale alone."
+  },
+  {
+    "id": "it_cold_war_vocab_168",
+    "en": "the Rearmament",
+    "verdict": "keep",
+    "reason": "Riarmo is the more common military-process term and merits distinction from the also valid riarmamento and from plural armamenti, the weapons inventory."
+  },
+  {
+    "id": "it_cold_war_vocab_169",
+    "en": "the De-escalation",
+    "verdict": "keep",
+    "reason": "De-escalation is an established feminine political-military loan whose hyphenation, process meaning, and contrast with broader distensione merit explicit treatment."
+  },
+  {
+    "id": "it_cold_war_vocab_170",
+    "en": "the Nuclear fallout",
+    "verdict": "keep",
+    "reason": "Ricadute radioattive is the precise physical term and avoids confusing radioactive material with the figurative political consequences of a nuclear event."
+  },
+  {
+    "id": "it_cold_war_vocab_171",
+    "en": "the Nuclear umbrella",
+    "verdict": "keep",
+    "reason": "Ombrello nucleare is a specialist deterrence metaphor denoting an ally's extended guarantee rather than physical missile defense."
+  },
+  {
+    "id": "it_cold_war_vocab_172",
+    "en": "the Military parade",
+    "verdict": "drop",
+    "reason": "Parata militare is a transparent, high-frequency phrase with no government, false friend, or specialist-sense issue in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_173",
+    "en": "Cold peace",
+    "verdict": "keep",
+    "reason": "Pace fredda is an analytical label for formal peace without normalized relations and must be distinguished from the historically specific guerra fredda."
+  },
+  {
+    "id": "it_cold_war_vocab_174",
+    "en": "to confront",
+    "verdict": "keep",
+    "reason": "The adversarial sense requires affrontare or fronteggiare, while the tempting cognate confrontare normally means to compare or place in confrontation."
+  },
+  {
+    "id": "it_cold_war_vocab_175",
+    "en": "to oppose",
+    "verdict": "keep",
+    "reason": "Italian recasts the English transitive verb as the pronominal governed frame opporsi a, creating genuine production value."
+  },
+  {
+    "id": "it_cold_war_vocab_176",
+    "en": "to align",
+    "verdict": "keep",
+    "reason": "Geopolitical alignment uses allinearsi con an actor but allinearsi a a position, a complement distinction vulnerable to cross-language interference."
+  },
+  {
+    "id": "it_cold_war_vocab_177",
+    "en": "to infiltrate",
+    "verdict": "keep",
+    "reason": "The card distinguishes an agent who si infiltra in a network from an organization that infiltra un agente, a valency contrast omitted by the source."
+  },
+  {
+    "id": "it_cold_war_vocab_178",
+    "en": "to destabilize",
+    "verdict": "drop",
+    "reason": "Destabilizzare is a transparent formal cognate with ordinary transitive syntax, and the bare prompt offers no distinct advanced lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_179",
+    "en": "to censor",
+    "verdict": "drop",
+    "reason": "Censurare is a transparent regular verb, while the retained Censorship noun card already owns the relevant Cold War concept and sense distinctions."
+  },
+  {
+    "id": "it_cold_war_vocab_180",
+    "en": "to expropriate",
+    "verdict": "drop",
+    "reason": "The retained Expropriation card already teaches the legal distinction from confiscation and nationalization; the regular derived verb adds no source-selected construction."
+  },
+  {
+    "id": "it_cold_war_vocab_181",
+    "en": "to nationalize",
+    "verdict": "drop",
+    "reason": "Nazionalizzare is a transparent political-economic cognate with ordinary transitive syntax, and the source selects no industry, ownership structure, or legal frame."
+  },
+  {
+    "id": "it_cold_war_vocab_182",
+    "en": "to mobilize",
+    "verdict": "drop",
+    "reason": "The bare prompt is too broad to choose among mobilitare troops, resources, or supporters and the intransitive mobilitarsi, while all forms are familiar at C1."
+  },
+  {
+    "id": "it_cold_war_vocab_183",
+    "en": "to resist",
+    "verdict": "drop",
+    "reason": "An already-authored Italian FANCY_VOCAB card for capitalized 'To resist' teaches the same resistere a frame; the case-sensitive exact-duplicate report does not expose this duplicate."
+  },
+  {
+    "id": "it_cold_war_vocab_184",
+    "en": "to repress",
+    "verdict": "drop",
+    "reason": "Reprimere is a transparent, high-frequency political cognate, and the generic prompt supplies no distinction among suppressing protests, impulses, or information."
+  },
+  {
+    "id": "it_cold_war_vocab_185",
+    "en": "to embargo",
+    "verdict": "keep",
+    "reason": "Formal Italian favors the support-verb frame imporre un embargo a, while direct embargare remains marked and rare."
+  },
+  {
+    "id": "it_cold_war_vocab_186",
+    "en": "to elect",
+    "verdict": "drop",
+    "reason": "Eleggere is core, high-frequency political vocabulary already expected below C1, and the prompt selects no office or electoral construction."
+  },
+  {
+    "id": "it_cold_war_vocab_187",
+    "en": "to negotiate",
+    "verdict": "drop",
+    "reason": "Negoziare is a transparent, high-frequency cognate, and the bare prompt gives no basis for choosing an agreement, counterpart, or disputed issue."
+  },
+  {
+    "id": "it_cold_war_vocab_188",
+    "en": "to protest",
+    "verdict": "keep",
+    "reason": "Unlike English transitive protest, the selected Italian public-opposition sense normally uses protestare contro, creating a useful government lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_189",
+    "en": "to radicalize",
+    "verdict": "drop",
+    "reason": "Radicalizzare is a transparent cognate, while the bare source does not decide between causing radicalization and the pronominal radicalizzarsi."
+  },
+  {
+    "id": "it_cold_war_vocab_190",
+    "en": "to industrialize",
+    "verdict": "drop",
+    "reason": "Industrializzare is a transparent formal cognate, and the generic prompt does not distinguish a transitive development policy from industrializzarsi."
+  },
+  {
+    "id": "it_cold_war_vocab_191",
+    "en": "to accelerate",
+    "verdict": "drop",
+    "reason": "Accelerare is a transparent, high-frequency verb, and no specialist object or Cold War sense is selected by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_192",
+    "en": "to dissent",
+    "verdict": "keep",
+    "reason": "Dissentire is a formal argumentative verb whose da/su government adds a separate production lesson beyond the earlier retained Dissent noun card."
+  },
+  {
+    "id": "it_cold_war_vocab_193",
+    "en": "to exile",
+    "verdict": "keep",
+    "reason": "Esiliare qualcuno must be distinguished from subject-changing esiliarsi, a verbal valency lesson not covered by the retained Exile noun card."
+  },
+  {
+    "id": "it_cold_war_vocab_194",
+    "en": "to surveil",
+    "verdict": "drop",
+    "reason": "Sorvegliare is a familiar unambiguous verb, while the retained Surveillance noun card already owns the relevant Cold War concept and scope distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_195",
+    "en": "to disarm",
+    "verdict": "drop",
+    "reason": "Disarmare is familiar transparent vocabulary; the richer strategic distinction between disarmament and arms control is already taught by retained noun cards."
+  },
+  {
+    "id": "it_cold_war_vocab_196",
+    "en": "to deter",
+    "verdict": "keep",
+    "reason": "Dissuadere qualcuno dal fare qualcosa has a multi-part argument structure and a strategic meaning distinct from ordinary persuasion."
+  },
+  {
+    "id": "it_cold_war_vocab_197",
+    "en": "to escalate",
+    "verdict": "keep",
+    "reason": "Conflict-related English escalate calls for an object-sensitive Italian choice such as inasprire or intensificare, while direct escalare remains marked."
+  },
+  {
+    "id": "it_cold_war_vocab_198",
+    "en": "to proliferate",
+    "verdict": "keep",
+    "reason": "Italian proliferare is intransitive, so its valency provides production value beyond the earlier retained Nuclear proliferation noun card."
+  },
+  {
+    "id": "it_cold_war_vocab_199",
+    "en": "to integrate",
+    "verdict": "drop",
+    "reason": "The retained Integration card already teaches the concept and its necessary contextual specification; this transparent generic verb adds no distinct source sense."
+  },
+  {
+    "id": "it_cold_war_vocab_200",
+    "en": "to transition",
+    "verdict": "keep",
+    "reason": "The idiomatic frame passare da ... a ... expresses both endpoints and avoids overgeneralizing the marked policy verb transizionare."
+  }
+]

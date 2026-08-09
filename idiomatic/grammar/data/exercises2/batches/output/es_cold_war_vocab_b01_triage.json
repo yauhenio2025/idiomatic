@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_cold_war_vocab_001",
+    "en": "the Military coup",
+    "verdict": "keep",
+    "reason": "Golpe de Estado militar fixes the seizure-of-power sense and teaches the capitalization of Estado in the established expression."
+  },
+  {
+    "id": "it_cold_war_vocab_002",
+    "en": "the U.S. intervention",
+    "verdict": "drop",
+    "reason": "Intervención estadounidense is a transparent, fully compositional C1 phrase with no distinct production issue in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_003",
+    "en": "the Communism",
+    "verdict": "drop",
+    "reason": "Comunismo is a transparent, high-frequency ideological cognate already expected at C1."
+  },
+  {
+    "id": "it_cold_war_vocab_004",
+    "en": "the Democracy",
+    "verdict": "drop",
+    "reason": "Democracia is transparent core political vocabulary with no distinct sense or government supplied by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_005",
+    "en": "the CIA",
+    "verdict": "drop",
+    "reason": "The international proper-name initialism is unchanged in Spanish; feminine article agreement alone is too thin a C1 lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_006",
+    "en": "the Guerillas",
+    "verdict": "keep",
+    "reason": "Spanish usefully distinguishes individual guerrilleros from collective la guerrilla and requires rr despite the source spelling."
+  },
+  {
+    "id": "it_cold_war_vocab_007",
+    "en": "the Embargo",
+    "verdict": "drop",
+    "reason": "Embargo is a transparent, established political-economic cognate already owned at C1, and the bare prompt selects no narrower sense."
+  },
+  {
+    "id": "it_cold_war_vocab_008",
+    "en": "the Revolution",
+    "verdict": "drop",
+    "reason": "Revolución is a transparent, high-frequency historical cognate with no additional lexical lesson in the isolated prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_009",
+    "en": "the Dictatorship",
+    "verdict": "drop",
+    "reason": "Dictadura is core political vocabulary already expected at C1 and the legacy rendering is accurate."
+  },
+  {
+    "id": "it_cold_war_vocab_010",
+    "en": "the Marxism",
+    "verdict": "drop",
+    "reason": "Marxismo is a transparent, high-frequency ideological cognate; correcting unnecessary capitalization alone does not justify a card."
+  },
+  {
+    "id": "it_cold_war_vocab_011",
+    "en": "the Capitalism",
+    "verdict": "keep",
+    "reason": "The exact-duplicate report assigns this item to COLD_WAR_VOCAB, and generic article use supplies a genuine English-to-Spanish production lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_012",
+    "en": "the Torture",
+    "verdict": "drop",
+    "reason": "Tortura is a transparent, high-frequency legal and human-rights cognate with regular morphology and no narrower sense in the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_013",
+    "en": "the Dissidents",
+    "verdict": "drop",
+    "reason": "Disidentes is a transparent political cognate whose plural morphology is regular and already expected at C1."
+  },
+  {
+    "id": "it_cold_war_vocab_014",
+    "en": "the Regime",
+    "verdict": "keep",
+    "reason": "The régimen/regímenes stress shift and the term's pragmatic tendency toward critical political description create real teaching value."
+  },
+  {
+    "id": "it_cold_war_vocab_015",
+    "en": "the Soviet influence",
+    "verdict": "drop",
+    "reason": "Influencia soviética is a transparent compositional phrase with regular agreement and no distinct usage issue for a C1 learner."
+  },
+  {
+    "id": "it_cold_war_vocab_016",
+    "en": "Authoritarian",
+    "verdict": "keep",
+    "reason": "The duplicate report assigns the item to COLD_WAR_VOCAB, and Spanish must distinguish autoritario from autoritativo and autorizado."
+  },
+  {
+    "id": "it_cold_war_vocab_017",
+    "en": "the Opposition",
+    "verdict": "drop",
+    "reason": "La oposición is transparent, high-frequency political vocabulary with no special government or sense selected by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_018",
+    "en": "the Exile",
+    "verdict": "keep",
+    "reason": "The item supports a useful distinction among exilio, exiliado, and the more coercive destierro, plus the fixed phrase en el exilio."
+  },
+  {
+    "id": "it_cold_war_vocab_019",
+    "en": "the Nationalization",
+    "verdict": "drop",
+    "reason": "Nacionalización is a transparent academic-policy cognate with regular morphology and no distinct sense issue in this isolated prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_020",
+    "en": "the Junta",
+    "verdict": "keep",
+    "reason": "Junta has a broader ordinary Spanish meaning, while junta militar fixes the intended Cold War political sense and lowercase spelling."
+  },
+  {
+    "id": "it_cold_war_vocab_021",
+    "en": "the Counterinsurgency",
+    "verdict": "keep",
+    "reason": "Specialist security term with a useful semantic scope and a non-obvious closed Spanish prefix spelling."
+  },
+  {
+    "id": "it_cold_war_vocab_022",
+    "en": "the OAS (Organization of American States)",
+    "verdict": "keep",
+    "reason": "Spanish localizes both the official institutional name and its acronym as Organización de los Estados Americanos (OEA)."
+  },
+  {
+    "id": "it_cold_war_vocab_023",
+    "en": "the Proxy wars",
+    "verdict": "keep",
+    "reason": "The legacy guerras de poder is non-idiomatic; guerras por delegación and guerras subsidiarias are established geopolitical terms."
+  },
+  {
+    "id": "it_cold_war_vocab_024",
+    "en": "the Destabilization",
+    "verdict": "drop",
+    "reason": "Desestabilización is a transparent academic cognate with regular derivation and no additional scope provided by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_025",
+    "en": "the Repression",
+    "verdict": "drop",
+    "reason": "Represión is a transparent, high-frequency political cognate already expected at C1; the isolated prompt supplies no narrower analytical contrast."
+  },
+  {
+    "id": "it_cold_war_vocab_026",
+    "en": "the Diplomacy",
+    "verdict": "keep",
+    "reason": "The exact-duplicate report assigns this prompt to COLD_WAR_VOCAB, where practice-versus-practitioners scope provides a useful distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_027",
+    "en": "the Human rights",
+    "verdict": "drop",
+    "reason": "Derechos humanos is transparent, high-frequency policy vocabulary already firmly expected at C1."
+  },
+  {
+    "id": "it_cold_war_vocab_028",
+    "en": "the Embassies",
+    "verdict": "drop",
+    "reason": "Embajadas is a transparent, regular plural with no distinct lexical or institutional naming issue in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_029",
+    "en": "the Trade barriers",
+    "verdict": "keep",
+    "reason": "Barreras al comercio is a precise policy collocation whose scope usefully extends beyond tariffs alone."
+  },
+  {
+    "id": "it_cold_war_vocab_030",
+    "en": "the Censorship",
+    "verdict": "keep",
+    "reason": "The exact-duplicate report assigns this item to COLD_WAR_VOCAB, and the censorship/censure ambiguity supplies a genuine English interference warning."
+  },
+  {
+    "id": "it_cold_war_vocab_031",
+    "en": "the Refugees",
+    "verdict": "drop",
+    "reason": "Refugiados is transparent, high-frequency humanitarian vocabulary with regular morphology and no distinct scope issue in the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_032",
+    "en": "the Neoliberalism",
+    "verdict": "keep",
+    "reason": "The exact-duplicate report explicitly assigns this political-economy term to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_033",
+    "en": "the Propaganda",
+    "verdict": "drop",
+    "reason": "Propaganda is a transparent, high-frequency international noun with no distinct Spanish usage issue selected by the isolated prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_034",
+    "en": "the Cold War alliances",
+    "verdict": "drop",
+    "reason": "Alianzas de la Guerra Fría is a transparent compositional phrase; capitalization of the historical name alone is too thin a C1 lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_035",
+    "en": "the Containment",
+    "verdict": "keep",
+    "reason": "The Cold War context selects the strategic política de contención rather than merely the generic process noun contención."
+  },
+  {
+    "id": "it_cold_war_vocab_036",
+    "en": "the Mobilization",
+    "verdict": "drop",
+    "reason": "Movilización is a transparent cognate whose military, social, and political senses remain underspecified by the bare prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_037",
+    "en": "the Pro-U.S. factions",
+    "verdict": "keep",
+    "reason": "Proestadounidense teaches closed prefix spelling and facciones avoids the false-friend form *fracciones."
+  },
+  {
+    "id": "it_cold_war_vocab_038",
+    "en": "the Pro-Soviet factions",
+    "verdict": "drop",
+    "reason": "Constructional duplicate of the kept pro-U.S. factions item; prosoviético adds no distinct Spanish morphology, register, or government lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_039",
+    "en": "Disappeared",
+    "verdict": "keep",
+    "reason": "The Cold War context selects the substantivized human-rights plural los desaparecidos, materially correcting the bare singular legacy adjective."
+  },
+  {
+    "id": "it_cold_war_vocab_040",
+    "en": "the Economic sanctions",
+    "verdict": "keep",
+    "reason": "The international-relations sense usefully distinguishes coercive economic measures from the separate Spanish meaning of legal approval."
+  }
+]

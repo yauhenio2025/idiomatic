@@ -1,0 +1,330 @@
+[
+  {
+    "id": "it_cold_war_vocab_084",
+    "en": "Developmentalism",
+    "category": "lexical-noun",
+    "tl": "der Developmentalismus",
+    "alts": [
+      "der Desarrollismo"
+    ],
+    "register": "Formal development-studies term for a state-led strategy of accelerated national development; Desarrollismo is used especially for its Latin American form.",
+    "trap": "The legacy Entwicklungshilfe means development aid, not developmentalism; the latter is a doctrine or policy model rather than external assistance.",
+    "example_tl": "Der Developmentalismus versprach, durch staatlich gelenkte Industrialisierung und Importsubstitution die Abhängigkeit Brasiliens zu verringern, verschärfte jedoch regionale und soziale Ungleichheiten.",
+    "example_en": "Developmentalism promised to reduce Brazil's dependency through state-directed industrialization and import substitution, but it exacerbated regional and social inequalities.",
+    "cloze": "Der {{c1::Developmentalismus}} versprach, durch staatlich gelenkte Industrialisierung und Importsubstitution die Abhängigkeit Brasiliens zu verringern, verschärfte jedoch regionale und soziale Ungleichheiten.",
+    "note": "Materially corrects old_back, which mistranslates the concept as development aid. The alternative preserves the Spanish name used for the specifically Latin American programmatic tradition."
+  },
+  {
+    "id": "it_cold_war_vocab_085",
+    "en": "the Import substitution",
+    "category": "lexical-noun",
+    "tl": "die Importsubstitution",
+    "alts": [],
+    "register": "Formal economics and development-policy term for replacing imported goods with domestic production, often as part of an industrialization strategy.",
+    "trap": "Importsubstitution is not merely an Importbeschränkung: the former requires domestic production to replace imports, whereas the latter may only restrict trade.",
+    "example_tl": "Die Importsubstitution förderte zunächst heimische Industrien, machte sie aber zugleich von staatlichen Krediten, geschützten Märkten und importierten Vorprodukten abhängig.",
+    "example_en": "Import substitution initially promoted domestic industries, but at the same time made them dependent on state loans, protected markets and imported intermediate goods.",
+    "cloze": "Die {{c1::Importsubstitution}} förderte zunächst heimische Industrien, machte sie aber zugleich von staatlichen Krediten, geschützten Märkten und importierten Vorprodukten abhängig.",
+    "note": "The legacy rendering is accurate; the card fixes the specialist economic sense and distinguishes the production strategy from a mere import restriction."
+  },
+  {
+    "id": "it_cold_war_vocab_087",
+    "en": "Tropicalia (referring to the music and art movement)",
+    "category": "lexical-noun",
+    "tl": "die Tropicália",
+    "alts": [
+      "der Tropicalismo"
+    ],
+    "register": "Established cultural-historical name for the Brazilian movement of the late 1960s; Tropicalismo is a common alternative, especially in music history.",
+    "trap": "Preserve the Portuguese proper name and its accent, Tropicália; the explanatory phrase in old_back is not part of the headword.",
+    "example_tl": "Die Tropicália verband experimentelle Popmusik mit bildender Kunst und politischer Provokation, bis das Militärregime führende Künstler verhaften oder ins Exil treiben ließ.",
+    "example_en": "Tropicália combined experimental pop music with visual art and political provocation until the military regime had leading artists arrested or driven into exile.",
+    "cloze": "Die {{c1::Tropicália}} verband experimentelle Popmusik mit bildender Kunst und politischer Provokation, bis das Militärregime führende Künstler verhaften oder ins Exil treiben ließ.",
+    "note": "Materially improves old_back by supplying the established accented proper name alone rather than appending a translated parenthetical explanation. Self-review replaced zentrale with the idiomatic führende for leading artists."
+  },
+  {
+    "id": "it_cold_war_vocab_088",
+    "en": "Clandestine",
+    "category": "lexical-adjective",
+    "tl": "klandestin",
+    "alts": [],
+    "register": "Written-formal adjective used particularly for covert political, publishing or intelligence activity; heimlich is broader and less institutional.",
+    "trap": "The prompt is adjectival: German uses lowercase klandestin and inflects it, as in klandestine Verlage; Die klandestine is an incomplete noun phrase.",
+    "example_tl": "Klandestine Verlage verbreiteten verbotene Essays über Universitätsnetzwerke, obwohl Geheimdienste Druckereien überwachten und bereits der Besitz einzelner Ausgaben Haftstrafen nach sich ziehen konnte.",
+    "example_en": "Clandestine publishers distributed banned essays through university networks, although intelligence services monitored printing presses and possession of individual issues could already result in prison sentences.",
+    "cloze": "{{c1::Klandestine}} Verlage verbreiteten verbotene Essays über Universitätsnetzwerke, obwohl Geheimdienste Druckereien überwachten und bereits der Besitz einzelner Ausgaben Haftstrafen nach sich ziehen konnte.",
+    "note": "Materially corrects old_back, which capitalizes the adjective, adds an article and leaves the resulting phrase without a noun."
+  },
+  {
+    "id": "it_cold_war_vocab_090",
+    "en": "the Industrialists",
+    "category": "lexical-noun",
+    "tl": "die Industriellen",
+    "alts": [
+      "die Industrieunternehmer"
+    ],
+    "register": "Neutral-formal plural for owners or leading business figures in industry; Industrieunternehmer explicitly foregrounds their entrepreneurial role.",
+    "trap": "Industrieller is a substantivized adjective: ein Industrieller, mit einem Industriellen, die Industriellen; Industriearbeiter instead denotes industrial workers.",
+    "example_tl": "Einflussreiche Industrielle unterstützten die neue Regierung, weil sie niedrige Löhne, günstige Kredite und wirksamen Schutz vor ausländischer Konkurrenz erwarteten.",
+    "example_en": "Influential industrialists supported the new government because they expected low wages, favorable loans and effective protection from foreign competition.",
+    "cloze": "Einflussreiche {{c1::Industrielle}} unterstützten die neue Regierung, weil sie niedrige Löhne, günstige Kredite und wirksamen Schutz vor ausländischer Konkurrenz erwarteten.",
+    "note": "The legacy plural is accurate; the card adds the substantivized-adjective morphology and separates industrialists from industrial workers. Self-review replaced stable wages and determined protection with the historically sharper niedrige Löhne and idiomatic wirksamen Schutz."
+  },
+  {
+    "id": "it_cold_war_vocab_091",
+    "en": "the Military governance",
+    "category": "lexical-noun",
+    "tl": "die Militärherrschaft",
+    "alts": [
+      "die Herrschaft des Militärs"
+    ],
+    "register": "Neutral-formal historical and political term for a condition or period of military rule; Militärregierung more narrowly names the governing administration.",
+    "trap": "Old_back changes governance into Regierung: Militärherrschaft denotes military rule, while Militärregierung can refer to the executive body exercising it.",
+    "example_tl": "Unter der Militärherrschaft wurden Parlamente entmachtet, oppositionelle Parteien eingeschränkt und zentrale wirtschaftspolitische Entscheidungen zunehmend nicht gewählten Technokraten übertragen.",
+    "example_en": "Under military rule, parliaments were stripped of power, opposition parties were restricted and key economic-policy decisions were increasingly entrusted to unelected technocrats.",
+    "cloze": "Unter der {{c1::Militärherrschaft}} wurden Parlamente entmachtet, oppositionelle Parteien eingeschränkt und zentrale wirtschaftspolitische Entscheidungen zunehmend nicht gewählten Technokraten übertragen.",
+    "note": "Materially sharpens old_back by distinguishing the system of military rule from a military government as an institutional actor."
+  },
+  {
+    "id": "it_cold_war_vocab_093",
+    "en": "the Amazon",
+    "category": "lexical-noun",
+    "tl": "Amazonien",
+    "alts": [
+      "das Amazonasgebiet"
+    ],
+    "register": "Neutral geographical term for the Amazon region; Amazonasgebiet is an explicit analytical alternative, while der Amazonas normally identifies the river.",
+    "trap": "English the Amazon is ambiguous; in this Brazilian regional context use Amazonien or das Amazonasgebiet, not automatically der Amazonas, which primarily names the river.",
+    "example_tl": "Amazonien galt der Militärregierung als unerschlossener Wirtschaftsraum, weshalb sie Straßenbau, Bergbau und staatlich geförderte Siedlungsprojekte ohne Rücksicht auf indigene Territorien vorantrieb.",
+    "example_en": "The Amazon region appeared to the military government as an undeveloped economic space, so it advanced roadbuilding, mining and state-sponsored settlement projects without regard for Indigenous territories.",
+    "cloze": "{{c1::Amazonien}} galt der Militärregierung als unerschlossener Wirtschaftsraum, weshalb sie Straßenbau, Bergbau und staatlich geförderte Siedlungsprojekte ohne Rücksicht auf indigene Territorien vorantrieb.",
+    "note": "Materially corrects old_back for the intended regional sense. The English could denote the river, but the Brazilian context and the Romance source references select the region. Self-review made Militärregierung singular to keep the example specifically Brazilian."
+  },
+  {
+    "id": "it_cold_war_vocab_095",
+    "en": "Cinema Novo",
+    "category": "lexical-noun",
+    "tl": "das Cinema Novo",
+    "alts": [],
+    "register": "Established film-historical proper name for the Brazilian movement that emerged in the late 1950s; German normally uses it with a neuter article.",
+    "trap": "Do not translate the proper name as Kino Novo; Novo Cinema names a separate Portuguese movement, so word order is also significant.",
+    "example_tl": "Das Cinema Novo stellte soziale Ungleichheit mit knappen Mitteln und einer radikalen Bildsprache dar und widersetzte sich damit den kommerziellen Mustern importierter Unterhaltungsfilme.",
+    "example_en": "Cinema Novo portrayed social inequality with limited resources and a radical visual language, thereby resisting the commercial patterns of imported entertainment films.",
+    "cloze": "Das {{c1::Cinema Novo}} stellte soziale Ungleichheit mit knappen Mitteln und einer radikalen Bildsprache dar und widersetzte sich damit den kommerziellen Mustern importierter Unterhaltungsfilme.",
+    "note": "Materially corrects old_back, which partially translates and thereby corrupts the established Portuguese proper name. Self-review changed the abstract plural Bildsprachen to the more coherent einer radikalen Bildsprache."
+  },
+  {
+    "id": "it_cold_war_vocab_097",
+    "en": "Autarky",
+    "category": "lexical-noun",
+    "tl": "die Autarkie",
+    "alts": [
+      "die wirtschaftliche Selbstversorgung"
+    ],
+    "register": "Formal economics and political-history term for the policy or condition of economic self-sufficiency; the alternative is explanatory rather than terminological.",
+    "trap": "Autarkie means economic self-sufficiency and must not be confused with Autokratie, autocracy; the corresponding adjective is autark.",
+    "example_tl": "Die angestrebte Autarkie blieb unerreichbar, da selbst stark abgeschottete Volkswirtschaften für ihre Industrialisierung auf Maschinen, Energieimporte und ausländische Technologie angewiesen waren.",
+    "example_en": "The desired autarky remained unattainable because even heavily insulated economies depended on machinery, energy imports and foreign technology for their industrialization.",
+    "cloze": "Die angestrebte {{c1::Autarkie}} blieb unerreichbar, da selbst stark abgeschottete Volkswirtschaften für ihre Industrialisierung auf Maschinen, Energieimporte und ausländische Technologie angewiesen waren.",
+    "note": "The legacy rendering is accurate; the card adds the high-value distinction from the near-form Autokratie."
+  },
+  {
+    "id": "it_cold_war_vocab_098",
+    "en": "the Dependency theory",
+    "category": "lexical-noun",
+    "tl": "die Dependenztheorie",
+    "alts": [
+      "die Abhängigkeitstheorie"
+    ],
+    "register": "Formal specialist term in development sociology and political economy; the plural Dependenztheorien is common when distinguishing its different approaches.",
+    "trap": "German uses the closed compound Dependenztheorie, not an English-style *Dependency-Theorie; Dependenz here denotes structural dependence, not an individual dependency.",
+    "example_tl": "Die Dependenztheorie erklärte Unterentwicklung nicht als vorübergehenden Rückstand, sondern als Folge asymmetrischer Handelsbeziehungen zwischen industriellen Zentren und peripheren Volkswirtschaften.",
+    "example_en": "Dependency theory explained underdevelopment not as a temporary lag but as a consequence of asymmetric trade relations between industrial centers and peripheral economies.",
+    "cloze": "Die {{c1::Dependenztheorie}} erklärte Unterentwicklung nicht als vorübergehenden Rückstand, sondern als Folge asymmetrischer Handelsbeziehungen zwischen industriellen Zentren und peripheren Volkswirtschaften.",
+    "note": "The legacy rendering is accurate; the example fixes the Latin American structural-development sense rather than a generic use of dependency."
+  },
+  {
+    "id": "it_cold_war_vocab_099",
+    "en": "the Technocrats",
+    "category": "lexical-noun",
+    "tl": "die Technokraten",
+    "alts": [],
+    "register": "Neutral-formal political and sociological plural, often critical when expertise is used to present contested choices as politically neutral necessities.",
+    "trap": "Technokrat is a weak masculine noun: der Technokrat, den Technokraten and die Technokraten; do not use *die Technokrats under English influence.",
+    "example_tl": "Die Technokraten begründeten Lohnkontrollen und Haushaltskürzungen mit ökonomischer Sachlogik, obwohl ihre Modelle die politischen Kosten wachsender Armut weitgehend ausblendeten.",
+    "example_en": "The technocrats justified wage controls and budget cuts by invoking economic logic, although their models largely ignored the political costs of growing poverty.",
+    "cloze": "Die {{c1::Technokraten}} begründeten Lohnkontrollen und Haushaltskürzungen mit ökonomischer Sachlogik, obwohl ihre Modelle die politischen Kosten wachsender Armut weitgehend ausblendeten.",
+    "note": "The legacy plural is accurate; the card supplies the weak-noun morphology absent from the isolated gloss."
+  },
+  {
+    "id": "it_cold_war_vocab_100",
+    "en": "the Favelas",
+    "category": "lexical-noun",
+    "tl": "die Favelas",
+    "alts": [],
+    "register": "Neutral Brazilian social-geography term in informed reporting; Armenviertel is reductive, and not every informal settlement is a favela.",
+    "trap": "The German singular is die Favela and the plural is die Favelas, not *Favelen; avoid treating the term as a synonym for every poor neighborhood.",
+    "example_tl": "Viele Favelas entstanden auf ökologisch riskanten Flächen, weil formelle Wohnungsmärkte einkommensschwache Familien ausschlossen und kommunale Infrastruktur dem Bevölkerungswachstum nicht folgte.",
+    "example_en": "Many favelas arose on environmentally hazardous land because formal housing markets excluded low-income families and municipal infrastructure did not keep pace with population growth.",
+    "cloze": "Viele {{c1::Favelas}} entstanden auf ökologisch riskanten Flächen, weil formelle Wohnungsmärkte einkommensschwache Familien ausschlossen und kommunale Infrastruktur dem Bevölkerungswachstum nicht folgte.",
+    "note": "The legacy plural is accurate; the card records its German number morphology and rejects the overly broad equation with Armenviertel."
+  },
+  {
+    "id": "it_cold_war_vocab_101",
+    "en": "Bureaucratic-authoritarian",
+    "category": "lexical-adjective",
+    "tl": "bürokratisch-autoritär",
+    "alts": [],
+    "register": "Formal political-science adjective, especially associated with analyses of Latin American regimes led by military officers and technocratic elites.",
+    "trap": "The item is an adjective: write bürokratisch-autoritär in lowercase and inflect the second element; Die bürokratisch-autoritäre is an incomplete noun phrase.",
+    "example_tl": "Das bürokratisch-autoritäre Regime stützte sich auf Militärs und Technokraten, schloss breite Bevölkerungsschichten politisch aus und versprach zugleich beschleunigte Industrialisierung.",
+    "example_en": "The bureaucratic-authoritarian regime relied on military officers and technocrats, politically excluded broad sections of the population and simultaneously promised accelerated industrialization.",
+    "cloze": "Das {{c1::bürokratisch-autoritäre}} Regime stützte sich auf Militärs und Technokraten, schloss breite Bevölkerungsschichten politisch aus und versprach zugleich beschleunigte Industrialisierung.",
+    "note": "Materially corrects old_back, which capitalizes the adjective, adds an article and omits the noun required by that inflected form."
+  },
+  {
+    "id": "it_cold_war_vocab_104",
+    "en": "the Caudillo",
+    "category": "lexical-noun",
+    "tl": "der Caudillo",
+    "alts": [],
+    "register": "Historical and political term, often critical, for a personalist leader or strongman in Spain or Latin America; it is not simply a synonym for every dictator.",
+    "trap": "German retains the Spanish loanword with masculine gender and forms the plural Caudillos; Diktator is broader and loses the tradition of personalist patronage.",
+    "example_tl": "Der Caudillo band regionale Eliten durch Patronage an seine Person und schwächte Institutionen, die seiner informellen Macht dauerhafte Grenzen hätten setzen können.",
+    "example_en": "The caudillo bound regional elites to himself through patronage and weakened institutions that could have placed lasting limits on his informal power.",
+    "cloze": "Der {{c1::Caudillo}} band regionale Eliten durch Patronage an seine Person und schwächte Institutionen, die seiner informellen Macht dauerhafte Grenzen hätten setzen können.",
+    "note": "The legacy headword is accurate; the card adds the historical scope and avoids flattening the term into the broader Diktator."
+  },
+  {
+    "id": "it_cold_war_vocab_105",
+    "en": "Corporatism",
+    "category": "lexical-noun",
+    "tl": "der Korporatismus",
+    "alts": [],
+    "register": "Formal political-science term for organizing interest representation through recognized functional associations; its precise institutional form varies by theory and period.",
+    "trap": "Korporatismus does not mean rule by commercial corporations: English corporation is normally Unternehmen or Konzern in that business sense.",
+    "example_tl": "Der staatliche Korporatismus band Gewerkschaften und Arbeitgeberverbände in kontrollierte Verhandlungsgremien ein, begrenzte jedoch ihre organisatorische Autonomie und unabhängige politische Mobilisierung.",
+    "example_en": "State corporatism incorporated trade unions and employers' associations into controlled negotiating bodies but limited their organizational autonomy and independent political mobilization.",
+    "cloze": "Der staatliche {{c1::Korporatismus}} band Gewerkschaften und Arbeitgeberverbände in kontrollierte Verhandlungsgremien ein, begrenzte jedoch ihre organisatorische Autonomie und unabhängige politische Mobilisierung.",
+    "note": "The legacy rendering is accurate; the card adds the crucial distinction from corporate commercial power."
+  },
+  {
+    "id": "it_cold_war_vocab_108",
+    "en": "the Surveillance",
+    "category": "lexical-noun",
+    "tl": "die Überwachung",
+    "alts": [],
+    "register": "Neutral-formal institutional term for systematic monitoring by state, police, intelligence or technical systems; context determines whether it is covert.",
+    "trap": "French surveillance and its Romance cognates should not be imported into ordinary political German; outside specialist uses such as epidemiology, the standard term is Überwachung.",
+    "example_tl": "Die digitale Überwachung oppositioneller Netzwerke ermöglichte präventive Festnahmen, schuf aber zugleich riesige Datenbestände, deren politische Deutung häufig von Vorurteilen geprägt war.",
+    "example_en": "Digital surveillance of opposition networks enabled preventive arrests but also created vast datasets whose political interpretation was often shaped by prejudice.",
+    "cloze": "Die digitale {{c1::Überwachung}} oppositioneller Netzwerke ermöglichte präventive Festnahmen, schuf aber zugleich riesige Datenbestände, deren politische Deutung häufig von Vorurteilen geprägt war.",
+    "note": "Retained here under the cross-topic duplicate report, which assigns this exact prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_111",
+    "en": "the Economic miracle",
+    "category": "lexical-noun",
+    "tl": "das Wirtschaftswunder",
+    "alts": [],
+    "register": "Journalistic and historical label for unusually rapid economic growth; in critical analysis it is often qualified as so-called because it embeds an evaluative narrative.",
+    "trap": "Established historical labels use the compound Wirtschaftswunder, not a literal *ökonomisches Wunder; the term praises growth and can conceal its distributional costs.",
+    "example_tl": "Das brasilianische Wirtschaftswunder steigerte Produktion und Exporte rasant, doch sinkende Reallöhne und wachsende regionale Ungleichheit relativierten die offizielle Erfolgserzählung.",
+    "example_en": "The Brazilian economic miracle rapidly increased production and exports, but falling real wages and growing regional inequality qualified the official success story.",
+    "cloze": "Das brasilianische {{c1::Wirtschaftswunder}} steigerte Produktion und Exporte rasant, doch sinkende Reallöhne und wachsende regionale Ungleichheit relativierten die offizielle Erfolgserzählung.",
+    "note": "The legacy rendering is accurate; the example makes the Brazilian historical referent and the label's evaluative force explicit."
+  },
+  {
+    "id": "it_cold_war_vocab_112",
+    "en": "the Debt",
+    "category": "lexical-noun",
+    "tl": "die Verschuldung",
+    "alts": [],
+    "register": "Neutral-formal macroeconomic term for a state or process of indebtedness; Schulden denotes the liabilities themselves, while Schuldenstand quantifies their total.",
+    "trap": "Do not confuse Verschuldung with singular Schuld, which can mean moral guilt or one obligation; the isolated English debt leaves this distinction implicit.",
+    "example_tl": "Die wachsende Verschuldung zwang die Regierung zu Verhandlungen mit internationalen Gläubigern, deren Kreditauflagen tief in die Sozialpolitik und die öffentliche Investitionsplanung eingriffen.",
+    "example_en": "Growing debt forced the government into negotiations with international creditors whose lending conditions intruded deeply into social policy and public investment planning.",
+    "cloze": "Die wachsende {{c1::Verschuldung}} zwang die Regierung zu Verhandlungen mit internationalen Gläubigern, deren Kreditauflagen tief in die Sozialpolitik und die öffentliche Investitionsplanung eingriffen.",
+    "note": "The English prompt is underspecified; the legacy rendering and the regional macroeconomic sequence support aggregate indebtedness, which the example fixes explicitly. Self-review supplied parallel articles before both policy domains."
+  },
+  {
+    "id": "it_cold_war_vocab_114",
+    "en": "the Geopolitics",
+    "category": "lexical-noun",
+    "tl": "die Geopolitik",
+    "alts": [],
+    "register": "Formal academic and media term for the interaction of geography, power and strategy; it can also critically name a strategic way of framing conflicts.",
+    "trap": "English geopolitics ends in -s, but German normally uses the singular collective Geopolitik rather than a mechanically copied plural *Geopolitiken.",
+    "example_tl": "Die Geopolitik des Kalten Krieges verwandelte regionale Konflikte in globale Stellvertreterkrisen, deren lokale Ursachen in westlichen Analysen oft zweitrangig erschienen.",
+    "example_en": "Cold War geopolitics turned regional conflicts into global proxy crises whose local causes often appeared secondary in Western analyses.",
+    "cloze": "Die {{c1::Geopolitik}} des Kalten Krieges verwandelte regionale Konflikte in globale Stellvertreterkrisen, deren lokale Ursachen in westlichen Analysen oft zweitrangig erschienen.",
+    "note": "Retained here under the cross-topic duplicate report, which assigns this exact prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_115",
+    "en": "the Infrastructure",
+    "category": "lexical-noun",
+    "tl": "die Infrastruktur",
+    "alts": [],
+    "register": "Neutral policy and economics collective noun; the plural Infrastrukturen is appropriate mainly when distinct systems, sectors or national networks are being compared.",
+    "trap": "English and Romance plurals can encourage overuse of Infrastrukturen; German normally uses singular Infrastruktur for a place's transport, utility and public-service base collectively.",
+    "example_tl": "Die staatliche Infrastruktur verband Rohstoffregionen mit Exporthäfen, während ländliche Gemeinden weiterhin kaum Zugang zu Strom, Gesundheitsversorgung oder befestigten Straßen hatten.",
+    "example_en": "State infrastructure connected resource-producing regions to export ports, while rural communities continued to have little access to electricity, healthcare or paved roads.",
+    "cloze": "Die staatliche {{c1::Infrastruktur}} verband Rohstoffregionen mit Exporthäfen, während ländliche Gemeinden weiterhin kaum Zugang zu Strom, Gesundheitsversorgung oder befestigten Straßen hatten.",
+    "note": "Retained here under the cross-topic duplicate report, which assigns this exact prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_116",
+    "en": "Mestizo",
+    "category": "lexical-noun",
+    "tl": "der Mestize",
+    "alts": [],
+    "register": "Historical or explicitly metalinguistic label; it derives from colonial racial classification and is now widely regarded as discriminatory, so avoid it as an unmarked present-day designation.",
+    "trap": "The German masculine noun is Mestize, plural Mestizen, with feminine Mestizin; Spanish mestizaje instead names mixing or the ideology built around it, not an individual.",
+    "example_tl": "Koloniale Verwaltungen verwendeten die Kategorie Mestize, um Menschen hierarchisch einzuordnen, deren Herkunft und Selbstverständnis sich solchen starren Zuschreibungen vielfach entzogen.",
+    "example_en": "Colonial administrations used the category mestizo to rank people hierarchically, even though their origins and self-understanding often eluded such rigid labels.",
+    "cloze": "Koloniale Verwaltungen verwendeten die Kategorie {{c1::Mestize}}, um Menschen hierarchisch einzuordnen, deren Herkunft und Selbstverständnis sich solchen starren Zuschreibungen vielfach entzogen.",
+    "note": "The source is genuinely ambiguous: the English may be a noun or adjective, while its Romance references conflict in number and even select mestizaje. The capitalized English and German legacy plural support the person noun; the example deliberately historicizes it."
+  },
+  {
+    "id": "it_cold_war_vocab_117",
+    "en": "the Economic disparity",
+    "category": "lexical-expression",
+    "tl": "das wirtschaftliche Gefälle",
+    "alts": [
+      "die wirtschaftliche Ungleichheit"
+    ],
+    "register": "Neutral-formal analytical expression for a measurable gap between regions or groups; wirtschaftliche Ungleichheit is broader and need not explicitly compare two poles.",
+    "trap": "Gefälle is neuter and commonly takes zwischen plus dative when the two sides are named; here its abstract sense is disparity, not a physical slope.",
+    "example_tl": "Das wirtschaftliche Gefälle zwischen Küstenmetropolen und ländlichem Hinterland vertiefte politische Konflikte, weil öffentliche Investitionen weiterhin den bereits prosperierenden Regionen zugutekamen.",
+    "example_en": "The economic disparity between coastal metropolises and the rural hinterland deepened political conflicts because public investment continued to benefit regions that were already prospering.",
+    "cloze": "Das {{c1::wirtschaftliche Gefälle}} zwischen Küstenmetropolen und ländlichem Hinterland vertiefte politische Konflikte, weil öffentliche Investitionen weiterhin den bereits prosperierenden Regionen zugutekamen.",
+    "note": "Materially sharpens old_back for an explicit comparison between regions; wirtschaftliche Ungleichheit remains a valid broader alternative."
+  },
+  {
+    "id": "it_cold_war_vocab_118",
+    "en": "Afro-Brazilian",
+    "category": "lexical-adjective",
+    "tl": "afrobrasilianisch",
+    "alts": [],
+    "register": "Neutral academic and cultural adjective for people, practices or traditions in Brazil with African ancestry or origins; identity-sensitive contexts may require more specific wording.",
+    "trap": "The standard compact adjective is lowercase afrobrasilianisch and inflects normally; old_back incorrectly capitalizes the isolated adjective, while hyphenation varies for emphasis or clarity.",
+    "example_tl": "Afrobrasilianische Künstler verbanden religiöse Traditionen, populäre Musik und politische Forderungen zu Ausdrucksformen, die das offizielle Bild einer konfliktfreien Nationalkultur grundlegend infrage stellten.",
+    "example_en": "Afro-Brazilian artists combined religious traditions, popular music and political demands into forms of expression that fundamentally challenged the official image of a conflict-free national culture.",
+    "cloze": "{{c1::Afrobrasilianische}} Künstler verbanden religiöse Traditionen, populäre Musik und politische Forderungen zu Ausdrucksformen, die das offizielle Bild einer konfliktfreien Nationalkultur grundlegend infrage stellten.",
+    "note": "Materially normalizes old_back to the lowercase unhyphenated citation form; the example supplies the required sentence-initial capitalization and adjectival inflection."
+  },
+  {
+    "id": "it_cold_war_vocab_119",
+    "en": "the Indigenous rights",
+    "category": "lexical-expression",
+    "tl": "die Rechte indigener Völker",
+    "alts": [],
+    "register": "Current formal human-rights and policy wording, especially for collective rights to territory, culture and self-determination.",
+    "trap": "Ureinwohner is often reductive or othering in current institutional prose; indigene Völker is the established rights-bearing collective, with lowercase inflected indigener.",
+    "example_tl": "Die Rechte indigener Völker blieben trotz verfassungsrechtlicher Garantien prekär, sobald Bergbaukonzessionen, Staudämme oder militärische Sicherheitsinteressen ihre Territorien berührten.",
+    "example_en": "The rights of Indigenous peoples remained precarious despite constitutional guarantees whenever mining concessions, dams or military security interests affected their territories.",
+    "cloze": "Die {{c1::Rechte indigener Völker}} blieben trotz verfassungsrechtlicher Garantien prekär, sobald Bergbaukonzessionen, Staudämme oder militärische Sicherheitsinteressen ihre Territorien berührten.",
+    "note": "Materially improves old_back by replacing the dated Rechte der Ureinwohner with the current institutional term for the collective rights of Indigenous peoples."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_cold_war_vocab_041",
+    "en": "the Resistance",
+    "verdict": "keep",
+    "reason": "Capitalization distinguishes the historical French Resistance from generic resistance and creates a real production lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_042",
+    "en": "the KGB",
+    "verdict": "drop",
+    "reason": "KGB is unchanged in French, and masculine article agreement alone is too thin a C1 lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_043",
+    "en": "the Land reforms",
+    "verdict": "drop",
+    "reason": "Constructional duplicate of the more canonical singular agrarian reform item 063, which carries the same French collocation lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_044",
+    "en": "the Ideology",
+    "verdict": "keep",
+    "reason": "The exact-duplicate report assigns this item to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_045",
+    "en": "the Arms race",
+    "verdict": "keep",
+    "reason": "Course aux armements is an established nonliteral geopolitical collocation with useful fixed government."
+  },
+  {
+    "id": "it_cold_war_vocab_046",
+    "en": "Interventionism",
+    "verdict": "keep",
+    "reason": "Interventionnisme has a spelling trap and requires context to distinguish foreign-policy from domestic-economic interventionism."
+  },
+  {
+    "id": "it_cold_war_vocab_047",
+    "en": "the Coup d'état",
+    "verdict": "drop",
+    "reason": "The retained military coup item 001 already teaches coup d’État, including its fixed complement and capitalization."
+  },
+  {
+    "id": "it_cold_war_vocab_048",
+    "en": "the Reform",
+    "verdict": "drop",
+    "reason": "Réforme is a transparent, high-frequency cognate with no narrower sense or government supplied by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_049",
+    "en": "the Copper",
+    "verdict": "drop",
+    "reason": "Cuivre is core concrete vocabulary already expected well below C1, and the isolated prompt adds no specialist collocation."
+  },
+  {
+    "id": "it_cold_war_vocab_050",
+    "en": "the Socialism",
+    "verdict": "drop",
+    "reason": "Socialisme is a transparent, high-frequency ideological cognate; lowercase spelling alone does not justify a C1 card."
+  },
+  {
+    "id": "it_cold_war_vocab_051",
+    "en": "the Christian Democracy",
+    "verdict": "keep",
+    "reason": "The Chilean sequence selects a party label whose capitalization and distinction from the generic political tradition are pedagogically useful."
+  },
+  {
+    "id": "it_cold_war_vocab_052",
+    "en": "the Land redistribution",
+    "verdict": "keep",
+    "reason": "Redistribution des terres is a precise agrarian-policy collocation and is narrower than réforme agraire."
+  },
+  {
+    "id": "it_cold_war_vocab_053",
+    "en": "the Inflation",
+    "verdict": "drop",
+    "reason": "Inflation is a transparent, high-frequency economics cognate with regular gender and no distinct sense issue here."
+  },
+  {
+    "id": "it_cold_war_vocab_054",
+    "en": "the Expropriation",
+    "verdict": "keep",
+    "reason": "The legal distinction between expropriation and punitive confiscation supplies genuine advanced policy vocabulary."
+  },
+  {
+    "id": "it_cold_war_vocab_055",
+    "en": "the Coalition",
+    "verdict": "drop",
+    "reason": "Coalition is a transparent, high-frequency political cognate with regular morphology and no narrower lesson in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_056",
+    "en": "the Economic policy",
+    "verdict": "drop",
+    "reason": "Politique économique is a transparent, standard C1 collocation, and the prompt does not select a less obvious policy sense."
+  },
+  {
+    "id": "it_cold_war_vocab_057",
+    "en": "the Peasants",
+    "verdict": "keep",
+    "reason": "Paysan carries a historical social-class framing that usefully contrasts with the contemporary occupational term agriculteur."
+  },
+  {
+    "id": "it_cold_war_vocab_058",
+    "en": "the Elections",
+    "verdict": "drop",
+    "reason": "Élections is transparent core civic vocabulary with regular plural morphology and no distinct usage issue."
+  },
+  {
+    "id": "it_cold_war_vocab_059",
+    "en": "the Radicalization",
+    "verdict": "drop",
+    "reason": "Radicalisation is a transparent academic and media cognate with regular derivation and no narrower sense in the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_060",
+    "en": "Authoritarianism",
+    "verdict": "drop",
+    "reason": "Autoritarisme is a transparent cognate, and the retained authoritarian item 016 already teaches the noun-adjective contrast."
+  },
+  {
+    "id": "it_cold_war_vocab_061",
+    "en": "the Militancy",
+    "verdict": "keep",
+    "reason": "French militantisme often means peaceful organized activism, whereas English militancy can imply a more confrontational stance."
+  },
+  {
+    "id": "it_cold_war_vocab_062",
+    "en": "the Industrialization",
+    "verdict": "drop",
+    "reason": "Industrialisation is a transparent academic cognate with regular derivation and no additional production challenge."
+  },
+  {
+    "id": "it_cold_war_vocab_063",
+    "en": "the Agrarian reform",
+    "verdict": "keep",
+    "reason": "Réforme agraire is the canonical specialist term and teaches the important agraire rather than agrarien distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_064",
+    "en": "the Urbanization",
+    "verdict": "drop",
+    "reason": "Urbanisation is a transparent academic cognate with regular morphology and no narrower scope selected here."
+  },
+  {
+    "id": "it_cold_war_vocab_065",
+    "en": "the Strike",
+    "verdict": "drop",
+    "reason": "Grève in the labor sense is high-frequency core political vocabulary already firmly expected at C1."
+  },
+  {
+    "id": "it_cold_war_vocab_066",
+    "en": "the Trade unions",
+    "verdict": "keep",
+    "reason": "The noncognate syndicats and the false-friend risk of translating union literally create clear production value."
+  },
+  {
+    "id": "it_cold_war_vocab_067",
+    "en": "the Workers",
+    "verdict": "drop",
+    "reason": "Travailleurs is transparent core labor vocabulary, while the bare prompt supplies no context requiring the narrower ouvriers."
+  },
+  {
+    "id": "it_cold_war_vocab_068",
+    "en": "the Redistribution",
+    "verdict": "drop",
+    "reason": "Redistribution is a transparent academic cognate and is less instructive than the retained land-specific collocation in item 052."
+  },
+  {
+    "id": "it_cold_war_vocab_069",
+    "en": "the Inequality",
+    "verdict": "keep",
+    "reason": "French policy prose typically pluralizes les inégalités, creating a genuine number and register lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_070",
+    "en": "Left-wing",
+    "verdict": "keep",
+    "reason": "The source is adjectival, so de gauche materially corrects the legacy noun Gauche and teaches the invariable postnominal phrase."
+  },
+  {
+    "id": "it_cold_war_vocab_071",
+    "en": "Right-wing",
+    "verdict": "drop",
+    "reason": "Constructional mirror of the retained de gauche item; de droite is core C1 vocabulary and adds no new morphology or government."
+  },
+  {
+    "id": "it_cold_war_vocab_072",
+    "en": "Centrism",
+    "verdict": "drop",
+    "reason": "Centrisme is a transparent political cognate with regular derivation and no distinct sense issue in the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_073",
+    "en": "the Protest",
+    "verdict": "keep",
+    "reason": "Contestation captures sustained political protest and usefully contrasts with a discrete protestation and a street manifestation."
+  },
+  {
+    "id": "it_cold_war_vocab_074",
+    "en": "the Dissent",
+    "verdict": "keep",
+    "reason": "Dissidence is a marked political term whose scope is stronger and narrower than an ordinary désaccord."
+  },
+  {
+    "id": "it_cold_war_vocab_075",
+    "en": "the Social justice",
+    "verdict": "drop",
+    "reason": "Justice sociale is a transparent, high-frequency policy collocation already expected at C1."
+  },
+  {
+    "id": "it_cold_war_vocab_076",
+    "en": "the Economic growth",
+    "verdict": "drop",
+    "reason": "Croissance économique is a transparent, high-frequency economics collocation with no distinct production trap."
+  },
+  {
+    "id": "it_cold_war_vocab_077",
+    "en": "the Popular unity",
+    "verdict": "keep",
+    "reason": "The Chilean context selects the proper coalition name Unité populaire, making capitalization and the retained Spanish form teachable."
+  },
+  {
+    "id": "it_cold_war_vocab_078",
+    "en": "the Divestment",
+    "verdict": "keep",
+    "reason": "Désinvestissement is specialist financial vocabulary whose scope usefully contrasts with broader désengagement and transactional cession."
+  },
+  {
+    "id": "it_cold_war_vocab_079",
+    "en": "the Polarization",
+    "verdict": "drop",
+    "reason": "Polarisation is a transparent, established political cognate with regular morphology and no added lesson in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_080",
+    "en": "the Foreign relations",
+    "verdict": "keep",
+    "reason": "Relations extérieures is an established institutional collocation and avoids the tempting English calque relations étrangères."
+  }
+]

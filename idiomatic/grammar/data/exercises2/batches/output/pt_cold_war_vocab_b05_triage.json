@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_cold_war_vocab_161",
+    "en": "the Berlin Wall",
+    "verdict": "drop",
+    "reason": "Muro de Berlim is an iconic, transparent proper name already expected at C1, and the isolated prompt adds no production distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_162",
+    "en": "the Diplomatic tension",
+    "verdict": "drop",
+    "reason": "Tensão diplomática is a transparent adjective-noun collocation with no specialist sense, government, or interference trap beyond its familiar components."
+  },
+  {
+    "id": "it_cold_war_vocab_163",
+    "en": "the Summits",
+    "verdict": "keep",
+    "reason": "Brazilian Portuguese offers the explicit reuniões de cúpula and the polysemous compact cúpulas, with a useful contrast to European Portuguese cimeiras."
+  },
+  {
+    "id": "it_cold_war_vocab_164",
+    "en": "the Nuclear testing",
+    "verdict": "keep",
+    "reason": "The weapons context selects testes or ensaios nucleares in the plural and must be distinguished from generic technical testagem of nuclear systems."
+  },
+  {
+    "id": "it_cold_war_vocab_165",
+    "en": "the Cold War frontiers",
+    "verdict": "drop",
+    "reason": "The phrase is compositional and underspecified: frontiers could mean state borders, peripheral theaters, ideological fault lines, or limits of scholarship."
+  },
+  {
+    "id": "it_cold_war_vocab_166",
+    "en": "the Ideological expansion",
+    "verdict": "drop",
+    "reason": "Expansão ideológica is a transparent academic collocation whose bare source supplies no doctrine, agent, mechanism, or construction to resolve."
+  },
+  {
+    "id": "it_cold_war_vocab_167",
+    "en": "the Conventional forces",
+    "verdict": "keep",
+    "reason": "Forças convencionais is a strategic term whose technical contrast with nuclear forces is not recoverable from the everyday sense of convencional alone."
+  },
+  {
+    "id": "it_cold_war_vocab_168",
+    "en": "the Rearmament",
+    "verdict": "drop",
+    "reason": "Rearmamento is a transparent formal cognate with regular derivation, and the prompt does not select a treaty, state, or historically distinctive program."
+  },
+  {
+    "id": "it_cold_war_vocab_169",
+    "en": "the De-escalation",
+    "verdict": "keep",
+    "reason": "Desescalada is an established military-diplomatic process noun whose spelling, register, and distinction from a momentary pause merit explicit treatment."
+  },
+  {
+    "id": "it_cold_war_vocab_170",
+    "en": "the Nuclear fallout",
+    "verdict": "keep",
+    "reason": "The physical term is precipitação radioativa, materially correcting old_back and distinguishing radioactive material from figurative political fallout."
+  },
+  {
+    "id": "it_cold_war_vocab_171",
+    "en": "the Nuclear umbrella",
+    "verdict": "keep",
+    "reason": "Guarda-chuva nuclear is a lexicalized deterrence metaphor denoting an ally's extended guarantee rather than physical missile defense."
+  },
+  {
+    "id": "it_cold_war_vocab_172",
+    "en": "the Military parade",
+    "verdict": "drop",
+    "reason": "Desfile militar and parada militar are familiar transparent expressions, and the generic prompt provides no distinct advanced lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_173",
+    "en": "Cold peace",
+    "verdict": "keep",
+    "reason": "Paz fria is an analytical label for formal peace without normalized relations and must be distinguished from the historically specific Guerra Fria."
+  },
+  {
+    "id": "it_cold_war_vocab_174",
+    "en": "to confront",
+    "verdict": "keep",
+    "reason": "The adversarial or difficulty-facing sense normally favors enfrentar, while the cognate confrontar can instead select comparison or direct challenge."
+  },
+  {
+    "id": "it_cold_war_vocab_175",
+    "en": "to oppose",
+    "verdict": "keep",
+    "reason": "Portuguese normally recasts the English transitive verb as the pronominal frame opor-se a, making government the teaching value."
+  },
+  {
+    "id": "it_cold_war_vocab_176",
+    "en": "to align",
+    "verdict": "keep",
+    "reason": "Geopolitical alignment uses alinhar-se com for an actor but alinhar-se a for a position, a complement distinction absent from old_back."
+  },
+  {
+    "id": "it_cold_war_vocab_177",
+    "en": "to infiltrate",
+    "verdict": "keep",
+    "reason": "The card distinguishes the pronominal frame infiltrar-se em from the transitive frame infiltrar um agente em, a valency contrast omitted by the source."
+  },
+  {
+    "id": "it_cold_war_vocab_178",
+    "en": "to destabilize",
+    "verdict": "drop",
+    "reason": "Desestabilizar is a transparent formal cognate with ordinary transitive syntax, and the bare prompt offers no distinct advanced lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_179",
+    "en": "to censor",
+    "verdict": "drop",
+    "reason": "Censurar is a transparent, high-frequency political cognate, while the retained Censorship noun card already owns the relevant concept and sense distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_180",
+    "en": "to expropriate",
+    "verdict": "drop",
+    "reason": "The retained Expropriation card already teaches the Brazilian legal distinction from desapropriação; this transparent derived verb adds no separate construction."
+  },
+  {
+    "id": "it_cold_war_vocab_181",
+    "en": "to nationalize",
+    "verdict": "drop",
+    "reason": "The retained Nationalization card already distinguishes estatizar from nacionalizar, and this bare derived verb adds no source-selected ownership construction."
+  },
+  {
+    "id": "it_cold_war_vocab_182",
+    "en": "to mobilize",
+    "verdict": "drop",
+    "reason": "The prompt is too broad to choose among mobilizing troops, resources, supporters, or oneself, while mobilizar and mobilizar-se are familiar at C1."
+  },
+  {
+    "id": "it_cold_war_vocab_183",
+    "en": "to resist",
+    "verdict": "keep",
+    "reason": "Portuguese resistir a requires a governed preposition unlike English and Spanish direct-object patterns, creating consequential production value."
+  },
+  {
+    "id": "it_cold_war_vocab_184",
+    "en": "to repress",
+    "verdict": "drop",
+    "reason": "Reprimir is a transparent, high-frequency political cognate, and the generic prompt supplies no distinction among suppressing protests, impulses, or information."
+  },
+  {
+    "id": "it_cold_war_vocab_185",
+    "en": "to embargo",
+    "verdict": "keep",
+    "reason": "Impor um embargo a fixes the trade-sanctions sense and avoids the judicial suspension or seizure readily activated by bare embargar in Brazil."
+  },
+  {
+    "id": "it_cold_war_vocab_186",
+    "en": "to elect",
+    "verdict": "drop",
+    "reason": "Eleger is core political vocabulary with ordinary transitive syntax; the source selects no office, procedure, or construction that would justify a C1 card."
+  },
+  {
+    "id": "it_cold_war_vocab_187",
+    "en": "to negotiate",
+    "verdict": "drop",
+    "reason": "Negociar is a transparent, high-frequency cognate, and the bare prompt gives no basis for choosing an agreement, counterpart, or disputed issue."
+  },
+  {
+    "id": "it_cold_war_vocab_188",
+    "en": "to protest",
+    "verdict": "keep",
+    "reason": "Unlike English transitive protest, the selected Portuguese political-objection sense normally uses protestar contra, creating a useful government lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_189",
+    "en": "to radicalize",
+    "verdict": "drop",
+    "reason": "Radicalizar is a transparent cognate, while the bare source does not decide between causing radicalization and the subject-changing radicalizar-se."
+  },
+  {
+    "id": "it_cold_war_vocab_190",
+    "en": "to industrialize",
+    "verdict": "drop",
+    "reason": "Industrializar is a transparent formal cognate, and the generic prompt does not distinguish a transitive development policy from industrializar-se."
+  },
+  {
+    "id": "it_cold_war_vocab_191",
+    "en": "to accelerate",
+    "verdict": "drop",
+    "reason": "Acelerar is a transparent, high-frequency cognate with ordinary syntax, and no specialist object or Cold War sense is selected."
+  },
+  {
+    "id": "it_cold_war_vocab_192",
+    "en": "to dissent",
+    "verdict": "keep",
+    "reason": "Brazilian Portuguese naturally uses divergir de or discordar de; old_back's rare dissidir and the governed complement create real production value."
+  },
+  {
+    "id": "it_cold_war_vocab_193",
+    "en": "to exile",
+    "verdict": "keep",
+    "reason": "Exilar alguém must be distinguished from subject-changing exilar-se, a verbal valency lesson not covered by the retained Exile noun."
+  },
+  {
+    "id": "it_cold_war_vocab_194",
+    "en": "to surveil",
+    "verdict": "drop",
+    "reason": "Vigiar is a familiar unambiguous verb, while the retained Surveillance noun card already owns the relevant Cold War concept and scope distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_195",
+    "en": "to disarm",
+    "verdict": "drop",
+    "reason": "Desarmar is familiar transparent vocabulary; the richer strategic distinction between disarmament and arms control is already taught by preceding noun cards."
+  },
+  {
+    "id": "it_cold_war_vocab_196",
+    "en": "to deter",
+    "verdict": "keep",
+    "reason": "Dissuadir alguém de fazer algo has a multi-part argument structure and a strategic meaning distinct from ordinary persuasion."
+  },
+  {
+    "id": "it_cold_war_vocab_197",
+    "en": "to escalate",
+    "verdict": "keep",
+    "reason": "Conflict-related English escalate requires an object-sensitive Portuguese choice such as agravar or intensificar, while escalar remains technical outside defense usage."
+  },
+  {
+    "id": "it_cold_war_vocab_198",
+    "en": "to proliferate",
+    "verdict": "keep",
+    "reason": "Portuguese proliferar is naturally intransitive, so its valency supplies separate production value beyond the retained Nuclear proliferation noun."
+  },
+  {
+    "id": "it_cold_war_vocab_199",
+    "en": "to integrate",
+    "verdict": "drop",
+    "reason": "The retained Integration card already teaches integração and its complements; this transparent generic verb adds no distinct sense beyond that word family."
+  },
+  {
+    "id": "it_cold_war_vocab_200",
+    "en": "to transition",
+    "verdict": "keep",
+    "reason": "The idiomatic Brazilian frame passar de ... para ... expresses both endpoints without requiring the marked general-policy use of transicionar."
+  }
+]

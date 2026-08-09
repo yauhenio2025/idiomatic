@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_cold_war_vocab_041",
+    "en": "the Resistance",
+    "verdict": "drop",
+    "reason": "Widerstand is high-frequency core vocabulary already expected at C1, and the isolated prompt does not identify a specific resistance movement or specialist sense."
+  },
+  {
+    "id": "it_cold_war_vocab_042",
+    "en": "the KGB",
+    "verdict": "drop",
+    "reason": "International proper-name initialism rather than productive vocabulary; masculine article gender alone is too thin a standalone lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_043",
+    "en": "the Land reforms",
+    "verdict": "drop",
+    "reason": "Near-duplicate of the more precise kept Agrarian reform item; Agrarreform supports a clearer distinction from land redistribution."
+  },
+  {
+    "id": "it_cold_war_vocab_044",
+    "en": "the Ideology",
+    "verdict": "keep",
+    "reason": "The cross-topic duplicate report assigns this exact prompt to COLD_WAR_VOCAB, and the ideologisch derivation adds production value."
+  },
+  {
+    "id": "it_cold_war_vocab_045",
+    "en": "the Arms race",
+    "verdict": "keep",
+    "reason": "The established nonliteral Wettrüsten and alternative Rüstungswettlauf resist an English-style Waffenrennen calque."
+  },
+  {
+    "id": "it_cold_war_vocab_046",
+    "en": "Interventionism",
+    "verdict": "keep",
+    "reason": "The formal doctrine noun must be distinguished from one Intervention and from interventionist economic policy."
+  },
+  {
+    "id": "it_cold_war_vocab_047",
+    "en": "the Coup d'état",
+    "verdict": "keep",
+    "reason": "Staatsstreich is broader than the previously retained Militärputsch, preserving a useful perpetrator and register distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_048",
+    "en": "the Reform",
+    "verdict": "drop",
+    "reason": "Transparent high-frequency cognate already owned at C1, with no domain, object or usage issue supplied by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_049",
+    "en": "the Copper",
+    "verdict": "drop",
+    "reason": "Basic concrete material noun with an accurate legacy rendering and no distinct advanced production lesson in isolation."
+  },
+  {
+    "id": "it_cold_war_vocab_050",
+    "en": "the Socialism",
+    "verdict": "drop",
+    "reason": "Transparent high-frequency ideological cognate already expected at C1, with no selected subtype or usage contrast."
+  },
+  {
+    "id": "it_cold_war_vocab_051",
+    "en": "the Christian Democracy",
+    "verdict": "keep",
+    "reason": "Christdemokratie usefully distinguishes the political current from a descriptive christliche Demokratie and from specific party names."
+  },
+  {
+    "id": "it_cold_war_vocab_052",
+    "en": "the Land redistribution",
+    "verdict": "keep",
+    "reason": "The policy term supports a real von Land versus vom Land trap and remains narrower than the kept Agrarreform."
+  },
+  {
+    "id": "it_cold_war_vocab_053",
+    "en": "the Inflation",
+    "verdict": "drop",
+    "reason": "Transparent, high-frequency economics cognate firmly expected at C1, with no special collocation or sense in the isolated prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_054",
+    "en": "the Expropriation",
+    "verdict": "keep",
+    "reason": "Noncognate Enteignung has important legal distinctions from Beschlagnahme and Verstaatlichung."
+  },
+  {
+    "id": "it_cold_war_vocab_055",
+    "en": "the Coalition",
+    "verdict": "drop",
+    "reason": "Transparent high-frequency political cognate already owned at C1, with accurate gender and no special sense selected."
+  },
+  {
+    "id": "it_cold_war_vocab_056",
+    "en": "the Economic policy",
+    "verdict": "drop",
+    "reason": "Transparent productive compound that an advanced learner can form directly, with no additional government or register issue."
+  },
+  {
+    "id": "it_cold_war_vocab_057",
+    "en": "the Peasants",
+    "verdict": "keep",
+    "reason": "Bauern contributes weak-masculine morphology and a useful historical social-class distinction from occupational Landwirte."
+  },
+  {
+    "id": "it_cold_war_vocab_058",
+    "en": "the Elections",
+    "verdict": "drop",
+    "reason": "Wahlen is core political vocabulary already expected well below C1, and the plural prompt has no further teaching value."
+  },
+  {
+    "id": "it_cold_war_vocab_059",
+    "en": "the Radicalization",
+    "verdict": "drop",
+    "reason": "Transparent academic cognate with an accurate rendering and no actor, direction or construction to disambiguate."
+  },
+  {
+    "id": "it_cold_war_vocab_060",
+    "en": "Authoritarianism",
+    "verdict": "drop",
+    "reason": "Transparent derivational counterpart of the retained Authoritarian card in the preceding chunk, with no distinct additional lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_061",
+    "en": "the Militancy",
+    "verdict": "keep",
+    "reason": "German Militanz has a stronger confrontational tendency than its ordinary-activism Romance lookalikes, creating a genuine interference trap."
+  },
+  {
+    "id": "it_cold_war_vocab_062",
+    "en": "the Industrialization",
+    "verdict": "drop",
+    "reason": "Transparent academic cognate already expected at C1, with no phase, agent or usage contrast supplied by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_063",
+    "en": "the Agrarian reform",
+    "verdict": "keep",
+    "reason": "Best item in the land-reform family; Agrarreform is broader than Bodenreform and distinct from simple land redistribution."
+  },
+  {
+    "id": "it_cold_war_vocab_064",
+    "en": "the Urbanization",
+    "verdict": "keep",
+    "reason": "The demographic Verstädterung and broader Urbanisierung distinction materially improves the unqualified legacy cognate."
+  },
+  {
+    "id": "it_cold_war_vocab_065",
+    "en": "the Strike",
+    "verdict": "drop",
+    "reason": "Streik is high-frequency core labor vocabulary already expected at C1, and the isolated singular offers no advanced usage issue."
+  },
+  {
+    "id": "it_cold_war_vocab_066",
+    "en": "the Trade unions",
+    "verdict": "keep",
+    "reason": "Noncognate Gewerkschaften and the misleading Romance-to-German Syndikat transfer create clear production value."
+  },
+  {
+    "id": "it_cold_war_vocab_067",
+    "en": "the Workers",
+    "verdict": "drop",
+    "reason": "Arbeiter is basic high-frequency vocabulary, and the generic plural supplies no class, sector or register distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_068",
+    "en": "the Redistribution",
+    "verdict": "keep",
+    "reason": "Umverteilung is a productive political-economy concept whose fiscal use differs from Neuverteilung and from the retained land-specific term."
+  },
+  {
+    "id": "it_cold_war_vocab_069",
+    "en": "the Inequality",
+    "verdict": "keep",
+    "reason": "The structural Ungleichheit versus actor-based Ungleichbehandlung distinction provides a substantive analytical lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_070",
+    "en": "Left-wing",
+    "verdict": "keep",
+    "reason": "The legacy gloss wrongly turns an adjective into a noun phrase; German attributive inflection makes the correction pedagogically valuable."
+  },
+  {
+    "id": "it_cold_war_vocab_071",
+    "en": "Right-wing",
+    "verdict": "drop",
+    "reason": "Constructional mirror of the kept Left-wing adjective; it adds no distinct inflection or part-of-speech lesson within this batch."
+  },
+  {
+    "id": "it_cold_war_vocab_072",
+    "en": "Centrism",
+    "verdict": "keep",
+    "reason": "The specialist political noun has teachable German -ismus morphology and must be distinguished from Zentrum and a political center."
+  },
+  {
+    "id": "it_cold_war_vocab_073",
+    "en": "the Protest",
+    "verdict": "drop",
+    "reason": "Transparent high-frequency cognate already owned at C1, with no construction, object or institutional sense supplied."
+  },
+  {
+    "id": "it_cold_war_vocab_074",
+    "en": "the Dissent",
+    "verdict": "keep",
+    "reason": "Formal Dissens, expressed Widerspruch and dissident-oriented Dissidenz require a useful semantic and register distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_075",
+    "en": "the Social justice",
+    "verdict": "drop",
+    "reason": "Transparent, high-frequency political set phrase that an advanced learner can form directly without a special usage trap."
+  },
+  {
+    "id": "it_cold_war_vocab_076",
+    "en": "the Economic growth",
+    "verdict": "drop",
+    "reason": "Transparent productive compound and core economics vocabulary, with no subtype or collocational problem selected by the prompt."
+  },
+  {
+    "id": "it_cold_war_vocab_077",
+    "en": "the Popular unity",
+    "verdict": "keep",
+    "reason": "The Chilean context selects the proper name Unidad Popular, materially correcting the unnatural literal legacy rendering Volkseinheit."
+  },
+  {
+    "id": "it_cold_war_vocab_078",
+    "en": "the Divestment",
+    "verdict": "keep",
+    "reason": "The source family selects macroeconomic Desinvestition, whose scope must be distinguished from asset sale, capital flight and ethical divestment."
+  },
+  {
+    "id": "it_cold_war_vocab_079",
+    "en": "the Polarization",
+    "verdict": "keep",
+    "reason": "Political German favors Polarisierung over the cross-language cognate Polarisation, a real advanced production distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_080",
+    "en": "the Foreign relations",
+    "verdict": "keep",
+    "reason": "The nonliteral compound Außenbeziehungen supports an important distinction between international relationships and Außenpolitik."
+  }
+]
