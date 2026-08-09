@@ -35,3 +35,13 @@ per topic — per-chunk verdict table, every edit applied, defect
 taxonomy summary, and the final line: chunks passed / edited / failed.
 Commit per topic. Audited+green chunks are merge-eligible; the
 coordinator runs the merge step.
+
+6. REPETITION (added 2026-08-09 after owner findings in geopolitics):
+   examine EVERY item, not samples — (a) circular definitions (the
+   term restated inside its own definition where it adds nothing),
+   (b) boilerplate phrasing recycled across items in the same topic
+   (same opener/formula on many cards deadens recall — vary or
+   sharpen), (c) EN-vs-TL redundancy on term-definition shapes (the
+   two sides must complement, not mirror), (d) repetition within a
+   single sentence. These are PASS-WITH-EDITS defects: fix, keep
+   meaning, re-gate.
