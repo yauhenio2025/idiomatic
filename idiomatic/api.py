@@ -2125,6 +2125,52 @@ async def admin_rotate_agent_token(
     return {"ok": True, "agent": name}
 
 
+# --- Personal Study DJ (slices 1-2; docs/commissions/PERSONAL_DJ_COMMISSION.md)
+
+@app.post("/admin/dj-budgets")
+async def admin_dj_budgets(body: dict, _: None = Depends(authed_admin)) -> dict:
+    """Set per-language daily study budgets (minutes). Body JSON:
+    {"budgets": {"it": 25, …}} — unknown langs refused, 0 pauses a
+    language. The DJ's sanctioned dashboard-mutation surface (same
+    pattern as the grammar unit editor)."""
+    from . import dj
+    try:
+        merged = await dj.save_budgets(body.get("budgets"))
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"ok": True, "budgets": merged}
+
+
+@app.post("/admin/dj-run")
+async def admin_dj_run(_: None = Depends(authed_admin)) -> dict:
+    """Force a DJ run now (AnkiWeb pull → observations → session plan).
+    Runs in the background; read the result at /ui/api/dj/overview when
+    it lands."""
+    from . import dj
+
+    async def _run() -> None:
+        try:
+            await dj.run_dj(force=True)
+        except Exception as e:  # noqa: BLE001
+            log.warning("admin.dj_run.failed", err=repr(e)[:300])
+
+    _spawn_bg(_run())
+    return {"started": True}
+
+
+@app.get("/dj/plan")
+async def agent_dj_plan(agent: dict = Depends(authed_agent)) -> dict:
+    """The session plan for the add-on materializer (slice 3) — agent
+    token, like /apkgs/*. Returns the latest stored plan wrapped with
+    its day; the add-on decides whether a stale day still gets
+    materialized."""
+    from . import dj
+    row = await dj.load_plan()
+    if row is None:
+        raise HTTPException(404, "no session plan yet")
+    return row
+
+
 # --- dashboard SPA (must be registered LAST — the catch-all would otherwise
 # shadow the API routes above; FastAPI matches in registration order) --------
 

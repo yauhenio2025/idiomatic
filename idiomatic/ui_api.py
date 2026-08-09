@@ -869,6 +869,51 @@ async def rescue_autopilot_status(_: None = Depends(authed_ui)) -> dict:
     }
 
 
+# --- Personal Study DJ (read-only; mutations live on /admin/dj-*) ----------
+
+@router.get("/dj/overview")
+async def dj_overview(_: None = Depends(authed_ui)) -> dict:
+    """Everything the /dj page needs in one call: budgets (with the
+    defaults for reference), the cached observations (never triggers a
+    pull), the latest session plan, and the last run report."""
+    from . import dj
+
+    s = get_settings()
+    obs_raw = await db.kv_get(dj.KV_OBSERVATIONS)
+    report_raw = await db.kv_get(dj.KV_LAST_REPORT)
+    last_ts = await db.kv_get(dj.KV_LAST_RUN_TS)
+    return {
+        "enabled": s.dj_enabled,
+        "interval_hours": s.dj_interval_hours,
+        "ankiweb_configured": bool(s.ankiweb_hkey),
+        "budgets": await dj.load_budgets(),
+        "default_budgets": dj.DEFAULT_BUDGETS_MIN,
+        "new_mix_weights": dj.NEW_MIX_WEIGHTS_V1,
+        "new_card_time_factor": dj.NEW_CARD_TIME_FACTOR,
+        "observations": json.loads(obs_raw) if obs_raw else None,
+        "last_run": json.loads(report_raw) if report_raw else None,
+        "last_run_epoch": int(last_ts) if last_ts else None,
+        "plan": await dj.load_plan(),
+    }
+
+
+@router.get("/dj/plan")
+async def dj_plan(
+    day: str | None = Query(default=None),
+    _: None = Depends(authed_ui),
+) -> dict:
+    """One stored session plan: ?day=YYYY-MM-DD for history, else the
+    latest."""
+    from . import dj
+
+    if day is not None and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", day):
+        raise HTTPException(400, "day must be YYYY-MM-DD")
+    row = await dj.load_plan(day)
+    if row is None:
+        raise HTTPException(404, "no plan for that day" if day else "no plans yet")
+    return row
+
+
 @router.get("/rescue/formats")
 async def rescue_formats(_: None = Depends(authed_ui)) -> dict:
     """The format taxonomy + provider registry, for the Formats page and

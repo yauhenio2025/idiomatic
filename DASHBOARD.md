@@ -4,15 +4,35 @@ https://idiomatic-app.onrender.com/ — served by the same FastAPI app that
 runs the pipeline; log in with the admin token (local copy:
 `~/.config/idiomatic-admin.env`). Read-only — EXCEPT the Grammar section
 (amended 2026-07-31 by the Wave-6 commission), the Rescue Lab section
-(amended 2026-08-05 by the Rescue Lab commission), and the Cast page
-(amended 2026-08-06, Asset Factory): those pages may trigger generation
-runs and edit their own state via `/admin/*` endpoints. Everything else
-still cannot mutate pipeline state.
+(amended 2026-08-05 by the Rescue Lab commission), the Cast page
+(amended 2026-08-06, Asset Factory), and the Study DJ page (amended
+2026-08-09, Personal DJ commission — budget edits + forced runs only):
+those pages may trigger generation runs and edit their own state via
+`/admin/*` endpoints. Everything else still cannot mutate pipeline
+state.
 
 ## What each page answers
 
 Navigation: Overview · Videos · Expressions · Channels · Grammar ·
-Rescue Lab · Cast · Delivery.
+Rescue Lab · Cast · Study DJ · Delivery · Legacy.
+
+**Study DJ** (`/dj`) — "what should I study today, and why exactly?"
+The Personal Study DJ panel (docs/commissions/PERSONAL_DJ_COMMISSION.md,
+slices 1-2). Top: recompute button (forces the pull → observe → plan
+loop that otherwise runs daily on the worker) and the last run's report.
+Then the per-language daily time budgets (the page's only mutation,
+`POST /admin/dj-budgets`; defaults 25 min each de/es/fr/it/pt, 20 zh,
+0 pauses a language). The session plan renders per language with its
+arithmetic spelled out: budget, due load (cards × observed secs/rep,
+never dropped — an over-budget language wears an OVERFLOW badge with
+the excess minutes), then the weighted new-card mix, one line per card
+population with weight, card count, estimated minutes, reservoir, the
+exact Anki search the add-on will run, and a human-readable reasoning
+string. Below, the raw observations from the latest pulled snapshot:
+per language × population, due backlog, new-card reservoir, secs/rep
+(flagged `prior` until 20 observed reps), and the last 7 days' actual
+reps + minutes. Populations come from the estate deck lanes
+(1 Expressions … 8 Pimsleur) plus the `idiomatic-podcast` tag.
 
 **Cast** (`/cast`) — "which Asset Factory cast sheets pass, which need a
 remake?" Fast-forward review of the famous-cast character sheets: sheet +

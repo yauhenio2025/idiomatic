@@ -8,6 +8,7 @@ const NAV = [
   { to: "/grammar", label: "Grammar", icon: "∴" },
   { to: "/rescue", label: "Rescue Lab", icon: "✚" },
   { to: "/cast", label: "Cast", icon: "☻" },
+  { to: "/dj", label: "Study DJ", icon: "♫" },
   { to: "/delivery", label: "Delivery", icon: "⇣" },
   { to: "/legacy", label: "Legacy", icon: "⌁" },
 ];
