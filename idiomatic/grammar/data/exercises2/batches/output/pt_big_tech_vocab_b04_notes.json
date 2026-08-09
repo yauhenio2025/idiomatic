@@ -33,17 +33,16 @@
     "id": "it_big_tech_vocab_126",
     "en": "Indigenous technologies",
     "category": "lexical-noun",
-    "tl": "as tecnologias desenvolvidas no país",
+    "tl": "as tecnologias dos povos indígenas",
     "alts": [
-      "as tecnologias nacionais",
-      "as tecnologias autóctones"
+      "as tecnologias indígenas"
     ],
-    "register": "Na política industrial, a forma explicativa é clara e neutra; tecnologias autóctones é formal e rara, enquanto tecnologias nacionais pode abranger produtos apenas montados localmente.",
-    "trap": "Tecnologias indígenas refere-se normalmente às tecnologias de povos indígenas; no sentido geopolítico de indigenous, o inglês descreve desenvolvimento tecnológico interno.",
-    "example_tl": "As tecnologias desenvolvidas no país reduziram a exposição a embargos, mas continuaram dependentes de patentes, máquinas e componentes fornecidos pelo exterior.",
-    "example_en": "Technologies developed domestically reduced exposure to embargoes, but they remained dependent on patents, machinery, and components supplied from abroad.",
-    "cloze": "As {{c1::tecnologias desenvolvidas no país}} reduziram a exposição a embargos, mas continuaram dependentes de patentes, máquinas e componentes fornecidos pelo exterior.",
-    "note": "Diverge materialmente de old_back, que ativa a leitura referente a povos indígenas. O contexto de soberania tecnológica sustenta a leitura industrial; se a fonte pretendia saberes indígenas, esta carta precisará ser revista."
+    "register": "Termo de estudos decoloniais e política tecnológica para tecnologias desenvolvidas, adaptadas ou governadas por povos indígenas e enraizadas em seus sistemas de conhecimento.",
+    "trap": "Tecnologias desenvolvidas no país significa tecnologias nacionais ou locais e apaga a referência específica a povos indígenas expressa pelo inglês Indigenous com inicial maiúscula.",
+    "example_tl": "As tecnologias dos povos indígenas combinam conhecimentos herdados, adaptação local e controle comunitário, sem medir a inovação apenas por patentes, escala ou inserção em mercados globais.",
+    "example_en": "Indigenous peoples’ technologies combine inherited knowledge, local adaptation, and community control without measuring innovation only by patents, scale, or integration into global markets.",
+    "cloze": "As {{c1::tecnologias dos povos indígenas}} combinam conhecimentos herdados, adaptação local e controle comunitário, sem medir a inovação apenas por patentes, escala ou inserção em mercados globais.",
+    "note": "Auditoria: corrige a leitura industrial aplicada na autoria. O I maiúsculo de Indigenous e old_back apontam para povos indígenas, não para tecnologia desenvolvida no país."
   },
   {
     "id": "it_big_tech_vocab_127",

@@ -1,0 +1,1280 @@
+[
+  {
+    "id": "it_big_tech_vocab_001",
+    "en": "the Technological solutionism",
+    "category": "lexical-noun",
+    "tl": "el solucionismo tecnológico",
+    "alts": [],
+    "register": "Término crítico de los estudios sobre tecnología para la tendencia a presentar herramientas técnicas como respuestas suficientes a problemas políticos.",
+    "trap": "No equivale a orientación hacia las soluciones: critica la reducción de conflictos sociales o políticos a problemas supuestamente resolubles con tecnología.",
+    "example_tl": "El solucionismo tecnológico promete una aplicación para cada crisis social, pero elude deliberadamente el análisis de las relaciones de poder y la responsabilidad institucional.",
+    "example_en": "Technological solutionism promises an app for every social crisis, but deliberately evades analysis of power relations and institutional responsibility.",
+    "cloze": "{{c1::El solucionismo tecnológico}} promete una aplicación para cada crisis social, pero elude deliberadamente el análisis de las relaciones de poder y la responsabilidad institucional.",
+    "note": "Old_back is accurate; the card fixes the specialist critical sense rather than a neutral preference for practical solutions. Self-review added el análisis de to avoid an imprecise collocation."
+  },
+  {
+    "id": "it_big_tech_vocab_002",
+    "en": "the Internet centrism",
+    "category": "lexical-noun",
+    "tl": "el internetcentrismo",
+    "alts": [],
+    "register": "Neologismo especializado y crítico, asociado sobre todo al análisis que trata internet como una fuerza única dotada de lógica propia.",
+    "trap": "No designa el centrismo político en internet; nombra el hábito de colocar una idea abstracta de internet en el centro de toda explicación.",
+    "example_tl": "El internetcentrismo de ciertos reformistas presupone que ampliar la conectividad democratiza una sociedad, aunque la misma infraestructura también facilite el control autoritario.",
+    "example_en": "The internet-centrism of certain reformers assumes that expanding connectivity democratizes a society, although the same infrastructure may also facilitate authoritarian control.",
+    "cloze": "{{c1::El internetcentrismo}} de ciertos reformistas presupone que ampliar la conectividad democratiza una sociedad, aunque la misma infraestructura también facilite el control autoritario.",
+    "note": "Old_back identifies the intended neologism but capitalizes it unnecessarily; Spanish common nouns and internet are normally lowercase here."
+  },
+  {
+    "id": "it_big_tech_vocab_004",
+    "en": "Surveillance capitalism",
+    "category": "lexical-noun",
+    "tl": "el capitalismo de la vigilancia",
+    "alts": [
+      "el capitalismo de vigilancia"
+    ],
+    "register": "Término consolidado y crítico de economía política y estudios tecnológicos; la variante sin artículo también aparece en ensayo y prensa.",
+    "trap": "Describe una lógica económica basada en extraer y monetizar datos de conducta, no simplemente un mercado dedicado a vender equipos de vigilancia.",
+    "example_tl": "El capitalismo de la vigilancia convierte interacciones cotidianas en datos rentables sin conceder a los usuarios un control efectivo sobre sus usos posteriores.",
+    "example_en": "Surveillance capitalism turns everyday interactions into profitable data without granting users effective control over their subsequent uses.",
+    "cloze": "{{c1::El capitalismo de la vigilancia}} convierte interacciones cotidianas en datos rentables sin conceder a los usuarios un control efectivo sobre sus usos posteriores.",
+    "note": "Old_back is accurate apart from capitalizing the article; the version with de la is the most recognizable form in European Spanish."
+  },
+  {
+    "id": "it_big_tech_vocab_005",
+    "en": "the Algorithmic bias",
+    "category": "lexical-noun",
+    "tl": "el sesgo algorítmico",
+    "alts": [
+      "el sesgo de los algoritmos"
+    ],
+    "register": "Término neutral-formal de investigación, auditoría algorítmica y política tecnológica; la alternativa resulta algo más explicativa.",
+    "trap": "El portugués viés no debe trasladarse como *viés en español; sesgo puede proceder de los datos, del diseño o del contexto de uso.",
+    "example_tl": "Un sesgo algorítmico puede perjudicar sistemáticamente a las candidatas aunque el modelo no utilice el sexo como variable explícita de decisión.",
+    "example_en": "Algorithmic bias can systematically disadvantage female candidates even if the model does not use sex as an explicit decision variable.",
+    "cloze": "Un {{c1::sesgo algorítmico}} puede perjudicar sistemáticamente a las candidatas aunque el modelo no utilice el sexo como variable explícita de decisión.",
+    "note": "Old_back is accurate; the example prevents the misleading inference that only an explicitly protected variable can generate bias."
+  },
+  {
+    "id": "it_big_tech_vocab_006",
+    "en": "the Net neutrality",
+    "category": "lexical-noun",
+    "tl": "la neutralidad de la red",
+    "alts": [
+      "la neutralidad en la red"
+    ],
+    "register": "Término regulatorio consolidado en telecomunicaciones; de la red es la formulación técnica más estable, aunque también se documenta en la red.",
+    "trap": "No significa que internet carezca de contenidos políticos: exige que los proveedores no discriminen el tráfico por origen, destino, contenido o servicio.",
+    "example_tl": "La neutralidad de la red impide que un proveedor ralentice servicios rivales o cobre a determinadas plataformas por ofrecerles una vía preferente.",
+    "example_en": "Net neutrality prevents a provider from slowing rival services or charging certain platforms to offer them a preferential route.",
+    "cloze": "{{c1::La neutralidad de la red}} impide que un proveedor ralentice servicios rivales o cobre a determinadas plataformas por ofrecerles una vía preferente.",
+    "note": "Old_back is lexically accurate but omits the initial article; the note anchors the precise regulatory sense."
+  },
+  {
+    "id": "it_big_tech_vocab_007",
+    "en": "the Data brokers",
+    "category": "lexical-noun",
+    "tl": "los corredores de datos",
+    "alts": [
+      "los brókeres de datos"
+    ],
+    "register": "Corredores de datos aparece en textos españoles de protección de datos; brókeres de datos es asimismo habitual en prensa y conserva el préstamo especializado.",
+    "trap": "Un intermediario de datos también puede ser un facilitador regulado de intercambio; data broker suele implicar recopilar, combinar y vender perfiles personales.",
+    "example_tl": "Los corredores de datos combinan historiales de compra, ubicación e intereses para vender perfiles que las personas afectadas rara vez pueden revisar.",
+    "example_en": "Data brokers combine purchase histories, location, and interests to sell profiles that the people concerned can rarely review.",
+    "cloze": "{{c1::Los corredores de datos}} combinan historiales de compra, ubicación e intereses para vender perfiles que las personas afectadas rara vez pueden revisar.",
+    "note": "Materially sharpens old_back: intermediarios de datos is broader and can denote a different regulated role. Self-review promoted the form used in Spanish data-protection texts over the English loan."
+  },
+  {
+    "id": "it_big_tech_vocab_009",
+    "en": "the Filter bubble",
+    "category": "lexical-noun",
+    "tl": "la burbuja de filtros",
+    "alts": [],
+    "register": "Metáfora consolidada de crítica mediática para el aislamiento informativo atribuido específicamente a la selección personalizada mediante filtros algorítmicos.",
+    "trap": "No es idéntica a una cámara de eco: la burbuja enfatiza la selección personalizada, mientras la cámara enfatiza el refuerzo mutuo dentro de un grupo.",
+    "example_tl": "Culpar exclusivamente a la burbuja de filtros de la polarización oculta los conflictos sociales y las campañas organizadas que también la alimentan.",
+    "example_en": "Blaming the filter bubble alone for polarization conceals the social conflicts and organized campaigns that also fuel it.",
+    "cloze": "Culpar exclusivamente a {{c1::la burbuja de filtros}} de la polarización oculta los conflictos sociales y las campañas organizadas que también la alimentan.",
+    "note": "The exact-duplicate report assigns this item to BIG_TECH_VOCAB. Old_back's burbuja de los filtros is understandable but less idiomatic as the fixed term."
+  },
+  {
+    "id": "it_big_tech_vocab_010",
+    "en": "Platform capitalism",
+    "category": "lexical-noun",
+    "tl": "el capitalismo de plataformas",
+    "alts": [
+      "el capitalismo de plataforma"
+    ],
+    "register": "Término crítico de economía política; el plural es habitual para el sistema general, mientras el singular aparece como modificador clasificatorio.",
+    "trap": "Designa una formación económica basada en datos, efectos de red y control de accesos, no solo capitalismo practicado dentro de una plataforma.",
+    "example_tl": "El capitalismo de plataformas traslada riesgos a trabajadores y proveedores mientras los intermediarios controlan los datos, el acceso y las reglas del mercado.",
+    "example_en": "Platform capitalism shifts risks onto workers and suppliers while intermediaries control data, access, and market rules.",
+    "cloze": "{{c1::El capitalismo de plataformas}} traslada riesgos a trabajadores y proveedores mientras los intermediarios controlan los datos, el acceso y las reglas del mercado.",
+    "note": "Materially improves old_back by selecting the conventional plural used for the general political-economic concept."
+  },
+  {
+    "id": "it_big_tech_vocab_011",
+    "en": "the Disruption",
+    "category": "lexical-noun",
+    "tl": "la disrupción",
+    "alts": [],
+    "register": "Anglicismo ya asentado pero a menudo promocional en el discurso de innovación; la prosa crítica suele cuestionar la magnitud de la ruptura anunciada.",
+    "trap": "En este ámbito no significa una mera interrupción del servicio, sino una supuesta transformación radical de un mercado, institución o modelo empresarial.",
+    "example_tl": "La disrupción prometida en la educación consistió principalmente en privatizar materiales públicos y hacer que los centros dependieran de plataformas propietarias.",
+    "example_en": "The promised disruption in education consisted mainly in privatizing public materials and making schools dependent on proprietary platforms.",
+    "cloze": "{{c1::La disrupción}} prometida en la educación consistió principalmente en privatizar materiales públicos y hacer que los centros dependieran de plataformas propietarias.",
+    "note": "The exact-duplicate report assigns this digital-economy sense to BIG_TECH_VOCAB. Old_back is accurate once the specialist sense is made explicit."
+  },
+  {
+    "id": "it_big_tech_vocab_012",
+    "en": "Digital colonialism",
+    "category": "lexical-noun",
+    "tl": "el colonialismo digital",
+    "alts": [],
+    "register": "Término crítico de estudios poscoloniales y política tecnológica que abarca control asimétrico de infraestructuras, normas, datos y extracción de valor.",
+    "trap": "Es más fuerte que dependencia digital: presenta el control de infraestructuras, normas y datos como una relación estructural de dominación y extracción.",
+    "example_tl": "El colonialismo digital se consolida cuando empresas extranjeras controlan datos e infraestructuras mientras las sociedades locales apenas intervienen en la definición de sus reglas.",
+    "example_en": "Digital colonialism becomes entrenched when foreign companies control data and infrastructure while local societies have little say in defining their rules.",
+    "cloze": "{{c1::El colonialismo digital}} se consolida cuando empresas extranjeras controlan datos e infraestructuras mientras las sociedades locales apenas intervienen en la definición de sus reglas.",
+    "note": "Old_back is accurate; the example fixes the structural domination sense and avoids using the label for every foreign technology purchase. Self-review replaced participar en sus reglas with an idiomatic formulation."
+  },
+  {
+    "id": "it_big_tech_vocab_013",
+    "en": "the Smart city",
+    "category": "lexical-noun",
+    "tl": "la ciudad inteligente",
+    "alts": [
+      "la smart city"
+    ],
+    "register": "Ciudad inteligente es la opción neutral en política urbana; smart city sigue siendo frecuente en consultoría, promoción municipal y documentación sectorial.",
+    "trap": "Smart no se traduce aquí por lista ni se refiere solo a conectividad: el término abarca gestión urbana basada en sensores, datos y automatización.",
+    "example_tl": "La ciudad inteligente queda democráticamente vacía cuando compra sensores antes de definir objetivos públicos, responsabilidades claras y límites vinculantes al uso de datos.",
+    "example_en": "The smart city becomes democratically hollow when it buys sensors before defining public goals, clear responsibilities, and binding limits on data use.",
+    "cloze": "{{c1::La ciudad inteligente}} queda democráticamente vacía cuando compra sensores antes de definir objetivos públicos, responsabilidades claras y límites vinculantes al uso de datos.",
+    "note": "Old_back is accurate; the English loan remains a genuine sectoral alternative but is not the preferred neutral Spanish headword."
+  },
+  {
+    "id": "it_big_tech_vocab_014",
+    "en": "Techno-utopianism",
+    "category": "lexical-noun",
+    "tl": "el tecnoutopismo",
+    "alts": [
+      "el utopismo tecnológico"
+    ],
+    "register": "Término crítico de historia intelectual y ensayo tecnológico; la alternativa analítica es transparente y algo más formal.",
+    "trap": "No equivale a optimismo sobre una innovación concreta: atribuye a la tecnología la capacidad de conducir por sí sola a un orden social ideal.",
+    "example_tl": "El tecnoutopismo de los años noventa subestimó la rapidez con que la publicidad, la vigilancia y las plataformas cerradas transformarían las redes abiertas.",
+    "example_en": "The techno-utopianism of the 1990s underestimated how quickly advertising, surveillance, and closed platforms would transform open networks.",
+    "cloze": "{{c1::El tecnoutopismo}} de los años noventa subestimó la rapidez con que la publicidad, la vigilancia y las plataformas cerradas transformarían las redes abiertas.",
+    "note": "Materially corrects old_back: tecnoutopía names an imagined ideal or vision, whereas tecnoutopismo names the doctrine or disposition requested by the source. Self-review replaced the unnatural cercados privados with plataformas cerradas."
+  },
+  {
+    "id": "it_big_tech_vocab_015",
+    "en": "the Datafication",
+    "category": "lexical-noun",
+    "tl": "la datificación",
+    "alts": [],
+    "register": "Término especializado de ciencias sociales; datificación es la forma bien construida en español, aunque la variante inglesa datafication favorece calcos en el uso.",
+    "trap": "No es *dataficación ni un sinónimo de digitalización: se refiere específicamente a convertir actividades, relaciones o cualidades en datos cuantificables y procesables.",
+    "example_tl": "La datificación de la escuela modifica no solo la administración, sino también los criterios con que se juzgan el rendimiento y la conducta.",
+    "example_en": "The datafication of schools changes not only administration but also the criteria by which performance and conduct are judged.",
+    "cloze": "{{c1::La datificación}} de la escuela modifica no solo la administración, sino también los criterios con que se juzgan el rendimiento y la conducta.",
+    "note": "The exact-duplicate report assigns this item to BIG_TECH_VOCAB. Old_back uses the English-influenced form dataficación and incorrectly capitalizes the common noun."
+  },
+  {
+    "id": "it_big_tech_vocab_016",
+    "en": "the Privacy paradox",
+    "category": "lexical-noun",
+    "tl": "la paradoja de la privacidad",
+    "alts": [
+      "la paradoja de la privacidad digital"
+    ],
+    "register": "Término consolidado de investigación sobre conducta y protección de datos; digital puede añadirse cuando el contexto no está claro.",
+    "trap": "La divergencia entre preocupación declarada y conducta observable no prueba indiferencia: el diseño de las plataformas y la falta de alternativas restringen la elección.",
+    "example_tl": "La paradoja de la privacidad no demuestra que los usuarios sean incoherentes, pues las interfaces manipuladoras y la falta de alternativas restringen su capacidad real de decidir.",
+    "example_en": "The privacy paradox does not prove that users are inconsistent, since manipulative interfaces and a lack of alternatives restrict their real capacity to choose.",
+    "cloze": "{{c1::La paradoja de la privacidad}} no demuestra que los usuarios sean incoherentes, pues las interfaces manipuladoras y la falta de alternativas restringen su capacidad real de decidir.",
+    "note": "Old_back is accurate; self-review framed the example cautiously so the research label does not become a causal explanation and removed the awkward opciones de consentimiento."
+  },
+  {
+    "id": "it_big_tech_vocab_019",
+    "en": "the Digital detox",
+    "category": "lexical-expression",
+    "tl": "la desintoxicación digital",
+    "alts": [
+      "el détox digital"
+    ],
+    "register": "Desintoxicación digital es transparente y neutral; détox digital es un rótulo periodístico y comercial más breve, marcado como préstamo.",
+    "trap": "No debe confundirse con el derecho laboral a la desconexión digital, que protege frente a comunicaciones profesionales fuera del horario de trabajo.",
+    "example_tl": "La desintoxicación digital promete alivio individual, pero no altera modelos empresariales que convierten cada instante de desconexión en atención perdida.",
+    "example_en": "Digital detox promises individual relief, but it does not alter business models that turn every pause in connectivity into lost attention.",
+    "cloze": "{{c1::La desintoxicación digital}} promete alivio individual, pero no altera modelos empresariales que convierten cada instante de desconexión en atención perdida.",
+    "note": "Old_back is accurate. Self-review retained détox digital as a marked equivalent but excluded desconexión digital because its Spanish employment-law sense creates ambiguity; the example's pausa de conexión was also recast idiomatically."
+  },
+  {
+    "id": "it_big_tech_vocab_020",
+    "en": "the Attention economy",
+    "category": "lexical-noun",
+    "tl": "la economía de la atención",
+    "alts": [],
+    "register": "Término consolidado de economía de medios y crítica tecnológica para mercados que capturan, miden y monetizan un recurso cognitivo escaso.",
+    "trap": "No describe la gestión personal del tiempo ni una economía atenta, sino un sistema en que la atención humana se convierte en mercancía.",
+    "example_tl": "La economía de la atención recompensa más la indignación inmediata que el análisis cuidadoso porque las plataformas miden y venden reacciones rápidas.",
+    "example_en": "The attention economy rewards immediate outrage more than careful analysis because platforms measure and sell rapid reactions.",
+    "cloze": "{{c1::La economía de la atención}} recompensa más la indignación inmediata que el análisis cuidadoso porque las plataformas miden y venden reacciones rápidas.",
+    "note": "Old_back is accurate; the contextual sentence fixes the specialist political-economic sense."
+  },
+  {
+    "id": "it_big_tech_vocab_022",
+    "en": "the Digital divide",
+    "category": "lexical-noun",
+    "tl": "la brecha digital",
+    "alts": [],
+    "register": "Término estándar de política pública y estudios de desigualdad; puede abarcar acceso, asequibilidad, capacidades y resultados, según el contexto.",
+    "trap": "No se limita a disponer de conexión: también incluye la calidad del acceso, las competencias de uso y la capacidad de obtener beneficios.",
+    "example_tl": "La brecha digital persiste cuando existe cobertura, pero los hogares no pueden pagar dispositivos adecuados ni adquirir competencias para utilizar servicios esenciales.",
+    "example_en": "The digital divide persists when coverage exists but households cannot afford suitable devices or acquire the skills to use essential services.",
+    "cloze": "{{c1::La brecha digital}} persiste cuando existe cobertura, pero los hogares no pueden pagar dispositivos adecuados ni adquirir competencias para utilizar servicios esenciales.",
+    "note": "The exact-duplicate report assigns this item to BIG_TECH_VOCAB. Old_back is accurate; the example broadens the concept beyond network availability."
+  },
+  {
+    "id": "it_big_tech_vocab_023",
+    "en": "Techno-authoritarianism",
+    "category": "lexical-noun",
+    "tl": "el tecnoautoritarismo",
+    "alts": [
+      "el autoritarismo tecnológico"
+    ],
+    "register": "Término crítico emergente de geopolítica y estudios tecnológicos; la alternativa es más explicativa y algo menos lexicalizada.",
+    "trap": "Tiene un alcance mayor que vigilancia digital: incluye el uso de infraestructuras, plataformas y automatización para concentrar poder y restringir la contestación.",
+    "example_tl": "El tecnoautoritarismo combina vigilancia masiva, censura automatizada y dependencia de plataformas para reducir el coste político de controlar a la población.",
+    "example_en": "Techno-authoritarianism combines mass surveillance, automated censorship, and platform dependence to reduce the political cost of controlling the population.",
+    "cloze": "{{c1::El tecnoautoritarismo}} combina vigilancia masiva, censura automatizada y dependencia de plataformas para reducir el coste político de controlar a la población.",
+    "note": "Old_back is accurate; standard Spanish prefixation favors the closed form without a hyphen."
+  },
+  {
+    "id": "it_big_tech_vocab_025",
+    "en": "the Digital footprint",
+    "category": "lexical-noun",
+    "tl": "la huella digital",
+    "alts": [
+      "el rastro digital"
+    ],
+    "register": "Huella digital es el término general asentado; rastro digital resulta especialmente natural cuando se enfatizan vestigios dispersos de actividad en línea.",
+    "trap": "Huella digital también significa impresión dactilar; en privacidad abarca datos inferidos y registros pasivos, no solo publicaciones deliberadas del usuario.",
+    "example_tl": "La huella digital de una persona incluye búsquedas, ubicaciones y metadatos que numerosas empresas conservan aunque esta nunca haya publicado esa información.",
+    "example_en": "A person's digital footprint includes searches, locations, and metadata that numerous companies retain even though that person never published that information.",
+    "cloze": "{{c1::La huella digital}} de una persona incluye búsquedas, ubicaciones y metadatos que numerosas empresas conservan aunque esta nunca haya publicado esa información.",
+    "note": "The exact-duplicate report assigns this item to BIG_TECH_VOCAB. Old_back is accurate; the trap records the genuine biometric ambiguity. Self-review removed an unclear mixed-gender object pronoun."
+  },
+  {
+    "id": "it_big_tech_vocab_026",
+    "en": "Big Data",
+    "category": "lexical-noun",
+    "tl": "los macrodatos",
+    "alts": [
+      "los datos masivos"
+    ],
+    "register": "Macrodatos es la recomendación española más integrada y frecuente en textos institucionales; big data domina en ámbitos empresariales y técnicos.",
+    "trap": "*Grandes datos es un calco impropio; el préstamo big data suele tratarse como masculino singular, mientras macrodatos es masculino plural.",
+    "example_tl": "Los macrodatos permiten detectar patrones a gran escala, pero su volumen no corrige muestras sesgadas ni categorías construidas con criterios discriminatorios.",
+    "example_en": "Big data makes it possible to detect large-scale patterns, but its volume does not correct biased samples or categories built with discriminatory criteria.",
+    "cloze": "{{c1::Los macrodatos}} permiten detectar patrones a gran escala, pero su volumen no corrige muestras sesgadas ni categorías construidas con criterios discriminatorios.",
+    "note": "Materially corrects old_back's literal grandes datos and supplies the number agreement required by the preferred Spanish headword. Self-review removed el big data from alts because it would require singular agreement in the example."
+  },
+  {
+    "id": "it_big_tech_vocab_027",
+    "en": "Cloud computing",
+    "category": "lexical-noun",
+    "tl": "la computación en la nube",
+    "alts": [
+      "la informática en la nube"
+    ],
+    "register": "Término técnico neutral; informática en la nube es asimismo muy natural en España y evita el matiz más latinoamericano que algunos perciben en computación.",
+    "trap": "Cloud se expresa mediante un complemento con en; no se forma un compuesto inglés como *computación nube ni se traduce literalmente por nube informática.",
+    "example_tl": "La computación en la nube abarata el lanzamiento de nuevos servicios, aunque somete archivos públicos a contratos opacos y dependencias transnacionales.",
+    "example_en": "Cloud computing lowers the cost of launching new services, although it subjects public records to opaque contracts and transnational dependencies.",
+    "cloze": "{{c1::La computación en la nube}} abarata el lanzamiento de nuevos servicios, aunque somete archivos públicos a contratos opacos y dependencias transnacionales.",
+    "note": "Old_back is acceptable; the main headword adds the definite article. Self-review replaced an example that was too close to an already authored FANCY_VOCAB sentence and chose the idiomatic lanzamiento de servicios."
+  },
+  {
+    "id": "it_big_tech_vocab_029",
+    "en": "Platform governance",
+    "category": "lexical-noun",
+    "tl": "la gobernanza de plataformas",
+    "alts": [
+      "la gobernanza de las plataformas"
+    ],
+    "register": "Término interdisciplinar de política digital; la variante con artículo resulta más discursiva, mientras la forma escueta funciona como etiqueta académica.",
+    "trap": "Es más amplia que regulación de plataformas: incluye también reglas privadas, moderación, diseño, mecanismos de recurso y participación de distintos actores.",
+    "example_tl": "La gobernanza de plataformas no puede reducirse a retirar contenidos, pues también determina quién fija las reglas y qué vías existen para recurrir decisiones.",
+    "example_en": "Platform governance cannot be reduced to removing content, since it also determines who sets the rules and what avenues exist for appealing decisions.",
+    "cloze": "{{c1::La gobernanza de plataformas}} no puede reducirse a retirar contenidos, pues también determina quién fija las reglas y qué vías existen para recurrir decisiones.",
+    "note": "Old_back is accurate; the example supplies the concept's broader institutional scope. Self-review removed an ambiguous possessive from the appeal mechanism."
+  },
+  {
+    "id": "it_big_tech_vocab_030",
+    "en": "the Techlash",
+    "category": "lexical-noun",
+    "tl": "el techlash",
+    "alts": [],
+    "register": "Neologismo periodístico anglófono, masculino e invariable en español; conviene explicarlo en la primera mención fuera de círculos tecnológicos.",
+    "trap": "No es un simple revés tecnológico: combina tech con backlash y designa la reacción pública y política contra el poder de las grandes tecnológicas.",
+    "example_tl": "El techlash situó abusos antes tratados como fallos aislados en el centro del debate sobre competencia, privacidad y poder empresarial.",
+    "example_en": "The techlash placed abuses previously treated as isolated failures at the center of the debate over competition, privacy, and corporate power.",
+    "cloze": "{{c1::El techlash}} situó abusos antes tratados como fallos aislados en el centro del debate sobre competencia, privacidad y poder empresarial.",
+    "note": "Old_back identifies the loan but capitalizes it unnecessarily; the example fixes its collective backlash sense. Self-review replaced an awkward problema político sobre construction."
+  },
+  {
+    "id": "it_big_tech_vocab_031",
+    "en": "Techno-optimism",
+    "category": "lexical-noun",
+    "tl": "el tecnooptimismo",
+    "alts": [
+      "el optimismo tecnológico"
+    ],
+    "register": "Término analítico y periodístico; la forma prefijada es concisa, mientras la alternativa transparente encaja bien en prosa general.",
+    "trap": "No implica necesariamente tecnoutopismo: puede expresar confianza en la innovación sin afirmar que la tecnología resolverá por sí sola los conflictos sociales.",
+    "example_tl": "El tecnooptimismo del informe presenta la automatización como progreso inevitable y apenas examina quién soportará sus costes laborales y ambientales.",
+    "example_en": "The report's techno-optimism presents automation as inevitable progress and barely examines who will bear its labor and environmental costs.",
+    "cloze": "{{c1::El tecnooptimismo}} del informe presenta la automatización como progreso inevitable y apenas examina quién soportará sus costes laborales y ambientales.",
+    "note": "Old_back is accurate; Spanish writes the prefixed common noun as one lowercase word."
+  },
+  {
+    "id": "it_big_tech_vocab_032",
+    "en": "Digital sovereignty",
+    "category": "lexical-noun",
+    "tl": "la soberanía digital",
+    "alts": [],
+    "register": "Concepto central pero discutido de política tecnológica; soberanía tecnológica es un término relacionado, aunque abarca capacidades industriales más amplias.",
+    "trap": "No equivale necesariamente a autarquía nacional: puede referirse a capacidad pública, colectiva o individual para decidir sobre datos, estándares e infraestructuras.",
+    "example_tl": "La soberanía digital europea exige capacidad para fijar reglas y mantener infraestructuras críticas, no simplemente sustituir cada proveedor extranjero.",
+    "example_en": "European digital sovereignty requires the capacity to set rules and maintain critical infrastructure, not simply to replace every foreign provider.",
+    "cloze": "{{c1::La soberanía digital}} europea exige capacidad para fijar reglas y mantener infraestructuras críticas, no simplemente sustituir cada proveedor extranjero.",
+    "note": "Old_back is accurate; the trap records the concept's contested bearers and distinguishes strategic autonomy from isolation."
+  },
+  {
+    "id": "it_big_tech_vocab_033",
+    "en": "Public interest technology",
+    "category": "lexical-noun",
+    "tl": "la tecnología de interés público",
+    "alts": [
+      "la tecnología para el bien público"
+    ],
+    "register": "Nombre emergente de un campo profesional y académico; la alternativa es explicativa, pero suena más programática y menos terminológica.",
+    "trap": "Interés público no significa simplemente popular o financiado por el Estado: exige orientar diseño, despliegue y rendición de cuentas hacia derechos y necesidades colectivas.",
+    "example_tl": "La tecnología de interés público incorpora conocimientos jurídicos y sociales para que los sistemas digitales protejan derechos colectivos y atiendan necesidades sociales.",
+    "example_en": "Public interest technology incorporates legal and social knowledge so that digital systems protect collective rights and address social needs.",
+    "cloze": "{{c1::La tecnología de interés público}} incorpora conocimientos jurídicos y sociales para que los sistemas digitales protejan derechos colectivos y atiendan necesidades sociales.",
+    "note": "Old_back provides the accepted literal field label; the example distinguishes the practice from generic socially beneficial technology. Self-review replaced the unnatural responder a derechos collocation."
+  },
+  {
+    "id": "it_big_tech_vocab_036",
+    "en": "Digital literacy",
+    "category": "lexical-noun",
+    "tl": "la alfabetización digital",
+    "alts": [],
+    "register": "Término estándar en educación y políticas de inclusión; competencia digital es frecuente en marcos europeos, pero suele designar un repertorio más amplio.",
+    "trap": "No se limita a manejar dispositivos: incluye evaluar fuentes, comprender riesgos, crear contenidos y participar de manera crítica y segura.",
+    "example_tl": "La alfabetización digital permite reconocer interfaces manipuladoras y verificar fuentes, destrezas tan necesarias como el manejo de nuevas aplicaciones.",
+    "example_en": "Digital literacy makes it possible to recognize manipulative interfaces and verify sources, skills as necessary as handling new applications.",
+    "cloze": "{{c1::La alfabetización digital}} permite reconocer interfaces manipuladoras y verificar fuentes, destrezas tan necesarias como el manejo de nuevas aplicaciones.",
+    "note": "Old_back is accurate; the contextual sentence prevents a narrow interpretation limited to operational device skills. Self-review repaired a faulty comparison between nouns and an infinitive clause."
+  },
+  {
+    "id": "it_big_tech_vocab_037",
+    "en": "Open source",
+    "category": "lexical-expression",
+    "tl": "el código abierto",
+    "alts": [
+      "el software de código abierto"
+    ],
+    "register": "Término técnico estándar; la alternativa explicita el referente cuando código abierto podría interpretarse como una propiedad del código y no del programa.",
+    "trap": "*Fuente abierta es un calco del inglés que en español suele aludir a fuentes de información, no al modelo de licencias de software.",
+    "example_tl": "El código abierto facilita la auditoría independiente, pero publicar un repositorio no garantiza una comunidad activa ni una gobernanza transparente.",
+    "example_en": "Open source facilitates independent auditing, but publishing a repository does not guarantee an active community or transparent governance.",
+    "cloze": "{{c1::El código abierto}} facilita la auditoría independiente, pero publicar un repositorio no garantiza una comunidad activa ni una gobernanza transparente.",
+    "note": "Old_back is accurate; the trap addresses a genuine English and French interference risk around source and fuente."
+  },
+  {
+    "id": "it_big_tech_vocab_039",
+    "en": "the Decentralized web",
+    "category": "lexical-noun",
+    "tl": "la web descentralizada",
+    "alts": [],
+    "register": "Término técnico y político neutral; web conserva la referencia a servicios web y evita ampliar indebidamente el concepto a toda la infraestructura de internet.",
+    "trap": "Descentralizada no significa necesariamente distribuida: un sistema puede repartir infraestructura y conservar, aun así, centros decisivos de control o gobernanza.",
+    "example_tl": "La web descentralizada pretende reducir la dependencia de intermediarios únicos, aunque sus protocolos también pueden concentrar poder en pocos desarrolladores.",
+    "example_en": "The decentralized web aims to reduce dependence on single intermediaries, although its protocols may also concentrate power among a few developers.",
+    "cloze": "{{c1::La web descentralizada}} pretende reducir la dependencia de intermediarios únicos, aunque sus protocolos también pueden concentrar poder en pocos desarrolladores.",
+    "note": "Old_back is accurate; the example avoids equating a decentralized architecture with automatically democratic governance."
+  },
+  {
+    "id": "it_big_tech_vocab_040",
+    "en": "Information disorder",
+    "category": "lexical-noun",
+    "tl": "el desorden informativo",
+    "alts": [
+      "el desorden de la información"
+    ],
+    "register": "Término especializado de investigación mediática; desorden informativo es la forma más compacta, mientras la alternativa explicativa también se documenta.",
+    "trap": "Es un término paraguas y no equivale solo a desinformación deliberada: puede incluir información errónea y contenidos auténticos difundidos para causar daño.",
+    "example_tl": "El desorden informativo no procede únicamente de noticias inventadas, sino también de contextos falsos, material manipulado e incentivos opacos de las plataformas.",
+    "example_en": "Information disorder arises not only from fabricated news but also from false contexts, manipulated material, and opaque platform incentives.",
+    "cloze": "{{c1::El desorden informativo}} no procede únicamente de noticias inventadas, sino también de contextos falsos, material manipulado e incentivos opacos de las plataformas.",
+    "note": "Materially improves old_back: desorden informativo is the established compact research term and the example preserves its umbrella scope. Self-review replaced an awkward adjective placement."
+  },
+  {
+    "id": "it_big_tech_vocab_041",
+    "en": "the Digital proletariat",
+    "category": "lexical-noun",
+    "tl": "el proletariado digital",
+    "alts": [],
+    "register": "Término crítico de economía política digital para el colectivo laboral subordinado que sostiene plataformas, cadenas de datos y servicios automatizados.",
+    "trap": "No designa a cualquier trabajador que use tecnología: proletariado mantiene aquí el sentido colectivo de clase y una relación de subordinación económica.",
+    "example_tl": "El proletariado digital sostiene servicios supuestamente automáticos mediante etiquetado, reparto y moderación, aunque las plataformas fragmentan su trabajo y ocultan su poder colectivo.",
+    "example_en": "The digital proletariat sustains supposedly automated services through labeling, delivery, and moderation, although platforms fragment its labor and conceal its collective power.",
+    "cloze": "{{c1::El proletariado digital}} sostiene servicios supuestamente automáticos mediante etiquetado, reparto y moderación, aunque las plataformas fragmentan su trabajo y ocultan su poder colectivo.",
+    "note": "Old_back is accurate apart from unnecessary capitalization. Self-review made the class relation explicit so the label does not encompass every digital-device user."
+  },
+  {
+    "id": "it_big_tech_vocab_042",
+    "en": "the Commodification of data",
+    "category": "lexical-noun",
+    "tl": "la mercantilización de los datos",
+    "alts": [],
+    "register": "Término crítico asentado en economía política y estudios de datos; describe su conversión en activos apropiables y negociables.",
+    "trap": "Mercantilización no equivale a monetización: convertir los datos en mercancía puede preceder a cualquier ingreso o venta efectiva.",
+    "example_tl": "La mercantilización de los datos convierte hábitos cotidianos en activos negociables, mientras las personas que los generan apenas participan en el valor obtenido.",
+    "example_en": "The commodification of data turns everyday habits into tradable assets, while the people who generate them scarcely share in the value obtained.",
+    "cloze": "{{c1::La mercantilización de los datos}} convierte hábitos cotidianos en activos negociables, mientras las personas que los generan apenas participan en el valor obtenido.",
+    "note": "Old_back is accurate. Self-review excluded comercialización and monetización because they describe narrower downstream processes, and removed a periphrastic alternative that sounded repetitive in the example."
+  },
+  {
+    "id": "it_big_tech_vocab_043",
+    "en": "Data as labor",
+    "category": "lexical-expression",
+    "tl": "los datos como trabajo",
+    "alts": [],
+    "register": "Marco polémico de economía digital que interpreta determinadas aportaciones de datos como trabajo susceptible de reconocimiento o remuneración.",
+    "trap": "La antigua traducción mano de obra es errónea: los datos se conciben como trabajo, no como trabajadores; trabajo con datos sería trabajo realizado sobre ellos.",
+    "example_tl": "El marco de los datos como trabajo propone remunerar ciertas contribuciones digitales, pero sus críticos temen que normalice aún más la vigilancia comercial.",
+    "example_en": "The data-as-labor framework proposes paying for certain digital contributions, but its critics fear that it will further normalize commercial surveillance.",
+    "cloze": "El marco de {{c1::los datos como trabajo}} propone remunerar ciertas contribuciones digitales, pero sus críticos temen que normalice aún más la vigilancia comercial.",
+    "note": "Materially corrects old_back ('Los datos como mano de obra'), which changes labor into workforce. Self-review added marco de to mark this as a contested proposal."
+  },
+  {
+    "id": "it_big_tech_vocab_044",
+    "en": "the Digital means of production",
+    "category": "lexical-noun",
+    "tl": "los medios de producción digitales",
+    "alts": [
+      "los medios digitales de producción"
+    ],
+    "register": "Extensión marxiana frecuente en crítica tecnológica para infraestructuras, plataformas, datos y herramientas digitales bajo control productivo.",
+    "trap": "Medios de producción nombra recursos productivos; no debe confundirse con modo de producción, que incluye además relaciones laborales y organización social.",
+    "example_tl": "Controlar los medios de producción digitales permite a unas pocas empresas imponer tarifas, organizar el trabajo y decidir quién accede a mercados esenciales.",
+    "example_en": "Controlling the digital means of production allows a few companies to impose fees, organize labor, and decide who gains access to essential markets.",
+    "cloze": "Controlar {{c1::los medios de producción digitales}} permite a unas pocas empresas imponer tarifas, organizar el trabajo y decidir quién accede a mercados esenciales.",
+    "note": "Old_back is accurate. Self-review retained this alongside modo de producción digital because the two occupy distinct Marxian analytical levels."
+  },
+  {
+    "id": "it_big_tech_vocab_045",
+    "en": "the Algorithmic exploitation",
+    "category": "lexical-noun",
+    "tl": "la explotación algorítmica",
+    "alts": [
+      "la explotación mediante algoritmos"
+    ],
+    "register": "Término crítico de estudios laborales para prácticas de extracción y disciplina organizadas o intensificadas mediante sistemas algorítmicos.",
+    "trap": "El adjetivo no convierte al algoritmo en un agente intencional: la responsabilidad sigue correspondiendo a las instituciones que diseñan y aplican el sistema.",
+    "example_tl": "La explotación algorítmica se intensifica cuando una plataforma eleva automáticamente los objetivos, penaliza cualquier pausa y niega al personal criterios de evaluación transparentes.",
+    "example_en": "Algorithmic exploitation intensifies when a platform automatically raises targets, penalizes every break, and denies staff transparent evaluation criteria.",
+    "cloze": "{{c1::La explotación algorítmica}} se intensifica cuando una plataforma eleva automáticamente los objetivos, penaliza cualquier pausa y niega al personal criterios de evaluación transparentes.",
+    "note": "Old_back supplies the conventional compact label. Self-review added the periphrastic alternative to clarify mediation without erasing institutional agency."
+  },
+  {
+    "id": "it_big_tech_vocab_046",
+    "en": "Platform cooperativism",
+    "category": "lexical-noun",
+    "tl": "el cooperativismo de plataforma",
+    "alts": [
+      "el cooperativismo de plataformas"
+    ],
+    "register": "Término consolidado de economía social y crítica de plataformas para un movimiento basado en propiedad y gobierno cooperativos.",
+    "trap": "Cooperativismo de plataforma nombra el modelo o movimiento; una plataforma cooperativa es una organización concreta y no resulta intercambiable en todos los contextos.",
+    "example_tl": "El cooperativismo de plataforma traslada la propiedad y las decisiones a trabajadores y usuarios, aunque necesita financiación a largo plazo para competir con empresas subvencionadas.",
+    "example_en": "Platform cooperativism transfers ownership and decisions to workers and users, although it needs long-term financing to compete with subsidized companies.",
+    "cloze": "{{c1::El cooperativismo de plataforma}} traslada la propiedad y las decisiones a trabajadores y usuarios, aunque necesita financiación a largo plazo para competir con empresas subvencionadas.",
+    "note": "Old_back is accurate. Self-review kept the singular as the conventional name of the movement, retained the plural as a documented equivalent, and removed an avoidable financial calque."
+  },
+  {
+    "id": "it_big_tech_vocab_047",
+    "en": "the Technological determinism",
+    "category": "lexical-noun",
+    "tl": "el determinismo tecnológico",
+    "alts": [],
+    "register": "Concepto consolidado y normalmente crítico en sociología e historia de la tecnología.",
+    "trap": "No es la mera afirmación de que una tecnología produce efectos: atribuye a la tecnología un papel causal autónomo o predominante en el cambio social.",
+    "example_tl": "El determinismo tecnológico atribuye a la inteligencia artificial cambios que dependen también de instituciones, conflictos laborales, decisiones empresariales y políticas públicas.",
+    "example_en": "Technological determinism attributes to artificial intelligence changes that also depend on institutions, labor conflicts, corporate decisions, and public policies.",
+    "cloze": "{{c1::El determinismo tecnológico}} atribuye a la inteligencia artificial cambios que dependen también de instituciones, conflictos laborales, decisiones empresariales y políticas públicas.",
+    "note": "Old_back is accurate apart from capitalization; the example fixes the concept's strong causal claim."
+  },
+  {
+    "id": "it_big_tech_vocab_048",
+    "en": "Data nationalism",
+    "category": "lexical-noun",
+    "tl": "el nacionalismo de datos",
+    "alts": [],
+    "register": "Término emergente y generalmente crítico de geopolítica digital para políticas que subordinan los flujos de datos a intereses nacionales.",
+    "trap": "No equivale a soberanía de datos: esta puede proteger capacidad de decisión y derechos, mientras nacionalismo de datos subraya territorialización y competencia nacional.",
+    "example_tl": "El nacionalismo de datos promete seguridad mediante almacenamiento territorial, pero puede afianzar proveedores nacionales igualmente opacos y fragmentar servicios que requieren cooperación transfronteriza.",
+    "example_en": "Data nationalism promises security through territorial storage, but it can entrench equally opaque domestic providers and fragment services that require cross-border cooperation.",
+    "cloze": "{{c1::El nacionalismo de datos}} promete seguridad mediante almacenamiento territorial, pero puede afianzar proveedores nacionales igualmente opacos y fragmentar servicios que requieren cooperación transfronteriza.",
+    "note": "Materially improves old_back: Spanish policy usage favors nacionalismo de datos over the less lexicalized nacionalismo de los datos."
+  },
+  {
+    "id": "it_big_tech_vocab_049",
+    "en": "the Digital commons",
+    "category": "lexical-noun",
+    "tl": "el procomún digital",
+    "alts": [
+      "los bienes comunes digitales"
+    ],
+    "register": "Procomún digital es un término especializado de cultura libre y gobernanza colectiva; la alternativa plural es más transparente en política pública.",
+    "trap": "Procomún no significa simplemente gratuito o de dominio público: implica recursos compartidos junto con una comunidad y reglas para gestionarlos.",
+    "example_tl": "Sin el procomún digital, archivos abiertos, programas libres y bases de datos compartidas quedan expuestos a apropiaciones privadas que restringen el acceso y deshacen años de trabajo colectivo.",
+    "example_en": "Without the digital commons, open archives, free software, and shared databases remain exposed to private appropriation that restricts access and undoes years of collective work.",
+    "cloze": "Sin {{c1::el procomún digital}}, archivos abiertos, programas libres y bases de datos compartidas quedan expuestos a apropiaciones privadas que restringen el acceso y deshacen años de trabajo colectivo.",
+    "note": "The exact-duplicate report assigns this item to BIG_TECH_VOCAB. Old_back is accurate; self-review added an interchangeable explanatory alternative and recast the final clause idiomatically."
+  },
+  {
+    "id": "it_big_tech_vocab_050",
+    "en": "Global tech imperialism",
+    "category": "lexical-noun",
+    "tl": "el imperialismo tecnológico global",
+    "alts": [
+      "el imperialismo tecnológico mundial"
+    ],
+    "register": "Rótulo fuertemente crítico de geopolítica y economía política; presupone una relación estructural de dominación, no mera presencia internacional.",
+    "trap": "Es una acusación más fuerte que dependencia tecnológica: imperialismo atribuye extracción, jerarquía y proyección de poder a la relación descrita.",
+    "example_tl": "El imperialismo tecnológico global se reproduce cuando empresas dominantes exportan infraestructuras cerradas y convierten la dependencia técnica de otros países en influencia política.",
+    "example_en": "Global tech imperialism reproduces itself when dominant companies export closed infrastructure and turn other countries' technical dependence into political influence.",
+    "cloze": "{{c1::El imperialismo tecnológico global}} se reproduce cuando empresas dominantes exportan infraestructuras cerradas y convierten la dependencia técnica de otros países en influencia política.",
+    "note": "Old_back is accurate. Self-review retained the item because its marked analytical force cannot be replaced by a neutral phrase about global technology companies."
+  },
+  {
+    "id": "it_big_tech_vocab_051",
+    "en": "the Digital mode of production",
+    "category": "lexical-noun",
+    "tl": "el modo de producción digital",
+    "alts": [],
+    "register": "Extensión marxiana especializada que abarca fuerzas productivas, propiedad, relaciones laborales y formas de acumulación organizadas digitalmente.",
+    "trap": "Modo de producción es más amplio que medios de producción: no nombra solo las herramientas o infraestructuras, sino también las relaciones sociales que las organizan.",
+    "example_tl": "El modo de producción digital reorganiza la propiedad, el trabajo y la acumulación mediante plataformas cuyos sistemas técnicos determinan quién participa y en qué condiciones.",
+    "example_en": "The digital mode of production reorganizes ownership, labor, and accumulation through platforms whose technical systems determine who participates and under what conditions.",
+    "cloze": "{{c1::El modo de producción digital}} reorganiza la propiedad, el trabajo y la acumulación mediante plataformas cuyos sistemas técnicos determinan quién participa y en qué condiciones.",
+    "note": "Old_back is accurate. Self-review distinguished the analytical level explicitly from the retained medios de producción digitales card and restored natural Spanish articles in the example."
+  },
+  {
+    "id": "it_big_tech_vocab_052",
+    "en": "Neoliberal techno-science",
+    "category": "lexical-noun",
+    "tl": "la tecnociencia neoliberal",
+    "alts": [],
+    "register": "Término especializado y crítico de estudios sociales de la ciencia y la tecnología.",
+    "trap": "Tecnociencia se escribe en una sola palabra y describe la coproducción de ciencia y tecnología; no es una simple enumeración de ambas actividades.",
+    "example_tl": "La tecnociencia neoliberal orienta laboratorios y universidades hacia patentes rentables, mientras presenta las prioridades del mercado como criterios neutrales de excelencia científica.",
+    "example_en": "Neoliberal technoscience steers laboratories and universities toward profitable patents while presenting market priorities as neutral criteria of scientific excellence.",
+    "cloze": "{{c1::La tecnociencia neoliberal}} orienta laboratorios y universidades hacia patentes rentables, mientras presenta las prioridades del mercado como criterios neutrales de excelencia científica.",
+    "note": "Old_back has the correct lexeme but unnecessary capitalization. Self-review kept the card for the coupled STS sense and closed Spanish spelling."
+  },
+  {
+    "id": "it_big_tech_vocab_053",
+    "en": "Cyber-Marxism",
+    "category": "lexical-noun",
+    "tl": "el cibermarxismo",
+    "alts": [],
+    "register": "Etiqueta rara pero reconocible de historia intelectual y teoría crítica sobre marxismo, redes informáticas y capitalismo digital.",
+    "trap": "El prefijo ciber- se une sin guion en español; aquí remite a redes y cibernética, no específicamente a ciberdelincuencia o ciberseguridad.",
+    "example_tl": "El cibermarxismo reinterpretó la lucha de clases para explicar unas redes informáticas que ampliaban tanto la cooperación social como las posibilidades de extracción empresarial.",
+    "example_en": "Cyber-Marxism reinterpreted class struggle to explain computer networks that expanded both social cooperation and the possibilities for corporate extraction.",
+    "cloze": "{{c1::El cibermarxismo}} reinterpretó la lucha de clases para explicar unas redes informáticas que ampliaban tanto la cooperación social como las posibilidades de extracción empresarial.",
+    "note": "Old_back identifies the intended rare label. Self-review marks its limited circulation rather than presenting it as routine policy vocabulary and recast the example for natural syntax."
+  },
+  {
+    "id": "it_big_tech_vocab_055",
+    "en": "Informationalism",
+    "category": "lexical-noun",
+    "tl": "el informacionalismo",
+    "alts": [],
+    "register": "Concepto especializado asociado sobre todo a Manuel Castells y a la teoría de la sociedad red.",
+    "trap": "No es sinónimo de sociedad de la información ni de informatización: nombra una lógica de desarrollo basada en generar y procesar información.",
+    "example_tl": "Para Castells, el informacionalismo convierte la generación y el procesamiento de información en fuentes decisivas de productividad, poder y transformación social.",
+    "example_en": "For Castells, informationalism turns the generation and processing of information into decisive sources of productivity, power, and social transformation.",
+    "cloze": "Para Castells, {{c1::el informacionalismo}} convierte la generación y el procesamiento de información en fuentes decisivas de productividad, poder y transformación social.",
+    "note": "Old_back is accurate apart from capitalization. Self-review anchored this low-frequency term to its principal theoretical tradition."
+  },
+  {
+    "id": "it_big_tech_vocab_058",
+    "en": "Informational capitalism",
+    "category": "lexical-noun",
+    "tl": "el capitalismo informacional",
+    "alts": [],
+    "register": "Término especializado de sociología económica, especialmente vinculado a Castells, para el capitalismo estructurado por redes y procesamiento de información.",
+    "trap": "No es un mero sinónimo estilístico de capitalismo digital: informacional remite a una teoría específica sobre productividad, redes y poder.",
+    "example_tl": "El capitalismo informacional concentra poder no solo mediante fábricas y finanzas, sino también mediante el control de redes capaces de procesar conocimiento y coordinar mercados globales.",
+    "example_en": "Informational capitalism concentrates power not only through factories and finance, but also through control of networks capable of processing knowledge and coordinating global markets.",
+    "cloze": "{{c1::El capitalismo informacional}} concentra poder no solo mediante fábricas y finanzas, sino también mediante el control de redes capaces de procesar conocimiento y coordinar mercados globales.",
+    "note": "Old_back is accurate. Self-review retained the Castells-associated adjective instead of flattening the term into capitalismo de la información and repaired parallel syntax in the example."
+  },
+  {
+    "id": "it_big_tech_vocab_059",
+    "en": "the Digital enclosure",
+    "category": "lexical-noun",
+    "tl": "el cercamiento digital",
+    "alts": [
+      "los cercamientos digitales"
+    ],
+    "register": "Metáfora crítica de economía política del procomún; el plural es frecuente al analizar varias prácticas de privatización y cierre.",
+    "trap": "La antigua traducción encierro es errónea: enclosure evoca el cercamiento histórico de bienes comunes, no el confinamiento físico o la reclusión.",
+    "example_tl": "Contra el cercamiento digital, varias bibliotecas exigen licencias abiertas y acceso interoperable para impedir que plataformas privadas capturen colecciones financiadas públicamente.",
+    "example_en": "Against digital enclosure, several libraries demand open licenses and interoperable access to prevent private platforms from capturing publicly funded collections.",
+    "cloze": "Contra {{c1::el cercamiento digital}}, varias bibliotecas exigen licencias abiertas y acceso interoperable para impedir que plataformas privadas capturen colecciones financiadas públicamente.",
+    "note": "Materially corrects old_back ('El encierro digital'), which loses the commons metaphor. Self-review made the historical allusion explicit."
+  },
+  {
+    "id": "it_big_tech_vocab_061",
+    "en": "the Tech Cold War",
+    "category": "lexical-noun",
+    "tl": "la guerra fría tecnológica",
+    "alts": [],
+    "register": "Metáfora geopolítica frecuente en prensa y análisis estratégico; tecnológica es la colocación más natural y neutral.",
+    "trap": "No equivale a una guerra comercial limitada: la metáfora suele abarcar bloques tecnológicos, seguridad, investigación, estándares y cadenas de suministro.",
+    "example_tl": "La guerra fría tecnológica entre Estados Unidos y China ya reorganiza cadenas de suministro, alianzas científicas y controles a la exportación de semiconductores avanzados.",
+    "example_en": "The tech Cold War between the United States and China is already reorganizing supply chains, scientific alliances, and export controls on advanced semiconductors.",
+    "cloze": "{{c1::La guerra fría tecnológica}} entre Estados Unidos y China ya reorganiza cadenas de suministro, alianzas científicas y controles a la exportación de semiconductores avanzados.",
+    "note": "Old_back is lexically sound; self-review lowercased the metaphorical common-noun phrase, removed a less idiomatic alternative adjective order, and specified the semiconductor controls."
+  },
+  {
+    "id": "it_big_tech_vocab_063",
+    "en": "the Digital Belt and Road",
+    "category": "lexical-noun",
+    "tl": "la Ruta de la Seda Digital",
+    "alts": [],
+    "register": "Nombre geopolítico consolidado para la dimensión digital de la iniciativa china de la Franja y la Ruta; la mayúscula de Digital varía según criterio editorial.",
+    "trap": "El calco Cinturón y Ruta Digitales no es el nombre convencional en español; en esta denominación, Belt and Road se vierte como Ruta de la Seda.",
+    "example_tl": "La Ruta de la Seda Digital extiende la influencia china mediante cables, centros de datos y estándares que condicionarán futuras decisiones regulatorias.",
+    "example_en": "The Digital Silk Road extends Chinese influence through cables, data centers, and standards that will shape future regulatory decisions.",
+    "cloze": "{{c1::La Ruta de la Seda Digital}} extiende la influencia china mediante cables, centros de datos y estándares que condicionarán futuras decisiones regulatorias.",
+    "note": "Materially replaces old_back ('Cinturón y Ruta Digitales') with the established Spanish name. Self-review retained capitalization used for the initiative while flagging editorial variation."
+  },
+  {
+    "id": "it_big_tech_vocab_064",
+    "en": "Techno-nationalism",
+    "category": "lexical-noun",
+    "tl": "el tecnonacionalismo",
+    "alts": [
+      "el nacionalismo tecnológico"
+    ],
+    "register": "Término asentado de política industrial y geopolítica para vincular capacidad tecnológica, competitividad, autonomía y seguridad nacional.",
+    "trap": "El prefijo tecno- se escribe unido y sin guion; el concepto es más amplio que nacionalismo de datos porque incluye industria, innovación y cadenas de suministro.",
+    "example_tl": "El tecnonacionalismo vincula innovación y seguridad nacional para justificar subsidios, controles de exportación y la contratación preferente de proveedores considerados estratégicos.",
+    "example_en": "Techno-nationalism links innovation and national security to justify subsidies, export controls, and preferential procurement from suppliers deemed strategic.",
+    "cloze": "{{c1::El tecnonacionalismo}} vincula innovación y seguridad nacional para justificar subsidios, controles de exportación y la contratación preferente de proveedores considerados estratégicos.",
+    "note": "Materially normalizes old_back's hyphenated form to standard closed Spanish prefixation. Self-review kept the transparent alternative as genuinely substitutable and sharpened the procurement phrase."
+  },
+  {
+    "id": "it_big_tech_vocab_065",
+    "en": "Digital commodity fetishism",
+    "category": "lexical-noun",
+    "tl": "el fetichismo de la mercancía digital",
+    "alts": [],
+    "register": "Extensión marxiana muy teórica del fetichismo de la mercancía al análisis de bienes y servicios digitales.",
+    "trap": "Fetichismo tiene aquí el sentido marxiano: oculta relaciones sociales y materiales tras la apariencia autónoma de la mercancía, no alude a una obsesión personal.",
+    "example_tl": "El fetichismo de la mercancía digital presenta la nube como un servicio inmaterial y oculta el trabajo, los minerales y la energía que la sostienen.",
+    "example_en": "Digital commodity fetishism presents the cloud as an immaterial service and conceals the labor, minerals, and energy that sustain it.",
+    "cloze": "{{c1::El fetichismo de la mercancía digital}} presenta la nube como un servicio inmaterial y oculta el trabajo, los minerales y la energía que la sostienen.",
+    "note": "Old_back is accurate. Self-review used a material-infrastructure example to secure the specialized Marxian sense and restored the natural article before servicio."
+  },
+  {
+    "id": "it_big_tech_vocab_066",
+    "en": "Digital surplus value",
+    "category": "lexical-noun",
+    "tl": "la plusvalía digital",
+    "alts": [],
+    "register": "Término marxiano especializado de economía política digital; su definición exacta varía entre autores y modelos de trabajo de usuario.",
+    "trap": "En español marxiano, surplus value es plusvalía, no valor añadido; este último es un concepto contable y tributario ordinario.",
+    "example_tl": "La plusvalía digital surge, según este enfoque, de la apropiación del trabajo y los datos generados por usuarios cuyo tiempo queda fuera de toda relación salarial.",
+    "example_en": "Digital surplus value arises, according to this approach, from appropriating the labor and data generated by users whose time falls outside any wage relationship.",
+    "cloze": "{{c1::La plusvalía digital}} surge, según este enfoque, de la apropiación del trabajo y los datos generados por usuarios cuyo tiempo queda fuera de toda relación salarial.",
+    "note": "Old_back is accurate. Self-review added según este enfoque because the proposed source of digital surplus value is theoretically contested and replaced an English-influenced verb phrase."
+  },
+  {
+    "id": "it_big_tech_vocab_068",
+    "en": "Digital rentierism",
+    "category": "lexical-noun",
+    "tl": "el rentismo digital",
+    "alts": [],
+    "register": "Término crítico emergente de economía política para la extracción de rentas mediante el control de plataformas, activos e infraestructuras digitales.",
+    "trap": "Rentismo no se limita al alquiler inmobiliario: aquí describe ingresos derivados del control de un activo o acceso escaso más que de nueva producción.",
+    "example_tl": "El rentismo digital prospera cuando una empresa controla una infraestructura indispensable y cobra por el acceso sin realizar una inversión productiva equivalente.",
+    "example_en": "Digital rentierism thrives when a company controls indispensable infrastructure and charges for access without making an equivalent productive investment.",
+    "cloze": "{{c1::El rentismo digital}} prospera cuando una empresa controla una infraestructura indispensable y cobra por el acceso sin realizar una inversión productiva equivalente.",
+    "note": "Old_back gives the most economical Spanish rendering. The term is emerging and less fixed than capitalismo rentista; self-review records that limited lexical stability and sharpened the rent-extraction example."
+  },
+  {
+    "id": "it_big_tech_vocab_071",
+    "en": "Global tech governance",
+    "category": "lexical-noun",
+    "tl": "la gobernanza mundial de la tecnología",
+    "alts": [
+      "la gobernanza tecnológica global"
+    ],
+    "register": "Término formal de relaciones internacionales para instituciones, normas y procesos multilaterales que ordenan tecnologías con alcance transfronterizo.",
+    "trap": "Gobernanza es más amplia que regulación o gobierno: incluye estándares, coordinación y actores privados o sociales además de normas estatales vinculantes.",
+    "example_tl": "La gobernanza mundial de la tecnología exige coordinar Estados, empresas y sociedad civil para fijar estándares comunes sin convertirlos en barreras geopolíticas.",
+    "example_en": "Global technology governance requires coordinating states, companies, and civil society to set common standards without turning them into geopolitical barriers.",
+    "cloze": "{{c1::La gobernanza mundial de la tecnología}} exige coordinar Estados, empresas y sociedad civil para fijar estándares comunes sin convertirlos en barreras geopolíticas.",
+    "note": "Materially clarifies old_back: de la tecnología avoids the possible reading of tecnológica as governance performed by technological means."
+  },
+  {
+    "id": "it_big_tech_vocab_073",
+    "en": "Cybernetic socialism",
+    "category": "lexical-noun",
+    "tl": "el socialismo cibernético",
+    "alts": [],
+    "register": "Término histórico y teórico para proyectos socialistas que aplican cibernética, retroalimentación e información a la coordinación económica.",
+    "trap": "Cibernético remite aquí a la cibernética clásica de control y retroalimentación, no al sentido moderno y más estrecho de seguridad en internet.",
+    "example_tl": "El socialismo cibernético del proyecto Cybersyn buscó coordinar la economía chilena mediante información casi en tiempo real, sin reducir la planificación a un mando centralizado.",
+    "example_en": "The cybernetic socialism of Project Cybersyn sought to coordinate Chile's economy through near-real-time information without reducing planning to centralized command.",
+    "cloze": "{{c1::El socialismo cibernético}} del proyecto Cybersyn buscó coordinar la economía chilena mediante información casi en tiempo real, sin reducir la planificación a un mando centralizado.",
+    "note": "Old_back is accurate. Self-review anchored the concept historically, avoided conflating cybernetics with contemporary cybersecurity, and replaced a translated-sounding time phrase."
+  },
+  {
+    "id": "it_big_tech_vocab_079",
+    "en": "the Algorithmic means of control",
+    "category": "lexical-noun",
+    "tl": "los mecanismos de control algorítmico",
+    "alts": [
+      "los medios algorítmicos de control"
+    ],
+    "register": "Expresión crítica de estudios laborales y vigilancia; mecanismos resulta más idiomático cuando se describen procedimientos concretos de disciplina.",
+    "trap": "Control puede significar también comprobación o supervisión neutral; aquí alude a la capacidad de dirigir, disciplinar o sancionar conductas mediante algoritmos.",
+    "example_tl": "Los mecanismos de control algorítmico asignan turnos, calculan ritmos y sancionan desviaciones sin revelar al personal las reglas que condicionan su sustento.",
+    "example_en": "Algorithmic means of control assign shifts, calculate work rates, and penalize deviations without revealing to staff the rules that shape their livelihood.",
+    "cloze": "{{c1::Los mecanismos de control algorítmico}} asignan turnos, calculan ritmos y sancionan desviaciones sin revelar al personal las reglas que condicionan su sustento.",
+    "note": "Materially improves old_back by preferring mecanismos in this procedural sense; the literal version remains a valid interchangeable alternative."
+  },
+  {
+    "id": "it_big_tech_vocab_080",
+    "en": "the Digital base and superstructure",
+    "category": "lexical-expression",
+    "tl": "la base y la superestructura digitales",
+    "alts": [],
+    "register": "Marco marxiano muy teórico que traslada la relación entre base económica y superestructura jurídica, política o cultural al capitalismo digital.",
+    "trap": "Base no significa aquí base de datos: es la estructura económica marxiana; el adjetivo va en plural porque modifica ambos sustantivos coordinados.",
+    "example_tl": "La base y la superestructura digitales permiten preguntar cómo las infraestructuras económicas condicionan instituciones, discursos y hábitos sin determinar mecánicamente cada resultado político.",
+    "example_en": "The digital base and superstructure make it possible to ask how economic infrastructures condition institutions, discourses, and habits without mechanically determining every political outcome.",
+    "cloze": "{{c1::La base y la superestructura digitales}} permiten preguntar cómo las infraestructuras económicas condicionan instituciones, discursos y hábitos sin determinar mecánicamente cada resultado político.",
+    "note": "Old_back omits pedagogically useful articles. Self-review preserved plural agreement and made the Marxian, rather than database, sense explicit."
+  },
+  {
+    "id": "it_big_tech_vocab_084",
+    "en": "Internet exceptionalism",
+    "category": "lexical-noun",
+    "tl": "el excepcionalismo de internet",
+    "alts": [],
+    "register": "Término crítico de historia y política digital para la tesis de que internet constituye un ámbito excepcional al que no deben aplicarse reglas ordinarias.",
+    "trap": "No alude a una calidad extraordinaria de la red: excepcionalismo designa aquí una pretensión de quedar al margen del derecho o de la regulación común.",
+    "example_tl": "El excepcionalismo de internet presenta la red como un espacio ajeno a las reglas ordinarias, pese al poder económico y político acumulado por las grandes plataformas.",
+    "example_en": "Internet exceptionalism presents the network as a space outside ordinary rules, despite the economic and political power accumulated by the major platforms.",
+    "cloze": "{{c1::El excepcionalismo de internet}} presenta la red como un espacio ajeno a las reglas ordinarias, pese al poder económico y político acumulado por las grandes plataformas.",
+    "note": "Old_back has the right term but unnecessary capitalization. Self-review made the doctrine's legal-regulatory claim explicit and replaced a vague possessive with las grandes plataformas."
+  },
+  {
+    "id": "it_big_tech_vocab_087",
+    "en": "the Gig economy",
+    "category": "lexical-noun",
+    "tl": "la economía bajo demanda",
+    "alts": [
+      "la economía de pequeños encargos"
+    ],
+    "register": "Economía bajo demanda es la alternativa periodística más compacta; economía de pequeños encargos explicita mejor la organización laboral y evita el préstamo inglés.",
+    "trap": "No debe confundirse con economía colaborativa: gig economy se centra en trabajos breves e independientes, a menudo intermediados por plataformas, no en compartir bienes entre particulares.",
+    "example_tl": "La economía bajo demanda ofrece flexibilidad aparente, pero traslada a quienes aceptan encargos los costes de espera, equipos, seguros y protección social.",
+    "example_en": "The gig economy offers apparent flexibility, but shifts the costs of waiting, equipment, insurance, and social protection onto those who accept jobs.",
+    "cloze": "{{c1::La economía bajo demanda}} ofrece flexibilidad aparente, pero traslada a quienes aceptan encargos los costes de espera, equipos, seguros y protección social.",
+    "note": "Materially replaces the unusable old_back ('la economía Gig'). The exact-duplicate report assigns this item to BIG_TECH_VOCAB over its FANCY_VOCAB copy; self-review chose a FundéuRAE-recommended Spanish rendering."
+  },
+  {
+    "id": "it_big_tech_vocab_088",
+    "en": "the Corporate walled gardens",
+    "category": "lexical-noun",
+    "tl": "los jardines vallados empresariales",
+    "alts": [
+      "los ecosistemas empresariales cerrados"
+    ],
+    "register": "Jardín vallado es la metáfora asentada en telecomunicaciones y mercados digitales; ecosistema cerrado es una reformulación más transparente y menos figurada.",
+    "trap": "La imagen no describe una barrera física de seguridad: un jardín vallado restringe interoperabilidad, acceso o salida para mantener a usuarios y complementos dentro de un ecosistema.",
+    "example_tl": "Los jardines vallados empresariales limitan la interoperabilidad para que usuarios, desarrolladores y anunciantes permanezcan dentro de servicios controlados por una sola compañía.",
+    "example_en": "Corporate walled gardens limit interoperability so that users, developers, and advertisers remain within services controlled by a single company.",
+    "cloze": "{{c1::Los jardines vallados empresariales}} limitan la interoperabilidad para que usuarios, desarrolladores y anunciantes permanezcan dentro de servicios controlados por una sola compañía.",
+    "note": "Materially improves old_back: jardines amurallados is understandable but not the established sectoral metaphor. Self-review rendered corporate as empresariales instead of importing the broader Spanish sense of corporativo."
+  },
+  {
+    "id": "it_big_tech_vocab_089",
+    "en": "Techno-libertarianism",
+    "category": "lexical-noun",
+    "tl": "el tecnolibertarismo",
+    "alts": [
+      "el ciberlibertarismo"
+    ],
+    "register": "Etiqueta de filosofía política y crítica tecnológica, asociada a la cultura digital estadounidense y a la preferencia por mercados con mínima intervención estatal.",
+    "trap": "No significa simplemente defensa de libertades digitales ni coincide sin más con la tradición anarquista española; combina confianza tecnológica, individualismo y desregulación.",
+    "example_tl": "El tecnolibertarismo defiende mercados digitales con mínima intervención estatal, aunque muchas de las empresas que lo promueven dependen de contratos públicos, patentes e infraestructuras financiadas colectivamente.",
+    "example_en": "Techno-libertarianism advocates digital markets with minimal state intervention, although many companies that promote it depend on public contracts, patents, and collectively funded infrastructure.",
+    "cloze": "{{c1::El tecnolibertarismo}} defiende mercados digitales con mínima intervención estatal, aunque muchas de las empresas que lo promueven dependen de contratos públicos, patentes e infraestructuras financiadas colectivamente.",
+    "note": "Materially regularizes old_back: Spanish usage favors the closed, more compact tecnolibertarismo over tecno-libertarianismo. Self-review retained ciberlibertarismo in its internet-centered sense and clarified which companies depend on public support."
+  },
+  {
+    "id": "it_big_tech_vocab_091",
+    "en": "Information asymmetry",
+    "category": "lexical-noun",
+    "tl": "la asimetría de la información",
+    "alts": [
+      "la asimetría informativa"
+    ],
+    "register": "Término formal y consolidado de economía, regulación y análisis de mercados; la variante adjetival es algo más compacta pero igualmente corriente.",
+    "trap": "No es cualquier diferencia de conocimientos: en economía describe una distribución desigual de información relevante entre las partes de una relación o transacción.",
+    "example_tl": "La asimetría de la información permite que una plataforma negocie con anunciantes y usuarios sin revelar cuánto sabe de cada parte ni cómo fija sus precios.",
+    "example_en": "Information asymmetry allows a platform to negotiate with advertisers and users without revealing how much it knows about each side or how it sets prices.",
+    "cloze": "{{c1::La asimetría de la información}} permite que una plataforma negocie con anunciantes y usuarios sin revelar cuánto sabe de cada parte ni cómo fija sus precios.",
+    "note": "Old_back is accurate. Self-review fixed the economic relation in the example and excluded desequilibrio informativo, which is descriptive but less terminological."
+  },
+  {
+    "id": "it_big_tech_vocab_092",
+    "en": "Digital feudalism",
+    "category": "lexical-noun",
+    "tl": "el feudalismo digital",
+    "alts": [],
+    "register": "Metáfora crítica de economía política para relaciones duraderas de dependencia respecto de propietarios de plataformas, infraestructuras o datos.",
+    "trap": "No presenta el capitalismo digital como feudalismo histórico literal: la etiqueta destaca control de recursos esenciales, dependencia y condiciones impuestas unilateralmente.",
+    "example_tl": "El feudalismo digital describe un orden en el que pocos propietarios controlan infraestructuras esenciales y los demás acceden a ellas bajo condiciones unilaterales y revocables.",
+    "example_en": "Digital feudalism describes an order in which a few owners control essential infrastructure and everyone else accesses it under unilateral, revocable conditions.",
+    "cloze": "{{c1::El feudalismo digital}} describe un orden en el que pocos propietarios controlan infraestructuras esenciales y los demás acceden a ellas bajo condiciones unilaterales y revocables.",
+    "note": "Old_back is accurate apart from capitalization. Self-review marked the expression as an analytical metaphor and replaced colloquial donde with the more precise en el que."
+  },
+  {
+    "id": "it_big_tech_vocab_095",
+    "en": "the Digital public sphere",
+    "category": "lexical-noun",
+    "tl": "la esfera pública digital",
+    "alts": [],
+    "register": "Término formal de teoría democrática, comunicación y estudios de medios que extiende el concepto de esfera pública a entornos digitales.",
+    "trap": "No equivale a sector público digital ni a infraestructura estatal: esfera pública nombra el espacio social donde circulan argumentos y se forma opinión colectiva.",
+    "example_tl": "La esfera pública digital amplía la participación política, pero las plataformas privadas premian mensajes polarizantes y someten la visibilidad del debate a criterios comerciales.",
+    "example_en": "The digital public sphere broadens political participation, but private platforms reward polarizing messages and subject the debate's visibility to commercial criteria.",
+    "cloze": "{{c1::La esfera pública digital}} amplía la participación política, pero las plataformas privadas premian mensajes polarizantes y someten la visibilidad del debate a criterios comerciales.",
+    "note": "Old_back is accurate apart from unnecessary capitalization. Self-review preserved the Habermasian sense and replaced arquitectura privatizada, which wrongly implied transfer from prior public ownership."
+  },
+  {
+    "id": "it_big_tech_vocab_097",
+    "en": "Digital rights management (DRM)",
+    "category": "lexical-noun",
+    "tl": "la gestión de derechos digitales (DRM)",
+    "alts": [],
+    "register": "Término técnico y jurídico consolidado para controles de acceso y copia aplicados a obras digitales; la sigla inglesa DRM se mantiene en español.",
+    "trap": "Derechos digitales puede sugerir derechos fundamentales en línea, pero DRM gestiona restricciones ligadas principalmente al derecho de autor y a las licencias de uso.",
+    "example_tl": "La gestión de derechos digitales restringe la copia y el acceso a obras adquiridas mediante controles técnicos que pueden impedir usos legalmente permitidos.",
+    "example_en": "Digital rights management restricts copying and access to purchased works through technical controls that may prevent legally permitted uses.",
+    "cloze": "{{c1::La gestión de derechos digitales}} restringe la copia y el acceso a obras adquiridas mediante controles técnicos que pueden impedir usos legalmente permitidos.",
+    "note": "Old_back is accurate. Self-review kept the internationally recognized DRM in the headword but omitted it from the example occurrence so the cloze tests the Spanish term itself."
+  },
+  {
+    "id": "it_big_tech_vocab_098",
+    "en": "Platform dependency",
+    "category": "lexical-noun",
+    "tl": "la dependencia de las plataformas",
+    "alts": [
+      "la dependencia respecto de las plataformas"
+    ],
+    "register": "Término de estudios de plataformas y medios para una dependencia estructural de sus infraestructuras, audiencias, datos o reglas privadas.",
+    "trap": "No describe adicción personal a usar una aplicación: suele referirse a organizaciones, sectores o trabajadores que no pueden prescindir fácilmente de una plataforma.",
+    "example_tl": "La dependencia de las plataformas obliga a los pequeños medios a adaptar titulares, formatos y calendarios a cambios algorítmicos que no pueden negociar ni anticipar.",
+    "example_en": "Platform dependency forces small media outlets to adapt headlines, formats, and schedules to algorithmic changes they can neither negotiate nor anticipate.",
+    "cloze": "{{c1::La dependencia de las plataformas}} obliga a los pequeños medios a adaptar titulares, formatos y calendarios a cambios algorítmicos que no pueden negociar ni anticipar.",
+    "note": "Old_back is usable as a compact label but omits the natural article in running prose. Self-review fixed the structural sense, naturalized los pequeños medios, and kept an interchangeable governed-preposition alternative."
+  },
+  {
+    "id": "it_big_tech_vocab_099",
+    "en": "Proprietary software",
+    "category": "lexical-noun",
+    "tl": "el software propietario",
+    "alts": [
+      "el software privativo"
+    ],
+    "register": "Software propietario es neutral y general; software privativo es habitual en el movimiento del software libre y destaca las libertades que la licencia restringe.",
+    "trap": "Privativo no significa privado ni propietario implica necesariamente una patente: ambos términos se oponen aquí al software que permite usar, estudiar, modificar y redistribuir el código.",
+    "example_tl": "El software propietario puede resolver necesidades inmediatas, pero sus licencias y formatos cerrados dificultan que una administración cambie de proveedor sin perder autonomía.",
+    "example_en": "Proprietary software may meet immediate needs, but its licenses and closed formats make it difficult for a public administration to switch providers without losing autonomy.",
+    "cloze": "{{c1::El software propietario}} puede resolver necesidades inmediatas, pero sus licencias y formatos cerrados dificultan que una administración cambie de proveedor sin perder autonomía.",
+    "note": "Old_back is accurate. Self-review retained propietario as the neutral production answer and marked privativo as the ideologically informative, genuinely usable alternative rather than treating one as an error."
+  },
+  {
+    "id": "it_big_tech_vocab_101",
+    "en": "the Network effects",
+    "category": "lexical-noun",
+    "tl": "los efectos de red",
+    "alts": [],
+    "register": "Término consolidado de economía industrial y mercados digitales para cambios de valor producidos por el número o la composición de usuarios.",
+    "trap": "No son efectos técnicos sobre el funcionamiento de una red: describen cómo la utilidad de un producto cambia cuando otras personas o grupos lo adoptan.",
+    "example_tl": "Los efectos de red refuerzan a la plataforma dominante porque cada nuevo usuario aumenta el valor del servicio y eleva el coste colectivo de abandonarlo.",
+    "example_en": "Network effects reinforce the dominant platform because each new user increases the service's value and raises the collective cost of leaving it.",
+    "cloze": "{{c1::Los efectos de red}} refuerzan a la plataforma dominante porque cada nuevo usuario aumenta el valor del servicio y eleva el coste colectivo de abandonarlo.",
+    "note": "Old_back has the correct term but omits the article. Self-review anchored the economic mechanism, clarified the referent of value, and avoided claiming that every network effect produces monopoly."
+  },
+  {
+    "id": "it_big_tech_vocab_102",
+    "en": "Techno-politics",
+    "category": "lexical-noun",
+    "tl": "la tecnopolítica",
+    "alts": [],
+    "register": "Término académico y periodístico para la coproducción de tecnología y poder político, incluido el uso estratégico de herramientas técnicas en la acción colectiva.",
+    "trap": "No equivale a política tecnológica, que suele nombrar políticas públicas sobre tecnología; tecnopolítica subraya cómo la técnica configura y ejecuta relaciones políticas.",
+    "example_tl": "La tecnopolítica abarca tanto el poder inscrito en infraestructuras y algoritmos como el uso estratégico de herramientas digitales para organizar movilizaciones y campañas.",
+    "example_en": "Technopolitics encompasses both the power embedded in infrastructure and algorithms and the strategic use of digital tools to organize mobilizations and campaigns.",
+    "cloze": "{{c1::La tecnopolítica}} abarca tanto el poder inscrito en infraestructuras y algoritmos como el uso estratégico de herramientas digitales para organizar movilizaciones y campañas.",
+    "note": "Old_back is accurate apart from capitalization. Self-review used an example broad enough to cover the term's two established emphases without collapsing it into government technology policy."
+  },
+  {
+    "id": "it_big_tech_vocab_104",
+    "en": "Internet balkanization",
+    "category": "lexical-noun",
+    "tl": "la balcanización de internet",
+    "alts": [],
+    "register": "Metáfora crítica frecuente en gobernanza digital para la fragmentación de una red mundial en espacios nacionales o bloques técnicos incompatibles.",
+    "trap": "No describe una simple caída del servicio ni la personalización de contenidos: balcanización implica fragmentación territorial o política en unidades enfrentadas o poco interoperables.",
+    "example_tl": "La balcanización de internet avanza cuando los Estados imponen normas incompatibles, filtros territoriales y requisitos técnicos que impiden ofrecer servicios globales interoperables.",
+    "example_en": "Internet balkanization advances when states impose incompatible rules, territorial filters, and technical requirements that prevent the provision of interoperable global services.",
+    "cloze": "{{c1::La balcanización de internet}} avanza cuando los Estados imponen normas incompatibles, filtros territoriales y requisitos técnicos que impiden ofrecer servicios globales interoperables.",
+    "note": "Old_back is accurate. Self-review lowercased internet consistently with the batch's editorial style and retained the politically marked metaphor rather than flattening it into generic fragmentación."
+  },
+  {
+    "id": "it_big_tech_vocab_105",
+    "en": "Global tech hegemony",
+    "category": "lexical-noun",
+    "tl": "la hegemonía tecnológica mundial",
+    "alts": [
+      "la hegemonía tecnológica global"
+    ],
+    "register": "Expresión formal de geopolítica para el liderazgo estructural que permite fijar agendas, estándares y dependencias en el sistema tecnológico mundial.",
+    "trap": "Hegemonía no equivale a monopolio y es menos específica que imperialismo: puede apoyarse en liderazgo, estándares y consentimiento además de coerción o extracción.",
+    "example_tl": "La hegemonía tecnológica mundial no depende solo de fabricar dispositivos, sino también de controlar patentes, estándares, plataformas y cadenas de suministro estratégicas.",
+    "example_en": "Global technological hegemony depends not only on manufacturing devices, but also on controlling patents, standards, platforms, and strategic supply chains.",
+    "cloze": "{{c1::La hegemonía tecnológica mundial}} no depende solo de fabricar dispositivos, sino también de controlar patentes, estándares, plataformas y cadenas de suministro estratégicas.",
+    "note": "Old_back is accurate. Self-review retained this beside b02 Global tech imperialism because hegemony specifically teaches agenda-setting and standard-setting power rather than necessarily alleging direct extraction."
+  },
+  {
+    "id": "it_big_tech_vocab_106",
+    "en": "Data localization",
+    "category": "lexical-noun",
+    "tl": "la localización de datos",
+    "alts": [],
+    "register": "Término técnico de comercio y gobernanza digital, usado sobre todo al hablar de requisitos que vinculan el almacenamiento o tratamiento de datos a un territorio.",
+    "trap": "Aquí localización no significa encontrar datos ni geolocalizarlos: designa restricciones sobre el país o territorio donde deben almacenarse o procesarse.",
+    "example_tl": "La localización de datos exige almacenar o procesar determinada información dentro del territorio nacional, a menudo por razones de seguridad, supervisión o política industrial.",
+    "example_en": "Data localization requires certain information to be stored or processed within national territory, often for reasons of security, oversight, or industrial policy.",
+    "cloze": "{{c1::La localización de datos}} exige almacenar o procesar determinada información dentro del territorio nacional, a menudo por razones de seguridad, supervisión o política industrial.",
+    "note": "Old_back is lexically accurate but leaves the specialist policy sense unstated. Self-review distinguished localization requirements from the broader concepts of data sovereignty and data protection."
+  },
+  {
+    "id": "it_big_tech_vocab_107",
+    "en": "Encryption",
+    "category": "lexical-noun",
+    "tl": "el cifrado",
+    "alts": [
+      "la encriptación"
+    ],
+    "register": "Cifrado es el término técnico tradicional y más sobrio; encriptación está plenamente extendido y aceptado en informática, aunque algunos manuales prefieren evitarlo.",
+    "trap": "No debe confundirse con codificación: el cifrado transforma información mediante un procedimiento criptográfico y una clave para impedir su lectura no autorizada.",
+    "example_tl": "El cifrado de extremo a extremo impide que el proveedor lea los mensajes, aunque no oculta necesariamente quién se comunica, cuándo ni desde dónde.",
+    "example_en": "End-to-end encryption prevents the provider from reading messages, although it does not necessarily hide who communicates, when, or from where.",
+    "cloze": "{{c1::El cifrado}} de extremo a extremo impide que el proveedor lea los mensajes, aunque no oculta necesariamente quién se comunica, cuándo ni desde dónde.",
+    "note": "Old_back is accurate. Self-review retained encriptación as a valid alternative rather than repeating the outdated claim that it is simply an incorrect English calque."
+  },
+  {
+    "id": "it_big_tech_vocab_111",
+    "en": "Data privacy",
+    "category": "lexical-noun",
+    "tl": "la privacidad de los datos",
+    "alts": [],
+    "register": "Término general de política y seguridad digital; en el derecho de la UE, protección de datos nombra un marco jurídico relacionado pero no idéntico.",
+    "trap": "Privacidad y protección de datos se solapan, pero no son intercambiables en todo contexto: la segunda incluye reglas de tratamiento que pueden aplicarse más allá de la intimidad.",
+    "example_tl": "La privacidad de los datos exige limitar quién puede inferir hábitos íntimos, incluso cuando una base de datos ha eliminado nombres y otros identificadores directos.",
+    "example_en": "Data privacy requires limiting who may infer intimate habits, even when a database has removed names and other direct identifiers.",
+    "cloze": "{{c1::La privacidad de los datos}} exige limitar quién puede inferir hábitos íntimos, incluso cuando una base de datos ha eliminado nombres y otros identificadores directos.",
+    "note": "Old_back is accurate. Self-review excluded protección de datos from alts because the EU legal field and privacy are not coterminous, and expanded an elliptical base to base de datos."
+  },
+  {
+    "id": "it_big_tech_vocab_113",
+    "en": "Internet governance",
+    "category": "lexical-noun",
+    "tl": "la gobernanza de internet",
+    "alts": [],
+    "register": "Término formal y consolidado para los procesos multilaterales y multiactor que ordenan la infraestructura, los recursos y los usos de internet.",
+    "trap": "Gobernanza es más amplia que gobierno o regulación estatal: incluye organismos técnicos, empresas y sociedad civil, además de autoridades públicas.",
+    "example_tl": "La gobernanza de internet reúne a Estados, empresas, organismos técnicos y sociedad civil para acordar reglas sobre dominios, protocolos, seguridad y derechos en la red.",
+    "example_en": "Internet governance brings together states, companies, technical bodies, and civil society to agree on rules for domains, protocols, security, and rights online.",
+    "cloze": "{{c1::La gobernanza de internet}} reúne a Estados, empresas, organismos técnicos y sociedad civil para acordar reglas sobre dominios, protocolos, seguridad y derechos en la red.",
+    "note": "Old_back is accurate apart from capitalization. Self-review retained this narrower institutional field beside Global tech governance and replaced decidir sobre with the more precise acordar reglas sobre."
+  },
+  {
+    "id": "it_big_tech_vocab_117",
+    "en": "the National firewall",
+    "category": "lexical-noun",
+    "tl": "el cortafuegos nacional",
+    "alts": [],
+    "register": "Término técnico-geopolítico para una infraestructura estatal que filtra el tráfico transfronterizo y limita el acceso nacional a servicios o contenidos.",
+    "trap": "Cortafuegos es invariable en número —el cortafuegos, los cortafuegos— y aquí nombra censura a escala estatal, no el perímetro de seguridad de una sola red.",
+    "example_tl": "El cortafuegos nacional bloquea servicios y contenidos extranjeros mediante filtros centralizados, pero también favorece plataformas nacionales sometidas a la supervisión política del Estado.",
+    "example_en": "The national firewall blocks foreign services and content through centralized filters, but also favors domestic platforms subject to political oversight by the state.",
+    "cloze": "{{c1::El cortafuegos nacional}} bloquea servicios y contenidos extranjeros mediante filtros centralizados, pero también favorece plataformas nacionales sometidas a la supervisión política del Estado.",
+    "note": "Old_back is accurate. Self-review supplied the state-censorship sense and recorded the invariant compound morphology rather than inventing a literal muro de fuego alternative."
+  },
+  {
+    "id": "it_big_tech_vocab_118",
+    "en": "Technological self-reliance",
+    "category": "lexical-noun",
+    "tl": "la autosuficiencia tecnológica",
+    "alts": [],
+    "register": "Término de política industrial y seguridad económica para la capacidad de abastecerse con tecnología nacional en sectores considerados críticos.",
+    "trap": "Autonomía tecnológica es más amplia y gradual; autosuficiencia expresa con mayor precisión self-reliance y puede implicar sustituir insumos o proveedores extranjeros.",
+    "example_tl": "La autosuficiencia tecnológica impulsa la inversión nacional en chips y equipos críticos, aunque perseguirla como autarquía puede encarecer la innovación y reducir la cooperación científica.",
+    "example_en": "Technological self-reliance drives domestic investment in chips and critical equipment, although pursuing it as autarky may make innovation costlier and reduce scientific cooperation.",
+    "cloze": "{{c1::La autosuficiencia tecnológica}} impulsa la inversión nacional en chips y equipos críticos, aunque perseguirla como autarquía puede encarecer la innovación y reducir la cooperación científica.",
+    "note": "Materially corrects old_back ('Autonomía tecnológica'), which softens the source's supply-capacity claim. Self-review qualified self-reliance and restored the natural article before inversión nacional."
+  },
+  {
+    "id": "it_big_tech_vocab_119",
+    "en": "Data sovereignty",
+    "category": "lexical-noun",
+    "tl": "la soberanía de los datos",
+    "alts": [],
+    "register": "Concepto central pero discutido de gobernanza digital para la autoridad efectiva sobre el acceso, tratamiento, jurisdicción e infraestructura de los datos.",
+    "trap": "No equivale a localización de datos: almacenarlos dentro de una frontera no garantiza por sí solo control jurídico, técnico o efectivo sobre su uso.",
+    "example_tl": "La soberanía de los datos reclama capacidad para decidir dónde se almacenan, bajo qué leyes se procesan y quién puede acceder a ellos.",
+    "example_en": "Data sovereignty calls for the capacity to decide where data is stored, under which laws it is processed, and who may access it.",
+    "cloze": "{{c1::La soberanía de los datos}} reclama capacidad para decidir dónde se almacenan, bajo qué leyes se procesan y quién puede acceder a ellos.",
+    "note": "Old_back is accurate apart from capitalization. Self-review retained this beside b01 Digital sovereignty and b02 Data nationalism because its object and its control-versus-territorialization distinction are independently teachable."
+  },
+  {
+    "id": "it_big_tech_vocab_122",
+    "en": "Cross-border data flows",
+    "category": "lexical-noun",
+    "tl": "los flujos transfronterizos de datos",
+    "alts": [],
+    "register": "Término formal y consolidado de comercio y gobernanza digital para la circulación de datos entre jurisdicciones nacionales.",
+    "trap": "El orden institucional habitual es flujos transfronterizos de datos; flujos de datos transfronterizos puede hacer que transfronterizos parezca modificar a datos.",
+    "example_tl": "Los flujos transfronterizos de datos sostienen servicios globales, pero también obligan a conciliar comercio digital, protección de la privacidad y acceso efectivo de los reguladores.",
+    "example_en": "Cross-border data flows underpin global services, but also require reconciling digital trade, privacy protection, and effective access for regulators.",
+    "cloze": "{{c1::Los flujos transfronterizos de datos}} sostienen servicios globales, pero también obligan a conciliar comercio digital, protección de la privacidad y acceso efectivo de los reguladores.",
+    "note": "Materially improves the word order in old_back. Self-review retained the established EU policy collocation and excluded transferencias, which denotes discrete transfers rather than flows as a whole."
+  },
+  {
+    "id": "it_big_tech_vocab_125",
+    "en": "the Digital borders",
+    "category": "lexical-noun",
+    "tl": "las fronteras digitales",
+    "alts": [],
+    "register": "Metáfora crítica de geopolítica y gobernanza digital para límites territoriales impuestos a una red concebida como global.",
+    "trap": "No designa una frontera física ni un simple cortafuegos: puede materializarse mediante leyes, licencias, geobloqueos o requisitos territoriales de datos.",
+    "example_tl": "Las fronteras digitales surgen cuando los Estados territorializan la red mediante bloqueos, licencias y requisitos de almacenamiento que condicionan el acceso desde cada jurisdicción.",
+    "example_en": "Digital borders arise when states territorialize the internet through blocks, licenses, and storage requirements that condition access from each jurisdiction.",
+    "cloze": "{{c1::Las fronteras digitales}} surgen cuando los Estados territorializan la red mediante bloqueos, licencias y requisitos de almacenamiento que condicionan el acceso desde cada jurisdicción.",
+    "note": "Old_back is lexically accurate but leaves the geopolitical metaphor unstated. Self-review distinguished the umbrella concept from the narrower national-firewall mechanism retained in b03."
+  },
+  {
+    "id": "it_big_tech_vocab_126",
+    "en": "Indigenous technologies",
+    "category": "lexical-noun",
+    "tl": "las tecnologías indígenas",
+    "alts": [
+      "las tecnologías de los pueblos indígenas"
+    ],
+    "register": "Término de estudios decoloniales y política tecnológica; la alternativa explícita evita cualquier duda sobre la referencia a pueblos indígenas.",
+    "trap": "El inglés Indigenous con mayúscula remite aquí a pueblos indígenas; autóctonas puede significar solo locales o nacionales y borrar esa relación política y cultural.",
+    "example_tl": "Las tecnologías indígenas incorporan conocimientos, prioridades y formas de gobierno propias de cada pueblo, en lugar de adaptar soluciones externas sin participación comunitaria.",
+    "example_en": "Indigenous technologies incorporate the knowledge, priorities, and forms of governance of each Indigenous people, rather than adapting external solutions without community participation.",
+    "cloze": "{{c1::Las tecnologías indígenas}} incorporan conocimientos, prioridades y formas de gobierno propias de cada pueblo, en lugar de adaptar soluciones externas sin participación comunitaria.",
+    "note": "Materially corrects old_back ('Tecnologías autóctonas'), which permits a merely domestic-technology reading. Self-review added the explicit alternative for contexts requiring maximum terminological precision."
+  },
+  {
+    "id": "it_big_tech_vocab_127",
+    "en": "Cyber-espionage",
+    "category": "lexical-noun",
+    "tl": "el ciberespionaje",
+    "alts": [
+      "el espionaje informático"
+    ],
+    "register": "Término consolidado de ciberseguridad y relaciones internacionales; espionaje informático es una alternativa transparente, aunque algo menos compacta.",
+    "trap": "Ciber- se escribe unido y sin guion en español; el ciberespionaje busca información secreta y no equivale a cualquier vigilancia realizada por medios digitales.",
+    "example_tl": "El ciberespionaje estatal busca secretos diplomáticos, industriales o militares mediante intrusiones digitales, mientras la vigilancia masiva recaba además información sobre poblaciones enteras.",
+    "example_en": "State cyber-espionage seeks diplomatic, industrial, or military secrets through digital intrusions, while mass surveillance also gathers information about entire populations.",
+    "cloze": "{{c1::El ciberespionaje}} estatal busca secretos diplomáticos, industriales o militares mediante intrusiones digitales, mientras la vigilancia masiva recaba además información sobre poblaciones enteras.",
+    "note": "Old_back gives the correct closed Spanish form. Self-review retained espionaje informático as a genuine contextual alternative and made the distinction from mass surveillance explicit."
+  },
+  {
+    "id": "it_big_tech_vocab_128",
+    "en": "Data ownership",
+    "category": "lexical-noun",
+    "tl": "la propiedad de los datos",
+    "alts": [],
+    "register": "Expresión de política y derecho digital que suele plantearse como cuestión controvertida, no como una categoría jurídica universalmente reconocida.",
+    "trap": "Propiedad no equivale a mera posesión o acceso, y el derecho europeo no concede sin más un derecho general de propiedad sobre los datos personales.",
+    "example_tl": "La propiedad de los datos sigue siendo una metáfora jurídica controvertida, porque acceso, control, portabilidad y derechos personales pueden corresponder a actores distintos.",
+    "example_en": "Data ownership remains a contested legal metaphor because access, control, portability, and personal rights may belong to different actors.",
+    "cloze": "{{c1::La propiedad de los datos}} sigue siendo una metáfora jurídica controvertida, porque acceso, control, portabilidad y derechos personales pueden corresponder a actores distintos.",
+    "note": "Old_back is lexically usable but masks the term's contested legal status. Self-review excluded titularidad as an alternative because it can assert a more specific legal entitlement."
+  },
+  {
+    "id": "it_big_tech_vocab_129",
+    "en": "the Digital trade barriers",
+    "category": "lexical-noun",
+    "tl": "las barreras al comercio digital",
+    "alts": [
+      "los obstáculos al comercio digital"
+    ],
+    "register": "Término formal de política comercial para medidas que restringen o encarecen el suministro digital de bienes y servicios entre mercados.",
+    "trap": "Barreras comerciales digitales puede sugerir barreras que son digitales; la construcción al comercio digital identifica con claridad la actividad afectada.",
+    "example_tl": "Las barreras al comercio digital incluyen exigencias de localización, licencias discriminatorias y normas incompatibles que encarecen la prestación transfronteriza de servicios.",
+    "example_en": "Digital trade barriers include localization requirements, discriminatory licenses, and incompatible rules that make the cross-border provision of services more expensive.",
+    "cloze": "{{c1::Las barreras al comercio digital}} incluyen exigencias de localización, licencias discriminatorias y normas incompatibles que encarecen la prestación transfronteriza de servicios.",
+    "note": "Materially improves old_back by removing an attachment ambiguity. Self-review kept obstáculos as an interchangeable institutional alternative rather than adding the broader restriction."
+  },
+  {
+    "id": "it_big_tech_vocab_130",
+    "en": "the Source code review",
+    "category": "lexical-noun",
+    "tl": "la revisión del código fuente",
+    "alts": [
+      "la revisión de código fuente"
+    ],
+    "register": "Término técnico de ingeniería y seguridad del software; la construcción sin artículo interno es frecuente cuando código fuente funciona como modificador clasificatorio.",
+    "trap": "Review significa aquí revisión, no reseña; auditoría del código fuente solo es equivalente cuando se trata de una evaluación formal con alcance y criterios definidos.",
+    "example_tl": "La revisión del código fuente detectó una validación defectuosa que permitía eludir controles de acceso antes de que la aplicación llegara a producción.",
+    "example_en": "The source code review detected faulty validation that made it possible to bypass access controls before the application reached production.",
+    "cloze": "{{c1::La revisión del código fuente}} detectó una validación defectuosa que permitía eludir controles de acceso antes de que la aplicación llegara a producción.",
+    "note": "Old_back is accurate. Self-review excluded auditoría from alts because a routine peer review and a formal security audit are not automatically the same process."
+  },
+  {
+    "id": "it_big_tech_vocab_131",
+    "en": "Zero trust architecture",
+    "category": "lexical-noun",
+    "tl": "la arquitectura de confianza cero",
+    "alts": [
+      "la arquitectura Zero Trust"
+    ],
+    "register": "Término técnico consolidado de ciberseguridad; la etiqueta inglesa Zero Trust también circula en documentación profesional española.",
+    "trap": "Confianza cero no elimina toda confianza: rechaza la confianza implícita por ubicación de red y exige verificar cada acceso según identidad, dispositivo y contexto.",
+    "example_tl": "La arquitectura de confianza cero exige verificar cada solicitud según identidad, dispositivo y contexto, incluso cuando procede de una red corporativa interna.",
+    "example_en": "Zero trust architecture requires every request to be verified according to identity, device, and context, even when it comes from an internal corporate network.",
+    "cloze": "{{c1::La arquitectura de confianza cero}} exige verificar cada solicitud según identidad, dispositivo y contexto, incluso cuando procede de una red corporativa interna.",
+    "note": "Old_back is accurate. Self-review confirmed the Spanish term against current INCIBE usage and retained the English-label alternative used in professional documentation."
+  },
+  {
+    "id": "it_big_tech_vocab_133",
+    "en": "Digital autonomy",
+    "category": "lexical-noun",
+    "tl": "la autonomía digital",
+    "alts": [],
+    "register": "Concepto de política tecnológica para conservar capacidad efectiva de elección y decisión frente a proveedores, infraestructuras o reglas ajenas.",
+    "trap": "No equivale a autosuficiencia ni a soberanía: la autonomía admite interdependencias, siempre que no anulen la capacidad de elegir, migrar o gobernar.",
+    "example_tl": "La autonomía digital permite elegir proveedores, migrar datos y conservar capacidad técnica de decisión sin exigir que toda la tecnología sea nacional.",
+    "example_en": "Digital autonomy makes it possible to choose providers, migrate data, and retain technical decision-making capacity without requiring all technology to be domestic.",
+    "cloze": "{{c1::La autonomía digital}} permite elegir proveedores, migrar datos y conservar capacidad técnica de decisión sin exigir que toda la tecnología sea nacional.",
+    "note": "Old_back is accurate. Self-review distinguished practical freedom of action from b01 digital sovereignty, b03 technological self-reliance, and this batch's rights-oriented digital self-determination."
+  },
+  {
+    "id": "it_big_tech_vocab_135",
+    "en": "End-to-end encryption",
+    "category": "lexical-noun",
+    "tl": "el cifrado de extremo a extremo",
+    "alts": [],
+    "register": "Término técnico y regulatorio consolidado para el cifrado cuyo contenido solo pueden descifrar los extremos de la comunicación.",
+    "trap": "No es cualquier cifrado en tránsito: si el proveedor descifra el contenido en un servidor intermedio, la comunicación no está cifrada de extremo a extremo.",
+    "example_tl": "El cifrado de extremo a extremo protege el contenido durante todo el trayecto, de modo que ni siquiera el proveedor puede leer los mensajes.",
+    "example_en": "End-to-end encryption protects content throughout its journey, so that not even the provider can read the messages.",
+    "cloze": "{{c1::El cifrado de extremo a extremo}} protege el contenido durante todo el trayecto, de modo que ni siquiera el proveedor puede leer los mensajes.",
+    "note": "Old_back is accurate. Self-review excluded punto a punto because it can describe a link or topology without guaranteeing exclusive access for the communicating endpoints."
+  },
+  {
+    "id": "it_big_tech_vocab_138",
+    "en": "the Critical infrastructure",
+    "category": "lexical-noun",
+    "tl": "las infraestructuras críticas",
+    "alts": [],
+    "register": "Término jurídico y de seguridad pública; en el discurso institucional español es frecuente el plural para la categoría general.",
+    "trap": "Crítica no significa aquí censuradora ni simplemente muy importante: clasifica una infraestructura cuya perturbación dañaría gravemente servicios esenciales y funciones públicas.",
+    "example_tl": "Las infraestructuras críticas sostienen servicios esenciales cuya interrupción afectaría gravemente a la seguridad, la salud, la economía o el funcionamiento del Estado.",
+    "example_en": "Critical infrastructure supports essential services whose disruption would seriously affect security, health, the economy, or the functioning of the state.",
+    "cloze": "{{c1::Las infraestructuras críticas}} sostienen servicios esenciales cuya interrupción afectaría gravemente a la seguridad, la salud, la economía o el funcionamiento del Estado.",
+    "note": "Old_back supplies the idiomatic Spanish plural. Self-review retained that institutional category form despite the source's singular wording and made the legal consequence criterion explicit."
+  },
+  {
+    "id": "it_big_tech_vocab_139",
+    "en": "Internet universality",
+    "category": "lexical-noun",
+    "tl": "la universalidad de internet",
+    "alts": [],
+    "register": "Concepto normativo formal de la UNESCO que integra derechos humanos, apertura, acceso y participación de múltiples partes interesadas.",
+    "trap": "No afirma que internet ya sea universal ni equivale al servicio universal de telecomunicaciones: nombra un marco normativo multidimensional.",
+    "example_tl": "La universalidad de internet vincula el acceso con los derechos humanos, la apertura y la participación de múltiples partes interesadas, no solo con la cobertura técnica.",
+    "example_en": "Internet universality links access with human rights, openness, and multistakeholder participation, not only with technical coverage.",
+    "cloze": "{{c1::La universalidad de internet}} vincula el acceso con los derechos humanos, la apertura y la participación de múltiples partes interesadas, no solo con la cobertura técnica.",
+    "note": "Old_back has the right term but omits the article. Self-review checked the current UNESCO DAAM-X framework and lowercased internet consistently with the batch's editorial style."
+  },
+  {
+    "id": "it_big_tech_vocab_141",
+    "en": "Secure by design",
+    "category": "lexical-expression",
+    "tl": "la seguridad desde el diseño",
+    "alts": [
+      "la seguridad por diseño"
+    ],
+    "register": "Principio técnico y regulatorio de ciberseguridad; ambas formas están asentadas, con desde el diseño frecuente en documentación institucional española.",
+    "trap": "No equivale a seguridad por defecto: by design integra la seguridad en todo el desarrollo, mientras by default exige una configuración inicial segura.",
+    "example_tl": "La seguridad desde el diseño integra controles y análisis de riesgos durante todo el ciclo de desarrollo, en vez de añadir protección tras el despliegue.",
+    "example_en": "Secure by design integrates controls and risk analysis throughout the development lifecycle, instead of adding protection after deployment.",
+    "cloze": "{{c1::La seguridad desde el diseño}} integra controles y análisis de riesgos durante todo el ciclo de desarrollo, en vez de añadir protección tras el despliegue.",
+    "note": "Old_back is accurate once supplied with the natural article. Self-review confirmed current INCIBE and CCN usage and retained seguridad por diseño as a genuine alternative."
+  },
+  {
+    "id": "it_big_tech_vocab_142",
+    "en": "Digital resilience",
+    "category": "lexical-noun",
+    "tl": "la resiliencia digital",
+    "alts": [],
+    "register": "Término de gestión de riesgos y política digital para la continuidad, recuperación y adaptación de sistemas y organizaciones ante perturbaciones.",
+    "trap": "No es sinónimo de ciberseguridad: además de prevenir ataques, la resiliencia abarca mantener funciones, recuperarse, aprender y adaptarse tras incidentes o fallos.",
+    "example_tl": "La resiliencia digital exige mantener servicios esenciales durante un incidente, recuperar operaciones con rapidez y adaptar los sistemas después de analizar el fallo.",
+    "example_en": "Digital resilience requires maintaining essential services during an incident, restoring operations quickly, and adapting systems after analyzing the failure.",
+    "cloze": "{{c1::La resiliencia digital}} exige mantener servicios esenciales durante un incidente, recuperar operaciones con rapidez y adaptar los sistemas después de analizar el fallo.",
+    "note": "Old_back is accurate. Self-review sharpened the concept around continuity, recovery, learning, and adaptation rather than treating it as a fashionable synonym for cybersecurity."
+  },
+  {
+    "id": "it_big_tech_vocab_145",
+    "en": "Digital self-determination",
+    "category": "lexical-noun",
+    "tl": "la autodeterminación digital",
+    "alts": [],
+    "register": "Concepto normativo emergente de derechos y gobernanza digital, aplicable tanto a la capacidad individual como a decisiones colectivas sobre tecnología.",
+    "trap": "Autodeterminación informativa se centra en los datos personales; autodeterminación digital puede abarcar además plataformas, infraestructuras, mediación algorítmica y decisiones colectivas.",
+    "example_tl": "La autodeterminación digital reclama que personas y comunidades puedan decidir cómo se recopilan sus datos, qué tecnologías median sus relaciones y bajo qué reglas.",
+    "example_en": "Digital self-determination demands that people and communities be able to decide how their data is collected, which technologies mediate their relationships, and under what rules.",
+    "cloze": "{{c1::La autodeterminación digital}} reclama que personas y comunidades puedan decidir cómo se recopilan sus datos, qué tecnologías median sus relaciones y bajo qué reglas.",
+    "note": "Old_back is lexically accurate. The source is bare and Spanish usage remains somewhat fluid; self-review adopts the broad individual-and-collective agency sense and flags its boundary with informational self-determination."
+  }
+]

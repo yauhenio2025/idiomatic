@@ -614,7 +614,12 @@ def test_existing_merges_match_their_keep_triage_and_have_no_cross_topic_copies(
     assert results["es_conditionals"] == 168
     for lang in ("de", "es", "fr", "it"):
         assert results[f"{lang}_big_tech_phrases"] == 90
+    for lang, expected in (
+        ("de", 97), ("es", 92), ("fr", 93), ("it", 97), ("pt", 97),
+    ):
+        assert results[f"{lang}_big_tech_vocab"] == expected
     # 4022 (through geopolitics) + 360 big_tech_phrases; pt lands its 80+10
     # notes only after the staged rows 31-40 gap chunk (pt b01) is authored,
     # which will take this to 4472.
-    assert wave.check_merged_duplicates() == 4472  # + pt_big_tech_phrases (2026-08-09)
+    # + 476 big_tech_vocab (2026-08-10, hostile audit 20/20).
+    assert wave.check_merged_duplicates() == 4948
