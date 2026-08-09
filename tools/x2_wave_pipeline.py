@@ -25,6 +25,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
 from idiomatic.grammar import exercises2 as x2  # noqa: E402
+from idiomatic.grammar import exercises2_shadowing as x2s  # noqa: E402
 
 X2_DIR = REPO / "idiomatic" / "grammar" / "data" / "exercises2"
 SOURCE_DIR = X2_DIR / "it_rebuild"
@@ -76,6 +77,18 @@ PLAN_CHUNK_SIZE: dict[str, int] = {plan: BULK_CHUNK_SIZE for plan in BULK_WAVE_P
 # EXERCISES2_NEW_FORMAT_PILOTS.md carries the dated OWNER VERDICT section).
 FORMAT_VERDICT_DATE = "2026-08-09"
 FORMAT_VERDICT_QUOTE = "this looks good to me too - all three formats"
+# Approved pilot chunks that own the head of a language's corpus.  Bulk
+# staging skips those rows (the es_connecting convention) while keeping the
+# canonical chunk grid, and the merge composes the pilot's audited notes as
+# the target's prefix instead of re-authoring them.
+PILOT_PREFIX_CHUNKS: dict[tuple[str, str], str] = {
+    ("pt", "big_tech_phrases"): "pt_big_tech_phrases_pilot_b01",
+}
+# Reviewed shadowing notes (P1 contract) — validated by the draft-model
+# parser plus this exact batch key set; never by the Exercises v1 parser.
+SHADOWING_NOTE_KEYS = frozenset(
+    {"id", "en", "category", "tl", "focus_tl", "focus_en", "register", "trap", "note"}
+)
 
 # These absences are settled audit facts, not optional tolerance.  Requiring
 # exact equality catches a newly missing ref as well as accidental reinsertion
@@ -104,6 +117,10 @@ class StageSpec:
     langs: tuple[str, ...]
     pilot: bool = False
     indices: tuple[int, ...] | None = None
+    # Leading canonical rows owned by an approved pilot chunk (see
+    # PILOT_PREFIX_CHUNKS): bulk staging skips them but keeps the canonical
+    # chunk grid, so later chunks stay aligned with already-authored files.
+    pilot_prefix_rows: int = 0
 
 
 # wave3 and the three pilots are the historical record and must keep
@@ -120,7 +137,14 @@ STAGE_PLANS: dict[str, tuple[StageSpec, ...]] = {
         StageSpec("cold_war_vocab", LANGS),
         StageSpec("geopolitics", LANGS),
     ),
-    "wave6": (StageSpec("big_tech_phrases", LANGS),),
+    "wave6": (
+        StageSpec("big_tech_phrases", ("de", "es", "fr", "it")),
+        # The approved 30-row PT pilot owns rows 1-30; bulk staging skips
+        # them and keeps the canonical 40-row grid, so pt b01 is the 10-row
+        # tail of grid cell one (rows 31-40) and b02/b03 stay aligned with
+        # the already-authored chunks.
+        StageSpec("big_tech_phrases", ("pt",), pilot_prefix_rows=30),
+    ),
     "vocab-pilot": (
         StageSpec(
             "fancy_vocab",
@@ -308,6 +332,21 @@ def render_plan(plan: str) -> tuple[dict, dict[Path, bytes]]:
             topic_record["expected_duplicate_drops"] = sum(
                 1 for row in chosen if (spec.topic, row["id"]) in duplicate_drops
             )
+        if spec.pilot_prefix_rows:
+            if spec.pilot or spec.indices is not None or len(spec.langs) != 1:
+                raise PipelineError(
+                    f"{spec.topic}: pilot_prefix_rows requires a single-language "
+                    "full-corpus non-pilot spec"
+                )
+            prefix_chunk = PILOT_PREFIX_CHUNKS.get((spec.langs[0], spec.topic))
+            if prefix_chunk is None:
+                raise PipelineError(
+                    f"{spec.topic}: pilot_prefix_rows without a registered "
+                    "pilot prefix chunk"
+                )
+            topic_record["pilot_prefix_rows"] = spec.pilot_prefix_rows
+            topic_record["pilot_prefix_chunk"] = prefix_chunk
+            topic_record["staged_rows"] = len(chosen) - spec.pilot_prefix_rows
         plan_topics.append(topic_record)
         for lang in spec.langs:
             if lang not in LANGS:
@@ -322,12 +361,15 @@ def render_plan(plan: str) -> tuple[dict, dict[Path, bytes]]:
                 )
                 staged.append({"id": item_id, "en": row["en"], "old_back": old_back})
 
+            chunk_number = 0
             for offset in range(0, len(staged), chunk_size):
-                batch_number = offset // chunk_size + 1
-                suffix = f"pilot_b{batch_number:02d}" if spec.pilot else f"b{batch_number:02d}"
+                chunk_rows = staged[max(offset, spec.pilot_prefix_rows) : offset + chunk_size]
+                if not chunk_rows:
+                    continue  # grid cell fully owned by the pilot prefix
+                chunk_number += 1
+                suffix = f"pilot_b{chunk_number:02d}" if spec.pilot else f"b{chunk_number:02d}"
                 name = f"{lang}_{spec.topic}_{suffix}.json"
                 path = BATCH_DIR / "input" / name
-                chunk_rows = staged[offset : offset + chunk_size]
                 data = _json_bytes(chunk_rows)
                 files[path] = data
                 chunk_record = {
@@ -479,11 +521,46 @@ def parse_chunk_name(chunk: str) -> tuple[str, str, bool, int]:
     )
 
 
+def _validate_notes(source: str, lang: str, topic: str, notes: Sequence[dict]) -> None:
+    """Validate reviewed notes under the schema their topic ships with.
+
+    Shadowing topics carry the P1 draft-model contract (complete `tl` frame,
+    `focus_tl` verbatim inside it, frame categories) — the Exercises v1
+    parser must never judge them, and vice versa.
+    """
+    if topic in x2.SHADOWING_TOPICS:
+        for row in notes:
+            extra = sorted(set(row) - SHADOWING_NOTE_KEYS)
+            missing = sorted(SHADOWING_NOTE_KEYS - set(row))
+            if extra or missing:
+                raise PipelineError(
+                    f"{source}: {row.get('id')}: shadowing keys mismatch "
+                    f"(extra={extra}, missing={missing})"
+                )
+            if not isinstance(row["note"], str):
+                raise PipelineError(f"{source}: {row['id']}: note must be a string")
+        if notes:
+            try:
+                x2s.parse_notes_data(
+                    list(notes), lang=lang, source_name=f"{lang}_{topic}.json"
+                )
+            except x2s.ShadowSourceError as exc:
+                raise PipelineError(f"{source}: {exc}") from exc
+    else:
+        for row in notes:
+            x2._parse_note(Path(f"{lang}_{topic}.json"), lang, topic, row)
+
+
 def _verified_chunk_notes(chunk: str) -> list[dict]:
     lang, topic, _pilot, _number = parse_chunk_name(chunk)
     input_path = BATCH_DIR / "input" / f"{chunk}.json"
     notes_path = BATCH_DIR / "output" / f"{chunk}_notes.json"
     triage_path = BATCH_DIR / "output" / f"{chunk}_triage.json"
+    if not notes_path.exists() or not triage_path.exists():
+        raise PipelineError(
+            f"{chunk}: awaiting authored outputs "
+            f"({notes_path.name} / {triage_path.name})"
+        )
     inputs = _load_json_array(input_path)
     notes = _load_json_array(notes_path)
     triage = _load_json_array(triage_path)
@@ -502,7 +579,7 @@ def _verified_chunk_notes(chunk: str) -> list[dict]:
     for row in notes:
         if row.get("en") != input_en[row["id"]]:
             raise PipelineError(f"{chunk}: {row['id']}: authored EN changed")
-        x2._parse_note(Path(f"{lang}_{topic}.json"), lang, topic, row)
+    _validate_notes(chunk, lang, topic, notes)
     return notes
 
 
@@ -525,13 +602,35 @@ def _target(value: str) -> tuple[str, str]:
     return match.group(1), match.group(2)
 
 
+def _require_canonical_order(lang: str, topic: str, notes: Sequence[dict]) -> None:
+    """Composed merges must follow the canonical source ID order exactly."""
+    canonical = {
+        row["id"]: index for index, row in enumerate(load_topic(topic)[0])
+    }
+    ids = [row["id"] for row in notes]
+    unknown = [item_id for item_id in ids if item_id not in canonical]
+    if unknown or len(set(ids)) != len(ids):
+        raise PipelineError(
+            f"{lang}_{topic}: non-canonical or duplicate merged IDs {unknown[:3]}"
+        )
+    if ids != sorted(ids, key=canonical.__getitem__):
+        raise PipelineError(f"{lang}_{topic}: merged IDs violate canonical source order")
+
+
 def expected_merged_notes(lang: str, topic: str) -> list[dict]:
     chunks = _target_chunks(lang, topic)
     if not chunks:
         raise PipelineError(f"{lang}_{topic}: no non-pilot batch inputs")
     result: list[dict] = []
+    prefix_chunk = PILOT_PREFIX_CHUNKS.get((lang, topic))
+    if prefix_chunk is not None:
+        # The approved pilot's audited notes ARE the head of this corpus;
+        # bulk staging skipped its rows, so the merge composes them here.
+        result.extend(_verified_chunk_notes(prefix_chunk))
     for chunk in chunks:
         result.extend(_verified_chunk_notes(chunk))
+    if prefix_chunk is not None:
+        _require_canonical_order(lang, topic, result)
     return result
 
 
@@ -555,10 +654,10 @@ def verify_merge(lang: str, topic: str) -> int:
     for row in actual:
         if row.get("en") != expected_en[row["id"]]:
             raise PipelineError(f"{lang}_{topic}: {row['id']}: merged EN changed")
-        # A linguistic audit may improve authored fields after the batch gate;
-        # validate that final note rather than requiring byte identity with the
-        # pre-audit batch artifact.
-        x2._parse_note(Path(f"{lang}_{topic}.json"), lang, topic, row)
+    # A linguistic audit may improve authored fields after the batch gate;
+    # validate the final notes (under their topic's schema) rather than
+    # requiring byte identity with the pre-audit batch artifact.
+    _validate_notes(f"{lang}_{topic}", lang, topic, actual)
     return len(expected)
 
 

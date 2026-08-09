@@ -50,6 +50,50 @@ def test_shadowing_in_memory_parser_supports_batch_gate_filename(tmp_path: Path)
     assert notes[0].lang == "pt"
 
 
+def _v1_note_dict() -> dict:
+    return {
+        "id": "ptc01",
+        "en": "Be that as it may",
+        "category": "concession",
+        "tl": "Seja como for",
+        "alts": [],
+        "register": "written-formal",
+        "trap": "",
+        "example_tl": "Seja como for, a comissão não pode adiar a regulação.",
+        "example_en": "Be that as it may, the commission cannot postpone regulation.",
+        "cloze": "{{c1::Seja como for}}, a comissão não pode adiar a regulação.",
+        "note": "",
+    }
+
+
+def test_v1_loader_never_ingests_merged_shadowing_notes(tmp_path: Path):
+    (tmp_path / "pt_connecting.json").write_text(
+        json.dumps([_v1_note_dict()], ensure_ascii=False), encoding="utf-8",
+    )
+    _write(tmp_path / "pt_big_tech_phrases.json")
+
+    notes = x2.load_notes("pt", source_dir=tmp_path)
+
+    assert [note.topic for note in notes] == ["connecting"]
+
+
+def test_admin_inventory_reports_shadowing_files_via_their_own_parser(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+):
+    (tmp_path / "pt_connecting.json").write_text(
+        json.dumps([_v1_note_dict()], ensure_ascii=False), encoding="utf-8",
+    )
+    _write(tmp_path / "pt_big_tech_phrases.json")
+    monkeypatch.setattr(x2, "SOURCE_DIR", tmp_path)
+
+    by_file = {row["file"]: row for row in x2.list_sources()}
+
+    shadow_row = by_file["pt_big_tech_phrases.json"]
+    assert shadow_row["valid"] is True
+    assert (shadow_row["topic"], shadow_row["notes"]) == ("big_tech_phrases", 1)
+    assert by_file["pt_connecting.json"]["valid"] is True
+
+
 def test_shadowing_model_is_separate_and_existing_model_remains_frozen():
     model = shadow.make_draft_model()
     assert model.model_id == shadow.DRAFT_MODEL_ID

@@ -303,12 +303,26 @@ def parse_notes_file(path: Path) -> list[Ex2Note]:
     return notes
 
 
+# Shadowing topics are merged into notes/ under the same review discipline as
+# every other Exercises 2 topic, but they belong to the isolated draft model
+# in exercises2_shadowing.py (P1 owner verdict 2026-08-09).  The frozen
+# Exercises v1 loaders must never ingest them: no v1 build, TTS seeding, or
+# delivery may touch a shadowing note until that model gets its own builder.
+SHADOWING_TOPICS = frozenset({"big_tech_phrases"})
+
+
+def _notes_file_topic(path: Path) -> str:
+    return path.stem.split("_", 1)[1]
+
+
 def load_notes(lang: str, *, source_dir: Path | None = None) -> list[Ex2Note]:
     if lang not in SUPPORTED_LANGS:
         raise ValueError("lang must be de|es|fr|it|pt")
     root = Path(source_dir) if source_dir is not None else SOURCE_DIR
     notes: list[Ex2Note] = []
     for path in sorted(root.glob(f"{lang}_*.json")):
+        if _notes_file_topic(path) in SHADOWING_TOPICS:
+            continue
         notes.extend(parse_notes_file(path))
     return notes
 
@@ -629,9 +643,26 @@ async def build_language(
 
 def list_sources() -> list[dict[str, Any]]:
     """List notes files with validation state — the admin inventory view."""
+    from idiomatic.grammar import exercises2_shadowing as shadowing
+
     rows: list[dict[str, Any]] = []
     for path in sorted(SOURCE_DIR.glob("*_*.json")):
         row: dict[str, Any] = {"file": path.name}
+        if _notes_file_topic(path) in SHADOWING_TOPICS:
+            try:
+                shadow_notes = shadowing.parse_notes_file(path)
+            except (shadowing.ShadowSourceError, json.JSONDecodeError) as exc:
+                row.update({"valid": False, "error": str(exc)[:200]})
+            else:
+                row.update({
+                    "valid": True,
+                    "lang": shadow_notes[0].lang,
+                    "topic": _notes_file_topic(path),
+                    "notes": len(shadow_notes),
+                    "with_trap": sum(1 for note in shadow_notes if note.trap),
+                })
+            rows.append(row)
+            continue
         try:
             notes = parse_notes_file(path)
         except (Ex2SourceError, json.JSONDecodeError) as exc:
