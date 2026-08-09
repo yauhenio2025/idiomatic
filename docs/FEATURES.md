@@ -95,10 +95,11 @@
 - **Dependencies**: `ANKIWEB_HKEY`/`ANKIWEB_ENDPOINT`, `DASHSCOPE_API_KEY`, `ARK_API_KEY` (Render env); `anki` pip package
 - **Added**: 2026-08-05
 
-### Personal Study DJ (slices 1-2: observer + planner)
+### Personal Study DJ (slices 1-3: observer + planner + add-on materializer)
 - **Status**: Active
-- **Description**: Daily worker-scheduled loop (reusing the rescue autopilot's headless download-only AnkiWeb pull): classifies every card into a population by estate deck lane (`1 Expressions` … `8 Pimsleur`, plus the `idiomatic-podcast` tag), computes due backlog / new-card reservoir / observed median secs-per-rep (priors where thin) / last-7-days study distribution, then builds a per-language daily SESSION PLAN — due reviews first (overflow flagged, never dropped), remaining budget to a weighted new-card mix (v1 curriculum-forward weights; weakness-clustering hook wired but identity). Plan JSON schema v1 in the module docstring; slice 3 (add-on materializer) consumes it via the agent-authed endpoint.
+- **Description**: Daily worker-scheduled loop (reusing the rescue autopilot's headless download-only AnkiWeb pull): classifies every card into a population by estate deck lane (`1 Expressions` … `8 Pimsleur`, plus the `idiomatic-podcast` tag), computes due backlog / new-card reservoir / observed median secs-per-rep (priors where thin) / last-7-days study distribution, then builds a per-language daily SESSION PLAN — due reviews first (overflow flagged, never dropped), remaining budget to a weighted new-card mix (v1 curriculum-forward weights; weakness-clustering hook wired but identity). Plan JSON schema v1 in the module docstring. Slice 3 (2026-08-09, in the MACHINE-LOCAL add-on, not in this repo): on profile open + Tools → Idiomatic → "Rebuild 0 Today", gated by add-on config `dj_today_enabled` (default false until the Italian pilot is armed at the owner gate), fetches `GET /dj/plan` and materializes one filtered deck per language under `0 Today::<Root>` — term 1 = plan due.search (order due, limit due.limit), term 2 = `cid:` union of the new mix in authored due-position order (never shuffled), reschedule on; stale-language decks emptied+deleted; stale plan day still materializes with a "(yesterday's plan)" toast.
 - **Entry Points**:
+  - `/home/admin/.var/app/net.ankiweb.Anki/data/Anki2/addons21/idiomatic_puller/__init__.py` - `_dj_materialize_today` + helpers (slice-3 materializer; machine-local)
   - `idiomatic/dj.py:236` - `compute_observations` (observer over the pulled snapshot)
   - `idiomatic/dj.py:364` - `build_plan` (pure planner)
   - `idiomatic/dj.py:335` - `weakness_weights` (the v1-identity weakness hook)
@@ -110,8 +111,8 @@
   - `idiomatic/ui_api.py:874` - `GET /ui/api/dj/overview` + `/ui/api/dj/plan`
   - `frontend/src/pages/DJ.tsx` - the /dj dashboard page
   - `db/schema.sql` - `dj_plans` table (one plan per day)
-- **Dependencies**: `ANKIWEB_HKEY`/`ANKIWEB_ENDPOINT` (Render env; without them plans build from cached observations), `anki` pip package, kv_store (`dj_budgets`, `dj_observations_last`, `dj_last_report`, `dj_last_run_ts`)
-- **Added**: 2026-08-09
+- **Dependencies**: `ANKIWEB_HKEY`/`ANKIWEB_ENDPOINT` (Render env; without them plans build from cached observations), `anki` pip package, kv_store (`dj_budgets`, `dj_observations_last`, `dj_last_report`, `dj_last_run_ts`); slice 3: the idiomatic_puller add-on + its agent token
+- **Added**: 2026-08-09 | **Modified**: 2026-08-09 (slice 3 materializer)
 
 ### DJ-C2 curation triage console (decisions only — executor lane applies)
 - **Status**: Active
