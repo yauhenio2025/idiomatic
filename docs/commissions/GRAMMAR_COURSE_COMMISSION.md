@@ -55,7 +55,31 @@ ambiguity flagged never guessed. Output feeds this system as verified
 exercise seed data + lesson outlines per Hammer chapter. Other
 languages follow the same pattern with their reference grammars.
 
-## Open design decisions (owner, at design review)
+## Design decisions — TAKEN by coordinator under owner delegation
+(2026-08-09: "a lot of the decisions will be obvious and you can take
+them too"; anything genuinely needing the owner ships as an interactive
+console page — multiple choice + comment boxes — NEVER an MD to read.)
+
+1. Layout: `1 Lesson` / `2 Exercises` subdecks per unit (consistent
+   with the estate tree's numbered-lane doctrine; flags stay visual-only).
+2. Interleave default: 2 lesson slides → ~20 exercises, encoded in
+   new-card due positions.
+3. Escalation thresholds: start at the Hub's Balanced policy values.
+4. Provenance: book-derived items tagged as ground truth, LLM items
+   tagged generated; book beats LLM on conflict.
+5. No interactive card elements in v1 (owner: "maybe we don't need it").
+
+OWNER-RATIFIED PRINCIPLE (2026-08-09, binds all formats): exercises are
+atomic individually-graded cards, never embedded inside lesson cards —
+measurement granularity = card granularity ("once we flip the card,
+we're not measuring anything" otherwise). Existing podcast decks that
+mix exercise moments into lesson audio stay as-is for listening value,
+but their measurable successors follow this split.
+
+The Grammar Course serves sessions THROUGH the Personal Study DJ
+(PERSONAL_DJ_COMMISSION.md) — the umbrella orchestrator.
+
+## (superseded) Open design decisions
 
 1. Same-deck flags vs `1 Lesson`/`2 Exercises` subdecks per unit.
 2. Interleave granularity default (2 slides / ~20 exercises was the
