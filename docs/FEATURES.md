@@ -95,6 +95,24 @@
 - **Dependencies**: `ANKIWEB_HKEY`/`ANKIWEB_ENDPOINT`, `DASHSCOPE_API_KEY`, `ARK_API_KEY` (Render env); `anki` pip package
 - **Added**: 2026-08-05
 
+### Personal Study DJ (slices 1-2: observer + planner)
+- **Status**: Active
+- **Description**: Daily worker-scheduled loop (reusing the rescue autopilot's headless download-only AnkiWeb pull): classifies every card into a population by estate deck lane (`1 Expressions` … `8 Pimsleur`, plus the `idiomatic-podcast` tag), computes due backlog / new-card reservoir / observed median secs-per-rep (priors where thin) / last-7-days study distribution, then builds a per-language daily SESSION PLAN — due reviews first (overflow flagged, never dropped), remaining budget to a weighted new-card mix (v1 curriculum-forward weights; weakness-clustering hook wired but identity). Plan JSON schema v1 in the module docstring; slice 3 (add-on materializer) consumes it via the agent-authed endpoint.
+- **Entry Points**:
+  - `idiomatic/dj.py:236` - `compute_observations` (observer over the pulled snapshot)
+  - `idiomatic/dj.py:364` - `build_plan` (pure planner)
+  - `idiomatic/dj.py:335` - `weakness_weights` (the v1-identity weakness hook)
+  - `idiomatic/dj.py:568` - `run_dj` (pull → observe → plan → report)
+  - `idiomatic/worker.py:605` - scheduling hook (janitor cadence, daily self-gate)
+  - `idiomatic/api.py:2130` - `POST /admin/dj-budgets` (sanctioned mutation)
+  - `idiomatic/api.py:2144` - `POST /admin/dj-run` (force a run)
+  - `idiomatic/api.py:2162` - `GET /dj/plan` (agent token — the slice-3 feed)
+  - `idiomatic/ui_api.py:874` - `GET /ui/api/dj/overview` + `/ui/api/dj/plan`
+  - `frontend/src/pages/DJ.tsx` - the /dj dashboard page
+  - `db/schema.sql` - `dj_plans` table (one plan per day)
+- **Dependencies**: `ANKIWEB_HKEY`/`ANKIWEB_ENDPOINT` (Render env; without them plans build from cached observations), `anki` pip package, kv_store (`dj_budgets`, `dj_observations_last`, `dj_last_report`, `dj_last_run_ts`)
+- **Added**: 2026-08-09
+
 ### Admin API + dashboard
 - **Status**: Active
 - **Description**: Admin-token endpoints (backfills, retts, rebuild-pools, rotate-agent-token) + React SPA dashboard with read-only `/ui/api/*`.

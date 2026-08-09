@@ -114,7 +114,7 @@ import sqlite3
 import statistics
 import tempfile
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from typing import Any
 
 import structlog
@@ -528,12 +528,12 @@ async def save_plan(plan: dict) -> None:
     await pool.execute(
         """
         INSERT INTO dj_plans (day, schema_version, generated_at, plan)
-        VALUES ($1::date, $2, NOW(), $3::jsonb)
+        VALUES ($1, $2, NOW(), $3::jsonb)
         ON CONFLICT (day) DO UPDATE SET
             schema_version = EXCLUDED.schema_version,
             generated_at = NOW(),
             plan = EXCLUDED.plan
-        """, plan["for_day"], plan["schema"],
+        """, date.fromisoformat(plan["for_day"]), plan["schema"],
         json.dumps(plan, ensure_ascii=False))
 
 
@@ -543,7 +543,7 @@ async def load_plan(day: str | None = None) -> dict | None:
     if day:
         row = await pool.fetchrow(
             "SELECT day, schema_version, generated_at, plan FROM dj_plans "
-            "WHERE day = $1::date", day)
+            "WHERE day = $1", date.fromisoformat(day))
     else:
         row = await pool.fetchrow(
             "SELECT day, schema_version, generated_at, plan FROM dj_plans "
