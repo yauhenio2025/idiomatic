@@ -1,0 +1,74 @@
+[
+  {
+    "id": "it_fancy_vocab_564",
+    "en": "Insightful",
+    "category": "lexical-adjective",
+    "tl": "perspicaz",
+    "alts": [
+      "agudo",
+      "lúcido"
+    ],
+    "register": "Neutral-formal for an analysis, observation or person showing penetrating understanding; agudo stresses intellectual sharpness, while lúcido stresses clear judgment.",
+    "trap": "Do not confuse insightful with intuitive: perspicaz conveys deep understanding, whereas intuitivo means grasped without conscious reasoning or easy to use.",
+    "example_tl": "El análisis perspicaz de los archivos muestra que la aparente neutralidad tecnológica encubría decisiones políticas tomadas mucho antes de la crisis.",
+    "example_en": "The insightful analysis of the archives shows that the apparent technological neutrality concealed political decisions made long before the crisis.",
+    "cloze": "El análisis {{c1::perspicaz}} de los archivos muestra que la aparente neutralidad tecnológica encubría decisiones políticas tomadas mucho antes de la crisis.",
+    "note": "Legacy Perspicaz is sound. Self-review retained the card because the adjacent source item Intuitive creates a genuine and consequential English-to-Spanish sense trap."
+  },
+  {
+    "id": "it_fancy_vocab_567",
+    "en": "Nuanced",
+    "category": "lexical-adjective",
+    "tl": "matizado",
+    "alts": [
+      "con matices"
+    ],
+    "register": "Neutral-formal analytical and journalistic usage for an account that preserves relevant distinctions instead of forcing a simple binary.",
+    "trap": "Avoid *nuanciado, a likely calque from French nuancé or Portuguese nuançado; standard Spanish normally uses matizado or con matices.",
+    "example_tl": "El diagnóstico matizado reconoce que la moderación automática reduce ciertos abusos, pero también amplifica sesgos cuando opera sin supervisión humana efectiva.",
+    "example_en": "The nuanced assessment acknowledges that automated moderation reduces certain abuses but also amplifies biases when it operates without effective human oversight.",
+    "cloze": "El diagnóstico {{c1::matizado}} reconoce que la moderación automática reduce ciertos abusos, pero también amplifica sesgos cuando opera sin supervisión humana efectiva.",
+    "note": "Legacy Matizado is correct. Self-review retained con matices as the sole alternative because it substitutes naturally in the example without changing the claim."
+  },
+  {
+    "id": "it_fancy_vocab_574",
+    "en": "Presumptuous",
+    "category": "lexical-adjective",
+    "tl": "presuntuoso",
+    "alts": [],
+    "register": "Critical neutral-formal usage for a claim or action that oversteps what the speaker's authority, knowledge or evidence justifies.",
+    "trap": "Do not substitute presumido: it usually describes someone vain or conceited, while presuntuoso can criticize an unwarranted assumption or overreach.",
+    "example_tl": "Sería presuntuoso que la plataforma afirmara representar el interés público cuando ni siquiera revela cómo prioriza unas voces políticas sobre otras.",
+    "example_en": "It would be presumptuous for the platform to claim to represent the public interest when it does not even disclose how it prioritizes some political voices over others.",
+    "cloze": "Sería {{c1::presuntuoso}} que la plataforma afirmara representar el interés público cuando ni siquiera revela cómo prioriza unas voces políticas sobre otras.",
+    "note": "Legacy Presuntuoso is correct. Self-review removed arrogante as an alternative because it foregrounds attitude rather than the unwarranted overreach tested here."
+  },
+  {
+    "id": "it_fancy_vocab_576",
+    "en": "Recondite",
+    "category": "lexical-adjective",
+    "tl": "abstruso",
+    "alts": [],
+    "register": "Marked formal and academic usage for specialist material that is difficult to understand and accessible to few readers.",
+    "trap": "Spanish recóndito often foregrounds something hidden or remote; for intellectually difficult specialist material, abstruso fixes the intended English sense more clearly.",
+    "example_tl": "El informe convierte una decisión política urgente en un debate abstruso sobre parámetros técnicos que solo dominan los proveedores del sistema.",
+    "example_en": "The report turns an urgent political decision into a recondite debate about technical parameters understood only by the system's vendors.",
+    "cloze": "El informe convierte una decisión política urgente en un debate {{c1::abstruso}} sobre parámetros técnicos que solo dominan los proveedores del sistema.",
+    "note": "Materially refines legacy Recóndito: that cognate is possible, but it readily evokes physical or figurative hiddenness. Self-review chose abstruso to make difficulty of comprehension explicit."
+  },
+  {
+    "id": "it_fancy_vocab_577",
+    "en": "Reductive",
+    "category": "lexical-adjective",
+    "tl": "reduccionista",
+    "alts": [
+      "simplista"
+    ],
+    "register": "Critical academic and journalistic usage for an explanation that erases relevant dimensions of a complex issue; simplista is less technical and more openly dismissive.",
+    "trap": "Reductivo often means reducing or reduction-related; when English reductive criticizes intellectual oversimplification, Spanish normally prefers reduccionista.",
+    "example_tl": "La lectura reduccionista del conflicto atribuye toda la violencia al fanatismo religioso y borra décadas de intervención exterior y desigualdad económica.",
+    "example_en": "The reductive reading of the conflict attributes all the violence to religious fanaticism and erases decades of foreign intervention and economic inequality.",
+    "cloze": "La lectura {{c1::reduccionista}} del conflicto atribuye toda la violencia al fanatismo religioso y borra décadas de intervención exterior y desigualdad económica.",
+    "note": "Materially replaces legacy Reductivo for the critical analytical sense. Self-review retained simplista as a natural substitute in the example while documenting its stronger evaluative tone."
+  }
+]

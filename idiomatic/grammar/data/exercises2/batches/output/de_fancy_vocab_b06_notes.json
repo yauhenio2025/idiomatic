@@ -1,0 +1,337 @@
+[
+  {
+    "id": "it_fancy_vocab_204",
+    "en": "Hegemonic",
+    "category": "lexical-adjective",
+    "tl": "hegemonisch",
+    "alts": [
+      "hegemonial"
+    ],
+    "register": "Formal terminology in political science, international relations and critical theory; hegemonial is also established, especially with power, status and ambitions.",
+    "trap": "German writes both adjectives lower-case and inflects them; old_back's capitalized Hegemonial is not a production headword, though the underlying lexeme is valid.",
+    "example_tl": "Die hegemonische Stellung einiger weniger Plattformen beruht nicht allein auf Marktanteilen, sondern auch auf ihrer Kontrolle über Standards, Datenzugänge und öffentliche Sichtbarkeit.",
+    "example_en": "The hegemonic position of a small number of platforms rests not only on market shares but also on their control over standards, data access, and public visibility.",
+    "cloze": "Die {{c1::hegemonische}} Stellung einiger weniger Plattformen beruht nicht allein auf Marktanteilen, sondern auch auf ihrer Kontrolle über Standards, Datenzugänge und öffentliche Sichtbarkeit.",
+    "note": "Old_back supplies a valid alternative but capitalizes it. Self-review retained hegemonial only as an alternative because hegemonisch is the direct standard adjective for something based on hegemony."
+  },
+  {
+    "id": "it_fancy_vocab_205",
+    "en": "Insidious",
+    "category": "lexical-adjective",
+    "tl": "schleichend",
+    "alts": [],
+    "register": "Neutral-critical and idiomatic for harmful processes whose effects develop gradually or initially escape notice.",
+    "trap": "Heimtückisch usually imputes treachery or malicious intent; structural erosion described as insidious is more naturally schleichend in German.",
+    "example_tl": "Die schleichende Aushöhlung redaktioneller Unabhängigkeit beginnt oft mit harmlos wirkenden Kennzahlen, die wirtschaftlichen Druck als scheinbar neutrale Leistungsmessung tarnen.",
+    "example_en": "The insidious erosion of editorial independence often begins with seemingly harmless metrics that disguise commercial pressure as ostensibly neutral performance measurement.",
+    "cloze": "Die {{c1::schleichende}} Aushöhlung redaktioneller Unabhängigkeit beginnt oft mit harmlos wirkenden Kennzahlen, die wirtschaftlichen Druck als scheinbar neutrale Leistungsmessung tarnen.",
+    "note": "Materially diverges from old_back by selecting the gradual, initially unobtrusive sense appropriate to an institutional process rather than intentional treachery."
+  },
+  {
+    "id": "it_fancy_vocab_209",
+    "en": "Pervasive",
+    "category": "lexical-adjective",
+    "tl": "weitverbreitet",
+    "alts": [],
+    "register": "Neutral-formal for a practice or phenomenon found across much of a field; German often translates the adjective according to context.",
+    "trap": "Pervasiv exists mainly in specialist expressions such as pervasive computing; allgegenwärtig is stronger and can overstate English pervasive.",
+    "example_tl": "Die weitverbreitete Erfassung von Standortdaten verändert nicht nur Werbemärkte, sondern verschiebt auch das Machtverhältnis zwischen Bürgern, Plattformen und Sicherheitsbehörden.",
+    "example_en": "The pervasive collection of location data changes not only advertising markets but also shifts the balance of power among citizens, platforms, and security agencies.",
+    "cloze": "Die {{c1::weitverbreitete}} Erfassung von Standortdaten verändert nicht nur Werbemärkte, sondern verschiebt auch das Machtverhältnis zwischen Bürgern, Plattformen und Sicherheitsbehörden.",
+    "note": "Self-review replaced legacy allgegenwärtig with weitverbreitet because the example asserts broad prevalence, not literal omnipresence."
+  },
+  {
+    "id": "it_fancy_vocab_210",
+    "en": "Ephemeral",
+    "category": "lexical-adjective",
+    "tl": "kurzlebig",
+    "alts": [
+      "flüchtig"
+    ],
+    "register": "Kurzlebig is neutral and idiomatic for trends, attention and public reactions; flüchtig is somewhat more literary and emphasizes rapid disappearance.",
+    "trap": "The German cognate ephemer exists but is rare and markedly learned; it is not the normal general-purpose counterpart of English ephemeral.",
+    "example_tl": "Die kurzlebige Empörung über den Datenskandal erzeugte enorme Reichweite, führte jedoch weder zu strengeren Kontrollen noch zu einem dauerhaften Wandel der Plattformpraxis.",
+    "example_en": "The ephemeral outrage over the data scandal generated enormous reach but led neither to stricter oversight nor to a lasting change in platform practice.",
+    "cloze": "Die {{c1::kurzlebige}} Empörung über den Datenskandal erzeugte enorme Reichweite, führte jedoch weder zu strengeren Kontrollen noch zu einem dauerhaften Wandel der Plattformpraxis.",
+    "note": "Old_back is accurate; retention teaches the register contrast with the tempting learned cognate and supplies attributive inflection."
+  },
+  {
+    "id": "it_fancy_vocab_211",
+    "en": "Contingent",
+    "category": "lexical-adjective",
+    "tl": "kontingent",
+    "alts": [
+      "kontextabhängig"
+    ],
+    "register": "Kontingent is learned terminology in philosophy and social theory; kontextabhängig is clearer in general policy prose.",
+    "trap": "English contingent on is usually abhängig von; the capitalized German noun Kontingent instead denotes an allocated quantity or a group of personnel.",
+    "example_tl": "Die politische Wirkung algorithmischer Transparenz bleibt kontingent; nur ausreichend ausgestattete Behörden können Verstöße erkennen, wirksam sanktionieren und ihre Entscheidungen gegenüber mächtigen Anbietern durchsetzen.",
+    "example_en": "The political effect of algorithmic transparency remains contingent; only adequately resourced authorities can identify violations, penalize them effectively, and enforce their decisions against powerful providers.",
+    "cloze": "Die politische Wirkung algorithmischer Transparenz bleibt {{c1::kontingent}}; nur ausreichend ausgestattete Behörden können Verstöße erkennen, wirksam sanktionieren und ihre Entscheidungen gegenüber mächtigen Anbietern durchsetzen.",
+    "note": "Old_back is valid only for the learned adjective selected here. Self-review removed a faulty shared object from the coordinated verbs and preserved the condition-dependent sense."
+  },
+  {
+    "id": "it_fancy_vocab_214",
+    "en": "Extractive",
+    "category": "lexical-adjective",
+    "tl": "extraktiv",
+    "alts": [
+      "abschöpfungsorientiert"
+    ],
+    "register": "Academic-critical in political economy and technology criticism for systems organized around extracting resources, data or value.",
+    "trap": "Extraktiv is more specific than generic ausbeuterisch: it foregrounds one-way extraction without adequate replenishment, reciprocity or compensation.",
+    "example_tl": "Ein extraktives Geschäftsmodell verwandelt soziale Beziehungen in verwertbare Daten, während Kosten für Moderation, Sicherheit und demokratische Kontrolle der Öffentlichkeit überlassen bleiben.",
+    "example_en": "An extractive business model turns social relationships into monetizable data while leaving the costs of moderation, security, and democratic oversight to the public.",
+    "cloze": "Ein {{c1::extraktives}} Geschäftsmodell verwandelt soziale Beziehungen in verwertbare Daten, während Kosten für Moderation, Sicherheit und demokratische Kontrolle der Öffentlichkeit überlassen bleiben.",
+    "note": "Old_back is lexically accurate; the note fixes the intended critical political-economy sense rather than physical resource extraction alone."
+  },
+  {
+    "id": "it_fancy_vocab_216",
+    "en": "Myopic",
+    "category": "lexical-adjective",
+    "tl": "kurzsichtig",
+    "alts": [],
+    "register": "Neutral-critical and idiomatic in political or economic analysis when a decision neglects predictable long-term consequences.",
+    "trap": "Myopisch belongs mainly to medical or deliberately technical language; figurative English myopic normally becomes kurzsichtig.",
+    "example_tl": "Die kurzsichtige Entscheidung, digitale Infrastruktur ausschließlich nach Anschaffungskosten zu bewerten, schafft langfristige Abhängigkeiten und untergräbt die technologische Handlungsfähigkeit öffentlicher Institutionen.",
+    "example_en": "The myopic decision to assess digital infrastructure solely by acquisition cost creates long-term dependencies and undermines public institutions' capacity for technological action.",
+    "cloze": "Die {{c1::kurzsichtige}} Entscheidung, digitale Infrastruktur ausschließlich nach Anschaffungskosten zu bewerten, schafft langfristige Abhängigkeiten und untergräbt die technologische Handlungsfähigkeit öffentlicher Institutionen.",
+    "note": "Old_back is accurate; retention teaches the productive figurative adjective and blocks overuse of the cognate myopisch."
+  },
+  {
+    "id": "it_fancy_vocab_217",
+    "en": "Digital-native",
+    "category": "lexical-adjective",
+    "tl": "digital sozialisiert",
+    "alts": [
+      "mit digitalen Technologien aufgewachsen"
+    ],
+    "register": "A descriptive social-science paraphrase; it avoids treating the contested generational label Digital Native as an inherent competence.",
+    "trap": "Digital-einheimisch is not German, and digital affin means comfortable with technology rather than having grown up with it.",
+    "example_tl": "Digital sozialisierte Beschäftigte beherrschen gängige Plattformen oft intuitiv, verfügen deshalb aber keineswegs automatisch über vertieftes Wissen über Datenschutz, Sicherheit oder algorithmische Macht.",
+    "example_en": "Digital-native employees often use common platforms intuitively, but that by no means automatically gives them in-depth knowledge of privacy, security, or algorithmic power.",
+    "cloze": "{{c1::Digital sozialisierte}} Beschäftigte beherrschen gängige Plattformen oft intuitiv, verfügen deshalb aber keineswegs automatisch über vertieftes Wissen über Datenschutz, Sicherheit oder algorithmische Macht.",
+    "note": "Materially corrects the unusable legacy calque. Self-review chose a descriptive adjective because German Digital Native is primarily a noun and polished the example's knowledge collocation."
+  },
+  {
+    "id": "it_fancy_vocab_218",
+    "en": "Hegelian",
+    "category": "lexical-adjective",
+    "tl": "hegelianisch",
+    "alts": [],
+    "register": "Learned but standard terminology in philosophy, intellectual history and theoretically informed cultural criticism.",
+    "trap": "Unlike English Hegelian, the German adjective hegelianisch is normally lower-case and takes ordinary adjective endings when used attributively.",
+    "example_tl": "Eine hegelianische Lesart der Plattformökonomie würde ihre inneren Widersprüche untersuchen, ohne den technischen Wandel vorschnell als zwangsläufigen historischen Fortschritt zu deuten.",
+    "example_en": "A Hegelian reading of the platform economy would examine its internal contradictions without hastily interpreting technological change as inevitable historical progress.",
+    "cloze": "Eine {{c1::hegelianische}} Lesart der Plattformökonomie würde ihre inneren Widersprüche untersuchen, ohne den technischen Wandel vorschnell als zwangsläufigen historischen Fortschritt zu deuten.",
+    "note": "Old_back identifies the correct lexeme but incorrectly capitalizes it; the example tests its attributive inflection."
+  },
+  {
+    "id": "it_fancy_vocab_219",
+    "en": "Conformist",
+    "category": "lexical-adjective",
+    "tl": "konformistisch",
+    "alts": [
+      "angepasst"
+    ],
+    "register": "Critical and usually pejorative; angepasst is plainer but can be less explicit about ideological or social conformity.",
+    "trap": "Konform can neutrally mean compliant with a rule or standard, whereas konformistisch criticizes unreflective adaptation to prevailing views.",
+    "example_tl": "Eine konformistische Medienkultur belohnt vorhersehbare Positionen und behandelt grundlegende Kritik an Eigentumsstrukturen als unprofessionell, extrem oder wirtschaftlich unverantwortlich.",
+    "example_en": "A conformist media culture rewards predictable positions and treats fundamental criticism of ownership structures as unprofessional, extreme, or economically irresponsible.",
+    "cloze": "Eine {{c1::konformistische}} Medienkultur belohnt vorhersehbare Positionen und behandelt grundlegende Kritik an Eigentumsstrukturen als unprofessionell, extrem oder wirtschaftlich unverantwortlich.",
+    "note": "Old_back is accurate; retention teaches the pejorative force that distinguishes konformistisch from neutral konform."
+  },
+  {
+    "id": "it_fancy_vocab_221",
+    "en": "Singular",
+    "category": "lexical-adjective",
+    "tl": "singulär",
+    "alts": [
+      "einzigartig"
+    ],
+    "register": "Singulär is learned and analytically detached; einzigartig is more general and can carry positive evaluation.",
+    "trap": "English singular is polysemous: grammatical singular is Singular or Einzahl, while the selected adjective denotes an exceptional, unique case.",
+    "example_tl": "Die singuläre Stellung des Konzerns beruht darauf, dass er zugleich Infrastruktur, Marktplatz und Werbenetzwerk betreibt sowie den Zugang konkurrierender Anbieter kontrolliert.",
+    "example_en": "The corporation's singular position rests on its simultaneously operating infrastructure, a marketplace, and an advertising network while controlling competing providers' access.",
+    "cloze": "Die {{c1::singuläre}} Stellung des Konzerns beruht darauf, dass er zugleich Infrastruktur, Marktplatz und Werbenetzwerk betreibt sowie den Zugang konkurrierender Anbieter kontrolliert.",
+    "note": "Old_back selects the intended formal sense but incorrectly capitalizes the adjective. Self-review clarified the parallel objects and disambiguated the item from the grammatical sense."
+  },
+  {
+    "id": "it_fancy_vocab_222",
+    "en": "Protean",
+    "category": "lexical-adjective",
+    "tl": "wandlungsfähig",
+    "alts": [
+      "proteisch"
+    ],
+    "register": "Wandlungsfähig is idiomatic in serious general prose; proteisch is rare, literary and deliberately learned.",
+    "trap": "Proteisch derives from the shape-shifting Greek god Proteus, not from Protein; the valid legacy cognate is too marked for most contexts.",
+    "example_tl": "Die wandlungsfähige Ideologie des technologischen Fortschritts verbindet sich mühelos mit staatlicher Planung, libertärer Rhetorik oder autoritärer Kontrolle, solange Innovation unangetastet bleibt.",
+    "example_en": "The protean ideology of technological progress readily aligns itself with state planning, libertarian rhetoric, or authoritarian control as long as innovation remains beyond challenge.",
+    "cloze": "Die {{c1::wandlungsfähige}} Ideologie des technologischen Fortschritts verbindet sich mühelos mit staatlicher Planung, libertärer Rhetorik oder autoritärer Kontrolle, solange Innovation unangetastet bleibt.",
+    "note": "Materially improves on old_back by promoting the productive German adjective while preserving the rare learned equivalent as an alternative."
+  },
+  {
+    "id": "it_fancy_vocab_224",
+    "en": "Anomalous",
+    "category": "lexical-adjective",
+    "tl": "anomal",
+    "alts": [
+      "ungewöhnlich"
+    ],
+    "register": "Anomal is neutral-formal in statistics, research and investigative analysis; ungewöhnlich is the unmarked general alternative.",
+    "trap": "Anormal often describes deviation from a presumed human or biological norm and can sound pathologizing; anomal is preferable for irregular data patterns.",
+    "example_tl": "Die anomale Häufung identischer Beiträge deutet auf koordinierte Manipulation hin, beweist für sich genommen jedoch weder staatliche Steuerung noch automatisierte Verbreitung.",
+    "example_en": "The anomalous concentration of identical posts suggests coordinated manipulation but, by itself, proves neither state direction nor automated dissemination.",
+    "cloze": "Die {{c1::anomale}} Häufung identischer Beiträge deutet auf koordinierte Manipulation hin, beweist für sich genommen jedoch weder staatliche Steuerung noch automatisierte Verbreitung.",
+    "note": "Materially corrects old_back by choosing the established data-analysis adjective and avoiding an unnecessarily normative characterization."
+  },
+  {
+    "id": "it_fancy_vocab_225",
+    "en": "Interdependent",
+    "category": "lexical-adjective",
+    "tl": "wechselseitig abhängig",
+    "alts": [
+      "interdependent"
+    ],
+    "register": "The descriptive phrase is neutral and broadly idiomatic; interdependent is formal social-science and policy terminology.",
+    "trap": "Interdependent is a lower-case German adjective; it means mutually dependent, not voneinander unabhängig, which reverses the relationship.",
+    "example_tl": "Nationale Aufsichtsbehörden und europäische Institutionen sind wechselseitig abhängig, weil wirksame Plattformkontrolle sowohl lokales Wissen als auch grenzüberschreitende Durchsetzungsmacht erfordert.",
+    "example_en": "National regulators and European institutions are interdependent because effective platform oversight requires both local knowledge and cross-border enforcement power.",
+    "cloze": "Nationale Aufsichtsbehörden und europäische Institutionen sind {{c1::wechselseitig abhängig}}, weil wirksame Plattformkontrolle sowohl lokales Wissen als auch grenzüberschreitende Durchsetzungsmacht erfordert.",
+    "note": "Old_back gives a valid specialist adjective but incorrectly capitalizes it; the main answer makes the reciprocal dependency explicit."
+  },
+  {
+    "id": "it_fancy_vocab_226",
+    "en": "Unprecedented",
+    "category": "lexical-adjective",
+    "tl": "beispiellos",
+    "alts": [
+      "noch nie dagewesen"
+    ],
+    "register": "Beispiellos is neutral-formal and concise; noch nie dagewesen is more emphatic and common in journalism and speech.",
+    "trap": "Unvergleichlich means incomparable and can praise exceptional quality; it does not necessarily mean that nothing similar has happened before.",
+    "example_tl": "Das beispiellose Ausmaß der Datensammlung durch private Unternehmen zwingt Regulierungsbehörden, traditionelle Vorstellungen von Marktmacht, persönlicher Autonomie und demokratischer Rechenschaft grundlegend zu überdenken.",
+    "example_en": "The unprecedented scale of data collection by private companies forces regulators to fundamentally reconsider traditional notions of market power, personal autonomy, and democratic accountability.",
+    "cloze": "Das {{c1::beispiellose}} Ausmaß der Datensammlung durch private Unternehmen zwingt Regulierungsbehörden, traditionelle Vorstellungen von Marktmacht, persönlicher Autonomie und demokratischer Rechenschaft grundlegend zu überdenken.",
+    "note": "Materially corrects old_back, which expresses incomparability rather than the absence of a precedent."
+  },
+  {
+    "id": "it_fancy_vocab_227",
+    "en": "Permeable",
+    "category": "lexical-adjective",
+    "tl": "durchlässig",
+    "alts": [],
+    "register": "Neutral-formal and productive for literal barriers as well as figurative institutional, social and disciplinary boundaries.",
+    "trap": "Permeabel is used mainly for physical materials and technical or medical permeability; figurative boundaries are normally durchlässig.",
+    "example_tl": "Die durchlässige Grenze zwischen staatlicher Sicherheitsforschung und kommerzieller Überwachung erleichtert Wissenstransfer, erschwert aber zugleich eine klare demokratische Zurechnung von Verantwortung.",
+    "example_en": "The permeable boundary between state security research and commercial surveillance facilitates knowledge transfer but also complicates clear democratic attribution of responsibility.",
+    "cloze": "Die {{c1::durchlässige}} Grenze zwischen staatlicher Sicherheitsforschung und kommerzieller Überwachung erleichtert Wissenstransfer, erschwert aber zugleich eine klare demokratische Zurechnung von Verantwortung.",
+    "note": "Old_back is accurate; retention teaches the figurative production default and its contrast with specialist permeabel."
+  },
+  {
+    "id": "it_fancy_vocab_228",
+    "en": "Contemporaneous",
+    "category": "lexical-adjective",
+    "tl": "zeitgleich",
+    "alts": [
+      "gleichzeitig"
+    ],
+    "register": "Neutral-formal for events or developments occurring at the same time or during the same relevant period.",
+    "trap": "Contemporaneous emphasizes temporal coincidence; English contemporary instead often means gegenwärtig or zeitgenössisch, depending on context.",
+    "example_tl": "Die zeitgleichen Reformen in mehreren Staaten waren keine bloße Nachahmung, sondern Reaktionen auf dieselben wirtschaftlichen Schocks und sicherheitspolitischen Abhängigkeiten.",
+    "example_en": "The contemporaneous reforms in several states were not mere imitation but responses to the same economic shocks and security-policy dependencies.",
+    "cloze": "Die {{c1::zeitgleichen}} Reformen in mehreren Staaten waren keine bloße Nachahmung, sondern Reaktionen auf dieselben wirtschaftlichen Schocks und sicherheitspolitischen Abhängigkeiten.",
+    "note": "Materially improves old_back, which is capitalized and already inflected rather than a usable headword; the example fixes the temporal-coincidence sense."
+  },
+  {
+    "id": "it_fancy_vocab_229",
+    "en": "Partisan",
+    "category": "lexical-adjective",
+    "tl": "parteiisch",
+    "alts": [
+      "tendenziös"
+    ],
+    "register": "Critical in journalism, adjudication and public debate for a presentation that lacks impartiality; tendenziös is especially natural for media content.",
+    "trap": "German Partisan is a resistance or guerrilla fighter; parteipolitisch means party-political, while the selected bias sense is parteiisch.",
+    "example_tl": "Parteiische Berichterstattung entsteht nicht nur durch offene Parteinahme, sondern auch durch die systematische Auswahl scheinbar neutraler Experten, Themen und Vergleichsmaßstäbe.",
+    "example_en": "Partisan reporting arises not only through open advocacy but also through the systematic selection of seemingly neutral experts, topics, and standards of comparison.",
+    "cloze": "{{c1::Parteiische}} Berichterstattung entsteht nicht nur durch offene Parteinahme, sondern auch durch die systematische Auswahl scheinbar neutraler Experten, Themen und Vergleichsmaßstäbe.",
+    "note": "Materially refines old_back and explicitly selects the media-bias sense; party affiliation would instead require parteipolitisch or parteigebunden."
+  },
+  {
+    "id": "it_fancy_vocab_231",
+    "en": "Exploitative",
+    "category": "lexical-adjective",
+    "tl": "ausbeuterisch",
+    "alts": [
+      "auf Ausbeutung beruhend"
+    ],
+    "register": "Strongly pejorative in labor, economic and political criticism; it alleges a structural benefit gained at another party's expense.",
+    "trap": "Ausbeutend is a possible participle but is less idiomatic as a stable attributive label for business models or working relations than ausbeuterisch.",
+    "example_tl": "Ausbeuterische Geschäftsmodelle verlagern Risiken auf formal Selbstständige, während Plattformen Preise, Sichtbarkeit und Zugang einseitig bestimmen, ohne soziale Verantwortung zu übernehmen.",
+    "example_en": "Exploitative business models shift risks onto nominally self-employed workers while platforms unilaterally determine prices, visibility, and access without assuming social responsibility.",
+    "cloze": "{{c1::Ausbeuterische}} Geschäftsmodelle verlagern Risiken auf formal Selbstständige, während Plattformen Preise, Sichtbarkeit und Zugang einseitig bestimmen, ohne soziale Verantwortung zu übernehmen.",
+    "note": "Materially improves the legacy participle by selecting the conventional German evaluative adjective."
+  },
+  {
+    "id": "it_fancy_vocab_232",
+    "en": "Transitory",
+    "category": "lexical-adjective",
+    "tl": "vorübergehend",
+    "alts": [
+      "temporär"
+    ],
+    "register": "Vorübergehend is neutral and idiomatic in both policy prose and speech; temporär is slightly more formal or administrative.",
+    "trap": "Vergänglich suggests inherent impermanence or evanescence; a transitory arrangement, phase or political détente is normally vorübergehend.",
+    "example_tl": "Die Entspannung zwischen Regierung und Plattformbetreibern erwies sich als vorübergehend, weil der neue Rechtsrahmen zentrale Konflikte um Datenzugang und Haftung ungelöst ließ.",
+    "example_en": "The détente between the government and platform operators proved transitory because the new legal framework left central conflicts over data access and liability unresolved.",
+    "cloze": "Die Entspannung zwischen Regierung und Plattformbetreibern erwies sich als {{c1::vorübergehend}}, weil der neue Rechtsrahmen zentrale Konflikte um Datenzugang und Haftung ungelöst ließ.",
+    "note": "Materially diverges from old_back by selecting temporary duration rather than the more existential quality of being perishable or fleeting; self-review also corrected the German conflict collocation to Konflikte um."
+  },
+  {
+    "id": "it_fancy_vocab_235",
+    "en": "Disparate",
+    "category": "lexical-adjective",
+    "tl": "grundverschieden",
+    "alts": [
+      "sehr unterschiedlich"
+    ],
+    "register": "Neutral-formal and emphatic for elements that differ substantially in kind, structure or outlook.",
+    "trap": "Ungleichwertig means unequal in value or status; disparate only asserts substantial difference and does not itself rank the items.",
+    "example_tl": "Die nationalen Aufsichtsmodelle sind grundverschieden, weshalb identische Plattformpraktiken je nach Mitgliedstaat als Wettbewerbsproblem, Datenschutzverstoß oder legitime Geschäftspolitik erscheinen.",
+    "example_en": "The national oversight models are disparate, which is why identical platform practices appear as a competition problem, privacy violation, or legitimate business policy depending on the member state.",
+    "cloze": "Die nationalen Aufsichtsmodelle sind {{c1::grundverschieden}}, weshalb identische Plattformpraktiken je nach Mitgliedstaat als Wettbewerbsproblem, Datenschutzverstoß oder legitime Geschäftspolitik erscheinen.",
+    "note": "Materially corrects old_back, which introduces an unsupported judgment of unequal value."
+  },
+  {
+    "id": "it_fancy_vocab_236",
+    "en": "Censorious",
+    "category": "lexical-adjective",
+    "tl": "tadelsüchtig",
+    "alts": [
+      "übermäßig kritisch"
+    ],
+    "register": "Tadelsüchtig is a marked, strongly critical adjective for a habitual readiness to find fault; the paraphrase is more transparent.",
+    "trap": "Censorious does not mean censored or censoring: zensiert describes suppressed content, while tadelsüchtig describes a fault-finding disposition.",
+    "example_tl": "Tadelsüchtige Kommentatoren ersetzen die Prüfung institutioneller Ursachen durch moralische Schuldzuweisungen und erschweren damit eine nüchterne Reform der Plattformregulierung.",
+    "example_en": "Censorious commentators replace examination of institutional causes with moral blame and thereby hamper a sober reform of platform regulation.",
+    "cloze": "{{c1::Tadelsüchtige}} Kommentatoren ersetzen die Prüfung institutioneller Ursachen durch moralische Schuldzuweisungen und erschweren damit eine nüchterne Reform der Plattformregulierung.",
+    "note": "Materially corrects old_back, which translates the different English word censored. Self-review moved the adjective from an abstract tone to people, its more natural target."
+  },
+  {
+    "id": "it_fancy_vocab_239",
+    "en": "the Cybersecurity",
+    "category": "lexical-noun",
+    "tl": "die Cybersicherheit",
+    "alts": [
+      "die IT-Sicherheit"
+    ],
+    "register": "Cybersicherheit is standard in policy and security discourse; IT-Sicherheit is common in operational technical contexts and can be somewhat narrower.",
+    "trap": "Cybersecurity is used as an English loanword, but German public-sector prose generally prefers Cybersicherheit; Sicherheit is feminine in either compound.",
+    "example_tl": "Die Cybersicherheit kritischer Infrastrukturen hängt nicht allein von technischen Schutzmaßnahmen ab, sondern ebenso von klaren Zuständigkeiten, verlässlichen Meldewegen und dauerhaft verfügbarem Fachpersonal.",
+    "example_en": "The cybersecurity of critical infrastructure depends not only on technical safeguards but equally on clear responsibilities, reliable reporting channels, and permanently available specialist staff.",
+    "cloze": "Die {{c1::Cybersicherheit}} kritischer Infrastrukturen hängt nicht allein von technischen Schutzmaßnahmen ab, sondern ebenso von klaren Zuständigkeiten, verlässlichen Meldewegen und dauerhaft verfügbarem Fachpersonal.",
+    "note": "Materially improves old_back by promoting the established German policy term while retaining the related technical term as a scoped alternative; self-review polished the staffing collocation."
+  }
+]

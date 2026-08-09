@@ -1,0 +1,237 @@
+[
+  {
+    "id": "it_fancy_vocab_321",
+    "en": "to collect",
+    "category": "lexical-verb",
+    "tl": "coletar",
+    "alts": [
+      "recolher"
+    ],
+    "register": "Neutro e corrente no português brasileiro para a obtenção sistemática de dados; recolher é uma alternativa formal possível no mesmo contexto.",
+    "trap": "O infinitivo inglês to collect corresponde simplesmente a coletar, não para coletar; o espanhol recopilar não deve ser transferido automaticamente.",
+    "example_tl": "Empresas de publicidade coletam dados de navegação fora de seus próprios serviços, embora raramente expliquem como essas informações influenciam os preços exibidos.",
+    "example_en": "Advertising companies collect browsing data outside their own services, although they rarely explain how that information influences the prices displayed.",
+    "cloze": "Empresas de publicidade {{c1::coletam}} dados de navegação fora de seus próprios serviços, embora raramente expliquem como essas informações influenciam os preços exibidos.",
+    "note": "Corrige a forma de dicionário de old_back, que incorporou indevidamente a preposição para. O exemplo fixa a acepção de coleta sistemática de dados."
+  },
+  {
+    "id": "it_fancy_vocab_323",
+    "en": "to share",
+    "category": "lexical-verb",
+    "tl": "compartilhar com",
+    "alts": [],
+    "register": "Neutro e corrente em tecnologia, proteção de dados e linguagem geral; o complemento introduzido por com identifica o destinatário.",
+    "trap": "Para indicar o destinatário, use compartilhar algo com alguém; compartir, embora registrado, é raro no Brasil e pode refletir interferência do espanhol.",
+    "example_tl": "A operadora compartilhou com empresas de análise os registros de localização que usuários haviam fornecido exclusivamente para receber alertas sobre transporte público.",
+    "example_en": "The operator shared with analytics companies the location records that users had provided exclusively to receive public transport alerts.",
+    "cloze": "A operadora {{c1::compartilhou com}} empresas de análise os registros de localização que usuários haviam fornecido exclusivamente para receber alertas sobre transporte público.",
+    "note": "Old_back fornece o verbo brasileiro correto, mas omite a regência necessária para produção; a nota transforma-o em headword governado."
+  },
+  {
+    "id": "it_fancy_vocab_325",
+    "en": "to advertise",
+    "category": "lexical-verb",
+    "tl": "anunciar",
+    "alts": [
+      "fazer publicidade de"
+    ],
+    "register": "Anunciar é neutro e conciso; fazer publicidade de explicita a acepção promocional quando anunciar poderia significar apenas comunicar uma novidade.",
+    "trap": "Advertir significa alertar ou repreender, não anunciar comercialmente; publicitar ocorre, mas é menos característico do uso brasileiro geral.",
+    "example_tl": "Plataformas anunciam serviços de inteligência artificial como neutros, mas omitem que os modelos incorporam escolhas políticas feitas durante a seleção dos dados.",
+    "example_en": "Platforms advertise artificial-intelligence services as neutral but omit that the models embody political choices made during data selection.",
+    "cloze": "Plataformas {{c1::anunciam}} serviços de inteligência artificial como neutros, mas omitem que os modelos incorporam escolhas políticas feitas durante a seleção dos dados.",
+    "note": "Old_back oferece o equivalente principal correto. A retenção delimita a acepção publicitária e registra um falso amigo relevante."
+  },
+  {
+    "id": "it_fancy_vocab_327",
+    "en": "to discriminate",
+    "category": "lexical-verb",
+    "tl": "discriminar",
+    "alts": [],
+    "register": "Neutro-formal em direitos civis e governança algorítmica para tratamento desigual; a base da discriminação pode vir com por ou com base em.",
+    "trap": "Na acepção prejudicial, discriminar recebe objeto direto; distinguir é a opção neutra para perceber diferenças, e o inglês against não exige contra após o verbo.",
+    "example_tl": "O sistema discriminava candidatos com base no CEP, reproduzindo desigualdades raciais que a empresa alegava ter eliminado ao excluir informações sobre cor.",
+    "example_en": "The system discriminated against candidates based on their postal code, reproducing racial inequalities that the company claimed to have eliminated by excluding information about race.",
+    "cloze": "O sistema {{c1::discriminava}} candidatos com base no CEP, reproduzindo desigualdades raciais que a empresa alegava ter eliminado ao excluir informações sobre cor.",
+    "note": "Old_back está lexicalmente correto. O exemplo e a nota fixam a acepção de tratamento desigual e sua estrutura argumental."
+  },
+  {
+    "id": "it_fancy_vocab_328",
+    "en": "to violate",
+    "category": "lexical-verb",
+    "tl": "violar",
+    "alts": [],
+    "register": "Formal e corrente com direitos, privacidade e integridade; outros objetos institucionais podem exigir infringir ou descumprir.",
+    "trap": "Português costuma violar direitos, infringir uma norma ou lei e descumprir contrato ou obrigação; um único cognato não cobre todos esses objetos.",
+    "example_tl": "Os novos termos violam direitos básicos de privacidade ao permitir que parceiros comerciais combinem dados médicos, financeiros e comportamentais sem consentimento específico.",
+    "example_en": "The new terms violate basic privacy rights by allowing business partners to combine medical, financial, and behavioral data without specific consent.",
+    "cloze": "Os novos termos {{c1::violam}} direitos básicos de privacidade ao permitir que parceiros comerciais combinem dados médicos, financeiros e comportamentais sem consentimento específico.",
+    "note": "Old_back é correto para a acepção selecionada pelo exemplo. Como o inglês isolado é polissêmico, a nota documenta as escolhas determinadas pelo objeto. Autorrevisão: substituí históricos por dados para obter a colocação brasileira natural com as três categorias."
+  },
+  {
+    "id": "it_fancy_vocab_329",
+    "en": "to compete",
+    "category": "lexical-verb",
+    "tl": "competir com",
+    "alts": [
+      "concorrer com"
+    ],
+    "register": "Neutro em economia e política concorrencial; concorrer com é equivalente quando se focaliza a disputa entre agentes.",
+    "trap": "Competir com introduz o rival, competir por introduz o objetivo e competir em situa o mercado ou arena; não se deve generalizar uma só preposição.",
+    "example_tl": "Provedores locais competem com conglomerados estrangeiros por contratos públicos, embora estes possam subsidiar preços com receitas obtidas em mercados já concentrados.",
+    "example_en": "Local providers compete with foreign conglomerates for public contracts, although the latter can subsidize prices with revenue earned in already concentrated markets.",
+    "cloze": "Provedores locais {{c1::competem com}} conglomerados estrangeiros por contratos públicos, embora estes possam subsidiar preços com receitas obtidas em mercados já concentrados.",
+    "note": "Old_back fornece o verbo correto, mas não a regência. A alternativa preserva o sentido e a mesma estrutura no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_331",
+    "en": "to address",
+    "category": "lexical-verb",
+    "tl": "abordar",
+    "alts": [],
+    "register": "Neutro-formal para examinar ou tratar de uma questão em relatórios, políticas e argumentação profissional.",
+    "trap": "Endereçar uma questão circula no jargão corporativo por influência do inglês; abordar ou tratar de costuma ser mais idiomático em prosa cuidada.",
+    "example_tl": "O relatório aborda os riscos concorrenciais da integração vertical, mas ignora como contratos de exclusividade podem impedir a entrada de empresas menores.",
+    "example_en": "The report addresses the competition risks of vertical integration but ignores how exclusivity agreements can prevent smaller companies from entering.",
+    "cloze": "O relatório {{c1::aborda}} os riscos concorrenciais da integração vertical, mas ignora como contratos de exclusividade podem impedir a entrada de empresas menores.",
+    "note": "Old_back fornece o equivalente principal correto. A retenção bloqueia o decalque corporativo e delimita a acepção temática, não a de dirigir correspondência. Autorrevisão: retirei market da tradução, pois o exemplo português não explicita esse complemento."
+  },
+  {
+    "id": "it_fancy_vocab_332",
+    "en": "to fail",
+    "category": "lexical-verb",
+    "tl": "falhar em",
+    "alts": [
+      "não conseguir"
+    ],
+    "register": "Neutro; falhar em mais infinitivo avalia o insucesso em atingir um objetivo, enquanto não conseguir formula o resultado de modo mais direto.",
+    "trap": "Fracassar descreve o insucesso de uma pessoa ou iniciativa, e descumprir traduz fail quando o objeto é uma obrigação; falhar não substitui ambos automaticamente.",
+    "example_tl": "A política falhou em reduzir a dependência de fornecedores estrangeiros porque os subsídios privilegiaram projetos anunciados, não fábricas efetivamente construídas.",
+    "example_en": "The policy failed to reduce dependence on foreign suppliers because the subsidies favored announced projects, not factories that were actually built.",
+    "cloze": "A política {{c1::falhou em}} reduzir a dependência de fornecedores estrangeiros porque os subsídios privilegiaram projetos anunciados, não fábricas efetivamente construídas.",
+    "note": "O inglês isolado admite várias construções. Esta nota seleciona fail to achieve, acrescentando a preposição que old_back omite. Autorrevisão: troquei capacidade anunciada por projetos anunciados para tornar natural o contraste com fábricas construídas."
+  },
+  {
+    "id": "it_fancy_vocab_333",
+    "en": "to succeed",
+    "category": "lexical-verb",
+    "tl": "ter êxito em",
+    "alts": [
+      "conseguir"
+    ],
+    "register": "Ter êxito em é neutro-formal e explicita a avaliação do resultado; conseguir é mais conciso e frequente em todos os registros.",
+    "trap": "Suceder significa normalmente acontecer ou vir depois de alguém; para alcançar um objetivo, use ter êxito em ou conseguir mais infinitivo.",
+    "example_tl": "A coalizão teve êxito em ampliar a transparência dos anúncios políticos, mas não conseguiu limitar o uso opaco de dados por intermediários.",
+    "example_en": "The coalition succeeded in increasing the transparency of political ads but failed to limit intermediaries' opaque use of data.",
+    "cloze": "A coalizão {{c1::teve êxito em}} ampliar a transparência dos anúncios políticos, mas não conseguiu limitar o uso opaco de dados por intermediários.",
+    "note": "Old_back fornece uma expressão correta e muito frequente. A nota escolhe a variante formal com regência explícita e registra o falso amigo suceder."
+  },
+  {
+    "id": "it_fancy_vocab_334",
+    "en": "to entrench",
+    "category": "lexical-verb",
+    "tl": "consolidar",
+    "alts": [],
+    "register": "Neutro-formal e corrente em análise institucional quando uma regra, vantagem ou estrutura se torna mais firme e difícil de reverter.",
+    "trap": "Entrincheirar-se descreve uma postura defensiva e é reflexivo; entrench an advantage pede normalmente consolidar uma vantagem, sem pronome reflexivo.",
+    "example_tl": "Isenções concedidas sem prazo definido consolidaram a vantagem das plataformas incumbentes, tornando politicamente mais difícil revisar benefícios que deveriam ter sido temporários.",
+    "example_en": "Open-ended exemptions entrenched incumbent platforms' advantage, making it politically harder to review benefits that should have been temporary.",
+    "cloze": "Isenções concedidas sem prazo definido {{c1::consolidaram}} a vantagem das plataformas incumbentes, tornando politicamente mais difícil revisar benefícios que deveriam ter sido temporários.",
+    "note": "Diverge materialmente de old_back: para é um resíduo do infinitivo inglês, e consolidar-se altera a valência transitiva exigida nesta acepção. Autorrevisão: acrescentei definido a sem prazo para eliminar uma elipse pouco natural."
+  },
+  {
+    "id": "it_fancy_vocab_335",
+    "en": "to lobby",
+    "category": "lexical-verb",
+    "tl": "fazer lobby junto a",
+    "alts": [],
+    "register": "Expressão corrente em política e relações governamentais; o anglicismo lobby está consolidado no português brasileiro.",
+    "trap": "Junto a introduz a autoridade abordada; por, em favor de ou contra apresenta a posição defendida, e sobre pode introduzir a proposta discutida.",
+    "example_tl": "Empresas de tecnologia fizeram lobby junto ao Congresso para suavizar obrigações de transparência, enquanto publicamente defendiam uma regulação supostamente rigorosa.",
+    "example_en": "Technology companies lobbied Congress to soften transparency obligations while publicly advocating supposedly stringent regulation.",
+    "cloze": "Empresas de tecnologia {{c1::fizeram lobby junto ao}} Congresso para suavizar obrigações de transparência, enquanto publicamente defendiam uma regulação supostamente rigorosa.",
+    "note": "Old_back reconhece corretamente a locução, mas omite seus complementos produtivos. O headword seleciona a construção que introduz o alvo institucional."
+  },
+  {
+    "id": "it_fancy_vocab_337",
+    "en": "to partner",
+    "category": "lexical-verb",
+    "tl": "firmar parceria com",
+    "alts": [
+      "estabelecer parceria com"
+    ],
+    "register": "Formal e institucional; fazer parceria com é corrente e menos solene, enquanto firmar e estabelecer são preferíveis em prosa administrativa.",
+    "trap": "O verbo inglês partner não se transfere como um verbo simples neutro; parceirizar ocorre no jargão empresarial, mas a locução com parceria é mais cuidada.",
+    "example_tl": "O ministério firmou parceria com universidades públicas para auditar modelos preditivos, preservando autonomia metodológica e acesso independente aos dados de treinamento.",
+    "example_en": "The ministry partnered with public universities to audit predictive models, preserving methodological autonomy and independent access to the training data.",
+    "cloze": "O ministério {{c1::firmou parceria com}} universidades públicas para auditar modelos preditivos, preservando autonomia metodológica e acesso independente aos dados de treinamento.",
+    "note": "Old_back é semanticamente correto, porém apresenta apenas a variante mais geral no plural. A forma principal fixa uma colocação institucional e a preposição governada."
+  },
+  {
+    "id": "it_fancy_vocab_339",
+    "en": "to secure",
+    "category": "lexical-verb",
+    "tl": "obter",
+    "alts": [
+      "conseguir"
+    ],
+    "register": "Neutro-formal na acepção de obter com êxito recursos, contratos ou apoio; conseguir é mais geral e ligeiramente menos formal.",
+    "trap": "Secure funding, na acepção de obtê-lo, é obter ou conseguir financiamento; garantir o financiamento pode destacar sua disponibilidade ou a garantia de pagamento.",
+    "example_tl": "A startup obteve financiamento público após prometer infraestrutura aberta, mas depois restringiu o acesso aos resultados produzidos com recursos dos contribuintes.",
+    "example_en": "The startup secured public funding after promising open infrastructure but later restricted access to results produced with taxpayers' money.",
+    "cloze": "A startup {{c1::obteve}} financiamento público após prometer infraestrutura aberta, mas depois restringiu o acesso aos resultados produzidos com recursos dos contribuintes.",
+    "note": "O inglês isolado é polissêmico; a nota seleciona a acepção obtain successfully. Diverge de old_back, que incorpora para e privilegia ensure. Autorrevisão: reformulei o trap para não negar usos contextuais de garantir próximos de secure."
+  },
+  {
+    "id": "it_fancy_vocab_345",
+    "en": "Powerful",
+    "category": "lexical-adjective",
+    "tl": "poderoso",
+    "alts": [],
+    "register": "Neutro e avaliativo para pessoas, grupos e instituições com muito poder ou influência; a flexão acompanha o substantivo.",
+    "trap": "Poderoso descreve normalmente atores e instituições; potente é mais natural para máquinas, medicamentos, sinais e certos efeitos físicos.",
+    "example_tl": "Um grupo poderoso de anunciantes pressionou a plataforma a retirar reportagens críticas, revelando como dependência comercial pode limitar a autonomia editorial.",
+    "example_en": "A powerful group of advertisers pressured the platform to remove critical reports, revealing how commercial dependence can limit editorial autonomy.",
+    "cloze": "Um grupo {{c1::poderoso}} de anunciantes pressionou a plataforma a retirar reportagens críticas, revelando como dependência comercial pode limitar a autonomia editorial.",
+    "note": "Old_back usa o feminino sem que o prompt forneça substantivo. O headword adota a forma convencional masculina e o exemplo demonstra concordância real. Autorrevisão: retirei argumento da lista de referentes para não apresentar potente como escolha geral nesse contexto."
+  },
+  {
+    "id": "it_fancy_vocab_349",
+    "en": "Biased",
+    "category": "lexical-adjective",
+    "tl": "enviesado",
+    "alts": [],
+    "register": "Técnico e neutro em estatística, pesquisa e auditoria algorítmica; tendencioso é mais avaliativo e frequente para relatos ou fontes.",
+    "trap": "Biased não produz o decalque biasado; enviesado descreve viés metodológico ou estatístico, enquanto tendencioso pode sugerir uma orientação parcial deliberada.",
+    "example_tl": "O modelo enviesado atribuiu maior risco a bairros pobres porque os dados históricos refletiam décadas de fiscalização seletiva e acesso desigual ao crédito.",
+    "example_en": "The biased model assigned greater risk to poor neighborhoods because the historical data reflected decades of selective enforcement and unequal access to credit.",
+    "cloze": "O modelo {{c1::enviesado}} atribuiu maior risco a bairros pobres porque os dados históricos refletiam décadas de fiscalização seletiva e acesso desigual ao crédito.",
+    "note": "Diverge de old_back: tendenciosa é possível para uma fonte parcial, mas o inglês isolado também cobre o viés técnico selecionado aqui; o feminino foi normalizado. Autorrevisão: ajustei a regência nominal para acesso ao crédito."
+  },
+  {
+    "id": "it_fancy_vocab_353",
+    "en": "Comprehensive",
+    "category": "lexical-adjective",
+    "tl": "abrangente",
+    "alts": [],
+    "register": "Neutro-formal para análises, políticas e avaliações que cobrem muitos aspectos relevantes; exaustivo afirma um grau de completude mais forte.",
+    "trap": "Compreensivo descreve sobretudo quem demonstra compreensão ou tolerância; não é o equivalente normal de comprehensive para relatório, política ou auditoria.",
+    "example_tl": "A auditoria abrangente examinou contratos, sistemas de recomendação e práticas trabalhistas, sem reduzir o poder da plataforma a uma única métrica econômica.",
+    "example_en": "The comprehensive audit examined contracts, recommendation systems, and labor practices without reducing the platform's power to a single economic metric.",
+    "cloze": "A auditoria {{c1::abrangente}} examinou contratos, sistemas de recomendação e práticas trabalhistas, sem reduzir o poder da plataforma a uma única métrica econômica.",
+    "note": "Old_back fornece o equivalente brasileiro correto. A retenção documenta o falso amigo e evita apresentar exaustivo como alternativa automaticamente intercambiável. Autorrevisão: substituí evitando reduzir por sem reduzir para eliminar uma sequência gerundiva pesada."
+  },
+  {
+    "id": "it_fancy_vocab_359",
+    "en": "Inclusive",
+    "category": "lexical-adjective",
+    "tl": "inclusivo",
+    "alts": [],
+    "register": "Neutro em políticas públicas, desenho institucional e linguagem organizacional; o adjetivo varia em gênero e número.",
+    "trap": "O adjetivo é inclusivo, inclusiva, inclusivos ou inclusivas; inclusive sem flexão é normalmente advérbio e significa incluindo ou até mesmo.",
+    "example_tl": "Um processo inclusivo ouviu trabalhadores terceirizados, comunidades periféricas e pequenas empresas antes de definir as novas regras para contratos públicos de tecnologia.",
+    "example_en": "An inclusive process heard from outsourced workers, peripheral communities, and small businesses before defining the new rules for public technology contracts.",
+    "cloze": "Um processo {{c1::inclusivo}} ouviu trabalhadores terceirizados, comunidades periféricas e pequenas empresas antes de definir as novas regras para contratos públicos de tecnologia.",
+    "note": "Old_back fornece a forma adjetival correta. A retenção ensina a distinção morfológica entre o adjetivo inglês e o advérbio português inclusive. Autorrevisão: substituí contratação algorítmica por contratos públicos de tecnologia para tornar coerente o conjunto de partes consultadas."
+  }
+]

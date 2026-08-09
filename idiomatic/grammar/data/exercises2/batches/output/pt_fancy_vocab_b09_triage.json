@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_321",
+    "en": "to collect",
+    "verdict": "keep",
+    "reason": "Data collection uses the productive Brazilian collocation coletar dados, while the legacy para wrongly incorporates the English infinitive marker."
+  },
+  {
+    "id": "it_fancy_vocab_322",
+    "en": "to store",
+    "verdict": "drop",
+    "reason": "Armazenar is familiar core vocabulary with a direct, productive translation and no narrower storage construction selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_323",
+    "en": "to share",
+    "verdict": "keep",
+    "reason": "Compartilhar is the normal Brazilian verb, and its com complement provides useful production value for a learner also exposed to Spanish compartir."
+  },
+  {
+    "id": "it_fancy_vocab_324",
+    "en": "to sell",
+    "verdict": "drop",
+    "reason": "Vender is elementary core vocabulary with regular argument structure, and the isolated prompt supplies no specialist commercial or legal sense."
+  },
+  {
+    "id": "it_fancy_vocab_325",
+    "en": "to advertise",
+    "verdict": "keep",
+    "reason": "Anunciar and fazer publicidade de encode the advertising sense and block the tempting false friend advertir, which means to warn or admonish."
+  },
+  {
+    "id": "it_fancy_vocab_326",
+    "en": "to personalize",
+    "verdict": "drop",
+    "reason": "Personalizar is a transparent, familiar technology and marketing cognate with regular conjugation and no special complement here."
+  },
+  {
+    "id": "it_fancy_vocab_327",
+    "en": "to discriminate",
+    "verdict": "keep",
+    "reason": "The unequal-treatment sense teaches a direct object plus com base em or por and must be distinguished from neutral distinguir."
+  },
+  {
+    "id": "it_fancy_vocab_328",
+    "en": "to violate",
+    "verdict": "keep",
+    "reason": "Professional Portuguese distributes violate across violar direitos, infringir normas and descumprir obrigações rather than using one cognate indiscriminately."
+  },
+  {
+    "id": "it_fancy_vocab_329",
+    "en": "to compete",
+    "verdict": "keep",
+    "reason": "Competir takes com for the rival, por for the objective and em for the arena, a useful production pattern omitted by the legacy gloss."
+  },
+  {
+    "id": "it_fancy_vocab_330",
+    "en": "to connect",
+    "verdict": "drop",
+    "reason": "Conectar is a transparent, high-frequency cognate with regular morphology, while the prompt supplies no network-specific argument structure."
+  },
+  {
+    "id": "it_fancy_vocab_331",
+    "en": "to address",
+    "verdict": "keep",
+    "reason": "The deal-with-an-issue sense requires abordar or tratar de and merits protection from the corporate calque endereçar uma questão."
+  },
+  {
+    "id": "it_fancy_vocab_332",
+    "en": "to fail",
+    "verdict": "keep",
+    "reason": "Falhar em plus infinitive expresses failure to achieve an aim, while fracassar and descumprir cover different English fail constructions."
+  },
+  {
+    "id": "it_fancy_vocab_333",
+    "en": "to succeed",
+    "verdict": "keep",
+    "reason": "Ter êxito em supplies a productive complement pattern and blocks suceder, which normally means to happen or to replace someone."
+  },
+  {
+    "id": "it_fancy_vocab_334",
+    "en": "to entrench",
+    "verdict": "keep",
+    "reason": "Transitive consolidar fits an entrenched advantage, whereas legacy reflexive consolidar-se changes the valency and entrincheirar-se evokes a defensive position."
+  },
+  {
+    "id": "it_fancy_vocab_335",
+    "en": "to lobby",
+    "verdict": "keep",
+    "reason": "Fazer lobby is a productive Brazilian expression whose complements distinguish the audience, the proposal and the position being promoted."
+  },
+  {
+    "id": "it_fancy_vocab_336",
+    "en": "to acquire",
+    "verdict": "drop",
+    "reason": "Adquirir is a transparent, common formal cognate with regular conjugation and no specialized acquisition structure selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_337",
+    "en": "to partner",
+    "verdict": "keep",
+    "reason": "Portuguese renders the English verbing pattern with firmar or estabelecer parceria com, whose valency is worth active production."
+  },
+  {
+    "id": "it_fancy_vocab_338",
+    "en": "to limit",
+    "verdict": "drop",
+    "reason": "Limitar is a transparent, high-frequency cognate with predictable morphology and no special governed complement in this prompt."
+  },
+  {
+    "id": "it_fancy_vocab_339",
+    "en": "to secure",
+    "verdict": "keep",
+    "reason": "In the obtain-successfully sense, obter or conseguir is required; legacy garantir usually means to ensure, protect or provide a guarantee."
+  },
+  {
+    "id": "it_fancy_vocab_340",
+    "en": "Dominant",
+    "verdict": "drop",
+    "reason": "Dominante is a transparent, familiar policy cognate with ordinary adjective agreement; the bare prompt adds no specialist collocation."
+  },
+  {
+    "id": "it_fancy_vocab_341",
+    "en": "Invasive",
+    "verdict": "drop",
+    "reason": "Invasivo is a transparent and familiar adjective in Brazilian privacy criticism as well as medicine, and the prompt selects no narrower sense."
+  },
+  {
+    "id": "it_fancy_vocab_342",
+    "en": "Innovative",
+    "verdict": "drop",
+    "reason": "Inovador is a transparent, ubiquitous business and policy cognate with predictable gender agreement and no narrower sense here."
+  },
+  {
+    "id": "it_fancy_vocab_343",
+    "en": "Restrictive",
+    "verdict": "drop",
+    "reason": "Restritivo is a direct, familiar policy cognate with regular agreement, and the prompt identifies no construction beyond the adjective itself."
+  },
+  {
+    "id": "it_fancy_vocab_344",
+    "en": "Transparent",
+    "verdict": "drop",
+    "reason": "Transparente is a transparent, high-frequency cognate whose figurative institutional use is already standard well below the target level."
+  },
+  {
+    "id": "it_fancy_vocab_345",
+    "en": "Powerful",
+    "verdict": "keep",
+    "reason": "Portuguese makes a useful referent-sensitive choice: actors and institutions are poderosos, while machines, drugs and arguments are often potentes."
+  },
+  {
+    "id": "it_fancy_vocab_346",
+    "en": "Unethical",
+    "verdict": "drop",
+    "reason": "Antiético is a transparent, familiar evaluative cognate with regular agreement and no register or construction selected by the bare prompt."
+  },
+  {
+    "id": "it_fancy_vocab_347",
+    "en": "Lucrative",
+    "verdict": "drop",
+    "reason": "Lucrativo is a transparent, familiar business cognate with predictable morphology and no narrower profitability distinction supplied by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_348",
+    "en": "Personalized",
+    "verdict": "drop",
+    "reason": "Personalizado is a transparent, ubiquitous technology and marketing cognate with fully predictable adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_349",
+    "en": "Biased",
+    "verdict": "keep",
+    "reason": "Enviesado is productive for models, samples and estimates, while tendencioso often better describes a slanted account or source."
+  },
+  {
+    "id": "it_fancy_vocab_350",
+    "en": "Decentralized",
+    "verdict": "drop",
+    "reason": "Descentralizado is a transparent, familiar technical and political cognate with predictable participial morphology and agreement."
+  },
+  {
+    "id": "it_fancy_vocab_351",
+    "en": "Globalized",
+    "verdict": "drop",
+    "reason": "Globalizado is a transparent, common policy cognate with regular participial morphology and no specialized sense selected here."
+  },
+  {
+    "id": "it_fancy_vocab_352",
+    "en": "Competitive",
+    "verdict": "drop",
+    "reason": "Competitivo is a familiar direct cognate, while the isolated prompt does not distinguish rivalry from a product or economy's ability to compete."
+  },
+  {
+    "id": "it_fancy_vocab_353",
+    "en": "Comprehensive",
+    "verdict": "keep",
+    "reason": "Abrangente is the neutral professional equivalent and blocks the false friend compreensivo, which describes understanding or tolerance."
+  },
+  {
+    "id": "it_fancy_vocab_354",
+    "en": "Excessive",
+    "verdict": "drop",
+    "reason": "Excessivo is a transparent, high-frequency evaluative cognate with regular agreement and no narrower professional collocation."
+  },
+  {
+    "id": "it_fancy_vocab_355",
+    "en": "Controversial",
+    "verdict": "drop",
+    "reason": "Controverso and polêmico are familiar C1 vocabulary, while the isolated prompt supplies no contextual distinction worth testing."
+  },
+  {
+    "id": "it_fancy_vocab_356",
+    "en": "Secure",
+    "verdict": "drop",
+    "reason": "Seguro is core vocabulary, and the bare English prompt does not distinguish protected, safe, firmly attached or confident senses."
+  },
+  {
+    "id": "it_fancy_vocab_357",
+    "en": "Vulnerable",
+    "verdict": "drop",
+    "reason": "Vulnerável is a transparent, high-frequency cognate with regular agreement and no specialist construction here."
+  },
+  {
+    "id": "it_fancy_vocab_358",
+    "en": "Exclusive",
+    "verdict": "drop",
+    "reason": "Exclusivo is a transparent, familiar cognate whose restricted-access and incompatibility senses largely align with English."
+  },
+  {
+    "id": "it_fancy_vocab_359",
+    "en": "Inclusive",
+    "verdict": "keep",
+    "reason": "The agreeing adjective inclusivo must be distinguished from invariant Portuguese inclusive, an adverb meaning including or even."
+  },
+  {
+    "id": "it_fancy_vocab_360",
+    "en": "Interconnected",
+    "verdict": "drop",
+    "reason": "Interconectado is a transparent, predictable technical cognate and participle already familiar to an advanced learner."
+  }
+]

@@ -1,0 +1,408 @@
+[
+  {
+    "id": "it_fancy_vocab_325",
+    "en": "to advertise",
+    "category": "lexical-verb",
+    "tl": "etwas bewerben",
+    "alts": [
+      "Werbung für etwas machen",
+      "für etwas werben"
+    ],
+    "register": "Neutral business and media verb for promoting a product, service or message to an audience.",
+    "trap": "Bewerben also means applying for a position; für etwas werben can mean advocating a cause, while etwas bewerben is the direct product-marketing frame.",
+    "example_tl": "Die Plattform bewirbt personalisierte Nachrichten, obwohl ihre Reichweite kaum belegt, dass sie demokratische Debatten verbessert oder die Öffentlichkeit sachlicher informiert.",
+    "example_en": "The platform advertises personalized news, although its reach hardly proves that it actually improves democratic debates or informs the public more factually.",
+    "cloze": "Die Plattform {{c1::bewirbt}} personalisierte Nachrichten, obwohl ihre Reichweite kaum belegt, dass sie demokratische Debatten verbessert oder die Öffentlichkeit sachlicher informiert.",
+    "note": "Old_back's Werben is too broad and does not disambiguate the product-marketing frame. Self-review made etwas bewerben primary and retained the advocacy alternative only with its register distinction."
+  },
+  {
+    "id": "it_fancy_vocab_326",
+    "en": "to personalize",
+    "category": "lexical-verb",
+    "tl": "etwas personalisieren",
+    "alts": [
+      "etwas auf jemanden zuschneiden",
+      "etwas individualisieren"
+    ],
+    "register": "Neutral digital-services and policy verb for adapting content, interfaces or offers to an individual user.",
+    "trap": "Personalisieren means customize, not personifizieren (personify); auf jemanden zuschneiden is more idiomatic when the tailoring itself is foregrounded.",
+    "example_tl": "Streamingdienste personalisieren Empfehlungen anhand unseres Verhaltens, verschleiern aber oft, welche politischen Annahmen ihre Modelle dabei übernehmen und welche Interessen sie bedienen.",
+    "example_en": "Streaming services personalize recommendations based on our behavior, but often conceal which political assumptions their models adopt and which interests they serve.",
+    "cloze": "Streamingdienste {{c1::personalisieren}} Empfehlungen anhand unseres Verhaltens, verschleiern aber oft, welche politischen Annahmen ihre Modelle dabei übernehmen und welche Interessen sie bedienen.",
+    "note": "Old_back includes zu and is an infinitival fragment rather than the headword. Self-review retained the productive German loan and tested its accusative object in a data-targeting sense."
+  },
+  {
+    "id": "it_fancy_vocab_327",
+    "en": "to discriminate",
+    "category": "lexical-verb",
+    "tl": "jemanden diskriminieren",
+    "alts": [
+      "jemanden benachteiligen"
+    ],
+    "register": "Formal legal, social-policy and technology-governance verb for treating a group unfairly on a protected or systematic basis.",
+    "trap": "Diskriminieren takes a direct accusative object; benachteiligen is broader and does not always carry the legal or structural discrimination sense.",
+    "example_tl": "Ein Bewertungssystem diskriminiert Bewerberinnen, wenn es historische Einstellungsdaten so auswertet, dass männliche Karrieren systematisch als neutraler Leistungsmaßstab für alle Bewerbungen gelten.",
+    "example_en": "An assessment system discriminates against female applicants when it analyzes historical hiring data so that male careers systematically count as a neutral benchmark for all applications.",
+    "cloze": "Ein Bewertungssystem {{c1::diskriminiert}} Bewerberinnen, wenn es historische Einstellungsdaten so auswertet, dass männliche Karrieren systematisch als neutraler Leistungsmaßstab für alle Bewerbungen gelten.",
+    "note": "Old_back is conceptually correct. Self-review kept the direct-object frame and made the structural algorithmic sense explicit rather than presenting a merely interpersonal slight."
+  },
+  {
+    "id": "it_fancy_vocab_328",
+    "en": "to violate",
+    "category": "lexical-verb",
+    "tl": "gegen etwas verstoßen",
+    "alts": [
+      "etwas verletzen"
+    ],
+    "register": "Formal legal and policy verb for breaching a rule, principle, agreement or fundamental norm.",
+    "trap": "Gegen etwas verstoßen takes gegen plus accusative for rules and principles; Rechte verletzen is preferred when the object is a right itself.",
+    "example_tl": "Wenn Plattformen private Nachrichten ohne richterliche Kontrolle auswerten, verstoßen sie gegen Grundrechte und untergraben das Vertrauen ihrer Nutzer.",
+    "example_en": "When platforms analyze private messages without judicial oversight, they violate fundamental rights and undermine their users' trust.",
+    "cloze": "Wenn Plattformen private Nachrichten ohne richterliche Kontrolle auswerten, {{c1::verstoßen sie gegen Grundrechte}} und untergraben das Vertrauen ihrer Nutzer.",
+    "note": "Old_back names one valid rendering but misses the governing contrast. Self-review wrapped the full gegen-frame in the cloze and preserved etwas verletzen as the rights-focused alternative."
+  },
+  {
+    "id": "it_fancy_vocab_329",
+    "en": "to compete",
+    "category": "lexical-verb",
+    "tl": "mit jemandem konkurrieren",
+    "alts": [
+      "im Wettbewerb mit jemandem stehen"
+    ],
+    "register": "Neutral-formal business and geopolitical verb for contending with another actor for markets, influence or resources.",
+    "trap": "Konkurrieren takes mit plus dative for the rival and often um plus accusative for the prize; kämpfen is more forceful and not an automatic substitute.",
+    "example_tl": "Europäische Anbieter konkurrieren mit globalen Plattformen um Marktanteile, obwohl ihnen Rechenzentren und Risikokapitalreserven fehlen, die eine schnelle Expansion ermöglichen.",
+    "example_en": "European providers compete with global platforms for market share, although they lack the data centers and venture-capital reserves that enable rapid expansion.",
+    "cloze": "Europäische Anbieter {{c1::konkurrieren mit}} globalen Plattformen um Marktanteile, obwohl ihnen Rechenzentren und Risikokapitalreserven fehlen, die eine schnelle Expansion ermöglichen.",
+    "note": "Old_back is accurate but under-specified. Self-review retained the mit-plus-dative frame and included the frequent um-plus-accusative complement in the example."
+  },
+  {
+    "id": "it_fancy_vocab_331",
+    "en": "to address",
+    "category": "lexical-verb",
+    "tl": "ein Problem angehen",
+    "alts": [
+      "sich einer Sache annehmen",
+      "ein Problem behandeln"
+    ],
+    "register": "Neutral-formal policy and analytical verb for tackling a problem or responding to an issue, not for merely mentioning it.",
+    "trap": "Ansprechen can mean raise or address someone, but ein Problem angehen foregrounds taking action; the literal address sense is Adresse or adressieren.",
+    "example_tl": "Die Regierung muss den Wohnungsmangel angehen, statt ihn mit kurzfristigen Subventionen zu verwalten und die strukturelle Ursachenbekämpfung politisch zu vertagen.",
+    "example_en": "The government must address the housing shortage instead of managing it with short-term subsidies and politically postponing action on its structural causes.",
+    "cloze": "Die Regierung muss den Wohnungsmangel {{c1::angehen}}, statt ihn mit kurzfristigen Subventionen zu verwalten und die strukturelle Ursachenbekämpfung politisch zu vertagen.",
+    "note": "Old_back's ansprechen is possible for raising an issue but too weak for the policy sense. Self-review chose angehen as the action-oriented primary and retained the broader alternatives."
+  },
+  {
+    "id": "it_fancy_vocab_332",
+    "en": "to fail",
+    "category": "lexical-verb",
+    "tl": "an etwas scheitern",
+    "alts": [
+      "nicht gelingen"
+    ],
+    "register": "Formal analytical verb for a plan, reform or negotiation failing because of an obstacle or condition.",
+    "trap": "Scheitern takes an plus dative for the obstacle; it differs from ausfallen (not take place or malfunction) and from the event-oriented gelingen.",
+    "example_tl": "Die Reform scheiterte an ihrer komplizierten Umsetzung, nicht am fehlenden politischen Willen oder an einem unklaren gesetzlichen Auftrag.",
+    "example_en": "The reform failed because of its complicated implementation, not because of a lack of political will or an unclear legal mandate.",
+    "cloze": "Die Reform {{c1::scheiterte an}} ihrer komplizierten Umsetzung, nicht am fehlenden politischen Willen oder an einem unklaren gesetzlichen Auftrag.",
+    "note": "Old_back is a valid core translation. Self-review added the governing an-plus-dative frame and contrasted failure through an obstacle with a mere cancellation or malfunction."
+  },
+  {
+    "id": "it_fancy_vocab_333",
+    "en": "to succeed",
+    "category": "lexical-verb",
+    "tl": "gelingen",
+    "alts": [
+      "Erfolg haben",
+      "erfolgreich sein"
+    ],
+    "register": "Formal verb for a plan, negotiation or undertaking turning out successfully; common in analytical assessments.",
+    "trap": "Gelingen takes the successful event as subject, as in Der Plan gelingt; a person normally has Erfolg or ist erfolgreich, and jemandem gelingt etwas uses dative.",
+    "example_tl": "Ob die Verhandlungen gelingen, hängt davon ab, ob beide Seiten innenpolitische Verluste als tragbaren Preis akzeptieren können und wollen.",
+    "example_en": "Whether the negotiations succeed depends on whether both sides can and will accept domestic political losses as a bearable price.",
+    "cloze": "Ob die Verhandlungen {{c1::gelingen}}, hängt davon ab, ob beide Seiten innenpolitische Verluste als tragbaren Preis akzeptieren können und wollen.",
+    "note": "Old_back's Erfolg haben is valid for a person or organisation but does not model the event-oriented construction. Self-review made gelingen primary and retained the agent-oriented alternatives."
+  },
+  {
+    "id": "it_fancy_vocab_334",
+    "en": "to entrench",
+    "category": "lexical-verb",
+    "tl": "etwas verankern",
+    "alts": [
+      "etwas zementieren"
+    ],
+    "register": "Formal figurative verb for making an institution, hierarchy or inequality durable and difficult to dislodge.",
+    "trap": "Verankern is neutral-to-critical and works with structures; zementieren is more strongly negative and suggests rigidly fixing an undesirable situation.",
+    "example_tl": "Die neue Gesetzgebung verankert soziale Ungleichheiten, wenn sie Vermögen schützt, aber öffentliche Dienstleistungen dauerhaft unterfinanziert lässt und regionale Unterschiede vertieft.",
+    "example_en": "The new legislation entrenches social inequalities when it protects wealth but chronically underfunds public services and deepens regional disparities.",
+    "cloze": "Die neue Gesetzgebung {{c1::verankert}} soziale Ungleichheiten, wenn sie Vermögen schützt, aber öffentliche Dienstleistungen dauerhaft unterfinanziert lässt und regionale Unterschiede vertieft.",
+    "note": "Old_back is a useful literal starting point. Self-review fixed the figurative policy sense and kept zementieren only as the more condemnatory alternative."
+  },
+  {
+    "id": "it_fancy_vocab_335",
+    "en": "to lobby",
+    "category": "lexical-verb",
+    "tl": "Lobbyarbeit betreiben",
+    "alts": [
+      "auf die Politik einwirken"
+    ],
+    "register": "Formal political and institutional expression for organised efforts to influence legislation or public decisions.",
+    "trap": "Lobbyarbeit betreiben names organised representation and pressure; beeinflussen is broader and does not by itself imply lobbying or a political target.",
+    "example_tl": "Verbände betreiben Lobbyarbeit, bevor das Ministerium den Gesetzentwurf vorlegt, und beeinflussen dadurch technische Detailentscheidungen oft hinter verschlossenen Türen.",
+    "example_en": "Associations lobby before the ministry presents the bill and thereby often influence technical details behind closed doors.",
+    "cloze": "Verbände {{c1::betreiben Lobbyarbeit}}, bevor das Ministerium den Gesetzentwurf vorlegt, und beeinflussen dadurch technische Detailentscheidungen oft hinter verschlossenen Türen.",
+    "note": "Old_back's beeinflussen is too broad and fails to express organised political advocacy. Self-review selected the idiomatic noun-verb expression rather than forcing the marginal loan lobbyieren."
+  },
+  {
+    "id": "it_fancy_vocab_336",
+    "en": "to acquire",
+    "category": "lexical-verb",
+    "tl": "etwas erwerben",
+    "alts": [
+      "etwas übernehmen",
+      "sich etwas aneignen"
+    ],
+    "register": "Formal business and legal verb for obtaining an asset, company, right or capability.",
+    "trap": "Erwerben is broader than übernehmen, which often means taking over a company or responsibility; sich aneignen can imply appropriation or learning a skill.",
+    "example_tl": "Der Konzern erwirbt kleinere KI-Firmen, um Patente und Fachkräfte zu sichern, statt die eigene Forschung langfristig weiter auszubauen.",
+    "example_en": "The corporation acquires smaller AI companies to secure patents and specialists instead of continuing to expand its own research over the long term.",
+    "cloze": "Der Konzern {{c1::erwirbt}} kleinere KI-Firmen, um Patente und Fachkräfte zu sichern, statt die eigene Forschung langfristig weiter auszubauen.",
+    "note": "Old_back is correct but neutral. Self-review retained the formal acquisition verb and made its business sense explicit while distinguishing takeover and appropriation alternatives."
+  },
+  {
+    "id": "it_fancy_vocab_337",
+    "en": "to partner",
+    "category": "lexical-verb",
+    "tl": "mit jemandem kooperieren",
+    "alts": [
+      "eine Partnerschaft eingehen",
+      "sich mit jemandem zusammentun"
+    ],
+    "register": "Neutral-formal business and civic verb for working jointly with another organisation or actor.",
+    "trap": "German does not normally use zu verpartnern; kooperieren takes mit plus dative, while eine Partnerschaft eingehen foregrounds the formal relationship.",
+    "example_tl": "Die Stadt kooperiert mit lokalen Genossenschaften, damit die digitale Infrastruktur nicht dauerhaft allein von renditeorientierten Konzernen kontrolliert wird.",
+    "example_en": "The city partners with local cooperatives so that digital infrastructure is not permanently controlled solely by profit-oriented corporations.",
+    "cloze": "Die Stadt {{c1::kooperiert mit}} lokalen Genossenschaften, damit die digitale Infrastruktur nicht dauerhaft allein von renditeorientierten Konzernen kontrolliert wird.",
+    "note": "Old_back's zu verpartnern is not idiomatic German. Self-review replaced it with the standard mit-plus-dative construction and kept the formal partnership phrase as an alternative."
+  },
+  {
+    "id": "it_fancy_vocab_339",
+    "en": "to secure",
+    "category": "lexical-verb",
+    "tl": "sich etwas sichern",
+    "alts": [
+      "etwas absichern",
+      "etwas gewährleisten"
+    ],
+    "register": "Business and policy verb for obtaining or guaranteeing access to a resource, supply, position or outcome.",
+    "trap": "Sich etwas sichern means obtain or reserve it for oneself; absichern means protect it, while gewährleisten means ensure that a condition holds.",
+    "example_tl": "Die Regierung sichert sich langfristige Gaslieferungen, riskiert damit aber neue Abhängigkeiten und schwächt den Anreiz für einen schnelleren Ausbau erneuerbarer Energien.",
+    "example_en": "The government secures long-term gas supplies, but thereby risks new dependencies and weakens the incentive to expand renewables more quickly.",
+    "cloze": "Die Regierung {{c1::sichert sich}} langfristige Gaslieferungen, riskiert damit aber neue Abhängigkeiten und schwächt den Anreiz für einen schnelleren Ausbau erneuerbarer Energien.",
+    "note": "Old_back's sichern is usable but leaves the acquisition-versus-protection distinction unresolved. Self-review made the reflexive supply-acquisition frame primary and marked the neighbouring alternatives explicitly."
+  },
+  {
+    "id": "it_fancy_vocab_341",
+    "en": "Invasive",
+    "category": "lexical-adjective",
+    "tl": "invasiv",
+    "alts": [
+      "aufdringlich",
+      "eingreifend"
+    ],
+    "register": "Formal medical, biological and privacy-policy adjective for entering or affecting a system in an intrusive way.",
+    "trap": "Invasiv can describe a medical procedure, species or data practice; aufdringlich stresses nuisance, while eingreifend stresses intervention.",
+    "example_tl": "Die invasive Datenerhebung greift tief in die Privatsphäre ein, selbst wenn Unternehmen ihre Einwilligungsbanner als nutzerfreundliche Transparenz verkaufen.",
+    "example_en": "Intrusive data collection deeply encroaches on privacy, even when companies market their consent banners as user-friendly transparency.",
+    "cloze": "Die {{c1::invasive}} Datenerhebung greift tief in die Privatsphäre ein, selbst wenn Unternehmen ihre Einwilligungsbanner als nutzerfreundliche Transparenz verkaufen.",
+    "note": "Old_back is a correct cognate. Self-review kept it because the professional privacy sense is productive and its neighbouring German adjectives differ in focus."
+  },
+  {
+    "id": "it_fancy_vocab_343",
+    "en": "Restrictive",
+    "category": "lexical-adjective",
+    "tl": "restriktiv",
+    "alts": [
+      "einschränkend"
+    ],
+    "register": "Formal legal and policy adjective for rules or measures that limit permitted conduct, access or expression.",
+    "trap": "Restriktiv is the established policy register; einschränkend is broader and can describe any limiting effect, not necessarily a regulatory regime.",
+    "example_tl": "Restriktive Plattformregeln können Hassrede begrenzen, dürfen aber nicht als Vorwand dienen, legitime Kritik an mächtigen Unternehmen zu unterdrücken.",
+    "example_en": "Restrictive platform rules can limit hate speech, but must not serve as a pretext for suppressing legitimate criticism of powerful companies.",
+    "cloze": "{{c1::Restriktive}} Plattformregeln können Hassrede begrenzen, dürfen aber nicht als Vorwand dienen, legitime Kritik an mächtigen Unternehmen zu unterdrücken.",
+    "note": "Old_back is conceptually right but uses a participial gloss. Self-review selected the standard formal adjective and tested its policy collocation."
+  },
+  {
+    "id": "it_fancy_vocab_345",
+    "en": "Powerful",
+    "category": "lexical-adjective",
+    "tl": "einflussreich",
+    "alts": [
+      "mächtig"
+    ],
+    "register": "Formal political and media adjective for an actor or institution with substantial ability to shape decisions or public debate.",
+    "trap": "Einflussreich concerns influence, while mächtig is broader political power and leistungsstark is the better choice for technical performance rather than institutions.",
+    "example_tl": "Einflussreiche Plattformen gestalten öffentliche Debatten, obwohl ihre Entscheidungsmacht von gewählten Institutionen weder demokratisch legitimiert noch wirksam beaufsichtigt wird.",
+    "example_en": "Powerful platforms shape public debates, although their decision-making power is neither democratically legitimized nor effectively overseen by elected institutions.",
+    "cloze": "{{c1::Einflussreiche}} Plattformen gestalten öffentliche Debatten, obwohl ihre Entscheidungsmacht von gewählten Institutionen weder demokratisch legitimiert noch wirksam beaufsichtigt wird.",
+    "note": "Old_back's mächtig is valid but broad. Self-review chose einflussreich for institutional agenda-setting and retained mächtig as the wider political alternative."
+  },
+  {
+    "id": "it_fancy_vocab_347",
+    "en": "Lucrative",
+    "category": "lexical-adjective",
+    "tl": "lukrativ",
+    "alts": [
+      "einträglich",
+      "gewinnbringend"
+    ],
+    "register": "Formal economic adjective for an activity or business model generating substantial profit or financial returns.",
+    "trap": "Lukrativ means profitable, not luxurious; einträglich is more neutral and gewinnbringend foregrounds the profit generated.",
+    "example_tl": "Das lukrative Werbegeschäft belohnt maximale Aufmerksamkeit, selbst wenn die dafür optimierten Inhalte gesellschaftliche Polarisierung und Misstrauen weiter verstärken.",
+    "example_en": "The lucrative advertising business rewards maximum attention, even when the content optimized for it further intensifies social polarization and distrust.",
+    "cloze": "Das {{c1::lukrative}} Werbegeschäft belohnt maximale Aufmerksamkeit, selbst wenn die dafür optimierten Inhalte gesellschaftliche Polarisierung und Misstrauen weiter verstärken.",
+    "note": "Old_back is a valid cognate. Self-review retained lukrativ because it is established in analytical economic prose and added two register-sensitive alternatives rather than treating it as a luxury term."
+  },
+  {
+    "id": "it_fancy_vocab_348",
+    "en": "Personalized",
+    "category": "lexical-adjective",
+    "tl": "personalisiert",
+    "alts": [
+      "individuell zugeschnitten",
+      "maßgeschneidert"
+    ],
+    "register": "Neutral technology and media adjective for content or services adapted to an individual user's data or profile.",
+    "trap": "Personalisiert often implies algorithmic targeting; individuell zugeschnitten or maßgeschneidert can instead suggest deliberate human tailoring without data surveillance.",
+    "example_tl": "Personalisierte Nachrichtenfeeds wirken relevant, können aber den Blick verengen, indem sie Nutzer systematisch von widersprechenden Perspektiven fernhalten und dadurch isolieren.",
+    "example_en": "Personalized news feeds seem relevant but can narrow users' horizons by systematically keeping them from opposing perspectives and thereby isolating them.",
+    "cloze": "{{c1::Personalisierte}} Nachrichtenfeeds wirken relevant, können aber den Blick verengen, indem sie Nutzer systematisch von widersprechenden Perspektiven fernhalten und dadurch isolieren.",
+    "note": "Old_back is correct but underspecified. Self-review kept the standard participle and made the algorithmic-targeting sense distinct from human-tailored alternatives."
+  },
+  {
+    "id": "it_fancy_vocab_349",
+    "en": "Biased",
+    "category": "lexical-adjective",
+    "tl": "voreingenommen",
+    "alts": [
+      "verzerrt",
+      "parteiisch"
+    ],
+    "register": "Formal adjective for a person, procedure or model systematically favouring one perspective or group over others.",
+    "trap": "Voreingenommen commonly describes an actor or procedure; statistical bias is often Verzerrung or verzerrt, while parteiisch implies an overt partisan position.",
+    "example_tl": "Ein voreingenommenes Auswahlverfahren bevorzugt bestimmte Lebensläufe, obwohl seine Betreiber die verwendeten Kriterien als objektiv und datenbasiert öffentlich darstellen.",
+    "example_en": "A biased selection procedure favors certain career histories, although its operators publicly present the criteria used as objective and data-driven.",
+    "cloze": "Ein {{c1::voreingenommenes}} Auswahlverfahren bevorzugt bestimmte Lebensläufe, obwohl seine Betreiber die verwendeten Kriterien als objektiv und datenbasiert öffentlich darstellen.",
+    "note": "Old_back is a defensible person-focused rendering. Self-review retained it as primary for the evaluative procedure sense and added verzerrt for statistical contexts."
+  },
+  {
+    "id": "it_fancy_vocab_350",
+    "en": "Decentralized",
+    "category": "lexical-adjective",
+    "tl": "dezentralisiert",
+    "alts": [
+      "dezentral",
+      "auf mehrere Stellen verteilt"
+    ],
+    "register": "Technical governance and network adjective for a system whose control or operation has been distributed away from a central authority.",
+    "trap": "Dezentralisiert suggests a process or resulting design, whereas dezentral is the broader static adjective; neither automatically means democratically controlled.",
+    "example_tl": "Dezentralisierte Netzwerke erschweren zentrale Zensur, lösen jedoch weder Fragen der Verantwortlichkeit noch die Machtasymmetrien ihrer Betreiber von selbst.",
+    "example_en": "Decentralized networks make central censorship harder, but by themselves solve neither questions of accountability nor their operators' power asymmetries.",
+    "cloze": "{{c1::Dezentralisierte}} Netzwerke erschweren zentrale Zensur, lösen jedoch weder Fragen der Verantwortlichkeit noch die Machtasymmetrien ihrer Betreiber von selbst.",
+    "note": "Old_back is a usable participial form. Self-review kept it for the governance/process sense and explicitly distinguished it from the broader dezentral."
+  },
+  {
+    "id": "it_fancy_vocab_352",
+    "en": "Competitive",
+    "category": "lexical-adjective",
+    "tl": "wettbewerbsfähig",
+    "alts": [
+      "konkurrenzfähig"
+    ],
+    "register": "Formal economic adjective for a company, sector or product able to withstand competition in a market.",
+    "trap": "Wettbewerbsfähig means able to compete, not simply inclined to compete; wettbewerbsorientiert describes strategy or orientation rather than market viability.",
+    "example_tl": "Eine wettbewerbsfähige Industrie braucht nicht nur niedrigere Energiekosten, sondern auch Fachkräfte, verlässliche Netze und Zugang zu langfristigem Kapital.",
+    "example_en": "A competitive industry needs not only lower energy costs but also skilled workers, reliable networks, and access to long-term capital.",
+    "cloze": "Eine {{c1::wettbewerbsfähige}} Industrie braucht nicht nur niedrigere Energiekosten, sondern auch Fachkräfte, verlässliche Netze und Zugang zu langfristigem Kapital.",
+    "note": "Old_back is a valid but context-free rendering. Self-review selected the standard market-viability adjective and kept Konkurrenzfähigkeit as a genuine near-synonym."
+  },
+  {
+    "id": "it_fancy_vocab_354",
+    "en": "Excessive",
+    "category": "lexical-adjective",
+    "tl": "übermäßig",
+    "alts": [
+      "übertrieben",
+      "exzessiv"
+    ],
+    "register": "Formal neutral adjective for an amount or degree exceeding what is reasonable, necessary or proportionate.",
+    "trap": "Übermäßig is the neutral proportionality term; übertrieben suggests exaggeration, while exzessiv is stronger and often describes extreme conduct or use.",
+    "example_tl": "Übermäßige Datensammlung erhöht nicht automatisch die Sicherheit, sondern schafft zusätzliche Missbrauchsrisiken und erschwert wirksame Aufsicht durch unabhängige Gremien.",
+    "example_en": "Excessive data collection does not automatically increase security, but creates additional misuse risks and complicates effective oversight by independent bodies.",
+    "cloze": "{{c1::Übermäßige}} Datensammlung erhöht nicht automatisch die Sicherheit, sondern schafft zusätzliche Missbrauchsrisiken und erschwert wirksame Aufsicht durch unabhängige Gremien.",
+    "note": "Old_back's übertrieben can imply exaggeration rather than excess. Self-review made the neutral proportionality adjective primary and retained stronger alternatives with their restrictions."
+  },
+  {
+    "id": "it_fancy_vocab_357",
+    "en": "Vulnerable",
+    "category": "lexical-adjective",
+    "tl": "angreifbar",
+    "alts": [
+      "verwundbar",
+      "verletzlich"
+    ],
+    "register": "Formal technical and policy adjective for a system, institution or group exposed to attack, disruption or exploitation.",
+    "trap": "Angreifbar is the usual technical choice; verwundbar can be physical or strategic, while verletzlich often foregrounds people, emotions or social sensitivity.",
+    "example_tl": "Offene Standards machen Systeme interoperabel, können sie aber angreifbar machen, wenn Sicherheitsupdates nicht rechtzeitig bereitgestellt und geprüft werden.",
+    "example_en": "Open standards make systems interoperable but can make them vulnerable when security updates are not provided and tested promptly.",
+    "cloze": "Offene Standards machen Systeme interoperabel, können sie aber {{c1::angreifbar}} machen, wenn Sicherheitsupdates nicht rechtzeitig bereitgestellt und geprüft werden.",
+    "note": "Old_back is a plausible but context-free rendering. Self-review chose angreifbar for the cybersecurity sense and recorded the physical and emotional alternatives."
+  },
+  {
+    "id": "it_fancy_vocab_358",
+    "en": "Exclusive",
+    "category": "lexical-adjective",
+    "tl": "exklusiv",
+    "alts": [
+      "ausschließlich",
+      "vorbehalten"
+    ],
+    "register": "Business and policy adjective for access, treatment or status restricted to a select group, often with a premium or gatekeeping implication.",
+    "trap": "Exklusiv can mean select or restricted; ausschließlich means only, and vorbehalten means reserved for someone, so they are not interchangeable in every context.",
+    "example_tl": "Exklusiver Zugang zu öffentlichen Daten stärkt die Marktmacht weniger Unternehmen und erschwert unabhängige Forschung sowie demokratische Kontrolle erheblich.",
+    "example_en": "Exclusive access to public data strengthens the market power of a few companies and significantly hinders independent research and democratic oversight.",
+    "cloze": "{{c1::Exklusiver}} Zugang zu öffentlichen Daten stärkt die Marktmacht weniger Unternehmen und erschwert unabhängige Forschung sowie demokratische Kontrolle erheblich.",
+    "note": "Old_back is a valid loanword but does not separate the premium/restricted sense from exclusively. Self-review kept exklusiv primary and treated the other forms as context-bound alternatives."
+  },
+  {
+    "id": "it_fancy_vocab_359",
+    "en": "Inclusive",
+    "category": "lexical-adjective",
+    "tl": "inklusiv",
+    "alts": [
+      "teilhabeorientiert"
+    ],
+    "register": "Formal social-policy adjective for institutions, services or designs that enable participation by people with different needs and backgrounds.",
+    "trap": "Inklusiv in social policy concerns participation; einschließlich usually means including items or costs, as in inklusive Steuern, not social inclusion.",
+    "example_tl": "Eine inklusive Digitalpolitik berücksichtigt Menschen mit Behinderungen, geringem Einkommen und fehlenden Sprachkenntnissen bereits bei der Entwicklung öffentlicher Dienste.",
+    "example_en": "Inclusive digital policy considers people with disabilities, low incomes, and limited language skills from the outset when developing public services.",
+    "cloze": "Eine {{c1::inklusive}} Digitalpolitik berücksichtigt Menschen mit Behinderungen, geringem Einkommen und fehlenden Sprachkenntnissen bereits bei der Entwicklung öffentlicher Dienste.",
+    "note": "Materially corrects old_back: einschließlich is the item-inclusion or price-inclusion sense, not the social-participation adjective. Self-review chose inklusiv and added the policy-focused teilhabeorientiert."
+  },
+  {
+    "id": "it_fancy_vocab_360",
+    "en": "Interconnected",
+    "category": "lexical-adjective",
+    "tl": "miteinander verflochten",
+    "alts": [
+      "vernetzt",
+      "miteinander verbunden"
+    ],
+    "register": "Formal systems and geopolitics adjective for components or developments linked so that changes in one affect the others.",
+    "trap": "Verflochten stresses mutual dependence and complexity; vernetzt is more technical, while verbunden is broader and less implicational.",
+    "example_tl": "Die miteinander verflochtenen Lieferketten übertragen politische Konflikte rasch auf Preise, Arbeitsplätze und die Versorgungssicherheit in weit entfernten Regionen.",
+    "example_en": "The interconnected supply chains rapidly transmit political conflicts to prices, jobs, and security of supply in distant regions.",
+    "cloze": "Die {{c1::miteinander verflochtenen}} Lieferketten übertragen politische Konflikte rasch auf Preise, Arbeitsplätze und die Versorgungssicherheit in weit entfernten Regionen.",
+    "note": "Old_back's verknüpft is possible but flatter than the mutual-dependence sense. Self-review selected miteinander verflochten and retained technical and neutral alternatives."
+  }
+]

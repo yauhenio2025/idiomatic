@@ -1,0 +1,284 @@
+[
+  {
+    "id": "it_fancy_vocab_121",
+    "en": "the Dichotomy",
+    "category": "lexical-noun",
+    "tl": "die Dichotomie zwischen etwas und etwas",
+    "alts": [],
+    "register": "Written-formal in academic and analytical prose; often critical when a binary framing falsely excludes intermediate positions.",
+    "trap": "Dichotomie is stronger than Gegensatz: it divides a field into two mutually exclusive parts rather than naming just any contrast.",
+    "example_tl": "Die vermeintliche Dichotomie zwischen staatlicher Regulierung und technischer Innovation verdeckt, dass verbindliche Standards langfristig gerade kleineren Marktteilnehmern Planungssicherheit verschaffen können.",
+    "example_en": "The supposed dichotomy between government regulation and technological innovation obscures the fact that binding standards can give smaller market participants long-term planning certainty.",
+    "cloze": "Die vermeintliche {{c1::Dichotomie zwischen}} staatlicher Regulierung und technischer Innovation verdeckt, dass verbindliche Standards langfristig gerade kleineren Marktteilnehmern Planungssicherheit verschaffen können.",
+    "note": "Old_back supplies the correct head noun; retention adds its stronger binary meaning and the productive zwischen construction."
+  },
+  {
+    "id": "it_fancy_vocab_122",
+    "en": "the Ubiquity",
+    "category": "lexical-noun",
+    "tl": "die Allgegenwart",
+    "alts": [
+      "die Ubiquität"
+    ],
+    "register": "Allgegenwart is neutral-written and idiomatic in general analysis; Ubiquität is a learned term used mainly in academic or specialist prose.",
+    "trap": "The transparent Ubiquität is possible but markedly more technical than English ubiquity often is; general commentary normally prefers Allgegenwart.",
+    "example_tl": "Die Allgegenwart datengetriebener Bewertungssysteme verändert öffentliche Institutionen, weil selbst Ermessensentscheidungen zunehmend unter dem Druck quantifizierbarer Leistungskennzahlen und automatisierter Vergleichslogiken stehen.",
+    "example_en": "The ubiquity of data-driven assessment systems is changing public institutions because even discretionary decisions are increasingly subject to quantifiable performance indicators and automated comparison logics.",
+    "cloze": "Die {{c1::Allgegenwart}} datengetriebener Bewertungssysteme verändert öffentliche Institutionen, weil selbst Ermessensentscheidungen zunehmend unter dem Druck quantifizierbarer Leistungskennzahlen und automatisierter Vergleichslogiken stehen.",
+    "note": "Materially improves old_back by choosing the unmarked German equivalent while preserving the learned cognate as a register-marked alternative."
+  },
+  {
+    "id": "it_fancy_vocab_124",
+    "en": "the Disparity",
+    "category": "lexical-noun",
+    "tl": "das Gefälle zwischen etwas und etwas",
+    "alts": [
+      "die Ungleichheit zwischen etwas und etwas"
+    ],
+    "register": "Neutral-formal in social and economic analysis for a structured difference between groups; Disparität is learned and often statistical.",
+    "trap": "Gefälle is neuter, and zwischen takes the dative when it names the groups on either side of a static disparity.",
+    "example_tl": "Das digitale Gefälle zwischen urbanen und ländlichen Regionen verschärft politische Ungleichheit, weil öffentliche Dienste zunehmend einen stabilen Breitbandzugang voraussetzen.",
+    "example_en": "The digital disparity between urban and rural regions exacerbates political inequality because public services increasingly require a stable broadband connection.",
+    "cloze": "Das digitale {{c1::Gefälle zwischen}} urbanen und ländlichen Regionen verschärft politische Ungleichheit, weil öffentliche Dienste zunehmend einen stabilen Breitbandzugang voraussetzen.",
+    "note": "Materially refines old_back: Ungleichheit names inequality broadly, whereas Gefälle naturally frames the relational and structural disparity demonstrated here."
+  },
+  {
+    "id": "it_fancy_vocab_126",
+    "en": "the Proliferation",
+    "category": "lexical-noun",
+    "tl": "die rasche Verbreitung",
+    "alts": [
+      "die schnelle Ausbreitung"
+    ],
+    "register": "Neutral-formal for rapid spread in general analysis; Proliferation is a specialist term in arms control, biology and related technical domains.",
+    "trap": "Using Proliferation for every rapid increase is an English calque; German normally chooses Verbreitung, Ausbreitung or Zunahme according to what multiplies.",
+    "example_tl": "Die rasche Verbreitung KI-generierter Nachrichtenportale erschwert die Quellenprüfung, während redaktionelle Budgets sinken und Plattformen automatisierte Inhalte weiterhin algorithmisch belohnen.",
+    "example_en": "The rapid proliferation of AI-generated news outlets makes source verification harder while editorial budgets shrink and platforms continue to reward automated content algorithmically.",
+    "cloze": "Die {{c1::rasche Verbreitung}} KI-generierter Nachrichtenportale erschwert die Quellenprüfung, während redaktionelle Budgets sinken und Plattformen automatisierte Inhalte weiterhin algorithmisch belohnen.",
+    "note": "The isolated source is polysemous. This note selects rapid general spread; old_back would be appropriate only in a more narrowly specialist context. Self-review: replaced the potentially ambiguous synthetische Nachrichtenkanäle with idiomatic KI-generierte Nachrichtenportale."
+  },
+  {
+    "id": "it_fancy_vocab_129",
+    "en": "the Monoculture",
+    "category": "lexical-noun",
+    "tl": "die Monokultur",
+    "alts": [],
+    "register": "Neutral in agriculture and written-critical as a metaphor for structural uniformity in technology, media or institutional life.",
+    "trap": "In technology criticism, Monokultur implies shared dependencies and correlated failures, not merely an audience or workforce that happens to be homogeneous.",
+    "example_tl": "Die von wenigen Cloud-Anbietern geprägte Monokultur macht öffentliche Verwaltungen verwundbar, weil technische Störungen und geopolitische Sanktionen gleichzeitig zahlreiche Behörden treffen können.",
+    "example_en": "The monoculture shaped by a handful of cloud providers makes public administrations vulnerable because technical disruptions and geopolitical sanctions can affect numerous authorities at once.",
+    "cloze": "Die von wenigen Cloud-Anbietern geprägte {{c1::Monokultur}} macht öffentliche Verwaltungen verwundbar, weil technische Störungen und geopolitische Sanktionen gleichzeitig zahlreiche Behörden treffen können.",
+    "note": "Old_back is accurate; the example fixes the high-value figurative technology sense rather than the literal agricultural one. Self-review: replaced the vague politische Vorgaben with geopolitische Sanktionen to make the correlated-risk mechanism concrete."
+  },
+  {
+    "id": "it_fancy_vocab_131",
+    "en": "the Contingency",
+    "category": "lexical-noun",
+    "tl": "die Kontingenz",
+    "alts": [],
+    "register": "Specialist in philosophy, sociology and historical analysis for what is possible but not necessary; ordinary planning uses Eventualität or Notfall.",
+    "trap": "English contingency often means a possible emergency or a provision for one; German Kontingenz instead denotes what is neither necessary nor impossible.",
+    "example_tl": "Die Kontingenz der heutigen Plattformordnung wird sichtbar, wenn man historische Entscheidungen betrachtet, die offene Standards zugunsten privater Infrastrukturen verdrängten.",
+    "example_en": "The contingency of today's platform order becomes apparent when one considers historical decisions that displaced open standards in favor of private infrastructure.",
+    "cloze": "Die {{c1::Kontingenz}} der heutigen Plattformordnung wird sichtbar, wenn man historische Entscheidungen betrachtet, die offene Standards zugunsten privater Infrastrukturen verdrängten.",
+    "note": "Old_back is correct only for the theoretical sense selected here; it must not be transferred automatically to English emergency-planning uses."
+  },
+  {
+    "id": "it_fancy_vocab_132",
+    "en": "the Encroachment",
+    "category": "lexical-noun",
+    "tl": "das Vordringen in etwas",
+    "alts": [],
+    "register": "Written-formal for gradual expansion into a territory or social domain; Eingriff foregrounds interference or violation rather than advance.",
+    "trap": "The legacy Übergriffigkeit describes intrusive or inappropriate conduct, usually as a personal trait, not the process of encroaching into a domain.",
+    "example_tl": "Das Vordringen privater Überwachungsdienste in kommunale Räume verändert die Machtverhältnisse, ohne dass Parlamente über diese schleichende Privatisierung ausdrücklich entscheiden.",
+    "example_en": "The encroachment of private surveillance services into municipal spaces changes the balance of power without parliaments explicitly deciding on this creeping privatization.",
+    "cloze": "Das {{c1::Vordringen}} privater Überwachungsdienste {{c1::in}} kommunale Räume verändert die Machtverhältnisse, ohne dass Parlamente über diese schleichende Privatisierung ausdrücklich entscheiden.",
+    "note": "Materially corrects old_back and selects the gradual territorial or institutional expansion sense of the polysemous English source."
+  },
+  {
+    "id": "it_fancy_vocab_133",
+    "en": "the Malleability",
+    "category": "lexical-noun",
+    "tl": "die Formbarkeit",
+    "alts": [
+      "die Veränderbarkeit"
+    ],
+    "register": "Neutral-formal for the capacity of institutions, systems or ideas to be shaped; Malleabilität is largely material-science terminology.",
+    "trap": "Formbarkeit suggests susceptibility to shaping, whereas Veränderbarkeit more broadly means capacity for change; the context determines whether they fully coincide.",
+    "example_tl": "Die institutionelle Formbarkeit algorithmischer Systeme bleibt politisch entscheidend, weil ihre Regeln weder naturgegeben noch gegenüber demokratischer Kontrolle grundsätzlich unveränderlich sind.",
+    "example_en": "The institutional malleability of algorithmic systems remains politically crucial because their rules are neither natural nor fundamentally impervious to democratic control.",
+    "cloze": "Die institutionelle {{c1::Formbarkeit}} algorithmischer Systeme bleibt politisch entscheidend, weil ihre Regeln weder naturgegeben noch gegenüber demokratischer Kontrolle grundsätzlich unveränderlich sind.",
+    "note": "Old_back is accurate. Retention teaches the idiomatic non-cognate and fixes its abstract institutional sense."
+  },
+  {
+    "id": "it_fancy_vocab_134",
+    "en": "the Consequentialism",
+    "category": "lexical-noun",
+    "tl": "der Konsequentialismus",
+    "alts": [
+      "der Konsequenzialismus"
+    ],
+    "register": "Specialist terminology in moral philosophy, political theory and bioethics; both listed spellings occur in serious German scholarship.",
+    "trap": "Konsequentialismus is not synonymous with Utilitarismus: utilitarian theories form one consequentialist family, but other theories can rank different goods.",
+    "example_tl": "Der Konsequentialismus bewertet politische Entscheidungen primär nach ihren Folgen, kann aber je nach Theorie unterschiedliche Güter und Verteilungsregeln berücksichtigen.",
+    "example_en": "Consequentialism evaluates political decisions primarily by their outcomes, but it can take different goods and distributive rules into account depending on the theory.",
+    "cloze": "Der {{c1::Konsequentialismus}} bewertet politische Entscheidungen primär nach ihren Folgen, kann aber je nach Theorie unterschiedliche Güter und Verteilungsregeln berücksichtigen.",
+    "note": "Old_back uses a documented spelling variant rather than a semantic error; this note consistently selects Konsequentialismus as its main form."
+  },
+  {
+    "id": "it_fancy_vocab_135",
+    "en": "the Fluidity",
+    "category": "lexical-noun",
+    "tl": "die Fluidität",
+    "alts": [],
+    "register": "Written-formal in sociology and media theory for shifting identities, roles or boundaries; physical liquids normally call for Fließfähigkeit.",
+    "trap": "The legacy Flüchtigkeit means transience, volatility or inattentiveness, not the capacity of categories and identities to remain fluid.",
+    "example_tl": "Die Fluidität digitaler Identitäten erschwert starre Regulierungskategorien, da Nutzer je nach Plattform zugleich als Produzenten, Beschäftigte und Konsumenten auftreten.",
+    "example_en": "The fluidity of digital identities complicates rigid regulatory categories because users can simultaneously act as producers, workers and consumers depending on the platform.",
+    "cloze": "Die {{c1::Fluidität}} digitaler Identitäten erschwert starre Regulierungskategorien, da Nutzer je nach Plattform zugleich als Produzenten, Beschäftigte und Konsumenten auftreten.",
+    "note": "Materially corrects old_back by selecting the established social-theory term for shifting categories rather than transience."
+  },
+  {
+    "id": "it_fancy_vocab_136",
+    "en": "the Serendipity",
+    "category": "lexical-noun",
+    "tl": "der glückliche Zufallsfund",
+    "alts": [],
+    "register": "Neutral-written and natural for a valuable accidental discovery; Serendipität is a marked learned term in research, information science and journalism.",
+    "trap": "Serendipity is not simply Glück: it denotes a valuable discovery made by chance, often while someone was looking for something else.",
+    "example_tl": "Ein glücklicher Zufallsfund in den Gerichtsakten offenbarte, wie eng die Plattform ihre Moderationsregeln mit staatlichen Sicherheitsbehörden abgestimmt hatte.",
+    "example_en": "A fortunate chance discovery in the court records revealed how closely the platform had coordinated its moderation rules with state security agencies.",
+    "cloze": "Ein {{c1::glücklicher Zufallsfund}} in den Gerichtsakten offenbarte, wie eng die Plattform ihre Moderationsregeln mit staatlichen Sicherheitsbehörden abgestimmt hatte.",
+    "note": "Materially improves old_back: the learned loanword exists, but the main rendering selects the concrete accidental-discovery sense and unmarked German phrasing."
+  },
+  {
+    "id": "it_fancy_vocab_137",
+    "en": "the Permeability",
+    "category": "lexical-noun",
+    "tl": "die Durchlässigkeit für etwas",
+    "alts": [],
+    "register": "Neutral-formal in policy and institutional analysis as well as in technical descriptions of materials or boundaries.",
+    "trap": "When naming what can pass or gain entry, Durchlässigkeit and durchlässig govern für plus the accusative, not zu.",
+    "example_tl": "Die Durchlässigkeit öffentlicher Institutionen für kommerzielle Interessen wächst, während verbindliche Regeln zur Offenlegung privater Einflussnahme weiterhin politisch blockiert werden.",
+    "example_en": "The permeability of public institutions to commercial interests is growing while binding rules on disclosing private influence continue to be politically blocked.",
+    "cloze": "Die {{c1::Durchlässigkeit}} öffentlicher Institutionen {{c1::für}} kommerzielle Interessen wächst, während verbindliche Regeln zur Offenlegung privater Einflussnahme weiterhin politisch blockiert werden.",
+    "note": "Old_back is accurate; the production headword adds the governed preposition and the example establishes the institutional metaphor."
+  },
+  {
+    "id": "it_fancy_vocab_139",
+    "en": "the Aggregation",
+    "category": "lexical-noun",
+    "tl": "die Zusammenführung von Daten",
+    "alts": [
+      "die Aggregation von Daten"
+    ],
+    "register": "Zusammenführung is neutral-formal and transparent; Aggregation is technical in data processing, statistics and economics.",
+    "trap": "English aggregation may mean either combining records or calculating summary values; German requires context and may use Zusammenführung, Bündelung or Aggregation.",
+    "example_tl": "Die Zusammenführung von Daten aus mehreren Diensten erlaubt detaillierte Verhaltensprofile, obwohl jede einzelne Information für sich genommen harmlos erscheinen mag.",
+    "example_en": "The aggregation of data from several services enables detailed behavioral profiles even though each individual piece of information may seem harmless on its own.",
+    "cloze": "Die {{c1::Zusammenführung von Daten}} aus mehreren Diensten erlaubt detaillierte Verhaltensprofile, obwohl jede einzelne Information für sich genommen harmlos erscheinen mag.",
+    "note": "The isolated source is polysemous. This note selects the combination-of-records sense; old_back is valid technical German but does not disambiguate it."
+  },
+  {
+    "id": "it_fancy_vocab_142",
+    "en": "the Reciprocity",
+    "category": "lexical-noun",
+    "tl": "die Gegenseitigkeit",
+    "alts": [
+      "die Reziprozität"
+    ],
+    "register": "Gegenseitigkeit is neutral-formal in general policy prose; Reziprozität is more technical in law, economics and social science.",
+    "trap": "Reciprocity is not mere cooperation: it entails corresponding treatment, benefits or obligations on both sides of a relationship.",
+    "example_tl": "Das Prinzip der Gegenseitigkeit verlangt, dass Plattformen europäischen Forschern denselben Datenzugang gewähren, den sie selbst von öffentlichen Einrichtungen beanspruchen.",
+    "example_en": "The principle of reciprocity requires platforms to give European researchers the same data access that they themselves demand from public institutions.",
+    "cloze": "Das Prinzip der {{c1::Gegenseitigkeit}} verlangt, dass Plattformen europäischen Forschern denselben Datenzugang gewähren, den sie selbst von öffentlichen Einrichtungen beanspruchen.",
+    "note": "Materially refines old_back by choosing the idiomatic general-policy term while retaining the learned cognate as a specialist alternative."
+  },
+  {
+    "id": "it_fancy_vocab_150",
+    "en": "the Intermediary",
+    "category": "lexical-noun",
+    "tl": "die vermittelnde Instanz zwischen zwei Seiten",
+    "alts": [
+      "der Intermediär zwischen zwei Seiten"
+    ],
+    "register": "Vermittelnde Instanz is neutral-formal for an organization; Intermediär is concise specialist language in economics and platform regulation.",
+    "trap": "German Vermittler often suggests a person or active broker, whereas an intermediary in platform analysis may be an organization or technical service.",
+    "example_tl": "Als vermittelnde Instanz zwischen Medienhäusern und Werbekunden kontrolliert die Plattform nicht nur Zahlungsströme, sondern zunehmend auch die Bedingungen journalistischer Sichtbarkeit.",
+    "example_en": "As an intermediary between media companies and advertisers, the platform controls not only payment flows but increasingly the conditions of journalistic visibility as well.",
+    "cloze": "Als {{c1::vermittelnde Instanz}} {{c1::zwischen}} Medienhäusern und Werbekunden kontrolliert die Plattform nicht nur Zahlungsströme, sondern zunehmend auch die Bedingungen journalistischer Sichtbarkeit.",
+    "note": "The source is polysemous. Old_back is valid specialist terminology; the main rendering avoids implying that the intermediary must be a person."
+  },
+  {
+    "id": "it_fancy_vocab_152",
+    "en": "the Governance",
+    "category": "lexical-noun",
+    "tl": "die Governance",
+    "alts": [
+      "die Steuerungsordnung"
+    ],
+    "register": "Established specialist terminology in political science, organizational studies and technology policy; Steuerungsordnung is a more explanatory German alternative.",
+    "trap": "Governance is not Regierung: it covers the rules, processes and interactions through which state and non-state actors collectively exercise control.",
+    "example_tl": "Die Governance grenzüberschreitender Datenräume bleibt lückenhaft, solange nationale Aufsichtsbehörden unterschiedliche Transparenzstandards anwenden und private Betreiber zentrale Regeln faktisch selbst setzen.",
+    "example_en": "The governance of cross-border data spaces remains incomplete as long as national regulators apply different transparency standards and private operators effectively set key rules themselves.",
+    "cloze": "Die {{c1::Governance}} grenzüberschreitender Datenräume bleibt lückenhaft, solange nationale Aufsichtsbehörden unterschiedliche Transparenzstandards anwenden und private Betreiber zentrale Regeln faktisch selbst setzen.",
+    "note": "Old_back is accurate in the specialist sense selected here; retention teaches the consequential distinction from government and ordinary management."
+  },
+  {
+    "id": "it_fancy_vocab_154",
+    "en": "the Silo",
+    "category": "lexical-noun",
+    "tl": "das Silo",
+    "alts": [],
+    "register": "A specialist metaphor in management and data architecture; compounds such as Datensilo and Informationssilo are especially common.",
+    "trap": "The figurative German Silo is neuter and implies harmful isolation that obstructs exchange; organizational commentary also frequently uses Silodenken.",
+    "example_tl": "Organisatorische Silos verhindern, dass Sicherheitsforscher wichtige Erkenntnisse mit Produktteams teilen, obwohl beide Gruppen seit Jahren dieselben systemischen Risiken beobachten.",
+    "example_en": "Organizational silos prevent security researchers from sharing important findings with product teams even though both groups have observed the same systemic risks for years.",
+    "cloze": "Organisatorische {{c1::Silos}} verhindern, dass Sicherheitsforscher wichtige Erkenntnisse mit Produktteams teilen, obwohl beide Gruppen seit Jahren dieselben systemischen Risiken beobachten.",
+    "note": "Old_back is accurate; the example fixes the figurative organizational sense rather than the literal storage structure. Self-review: changed the generic singular to the more idiomatic organizational plural and thereby exposed the plural morphology."
+  },
+  {
+    "id": "it_fancy_vocab_158",
+    "en": "the Consumerism",
+    "category": "lexical-noun",
+    "tl": "der Konsumismus",
+    "alts": [
+      "das Konsumdenken"
+    ],
+    "register": "Konsumismus is formal and critical in social theory; Konsumdenken is more accessible and openly evaluative.",
+    "trap": "English consumerism can also denote organized consumer advocacy, whereas German Konsumismus normally denotes an ideology or lifestyle centered on consumption.",
+    "example_tl": "Der digitale Konsumismus verwandelt Aufmerksamkeit in eine ständig erneuerbare Nachfrage, während Plattformen soziale Anerkennung systematisch an demonstrativen Konsum koppeln.",
+    "example_en": "Digital consumerism turns attention into constantly renewable demand while platforms systematically tie social recognition to conspicuous consumption.",
+    "cloze": "Der digitale {{c1::Konsumismus}} verwandelt Aufmerksamkeit in eine ständig erneuerbare Nachfrage, während Plattformen soziale Anerkennung systematisch an demonstrativen Konsum koppeln.",
+    "note": "Old_back is accurate for the critical consumption-centered sense selected here; it does not cover the consumer-protection sense of the English source. Self-review: replaced the literal sichtbarer Erwerb with the established phrase demonstrativer Konsum."
+  },
+  {
+    "id": "it_fancy_vocab_159",
+    "en": "the Corporatocracy",
+    "category": "lexical-noun",
+    "tl": "die Konzernherrschaft",
+    "alts": [
+      "die Korporatokratie"
+    ],
+    "register": "Konzernherrschaft is written-critical and immediately intelligible; Korporatokratie is a rare theoretical loanword.",
+    "trap": "Do not confuse Korporatokratie with Korporatismus, which describes an organized system of interest representation rather than rule by corporations.",
+    "example_tl": "Die Konzernherrschaft beginnt dort, wo wenige Unternehmen öffentliche Regeln faktisch vorgeben, ohne demokratisch legitimiert oder wirksam rechenschaftspflichtig zu sein.",
+    "example_en": "Corporatocracy begins where a handful of companies effectively dictate public rules without being democratically legitimate or meaningfully accountable.",
+    "cloze": "Die {{c1::Konzernherrschaft}} beginnt dort, wo wenige Unternehmen öffentliche Regeln faktisch vorgeben, ohne demokratisch legitimiert oder wirksam rechenschaftspflichtig zu sein.",
+    "note": "Materially improves old_back: the learned coinage is intelligible but rare, so the main rendering uses transparent and idiomatic German."
+  },
+  {
+    "id": "it_fancy_vocab_160",
+    "en": "the Exploitation",
+    "category": "lexical-noun",
+    "tl": "die Ausbeutung von jemandem oder etwas",
+    "alts": [],
+    "register": "Strongly negative in labor, colonial and critical economic contexts; neutral technical exploitation may instead require Nutzung or Verwertung.",
+    "trap": "English exploitation can mean neutral use in some technical contexts; German Exploitation usually names a film or marketing genre, not ordinary resource use.",
+    "example_tl": "Die Ausbeutung prekär Beschäftigter bleibt im Plattformmodell unsichtbar, weil Unternehmen formale Selbstständigkeit als Beleg für echte Verhandlungsmacht darstellen.",
+    "example_en": "The exploitation of precarious workers remains invisible in the platform model because companies portray formal self-employment as evidence of genuine bargaining power.",
+    "cloze": "Die {{c1::Ausbeutung}} prekär Beschäftigter bleibt im Plattformmodell unsichtbar, weil Unternehmen formale Selbstständigkeit als Beleg für echte Verhandlungsmacht darstellen.",
+    "note": "The source is polysemous. This note selects the strongly negative labor sense, for which old_back is accurate."
+  }
+]

@@ -1,0 +1,196 @@
+[
+  {
+    "id": "it_fancy_vocab_322",
+    "en": "to store",
+    "category": "lexical-verb",
+    "tl": "conservare",
+    "alts": [],
+    "register": "Verbo neutro nella prosa normativa sulla conservazione dei dati; memorizzare descrive più precisamente la scrittura in memoria, mentre archiviare implica un archivio.",
+    "trap": "L'inglese store copre operazioni diverse: archiviare non è la resa automatica quando si parla della durata per cui un'impresa conserva dati.",
+    "example_tl": "Le piattaforme conservano per anni dati di localizzazione apparentemente anonimi, aumentando il rischio che autorità o intermediari ricostruiscano gli spostamenti individuali.",
+    "example_en": "Platforms store apparently anonymous location data for years, increasing the risk that authorities or intermediaries will reconstruct individuals' movements.",
+    "cloze": "Le piattaforme {{c1::conservano}} per anni dati di localizzazione apparentemente anonimi, aumentando il rischio che autorità o intermediari ricostruiscano gli spostamenti individuali.",
+    "note": "The bare source is polysemous. The legacy archiviare is possible for archival storage but too narrow for the data-retention sense fixed here; self-review selected conservare and replaced ampliare il rischio with the idiomatic aumentare il rischio."
+  },
+  {
+    "id": "it_fancy_vocab_325",
+    "en": "to advertise",
+    "category": "lexical-verb",
+    "tl": "pubblicizzare",
+    "alts": [
+      "fare pubblicità a"
+    ],
+    "register": "Pubblicizzare è neutro e transitivo; fare pubblicità a è la comune locuzione equivalente e rende esplicita la preposizione davanti al prodotto o servizio.",
+    "trap": "Non usare avvertire sul modello dell'inglese advertise: in italiano avvertire significa normalmente avvisare o percepire.",
+    "example_tl": "Le piattaforme pubblicizzano servizi finanziari ad alto rischio con messaggi personalizzati, mentre scaricano sugli utenti la responsabilità delle perdite prevedibili.",
+    "example_en": "Platforms advertise high-risk financial services with personalized messages while shifting responsibility for foreseeable losses onto users.",
+    "cloze": "Le piattaforme {{c1::pubblicizzano}} servizi finanziari ad alto rischio con messaggi personalizzati, mentre scaricano sugli utenti la responsabilità delle perdite prevedibili.",
+    "note": "The legacy phrase is valid but omits its governed a-complement. Self-review chose the compact transitive verb as the headword and retained the phrase as an interchangeable alternative."
+  },
+  {
+    "id": "it_fancy_vocab_327",
+    "en": "to discriminate",
+    "category": "lexical-verb",
+    "tl": "discriminare",
+    "alts": [],
+    "register": "Verbo neutro-formale nel diritto antidiscriminatorio e nell'analisi degli effetti algoritmici; regge direttamente la persona o il gruppo penalizzato.",
+    "trap": "A differenza di discriminate against, discriminare nel senso sociale è transitivo: discriminare i candidati, non *discriminare contro i candidati; discriminare tra significa distinguere.",
+    "example_tl": "I sistemi di selezione automatizzata discriminano i candidati provenienti da quartieri poveri quando vengono addestrati su dati storici segnati da disuguaglianze.",
+    "example_en": "Automated selection systems discriminate against candidates from poor neighborhoods when they are trained on historical data marked by inequalities.",
+    "cloze": "I sistemi di selezione automatizzata {{c1::discriminano}} i candidati provenienti da quartieri poveri quando vengono addestrati su dati storici segnati da disuguaglianze.",
+    "note": "The legacy rendering is accurate. Self-review retained the transparent cognate because its direct-object syntax blocks an English calque and replaced the compressed learning-from-records phrasing with the idiomatic addestrare su dati."
+  },
+  {
+    "id": "it_fancy_vocab_329",
+    "en": "to compete",
+    "category": "lexical-verb",
+    "tl": "competere con",
+    "alts": [],
+    "register": "Costruzione neutra in ambito economico e istituzionale; competere per introduce l'obiettivo conteso e competere sul prezzo il terreno della concorrenza.",
+    "trap": "Il complemento cambia con il ruolo semantico: si compete con un rivale, per un contratto e su un criterio; il solo infinito non insegna questa reggenza.",
+    "example_tl": "Le imprese locali faticano a competere con piattaforme globali che controllano infrastrutture, dati e accesso privilegiato ai mercati pubblicitari.",
+    "example_en": "Local companies struggle to compete with global platforms that control infrastructure, data, and privileged access to advertising markets.",
+    "cloze": "Le imprese locali faticano a {{c1::competere con}} piattaforme globali che controllano infrastrutture, dati e accesso privilegiato ai mercati pubblicitari.",
+    "note": "The legacy verb is correct but omits its productive complements. Self-review retained con in the headword and cloze because the example fixes rivalry with another actor."
+  },
+  {
+    "id": "it_fancy_vocab_331",
+    "en": "to address",
+    "category": "lexical-verb",
+    "tl": "affrontare",
+    "alts": [],
+    "register": "Verbo neutro e idiomatico per affrontare un problema o una questione; trattare può limitarsi a esaminare il tema, senza suggerire un intervento.",
+    "trap": "Per address an issue non usare automaticamente indirizzare o addressare: il primo indica soprattutto una direzione, il secondo appartiene a usi tecnici ristretti.",
+    "example_tl": "Il regolamento tenta di affrontare l'opacità algoritmica, ma rinvia alle imprese la definizione concreta degli obblighi di verifica indipendente.",
+    "example_en": "The regulation attempts to address algorithmic opacity but leaves the concrete definition of independent-audit obligations to companies.",
+    "cloze": "Il regolamento tenta di {{c1::affrontare}} l'opacità algoritmica, ma rinvia alle imprese la definizione concreta degli obblighi di verifica indipendente.",
+    "note": "The legacy rendering is the natural policy verb. Self-review retained the item for its high-value English calque trap and excluded trattare as a blanket alternative because it can mean merely discussing the issue."
+  },
+  {
+    "id": "it_fancy_vocab_334",
+    "en": "to entrench",
+    "category": "lexical-verb",
+    "tl": "consolidare",
+    "alts": [],
+    "register": "Verbo neutro-formale per rendere più stabile un potere, un vantaggio o un assetto; radicare è più naturale con abitudini, convinzioni e pratiche.",
+    "trap": "Entrench non si traduce con trincerare nel senso politico astratto; la scelta italiana dipende dall'oggetto che viene reso difficile da rimuovere.",
+    "example_tl": "Ogni acquisizione non contestata consolida il potere degli operatori dominanti e rende più costoso l'ingresso di concorrenti indipendenti nel mercato.",
+    "example_en": "Every unchallenged acquisition entrenches the power of dominant operators and makes entry into the market more expensive for independent competitors.",
+    "cloze": "Ogni acquisizione non contestata {{c1::consolida}} il potere degli operatori dominanti e rende più costoso l'ingresso di concorrenti indipendenti nel mercato.",
+    "note": "Materially refines old_back: radicare is possible with practices or beliefs but is less idiomatic with potere. Self-review chose consolidare after fixing the object in the example."
+  },
+  {
+    "id": "it_fancy_vocab_335",
+    "en": "to lobby",
+    "category": "lexical-verb",
+    "tl": "fare lobbying presso",
+    "alts": [
+      "svolgere attività di lobbying presso"
+    ],
+    "register": "Prestito comune nella prosa politica e aziendale; svolgere attività di lobbying presso è più formale, mentre fare pressione su può suggerire mezzi più coercitivi.",
+    "trap": "Davanti all'istituzione destinataria è naturale presso; fare lobbying non equivale in ogni contesto al più ampio fare pressione su.",
+    "example_tl": "Le grandi piattaforme fanno lobbying presso le istituzioni europee affinché gli obblighi di interoperabilità vengano diluiti durante i negoziati tecnici.",
+    "example_en": "Large platforms lobby European institutions so that interoperability obligations are watered down during technical negotiations.",
+    "cloze": "Le grandi piattaforme {{c1::fanno lobbying presso}} le istituzioni europee affinché gli obblighi di interoperabilità vengano diluiti durante i negoziati tecnici.",
+    "note": "The legacy expression is idiomatic but omits the institutional complement. Self-review added presso to the production headword and rejected fare pressione su as a fully interchangeable alternative."
+  },
+  {
+    "id": "it_fancy_vocab_337",
+    "en": "to partner",
+    "category": "lexical-verb",
+    "tl": "collaborare con",
+    "alts": [],
+    "register": "Costruzione neutra per una collaborazione operativa; stringere una partnership con è aziendale e sottolinea la creazione dell'accordo formale.",
+    "trap": "L'inglese ricava il verbo dal nome partner; in italiano partnerizzare è gergale, mentre associarsi può implicare adesione o alleanza anziché collaborazione concreta.",
+    "example_tl": "Il consorzio collabora con università pubbliche per sviluppare standard aperti, evitando che un singolo fornitore controlli l'intera infrastruttura digitale.",
+    "example_en": "The consortium partners with public universities to develop open standards, preventing a single supplier from controlling the entire digital infrastructure.",
+    "cloze": "Il consorzio {{c1::collabora con}} università pubbliche per sviluppare standard aperti, evitando che un singolo fornitore controlli l'intera infrastruttura digitale.",
+    "note": "Materially refines old_back: associarsi is possible but can describe joining an organization or alliance. Self-review fixed an ongoing joint-work sense and chose collaborare con."
+  },
+  {
+    "id": "it_fancy_vocab_339",
+    "en": "to secure",
+    "category": "lexical-verb",
+    "tl": "ottenere",
+    "alts": [],
+    "register": "Verbo neutro per secure funding, support, access o a contract nel senso di riuscire a procurarseli; altri sensi richiedono proteggere, garantire o mettere in sicurezza.",
+    "trap": "Mettere in sicurezza significa rendere qualcosa sicuro e non traduce secure quando il verbo inglese vuol dire procurarsi con successo una risorsa o un accordo.",
+    "example_tl": "Dopo mesi di negoziati, il gruppo ha ottenuto finanziamenti pubblici per ampliare la rete senza cedere il controllo dei dati strategici.",
+    "example_en": "After months of negotiations, the group secured public funding to expand the network without surrendering control of strategic data.",
+    "cloze": "Dopo mesi di negoziati, il gruppo {{c1::ha ottenuto}} finanziamenti pubblici per ampliare la rete senza cedere il controllo dei dati strategici.",
+    "note": "The bare English prompt is polysemous. This card deliberately fixes the obtain-successfully sense; old_back is correct only for the protect-or-make-safe sense."
+  },
+  {
+    "id": "it_fancy_vocab_345",
+    "en": "Powerful",
+    "category": "lexical-adjective",
+    "tl": "influente",
+    "alts": [
+      "potente"
+    ],
+    "register": "Influente è neutro per persone e organizzazioni capaci di orientare decisioni; potente è più ampio e può riferirsi anche a mezzi, effetti o capacità materiali.",
+    "trap": "Powerful non corrisponde sempre a potente: quando conta la capacità di orientare il comportamento altrui, influente rende esplicito il tipo di potere.",
+    "example_tl": "Le piattaforme più influenti orientano il dibattito pubblico non soltanto moderando i contenuti, ma anche decidendo quali fonti rendere visibili.",
+    "example_en": "The most powerful platforms shape public debate not only by moderating content but also by deciding which sources to make visible.",
+    "cloze": "Le piattaforme più {{c1::influenti}} orientano il dibattito pubblico non soltanto moderando i contenuti, ma anche decidendo quali fonti rendere visibili.",
+    "note": "The isolated source is referent-sensitive. The legacy potente remains valid and fits this example, but self-review selected influente to fix the institutional-influence sense."
+  },
+  {
+    "id": "it_fancy_vocab_347",
+    "en": "Lucrative",
+    "category": "lexical-adjective",
+    "tl": "redditizio",
+    "alts": [
+      "remunerativo"
+    ],
+    "register": "Aggettivo neutro per attività, mercati o investimenti che producono buoni profitti; remunerativo è naturale soprattutto per un'attività o un impiego.",
+    "trap": "Lucrativo in italiano indica spesso lo scopo di lucro, specialmente nell'opposizione lucrativo/non lucrativo, e non implica da solo profitti elevati.",
+    "example_tl": "La vendita di profili comportamentali resta un'attività redditizia per gli intermediari, anche quando gli utenti ignorano come vengano combinati i loro dati.",
+    "example_en": "Selling behavioral profiles remains a lucrative activity for intermediaries, even when users do not know how their data are combined.",
+    "cloze": "La vendita di profili comportamentali resta un'attività {{c1::redditizia}} per gli intermediari, anche quando gli utenti ignorano come vengano combinati i loro dati.",
+    "note": "The legacy rendering is accurate. Self-review retained remunerativo because it is interchangeable with redditizio for the activity in this example, while excluding the deceptive cognate lucrativo."
+  },
+  {
+    "id": "it_fancy_vocab_349",
+    "en": "Biased",
+    "category": "lexical-adjective",
+    "tl": "distorto",
+    "alts": [
+      "parziale"
+    ],
+    "register": "Distorto è neutro per rappresentazioni, risultati e dati alterati sistematicamente; parziale sottolinea la mancanza di equilibrio, mentre affetto da bias è tecnico.",
+    "trap": "L'inglese biased copre referenti diversi: una persona può essere prevenuta, una valutazione parziale e un campione distorto o non rappresentativo; biasato resta gergo tecnico.",
+    "example_tl": "Una rappresentazione distorta dei flussi migratori alimenta richieste securitarie, perché sovrarappresenta gli episodi violenti e cancella le tendenze di lungo periodo.",
+    "example_en": "A biased portrayal of migration flows fuels securitarian demands because it overrepresents violent incidents and erases long-term trends.",
+    "cloze": "Una rappresentazione {{c1::distorta}} dei flussi migratori alimenta richieste securitarie, perché sovrarappresenta gli episodi violenti e cancella le tendenze di lungo periodo.",
+    "note": "The legacy rendering is accurate for the referent selected here but is not universal. Self-review retained parziale because it also fits this example, while documenting the person-and-sample distinctions."
+  },
+  {
+    "id": "it_fancy_vocab_352",
+    "en": "Competitive",
+    "category": "lexical-adjective",
+    "tl": "concorrenziale",
+    "alts": [],
+    "register": "Aggettivo neutro dell'economia per mercati, condizioni e pressioni caratterizzati dalla concorrenza; competitivo descrive più spesso un'impresa, un prodotto o un prezzo.",
+    "trap": "L'inglese competitive accorpa due prospettive: un mercato è concorrenziale, mentre un'impresa capace di competere è competitiva.",
+    "example_tl": "Un mercato concorrenziale richiede portabilità dei dati e accesso equo alle infrastrutture, non soltanto l'assenza formale di accordi collusivi.",
+    "example_en": "A competitive market requires data portability and fair access to infrastructure, not merely the formal absence of collusive agreements.",
+    "cloze": "Un mercato {{c1::concorrenziale}} richiede portabilità dei dati e accesso equo alle infrastrutture, non soltanto l'assenza formale di accordi collusivi.",
+    "note": "The bare source is underspecified. The legacy competitivo is valid for actors, products, and prices; self-review selected the market sense to teach the policy-relevant Italian contrast."
+  },
+  {
+    "id": "it_fancy_vocab_353",
+    "en": "Comprehensive",
+    "category": "lexical-adjective",
+    "tl": "esaustivo",
+    "alts": [
+      "completo"
+    ],
+    "register": "Esaustivo è neutro-formale per analisi, esami e rapporti che trattano tutti gli aspetti pertinenti; completo è più generale e meno marcato.",
+    "trap": "Evitare il falso amico comprensivo per un'analisi: descrive spesso una persona comprensiva, mentre comprensivo di introduce ciò che è incluso.",
+    "example_tl": "Un'analisi esaustiva della concentrazione digitale deve includere infrastrutture cloud, mercati pubblicitari, sistemi operativi, proprietà e controllo dei dati.",
+    "example_en": "A comprehensive analysis of digital concentration must include cloud infrastructure, advertising markets, operating systems, and data ownership and control.",
+    "cloze": "Un'analisi {{c1::esaustiva}} della concentrazione digitale deve includere infrastrutture cloud, mercati pubblicitari, sistemi operativi, proprietà e controllo dei dati.",
+    "note": "The legacy completo is correct but less precise for an analysis. Self-review selected esaustivo, retained completo because it remains natural here, and replaced the compressed controllo proprietario with proprietà e controllo."
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "it_big_tech_vocab_121",
+    "en": "Platform independence",
+    "verdict": "drop",
+    "reason": "Indipendenza dalle piattaforme è trasparente e sottospecificato: il prompt non chiarisce se riguardi sistema operativo, marketplace, fornitore o infrastruttura, mentre b03 copre la più precisa platform dependency."
+  },
+  {
+    "id": "it_big_tech_vocab_122",
+    "en": "Cross-border data flows",
+    "verdict": "keep",
+    "reason": "Termine consolidato della governance dei dati e del commercio digitale, con ordine sintattico istituzionale e una distinzione utile rispetto al singolo trasferimento transfrontaliero."
+  },
+  {
+    "id": "it_big_tech_vocab_123",
+    "en": "Secure hardware",
+    "verdict": "drop",
+    "reason": "Hardware sicuro è pienamente trasparente e troppo ampio: non identifica proprietà di sicurezza, architettura, certificazione o classe di dispositivi."
+  },
+  {
+    "id": "it_big_tech_vocab_124",
+    "en": "Software audits",
+    "verdict": "drop",
+    "reason": "Audit del software è una collocazione professionale prevedibile e priva di uno scopo o standard specifico; il più preciso source code review offre una lezione distinta nel chunk."
+  },
+  {
+    "id": "it_big_tech_vocab_125",
+    "en": "the Digital borders",
+    "verdict": "keep",
+    "reason": "Metafora geopolitica marcata che comprende territorializzazione di reti, dati e servizi e va distinta dal solo confine tecnico o firewall nazionale."
+  },
+  {
+    "id": "it_big_tech_vocab_126",
+    "en": "Indigenous technologies",
+    "verdict": "keep",
+    "reason": "La resa autoctone consente una lettura meramente domestica; esplicitare il riferimento ai popoli indigeni corregge un’ambiguità lessicale e politica sostanziale."
+  },
+  {
+    "id": "it_big_tech_vocab_127",
+    "en": "Cyber-espionage",
+    "verdict": "keep",
+    "reason": "Termine stabilizzato della sicurezza con grafia italiana univerbata e un significato più ristretto della generica sorveglianza o intrusione digitale."
+  },
+  {
+    "id": "it_big_tech_vocab_128",
+    "en": "Data ownership",
+    "verdict": "keep",
+    "reason": "Formula giuridicamente controversa che richiede di distinguere proprietà, titolarità, possesso, accesso, controllo e diritti della persona interessata."
+  },
+  {
+    "id": "it_big_tech_vocab_129",
+    "en": "the Digital trade barriers",
+    "verdict": "keep",
+    "reason": "Concetto stabilizzato della politica commerciale per cui ostacoli al commercio digitale evita l’ambiguità sintattica presente nella resa letterale di old_back."
+  },
+  {
+    "id": "it_big_tech_vocab_130",
+    "en": "the Source code review",
+    "verdict": "keep",
+    "reason": "Termine utile della qualità e sicurezza del software, con una distinzione reale fra revisione del codice, test automatici e audit più ampi."
+  },
+  {
+    "id": "it_big_tech_vocab_131",
+    "en": "Zero trust architecture",
+    "verdict": "keep",
+    "reason": "Architettura di cibersicurezza consolidata la cui etichetta convenzionale e verifica continua non risultano dalla sola resa letterale fiducia zero."
+  },
+  {
+    "id": "it_big_tech_vocab_132",
+    "en": "Secure communication",
+    "verdict": "drop",
+    "reason": "Comunicazione sicura è una collocazione trasparente che esprime soltanto un obiettivo ampio; end-to-end encryption mantiene nello stesso chunk un meccanismo tecnico preciso."
+  },
+  {
+    "id": "it_big_tech_vocab_133",
+    "en": "Digital autonomy",
+    "verdict": "keep",
+    "reason": "Concetto corrente delle politiche tecnologiche la cui libertà d’azione pratica va distinta da sovranità digitale, autosufficienza e autodeterminazione."
+  },
+  {
+    "id": "it_big_tech_vocab_134",
+    "en": "the Technology standards",
+    "verdict": "drop",
+    "reason": "Standard tecnologici è trasparente e sottospecificato: il prompt non individua un regime di normazione, una famiglia tecnica o un problema di conformità."
+  },
+  {
+    "id": "it_big_tech_vocab_135",
+    "en": "End-to-end encryption",
+    "verdict": "keep",
+    "reason": "Termine tecnico centrale con una distinzione didattica essenziale rispetto alla codifica e alla cifratura del solo canale di trasporto."
+  },
+  {
+    "id": "it_big_tech_vocab_136",
+    "en": "the Digital policy",
+    "verdict": "drop",
+    "reason": "Politica digitale è un’etichetta di settore frequente e trasparente; il prompt isolato non specifica istituzione, strumento o ambito normativo."
+  },
+  {
+    "id": "it_big_tech_vocab_137",
+    "en": "Online censorship",
+    "verdict": "drop",
+    "reason": "Censura online è trasparente e il prompt non indica attore, meccanismo o soglia giuridica che la distingua dalla moderazione dei contenuti."
+  },
+  {
+    "id": "it_big_tech_vocab_138",
+    "en": "the Critical infrastructure",
+    "verdict": "keep",
+    "reason": "Categoria giuridico-istituzionale consolidata, normalmente plurale in italiano e definita dalle conseguenze del disservizio anziché dalla generica importanza."
+  },
+  {
+    "id": "it_big_tech_vocab_139",
+    "en": "Internet universality",
+    "verdict": "keep",
+    "reason": "Concetto specialistico UNESCO che combina diritti, apertura, accessibilità e partecipazione multi-attore, non una semplice affermazione di copertura mondiale."
+  },
+  {
+    "id": "it_big_tech_vocab_140",
+    "en": "the Digital dependencies",
+    "verdict": "drop",
+    "reason": "Dipendenze digitali è trasparente e troppo ampio; b03 insegna la più precisa platform dependency e questo chunk mantiene il contrasto produttivo con l’autonomia digitale."
+  },
+  {
+    "id": "it_big_tech_vocab_141",
+    "en": "Secure by design",
+    "verdict": "keep",
+    "reason": "Principio consolidato della cibersicurezza lungo il ciclo di vita, con una resa italiana produttiva e una distinzione cruciale da secure by default."
+  },
+  {
+    "id": "it_big_tech_vocab_142",
+    "en": "Digital resilience",
+    "verdict": "keep",
+    "reason": "Concetto corrente delle politiche di rischio, più ampio della prevenzione cibersicura perché include continuità, risposta, recupero e adattamento."
+  },
+  {
+    "id": "it_big_tech_vocab_143",
+    "en": "Sovereign operating systems",
+    "verdict": "drop",
+    "reason": "Locuzione poco lessicalizzata e sottospecificata: sovrani può significare nazionali, pubblici, verificabili, indipendenti dalla filiera o semplicemente certificati."
+  },
+  {
+    "id": "it_big_tech_vocab_144",
+    "en": "Digital ethics",
+    "verdict": "drop",
+    "reason": "Etica digitale è il nome trasparente di un campo ampio, con morfologia regolare e nessun problema autonomo di senso o reggenza per un C1."
+  },
+  {
+    "id": "it_big_tech_vocab_145",
+    "en": "Digital self-determination",
+    "verdict": "keep",
+    "reason": "Concetto normativo emergente la cui dimensione individuale e collettiva va distinta dalla più stretta autodeterminazione informativa e dalla sovranità statale."
+  }
+]

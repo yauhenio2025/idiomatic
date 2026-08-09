@@ -1,0 +1,266 @@
+[
+  {
+    "id": "it_fancy_vocab_161",
+    "en": "the Profiteering",
+    "category": "lexical-noun",
+    "tl": "die Geschäftemacherei mit etwas",
+    "alts": [
+      "die Profitmacherei mit etwas"
+    ],
+    "register": "Strongly pejorative in political and journalistic criticism; it presents profit-taking as unscrupulous exploitation of a situation.",
+    "trap": "Geschäftemacherei is not neutral business activity or Gewinnerzielung; it imputes opportunism and typically governs mit plus the dative.",
+    "example_tl": "Die Geschäftemacherei mit dringend benötigten Schutzgütern zeigte, wie schnell unregulierte Plattformen gesellschaftliche Krisen in lukrative private Renditechancen verwandeln.",
+    "example_en": "The profiteering from urgently needed protective goods showed how quickly unregulated platforms turn social crises into lucrative private opportunities for profit.",
+    "cloze": "Die {{c1::Geschäftemacherei}} {{c1::mit}} dringend benötigten Schutzgütern zeigte, wie schnell unregulierte Plattformen gesellschaftliche Krisen in lukrative private Renditechancen verwandeln.",
+    "note": "Old_back is accurate but incomplete as a production headword; the note adds the governed preposition and fixes the strongly condemnatory sense."
+  },
+  {
+    "id": "it_fancy_vocab_168",
+    "en": "the Digital native",
+    "category": "lexical-noun",
+    "tl": "der Digital Native",
+    "alts": [
+      "der digitale Eingeborene"
+    ],
+    "register": "Digital Native is the established media and social-science loanword; digitaler Eingeborener is less common and often sounds deliberately critical or ironic.",
+    "trap": "The English loanword is masculine in dictionary form and has the plural Digital Natives; old_back silently changes the singular prompt into a plural.",
+    "example_tl": "Die Vorstellung vom Digital Native verdeckt, dass souveräner Umgang mit Daten nicht automatisch aus früher Smartphone-Nutzung entsteht, sondern gezielte Bildung voraussetzt.",
+    "example_en": "The notion of the digital native obscures the fact that confident handling of data does not arise automatically from early smartphone use but requires targeted education.",
+    "cloze": "Die Vorstellung vom {{c1::Digital Native}} verdeckt, dass souveräner Umgang mit Daten nicht automatisch aus früher Smartphone-Nutzung entsteht, sondern gezielte Bildung voraussetzt.",
+    "note": "Materially corrects old_back, which gives only the plural and promotes a less idiomatic calque to the main answer; the singular headword follows established German usage."
+  },
+  {
+    "id": "it_fancy_vocab_170",
+    "en": "the Solutionism",
+    "category": "lexical-noun",
+    "tl": "der technologische Solutionismus",
+    "alts": [
+      "das technikzentrierte Lösungsdenken"
+    ],
+    "register": "A critical term in technology studies and policy analysis; the explanatory alternative is clearer for readers unfamiliar with the loanword.",
+    "trap": "Solutionismus is not neutral Lösungsorientierung: it criticizes the reduction of complex social or political problems to supposedly simple technical fixes.",
+    "example_tl": "Technologischer Solutionismus reduziert politische Konflikte auf Optimierungsprobleme und lässt Machtverhältnisse, institutionelle Interessen sowie die Verteilungsfolgen automatisierter Entscheidungen systematisch außer Acht.",
+    "example_en": "Technological solutionism reduces political conflicts to optimization problems and systematically disregards power relations, institutional interests, and the distributive effects of automated decisions.",
+    "cloze": "{{c1::Technologischer Solutionismus}} reduziert politische Konflikte auf Optimierungsprobleme und lässt Machtverhältnisse, institutionelle Interessen sowie die Verteilungsfolgen automatisierter Entscheidungen systematisch außer Acht.",
+    "note": "Old_back is viable but underspecified; the established modifier technologisch fixes the intended critical technology-policy sense."
+  },
+  {
+    "id": "it_fancy_vocab_171",
+    "en": "the Tokenization",
+    "category": "lexical-noun",
+    "tl": "die Tokenisierung von Vermögenswerten",
+    "alts": [],
+    "register": "Technical in finance and blockchain policy; the complement is needed to distinguish this sense from tokenization in natural-language processing.",
+    "trap": "Tokenisierung is domain-dependent: in language technology it divides text into tokens, whereas here it represents rights in assets through digital tokens.",
+    "example_tl": "Die Tokenisierung von Vermögenswerten verspricht leichteren Marktzugang, kann Eigentumsrechte jedoch nur dann sichern, wenn das zugrunde liegende Rechtssystem die digitalen Ansprüche anerkennt.",
+    "example_en": "The tokenization of assets promises easier market access but can secure property rights only if the underlying legal system recognizes the digital claims.",
+    "cloze": "Die {{c1::Tokenisierung}} {{c1::von}} Vermögenswerten verspricht leichteren Marktzugang, kann Eigentumsrechte jedoch nur dann sichern, wenn das zugrunde liegende Rechtssystem die digitalen Ansprüche anerkennt.",
+    "note": "Old_back is accurate but leaves the source's competing technical senses unresolved; this note explicitly selects the asset-tokenization sense."
+  },
+  {
+    "id": "it_fancy_vocab_174",
+    "en": "the Techno-optimism",
+    "category": "lexical-noun",
+    "tl": "der Technikoptimismus",
+    "alts": [
+      "der Technooptimismus"
+    ],
+    "register": "Technikoptimismus is the established neutral-formal term in technology history and criticism; Technooptimismus is a less common recent variant.",
+    "trap": "German normally uses the compound Technikoptimismus; the hyphenated old_back form mirrors the English surface and is not the best production default.",
+    "example_tl": "Der Technikoptimismus vieler Regierungsstrategien unterschätzt, dass künstliche Intelligenz bestehende Machtasymmetrien verschärfen kann, wenn öffentliche Institutionen ihre eigene Gestaltungskompetenz an Anbieter abtreten.",
+    "example_en": "The techno-optimism of many government strategies underestimates how artificial intelligence can deepen existing power asymmetries when public institutions cede their own capacity to shape policy to vendors.",
+    "cloze": "Der {{c1::Technikoptimismus}} vieler Regierungsstrategien unterschätzt, dass künstliche Intelligenz bestehende Machtasymmetrien verschärfen kann, wenn öffentliche Institutionen ihre eigene Gestaltungskompetenz an Anbieter abtreten.",
+    "note": "Materially improves old_back by replacing an English-patterned hyphenated form with the established German compound."
+  },
+  {
+    "id": "it_fancy_vocab_177",
+    "en": "the Overreach",
+    "category": "lexical-noun",
+    "tl": "die Kompetenzüberschreitung",
+    "alts": [
+      "die Überschreitung von Befugnissen"
+    ],
+    "register": "Neutral-formal in legal and institutional criticism; the paraphrase is especially clear when the relevant powers are formally defined.",
+    "trap": "English overreach changes with context: institutional overreach is Kompetenzüberschreitung, while geopolitical or organizational overreach may be Überdehnung.",
+    "example_tl": "Die Kompetenzüberschreitung durch die Behörde schwächt die parlamentarische Aufsicht, selbst wenn sie ihre expansive Rechtsauslegung mit einer akuten Sicherheitslage begründet.",
+    "example_en": "The agency's overreach weakens parliamentary oversight even if it justifies its expansive interpretation of the law by citing an acute security situation.",
+    "cloze": "Die {{c1::Kompetenzüberschreitung}} durch die Behörde schwächt die parlamentarische Aufsicht, selbst wenn sie ihre expansive Rechtsauslegung mit einer akuten Sicherheitslage begründet.",
+    "note": "Materially diverges from old_back: Overreach occurs as specialist jargon, but idiomatic German normally names the kind of excess more precisely."
+  },
+  {
+    "id": "it_fancy_vocab_178",
+    "en": "Open-source",
+    "category": "lexical-adjective",
+    "tl": "quelloffen",
+    "alts": [
+      "Open Source"
+    ],
+    "register": "Quelloffen is neutral and readily inflected; Open Source is the conventional technical label and appears in compounds such as Open-Source-Software.",
+    "trap": "As an attributive German adjective, quelloffen takes ordinary adjective endings; Open Source remains uninflected and needs hyphens inside a larger compound.",
+    "example_tl": "Quelloffene Software ermöglicht unabhängige Sicherheitsprüfungen, garantiert aber weder faire Governance noch dauerhafte Wartung, solange Finanzierung und Verantwortung ungeklärt bleiben.",
+    "example_en": "Open-source software enables independent security audits but guarantees neither fair governance nor lasting maintenance while funding and responsibility remain unresolved.",
+    "cloze": "{{c1::Quelloffene}} Software ermöglicht unabhängige Sicherheitsprüfungen, garantiert aber weder faire Governance noch dauerhafte Wartung, solange Finanzierung und Verantwortung ungeklärt bleiben.",
+    "note": "Old_back supplies only the borrowed label; the main answer provides the productive German adjective and the example tests its inflection."
+  },
+  {
+    "id": "it_fancy_vocab_179",
+    "en": "the Balkanization",
+    "category": "lexical-noun",
+    "tl": "die Balkanisierung von etwas",
+    "alts": [
+      "die Zersplitterung in rivalisierende Teilräume"
+    ],
+    "register": "A marked political metaphor used critically for division into mutually isolated or rival units; the transparent paraphrase avoids the historical regional label.",
+    "trap": "Balkanisierung is stronger and more politically loaded than ordinary Fragmentierung: it implies a field splitting into rival, poorly interoperable parts.",
+    "example_tl": "Die Balkanisierung des Internets beschleunigt sich, wenn Staaten nationale Datenräume abschotten, technische Standards politisieren und grenzüberschreitende Dienste pauschal als Sicherheitsrisiko behandeln.",
+    "example_en": "The balkanization of the internet accelerates when states seal off national data spaces, politicize technical standards, and treat cross-border services wholesale as security risks.",
+    "cloze": "Die {{c1::Balkanisierung}} des Internets beschleunigt sich, wenn Staaten nationale Datenräume abschotten, technische Standards politisieren und grenzüberschreitende Dienste pauschal als Sicherheitsrisiko behandeln.",
+    "note": "Old_back is lexically accurate; the note adds the productive government and flags the metaphor's narrower, politically loaded force."
+  },
+  {
+    "id": "it_fancy_vocab_180",
+    "en": "the Duopoly",
+    "category": "lexical-noun",
+    "tl": "das Duopol",
+    "alts": [],
+    "register": "Standard neutral-formal terminology in economics, competition policy and media-market analysis.",
+    "trap": "German uses the neuter noun Duopol, with plural Duopole; old_back's Duopoly is an unadapted English form rather than the German headword.",
+    "example_tl": "Das Duopol der beiden App-Marktplätze bestimmt, welche Gebühren Entwickler zahlen und unter welchen Bedingungen konkurrierende Dienste überhaupt Zugang zu mobilen Nutzern erhalten.",
+    "example_en": "The two app marketplaces' duopoly determines what fees developers pay and under what conditions competing services can gain any access to mobile users.",
+    "cloze": "Das {{c1::Duopol}} der beiden App-Marktplätze bestimmt, welche Gebühren Entwickler zahlen und unter welchen Bedingungen konkurrierende Dienste überhaupt Zugang zu mobilen Nutzern erhalten.",
+    "note": "Materially corrects old_back, which gives the English noun instead of the established German Duopol."
+  },
+  {
+    "id": "it_fancy_vocab_181",
+    "en": "the Encryption",
+    "category": "lexical-noun",
+    "tl": "die Verschlüsselung von Daten",
+    "alts": [],
+    "register": "Neutral technical and policy vocabulary; productive with a genitive complement or von plus the dative.",
+    "trap": "Verschlüsselung is not Kodierung: encoding changes a representation, whereas encryption protects information by making a key necessary for access.",
+    "example_tl": "Die Verschlüsselung sensibler Kommunikationsdaten schützt nicht nur einzelne Nutzer, sondern begrenzt zugleich die strukturelle Überwachungsmacht privater Plattformbetreiber und staatlicher Stellen.",
+    "example_en": "The encryption of sensitive communications data protects not only individual users but also limits the structural surveillance power of private platform operators and government bodies.",
+    "cloze": "Die {{c1::Verschlüsselung}} sensibler Kommunikationsdaten schützt nicht nur einzelne Nutzer, sondern begrenzt zugleich die strukturelle Überwachungsmacht privater Plattformbetreiber und staatlicher Stellen.",
+    "note": "Old_back is accurate; retention teaches the consequential German distinction between encryption and mere encoding."
+  },
+  {
+    "id": "it_fancy_vocab_184",
+    "en": "Bias",
+    "category": "lexical-noun",
+    "tl": "die systematische Verzerrung",
+    "alts": [
+      "der Bias"
+    ],
+    "register": "Systematische Verzerrung is neutral-formal in statistics and AI policy; Bias is common specialist shorthand, especially in machine learning.",
+    "trap": "English bias is polysemous: Voreingenommenheit suits a person's prior attitude, but data or model bias is normally a systematische Verzerrung.",
+    "example_tl": "Eine systematische Verzerrung in Trainingsdaten kann dazu führen, dass automatisierte Auswahlverfahren historische Benachteiligungen nicht nur abbilden, sondern scheinbar objektiv legitimieren.",
+    "example_en": "A systematic bias in training data can cause automated selection processes not only to reproduce historical disadvantages but to legitimize them as seemingly objective.",
+    "cloze": "Eine {{c1::systematische Verzerrung}} in Trainingsdaten kann dazu führen, dass automatisierte Auswahlverfahren historische Benachteiligungen nicht nur abbilden, sondern scheinbar objektiv legitimieren.",
+    "note": "Materially diverges from old_back by selecting the statistical and algorithmic sense appropriate to this vocabulary cluster rather than human attitudinal bias."
+  },
+  {
+    "id": "it_fancy_vocab_189",
+    "en": "Disruptive",
+    "category": "lexical-adjective",
+    "tl": "disruptiv",
+    "alts": [
+      "umwälzend"
+    ],
+    "register": "Disruptiv is established but fashionable business and technology jargon; umwälzend is plainer when genuine structural change is meant.",
+    "trap": "German predicative disruptiv has no ending, while attributive uses such forms as disruptive Technologie; old_back's capitalized Disruptive is not a headword.",
+    "example_tl": "Die Plattform bezeichnet ihr Geschäftsmodell als disruptiv, obwohl es vor allem bestehende Arbeitsrechte umgeht und bekannte Abhängigkeiten in digitaler Form reproduziert.",
+    "example_en": "The platform describes its business model as disruptive even though it mainly circumvents existing labor rights and reproduces familiar dependencies in digital form.",
+    "cloze": "Die Plattform bezeichnet ihr Geschäftsmodell als {{c1::disruptiv}}, obwohl es vor allem bestehende Arbeitsrechte umgeht und bekannte Abhängigkeiten in digitaler Form reproduziert.",
+    "note": "Materially corrects old_back's capitalization and preserves the source as an adjective; the example also tests the uninflected predicative form."
+  },
+  {
+    "id": "it_fancy_vocab_190",
+    "en": "Ubiquitous",
+    "category": "lexical-adjective",
+    "tl": "allgegenwärtig",
+    "alts": [
+      "ubiquitär"
+    ],
+    "register": "Allgegenwärtig is neutral and idiomatic across serious prose; ubiquitär is learned and more at home in academic or technical contexts.",
+    "trap": "The cognate ubiquitär exists but is more marked than English ubiquitous; allgegenwärtig is usually the natural general-purpose choice.",
+    "example_tl": "Algorithmische Bewertung ist im digitalen Arbeitsmarkt allgegenwärtig, bleibt für Beschäftigte jedoch meist unsichtbar und lässt sich wegen fehlender Auskunftsrechte kaum wirksam anfechten.",
+    "example_en": "Algorithmic assessment is ubiquitous in the digital labor market but usually remains invisible to workers and is hard to challenge effectively because information rights are lacking.",
+    "cloze": "Algorithmische Bewertung ist im digitalen Arbeitsmarkt {{c1::allgegenwärtig}}, bleibt für Beschäftigte jedoch meist unsichtbar und lässt sich wegen fehlender Auskunftsrechte kaum wirksam anfechten.",
+    "note": "Old_back is accurate; retention teaches the register contrast with the tempting learned cognate and provides predicative adjective practice."
+  },
+  {
+    "id": "it_fancy_vocab_193",
+    "en": "Fragmented",
+    "category": "lexical-adjective",
+    "tl": "zersplittert",
+    "alts": [
+      "fragmentiert"
+    ],
+    "register": "Zersplittert is idiomatic and mildly critical for institutions, markets and authority; fragmentiert is neutral-formal and somewhat more technical.",
+    "trap": "The transparent cognate fragmentiert is valid, but German policy prose often prefers zersplittert when fragmentation means dysfunctional institutional division.",
+    "example_tl": "Der europäische Aufsichtsrahmen bleibt zersplittert, weil nationale Behörden dieselben Plattformpraktiken unterschiedlich bewerten und grenzüberschreitende Verfahren nur zögerlich miteinander koordinieren.",
+    "example_en": "The European oversight framework remains fragmented because national authorities assess the same platform practices differently and coordinate cross-border proceedings only hesitantly.",
+    "cloze": "Der europäische Aufsichtsrahmen bleibt {{c1::zersplittert}}, weil nationale Behörden dieselben Plattformpraktiken unterschiedlich bewerten und grenzüberschreitende Verfahren nur zögerlich miteinander koordinieren.",
+    "note": "Materially refines old_back by choosing the more idiomatic critical-policy adjective while retaining fragmentiert as a valid technical alternative."
+  },
+  {
+    "id": "it_fancy_vocab_194",
+    "en": "Opaque",
+    "category": "lexical-adjective",
+    "tl": "undurchsichtig",
+    "alts": [
+      "intransparent"
+    ],
+    "register": "Undurchsichtig is neutral-critical for rules, processes and motives; intransparent is common in administrative and policy prose.",
+    "trap": "German opak is mainly physical or specialist terminology; the English institutional metaphor normally requires undurchsichtig or intransparent.",
+    "example_tl": "Die Kriterien der Inhaltsmoderation bleiben undurchsichtig, obwohl ihre Anwendung politische Debatten prägt und über die wirtschaftliche Reichweite unabhängiger Medien entscheidet.",
+    "example_en": "The content-moderation criteria remain opaque even though their application shapes political debate and determines the commercial reach of independent media.",
+    "cloze": "Die Kriterien der Inhaltsmoderation bleiben {{c1::undurchsichtig}}, obwohl ihre Anwendung politische Debatten prägt und über die wirtschaftliche Reichweite unabhängiger Medien entscheidet.",
+    "note": "Old_back is accurate; the note records the important restriction on the tempting learned cognate opak."
+  },
+  {
+    "id": "it_fancy_vocab_196",
+    "en": "Intrusive",
+    "category": "lexical-adjective",
+    "tl": "eingriffsintensiv",
+    "alts": [
+      "invasiv"
+    ],
+    "register": "Eingriffsintensiv is formal legal and rights-policy language for measures that seriously interfere with protected interests; invasiv is more broadly technical and critical.",
+    "trap": "Aufdringlich normally describes annoying people, advertising or interfaces; it understates an official measure's intrusion into privacy or fundamental rights.",
+    "example_tl": "Die neue Identitätsprüfung ist besonders eingriffsintensiv, weil sie biometrische Merkmale dauerhaft speichert, ohne ihre Notwendigkeit für jede einzelne Transaktion nachzuweisen.",
+    "example_en": "The new identity check is particularly intrusive because it stores biometric features permanently without demonstrating its necessity for every individual transaction.",
+    "cloze": "Die neue Identitätsprüfung ist besonders {{c1::eingriffsintensiv}}, weil sie biometrische Merkmale dauerhaft speichert, ohne ihre Notwendigkeit für jede einzelne Transaktion nachzuweisen.",
+    "note": "Materially corrects old_back for the rights-policy sense selected here; aufdringlich would describe nuisance rather than the intensity of an intervention."
+  },
+  {
+    "id": "it_fancy_vocab_197",
+    "en": "Predatory",
+    "category": "lexical-adjective",
+    "tl": "ausbeuterisch",
+    "alts": [
+      "räuberisch"
+    ],
+    "register": "Ausbeuterisch is strongly critical but idiomatic for contracts and business models; räuberisch is more rhetorical and occurs in selected economic collocations.",
+    "trap": "Predatory is not translated mechanically in fixed economic terms: predatory pricing is usually rendered with Verdrängungspreise, not räuberische Preise.",
+    "example_tl": "Ausbeuterische Vertragsbedingungen zwingen kleine Anbieter, wachsende Datenbestände abzutreten, während die Plattform sämtliche Haftungsrisiken bei ihren formal unabhängigen Partnern belässt.",
+    "example_en": "Predatory contract terms force small providers to surrender growing data holdings while the platform leaves all liability risks with its formally independent partners.",
+    "cloze": "{{c1::Ausbeuterische}} Vertragsbedingungen zwingen kleine Anbieter, wachsende Datenbestände abzutreten, während die Plattform sämtliche Haftungsrisiken bei ihren formal unabhängigen Partnern belässt.",
+    "note": "Materially improves old_back for the selected business-conduct sense; the literal metaphor is retained only as a more rhetorical alternative. Self-review: replaced an over-specific pricing compound with the established plural Verdrängungspreise."
+  },
+  {
+    "id": "it_fancy_vocab_200",
+    "en": "Hyperconnected",
+    "category": "lexical-adjective",
+    "tl": "hypervernetzt",
+    "alts": [
+      "hochgradig vernetzt"
+    ],
+    "register": "A recent neutral-to-critical coinage in media and technology commentary; the paraphrase is clearer outside specialist discussion.",
+    "trap": "In digital network contexts German normally uses vernetzt rather than the English-patterned verbunden; the attributive adjective is inflected normally.",
+    "example_tl": "Eine hypervernetzte Öffentlichkeit verbreitet Krisenbilder in Echtzeit, schafft aber zugleich neue Abhängigkeiten von wenigen privaten Infrastrukturen und deren undurchsichtigen Priorisierungsregeln.",
+    "example_en": "A hyperconnected public spreads images of crises in real time but also creates new dependencies on a few private infrastructures and their opaque prioritization rules.",
+    "cloze": "Eine {{c1::hypervernetzte}} Öffentlichkeit verbreitet Krisenbilder in Echtzeit, schafft aber zugleich neue Abhängigkeiten von wenigen privaten Infrastrukturen und deren undurchsichtigen Priorisierungsregeln.",
+    "note": "Old_back is accurate; retention supplies the productive attributive morphology and distinguishes digital Vernetzung from generic Verbindung. Self-review: replaced the pleonastic alternative extrem stark vernetzt with idiomatic hochgradig vernetzt."
+  }
+]

@@ -1,0 +1,408 @@
+[
+  {
+    "id": "it_fancy_vocab_442",
+    "en": "To revise",
+    "category": "lexical-verb",
+    "tl": "rever algo",
+    "alts": [
+      "reformular algo"
+    ],
+    "register": "Neutro-formal para reconsiderar e alterar uma regra, política ou decisão; reformular sugere uma mudança mais ampla na estrutura ou redação.",
+    "trap": "Revisar é corrente para conferir ou corrigir um texto; com políticas e decisões, rever destaca melhor a reconsideração, embora os usos possam se sobrepor.",
+    "example_tl": "Após a consulta pública, o ministério reviu as regras de portabilidade para impedir que plataformas dominantes bloqueassem a transferência de históricos entre serviços.",
+    "example_en": "After the public consultation, the ministry revised the portability rules to prevent dominant platforms from blocking the transfer of histories between services.",
+    "cloze": "Após a consulta pública, o ministério {{c1::reviu}} as regras de portabilidade para impedir que plataformas dominantes bloqueassem a transferência de históricos entre serviços.",
+    "note": "Old_back é possível sobretudo para textos, mas não fixa a acepção institucional selecionada. Autorrevisão: mantive reformular porque funciona no exemplo, com uma mudança deliberadamente mais profunda."
+  },
+  {
+    "id": "it_fancy_vocab_443",
+    "en": "To scrutinize",
+    "category": "lexical-verb",
+    "tl": "examinar algo minuciosamente",
+    "alts": [
+      "analisar algo minuciosamente"
+    ],
+    "register": "Neutro-formal em auditorias, investigações e análises regulatórias; o advérbio preserva a atenção rigorosa que distingue scrutinize de um exame comum.",
+    "trap": "Examinar, sem um modificador ou contexto adequado, pode perder a ideia de escrutínio intenso; escrutinar existe, mas é muito menos corrente no português geral.",
+    "example_tl": "Antes de aprovar a fusão, o conselho examinou minuciosamente os contratos internos para identificar cláusulas que poderiam excluir concorrentes menores.",
+    "example_en": "Before approving the merger, the board scrutinized the internal contracts to identify clauses that could exclude smaller competitors.",
+    "cloze": "Antes de aprovar a fusão, o conselho {{c1::examinou minuciosamente}} os contratos internos para identificar cláusulas que poderiam excluir concorrentes menores.",
+    "note": "Old_back transmite apenas o exame genérico. Autorrevisão: acrescentei minuciosamente e confirmei que analisar conserva no exemplo o mesmo objeto e o mesmo grau de atenção."
+  },
+  {
+    "id": "it_fancy_vocab_446",
+    "en": "To allege",
+    "category": "lexical-verb",
+    "tl": "alegar que",
+    "alts": [],
+    "register": "Neutro-formal em jornalismo, direito e atribuição de declarações cuja veracidade ainda não foi estabelecida.",
+    "trap": "Alegar não torna uma afirmação falsa por si só; a ausência de comprovação deve vir da atribuição, do contexto ou de uma ressalva explícita.",
+    "example_tl": "A empresa alegou que o vazamento partira de um fornecedor externo, mas não apresentou registros capazes de sustentar essa versão.",
+    "example_en": "The company alleged that the leak had originated with an outside supplier, but it presented no records capable of supporting that account.",
+    "cloze": "A empresa {{c1::alegou que}} o vazamento partira de um fornecedor externo, mas não apresentou registros capazes de sustentar essa versão.",
+    "note": "Old_back oferece o verbo correto, mas não ensina a cautela evidencial associada ao inglês. Autorrevisão: deixei alts vazio para não sugerir que afirmar codifique sozinho falta de prova."
+  },
+  {
+    "id": "it_fancy_vocab_447",
+    "en": "To bolster",
+    "category": "lexical-verb",
+    "tl": "reforçar algo",
+    "alts": [
+      "fortalecer algo"
+    ],
+    "register": "Neutro-formal para aumentar a solidez de uma tese, instituição ou posição; fortalecer é ligeiramente mais amplo e menos ligado à argumentação.",
+    "trap": "Bolster implica dar sustentação adicional, não necessariamente provar uma conclusão; com evidências, comprovar pode afirmar mais do que o inglês permite.",
+    "example_tl": "Os novos dados reforçaram a tese de que regras de transparência reduzem abusos sem comprometer a segurança dos sistemas públicos.",
+    "example_en": "The new data bolstered the thesis that transparency rules reduce abuses without compromising the security of public systems.",
+    "cloze": "Os novos dados {{c1::reforçaram}} a tese de que regras de transparência reduzem abusos sem comprometer a segurança dos sistemas públicos.",
+    "note": "Old_back é semanticamente correto. Autorrevisão: mantive dados como sujeito e tese como objeto para que fortalecer permaneça natural sem converter apoio em prova conclusiva."
+  },
+  {
+    "id": "it_fancy_vocab_448",
+    "en": "To broach",
+    "category": "lexical-verb",
+    "tl": "levantar uma questão",
+    "alts": [
+      "introduzir uma questão"
+    ],
+    "register": "Neutro-formal para trazer um tema, muitas vezes delicado, à discussão pela primeira vez; corrente em diplomacia e reuniões institucionais.",
+    "trap": "Abordar uma questão pode significar desenvolvê-la ou enfrentá-la; broach focaliza inicialmente o ato de colocá-la em discussão.",
+    "example_tl": "Durante a cúpula, a ministra levantou a questão dos controles de exportação, que as delegações haviam evitado para preservar a aliança.",
+    "example_en": "During the summit, the minister broached the issue of export controls, which the delegations had avoided in order to preserve the alliance.",
+    "cloze": "Durante a cúpula, a ministra {{c1::levantou a questão}} dos controles de exportação, que as delegações haviam evitado para preservar a aliança.",
+    "note": "Old_back é amplo demais porque pode abranger todo o tratamento do tema. Autorrevisão: a oração relativa deixa claro que a questão estava sendo introduzida após ter sido evitada."
+  },
+  {
+    "id": "it_fancy_vocab_449",
+    "en": "To circumvent",
+    "category": "lexical-verb",
+    "tl": "contornar uma restrição",
+    "alts": [
+      "eludir uma restrição"
+    ],
+    "register": "Neutro-formal com regras, controles e obstáculos; eludir é mais formal e realça a intenção de escapar ao alcance de uma obrigação.",
+    "trap": "Circumvent não exige o decalque raro circunvir; contornar pode ser neutro, enquanto burlar acrescenta uma acusação mais explícita de fraude ou infração.",
+    "example_tl": "Algumas plataformas contornam as restrições à publicidade política classificando anúncios pagos como conteúdo informativo distribuído por influenciadores independentes.",
+    "example_en": "Some platforms circumvent restrictions on political advertising by classifying paid ads as informational content distributed by independent influencers.",
+    "cloze": "Algumas plataformas {{c1::contornam as restrições}} à publicidade política classificando anúncios pagos como conteúdo informativo distribuído por influenciadores independentes.",
+    "note": "Old_back é adequado, mas omite a alternativa formal e a diferença de força em relação a burlar. Autorrevisão: o contexto regulatório licencia tanto contornar quanto eludir."
+  },
+  {
+    "id": "it_fancy_vocab_451",
+    "en": "To corroborate",
+    "category": "lexical-verb",
+    "tl": "corroborar algo",
+    "alts": [
+      "confirmar algo com evidências"
+    ],
+    "register": "Formal em pesquisa, investigação e argumentação para indicar que uma fonte independente aumenta a credibilidade de uma versão ou hipótese.",
+    "trap": "Corroborar fornece apoio convergente, mas não significa necessariamente demonstrar de modo definitivo; comprovar pode ser forte demais quando a evidência ainda é parcial.",
+    "example_tl": "As mensagens recuperadas corroboraram a versão dos denunciantes, segundo a qual a diretoria já conhecia a vulnerabilidade do aplicativo havia meses.",
+    "example_en": "The recovered messages corroborated the whistleblowers' account that management had already known about the application's vulnerability for months.",
+    "cloze": "As mensagens recuperadas {{c1::corroboraram}} a versão dos denunciantes, segundo a qual a diretoria já conhecia a vulnerabilidade do aplicativo havia meses.",
+    "note": "Old_back fornece o cognato correto. Autorrevisão: distingui apoio de prova conclusiva e mantive uma alternativa analítica que preserva a contribuição evidencial no mesmo contexto."
+  },
+  {
+    "id": "it_fancy_vocab_452",
+    "en": "To counter",
+    "category": "lexical-verb",
+    "tl": "rebater algo",
+    "alts": [
+      "contestar algo"
+    ],
+    "register": "Neutro-formal para responder argumentativamente a uma crítica, acusação ou narrativa; contestar enfatiza mais o desacordo que a resposta ponto a ponto.",
+    "trap": "Contrapor costuma pedir dois elementos ou um argumento a outro; para responder diretamente a críticas, rebater dispensa o decalque da construção inglesa.",
+    "example_tl": "A pesquisadora rebateu as críticas mostrando que a amostra incluía pequenas empresas, órgãos públicos e usuários de regiões rurais.",
+    "example_en": "The researcher countered the criticism by showing that the sample included small businesses, public agencies, and users from rural regions.",
+    "cloze": "A pesquisadora {{c1::rebateu}} as críticas mostrando que a amostra incluía pequenas empresas, órgãos públicos e usuários de regiões rurais.",
+    "note": "O prompt é polissêmico; a nota seleciona a resposta argumentativa sugerida por old_back. Autorrevisão: contestar aceita o mesmo objeto no exemplo, embora seja menos responsivo."
+  },
+  {
+    "id": "it_fancy_vocab_454",
+    "en": "To demur",
+    "category": "lexical-verb",
+    "tl": "fazer uma objeção",
+    "alts": [
+      "manifestar uma ressalva"
+    ],
+    "register": "Neutro-formal para expressar desacordo contido ou uma reserva, sem implicar necessariamente rejeição definitiva.",
+    "trap": "Old_back confunde demur com desmentir: desmentir declara falsa uma afirmação, enquanto demur registra objeção ou relutância diante de uma proposta.",
+    "example_tl": "A conselheira fez uma objeção à proposta, alegando que os poderes de vigilância previstos não estavam sujeitos a controle judicial adequado.",
+    "example_en": "The council member demurred at the proposal, arguing that the proposed surveillance powers were not subject to adequate judicial oversight.",
+    "cloze": "A conselheira {{c1::fez uma objeção}} à proposta, alegando que os poderes de vigilância previstos não estavam sujeitos a controle judicial adequado.",
+    "note": "Diverge materialmente de old_back, que traduz outra ação discursiva. Autorrevisão: preservei a objeção contida e evitei recusar, que atribuiria um desfecho mais categórico."
+  },
+  {
+    "id": "it_fancy_vocab_455",
+    "en": "To denigrate",
+    "category": "lexical-verb",
+    "tl": "desqualificar alguém",
+    "alts": [],
+    "register": "Neutro-formal para depreciar publicamente a competência, o caráter ou o valor de uma pessoa ou grupo; geralmente tem carga crítica.",
+    "trap": "Difamar pode envolver uma imputação lesiva à reputação e tem uso jurídico específico; denigrate também abrange menosprezo sem uma acusação factual determinada.",
+    "example_tl": "O porta-voz desqualificou os pesquisadores, chamando-os de alarmistas, mas não respondeu a nenhuma das falhas metodológicas apontadas no relatório independente.",
+    "example_en": "The spokesperson denigrated the researchers by calling them alarmists but responded to none of the methodological flaws identified in the independent report.",
+    "cloze": "O porta-voz {{c1::desqualificou}} os pesquisadores, chamando-os de alarmistas, mas não respondeu a nenhuma das falhas metodológicas apontadas no relatório independente.",
+    "note": "Old_back mistura o prompt inglês com uma opção portuguesa e não constitui um headword utilizável. Autorrevisão: selecionei desqualificar para fixar o ataque depreciativo sem acrescentar difamação factual."
+  },
+  {
+    "id": "it_fancy_vocab_457",
+    "en": "To discern",
+    "category": "lexical-verb",
+    "tl": "discernir algo",
+    "alts": [
+      "identificar algo"
+    ],
+    "register": "Formal para perceber intelectualmente uma diferença ou padrão pouco evidente; identificar é mais corrente e menos marcado em análise técnica.",
+    "trap": "Discernir não é simplesmente decidir: implica perceber ou distinguir algo que não se apresenta com clareza imediata.",
+    "example_tl": "Nos dados publicados pela plataforma, os analistas não conseguiram discernir um padrão estável porque as categorias mudavam a cada relatório.",
+    "example_en": "In the data published by the platform, analysts could not discern a stable pattern because the categories changed with every report.",
+    "cloze": "Nos dados publicados pela plataforma, os analistas não conseguiram {{c1::discernir}} um padrão estável porque as categorias mudavam a cada relatório.",
+    "note": "Old_back fornece o cognato correto, mas não sinaliza seu registro elevado. Autorrevisão: o objeto padrão permite substituir discernir por identificar sem alterar a leitura analítica."
+  },
+  {
+    "id": "it_fancy_vocab_458",
+    "en": "To disseminate",
+    "category": "lexical-verb",
+    "tl": "divulgar algo",
+    "alts": [
+      "difundir algo"
+    ],
+    "register": "Neutro-formal para fazer informações ou orientações chegarem a um público amplo; difundir é um pouco mais formal e destaca a propagação.",
+    "trap": "Disseminar é correto, mas tende a soar mais técnico; para a publicação institucional deliberada de informação, divulgar costuma ser a escolha não marcada.",
+    "example_tl": "O instituto divulgou orientações práticas para que pequenas redações reconhecessem imagens sintéticas durante campanhas coordenadas de desinformação eleitoral.",
+    "example_en": "The institute disseminated practical guidance so that small newsrooms could recognize synthetic images during coordinated electoral disinformation campaigns.",
+    "cloze": "O instituto {{c1::divulgou}} orientações práticas para que pequenas redações reconhecessem imagens sintéticas durante campanhas coordenadas de desinformação eleitoral.",
+    "note": "Old_back é possível, mas mais marcado que a forma principal em comunicação institucional brasileira. Autorrevisão: mantive difundir porque aceita naturalmente o mesmo objeto e público implícito."
+  },
+  {
+    "id": "it_fancy_vocab_459",
+    "en": "To elicit",
+    "category": "lexical-verb",
+    "tl": "suscitar algo",
+    "alts": [
+      "provocar algo"
+    ],
+    "register": "Neutro-formal com reações, perguntas, críticas e respostas; provocar é ligeiramente mais forte e pode sugerir causalidade mais direta.",
+    "trap": "A tradução depende do objeto: suscita-se uma reação, mas uma entrevista pode obter informação ou fazer emergir uma lembrança.",
+    "example_tl": "A proposta de reconhecimento facial suscitou fortes objeções entre prefeitos preocupados com a ausência de salvaguardas contra abusos policiais.",
+    "example_en": "The facial-recognition proposal elicited strong objections among mayors concerned about the absence of safeguards against police abuse.",
+    "cloze": "A proposta de reconhecimento facial {{c1::suscitou}} fortes objeções entre prefeitos preocupados com a ausência de salvaguardas contra abusos policiais.",
+    "note": "Old_back é amplo e pode servir a outra acepção. Autorrevisão: fixei uma reação como objeto e confirmei que provocar continua idiomático, embora mais contundente."
+  },
+  {
+    "id": "it_fancy_vocab_460",
+    "en": "To embellish",
+    "category": "lexical-verb",
+    "tl": "embelezar um relato",
+    "alts": [
+      "enfeitar um relato"
+    ],
+    "register": "Neutro em sentido figurado para tornar uma narrativa mais atraente, muitas vezes por exagero; enfeitar é mais coloquial e abertamente crítico.",
+    "trap": "No uso narrativo, embellish não descreve aparência visual: pode indicar uma apresentação favorável ou a adição de detalhes não comprovados.",
+    "example_tl": "Na entrevista, o executivo embelezou o relato da expansão, omitindo subsídios públicos e atribuindo toda a demanda à qualidade do serviço.",
+    "example_en": "In the interview, the executive embellished the account of the expansion, omitting public subsidies and attributing all demand to the service's quality.",
+    "cloze": "Na entrevista, o executivo {{c1::embelezou o relato}} da expansão, omitindo subsídios públicos e atribuindo toda a demanda à qualidade do serviço.",
+    "note": "Old_back registra apenas o equivalente literal. Autorrevisão: o exemplo fixa a acepção narrativa sem afirmar fabricação completa, e enfeitar preserva essa nuance."
+  },
+  {
+    "id": "it_fancy_vocab_462",
+    "en": "To fabricate",
+    "category": "lexical-verb",
+    "tl": "forjar algo",
+    "alts": [
+      "fabricar algo"
+    ],
+    "register": "Neutro-formal e acusatório quando o objeto é prova, versão ou documento falso; fabricar também pode ter o sentido físico não enganoso.",
+    "trap": "Fabricate é polissêmico: com provas, forjar ou fabricar implica falsidade deliberada; com produtos materiais, fabricar significa apenas produzir.",
+    "example_tl": "A investigação concluiu que os consultores forjaram provas para ocultar pagamentos realizados por intermédio de empresas de fachada no exterior.",
+    "example_en": "The investigation concluded that the consultants fabricated evidence to conceal payments made through shell companies abroad.",
+    "cloze": "A investigação concluiu que os consultores {{c1::forjaram}} provas para ocultar pagamentos realizados por intermédio de empresas de fachada no exterior.",
+    "note": "Old_back não distingue produção legítima de invenção fraudulenta. Autorrevisão: escolhi provas como objeto, contexto em que forjar e fabricar expressam claramente falsificação deliberada."
+  },
+  {
+    "id": "it_fancy_vocab_463",
+    "en": "To fathom",
+    "category": "lexical-verb",
+    "tl": "compreender plenamente algo",
+    "alts": [
+      "entender algo a fundo"
+    ],
+    "register": "Neutro-formal para alcançar compreensão profunda ou completa; entender a fundo é um pouco menos formal e igualmente idiomático.",
+    "trap": "Sondar traduz a medição ou investigação de profundidade, mas não é o equivalente normal do sentido mental de fathom.",
+    "example_tl": "Nem os próprios engenheiros conseguiam compreender plenamente como o sistema atribuía pontuações, pois a empresa ocultava parâmetros e dados de treinamento.",
+    "example_en": "Not even the engineers themselves could fathom how the system assigned scores, since the company concealed parameters and training data.",
+    "cloze": "Nem os próprios engenheiros conseguiam {{c1::compreender plenamente}} como o sistema atribuía pontuações, pois a empresa ocultava parâmetros e dados de treinamento.",
+    "note": "Diverge de old_back, que importa a metáfora literal e produz uma escolha pouco natural. Autorrevisão: preservei o componente de compreensão completa nas duas opções."
+  },
+  {
+    "id": "it_fancy_vocab_464",
+    "en": "To glean",
+    "category": "lexical-verb",
+    "tl": "depreender algo de algo",
+    "alts": [
+      "extrair algo de algo"
+    ],
+    "register": "Formal em análise para obter informação limitada ou indireta a partir de documentos, dados ou indícios; extrair é mais neutro.",
+    "trap": "Colher reproduz a imagem literal do inglês, mas com informação documental pode soar artificial; depreender e extrair pedem uma fonte introduzida por de.",
+    "example_tl": "Os jornalistas depreenderam dos relatórios com trechos suprimidos apenas alguns indícios sobre a cadeia de comando, sem encontrar prova direta da autorização ministerial.",
+    "example_en": "The journalists gleaned only a few clues about the chain of command from reports with redacted passages, finding no direct proof of ministerial authorization.",
+    "cloze": "Os jornalistas {{c1::depreenderam dos}} relatórios com trechos suprimidos apenas alguns indícios sobre a cadeia de comando, sem encontrar prova direta da autorização ministerial.",
+    "note": "Diverge materialmente da metáfora de old_back. Autorrevisão: incluí de mais artigo no cloze para testar a regência e mantive a informação deliberadamente limitada."
+  },
+  {
+    "id": "it_fancy_vocab_465",
+    "en": "To harp",
+    "category": "lexical-expression",
+    "tl": "bater sempre na mesma tecla",
+    "alts": [],
+    "register": "Figurado, corrente e crítico em fala ou comentário jornalístico; atribui repetição excessiva e pode soar mais coloquial que insistir reiteradamente.",
+    "trap": "O inglês exige normalmente harp on; a tradução literal com harpa é absurda, pois o sentido discursivo corresponde à repetição insistente de um ponto.",
+    "example_tl": "O ministro bate sempre na mesma tecla ao mencionar erros passados, mas evita explicar por que seu plano reproduz exatamente os mesmos problemas.",
+    "example_en": "The minister keeps harping on past mistakes but avoids explaining why his plan reproduces exactly the same problems.",
+    "cloze": "O ministro {{c1::bate sempre na mesma tecla}} ao mencionar erros passados, mas evita explicar por que seu plano reproduz exatamente os mesmos problemas.",
+    "note": "Corrige integralmente old_back, que traduz o substantivo literal e ainda deixa um fragmento. Autorrevisão: usei lexical-expression e deixei alts vazio para preservar a construção do exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_466",
+    "en": "To impugn",
+    "category": "lexical-verb",
+    "tl": "pôr em dúvida algo",
+    "alts": [
+      "contestar algo"
+    ],
+    "register": "Neutro-formal para atacar a validade, integridade ou credibilidade de alguém ou algo; contestar é mais direto e pode ser procedimental.",
+    "trap": "Impugnar em português sugere sobretudo contestar formalmente um ato, candidatura ou decisão; não é a escolha automática quando o objeto inglês é a credibilidade de alguém.",
+    "example_tl": "O porta-voz pôs em dúvida a integridade dos pesquisadores, mas não contestou nenhum dos dados publicados no relatório independente.",
+    "example_en": "The spokesperson impugned the researchers' integrity but disputed none of the data published in the independent report.",
+    "cloze": "O porta-voz {{c1::pôs em dúvida}} a integridade dos pesquisadores, mas não contestou nenhum dos dados publicados no relatório independente.",
+    "note": "Old_back fornece um cognato possível, porém excessivamente jurídico para a acepção reputacional selecionada. Autorrevisão: o objeto integridade licencia tanto a forma principal quanto contestar."
+  },
+  {
+    "id": "it_fancy_vocab_467",
+    "en": "To inculcate",
+    "category": "lexical-verb",
+    "tl": "incutir algo em alguém",
+    "alts": [],
+    "register": "Formal para fazer uma ideia, valor ou hábito arraigar-se por ensino ou repetição; frequente em crítica educacional e institucional.",
+    "trap": "A construção produtiva é incutir algo em alguém; copiar a ordem inglesa inculcate someone with something produz uma regência inadequada.",
+    "example_tl": "O programa incutiu nos gestores a ideia de que qualquer crítica pública ameaça a reputação da instituição e deve ser neutralizada.",
+    "example_en": "The program inculcated in managers the idea that any public criticism threatens the institution's reputation and must be neutralized.",
+    "cloze": "O programa {{c1::incutiu nos gestores}} a ideia de que qualquer crítica pública ameaça a reputação da instituição e deve ser neutralizada.",
+    "note": "Old_back oferece o cognato culto, mas incutir é mais corrente no português brasileiro. Autorrevisão: o cloze inclui o complemento humano para testar a regência essencial."
+  },
+  {
+    "id": "it_fancy_vocab_468",
+    "en": "To indict",
+    "category": "lexical-verb",
+    "tl": "acusar formalmente alguém",
+    "alts": [],
+    "register": "Jurídico-jornalístico e deliberadamente genérico para relatar uma acusação formal em sistemas processuais estrangeiros sem equiparar etapas não idênticas.",
+    "trap": "Indiciar, denunciar e tornar réu designam atos específicos no Brasil; nenhum equivale automaticamente a indict em toda jurisdição, e indict não significa condenar.",
+    "example_tl": "Três executivos foram formalmente acusados de fraude eletrônica após investigadores encontrarem contratos falsos usados para enganar investidores estrangeiros.",
+    "example_en": "Three executives were indicted for wire fraud after investigators found false contracts used to deceive foreign investors.",
+    "cloze": "Três executivos {{c1::foram formalmente acusados}} de fraude eletrônica após investigadores encontrarem contratos falsos usados para enganar investidores estrangeiros.",
+    "note": "Old_back não fornece tradução. Autorrevisão: preferi uma paráfrase jurisdicionalmente neutra e deixei alts vazio para não apresentar etapas brasileiras como equivalentes universais."
+  },
+  {
+    "id": "it_fancy_vocab_470",
+    "en": "To laud",
+    "category": "lexical-verb",
+    "tl": "elogiar algo",
+    "alts": [
+      "exaltar algo"
+    ],
+    "register": "Neutro-formal para louvor público; exaltar é mais enfático e pode sugerir entusiasmo ou aprovação excessiva.",
+    "trap": "Laudar existe, mas é raro no uso geral brasileiro e pode evocar linguagem solene ou técnica; elogiar é a opção corrente na imprensa.",
+    "example_tl": "No relatório anual, o conselho elogiou o ritmo da inovação, mas omitiu as demissões ocorridas após a implantação dos sistemas automatizados.",
+    "example_en": "In the annual report, the board lauded the pace of innovation but omitted the layoffs that followed the deployment of automated systems.",
+    "cloze": "No relatório anual, o conselho {{c1::elogiou}} o ritmo da inovação, mas omitiu as demissões ocorridas após a implantação dos sistemas automatizados.",
+    "note": "Old_back escolhe uma forma dicionarizada, porém pouco natural neste registro. Autorrevisão: mantive exaltar como alternativa mais intensa, adequada ao tom crítico do exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_474",
+    "en": "To promulgate",
+    "category": "lexical-verb",
+    "tl": "promulgar uma lei",
+    "alts": [],
+    "register": "Técnico-jurídico para o ato formal que atesta a existência de uma lei aprovada; não é sinônimo geral de legislar.",
+    "trap": "Aprovar, sancionar, promulgar e publicar nomeiam atos distintos do processo legislativo; não são alternativas automáticas apenas porque antecedem a vigência.",
+    "example_tl": "O presidente promulgou a lei de transparência algorítmica depois que o Congresso rejeitou as últimas alterações propostas pelas associações empresariais.",
+    "example_en": "The president promulgated the algorithmic-transparency law after Congress rejected the final amendments proposed by business associations.",
+    "cloze": "O presidente {{c1::promulgou a lei}} de transparência algorítmica depois que o Congresso rejeitou as últimas alterações propostas pelas associações empresariais.",
+    "note": "Old_back é correto, mas não diferencia atos legislativos vizinhos. Autorrevisão: deixei alts vazio porque qualquer substituto mudaria o agente ou a etapa institucional."
+  },
+  {
+    "id": "it_fancy_vocab_475",
+    "en": "To rebuff",
+    "category": "lexical-verb",
+    "tl": "rechaçar algo",
+    "alts": [
+      "recusar algo firmemente"
+    ],
+    "register": "Formal para rejeição clara e firme de proposta, pedido ou aproximação; a alternativa explicita a intensidade sem pressupor grosseria.",
+    "trap": "Rebuff é mais forte que o genérico reject, mas não implica necessariamente rudeza; traduzir sempre com recusar bruscamente pode inventar uma maneira ausente.",
+    "example_tl": "O governo rechaçou a proposta de vigilância conjunta, considerando-a incompatível com as garantias constitucionais de privacidade das comunicações.",
+    "example_en": "The government rebuffed the joint-surveillance proposal, deeming it incompatible with constitutional safeguards for the privacy of communications.",
+    "cloze": "O governo {{c1::rechaçou}} a proposta de vigilância conjunta, considerando-a incompatível com as garantias constitucionais de privacidade das comunicações.",
+    "note": "Old_back perde a firmeza característica do verbo inglês. Autorrevisão: evitei acrescentar descortesia e confirmei que recusar firmemente aceita o mesmo objeto."
+  },
+  {
+    "id": "it_fancy_vocab_477",
+    "en": "To refute",
+    "category": "lexical-verb",
+    "tl": "refutar algo",
+    "alts": [],
+    "register": "Formal em argumentação, ciência e direito para demonstrar, com razões ou evidências, que uma afirmação é falsa.",
+    "trap": "Refutar exige mais que negar, rejeitar ou contestar: no sentido rigoroso, a resposta deve apresentar elementos contrários capazes de invalidar a afirmação.",
+    "example_tl": "Os registros internos refutaram a alegação de desconhecimento, pois documentavam quatro alertas enviados à diretoria antes do vazamento de dados.",
+    "example_en": "The internal records refuted the claim of ignorance because they documented four warnings sent to management before the data leak.",
+    "cloze": "Os registros internos {{c1::refutaram}} a alegação de desconhecimento, pois documentavam quatro alertas enviados à diretoria antes do vazamento de dados.",
+    "note": "Old_back é correto, mas não explicita a exigência evidencial. Autorrevisão: tornei documentos o sujeito e deixei alts vazio para não equiparar refutação a simples desmentido."
+  },
+  {
+    "id": "it_fancy_vocab_478",
+    "en": "To reiterate",
+    "category": "lexical-verb",
+    "tl": "reafirmar algo",
+    "alts": [
+      "reiterar algo"
+    ],
+    "register": "Neutro-formal para declarar novamente uma posição com ênfase; reiterar é mais formal e frequente em linguagem administrativa.",
+    "trap": "Não acrescente novamente sem necessidade: tanto reiterate quanto reiterar já expressam repetição, de modo que reiterar novamente costuma ser redundante.",
+    "example_tl": "A agência reafirmou que o acesso aos dados continuará sujeito a autorização específica e à supervisão de um juiz independente.",
+    "example_en": "The agency reiterated that access to the data would remain subject to specific authorization and oversight by an independent judge.",
+    "cloze": "A agência {{c1::reafirmou}} que o acesso aos dados continuará sujeito a autorização específica e à supervisão de um juiz independente.",
+    "note": "Old_back é correto, porém mais burocrático que a forma principal. Autorrevisão: o contexto deixa clara a repetição e permite substituir reafirmou por reiterou diretamente."
+  },
+  {
+    "id": "it_fancy_vocab_479",
+    "en": "To repudiate",
+    "category": "lexical-verb",
+    "tl": "repudiar algo",
+    "alts": [
+      "rejeitar categoricamente algo"
+    ],
+    "register": "Formal e enfático para rejeitar publicamente uma doutrina, vínculo ou conduta, muitas vezes marcando distanciamento moral ou político.",
+    "trap": "Repudiar é mais categórico que simplesmente rejeitar uma proposta e frequentemente envolve afastar-se de algo antes aceito, atribuído ou tolerado.",
+    "example_tl": "Após os protestos, o partido repudiou a doutrina econômica que defendera por décadas, sem explicar as razões da mudança súbita.",
+    "example_en": "After the protests, the party repudiated the economic doctrine it had defended for decades without explaining the reasons for the sudden change.",
+    "cloze": "Após os protestos, o partido {{c1::repudiou}} a doutrina econômica que defendera por décadas, sem explicar as razões da mudança súbita.",
+    "note": "Old_back é correto. Autorrevisão: escolhi uma doutrina antes defendida para fixar o distanciamento enfático e distinguir repudiar do ato pontual de recusar."
+  },
+  {
+    "id": "it_fancy_vocab_480",
+    "en": "To ruminate",
+    "category": "lexical-verb",
+    "tl": "remoer algo",
+    "alts": [
+      "ruminar sobre algo"
+    ],
+    "register": "Neutro, mas geralmente negativo, para pensamento prolongado e repetitivo; ruminar é mais literário e torna a metáfora mais visível.",
+    "trap": "Refletir longamente pode ser sereno e produtivo; ruminate frequentemente sugere voltar obsessivamente ao mesmo assunto, além do sentido literal ligado à digestão animal.",
+    "example_tl": "Em seu editorial, o autor remoía as consequências da derrota eleitoral, mas ignorava as transformações sociais que haviam tornado o resultado possível.",
+    "example_en": "In his editorial, the author ruminated on the consequences of the electoral defeat but ignored the social changes that had made the result possible.",
+    "cloze": "Em seu editorial, o autor {{c1::remoía}} as consequências da derrota eleitoral, mas ignorava as transformações sociais que haviam tornado o resultado possível.",
+    "note": "Old_back registra a metáfora possível, mas não seu caráter marcado. Autorrevisão: preferi remoer no exemplo para fixar a nuance repetitiva e potencialmente negativa."
+  }
+]

@@ -1,0 +1,151 @@
+[
+  {
+    "id": "it_fancy_vocab_481",
+    "en": "To stipulate",
+    "category": "lexical-verb",
+    "tl": "estipular algo",
+    "alts": [
+      "estabelecer expressamente algo"
+    ],
+    "register": "Formal e corrente em contratos, normas e acordos negociados; estabelecer expressamente é menos técnico e costuma ser mais claro fora da linguagem jurídica.",
+    "trap": "No raciocínio hipotético, o inglês stipulate também pode significar admitir por hipótese; em português, estipular normalmente fixa uma condição ou obrigação.",
+    "example_tl": "O acordo estipula que os fornecedores deverão revelar toda subcontratação antes de transferir dados de saúde para servidores localizados fora do país.",
+    "example_en": "The agreement stipulates that providers must disclose all subcontracting before transferring health data to servers located outside the country.",
+    "cloze": "O acordo {{c1::estipula}} que os fornecedores deverão revelar toda subcontratação antes de transferir dados de saúde para servidores localizados fora do país.",
+    "note": "Old_back é adequado para a acepção contratual selecionada. Autorrevisão: explicitei a acepção de fixar uma obrigação para não estender estipular ao uso hipotético distinto do inglês."
+  },
+  {
+    "id": "it_fancy_vocab_482",
+    "en": "To substantiate",
+    "category": "lexical-verb",
+    "tl": "fundamentar uma alegação",
+    "alts": [
+      "embasar uma alegação"
+    ],
+    "register": "Neutro-formal em textos analíticos, jornalísticos e jurídicos quando fatos ou provas dão sustentação a uma afirmação; embasar é especialmente corrente no Brasil.",
+    "trap": "Comprovar pode ser forte demais: substantiate exige sustentação probatória, mas nem sempre afirma que a prova estabeleceu definitivamente a verdade da alegação.",
+    "example_tl": "A empresa não conseguiu fundamentar a acusação com provas verificáveis, embora tivesse repetido a mesma versão perante três comissões parlamentares.",
+    "example_en": "The company was unable to substantiate the accusation with verifiable evidence, although it had repeated the same account before three parliamentary committees.",
+    "cloze": "A empresa não conseguiu {{c1::fundamentar}} a acusação com provas verificáveis, embora tivesse repetido a mesma versão perante três comissões parlamentares.",
+    "note": "Old_back deixa o item sem tradução. Autorrevisão: preferi fundamentar a comprovar para preservar a diferença entre apoio probatório e demonstração conclusiva."
+  },
+  {
+    "id": "it_fancy_vocab_483",
+    "en": "To surmise",
+    "category": "lexical-verb",
+    "tl": "conjecturar que",
+    "alts": [
+      "inferir provisoriamente que"
+    ],
+    "register": "Neutro-formal para uma conclusão tentativa extraída de indícios incompletos; inferir provisoriamente torna explícita a cautela epistêmica.",
+    "trap": "Supor é mais amplo e pode introduzir uma hipótese sem base observável; surmise costuma sugerir uma inferência tentativa a partir de pistas limitadas.",
+    "example_tl": "Os analistas conjecturaram que o apagão fora deliberado, embora a ausência de registros impedisse atribuí-lo com segurança a qualquer governo.",
+    "example_en": "The analysts surmised that the outage had been deliberate, although the lack of records prevented them from confidently attributing it to any government.",
+    "cloze": "Os analistas {{c1::conjecturaram}} que o apagão fora deliberado, embora a ausência de registros impedisse atribuí-lo com segurança a qualquer governo.",
+    "note": "Old_back deixa o item em inglês. Autorrevisão: mantive o mais formal fora no exemplo porque o registro analítico o licencia e a oração concessiva preserva a natureza provisória da inferência."
+  },
+  {
+    "id": "it_fancy_vocab_484",
+    "en": "To tout",
+    "category": "lexical-verb",
+    "tl": "alardear algo como",
+    "alts": [
+      "apregoar algo como",
+      "promover algo como"
+    ],
+    "register": "Neutro em crítica política e midiática para elogio público e interessado; apregoar é mais formal, enquanto promover destaca a dimensão mercadológica.",
+    "trap": "O verbo inglês não tem cognato produtivo em português; elogiar pode perder tanto a publicidade quanto o interesse estratégico normalmente presentes em tout.",
+    "example_tl": "O ministro alardeou o sistema biométrico como garantia de segurança, mas evitou explicar quem conservaria os dados e por quanto tempo.",
+    "example_en": "The minister touted the biometric system as a guarantee of security but avoided explaining who would retain the data and for how long.",
+    "cloze": "O ministro {{c1::alardeou}} o sistema biométrico como garantia de segurança, mas evitou explicar quem conservaria os dados e por quanto tempo.",
+    "note": "Old_back está vazio. Autorrevisão: o enquadramento promocional do exemplo permite substituir alardear por apregoar ou promover sem eliminar o elogio público interessado."
+  },
+  {
+    "id": "it_fancy_vocab_487",
+    "en": "To vilify",
+    "category": "lexical-verb",
+    "tl": "demonizar alguém ou algo",
+    "alts": [
+      "vilipendiar alguém ou algo"
+    ],
+    "register": "Neutro-formal e geralmente crítico de uma representação que torna uma pessoa ou grupo moralmente desprezível; vilipendiar é marcadamente mais elevado.",
+    "trap": "Vilipendiar é correto, mas seu tom culto ou literário o torna uma escolha automática inadequada para muitos usos correntes de vilify na imprensa.",
+    "example_tl": "A campanha demonizou as organizações humanitárias, retratando-as como cúmplices de redes criminosas sem apresentar nenhuma prova concreta dessa colaboração.",
+    "example_en": "The campaign vilified humanitarian organizations, portraying them as accomplices of criminal networks without presenting any concrete evidence of that collaboration.",
+    "cloze": "A campanha {{c1::demonizou}} as organizações humanitárias, retratando-as como cúmplices de redes criminosas sem apresentar nenhuma prova concreta dessa colaboração.",
+    "note": "Old_back é semanticamente possível, mas marcado demais para o contexto midiático selecionado. Autorrevisão: evitei difamar, que poderia acrescentar uma imputação factual lesiva específica."
+  },
+  {
+    "id": "it_fancy_vocab_488",
+    "en": "To warrant",
+    "category": "lexical-verb",
+    "tl": "justificar algo",
+    "alts": [],
+    "register": "Neutro-formal quando fatos ou circunstâncias fornecem razão suficiente para uma conclusão ou medida; outras acepções exigem autorizar ou garantir.",
+    "trap": "Garantir exprime assegurar ou dar garantia; não traduz a acepção epistêmica em que determinados fatos warrant uma conclusão ou providência.",
+    "example_tl": "As irregularidades detectadas justificam uma auditoria independente, mas não o bloqueio imediato de um serviço do qual milhares de cidadãos dependem.",
+    "example_en": "The irregularities detected warrant an independent audit, but not the immediate blocking of a service on which thousands of citizens depend.",
+    "cloze": "As irregularidades detectadas {{c1::justificam}} uma auditoria independente, mas não o bloqueio imediato de um serviço do qual milhares de cidadãos dependem.",
+    "note": "Diverge materialmente de old_back, que seleciona a acepção de assegurar. Autorrevisão: deixei alts vazio porque autorizar e dar respaldo exigiriam outra estrutura ou alterariam a força no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_492",
+    "en": "The contention",
+    "category": "lexical-noun",
+    "tl": "a tese",
+    "alts": [
+      "a afirmação"
+    ],
+    "register": "Neutro-formal em argumentação para uma proposição ou posição que alguém apresenta e defende; não pressupõe uma disputa hostil.",
+    "trap": "Contenção significa ato de conter, limitação ou controle de gastos; é um falso cognato para contention na acepção de tese argumentativa.",
+    "example_tl": "A tese de que a moderação privada protege sozinha o debate público ignora os incentivos comerciais que recompensam a polarização.",
+    "example_en": "The contention that private moderation alone protects public debate ignores the commercial incentives that reward polarization.",
+    "cloze": "{{c1::A tese}} de que a moderação privada protege sozinha o debate público ignora os incentivos comerciais que recompensam a polarização.",
+    "note": "Diverge materialmente de old_back, que oferece um falso cognato. Autorrevisão: a afirmação conserva no exemplo a leitura de proposição defendida sem pressupor que ela seja verdadeira."
+  },
+  {
+    "id": "it_fancy_vocab_496",
+    "en": "The elucidation",
+    "category": "lexical-noun",
+    "tl": "o esclarecimento",
+    "alts": [
+      "a elucidação"
+    ],
+    "register": "Neutro em explicações institucionais; elucidação é mais formal e aparece com frequência quando se resolve algo obscuro, especialmente um fato investigado.",
+    "trap": "Esclarecimento é masculino, ao contrário de aclaración em espanhol e clarificazione em italiano; elucidação é feminina, mas não tem registro idêntico.",
+    "example_tl": "O esclarecimento do tribunal eliminou uma ambiguidade que permitia às plataformas excluir pesquisadores independentes de seus arquivos de publicidade política.",
+    "example_en": "The court's elucidation removed an ambiguity that allowed platforms to exclude independent researchers from their political advertising archives.",
+    "cloze": "{{c1::O esclarecimento}} do tribunal eliminou uma ambiguidade que permitia às plataformas excluir pesquisadores independentes de seus arquivos de publicidade política.",
+    "note": "Old_back é possível, mas mais formal e menos neutro que a opção principal. Autorrevisão: mantive elucidação como alternativa porque o ato judicial resolve uma ambiguidade real no mesmo contexto."
+  },
+  {
+    "id": "it_fancy_vocab_500",
+    "en": "The insight",
+    "category": "lexical-noun",
+    "tl": "uma percepção esclarecedora",
+    "alts": [
+      "uma ideia reveladora"
+    ],
+    "register": "Neutro-formal em análise e crítica para uma compreensão nova e valiosa; o anglicismo insight é frequente no meio empresarial, mas pode soar jargonal.",
+    "trap": "Perspicácia costuma nomear a capacidade de compreender com agudeza, não uma percepção individual e contável produzida por um estudo ou argumento.",
+    "example_tl": "O estudo oferece uma percepção esclarecedora sobre como sistemas de recomendação transformam preferências iniciais discretas em padrões duradouros de consumo informativo.",
+    "example_en": "The study offers an insight into how recommendation systems transform small initial preferences into lasting patterns of news consumption.",
+    "cloze": "O estudo oferece {{c1::uma percepção esclarecedora}} sobre como sistemas de recomendação transformam preferências iniciais discretas em padrões duradouros de consumo informativo.",
+    "note": "Old_back usa um empréstimo corrente, mas desnecessário na prosa editorial selecionada. Autorrevisão: usei artigo indefinido porque o exemplo apresenta uma descoberta contável, não a faculdade abstrata."
+  },
+  {
+    "id": "it_fancy_vocab_512",
+    "en": "The rebuttal",
+    "category": "lexical-noun",
+    "tl": "a réplica",
+    "alts": [
+      "o contra-argumento"
+    ],
+    "register": "Neutro-formal em debates, processos e controvérsias públicas para uma resposta destinada a contestar ou enfraquecer uma alegação adversária.",
+    "trap": "Uma rebuttal é uma resposta contrária e pode fracassar; refutação apresenta com mais força um argumento ou prova como demonstração do erro da tese adversária.",
+    "example_tl": "A réplica da empresa questionou a metodologia do relatório, mas não respondeu às mensagens que demonstravam a coordenação secreta com autoridades públicas.",
+    "example_en": "The company's rebuttal challenged the report's methodology but did not address the messages that demonstrated secret coordination with public authorities.",
+    "cloze": "{{c1::A réplica}} da empresa questionou a metodologia do relatório, mas não respondeu às mensagens que demonstravam a coordenação secreta com autoridades públicas.",
+    "note": "Diverge materialmente de old_back ao preservar a diferença entre resposta adversativa e refutação apresentada como conclusiva. Autorrevisão: contra-argumento mantém no exemplo a tentativa de resposta sem garantir seu êxito."
+  }
+]

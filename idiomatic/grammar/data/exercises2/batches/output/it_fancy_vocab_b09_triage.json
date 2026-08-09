@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_321",
+    "en": "to collect",
+    "verdict": "drop",
+    "reason": "Raccogliere is familiar core vocabulary for collecting data, and the isolated prompt selects no instructive contrast with riscuotere, collezionare or radunare."
+  },
+  {
+    "id": "it_fancy_vocab_322",
+    "en": "to store",
+    "verdict": "keep",
+    "reason": "The data context requires a useful distinction among conservare, memorizzare and archiviare, which old_back collapses into archival storage."
+  },
+  {
+    "id": "it_fancy_vocab_323",
+    "en": "to share",
+    "verdict": "drop",
+    "reason": "Condividere is elementary, productive vocabulary, and the prompt supplies no specialized data-sharing construction worth testing at C1."
+  },
+  {
+    "id": "it_fancy_vocab_324",
+    "en": "to sell",
+    "verdict": "drop",
+    "reason": "Vendere is elementary core vocabulary with ordinary transitive use and no selected commercial or legal construction."
+  },
+  {
+    "id": "it_fancy_vocab_325",
+    "en": "to advertise",
+    "verdict": "keep",
+    "reason": "Pubblicizzare and fare pubblicità a teach a productive construction and block the false-friend use of avvertire."
+  },
+  {
+    "id": "it_fancy_vocab_326",
+    "en": "to personalize",
+    "verdict": "drop",
+    "reason": "Personalizzare is a transparent, familiar marketing and technology cognate with predictable morphology and argument structure."
+  },
+  {
+    "id": "it_fancy_vocab_327",
+    "en": "to discriminate",
+    "verdict": "keep",
+    "reason": "Italian uses a direct object for the person or group discriminated against, creating a real English-calque trap despite the transparent cognate."
+  },
+  {
+    "id": "it_fancy_vocab_328",
+    "en": "to violate",
+    "verdict": "drop",
+    "reason": "Violare is a transparent, familiar policy and legal cognate with ordinary transitive use in collocations such as violare un diritto or la privacy."
+  },
+  {
+    "id": "it_fancy_vocab_329",
+    "en": "to compete",
+    "verdict": "keep",
+    "reason": "Competere has productive con, per and su complements whose roles are absent from the bare legacy headword."
+  },
+  {
+    "id": "it_fancy_vocab_330",
+    "en": "to connect",
+    "verdict": "drop",
+    "reason": "The prompt is too broad to choose instructively between connettere and collegare, while both are already familiar technology vocabulary at C1."
+  },
+  {
+    "id": "it_fancy_vocab_331",
+    "en": "to address",
+    "verdict": "keep",
+    "reason": "Addressing an issue requires affrontare rather than the tempting calques indirizzare or addressare."
+  },
+  {
+    "id": "it_fancy_vocab_332",
+    "en": "to fail",
+    "verdict": "drop",
+    "reason": "The bare prompt is too broad to choose among fallire, non riuscire, guastarsi and venire meno, while each individual sense is familiar at C1."
+  },
+  {
+    "id": "it_fancy_vocab_333",
+    "en": "to succeed",
+    "verdict": "drop",
+    "reason": "Riuscire and avere successo are familiar core expressions, and the prompt does not select a useful construction such as riuscire a."
+  },
+  {
+    "id": "it_fancy_vocab_334",
+    "en": "to entrench",
+    "verdict": "keep",
+    "reason": "Italian selects consolidare, radicare or rendere strutturale according to the object, and old_back is not a production-ready default for power or advantage."
+  },
+  {
+    "id": "it_fancy_vocab_335",
+    "en": "to lobby",
+    "verdict": "keep",
+    "reason": "Fare lobbying presso supplies the institutional complement and a register-sensitive alternative to the broader fare pressione su."
+  },
+  {
+    "id": "it_fancy_vocab_336",
+    "en": "to acquire",
+    "verdict": "drop",
+    "reason": "Acquisire is a transparent, familiar formal and business cognate with regular transitive use and no narrower acquisition frame selected."
+  },
+  {
+    "id": "it_fancy_vocab_337",
+    "en": "to partner",
+    "verdict": "keep",
+    "reason": "Italian normally replaces the English converted verb with collaborare con or a noun-based partnership expression, while associarsi may imply joining an alliance."
+  },
+  {
+    "id": "it_fancy_vocab_338",
+    "en": "to limit",
+    "verdict": "drop",
+    "reason": "Limitare is a transparent, high-frequency verb with predictable valency and no special governed complement in this prompt."
+  },
+  {
+    "id": "it_fancy_vocab_339",
+    "en": "to secure",
+    "verdict": "keep",
+    "reason": "In the obtain-successfully sense Italian uses ottenere, whereas old_back covers only protecting or making something safe."
+  },
+  {
+    "id": "it_fancy_vocab_340",
+    "en": "Dominant",
+    "verdict": "drop",
+    "reason": "Dominante is a transparent, familiar policy cognate with ordinary adjective agreement and no narrower construction here."
+  },
+  {
+    "id": "it_fancy_vocab_341",
+    "en": "Invasive",
+    "verdict": "drop",
+    "reason": "Invasivo is a transparent, familiar adjective in privacy and technology criticism, and the prompt does not select a useful contrast with intrusivo."
+  },
+  {
+    "id": "it_fancy_vocab_342",
+    "en": "Innovative",
+    "verdict": "drop",
+    "reason": "Innovativo is a transparent, ubiquitous business and policy cognate with predictable agreement."
+  },
+  {
+    "id": "it_fancy_vocab_343",
+    "en": "Restrictive",
+    "verdict": "drop",
+    "reason": "Restrittivo is a direct, familiar policy cognate, and the prompt identifies no contrast with limitativo or vincolante."
+  },
+  {
+    "id": "it_fancy_vocab_344",
+    "en": "Transparent",
+    "verdict": "drop",
+    "reason": "Trasparente is a high-frequency identical cognate whose figurative institutional use is already standard well below C1."
+  },
+  {
+    "id": "it_fancy_vocab_345",
+    "en": "Powerful",
+    "verdict": "keep",
+    "reason": "Italian distinguishes influential actors from powerful machines or effects, so the referent-sensitive choice between influente and potente merits practice."
+  },
+  {
+    "id": "it_fancy_vocab_346",
+    "en": "Unethical",
+    "verdict": "drop",
+    "reason": "Non etico is a familiar, compositionally transparent evaluative phrase with predictable agreement and no additional usage distinction here."
+  },
+  {
+    "id": "it_fancy_vocab_347",
+    "en": "Lucrative",
+    "verdict": "keep",
+    "reason": "Redditizio fixes the high-profit sense and must be distinguished from Italian lucrativo, which often means profit-making rather than highly profitable."
+  },
+  {
+    "id": "it_fancy_vocab_348",
+    "en": "Personalized",
+    "verdict": "drop",
+    "reason": "Personalizzato is a transparent, ubiquitous technology and marketing cognate with fully predictable adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_349",
+    "en": "Biased",
+    "verdict": "keep",
+    "reason": "Italian distributes the English adjective across distorto, parziale, prevenuto and affetto da bias according to the referent."
+  },
+  {
+    "id": "it_fancy_vocab_350",
+    "en": "Decentralized",
+    "verdict": "drop",
+    "reason": "Decentralizzato is a transparent, familiar technical and political cognate with predictable participial morphology and agreement."
+  },
+  {
+    "id": "it_fancy_vocab_351",
+    "en": "Globalized",
+    "verdict": "drop",
+    "reason": "Globalizzato is a transparent, common policy cognate with regular participial morphology and no specialized sense selected here."
+  },
+  {
+    "id": "it_fancy_vocab_352",
+    "en": "Competitive",
+    "verdict": "keep",
+    "reason": "A competitive market is concorrenziale, whereas competitivo more often describes an actor, product or price capable of competing."
+  },
+  {
+    "id": "it_fancy_vocab_353",
+    "en": "Comprehensive",
+    "verdict": "keep",
+    "reason": "Esaustivo or completo is required for an analysis, blocking the false-friend use of comprensivo."
+  },
+  {
+    "id": "it_fancy_vocab_354",
+    "en": "Excessive",
+    "verdict": "drop",
+    "reason": "Eccessivo is a transparent, high-frequency evaluative cognate with ordinary agreement and no narrower professional sense."
+  },
+  {
+    "id": "it_fancy_vocab_355",
+    "en": "Controversial",
+    "verdict": "drop",
+    "reason": "Controverso is familiar C1 policy vocabulary, and the bare prompt supplies no useful contrast with discusso or polemico."
+  },
+  {
+    "id": "it_fancy_vocab_356",
+    "en": "Secure",
+    "verdict": "drop",
+    "reason": "Sicuro is core vocabulary, and the bare adjective does not distinguish protected systems, safe conditions, firm attachments or confident people."
+  },
+  {
+    "id": "it_fancy_vocab_357",
+    "en": "Vulnerable",
+    "verdict": "drop",
+    "reason": "Vulnerabile is an identical, high-frequency cognate with regular agreement, and its common a-complement is already expected at C1."
+  },
+  {
+    "id": "it_fancy_vocab_358",
+    "en": "Exclusive",
+    "verdict": "drop",
+    "reason": "Esclusivo is a transparent, familiar cognate, while the isolated prompt gives no basis for selecting restricted-access, prestige or incompatibility senses."
+  },
+  {
+    "id": "it_fancy_vocab_359",
+    "en": "Inclusive",
+    "verdict": "drop",
+    "reason": "Inclusivo is a transparent, familiar social-policy cognate with regular agreement and no distinctive construction."
+  },
+  {
+    "id": "it_fancy_vocab_360",
+    "en": "Interconnected",
+    "verdict": "drop",
+    "reason": "Interconnesso is transparent, predictable technical vocabulary already familiar to an advanced learner."
+  }
+]

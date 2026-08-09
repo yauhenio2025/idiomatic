@@ -1,0 +1,347 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "category": "lexical-noun",
+    "tl": "a foundry de semicondutores",
+    "alts": [
+      "a fabricante de semicondutores por encomenda"
+    ],
+    "register": "Termo especializado da indústria de semicondutores; o anglicismo foundry é corrente no Brasil e costuma receber artigo feminino.",
+    "trap": "Fundição, sem qualificador, evoca sobretudo o processamento de metais; no setor de chips, foundry fabrica projetos desenvolvidos por outras empresas.",
+    "example_tl": "A foundry de semicondutores reservou parte da capacidade para projetistas locais, mas ainda depende de equipamentos litográficos importados e insumos altamente concentrados.",
+    "example_en": "The semiconductor foundry reserved part of its capacity for local designers but still depends on imported lithography equipment and highly concentrated inputs.",
+    "cloze": "A {{c1::foundry de semicondutores}} reservou parte da capacidade para projetistas locais, mas ainda depende de equipamentos litográficos importados e insumos altamente concentrados.",
+    "note": "Diverge materialmente de old_back: fundição isolada seleciona primeiro a acepção metalúrgica. A forma principal acompanha o uso brasileiro em política industrial; a alternativa explicita o modelo de fabricação por encomenda."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "category": "lexical-noun",
+    "tl": "a fotolitografia",
+    "alts": [
+      "a litografia de semicondutores"
+    ],
+    "register": "Termo técnico de microfabricação para a transferência de padrões a uma superfície fotossensível; litografia é o hiperônimo.",
+    "trap": "Litografia também nomeia processos artísticos e gráficos; fotolitografia fixa a acepção baseada em luz exigida pelo contexto de semicondutores.",
+    "example_tl": "A fotolitografia transfere padrões microscópicos para a lâmina de silício, e pequenas falhas de exposição podem inutilizar centenas de circuitos antes do encapsulamento.",
+    "example_en": "Photolithography transfers microscopic patterns onto the silicon wafer, and small exposure defects can render hundreds of circuits unusable before packaging.",
+    "cloze": "A {{c1::fotolitografia}} transfere padrões microscópicos para a lâmina de silício, e pequenas falhas de exposição podem inutilizar centenas de circuitos antes do encapsulamento.",
+    "note": "Old_back fornece apenas o termo amplo e ainda omite o artigo. A nota seleciona a acepção específica indicada pelos itens vizinhos do lote."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "category": "lexical-noun",
+    "tl": "a pastilha semicondutora",
+    "alts": [
+      "a pastilha não encapsulada",
+      "o die"
+    ],
+    "register": "Especializado em microeletrônica; textos técnicos e normativos brasileiros também mantêm die entre parênteses após pastilha não encapsulada.",
+    "trap": "Die é a pastilha cortada da lâmina antes do encapsulamento; molde traduz outra acepção inglesa, e chip pode designar um componente já encapsulado.",
+    "example_tl": "A pastilha semicondutora é testada antes do encapsulamento para impedir que um defeito microscópico encareça a montagem de todo o processador.",
+    "example_en": "The semiconductor die is tested before packaging to prevent a microscopic defect from making assembly of the entire processor more expensive.",
+    "cloze": "{{c1::A pastilha semicondutora}} é testada antes do encapsulamento para impedir que um defeito microscópico encareça a montagem de todo o processador.",
+    "note": "Corrige materialmente old_back, que escolhe a acepção de molde. Autorrevisão: preferi pastilha semicondutora como headword, mantive não encapsulada para explicitar o estágio e alinhei o determinante do exemplo às alternativas."
+  },
+  {
+    "id": "it_fancy_vocab_286",
+    "en": "the Fabless",
+    "category": "lexical-noun",
+    "tl": "a empresa fabless",
+    "alts": [
+      "a empresa de semicondutores sem fábrica própria"
+    ],
+    "register": "Anglicismo especializado e corrente em política industrial; fabless funciona como adjetivo pós-nominal invariável.",
+    "trap": "Fabless não significa uma empresa sem escritórios: ela projeta ou comercializa semicondutores, mas contrata de terceiros a fabricação física.",
+    "example_tl": "A empresa fabless concentra recursos no projeto dos chips e terceiriza a fabricação, estratégia que reduz investimento fixo, mas amplia a dependência de foundries estrangeiras.",
+    "example_en": "The fabless company concentrates resources on chip design and outsources manufacturing, a strategy that reduces fixed investment but increases dependence on foreign foundries.",
+    "cloze": "A {{c1::empresa fabless}} concentra recursos no projeto dos chips e terceiriza a fabricação, estratégia que reduz investimento fixo, mas amplia a dependência de foundries estrangeiras.",
+    "note": "Old_back preserva o empréstimo, mas não oferece uma unidade lexical produtiva nem explica o modelo empresarial. A capitalização foi normalizada."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "category": "lexical-noun",
+    "tl": "o sistema em um chip (SoC)",
+    "alts": [
+      "o sistema em chip (SoC)"
+    ],
+    "register": "Termo técnico de arquitetura de hardware; a sigla internacional SoC é corrente depois da primeira expansão.",
+    "trap": "Um SoC integra vários subsistemas no mesmo circuito e não é sinônimo de microprocessador, que pode ser apenas um de seus componentes.",
+    "example_tl": "O sistema em um chip (SoC) integra processador, memória e interfaces no mesmo componente, reduzindo espaço e consumo em dispositivos móveis de baixo custo.",
+    "example_en": "The system on a chip (SoC) integrates a processor, memory, and interfaces into the same component, reducing space and power consumption in low-cost mobile devices.",
+    "cloze": "{{c1::O sistema em um chip (SoC)}} integra processador, memória e interfaces no mesmo componente, reduzindo espaço e consumo em dispositivos móveis de baixo custo.",
+    "note": "Old_back registra uma variante possível, mas omite a sigla e a construção mais explícita em um chip. Autorrevisão: alinhei o artigo do exemplo às duas formas de headword."
+  },
+  {
+    "id": "it_fancy_vocab_291",
+    "en": "the Deep Learning",
+    "category": "lexical-noun",
+    "tl": "o deep learning",
+    "alts": [
+      "o aprendizado profundo"
+    ],
+    "register": "O empréstimo inglês predomina no setor de tecnologia brasileiro; aprendizado profundo é a alternativa explicativa em divulgação e textos acadêmicos.",
+    "trap": "Aprendizagem profunda é compreensível e usada, mas aprendizado profundo é mais característico do português brasileiro; nenhum dos dois equivale a todo aprendizado de máquina.",
+    "example_tl": "O deep learning elevou a precisão dos sistemas de reconhecimento de voz, mas também concentrou poder em empresas capazes de financiar modelos gigantescos.",
+    "example_en": "Deep learning increased the accuracy of speech-recognition systems, but it also concentrated power in companies capable of financing gigantic models.",
+    "cloze": "O {{c1::deep learning}} elevou a precisão dos sistemas de reconhecimento de voz, mas também concentrou poder em empresas capazes de financiar modelos gigantescos.",
+    "note": "Old_back é uma tradução válida, porém menos característica do uso profissional brasileiro. A nota retém a forma portuguesa como alternativa e delimita a relação hierárquica com aprendizado de máquina."
+  },
+  {
+    "id": "it_fancy_vocab_292",
+    "en": "the Machine Learning",
+    "category": "lexical-noun",
+    "tl": "o aprendizado de máquina",
+    "alts": [
+      "o machine learning"
+    ],
+    "register": "Termo técnico neutro e consolidado no Brasil; o empréstimo inglês permanece muito frequente na indústria.",
+    "trap": "O composto consagrado omite o artigo: aprendizado de máquina, não aprendizado da máquina; o termo nomeia o campo, não a aprendizagem de um aparelho específico.",
+    "example_tl": "O aprendizado de máquina automatizou parte da moderação, porém os erros permaneceram concentrados em variedades linguísticas pouco representadas nos dados de treinamento.",
+    "example_en": "Machine learning automated part of moderation, yet errors remained concentrated in language varieties poorly represented in the training data.",
+    "cloze": "O {{c1::aprendizado de máquina}} automatizou parte da moderação, porém os erros permaneceram concentrados em variedades linguísticas pouco representadas nos dados de treinamento.",
+    "note": "Old_back fornece o equivalente brasileiro correto. A retenção acrescenta a regência interna e a alternativa efetivamente usada no setor."
+  },
+  {
+    "id": "it_fancy_vocab_293",
+    "en": "the Training Data",
+    "category": "lexical-noun",
+    "tl": "os dados de treinamento",
+    "alts": [],
+    "register": "Termo técnico neutro para os dados usados no ajuste de um modelo; aparece no singular coletivo ou, mais frequentemente, no plural.",
+    "trap": "Dados de treinamento pode abranger todo o material usado para treinar; conjunto de treinamento costuma nomear a partição oposta aos conjuntos de validação e teste.",
+    "example_tl": "Os dados de treinamento incluem decisões editoriais históricas; por isso, um modelo pode reproduzir exclusões mesmo quando seus desenvolvedores removem atributos explicitamente sensíveis.",
+    "example_en": "Training data includes historical editorial decisions; therefore, a model can reproduce exclusions even when its developers remove explicitly sensitive attributes.",
+    "cloze": "Os {{c1::dados de treinamento}} incluem decisões editoriais históricas; por isso, um modelo pode reproduzir exclusões mesmo quando seus desenvolvedores removem atributos explicitamente sensíveis.",
+    "note": "Old_back está correto. A retenção documenta a distinção produtiva entre os dados de treinamento em sentido amplo e uma partição específica do conjunto de dados."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "category": "lexical-noun",
+    "tl": "o processamento de linguagem natural (PLN)",
+    "alts": [],
+    "register": "Nome técnico e acadêmico estabelecido; PLN é a sigla portuguesa, embora NLP também circule em equipes internacionais.",
+    "trap": "Não transfira automaticamente a sigla inglesa NLP: PLN é produtiva em português; processamento de linguagem natural não se reduz à geração de texto.",
+    "example_tl": "O processamento de linguagem natural (PLN) permite analisar milhões de comentários, mas a escala não corrige vieses presentes nas categorias usadas para classificá-los.",
+    "example_en": "Natural language processing (NLP) makes it possible to analyze millions of comments, but scale does not correct biases in the categories used to classify them.",
+    "cloze": "O {{c1::processamento de linguagem natural (PLN)}} permite analisar milhões de comentários, mas a escala não corrige vieses presentes nas categorias usadas para classificá-los.",
+    "note": "Old_back fornece o núcleo correto, mas omite o artigo e a sigla relevante para produção. Autorrevisão: o registro reconhece NLP como variante profissional, sem apresentar PLN como forma exclusiva."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "category": "lexical-noun",
+    "tl": "as redes adversárias generativas (GANs)",
+    "alts": [
+      "as redes generativas adversariais (GANs)"
+    ],
+    "register": "Termo técnico de aprendizado de máquina; há variação entre adversárias e adversariais, enquanto a sigla inglesa GAN permanece estável.",
+    "trap": "Geradora nomeia apenas uma das duas redes da arquitetura; chamar o conjunto de redes adversárias geradoras apaga a oposição entre gerador e discriminador.",
+    "example_tl": "As redes adversárias generativas (GANs) produzem imagens sintéticas convincentes, embora o treinamento instável possa amplificar vieses e dificultar a auditoria dos resultados.",
+    "example_en": "Generative adversarial networks (GANs) produce convincing synthetic images, although unstable training can amplify biases and make the results harder to audit.",
+    "cloze": "As {{c1::redes adversárias generativas (GANs)}} produzem imagens sintéticas convincentes, embora o treinamento instável possa amplificar vieses e dificultar a auditoria dos resultados.",
+    "note": "Corrige materialmente old_back: geradoras não qualifica adequadamente a arquitetura completa. Autorrevisão: mantive a forma principal atestada por IBM e AWS e reordenei a alternativa conforme uso acadêmico brasileiro documentado."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "category": "lexical-noun",
+    "tl": "o aprendizado por reforço",
+    "alts": [
+      "a aprendizagem por reforço"
+    ],
+    "register": "Termo técnico consolidado; aprendizado é mais característico do português brasileiro, enquanto aprendizagem também ocorre em textos acadêmicos.",
+    "trap": "A construção fixa usa por reforço, não de reforço; o método aprende com sinais de recompensa, e não simplesmente com exemplos rotulados.",
+    "example_tl": "O aprendizado por reforço otimiza decisões por recompensas sucessivas, mas objetivos mal definidos podem ensinar agentes a explorar falhas em vez de cumprir a política.",
+    "example_en": "Reinforcement learning optimizes decisions through successive rewards, but poorly defined objectives can teach agents to exploit flaws instead of following the policy.",
+    "cloze": "O {{c1::aprendizado por reforço}} otimiza decisões por recompensas sucessivas, mas objetivos mal definidos podem ensinar agentes a explorar falhas em vez de cumprir a política.",
+    "note": "Old_back está correto em sentido e regência; a nota adapta o substantivo ao uso brasileiro predominante e preserva a variante também atestada."
+  },
+  {
+    "id": "it_fancy_vocab_303",
+    "en": "the Inventory",
+    "category": "lexical-noun",
+    "tl": "o estoque",
+    "alts": [],
+    "register": "Neutro e corrente em logística para os bens mantidos disponíveis; inventário pertence sobretudo à contagem, ao registro ou à lista desses bens.",
+    "trap": "O cognato inventário não substitui automaticamente inventory: em gestão logística, o volume disponível é estoque, enquanto fazer inventário é contá-lo e registrá-lo.",
+    "example_tl": "O estoque de componentes caiu abaixo do nível de segurança, obrigando a fábrica a suspender pedidos enquanto renegociava prazos com fornecedores asiáticos.",
+    "example_en": "Component inventory fell below the safety level, forcing the factory to suspend orders while it renegotiated deadlines with Asian suppliers.",
+    "cloze": "O {{c1::estoque}} de componentes caiu abaixo do nível de segurança, obrigando a fábrica a suspender pedidos enquanto renegociava prazos com fornecedores asiáticos.",
+    "note": "Diverge materialmente de old_back, que reproduz um cognato enganoso para a acepção logística selecionada pelos itens vizinhos."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "category": "lexical-noun",
+    "tl": "a gestão de compras e suprimentos",
+    "alts": [
+      "o procurement"
+    ],
+    "register": "Formal no setor privado para o processo amplo que vai da identificação da necessidade à contratação e gestão do fornecimento; o empréstimo é corporativo.",
+    "trap": "Procurement é mais amplo do que uma compra isolada e não equivale ao suprimento físico; no setor público, o contexto pode exigir contratação pública.",
+    "example_tl": "A gestão de compras e suprimentos definiu critérios socioambientais para fornecedores, mas a diretoria eliminou exigências sempre que ameaçavam reduzir a margem trimestral.",
+    "example_en": "Procurement management set social and environmental criteria for suppliers, but management removed requirements whenever they threatened to reduce the quarterly margin.",
+    "cloze": "A {{c1::gestão de compras e suprimentos}} definiu critérios socioambientais para fornecedores, mas a diretoria eliminou exigências sempre que ameaçavam reduzir a margem trimestral.",
+    "note": "Diverge de old_back: suprimento, no singular, sugere o bem fornecido e não todo o processo gerencial. A acepção pública foi apenas sinalizada porque o lote aponta para logística empresarial."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "category": "lexical-expression",
+    "tl": "o sistema just in time (JIT)",
+    "alts": [],
+    "register": "Termo técnico de produção e logística; em português, a locução inglesa costuma aparecer em minúsculas, acompanhada de sistema, método ou produção.",
+    "trap": "Como método produtivo, just in time é um sintagma nominal e não a expressão cotidiana bem na hora; não exige as maiúsculas nem os hífens do prompt.",
+    "example_tl": "O sistema just in time (JIT) reduziu custos de estoque, porém deixou a montadora vulnerável quando uma greve interrompeu a entrega diária de componentes.",
+    "example_en": "The just-in-time (JIT) system reduced inventory costs but left the automaker vulnerable when a strike interrupted the daily delivery of components.",
+    "cloze": "O {{c1::sistema just in time (JIT)}} reduziu custos de estoque, porém deixou a montadora vulnerável quando uma greve interrompeu a entrega diária de componentes.",
+    "note": "Old_back repete o inglês sem transformá-lo em headword português. A nota acrescenta o núcleo nominal, a sigla e a convenção gráfica do uso brasileiro."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "category": "lexical-noun",
+    "tl": "a logística terceirizada (3PL)",
+    "alts": [
+      "a logística de terceiros (3PL)"
+    ],
+    "register": "Especializado em cadeias de suprimentos para serviços logísticos contratados de um operador externo; a sigla internacional 3PL é corrente.",
+    "trap": "Third-party não é terceiro partido, decalque de sentido político; uma operação 3PL pode abranger transporte, armazenagem e distribuição sem transferir a propriedade da mercadoria.",
+    "example_tl": "A logística terceirizada (3PL) ampliou a cobertura nacional do varejista, mas contratos opacos dificultaram atribuir responsabilidade por atrasos e perdas de mercadorias.",
+    "example_en": "Third-party logistics (3PL) expanded the retailer's nationwide coverage, but opaque contracts made it difficult to assign responsibility for delays and lost goods.",
+    "cloze": "A {{c1::logística terceirizada (3PL)}} ampliou a cobertura nacional do varejista, mas contratos opacos dificultaram atribuir responsabilidade por atrasos e perdas de mercadorias.",
+    "note": "Old_back é possível, mas a forma principal explicita o modelo de contratação e acrescenta a sigla produtiva no setor."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "category": "lexical-noun",
+    "tl": "o lead time",
+    "alts": [],
+    "register": "Anglicismo técnico muito corrente em operações; a tradução varia conforme o intervalo medido, como prazo de entrega ou tempo de produção.",
+    "trap": "Lead time nunca é tempo de liderança; identifique os marcos do processo antes de escolher entre prazo de entrega, reposição, produção ou aprovisionamento.",
+    "example_tl": "O lead time dos chips importados dobrou após o embargo, forçando fabricantes locais a rever estoques de segurança e calendários de lançamento.",
+    "example_en": "The lead time for imported chips doubled after the embargo, forcing local manufacturers to revise safety stocks and launch schedules.",
+    "cloze": "O {{c1::lead time}} dos chips importados dobrou após o embargo, forçando fabricantes locais a rever estoques de segurança e calendários de lançamento.",
+    "note": "Old_back preserva corretamente o empréstimo, mas usa maiúsculas desnecessárias e não registra que equivalentes portugueses dependem dos limites do processo."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "category": "lexical-noun",
+    "tl": "a prospecção e seleção de fornecedores",
+    "alts": [
+      "o sourcing de fornecedores"
+    ],
+    "register": "Formal em gestão de suprimentos; o empréstimo é corrente, sobretudo na expressão strategic sourcing, mas uma expansão portuguesa costuma ser mais clara.",
+    "trap": "Sourcing procura, avalia e seleciona fontes de fornecimento; não equivale a todo o procurement nem ao simples ato de comprar ou receber suprimentos.",
+    "example_tl": "A prospecção e seleção de fornecedores priorizou empresas com capacidade ociosa, mas ignorou riscos trabalhistas que depois comprometeram a continuidade dos contratos.",
+    "example_en": "Supplier sourcing prioritized companies with spare capacity but ignored labor risks that later jeopardized contract continuity.",
+    "cloze": "A {{c1::prospecção e seleção de fornecedores}} priorizou empresas com capacidade ociosa, mas ignorou riscos trabalhistas que depois comprometeram a continuidade dos contratos.",
+    "note": "Old_back apenas transfere o empréstimo e sua capitalização. A nota escolhe a acepção geral sugerida pelo contexto e a separa do processo mais amplo de procurement."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "category": "lexical-noun",
+    "tl": "o código SKU",
+    "alts": [
+      "o SKU"
+    ],
+    "register": "Termo operacional de varejo e estoque para o identificador interno atribuído a cada variante comercializável; a sigla inglesa não muda.",
+    "trap": "SKU não é sinônimo de código de barras, EAN ou GTIN: empresas diferentes podem atribuir SKUs próprios à mesma variante de produto.",
+    "example_tl": "O código SKU distingue cada combinação de tamanho e cor no estoque interno, enquanto o GTIN identifica comercialmente o produto em diferentes varejistas.",
+    "example_en": "The SKU code distinguishes each size and color combination in internal inventory, while the GTIN commercially identifies the product across different retailers.",
+    "cloze": "O {{c1::código SKU}} distingue cada combinação de tamanho e cor no estoque interno, enquanto o GTIN identifica comercialmente o produto em diferentes varejistas.",
+    "note": "Diverge materialmente da expansão literal de old_back, que não é a forma operacional mais produtiva. O uso brasileiro trata SKU sobretudo como código interno da unidade de estoque."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "category": "lexical-noun",
+    "tl": "a previsão de demanda",
+    "alts": [
+      "a previsão da demanda"
+    ],
+    "register": "Colocação neutro-formal de planejamento logístico e comercial; as construções com de demanda e da demanda são correntes.",
+    "trap": "Previsão estima a demanda futura; não confunda com provisão, que designa fornecimento, reserva ou reconhecimento contábil.",
+    "example_tl": "A previsão de demanda combinou vendas históricas e sinais macroeconômicos, mas subestimou o impacto de uma campanha viral sobre produtos de baixa margem.",
+    "example_en": "Demand forecasting combined historical sales and macroeconomic signals but underestimated the impact of a viral campaign on low-margin products.",
+    "cloze": "A {{c1::previsão de demanda}} combinou vendas históricas e sinais macroeconômicos, mas subestimou o impacto de uma campanha viral sobre produtos de baixa margem.",
+    "note": "Old_back fornece a colocação correta, embora sem artigo. A retenção registra uma alternativa genuína e o contraste lexical com provisão."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "category": "lexical-noun",
+    "tl": "o efeito chicote",
+    "alts": [],
+    "register": "Termo especializado de gestão da cadeia de suprimentos para a amplificação de pequenas oscilações da demanda entre seus diferentes elos.",
+    "trap": "A colocação consagrada é efeito chicote, sem de; não se trata de mera volatilidade, mas da amplificação a montante de variações nos pedidos.",
+    "example_tl": "O efeito chicote transformou uma pequena alta nas vendas em pedidos excessivos dos distribuidores, agravando oscilações de estoque em toda a cadeia.",
+    "example_en": "The bullwhip effect turned a small increase in sales into excessive orders from distributors, worsening inventory fluctuations throughout the chain.",
+    "cloze": "O {{c1::efeito chicote}} transformou uma pequena alta nas vendas em pedidos excessivos dos distribuidores, agravando oscilações de estoque em toda a cadeia.",
+    "note": "Old_back estava vazio. A nota fornece o termo técnico brasileiro e delimita o mecanismo, evitando uma leitura puramente metafórica."
+  },
+  {
+    "id": "it_fancy_vocab_314",
+    "en": "the Outsourcing",
+    "category": "lexical-noun",
+    "tl": "a terceirização",
+    "alts": [
+      "o outsourcing"
+    ],
+    "register": "Termo neutro-formal e consolidado no português brasileiro; o empréstimo inglês aparece com frequência em linguagem corporativa.",
+    "trap": "Terceirização contrata uma entidade externa para executar uma atividade; não implica necessariamente deslocá-la para outro país, que seria offshoring.",
+    "example_tl": "A terceirização da moderação reduziu despesas da plataforma, mas transferiu conteúdo traumático para trabalhadores com pouco apoio psicológico e alta rotatividade.",
+    "example_en": "Outsourcing moderation reduced the platform's expenses but shifted traumatic content to workers with little psychological support and high turnover.",
+    "cloze": "A {{c1::terceirização}} da moderação reduziu despesas da plataforma, mas transferiu conteúdo traumático para trabalhadores com pouco apoio psicológico e alta rotatividade.",
+    "note": "Old_back está correto. A retenção fixa a forma brasileira não cognata e distingue terceirização de transferência internacional da atividade."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "category": "lexical-noun",
+    "tl": "a armazenagem",
+    "alts": [],
+    "register": "Termo profissional de logística para a função operacional ligada à guarda e movimentação em armazéns; armazenamento é mais geral.",
+    "trap": "No uso logístico, armazenagem costuma nomear a operação; armazenamento também se aplica ao simples ato de guardar e a dados digitais.",
+    "example_tl": "A armazenagem automatizada acelerou a separação de pedidos, porém concentrou a operação em sistemas proprietários cuja falha paralisou três centros de distribuição.",
+    "example_en": "Automated warehousing sped up order picking but concentrated the operation in proprietary systems whose failure shut down three distribution centers.",
+    "cloze": "A {{c1::armazenagem}} automatizada acelerou a separação de pedidos, porém concentrou a operação em sistemas proprietários cuja falha paralisou três centros de distribuição.",
+    "note": "Refina old_back: armazenamento é possível, mas mais amplo; armazenagem seleciona a acepção setorial indicada pelos itens logísticos do lote."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "category": "lexical-verb",
+    "tl": "rastrear",
+    "alts": [],
+    "register": "Neutro em logística e tecnologia para seguir a localização ou o percurso; acompanhar é preferível para progresso, estado ou desempenho.",
+    "trap": "O to do infinitivo inglês não vira para no headword português; rastrear uma remessa, acompanhar um processo e monitorar um indicador não são trocas automáticas.",
+    "example_tl": "A plataforma rastreia cada remessa em tempo real, mas não informa quais parceiros acessam os dados de localização dos entregadores terceirizados.",
+    "example_en": "The platform tracks every shipment in real time but does not disclose which partners access the outsourced couriers' location data.",
+    "cloze": "A plataforma {{c1::rastreia}} cada remessa em tempo real, mas não informa quais parceiros acessam os dados de localização dos entregadores terceirizados.",
+    "note": "Corrige a forma de dicionário de old_back, que incorporou indevidamente a preposição para. O exemplo fixa a acepção logística recuperável pelo contexto."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "category": "lexical-verb",
+    "tl": "lucrar com",
+    "alts": [
+      "obter lucro com"
+    ],
+    "register": "Neutro; lucrar com é corrente e pode ter carga crítica, enquanto obter lucro com é uma expansão mais formal.",
+    "trap": "Na acepção monetária, lucrar rege com; beneficiar-se de é mais amplo e não afirma necessariamente a obtenção de lucro financeiro.",
+    "example_tl": "Algumas consultorias lucraram com a crise ao vender sistemas de vigilância cuja eficácia jamais foi avaliada por autoridades independentes ou pesquisadores externos.",
+    "example_en": "Some consulting firms profited from the crisis by selling surveillance systems whose effectiveness was never evaluated by independent authorities or outside researchers.",
+    "cloze": "Algumas consultorias {{c1::lucraram com}} a crise ao vender sistemas de vigilância cuja eficácia jamais foi avaliada por autoridades independentes ou pesquisadores externos.",
+    "note": "Old_back fornece o verbo correto, mas omite a preposição governada necessária para produção. A alternativa preserva explicitamente a acepção financeira."
+  }
+]

@@ -1,0 +1,341 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "category": "lexical-noun",
+    "tl": "la fonderie de semi-conducteurs",
+    "alts": [],
+    "register": "Specialist semiconductor-industry term for a fabrication plant or business that manufactures chips designed by clients; context distinguishes the facility from the company.",
+    "trap": "Bare fonderie first evokes metalworking outside this domain; fondeur de semi-conducteurs usually names the company, while fonderie can name its fabrication operation.",
+    "example_tl": "La fonderie de semi-conducteurs taïwanaise fabrique les puces conçues par ses clients, ce qui place un maillon stratégique de la chaîne entre les mains de quelques acteurs.",
+    "example_en": "The Taiwanese semiconductor foundry manufactures chips designed by its clients, placing a strategic link in the chain in the hands of a few players.",
+    "cloze": "{{c1::La fonderie de semi-conducteurs}} taïwanaise fabrique les puces conçues par ses clients, ce qui place un maillon stratégique de la chaîne entre les mains de quelques acteurs.",
+    "note": "Materially refines old_back fonderie by anchoring the semiconductor sense; the isolated English source can denote either the plant or the contract-manufacturing business. Self-review replaced an unnatural concentre un maillon collocation."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "category": "lexical-noun",
+    "tl": "la photolithographie",
+    "alts": [],
+    "register": "Neutral specialist term for transferring circuit patterns onto a photosensitive semiconductor surface; ordinary lithographie covers a broader printing process.",
+    "trap": "Legacy lithographie is too broad in this semiconductor sequence: the fabrication process is specifically photolithographie.",
+    "example_tl": "La photolithographie transfère des motifs microscopiques sur la tranche de silicium, mais chaque nouvelle génération exige des équipements toujours plus coûteux et complexes.",
+    "example_en": "Photolithography transfers microscopic patterns onto the silicon wafer, but each new generation requires increasingly expensive and complex equipment.",
+    "cloze": "{{c1::La photolithographie}} transfère des motifs microscopiques sur la tranche de silicium, mais chaque nouvelle génération exige des équipements toujours plus coûteux et complexes.",
+    "note": "Materially narrows old_back lithographie to the semiconductor process selected by the surrounding source items. Self-review replaced projette with transfère to describe the overall process rather than one exposure technique."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "category": "lexical-noun",
+    "tl": "la puce nue",
+    "alts": [],
+    "register": "Specialist electronics term for the individual piece of processed semiconductor before packaging; puce alone is broader in general technical prose.",
+    "trap": "French matrice translates die in moulding or tooling, not the semiconductor sense; puce nue makes the absence of packaging explicit.",
+    "example_tl": "Une puce nue doit être testée puis encapsulée avant son intégration au produit final, car ses connexions restent particulièrement vulnérables aux dommages.",
+    "example_en": "A bare die must be tested and then packaged before being integrated into the final product, because its connections remain particularly vulnerable to damage.",
+    "cloze": "Une {{c1::puce nue}} doit être testée puis encapsulée avant son intégration au produit final, car ses connexions restent particulièrement vulnérables aux dommages.",
+    "note": "Materially replaces old_back matrice, which selects a different sense of English die."
+  },
+  {
+    "id": "it_fancy_vocab_286",
+    "en": "the Fabless",
+    "category": "lexical-noun",
+    "tl": "l’entreprise de semi-conducteurs sans usine",
+    "alts": [
+      "l’entreprise fabless"
+    ],
+    "register": "The expanded phrase is clear in formal policy prose; entreprise fabless is established but belongs mainly to semiconductor-industry and financial usage.",
+    "trap": "Fabless is an invariable English adjective in French and normally modifies entreprise, société or modèle; le fabless is not a production-ready company noun.",
+    "example_tl": "Une entreprise de semi-conducteurs sans usine concentre ses investissements sur la conception, tout en confiant la fabrication de ses puces à des fonderies partenaires.",
+    "example_en": "A fabless semiconductor company concentrates its investments on design while entrusting the manufacture of its chips to partner foundries.",
+    "cloze": "Une {{c1::entreprise de semi-conducteurs sans usine}} concentre ses investissements sur la conception, tout en confiant la fabrication de ses puces à des fonderies partenaires.",
+    "note": "The English source is elliptically nominalized. This note interprets it as a fabless semiconductor company and materially replaces legacy Le Fabless."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "category": "lexical-noun",
+    "tl": "le système sur puce (SoC)",
+    "alts": [],
+    "register": "Standard specialist hardware term; the international abbreviation SoC is common in both technical reporting and industry analysis.",
+    "trap": "A système sur puce integrates several functions on one component; it is not merely another name for a microprocesseur.",
+    "example_tl": "Un système sur puce, ou SoC, réunit un processeur, de la mémoire et plusieurs interfaces sur un même composant, réduisant l’encombrement sans supprimer la dépendance aux fondeurs.",
+    "example_en": "A system on a chip, or SoC, combines a processor, memory, and several interfaces on a single component, reducing bulk without eliminating dependence on foundries.",
+    "cloze": "Un {{c1::système sur puce}}, ou SoC, réunit un processeur, de la mémoire et plusieurs interfaces sur un même composant, réduisant l’encombrement sans supprimer la dépendance aux fondeurs.",
+    "note": "Old_back gives the established full term. The production headword adds the conventional abbreviation and the example fixes the integrated-system sense. Self-review restored the natural determiners in the component list."
+  },
+  {
+    "id": "it_fancy_vocab_291",
+    "en": "the Deep Learning",
+    "category": "lexical-noun",
+    "tl": "l’apprentissage profond",
+    "alts": [
+      "le deep learning"
+    ],
+    "register": "Apprentissage profond is preferred in institutional, educational and formal technical prose; deep learning remains widespread in France’s technology industry.",
+    "trap": "The established French term is apprentissage profond, not legacy apprentissage en profondeur; deep describes the model’s many representation layers.",
+    "example_tl": "L’apprentissage profond excelle à repérer des régularités dans d’immenses corpus, mais ses performances ne garantissent ni explicabilité ni compréhension du contexte.",
+    "example_en": "Deep learning excels at identifying patterns in immense corpora, but its performance guarantees neither explainability nor an understanding of context.",
+    "cloze": "{{c1::L’apprentissage profond}} excelle à repérer des régularités dans d’immenses corpus, mais ses performances ne garantissent ni explicabilité ni compréhension du contexte.",
+    "note": "Materially replaces old_back apprentissage en profondeur with the established field name; the English loan is retained as a France-French industry alternative."
+  },
+  {
+    "id": "it_fancy_vocab_292",
+    "en": "the Machine Learning",
+    "category": "lexical-noun",
+    "tl": "l’apprentissage automatique",
+    "alts": [
+      "le machine learning"
+    ],
+    "register": "Apprentissage automatique is the standard institutional and academic term; machine learning is common in France’s technical and business usage.",
+    "trap": "Do not calque English machine as machine in the French compound; automatique names learning from data and does not imply the absence of human choices.",
+    "example_tl": "L’apprentissage automatique aide les rédactions à classer des documents, mais les choix de variables et d’étiquettes incorporent souvent des présupposés éditoriaux.",
+    "example_en": "Machine learning helps newsrooms classify documents, but the choices of variables and labels often incorporate editorial assumptions.",
+    "cloze": "{{c1::L’apprentissage automatique}} aide les rédactions à classer des documents, mais les choix de variables et d’étiquettes incorporent souvent des présupposés éditoriaux.",
+    "note": "Old_back is accurate. The alternative records ordinary France-French industry usage without displacing the preferred formal term."
+  },
+  {
+    "id": "it_fancy_vocab_293",
+    "en": "the Training Data",
+    "category": "lexical-noun",
+    "tl": "les données d’entraînement",
+    "alts": [
+      "les données d’apprentissage"
+    ],
+    "register": "Neutral machine-learning term; données d’entraînement is common in technical practice, while données d’apprentissage is frequent in formal explanatory prose.",
+    "trap": "Training is entraînement or apprentissage here, not formation; a jeu d’entraînement is a defined training set rather than all training data collectively.",
+    "example_tl": "Des données d’entraînement mal documentées peuvent reproduire des discriminations historiques, même lorsque l’architecture du modèle paraît techniquement irréprochable aux évaluateurs.",
+    "example_en": "Poorly documented training data can reproduce historical discrimination even when the model’s architecture appears technically flawless to evaluators.",
+    "cloze": "Des {{c1::données d’entraînement}} mal documentées peuvent reproduire des discriminations historiques, même lorsque l’architecture du modèle paraît techniquement irréprochable aux évaluateurs.",
+    "note": "Old_back is accurate. The note distinguishes the mass term from the narrower partition called a training set."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "category": "lexical-noun",
+    "tl": "le traitement automatique du langage naturel (TALN)",
+    "alts": [],
+    "register": "Standard academic and institutional field name; TALN is the conventional French abbreviation, although English NLP also appears in international teams.",
+    "trap": "French uses langage naturel, not langue naturelle, for the computational object; importing English NLP also loses the conventional French abbreviation TALN.",
+    "example_tl": "Le traitement automatique du langage naturel permet d’analyser des millions de commentaires, sans pour autant saisir l’ironie politique propre à chaque communauté.",
+    "example_en": "Natural language processing makes it possible to analyze millions of comments without necessarily grasping the political irony specific to each community.",
+    "cloze": "{{c1::Le traitement automatique du langage naturel}} permet d’analyser des millions de commentaires, sans pour autant saisir l’ironie politique propre à chaque communauté.",
+    "note": "Materially expands old_back by restoring automatique and the established abbreviation TALN."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "category": "lexical-noun",
+    "tl": "le réseau antagoniste génératif (GAN)",
+    "alts": [],
+    "register": "Formal French technical term; specialists also use the English abbreviation GAN, especially in research written for an international audience.",
+    "trap": "Legacy adversoriel is an English-shaped calque; French technical terminology uses antagoniste for the paired models trained in opposition.",
+    "example_tl": "Les réseaux antagonistes génératifs opposent deux modèles pendant l’entraînement, ce qui permet de produire des images plausibles tout en amplifiant certains biais du corpus.",
+    "example_en": "Generative adversarial networks pit two models against each other during training, making it possible to produce plausible images while amplifying some biases in the corpus.",
+    "cloze": "Les {{c1::réseaux antagonistes génératifs}} opposent deux modèles pendant l’entraînement, ce qui permet de produire des images plausibles tout en amplifiant certains biais du corpus.",
+    "note": "Materially replaces old_back réseaux adversoriels génératifs. Terminological variation exists in specialist usage, so the established antagoniste form is taught without a speculative French alternative."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "category": "lexical-noun",
+    "tl": "l’apprentissage par renforcement",
+    "alts": [],
+    "register": "Standard academic and technical term for learning through rewards associated with an agent’s actions in an environment.",
+    "trap": "The fixed construction is apprentissage par renforcement, not apprentissage renforcé; par marks the learning mechanism rather than a property of the learning itself.",
+    "example_tl": "L’apprentissage par renforcement peut optimiser la consommation électrique d’un centre de données, mais une récompense mal définie encourage parfois des stratégies indésirables.",
+    "example_en": "Reinforcement learning can optimize a data center’s energy consumption, but a poorly defined reward sometimes encourages undesirable strategies.",
+    "cloze": "{{c1::L’apprentissage par renforcement}} peut optimiser la consommation électrique d’un centre de données, mais une récompense mal définie encourage parfois des stratégies indésirables.",
+    "note": "Old_back is accurate; retention is justified by the fixed preposition and the specialized reward-based sense. Self-review specified electrical consumption to remove an avoidable ambiguity."
+  },
+  {
+    "id": "it_fancy_vocab_303",
+    "en": "the Inventory",
+    "category": "lexical-noun",
+    "tl": "les stocks",
+    "alts": [],
+    "register": "Standard supply-chain plural for goods and materials held by a business; singular le stock is used when treating the quantity as one aggregate.",
+    "trap": "English inventory is stocks in this supply-chain sense; French inventaire normally means the act of stocktaking or the resulting itemized list.",
+    "example_tl": "Les stocks de composants critiques immobilisent du capital, mais leur réduction excessive expose l’usine au moindre retard chez un fournisseur lointain.",
+    "example_en": "Inventories of critical components tie up capital, but reducing them excessively exposes the factory to the slightest delay at a distant supplier.",
+    "cloze": "Les {{c1::stocks}} de composants critiques immobilisent du capital, mais leur réduction excessive expose l’usine au moindre retard chez un fournisseur lointain.",
+    "note": "Materially replaces old_back inventaire, which selects stocktaking or an itemized list rather than the goods held."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "category": "lexical-noun",
+    "tl": "la fonction achats",
+    "alts": [],
+    "register": "Standard corporate term for the function that defines needs, selects suppliers and negotiates purchases; public procurement requires a context-specific legal term.",
+    "trap": "Approvisionnement keeps materials available and manages replenishment; it does not by itself cover the supplier selection and negotiation performed by la fonction achats.",
+    "example_tl": "La fonction achats doit évaluer le coût total, les risques sociaux et la dépendance géopolitique avant de sélectionner un fournisseur stratégique.",
+    "example_en": "The procurement function must assess total cost, social risks, and geopolitical dependence before selecting a strategic supplier.",
+    "cloze": "{{c1::La fonction achats}} doit évaluer le coût total, les risques sociaux et la dépendance géopolitique avant de sélectionner un fournisseur stratégique.",
+    "note": "The source is polysemous. This note selects corporate procurement and materially replaces legacy approvisionnement; public-sector procurement would instead call for commande publique or passation de marchés."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "category": "lexical-expression",
+    "tl": "le juste-à-temps",
+    "alts": [],
+    "register": "Standard operations-management noun for organizing production and deliveries around immediate need; the English abbreviation JIT also occurs in industry.",
+    "trap": "As the logistics method, juste-à-temps is a masculine hyphenated noun; juste à temps without hyphens is the everyday adverbial phrase meaning just in time.",
+    "example_tl": "Le juste-à-temps réduit les stocks intermédiaires, mais transforme chaque retard portuaire en menace immédiate pour la continuité de la production industrielle.",
+    "example_en": "Just-in-time production reduces intermediate inventories but turns every port delay into an immediate threat to the continuity of industrial production.",
+    "cloze": "{{c1::Le juste-à-temps}} réduit les stocks intermédiaires, mais transforme chaque retard portuaire en menace immédiate pour la continuité de la production industrielle.",
+    "note": "Materially corrects old_back Juste à temps by supplying the article and nominal hyphenation required for the logistics method."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "category": "lexical-noun",
+    "tl": "la logistique externalisée (3PL)",
+    "alts": [],
+    "register": "Professional supply-chain term for logistics entrusted to an outside specialist; 3PL commonly labels the service model and its providers.",
+    "trap": "Logistique des tiers is not idiomatic French; sous-traitance is broader, whereas 3PL specifically covers outsourced logistics operations.",
+    "example_tl": "L’entreprise recourt à la logistique externalisée : un prestataire 3PL coordonne l’entreposage et le transport sans devenir propriétaire des marchandises.",
+    "example_en": "The company uses third-party logistics: a 3PL provider coordinates warehousing and transport without taking ownership of the goods.",
+    "cloze": "L’entreprise recourt à la {{c1::logistique externalisée}} : un prestataire 3PL coordonne l’entreposage et le transport sans devenir propriétaire des marchandises.",
+    "note": "Materially replaces legacy logistique des tiers with an idiomatic France-French expansion; the international label 3PL preserves the specialist scope. Self-review removed a redundant confie sa logistique externalisée construction."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "category": "lexical-noun",
+    "tl": "le délai d’approvisionnement",
+    "alts": [],
+    "register": "Standard supply-chain term for the elapsed time from an ordering or replenishment trigger to availability; other processes require a different délai compound.",
+    "trap": "Lead time has no single context-free French equivalent: délai de livraison and délai de production measure different intervals from délai d’approvisionnement.",
+    "example_tl": "Le délai d’approvisionnement s’allonge lorsque les pièces franchissent plusieurs frontières, obligeant les fabricants à arbitrer entre résilience et immobilisation financière.",
+    "example_en": "Lead time grows when parts cross several borders, forcing manufacturers to balance resilience against tied-up capital.",
+    "cloze": "{{c1::Le délai d’approvisionnement}} s’allonge lorsque les pièces franchissent plusieurs frontières, obligeant les fabricants à arbitrer entre résilience et immobilisation financière.",
+    "note": "The English source is underspecified. This note selects procurement lead time from the surrounding supply-chain sequence and replaces the broader legacy délai d’exécution."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "category": "lexical-noun",
+    "tl": "le sourcing fournisseurs",
+    "alts": [],
+    "register": "Common professional loan in France for identifying, evaluating and selecting suppliers; formal explanatory prose can spell out those activities.",
+    "trap": "Sourcing fournisseurs concerns the search and selection stage; approvisionnement is the broader process of securing and replenishing supplies after needs are defined.",
+    "example_tl": "Un sourcing fournisseurs trop concentré peut réduire les coûts à court terme, tout en rendant l’entreprise vulnérable aux sanctions ou aux catastrophes régionales.",
+    "example_en": "Overly concentrated supplier sourcing can reduce short-term costs while making the company vulnerable to sanctions or regional disasters.",
+    "cloze": "Un {{c1::sourcing fournisseurs}} trop concentré peut réduire les coûts à court terme, tout en rendant l’entreprise vulnérable aux sanctions ou aux catastrophes régionales.",
+    "note": "Materially replaces old_back approvisionnement, which fails to isolate supplier identification and selection."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "category": "lexical-noun",
+    "tl": "l’unité de gestion des stocks (SKU)",
+    "alts": [
+      "la référence article (SKU)"
+    ],
+    "register": "The expanded term is formal and explanatory; French retail and logistics professionals commonly use the English abbreviation SKU or the phrase référence article.",
+    "trap": "A SKU identifies a merchant-specific product variant; it is not the universal EAN or GTIN barcode assigned across businesses.",
+    "example_tl": "Chaque unité de gestion des stocks correspond à une taille, une couleur et un conditionnement précis, afin que le distributeur suive séparément chaque variante.",
+    "example_en": "Each stock keeping unit corresponds to a specific size, color, and package so that the retailer can track each variant separately.",
+    "cloze": "Chaque {{c1::unité de gestion des stocks}} correspond à une taille, une couleur et un conditionnement précis, afin que le distributeur suive séparément chaque variante.",
+    "note": "Old_back gives the valid formal expansion. The production headword adds the widely used SKU label, and the example distinguishes the unit from a universal product code. Self-review changed distingue to correspond à for technical precision."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "category": "lexical-noun",
+    "tl": "la prévision de la demande",
+    "alts": [],
+    "register": "Standard planning and supply-chain term for estimating future customer demand from quantitative and qualitative evidence.",
+    "trap": "Professional planning normally uses prévision, not prédiction; demande is a collective singular here, while prévision des ventes is narrower than demand forecasting.",
+    "example_tl": "La prévision de la demande guide le dimensionnement des capacités et des stocks, mais elle devient fragile lorsque les ventes passées reflètent une pénurie exceptionnelle.",
+    "example_en": "Demand forecasting guides the sizing of capacity and inventory levels, but it becomes fragile when past sales reflect an exceptional shortage.",
+    "cloze": "{{c1::La prévision de la demande}} guide le dimensionnement des capacités et des stocks, mais elle devient fragile lorsque les ventes passées reflètent une pénurie exceptionnelle.",
+    "note": "Old_back is accurate. The trap and example fix the planning sense and distinguish demand from observed sales. Self-review replaced the vague guide les capacités with the professional collocation guide le dimensionnement."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "category": "lexical-noun",
+    "tl": "l’effet coup de fouet",
+    "alts": [
+      "l’effet Forrester"
+    ],
+    "register": "Specialist supply-chain term for the amplification of demand variability upstream; effet Forrester is a recognized technical alternative.",
+    "trap": "A bare effet Bullwhip needlessly imports English and its capitalization; the phenomenon concerns order variability amplifying upstream, not merely a sudden shortage.",
+    "example_tl": "L’effet coup de fouet amplifie une faible variation des ventes à mesure que chaque intermédiaire révise ses commandes avec ses propres marges de sécurité.",
+    "example_en": "The bullwhip effect amplifies a slight change in sales as each intermediary revises its orders with its own safety margins.",
+    "cloze": "{{c1::L’effet coup de fouet}} amplifie une faible variation des ventes à mesure que chaque intermédiaire révise ses commandes avec ses propres marges de sécurité.",
+    "note": "Materially replaces old_back effet Bullwhip with the established French metaphor and records the recognized eponymous alternative."
+  },
+  {
+    "id": "it_fancy_vocab_314",
+    "en": "the Outsourcing",
+    "category": "lexical-noun",
+    "tl": "l’externalisation",
+    "alts": [],
+    "register": "Standard formal business and policy term for transferring an activity or function to an outside organization.",
+    "trap": "Externalisation describes the transfer of a function; sous-traitance describes the contractual performance by another firm and is not automatically identical in scope.",
+    "example_tl": "L’externalisation de la modération des contenus réduit parfois les coûts visibles, mais éloigne les décisions sensibles des équipes responsables de la politique éditoriale.",
+    "example_en": "Outsourcing content moderation sometimes reduces visible costs but distances sensitive decisions from the teams responsible for editorial policy.",
+    "cloze": "{{c1::L’externalisation}} de la modération des contenus réduit parfois les coûts visibles, mais éloigne les décisions sensibles des équipes responsables de la politique éditoriale.",
+    "note": "Old_back is accurate. Retention is justified by the nonliteral French term and its useful distinction from sous-traitance. Self-review replaced contrôle des contenus with the established platform-policy collocation modération des contenus."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "category": "lexical-noun",
+    "tl": "l’entreposage",
+    "alts": [],
+    "register": "Standard professional logistics term for receiving and holding goods in a warehouse as part of distribution operations.",
+    "trap": "Entreposage foregrounds the warehouse operation; stockage can instead foreground the state, capacity or technical conditions in which goods are kept.",
+    "example_tl": "L’entreposage de batteries exige une ventilation adaptée et des procédures strictes, car un incident local peut interrompre toute la chaîne logistique.",
+    "example_en": "Warehousing batteries requires suitable ventilation and strict procedures, because a local incident can disrupt the entire supply chain.",
+    "cloze": "{{c1::L’entreposage}} de batteries exige une ventilation adaptée et des procédures strictes, car un incident local peut interrompre toute la chaîne logistique.",
+    "note": "Old_back is accurate. The note distinguishes the professional warehouse operation from the broader notion of storage."
+  },
+  {
+    "id": "it_fancy_vocab_317",
+    "en": "the Node",
+    "category": "lexical-noun",
+    "tl": "le nœud logistique",
+    "alts": [],
+    "register": "Professional network and supply-chain compound for a location where routes, infrastructure or flows converge.",
+    "trap": "English node is nœud in this network sense, not French node; preserve the ligature œ, and add the domain modifier when context is not explicit.",
+    "example_tl": "Ce nœud logistique articule le port, le réseau ferroviaire et plusieurs entrepôts, ce qui en fait une cible stratégique en période de tensions.",
+    "example_en": "This logistics node links the port, the rail network, and several warehouses, making it a strategic target during periods of tension.",
+    "cloze": "Ce {{c1::nœud logistique}} articule le port, le réseau ferroviaire et plusieurs entrepôts, ce qui en fait une cible stratégique en période de tensions.",
+    "note": "Old_back supplies the correct core noun. The production headword adds logistique because the isolated source is polysemous and the surrounding sequence selects supply chains. Self-review replaced a literal relie le rail with the idiomatic infrastructure phrasing articule le réseau ferroviaire."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "category": "lexical-verb",
+    "tl": "suivre",
+    "alts": [],
+    "register": "Neutral verb for monitoring the progress, status or movement of goods; assurer le suivi de is a more administrative construction.",
+    "trap": "Tracer foregrounds reconstructing origin or route for traceability, while pister is more marked; legacy à suivre is not an infinitive headword and can mean to be continued.",
+    "example_tl": "L’autorité suit en temps réel les cargaisons de minerais critiques, afin d’identifier les retards susceptibles de perturber plusieurs usines européennes.",
+    "example_en": "The authority tracks shipments of critical minerals in real time in order to identify delays liable to disrupt several European factories.",
+    "cloze": "L’autorité {{c1::suit}} en temps réel les cargaisons de minerais critiques, afin d’identifier les retards susceptibles de perturber plusieurs usines européennes.",
+    "note": "Materially corrects old_back à suivre by restoring the infinitive and fixing the routine monitoring sense in context. Self-review replaced an origin-to-destination example that called for tracer with real-time status monitoring."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "category": "lexical-verb",
+    "tl": "tirer profit de",
+    "alts": [
+      "profiter de"
+    ],
+    "register": "Tirer profit de is neutral-formal and makes the benefit explicit; profiter de is common but can suggest taking advantage of a situation or person.",
+    "trap": "Profiter governs de in this sense; profiter à means to benefit someone, while réaliser un bénéfice foregrounds accounting profit rather than benefit obtained from a source.",
+    "example_tl": "Certaines plateformes tirent profit de contenus trompeurs, puisque l’indignation augmente le temps d’écran sans qu’elles assument le coût social de cette amplification.",
+    "example_en": "Some platforms profit from misleading content because outrage increases screen time without their bearing the social cost of that amplification.",
+    "cloze": "Certaines plateformes {{c1::tirent profit de}} contenus trompeurs, puisque l’indignation augmente le temps d’écran sans qu’elles assument le coût social de cette amplification.",
+    "note": "Materially improves old_back profiter by adding the required government and selecting an unambiguous formal rendering; profiter de remains a valid contextual alternative."
+  }
+]

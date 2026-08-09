@@ -1,0 +1,222 @@
+[
+  {
+    "id": "it_fancy_vocab_161",
+    "en": "the Profiteering",
+    "category": "lexical-noun",
+    "tl": "la speculazione sui prezzi",
+    "alts": [],
+    "register": "Espressione critica corrente nel giornalismo economico e nelle analisi di mercato per il profitto eccessivo ottenuto sfruttando una scarsità o un'emergenza.",
+    "trap": "Speculazione senza complemento può indicare anche un'operazione finanziaria rischiosa; profiteering è sempre spregiativo e implica lo sfruttamento opportunistico delle circostanze.",
+    "example_tl": "La speculazione sui prezzi dei farmaci essenziali ha consentito agli intermediari di moltiplicare i margini mentre gli ospedali affrontavano una carenza evitabile.",
+    "example_en": "Profiteering through the pricing of essential medicines allowed intermediaries to multiply their margins while hospitals faced an avoidable shortage.",
+    "cloze": "{{c1::La speculazione sui prezzi}} dei farmaci essenziali ha consentito agli intermediari di moltiplicare i margini mentre gli ospedali affrontavano una carenza evitabile.",
+    "note": "The legacy rendering is defensible but too broad as a production headword. Self-review added the usual price complement and preserved the condemnatory sense of opportunistic excessive profit."
+  },
+  {
+    "id": "it_fancy_vocab_170",
+    "en": "the Solutionism",
+    "category": "lexical-noun",
+    "tl": "il soluzionismo tecnologico",
+    "alts": [],
+    "register": "Termine critico della saggistica tecnologica e politica per la tendenza a trattare problemi sociali complessi come difetti risolvibili principalmente con strumenti tecnici.",
+    "trap": "Non equivale al neutro orientamento alla soluzione: soluzionismo critica la pretesa che una soluzione tecnica possa sostituire il confronto politico.",
+    "example_tl": "Il soluzionismo tecnologico riduce problemi politici complessi a difetti tecnici, sottraendo al dibattito pubblico le scelte distributive incorporate nelle piattaforme digitali.",
+    "example_en": "Technological solutionism reduces complex political problems to technical flaws, removing from public debate the distributive choices embedded in digital platforms.",
+    "cloze": "{{c1::Il soluzionismo tecnologico}} riduce problemi politici complessi a difetti tecnici, sottraendo al dibattito pubblico le scelte distributive incorporate nelle piattaforme digitali.",
+    "note": "The legacy headword is valid but underspecified. Self-review added tecnologico to fix the critical sense intended by this technology-policy batch."
+  },
+  {
+    "id": "it_fancy_vocab_171",
+    "en": "the Tokenization",
+    "category": "lexical-noun",
+    "tl": "la tokenizzazione degli asset",
+    "alts": [
+      "la tokenizzazione dei beni"
+    ],
+    "register": "Lessico specialistico della finanza digitale per la rappresentazione di diritti su un bene mediante token; asset è corrente tra gli operatori.",
+    "trap": "In linguistica computazionale tokenizzazione indica la segmentazione di un testo; in finanza non va confusa con la titolarizzazione di crediti o attività.",
+    "example_tl": "La tokenizzazione degli asset promette scambi più rapidi, ma può trasferire titoli opachi su infrastrutture che restano concentrate nelle mani di pochi operatori.",
+    "example_en": "Asset tokenization promises faster trading, but it can move opaque securities onto infrastructure that remains concentrated in the hands of a few operators.",
+    "cloze": "{{c1::La tokenizzazione degli asset}} promette scambi più rapidi, ma può trasferire titoli opachi su infrastrutture che restano concentrate nelle mani di pochi operatori.",
+    "note": "The bare source is polysemous. Self-review selected the financial-asset sense, supplied its productive complement and kept the NLP sense only as a contrast."
+  },
+  {
+    "id": "it_fancy_vocab_174",
+    "en": "the Techno-optimism",
+    "category": "lexical-noun",
+    "tl": "il tecno-ottimismo",
+    "alts": [],
+    "register": "Termine critico delle scienze sociali e della saggistica tecnologica per una fiducia generale nella capacità del progresso tecnico di produrre esiti positivi.",
+    "trap": "Non indica soltanto ottimismo riguardo a un singolo dispositivo: nel dibattito critico designa una visione più ampia del rapporto tra tecnologia e progresso.",
+    "example_tl": "Il tecno-ottimismo presenta l'automazione come progresso inevitabile, oscurando i costi ambientali e le nuove dipendenze create dalle infrastrutture digitali.",
+    "example_en": "Techno-optimism presents automation as inevitable progress, obscuring the environmental costs and new dependencies created by digital infrastructure.",
+    "cloze": "{{c1::Il tecno-ottimismo}} presenta l'automazione come progresso inevitabile, oscurando i costi ambientali e le nuove dipendenze create dalle infrastrutture digitali.",
+    "note": "The legacy rendering is accurate. Self-review retained the hyphenated Italian form and made the structural, rather than momentary, sense explicit."
+  },
+  {
+    "id": "it_fancy_vocab_177",
+    "en": "the Overreach",
+    "category": "lexical-noun",
+    "tl": "lo sconfinamento oltre le proprie competenze",
+    "alts": [],
+    "register": "Locuzione formale del linguaggio istituzionale e giuridico per un'autorità che oltrepassa i limiti del proprio mandato o delle proprie attribuzioni.",
+    "trap": "English overreach cambia resa secondo il contesto; eccesso di potere ha inoltre un significato tecnico nel diritto amministrativo italiano e non è sempre equivalente.",
+    "example_tl": "Lo sconfinamento oltre le proprie competenze indebolisce il regolatore, anche quando nasce dal tentativo legittimo di colmare una lacuna normativa urgente.",
+    "example_en": "Overstepping its authority weakens the regulator, even when it stems from a legitimate attempt to fill an urgent regulatory gap.",
+    "cloze": "{{c1::Lo sconfinamento oltre le proprie competenze}} indebolisce il regolatore, anche quando nasce dal tentativo legittimo di colmare una lacuna normativa urgente.",
+    "note": "Materially diverges from old_back: abuso di potere is possible but can imply a stronger abuse, while the chosen frame isolates institutional overreach."
+  },
+  {
+    "id": "it_fancy_vocab_178",
+    "en": "Open-source",
+    "category": "lexical-adjective",
+    "tl": "open source",
+    "alts": [
+      "a codice sorgente aperto"
+    ],
+    "register": "Prestito tecnico invariabile e corrente, normalmente posposto al nome; la perifrasi italiana è trasparente ma molto meno comune nell'uso professionale.",
+    "trap": "Open source riguarda l'accesso al codice e i diritti concessi dalla licenza; non significa semplicemente gratuito e non coincide necessariamente con software libero.",
+    "example_tl": "Un software open source consente verifiche indipendenti del codice, ma non garantisce né sicurezza operativa né una governance realmente partecipativa.",
+    "example_en": "Open-source software allows independent code audits, but it guarantees neither operational security nor genuinely participatory governance.",
+    "cloze": "Un software {{c1::open source}} consente verifiche indipendenti del codice, ma non garantisce né sicurezza operativa né una governance realmente partecipativa.",
+    "note": "Materially diverges from old_back: codice sorgente aperto is intelligible but calqued as a default adjective. Self-review retained the established invariant loan and replaced modello with software to make code access explicit."
+  },
+  {
+    "id": "it_fancy_vocab_179",
+    "en": "the Balkanization",
+    "category": "lexical-noun",
+    "tl": "la balcanizzazione di",
+    "alts": [],
+    "register": "Metafora formale e spesso critica in geopolitica e politica tecnologica per la divisione di un insieme in unità più piccole, rivali o incompatibili.",
+    "trap": "Balcanizzazione è una metafora storicamente connotata e più forte di frammentazione: suggerisce unità separate e spesso antagoniste, non qualsiasi divisione interna.",
+    "example_tl": "La balcanizzazione di Internet in spazi normativi incompatibili aumenterebbe i costi di accesso e rafforzerebbe il controllo politico sulle reti nazionali.",
+    "example_en": "The Balkanization of the Internet into incompatible regulatory spaces would increase access costs and strengthen political control over national networks.",
+    "cloze": "{{c1::La balcanizzazione di}} Internet in spazi normativi incompatibili aumenterebbe i costi di accesso e rafforzerebbe il controllo politico sulle reti nazionali.",
+    "note": "The legacy rendering is accurate. Self-review added the governed di complement and ensured that the example expresses incompatible fragmentation rather than a neutral subdivision."
+  },
+  {
+    "id": "it_fancy_vocab_180",
+    "en": "the Duopoly",
+    "category": "lexical-noun",
+    "tl": "il duopolio",
+    "alts": [],
+    "register": "Termine neutro-formale dell'economia e della politica della concorrenza per un mercato dominato da due soli operatori.",
+    "trap": "Duopolio richiede due imprese dominanti; oligopolio è più ampio e monopolio ne presuppone una sola, anche se il controllo non deve essere assoluto.",
+    "example_tl": "Il duopolio pubblicitario consente a due piattaforme di dettare condizioni agli editori, benché nessuna delle due controlli formalmente l'intero mercato.",
+    "example_en": "The advertising duopoly allows two platforms to dictate terms to publishers, although neither formally controls the entire market.",
+    "cloze": "{{c1::Il duopolio}} pubblicitario consente a due piattaforme di dettare condizioni agli editori, benché nessuna delle due controlli formalmente l'intero mercato.",
+    "note": "The legacy rendering is accurate. Self-review made the exact two-operator contrast explicit and avoided implying that the pair must control every transaction."
+  },
+  {
+    "id": "it_fancy_vocab_181",
+    "en": "the Encryption",
+    "category": "lexical-noun",
+    "tl": "la cifratura",
+    "alts": [],
+    "register": "Termine tecnico neutro della sicurezza informatica per la trasformazione reversibile di dati mediante una chiave al fine di impedirne la lettura non autorizzata.",
+    "trap": "Codifica cambia la rappresentazione dei dati senza necessariamente proteggerli; crittografia designa più ampiamente la disciplina e l'insieme delle tecniche impiegate.",
+    "example_tl": "La cifratura dei messaggi tutela le fonti giornalistiche, ma perde efficacia se le chiavi vengono archiviate da un unico fornitore vulnerabile.",
+    "example_en": "Message encryption protects journalistic sources, but it loses effectiveness if the keys are stored by a single vulnerable provider.",
+    "cloze": "{{c1::La cifratura}} dei messaggi tutela le fonti giornalistiche, ma perde efficacia se le chiavi vengono archiviate da un unico fornitore vulnerabile.",
+    "note": "The legacy rendering is accurate. Self-review retained the precise process noun and excluded codifica, which does not entail confidentiality."
+  },
+  {
+    "id": "it_fancy_vocab_184",
+    "en": "Bias",
+    "category": "lexical-noun",
+    "tl": "la distorsione algoritmica",
+    "alts": [
+      "il bias algoritmico"
+    ],
+    "register": "Distorsione algoritmica è chiaro e neutro-formale nella critica tecnologica; il prestito maschile bias è molto comune nel linguaggio tecnico e accademico.",
+    "trap": "Pregiudizio suggerisce spesso un atteggiamento umano, mentre un bias statistico o algoritmico può derivare da dati, misurazioni o obiettivi senza intenzione cosciente.",
+    "example_tl": "La distorsione algoritmica penalizza i candidati provenienti da percorsi atipici, perché il modello assume come neutrali criteri ricavati da assunzioni storicamente discriminatorie.",
+    "example_en": "Algorithmic bias penalizes candidates from atypical backgrounds because the model treats criteria derived from historically discriminatory hiring as neutral.",
+    "cloze": "{{c1::La distorsione algoritmica}} penalizza i candidati provenienti da percorsi atipici, perché il modello assume come neutrali criteri ricavati da assunzioni storicamente discriminatorie.",
+    "note": "The source is underspecified; the batch context supports the algorithmic sense. Self-review retained legacy bias only as a marked technical alternative and selected an explanatory Italian main term."
+  },
+  {
+    "id": "it_fancy_vocab_187",
+    "en": "Metadata",
+    "category": "lexical-noun",
+    "tl": "i metadati",
+    "alts": [],
+    "register": "Termine tecnico neutro e ormai corrente nell'informatica, nella gestione documentale e nelle politiche dei dati.",
+    "trap": "Italiano usa normalmente il plurale maschile i metadati; il singolare metadato indica un solo elemento descrittivo e non ricalca l'inglese metadata come nome collettivo.",
+    "example_tl": "I metadati delle comunicazioni possono rivelare reti di contatti e abitudini politiche anche quando il contenuto dei messaggi rimane cifrato.",
+    "example_en": "Communication metadata can reveal contact networks and political habits even when the content of the messages remains encrypted.",
+    "cloze": "{{c1::I metadati}} delle comunicazioni possono rivelare reti di contatti e abitudini politiche anche quando il contenuto dei messaggi rimane cifrato.",
+    "note": "The legacy lexeme is correct but omits the pedagogically useful article. Self-review fixed masculine plural production and contrasted it with singular metadato."
+  },
+  {
+    "id": "it_fancy_vocab_189",
+    "en": "Disruptive",
+    "category": "lexical-adjective",
+    "tl": "dirompente",
+    "alts": [],
+    "register": "Aggettivo formale ma comune nel discorso sull'innovazione per un cambiamento che altera profondamente un mercato, una tecnologia o un assetto istituzionale.",
+    "trap": "Nel lessico dell'innovazione non significa soltanto fastidioso o perturbatore; l'anglicismo disruptivo ricorre nel gergo aziendale, ma dirompente è più idiomatico.",
+    "example_tl": "Una tecnologia dirompente non migliora soltanto un prodotto esistente, ma modifica incentivi, intermediari e rapporti di potere nell'intero settore.",
+    "example_en": "A disruptive technology does not merely improve an existing product; it changes incentives, intermediaries and power relations across the entire sector.",
+    "cloze": "Una tecnologia {{c1::dirompente}} non migliora soltanto un prodotto esistente, ma modifica incentivi, intermediari e rapporti di potere nell'intero settore.",
+    "note": "The legacy rendering is accurate. Self-review fixed the innovation sense in context and rejected the narrower idea of merely causing a disturbance."
+  },
+  {
+    "id": "it_fancy_vocab_190",
+    "en": "Ubiquitous",
+    "category": "lexical-adjective",
+    "tl": "ubiquo",
+    "alts": [
+      "onnipresente"
+    ],
+    "register": "Aggettivo dotto ma corrente nella saggistica tecnologica; onnipresente è più comune e leggermente meno tecnico.",
+    "trap": "L'italiano scrive ubiquo senza accento grafico e forma regolarmente il femminile ubiqua; il portoghese ubíquo può indurre un accento improprio.",
+    "example_tl": "La sorveglianza ubiqua trasforma ogni interazione digitale in una possibile fonte di dati, rendendo eccezionale la possibilità di agire senza essere osservati.",
+    "example_en": "Ubiquitous surveillance turns every digital interaction into a potential source of data, making it exceptional to act without being observed.",
+    "cloze": "La sorveglianza {{c1::ubiqua}} trasforma ogni interazione digitale in una possibile fonte di dati, rendendo eccezionale la possibilità di agire senza essere osservati.",
+    "note": "The legacy rendering is accurate. Self-review supplied feminine agreement in the example and retained onnipresente as the only fully interchangeable alternative."
+  },
+  {
+    "id": "it_fancy_vocab_192",
+    "en": "Unregulated",
+    "category": "lexical-adjective",
+    "tl": "non regolamentato",
+    "alts": [
+      "privo di regolamentazione"
+    ],
+    "register": "Locuzione neutro-formale comune nel linguaggio giuridico, economico e tecnologico per un'attività o un mercato non sottoposto a norme specifiche.",
+    "trap": "Deregolamentato implica normalmente la rimozione o l'allentamento di regole precedenti; non regolamentato descrive invece anche ciò che non è mai stato disciplinato.",
+    "example_tl": "Un mercato non regolamentato favorisce operatori capaci di trasferire rapidamente il rischio, lasciando ai cittadini i costi delle crisi che ne derivano.",
+    "example_en": "An unregulated market favors operators able to transfer risk quickly, leaving citizens with the costs of the resulting crises.",
+    "cloze": "Un mercato {{c1::non regolamentato}} favorisce operatori capaci di trasferire rapidamente il rischio, lasciando ai cittadini i costi delle crisi che ne derivano.",
+    "note": "The legacy rendering is accurate. Self-review preserved the absence-of-regulation sense and explicitly separated it from prior deregulation."
+  },
+  {
+    "id": "it_fancy_vocab_199",
+    "en": "Neoliberal",
+    "category": "lexical-adjective",
+    "tl": "neoliberista",
+    "alts": [
+      "neoliberale"
+    ],
+    "register": "Neoliberista è corrente e spesso critico nell'analisi politico-economica; neoliberale ricorre anch'esso, soprattutto per influenza del lessico internazionale.",
+    "trap": "A differenza di inglese, francese e spagnolo, l'italiano usa spesso -liberista per richiamare la dottrina economica; liberale ha una storia politica più ampia.",
+    "example_tl": "Una politica neoliberista tratta la concorrenza come criterio universale, anche quando servizi essenziali richiederebbero investimenti pubblici e obblighi di solidarietà.",
+    "example_en": "A neoliberal policy treats competition as a universal criterion, even when essential services would require public investment and solidarity obligations.",
+    "cloze": "Una politica {{c1::neoliberista}} tratta la concorrenza come criterio universale, anche quando servizi essenziali richiederebbero investimenti pubblici e obblighi di solidarietà.",
+    "note": "The legacy rendering is accurate for the political-economic sense. Self-review retained neoliberale as a real alternative but foregrounded the characteristically Italian link to neoliberismo."
+  },
+  {
+    "id": "it_fancy_vocab_200",
+    "en": "Hyperconnected",
+    "category": "lexical-adjective",
+    "tl": "iperconnesso",
+    "alts": [],
+    "register": "Aggettivo contemporaneo della critica tecnologica per persone, ambienti o società caratterizzati da connessioni digitali continue e pervasive.",
+    "trap": "Il prefisso italiano è iper- e si unisce normalmente alla base senza trattino: iperconnesso, non hyperconnesso né iper-connesso.",
+    "example_tl": "Un ambiente iperconnesso accelera la circolazione delle notizie, ma espone istituzioni e cittadini a crisi informative che attraversano istantaneamente più piattaforme.",
+    "example_en": "A hyperconnected environment accelerates the circulation of news, but it exposes institutions and citizens to information crises that instantly cross multiple platforms.",
+    "cloze": "Un ambiente {{c1::iperconnesso}} accelera la circolazione delle notizie, ma espone istituzioni e cittadini a crisi informative che attraversano istantaneamente più piattaforme.",
+    "note": "The legacy rendering is accurate. Self-review retained the item for its productive Italian prefix and joined spelling rather than for semantic opacity."
+  }
+]

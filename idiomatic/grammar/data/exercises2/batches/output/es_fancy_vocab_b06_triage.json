@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_201",
+    "en": "Asymmetric",
+    "verdict": "drop",
+    "reason": "Asimétrico is a transparent, familiar academic adjective with regular morphology, and the isolated prompt selects no specific relational construction."
+  },
+  {
+    "id": "it_fancy_vocab_202",
+    "en": "Homogenized",
+    "verdict": "drop",
+    "reason": "Homogeneizado is a transparent and routine cognate whose participial agreement is entirely regular; the prompt offers no narrower critical sense."
+  },
+  {
+    "id": "it_fancy_vocab_203",
+    "en": "Privatized",
+    "verdict": "drop",
+    "reason": "Privatizado is a transparent, high-frequency policy cognate already expected at C1, with no additional construction or contrast to teach."
+  },
+  {
+    "id": "it_fancy_vocab_204",
+    "en": "Hegemonic",
+    "verdict": "keep",
+    "reason": "Hegemónico is marked political-theory vocabulary whose consensual or worldview-setting dimension is more specific than ordinary dominance."
+  },
+  {
+    "id": "it_fancy_vocab_205",
+    "en": "Insidious",
+    "verdict": "keep",
+    "reason": "Insidioso is a marked critical adjective whose core lesson is concealed, gradual harm rather than generic danger or deception."
+  },
+  {
+    "id": "it_fancy_vocab_206",
+    "en": "Polarized",
+    "verdict": "drop",
+    "reason": "Polarizado is transparent and ubiquitous in contemporary political commentary, with predictable spelling and agreement."
+  },
+  {
+    "id": "it_fancy_vocab_207",
+    "en": "Dystopian",
+    "verdict": "keep",
+    "reason": "Distópico is useful cultural-political vocabulary and teaches the Spanish i spelling and written stress rather than the English y pattern."
+  },
+  {
+    "id": "it_fancy_vocab_208",
+    "en": "Automated",
+    "verdict": "keep",
+    "reason": "The item supports the policy-relevant distinction between automatizado for a process converted to automation and the overlapping automático."
+  },
+  {
+    "id": "it_fancy_vocab_209",
+    "en": "Pervasive",
+    "verdict": "keep",
+    "reason": "The English adjective needs a context-sensitive Spanish choice such as generalizado or omnipresente rather than a mechanical one-word calque."
+  },
+  {
+    "id": "it_fancy_vocab_210",
+    "en": "Ephemeral",
+    "verdict": "keep",
+    "reason": "Efímero is marked learned vocabulary with a real Italian spelling-interference risk and a useful contrast with the less elevated fugaz."
+  },
+  {
+    "id": "it_fancy_vocab_211",
+    "en": "Contingent",
+    "verdict": "keep",
+    "reason": "The high-value contingent-on sense requires condicionado a or supeditado a; legacy contingente instead selects a different Spanish sense."
+  },
+  {
+    "id": "it_fancy_vocab_212",
+    "en": "Oversaturated",
+    "verdict": "drop",
+    "reason": "Sobresaturado is compositionally transparent from sobre- and saturado, with regular agreement and no selected specialist contrast."
+  },
+  {
+    "id": "it_fancy_vocab_213",
+    "en": "Manipulative",
+    "verdict": "keep",
+    "reason": "Manipulador is the idiomatic agentive adjective for a covertly influential design or tactic, improving on the restricted legacy manipulativo."
+  },
+  {
+    "id": "it_fancy_vocab_214",
+    "en": "Extractive",
+    "verdict": "keep",
+    "reason": "Extractivo has a productive critical political-economy sense for models that remove data or value, beyond literal resource extraction."
+  },
+  {
+    "id": "it_fancy_vocab_215",
+    "en": "Supranational",
+    "verdict": "drop",
+    "reason": "Supranacional is a transparent, familiar institutional cognate already expected at C1 and carries no special government in this prompt."
+  },
+  {
+    "id": "it_fancy_vocab_216",
+    "en": "Myopic",
+    "verdict": "keep",
+    "reason": "The figurative policy use of miope is valuable and exposes both a Portuguese accent trap and the narrower time-horizon alternative cortoplacista."
+  },
+  {
+    "id": "it_fancy_vocab_217",
+    "en": "Digital-native",
+    "verdict": "drop",
+    "reason": "Nativo digital is a familiar, transparent expression and a near-duplicate of the earlier FANCY_VOCAB prompt 'the Digital native', with no distinct lesson."
+  },
+  {
+    "id": "it_fancy_vocab_218",
+    "en": "Hegelian",
+    "verdict": "keep",
+    "reason": "Hegeliano is specialist intellectual-history vocabulary and teaches the lowercase Spanish relational adjective, correcting old_back capitalisation."
+  },
+  {
+    "id": "it_fancy_vocab_219",
+    "en": "Conformist",
+    "verdict": "drop",
+    "reason": "Conformista is a transparent and familiar adjective with the same form for masculine and feminine and no narrower construction selected."
+  },
+  {
+    "id": "it_fancy_vocab_220",
+    "en": "Authoritarian",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_221",
+    "en": "Singular",
+    "verdict": "drop",
+    "reason": "Singular is a familiar direct cognate, while the isolated polysemous prompt gives no basis for choosing grammatical, exceptional or unique."
+  },
+  {
+    "id": "it_fancy_vocab_222",
+    "en": "Protean",
+    "verdict": "keep",
+    "reason": "Proteico is rare learned vocabulary for repeated changeability and must be disambiguated from the identically written protein-related adjective."
+  },
+  {
+    "id": "it_fancy_vocab_223",
+    "en": "Illusory",
+    "verdict": "drop",
+    "reason": "Ilusorio is a transparent, familiar academic cognate with predictable morphology, and the bare prompt supplies no contrast with aparente or engañoso."
+  },
+  {
+    "id": "it_fancy_vocab_224",
+    "en": "Anomalous",
+    "verdict": "keep",
+    "reason": "Anómalo is useful formal analytical vocabulary with a real Portuguese accent-interference risk and a meaningful contrast with atípico."
+  },
+  {
+    "id": "it_fancy_vocab_225",
+    "en": "Interdependent",
+    "verdict": "drop",
+    "reason": "Interdependiente is a transparent, high-frequency academic cognate with ordinary agreement and no specific complement selected."
+  },
+  {
+    "id": "it_fancy_vocab_226",
+    "en": "Unprecedented",
+    "verdict": "keep",
+    "reason": "Sin precedentes is a high-value nonliteral production expression whose fixed plural form does not follow the source adjective morphology."
+  },
+  {
+    "id": "it_fancy_vocab_227",
+    "en": "Permeable",
+    "verdict": "drop",
+    "reason": "Permeable is a transparent familiar cognate, and the earlier retained noun permeabilidad already carries the topic's useful governed-preposition lesson."
+  },
+  {
+    "id": "it_fancy_vocab_228",
+    "en": "Contemporaneous",
+    "verdict": "keep",
+    "reason": "Coetáneo de blocks the misleading present-day reading of contemporáneo and supplies the relational complement absent from the legacy gloss."
+  },
+  {
+    "id": "it_fancy_vocab_229",
+    "en": "Partisan",
+    "verdict": "keep",
+    "reason": "Partidista is required for partisan bias or coverage; legacy partidario instead denotes a supporter or someone in favour of something."
+  },
+  {
+    "id": "it_fancy_vocab_230",
+    "en": "Undemocratic",
+    "verdict": "drop",
+    "reason": "Antidemocrático is familiar core political vocabulary, compositionally transparent and already expected of a C1 learner."
+  },
+  {
+    "id": "it_fancy_vocab_231",
+    "en": "Exploitative",
+    "verdict": "keep",
+    "reason": "Explotador is the idiomatic adjective for an abusive practice and blocks confusion with both the English-shaped *explotativo and explotable."
+  },
+  {
+    "id": "it_fancy_vocab_232",
+    "en": "Transitory",
+    "verdict": "drop",
+    "reason": "Transitorio is a transparent and familiar formal cognate with predictable stress and agreement and no narrower use in the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_233",
+    "en": "Reductionist",
+    "verdict": "drop",
+    "reason": "Reduccionista is a transparent, established academic cognate with regular morphology and no particular analytical construction selected."
+  },
+  {
+    "id": "it_fancy_vocab_234",
+    "en": "Symbiotic",
+    "verdict": "keep",
+    "reason": "Simbiótico has a productive political-economy metaphor that requires reciprocal dependence or benefit rather than mere coexistence."
+  },
+  {
+    "id": "it_fancy_vocab_235",
+    "en": "Disparate",
+    "verdict": "keep",
+    "reason": "Dispar is marked formal vocabulary whose plural dispares and lack of the Portuguese accent present genuine production value."
+  },
+  {
+    "id": "it_fancy_vocab_236",
+    "en": "Censorious",
+    "verdict": "keep",
+    "reason": "The rare English adjective requires the judgmental sense of Spanish censor, not the distinct institutional act of removing content."
+  },
+  {
+    "id": "it_fancy_vocab_237",
+    "en": "Virtualized",
+    "verdict": "drop",
+    "reason": "Virtualizado is a transparent standard IT cognate with regular participial agreement and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_238",
+    "en": "the sanctions",
+    "verdict": "drop",
+    "reason": "Las sanciones is familiar core legal and geopolitical vocabulary already well below the target learner's C1 threshold."
+  },
+  {
+    "id": "it_fancy_vocab_239",
+    "en": "the Cybersecurity",
+    "verdict": "drop",
+    "reason": "La ciberseguridad is transparent, ubiquitous core technology vocabulary; the legacy capitalisation is easily corrected without a full production note."
+  },
+  {
+    "id": "it_fancy_vocab_240",
+    "en": "the Espionage",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  }
+]

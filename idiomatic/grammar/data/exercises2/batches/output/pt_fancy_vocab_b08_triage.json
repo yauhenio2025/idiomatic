@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "verdict": "keep",
+    "reason": "The semiconductor sense requires domain-specific Brazilian terminology and must be distinguished from an ordinary metal foundry."
+  },
+  {
+    "id": "it_fancy_vocab_282",
+    "en": "the Microprocessor",
+    "verdict": "drop",
+    "reason": "Microprocessador is a transparent, ubiquitous technical cognate with predictable gender and no narrower construction selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_283",
+    "en": "the Nanometer",
+    "verdict": "drop",
+    "reason": "Nanômetro is a transparent SI unit already familiar at C1; its accent and regular masculine gender add too little teaching value."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "verdict": "keep",
+    "reason": "Semiconductor fabrication calls for the precise fotolitografia rather than the broader artistic and printing term litografia."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "verdict": "keep",
+    "reason": "A semiconductor die is a pastilha semicondutora or pastilha não encapsulada, not the mould selected by the legacy gloss."
+  },
+  {
+    "id": "it_fancy_vocab_286",
+    "en": "the Fabless",
+    "verdict": "keep",
+    "reason": "Despite the awkward English nominalization, the fabless business model supports a production-ready Brazilian noun phrase and a real meaning trap."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "verdict": "keep",
+    "reason": "Sistema em um chip and the SoC abbreviation form an established compound whose scope must be distinguished from a microprocessor."
+  },
+  {
+    "id": "it_fancy_vocab_288",
+    "en": "the Moore's Law",
+    "verdict": "drop",
+    "reason": "A lei de Moore is a familiar, compositionally transparent proper-name expression with no additional Portuguese production difficulty."
+  },
+  {
+    "id": "it_fancy_vocab_289",
+    "en": "the Integrated Circuit",
+    "verdict": "drop",
+    "reason": "Circuito integrado is a transparent, ubiquitous electronics term with ordinary masculine gender and regular adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_290",
+    "en": "the Neural Networks",
+    "verdict": "drop",
+    "reason": "Redes neurais is now familiar core AI vocabulary, directly cognate and morphologically predictable for an advanced learner."
+  },
+  {
+    "id": "it_fancy_vocab_291",
+    "en": "the Deep Learning",
+    "verdict": "keep",
+    "reason": "Brazilian professional usage favours the English loan while aprendizado profundo is a useful register-sensitive alternative to the legacy form."
+  },
+  {
+    "id": "it_fancy_vocab_292",
+    "en": "the Machine Learning",
+    "verdict": "keep",
+    "reason": "Aprendizado de máquina is the established Brazilian term and carries a useful article-deletion and register contrast with the English loan."
+  },
+  {
+    "id": "it_fancy_vocab_293",
+    "en": "the Training Data",
+    "verdict": "keep",
+    "reason": "Dados de treinamento fixes the machine-learning sense and supports a useful distinction from the narrower conjunto de treinamento."
+  },
+  {
+    "id": "it_fancy_vocab_294",
+    "en": "the Algorithms",
+    "verdict": "drop",
+    "reason": "Algoritmos is a transparent, ubiquitous computing cognate with predictable masculine plural morphology."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "verdict": "keep",
+    "reason": "The full Portuguese term teaches the established compound and the local PLN abbreviation rather than an automatic transfer of English NLP."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "verdict": "keep",
+    "reason": "Redes adversárias generativas is a variable specialist rendering, while the legacy adjective geradoras misdescribes the two-network architecture."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "verdict": "keep",
+    "reason": "Aprendizado por reforço is a fixed nonliteral construction whose preposition and reward-based meaning merit active production."
+  },
+  {
+    "id": "it_fancy_vocab_298",
+    "en": "the AI Ethics",
+    "verdict": "drop",
+    "reason": "Ética em IA is a transparent and now familiar technology-policy expression, and the prompt selects no narrower ethical framework."
+  },
+  {
+    "id": "it_fancy_vocab_299",
+    "en": "the Supervised Learning",
+    "verdict": "drop",
+    "reason": "Aprendizado supervisionado is compositionally transparent, established core AI vocabulary with regular adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_300",
+    "en": "the Unsupervised Learning",
+    "verdict": "drop",
+    "reason": "Aprendizado não supervisionado is compositionally transparent and differs from the familiar supervised term only through regular negation."
+  },
+  {
+    "id": "it_fancy_vocab_301",
+    "en": "the Model",
+    "verdict": "drop",
+    "reason": "Modelo is a transparent, high-frequency cognate, while the isolated prompt does not select a statistical, AI, or analytical sense."
+  },
+  {
+    "id": "it_fancy_vocab_302",
+    "en": "the Logistics",
+    "verdict": "drop",
+    "reason": "Logística is transparent, familiar business vocabulary below the target level and carries no special construction in this prompt."
+  },
+  {
+    "id": "it_fancy_vocab_303",
+    "en": "the Inventory",
+    "verdict": "keep",
+    "reason": "Supply-chain inventory is estoque, whereas inventário usually denotes stocktaking, a record, or the resulting list; the legacy cognate is misleading."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "verdict": "keep",
+    "reason": "Procurement spans a broader management process than a single purchase or physical supply, which legacy suprimento fails to express."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "verdict": "keep",
+    "reason": "The production method needs a Portuguese domain head noun and the JIT abbreviation to distinguish it from the everyday phrase bem na hora."
+  },
+  {
+    "id": "it_fancy_vocab_306",
+    "en": "the Distribution",
+    "verdict": "drop",
+    "reason": "Distribuição is a transparent, familiar logistics cognate with regular morphology and no narrower channel or process specified."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "verdict": "keep",
+    "reason": "Logística terceirizada is a specialist service model associated with 3PL and a genuine third-party versus terceiro partido interference trap."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "verdict": "keep",
+    "reason": "Brazilian operations language commonly retains lead time, while its Portuguese rendering changes with the measured production, delivery, or replenishment interval."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "verdict": "keep",
+    "reason": "Sourcing foregrounds finding and selecting suppliers and must be distinguished from the broader procurement process and physical supply."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "verdict": "keep",
+    "reason": "Operational Brazilian usage favours código SKU, which must be distinguished from standardized EAN or GTIN identifiers and the literal legacy expansion."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "verdict": "keep",
+    "reason": "Previsão de demanda is a productive planning collocation with a genuine previsão versus provisão lexical trap."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "verdict": "keep",
+    "reason": "Efeito chicote is a fixed specialist metaphor for demand amplification, and the legacy gloss is empty."
+  },
+  {
+    "id": "it_fancy_vocab_313",
+    "en": "the Vertical Integration",
+    "verdict": "drop",
+    "reason": "Integração vertical is a compositionally transparent, familiar business-policy term with ordinary gender and adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_314",
+    "en": "the Outsourcing",
+    "verdict": "keep",
+    "reason": "Terceirização is the established nonliteral Brazilian term and supports a useful distinction from offshoring and the English corporate loan."
+  },
+  {
+    "id": "it_fancy_vocab_315",
+    "en": "the Transportation",
+    "verdict": "drop",
+    "reason": "Transporte is familiar core vocabulary with a direct translation and no selected modal, legal, or logistics-specific sense."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "verdict": "keep",
+    "reason": "Armazenagem is the professional logistics term and usefully contrasts with broader armazenamento, which also applies to data."
+  },
+  {
+    "id": "it_fancy_vocab_317",
+    "en": "the Node",
+    "verdict": "drop",
+    "reason": "Nó is familiar technical vocabulary, while the isolated prompt does not select a network, logistics, graph-theory, or infrastructure sense."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "verdict": "keep",
+    "reason": "The logistics context supports rastrear, while the malformed legacy infinitive and distinctions from acompanhar and monitorar add production value."
+  },
+  {
+    "id": "it_fancy_vocab_319",
+    "en": "to marginalize",
+    "verdict": "drop",
+    "reason": "Marginalizar is a transparent, familiar critical verb with regular conjugation and no special complement selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "verdict": "keep",
+    "reason": "The financial sense requires lucrar com or obter lucro com, so the governed preposition omitted by the legacy gloss merits active practice."
+  }
+]

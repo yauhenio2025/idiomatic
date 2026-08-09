@@ -1,0 +1,254 @@
+[
+  {
+    "id": "it_fancy_vocab_241",
+    "en": "the Intellectual Property",
+    "category": "lexical-noun",
+    "tl": "la propiedad intelectual",
+    "alts": [],
+    "register": "Neutral-formal legal and policy term; its precise statutory scope varies across legal systems.",
+    "trap": "In Spanish law, propiedad intelectual often refers specifically to copyright and related rights, while patents and trademarks fall under propiedad industrial.",
+    "example_tl": "El acuerdo exige proteger la propiedad intelectual, pero distingue los derechos de autor de las patentes sobre tecnologías desarrolladas con fondos públicos.",
+    "example_en": "The agreement requires intellectual property to be protected, but distinguishes copyright from patents on technologies developed with public funds.",
+    "cloze": "El acuerdo exige proteger {{c1::la propiedad intelectual}}, pero distingue los derechos de autor de las patentes sobre tecnologías desarrolladas con fondos públicos.",
+    "note": "The legacy rendering is lexically correct but conceals a material legal-system difference: Spanish propiedad intelectual may be narrower than the English umbrella term."
+  },
+  {
+    "id": "it_fancy_vocab_243",
+    "en": "the Supply Chain",
+    "category": "lexical-noun",
+    "tl": "la cadena de suministro",
+    "alts": [
+      "la cadena de abastecimiento"
+    ],
+    "register": "Neutral business, logistics and industrial-policy term; cadena de suministro is the usual choice in Spain.",
+    "trap": "Portuguese cadeia de suprimentos can prompt the non-Spanish calque *cadena de suprimentos; use cadena de suministro or cadena de abastecimiento.",
+    "example_tl": "La crisis reveló que la cadena de suministro europea dependía de pocos fabricantes asiáticos para componentes esenciales de redes y centros de datos.",
+    "example_en": "The crisis revealed that the European supply chain depended on a small number of Asian manufacturers for essential network and data-centre components.",
+    "cloze": "La crisis reveló que {{c1::la cadena de suministro}} europea dependía de pocos fabricantes asiáticos para componentes esenciales de redes y centros de datos.",
+    "note": "The legacy rendering is accurate. Cadena de abastecimiento is retained as a genuine alternative, especially common in Latin American usage."
+  },
+  {
+    "id": "it_fancy_vocab_245",
+    "en": "the Tariffs",
+    "category": "lexical-noun",
+    "tl": "el arancel sobre algo",
+    "alts": [],
+    "register": "Neutral-formal trade and customs vocabulary for a duty imposed on imported or exported goods.",
+    "trap": "English tariff is not always tarifa: a customs duty is an arancel, whereas tarifa normally denotes a price schedule or service charge.",
+    "example_tl": "Los aranceles sobre componentes electrónicos encarecieron la producción nacional sin crear proveedores alternativos, porque las empresas siguieron dependiendo de maquinaria importada.",
+    "example_en": "Tariffs on electronic components made domestic production more expensive without creating alternative suppliers, because companies remained dependent on imported machinery.",
+    "cloze": "{{c1::Los aranceles sobre}} componentes electrónicos encarecieron la producción nacional sin crear proveedores alternativos, porque las empresas siguieron dependiendo de maquinaria importada.",
+    "note": "The legacy plural is correct; the production headword restores the singular lemma and its productive sobre complement."
+  },
+  {
+    "id": "it_fancy_vocab_247",
+    "en": "the Decoupling",
+    "category": "lexical-noun",
+    "tl": "el desacoplamiento",
+    "alts": [
+      "la desvinculación"
+    ],
+    "register": "Formal economic and geopolitical vocabulary for deliberately reducing strategic interdependence between countries, sectors or technological systems.",
+    "trap": "Desacoplamiento is stronger than reducción de riesgos: the latter can preserve substantial ties while diversifying selected strategic dependencies.",
+    "example_tl": "El desacoplamiento avanza de forma selectiva: los gobiernos restringen chips estratégicos mientras preservan intercambios comerciales que consideran menos sensibles.",
+    "example_en": "Decoupling is advancing selectively: governments restrict strategic chips while preserving trade flows that they consider less sensitive.",
+    "cloze": "{{c1::El desacoplamiento}} avanza de forma selectiva: los gobiernos restringen chips estratégicos mientras preservan intercambios comerciales que consideran menos sensibles.",
+    "note": "The legacy desvinculación is valid and retained as an alternative; desacoplamiento is the established main term in current geoeconomic debate."
+  },
+  {
+    "id": "it_fancy_vocab_251",
+    "en": "the Interference",
+    "category": "lexical-noun",
+    "tl": "la injerencia en algo",
+    "alts": [
+      "la intromisión en algo"
+    ],
+    "register": "Formal-critical political and geopolitical vocabulary for improper involvement in another actor's affairs or processes.",
+    "trap": "Interferencia is natural for signals, waves or operational disruption; improper political interference is more idiomatically injerencia or intromisión.",
+    "example_tl": "La injerencia en procesos electorales no siempre altera el recuento; también puede erosionar la confianza pública mediante filtraciones selectivas y campañas encubiertas.",
+    "example_en": "Interference in electoral processes does not always alter the count; it can also erode public confidence through selective leaks and covert campaigns.",
+    "cloze": "{{c1::La injerencia en}} procesos electorales no siempre altera el recuento; también puede erosionar la confianza pública mediante filtraciones selectivas y campañas encubiertas.",
+    "note": "The isolated English prompt is polysemous. This note deliberately selects political interference and materially replaces legacy interferencia, which suggests a technical sense here."
+  },
+  {
+    "id": "it_fancy_vocab_252",
+    "en": "the Regulations",
+    "category": "lexical-noun",
+    "tl": "la normativa",
+    "alts": [
+      "la regulación"
+    ],
+    "register": "Formal institutional usage; normativa denotes a body of applicable rules, while regulación can denote either that framework or the activity of regulating.",
+    "trap": "Reglamentación is possible but often foregrounds detailed implementing rules; English plural regulations is frequently the collective Spanish singular normativa.",
+    "example_tl": "La normativa europea exige que las plataformas expliquen sus sistemas de recomendación y ofrezcan a los investigadores acceso seguro a ciertos datos.",
+    "example_en": "European regulations require platforms to explain their recommendation systems and give researchers secure access to certain data.",
+    "cloze": "{{c1::La normativa}} europea exige que las plataformas expliquen sus sistemas de recomendación y ofrezcan a los investigadores acceso seguro a ciertos datos.",
+    "note": "Materially refines old_back reglamentación by selecting the idiomatic collective noun for a body of binding rules in this institutional context."
+  },
+  {
+    "id": "it_fancy_vocab_257",
+    "en": "the Dominance",
+    "category": "lexical-noun",
+    "tl": "la posición dominante",
+    "alts": [],
+    "register": "Formal competition-law and market-policy expression for economic power that lets an undertaking behave substantially independently of competitors or customers.",
+    "trap": "Generic dominio does not supply the established competition-law collocation; abuse of dominance is abuso de posición dominante, not *abuso de dominancia.",
+    "example_tl": "La posición dominante de la plataforma le permite imponer comisiones a los desarrolladores sin negociar condiciones ni ofrecer mecanismos eficaces de apelación.",
+    "example_en": "The platform's dominant position allows it to impose fees on developers without negotiating terms or offering effective appeal mechanisms.",
+    "cloze": "{{c1::La posición dominante}} de la plataforma le permite imponer comisiones a los desarrolladores sin negociar condiciones ni ofrecer mecanismos eficaces de apelación.",
+    "note": "The prompt is polysemous. This note selects the high-value competition-policy sense and replaces legacy dominio with its established legal collocation."
+  },
+  {
+    "id": "it_fancy_vocab_259",
+    "en": "the Quantum Computing",
+    "category": "lexical-noun",
+    "tl": "la computación cuántica",
+    "alts": [
+      "la informática cuántica"
+    ],
+    "register": "Neutral specialist vocabulary; computación cuántica and informática cuántica are both established in Spain's technical and policy writing.",
+    "trap": "The field is computación cuántica, whereas a physical device is an ordenador cuántico or computador cuántico; the terms are related but not interchangeable.",
+    "example_tl": "La computación cuántica aún no amenaza todo el cifrado existente, pero obliga a adoptar estándares criptográficos poscuánticos antes de que maduren los equipos.",
+    "example_en": "Quantum computing does not yet threaten all existing encryption, but it makes it necessary to adopt post-quantum cryptographic standards before the machines mature.",
+    "cloze": "{{c1::La computación cuántica}} aún no amenaza todo el cifrado existente, pero obliga a adoptar estándares criptográficos poscuánticos antes de que maduren los equipos.",
+    "note": "The legacy rendering is accurate apart from unnecessary capitalization. Informática cuántica is retained as a natural Spain-oriented alternative. Self-review replaced the vague estándares resistentes with the established estándares criptográficos poscuánticos."
+  },
+  {
+    "id": "it_fancy_vocab_260",
+    "en": "the Standards",
+    "category": "lexical-noun",
+    "tl": "los estándares técnicos",
+    "alts": [
+      "las normas técnicas"
+    ],
+    "register": "Neutral technical and institutional usage for agreed specifications governing compatibility, quality or implementation.",
+    "trap": "Portuguese padrões must not become Spanish *padrones, which means registers or censuses; use estándares or normas according to context.",
+    "example_tl": "Los estándares técnicos abiertos reducen la dependencia de un proveedor y permiten que administraciones distintas intercambien datos sin adoptar sistemas idénticos.",
+    "example_en": "Open technical standards reduce dependence on one supplier and allow different public administrations to exchange data without adopting identical systems.",
+    "cloze": "{{c1::Los estándares técnicos}} abiertos reducen la dependencia de un proveedor y permiten que administraciones distintas intercambien datos sin adoptar sistemas idénticos.",
+    "note": "Legacy normas is valid and retained in the more precise alternative normas técnicas; estándares técnicos is especially idiomatic for interoperability specifications."
+  },
+  {
+    "id": "it_fancy_vocab_262",
+    "en": "R&D (Research and Development)",
+    "category": "lexical-expression",
+    "tl": "la I+D",
+    "alts": [],
+    "register": "Standard institutional, academic and business abbreviation in Spain for investigación y desarrollo; often expanded on first mention in formal documents.",
+    "trap": "Spanish retains neither English R&D nor Portuguese P&D in domestic usage: the conventional abbreviation is I+D and is feminine through investigación.",
+    "example_tl": "La I+D pública puede orientar proyectos arriesgados hacia objetivos sociales que el capital privado descarta por prometer rendimientos demasiado tardíos o inciertos.",
+    "example_en": "Public R&D can direct risky projects towards social goals that private capital rejects because they promise returns that are too delayed or uncertain.",
+    "cloze": "{{c1::La I+D}} pública puede orientar proyectos arriesgados hacia objetivos sociales que el capital privado descarta por prometer rendimientos demasiado tardíos o inciertos.",
+    "note": "The legacy equivalent is correct, but the production note adds the conventional feminine article and removes unnecessary capitalization from the expansion. Self-review replaced the calque retornos lentos with rendimientos tardíos."
+  },
+  {
+    "id": "it_fancy_vocab_263",
+    "en": "the Digital Sovereignty",
+    "category": "lexical-noun",
+    "tl": "la soberanía digital",
+    "alts": [],
+    "register": "Formal technology-policy term for the capacity of a polity or institution to govern its digital infrastructure, data and strategic dependencies.",
+    "trap": "Soberanía digital does not necessarily mean complete technological self-sufficiency; it can instead concern regulatory control, auditability and substitutable suppliers.",
+    "example_tl": "La soberanía digital no exige fabricar cada componente dentro de Europa, sino conservar la capacidad política para auditar, sustituir y regular proveedores.",
+    "example_en": "Digital sovereignty does not require manufacturing every component within Europe, but rather retaining the political capacity to audit, replace and regulate suppliers.",
+    "cloze": "{{c1::La soberanía digital}} no exige fabricar cada componente dentro de Europa, sino conservar la capacidad política para auditar, sustituir y regular proveedores.",
+    "note": "The legacy rendering is accurate apart from unnecessary capitalization. Retention is justified by the term's contested policy meaning rather than cognate recognition alone. Self-review restored the article in la capacidad política for idiomatic flow."
+  },
+  {
+    "id": "it_fancy_vocab_266",
+    "en": "the Data Privacy",
+    "category": "lexical-noun",
+    "tl": "la protección de datos",
+    "alts": [],
+    "register": "Standard legal and policy term in Spain and the EU for rules and practices governing the lawful processing of personal data.",
+    "trap": "Protección de datos names the regulatory field; privacidad de los datos can denote the protected interest, so the two expressions do not always coincide.",
+    "example_tl": "La protección de datos exige limitar la recogida de información, incluso cuando cada usuario haya aceptado formalmente una política de privacidad extensa.",
+    "example_en": "Data privacy requires limiting information collection, even when each user has formally accepted an extensive privacy policy.",
+    "cloze": "{{c1::La protección de datos}} exige limitar la recogida de información, incluso cuando cada usuario haya aceptado formalmente una política de privacidad extensa.",
+    "note": "Materially replaces legacy privacidad de los datos by selecting the institutional EU-policy sense established by the example; the more literal phrase remains valid in other contexts."
+  },
+  {
+    "id": "it_fancy_vocab_269",
+    "en": "the Espionage Act",
+    "category": "lexical-noun",
+    "tl": "la Ley de Espionaje de 1917",
+    "alts": [],
+    "register": "Formal US legal and historical proper name; the year identifies the federal statute rather than espionage legislation in general.",
+    "trap": "English Act in the title is ley, not acto; Spanish capitalizes Ley and Espionaje when they form the translated identifying name of this statute.",
+    "example_tl": "La Ley de Espionaje de 1917 se ha invocado contra responsables de filtraciones, aunque sus defensores sostienen que protege secretos esenciales para la seguridad nacional.",
+    "example_en": "The Espionage Act of 1917 has been invoked against those responsible for leaks, although its defenders argue that it protects secrets essential to national security.",
+    "cloze": "{{c1::La Ley de Espionaje de 1917}} se ha invocado contra responsables de filtraciones, aunque sus defensores sostienen que protege secretos esenciales para la seguridad nacional.",
+    "note": "The legacy title is broadly correct but underspecified; adding de 1917 anchors the intended US statute and prevents a generic reading."
+  },
+  {
+    "id": "it_fancy_vocab_270",
+    "en": "the Cloud Computing",
+    "category": "lexical-noun",
+    "tl": "la computación en la nube",
+    "alts": [
+      "la informática en la nube"
+    ],
+    "register": "Neutral technical and technology-policy usage; informática en la nube is also natural in Spain.",
+    "trap": "Cloud is rendered with an en phrase: computación en la nube or informática en la nube, not an English-patterned compound such as *computación nube.",
+    "example_tl": "La computación en la nube permitió ampliar rápidamente la capacidad del servicio, pero concentró datos sensibles en infraestructuras sometidas a jurisdicciones extranjeras.",
+    "example_en": "Cloud computing allowed the service's capacity to be expanded rapidly, but concentrated sensitive data in infrastructure subject to foreign jurisdictions.",
+    "cloze": "{{c1::La computación en la nube}} permitió ampliar rápidamente la capacidad del servicio, pero concentró datos sensibles en infraestructuras sometidas a jurisdicciones extranjeras.",
+    "note": "The legacy computación en nube is valid; the main form adds the definite article, which is especially natural in general professional prose. Self-review replaced the technical anglicism escalar el servicio with ampliar la capacidad del servicio."
+  },
+  {
+    "id": "it_fancy_vocab_273",
+    "en": "the Internet Protocol",
+    "category": "lexical-noun",
+    "tl": "el protocolo de internet",
+    "alts": [
+      "el protocolo IP"
+    ],
+    "register": "Neutral specialist networking term; the international abbreviation IP is retained from English and is widely used after expansion.",
+    "trap": "El protocolo IP is not la dirección IP: the protocol defines packet addressing and routing, while an IP address identifies an interface within that scheme.",
+    "example_tl": "El protocolo de internet permite que redes heterogéneas intercambien paquetes, pero no garantiza por sí mismo la confidencialidad ni la autenticidad.",
+    "example_en": "The Internet Protocol allows heterogeneous networks to exchange packets, but does not by itself guarantee confidentiality or authenticity.",
+    "cloze": "{{c1::El protocolo de internet}} permite que redes heterogéneas intercambien paquetes, pero no garantiza por sí mismo la confidencialidad ni la autenticidad.",
+    "note": "The legacy rendering is lexically correct but uses unnecessary title-style capitals; contemporary Spanish normally writes the common nouns in lowercase."
+  },
+  {
+    "id": "it_fancy_vocab_277",
+    "en": "the Zero Trust",
+    "category": "lexical-noun",
+    "tl": "el modelo de confianza cero",
+    "alts": [
+      "la arquitectura de confianza cero"
+    ],
+    "register": "Specialist cybersecurity term for an access model that continually verifies identities, devices and requests instead of trusting network location.",
+    "trap": "Confianza cero is not ordinary interpersonal distrust; in security it labels a verification architecture, so the bare legacy phrase needs a head noun.",
+    "example_tl": "El modelo de confianza cero parte de que ninguna identidad debe recibir acceso permanente y exige verificar cada solicitud según su contexto y riesgo.",
+    "example_en": "The zero-trust model assumes that no identity should receive permanent access and requires every request to be verified according to its context and risk.",
+    "cloze": "{{c1::El modelo de confianza cero}} parte de que ninguna identidad debe recibir acceso permanente y exige verificar cada solicitud según su contexto y riesgo.",
+    "note": "Materially refines old_back confianza cero by supplying the domain head noun needed for a production-ready Spanish term. Self-review replaced the anthropomorphic merece acceso with debe recibir acceso."
+  },
+  {
+    "id": "it_fancy_vocab_279",
+    "en": "the Silicon",
+    "category": "lexical-noun",
+    "tl": "el silicio",
+    "alts": [],
+    "register": "Neutral scientific and semiconductor-industry term for the chemical element used as the substrate in most integrated circuits.",
+    "trap": "English silicon is silicio; silicona means silicone, the family of synthetic polymers used in sealants, implants and other products.",
+    "example_tl": "El silicio sigue siendo esencial para fabricar chips avanzados, aunque la ventaja competitiva depende también del diseño, la maquinaria y el encapsulado.",
+    "example_en": "Silicon remains essential for manufacturing advanced chips, although competitive advantage also depends on design, machinery and packaging.",
+    "cloze": "{{c1::El silicio}} sigue siendo esencial para fabricar chips avanzados, aunque la ventaja competitiva depende también del diseño, la maquinaria y el encapsulado.",
+    "note": "The legacy rendering is correct. Retention is justified by the consequential silicon/silicone false-friend distinction."
+  },
+  {
+    "id": "it_fancy_vocab_280",
+    "en": "the Wafer",
+    "category": "lexical-noun",
+    "tl": "la oblea semiconductora",
+    "alts": [],
+    "register": "Specialist semiconductor-manufacturing term for the thin disc on which many integrated circuits are fabricated before separation.",
+    "trap": "Oblea also denotes a thin edible wafer; semiconductor context or a modifier such as semiconductora or de silicio is needed to fix the technical sense.",
+    "example_tl": "La oblea semiconductora atraviesa cientos de procesos antes de dividirse en chips, por lo que un defecto microscópico puede reducir mucho el rendimiento.",
+    "example_en": "The semiconductor wafer goes through hundreds of processes before being divided into chips, so a microscopic defect can greatly reduce the yield.",
+    "cloze": "{{c1::La oblea semiconductora}} atraviesa cientos de procesos antes de dividirse en chips, por lo que un defecto microscópico puede reducir mucho el rendimiento.",
+    "note": "The legacy oblea is correct but polysemous; the production headword adds semiconductora to anchor the intended technical sense."
+  }
+]

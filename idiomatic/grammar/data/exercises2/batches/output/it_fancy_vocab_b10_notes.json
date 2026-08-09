@@ -1,0 +1,217 @@
+[
+  {
+    "id": "it_fancy_vocab_361",
+    "en": "Diverse",
+    "category": "lexical-adjective",
+    "tl": "eterogeneo",
+    "alts": [
+      "variegato"
+    ],
+    "register": "Eterogeneo è neutro-formale per un insieme composto da elementi differenti; variegato è meno analitico e mette maggiormente in risalto la varietà.",
+    "trap": "Diverso significa spesso different e, al plurale, può anche significare several; non è quindi la resa automatica dell'inglese diverse riferito alla composizione di un insieme.",
+    "example_tl": "Un ecosistema informativo eterogeneo limita il potere dei grandi intermediari, perché espone il pubblico a prospettive, fonti e modelli economici differenti.",
+    "example_en": "A diverse information ecosystem limits the power of major intermediaries because it exposes the public to different perspectives, sources, and economic models.",
+    "cloze": "Un ecosistema informativo {{c1::eterogeneo}} limita il potere dei grandi intermediari, perché espone il pubblico a prospettive, fonti e modelli economici differenti.",
+    "note": "The legacy diverso is possible in some contexts but is ambiguous between diverse and different. Self-review fixed the composition-of-a-set sense and selected eterogeneo; variegato remains natural in the example."
+  },
+  {
+    "id": "it_fancy_vocab_364",
+    "en": "Responsive",
+    "category": "lexical-adjective",
+    "tl": "sensibile alle esigenze di",
+    "alts": [
+      "attento alle esigenze di"
+    ],
+    "register": "Locuzione neutro-formale per autorità e organizzazioni che ascoltano i destinatari e adeguano il proprio operato; attento alle esigenze di è leggermente meno istituzionale.",
+    "trap": "Reattivo descrive soprattutto chi o ciò che reagisce prontamente a uno stimolo; responsive riferito a un'istituzione implica anche ascolto e risposta ai bisogni.",
+    "example_tl": "Un'autorità sensibile alle esigenze di utenti vulnerabili interviene rapidamente sui reclami documentati, senza confondere la capacità di risposta con la rinuncia all'indipendenza.",
+    "example_en": "A regulator responsive to the needs of vulnerable users acts quickly on substantiated complaints without confusing responsiveness with the surrender of its independence.",
+    "cloze": "Un'autorità {{c1::sensibile alle esigenze di}} utenti vulnerabili interviene rapidamente sui reclami documentati, senza confondere la capacità di risposta con la rinuncia all'indipendenza.",
+    "note": "Materially diverges from old_back: reattivo would capture speed of reaction but not institutional attentiveness. Self-review made the human-needs complement explicit and excluded the unrelated web-design sense."
+  },
+  {
+    "id": "it_fancy_vocab_365",
+    "en": "Detached",
+    "category": "lexical-adjective",
+    "tl": "avulso da",
+    "alts": [
+      "scollegato da"
+    ],
+    "register": "Avulso da è formale e critico per idee, dibattiti o decisioni separati dal loro contesto; scollegato da è neutro e meno marcato.",
+    "trap": "Distaccato descrive normalmente un atteggiamento emotivamente distante o una separazione materiale; per un'argomentazione detached from evidence è più idiomatico avulso da.",
+    "example_tl": "Un dibattito avulso dai dati empirici permette alle piattaforme di presentare interessi commerciali contingenti come principi tecnici universali e inevitabili.",
+    "example_en": "A debate detached from empirical data allows platforms to present contingent commercial interests as universal and inevitable technical principles.",
+    "cloze": "Un dibattito {{c1::avulso dai}} dati empirici permette alle piattaforme di presentare interessi commerciali contingenti come principi tecnici universali e inevitabili.",
+    "note": "The source is polysemous. Self-review selected the detached-from-context argumentative sense, for which the legacy distaccato is unnatural, and retained the governed da in the headword."
+  },
+  {
+    "id": "it_fancy_vocab_373",
+    "en": "Consumptive",
+    "category": "lexical-adjective",
+    "tl": "ad alto consumo di risorse",
+    "alts": [
+      "dispendioso in termini di risorse"
+    ],
+    "register": "Locuzione analitica neutra nella critica ambientale e tecnologica per processi che assorbono molte risorse; l'alternativa sottolinea maggiormente il costo.",
+    "trap": "Consumistico riguarda il consumismo o la propensione all'acquisto e non descrive automaticamente un sistema che consuma grandi quantità di energia o risorse.",
+    "example_tl": "Un modello pubblicitario ad alto consumo di risorse trasferisce i costi ambientali sui territori che ospitano centri dati e infrastrutture energetiche.",
+    "example_en": "A resource-consumptive advertising model shifts environmental costs onto the areas that host data centers and energy infrastructure.",
+    "cloze": "Un modello pubblicitario {{c1::ad alto consumo di risorse}} trasferisce i costi ambientali sui territori che ospitano centri dati e infrastrutture energetiche.",
+    "note": "The bare English adjective has several specialist senses. Self-review fixed the resource-intensive sense anticipated by old_back and supplied the missing resource complement needed for a production-ready Italian phrase."
+  },
+  {
+    "id": "it_fancy_vocab_374",
+    "en": "Neutral",
+    "category": "lexical-adjective",
+    "tl": "neutrale",
+    "alts": [],
+    "register": "Neutrale è neutro-formale per soggetti, istituzioni o tecnologie che non favoriscono una parte; neutro è preferito in molti usi classificatori e descrittivi.",
+    "trap": "Italiano neutro e neutrale si sovrappongono solo in parte: neutro è normalmente preferito per tono, colore e genere grammaticale, mentre qui serve neutralità rispetto a interessi contrapposti.",
+    "example_tl": "Nessuna architettura di raccomandazione è neutrale, poiché ogni criterio di priorità favorisce alcune fonti, forme espressive e strategie commerciali rispetto ad altre.",
+    "example_en": "No recommendation architecture is neutral, since every priority criterion favors some sources, forms of expression, and commercial strategies over others.",
+    "cloze": "Nessuna architettura di raccomandazione è {{c1::neutrale}}, poiché ogni criterio di priorità favorisce alcune fonti, forme espressive e strategie commerciali rispetto ad altre.",
+    "note": "The legacy rendering is accurate for institutional or political nonalignment. Self-review retained the item to document the productive neutro/neutrale distinction without treating it as absolute."
+  },
+  {
+    "id": "it_fancy_vocab_376",
+    "en": "the Data",
+    "category": "lexical-noun",
+    "tl": "i dati",
+    "alts": [],
+    "register": "Nome neutro e comune in ambito tecnico e istituzionale; italiano standard usa normalmente il plurale dati, mentre un singolo dato è un elemento informativo.",
+    "trap": "English data è spesso un nome massa con verbo singolare; in italiano i dati richiede accordo plurale. La data significa invece il giorno indicato nel calendario.",
+    "example_tl": "I dati raccolti dalle applicazioni rivelano abitudini politiche e sanitarie che gli utenti non sanno di comunicare a intermediari commerciali.",
+    "example_en": "The data collected by applications reveal political and health-related habits that users do not know they are communicating to commercial intermediaries.",
+    "cloze": "{{c1::I dati}} raccolti dalle applicazioni rivelano abitudini politiche e sanitarie che gli utenti non sanno di comunicare a intermediari commerciali.",
+    "note": "The legacy rendering is accurate. Self-review retained the item for the consequential English-to-Italian number mismatch, made plural agreement visible and replaced non immaginano with the more idiomatic non sanno."
+  },
+  {
+    "id": "it_fancy_vocab_377",
+    "en": "the Regulation",
+    "category": "lexical-noun",
+    "tl": "la regolamentazione di",
+    "alts": [
+      "la disciplina di"
+    ],
+    "register": "Regolamentazione è neutro-formale per l'attività o l'assetto regolatorio; disciplina è più giuridico, mentre regolamento indica normalmente un singolo atto normativo.",
+    "trap": "English regulation può indicare il processo, il complesso delle regole o una singola norma; italiano distingue spesso regolamentazione, normativa, norma e regolamento.",
+    "example_tl": "La regolamentazione delle piattaforme fallisce quando gli obblighi formali non sono accompagnati da poteri ispettivi, competenze tecniche e sanzioni realmente dissuasive.",
+    "example_en": "The regulation of platforms fails when formal obligations are not accompanied by inspection powers, technical expertise, and genuinely deterrent sanctions.",
+    "cloze": "{{c1::La regolamentazione delle}} piattaforme fallisce quando gli obblighi formali non sono accompagnati da poteri ispettivi, competenze tecniche e sanzioni realmente dissuasive.",
+    "note": "The legacy noun is accurate only for the process or framework sense. Self-review added the governed di complement and separated that sense from a single regolamento and the collective normativa."
+  },
+  {
+    "id": "it_fancy_vocab_378",
+    "en": "the Advertisement",
+    "category": "lexical-noun",
+    "tl": "l'annuncio pubblicitario",
+    "alts": [
+      "l'inserzione pubblicitaria"
+    ],
+    "register": "Annuncio pubblicitario è neutro per un singolo messaggio promozionale; inserzione è comune nella stampa e negli spazi acquistati, mentre pubblicità può indicare l'attività nel suo complesso.",
+    "trap": "La pubblicità traduce advertising come attività o settore e, colloquialmente, anche an advertisement; il singolare inglese richiede spesso il più preciso annuncio pubblicitario.",
+    "example_tl": "L'annuncio pubblicitario prometteva una sicurezza assoluta, ma ometteva che il servizio avrebbe condiviso informazioni sensibili con numerosi intermediari esterni.",
+    "example_en": "The advertisement promised absolute security but omitted that the service would share sensitive information with numerous external intermediaries.",
+    "cloze": "{{c1::L'annuncio pubblicitario}} prometteva una sicurezza assoluta, ma ometteva che il servizio avrebbe condiviso informazioni sensibili con numerosi intermediari esterni.",
+    "note": "Materially refines old_back, which collapses one advertisement into advertising generally. Self-review selected a countable headword and retained inserzione because it fits the purchased ad in the example."
+  },
+  {
+    "id": "it_fancy_vocab_381",
+    "en": "the Revenue",
+    "category": "lexical-noun",
+    "tl": "i ricavi",
+    "alts": [
+      "le entrate"
+    ],
+    "register": "Ricavi è il termine economico-contabile neutro per i proventi dell'attività prima dei costi; entrate è più ampio e può descrivere flussi di denaro pubblici o privati.",
+    "trap": "Revenue non è utile o profitto, che risultano dopo aver sottratto i costi; reddito si usa soprattutto per persone, famiglie o categorie economiche differenti.",
+    "example_tl": "I ricavi pubblicitari delle piattaforme crescono anche nelle fasi di crisi dell'informazione pubblica, perché l'indignazione prolunga l'attenzione e moltiplica le occasioni di profilazione.",
+    "example_en": "Platforms' advertising revenue grows even during crises in public information because outrage prolongs attention and multiplies opportunities for profiling.",
+    "cloze": "{{c1::I ricavi}} pubblicitari delle piattaforme crescono anche nelle fasi di crisi dell'informazione pubblica, perché l'indignazione prolunga l'attenzione e moltiplica le occasioni di profilazione.",
+    "note": "The legacy rendering is accurate. Self-review retained entrate for this revenue sense, excluded the narrower turnover measure fatturato and replaced the calque-like crisi informative with crisi dell'informazione pubblica."
+  },
+  {
+    "id": "it_fancy_vocab_383",
+    "en": "the Competition",
+    "category": "lexical-noun",
+    "tl": "la concorrenza",
+    "alts": [],
+    "register": "Termine neutro dell'economia e del diritto antitrust per la rivalità tra operatori sul mercato; competizione è più generale e si usa anche per gare o confronti.",
+    "trap": "Nel lessico economico competition è concorrenza, non automaticamente il cognato competizione; la politica della concorrenza tutela la struttura competitiva del mercato.",
+    "example_tl": "La concorrenza si indebolisce quando gli operatori dominanti acquistano imprese emergenti prima che possano sviluppare modelli economici realmente alternativi.",
+    "example_en": "Competition weakens when dominant operators acquire emerging companies before they can develop genuinely alternative business models.",
+    "cloze": "{{c1::La concorrenza}} si indebolisce quando gli operatori dominanti acquistano imprese emergenti prima che possano sviluppare modelli economici realmente alternativi.",
+    "note": "The legacy rendering is accurate. Self-review retained the otherwise familiar noun because the competition/competizione cognate trap is central to policy and antitrust prose."
+  },
+  {
+    "id": "it_fancy_vocab_385",
+    "en": "the Breach",
+    "category": "lexical-noun",
+    "tl": "la violazione dei dati personali",
+    "alts": [],
+    "register": "Termine tecnico-giuridico della protezione dei dati per un incidente che compromette disponibilità, integrità o riservatezza; data breach resta frequente nel settore.",
+    "trap": "Fuga di dati descrive soprattutto divulgazione o sottrazione; una violazione dei dati personali comprende anche perdita, distruzione o alterazione accidentale.",
+    "example_tl": "La violazione dei dati personali è rimasta nascosta per settimane, impedendo agli interessati di cambiare credenziali e valutare tempestivamente i rischi.",
+    "example_en": "The personal data breach remained hidden for weeks, preventing the affected individuals from changing credentials and assessing the risks promptly.",
+    "cloze": "{{c1::La violazione dei dati personali}} è rimasta nascosta per settimane, impedendo agli interessati di cambiare credenziali e valutare tempestivamente i rischi.",
+    "note": "Materially specifies old_back: bare violazione does not identify a data breach. Self-review used the established privacy-law term and rejected fuga di dati as too narrow for the example's unspecified incident."
+  },
+  {
+    "id": "it_fancy_vocab_389",
+    "en": "the Profit",
+    "category": "lexical-noun",
+    "tl": "l'utile",
+    "alts": [
+      "il profitto"
+    ],
+    "register": "Utile è il termine contabile neutro per il risultato positivo dopo i costi, spesso precisato come lordo o netto; profitto è più generale e analitico.",
+    "trap": "Non confondere profit con ricavi: i ricavi precedono la sottrazione dei costi. Beneficio indica normalmente un vantaggio, non il risultato contabile di un'impresa.",
+    "example_tl": "L'utile netto del gruppo è aumentato nonostante il calo degli utenti, grazie a commissioni più elevate e a una drastica riduzione del personale.",
+    "example_en": "The group's net profit increased despite the decline in users, thanks to higher fees and a drastic reduction in staff.",
+    "cloze": "{{c1::L'utile}} netto del gruppo è aumentato nonostante il calo degli utenti, grazie a commissioni più elevate e a una drastica riduzione del personale.",
+    "note": "The legacy profitto is valid in general economic prose. Self-review fixed a company-reporting sense, selected utile, and verified that profitto remains interchangeable in the example."
+  },
+  {
+    "id": "it_fancy_vocab_391",
+    "en": "the Policy",
+    "category": "lexical-noun",
+    "tl": "la politica pubblica",
+    "alts": [
+      "la policy"
+    ],
+    "register": "Politica pubblica è neutro-formale nelle scienze sociali e nell'amministrazione; policy è un prestito specialistico comune anche per regole interne aziendali.",
+    "trap": "English distingue policy da politics, mentre politica può rendere entrambe; linea politica, politica pubblica, normativa o informativa possono servire secondo il contesto.",
+    "example_tl": "La politica pubblica sui mercati digitali dovrebbe ridurre le asimmetrie informative, anziché affidare ai consumatori scelte che richiedono competenze tecniche e dati verificabili.",
+    "example_en": "Public policy on digital markets should reduce information asymmetries instead of leaving consumers with choices that require technical expertise and verifiable data.",
+    "cloze": "{{c1::La politica pubblica}} sui mercati digitali dovrebbe ridurre le asimmetrie informative, anziché affidare ai consumatori scelte che richiedono competenze tecniche e dati verificabili.",
+    "note": "Materially refines old_back: bare politica is ambiguous between policy and politics. Self-review fixed the public-policy sense, retained policy as an established specialist loan and replaced the vague dati indipendenti with dati verificabili."
+  },
+  {
+    "id": "it_fancy_vocab_393",
+    "en": "the Accountability",
+    "category": "lexical-noun",
+    "tl": "l'obbligo di rendere conto",
+    "alts": [],
+    "register": "Locuzione formale del lessico istituzionale per il dovere di spiegare e giustificare decisioni davanti a chi può valutarle o contestarle.",
+    "trap": "Responsabilità è più ampia e può indicare competenza, colpa o liability; accountability aggiunge normalmente un obbligo concreto di spiegazione e scrutinio.",
+    "example_tl": "L'obbligo di rendere conto impone ai dirigenti di motivare le decisioni automatizzate e consente agli interessati di contestarle davanti a un'autorità indipendente.",
+    "example_en": "Accountability requires executives to justify automated decisions and allows affected parties to challenge them before an independent authority.",
+    "cloze": "{{c1::L'obbligo di rendere conto}} impone ai dirigenti di motivare le decisioni automatizzate e consente agli interessati di contestarle davanti a un'autorità indipendente.",
+    "note": "Materially diverges from old_back: responsabilità alone omits answerability. Self-review preferred the transparent institutional phrase to the technical rendicontabilità, whose scope varies across administrative and accounting contexts."
+  },
+  {
+    "id": "it_fancy_vocab_394",
+    "en": "the Stakeholder",
+    "category": "lexical-noun",
+    "tl": "il portatore di interesse",
+    "alts": [
+      "la parte interessata"
+    ],
+    "register": "Portatore di interesse è formale nelle consultazioni e nelle politiche pubbliche; parte interessata è istituzionale e stakeholder resta comune nel linguaggio aziendale.",
+    "trap": "Stakeholder non significa shareholder: un portatore di interesse può essere un lavoratore, una comunità o un'autorità senza possedere azioni dell'impresa.",
+    "example_tl": "I portatori di interesse hanno partecipato alla consultazione, ma le associazioni minori disponevano di meno risorse per analizzare le proposte tecniche.",
+    "example_en": "Stakeholders took part in the consultation, but the smaller associations had fewer resources with which to analyze the technical proposals.",
+    "cloze": "{{c1::I portatori di interesse}} hanno partecipato alla consultazione, ma le associazioni minori disponevano di meno risorse per analizzare le proposte tecniche.",
+    "note": "The legacy parte interessata is valid and interchangeable in the example. Self-review selected portatore di interesse as the explicit policy-analysis term and documented the consequential stakeholder/shareholder distinction."
+  }
+]

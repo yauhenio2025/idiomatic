@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_441",
+    "en": "To reject",
+    "verdict": "drop",
+    "reason": "Rejeter is transparent, high-frequency vocabulary, and the bare prompt does not select a proposal, hypothesis, person or defective product."
+  },
+  {
+    "id": "it_fancy_vocab_442",
+    "en": "To revise",
+    "verdict": "drop",
+    "reason": "Réviser and revoir are familiar, while the context-free prompt does not choose editing, amending, reviewing or studying for an examination."
+  },
+  {
+    "id": "it_fancy_vocab_443",
+    "en": "To scrutinize",
+    "verdict": "keep",
+    "reason": "Passer au crible preserves thorough systematic examination and avoids the nonexistent calque scrutiniser."
+  },
+  {
+    "id": "it_fancy_vocab_444",
+    "en": "To underscore",
+    "verdict": "drop",
+    "reason": "Souligner is familiar analytical vocabulary, and the preceding batch’s retained To highlight card already covers the same discourse function."
+  },
+  {
+    "id": "it_fancy_vocab_445",
+    "en": "To affirm",
+    "verdict": "drop",
+    "reason": "Affirmer is a transparent, high-frequency cognate, and no context selects assertion, confirmation, judicial affirmation or support for a principle."
+  },
+  {
+    "id": "it_fancy_vocab_446",
+    "en": "To allege",
+    "verdict": "keep",
+    "reason": "Alléguer que teaches formal evidential distance and the distinction between reporting an unproved claim and affirming it."
+  },
+  {
+    "id": "it_fancy_vocab_447",
+    "en": "To bolster",
+    "verdict": "keep",
+    "reason": "The evidential sense calls for étayer, which distinguishes evidence supporting an argument from a person defending it."
+  },
+  {
+    "id": "it_fancy_vocab_448",
+    "en": "To broach",
+    "verdict": "keep",
+    "reason": "Aborder or soulever a delicate subject materially corrects the unrelated legacy phrase and fixes the discussion-opening sense."
+  },
+  {
+    "id": "it_fancy_vocab_449",
+    "en": "To circumvent",
+    "verdict": "keep",
+    "reason": "Contourner precisely captures deliberate evasion of a rule or safeguard and contrasts usefully with the false friend circonvenir."
+  },
+  {
+    "id": "it_fancy_vocab_450",
+    "en": "To cogitate",
+    "verdict": "drop",
+    "reason": "The rare, often humorous English verb adds no distinct production value beside the retained brooding ruminate card and the preceding batch’s ponder card."
+  },
+  {
+    "id": "it_fancy_vocab_451",
+    "en": "To corroborate",
+    "verdict": "drop",
+    "reason": "Corroborer is a transparent, established C1 cognate, and the isolated prompt supplies no distinctive construction or interference risk."
+  },
+  {
+    "id": "it_fancy_vocab_452",
+    "en": "To counter",
+    "verdict": "keep",
+    "reason": "The English verb is object-dependent; contrecarrer a campaign usefully differs from réfuter a claim or contrebalancer an effect."
+  },
+  {
+    "id": "it_fancy_vocab_453",
+    "en": "To deduce",
+    "verdict": "drop",
+    "reason": "Déduire is transparent and duplicates the preceding batch’s retained To infer card, which already teaches déduire de and the inference distinction."
+  },
+  {
+    "id": "it_fancy_vocab_454",
+    "en": "To demur",
+    "verdict": "keep",
+    "reason": "Émettre des réserves preserves tactful institutional disagreement and materially corrects old_back dénigrer."
+  },
+  {
+    "id": "it_fancy_vocab_455",
+    "en": "To denigrate",
+    "verdict": "drop",
+    "reason": "Dénigrer is a direct formal cognate familiar at C1, and the prompt does not select a distinctive object or construction."
+  },
+  {
+    "id": "it_fancy_vocab_456",
+    "en": "To deride",
+    "verdict": "keep",
+    "reason": "Tourner en dérision preserves the contemptuous mockery that distinguishes deride from generic criticism or denigration."
+  },
+  {
+    "id": "it_fancy_vocab_457",
+    "en": "To discern",
+    "verdict": "drop",
+    "reason": "Discerner is a transparent advanced cognate, and the bare infinitive does not choose perception, conceptual distinction or judgment."
+  },
+  {
+    "id": "it_fancy_vocab_458",
+    "en": "To disseminate",
+    "verdict": "keep",
+    "reason": "Information is normally diffusée, while the legacy cognate disséminer often has physical or technical associations."
+  },
+  {
+    "id": "it_fancy_vocab_459",
+    "en": "To elicit",
+    "verdict": "keep",
+    "reason": "The source changes with its object; susciter a reaction must be distinguished from obtenir or faire émerger information."
+  },
+  {
+    "id": "it_fancy_vocab_460",
+    "en": "To embellish",
+    "verdict": "keep",
+    "reason": "Enjoliver a record or account captures favorable distortion more clearly than a generic physical or factual embellir."
+  },
+  {
+    "id": "it_fancy_vocab_461",
+    "en": "To espouse",
+    "verdict": "keep",
+    "reason": "The formal figurative use of épouser with a doctrine or vision has real production and register value."
+  },
+  {
+    "id": "it_fancy_vocab_462",
+    "en": "To fabricate",
+    "verdict": "keep",
+    "reason": "Fabriquer de toutes pièces fixes the false-evidence sense and avoids leaving the headword at ordinary physical manufacture."
+  },
+  {
+    "id": "it_fancy_vocab_463",
+    "en": "To fathom",
+    "verdict": "keep",
+    "reason": "Parvenir à comprendre preserves difficult achieved understanding and materially corrects the legacy noun sondage."
+  },
+  {
+    "id": "it_fancy_vocab_464",
+    "en": "To glean",
+    "verdict": "keep",
+    "reason": "Figurative glaner expresses gathering limited information from scattered evidence rather than exhaustive collection."
+  },
+  {
+    "id": "it_fancy_vocab_465",
+    "en": "To harp",
+    "verdict": "keep",
+    "reason": "Ressasser captures the usual harp on sense of tiresome repetition and replaces the unrelated legacy harponner."
+  },
+  {
+    "id": "it_fancy_vocab_466",
+    "en": "To impugn",
+    "verdict": "keep",
+    "reason": "Mettre en cause a person’s probity teaches the integrity-targeting sense, distinct from merely disputing a finding."
+  },
+  {
+    "id": "it_fancy_vocab_467",
+    "en": "To inculcate",
+    "verdict": "keep",
+    "reason": "Inculquer quelque chose à quelqu’un supplies valuable two-object government and corrects old_back incorporer."
+  },
+  {
+    "id": "it_fancy_vocab_468",
+    "en": "To indict",
+    "verdict": "keep",
+    "reason": "The jurisdiction-sensitive formal accusation must be distinguished from conviction and from France’s different domestic procedural terminology."
+  },
+  {
+    "id": "it_fancy_vocab_469",
+    "en": "To insinuate",
+    "verdict": "drop",
+    "reason": "Insinuer is a familiar direct cognate, and the bare prompt does not select indirect suggestion, gradual insertion or ingratiation."
+  },
+  {
+    "id": "it_fancy_vocab_470",
+    "en": "To laud",
+    "verdict": "keep",
+    "reason": "Formal praise calls for louer or saluer, and the item materially corrects the nonsensical legacy phrase."
+  },
+  {
+    "id": "it_fancy_vocab_471",
+    "en": "To mull",
+    "verdict": "drop",
+    "reason": "Neutral careful consideration duplicates the preceding batch’s retained To ponder card, while this batch keeps ruminate only for its brooding sense."
+  },
+  {
+    "id": "it_fancy_vocab_472",
+    "en": "To opine",
+    "verdict": "keep",
+    "reason": "Estimer que is the idiomatic institutional rendering; French opiner is rare and legacy s’engager has a different meaning."
+  },
+  {
+    "id": "it_fancy_vocab_473",
+    "en": "To postulate",
+    "verdict": "drop",
+    "reason": "The preceding batch’s retained To posit card already teaches postuler que, leaving no distinct sense or construction here."
+  },
+  {
+    "id": "it_fancy_vocab_474",
+    "en": "To promulgate",
+    "verdict": "keep",
+    "reason": "Promulguer precisely names a formal legal act with a law or constitution and replaces an unusable legacy gloss."
+  },
+  {
+    "id": "it_fancy_vocab_475",
+    "en": "To rebuff",
+    "verdict": "keep",
+    "reason": "Rejeter catégoriquement preserves the firmness of rebuff for a proposal rather than reducing it to generic rejection."
+  },
+  {
+    "id": "it_fancy_vocab_476",
+    "en": "To recapitulate",
+    "verdict": "drop",
+    "reason": "Récapituler is a familiar transparent cognate, and the isolated prompt supplies no distinctive summarizing frame."
+  },
+  {
+    "id": "it_fancy_vocab_477",
+    "en": "To refute",
+    "verdict": "keep",
+    "reason": "The evidential distinction between disproving, denying and merely disputing gives the transparent cognate genuine advanced value."
+  },
+  {
+    "id": "it_fancy_vocab_478",
+    "en": "To reiterate",
+    "verdict": "drop",
+    "reason": "Réitérer is a familiar transparent formal cognate, and the prompt offers no distinct rhetorical frame beyond saying something again."
+  },
+  {
+    "id": "it_fancy_vocab_479",
+    "en": "To repudiate",
+    "verdict": "keep",
+    "reason": "Désavouer a former public doctrine preserves emphatic disavowal and materially corrects the unrelated legacy sentence."
+  },
+  {
+    "id": "it_fancy_vocab_480",
+    "en": "To ruminate",
+    "verdict": "keep",
+    "reason": "Figurative ruminer is marked and usually brooding, a distinct sense from the neutral reflective verbs dropped as duplicates."
+  }
+]

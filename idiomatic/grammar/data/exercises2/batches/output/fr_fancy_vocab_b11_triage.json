@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_401",
+    "en": "the Value",
+    "verdict": "drop",
+    "reason": "La valeur is familiar core vocabulary, while the bare prompt gives no context for choosing a more specialized economic, ethical or numerical sense."
+  },
+  {
+    "id": "it_fancy_vocab_402",
+    "en": "the Dependency",
+    "verdict": "keep",
+    "reason": "The noun’s complement and the distinction among dépendance à l’égard de, envers and the verb dépendre de provide useful production value."
+  },
+  {
+    "id": "it_fancy_vocab_403",
+    "en": "To advocate",
+    "verdict": "keep",
+    "reason": "The public-policy sense calls for plaider en faveur de rather than a nonexistent direct cognate or an underspecified défendre."
+  },
+  {
+    "id": "it_fancy_vocab_404",
+    "en": "To appraise",
+    "verdict": "keep",
+    "reason": "Évaluer is the broad professional assessment verb, while expertiser is limited to a specialist examination or valuation."
+  },
+  {
+    "id": "it_fancy_vocab_405",
+    "en": "To articulate",
+    "verdict": "keep",
+    "reason": "Formuler clairement is often more idiomatic than the cognate articuler when the object is an argument, condition or concern."
+  },
+  {
+    "id": "it_fancy_vocab_406",
+    "en": "To champion",
+    "verdict": "keep",
+    "reason": "The figurative verb requires an idiomatic phrase such as défendre avec force and carries more energetic public support than bare défendre."
+  },
+  {
+    "id": "it_fancy_vocab_407",
+    "en": "To clarify",
+    "verdict": "drop",
+    "reason": "The exact-duplicate report assigns this item to CONNECTING, where it already has an authored treatment; the FANCY_VOCAB copy adds no distinct sense."
+  },
+  {
+    "id": "it_fancy_vocab_408",
+    "en": "To compare",
+    "verdict": "drop",
+    "reason": "Comparer is familiar core analytical vocabulary, and the isolated prompt supplies no specific à-versus-avec comparison to teach."
+  },
+  {
+    "id": "it_fancy_vocab_409",
+    "en": "To condemn",
+    "verdict": "drop",
+    "reason": "Condamner is a transparent, high-frequency cognate in legal and political prose with no special construction selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_410",
+    "en": "To consider",
+    "verdict": "drop",
+    "reason": "This common, highly underspecified verb adds no distinct lesson beside the kept prospective contemplate and assessment appraise items in the same chunk."
+  },
+  {
+    "id": "it_fancy_vocab_411",
+    "en": "To contemplate",
+    "verdict": "keep",
+    "reason": "Considering a future action is envisager de, whereas contempler normally means gaze at or admire."
+  },
+  {
+    "id": "it_fancy_vocab_412",
+    "en": "To contradict",
+    "verdict": "drop",
+    "reason": "Contredire is a transparent and familiar analytical cognate whose ordinary object patterns are already expected at C1."
+  },
+  {
+    "id": "it_fancy_vocab_413",
+    "en": "To convey",
+    "verdict": "keep",
+    "reason": "The rendering changes with the object, and old_back incorrectly narrows the verb to making one’s opinion known."
+  },
+  {
+    "id": "it_fancy_vocab_414",
+    "en": "To criticize",
+    "verdict": "drop",
+    "reason": "Critiquer is a transparent, high-frequency cognate with no marked register, government or specialized sense in the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_415",
+    "en": "To debate",
+    "verdict": "keep",
+    "reason": "Careful French uses débattre de a subject rather than copying the English direct-object construction."
+  },
+  {
+    "id": "it_fancy_vocab_416",
+    "en": "To defend",
+    "verdict": "drop",
+    "reason": "Défendre is familiar core vocabulary, and its advocacy sense is covered more precisely by the kept advocate and champion items."
+  },
+  {
+    "id": "it_fancy_vocab_417",
+    "en": "To delineate",
+    "verdict": "keep",
+    "reason": "Délimiter teaches the scope-and-boundaries sense, which is narrower than merely describing something."
+  },
+  {
+    "id": "it_fancy_vocab_418",
+    "en": "To denounce",
+    "verdict": "drop",
+    "reason": "Dénoncer is a transparent, familiar political and institutional cognate, and the prompt supplies no distinct reporting-to-authorities sense."
+  },
+  {
+    "id": "it_fancy_vocab_419",
+    "en": "To describe",
+    "verdict": "drop",
+    "reason": "Décrire is basic, transparent production vocabulary with no advanced collocation or contrast selected here."
+  },
+  {
+    "id": "it_fancy_vocab_420",
+    "en": "To dismiss",
+    "verdict": "keep",
+    "reason": "Dismiss is strongly object-dependent: criticisms, appeals and employees require different French verbs."
+  },
+  {
+    "id": "it_fancy_vocab_421",
+    "en": "To dispute",
+    "verdict": "keep",
+    "reason": "Contester a finding must be distinguished from the false friend disputer, which means argue, quarrel or compete for something."
+  },
+  {
+    "id": "it_fancy_vocab_422",
+    "en": "To embrace",
+    "verdict": "keep",
+    "reason": "The figurative acceptance sense is neutrally adopter pleinement; literal-looking embrasser is more elevated when used for a cause."
+  },
+  {
+    "id": "it_fancy_vocab_423",
+    "en": "To evaluate",
+    "verdict": "drop",
+    "reason": "It duplicates the general professional assessment function of the kept appraise item, whose less transparent English headword offers greater teaching value."
+  },
+  {
+    "id": "it_fancy_vocab_424",
+    "en": "To examine",
+    "verdict": "drop",
+    "reason": "Examiner is a transparent, high-frequency analytical cognate with no specialized procedure or construction in the isolated prompt."
+  },
+  {
+    "id": "it_fancy_vocab_425",
+    "en": "To expound",
+    "verdict": "keep",
+    "reason": "Exposer en détail preserves the sustained, systematic presentation that old_back expliquer does not necessarily encode."
+  },
+  {
+    "id": "it_fancy_vocab_426",
+    "en": "To express",
+    "verdict": "drop",
+    "reason": "Exprimer is familiar core vocabulary and an exact cognate, with no specific emotion, opinion or grammatical construction selected here."
+  },
+  {
+    "id": "it_fancy_vocab_427",
+    "en": "To foster",
+    "verdict": "keep",
+    "reason": "Favoriser is productive for creating conditions for development, while other domains such as foster care require entirely different French wording."
+  },
+  {
+    "id": "it_fancy_vocab_428",
+    "en": "To generate",
+    "verdict": "drop",
+    "reason": "Générer is established and familiar in technical prose, while the bare prompt gives no basis for selecting produire, susciter or engendrer instead."
+  },
+  {
+    "id": "it_fancy_vocab_429",
+    "en": "To highlight",
+    "verdict": "keep",
+    "reason": "The figurative analytical sense uses mettre en lumière, mettre en évidence or souligner rather than the physical-text verb surligner."
+  },
+  {
+    "id": "it_fancy_vocab_430",
+    "en": "To hypothesize",
+    "verdict": "keep",
+    "reason": "Formal French normally uses the multiword construction formuler l’hypothèse que rather than a direct verbal cognate."
+  },
+  {
+    "id": "it_fancy_vocab_431",
+    "en": "To illustrate",
+    "verdict": "drop",
+    "reason": "Illustrer is a transparent, familiar analytical cognate, and the prompt supplies no contrast between an example and a literal image."
+  },
+  {
+    "id": "it_fancy_vocab_432",
+    "en": "To infer",
+    "verdict": "keep",
+    "reason": "Déduire de supplies useful government and must be distinguished from imply, normally impliquer on the evidence or speaker side."
+  },
+  {
+    "id": "it_fancy_vocab_433",
+    "en": "To interpret",
+    "verdict": "drop",
+    "reason": "Interpréter is a transparent, high-frequency analytical cognate with no specialized legal, artistic or statistical sense selected."
+  },
+  {
+    "id": "it_fancy_vocab_434",
+    "en": "To negate",
+    "verdict": "keep",
+    "reason": "Old_back is the noun négation rather than a verb, and the French rendering changes between denying a proposition and neutralizing an effect."
+  },
+  {
+    "id": "it_fancy_vocab_435",
+    "en": "To ponder",
+    "verdict": "keep",
+    "reason": "Réfléchir à supplies the governed preposition and avoids the tempting false friend pondérer."
+  },
+  {
+    "id": "it_fancy_vocab_436",
+    "en": "To posit",
+    "verdict": "keep",
+    "reason": "Postuler que or poser comme hypothèse que is needed to introduce a premise; old_back poser alone is incomplete and ambiguous."
+  },
+  {
+    "id": "it_fancy_vocab_437",
+    "en": "To promote",
+    "verdict": "drop",
+    "reason": "Promouvoir is a familiar cognate, and the unspecified support sense overlaps the more instructive foster and champion items kept in this chunk."
+  },
+  {
+    "id": "it_fancy_vocab_438",
+    "en": "To propose",
+    "verdict": "drop",
+    "reason": "Proposer is transparent, high-frequency vocabulary with predictable syntax and no specialized parliamentary or theoretical sense selected here."
+  },
+  {
+    "id": "it_fancy_vocab_439",
+    "en": "To qualify",
+    "verdict": "keep",
+    "reason": "In rhetorical argument, qualify means nuancer rather than the French cognate qualifier, which normally characterizes or names."
+  },
+  {
+    "id": "it_fancy_vocab_440",
+    "en": "To question",
+    "verdict": "keep",
+    "reason": "Remettre en question explicitly challenges validity, whereas questionner may merely interrogate or examine the subject."
+  }
+]

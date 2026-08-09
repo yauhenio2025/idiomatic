@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_241",
+    "en": "the Intellectual Property",
+    "verdict": "keep",
+    "reason": "The abstract legal field must be distinguished from particular droits de propriété intellectuelle, which creates genuine production value despite the transparent cognate."
+  },
+  {
+    "id": "it_fancy_vocab_242",
+    "en": "the 5G",
+    "verdict": "drop",
+    "reason": "La 5G is ubiquitous core telecommunications vocabulary; its feminine gender follows génération, and the bare prompt offers no further C1-level distinction."
+  },
+  {
+    "id": "it_fancy_vocab_243",
+    "en": "the Supply Chain",
+    "verdict": "keep",
+    "reason": "Chaîne d’approvisionnement is a useful nonliteral logistics collocation, with chaîne logistique as an established professional alternative."
+  },
+  {
+    "id": "it_fancy_vocab_244",
+    "en": "the Trade",
+    "verdict": "drop",
+    "reason": "Le commerce is familiar core vocabulary already expected well below C1, and the isolated prompt selects no specialist trade-law construction."
+  },
+  {
+    "id": "it_fancy_vocab_245",
+    "en": "the Tariffs",
+    "verdict": "keep",
+    "reason": "Trade tariffs are droits de douane rather than generic tarifs, a consequential customs-versus-price distinction obscured by the legacy gloss."
+  },
+  {
+    "id": "it_fancy_vocab_246",
+    "en": "the Innovation",
+    "verdict": "drop",
+    "reason": "L’innovation is a transparent, ubiquitous policy and business cognate with no narrower construction selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_247",
+    "en": "the Decoupling",
+    "verdict": "keep",
+    "reason": "Découplage is marked geoeconomic vocabulary whose distinction from the less absolute réduction des risques carries real policy value."
+  },
+  {
+    "id": "it_fancy_vocab_248",
+    "en": "the Diplomacy",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_249",
+    "en": "the Geopolitics",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_250",
+    "en": "the Semiconductors",
+    "verdict": "drop",
+    "reason": "Les semi-conducteurs is a transparent, familiar technical cognate with predictable number and no narrower sense fixed by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_251",
+    "en": "the Interference",
+    "verdict": "keep",
+    "reason": "Political interference requires ingérence rather than technical interférence and supplies the productive government ingérence dans."
+  },
+  {
+    "id": "it_fancy_vocab_252",
+    "en": "the Regulations",
+    "verdict": "keep",
+    "reason": "English plural regulations often maps to collective singular réglementation, while règlements and régulation denote different institutional concepts."
+  },
+  {
+    "id": "it_fancy_vocab_253",
+    "en": "the Digital Currency",
+    "verdict": "keep",
+    "reason": "Monnaie numérique is an institutional France-French term whose distinction from cryptocurrency and the narrower legal category monnaie électronique merits a note."
+  },
+  {
+    "id": "it_fancy_vocab_254",
+    "en": "the Artificial Intelligence",
+    "verdict": "drop",
+    "reason": "L’intelligence artificielle is ubiquitous core technology vocabulary with a transparent translation and no additional production difficulty here."
+  },
+  {
+    "id": "it_fancy_vocab_255",
+    "en": "the Export",
+    "verdict": "drop",
+    "reason": "L’exportation is a transparent, high-frequency economics cognate already expected at C1, and the prompt supplies no useful construction."
+  },
+  {
+    "id": "it_fancy_vocab_256",
+    "en": "the Restrictions",
+    "verdict": "drop",
+    "reason": "Les restrictions is familiar core policy vocabulary and a direct cognate with regular plural morphology."
+  },
+  {
+    "id": "it_fancy_vocab_257",
+    "en": "the Dominance",
+    "verdict": "keep",
+    "reason": "Competition policy uses the established expression position dominante rather than generic domination or a calqued dominance."
+  },
+  {
+    "id": "it_fancy_vocab_258",
+    "en": "the Platforms",
+    "verdict": "drop",
+    "reason": "Les plateformes is ubiquitous core digital-economy vocabulary, transparently formed and already well below the target level."
+  },
+  {
+    "id": "it_fancy_vocab_259",
+    "en": "the Quantum Computing",
+    "verdict": "keep",
+    "reason": "The field term requires a useful choice between informatique quantique and calcul quantique and must be distinguished from an ordinateur quantique."
+  },
+  {
+    "id": "it_fancy_vocab_260",
+    "en": "the Standards",
+    "verdict": "keep",
+    "reason": "French distinguishes an institutionally adopted norme from a potentially de facto standard, so the transparent-looking English prompt hides a material policy distinction."
+  },
+  {
+    "id": "it_fancy_vocab_261",
+    "en": "the Alliances",
+    "verdict": "drop",
+    "reason": "Les alliances is transparent, familiar geopolitical vocabulary with regular morphology and no narrower construction selected."
+  },
+  {
+    "id": "it_fancy_vocab_262",
+    "en": "R&D (Research and Development)",
+    "verdict": "keep",
+    "reason": "The established feminine abbreviation la R&D and its contrast with Spanish I+D and Portuguese P&D form a genuine multilingual production target."
+  },
+  {
+    "id": "it_fancy_vocab_263",
+    "en": "the Digital Sovereignty",
+    "verdict": "keep",
+    "reason": "Souveraineté numérique is a contested technology-policy concept whose meaning is broader and subtler than technological self-sufficiency or national hosting."
+  },
+  {
+    "id": "it_fancy_vocab_264",
+    "en": "the Networks",
+    "verdict": "drop",
+    "reason": "Les réseaux is elementary core vocabulary in social and computing contexts, and the bare plural selects no specialist network type."
+  },
+  {
+    "id": "it_fancy_vocab_265",
+    "en": "the Patents",
+    "verdict": "keep",
+    "reason": "Brevet is non-cognate legal vocabulary and blocks the consequential false-friend transfer of English patent and Spanish or Portuguese patente."
+  },
+  {
+    "id": "it_fancy_vocab_266",
+    "en": "the Data Privacy",
+    "verdict": "keep",
+    "reason": "EU policy uses protection des données personnelles, while legacy confidentialité des données names only one narrower safeguard."
+  },
+  {
+    "id": "it_fancy_vocab_267",
+    "en": "the Threats",
+    "verdict": "drop",
+    "reason": "Les menaces is familiar core vocabulary with a straightforward translation and regular plural morphology."
+  },
+  {
+    "id": "it_fancy_vocab_268",
+    "en": "the Investments",
+    "verdict": "drop",
+    "reason": "Les investissements is a transparent, high-frequency economics cognate already expected at C1."
+  },
+  {
+    "id": "it_fancy_vocab_269",
+    "en": "the Espionage Act",
+    "verdict": "keep",
+    "reason": "The specific US statute requires proper-name treatment, translates Act as loi rather than acte, and benefits from the identifying year 1917."
+  },
+  {
+    "id": "it_fancy_vocab_270",
+    "en": "the Cloud Computing",
+    "verdict": "keep",
+    "reason": "France French normally uses masculine cloud computing, while informatique en nuage is a marked institutional alternative and infonuagique is regionally associated with Canada."
+  },
+  {
+    "id": "it_fancy_vocab_271",
+    "en": "the Integration",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_272",
+    "en": "the Chips",
+    "verdict": "keep",
+    "reason": "Puce is a useful non-cognate semiconductor term vulnerable to transfer of English and Spanish chip, and électronique disambiguates the technical sense."
+  },
+  {
+    "id": "it_fancy_vocab_273",
+    "en": "the Internet Protocol",
+    "verdict": "keep",
+    "reason": "Protocole IP is the unambiguous networking term and supports a useful distinction from adresse IP and generic internet protocols."
+  },
+  {
+    "id": "it_fancy_vocab_274",
+    "en": "the Resilience",
+    "verdict": "drop",
+    "reason": "La résilience is a transparent and now familiar policy cognate; the isolated prompt supplies no specific system property or contrast to teach."
+  },
+  {
+    "id": "it_fancy_vocab_275",
+    "en": "the Satellites",
+    "verdict": "drop",
+    "reason": "Les satellites is familiar core scientific and geopolitical vocabulary with a direct cognate and predictable plural."
+  },
+  {
+    "id": "it_fancy_vocab_276",
+    "en": "the Trade War",
+    "verdict": "drop",
+    "reason": "Guerre commerciale is a familiar, compositionally transparent policy expression whose ordinary gender and agreement add no C1 production lesson."
+  },
+  {
+    "id": "it_fancy_vocab_277",
+    "en": "the Zero Trust",
+    "verdict": "keep",
+    "reason": "The cybersecurity concept needs a production-ready head noun and the established model Zero Trust or architecture zéro confiance rather than the bare legacy calque."
+  },
+  {
+    "id": "it_fancy_vocab_278",
+    "en": "the Transistor",
+    "verdict": "drop",
+    "reason": "Le transistor is a transparent, familiar electronics cognate with predictable masculine gender and no narrower sense in the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_279",
+    "en": "the Silicon",
+    "verdict": "keep",
+    "reason": "Silicium blocks the consequential English false-friend confusion between semiconductor silicon and polymer silicone."
+  },
+  {
+    "id": "it_fancy_vocab_280",
+    "en": "the Wafer",
+    "verdict": "keep",
+    "reason": "Tranche de silicium is marked semiconductor-manufacturing vocabulary; the legacy plaquette is valid but requires domain specification."
+  }
+]

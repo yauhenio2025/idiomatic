@@ -1,0 +1,287 @@
+[
+  {
+    "id": "it_fancy_vocab_402",
+    "en": "the Dependency",
+    "category": "lexical-noun",
+    "tl": "a dependência de",
+    "alts": [
+      "a dependência em relação a"
+    ],
+    "register": "Neutro-formal em análises de política pública, tecnologia e geopolítica; o complemento identifica o agente, recurso ou sistema do qual se depende.",
+    "trap": "Use dependência de ou dependência em relação a, não o decalque inglês *dependência sobre; em contexto clínico, dependência também pode designar adicção.",
+    "example_tl": "A dependência de fornecedores estrangeiros limita a autonomia tecnológica do país, sobretudo quando sanções interrompem a manutenção de infraestruturas digitais essenciais.",
+    "example_en": "Dependence on foreign suppliers limits the country's technological autonomy, especially when sanctions interrupt the maintenance of essential digital infrastructure.",
+    "cloze": "{{c1::A dependência de}} fornecedores estrangeiros limita a autonomia tecnológica do país, sobretudo quando sanções interrompem a manutenção de infraestruturas digitais essenciais.",
+    "note": "Old_back fornece o substantivo correto, mas omite sua regência produtiva. A nota seleciona a dependência institucional, não a acepção clínica. Autorrevisão: mantive em relação a como alternativa porque preserva o sentido no exemplo, embora seja mais longa."
+  },
+  {
+    "id": "it_fancy_vocab_403",
+    "en": "To advocate",
+    "category": "lexical-verb",
+    "tl": "defender publicamente algo",
+    "alts": [
+      "advogar em favor de algo"
+    ],
+    "register": "Neutro-formal para sustentar publicamente uma política, causa ou posição; advogar em favor de é mais marcado e próximo da linguagem jurídica.",
+    "trap": "O equivalente português é advogar, com g, não o decalque inglês *advocar; defender é mais amplo e também pode significar proteger.",
+    "example_tl": "A relatora defendeu publicamente uma moratória internacional sobre reconhecimento facial até que existissem salvaguardas verificáveis contra a discriminação algorítmica.",
+    "example_en": "The rapporteur advocated an international moratorium on facial recognition until verifiable safeguards against algorithmic discrimination were in place.",
+    "cloze": "A relatora {{c1::defendeu publicamente}} uma moratória internacional sobre reconhecimento facial até que existissem salvaguardas verificáveis contra a discriminação algorítmica.",
+    "note": "Old_back transmite o apoio genérico, mas não distingue advocate do mais amplo defend. Autorrevisão: priorizei a forma mais idiomática no jornalismo brasileiro e mantive a construção marcada com sua regência como alternativa."
+  },
+  {
+    "id": "it_fancy_vocab_404",
+    "en": "To appraise",
+    "category": "lexical-verb",
+    "tl": "estimar o valor de algo",
+    "alts": [
+      "avaliar o valor de algo"
+    ],
+    "register": "Neutro-formal para atribuir valor monetário a um ativo; avaliar é mais amplo e também se aplica a qualidade, desempenho ou mérito.",
+    "trap": "Appraise é polissêmico: estimar o valor fixa a acepção monetária, enquanto precificar costuma indicar a definição de um preço de venda.",
+    "example_tl": "Auditores independentes estimaram o valor dos ativos digitais da empresa antes de o fundo apresentar uma oferta vinculante de aquisição.",
+    "example_en": "Independent auditors appraised the company's digital assets before the fund submitted a binding acquisition offer.",
+    "cloze": "Auditores independentes {{c1::estimaram o valor}} dos ativos digitais da empresa antes de o fundo apresentar uma oferta vinculante de aquisição.",
+    "note": "O prompt isolado é polissêmico. Esta nota seleciona a avaliação monetária; old_back continua válido, mas é mais amplo. Autorrevisão: explicitei o valor também na alternativa e evitei precificar, que não equivale necessariamente a uma avaliação independente."
+  },
+  {
+    "id": "it_fancy_vocab_405",
+    "en": "To articulate",
+    "category": "lexical-verb",
+    "tl": "articular algo com clareza",
+    "alts": [
+      "formular algo com clareza"
+    ],
+    "register": "Neutro-formal para organizar e exprimir uma posição, objeção ou princípio de modo coerente; corrente em prosa política e institucional.",
+    "trap": "Articular também pode significar conectar partes de um sistema ou produzir sons da fala; o objeto e o contexto fixam a acepção argumentativa.",
+    "example_tl": "A ministra articulou suas ressalvas com clareza, sem transformar uma divergência técnica sobre o pacto em ruptura política irreversível.",
+    "example_en": "The minister articulated her reservations clearly, without turning a technical disagreement over the pact into an irreversible political rupture.",
+    "cloze": "A ministra {{c1::articulou}} suas ressalvas com clareza, sem transformar uma divergência técnica sobre o pacto em ruptura política irreversível.",
+    "note": "Old_back é correto na acepção selecionada. A retenção contrasta a formulação coerente de uma posição com o mais amplo expressar. Autorrevisão: confirmei que formular preserva o sentido no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_406",
+    "en": "To champion",
+    "category": "lexical-verb",
+    "tl": "defender ativamente algo",
+    "alts": [
+      "promover ativamente algo"
+    ],
+    "register": "Neutro para apoio público vigoroso e continuado a uma causa, prática ou reforma; a alternativa enfatiza mais a difusão que a defesa.",
+    "trap": "O verbo inglês não se traduz por *campeonar nem *campeonizar; campeão é o substantivo, enquanto defender ou promover expressa o apoio ativo.",
+    "example_tl": "Várias pesquisadoras defenderam ativamente a ciência aberta quando grandes editoras tentaram consolidar modelos de acesso ainda mais restritivos.",
+    "example_en": "Several researchers championed open science when major publishers tried to consolidate even more restrictive access models.",
+    "cloze": "Várias pesquisadoras {{c1::defenderam ativamente}} a ciência aberta quando grandes editoras tentaram consolidar modelos de acesso ainda mais restritivos.",
+    "note": "Old_back capta o apoio genérico, mas perde a intensidade de champion. Autorrevisão: o advérbio explicita esse componente e permite que a alternativa conserve a mesma força no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_411",
+    "en": "To contemplate",
+    "category": "lexical-verb",
+    "tl": "cogitar fazer algo",
+    "alts": [
+      "considerar a possibilidade de fazer algo"
+    ],
+    "register": "Neutro-formal para considerar uma possível ação futura; cogitar é conciso e frequente no jornalismo e na análise de políticas públicas.",
+    "trap": "Contemplar pode significar observar, incluir ou considerar; cogitar fazer algo elimina essa ambiguidade quando há uma decisão ainda em estudo.",
+    "example_tl": "O governo cogita suspender as licenças se a empresa voltar a descumprir as condições impostas pelo órgão regulador.",
+    "example_en": "The government is contemplating suspending the licenses if the company again fails to comply with the conditions imposed by the regulator.",
+    "cloze": "O governo {{c1::cogita}} suspender as licenças se a empresa voltar a descumprir as condições impostas pelo órgão regulador.",
+    "note": "Old_back é possível, mas não fixa a acepção deliberativa. A nota seleciona uma ação futura em estudo. Autorrevisão: mantive a alternativa analítica porque cabe naturalmente no mesmo exemplo após a flexão."
+  },
+  {
+    "id": "it_fancy_vocab_413",
+    "en": "To convey",
+    "category": "lexical-verb",
+    "tl": "transmitir algo",
+    "alts": [
+      "passar uma impressão"
+    ],
+    "register": "Neutro para comunicar informação, sentido ou impressão; o equivalente mais natural depende do tipo de conteúdo transmitido.",
+    "trap": "Convey também pode indicar transporte físico em inglês; transportar serve a esse uso, mas não é a escolha normal para uma impressão ou mensagem.",
+    "example_tl": "O gráfico transmite uma impressão de estabilidade, embora exclua os meses em que os preços de energia aumentaram mais rapidamente.",
+    "example_en": "The chart conveys an impression of stability, although it excludes the months in which energy prices rose most rapidly.",
+    "cloze": "O gráfico {{c1::transmite}} uma impressão de estabilidade, embora exclua os meses em que os preços de energia aumentaram mais rapidamente.",
+    "note": "Old_back é correto para a acepção comunicativa selecionada; o verbo inglês permanece polissêmico. Autorrevisão: substituí comunicar pela colocação mais idiomática passar uma impressão."
+  },
+  {
+    "id": "it_fancy_vocab_417",
+    "en": "To delineate",
+    "category": "lexical-verb",
+    "tl": "delimitar algo",
+    "alts": [
+      "definir algo com precisão"
+    ],
+    "register": "Escrito-formal para estabelecer fronteiras conceituais, jurídicas ou institucionais; comum em análises regulatórias e documentos de governança.",
+    "trap": "Delimitar estabelece limites entre âmbitos ou responsabilidades; limitar restringe quantidade ou ação, por isso os dois verbos não são automaticamente intercambiáveis.",
+    "example_tl": "O relatório delimita as responsabilidades das plataformas, dos anunciantes e das agências públicas durante campanhas coordenadas de desinformação eleitoral.",
+    "example_en": "The report delineates the responsibilities of platforms, advertisers, and public agencies during coordinated electoral disinformation campaigns.",
+    "cloze": "O relatório {{c1::delimita}} as responsabilidades das plataformas, dos anunciantes e das agências públicas durante campanhas coordenadas de desinformação eleitoral.",
+    "note": "Old_back é possível quando se traçam os contornos gerais de algo; delimitar é mais preciso para separar responsabilidades institucionais. Autorrevisão: a alternativa mantém exatamente essa função no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_420",
+    "en": "To dismiss",
+    "category": "lexical-verb",
+    "tl": "descartar algo",
+    "alts": [
+      "desconsiderar algo"
+    ],
+    "register": "Neutro-formal para rejeitar uma objeção, explicação ou possibilidade; desconsiderar sugere que o argumento não recebeu o peso devido.",
+    "trap": "Dismiss é polissêmico: demitir aplica-se a um empregado, e desmentir declara algo falso; nenhum dos dois equivale a simplesmente descartar uma objeção.",
+    "example_tl": "O comitê descartou as objeções dos especialistas sem explicar por que considerava suficientes as garantias oferecidas pelo fornecedor do sistema.",
+    "example_en": "The committee dismissed the experts' objections without explaining why it considered the safeguards offered by the system's supplier sufficient.",
+    "cloze": "O comitê {{c1::descartou}} as objeções dos especialistas sem explicar por que considerava suficientes as garantias oferecidas pelo fornecedor do sistema.",
+    "note": "Diverge materialmente de old_back, que significa refutar uma alegação como falsa. Esta nota seleciona a rejeição argumentativa. Autorrevisão: desconsiderar funciona no exemplo, com nuance crítica ligeiramente maior."
+  },
+  {
+    "id": "it_fancy_vocab_421",
+    "en": "To dispute",
+    "category": "lexical-verb",
+    "tl": "contestar algo",
+    "alts": [
+      "impugnar algo"
+    ],
+    "register": "Neutro-formal para questionar a validade de uma conclusão, decisão ou prova; impugnar é mais técnico e jurídico.",
+    "trap": "Disputar costuma significar competir por algo ou travar uma disputa; não é o verbo normal para contestar formalmente a validade de uma prova.",
+    "example_tl": "A defesa contestou a validade do laudo porque a polícia usara um programa forense cuja confiabilidade nenhum tribunal havia avaliado.",
+    "example_en": "The defense disputed the validity of the expert report because the police had used forensic software whose reliability no court had assessed.",
+    "cloze": "A defesa {{c1::contestou}} a validade do laudo porque a polícia usara um programa forense cuja confiabilidade nenhum tribunal havia avaliado.",
+    "note": "Substitui materialmente old_back e seleciona a contestação de validade, distinta da competição expressa por disputar. Autorrevisão: impugnar preserva o sentido no exemplo, mas eleva o grau de tecnicidade jurídica."
+  },
+  {
+    "id": "it_fancy_vocab_422",
+    "en": "To embrace",
+    "category": "lexical-verb",
+    "tl": "adotar algo",
+    "alts": [
+      "abraçar algo"
+    ],
+    "register": "Neutro para aceitar uma política, estratégia ou abordagem; abraçar é figurativo, mais enfático e especialmente natural com causas e ideias.",
+    "trap": "Abraçar é correto no sentido figurado, mas pode soar retórico com estratégias técnicas; adotar costuma ser a opção não marcada nesses contextos.",
+    "example_tl": "A nova diretoria adotou uma estratégia de interoperabilidade que seus antecessores haviam rejeitado por considerá-la cara e politicamente arriscada.",
+    "example_en": "The new board embraced an interoperability strategy that its predecessors had rejected as expensive and politically risky.",
+    "cloze": "A nova diretoria {{c1::adotou}} uma estratégia de interoperabilidade que seus antecessores haviam rejeitado por considerá-la cara e politicamente arriscada.",
+    "note": "O prompt é polissêmico. Esta nota seleciona a aceitação de uma estratégia, não o abraço físico de old_back. Autorrevisão: abraçar conserva o sentido no exemplo, mas produz deliberadamente um tom mais retórico."
+  },
+  {
+    "id": "it_fancy_vocab_425",
+    "en": "To expound",
+    "category": "lexical-verb",
+    "tl": "expor algo detalhadamente",
+    "alts": [
+      "explicar algo detalhadamente"
+    ],
+    "register": "Escrito-formal para explicar de modo sistemático e relativamente extenso uma tese, doutrina ou conjunto de razões.",
+    "trap": "O inglês expound on não determina a preposição portuguesa: diz-se expor uma tese, sem sobre, mas discorrer sobre um tema.",
+    "example_tl": "A jurista expôs detalhadamente os fundamentos constitucionais da proposta antes de responder às objeções apresentadas pelos líderes da oposição.",
+    "example_en": "The jurist expounded the constitutional grounds for the proposal before responding to the objections raised by opposition leaders.",
+    "cloze": "A jurista {{c1::expôs detalhadamente}} os fundamentos constitucionais da proposta antes de responder às objeções apresentadas pelos líderes da oposição.",
+    "note": "Old_back capta o núcleo semântico; o advérbio recupera a explicação extensa e sistemática de expound. Autorrevisão: escolhi uma alternativa com a mesma regência para que ela funcione diretamente no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_430",
+    "en": "To hypothesize",
+    "category": "lexical-verb",
+    "tl": "formular uma hipótese",
+    "alts": [
+      "levantar uma hipótese"
+    ],
+    "register": "Neutro-formal em pesquisa e análise para apresentar uma proposição que será examinada ou testada posteriormente.",
+    "trap": "O italiano ipotesi pode induzir *ipótese; em português, hipótese conserva o h, termina em e e recebe acento agudo.",
+    "example_tl": "Os pesquisadores formularam a hipótese de que a queda do tráfego resultava de mudanças algorítmicas, não de menor interesse pelas notícias.",
+    "example_en": "The researchers hypothesized that the drop in traffic resulted from algorithmic changes, not from less interest in the news.",
+    "cloze": "Os pesquisadores {{c1::formularam a hipótese}} de que a queda do tráfego resultava de mudanças algorítmicas, não de menor interesse pelas notícias.",
+    "note": "Old_back oferece uma colocação válida no plural; o headword restaura o singular genérico e prioriza formular. Autorrevisão: as duas construções preservam a mesma hipótese e a mesma regência com de que no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_432",
+    "en": "To infer",
+    "category": "lexical-verb",
+    "tl": "inferir algo de algo",
+    "alts": [
+      "deduzir algo de algo"
+    ],
+    "register": "Neutro-formal em pesquisa, direito e análise para derivar uma conclusão de evidências ou premissas.",
+    "trap": "Inferir é chegar a uma conclusão; implicar ou dar a entender é fornecer a base para que outra pessoa faça essa inferência.",
+    "example_tl": "Os analistas inferiram dos contratos vazados que a empresa conhecia os riscos do sistema muito antes de admiti-los publicamente.",
+    "example_en": "The analysts inferred from the leaked contracts that the company knew the system's risks long before admitting them publicly.",
+    "cloze": "Os analistas {{c1::inferiram dos}} contratos vazados que a empresa conhecia os riscos do sistema muito antes de admiti-los publicamente.",
+    "note": "Old_back fornece o infinitivo correto. O headword completo e o exemplo ensinam a regência com de e a forma flexionada inferiram. Autorrevisão: deduzir funciona com o mesmo complemento no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_434",
+    "en": "To negate",
+    "category": "lexical-verb",
+    "tl": "anular algo",
+    "alts": [
+      "neutralizar algo"
+    ],
+    "register": "Neutro-formal para tornar ineficaz um efeito, benefício ou vantagem; frequente em avaliações analíticas.",
+    "trap": "Negar serve para rejeitar uma proposição ou recusar algo; não traduz normalmente negate quando um fator cancela o efeito prático de outro.",
+    "example_tl": "A opacidade do processo anulou os benefícios da consulta pública, pois os cidadãos nunca souberam quais decisões ainda podiam influenciar.",
+    "example_en": "The opacity of the process negated the benefits of the public consultation, since citizens never knew which decisions they could still influence.",
+    "cloze": "A opacidade do processo {{c1::anulou}} os benefícios da consulta pública, pois os cidadãos nunca souberam quais decisões ainda podiam influenciar.",
+    "note": "O prompt é polissêmico. Esta nota seleciona o cancelamento de um efeito e substitui materialmente old_back nessa acepção. Autorrevisão: neutralizar preserva o resultado prático no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_435",
+    "en": "To ponder",
+    "category": "lexical-verb",
+    "tl": "sopesar algo",
+    "alts": [
+      "ponderar algo cuidadosamente"
+    ],
+    "register": "Neutro-formal para avaliar com cuidado consequências, opções ou considerações concorrentes antes de uma decisão.",
+    "trap": "Ponderar pode significar considerar, elogiar ou atribuir peso estatístico; sopesar destaca inequivocamente a avaliação cuidadosa de fatores concorrentes.",
+    "example_tl": "O conselho sopesou os custos diplomáticos da proibição antes de restringir a exportação de componentes empregados em sistemas militares.",
+    "example_en": "The council pondered the diplomatic costs of the ban before restricting exports of components used in military systems.",
+    "cloze": "O conselho {{c1::sopesou}} os custos diplomáticos da proibição antes de restringir a exportação de componentes empregados em sistemas militares.",
+    "note": "Old_back é válido, mas polissêmico. A nota seleciona a ponderação cuidadosa que precede uma decisão e a distingue de simplesmente cogitar uma ação. Autorrevisão: a alternativa mantém essa deliberação no exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_436",
+    "en": "To posit",
+    "category": "lexical-verb",
+    "tl": "postular algo",
+    "alts": [
+      "propor algo como premissa"
+    ],
+    "register": "Escrito-formal e acadêmico para apresentar uma proposição como premissa ou princípio explicativo.",
+    "trap": "Postar significa publicar, enviar pelo correio ou colocar em determinado lugar; não traduz o verbo acadêmico posit.",
+    "example_tl": "O modelo postula uma relação causal entre concentração midiática e empobrecimento do debate, mas apresenta apenas evidências correlacionais.",
+    "example_en": "The model posits a causal relationship between media concentration and impoverishment of debate, but presents only correlational evidence.",
+    "cloze": "O modelo {{c1::postula}} uma relação causal entre concentração midiática e empobrecimento do debate, mas apresenta apenas evidências correlacionais.",
+    "note": "Corrige materialmente o erro de old_back, que confunde posit com post. Autorrevisão: a alternativa explicita o estatuto de premissa sem transformar a proposição em hipótese já submetida a teste."
+  },
+  {
+    "id": "it_fancy_vocab_439",
+    "en": "To qualify",
+    "category": "lexical-verb",
+    "tl": "matizar algo",
+    "alts": [
+      "relativizar algo"
+    ],
+    "register": "Escrito-formal na argumentação para limitar, refinar ou acrescentar reservas a uma afirmação anterior; relativizar pode sugerir uma redução mais forte de seu alcance.",
+    "trap": "Qualificar costuma significar caracterizar, capacitar ou conferir uma qualidade; não exprime normalmente a introdução de ressalvas em uma afirmação.",
+    "example_tl": "A porta-voz matizou sua afirmação inicial depois que documentos internos mostraram que o sistema havia falhado em inúmeras ocasiões.",
+    "example_en": "The spokesperson qualified her initial statement after internal documents showed that the system had failed on numerous occasions.",
+    "cloze": "A porta-voz {{c1::matizou}} sua afirmação inicial depois que documentos internos mostraram que o sistema havia falhado em inúmeras ocasiões.",
+    "note": "O verbo inglês é fortemente polissêmico. Esta nota seleciona a qualificação argumentativa e corrige materialmente old_back nessa acepção. Autorrevisão: mantive relativizar, mas registrei sua possível intensidade maior."
+  },
+  {
+    "id": "it_fancy_vocab_440",
+    "en": "To question",
+    "category": "lexical-verb",
+    "tl": "pôr algo em dúvida",
+    "alts": [
+      "questionar algo"
+    ],
+    "register": "Neutro para manifestar dúvida sobre uma alegação, premissa ou instituição; questionar é igualmente corrente e pode soar mais confrontativo conforme o contexto.",
+    "trap": "Quando question significa solicitar informação, use perguntar ou interrogar; perguntar não expressa o ato de pôr em dúvida a validade de uma alegação.",
+    "example_tl": "Vários especialistas puseram em dúvida a independência do comitê após descobrirem os vínculos financeiros de dois de seus integrantes.",
+    "example_en": "Several experts questioned the committee's independence after discovering the financial ties of two of its members.",
+    "cloze": "Vários especialistas {{c1::puseram em dúvida}} a independência do comitê após descobrirem os vínculos financeiros de dois de seus integrantes.",
+    "note": "Old_back é correto para a acepção epistêmica, mas a locução escolhida a torna inequívoca e a distingue da solicitação de informação. Autorrevisão: questionar preserva o sentido no exemplo."
+  }
+]

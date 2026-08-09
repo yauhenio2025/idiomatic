@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_201",
+    "en": "Asymmetric",
+    "verdict": "drop",
+    "reason": "Assimétrico é um cognato transparente e frequente em prosa técnica, com flexão regular e sem acepção ou regência mais estreita no item isolado."
+  },
+  {
+    "id": "it_fancy_vocab_202",
+    "en": "Homogenized",
+    "verdict": "drop",
+    "reason": "Homogeneizado é um cognato transparente e morfologicamente previsível, já esperado no nível C1, e old_back está correto."
+  },
+  {
+    "id": "it_fancy_vocab_203",
+    "en": "Privatized",
+    "verdict": "drop",
+    "reason": "Privatizado é vocabulário político-econômico frequente, transparente e de formação regular, sem dificuldade produtiva adicional neste particípio isolado."
+  },
+  {
+    "id": "it_fancy_vocab_204",
+    "en": "Hegemonic",
+    "verdict": "keep",
+    "reason": "O adjetivo político marcado ensina o acento brasileiro de hegemônico e sofre interferência concreta do espanhol hegemónico e do italiano egemonico."
+  },
+  {
+    "id": "it_fancy_vocab_205",
+    "en": "Insidious",
+    "verdict": "keep",
+    "reason": "Insidioso codifica um dano gradual e dissimulado, nuance que equivalentes gerais como nocivo ou prejudicial não preservam."
+  },
+  {
+    "id": "it_fancy_vocab_206",
+    "en": "Polarized",
+    "verdict": "drop",
+    "reason": "Polarizado é um cognato transparente e muito frequente no debate político, com flexão previsível e tradução legada correta."
+  },
+  {
+    "id": "it_fancy_vocab_207",
+    "en": "Dystopian",
+    "verdict": "drop",
+    "reason": "Distópico é hoje um cognato corrente em crítica de tecnologia e cultura, com morfologia regular e sem sentido mais específico selecionado pelo prompt."
+  },
+  {
+    "id": "it_fancy_vocab_208",
+    "en": "Automated",
+    "verdict": "drop",
+    "reason": "Automatizado é vocabulário técnico básico, transparente e plenamente produtivo muito antes do nível C1."
+  },
+  {
+    "id": "it_fancy_vocab_209",
+    "en": "Pervasive",
+    "verdict": "keep",
+    "reason": "O inglês exige escolha contextual entre generalizado, difuso e onipresente; o cognato pervasivo é mais marcado e não funciona como solução automática."
+  },
+  {
+    "id": "it_fancy_vocab_210",
+    "en": "Ephemeral",
+    "verdict": "keep",
+    "reason": "Efêmero ensina duração muito breve e uma acentuação portuguesa vulnerável à interferência de espanhol, italiano e francês."
+  },
+  {
+    "id": "it_fancy_vocab_211",
+    "en": "Contingent",
+    "verdict": "keep",
+    "reason": "A acepção adjetival de dependência circunstancial requer a regência contingente a e precisa ser separada dos sentidos nominais de contingente."
+  },
+  {
+    "id": "it_fancy_vocab_212",
+    "en": "Oversaturated",
+    "verdict": "keep",
+    "reason": "Supersaturado corrige o decalque de prefixo em oversaturado e fixa uma forma produtiva para mercados ou ambientes além do limite de saturação."
+  },
+  {
+    "id": "it_fancy_vocab_213",
+    "en": "Manipulative",
+    "verdict": "keep",
+    "reason": "Manipulador é a solução geral mais idiomática para pessoas, táticas e interfaces; manipulativo é marcado e não deve ser copiado automaticamente."
+  },
+  {
+    "id": "it_fancy_vocab_214",
+    "en": "Extractive",
+    "verdict": "keep",
+    "reason": "O registro de economia política seleciona extrativista e exige distingui-lo do adjetivo técnico extrativo."
+  },
+  {
+    "id": "it_fancy_vocab_215",
+    "en": "Supranational",
+    "verdict": "drop",
+    "reason": "Supranacional é um cognato institucional transparente, frequente e de formação regular, sem problema produtivo adicional no item isolado."
+  },
+  {
+    "id": "it_fancy_vocab_216",
+    "en": "Myopic",
+    "verdict": "keep",
+    "reason": "O uso figurado de míope é produtivo em crítica de políticas públicas, e o acento português contrasta com as formas espanhola, italiana e francesa."
+  },
+  {
+    "id": "it_fancy_vocab_217",
+    "en": "Digital-native",
+    "verdict": "keep",
+    "reason": "Nativo digital corrige a ordem e o hífen calcados em old_back e ensina que o primeiro elemento concorda com o substantivo."
+  },
+  {
+    "id": "it_fancy_vocab_218",
+    "en": "Hegelian",
+    "verdict": "drop",
+    "reason": "Hegeliano é um adjetivo de nome próprio transparente, compartilhado pelas línguas românicas estudadas e flexionado de modo regular."
+  },
+  {
+    "id": "it_fancy_vocab_219",
+    "en": "Conformist",
+    "verdict": "drop",
+    "reason": "Conformista é um cognato corrente e transparente, invariável em gênero e sem acepção mais estreita indicada pelo original."
+  },
+  {
+    "id": "it_fancy_vocab_220",
+    "en": "Authoritarian",
+    "verdict": "drop",
+    "reason": "Duplicata exata atribuída a COLD_WAR_VOCAB pela regra determinística do relatório entre tópicos."
+  },
+  {
+    "id": "it_fancy_vocab_221",
+    "en": "Singular",
+    "verdict": "drop",
+    "reason": "Singular é um cognato frequente cujos sentidos gramatical e avaliativo correspondem amplamente aos do inglês; o prompt não desambigua uma lição específica."
+  },
+  {
+    "id": "it_fancy_vocab_222",
+    "en": "Protean",
+    "verdict": "keep",
+    "reason": "Proteiforme é um equivalente culto e não literal para algo mutável ou multiforme; proteano de old_back é raro e pouco transparente."
+  },
+  {
+    "id": "it_fancy_vocab_223",
+    "en": "Illusory",
+    "verdict": "keep",
+    "reason": "Ilusório apresenta riscos reais de acento e duplicação consonantal sob interferência do espanhol e do italiano, além do contraste entre aparência e realidade."
+  },
+  {
+    "id": "it_fancy_vocab_224",
+    "en": "Anomalous",
+    "verdict": "keep",
+    "reason": "Anômalo é vocabulário analítico útil cuja acentuação brasileira contrasta diretamente com o espanhol anómalo e o italiano anomalo."
+  },
+  {
+    "id": "it_fancy_vocab_225",
+    "en": "Interdependent",
+    "verdict": "drop",
+    "reason": "Interdependente é um cognato transparente e produtivo, com flexão regular e sem complemento ou contraste específico fornecido pelo prompt."
+  },
+  {
+    "id": "it_fancy_vocab_226",
+    "en": "Unprecedented",
+    "verdict": "keep",
+    "reason": "Sem precedentes é uma expressão produtiva não derivada literalmente do adjetivo inglês e precisa ser distinguida do polissêmico inédito."
+  },
+  {
+    "id": "it_fancy_vocab_227",
+    "en": "Permeable",
+    "verdict": "drop",
+    "reason": "Permeável é um cognato transparente e familiar nos sentidos físico e institucional, sem complemento que selecione uma regência específica."
+  },
+  {
+    "id": "it_fancy_vocab_228",
+    "en": "Contemporaneous",
+    "verdict": "keep",
+    "reason": "Contemporâneo de ensina a regência e a simultaneidade histórica de contemporaneous, evitando a leitura apenas atual de contemporary."
+  },
+  {
+    "id": "it_fancy_vocab_229",
+    "en": "Partisan",
+    "verdict": "keep",
+    "reason": "O adjetivo partidário seleciona alinhamento a um partido, enquanto parcial ou tendencioso exprimem viés geral e podem apagar essa relação."
+  },
+  {
+    "id": "it_fancy_vocab_230",
+    "en": "Undemocratic",
+    "verdict": "drop",
+    "reason": "Antidemocrático é vocabulário político frequente e composicionalmente transparente para um aprendiz C1, com flexão inteiramente regular."
+  },
+  {
+    "id": "it_fancy_vocab_231",
+    "en": "Exploitative",
+    "verdict": "keep",
+    "reason": "Explorador precisa ser distinguido do falso amigo exploratório, que significa destinado a investigar ou testar possibilidades."
+  },
+  {
+    "id": "it_fancy_vocab_232",
+    "en": "Transitory",
+    "verdict": "keep",
+    "reason": "Transitório pode marcar uma etapa de passagem e ensina um acento ausente nas formas espanhola e italiana; temporário é mais geral."
+  },
+  {
+    "id": "it_fancy_vocab_233",
+    "en": "Reductionist",
+    "verdict": "keep",
+    "reason": "Reducionista fixa um uso crítico preciso e a grafia portuguesa com um só c, vulnerável à interferência do espanhol reduccionista."
+  },
+  {
+    "id": "it_fancy_vocab_234",
+    "en": "Symbiotic",
+    "verdict": "drop",
+    "reason": "Simbiótico é um cognato científico e metafórico transparente, já familiar no nível C1 e sem relação ou construção específica indicada."
+  },
+  {
+    "id": "it_fancy_vocab_235",
+    "en": "Disparate",
+    "verdict": "keep",
+    "reason": "Díspar corrige a troca de classe gramatical em old_back, ensina o plural díspares e não deve ser confundido com disparidade."
+  },
+  {
+    "id": "it_fancy_vocab_236",
+    "en": "Censorious",
+    "verdict": "keep",
+    "reason": "Reprovador corrige a glosa censurado, que significa censored e inverte a relação semântica do adjetivo inglês."
+  },
+  {
+    "id": "it_fancy_vocab_237",
+    "en": "Virtualized",
+    "verdict": "drop",
+    "reason": "Virtualizado é um cognato técnico estabelecido e morfologicamente regular, sem plataforma ou mecanismo específico selecionado pelo item."
+  },
+  {
+    "id": "it_fancy_vocab_238",
+    "en": "the sanctions",
+    "verdict": "drop",
+    "reason": "As sanções é um cognato político-jurídico transparente e frequente, já esperado no nível C1, e o artigo não acrescenta dificuldade."
+  },
+  {
+    "id": "it_fancy_vocab_239",
+    "en": "the Cybersecurity",
+    "verdict": "keep",
+    "reason": "O termo recuperável ensina as variantes segurança cibernética e cibersegurança, inclusive a grafia compacta sem hífen nem y."
+  },
+  {
+    "id": "it_fancy_vocab_240",
+    "en": "the Espionage",
+    "verdict": "drop",
+    "reason": "Duplicata exata atribuída a COLD_WAR_VOCAB pela regra determinística do relatório entre tópicos."
+  }
+]

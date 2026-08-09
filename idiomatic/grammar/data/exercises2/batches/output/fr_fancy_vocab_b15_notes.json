@@ -1,0 +1,60 @@
+[
+  {
+    "id": "it_fancy_vocab_564",
+    "en": "Insightful",
+    "category": "lexical-adjective",
+    "tl": "perspicace",
+    "alts": [],
+    "register": "Neutral-formal adjective for a person, observation or analysis that reveals penetrating understanding; natural in analytical and critical prose.",
+    "trap": "Do not confuse perspicace with intuitif: perspicace signals penetrating discernment, whereas intuitif describes reliance on intuition or something readily understood without instruction.",
+    "example_tl": "L’analyse perspicace de la chercheuse montre comment les systèmes de recommandation transforment une décision commerciale apparemment anodine en pouvoir durable sur la circulation de l’information.",
+    "example_en": "The researcher’s insightful analysis shows how recommendation systems turn an apparently innocuous business decision into lasting power over how information circulates.",
+    "cloze": "L’analyse {{c1::perspicace}} de la chercheuse montre comment les systèmes de recommandation transforment une décision commerciale apparemment anodine en pouvoir durable sur la circulation de l’information.",
+    "note": "Old_back is accurate. Retained after self-review because English offers no transparent route to the French adjective and because distinguishing insight from intuition creates a genuine production lesson; broader éclairant was removed as a non-exact alternative."
+  },
+  {
+    "id": "it_fancy_vocab_576",
+    "en": "Recondite",
+    "category": "lexical-adjective",
+    "tl": "abscons",
+    "alts": [
+      "abstrus"
+    ],
+    "register": "Sustained and usually pejorative adjective for intellectual material or language that is exceptionally difficult to understand; abstrus is a close formal alternative.",
+    "trap": "The legacy form réconditoire is not standard French; recondite in the sense of intellectually obscure is rendered by abscons or abstrus, not by a copied cognate.",
+    "example_tl": "Le rapport rend son diagnostic abscons en multipliant les références théoriques sans montrer comment celles-ci expliquent la concentration actuelle du pouvoir médiatique.",
+    "example_en": "The report makes its diagnosis abstruse by piling up theoretical references without showing how they explain the current concentration of media power.",
+    "cloze": "Le rapport rend son diagnostic {{c1::abscons}} en multipliant les références théoriques sans montrer comment celles-ci expliquent la concentration actuelle du pouvoir médiatique.",
+    "note": "Materially corrects old_back, which supplies a nonstandard form. The source is polysemous; this card deliberately selects the abstruse-language sense rather than the rarer sense of knowledge known only to specialists. Self-review retained abstrus because it remains interchangeable in the example."
+  },
+  {
+    "id": "it_fancy_vocab_577",
+    "en": "Reductive",
+    "category": "lexical-adjective",
+    "tl": "réducteur",
+    "alts": [
+      "simpliste"
+    ],
+    "register": "Neutral-formal but critical adjective for an interpretation that oversimplifies a complex issue; simpliste is slightly more openly dismissive.",
+    "trap": "In critical prose, use réducteur rather than mapping English reductive mechanically to réductif, a rare adjective chiefly associated with specialized reductive processes.",
+    "example_tl": "Réduire la crise de confiance à un problème de communication est réducteur, car cette lecture ignore les conflits d’intérêts structurels du secteur.",
+    "example_en": "Reducing the crisis of trust to a communication problem is reductive, because that reading ignores the sector’s structural conflicts of interest.",
+    "cloze": "Réduire la crise de confiance à un problème de communication est {{c1::réducteur}}, car cette lecture ignore les conflits d’intérêts structurels du secteur.",
+    "note": "Old_back is accurate. Retained after self-review for the productive réducteur versus réductif interference trap; simpliste remains a valid contextual alternative but carries a somewhat sharper evaluative judgment."
+  },
+  {
+    "id": "it_fancy_vocab_581",
+    "en": "Unbiased",
+    "category": "lexical-adjective",
+    "tl": "impartial",
+    "alts": [
+      "sans parti pris"
+    ],
+    "register": "Neutral-formal adjective for a person, inquiry or judgment that does not favor one side; sans parti pris is an idiomatic descriptive alternative.",
+    "trap": "Sans préjugé usually means unprejudiced or open-minded, while non biaisé and sans biais belong mainly to technical or statistical contexts; institutional judgment is impartial.",
+    "example_tl": "Pour être crédible, l’enquête devra être impartiale et publier aussi les témoignages qui contredisent les accusations formulées par le gouvernement.",
+    "example_en": "To be credible, the inquiry must be unbiased and also publish the accounts that contradict the accusations made by the government.",
+    "cloze": "Pour être crédible, l’enquête devra être {{c1::impartiale}} et publier aussi les témoignages qui contredisent les accusations formulées par le gouvernement.",
+    "note": "Materially narrows old_back sans préjugé, which describes freedom from prejudice more readily than institutional neutrality. The isolated English source is polysemous; this card selects the evaluative and institutional sense, not the statistical sense of an unbiased estimator."
+  }
+]

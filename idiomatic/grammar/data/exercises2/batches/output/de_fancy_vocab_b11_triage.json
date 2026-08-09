@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_401",
+    "en": "the Value",
+    "verdict": "drop",
+    "reason": "Wert is a transparent, high-frequency German noun already owned at C1, and the bare prompt selects no specialised economic or evaluative sense."
+  },
+  {
+    "id": "it_fancy_vocab_402",
+    "en": "the Dependency",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_403",
+    "en": "To advocate",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_404",
+    "en": "To appraise",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_405",
+    "en": "To articulate",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_406",
+    "en": "To champion",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_407",
+    "en": "To clarify",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate: the landed CONNECTING note owns To clarify, as required by the deterministic duplicate report."
+  },
+  {
+    "id": "it_fancy_vocab_408",
+    "en": "To compare",
+    "verdict": "drop",
+    "reason": "Vergleichen is a transparent, high-frequency verb already owned at C1, and the isolated prompt supplies no distinctive comparison frame or government issue."
+  },
+  {
+    "id": "it_fancy_vocab_409",
+    "en": "To condemn",
+    "verdict": "drop",
+    "reason": "Verurteilen is a familiar direct equivalent, and the bare prompt does not distinguish moral condemnation, legal sentencing or public denunciation."
+  },
+  {
+    "id": "it_fancy_vocab_410",
+    "en": "To consider",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_411",
+    "en": "To contemplate",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_412",
+    "en": "To contradict",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_413",
+    "en": "To convey",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_414",
+    "en": "To criticize",
+    "verdict": "drop",
+    "reason": "Kritisieren is a transparent, high-frequency cognate, and this isolated prompt adds no analytical frame beyond the already-familiar verb."
+  },
+  {
+    "id": "it_fancy_vocab_415",
+    "en": "To debate",
+    "verdict": "drop",
+    "reason": "Debattieren and diskutieren are familiar German options, while the prompt does not select a formal debate, public dispute or deliberative frame."
+  },
+  {
+    "id": "it_fancy_vocab_416",
+    "en": "To defend",
+    "verdict": "drop",
+    "reason": "Verteidigen is a basic, familiar equivalent, and the bare prompt does not select a legal, argumentative or self-defence construction."
+  },
+  {
+    "id": "it_fancy_vocab_417",
+    "en": "To delineate",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_418",
+    "en": "To denounce",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_419",
+    "en": "To describe",
+    "verdict": "drop",
+    "reason": "Beschreiben is a basic, transparent verb already owned well before C1, and the isolated prompt contains no specialised descriptive frame."
+  },
+  {
+    "id": "it_fancy_vocab_420",
+    "en": "To dismiss",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_421",
+    "en": "To dispute",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_422",
+    "en": "To embrace",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_423",
+    "en": "To evaluate",
+    "verdict": "drop",
+    "reason": "Bewerten and beurteilen are familiar, transparent options, and this general assessment prompt adds no distinct teaching point beyond the retained appraise card."
+  },
+  {
+    "id": "it_fancy_vocab_424",
+    "en": "To examine",
+    "verdict": "drop",
+    "reason": "Untersuchen and prüfen are basic, familiar equivalents, while the isolated prompt does not select a legal, scientific or investigative sense."
+  },
+  {
+    "id": "it_fancy_vocab_425",
+    "en": "To expound",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_426",
+    "en": "To express",
+    "verdict": "drop",
+    "reason": "Ausdrücken is a high-frequency, transparent equivalent, and the bare prompt supplies no useful distinction between expressing an opinion, emotion or quantity."
+  },
+  {
+    "id": "it_fancy_vocab_427",
+    "en": "To foster",
+    "verdict": "drop",
+    "reason": "Fördern is a familiar policy and general verb, and the context-free prompt does not select a distinctive developmental or nurturing sense."
+  },
+  {
+    "id": "it_fancy_vocab_428",
+    "en": "To generate",
+    "verdict": "drop",
+    "reason": "Erzeugen and generieren are familiar options, while the bare prompt does not choose a technical, economic or causal collocation worth isolating."
+  },
+  {
+    "id": "it_fancy_vocab_429",
+    "en": "To highlight",
+    "verdict": "drop",
+    "reason": "Hervorheben is a familiar, transparent analytical verb, and the isolated prompt offers no special media or argumentative construction."
+  },
+  {
+    "id": "it_fancy_vocab_430",
+    "en": "To hypothesize",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_431",
+    "en": "To illustrate",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_432",
+    "en": "To infer",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_433",
+    "en": "To interpret",
+    "verdict": "drop",
+    "reason": "Interpretieren is a transparent, familiar cognate, and the bare prompt does not distinguish interpreting data, meaning, law or artistic work."
+  },
+  {
+    "id": "it_fancy_vocab_434",
+    "en": "To negate",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_435",
+    "en": "To ponder",
+    "verdict": "drop",
+    "reason": "Nachdenken, erwägen and in Betracht ziehen are already represented by the retained consider/contemplate family; this isolated synonym offers no distinct German production point."
+  },
+  {
+    "id": "it_fancy_vocab_436",
+    "en": "To posit",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_437",
+    "en": "To promote",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_438",
+    "en": "To propose",
+    "verdict": "drop",
+    "reason": "Vorschlagen is a familiar, basic equivalent, and the source gives no formal proposal, offer or institutional construction that would add value."
+  },
+  {
+    "id": "it_fancy_vocab_439",
+    "en": "To qualify",
+    "verdict": "keep",
+    "reason": ""
+  },
+  {
+    "id": "it_fancy_vocab_440",
+    "en": "To question",
+    "verdict": "keep",
+    "reason": ""
+  }
+]

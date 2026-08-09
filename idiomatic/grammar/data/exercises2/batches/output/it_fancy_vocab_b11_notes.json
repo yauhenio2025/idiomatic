@@ -1,0 +1,307 @@
+[
+  {
+    "id": "it_fancy_vocab_402",
+    "en": "the Dependency",
+    "category": "lexical-noun",
+    "tl": "la dipendenza da",
+    "alts": [
+      "la dipendenza nei confronti di"
+    ],
+    "register": "Dipendenza da è neutro-formale in ambito economico e istituzionale; dipendenza nei confronti di è più esplicito e leggermente più sorvegliato.",
+    "trap": "Dipendenza regge normalmente da, non di: la preposizione resta necessaria anche quando dependency indica un vincolo tecnologico anziché una dipendenza clinica.",
+    "example_tl": "La dipendenza da pochi fornitori di servizi cloud espone le amministrazioni pubbliche a interruzioni, rincari improvvisi e pressioni politiche difficili da contrastare.",
+    "example_en": "Dependence on a small number of cloud service providers exposes public administrations to outages, sudden price increases, and political pressure that is difficult to resist.",
+    "cloze": "{{c1::La dipendenza da}} pochi fornitori di servizi cloud espone le amministrazioni pubbliche a interruzioni, rincari improvvisi e pressioni politiche difficili da contrastare.",
+    "note": "The legacy noun is accurate but omits its governed preposition. Self-review retained the institutional sense and verified that the alternative fits the same supplier-dependence context."
+  },
+  {
+    "id": "it_fancy_vocab_403",
+    "en": "To advocate",
+    "category": "lexical-verb",
+    "tl": "sostenere",
+    "alts": [
+      "caldeggiare"
+    ],
+    "register": "Sostenere è neutro-formale per appoggiare pubblicamente una proposta; caldeggiare è più formale e segnala un appoggio particolarmente attivo.",
+    "trap": "Non confondere advocate con avocare, che significa assumere a sé una competenza o una causa; nel dibattito pubblico si sostiene o si caldeggia una proposta.",
+    "example_tl": "Numerosi ricercatori sostengono l'introduzione dell'obbligo di rendere pubblici i dati usati per addestrare i modelli, affinché se ne possano valutare distorsioni e lacune.",
+    "example_en": "Many researchers advocate introducing a requirement to disclose the data used to train models, so that their biases and gaps can be assessed.",
+    "cloze": "Numerosi ricercatori {{c1::sostengono}} l'introduzione dell'obbligo di rendere pubblici i dati usati per addestrare i modelli, affinché se ne possano valutare distorsioni e lacune.",
+    "note": "The legacy rendering is accurate. Self-review fixed a public-policy advocacy sense and kept only caldeggiare, which can replace the main verb without changing the argument structure."
+  },
+  {
+    "id": "it_fancy_vocab_404",
+    "en": "To appraise",
+    "category": "lexical-verb",
+    "tl": "stimare",
+    "alts": [
+      "valutare",
+      "periziare"
+    ],
+    "register": "Stimare è neutro nel senso economico di attribuire un valore; periziare è tecnico e presuppone una valutazione specialistica, mentre valutare è più ampio.",
+    "trap": "Appraise non va reso automaticamente con apprezzare: nell'uso corrente quest'ultimo significa soprattutto stimare positivamente o riconoscere il valore di qualcosa.",
+    "example_tl": "Prima dell'acquisizione, consulenti indipendenti hanno stimato i brevetti della società, escludendo le proiezioni di crescita prive di riscontri verificabili.",
+    "example_en": "Before the acquisition, independent consultants appraised the company's patents, excluding growth projections unsupported by verifiable evidence.",
+    "cloze": "Prima dell'acquisizione, consulenti indipendenti hanno {{c1::stimato}} i brevetti della società, escludendo le proiezioni di crescita prive di riscontri verificabili.",
+    "note": "The broad legacy valutare is possible. Self-review selected the asset-valuation sense to distinguish appraise from the transparent evaluate item dropped later in this chunk."
+  },
+  {
+    "id": "it_fancy_vocab_405",
+    "en": "To articulate",
+    "category": "lexical-verb",
+    "tl": "formulare con chiarezza",
+    "alts": [
+      "esprimere con chiarezza"
+    ],
+    "register": "Formulare con chiarezza è neutro-formale nella prosa argomentativa; esprimere con chiarezza è un'alternativa leggermente più generale.",
+    "trap": "Articolare è possibile quando si organizza un ragionamento in parti, ma non sostituisce automaticamente formulare o esprimere con chiarezza con qualsiasi oggetto.",
+    "example_tl": "Nel parere di minoranza, due commissari formulano con chiarezza le ragioni per cui il controllo automatizzato rischia di discriminare i lavoratori più vulnerabili.",
+    "example_en": "In the minority opinion, two commissioners clearly articulate why automated monitoring risks discriminating against the most vulnerable workers.",
+    "cloze": "Nel parere di minoranza, due commissari {{c1::formulano con chiarezza}} le ragioni per cui il controllo automatizzato rischia di discriminare i lavoratori più vulnerabili.",
+    "note": "Materially refines old_back for the verbal-expression sense. Self-review preserved the legitimate structural use of articolare in the trap rather than treating the cognate as categorically wrong."
+  },
+  {
+    "id": "it_fancy_vocab_406",
+    "en": "To champion",
+    "category": "lexical-verb",
+    "tl": "battersi per",
+    "alts": [
+      "farsi promotore di",
+      "sostenere con forza"
+    ],
+    "register": "Battersi per è neutro ma energico nel dibattito pubblico; farsi promotore di è più istituzionale, mentre sostenere con forza è trasparente e versatile.",
+    "trap": "Il verbo inglese champion non corrisponde a campionare, che in italiano significa prelevare o rappresentare mediante un campione.",
+    "example_tl": "Il garante si batte per controlli indipendenti sugli algoritmi, nonostante l'opposizione delle imprese che traggono profitto dalla loro opacità.",
+    "example_en": "The regulator champions independent audits of algorithms despite opposition from the companies that profit from their opacity.",
+    "cloze": "Il garante {{c1::si batte per}} controlli indipendenti sugli algoritmi, nonostante l'opposizione delle imprese che traggono profitto dalla loro opacità.",
+    "note": "The legacy farsi promotore di is valid in institutional prose. Self-review chose the more active battersi per to preserve the force of champion and retained the legacy phrase as a register-marked alternative."
+  },
+  {
+    "id": "it_fancy_vocab_411",
+    "en": "To contemplate",
+    "category": "lexical-verb",
+    "tl": "contemplare la possibilità di",
+    "alts": [
+      "valutare la possibilità di"
+    ],
+    "register": "Contemplare la possibilità di è formale e comune nella prosa amministrativa; valutare la possibilità di è più neutro e meno elevato.",
+    "trap": "Contemplare da solo può indicare l'osservazione prolungata; per una futura linea d'azione, la cornice la possibilità di rende esplicito il senso deliberativo.",
+    "example_tl": "Il governo contempla la possibilità di imporre obblighi di interoperabilità, qualora le piattaforme continuino a ostacolare il trasferimento dei dati tra servizi concorrenti.",
+    "example_en": "The government is contemplating imposing interoperability requirements should the platforms continue to obstruct data transfers between competing services.",
+    "cloze": "Il governo {{c1::contempla la possibilità di}} imporre obblighi di interoperabilità, qualora le piattaforme continuino a ostacolare il trasferimento dei dati tra servizi concorrenti.",
+    "note": "The legacy infinitive is semantically possible but underspecified. Self-review added the productive prospective frame and checked that the alternative licenses the same following infinitive."
+  },
+  {
+    "id": "it_fancy_vocab_413",
+    "en": "To convey",
+    "category": "lexical-verb",
+    "tl": "trasmettere",
+    "alts": [
+      "comunicare",
+      "veicolare"
+    ],
+    "register": "Trasmettere è neutro per idee e impressioni; comunicare è più generale, mentre veicolare è formale e frequente nell'analisi dei media.",
+    "trap": "Convogliare riguarda soprattutto flussi, risorse o traffico e non è il calco predefinito di convey quando l'oggetto è un'idea o un'impressione.",
+    "example_tl": "L'infografica trasmette un'impressione di certezza che i dati incompleti non giustificano, perché omette gli intervalli di confidenza e le ipotesi del modello.",
+    "example_en": "The infographic conveys an impression of certainty that the incomplete data do not justify, because it omits confidence intervals and the model's assumptions.",
+    "cloze": "L'infografica {{c1::trasmette}} un'impressione di certezza che i dati incompleti non giustificano, perché omette gli intervalli di confidenza e le ipotesi del modello.",
+    "note": "The legacy rendering is accurate for communication. Self-review fixed an impression as the object and verified that both alternatives remain idiomatic in that exact context."
+  },
+  {
+    "id": "it_fancy_vocab_417",
+    "en": "To delineate",
+    "category": "lexical-verb",
+    "tl": "delimitare",
+    "alts": [
+      "definire",
+      "delineare"
+    ],
+    "register": "Delimitare è formale e preciso quando si fissano confini o competenze; definire è più generale, mentre delineare può anche indicare una descrizione per grandi linee.",
+    "trap": "Limitare le responsabilità significa ridurle; delimitarle significa stabilirne i confini, senza necessariamente restringerle.",
+    "example_tl": "Il regolamento delimita le responsabilità delle piattaforme e degli inserzionisti, evitando che ciascun attore scarichi sull'altro il compito di controllare i messaggi politici.",
+    "example_en": "The regulation delineates the responsibilities of platforms and advertisers, preventing each party from shifting the task of monitoring political messages onto the other.",
+    "cloze": "Il regolamento {{c1::delimita}} le responsabilità delle piattaforme e degli inserzionisti, evitando che ciascun attore scarichi sull'altro il compito di controllare i messaggi politici.",
+    "note": "The legacy delineare is valid. Self-review selected the narrower boundary-setting sense and retained delineare only because it remains natural with responsabilità in the example."
+  },
+  {
+    "id": "it_fancy_vocab_420",
+    "en": "To dismiss",
+    "category": "lexical-verb",
+    "tl": "liquidare come",
+    "alts": [
+      "bollare come"
+    ],
+    "register": "Liquidare come è critico e segnala un rifiuto sommario; bollare come è ancora più polemico, mentre respingere è più neutro e procedurale.",
+    "trap": "Dismiss cambia resa secondo l'oggetto: si licenzia un dipendente, si rigetta un ricorso e si liquida come infondata un'obiezione.",
+    "example_tl": "Il ministro liquida come allarmistiche le conclusioni dell'autorità indipendente, senza rispondere ai dati sulle discriminazioni prodotte dal sistema automatizzato.",
+    "example_en": "The minister dismisses the independent authority's conclusions as alarmist, without addressing the data on discrimination produced by the automated system.",
+    "cloze": "Il ministro {{c1::liquida come}} allarmistiche le conclusioni dell'autorità indipendente, senza rispondere ai dati sulle discriminazioni prodotte dal sistema automatizzato.",
+    "note": "Materially narrows old_back: respingere omits the dismissive framing selected here. Self-review retained only bollare come because it preserves both the syntax and polemical force of the example."
+  },
+  {
+    "id": "it_fancy_vocab_421",
+    "en": "To dispute",
+    "category": "lexical-verb",
+    "tl": "contestare",
+    "alts": [
+      "mettere in discussione"
+    ],
+    "register": "Contestare è neutro-formale per impugnare la validità di dati o affermazioni; mettere in discussione è meno procedurale e più argomentativo.",
+    "trap": "Disputare in italiano indica soprattutto contendersi qualcosa o partecipare a una gara; normalmente non rende to dispute a claim nel senso di contestarne la validità.",
+    "example_tl": "La società contesta la validità dello studio, ma non pubblica i dati necessari per verificare le presunte anomalie segnalate dai propri consulenti.",
+    "example_en": "The company disputes the study's validity but does not publish the data needed to verify the alleged anomalies reported by its own consultants.",
+    "cloze": "La società {{c1::contesta}} la validità dello studio, ma non pubblica i dati necessari per verificare le presunte anomalie segnalate dai propri consulenti.",
+    "note": "The legacy rendering is accurate. Self-review centered the evidential challenge sense and excluded impugnare, which would suggest a more specifically legal procedure."
+  },
+  {
+    "id": "it_fancy_vocab_422",
+    "en": "To embrace",
+    "category": "lexical-verb",
+    "tl": "adottare",
+    "alts": [],
+    "register": "Adottare è neutro-formale con approcci, politiche e standard; abbracciare è possibile in senso figurato, ma suona più retorico ed entusiastico.",
+    "trap": "Il cognato inglese non impone abbracciare: quando embrace significa accettare e applicare una linea d'azione, adottare è spesso la scelta meno marcata.",
+    "example_tl": "Dopo anni di resistenza, l'autorità ha adottato un approccio più trasparente, pubblicando i criteri con cui seleziona i contenuti da rimuovere.",
+    "example_en": "After years of resistance, the authority embraced a more transparent approach, publishing the criteria it uses to select content for removal.",
+    "cloze": "Dopo anni di resistenza, l'autorità {{c1::ha adottato}} un approccio più trasparente, pubblicando i criteri con cui seleziona i contenuti da rimuovere.",
+    "note": "Materially diverges from old_back for a policy-acceptance sense. Self-review left abbracciare out of alts because its more enthusiastic register is not fully interchangeable in this institutional sentence."
+  },
+  {
+    "id": "it_fancy_vocab_425",
+    "en": "To expound",
+    "category": "lexical-verb",
+    "tl": "esporre in modo articolato",
+    "alts": [
+      "illustrare diffusamente"
+    ],
+    "register": "Esporre in modo articolato è formale e adatto a relazioni o audizioni; illustrare diffusamente insiste sulla completezza dell'esposizione.",
+    "trap": "Expound on non si calca con espandere su: si espone qualcosa, mentre si disserta su un tema in un registro più elevato e spesso prolisso.",
+    "example_tl": "Nell'audizione, l'economista espone in modo articolato le ragioni per cui la concentrazione del mercato riduce l'innovazione e accresce le rendite monopolistiche.",
+    "example_en": "At the hearing, the economist expounds the reasons why market concentration reduces innovation and increases monopoly rents.",
+    "cloze": "Nell'audizione, l'economista {{c1::espone in modo articolato}} le ragioni per cui la concentrazione del mercato riduce l'innovazione e accresce le rendite monopolistiche.",
+    "note": "The legacy esporre is valid but does not by itself encode sustained explanation. Self-review added a natural manner phrase and rejected dissertare as unnecessarily marked for the hearing context."
+  },
+  {
+    "id": "it_fancy_vocab_427",
+    "en": "To foster",
+    "category": "lexical-verb",
+    "tl": "favorire",
+    "alts": [
+      "promuovere"
+    ],
+    "register": "Favorire è neutro-formale quando si creano condizioni propizie; promuovere attribuisce al soggetto un ruolo più intenzionale e attivo.",
+    "trap": "Lo spagnolo e il portoghese fomentar possono interferire: l'italiano fomentare ricorre soprattutto con conflitti, disordini o sentimenti negativi, non come sinonimo neutro di favorire.",
+    "example_tl": "Regole di accesso eque favoriscono la nascita di servizi indipendenti, mentre gli accordi esclusivi consolidano il potere degli intermediari già dominanti.",
+    "example_en": "Fair access rules foster the emergence of independent services, while exclusive agreements consolidate the power of already dominant intermediaries.",
+    "cloze": "Regole di accesso eque {{c1::favoriscono}} la nascita di servizi indipendenti, mentre gli accordi esclusivi consolidano il potere degli intermediari già dominanti.",
+    "note": "The legacy rendering is accurate. Self-review selected an enabling-conditions context and retained promuovere because it remains natural, while documenting its slightly greater intentionality."
+  },
+  {
+    "id": "it_fancy_vocab_429",
+    "en": "To highlight",
+    "category": "lexical-verb",
+    "tl": "mettere in luce",
+    "alts": [
+      "evidenziare",
+      "far emergere"
+    ],
+    "register": "Mettere in luce è neutro-formale nell'analisi; evidenziare è molto comune, mentre far emergere insiste sul carattere rivelatore del risultato.",
+    "trap": "Nel senso materiale di mark text, highlight è evidenziare; mettere in luce qui significa invece far emergere un risultato, non colorare un passaggio.",
+    "example_tl": "L'inchiesta mette in luce come i sistemi di raccomandazione amplifichino contenuti estremi, anche quando le imprese dichiarano di privilegiare fonti affidabili.",
+    "example_en": "The investigation highlights how recommendation systems amplify extreme content, even when companies claim to prioritize reliable sources.",
+    "cloze": "L'inchiesta {{c1::mette in luce}} come i sistemi di raccomandazione amplifichino contenuti estremi, anche quando le imprese dichiarano di privilegiare fonti affidabili.",
+    "note": "The legacy evidenziare is accurate. Self-review selected the analytical discovery sense and kept only alternatives that remain idiomatic before the example's come-clause."
+  },
+  {
+    "id": "it_fancy_vocab_432",
+    "en": "To infer",
+    "category": "lexical-verb",
+    "tl": "dedurre da",
+    "alts": [
+      "inferire da"
+    ],
+    "register": "Dedurre da è neutro-formale nella prosa analitica; inferire da è corretto ma più tecnico e frequente nella logica o nella metodologia scientifica.",
+    "trap": "Infer descrive la conclusione tratta dall'analista; imply riguarda ciò che prove o parole lasciano intendere e non si rende automaticamente con implicare in ogni contesto.",
+    "example_tl": "Gli analisti deducono dai bruschi scarti nel traffico che il governo limita selettivamente l'accesso alle piattaforme straniere durante le proteste.",
+    "example_en": "Analysts infer from the abrupt shifts in traffic that the government selectively restricts access to foreign platforms during protests.",
+    "cloze": "Gli analisti {{c1::deducono dai}} bruschi scarti nel traffico che il governo limita selettivamente l'accesso alle piattaforme straniere durante le proteste.",
+    "note": "The legacy inferire is valid but stylistically marked. Self-review promoted the more usual analytical dedurre, supplied its da government and retained inferire as a technical alternative."
+  },
+  {
+    "id": "it_fancy_vocab_434",
+    "en": "To negate",
+    "category": "lexical-verb",
+    "tl": "annullare",
+    "alts": [
+      "neutralizzare",
+      "vanificare"
+    ],
+    "register": "Annullare è neutro quando un effetto ne cancella un altro; neutralizzare è più tecnico, mentre vanificare sottolinea che un risultato atteso viene reso inutile.",
+    "trap": "Negare significa deny, cioè rifiutare la verità o l'esistenza di qualcosa; non rende negate quando un costo cancella concretamente un beneficio.",
+    "example_tl": "Il crescente consumo idrico dei centri dati annulla i benefici climatici ottenuti con processori più efficienti, soprattutto nelle regioni già colpite dalla siccità.",
+    "example_en": "The growing water consumption of data centers negates the climate benefits achieved with more efficient processors, especially in regions already affected by drought.",
+    "cloze": "Il crescente consumo idrico dei centri dati {{c1::annulla}} i benefici climatici ottenuti con processori più efficienti, soprattutto nelle regioni già colpite dalla siccità.",
+    "note": "Materially corrects old_back for the cancel-an-effect sense. Self-review tested both alternatives against benefici and excluded negare, which would change the proposition entirely."
+  },
+  {
+    "id": "it_fancy_vocab_435",
+    "en": "To ponder",
+    "category": "lexical-verb",
+    "tl": "soppesare",
+    "alts": [
+      "ponderare",
+      "valutare attentamente"
+    ],
+    "register": "Soppesare è neutro-formale e suggerisce il confronto tra fattori; ponderare è più scritto, mentre valutare attentamente è trasparente e non marcato.",
+    "trap": "Soppesare e ponderare reggono un oggetto diretto; riflettere richiede normalmente su e descrive la riflessione più che il bilanciamento di fattori concorrenti.",
+    "example_tl": "Prima di vietare la pubblicità politica mirata, il legislatore deve soppesare i rischi di manipolazione e le conseguenze per le campagne con meno risorse.",
+    "example_en": "Before banning targeted political advertising, lawmakers must ponder the risks of manipulation and the consequences for campaigns with fewer resources.",
+    "cloze": "Prima di vietare la pubblicità politica mirata, il legislatore deve {{c1::soppesare}} i rischi di manipolazione e le conseguenze per le campagne con meno risorse.",
+    "note": "Materially sharpens old_back: riflettere names deliberation but not necessarily weighing alternatives. Self-review chose a direct-object sentence in which all retained alternatives are natural."
+  },
+  {
+    "id": "it_fancy_vocab_436",
+    "en": "To posit",
+    "category": "lexical-verb",
+    "tl": "postulare",
+    "alts": [
+      "assumere come premessa"
+    ],
+    "register": "Postulare è formale e proprio della teoria o dell'argomentazione; assumere come premessa è più esplicito e accessibile senza perdere precisione.",
+    "trap": "Porre da solo non equivale normalmente a posit: occorre porre come ipotesi o come premessa, specificando il ruolo argomentativo dell'enunciato.",
+    "example_tl": "Il modello postula che gli utenti agiscano in modo razionale, ignorando come le interfacce manipolino i tempi decisionali, le informazioni disponibili e la percezione del rischio.",
+    "example_en": "The model posits that users act rationally, ignoring how interfaces manipulate decision-making time, the available information, and perceptions of risk.",
+    "cloze": "Il modello {{c1::postula}} che gli utenti agiscano in modo razionale, ignorando come le interfacce manipolino i tempi decisionali, le informazioni disponibili e la percezione del rischio.",
+    "note": "The legacy rendering is accurate. Self-review distinguished positing a premise from merely proposing a hypothesis and verified the expected subjunctive after postulare che."
+  },
+  {
+    "id": "it_fancy_vocab_439",
+    "en": "To qualify",
+    "category": "lexical-verb",
+    "tl": "circoscrivere la portata di",
+    "alts": [
+      "limitare la portata di"
+    ],
+    "register": "Circoscrivere la portata di è formale e preciso nella prosa critica o giuridica; limitare la portata di è più trasparente e leggermente meno ricercato.",
+    "trap": "Nell'argomentazione qualify non è qualificare, che significa caratterizzare, attribuire una qualifica o rendere idoneo; qui significa restringere la forza di un'affermazione.",
+    "example_tl": "Nel rapporto finale, la commissione circoscrive la portata della conclusione, riconoscendo che i dati disponibili coprono soltanto le piattaforme di maggiori dimensioni.",
+    "example_en": "In the final report, the commission qualifies the conclusion by acknowledging that the available data cover only the largest platforms.",
+    "cloze": "Nel rapporto finale, la commissione {{c1::circoscrive la portata della}} conclusione, riconoscendo che i dati disponibili coprono soltanto le piattaforme di maggiori dimensioni.",
+    "note": "Materially refines old_back: precisare may add detail, whereas argumentative qualify often narrows a claim's scope. Self-review chose a context that makes that limiting function unambiguous."
+  },
+  {
+    "id": "it_fancy_vocab_440",
+    "en": "To question",
+    "category": "lexical-verb",
+    "tl": "mettere in discussione",
+    "alts": [
+      "mettere in dubbio"
+    ],
+    "register": "Mettere in discussione è neutro-formale per contestare un presupposto; mettere in dubbio concentra maggiormente l'attenzione sulla sua credibilità.",
+    "trap": "Questionare significa litigare o disputare, mentre interrogare riguarda soprattutto il porre domande a qualcuno; nessuno dei due rende automaticamente questo senso epistemico.",
+    "example_tl": "Le nuove prove mettono in discussione l'idea che la moderazione automatica sia politicamente neutrale, mostrando errori sistematici che penalizzano alcune varietà linguistiche.",
+    "example_en": "The new evidence questions the idea that automated moderation is politically neutral, revealing systematic errors that disadvantage certain language varieties.",
+    "cloze": "Le nuove prove {{c1::mettono in discussione}} l'idea che la moderazione automatica sia politicamente neutrale, mostrando errori sistematici che penalizzano alcune varietà linguistiche.",
+    "note": "The legacy rendering is accurate. Self-review fixed the challenge-to-validity sense and kept mettere in dubbio as the only alternative that remains natural with l'idea."
+  }
+]

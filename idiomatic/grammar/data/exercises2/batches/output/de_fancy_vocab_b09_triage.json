@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_321",
+    "en": "to collect",
+    "verdict": "drop",
+    "reason": "Sammeln is a familiar, transparent German verb, and the isolated prompt selects no specialised sense such as data collection or evidence gathering."
+  },
+  {
+    "id": "it_fancy_vocab_322",
+    "en": "to store",
+    "verdict": "drop",
+    "reason": "Speichern is a high-frequency, transparent German technology verb with predictable government and no selected storage collocation."
+  },
+  {
+    "id": "it_fancy_vocab_323",
+    "en": "to share",
+    "verdict": "drop",
+    "reason": "Teilen is a basic familiar verb, and the prompt does not distinguish sharing information from dividing or distributing something."
+  },
+  {
+    "id": "it_fancy_vocab_324",
+    "en": "to sell",
+    "verdict": "drop",
+    "reason": "Verkaufen is a core, transparent German verb whose isolated prompt supplies no professional construction or semantic trap."
+  },
+  {
+    "id": "it_fancy_vocab_325",
+    "en": "to advertise",
+    "verdict": "keep",
+    "reason": "Bewerben, Werbung machen and für etwas werben divide the product, activity and advocacy senses that a bare werben gloss leaves unclear."
+  },
+  {
+    "id": "it_fancy_vocab_326",
+    "en": "to personalize",
+    "verdict": "keep",
+    "reason": "Personalisieren is useful digital-policy vocabulary, with a genuine distinction from auf jemanden zuschneiden and a false-cognate risk around personifizieren."
+  },
+  {
+    "id": "it_fancy_vocab_327",
+    "en": "to discriminate",
+    "verdict": "keep",
+    "reason": "Diskriminieren is formal rights and policy vocabulary and supplies the precise accusative construction for discriminatory treatment."
+  },
+  {
+    "id": "it_fancy_vocab_328",
+    "en": "to violate",
+    "verdict": "keep",
+    "reason": "German chooses gegen etwas verstoßen for rules and principles but etwas verletzen for rights, making the English umbrella verb materially instructive."
+  },
+  {
+    "id": "it_fancy_vocab_329",
+    "en": "to compete",
+    "verdict": "keep",
+    "reason": "Konkurrieren teaches the productive mit-plus-dative and um-plus-accusative frames used in market and geopolitical analysis."
+  },
+  {
+    "id": "it_fancy_vocab_330",
+    "en": "to connect",
+    "verdict": "drop",
+    "reason": "Verbinden is a common transparent verb, and the generic prompt does not select the more specialised technical sense of vernetzen."
+  },
+  {
+    "id": "it_fancy_vocab_331",
+    "en": "to address",
+    "verdict": "keep",
+    "reason": "Angehen or sich einer Sache annehmen captures address an issue; the literal German Adresse-related senses make this a useful polysemy card."
+  },
+  {
+    "id": "it_fancy_vocab_332",
+    "en": "to fail",
+    "verdict": "keep",
+    "reason": "Scheitern an plus dative is a high-value analytical frame and differs from the event-oriented gelingen construction."
+  },
+  {
+    "id": "it_fancy_vocab_333",
+    "en": "to succeed",
+    "verdict": "keep",
+    "reason": "Gelingen corrects the agent-oriented old gloss for plans and negotiations and teaches that the successful event, not a person, is its subject."
+  },
+  {
+    "id": "it_fancy_vocab_334",
+    "en": "to entrench",
+    "verdict": "keep",
+    "reason": "Verankern is formal figurative vocabulary for making inequalities or institutions durable, with zementieren as a genuinely evaluative alternative."
+  },
+  {
+    "id": "it_fancy_vocab_335",
+    "en": "to lobby",
+    "verdict": "keep",
+    "reason": "Lobbyarbeit betreiben is the idiomatic German institutional expression; the legacy beeinflussen is a much broader verb and misses the organised pressure sense."
+  },
+  {
+    "id": "it_fancy_vocab_336",
+    "en": "to acquire",
+    "verdict": "keep",
+    "reason": "Erwerben is valuable formal business vocabulary and distinguishes acquisition of assets or firms from the narrower takeover verb übernehmen."
+  },
+  {
+    "id": "it_fancy_vocab_337",
+    "en": "to partner",
+    "verdict": "keep",
+    "reason": "Kooperieren mit or eine Partnerschaft eingehen replaces the malformed zu verpartnern and teaches the normal German partnership frame."
+  },
+  {
+    "id": "it_fancy_vocab_338",
+    "en": "to limit",
+    "verdict": "drop",
+    "reason": "Einschränken is familiar policy vocabulary, and the isolated prompt does not select a useful contrast with begrenzen or auf etwas beschränken."
+  },
+  {
+    "id": "it_fancy_vocab_339",
+    "en": "to secure",
+    "verdict": "keep",
+    "reason": "Sich etwas sichern teaches the reflexive acquisition frame for supplies or access and separates it from merely protecting or guaranteeing something."
+  },
+  {
+    "id": "it_fancy_vocab_340",
+    "en": "Dominant",
+    "verdict": "drop",
+    "reason": "Dominant is a familiar German internationalism, and the bare adjective offers no selected contrast with marktbeherrschend or vorherrschend."
+  },
+  {
+    "id": "it_fancy_vocab_341",
+    "en": "Invasive",
+    "verdict": "keep",
+    "reason": "Invasiv has distinct medical, biological and privacy-policy uses, and the professional example fixes its intrusive rather than merely entering sense."
+  },
+  {
+    "id": "it_fancy_vocab_342",
+    "en": "Innovative",
+    "verdict": "drop",
+    "reason": "Innovativ is a transparent, high-frequency German cognate with predictable morphology and no selected register or collocation."
+  },
+  {
+    "id": "it_fancy_vocab_343",
+    "en": "Restrictive",
+    "verdict": "keep",
+    "reason": "Restriktiv is formal policy vocabulary and usefully contrasts a rule that limits conduct with a merely narrow or constrained scope."
+  },
+  {
+    "id": "it_fancy_vocab_344",
+    "en": "Transparent",
+    "verdict": "drop",
+    "reason": "Transparent is a familiar German cognate, and the prompt does not select the figurative administrative sense over the literal one."
+  },
+  {
+    "id": "it_fancy_vocab_345",
+    "en": "Powerful",
+    "verdict": "keep",
+    "reason": "Einflussreich, mächtig and leistungsstark divide institutional influence, political power and technical performance, so the bare English adjective needs contextual treatment."
+  },
+  {
+    "id": "it_fancy_vocab_346",
+    "en": "Unethical",
+    "verdict": "drop",
+    "reason": "Unethisch is a transparent, familiar German adjective whose isolated prompt adds no meaningful domain distinction."
+  },
+  {
+    "id": "it_fancy_vocab_347",
+    "en": "Lucrative",
+    "verdict": "keep",
+    "reason": "Lukrativ is established formal economic vocabulary, with useful register-marked alternatives einträglich and gewinnbringend."
+  },
+  {
+    "id": "it_fancy_vocab_348",
+    "en": "Personalized",
+    "verdict": "keep",
+    "reason": "Personalisierte services are a live technology-policy sense and need distinction from individually zugeschnitten, which foregrounds tailoring rather than data-driven targeting."
+  },
+  {
+    "id": "it_fancy_vocab_349",
+    "en": "Biased",
+    "verdict": "keep",
+    "reason": "Voreingenommen applies to actors or procedures, while verzerrt is often the better statistical rendering; the distinction is important in algorithmic criticism."
+  },
+  {
+    "id": "it_fancy_vocab_350",
+    "en": "Decentralized",
+    "verdict": "keep",
+    "reason": "Dezentralisiert is technical governance and network vocabulary and contrasts a system made decentralized with the broader static adjective dezentral."
+  },
+  {
+    "id": "it_fancy_vocab_351",
+    "en": "Globalized",
+    "verdict": "drop",
+    "reason": "Globalisiert is a transparent German cognate, and the isolated adjective provides no selected economic or political nuance beyond the obvious translation."
+  },
+  {
+    "id": "it_fancy_vocab_352",
+    "en": "Competitive",
+    "verdict": "keep",
+    "reason": "Wettbewerbsfähig means able to compete and differs from wettbewerbsorientiert or konkurrenzbetont, making it useful in economic prose."
+  },
+  {
+    "id": "it_fancy_vocab_353",
+    "en": "Comprehensive",
+    "verdict": "drop",
+    "reason": "Umfassend is a familiar, transparent formal adjective, and the prompt selects no contrast with vollständig or ganzheitlich."
+  },
+  {
+    "id": "it_fancy_vocab_354",
+    "en": "Excessive",
+    "verdict": "keep",
+    "reason": "Übermäßig is a useful neutral rendering that differs from übertrieben and exzessiv in degree and evaluative force."
+  },
+  {
+    "id": "it_fancy_vocab_355",
+    "en": "Controversial",
+    "verdict": "drop",
+    "reason": "Umstritten is a familiar German political adjective with predictable morphology and no selected discourse distinction."
+  },
+  {
+    "id": "it_fancy_vocab_356",
+    "en": "Secure",
+    "verdict": "drop",
+    "reason": "Sicher is a basic high-frequency adjective, and the isolated prompt does not specify the technical sense that would warrant abgesichert or geschützt."
+  },
+  {
+    "id": "it_fancy_vocab_357",
+    "en": "Vulnerable",
+    "verdict": "keep",
+    "reason": "Angreifbar is the useful technical rendering for systems, while verwundbar and verletzlich shift toward physical or emotional vulnerability."
+  },
+  {
+    "id": "it_fancy_vocab_358",
+    "en": "Exclusive",
+    "verdict": "keep",
+    "reason": "Exklusiv separates premium or restricted access from ausschließlich, which means only; the distinction matters in market and policy prose."
+  },
+  {
+    "id": "it_fancy_vocab_359",
+    "en": "Inclusive",
+    "verdict": "keep",
+    "reason": "Inklusiv in social-policy German means enabling participation, whereas the legacy einschließlich usually means including items or costs."
+  },
+  {
+    "id": "it_fancy_vocab_360",
+    "en": "Interconnected",
+    "verdict": "keep",
+    "reason": "Miteinander verflochten or vernetzt gives a precise systems-level rendering rather than the flatter verknüpft gloss."
+  }
+]

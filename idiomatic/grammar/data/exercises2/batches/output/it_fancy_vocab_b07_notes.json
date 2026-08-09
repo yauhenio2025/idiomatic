@@ -1,0 +1,284 @@
+[
+  {
+    "id": "it_fancy_vocab_241",
+    "en": "the Intellectual Property",
+    "category": "lexical-noun",
+    "tl": "la proprietà intellettuale",
+    "alts": [],
+    "register": "Termine giuridico e istituzionale neutro-formale che comprende diverse categorie di diritti su creazioni, invenzioni, segni distintivi e altre attività immateriali.",
+    "trap": "Diritto d'autore corrisponde soltanto a copyright, mentre proprietà industriale copre soprattutto brevetti, marchi e disegni: nessuno dei due coincide con l'intero concetto.",
+    "example_tl": "La proprietà intellettuale protegge innovazioni e opere creative, ma tutele troppo estese possono concentrare conoscenze strategiche nelle mani di poche imprese.",
+    "example_en": "Intellectual property protects innovations and creative works, but overly extensive protections can concentrate strategic knowledge in the hands of a few companies.",
+    "cloze": "{{c1::La proprietà intellettuale}} protegge innovazioni e opere creative, ma tutele troppo estese possono concentrare conoscenze strategiche nelle mani di poche imprese.",
+    "note": "The legacy rendering is accurate. Self-review retained the item for the legally consequential contrast with the narrower diritto d'autore and proprietà industriale."
+  },
+  {
+    "id": "it_fancy_vocab_243",
+    "en": "the Supply Chain",
+    "category": "lexical-noun",
+    "tl": "la catena di approvvigionamento",
+    "alts": [
+      "la filiera di fornitura"
+    ],
+    "register": "Locuzione neutro-formale della logistica, dell'economia e della politica industriale; filiera di fornitura è un'alternativa professionale leggermente più settoriale.",
+    "trap": "La catena del valore descrive le attività che generano valore e non è sinonimo automatico di catena di approvvigionamento; logistica ne copre solo una parte.",
+    "example_tl": "La catena di approvvigionamento europea dei chip resta vulnerabile perché la produzione di materiali essenziali dipende ancora da pochi fornitori asiatici.",
+    "example_en": "Europe's chip supply chain remains vulnerable because the production of essential materials still depends on a small number of Asian suppliers.",
+    "cloze": "{{c1::La catena di approvvigionamento}} europea dei chip resta vulnerabile perché la produzione di materiali essenziali dipende ancora da pochi fornitori asiatici.",
+    "note": "The legacy rendering is accurate. Self-review kept filiera di fornitura because it can replace the main term in this industrial context without changing the claim."
+  },
+  {
+    "id": "it_fancy_vocab_245",
+    "en": "the Tariffs",
+    "category": "lexical-noun",
+    "tl": "i dazi doganali",
+    "alts": [
+      "i dazi"
+    ],
+    "register": "Termine neutro-formale del commercio internazionale per i tributi applicati alle merci oltre frontiera; dazi è normalmente sufficiente quando il contesto è chiaro.",
+    "trap": "Tariffa indica di solito il prezzo di un servizio o un sistema di aliquote; per English tariffs come prelievi sulle importazioni si usa dazi doganali.",
+    "example_tl": "I dazi doganali sui veicoli elettrici possono proteggere l'industria europea nel breve periodo, ma rischiano di alimentare nuove ritorsioni commerciali.",
+    "example_en": "Tariffs on electric vehicles can protect European industry in the short term, but they risk fueling new trade retaliation.",
+    "cloze": "{{c1::I dazi doganali}} sui veicoli elettrici possono proteggere l'industria europea nel breve periodo, ma rischiano di alimentare nuove ritorsioni commerciali.",
+    "note": "The legacy rendering is correct but less production-ready. Self-review added doganali to fix the cross-border tax sense and retained the shorter form only as a contextual alternative."
+  },
+  {
+    "id": "it_fancy_vocab_247",
+    "en": "the Decoupling",
+    "category": "lexical-noun",
+    "tl": "il disaccoppiamento economico",
+    "alts": [
+      "il decoupling economico"
+    ],
+    "register": "Termine formale della geoeconomia; il prestito decoupling è molto corrente nel dibattito specialistico, mentre disaccoppiamento è più trasparente nella prosa divulgativa.",
+    "trap": "Il de-risking mira a ridurre selettivamente dipendenze e rischi; non equivale al disaccoppiamento, che suggerisce una separazione economica molto più ampia.",
+    "example_tl": "Il disaccoppiamento economico tra Stati Uniti e Cina imporrebbe costi elevati alle imprese europee senza eliminare rapidamente le dipendenze strategiche esistenti.",
+    "example_en": "Economic decoupling between the United States and China would impose high costs on European companies without quickly eliminating existing strategic dependencies.",
+    "cloze": "{{c1::Il disaccoppiamento economico}} tra Stati Uniti e Cina imporrebbe costi elevati alle imprese europee senza eliminare rapidamente le dipendenze strategiche esistenti.",
+    "note": "The legacy term is defensible but underspecified. Self-review added economico to fix the intended geopolitical sense and verified the substantive contrast with de-risking."
+  },
+  {
+    "id": "it_fancy_vocab_251",
+    "en": "the Interference",
+    "category": "lexical-noun",
+    "tl": "l'ingerenza in",
+    "alts": [],
+    "register": "Termine formale e critico della politica e del diritto internazionale per l'intervento indebito di un soggetto negli affari o nei processi di un altro.",
+    "trap": "Interferenza è naturale per segnali, sistemi o ostacoli tecnici; nel senso politico di meddling si preferisce ingerenza, normalmente costruito con in.",
+    "example_tl": "L'ingerenza nei processi elettorali attraverso reti di disinformazione indebolisce la fiducia pubblica anche quando non altera direttamente il risultato del voto.",
+    "example_en": "Interference in electoral processes through disinformation networks weakens public trust even when it does not directly alter the outcome of the vote.",
+    "cloze": "{{c1::L'ingerenza nei}} processi elettorali attraverso reti di disinformazione indebolisce la fiducia pubblica anche quando non altera direttamente il risultato del voto.",
+    "note": "The legacy rendering correctly selects the political sense. Self-review added the governed preposition and rejected interferenza, which would invite the technical English cognate."
+  },
+  {
+    "id": "it_fancy_vocab_252",
+    "en": "the Regulations",
+    "category": "lexical-noun",
+    "tl": "la normativa",
+    "alts": [
+      "le norme"
+    ],
+    "register": "Nel linguaggio giuridico-istituzionale, normativa è un nome collettivo per l'insieme delle disposizioni vigenti; norme individua più direttamente le singole regole.",
+    "trap": "Regolazione indica il processo o l'assetto regolatorio, mentre un regolamento è uno specifico atto normativo; non sono sostituti automatici di English regulations.",
+    "example_tl": "Le imprese contestano la normativa sui servizi digitali, sostenendo che obblighi formulati in modo vago favoriscano gli operatori capaci di assorbire costi legali.",
+    "example_en": "Companies challenge the regulations on digital services, arguing that vaguely worded obligations favor operators able to absorb legal costs.",
+    "cloze": "Le imprese contestano {{c1::la normativa}} sui servizi digitali, sostenendo che obblighi formulati in modo vago favoriscano gli operatori capaci di assorbire costi legali.",
+    "note": "Materially refines old_back: plural le normative normally points to distinct regulatory frameworks. Self-review selected the idiomatic collective singular and verified le norme in the example."
+  },
+  {
+    "id": "it_fancy_vocab_253",
+    "en": "the Digital Currency",
+    "category": "lexical-noun",
+    "tl": "la valuta digitale",
+    "alts": [
+      "la moneta digitale"
+    ],
+    "register": "Termine neutro-formale della politica monetaria e dei pagamenti; moneta digitale è altrettanto corrente, soprattutto quando si sottolinea la funzione monetaria.",
+    "trap": "Una valuta digitale non è necessariamente una criptovaluta; moneta elettronica è inoltre una categoria giuridica più specifica e non un sinonimo universale.",
+    "example_tl": "La valuta digitale della banca centrale potrebbe ridurre i costi dei pagamenti, ma solleva interrogativi sul controllo pubblico delle transazioni quotidiane.",
+    "example_en": "The central bank's digital currency could reduce payment costs, but it raises questions about public control of everyday transactions.",
+    "cloze": "{{c1::La valuta digitale}} della banca centrale potrebbe ridurre i costi dei pagamenti, ma solleva interrogativi sul controllo pubblico delle transazioni quotidiane.",
+    "note": "The legacy rendering is accurate. The source is broad, so self-review fixed a central-bank context in the example without redefining every digital currency as a CBDC."
+  },
+  {
+    "id": "it_fancy_vocab_257",
+    "en": "the Dominance",
+    "category": "lexical-noun",
+    "tl": "la posizione dominante",
+    "alts": [],
+    "register": "Locuzione tecnica del diritto della concorrenza per un'impresa dotata di un potere di mercato che le consente di agire con notevole indipendenza.",
+    "trap": "Predominio è più generale, mentre dominanza ricorre in ambiti tecnici o descrittivi; la concorrenza giuridica parla stabilmente di posizione dominante.",
+    "example_tl": "Una posizione dominante non è illegale di per sé, ma il suo abuso può escludere concorrenti e limitare la scelta dei consumatori.",
+    "example_en": "A dominant position is not illegal in itself, but its abuse can exclude competitors and limit consumer choice.",
+    "cloze": "Una {{c1::posizione dominante}} non è illegale di per sé, ma il suo abuso può escludere concorrenti e limitare la scelta dei consumatori.",
+    "note": "Materially diverges from old_back ('il predominio') by selecting the competition-law term. Self-review made clear that dominance itself is not necessarily abusive."
+  },
+  {
+    "id": "it_fancy_vocab_259",
+    "en": "the Quantum Computing",
+    "category": "lexical-noun",
+    "tl": "il calcolo quantistico",
+    "alts": [
+      "la computazione quantistica"
+    ],
+    "register": "Termine tecnico neutro per il campo e il paradigma di elaborazione; computazione quantistica è una variante formale diffusa nella ricerca e nelle istituzioni.",
+    "trap": "Il calcolo quantistico è il campo o processo, mentre un computer quantistico è il dispositivo; quantum non resta invariato davanti al nome italiano.",
+    "example_tl": "Il governo finanzia il calcolo quantistico per ridurre la dipendenza tecnologica, ma i risultati industriali richiederanno ancora infrastrutture costose e competenze specialistiche.",
+    "example_en": "The government funds quantum computing to reduce technological dependence, but industrial results will still require costly infrastructure and specialist expertise.",
+    "cloze": "Il governo finanzia {{c1::il calcolo quantistico}} per ridurre la dipendenza tecnologica, ma i risultati industriali richiederanno ancora infrastrutture costose e competenze specialistiche.",
+    "note": "The legacy rendering is accurate. Self-review retained computazione quantistica as an attested equivalent and verified that the full alternative fits the example grammatically."
+  },
+  {
+    "id": "it_fancy_vocab_260",
+    "en": "the Standards",
+    "category": "lexical-noun",
+    "tl": "le norme tecniche",
+    "alts": [
+      "gli standard tecnici"
+    ],
+    "register": "Norme tecniche è la forma istituzionale per specifiche adottate da organismi di normazione; standard tecnici è corrente e può includere anche standard di fatto.",
+    "trap": "Standard e norma non coincidono sempre: uno standard può affermarsi sul mercato, mentre una norma tecnica è adottata da un organismo riconosciuto.",
+    "example_tl": "Le norme tecniche comuni favoriscono l'interoperabilità delle reti, ma possono consolidare il vantaggio delle imprese che partecipano stabilmente agli organismi di normazione.",
+    "example_en": "Common technical standards promote network interoperability, but they can entrench the advantage of companies that participate regularly in standards bodies.",
+    "cloze": "{{c1::Le norme tecniche}} comuni favoriscono l'interoperabilità delle reti, ma possono consolidare il vantaggio delle imprese che partecipano stabilmente agli organismi di normazione.",
+    "note": "The source is broader than either Italian term in every context. Self-review selected the institutional sense and kept standard tecnici as interchangeable for the example's general claim."
+  },
+  {
+    "id": "it_fancy_vocab_262",
+    "en": "R&D (Research and Development)",
+    "category": "lexical-expression",
+    "tl": "la ricerca e lo sviluppo (R&S)",
+    "alts": [
+      "le attività di R&S"
+    ],
+    "register": "Espressione neutro-formale della politica scientifica e aziendale; R&S è l'abbreviazione italiana istituzionale, mentre R&D resta frequente nelle multinazionali.",
+    "trap": "L'italiano usa R&S, non lo spagnolo I+D né il portoghese P&D; nella forma estesa autonoma lo sviluppo conserva normalmente l'articolo.",
+    "example_tl": "Il nuovo bilancio riduce i fondi per la ricerca e lo sviluppo (R&S), proprio mentre la concorrenza sui semiconduttori richiede investimenti di lungo periodo.",
+    "example_en": "The new budget cuts funding for research and development just as competition in semiconductors requires long-term investment.",
+    "cloze": "Il nuovo bilancio riduce i fondi per {{c1::la ricerca e lo sviluppo (R&S)}}, proprio mentre la concorrenza sui semiconduttori richiede investimenti di lungo periodo.",
+    "note": "The legacy answer gives the correct abbreviation but presents the expansion as a label. Self-review supplied a production-ready phrase and an attested institutional construction."
+  },
+  {
+    "id": "it_fancy_vocab_263",
+    "en": "the Digital Sovereignty",
+    "category": "lexical-noun",
+    "tl": "la sovranità digitale",
+    "alts": [],
+    "register": "Termine formale e controverso della politica tecnologica per la capacità di cittadini, imprese o istituzioni di controllare scelte, dati e infrastrutture digitali.",
+    "trap": "Sovranità digitale non significa necessariamente autarchia tecnologica, localizzazione integrale dei dati o produzione nazionale di ogni componente.",
+    "example_tl": "La sovranità digitale europea richiede capacità autonome di scelta e controllo, non l'illusione costosa di produrre ogni componente entro i confini dell'Unione.",
+    "example_en": "European digital sovereignty requires autonomous capacity for choice and control, not the costly illusion of producing every component within the Union's borders.",
+    "cloze": "{{c1::La sovranità digitale}} europea richiede capacità autonome di scelta e controllo, non l'illusione costosa di produrre ogni componente entro i confini dell'Unione.",
+    "note": "The legacy rendering is accurate. Self-review retained the item because the contested concept concerns practical control and capacity, not a simple synonym for technological self-sufficiency."
+  },
+  {
+    "id": "it_fancy_vocab_265",
+    "en": "the Patents",
+    "category": "lexical-noun",
+    "tl": "i brevetti",
+    "alts": [],
+    "register": "Termine giuridico e tecnico neutro per i titoli che attribuiscono un'esclusiva temporanea su invenzioni rispondenti ai requisiti previsti dalla legge.",
+    "trap": "In italiano patente indica soprattutto una licenza, come la patente di guida; Spanish e Portuguese patente possono quindi indurre un falso amico per patent.",
+    "example_tl": "I brevetti conferiscono un'esclusiva temporanea sulle invenzioni, ma non garantiscono che le tecnologie siano efficaci, sicure o già autorizzate alla commercializzazione.",
+    "example_en": "Patents grant temporary exclusivity over inventions, but they do not guarantee that the technologies are effective, safe, or already authorized for sale.",
+    "cloze": "{{c1::I brevetti}} conferiscono un'esclusiva temporanea sulle invenzioni, ma non garantiscono che le tecnologie siano efficaci, sicure o già autorizzate alla commercializzazione.",
+    "note": "The legacy rendering is accurate. Self-review retained this otherwise familiar legal noun because patente is a consequential cross-Romance false friend for the learner."
+  },
+  {
+    "id": "it_fancy_vocab_266",
+    "en": "the Data Privacy",
+    "category": "lexical-noun",
+    "tl": "la protezione dei dati personali",
+    "alts": [
+      "la tutela dei dati personali"
+    ],
+    "register": "Locuzione giuridico-istituzionale standard nell'Unione europea; tutela dei dati personali è equivalente, mentre privacy è corrente ma concettualmente più ampia.",
+    "trap": "Riservatezza riguarda soprattutto l'accesso o la divulgazione, mentre protezione dei dati disciplina anche raccolta, trattamento e diritti degli interessati.",
+    "example_tl": "La protezione dei dati personali limita la raccolta e il riuso delle informazioni, mentre la riservatezza riguarda più specificamente chi può accedervi o divulgarle.",
+    "example_en": "Data protection limits the collection and reuse of information, while confidentiality concerns more specifically who may access or disclose it.",
+    "cloze": "{{c1::La protezione dei dati personali}} limita la raccolta e il riuso delle informazioni, mentre la riservatezza riguarda più specificamente chi può accedervi o divulgarle.",
+    "note": "Materially diverges from old_back ('la privacy dei dati') in favor of the established EU legal term. Self-review preserved privacy only as a broader contrast, not an alternative."
+  },
+  {
+    "id": "it_fancy_vocab_269",
+    "en": "the Espionage Act",
+    "category": "lexical-noun",
+    "tl": "l'Espionage Act",
+    "alts": [
+      "la legge statunitense sullo spionaggio del 1917"
+    ],
+    "register": "Titolo proprio storico-giuridico statunitense, normalmente mantenuto in inglese nella prosa italiana; la perifrasi tradotta serve a identificarlo per un pubblico generale.",
+    "trap": "English Act in un titolo legislativo significa legge, non atto; la generica legge sullo spionaggio perde inoltre paese, data e identità del provvedimento.",
+    "example_tl": "L'Espionage Act è stato invocato contro chi ha divulgato informazioni riservate, alimentando un conflitto duraturo tra sicurezza nazionale e libertà di stampa.",
+    "example_en": "The Espionage Act has been invoked against people who disclosed classified information, fueling an enduring conflict between national security and freedom of the press.",
+    "cloze": "{{c1::L'Espionage Act}} è stato invocato contro chi ha divulgato informazioni riservate, alimentando un conflitto duraturo tra sicurezza nazionale e libertà di stampa.",
+    "note": "Materially diverges from old_back, which turns a specific US statute into a generic law. Self-review kept the proper title and supplied an identifying descriptive alternative."
+  },
+  {
+    "id": "it_fancy_vocab_270",
+    "en": "the Cloud Computing",
+    "category": "lexical-noun",
+    "tl": "il cloud computing",
+    "alts": [],
+    "register": "Prestito tecnico maschile, invariabile e ormai standard nell'informatica professionale, nelle politiche digitali e nella comunicazione istituzionale italiana.",
+    "trap": "Cloud computing non indica soltanto archiviazione remota: comprende capacità di calcolo, piattaforme e software erogati come servizi; computazione nella nuvola suona come un calco innaturale.",
+    "example_tl": "Il cloud computing consente alle amministrazioni di scalare rapidamente i servizi, ma concentra dati sensibili e capacità operative presso pochi fornitori globali.",
+    "example_en": "Cloud computing allows public administrations to scale services quickly, but it concentrates sensitive data and operational capacity among a few global providers.",
+    "cloze": "{{c1::Il cloud computing}} consente alle amministrazioni di scalare rapidamente i servizi, ma concentra dati sensibili e capacità operative presso pochi fornitori globali.",
+    "note": "The legacy rendering is accurate. Self-review retained the established loanword and made its service scope explicit rather than inventing an uncommon Italian calque."
+  },
+  {
+    "id": "it_fancy_vocab_273",
+    "en": "the Internet Protocol",
+    "category": "lexical-noun",
+    "tl": "il protocollo Internet (IP)",
+    "alts": [],
+    "register": "Termine tecnico neutro delle reti; la sigla internazionale IP è comune sia da sola sia nella forma estesa protocollo Internet.",
+    "trap": "IP può designare il protocollo o, in indirizzo IP, un identificatore di rete; la consegna affidabile è normalmente compito di protocolli superiori come TCP.",
+    "example_tl": "Il protocollo Internet (IP) instrada i pacchetti tra reti diverse, ma non garantisce da solo né la consegna né la riservatezza dei contenuti.",
+    "example_en": "The Internet Protocol (IP) routes packets between different networks, but by itself it guarantees neither delivery nor the confidentiality of content.",
+    "cloze": "{{c1::Il protocollo Internet (IP)}} instrada i pacchetti tra reti diverse, ma non garantisce da solo né la consegna né la riservatezza dei contenuti.",
+    "note": "The legacy rendering is accurate. Self-review added the standard abbreviation and verified that the example distinguishes the protocol from an IP address and transport-layer guarantees."
+  },
+  {
+    "id": "it_fancy_vocab_277",
+    "en": "the Zero Trust",
+    "category": "lexical-expression",
+    "tl": "il modello Zero Trust",
+    "alts": [
+      "l'architettura Zero Trust"
+    ],
+    "register": "Termine specialistico della cibersicurezza, con il nome inglese invariato e un nome testa italiano che chiarisce se si parla di modello o architettura.",
+    "trap": "Zero Trust non significa negare ogni accesso né sfiducia personale: richiede di verificare esplicitamente identità, dispositivo, contesto e autorizzazione per ciascuna risorsa.",
+    "example_tl": "Il modello Zero Trust verifica continuamente identità e autorizzazioni, evitando di considerare affidabile un dispositivo soltanto perché si trova all'interno della rete aziendale.",
+    "example_en": "The Zero Trust model continuously verifies identities and permissions, avoiding treating a device as trustworthy merely because it is inside the corporate network.",
+    "cloze": "{{c1::Il modello Zero Trust}} verifica continuamente identità e autorizzazioni, evitando di considerare affidabile un dispositivo soltanto perché si trova all'interno della rete aziendale.",
+    "note": "The legacy rendering is accurate. Self-review retained a head noun rather than bare Zero Trust and verified that architettura Zero Trust is interchangeable in the example."
+  },
+  {
+    "id": "it_fancy_vocab_279",
+    "en": "the Silicon",
+    "category": "lexical-noun",
+    "tl": "il silicio",
+    "alts": [],
+    "register": "Termine scientifico e industriale neutro per l'elemento chimico e il materiale semiconduttore centrale nella fabbricazione dei circuiti integrati.",
+    "trap": "English silicon è silicio; English silicone è invece silicone in italiano e silicona in spagnolo e portoghese. Confondere i materiali cambia completamente il referente.",
+    "example_tl": "Il silicio rimane il materiale centrale dell'industria dei chip, mentre il silicone è un polimero impiegato in sigillanti, protesi e numerosi prodotti.",
+    "example_en": "Silicon remains the central material of the chip industry, while silicone is a polymer used in sealants, prostheses, and many products.",
+    "cloze": "{{c1::Il silicio}} rimane il materiale centrale dell'industria dei chip, mentre il silicone è un polimero impiegato in sigillanti, protesi e numerosi prodotti.",
+    "note": "The legacy rendering is accurate. Self-review retained the familiar noun because the silicon/silicone false-friend contrast is consequential in this technical batch."
+  },
+  {
+    "id": "it_fancy_vocab_280",
+    "en": "the Wafer",
+    "category": "lexical-noun",
+    "tl": "il wafer di silicio",
+    "alts": [],
+    "register": "Prestito tecnico maschile e invariabile dell'industria dei semiconduttori; il complemento di silicio disambigua il supporto industriale dal prodotto alimentare.",
+    "trap": "Il plurale tecnico resta wafer, non wafers; il termine indica la sottile fetta di materiale su cui si fabbricano molti circuiti, non un singolo chip.",
+    "example_tl": "Il wafer di silicio attraversa decine di lavorazioni estremamente precise prima di essere tagliato in singoli chip destinati ai dispositivi elettronici.",
+    "example_en": "The silicon wafer goes through dozens of extremely precise processes before being cut into the individual chips intended for electronic devices.",
+    "cloze": "{{c1::Il wafer di silicio}} attraversa decine di lavorazioni estremamente precise prima di essere tagliato in singoli chip destinati ai dispositivi elettronici.",
+    "note": "The legacy rendering is valid but underspecified. Self-review added the domain-defining complement and made the distinction between a wafer and its eventual chips explicit."
+  }
+]

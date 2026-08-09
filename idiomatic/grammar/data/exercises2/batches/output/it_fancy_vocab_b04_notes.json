@@ -1,0 +1,282 @@
+[
+  {
+    "id": "it_fancy_vocab_121",
+    "en": "the Dichotomy",
+    "category": "lexical-noun",
+    "tl": "la dicotomia tra A e B",
+    "alts": [
+      "l'opposizione binaria tra A e B"
+    ],
+    "register": "Formale e analitico in teoria politica, critica dei media e discussione tecnologica; presenta due categorie o alternative come poli contrapposti.",
+    "trap": "Dicotomia indica una divisione netta in due rami, non una semplice differenza; dualismo può designare due principi senza presentarli come alternative esaustive.",
+    "example_tl": "La dicotomia tra sicurezza e libertà impoverisce il dibattito pubblico, perché ignora garanzie istituzionali capaci di conciliarle senza sacrifici assoluti.",
+    "example_en": "The dichotomy between security and freedom impoverishes public debate because it ignores institutional safeguards capable of reconciling them without absolute sacrifices.",
+    "cloze": "{{c1::La dicotomia tra}} sicurezza e libertà impoverisce il dibattito pubblico, perché ignora garanzie istituzionali capaci di conciliarle senza sacrifici assoluti.",
+    "note": "The legacy rendering is accurate but omits the productive tra A e B frame. Self-review changed proteggere entrambe to the idiomatic conciliarle and retained the strong two-way analytical sense."
+  },
+  {
+    "id": "it_fancy_vocab_122",
+    "en": "the Ubiquity",
+    "category": "lexical-noun",
+    "tl": "l'ubiquità di",
+    "alts": [
+      "l'onnipresenza di"
+    ],
+    "register": "Lessico dotto ma corrente nella saggistica tecnologica e sociale per una presenza estesa a ogni luogo o ambito rilevante.",
+    "trap": "Ubiquità esprime la presenza ovunque; pervasività sottolinea invece la diffusione capillare e l'influenza entro un sistema, quindi non è sempre intercambiabile.",
+    "example_tl": "L'ubiquità dei sistemi di raccomandazione rende opache scelte quotidiane che gli utenti continuano a percepire come spontanee e pienamente autonome.",
+    "example_en": "The ubiquity of recommendation systems makes opaque everyday choices that users continue to perceive as spontaneous and fully autonomous.",
+    "cloze": "{{c1::L'ubiquità dei}} sistemi di raccomandazione rende opache scelte quotidiane che gli utenti continuano a percepire come spontanee e pienamente autonome.",
+    "note": "The legacy rendering is accurate. Self-review kept the more exact learned noun and limited the alternative to onnipresenza, which preserves the all-present sense in the example."
+  },
+  {
+    "id": "it_fancy_vocab_124",
+    "en": "the Disparity",
+    "category": "lexical-noun",
+    "tl": "la disparità tra A e B",
+    "alts": [
+      "il divario tra A e B"
+    ],
+    "register": "Neutro-formale nelle analisi economiche, statistiche e sociali per una disuguaglianza marcata tra gruppi, risorse o risultati.",
+    "trap": "Disparità segnala una distribuzione o una condizione diseguale, non una semplice differenza qualitativa; divario suggerisce spesso uno scarto misurabile.",
+    "example_tl": "La disparità tra le risorse dei regolatori e quelle delle piattaforme compromette l'applicazione uniforme delle norme nel mercato digitale europeo.",
+    "example_en": "The disparity between regulators' resources and those of platforms compromises the uniform enforcement of rules in the European digital market.",
+    "cloze": "{{c1::La disparità tra}} le risorse dei regolatori e quelle delle piattaforme compromette l'applicazione uniforme delle norme nel mercato digitale europeo.",
+    "note": "The legacy rendering is accurate. Self-review added the productive tra frame and distinguished structural inequality from an ordinary difference."
+  },
+  {
+    "id": "it_fancy_vocab_126",
+    "en": "the Proliferation",
+    "category": "lexical-noun",
+    "tl": "la proliferazione di",
+    "alts": [
+      "il moltiplicarsi di"
+    ],
+    "register": "Formale e spesso critico in politica pubblica, sicurezza e analisi dei media per una moltiplicazione rapida o difficilmente controllabile.",
+    "trap": "Proliferazione implica spesso crescita rapida o incontrollata, non un semplice aumento graduale; il verbo collegato proliferare è normalmente intransitivo.",
+    "example_tl": "La proliferazione di contenuti sintetici complica la verifica delle immagini, mentre le redazioni locali faticano a documentare campagne coordinate su scala transnazionale.",
+    "example_en": "The proliferation of synthetic content complicates image verification, while local newsrooms struggle to document campaigns coordinated on a transnational scale.",
+    "cloze": "{{c1::La proliferazione di}} contenuti sintetici complica la verifica delle immagini, mentre le redazioni locali faticano a documentare campagne coordinate su scala transnazionale.",
+    "note": "The legacy rendering is accurate but underspecified. Self-review replaced ambiguous oltreconfine with su scala transnazionale, fixed the di complement and preserved the implication of rapid multiplication."
+  },
+  {
+    "id": "it_fancy_vocab_129",
+    "en": "the Monoculture",
+    "category": "lexical-noun",
+    "tl": "la monocoltura tecnologica",
+    "alts": [
+      "la dipendenza da un'unica tecnologia"
+    ],
+    "register": "Metafora critica specialistica per la dipendenza uniforme da un solo modello tecnico, fornitore o insieme di strumenti.",
+    "trap": "Monocoltura nasce in agricoltura ed evidenzia vulnerabilità condivise; monocultura, senza o, indica invece l'uniformazione verso un unico modello culturale.",
+    "example_tl": "La monocoltura tecnologica riduce i costi nel breve periodo, ma espone simultaneamente molti servizi pubblici alle stesse vulnerabilità e agli stessi vincoli geopolitici.",
+    "example_en": "Technological monoculture reduces costs in the short term but simultaneously exposes many public services to the same vulnerabilities and geopolitical constraints.",
+    "cloze": "{{c1::La monocoltura tecnologica}} riduce i costi nel breve periodo, ma espone simultaneamente molti servizi pubblici alle stesse vulnerabilità e agli stessi vincoli geopolitici.",
+    "note": "The legacy headword is literally correct but underspecified. Self-review made the established technology-dependency metaphor explicit and excluded the distinct cultural noun monocultura."
+  },
+  {
+    "id": "it_fancy_vocab_131",
+    "en": "the Contingency",
+    "category": "lexical-noun",
+    "tl": "la contingenza di",
+    "alts": [
+      "il carattere contingente di"
+    ],
+    "register": "Lessico filosofico e teorico formale per ciò che avrebbe potuto essere altrimenti e non è necessario o predeterminato.",
+    "trap": "English contingency può indicare anche un imprevisto o una misura d'emergenza; qui contingenza esprime non necessità, non un piano di emergenza.",
+    "example_tl": "La contingenza del sistema digitale emerge quando soluzioni presentate come inevitabili variano radicalmente da un paese all'altro e da un'istituzione all'altra.",
+    "example_en": "The contingency of the digital system emerges when solutions presented as inevitable vary radically from one country or institution to another.",
+    "cloze": "{{c1::La contingenza del}} sistema digitale emerge quando soluzioni presentate come inevitabili variano radicalmente da un paese all'altro e da un'istituzione all'altra.",
+    "note": "The bare English source is polysemous. Self-review selected the theoretical sense, separated it from event and backup-plan senses, and removed an awkward cloze boundary at dell'."
+  },
+  {
+    "id": "it_fancy_vocab_132",
+    "en": "the Encroachment",
+    "category": "lexical-noun",
+    "tl": "lo sconfinamento di A nelle competenze di B",
+    "alts": [],
+    "register": "Formale in ambito giuridico e politico per il superamento progressivo dei limiti di una competenza, di un diritto o di una sfera istituzionale.",
+    "trap": "Encroachment descrive tipicamente un'intrusione graduale; invasione è spesso troppo brusco, mentre sconfinamento richiede un contesto che renda chiari i limiti oltrepassati.",
+    "example_tl": "Lo sconfinamento del governo nelle competenze dei regolatori indipendenti procede attraverso riforme tecniche raramente sottoposte a un autentico confronto parlamentare.",
+    "example_en": "The government's encroachment on the powers of independent regulators proceeds through technical reforms rarely subjected to genuine parliamentary debate.",
+    "cloze": "{{c1::Lo sconfinamento del}} governo {{c1::nelle competenze dei}} regolatori indipendenti procede attraverso riforme tecniche raramente sottoposte a un autentico confronto parlamentare.",
+    "note": "The legacy lexeme is defensible but incomplete as a production headword. Self-review supplied the institutional frame, encoded gradual progression and split the two fixed arms around their variable slots."
+  },
+  {
+    "id": "it_fancy_vocab_133",
+    "en": "the Malleability",
+    "category": "lexical-noun",
+    "tl": "la malleabilità di",
+    "alts": [],
+    "register": "Formale in usi tecnici e astratti per materiali, regole o istituzioni suscettibili di essere plasmati o rimodellati.",
+    "trap": "Malleabilità non equivale alla generica flessibilità: mette in primo piano la possibilità di imprimere una forma nuova, anche dall'esterno.",
+    "example_tl": "La malleabilità delle regole interne consente alle piattaforme di rivendicare una coerenza di principio, adattandone però l'applicazione agli interessi dei mercati più redditizi.",
+    "example_en": "The malleability of internal rules allows platforms to claim consistency in principle while adapting their application to the interests of the most profitable markets.",
+    "cloze": "{{c1::La malleabilità delle}} regole interne consente alle piattaforme di rivendicare una coerenza di principio, adattandone però l'applicazione agli interessi dei mercati più redditizi.",
+    "note": "The legacy rendering is accurate. Self-review replaced dichiararsi coerenti with the more idiomatic rivendicare una coerenza di principio and avoided broader alternatives that lose imposed reshaping."
+  },
+  {
+    "id": "it_fancy_vocab_134",
+    "en": "the Consequentialism",
+    "category": "lexical-noun",
+    "tl": "il consequenzialismo",
+    "alts": [],
+    "register": "Termine specialistico dell'etica e della filosofia politica per teorie che valutano azioni o regole in base alle loro conseguenze.",
+    "trap": "Consequenzialismo è più ampio di utilitarismo: l'utilitarismo è una famiglia di teorie consequenzialiste, non un sinonimo dell'intera categoria.",
+    "example_tl": "Il consequenzialismo valuta la moderazione dei contenuti in base agli effetti prevedibili, anziché richiamarsi soltanto a doveri o principi considerati inviolabili.",
+    "example_en": "Consequentialism evaluates content moderation according to its foreseeable effects rather than appealing only to duties or principles considered inviolable.",
+    "cloze": "{{c1::Il consequenzialismo}} valuta la moderazione dei contenuti in base agli effetti prevedibili, anziché richiamarsi soltanto a doveri o principi considerati inviolabili.",
+    "note": "The legacy rendering is accurate. Self-review retained this specialist ethics term and blocked the tempting but narrower substitution of utilitarismo."
+  },
+  {
+    "id": "it_fancy_vocab_135",
+    "en": "the Fluidity",
+    "category": "lexical-noun",
+    "tl": "la fluidità di",
+    "alts": [
+      "il carattere mutevole di"
+    ],
+    "register": "Neutro-formale nella teoria sociale e nell'analisi politica per confini, identità o appartenenze che possono cambiare facilmente.",
+    "trap": "Fluidità mette in risalto la facilità del cambiamento, mentre instabilità insiste sulla mancanza di durata o equilibrio e ha valore più nettamente negativo.",
+    "example_tl": "La fluidità delle appartenenze politiche favorisce coalizioni inedite, senza cancellare le fratture sociali durature che continuano a orientare il voto.",
+    "example_en": "The fluidity of political affiliations fosters novel coalitions without erasing the enduring social divisions that continue to shape voting.",
+    "cloze": "{{c1::La fluidità delle}} appartenenze politiche favorisce coalizioni inedite, senza cancellare le fratture sociali durature che continuano a orientare il voto.",
+    "note": "The legacy rendering is accurate but polysemous. Self-review fixed the social-theory sense and distinguished ready change from stronger instability."
+  },
+  {
+    "id": "it_fancy_vocab_136",
+    "en": "the Serendipity",
+    "category": "lexical-noun",
+    "tl": "la serendipità",
+    "alts": [],
+    "register": "Letterario ma attestato nella ricerca scientifica e nella critica culturale per una scoperta inattesa e felice compiuta cercando altro.",
+    "trap": "Serendipità non significa semplice fortuna: comprende la capacità di riconoscere il valore di un risultato inatteso.",
+    "example_tl": "La serendipità ha permesso ai ricercatori di individuare un grave errore, perché hanno riconosciuto il valore di un'anomalia inizialmente ritenuta trascurabile.",
+    "example_en": "Serendipity allowed the researchers to identify a serious error because they recognized the value of an anomaly initially considered negligible.",
+    "cloze": "{{c1::La serendipità}} ha permesso ai ricercatori di individuare un grave errore, perché hanno riconosciuto il valore di un'anomalia inizialmente ritenuta trascurabile.",
+    "note": "The legacy rendering is accurate and the form is established Italian, although marked. Self-review left alts empty because chance or luck alone omits the element of insight."
+  },
+  {
+    "id": "it_fancy_vocab_137",
+    "en": "the Permeability",
+    "category": "lexical-noun",
+    "tl": "la permeabilità di A a B",
+    "alts": [],
+    "register": "Formale in ambito scientifico, con un uso metaforico produttivo nell'analisi politica, istituzionale e mediatica.",
+    "trap": "La relazione astratta usa permeabilità di A a B; nell'esempio di più le e a più le si contraggono rispettivamente in delle e alle.",
+    "example_tl": "La permeabilità delle frontiere digitali alle ingerenze straniere complica l'attribuzione delle campagne coordinate e indebolisce la fiducia nelle istituzioni elettorali.",
+    "example_en": "The permeability of digital borders to foreign interference complicates attribution of coordinated campaigns and weakens trust in electoral institutions.",
+    "cloze": "{{c1::La permeabilità delle}} frontiere digitali {{c1::alle}} ingerenze straniere complica l'attribuzione delle campagne coordinate e indebolisce la fiducia nelle istituzioni elettorali.",
+    "note": "The legacy lexeme is accurate but omits both arms of the productive construction. Self-review added the di A a B frame and its contracted forms."
+  },
+  {
+    "id": "it_fancy_vocab_139",
+    "en": "the Aggregation",
+    "category": "lexical-noun",
+    "tl": "l'aggregazione dei dati",
+    "alts": [
+      "il raggruppamento dei dati"
+    ],
+    "register": "Neutro-formale in statistica e politica dei dati per la combinazione di osservazioni o record in un insieme o in una sintesi.",
+    "trap": "L'aggregazione non è né raccolta né anonimizzazione: combinare i record può ridurre il dettaglio, ma non elimina automaticamente il rischio di reidentificazione.",
+    "example_tl": "L'aggregazione dei dati permette di confrontare territori diversi senza pubblicare ogni singolo record, ma non elimina completamente il rischio di reidentificazione.",
+    "example_en": "Data aggregation makes it possible to compare different territories without publishing every individual record, but it does not completely eliminate re-identification risk.",
+    "cloze": "{{c1::L'aggregazione dei dati}} permette di confrontare territori diversi senza pubblicare ogni singolo record, ma non elimina completamente il rischio di reidentificazione.",
+    "note": "The legacy headword is literally correct but underspecified. Self-review fixed the data-policy collocation and separated aggregation from collection and anonymization."
+  },
+  {
+    "id": "it_fancy_vocab_142",
+    "en": "the Reciprocity",
+    "category": "lexical-noun",
+    "tl": "la reciprocità tra A e B",
+    "alts": [],
+    "register": "Formale in diplomazia, commercio e analisi istituzionale per lo scambio mutuale di diritti, concessioni, obblighi o benefici.",
+    "trap": "Reciprocità implica trattamento o obblighi mutuali, non una generica cooperazione né una semplice simmetria; le parti sono comunemente collegate da tra.",
+    "example_tl": "La reciprocità tra i due Stati resta fragile, poiché ciascuno pretende concessioni commerciali senza offrire garanzie di sicurezza equivalenti.",
+    "example_en": "Reciprocity between the two states remains fragile because each demands trade concessions without offering equivalent security guarantees.",
+    "cloze": "{{c1::La reciprocità tra}} i due Stati resta fragile, poiché ciascuno pretende concessioni commerciali senza offrire garanzie di sicurezza equivalenti.",
+    "note": "The legacy rendering is accurate. Self-review added the productive tra frame and made the states, rather than unlike concessions, the reciprocal parties."
+  },
+  {
+    "id": "it_fancy_vocab_150",
+    "en": "the Intermediary",
+    "category": "lexical-noun",
+    "tl": "l'intermediario tra A e B",
+    "alts": [],
+    "register": "Neutro-formale in economia, politica dei media e analisi istituzionale per una persona o un ente che collega due parti o mercati.",
+    "trap": "Intermediario è il sostantivo per chi si colloca tra le parti, non l'aggettivo intermedio; mediatore è più ristretto e spesso implica la gestione di un conflitto.",
+    "example_tl": "L'intermediario tra inserzionisti e testate impone i propri criteri di misurazione, pur sostenendo di facilitare uno scambio meramente tecnico.",
+    "example_en": "The intermediary between advertisers and media outlets imposes its own measurement criteria while claiming merely to facilitate a technical exchange.",
+    "cloze": "{{c1::L'intermediario tra}} inserzionisti e testate impone i propri criteri di misurazione, pur sostenendo di facilitare uno scambio meramente tecnico.",
+    "note": "The legacy rendering is accurate. Self-review supplied the tra frame, restored the idiomatic article in i propri criteri and excluded mediatore because this is market intermediation."
+  },
+  {
+    "id": "it_fancy_vocab_152",
+    "en": "the Governance",
+    "category": "lexical-noun",
+    "tl": "la governance di",
+    "alts": [],
+    "register": "Prestito inglese femminile e invariabile, consolidato nel lessico aziendale e delle politiche pubbliche per strutture, processi e responsabilità decisionali.",
+    "trap": "Governance non equivale semplicemente a governo: può distribuire regole e responsabilità tra attori pubblici, privati e civici anziché indicare l'esecutivo.",
+    "example_tl": "La governance dei sistemi di intelligenza artificiale resta lacunosa quando le imprese fissano gli standard, finanziano le verifiche e controllano da sole l'accesso ai dati.",
+    "example_en": "The governance of artificial-intelligence systems remains incomplete when companies set the standards, fund the checks, and alone control access to the data.",
+    "cloze": "{{c1::La governance dei}} sistemi di intelligenza artificiale resta lacunosa quando le imprese fissano gli standard, finanziano le verifiche e controllano da sole l'accesso ai dati.",
+    "note": "The legacy rendering is accurate but omits the productive complement. Self-review retained the feminine loanword, distinguished it from government and removed an awkward cloze boundary at dell'."
+  },
+  {
+    "id": "it_fancy_vocab_154",
+    "en": "the Silo",
+    "category": "lexical-noun",
+    "tl": "il silo di dati",
+    "alts": [],
+    "register": "Metafora specialistica consolidata nell'architettura dei dati e nell'analisi organizzativa per informazioni isolate da altri sistemi o uffici.",
+    "trap": "Silo è anche il deposito agricolo letterale; nella metafora informatica implica isolamento dannoso, non un qualsiasi database. I plurali italiani sono sili o silos.",
+    "example_tl": "Un silo di dati impedisce all'amministrazione di riconoscere tendenze comuni, benché ogni ufficio produca indicatori tecnicamente affidabili e aggiornati.",
+    "example_en": "A data silo prevents the administration from recognizing common trends, although every office produces technically reliable and up-to-date indicators.",
+    "cloze": "Un {{c1::silo di dati}} impedisce all'amministrazione di riconoscere tendenze comuni, benché ogni ufficio produca indicatori tecnicamente affidabili e aggiornati.",
+    "note": "The legacy headword is literally correct but underspecified. Self-review fixed the documented data-architecture metaphor and used the singular to avoid privileging either accepted plural."
+  },
+  {
+    "id": "it_fancy_vocab_158",
+    "en": "the Consumerism",
+    "category": "lexical-noun",
+    "tl": "il consumismo",
+    "alts": [
+      "la cultura del consumo"
+    ],
+    "register": "Lessico sociologico e mediatico critico per una cultura che presenta l'acquisto continuo di beni come bisogno o obbligo sociale.",
+    "trap": "Consumismo indica consumo indiscriminato e ha valore critico; consumerismo designa invece l'organizzazione dei consumatori per tutelarsi nei confronti dei produttori.",
+    "example_tl": "Il consumismo trasforma la sostituzione continua dei dispositivi in un obbligo sociale, anche quando l'obsolescenza deriva da precise scelte progettuali.",
+    "example_en": "Consumerism turns the continual replacement of devices into a social obligation, even when obsolescence results from specific design choices.",
+    "cloze": "{{c1::Il consumismo}} trasforma la sostituzione continua dei dispositivi in un obbligo sociale, anche quando l'obsolescenza deriva da precise scelte progettuali.",
+    "note": "The legacy rendering is accurate. Self-review retained the item for the genuine consumismo/consumerismo distinction and the noun's critical force."
+  },
+  {
+    "id": "it_fancy_vocab_159",
+    "en": "the Corporatocracy",
+    "category": "lexical-noun",
+    "tl": "la corporatocrazia",
+    "alts": [
+      "il dominio delle grandi imprese"
+    ],
+    "register": "Termine raro e polemico della critica politica per un sistema in cui le grandi imprese esercitano un potere decisivo sulle istituzioni pubbliche.",
+    "trap": "Corporatocrazia non è corporativismo: la prima denuncia il dominio delle imprese, il secondo indica una dottrina di rappresentanza tramite corpi professionali organizzati.",
+    "example_tl": "La corporatocrazia emerge quando poche imprese dettano di fatto le regole pubbliche senza legittimazione democratica né reali obblighi di rendicontazione.",
+    "example_en": "Corporatocracy emerges when a few companies effectively dictate public rules without democratic legitimacy or genuine accountability requirements.",
+    "cloze": "{{c1::La corporatocrazia}} emerge quando poche imprese dettano di fatto le regole pubbliche senza legittimazione democratica né reali obblighi di rendicontazione.",
+    "note": "The legacy rendering is valid but markedly rare. Self-review flags its polemical force and supplies a neutral explanatory alternative that remains grammatical in the example."
+  },
+  {
+    "id": "it_fancy_vocab_160",
+    "en": "the Exploitation",
+    "category": "lexical-noun",
+    "tl": "lo sfruttamento di",
+    "alts": [],
+    "register": "Neutro-formale ma critico quando riguarda persone o lavoro; può essere descrittivo in locuzioni tecniche riferite a risorse o impianti.",
+    "trap": "Sfruttamento dei lavoratori implica abuso; sfruttamento di una risorsa può essere tecnicamente neutro, mentre esplorazione non traduce English exploitation.",
+    "example_tl": "Lo sfruttamento dei lavoratori invisibili resta centrale nell'economia digitale, mentre le piattaforme presentano la loro precarietà come una forma di autonomia.",
+    "example_en": "The exploitation of invisible workers remains central to the digital economy, while platforms present their precarity as a form of autonomy.",
+    "cloze": "{{c1::Lo sfruttamento dei}} lavoratori invisibili resta centrale nell'economia digitale, mentre le piattaforme presentano la loro precarietà come una forma di autonomia.",
+    "note": "The legacy rendering is accurate but polysemous. Self-review fixed the critical labor sense and left alts empty because neutral use-based paraphrases would weaken it."
+  }
+]

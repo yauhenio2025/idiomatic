@@ -1,0 +1,247 @@
+[
+  {
+    "id": "it_big_tech_vocab_122",
+    "en": "Cross-border data flows",
+    "category": "lexical-noun",
+    "tl": "die grenzüberschreitenden Datenströme",
+    "alts": [
+      "die grenzüberschreitenden Datenflüsse"
+    ],
+    "register": "Established formal term in data governance, trade policy, and privacy law for data transferred or made accessible across national borders.",
+    "trap": "Grenzüberschreitend describes the movement or accessibility of the data, not merely an international company relationship; German writes the compound adjective as one word.",
+    "example_tl": "Grenzüberschreitende Datenströme ermöglichen internationale Cloud-Dienste, erschweren Regulierungsbehörden jedoch die Durchsetzung nationaler Datenschutzregeln, sobald Verarbeitung und Unternehmenssitz räumlich auseinanderfallen.",
+    "example_en": "Cross-border data flows enable international cloud services but make it harder for regulators to enforce national data-protection rules when processing and corporate domicile are geographically separate.",
+    "cloze": "{{c1::Grenzüberschreitende Datenströme}} ermöglichen internationale Cloud-Dienste, erschweren Regulierungsbehörden jedoch die Durchsetzung nationaler Datenschutzregeln, sobald Verarbeitung und Unternehmenssitz räumlich auseinanderfallen.",
+    "note": "Old_back is accurate. Self-review made the cross-border element concrete by separating the locations of processing and corporate domicile rather than treating every international service as a data transfer."
+  },
+  {
+    "id": "it_big_tech_vocab_125",
+    "en": "the Digital borders",
+    "category": "lexical-noun",
+    "tl": "die digitalen Grenzen",
+    "alts": [
+      "die Grenzen im digitalen Raum"
+    ],
+    "register": "Critical geopolitical and internet-governance metaphor for territorial restrictions imposed on networks, data, services, or access.",
+    "trap": "Digitale Grenzen are not necessarily technical system boundaries; in geopolitical prose the expression commonly frames the territorialization of an ostensibly global network.",
+    "example_tl": "Digitale Grenzen entstehen, wenn Staaten Plattformzugänge, Datenübertragungen und technische Standards an nationalen Rechtsräumen ausrichten und dadurch das offene Netz territorial gliedern.",
+    "example_en": "Digital borders arise when states align platform access, data transfers, and technical standards with national jurisdictions, thereby dividing the open internet territorially.",
+    "cloze": "{{c1::Digitale Grenzen}} entstehen, wenn Staaten Plattformzugänge, Datenübertragungen und technische Standards an nationalen Rechtsräumen ausrichten und dadurch das offene Netz territorial gliedern.",
+    "note": "Old_back is lexically accurate, but the isolated source is ambiguous. The card fixes the specialist geopolitical sense; self-review retained the item because the metaphor adds a lesson beyond its transparent components."
+  },
+  {
+    "id": "it_big_tech_vocab_126",
+    "en": "Indigenous technologies",
+    "category": "lexical-noun",
+    "tl": "die indigenen Technologien",
+    "alts": [
+      "die Technologien indigener Gemeinschaften"
+    ],
+    "register": "Respectful social-science and technology-policy term for technologies developed, maintained, or governed by Indigenous peoples and grounded in their knowledge systems.",
+    "trap": "Einheimische Technologien means domestic or locally originating technologies and erases the specific reference to Indigenous peoples conveyed by indigene Technologien.",
+    "example_tl": "Indigene Technologien verbinden überliefertes Wissen mit lokaler Anpassung und gemeinschaftlicher Kontrolle, statt Innovation ausschließlich an Patenten, Skalierung und globalen Märkten zu messen.",
+    "example_en": "Indigenous technologies combine inherited knowledge with local adaptation and community control instead of measuring innovation solely by patents, scale, and global markets.",
+    "cloze": "{{c1::Indigene Technologien}} verbinden überliefertes Wissen mit lokaler Anpassung und gemeinschaftlicher Kontrolle, statt Innovation ausschließlich an Patenten, Skalierung und globalen Märkten zu messen.",
+    "note": "Materially corrects old_back: einheimisch means native to a place or domestically produced, whereas the source's capitalized Indigenous denotes Indigenous peoples."
+  },
+  {
+    "id": "it_big_tech_vocab_127",
+    "en": "Cyber-espionage",
+    "category": "lexical-noun",
+    "tl": "die Cyberspionage",
+    "alts": [
+      "die Cyber-Spionage"
+    ],
+    "register": "Established security and intelligence term for espionage conducted through attacks on digital systems or networks; neutral-formal despite its adversarial subject matter.",
+    "trap": "Cyberspionage is narrower than digitale Überwachung: it entails covert intelligence gathering, typically by compromising systems, rather than every form of online monitoring.",
+    "example_tl": "Cyberspionage zielt zunehmend auf Halbleiterhersteller und Forschungsnetze, weil gestohlene Entwicklungsdaten strategische Vorteile verschaffen, während staatliche Auftraggeber und operative Gruppen im Verborgenen bleiben.",
+    "example_en": "Cyber-espionage increasingly targets semiconductor manufacturers and research networks because stolen development data confer strategic advantages while state sponsors and operational groups remain hidden.",
+    "cloze": "{{c1::Cyberspionage}} zielt zunehmend auf Halbleiterhersteller und Forschungsnetze, weil gestohlene Entwicklungsdaten strategische Vorteile verschaffen, während staatliche Auftraggeber und operative Gruppen im Verborgenen bleiben.",
+    "note": "Old_back uses an accepted hyphenated spelling. Self-review selected the equally established closed compound as the production default and replaced a translated-sounding clause about a visible intelligence attack."
+  },
+  {
+    "id": "it_big_tech_vocab_128",
+    "en": "Data ownership",
+    "category": "lexical-noun",
+    "tl": "das Dateneigentum",
+    "alts": [
+      "das Eigentum an Daten"
+    ],
+    "register": "Common but legally contested data-policy shorthand; serious legal prose often questions whether data can be owned like physical objects at all.",
+    "trap": "Eigentum is a legal right and Besitz is factual possession; neither English ownership nor German Dateneigentum proves that a general property right in data exists.",
+    "example_tl": "Die Debatte über Dateneigentum verdeckt oft, dass Zugangsrechte, Kontrolle und vertragliche Nutzungsbefugnisse rechtlich wichtiger sein können als ein vermeintlicher Eigentumstitel.",
+    "example_en": "The debate over data ownership often obscures that access rights, control, and contractual rights of use may matter more legally than a supposed property title.",
+    "cloze": "Die Debatte über {{c1::Dateneigentum}} verdeckt oft, dass Zugangsrechte, Kontrolle und vertragliche Nutzungsbefugnisse rechtlich wichtiger sein können als ein vermeintlicher Eigentumstitel.",
+    "note": "The compact policy term replaces old_back as the production headword, while the old rendering remains a valid alternative. Self-review foregrounded the concept's disputed legal status and replaced an artificial compound with legal usage."
+  },
+  {
+    "id": "it_big_tech_vocab_129",
+    "en": "the Digital trade barriers",
+    "category": "lexical-noun",
+    "tl": "die Hemmnisse für den digitalen Handel",
+    "alts": [
+      "die digitalen Handelshemmnisse"
+    ],
+    "register": "Formal international-trade and regulatory term for measures that impede digitally enabled trade, including discriminatory technical or data-localization requirements.",
+    "trap": "In trade-policy German, Handelshemmnis is usually more idiomatic and broader than the literal Handelsschranke; the term does not mean barriers made of digital technology.",
+    "example_tl": "Hemmnisse für den digitalen Handel entstehen etwa durch unverhältnismäßige Lokalisierungspflichten, diskriminierende Zulassungsregeln oder technische Vorgaben, die ausländische Anbieter faktisch vom Markt ausschließen.",
+    "example_en": "Digital trade barriers arise, for example, from disproportionate localization requirements, discriminatory authorization rules, or technical requirements that effectively exclude foreign providers from the market.",
+    "cloze": "{{c1::Hemmnisse für den digitalen Handel}} entstehen etwa durch unverhältnismäßige Lokalisierungspflichten, diskriminierende Zulassungsregeln oder technische Vorgaben, die ausländische Anbieter faktisch vom Markt ausschließen.",
+    "note": "Materially improves old_back by using an explicit, idiomatic trade-policy rendering. Self-review moved digitale Handelshemmnisse to the alternatives because the compact calque can momentarily suggest digitally implemented barriers."
+  },
+  {
+    "id": "it_big_tech_vocab_130",
+    "en": "the Source code review",
+    "category": "lexical-noun",
+    "tl": "die Quellcodeprüfung",
+    "alts": [
+      "das Code-Review"
+    ],
+    "register": "Quellcodeprüfung is neutral-formal in security, procurement, and compliance prose; Code-Review is the common software-development term and may have a broader quality focus.",
+    "trap": "English review is not Rezension here. Prüfung conveys systematic examination, while Code-Review may refer to routine peer review rather than a full security audit.",
+    "example_tl": "Eine unabhängige Quellcodeprüfung deckte unsichere Bibliotheken und verdeckte Datenübertragungen auf, bevor die Behörde das System für den Einsatz in kritischen Netzen freigab.",
+    "example_en": "An independent source code review uncovered insecure libraries and hidden data transfers before the authority approved the system for use in critical networks.",
+    "cloze": "Eine unabhängige {{c1::Quellcodeprüfung}} deckte unsichere Bibliotheken und verdeckte Datenübertragungen auf, bevor die Behörde das System für den Einsatz in kritischen Netzen freigab.",
+    "note": "Old_back is semantically sound but paraphrastic. Self-review retained Code-Review only as an alternative because its everyday development sense can be narrower and less audit-oriented."
+  },
+  {
+    "id": "it_big_tech_vocab_131",
+    "en": "Zero trust architecture",
+    "category": "lexical-noun",
+    "tl": "die Zero-Trust-Architektur",
+    "alts": [
+      "die Architektur nach dem Zero-Trust-Prinzip"
+    ],
+    "register": "Established cybersecurity architecture term, normally retaining the English modifier in German professional and policy writing.",
+    "trap": "Architektur ohne Vertrauen is not the term and suggests the absence of any trust relationship; Zero Trust instead requires continuous, context-sensitive verification before access.",
+    "example_tl": "Eine Zero-Trust-Architektur gewährt Zugriffe nicht aufgrund des Netzwerkstandorts, sondern prüft Identität, Gerätezustand und Berechtigung bei jeder sicherheitsrelevanten Anfrage erneut.",
+    "example_en": "A zero trust architecture does not grant access based on network location but rechecks identity, device status, and authorization for every security-relevant request.",
+    "cloze": "Eine {{c1::Zero-Trust-Architektur}} gewährt Zugriffe nicht aufgrund des Netzwerkstandorts, sondern prüft Identität, Gerätezustand und Berechtigung bei jeder sicherheitsrelevanten Anfrage erneut.",
+    "note": "Materially replaces old_back's misleading literal calque with the established German specialist term."
+  },
+  {
+    "id": "it_big_tech_vocab_133",
+    "en": "Digital autonomy",
+    "category": "lexical-noun",
+    "tl": "die digitale Autonomie",
+    "alts": [],
+    "register": "Formal technology-policy term whose bearer must be stated: it can describe the practical agency of individuals, organizations, states, or regions.",
+    "trap": "Digitale Autonomie stresses the capacity to act without disabling dependence; digitale Souveränität more strongly invokes authority and control, so the terms are not automatically interchangeable.",
+    "example_tl": "Digitale Autonomie bedeutet für öffentliche Einrichtungen, Anbieter wechseln, Daten exportieren und zentrale Funktionen weiterbetreiben zu können, ohne einzelnen Unternehmen ausgeliefert zu sein.",
+    "example_en": "For public institutions, digital autonomy means being able to switch providers, export data, and continue operating core functions without being at the mercy of individual companies.",
+    "cloze": "{{c1::Digitale Autonomie}} bedeutet für öffentliche Einrichtungen, Anbieter wechseln, Daten exportieren und zentrale Funktionen weiterbetreiben zu können, ohne einzelnen Unternehmen ausgeliefert zu sein.",
+    "note": "Old_back is accurate. Because the source does not identify whose autonomy is meant, the example fixes the institutional-policy sense and distinguishes it from adjacent sovereignty and self-determination cards."
+  },
+  {
+    "id": "it_big_tech_vocab_135",
+    "en": "End-to-end encryption",
+    "category": "lexical-noun",
+    "tl": "die Ende-zu-Ende-Verschlüsselung",
+    "alts": [],
+    "register": "Standard technical, legal, and public-policy term for encryption designed so that message content is available in plaintext only at the communicating endpoints.",
+    "trap": "Ende-zu-Ende-Verschlüsselung is stronger than Transportverschlüsselung: encrypting only the connection can still leave plaintext accessible to an intermediary service.",
+    "example_tl": "Ende-zu-Ende-Verschlüsselung schützt Nachrichten auch vor dem Plattformbetreiber, sofern sie nur auf den Endgeräten im Klartext vorliegen und kein Vermittler die Schlüssel kontrolliert.",
+    "example_en": "End-to-end encryption protects messages even from the platform operator, provided they exist in plaintext only on end devices and no intermediary controls the keys.",
+    "cloze": "{{c1::Ende-zu-Ende-Verschlüsselung}} schützt Nachrichten auch vor dem Plattformbetreiber, sofern sie nur auf den Endgeräten im Klartext vorliegen und kein Vermittler die Schlüssel kontrolliert.",
+    "note": "Old_back is accurate. Self-review defined the endpoint condition without imposing an unnecessarily narrow key-generation or key-storage implementation."
+  },
+  {
+    "id": "it_big_tech_vocab_136",
+    "en": "the Digital policy",
+    "category": "lexical-noun",
+    "tl": "die Digitalpolitik",
+    "alts": [],
+    "register": "Established neutral-formal name for the policy field governing digital infrastructure, markets, rights, administration, and technological change.",
+    "trap": "Digitalpolitik names a policy domain; digitale Politik can instead suggest politics conducted through digital media and is not the idiomatic default for this source sense.",
+    "example_tl": "Eine kohärente Digitalpolitik verbindet Wettbewerbsrecht, Datenschutz und Infrastrukturförderung, statt jede neue Technologie isoliert zu behandeln oder ihre gesellschaftlichen Kosten zu externalisieren.",
+    "example_en": "A coherent digital policy links competition law, data protection, and infrastructure funding instead of treating each new technology in isolation or externalizing its social costs.",
+    "cloze": "Eine kohärente {{c1::Digitalpolitik}} verbindet Wettbewerbsrecht, Datenschutz und Infrastrukturförderung, statt jede neue Technologie isoliert zu behandeln oder ihre gesellschaftlichen Kosten zu externalisieren.",
+    "note": "Materially corrects old_back by replacing the potentially different phrase digitale Politik with the conventional compound for the policy domain. Self-review corrected privatisieren to the economically precise externalisieren."
+  },
+  {
+    "id": "it_big_tech_vocab_138",
+    "en": "the Critical infrastructure",
+    "category": "lexical-noun",
+    "tl": "die kritische Infrastruktur",
+    "alts": [
+      "die kritischen Infrastrukturen"
+    ],
+    "register": "Established civil-protection, security, and regulatory term; German institutional usage often prefers the generic plural and the abbreviation KRITIS.",
+    "trap": "The adjective is lowercase in running German: kritische Infrastruktur. KRITIS is an institutional abbreviation, not an ordinary plural noun ending.",
+    "example_tl": "Kritische Infrastrukturen benötigen redundante Netze und belastbare Notfallpläne, weil der Ausfall weniger digitaler Dienstleister zugleich Energieversorgung, Verwaltung und Gesundheitswesen treffen kann.",
+    "example_en": "Critical infrastructures need redundant networks and robust emergency plans because the failure of a few digital providers can simultaneously affect energy supply, government, and healthcare.",
+    "cloze": "{{c1::Kritische Infrastrukturen}} benötigen redundante Netze und belastbare Notfallpläne, weil der Ausfall weniger digitaler Dienstleister zugleich Energieversorgung, Verwaltung und Gesundheitswesen treffen kann.",
+    "note": "Old_back incorrectly capitalizes the adjective in the middle of a noun phrase. Self-review uses the idiomatic policy plural in the example while preserving the source singular as the headword."
+  },
+  {
+    "id": "it_big_tech_vocab_139",
+    "en": "Internet universality",
+    "category": "lexical-noun",
+    "tl": "die Internet-Universalität",
+    "alts": [
+      "die Universalität des Internets"
+    ],
+    "register": "Specialist UNESCO internet-governance term for a rights-based, open, accessible internet shaped through multistakeholder participation.",
+    "trap": "Universalität is not Universaldienst: the latter denotes guaranteed basic service provision, whereas internet universality is a broader governance principle.",
+    "example_tl": "Die Internet-Universalität bleibt ein zentraler politischer Anspruch, solange Zugang, Inhalte und technische Anschlussfähigkeit weltweit höchst ungleich verteilt sind.",
+    "example_en": "Internet universality remains a political aspiration as long as access, content, and technical connectivity are distributed highly unevenly around the world.",
+    "cloze": "Die {{c1::Internet-Universalität}} bleibt ein zentraler politischer Anspruch, solange Zugang, Inhalte und technische Anschlussfähigkeit weltweit höchst ungleich verteilt sind.",
+    "note": "Self-review replaced old_back's accurate paraphrase with Internet-Universalität, the institutional German name of UNESCO's normative ROAM framework, rather than treating the source as an empirical claim of universal reach."
+  },
+  {
+    "id": "it_big_tech_vocab_141",
+    "en": "Secure by design",
+    "category": "lexical-expression",
+    "tl": "Security by Design",
+    "alts": [],
+    "register": "Established English-language principle in German cybersecurity and product-regulation discourse; explanatory German paraphrases are preferable only when the audience needs them.",
+    "trap": "Design means the system's architecture and development process here, not its visual appearance; the principle requires security decisions from the outset.",
+    "example_tl": "Security by Design verlangt, Bedrohungsmodelle, sichere Voreinstellungen und Updatefähigkeit von Beginn an einzuplanen, statt Schwachstellen erst nach der Markteinführung notdürftig zu beheben.",
+    "example_en": "Secure by design requires threat models, secure defaults, and updateability to be planned from the outset instead of patching vulnerabilities inadequately only after market launch.",
+    "cloze": "{{c1::Security by Design}} verlangt, Bedrohungsmodelle, sichere Voreinstellungen und Updatefähigkeit von Beginn an einzuplanen, statt Schwachstellen erst nach der Markteinführung notdürftig zu beheben.",
+    "note": "Materially replaces old_back's understandable but unestablished calque with the term used in German professional discourse. Self-review removed a German explanatory paraphrase from alts because it is not a fixed equivalent label."
+  },
+  {
+    "id": "it_big_tech_vocab_142",
+    "en": "Digital resilience",
+    "category": "lexical-noun",
+    "tl": "die digitale Resilienz",
+    "alts": [
+      "die digitale Widerstandsfähigkeit"
+    ],
+    "register": "Established cross-sector policy term for the capacity of digital systems and institutions to withstand, recover from, and adapt after disruption.",
+    "trap": "Digitale Resilienz is broader than Cybersicherheit: it includes continuity, recovery, learning, and adaptation, not only protection against malicious attacks.",
+    "example_tl": "Digitale Resilienz zeigt sich daran, dass Kommunen nach Cyberangriffen zentrale Dienste rasch wiederherstellen, aus Vorfällen lernen und alternative Kommunikationswege bereithalten.",
+    "example_en": "Digital resilience is evident when municipalities rapidly restore essential services after cyberattacks, learn from incidents, and keep alternative communication channels available.",
+    "cloze": "{{c1::Digitale Resilienz}} zeigt sich daran, dass Kommunen nach Cyberangriffen zentrale Dienste rasch wiederherstellen, aus Vorfällen lernen und alternative Kommunikationswege bereithalten.",
+    "note": "Old_back supplies a valid plain-German alternative. Self-review retained Resilienz as the policy headword and made recovery and learning explicit to prevent reduction to attack prevention."
+  },
+  {
+    "id": "it_big_tech_vocab_144",
+    "en": "Digital ethics",
+    "category": "lexical-noun",
+    "tl": "die Digitalethik",
+    "alts": [
+      "die digitale Ethik"
+    ],
+    "register": "Established academic and public-policy field concerned with ethical questions raised by digital technologies, data practices, and automated decision-making.",
+    "trap": "Digitalethik names a field of inquiry; digitale Ethik is understandable but can sound like ethics itself has been digitized rather than applied to digital transformation.",
+    "example_tl": "Digitalethik untersucht nicht nur individuelles Onlineverhalten, sondern auch, wie automatisierte Entscheidungen Verantwortung verschieben, Grundrechte berühren und gesellschaftliche Machtverhältnisse verändern.",
+    "example_en": "Digital ethics examines not only individual online behavior but also how automated decisions shift responsibility, affect fundamental rights, and change social power relations.",
+    "cloze": "{{c1::Digitalethik}} untersucht nicht nur individuelles Onlineverhalten, sondern auch, wie automatisierte Entscheidungen Verantwortung verschieben, Grundrechte berühren und gesellschaftliche Machtverhältnisse verändern.",
+    "note": "Materially improves old_back by promoting the lexicalized name of the discipline to the main headword; the spaced adjective phrase remains acceptable. Self-review changed Verantwortung verteilen to the more idiomatic and critical verschieben."
+  },
+  {
+    "id": "it_big_tech_vocab_145",
+    "en": "Digital self-determination",
+    "category": "lexical-noun",
+    "tl": "die digitale Selbstbestimmung",
+    "alts": [],
+    "register": "Normative rights and technology-policy term for people's effective ability to shape their digital lives, choices, participation, and data practices.",
+    "trap": "Digitale Selbstbestimmung is broader than informationelle Selbstbestimmung, which specifically concerns control over personal information, and is not synonymous with state digital sovereignty.",
+    "example_tl": "Digitale Selbstbestimmung setzt voraus, dass Menschen Datenpraktiken verstehen, informiert einwilligen und Dienste ablehnen können, ohne dadurch vom gesellschaftlichen Leben ausgeschlossen zu werden.",
+    "example_en": "Digital self-determination requires people to understand data practices, give informed consent, and refuse services without thereby being excluded from social life.",
+    "cloze": "{{c1::Digitale Selbstbestimmung}} setzt voraus, dass Menschen Datenpraktiken verstehen, informiert einwilligen und Dienste ablehnen können, ohne dadurch vom gesellschaftlichen Leben ausgeschlossen zu werden.",
+    "note": "Old_back is accurate. Self-review distinguished the broad normative concept from both the narrower legal right to informational self-determination and collective digital sovereignty, and made the consent standard explicit."
+  }
+]

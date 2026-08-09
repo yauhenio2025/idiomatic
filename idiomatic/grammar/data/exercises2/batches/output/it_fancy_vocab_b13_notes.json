@@ -1,0 +1,167 @@
+[
+  {
+    "id": "it_fancy_vocab_481",
+    "en": "To stipulate",
+    "category": "lexical-verb",
+    "tl": "prevedere che",
+    "alts": [
+      "stabilire che"
+    ],
+    "register": "Prevedere che è neutro-formale quando il soggetto è una legge, un regolamento o un contratto; stabilire che rende più esplicito il carattere vincolante.",
+    "trap": "In italiano si stipulano contratti, accordi e convenzioni; per una condizione fissata dal testo, il documento normalmente prevede o stabilisce qualcosa.",
+    "example_tl": "Il regolamento prevede che ogni fornitore notifichi ciascun subappalto prima di trasferire dati sanitari fuori dallo Spazio economico europeo.",
+    "example_en": "The regulation stipulates that every provider must report each subcontract before transferring health data outside the European Economic Area.",
+    "cloze": "Il regolamento {{c1::prevede}} che ogni fornitore notifichi ciascun subappalto prima di trasferire dati sanitari fuori dallo Spazio economico europeo.",
+    "note": "Materially refines old_back: stabilire is possible, but the self-review selected prevedere as the idiomatic verb when the grammatical subject is a regulation and excluded stipulare because it selects the agreement itself."
+  },
+  {
+    "id": "it_fancy_vocab_482",
+    "en": "To substantiate",
+    "category": "lexical-verb",
+    "tl": "suffragare con prove",
+    "alts": [
+      "avvalorare con prove"
+    ],
+    "register": "Suffragare è formale e tipico della prosa argomentativa; avvalorare è leggermente meno forte e mette a fuoco l'aumento di credibilità.",
+    "trap": "Suffragare o avvalorare una tesi non equivale necessariamente a dimostrarla in modo conclusivo; supportare è spesso un calco meno idiomatico in questo contesto.",
+    "example_tl": "L'azienda non ha suffragato le accuse con documenti verificabili, benché le avesse ripetute davanti a tre diverse commissioni parlamentari.",
+    "example_en": "The company did not substantiate the accusations with verifiable documents, although it had repeated them before three different parliamentary committees.",
+    "cloze": "L'azienda non ha {{c1::suffragato}} le accuse con documenti verificabili, benché le avesse ripetute davanti a tre diverse commissioni parlamentari.",
+    "note": "The legacy rendering is accurate. Self-review retained the evidential con phrase in the headword and example, while calibrating avvalorare as a slightly weaker alternative rather than claiming definitive proof."
+  },
+  {
+    "id": "it_fancy_vocab_483",
+    "en": "To surmise",
+    "category": "lexical-verb",
+    "tl": "congetturare che",
+    "alts": [
+      "supporre che"
+    ],
+    "register": "Congetturare è formale e segnala una conclusione provvisoria tratta da indizi incompleti; supporre è più comune e semanticamente più ampio.",
+    "trap": "Surmise non è una deduzione certa: tradurlo con dedurre può attribuire agli indizi una forza probatoria che il verbo inglese non implica.",
+    "example_tl": "Gli analisti hanno congetturato che l'interruzione fosse deliberata, ma l'assenza di registri impediva di attribuirla con rigore a un attore preciso.",
+    "example_en": "The analysts surmised that the outage was deliberate, but the absence of logs made it impossible to attribute it rigorously to a specific actor.",
+    "cloze": "Gli analisti hanno {{c1::congetturato}} che l'interruzione fosse deliberata, ma l'assenza di registri impediva di attribuirla con rigore a un attore preciso.",
+    "note": "The legacy rendering is accurate. Self-review kept the subjunctive complement and added incomplete evidence plus an explicit uncertainty boundary to preserve the tentative force."
+  },
+  {
+    "id": "it_fancy_vocab_484",
+    "en": "To tout",
+    "category": "lexical-verb",
+    "tl": "decantare",
+    "alts": [
+      "esaltare",
+      "pubblicizzare"
+    ],
+    "register": "Decantare è espressivo e spesso ironico nella critica giornalistica; esaltare privilegia la lode, mentre pubblicizzare mette in primo piano la promozione.",
+    "trap": "Tout combina spesso elogio enfatico e interesse promozionale; vantare può invece indicare che il soggetto rivendica un merito o possiede una qualità.",
+    "example_tl": "Il ministro ha decantato il sistema biometrico come garanzia di sicurezza, evitando però di spiegare chi conserverebbe i dati e per quanto tempo.",
+    "example_en": "The minister touted the biometric system as a guarantee of security while avoiding explaining who would retain the data and for how long.",
+    "cloze": "Il ministro ha {{c1::decantato}} il sistema biometrico come garanzia di sicurezza, evitando però di spiegare chi conserverebbe i dati e per quanto tempo.",
+    "note": "The legacy rendering is accurate for emphatic, interested praise. Self-review retained alternatives that fit the same direct object and come predicative frame, with their narrower emphases stated in register."
+  },
+  {
+    "id": "it_fancy_vocab_487",
+    "en": "To vilify",
+    "category": "lexical-verb",
+    "tl": "demonizzare",
+    "alts": [
+      "denigrare",
+      "vilipendere"
+    ],
+    "register": "Demonizzare è corrente nella critica politica e mediatica; denigrare è neutro-formale, mentre vilipendere è decisamente più elevato e solenne.",
+    "trap": "Vilipendere è corretto ma non neutro: può evocare il lessico dei reati di vilipendio e non è il corrispondente automatico dell'inglese vilify.",
+    "example_tl": "La campagna ha demonizzato le organizzazioni umanitarie, descrivendole come complici dei trafficanti senza fornire alcuna prova di quella presunta collaborazione.",
+    "example_en": "The campaign vilified humanitarian organizations, portraying them as accomplices of traffickers without providing any evidence of that alleged collaboration.",
+    "cloze": "La campagna ha {{c1::demonizzato}} le organizzazioni umanitarie, descrivendole come complici dei trafficanti senza fornire alcuna prova di quella presunta collaborazione.",
+    "note": "Materially modernizes old_back for media commentary. Self-review kept vilipendere only as an explicitly elevated alternative and avoided diffamare, which would add a legal or falsity implication not guaranteed by vilify."
+  },
+  {
+    "id": "it_fancy_vocab_488",
+    "en": "To warrant",
+    "category": "lexical-verb",
+    "tl": "giustificare",
+    "alts": [
+      "rendere necessario"
+    ],
+    "register": "Giustificare è neutro-formale quando fatti o circostanze forniscono ragioni sufficienti; rendere necessario restringe il senso a un intervento richiesto dalla situazione.",
+    "trap": "Warrant può anche significare autorizzare o garantire; nel senso evidenziale, garantire è un falso equivalente perché non significa fornire ragioni sufficienti.",
+    "example_tl": "Le anomalie rilevate giustificano un'indagine indipendente, ma non la sospensione immediata di un servizio essenziale per migliaia di utenti vulnerabili.",
+    "example_en": "The anomalies detected warrant an independent investigation, but not the immediate suspension of a service essential to thousands of vulnerable users.",
+    "cloze": "Le anomalie rilevate {{c1::giustificano}} un'indagine indipendente, ma non la sospensione immediata di un servizio essenziale per migliaia di utenti vulnerabili.",
+    "note": "The legacy rendering is accurate for the provide-grounds sense selected here. Self-review made the evidential threshold explicit and excluded the unrelated authorization and guarantee senses."
+  },
+  {
+    "id": "it_fancy_vocab_492",
+    "en": "The contention",
+    "category": "lexical-noun",
+    "tl": "la tesi",
+    "alts": [
+      "l'affermazione"
+    ],
+    "register": "Tesi è neutro-formale per una posizione sostenuta nel dibattito; affermazione è più generico e non implica necessariamente un'argomentazione articolata.",
+    "trap": "L'italiano contenzione significa contenimento, ritegno o controllo di qualcosa e non traduce contention nel senso di tesi sostenuta.",
+    "example_tl": "La tesi secondo cui la moderazione privata tutelerebbe da sola il dibattito pubblico ignora gli incentivi commerciali che premiano i contenuti polarizzanti.",
+    "example_en": "The contention that private moderation would protect public debate by itself ignores the commercial incentives that reward polarizing content.",
+    "cloze": "{{c1::La tesi}} secondo cui la moderazione privata tutelerebbe da sola il dibattito pubblico ignora gli incentivi commerciali che premiano i contenuti polarizzanti.",
+    "note": "The legacy rendering is accurate. Self-review retained affermazione as a broader substitute that fits the same secondo cui construction and recorded the consequential false-friend contrast."
+  },
+  {
+    "id": "it_fancy_vocab_496",
+    "en": "The elucidation",
+    "category": "lexical-noun",
+    "tl": "il chiarimento",
+    "alts": [],
+    "register": "Chiarimento è neutro e idiomatico nella prosa istituzionale; elucidazione è raro e ricercato, mentre delucidazioni ricorre soprattutto al plurale in formule burocratiche.",
+    "trap": "L'inglese formale elucidation non richiede un cognato altrettanto dotto: in italiano corrente si chiede o si fornisce un chiarimento.",
+    "example_tl": "Il chiarimento fornito dalla Corte ha eliminato l'ambiguità che consentiva alle piattaforme di escludere i ricercatori indipendenti dai propri archivi pubblicitari.",
+    "example_en": "The elucidation provided by the Court eliminated the ambiguity that allowed platforms to exclude independent researchers from their advertising archives.",
+    "cloze": "{{c1::Il chiarimento}} fornito dalla Corte ha eliminato l'ambiguità che consentiva alle piattaforme di escludere i ricercatori indipendenti dai propri archivi pubblicitari.",
+    "note": "The legacy rendering is accurate. Self-review left alternatives empty because spiegazione changes the discourse function and delucidazione would be markedly less natural in this exact sentence."
+  },
+  {
+    "id": "it_fancy_vocab_500",
+    "en": "The insight",
+    "category": "lexical-noun",
+    "tl": "una chiave di lettura",
+    "alts": [
+      "una prospettiva illuminante"
+    ],
+    "register": "Chiave di lettura è neutro-formale per un'intuizione interpretativa; prospettiva illuminante è più esplicito, mentre insight resta settoriale nel marketing e nell'analisi aziendale.",
+    "trap": "Insight è diffuso come anglicismo professionale ma non è neutro in ogni registro; intuizione può inoltre suggerire un lampo individuale o un'ipotesi non verificata.",
+    "example_tl": "L'indagine offre una chiave di lettura su come gli algoritmi trasformino preferenze inizialmente deboli in abitudini durature di consumo informativo.",
+    "example_en": "The investigation offers an insight into how algorithms turn initially weak preferences into lasting patterns of news consumption.",
+    "cloze": "L'indagine offre {{c1::una chiave di lettura}} su come gli algoritmi trasformino preferenze inizialmente deboli in abitudini durature di consumo informativo.",
+    "note": "Materially narrows old_back, which can denote a hunch as well as an insight. Self-review selected the interpretive sense and an alternative that preserves the example's syntax and article."
+  },
+  {
+    "id": "it_fancy_vocab_512",
+    "en": "The rebuttal",
+    "category": "lexical-noun",
+    "tl": "la replica",
+    "alts": [
+      "il controargomento"
+    ],
+    "register": "Replica è neutro-formale nel dibattito e nel contenzioso; controargomento mette maggiormente a fuoco la ragione opposta anziché l'intero atto di risposta.",
+    "trap": "Una rebuttal mira a contrastare una tesi ma non la confuta necessariamente; confutazione presenta invece l'argomento o la prova come decisivi.",
+    "example_tl": "La replica dell'azienda ha contestato la metodologia dell'inchiesta, senza però rispondere ai messaggi interni che documentavano il coordinamento con il governo.",
+    "example_en": "The company's rebuttal challenged the investigation's methodology without, however, addressing the internal messages that documented coordination with the government.",
+    "cloze": "{{c1::La replica}} dell'azienda ha contestato la metodologia dell'inchiesta, senza però rispondere ai messaggi interni che documentavano il coordinamento con il governo.",
+    "note": "Materially corrects old_back by preserving the difference between an attempted opposing response and successful refutation. Self-review verified that the alternative fits the same possessive construction."
+  },
+  {
+    "id": "it_fancy_vocab_520",
+    "en": "The argument",
+    "category": "lexical-noun",
+    "tl": "l'argomentazione",
+    "alts": [
+      "il ragionamento"
+    ],
+    "register": "Argomentazione è neutro-formale per una linea strutturata di ragionamento; argomento può indicare un singolo motivo a sostegno oppure il tema trattato.",
+    "trap": "English argument può anche essere un litigio, che in italiano è discussione o lite; argomento non copre automaticamente quel senso.",
+    "example_tl": "L'argomentazione del governo presuppone che la raccolta indiscriminata dei metadati sia indispensabile, ma non dimostra perché controlli mirati sarebbero insufficienti.",
+    "example_en": "The government's argument assumes that indiscriminate metadata collection is indispensable, but it does not show why targeted controls would be insufficient.",
+    "cloze": "{{c1::L'argomentazione}} del governo presuppone che la raccolta indiscriminata dei metadati sia indispensabile, ma non dimostra perché controlli mirati sarebbero insufficienti.",
+    "note": "Materially narrows old_back to the structured-reasoning sense selected by the example. Self-review retained ragionamento as a substitutable alternative and separated both from the English quarrel sense."
+  }
+]

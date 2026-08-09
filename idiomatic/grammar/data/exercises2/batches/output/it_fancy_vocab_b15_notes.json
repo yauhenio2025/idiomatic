@@ -1,0 +1,73 @@
+[
+  {
+    "id": "it_fancy_vocab_564",
+    "en": "Insightful",
+    "category": "lexical-adjective",
+    "tl": "perspicace",
+    "alts": [
+      "acuto"
+    ],
+    "register": "Perspicace è neutro-formale per una persona, un'osservazione o un'interpretazione che coglie nessi non evidenti; acuto è più comune con analisi e giudizi.",
+    "trap": "Insightful non equivale a intuitivo: perspicace segnala capacità di comprensione penetrante, mentre intuitivo indica ciò che si coglie senza un ragionamento consapevole.",
+    "example_tl": "L'osservazione perspicace della ricercatrice mostra come la piattaforma abbia presentato agli utenti scelte commerciali controverse come semplici necessità tecniche.",
+    "example_en": "The researcher's insightful observation shows how the platform presented controversial business decisions to users as mere technical necessities.",
+    "cloze": "L'osservazione {{c1::perspicace}} della ricercatrice mostra come la piattaforma abbia presentato agli utenti scelte commerciali controverse come semplici necessità tecniche.",
+    "note": "Old_back is accurate. Self-review retained acuto as an inflected contextual alternative but removed illuminante, which describes the effect on the reader more readily than the quality of the observer's understanding."
+  },
+  {
+    "id": "it_fancy_vocab_567",
+    "en": "Nuanced",
+    "category": "lexical-adjective",
+    "tl": "ricco di sfumature",
+    "alts": [
+      "articolato"
+    ],
+    "register": "Ricco di sfumature è neutro-formale e valorizza la capacità di preservare distinzioni pertinenti; articolato è più sintetico ma può sottolineare anche la struttura.",
+    "trap": "Sfumato da solo suggerisce spesso contorni attenuati o poco precisi; in un'analisi elogiata come nuanced può quindi introdurre un'idea di vaghezza assente dall'inglese.",
+    "example_tl": "Il rapporto offre un quadro ricco di sfumature, riconoscendo che la moderazione automatica riduce alcuni abusi ma può amplificare discriminazioni già radicate.",
+    "example_en": "The report offers a nuanced picture, acknowledging that automated moderation reduces some abuses but can amplify already entrenched discrimination.",
+    "cloze": "Il rapporto offre un quadro {{c1::ricco di sfumature}}, riconoscendo che la moderazione automatica riduce alcuni abusi ma può amplificare discriminazioni già radicate.",
+    "note": "Materially replaces old_back, which can imply blurred or indistinct contours. Self-review chose an unambiguous analytical phrase and verified that quadro articolato is natural in the same sentence, while noting its slightly broader emphasis."
+  },
+  {
+    "id": "it_fancy_vocab_576",
+    "en": "Recondite",
+    "category": "lexical-adjective",
+    "tl": "astruso",
+    "alts": [],
+    "register": "Astruso è formale e spesso critico per concetti, argomenti o linguaggi difficili da comprendere a causa dell'eccessiva sottigliezza o astrazione.",
+    "trap": "Il cognato italiano recondito significa soprattutto nascosto, remoto o segreto; per materiale intellettualmente difficile, l'inglese recondite richiede normalmente astruso.",
+    "example_tl": "Il rapporto trasforma una scelta politica urgente in un dibattito astruso sui parametri del modello, accessibile soltanto ai consulenti dell'azienda.",
+    "example_en": "The report turns an urgent policy choice into a recondite debate about the model's parameters, accessible only to the company's consultants.",
+    "cloze": "Il rapporto trasforma una scelta politica urgente in un dibattito {{c1::astruso}} sui parametri del modello, accessibile soltanto ai consulenti dell'azienda.",
+    "note": "Materially corrects old_back for the intellectually abstruse sense. Self-review left alternatives empty because recondito foregrounds hiddenness and specialistico alone does not entail difficulty of comprehension."
+  },
+  {
+    "id": "it_fancy_vocab_577",
+    "en": "Reductive",
+    "category": "lexical-adjective",
+    "tl": "riduttivo",
+    "alts": [
+      "semplicistico"
+    ],
+    "register": "Riduttivo è neutro-formale ma critico nella prosa analitica; semplicistico è più apertamente svalutativo e insiste sull'eccessiva semplificazione.",
+    "trap": "L'aggettivo italiano corrente deriva da ridurre ed è riduttivo, non il calco *reduttivo; riduzionista può implicare l'adesione a un metodo o una dottrina riduzionistica.",
+    "example_tl": "La lettura riduttiva del conflitto attribuisce ogni tensione all'identità religiosa e cancella il peso delle disuguaglianze economiche e delle ingerenze straniere.",
+    "example_en": "The reductive reading of the conflict attributes every tension to religious identity and erases the weight of economic inequalities and foreign interference.",
+    "cloze": "La lettura {{c1::riduttiva}} del conflitto attribuisce ogni tensione all'identità religiosa e cancella il peso delle disuguaglianze economiche e delle ingerenze straniere.",
+    "note": "Old_back is accurate. Self-review retained semplicistico as a natural inflected substitute in the example and recorded its stronger dismissive force rather than treating the two adjectives as register-identical."
+  },
+  {
+    "id": "it_fancy_vocab_581",
+    "en": "Unbiased",
+    "category": "lexical-adjective",
+    "tl": "imparziale",
+    "alts": [],
+    "register": "Imparziale è neutro-formale per persone, giudizi e indagini che non favoriscono una parte; gli usi statistici richiedono invece non distorto o corretto.",
+    "trap": "Unbiased non significa sempre senza pregiudizi: per un'indagine istituzionale conta l'assenza di favoritismi, mentre uno stimatore unbiased è non distorto o corretto.",
+    "example_tl": "Per risultare credibile, l'inchiesta dovrà essere imparziale e pubblicare anche i documenti che contraddicono la ricostruzione sostenuta dal governo.",
+    "example_en": "To be credible, the inquiry must be unbiased and also publish the documents that contradict the account supported by the government.",
+    "cloze": "Per risultare credibile, l'inchiesta dovrà essere {{c1::imparziale}} e pubblicare anche i documenti che contraddicono la ricostruzione sostenuta dal governo.",
+    "note": "The isolated English source is polysemous; this card deliberately selects the institutional-neutrality sense, for which old_back is accurate. Self-review excluded obiettivo because it does not foreground equal treatment of opposing sides as clearly."
+  }
+]

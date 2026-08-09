@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_401",
+    "en": "the Value",
+    "verdict": "drop",
+    "reason": "Il valore is familiar core vocabulary, while the bare prompt does not select an economic, ethical or numerical sense with distinct teaching value."
+  },
+  {
+    "id": "it_fancy_vocab_402",
+    "en": "the Dependency",
+    "verdict": "keep",
+    "reason": "The institutional sense teaches dipendenza da, including its governed preposition and a useful distinction from other kinds of dependence."
+  },
+  {
+    "id": "it_fancy_vocab_403",
+    "en": "To advocate",
+    "verdict": "keep",
+    "reason": "Public advocacy requires sostenere or the more active caldeggiare and presents a consequential false-friend contrast with avocare."
+  },
+  {
+    "id": "it_fancy_vocab_404",
+    "en": "To appraise",
+    "verdict": "keep",
+    "reason": "The asset-valuation sense motivates stimare or periziare and distinguishes appraisal from the general evaluation item later in the chunk."
+  },
+  {
+    "id": "it_fancy_vocab_405",
+    "en": "To articulate",
+    "verdict": "keep",
+    "reason": "Formulating a reason clearly often calls for formulare or esprimere con chiarezza rather than automatically selecting the structural cognate articolare."
+  },
+  {
+    "id": "it_fancy_vocab_406",
+    "en": "To champion",
+    "verdict": "keep",
+    "reason": "The vigorous advocacy sense needs an idiomatic frame such as battersi per and cannot be inferred from the unrelated Italian verb campionare."
+  },
+  {
+    "id": "it_fancy_vocab_407",
+    "en": "To clarify",
+    "verdict": "drop",
+    "reason": "The exact-duplicate report assigns this prompt to CONNECTING, where it already has an authored treatment; this FANCY_VOCAB copy adds no distinct sense."
+  },
+  {
+    "id": "it_fancy_vocab_408",
+    "en": "To compare",
+    "verdict": "drop",
+    "reason": "Confrontare and paragonare are familiar analytical vocabulary, and the isolated prompt supplies no specific comparison construction or contrast to teach."
+  },
+  {
+    "id": "it_fancy_vocab_409",
+    "en": "To condemn",
+    "verdict": "drop",
+    "reason": "Condannare is a transparent, high-frequency equivalent in legal and political prose, with no specialized sense selected here."
+  },
+  {
+    "id": "it_fancy_vocab_410",
+    "en": "To consider",
+    "verdict": "drop",
+    "reason": "Considerare is basic, broad vocabulary and adds no distinct lesson beside the retained prospective contemplate and deliberative ponder cards."
+  },
+  {
+    "id": "it_fancy_vocab_411",
+    "en": "To contemplate",
+    "verdict": "keep",
+    "reason": "The prospective sense is productively expressed by contemplare la possibilità di and must be separated from merely looking at something contemplatively."
+  },
+  {
+    "id": "it_fancy_vocab_412",
+    "en": "To contradict",
+    "verdict": "drop",
+    "reason": "Contraddire is a transparent and familiar analytical cognate whose ordinary object pattern is already expected at C1."
+  },
+  {
+    "id": "it_fancy_vocab_413",
+    "en": "To convey",
+    "verdict": "keep",
+    "reason": "The communicative sense requires an object-sensitive choice among trasmettere, comunicare and veicolare rather than a single physical-transfer calque."
+  },
+  {
+    "id": "it_fancy_vocab_414",
+    "en": "To criticize",
+    "verdict": "drop",
+    "reason": "Criticare is a transparent, high-frequency cognate with no marked register, government or specialized sense in the bare prompt."
+  },
+  {
+    "id": "it_fancy_vocab_415",
+    "en": "To debate",
+    "verdict": "drop",
+    "reason": "Dibattere and discutere are familiar C1 analytical verbs, and the prompt does not select public debate, deliberation or interpersonal disagreement."
+  },
+  {
+    "id": "it_fancy_vocab_416",
+    "en": "To defend",
+    "verdict": "drop",
+    "reason": "Difendere is basic direct vocabulary, and its public-support sense is covered more precisely by the retained advocate and champion items."
+  },
+  {
+    "id": "it_fancy_vocab_417",
+    "en": "To delineate",
+    "verdict": "keep",
+    "reason": "The boundary-setting sense teaches delimitare and its important contrast with limitare, while delineare remains a broader alternative."
+  },
+  {
+    "id": "it_fancy_vocab_418",
+    "en": "To denounce",
+    "verdict": "drop",
+    "reason": "Denunciare is a familiar transparent equivalent, and the context-free prompt does not select public condemnation, accusation or reporting to authorities."
+  },
+  {
+    "id": "it_fancy_vocab_419",
+    "en": "To describe",
+    "verdict": "drop",
+    "reason": "Descrivere is basic, transparent production vocabulary with no advanced collocation or specialized descriptive frame here."
+  },
+  {
+    "id": "it_fancy_vocab_420",
+    "en": "To dismiss",
+    "verdict": "keep",
+    "reason": "The argumentative sense uses liquidare come, while employees, appeals and objections require different Italian verbs and registers."
+  },
+  {
+    "id": "it_fancy_vocab_421",
+    "en": "To dispute",
+    "verdict": "keep",
+    "reason": "Challenging a claim calls for contestare, whereas the tempting disputare normally concerns competition, a match or contested possession."
+  },
+  {
+    "id": "it_fancy_vocab_422",
+    "en": "To embrace",
+    "verdict": "keep",
+    "reason": "Adopting a policy or approach is neutrally adottare, while the literal-looking abbracciare is possible but more rhetorical in this sense."
+  },
+  {
+    "id": "it_fancy_vocab_423",
+    "en": "To evaluate",
+    "verdict": "drop",
+    "reason": "Valutare is a transparent, familiar cognate, and general assessment adds no lesson beyond the retained specialized appraise card."
+  },
+  {
+    "id": "it_fancy_vocab_424",
+    "en": "To examine",
+    "verdict": "drop",
+    "reason": "Esaminare is a basic direct cognate, while the prompt does not choose a scientific, legal or investigative construction."
+  },
+  {
+    "id": "it_fancy_vocab_425",
+    "en": "To expound",
+    "verdict": "keep",
+    "reason": "Extended systematic explanation motivates esporre in modo articolato and teaches the construction contrast with the more marked dissertare su."
+  },
+  {
+    "id": "it_fancy_vocab_426",
+    "en": "To express",
+    "verdict": "drop",
+    "reason": "Esprimere is familiar core vocabulary and is subsumed here by the more precise retained articulate card."
+  },
+  {
+    "id": "it_fancy_vocab_427",
+    "en": "To foster",
+    "verdict": "keep",
+    "reason": "Favorire captures creating enabling conditions and exposes interference from Spanish or Portuguese fomentar versus often negative Italian fomentare."
+  },
+  {
+    "id": "it_fancy_vocab_428",
+    "en": "To generate",
+    "verdict": "drop",
+    "reason": "Generare is an established, transparent technical cognate, and the bare prompt gives no basis for choosing produrre, suscitare or causare instead."
+  },
+  {
+    "id": "it_fancy_vocab_429",
+    "en": "To highlight",
+    "verdict": "keep",
+    "reason": "The analytical discovery sense motivates mettere in luce or far emergere and merits distinction from physically highlighting text."
+  },
+  {
+    "id": "it_fancy_vocab_430",
+    "en": "To hypothesize",
+    "verdict": "drop",
+    "reason": "Ipotizzare is a transparent academic equivalent, and the isolated prompt adds no construction beyond the retained, more marked posit card."
+  },
+  {
+    "id": "it_fancy_vocab_431",
+    "en": "To illustrate",
+    "verdict": "drop",
+    "reason": "Illustrare is a transparent, familiar analytical cognate, and the prompt does not distinguish an evidential example from a literal image."
+  },
+  {
+    "id": "it_fancy_vocab_432",
+    "en": "To infer",
+    "verdict": "keep",
+    "reason": "Dedurre da supplies useful government and a crucial inference-versus-implication distinction, while legacy inferire is stylistically more technical."
+  },
+  {
+    "id": "it_fancy_vocab_433",
+    "en": "To interpret",
+    "verdict": "drop",
+    "reason": "Interpretare is a transparent, high-frequency cognate, and the source does not select a legal, statistical, linguistic or artistic sense."
+  },
+  {
+    "id": "it_fancy_vocab_434",
+    "en": "To negate",
+    "verdict": "keep",
+    "reason": "When one effect cancels another, annullare or neutralizzare materially corrects legacy negare, which means deny."
+  },
+  {
+    "id": "it_fancy_vocab_435",
+    "en": "To ponder",
+    "verdict": "keep",
+    "reason": "Soppesare precisely expresses weighing competing considerations and contrasts productively with the broader riflettere su."
+  },
+  {
+    "id": "it_fancy_vocab_436",
+    "en": "To posit",
+    "verdict": "keep",
+    "reason": "Postulare is a marked academic verb, and the alternative porre requires an explicit come ipotesi or come premessa complement."
+  },
+  {
+    "id": "it_fancy_vocab_437",
+    "en": "To promote",
+    "verdict": "drop",
+    "reason": "Promuovere is a familiar, transparent cognate, and its support sense overlaps the more instructive foster and champion cards retained here."
+  },
+  {
+    "id": "it_fancy_vocab_438",
+    "en": "To propose",
+    "verdict": "drop",
+    "reason": "Proporre is a basic direct equivalent with predictable syntax and no specialized parliamentary or theoretical sense selected."
+  },
+  {
+    "id": "it_fancy_vocab_439",
+    "en": "To qualify",
+    "verdict": "keep",
+    "reason": "In argumentation, qualify can mean circoscrivere la portata di a claim rather than the false-friend choice qualificare."
+  },
+  {
+    "id": "it_fancy_vocab_440",
+    "en": "To question",
+    "verdict": "keep",
+    "reason": "The epistemic challenge requires mettere in discussione or mettere in dubbio and differs from questioning a person or Italian questionare."
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "category": "lexical-noun",
+    "tl": "die Halbleiter-Foundry",
+    "alts": [
+      "der Halbleiter-Auftragsfertiger"
+    ],
+    "register": "Specialist semiconductor-industry terminology; Foundry names the fabrication operation or, metonymically, the contract manufacturer producing customers' designs.",
+    "trap": "In this domain Foundry is not simply eine Gießerei for metal casting; Auftragsfertiger foregrounds the company, while Foundry often foregrounds the manufacturing model or facility.",
+    "example_tl": "Eine europäische Halbleiter-Foundry kann Abhängigkeiten verringern, wenn sie nicht nur moderne Prozesse anbietet, sondern auch langfristig qualifizierte Fachkräfte bindet.",
+    "example_en": "A European semiconductor foundry can reduce dependencies if it not only offers advanced processes but also retains qualified specialists over the long term.",
+    "cloze": "Eine europäische {{c1::Halbleiter-Foundry}} kann Abhängigkeiten verringern, wenn sie nicht nur moderne Prozesse anbietet, sondern auch langfristig qualifizierte Fachkräfte bindet.",
+    "note": "Old_back is too literal for the semiconductor sense. Self-review retained the established English loan and added Auftragsfertiger as the company-focused alternative."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "category": "lexical-noun",
+    "tl": "die Lithografie",
+    "alts": [
+      "die Lithographie"
+    ],
+    "register": "Specialist semiconductor-manufacturing terminology for transferring microscopic patterns onto a wafer; Lithografie is the current standard spelling.",
+    "trap": "Do not assume the older -phie spelling is the only German form; the reformed Lithografie is standard, and the process is not ordinary printing.",
+    "example_tl": "Moderne Lithografie verkleinert Strukturen, doch jeder neue Fertigungsschritt erhöht Kosten, Energiebedarf und die Abhängigkeit von wenigen spezialisierten Anlagenbauern.",
+    "example_en": "Modern lithography shrinks features, but each new manufacturing step increases costs, energy demand, and dependence on a few specialized equipment makers.",
+    "cloze": "Moderne {{c1::Lithografie}} verkleinert Strukturen, doch jeder neue Fertigungsschritt erhöht Kosten, Energiebedarf und die Abhängigkeit von wenigen spezialisierten Anlagenbauern.",
+    "note": "Old_back uses an older spelling rather than a wrong concept. Self-review made the current Lithografie form primary and retained Lithographie as a genuine variant."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "category": "lexical-noun",
+    "tl": "der Die",
+    "alts": [
+      "der Halbleiterchip"
+    ],
+    "register": "Specialist semiconductor packaging vocabulary for one separated, still-unencapsulated piece cut from a wafer.",
+    "trap": "The technical loan is masculine in German; a Die is narrower than a packaged Chip, and the English article die must not be translated as feminine die.",
+    "example_tl": "Nach dem Zerschneiden des Wafers wird jeder einzelne Die geprüft, bevor er verpackt und als Bestandteil eines komplexen Moduls ausgeliefert wird.",
+    "example_en": "After the wafer is diced, each individual die is tested before being packaged and shipped as part of a complex module.",
+    "cloze": "Nach dem Zerschneiden des Wafers wird jeder einzelne {{c1::Die}} geprüft, bevor er verpackt und als Bestandteil eines komplexen Moduls ausgeliefert wird.",
+    "note": "Old_back's Chip is usable only as a broader approximation. Self-review kept the German technical loan der Die and marked the packaged-versus-unpackaged distinction."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "category": "lexical-noun",
+    "tl": "das System-on-Chip (SoC)",
+    "alts": [
+      "der SoC"
+    ],
+    "register": "Specialist electronics terminology for a complete system integrated into one chip; the abbreviation SoC is standard in technical prose.",
+    "trap": "German normally retains the hyphenated technical loan System-on-Chip rather than calquing it as System auf dem Chip; SoC takes masculine gender from Chip.",
+    "example_tl": "Ein System-on-Chip bündelt Prozessor, Speicher und Schnittstellen auf einem Baustein und senkt dadurch Platzbedarf, Energieverbrauch und Produktionskosten in vernetzten Geräten.",
+    "example_en": "A system-on-chip combines the processor, memory, and interfaces on one component, thereby reducing space requirements, energy use, and production costs in connected devices.",
+    "cloze": "Ein {{c1::System-on-Chip}} bündelt Prozessor, Speicher und Schnittstellen auf einem Baustein und senkt dadurch Platzbedarf, Energieverbrauch und Produktionskosten in vernetzten Geräten.",
+    "note": "Old_back is an English-shaped calque. Self-review retained the established hyphenated loan as primary and added the common abbreviation as an alternative."
+  },
+  {
+    "id": "it_fancy_vocab_288",
+    "en": "the Moore's Law",
+    "category": "lexical-noun",
+    "tl": "das Mooresche Gesetz",
+    "alts": [
+      "das Moore-Gesetz"
+    ],
+    "register": "Neutral-formal technology and economics vocabulary for the observed historical trend in integrated-circuit density.",
+    "trap": "German writes Mooresche without the English apostrophe; the adjective inflects normally, as in nach dem Mooreschen Gesetz.",
+    "example_tl": "Nach dem Mooreschen Gesetz sollte die Rechenleistung regelmäßig steigen, doch Energieverbrauch, Fertigungskosten und physikalische Grenzen bremsen diese Erwartung zunehmend.",
+    "example_en": "Under Moore's law, computing power should rise regularly, but energy use, manufacturing costs, and physical limits increasingly constrain that expectation.",
+    "cloze": "Nach dem {{c1::Mooreschen Gesetz}} sollte die Rechenleistung regelmäßig steigen, doch Energieverbrauch, Fertigungskosten und physikalische Grenzen bremsen diese Erwartung zunehmend.",
+    "note": "Old_back is broadly correct. Self-review fixed the German orthography and tested the dative adjective rather than copying the nominative headword unchanged."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "category": "lexical-noun",
+    "tl": "die Verarbeitung natürlicher Sprache",
+    "alts": [
+      "Natural Language Processing (NLP)"
+    ],
+    "register": "Specialist AI and computational-linguistics terminology; the German phrase is standard in research, policy and technical reporting.",
+    "trap": "The German phrase uses the genitive natürlicher Sprache, not an English-style adjective order; NLP is a retained English abbreviation.",
+    "example_tl": "Die Verarbeitung natürlicher Sprache scheitert in politischen Debatten oft an Ironie, Mehrdeutigkeit und fehlendem Kontext, nicht an fehlender Rechenleistung.",
+    "example_en": "Natural language processing often fails in political debates because of irony, ambiguity, and missing context, not because of insufficient computing power.",
+    "cloze": "Die {{c1::Verarbeitung natürlicher Sprache}} scheitert in politischen Debatten oft an Ironie, Mehrdeutigkeit und fehlendem Kontext, nicht an fehlender Rechenleistung.",
+    "note": "Old_back is accurate. Self-review retained the productive German genitive phrase and treated the English expansion as a true specialist alternative rather than a thesaurus synonym."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "category": "lexical-noun",
+    "tl": "die Generative Adversarial Networks (GANs)",
+    "alts": [
+      "die generativen kontradiktorischen Netzwerke (GANs)"
+    ],
+    "register": "Specialist machine-learning terminology; German technical prose commonly retains the English name alongside the acronym GANs.",
+    "trap": "Do not force the literal legacy adjective into the only answer: the English technical name is idiomatic, while kontradiktorisch is a genuine Germanized alternative.",
+    "example_tl": "Generative Adversarial Networks erzeugen überzeugende synthetische Daten, benötigen aber sorgfältige Prüfungen, damit plausible Muster nicht mit verlässlichen Informationen verwechselt werden.",
+    "example_en": "Generative adversarial networks produce convincing synthetic data, but require careful checks so that plausible patterns are not mistaken for reliable information.",
+    "cloze": "{{c1::Generative Adversarial Networks}} erzeugen überzeugende synthetische Daten, benötigen aber sorgfältige Prüfungen, damit plausible Muster nicht mit verlässlichen Informationen verwechselt werden.",
+    "note": "Old_back is a defensible literal German expansion but not the most natural primary production form. Self-review made the established English technical name primary and retained the calque as an alternative."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "category": "lexical-noun",
+    "tl": "das bestärkende Lernen",
+    "alts": [
+      "das Reinforcement Learning",
+      "das verstärkende Lernen"
+    ],
+    "register": "Specialist AI terminology for learning through feedback and rewards; bestärkendes Lernen is the clearest established German rendering.",
+    "trap": "Reinforcement is not Verstärkungslernen in idiomatic German; bestärkendes or verstärkendes Lernen names the technical learning paradigm, not generic strengthening.",
+    "example_tl": "Bestärkendes Lernen kann politische Entscheidungen simulieren, doch eine hohe Belohnung optimiert nur das definierte Ziel und garantiert keine gesellschaftlich wünschenswerten Folgen.",
+    "example_en": "Reinforcement learning can simulate policy decisions, but a high reward optimizes only the defined objective and guarantees no socially desirable outcomes.",
+    "cloze": "{{c1::Bestärkendes Lernen}} kann politische Entscheidungen simulieren, doch eine hohe Belohnung optimiert nur das definierte Ziel und garantiert keine gesellschaftlich wünschenswerten Folgen.",
+    "note": "Materially corrects old_back's Verstärkungslernen. Self-review chose bestärkendes Lernen as the primary term while preserving the English loan and the also-attested verstärkendes Lernen."
+  },
+  {
+    "id": "it_fancy_vocab_298",
+    "en": "the AI Ethics",
+    "category": "lexical-noun",
+    "tl": "die KI-Ethik",
+    "alts": [
+      "die Ethik künstlicher Intelligenz"
+    ],
+    "register": "Formal technology-policy and governance vocabulary for ethical questions raised by artificial-intelligence systems.",
+    "trap": "German normally forms the compact compound KI-Ethik; the expanded phrase is possible, but AI-Ethik is less integrated into ordinary German prose.",
+    "example_tl": "KI-Ethik muss klären, wer für automatisierte Entscheidungen haftet, welche Daten verwendet werden und wie Betroffene gegen diskriminierende Ergebnisse vorgehen können.",
+    "example_en": "AI ethics must clarify who is liable for automated decisions, what data is used, and how affected people can challenge discriminatory outcomes.",
+    "cloze": "{{c1::KI-Ethik}} muss klären, wer für automatisierte Entscheidungen haftet, welche Daten verwendet werden und wie Betroffene gegen diskriminierende Ergebnisse vorgehen können.",
+    "note": "Old_back is accurate in substance. Self-review selected the compact German compound and kept the expanded genitive phrase as a genuine formal alternative."
+  },
+  {
+    "id": "it_fancy_vocab_299",
+    "en": "the Supervised Learning",
+    "category": "lexical-noun",
+    "tl": "das überwachte Lernen",
+    "alts": [
+      "das Supervised Learning"
+    ],
+    "register": "Specialist machine-learning taxonomy for training on examples with known labels or target outputs.",
+    "trap": "Überwacht refers to labeled training data, not human supervision of each prediction; the English loan remains common in technical teams.",
+    "example_tl": "Überwachtes Lernen benötigt gelabelte Beispiele, deren Qualität oft wichtiger ist als die bloße Menge der Daten, die ein Modell verarbeitet.",
+    "example_en": "Supervised learning requires labeled examples, whose quality is often more important than the sheer amount of data a model processes.",
+    "cloze": "{{c1::Überwachtes Lernen}} benötigt gelabelte Beispiele, deren Qualität oft wichtiger ist als die bloße Menge der Daten, die ein Modell verarbeitet.",
+    "note": "Old_back is accurate. Self-review retained the German taxonomy term and the English specialist alternative, while making the labeled-data sense explicit in the example."
+  },
+  {
+    "id": "it_fancy_vocab_300",
+    "en": "the Unsupervised Learning",
+    "category": "lexical-noun",
+    "tl": "das unüberwachte Lernen",
+    "alts": [
+      "das Unsupervised Learning"
+    ],
+    "register": "Specialist machine-learning taxonomy for finding structure in data without supplied target labels.",
+    "trap": "Unüberwacht means that target labels are absent during training, not that the resulting system is unmanaged or unchecked.",
+    "example_tl": "Unüberwachtes Lernen kann verborgene Muster in großen Datensätzen sichtbar machen, liefert aber nicht automatisch eine kausale Erklärung für die gefundenen Gruppen.",
+    "example_en": "Unsupervised learning can reveal hidden patterns in large datasets, but it does not automatically provide a causal explanation for the groups found.",
+    "cloze": "{{c1::Unüberwachtes Lernen}} kann verborgene Muster in großen Datensätzen sichtbar machen, liefert aber nicht automatisch eine kausale Erklärung für die gefundenen Gruppen.",
+    "note": "Old_back is accurate. Self-review kept the German paired taxonomy term and specified the absence of target labels so the example teaches the technical sense."
+  },
+  {
+    "id": "it_fancy_vocab_303",
+    "en": "the Inventory",
+    "category": "lexical-noun",
+    "tl": "der Lagerbestand",
+    "alts": [
+      "der Bestand"
+    ],
+    "register": "Neutral business and supply-chain vocabulary for goods held in stock and available for sale or production.",
+    "trap": "Lagerbestand is inventory held; Inventur is the stocktaking process, so the legacy gloss names an activity rather than the stock itself.",
+    "example_tl": "Ein verlässlicher Lagerbestand setzt voraus, dass Unternehmen Nachfrageänderungen erkennen, Lieferzeiten realistisch kalkulieren und veraltete Produkte rechtzeitig aus dem Sortiment nehmen.",
+    "example_en": "A reliable inventory requires companies to detect demand changes, calculate lead times realistically, and remove obsolete products from the range in time.",
+    "cloze": "Ein verlässlicher {{c1::Lagerbestand}} setzt voraus, dass Unternehmen Nachfrageänderungen erkennen, Lieferzeiten realistisch kalkulieren und veraltete Produkte rechtzeitig aus dem Sortiment nehmen.",
+    "note": "Materially corrects old_back: Inventur means stocktaking, whereas the supply-chain sense is Lagerbestand. Self-review retained the broader Bestand as a true alternative."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "category": "lexical-noun",
+    "tl": "die Beschaffung",
+    "alts": [
+      "das Procurement"
+    ],
+    "register": "Formal business, public-sector and policy vocabulary for obtaining goods and services, including supplier and contract decisions.",
+    "trap": "Beschaffung is broader than Sourcing: it covers obtaining and managing purchases, while Sourcing focuses on identifying and selecting suppliers.",
+    "example_tl": "Öffentliche Beschaffung muss nicht nur den niedrigsten Preis berücksichtigen, sondern auch Lieferkettenrisiken, Arbeitsbedingungen und die langfristige Reparierbarkeit gekaufter Systeme.",
+    "example_en": "Public procurement must consider not only the lowest price but also supply-chain risks, working conditions, and the long-term repairability of purchased systems.",
+    "cloze": "Öffentliche {{c1::Beschaffung}} muss nicht nur den niedrigsten Preis berücksichtigen, sondern auch Lieferkettenrisiken, Arbeitsbedingungen und die langfristige Reparierbarkeit gekaufter Systeme.",
+    "note": "Old_back is accurate. Self-review added the English business loan as a register-marked alternative and reserved the narrower supplier-selection sense for Sourcing."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "category": "lexical-expression",
+    "tl": "Just-in-time",
+    "alts": [
+      "die Just-in-time-Produktion"
+    ],
+    "register": "Neutral business and manufacturing terminology; German compounds use lower-case in and retain the hyphens.",
+    "trap": "Write Just-in-time, not the source's Just-In-Time capitalization; in continuous prose the expression commonly modifies a noun such as Produktion or Lieferung.",
+    "example_tl": "Just-in-time-Produktion senkt Lagerkosten, macht Unternehmen jedoch verwundbar, sobald Grenzschließungen, Hafenstreiks oder geopolitische Spannungen Lieferungen über mehrere Wochen verzögern.",
+    "example_en": "Just-in-time production reduces inventory costs but makes companies vulnerable when border closures, port strikes, or geopolitical tensions delay deliveries for several weeks.",
+    "cloze": "{{c1::Just-in-time-Produktion}} senkt Lagerkosten, macht Unternehmen jedoch verwundbar, sobald Grenzschließungen, Hafenstreiks oder geopolitische Spannungen Lieferungen über mehrere Wochen verzögern.",
+    "note": "Old_back conveys the expression but copies the source capitalization. Self-review made the productive German spelling primary and kept the nominal compound as a natural contextual alternative."
+  },
+  {
+    "id": "it_fancy_vocab_306",
+    "en": "the Distribution",
+    "category": "lexical-noun",
+    "tl": "die Distribution",
+    "alts": [
+      "die Verteilung"
+    ],
+    "register": "Business and logistics terminology for moving goods through a distribution network; Verteilung is more general and less industry-specific.",
+    "trap": "Do not automatically use Vertrieb: that often means sales and channels, whereas Distribution in supply-chain prose concerns the physical flow and network.",
+    "example_tl": "Eine resiliente Distribution verteilt Lagerstandorte strategisch, damit einzelne Ausfälle nicht sofort zu Engpässen für Krankenhäuser, Fabriken oder öffentliche Dienste führen.",
+    "example_en": "A resilient distribution network locates warehouses strategically so that individual failures do not immediately cause shortages for hospitals, factories, or public services.",
+    "cloze": "Eine resiliente {{c1::Distribution}} verteilt Lagerstandorte strategisch, damit einzelne Ausfälle nicht sofort zu Engpässen für Krankenhäuser, Fabriken oder öffentliche Dienste führen.",
+    "note": "Old_back is acceptable but underspecified. Self-review retained Distribution for the logistics sense, while excluding Vertrieb because it can mean sales rather than physical distribution."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "category": "lexical-noun",
+    "tl": "die Drittlogistik",
+    "alts": [
+      "die Logistik durch Drittanbieter"
+    ],
+    "register": "Specialist supply-chain and business terminology for outsourcing logistics operations to an external provider.",
+    "trap": "Drittlogistik is the service model, not merely logistics supplied by any third party on one occasion; the compact compound is idiomatic German.",
+    "example_tl": "Mit Drittlogistik können Hersteller Lagerung und Transport auslagern, verlieren aber einen Teil der direkten Kontrolle über Daten, Servicequalität und strategische Kapazitäten.",
+    "example_en": "With third-party logistics, manufacturers can outsource warehousing and transport but lose some direct control over data, service quality, and strategic capacity.",
+    "cloze": "Mit {{c1::Drittlogistik}} können Hersteller Lagerung und Transport auslagern, verlieren aber einen Teil der direkten Kontrolle über Daten, Servicequalität und strategische Kapazitäten.",
+    "note": "Materially improves the literal old_back by supplying the established German compound. Self-review retained the transparent paraphrase as a contextual alternative."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "category": "lexical-noun",
+    "tl": "die Vorlaufzeit",
+    "alts": [],
+    "register": "Neutral supply-chain and project-management terminology for the time needed between initiating an order or process and its result.",
+    "trap": "Vorlaufzeit is not automatically Durchlaufzeit or Lieferzeit: the exact interval depends on where the process starts and ends.",
+    "example_tl": "Lange Vorlaufzeiten zwingen Unternehmen zu früheren Bestellungen und erhöhen das Risiko, dass eine Prognose falsch liegt, bevor die Ware überhaupt eintrifft.",
+    "example_en": "Long lead times force companies to order earlier and increase the risk that a forecast proves wrong before the goods even arrive.",
+    "cloze": "Lange {{c1::Vorlaufzeiten}} zwingen Unternehmen zu früheren Bestellungen und erhöhen das Risiko, dass eine Prognose falsch liegt, bevor die Ware überhaupt eintrifft.",
+    "note": "Old_back is accurate. Self-review kept Vorlaufzeit primary and recorded the boundary with Durchlaufzeit and Lieferzeit instead of inventing interchangeable alternatives."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "category": "lexical-noun",
+    "tl": "das Sourcing",
+    "alts": [
+      "die Lieferantenauswahl"
+    ],
+    "register": "Marked business vocabulary for finding, evaluating and selecting suppliers, especially in strategic procurement.",
+    "trap": "Sourcing is narrower than Beschaffung or procurement: it centers on supplier discovery and selection rather than the whole purchasing lifecycle.",
+    "example_tl": "Strategisches Sourcing sucht nicht nur den günstigsten Anbieter, sondern bewertet technologische Kompetenz, politische Risiken und die Robustheit möglicher Lieferbeziehungen.",
+    "example_en": "Strategic sourcing seeks not only the cheapest supplier but also assesses technological competence, political risks, and the robustness of possible supply relationships.",
+    "cloze": "Strategisches {{c1::Sourcing}} sucht nicht nur den günstigsten Anbieter, sondern bewertet technologische Kompetenz, politische Risiken und die Robustheit möglicher Lieferbeziehungen.",
+    "note": "Old_back collapses Sourcing into Beschaffung. Self-review kept the common German business loan as primary and added Lieferantenauswahl to make the narrower sense explicit."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "category": "lexical-noun",
+    "tl": "die SKU (Stock Keeping Unit)",
+    "alts": [
+      "die Bestandseinheit"
+    ],
+    "register": "Specialist retail, inventory and logistics terminology for a merchant-specific stock-keeping unit, usually abbreviated SKU.",
+    "trap": "SKU is not Lagerhaltung and is not automatically the same as an EAN or GTIN; those can be standardized identifiers rather than merchant-specific units.",
+    "example_tl": "Jede SKU benötigt eine eigene Bestandsprognose, weil unterschiedliche Größen oder Farben desselben Produkts separat gelagert, bestellt und ausgewertet werden.",
+    "example_en": "Each SKU needs its own inventory forecast because different sizes or colors of the same product are stored, ordered, and evaluated separately.",
+    "cloze": "Jede {{c1::SKU}} benötigt eine eigene Bestandsprognose, weil unterschiedliche Größen oder Farben desselben Produkts separat gelagert, bestellt und ausgewertet werden.",
+    "note": "Materially corrects old_back, which gives the process Lagerhaltung rather than the inventory unit. Self-review selected the standard acronym and kept Bestandseinheit as a concise German alternative."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "category": "lexical-noun",
+    "tl": "die Nachfrageprognose",
+    "alts": [],
+    "register": "Neutral-formal planning and supply-chain terminology for estimating future customer demand.",
+    "trap": "Nachfrage refers to expected market or customer demand; it is not automatically Bedarf, which can describe an internal requirement or need.",
+    "example_tl": "Eine Nachfrageprognose bleibt wertlos, wenn sie saisonale Schwankungen ignoriert und die Anreize der Vertriebsabteilung bei der Datenerhebung nicht berücksichtigt.",
+    "example_en": "A demand forecast remains worthless if it ignores seasonal fluctuations and fails to account for the sales department's incentives when collecting data.",
+    "cloze": "Eine {{c1::Nachfrageprognose}} bleibt wertlos, wenn sie saisonale Schwankungen ignoriert und die Anreize der Vertriebsabteilung bei der Datenerhebung nicht berücksichtigt.",
+    "note": "Old_back is accurate. Self-review retained the compact German compound and marked Bedarf as a related but not automatically equivalent term."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "category": "lexical-noun",
+    "tl": "der Bullwhip-Effekt",
+    "alts": [
+      "der Peitscheneffekt"
+    ],
+    "register": "Specialist supply-chain terminology for amplification of small demand changes as they move upstream through the chain.",
+    "trap": "Bullwhip-Effekt is the established loan compound; Peitscheneffekt is a genuine German alternative, not a literal description of physical whipping.",
+    "example_tl": "Der Bullwhip-Effekt lässt kleine Nachfrageschwankungen am Ende der Lieferkette anwachsen, weil jeder Akteur Bestellungen vorsorglich stärker als nötig anpasst.",
+    "example_en": "The bullwhip effect makes small demand fluctuations grow at the end of the supply chain because each actor adjusts orders more than necessary as a precaution.",
+    "cloze": "Der {{c1::Bullwhip-Effekt}} lässt kleine Nachfrageschwankungen am Ende der Lieferkette anwachsen, weil jeder Akteur Bestellungen vorsorglich stärker als nötig anpasst.",
+    "note": "Old_back is accurate. Self-review retained the established loan compound and added Peitscheneffekt as the genuine German alternative used for this specific mechanism."
+  },
+  {
+    "id": "it_fancy_vocab_313",
+    "en": "the Vertical Integration",
+    "category": "lexical-noun",
+    "tl": "die vertikale Integration",
+    "alts": [],
+    "register": "Formal business-strategy and industrial-policy terminology for combining successive stages of production or distribution under common control.",
+    "trap": "The modifier is essential: vertikale Integration differs from horizontal integration and from generic institutional integration.",
+    "example_tl": "Vertikale Integration kann die Versorgung mit Schlüsselkomponenten sichern, bindet aber Kapital und erschwert es Unternehmen, auf alternative Technologien umzusteigen.",
+    "example_en": "Vertical integration can secure the supply of key components but ties up capital and makes it harder for companies to switch to alternative technologies.",
+    "cloze": "{{c1::Vertikale Integration}} kann die Versorgung mit Schlüsselkomponenten sichern, bindet aber Kapital und erschwert es Unternehmen, auf alternative Technologien umzusteigen.",
+    "note": "Old_back is accurate. Self-review retained the adjective because the modifier carries the material business meaning and prevents confusion with the cross-topic generic Integration entry."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "category": "lexical-noun",
+    "tl": "die Lagerhaltung",
+    "alts": [
+      "das Warehousing"
+    ],
+    "register": "Neutral supply-chain terminology for storing and managing goods in warehouses over time.",
+    "trap": "Lagerhaltung names the warehousing process; it is not the same as Lagerbestand, the inventory held, and Warehousing is a marked English loan.",
+    "example_tl": "Effiziente Lagerhaltung gleicht schwankende Nachfrage aus, bindet aber Kapital und verursacht laufende Kosten für Flächen, Personal, Energie und Versicherung.",
+    "example_en": "Efficient warehousing offsets fluctuating demand but ties up capital and incurs ongoing costs for space, staff, energy, and insurance.",
+    "cloze": "Effiziente {{c1::Lagerhaltung}} gleicht schwankende Nachfrage aus, bindet aber Kapital und verursacht laufende Kosten für Flächen, Personal, Energie und Versicherung.",
+    "note": "Old_back is accurate. Self-review kept Lagerhaltung primary and explicitly separated the process from Lagerbestand, which is authored for Inventory in this batch."
+  },
+  {
+    "id": "it_fancy_vocab_317",
+    "en": "the Node",
+    "category": "lexical-noun",
+    "tl": "der Knoten (in einem Netzwerk)",
+    "alts": [
+      "der Knotenpunkt"
+    ],
+    "register": "Technical vocabulary for a connected point in a network, graph or distributed system; the parenthetical narrows the intended sense.",
+    "trap": "Knoten is the standard graph and network term; Knotenpunkt can suggest a junction or hub and is not always interchangeable in computing.",
+    "example_tl": "Jeder Knoten in einem verteilten Netzwerk kann zum Engpass werden, wenn Daten nur über wenige geografisch konzentrierte Vermittlungsstellen laufen.",
+    "example_en": "Every node in a distributed network can become a bottleneck when data flows through only a few geographically concentrated intermediary points.",
+    "cloze": "Jeder {{c1::Knoten}} in einem verteilten Netzwerk kann zum Engpass werden, wenn Daten nur über wenige geografisch konzentrierte Vermittlungsstellen laufen.",
+    "note": "Old_back's Knotenpunkt is possible but broader. Self-review selected Knoten for the network sense and retained Knotenpunkt as a context-dependent alternative."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "category": "lexical-verb",
+    "tl": "etwas nachverfolgen",
+    "alts": [
+      "etwas verfolgen"
+    ],
+    "register": "Neutral technical, logistics and administrative verb for tracking a shipment, process or data trail over time.",
+    "trap": "Nachverfolgen is precise for tracking status or provenance; verfolgen is broader and can mean pursuing a person, following a goal or monitoring generally.",
+    "example_tl": "Unternehmen müssen Lieferungen digital nachverfolgen, wenn sie Kunden über Verzögerungen informieren und zugleich die Ursachen wiederkehrender Engpässe analysieren wollen.",
+    "example_en": "Companies must track deliveries digitally if they want to inform customers about delays while also analyzing the causes of recurring bottlenecks.",
+    "cloze": "Unternehmen müssen Lieferungen digital {{c1::nachverfolgen}}, wenn sie Kunden über Verzögerungen informieren und zugleich die Ursachen wiederkehrender Engpässe analysieren wollen.",
+    "note": "Old_back's zu verfolgen is an incomplete infinitive and too broad for shipment or data tracking. Self-review supplied the separable verb with its object pattern."
+  },
+  {
+    "id": "it_fancy_vocab_319",
+    "en": "to marginalize",
+    "category": "lexical-verb",
+    "tl": "jemanden marginalisieren",
+    "alts": [
+      "jemanden an den Rand drängen"
+    ],
+    "register": "Formal social, political and critical-theory vocabulary for pushing a person or group to the margins of participation or influence.",
+    "trap": "Marginalisieren is more analytical and structural than the broader ausgrenzen; it need not mean formal exclusion from membership or access.",
+    "example_tl": "Automatisierte Bewertungssysteme können Menschen marginalisieren, wenn historische Verzerrungen als neutrale Daten erscheinen und niemand ihre Auswirkungen regelmäßig überprüft.",
+    "example_en": "Automated scoring systems can marginalize people when historical biases appear as neutral data and nobody regularly reviews their effects.",
+    "cloze": "Automatisierte Bewertungssysteme können Menschen {{c1::marginalisieren}}, wenn historische Verzerrungen als neutrale Daten erscheinen und niemand ihre Auswirkungen regelmäßig überprüft.",
+    "note": "Old_back is accurate but bare. Self-review added the governed human object and the formal register distinction from broader exclusion verbs."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "category": "lexical-verb",
+    "tl": "von etwas profitieren",
+    "alts": [
+      "Nutzen aus etwas ziehen"
+    ],
+    "register": "Neutral-formal verb for benefiting from a resource, condition or development; common in analytical and policy prose.",
+    "trap": "Profitieren takes von plus dative in this sense; it means benefit from, not necessarily earn a financial profit or make a profit.",
+    "example_tl": "Vor allem große Plattformen profitieren von Netzwerkeffekten, während kleinere Anbieter trotz innovativer Produkte kaum Sichtbarkeit und Verhandlungsmacht gewinnen.",
+    "example_en": "Large platforms in particular benefit from network effects, while smaller providers gain little visibility or bargaining power despite innovative products.",
+    "cloze": "Vor allem große Plattformen {{c1::profitieren von}} Netzwerkeffekten, während kleinere Anbieter trotz innovativer Produkte kaum Sichtbarkeit und Verhandlungsmacht gewinnen.",
+    "note": "Old_back gives the correct verb but omits its productive von-plus-dative government. Self-review wrapped the governing frame in the cloze and distinguished benefit from financial profit."
+  }
+]

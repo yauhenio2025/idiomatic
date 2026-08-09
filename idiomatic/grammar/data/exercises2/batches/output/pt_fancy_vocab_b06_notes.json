@@ -1,0 +1,302 @@
+[
+  {
+    "id": "it_fancy_vocab_204",
+    "en": "Hegemonic",
+    "category": "lexical-adjective",
+    "tl": "hegemônico",
+    "alts": [],
+    "register": "Formal, frequente em teoria política e crítica cultural para uma posição dominante que também molda normas, instituições e consensos.",
+    "trap": "No português brasileiro, hegemônico leva circunflexo; o espanhol hegemónico pode induzir a posição errada do acento, e o italiano egemonico pode induzir a perda do h.",
+    "example_tl": "O projeto hegemônico das grandes plataformas transforma padrões privados em regras globais, limitando a capacidade de governos periféricos definirem prioridades próprias.",
+    "example_en": "The hegemonic project of the major platforms turns private standards into global rules, limiting peripheral governments' ability to define their own priorities.",
+    "cloze": "O projeto {{c1::hegemônico}} das grandes plataformas transforma padrões privados em regras globais, limitando a capacidade de governos periféricos definirem prioridades próprias.",
+    "note": "Old_back fornece o equivalente correto. A retenção fixa o acento brasileiro e o sentido político mais específico do que simplesmente dominante."
+  },
+  {
+    "id": "it_fancy_vocab_205",
+    "en": "Insidious",
+    "category": "lexical-adjective",
+    "tl": "insidioso",
+    "alts": [],
+    "register": "Formal e avaliativo; descreve um dano que avança de modo gradual, pouco perceptível ou enganoso, sobretudo em crítica institucional.",
+    "trap": "Insidioso não significa apenas nocivo: sugere que o perigo se instala de maneira dissimulada ou difícil de perceber.",
+    "example_tl": "A erosão insidiosa da autonomia editorial raramente ocorre por censura direta; avança por métricas, contratos opacos e dependência financeira.",
+    "example_en": "The insidious erosion of editorial autonomy rarely occurs through direct censorship; it advances through metrics, opaque contracts, and financial dependence.",
+    "cloze": "A erosão {{c1::insidiosa}} da autonomia editorial raramente ocorre por censura direta; avança por métricas, contratos opacos e dependência financeira.",
+    "note": "Old_back está correto. A nota preserva o componente de progressão dissimulada que sinônimos gerais como prejudicial não exprimem."
+  },
+  {
+    "id": "it_fancy_vocab_209",
+    "en": "Pervasive",
+    "category": "lexical-adjective",
+    "tl": "generalizado",
+    "alts": [],
+    "register": "Neutro-formal e idiomático para práticas ou efeitos espalhados por todo um sistema; pervasivo ocorre em áreas técnicas, mas é mais marcado.",
+    "trap": "Pervasivo existe em português especializado, porém não deve ser a tradução automática em toda colocação; monitoramento generalizado é mais natural na prosa pública.",
+    "example_tl": "O monitoramento generalizado nas escolas promete segurança, mas converte rotinas de crianças e professores em dados permanentes sujeitos a usos futuros.",
+    "example_en": "Pervasive monitoring in schools promises safety but turns the routines of children and teachers into permanent data subject to future uses.",
+    "cloze": "O monitoramento {{c1::generalizado}} nas escolas promete segurança, mas converte rotinas de crianças e professores em dados permanentes sujeitos a usos futuros.",
+    "note": "Diverge materialmente de old_back: pervasivo é possível em jargão, mas generalizado é a escolha menos calcada para a colocação demonstrada."
+  },
+  {
+    "id": "it_fancy_vocab_210",
+    "en": "Ephemeral",
+    "category": "lexical-adjective",
+    "tl": "efêmero",
+    "alts": [
+      "passageiro"
+    ],
+    "register": "Efêmero é neutro-formal e salienta duração muito breve; passageiro é menos marcado e funciona quando a brevidade, não a materialidade, é central.",
+    "trap": "O português brasileiro escreve efêmero; o espanhol efímero, o italiano effimero e o francês éphémère criam riscos reais de acento e grafia.",
+    "example_tl": "Na economia da atenção, o entusiasmo efêmero por novos aplicativos contrasta com os efeitos duradouros da coleta em massa de dados pessoais.",
+    "example_en": "In the attention economy, ephemeral enthusiasm for new apps contrasts with the lasting effects of mass personal-data collection.",
+    "cloze": "Na economia da atenção, o entusiasmo {{c1::efêmero}} por novos aplicativos contrasta com os efeitos duradouros da coleta em massa de dados pessoais.",
+    "note": "Old_back está correto. A retenção acrescenta o contraste produtivo com duradouro e registra a interferência ortográfica entre as línguas estudadas. Autorrevisão: substituí coleta massiva pela colocação mais idiomática coleta em massa."
+  },
+  {
+    "id": "it_fancy_vocab_211",
+    "en": "Contingent",
+    "category": "lexical-adjective",
+    "tl": "contingente a",
+    "alts": [],
+    "register": "Formal e acadêmico no sentido de condicionado por uma circunstância; fora desse registro, dependente de costuma soar mais direto.",
+    "trap": "Contingente rege a e pode contrair-se em à; como substantivo, contingente também significa grupo ou efetivo, sentido ausente neste exemplo.",
+    "example_tl": "A legitimidade de decisões automatizadas é contingente à existência de auditorias independentes, canais de recurso acessíveis e critérios públicos de avaliação.",
+    "example_en": "The legitimacy of automated decisions is contingent on the existence of independent audits, accessible appeal channels, and public evaluation criteria.",
+    "cloze": "A legitimidade de decisões automatizadas é {{c1::contingente à}} existência de auditorias independentes, canais de recurso acessíveis e critérios públicos de avaliação.",
+    "note": "Old_back omite a regência e não desambigua o adjetivo. A nota seleciona explicitamente a acepção de dependência circunstancial."
+  },
+  {
+    "id": "it_fancy_vocab_212",
+    "en": "Oversaturated",
+    "category": "lexical-adjective",
+    "tl": "supersaturado",
+    "alts": [],
+    "register": "Neutro-formal em análise de mercados, mídia e imagem para algo saturado além de um limite funcional ou desejável.",
+    "trap": "Evite transportar automaticamente o prefixo inglês over- para oversaturado; supersaturado é a formação portuguesa produtiva selecionada aqui.",
+    "example_tl": "Um mercado supersaturado de serviços de streaming fragmenta a atenção, encarece a aquisição de assinantes e favorece empresas capazes de sustentar prejuízos prolongados.",
+    "example_en": "An oversaturated streaming-services market fragments attention, makes subscriber acquisition more expensive, and favors companies able to sustain prolonged losses.",
+    "cloze": "Um mercado {{c1::supersaturado}} de serviços de streaming fragmenta a atenção, encarece a aquisição de assinantes e favorece empresas capazes de sustentar prejuízos prolongados.",
+    "note": "Diverge de old_back, que conserva o prefixo inglês. Autorrevisão: mantive saturado fora de alts porque não codifica necessariamente o excesso expresso por over-."
+  },
+  {
+    "id": "it_fancy_vocab_213",
+    "en": "Manipulative",
+    "category": "lexical-adjective",
+    "tl": "manipulador",
+    "alts": [],
+    "register": "Neutro-crítico para pessoas, mensagens, táticas ou interfaces concebidas para influenciar escolhas de modo encoberto ou desleal.",
+    "trap": "Manipulativo existe em usos especializados, mas não é substituto automático de manipulative; na prosa geral brasileira, interface ou tática que manipula costuma ser manipuladora.",
+    "example_tl": "A interface manipuladora destaca a opção mais invasiva em cores vivas e esconde a opção de recusa em menus deliberadamente confusos.",
+    "example_en": "The manipulative interface highlights the most invasive option in bright colors and hides the refusal option in deliberately confusing menus.",
+    "cloze": "A interface {{c1::manipuladora}} destaca a opção mais invasiva em cores vivas e esconde a opção de recusa em menus deliberadamente confusos.",
+    "note": "Diverge de old_back ao escolher a forma mais idiomática para a colocação. O exemplo fixa o sentido de influência desleal, não a manipulação física de objetos. Autorrevisão: explicitei opção de recusa para evitar a formulação vaga ocultar a recusa."
+  },
+  {
+    "id": "it_fancy_vocab_214",
+    "en": "Extractive",
+    "category": "lexical-adjective",
+    "tl": "extrativista",
+    "alts": [],
+    "register": "Crítico e especializado em economia política para modelos que retiram recursos ou valor sem distribuição proporcional dos benefícios.",
+    "trap": "Extrativo costuma qualificar a atividade ou o processo de extração; extrativista seleciona melhor a crítica sistêmica a um modelo econômico.",
+    "example_tl": "O modelo extrativista das plataformas converte relações sociais em matéria-prima, transfere custos à sociedade e concentra o valor econômico nos controladores da infraestrutura.",
+    "example_en": "The platforms' extractive model turns social relations into raw material, shifts costs onto society, and concentrates economic value among those who control the infrastructure.",
+    "cloze": "O modelo {{c1::extrativista}} das plataformas converte relações sociais em matéria-prima, transfere custos à sociedade e concentra o valor econômico nos controladores da infraestrutura.",
+    "note": "Old_back está correto para a acepção de economia política adotada. Como o inglês isolado é polissêmico, o exemplo explicita esse enquadramento."
+  },
+  {
+    "id": "it_fancy_vocab_216",
+    "en": "Myopic",
+    "category": "lexical-adjective",
+    "tl": "míope",
+    "alts": [],
+    "register": "Neutro-crítico no uso figurado para decisões que privilegiam efeitos imediatos e ignoram consequências previsíveis de longo prazo.",
+    "trap": "O português escreve míope com acento; espanhol miope, italiano miope e francês myope podem induzir grafia ou acentuação incorreta.",
+    "example_tl": "Uma política míope de inteligência artificial subsidia centros de dados hoje, mas ignora custos energéticos, dependência tecnológica e concentração econômica amanhã.",
+    "example_en": "A myopic artificial-intelligence policy subsidizes data centers today but ignores tomorrow's energy costs, technological dependence, and economic concentration.",
+    "cloze": "Uma política {{c1::míope}} de inteligência artificial subsidia centros de dados hoje, mas ignora custos energéticos, dependência tecnológica e concentração econômica amanhã.",
+    "note": "Old_back está correto. A retenção pratica a metáfora institucional produtiva e uma interferência ortográfica específica do português."
+  },
+  {
+    "id": "it_fancy_vocab_217",
+    "en": "Digital-native",
+    "category": "lexical-adjective",
+    "tl": "nativo digital",
+    "alts": [],
+    "register": "Adjetivo contemporâneo e neutro em negócios e tecnologia para organizações, produtos ou pessoas originados no ambiente digital.",
+    "trap": "Em português, a ordem é nativo digital, sem hífen, e nativo concorda com o nome: uma empresa nativa digital, não digital-nativo.",
+    "example_tl": "Uma empresa nativa digital pode dispensar agências físicas, mas continua sujeita às mesmas obrigações trabalhistas, tributárias e concorrenciais que qualquer empresa tradicional.",
+    "example_en": "A digital-native company may do without physical branches but remains subject to the same labor, tax, and competition obligations as any traditional company.",
+    "cloze": "Uma empresa {{c1::nativa digital}} pode dispensar agências físicas, mas continua sujeita às mesmas obrigações trabalhistas, tributárias e concorrenciais que qualquer empresa tradicional.",
+    "note": "Corrige materialmente old_back, que decalca a ordem inglesa e introduz um hífen impróprio. O cloze demonstra a flexão feminina ausente do lema. Autorrevisão: reformulei a comparação final para evitar que das empresas tradicionais sugerisse posse, não equivalência."
+  },
+  {
+    "id": "it_fancy_vocab_222",
+    "en": "Protean",
+    "category": "lexical-adjective",
+    "tl": "proteiforme",
+    "alts": [
+      "multiforme"
+    ],
+    "register": "Culto e escrito para algo que assume muitas formas ou muda de aparência conforme as circunstâncias; multiforme é menos alusivo.",
+    "trap": "Proteico remete normalmente a proteínas no português atual e pode tornar a alusão a Proteu opaca; proteiforme expressa sem ambiguidade a multiplicidade de formas.",
+    "example_tl": "A retórica proteiforme da empresa adota um discurso ambiental, trabalhista ou nacionalista conforme o público, sem alterar seu modelo de acumulação.",
+    "example_en": "The company's protean rhetoric adopts an environmental, labor, or nationalist discourse depending on the audience without changing its accumulation model.",
+    "cloze": "A retórica {{c1::proteiforme}} da empresa adota um discurso ambiental, trabalhista ou nacionalista conforme o público, sem alterar seu modelo de acumulação.",
+    "note": "Diverge de old_back: proteano é pouco transparente; proteiforme fixa de modo inequívoco a acepção contextual. Autorrevisão: mantive multiforme como alternativa, mas não proteico, por sua ambiguidade corrente, e troquei assume linguagem pela colocação natural adota um discurso."
+  },
+  {
+    "id": "it_fancy_vocab_223",
+    "en": "Illusory",
+    "category": "lexical-adjective",
+    "tl": "ilusório",
+    "alts": [],
+    "register": "Neutro-formal para algo que parece real, eficaz ou seguro, mas não resiste à análise ou às condições concretas.",
+    "trap": "O português escreve ilusório, com um l e acento; espanhol ilusorio e italiano illusorio podem induzir respectivamente perda do acento ou duplicação do l.",
+    "example_tl": "O anonimato oferecido pela plataforma é ilusório quando metadados, padrões de navegação e identificadores publicitários permitem reconstruir a identidade do usuário.",
+    "example_en": "The anonymity offered by the platform is illusory when metadata, browsing patterns, and advertising identifiers make it possible to reconstruct the user's identity.",
+    "cloze": "O anonimato oferecido pela plataforma é {{c1::ilusório}} quando metadados, padrões de navegação e identificadores publicitários permitem reconstruir a identidade do usuário.",
+    "note": "Old_back está correto. A retenção registra duas interferências ortográficas concretas e demonstra o contraste semântico entre aparência e realidade."
+  },
+  {
+    "id": "it_fancy_vocab_224",
+    "en": "Anomalous",
+    "category": "lexical-adjective",
+    "tl": "anômalo",
+    "alts": [
+      "atípico"
+    ],
+    "register": "Neutro-formal em análise técnica ou institucional para um dado ou comportamento que se afasta significativamente do padrão esperado.",
+    "trap": "No português brasileiro, anômalo leva circunflexo; o espanhol anómalo e o italiano anomalo podem deslocar ou apagar o acento.",
+    "example_tl": "Um aumento anômalo de contas recém-criadas pode indicar manipulação coordenada, embora o volume isolado não prove quem financiou a campanha.",
+    "example_en": "An anomalous increase in newly created accounts may indicate coordinated manipulation, although the volume alone does not prove who funded the campaign.",
+    "cloze": "Um aumento {{c1::anômalo}} de contas recém-criadas pode indicar manipulação coordenada, embora o volume isolado não prove quem financiou a campanha.",
+    "note": "Old_back está correto. A alternativa atípico cabe integralmente no exemplo; a retenção se justifica sobretudo pela acentuação contrastiva."
+  },
+  {
+    "id": "it_fancy_vocab_226",
+    "en": "Unprecedented",
+    "category": "lexical-adjective",
+    "tl": "sem precedentes",
+    "alts": [],
+    "register": "Neutro-formal e frequente em análise histórica e institucional; deve ser reservado para casos sem paralelo relevante, não apenas incomuns.",
+    "trap": "Não decalque o prefixo inglês em formas como não precedenciado; inédito pode equivaler em certos contextos, mas também significa ainda não publicado.",
+    "example_tl": "A concentração sem precedentes de infraestrutura digital nas mãos de poucas empresas reduz as opções do poder público e transforma falhas privadas em riscos sistêmicos.",
+    "example_en": "The unprecedented concentration of digital infrastructure in the hands of a few companies reduces the options available to public authorities and turns private failures into systemic risks.",
+    "cloze": "A concentração {{c1::sem precedentes}} de infraestrutura digital nas mãos de poucas empresas reduz as opções do poder público e transforma falhas privadas em riscos sistêmicos.",
+    "note": "Old_back fornece a expressão portuguesa mais segura. A nota exclui inédito de alts porque sua polissemia impediria substituição confiável fora do exemplo. Autorrevisão: substituí limita escolhas públicas por reduz as opções do poder público para evitar a leitura técnica de escolha pública."
+  },
+  {
+    "id": "it_fancy_vocab_228",
+    "en": "Contemporaneous",
+    "category": "lexical-adjective",
+    "tl": "contemporâneo de",
+    "alts": [
+      "coetâneo de"
+    ],
+    "register": "Formal no sentido histórico de existente na mesma época que outra pessoa ou acontecimento; coetâneo de é mais culto e menos ambíguo.",
+    "trap": "Contemporâneo também pode significar atual; a regência com de fixa aqui a simultaneidade de contemporaneous, não o sentido amplo de modern.",
+    "example_tl": "O tratado, contemporâneo da formação das alianças regionais, mostra que a disputa por infraestrutura já orientava a diplomacia antes da era digital.",
+    "example_en": "The treaty, contemporaneous with the formation of the regional alliances, shows that competition over infrastructure shaped diplomacy even before the digital age.",
+    "cloze": "O tratado, {{c1::contemporâneo da}} formação das alianças regionais, mostra que a disputa por infraestrutura já orientava a diplomacia antes da era digital.",
+    "note": "Old_back fornece o cognato, mas não distingue contemporaneous de contemporary nem registra a regência. A alternativa coetâneo de preserva a leitura histórica."
+  },
+  {
+    "id": "it_fancy_vocab_229",
+    "en": "Partisan",
+    "category": "lexical-adjective",
+    "tl": "partidário",
+    "alts": [],
+    "register": "Crítico em análise política e midiática para uma posição alinhada aos interesses ou à narrativa de um partido.",
+    "trap": "Parcial ou tendencioso exprimem viés geral, mas podem apagar o vínculo partidário; como substantivo, partidário também designa um apoiador.",
+    "example_tl": "A cobertura partidária transforma qualquer concessão do governo em vitória histórica e qualquer crítica da oposição em ameaça à estabilidade nacional.",
+    "example_en": "Partisan coverage turns every government concession into a historic victory and every opposition criticism into a threat to national stability.",
+    "cloze": "A cobertura {{c1::partidária}} transforma qualquer concessão do governo em vitória histórica e qualquer crítica da oposição em ameaça à estabilidade nacional.",
+    "note": "O inglês isolado também pode nomear um apoiador ou guerrilheiro. Esta nota, coerente com o registro profissional, seleciona o sentido adjetival político; old_back é válido nessa acepção."
+  },
+  {
+    "id": "it_fancy_vocab_231",
+    "en": "Exploitative",
+    "category": "lexical-adjective",
+    "tl": "explorador",
+    "alts": [],
+    "register": "Crítico para uma pessoa, instituição ou relação que obtém vantagem injusta do trabalho, da vulnerabilidade ou dos recursos alheios.",
+    "trap": "Exploratório significa destinado a explorar ou investigar possibilidades; não equivale a exploitative. Para contratos ou práticas, abusivo pode ser mais idiomático conforme o contexto.",
+    "example_tl": "O empregador explorador transfere todo o risco ao entregador, altera unilateralmente a remuneração e bloqueia qualquer tentativa de negociação coletiva.",
+    "example_en": "The exploitative employer shifts all risk onto the courier, changes compensation unilaterally, and blocks every attempt at collective bargaining.",
+    "cloze": "O empregador {{c1::explorador}} transfere todo o risco ao entregador, altera unilateralmente a remuneração e bloqueia qualquer tentativa de negociação coletiva.",
+    "note": "Old_back está correto para um agente humano. A retenção previne o falso amigo exploratório e explicita que objetos inanimados podem exigir outra solução contextual."
+  },
+  {
+    "id": "it_fancy_vocab_232",
+    "en": "Transitory",
+    "category": "lexical-adjective",
+    "tl": "transitório",
+    "alts": [
+      "temporário"
+    ],
+    "register": "Neutro-formal; transitório frequentemente apresenta algo como etapa de passagem, enquanto temporário apenas nega permanência.",
+    "trap": "O português brasileiro escreve transitório com acento, ao contrário do espanhol transitorio e do italiano transitorio; efêmero costuma sugerir duração ainda mais breve.",
+    "example_tl": "O acordo transitório preserva o acesso a dados durante a reforma, mas expira assim que a nova autoridade publicar regras permanentes.",
+    "example_en": "The transitory agreement preserves access to data during the reform but expires as soon as the new authority publishes permanent rules.",
+    "cloze": "O acordo {{c1::transitório}} preserva o acesso a dados durante a reforma, mas expira assim que a nova autoridade publicar regras permanentes.",
+    "note": "Old_back está correto. Autorrevisão: mantive temporário como alternativa porque cabe no exemplo, mas registrei a nuance de etapa intermediária própria de transitório."
+  },
+  {
+    "id": "it_fancy_vocab_233",
+    "en": "Reductionist",
+    "category": "lexical-adjective",
+    "tl": "reducionista",
+    "alts": [],
+    "register": "Formal e geralmente crítico para uma explicação que reduz fenômenos complexos a uma causa, dimensão ou mecanismo exclusivo.",
+    "trap": "O português escreve reducionista com um c; o espanhol reduccionista pode induzir a duplicação indevida da consoante.",
+    "example_tl": "A leitura reducionista atribui a polarização apenas aos algoritmos e ignora a desigualdade, os incentivos partidários, a concentração midiática e as escolhas editoriais.",
+    "example_en": "The reductionist reading attributes polarization solely to algorithms and ignores inequality, partisan incentives, media concentration, and editorial choices.",
+    "cloze": "A leitura {{c1::reducionista}} atribui a polarização apenas aos algoritmos e ignora a desigualdade, os incentivos partidários, a concentração midiática e as escolhas editoriais.",
+    "note": "Old_back está correto. A retenção combina uma interferência ortográfica concreta com o enquadramento crítico que diferencia reducionista de simplesmente resumido."
+  },
+  {
+    "id": "it_fancy_vocab_235",
+    "en": "Disparate",
+    "category": "lexical-adjective",
+    "tl": "díspar",
+    "alts": [],
+    "register": "Neutro-formal para pessoas, grupos ou elementos profundamente diferentes entre si, especialmente quando reunidos numa mesma análise ou coalizão.",
+    "trap": "Disparidade é substantivo e não traduz o adjetivo; díspar flexiona apenas em número, com o plural díspares, e não significa desesperado.",
+    "example_tl": "Coalizões díspares apoiaram a regulação por motivos incompatíveis: umas buscavam concorrência, enquanto outras pretendiam ampliar o controle estatal sobre conteúdos.",
+    "example_en": "Disparate coalitions supported the regulation for incompatible reasons: some sought competition, while others intended to expand state control over content.",
+    "cloze": "Coalizões {{c1::díspares}} apoiaram a regulação por motivos incompatíveis: umas buscavam concorrência, enquanto outras pretendiam ampliar o controle estatal sobre conteúdos.",
+    "note": "Corrige materialmente old_back, que troca o adjetivo pelo substantivo disparidade. O exemplo demonstra a forma plural e a ausência de flexão de gênero."
+  },
+  {
+    "id": "it_fancy_vocab_236",
+    "en": "Censorious",
+    "category": "lexical-adjective",
+    "tl": "reprovador",
+    "alts": [
+      "condenatório"
+    ],
+    "register": "Formal e crítico para um tom ou julgamento inclinado a censurar severamente o comportamento alheio; condenatório é uma alternativa mais forte.",
+    "trap": "Censurado significa que algo sofreu censura e corresponde a censored, não a censorious, que descreve quem ou aquilo que reprova duramente.",
+    "example_tl": "O tom reprovador do relatório condena usuários por compartilharem boatos, mas pouco examina os incentivos comerciais das plataformas que os amplificam.",
+    "example_en": "The report's censorious tone condemns users for sharing rumors but does little to examine the commercial incentives of the platforms that amplify them.",
+    "cloze": "O tom {{c1::reprovador}} do relatório condena usuários por compartilharem boatos, mas pouco examina os incentivos comerciais das plataformas que os amplificam.",
+    "note": "Corrige materialmente old_back, que seleciona a voz passiva e outro sentido. Autorrevisão: preferi reprovador a censório, menos corrente e facilmente associado à censura institucional."
+  },
+  {
+    "id": "it_fancy_vocab_239",
+    "en": "the Cybersecurity",
+    "category": "lexical-noun",
+    "tl": "a segurança cibernética",
+    "alts": [
+      "a cibersegurança"
+    ],
+    "register": "Termo técnico neutro; segurança cibernética é corrente em linguagem institucional brasileira, e cibersegurança é a alternativa compacta consolidada no setor.",
+    "trap": "A forma compacta portuguesa é cibersegurança, numa só palavra, sem hífen e sem o y do inglês cyber.",
+    "example_tl": "A segurança cibernética depende menos de slogans militarizados do que de equipes estáveis, atualizações regulares e protocolos claros para comunicar incidentes.",
+    "example_en": "Cybersecurity depends less on militarized slogans than on stable teams, regular updates, and clear protocols for reporting incidents.",
+    "cloze": "{{c1::A segurança cibernética}} depende menos de slogans militarizados do que de equipes estáveis, atualizações regulares e protocolos claros para comunicar incidentes.",
+    "note": "Old_back fornece uma tradução correta. O artigo e a maiúscula do prompt inglês são anômalos, mas o termo é recuperável; a retenção ensina a variante cibersegurança e sua grafia."
+  }
+]

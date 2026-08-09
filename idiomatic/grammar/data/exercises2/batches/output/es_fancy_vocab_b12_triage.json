@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_441",
+    "en": "To reject",
+    "verdict": "drop",
+    "reason": "Rechazar is a basic, transparent verb already owned at C1, and the bare prompt does not distinguish a proposal, hypothesis, person or defective product."
+  },
+  {
+    "id": "it_fancy_vocab_442",
+    "en": "To revise",
+    "verdict": "drop",
+    "reason": "Revisar is familiar and productive, while the context-free English prompt does not choose editing, amending, reviewing or studying for an examination."
+  },
+  {
+    "id": "it_fancy_vocab_443",
+    "en": "To scrutinize",
+    "verdict": "keep",
+    "reason": "The verb requires preserving thorough critical examination rather than mapping it to an underspecified examinar."
+  },
+  {
+    "id": "it_fancy_vocab_444",
+    "en": "To underscore",
+    "verdict": "drop",
+    "reason": "Subrayar and destacar are familiar analytical verbs, and this isolated prompt adds no lesson beyond the semantically equivalent To highlight item already triaged in the preceding batch."
+  },
+  {
+    "id": "it_fancy_vocab_445",
+    "en": "To affirm",
+    "verdict": "drop",
+    "reason": "Afirmar is a high-frequency transparent cognate, and no context selects assertion, confirmation, judicial affirmation or support for a principle."
+  },
+  {
+    "id": "it_fancy_vocab_446",
+    "en": "To allege",
+    "verdict": "keep",
+    "reason": "Legal and media usage requires managing the unproven status of the claim, which Spanish alegar does not encode in every context."
+  },
+  {
+    "id": "it_fancy_vocab_447",
+    "en": "To bolster",
+    "verdict": "keep",
+    "reason": "The figurative strengthening sense calls for reforzar or apuntalar rather than a literal rendering of the English support noun."
+  },
+  {
+    "id": "it_fancy_vocab_448",
+    "en": "To broach",
+    "verdict": "keep",
+    "reason": "Raising a delicate subject for discussion is usefully distinguished from the later act of addressing or tackling it."
+  },
+  {
+    "id": "it_fancy_vocab_449",
+    "en": "To circumvent",
+    "verdict": "keep",
+    "reason": "Intentional evasion of a rule or safeguard motivates precise eludir and a useful contrast with generic evitar."
+  },
+  {
+    "id": "it_fancy_vocab_450",
+    "en": "To cogitate",
+    "verdict": "drop",
+    "reason": "The rare, often humorous English verb supplies no distinct production lesson beside the retained reflective ruminate card and the preceding batch's ponder card."
+  },
+  {
+    "id": "it_fancy_vocab_451",
+    "en": "To corroborate",
+    "verdict": "drop",
+    "reason": "Corroborar is a transparent, established C1 cognate, and the bare prompt supplies no distinctive evidential construction or interference risk."
+  },
+  {
+    "id": "it_fancy_vocab_452",
+    "en": "To counter",
+    "verdict": "keep",
+    "reason": "The English verb is polysemous; offsetting an influence teaches contrarrestar and must be distinguished from rebutting a claim."
+  },
+  {
+    "id": "it_fancy_vocab_453",
+    "en": "To deduce",
+    "verdict": "drop",
+    "reason": "Deducir is transparent and semantically duplicates the retained To infer card, which already teaches the de complement and inference-versus-implication contrast."
+  },
+  {
+    "id": "it_fancy_vocab_454",
+    "en": "To demur",
+    "verdict": "keep",
+    "reason": "Poner reparos or objetar materially corrects legacy Recusar, whose Spanish procedural sense is much narrower."
+  },
+  {
+    "id": "it_fancy_vocab_455",
+    "en": "To denigrate",
+    "verdict": "drop",
+    "reason": "Denigrar is a direct formal cognate familiar at C1, and the prompt does not distinguish personal disparagement from reputational discrediting."
+  },
+  {
+    "id": "it_fancy_vocab_456",
+    "en": "To deride",
+    "verdict": "keep",
+    "reason": "The contemptuous force of public mockery makes ridiculizar or mofarse de more instructive than a generic reírse de."
+  },
+  {
+    "id": "it_fancy_vocab_457",
+    "en": "To discern",
+    "verdict": "drop",
+    "reason": "Discernir is a transparent advanced cognate, and the isolated infinitive does not select perceptual detection, conceptual distinction or judgment."
+  },
+  {
+    "id": "it_fancy_vocab_458",
+    "en": "To disseminate",
+    "verdict": "keep",
+    "reason": "Informational dissemination favors difundir and exposes the more physical or technical associations of automatic cognate diseminar."
+  },
+  {
+    "id": "it_fancy_vocab_459",
+    "en": "To elicit",
+    "verdict": "keep",
+    "reason": "The source alternates between causing a reaction and drawing out information, requiring a context-sensitive Spanish verb."
+  },
+  {
+    "id": "it_fancy_vocab_460",
+    "en": "To embellish",
+    "verdict": "keep",
+    "reason": "Adorning an account with exaggerated or invented details is a valuable figurative sense not reliably conveyed by bare embellecer."
+  },
+  {
+    "id": "it_fancy_vocab_461",
+    "en": "To espouse",
+    "verdict": "keep",
+    "reason": "Publicly adopting or advocating a position teaches defender or propugnar and carries a genuine false-friend risk with esposar."
+  },
+  {
+    "id": "it_fancy_vocab_462",
+    "en": "To fabricate",
+    "verdict": "keep",
+    "reason": "The false-information sense usually calls for inventar or inventarse rather than automatic physical-manufacture fabricar."
+  },
+  {
+    "id": "it_fancy_vocab_463",
+    "en": "To fathom",
+    "verdict": "keep",
+    "reason": "Achieving understanding calls for alcanzar a comprender and materially corrects legacy Profundizar, which describes deeper study."
+  },
+  {
+    "id": "it_fancy_vocab_464",
+    "en": "To glean",
+    "verdict": "keep",
+    "reason": "Obtaining limited information from evidence requires a productive analytical rendering and rejects the overly literal legacy Espigar."
+  },
+  {
+    "id": "it_fancy_vocab_465",
+    "en": "To harp",
+    "verdict": "keep",
+    "reason": "The phrasal sense harp on encodes tiresome repetition and materially corrects the unusable legacy Arpar."
+  },
+  {
+    "id": "it_fancy_vocab_466",
+    "en": "To impugn",
+    "verdict": "drop",
+    "reason": "The preceding batch's retained To dispute card already teaches impugnar for formally challenging validity, leaving no distinct sense here."
+  },
+  {
+    "id": "it_fancy_vocab_467",
+    "en": "To inculcate",
+    "verdict": "keep",
+    "reason": "The conventional inculcar algo en alguien construction adds advanced production value beyond recognition of the cognate."
+  },
+  {
+    "id": "it_fancy_vocab_468",
+    "en": "To indict",
+    "verdict": "keep",
+    "reason": "The jurisdiction-sensitive formal accusation must be distinguished from both a generic accusation and a conviction."
+  },
+  {
+    "id": "it_fancy_vocab_469",
+    "en": "To insinuate",
+    "verdict": "drop",
+    "reason": "Insinuar is a familiar direct cognate, and the bare prompt does not select indirect suggestion, gradual insertion or ingratiation."
+  },
+  {
+    "id": "it_fancy_vocab_470",
+    "en": "To laud",
+    "verdict": "keep",
+    "reason": "The elevated public-praise sense motivates an idiomatic institutional choice between elogiar and stronger ensalzar."
+  },
+  {
+    "id": "it_fancy_vocab_471",
+    "en": "To mull",
+    "verdict": "drop",
+    "reason": "Carefully weighing a proposal duplicates the retained To ponder card in the preceding batch, which already teaches sopesar."
+  },
+  {
+    "id": "it_fancy_vocab_472",
+    "en": "To opine",
+    "verdict": "drop",
+    "reason": "Opinar is basic and neutral in Spanish; the English verb's pompous or ironic register does not create a distinct Spanish production target."
+  },
+  {
+    "id": "it_fancy_vocab_473",
+    "en": "To postulate",
+    "verdict": "drop",
+    "reason": "The retained To posit card in the preceding batch already teaches academic postular, so this prompt offers no distinct sense or construction."
+  },
+  {
+    "id": "it_fancy_vocab_474",
+    "en": "To promulgate",
+    "verdict": "keep",
+    "reason": "The formal legal act supports a precise object-bearing headword and a useful warning against conflating promulgation with sanction or publicity."
+  },
+  {
+    "id": "it_fancy_vocab_475",
+    "en": "To rebuff",
+    "verdict": "keep",
+    "reason": "Firm rejection of a proposal needs rechazar de plano and differs from legacy Desairar, which more naturally targets a person or advance."
+  },
+  {
+    "id": "it_fancy_vocab_476",
+    "en": "To recapitulate",
+    "verdict": "drop",
+    "reason": "Recapitular and resumir are familiar, and the isolated prompt supplies no distinctive summarizing frame beyond a transparent formal cognate."
+  },
+  {
+    "id": "it_fancy_vocab_477",
+    "en": "To refute",
+    "verdict": "keep",
+    "reason": "The important evidential distinction between disproving, denying and merely disagreeing gives the transparent cognate real advanced value."
+  },
+  {
+    "id": "it_fancy_vocab_478",
+    "en": "To reiterate",
+    "verdict": "drop",
+    "reason": "Reiterar is a familiar transparent formal cognate, and the prompt offers no distinct rhetorical frame beyond saying something again."
+  },
+  {
+    "id": "it_fancy_vocab_479",
+    "en": "To repudiate",
+    "verdict": "keep",
+    "reason": "Strong public or moral disavowal is distinct from routine rejection and warrants explicit treatment of the verb's emphatic force."
+  },
+  {
+    "id": "it_fancy_vocab_480",
+    "en": "To ruminate",
+    "verdict": "keep",
+    "reason": "Figurative rumiar is marked, context-dependent and usefully contrasted with neutral reflexionar and conversational darle vueltas."
+  }
+]

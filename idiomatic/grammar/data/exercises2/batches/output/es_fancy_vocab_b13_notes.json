@@ -1,0 +1,152 @@
+[
+  {
+    "id": "it_fancy_vocab_481",
+    "en": "To stipulate",
+    "category": "lexical-verb",
+    "tl": "estipular algo",
+    "alts": [
+      "establecer expresamente algo"
+    ],
+    "register": "Formal, especially in contracts, statutes and negotiated agreements; establecer expresamente is less technical and often clearer outside legal prose.",
+    "trap": "In hypothetical reasoning, English stipulate can mean assume; Spanish estipular normally sets an explicit condition or term, not a provisional assumption.",
+    "example_tl": "El convenio estipula que los proveedores deberán revelar cualquier subcontratación antes de transferir datos sanitarios fuera del Espacio Económico Europeo.",
+    "example_en": "The agreement stipulates that providers must disclose any subcontracting before transferring health data outside the European Economic Area.",
+    "cloze": "El convenio {{c1::estipula}} que los proveedores deberán revelar cualquier subcontratación antes de transferir datos sanitarios fuera del Espacio Económico Europeo.",
+    "note": "The legacy rendering is accurate for the formal condition-setting sense selected here; the note excludes the distinct hypothetical use of English stipulate."
+  },
+  {
+    "id": "it_fancy_vocab_482",
+    "en": "To substantiate",
+    "category": "lexical-verb",
+    "tl": "fundamentar algo con pruebas",
+    "alts": [
+      "respaldar algo con pruebas"
+    ],
+    "register": "Neutral-formal in evidential, legal and analytical prose; acreditar is especially apt when the evidence establishes a fact or allegation.",
+    "trap": "Sustanciar is not the default cognate: in Spanish legal usage it commonly means to conduct or process proceedings, rather than support a claim with evidence.",
+    "example_tl": "La empresa no pudo fundamentar su acusación con pruebas verificables, pese a que había repetido la misma versión ante tres comisiones parlamentarias.",
+    "example_en": "The company could not substantiate its accusation with verifiable evidence, although it had repeated the same account before three parliamentary committees.",
+    "cloze": "La empresa no pudo {{c1::fundamentar}} su acusación con pruebas verificables, pese a que había repetido la misma versión ante tres comisiones parlamentarias.",
+    "note": "The legacy rendering captures the core sense; the production headword adds the evidential complement that distinguishes substantiation from bare assertion. Self-review removed acreditar algo because it did not substitute naturally with the example's accusation object."
+  },
+  {
+    "id": "it_fancy_vocab_483",
+    "en": "To surmise",
+    "category": "lexical-verb",
+    "tl": "conjeturar que...",
+    "alts": [
+      "deducir provisionalmente que..."
+    ],
+    "register": "Neutral-formal for a tentative conclusion drawn from incomplete evidence; more deliberate than a casual suponer.",
+    "trap": "Suponer is broader and may express an unsupported assumption; surmise normally suggests a tentative inference from limited clues.",
+    "example_tl": "Los analistas conjeturaron que el apagón había sido deliberado, aunque la ausencia de registros impedía atribuirlo con rigor a ningún actor.",
+    "example_en": "The analysts surmised that the outage had been deliberate, although the lack of records prevented them from rigorously attributing it to any actor.",
+    "cloze": "Los analistas {{c1::conjeturaron}} que el apagón había sido deliberado, aunque la ausencia de registros impedía atribuirlo con rigor a ningún actor.",
+    "note": "Materially refines legacy Suponer by preserving the tentative inference from incomplete evidence."
+  },
+  {
+    "id": "it_fancy_vocab_484",
+    "en": "To tout",
+    "category": "lexical-verb",
+    "tl": "promocionar algo como...",
+    "alts": [
+      "presentar algo como...",
+      "ensalzar algo"
+    ],
+    "register": "Neutral in media and commercial criticism for public, interested praise; ensalzar is more elevated and foregrounds praise rather than promotion.",
+    "trap": "The English verb has no usable Spanish cognate: choose promocionar, presentar como or ensalzar according to whether marketing, framing or emphatic praise dominates.",
+    "example_tl": "El ministro promocionó el sistema biométrico como una garantía de seguridad, mientras evitaba explicar quién conservaría los datos y durante cuánto tiempo.",
+    "example_en": "The minister touted the biometric system as a guarantee of security while avoiding explaining who would retain the data and for how long.",
+    "cloze": "El ministro {{c1::promocionó}} el sistema biométrico como una garantía de seguridad, mientras evitaba explicar quién conservaría los datos y durante cuánto tiempo.",
+    "note": "Materially replaces legacy Tout, which leaves the English word untranslated and is not a Spanish verb."
+  },
+  {
+    "id": "it_fancy_vocab_487",
+    "en": "To vilify",
+    "category": "lexical-verb",
+    "tl": "demonizar a alguien o algo",
+    "alts": [
+      "denigrar a alguien o algo",
+      "vilipendiar a alguien o algo"
+    ],
+    "register": "Neutral-formal and usually critical of portraying a person or group as reprehensible; vilipendiar is markedly more elevated and literary.",
+    "trap": "Vilipendiar is valid Spanish, but its elevated register makes it a poor automatic choice for the current media use of English vilify.",
+    "example_tl": "La campaña demonizó a las organizaciones humanitarias, presentándolas como cómplices de las redes criminales sin aportar pruebas de esa colaboración.",
+    "example_en": "The campaign vilified humanitarian organizations, portraying them as accomplices of criminal networks without providing evidence of that collaboration.",
+    "cloze": "La campaña {{c1::demonizó}} a las organizaciones humanitarias, presentándolas como cómplices de las redes criminales sin aportar pruebas de esa colaboración.",
+    "note": "The legacy rendering is semantically possible but overly elevated for the professional media context selected here."
+  },
+  {
+    "id": "it_fancy_vocab_488",
+    "en": "To warrant",
+    "category": "lexical-verb",
+    "tl": "justificar algo",
+    "alts": [],
+    "register": "Neutral-formal when evidence or circumstances provide sufficient grounds for a conclusion or action; other senses require autorizar or garantizar.",
+    "trap": "Garantizar means ensure or guarantee; it does not express the evidential sense in which facts warrant a conclusion.",
+    "example_tl": "Las irregularidades detectadas justifican una auditoría independiente, pero no el cierre inmediato de un servicio del que dependen miles de usuarios.",
+    "example_en": "The irregularities detected warrant an independent audit, but not the immediate shutdown of a service on which thousands of users depend.",
+    "cloze": "Las irregularidades detectadas {{c1::justifican}} una auditoría independiente, pero no el cierre inmediato de un servicio del que dependen miles de usuarios.",
+    "note": "Materially replaces legacy Garantizar, which selects the ensure or guarantee sense rather than the provide-grounds sense used here. Self-review replaced an awkward justificar concluir construction and removed a weaker alternative."
+  },
+  {
+    "id": "it_fancy_vocab_492",
+    "en": "The contention",
+    "category": "lexical-noun",
+    "tl": "la tesis",
+    "alts": [
+      "la afirmación"
+    ],
+    "register": "Neutral-formal in argumentation for a claim or position that someone advances and defends; not necessarily a hostile dispute.",
+    "trap": "Spanish contención means restraint, containment or cost control; it is a false friend for contention in the sense of an argued claim.",
+    "example_tl": "La tesis de que la moderación privada protege por sí sola el debate público ignora los incentivos comerciales que premian la polarización.",
+    "example_en": "The contention that private moderation protects public debate by itself ignores the commercial incentives that reward polarization.",
+    "cloze": "{{c1::La tesis}} de que la moderación privada protege por sí sola el debate público ignora los incentivos comerciales que premian la polarización.",
+    "note": "Materially replaces legacy Contención, a false friend that does not denote an argumentative claim. Self-review shortened the alternative to la afirmación so it substitutes naturally in the example's de que frame."
+  },
+  {
+    "id": "it_fancy_vocab_496",
+    "en": "The elucidation",
+    "category": "lexical-noun",
+    "tl": "la aclaración",
+    "alts": [
+      "el esclarecimiento"
+    ],
+    "register": "Neutral in explanatory and institutional prose; esclarecimiento is more formal and often suggests resolving something obscure or disputed.",
+    "trap": "Although elucidación exists, it is rare and markedly learned in current Spanish; aclaración or esclarecimiento is normally more idiomatic.",
+    "example_tl": "La aclaración del tribunal disipó una ambigüedad que permitía a las plataformas excluir a investigadores independientes de sus archivos publicitarios.",
+    "example_en": "The court's elucidation dispelled an ambiguity that allowed platforms to exclude independent researchers from their advertising archives.",
+    "cloze": "{{c1::La aclaración}} del tribunal disipó una ambigüedad que permitía a las plataformas excluir a investigadores independientes de sus archivos publicitarios.",
+    "note": "Materially replaces legacy Elucidación with the idiomatic default; the cognate remains possible only in unusually learned prose."
+  },
+  {
+    "id": "it_fancy_vocab_500",
+    "en": "The insight",
+    "category": "lexical-noun",
+    "tl": "una idea reveladora",
+    "alts": [
+      "una observación perspicaz"
+    ],
+    "register": "Neutral-formal in analysis and criticism for a valuable new understanding or observation; the exact noun phrase depends on what the insight contains.",
+    "trap": "Perspicacia normally names a person's capacity for sharp understanding, not one countable insight produced by a study or argument.",
+    "example_tl": "El estudio aporta una idea reveladora sobre cómo los sistemas de recomendación convierten pequeñas preferencias iniciales en patrones duraderos de consumo informativo.",
+    "example_en": "The study offers an insight into how recommendation systems turn small initial preferences into lasting patterns of news consumption.",
+    "cloze": "El estudio aporta {{c1::una idea reveladora}} sobre cómo los sistemas de recomendación convierten pequeñas preferencias iniciales en patrones duraderos de consumo informativo.",
+    "note": "Materially replaces legacy Perspicacia, which denotes the faculty of insight rather than an individual analytical finding."
+  },
+  {
+    "id": "it_fancy_vocab_512",
+    "en": "The rebuttal",
+    "category": "lexical-noun",
+    "tl": "la réplica",
+    "alts": [
+      "el contraargumento"
+    ],
+    "register": "Neutral-formal in debate, litigation and public controversy for a response intended to answer or undermine an opposing claim.",
+    "trap": "A rebuttal is an opposing response and need not succeed; refutación more strongly presents an argument or evidence as disproving the claim.",
+    "example_tl": "La réplica de la empresa cuestionó la metodología del informe, pero no respondió a los correos que demostraban la coordinación con el Gobierno.",
+    "example_en": "The company's rebuttal challenged the report's methodology but did not address the emails that demonstrated coordination with the government.",
+    "cloze": "{{c1::La réplica}} de la empresa cuestionó la metodología del informe, pero no respondió a los correos que demostraban la coordinación con el Gobierno.",
+    "note": "Materially refines legacy Refutación by preserving the distinction between an attempted opposing response and a refutation presented as disproof."
+  }
+]

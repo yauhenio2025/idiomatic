@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_361",
+    "en": "Diverse",
+    "verdict": "keep",
+    "reason": "Italian distinguishes eterogeneo or variegato from diverso meaning different or several, creating a useful false-friend and sense-selection contrast."
+  },
+  {
+    "id": "it_fancy_vocab_362",
+    "en": "Dynamic",
+    "verdict": "drop",
+    "reason": "Dinamico is a transparent, familiar adjective across professional and technical registers, with predictable agreement and no narrower sense selected."
+  },
+  {
+    "id": "it_fancy_vocab_363",
+    "en": "Static",
+    "verdict": "drop",
+    "reason": "Statico is a transparent, high-frequency technical cognate with predictable morphology and no instructive usage distinction in the isolated prompt."
+  },
+  {
+    "id": "it_fancy_vocab_364",
+    "en": "Responsive",
+    "verdict": "keep",
+    "reason": "Institutional responsiveness requires sensibile or attento alle esigenze di, whereas the legacy reattivo captures only reacting promptly."
+  },
+  {
+    "id": "it_fancy_vocab_365",
+    "en": "Detached",
+    "verdict": "keep",
+    "reason": "An argument detached from evidence is avulso da or scollegato da, not the legacy adjective normally used for emotional distance."
+  },
+  {
+    "id": "it_fancy_vocab_366",
+    "en": "Limited",
+    "verdict": "drop",
+    "reason": "Limitato is elementary, transparent vocabulary with regular agreement, and the prompt selects no contrast such as scarce, restricted or finite."
+  },
+  {
+    "id": "it_fancy_vocab_367",
+    "en": "Scalable",
+    "verdict": "drop",
+    "reason": "Scalabile is an established and transparent technology cognate already familiar at C1, with no specialized scaling constraint supplied here."
+  },
+  {
+    "id": "it_fancy_vocab_368",
+    "en": "Convergent",
+    "verdict": "drop",
+    "reason": "Convergente is a direct formal and technical cognate with predictable agreement and no additional construction to teach."
+  },
+  {
+    "id": "it_fancy_vocab_369",
+    "en": "Divergent",
+    "verdict": "drop",
+    "reason": "Divergente is a direct formal and technical cognate with predictable agreement and no selected contrast beyond its ordinary meaning."
+  },
+  {
+    "id": "it_fancy_vocab_370",
+    "en": "Autonomous",
+    "verdict": "drop",
+    "reason": "Autonomo is a transparent, high-frequency policy and technology cognate whose agreement and usage are already routine below C1."
+  },
+  {
+    "id": "it_fancy_vocab_371",
+    "en": "Collaborative",
+    "verdict": "drop",
+    "reason": "Collaborativo is a transparent and ubiquitous organizational cognate with regular agreement and no distinctive complement or sense here."
+  },
+  {
+    "id": "it_fancy_vocab_372",
+    "en": "Sustainable",
+    "verdict": "drop",
+    "reason": "Sostenibile is familiar core policy vocabulary with a transparent meaning and no narrower environmental, fiscal or organizational sense selected."
+  },
+  {
+    "id": "it_fancy_vocab_373",
+    "en": "Consumptive",
+    "verdict": "keep",
+    "reason": "The resource-consuming sense needs an Italian phrase such as ad alto consumo di risorse and must be separated from consumistico."
+  },
+  {
+    "id": "it_fancy_vocab_374",
+    "en": "Neutral",
+    "verdict": "keep",
+    "reason": "The overlapping but nonidentical distribution of neutrale and neutro across institutional and descriptive contexts merits advanced practice."
+  },
+  {
+    "id": "it_fancy_vocab_375",
+    "en": "the Privacy",
+    "verdict": "drop",
+    "reason": "La privacy is an established, ubiquitous loanword in Italian technology discourse and supplies no new C1-level construction in this bare prompt."
+  },
+  {
+    "id": "it_fancy_vocab_376",
+    "en": "the Data",
+    "verdict": "keep",
+    "reason": "Italian i dati takes plural agreement unlike the common English mass-noun use, while la data is a consequential false friend."
+  },
+  {
+    "id": "it_fancy_vocab_377",
+    "en": "the Regulation",
+    "verdict": "keep",
+    "reason": "English regulation distributes across regolamentazione, normativa, norma and regolamento, so the process sense and its di complement have teaching value."
+  },
+  {
+    "id": "it_fancy_vocab_378",
+    "en": "the Advertisement",
+    "verdict": "keep",
+    "reason": "The singular item requires annuncio or inserzione pubblicitaria, whereas legacy pubblicità commonly denotes advertising as an activity or sector."
+  },
+  {
+    "id": "it_fancy_vocab_379",
+    "en": "the User",
+    "verdict": "drop",
+    "reason": "L'utente is elementary and ubiquitous digital vocabulary, with no specialized sense or construction selected by the isolated prompt."
+  },
+  {
+    "id": "it_fancy_vocab_380",
+    "en": "the Content",
+    "verdict": "drop",
+    "reason": "Il contenuto is a transparent, high-frequency media and technology noun, and the prompt provides no useful countability or domain distinction."
+  },
+  {
+    "id": "it_fancy_vocab_381",
+    "en": "the Revenue",
+    "verdict": "keep",
+    "reason": "Ricavi and entrate must be distinguished from profit, utile, reddito and fatturato in economic and corporate prose."
+  },
+  {
+    "id": "it_fancy_vocab_382",
+    "en": "the Market",
+    "verdict": "drop",
+    "reason": "Il mercato is elementary, transparent economic vocabulary with no compound term, market structure or governed expression selected."
+  },
+  {
+    "id": "it_fancy_vocab_383",
+    "en": "the Competition",
+    "verdict": "keep",
+    "reason": "Economic and antitrust competition is concorrenza, while the tempting cognate competizione covers broader contests and rivalry."
+  },
+  {
+    "id": "it_fancy_vocab_384",
+    "en": "the Security",
+    "verdict": "drop",
+    "reason": "Sicurezza is familiar core vocabulary, and the bare source does not choose among cybersecurity, safety, assurance, collateral or national security."
+  },
+  {
+    "id": "it_fancy_vocab_385",
+    "en": "the Breach",
+    "verdict": "keep",
+    "reason": "The data-policy sense requires the established term violazione dei dati personali and a distinction from the narrower fuga di dati."
+  },
+  {
+    "id": "it_fancy_vocab_386",
+    "en": "the Ethics",
+    "verdict": "drop",
+    "reason": "L'etica is a transparent, familiar academic cognate whose singular number and feminine gender are routine for a C1 learner."
+  },
+  {
+    "id": "it_fancy_vocab_387",
+    "en": "the Accessibility",
+    "verdict": "drop",
+    "reason": "L'accessibilità is a transparent, established inclusion and technology cognate with no particular standard, audience or construction specified."
+  },
+  {
+    "id": "it_fancy_vocab_388",
+    "en": "the Consumer",
+    "verdict": "drop",
+    "reason": "Il consumatore is familiar, transparent economic vocabulary with ordinary morphology and no instructive legal distinction in this prompt."
+  },
+  {
+    "id": "it_fancy_vocab_389",
+    "en": "the Profit",
+    "verdict": "keep",
+    "reason": "Corporate reporting favors utile, while profitto is broader; both must be distinguished from pre-cost ricavi and the generic beneficio."
+  },
+  {
+    "id": "it_fancy_vocab_390",
+    "en": "the Trust",
+    "verdict": "drop",
+    "reason": "La fiducia is core vocabulary, while the isolated English prompt is too broad to select confidence, a legal trust or an antitrust combination."
+  },
+  {
+    "id": "it_fancy_vocab_391",
+    "en": "the Policy",
+    "verdict": "keep",
+    "reason": "English policy is not automatically bare politica; public policy, corporate policy, an insurance policy and a privacy notice require different Italian choices."
+  },
+  {
+    "id": "it_fancy_vocab_392",
+    "en": "the Lobbying",
+    "verdict": "drop",
+    "reason": "Il lobbying is an established, familiar loanword, and its institutional construction is already taught by the retained fare lobbying presso verb card in this topic."
+  },
+  {
+    "id": "it_fancy_vocab_393",
+    "en": "the Accountability",
+    "verdict": "keep",
+    "reason": "Italian lacks one universal equivalent: responsabilità is too broad, while accountability centrally involves an obligation to explain and answer for decisions."
+  },
+  {
+    "id": "it_fancy_vocab_394",
+    "en": "the Stakeholder",
+    "verdict": "keep",
+    "reason": "Portatore di interesse and parte interessata teach institutional register and prevent the consequential confusion of stakeholder with shareholder."
+  },
+  {
+    "id": "it_fancy_vocab_395",
+    "en": "the Consolidation",
+    "verdict": "drop",
+    "reason": "Il consolidamento is a transparent formal cognate, and the prompt does not select accounting consolidation, market concentration or stabilization."
+  },
+  {
+    "id": "it_fancy_vocab_396",
+    "en": "the Acquisition",
+    "verdict": "drop",
+    "reason": "L'acquisizione is transparent, familiar business vocabulary with predictable morphology and no deal structure or alternative sense specified."
+  },
+  {
+    "id": "it_fancy_vocab_397",
+    "en": "the Expansion",
+    "verdict": "drop",
+    "reason": "L'espansione is a direct, high-frequency formal cognate with ordinary di or in complements and no distinctive usage issue here."
+  },
+  {
+    "id": "it_fancy_vocab_398",
+    "en": "the Restriction",
+    "verdict": "drop",
+    "reason": "La restrizione is a transparent, familiar policy cognate, and the prompt does not identify a legally binding vincolo or other narrower constraint."
+  },
+  {
+    "id": "it_fancy_vocab_399",
+    "en": "the Influence",
+    "verdict": "drop",
+    "reason": "L'influenza is transparent and familiar in political and media analysis, with no selected contrast among influence, leverage and interference."
+  },
+  {
+    "id": "it_fancy_vocab_400",
+    "en": "the Manipulation",
+    "verdict": "drop",
+    "reason": "La manipolazione is a transparent, high-frequency critical cognate with predictable morphology and no specialized technique or construction supplied."
+  }
+]

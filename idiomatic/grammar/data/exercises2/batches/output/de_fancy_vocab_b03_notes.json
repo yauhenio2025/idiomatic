@@ -1,0 +1,303 @@
+[
+  {
+    "id": "it_fancy_vocab_081",
+    "en": "To transcend",
+    "category": "lexical-verb",
+    "tl": "über etwas hinausgehen",
+    "alts": [],
+    "register": "Neutral-formal in analytical prose for exceeding the scope or limits of a debate; transzendieren is markedly theoretical or philosophical.",
+    "trap": "The idiomatic frame uses über plus the accusative and the separable verb hinausgehen: etwas geht über einen Ansatz hinaus.",
+    "example_tl": "Der Bericht geht über die übliche Debatte zur Plattformhaftung hinaus, indem er die demokratische Kontrolle digitaler Infrastrukturen grundsätzlich neu bestimmt.",
+    "example_en": "The report transcends the usual debate on platform liability by fundamentally redefining the democratic control of digital infrastructure.",
+    "cloze": "Der Bericht {{c1::geht}} {{c1::über}} die übliche Debatte zur Plattformhaftung {{c1::hinaus}}, indem er die demokratische Kontrolle digitaler Infrastrukturen grundsätzlich neu bestimmt.",
+    "note": "Materially refines old_back: transzendieren is grammatically possible but unnecessarily specialist for the analytical scope-exceeding sense fixed by the example."
+  },
+  {
+    "id": "it_fancy_vocab_082",
+    "en": "To immerse",
+    "category": "lexical-verb",
+    "tl": "sich in etwas vertiefen",
+    "alts": [
+      "sich eingehend mit etwas befassen"
+    ],
+    "register": "Neutral-formal for sustained intellectual engagement with a subject or body of material; in etwas eintauchen is more openly metaphorical.",
+    "trap": "This sense is reflexive and takes in plus the accusative; transitive etwas vertiefen instead means to deepen something.",
+    "example_tl": "Vor der Veröffentlichung vertieften sich die Reporter monatelang in interne Dokumente, um die informellen Entscheidungswege des Konzerns präzise zu rekonstruieren.",
+    "example_en": "Before publication, the reporters immersed themselves in internal documents for months to reconstruct the corporation's informal decision-making channels precisely.",
+    "cloze": "Vor der Veröffentlichung {{c1::vertieften sich}} die Reporter monatelang {{c1::in}} interne Dokumente, um die informellen Entscheidungswege des Konzerns präzise zu rekonstruieren.",
+    "note": "The isolated source is polysemous. This note selects sustained study; old_back is viable for entering a topic or environment but is less precise with documentary material."
+  },
+  {
+    "id": "it_fancy_vocab_084",
+    "en": "To juxtapose",
+    "category": "lexical-verb",
+    "tl": "zwei Dinge einander gegenüberstellen",
+    "alts": [
+      "etwas mit etwas kontrastieren"
+    ],
+    "register": "Written-formal in criticism and analysis for placing two objects, claims or accounts in a deliberate comparative contrast.",
+    "trap": "Gegenüberstellen is separable; in the asymmetric frame, the contrasted item is dative: eine These den Daten gegenüberstellen.",
+    "example_tl": "Die Dokumentation stellt die öffentlichen Versprechen des Konzerns seinen internen Risikoanalysen gegenüber und macht dadurch die strategische Beschönigung regulatorischer Folgen sichtbar.",
+    "example_en": "The documentary juxtaposes the corporation's public promises with its internal risk analyses, thereby revealing how regulatory consequences were strategically glossed over.",
+    "cloze": "Die Dokumentation {{c1::stellt}} die öffentlichen Versprechen des Konzerns seinen internen Risikoanalysen {{c1::gegenüber}} und macht dadurch die strategische Beschönigung regulatorischer Folgen sichtbar.",
+    "note": "Materially refines old_back: nebeneinanderstellen can describe merely placing things side by side, whereas gegenüberstellen encodes the analytical comparison intended here. Self-review: normalized the alternative to its idiomatic mit-plus-dative frame and made the English rendering of Beschönigung less overstated."
+  },
+  {
+    "id": "it_fancy_vocab_085",
+    "en": "To overshadow",
+    "category": "lexical-verb",
+    "tl": "etwas in den Schatten stellen",
+    "alts": [
+      "etwas überlagern"
+    ],
+    "register": "Written-neutral and figurative when one issue, event or achievement makes another less noticeable; it can also mean outshining a comparator.",
+    "trap": "Überschatten often suggests that a negative event casts a pall over something; in den Schatten stellen more directly marks reduced salience or impact.",
+    "example_tl": "Die mediale Aufregung um generative KI stellte den tatsächlichen Arbeitskonflikt in den Schatten, obwohl Tausende Beschäftigte von den Kürzungen unmittelbar betroffen waren.",
+    "example_en": "The media excitement surrounding generative AI overshadowed the actual labor dispute, although thousands of employees were directly affected by the cuts.",
+    "cloze": "Die mediale Aufregung um generative KI {{c1::stellte}} den tatsächlichen Arbeitskonflikt {{c1::in den Schatten}}, obwohl Tausende Beschäftigte von den Kürzungen unmittelbar betroffen waren.",
+    "note": "The source is polysemous. This note selects the reduced-salience sense; old_back remains natural when a troubling event dominates the atmosphere."
+  },
+  {
+    "id": "it_fancy_vocab_086",
+    "en": "To compartmentalize",
+    "category": "lexical-verb",
+    "tl": "etwas gedanklich von etwas trennen",
+    "alts": [],
+    "register": "Neutral-analytical for mentally isolating concerns or areas that are actually connected; kompartimentieren is specialist jargon outside technical domains.",
+    "trap": "The tempting cognate kompartimentieren is common in specialist descriptions of compartments but is not the unmarked verb for psychological separation.",
+    "example_tl": "Die Untersuchung zeigt, wie Führungskräfte ethische Bedenken gedanklich von Geschäftsentscheidungen trennten, um aggressive Datennutzung intern als rein technische Frage darzustellen.",
+    "example_en": "The investigation shows how executives compartmentalized ethical concerns from business decisions to portray aggressive data use internally as a purely technical matter.",
+    "cloze": "Die Untersuchung zeigt, wie Führungskräfte ethische Bedenken {{c1::gedanklich von}} Geschäftsentscheidungen {{c1::trennten}}, um aggressive Datennutzung intern als rein technische Frage darzustellen.",
+    "note": "Materially diverges from old_back, which is too specialized for the cognitive sense fixed by the example."
+  },
+  {
+    "id": "it_fancy_vocab_087",
+    "en": "To interconnect",
+    "category": "lexical-verb",
+    "tl": "Dinge miteinander verknüpfen",
+    "alts": [
+      "Dinge miteinander verbinden"
+    ],
+    "register": "Neutral in technical and institutional prose for establishing functional links among systems, datasets or processes.",
+    "trap": "With two separately named objects, verknüpfen takes an accusative object and mit plus the dative; plural entities can be linked miteinander.",
+    "example_tl": "Die Reform verknüpft lokale Melderegister miteinander, ohne klare Grenzen für den behördenübergreifenden Zugriff oder die nachträgliche Zusammenführung sensibler Datensätze festzulegen.",
+    "example_en": "The reform interconnects local population registers without setting clear limits on cross-agency access or the subsequent merging of sensitive datasets.",
+    "cloze": "Die Reform {{c1::verknüpft}} lokale Melderegister {{c1::miteinander}}, ohne klare Grenzen für den behördenübergreifenden Zugriff oder die nachträgliche Zusammenführung sensibler Datensätze festzulegen.",
+    "note": "Old_back gives the correct core verb but omits the reciprocal or mit-plus-dative construction that makes the item production-ready."
+  },
+  {
+    "id": "it_fancy_vocab_088",
+    "en": "To contextualize",
+    "category": "lexical-verb",
+    "tl": "etwas in einen größeren Zusammenhang einordnen",
+    "alts": [
+      "etwas kontextualisieren"
+    ],
+    "register": "Neutral-formal in journalism and analysis; kontextualisieren is established but sounds more academic and technical.",
+    "trap": "Einordnen is separable and takes in plus the accusative for the interpretive context; zu is not part of a dictionary-form infinitive.",
+    "example_tl": "Die Zeitung ordnete die neuen Cyberangriffe in einen größeren geopolitischen Zusammenhang ein, statt jede Eskalation als isolierten Zwischenfall ohne Vorgeschichte darzustellen.",
+    "example_en": "The newspaper contextualized the new cyberattacks within a broader geopolitical framework instead of portraying each escalation as an isolated incident without a history.",
+    "cloze": "Die Zeitung {{c1::ordnete}} die neuen Cyberangriffe {{c1::in}} einen größeren geopolitischen Zusammenhang {{c1::ein}}, statt jede Eskalation als isolierten Zwischenfall ohne Vorgeschichte darzustellen.",
+    "note": "Materially improves old_back: the cognate is possible, but the legacy form incorrectly includes zu and capitalization rather than supplying a production headword."
+  },
+  {
+    "id": "it_fancy_vocab_089",
+    "en": "To deviate",
+    "category": "lexical-verb",
+    "tl": "von etwas abweichen",
+    "alts": [],
+    "register": "Neutral-formal for departing from a rule, standard, course or previous position.",
+    "trap": "Abweichen governs von plus the dative and is strong and separable: weicht ab, wich ab, ist abgewichen.",
+    "example_tl": "Die Plattform wich ohne öffentliche Begründung von ihrem eigenen Moderationsstandard ab, sobald staatliche Stellen die Entfernung regierungskritischer Beiträge verlangten.",
+    "example_en": "The platform deviated from its own moderation standard without public justification as soon as government agencies demanded the removal of content critical of the government.",
+    "cloze": "Die Plattform {{c1::wich}} ohne öffentliche Begründung {{c1::von}} ihrem eigenen Moderationsstandard {{c1::ab}}, sobald staatliche Stellen die Entfernung regierungskritischer Beiträge verlangten.",
+    "note": "Old_back is accurate but omits both the governed preposition and the strong separable morphology that justify retention. Self-review: changed whenever to as soon as in the translation to preserve sobald precisely."
+  },
+  {
+    "id": "it_fancy_vocab_091",
+    "en": "To resonate",
+    "category": "lexical-verb",
+    "tl": "Widerhall finden",
+    "alts": [
+      "auf Resonanz stoßen"
+    ],
+    "register": "Written-formal for an idea, demand or account receiving a meaningful public response; Anklang finden more often implies favorable reception.",
+    "trap": "In Resonanz gehen is not idiomatic standard German for public reception; technical resonance is expressed with in Resonanz treten or geraten.",
+    "example_tl": "Die Forderung nach öffentlicher Kontrolle digitaler Infrastrukturen fand auch außerhalb der Fachdebatte Widerhall, weil sie alltägliche Erfahrungen mit algorithmischer Abhängigkeit aufgriff.",
+    "example_en": "The demand for public control of digital infrastructure resonated beyond the specialist debate because it drew on everyday experiences of algorithmic dependence.",
+    "cloze": "Die Forderung nach öffentlicher Kontrolle digitaler Infrastrukturen {{c1::fand}} auch außerhalb der Fachdebatte {{c1::Widerhall}}, weil sie alltägliche Erfahrungen mit algorithmischer Abhängigkeit aufgriff.",
+    "note": "Materially diverges from the unnatural legacy phrase. Self-review: selected Widerhall finden rather than Anklang finden to avoid adding an invariably positive evaluation."
+  },
+  {
+    "id": "it_fancy_vocab_095",
+    "en": "the Hegemony",
+    "category": "lexical-noun",
+    "tl": "die Hegemonie über etwas",
+    "alts": [
+      "die Vorherrschaft über etwas"
+    ],
+    "register": "Formal in political theory, geopolitics and market analysis; Vorherrschaft is less theoretical and foregrounds concrete dominance.",
+    "trap": "The domain controlled is normally introduced by über plus the accusative: Hegemonie über einen Markt or über eine Region.",
+    "example_tl": "Der Konzern sicherte seine Hegemonie über den Markt für mobile Betriebssysteme durch exklusive Verträge ab, die kleineren Entwicklern den Zugang zu zentralen Gerätefunktionen erschwerten.",
+    "example_en": "The corporation secured its hegemony over the mobile operating-system market through exclusive contracts that made it harder for smaller developers to access key device functions.",
+    "cloze": "Der Konzern sicherte seine {{c1::Hegemonie über}} den Markt für mobile Betriebssysteme durch exklusive Verträge ab, die kleineren Entwicklern den Zugang zu zentralen Gerätefunktionen erschwerten.",
+    "note": "Old_back is accurate; the production headword adds the common complement needed for professional use. Self-review: specified the operating-system market as the domain of hegemony for a more natural institutional collocation."
+  },
+  {
+    "id": "it_fancy_vocab_100",
+    "en": "the Paradox",
+    "category": "lexical-noun",
+    "tl": "das Paradox",
+    "alts": [
+      "das Paradoxon"
+    ],
+    "register": "Neutral-formal in analytical prose; both Paradox and Paradoxon are standard, with the shorter form especially common in compact argumentative formulations.",
+    "trap": "German Paradox is neuter, unlike Spanish paradoja; its plural is Paradoxe, while the alternative Paradoxon has the learned plural Paradoxa.",
+    "example_tl": "Das Paradox der Plattformökonomie besteht darin, dass Dienste trotz wachsender Auswahl immer stärker von wenigen gemeinsamen Infrastrukturen abhängen.",
+    "example_en": "The paradox of the platform economy is that, despite growing choice, services depend ever more heavily on a few shared infrastructures.",
+    "cloze": "Das {{c1::Paradox}} der Plattformökonomie besteht darin, dass Dienste trotz wachsender Auswahl immer stärker von wenigen gemeinsamen Infrastrukturen abhängen.",
+    "note": "Old_back is accurate. Retention teaches neuter gender and the competing standard noun and plural forms."
+  },
+  {
+    "id": "it_fancy_vocab_101",
+    "en": "the Sovereignty",
+    "category": "lexical-noun",
+    "tl": "die Souveränität",
+    "alts": [],
+    "register": "Formal in constitutional, geopolitical and technology-policy prose; digitale Souveränität is a policy extension of the state-law concept.",
+    "trap": "Souveränität is not simply Unabhängigkeit: it foregrounds supreme authority and the capacity to determine rules within a domain.",
+    "example_tl": "Die Debatte über digitale Souveränität bleibt substanzlos, solange öffentliche Verwaltungen ihre wichtigsten Datenbestände und Kommunikationsdienste vollständig privaten Anbietern überlassen.",
+    "example_en": "The debate about digital sovereignty remains hollow as long as public administrations leave their most important datasets and communication services entirely to private providers.",
+    "cloze": "Die Debatte über digitale {{c1::Souveränität}} bleibt substanzlos, solange öffentliche Verwaltungen ihre wichtigsten Datenbestände und Kommunikationsdienste vollständig privaten Anbietern überlassen.",
+    "note": "Old_back is accurate; the example fixes the established technology-policy sense rather than treating sovereignty as a loose synonym for independence. Self-review: replaced the loose metaphor bleibt leer with the sharper policy-prose collocation bleibt substanzlos."
+  },
+  {
+    "id": "it_fancy_vocab_103",
+    "en": "the Conformity",
+    "category": "lexical-noun",
+    "tl": "die Konformität mit etwas",
+    "alts": [
+      "die Übereinstimmung mit etwas"
+    ],
+    "register": "Formal and technical for compliance with a standard or requirement; social conformity is more often expressed by Anpassung or, critically, Konformismus.",
+    "trap": "Konformismus denotes an uncritical tendency to conform and cannot replace technical Konformität mit a rule or standard.",
+    "example_tl": "Die Behörde prüft die Konformität des Empfehlungssystems mit europäischen Transparenzvorgaben, bevor sie dessen Einsatz in öffentlichen Informationsportalen genehmigt.",
+    "example_en": "The authority examines the recommendation system's conformity with European transparency requirements before approving its use in public information portals.",
+    "cloze": "Die Behörde prüft die {{c1::Konformität}} des Empfehlungssystems {{c1::mit}} europäischen Transparenzvorgaben, bevor sie dessen Einsatz in öffentlichen Informationsportalen genehmigt.",
+    "note": "The source is polysemous. This note selects regulatory conformity, for which old_back is accurate, and records the required mit-plus-dative complement."
+  },
+  {
+    "id": "it_fancy_vocab_107",
+    "en": "the Equilibrium",
+    "category": "lexical-noun",
+    "tl": "das Gleichgewicht zwischen etwas und etwas",
+    "alts": [
+      "die Balance zwischen etwas und etwas"
+    ],
+    "register": "Neutral-formal in policy and social analysis; Equilibrium is largely restricted to specialist scientific and economic usage.",
+    "trap": "The transparent-looking Equilibrium sounds markedly technical in general policy prose; zwischen governs the dative when it marks the two sides of a balance.",
+    "example_tl": "Das regulatorische Gleichgewicht zwischen Meinungsfreiheit und Schutzpflichten gerät ins Wanken, wenn private Plattformen allein über die Sichtbarkeit politischer Inhalte entscheiden.",
+    "example_en": "The regulatory equilibrium between freedom of expression and protective duties falters when private platforms alone decide the visibility of political content.",
+    "cloze": "Das regulatorische {{c1::Gleichgewicht zwischen}} Meinungsfreiheit und Schutzpflichten gerät ins Wanken, wenn private Plattformen allein über die Sichtbarkeit politischer Inhalte entscheiden.",
+    "note": "Materially diverges from old_back, whose learned Latinism is poorly suited to the general policy context fixed by the example."
+  },
+  {
+    "id": "it_fancy_vocab_109",
+    "en": "the Ambiguity",
+    "category": "lexical-noun",
+    "tl": "die Mehrdeutigkeit",
+    "alts": [
+      "die Ambiguität"
+    ],
+    "register": "Written-neutral for wording or conduct open to multiple interpretations; Ambiguität is a more specialist term in linguistics and theory.",
+    "trap": "Zweideutigkeit is narrower: it suggests exactly two readings and often carries a suggestive or risqué nuance absent from general ambiguity.",
+    "example_tl": "Die strategische Mehrdeutigkeit der Richtlinie erlaubt es der Plattform, widersprüchliche Entscheidungen gegenüber verschiedenen nationalen Aufsichtsbehörden nachträglich als konsequente Regelanwendung darzustellen.",
+    "example_en": "The guideline's strategic ambiguity allows the platform to present contradictory decisions to different national regulators after the fact as consistent rule enforcement.",
+    "cloze": "Die strategische {{c1::Mehrdeutigkeit}} der Richtlinie erlaubt es der Plattform, widersprüchliche Entscheidungen gegenüber verschiedenen nationalen Aufsichtsbehörden nachträglich als konsequente Regelanwendung darzustellen.",
+    "note": "Materially diverges from old_back, which narrows the unrestricted source concept to two possible readings."
+  },
+  {
+    "id": "it_fancy_vocab_113",
+    "en": "the Fragmentation",
+    "category": "lexical-noun",
+    "tl": "die Zersplitterung",
+    "alts": [
+      "die Fragmentierung"
+    ],
+    "register": "Written-neutral and often critical for social, political or institutional division; Fragmentierung is more academic and technical.",
+    "trap": "German uses Fragmentierung, not the English-shaped form Fragmentation; Zersplitterung is often more idiomatic for a divided public or party system.",
+    "example_tl": "Die Zersplitterung der digitalen Öffentlichkeit untergräbt eine gemeinsame Tatsachengrundlage, weil verschiedene Gruppen Nachrichten fast ausschließlich innerhalb geschlossener Kommunikationsräume austauschen.",
+    "example_en": "The fragmentation of the digital public sphere undermines a shared factual basis because different groups exchange news almost exclusively within closed communication spaces.",
+    "cloze": "Die {{c1::Zersplitterung}} der digitalen Öffentlichkeit untergräbt eine gemeinsame Tatsachengrundlage, weil verschiedene Gruppen Nachrichten fast ausschließlich innerhalb geschlossener Kommunikationsräume austauschen.",
+    "note": "Old_back is accurate; retention is justified by the noncognate production choice and the contrast with specialist Fragmentierung. Self-review: replaced the stiff collocation gemeinsame Tatsachengrundlagen erschweren with the idiomatic eine gemeinsame Tatsachengrundlage untergraben."
+  },
+  {
+    "id": "it_fancy_vocab_115",
+    "en": "the Commodification",
+    "category": "lexical-noun",
+    "tl": "die Kommodifizierung",
+    "alts": [
+      "die Verwandlung in eine Ware"
+    ],
+    "register": "Specialist and critical in sociology, political economy and media analysis for turning something into a tradable commodity.",
+    "trap": "Kommerzialisierung means commercial exploitation or marketing and does not necessarily entail the conversion into a commodity expressed by Kommodifizierung.",
+    "example_tl": "Die Kommodifizierung persönlicher Beziehungen schreitet voran, wenn Plattformen soziale Anerkennung systematisch in messbare Reichweite und handelbare Profildaten übersetzen.",
+    "example_en": "The commodification of personal relationships advances when platforms systematically translate social recognition into measurable reach and tradable profile data.",
+    "cloze": "Die {{c1::Kommodifizierung}} persönlicher Beziehungen schreitet voran, wenn Plattformen soziale Anerkennung systematisch in messbare Reichweite und handelbare Profildaten übersetzen.",
+    "note": "Old_back is accurate. The noun remains worth retaining because its critical sense must be distinguished from the much broader Kommerzialisierung."
+  },
+  {
+    "id": "it_fancy_vocab_116",
+    "en": "the Authenticity",
+    "category": "lexical-noun",
+    "tl": "die Authentizität",
+    "alts": [],
+    "register": "Neutral-formal in media and social analysis for perceived genuineness of a person or performance; Echtheit is usual for an object's verified authenticity.",
+    "trap": "English authenticity covers both perceived personal genuineness and the verified genuineness of documents or objects; German often reserves Echtheit for the latter.",
+    "example_tl": "Die inszenierte Authentizität politischer Influencer beruht auf sorgfältig geplanten Einblicken, die Nähe versprechen, wirtschaftliche Interessen hinter den Beiträgen jedoch gezielt verschleiern.",
+    "example_en": "The staged authenticity of political influencers rests on carefully planned glimpses that promise closeness while deliberately concealing the economic interests behind the posts.",
+    "cloze": "Die inszenierte {{c1::Authentizität}} politischer Influencer beruht auf sorgfältig geplanten Einblicken, die Nähe versprechen, wirtschaftliche Interessen hinter den Beiträgen jedoch gezielt verschleiern.",
+    "note": "The source is polysemous. Old_back is accurate for the discursive, person-centered sense fixed here but should not displace Echtheit for documents or objects. Self-review: replaced an unnatural Rechenschaft schaffen phrase with the idiomatic verschleiern contrast."
+  },
+  {
+    "id": "it_fancy_vocab_118",
+    "en": "the Interoperability",
+    "category": "lexical-noun",
+    "tl": "die Interoperabilität zwischen Systemen",
+    "alts": [],
+    "register": "Specialist but standard in technical regulation and digital policy for systems that can exchange and use information across organizational or technical boundaries.",
+    "trap": "Kompatibilität is not automatically interoperability: compatible systems may coexist without being able to exchange and process each other's data.",
+    "example_tl": "Verbindliche Standards sollen die Interoperabilität zwischen Messengerdiensten gewährleisten, damit Nutzer Anbieter wechseln können, ohne ihre Kontakte oder Kommunikationsverläufe zu verlieren.",
+    "example_en": "Binding standards are intended to ensure interoperability between messaging services so users can switch providers without losing their contacts or communication histories.",
+    "cloze": "Verbindliche Standards sollen die {{c1::Interoperabilität zwischen}} Messengerdiensten gewährleisten, damit Nutzer Anbieter wechseln können, ohne ihre Kontakte oder Kommunikationsverläufe zu verlieren.",
+    "note": "Old_back is accurate; retention is justified by the term's precise regulatory meaning and its consequential distinction from mere compatibility."
+  },
+  {
+    "id": "it_fancy_vocab_119",
+    "en": "the Immediacy",
+    "category": "lexical-noun",
+    "tl": "die Unmittelbarkeit",
+    "alts": [],
+    "register": "Written-formal in media theory and criticism for an apparently direct, unmediated experience or relationship.",
+    "trap": "Immediacy here means lack of mediation or distance, not urgency; the latter is Dringlichkeit in German.",
+    "example_tl": "Die vermeintliche Unmittelbarkeit von Livestreams verdeckt, dass Auswahl, Kameraführung und algorithmische Verbreitung die Wahrnehmung politischer Ereignisse entscheidend prägen.",
+    "example_en": "The apparent immediacy of livestreams obscures the fact that selection, camera work and algorithmic distribution decisively shape perceptions of political events.",
+    "cloze": "Die vermeintliche {{c1::Unmittelbarkeit}} von Livestreams verdeckt, dass Auswahl, Kameraführung und algorithmische Verbreitung die Wahrnehmung politischer Ereignisse entscheidend prägen.",
+    "note": "Old_back is accurate for the media-theoretical sense fixed by the example; the note guards against confusion with urgency."
+  },
+  {
+    "id": "it_fancy_vocab_120",
+    "en": "the Homogenization",
+    "category": "lexical-noun",
+    "tl": "die Homogenisierung",
+    "alts": [
+      "die Angleichung"
+    ],
+    "register": "Neutral-formal in social science and media analysis for a process through which previously diverse objects or practices become more uniform.",
+    "trap": "Standardisierung and Vereinheitlichung often foreground a deliberate standard-setting act; Homogenisierung can also describe an unintended structural process.",
+    "example_tl": "Die Homogenisierung lokaler Medienangebote beschleunigt sich, weil zentrale Analysesysteme dieselben Reichweitenkriterien schematisch auf sehr unterschiedliche regionale Öffentlichkeiten anwenden.",
+    "example_en": "The homogenization of local media offerings is accelerating because centralized analytics systems mechanically apply the same reach criteria to very different regional publics.",
+    "cloze": "Die {{c1::Homogenisierung}} lokaler Medienangebote beschleunigt sich, weil zentrale Analysesysteme dieselben Reichweitenkriterien schematisch auf sehr unterschiedliche regionale Öffentlichkeiten anwenden.",
+    "note": "Old_back is accurate; retention is justified by the useful distinction between emergent homogenization and deliberate standardization."
+  }
+]

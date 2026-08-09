@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "verdict": "keep",
+    "reason": "The semiconductor sense requires fonderia di semiconduttori and must be distinguished from an ordinary metal foundry."
+  },
+  {
+    "id": "it_fancy_vocab_282",
+    "en": "the Microprocessor",
+    "verdict": "drop",
+    "reason": "Microprocessore is a transparent, ubiquitous technical cognate with predictable masculine gender and no narrower construction selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_283",
+    "en": "the Nanometer",
+    "verdict": "drop",
+    "reason": "Nanometro is a transparent international unit already familiar at this level, with regular morphology and no additional usage distinction here."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "verdict": "keep",
+    "reason": "The semiconductor context favors fotolitografia over the broader artistic and printing term litografia supplied by the legacy gloss."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "verdict": "keep",
+    "reason": "The specialist loan die denotes the circuit cut from a wafer before packaging and is not equivalent to matrice or a complete packaged chip."
+  },
+  {
+    "id": "it_fancy_vocab_286",
+    "en": "the Fabless",
+    "verdict": "keep",
+    "reason": "Despite the awkward English nominalization, the recoverable specialist adjective teaches the production-ready construction impresa fabless and the no-fabrication-plant sense."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "verdict": "keep",
+    "reason": "Sistema su chip and SoC are established technical forms, and the concept must be distinguished from the narrower microprocessor."
+  },
+  {
+    "id": "it_fancy_vocab_288",
+    "en": "the Moore's Law",
+    "verdict": "drop",
+    "reason": "La legge di Moore is a familiar, compositionally transparent proper-name expression with no additional Italian production difficulty."
+  },
+  {
+    "id": "it_fancy_vocab_289",
+    "en": "the Integrated Circuit",
+    "verdict": "drop",
+    "reason": "Circuito integrato is a transparent, ubiquitous electronics term with ordinary masculine gender and regular adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_290",
+    "en": "the Neural Networks",
+    "verdict": "drop",
+    "reason": "Reti neurali is now familiar core AI vocabulary, directly cognate and morphologically predictable for a C1 learner."
+  },
+  {
+    "id": "it_fancy_vocab_291",
+    "en": "the Deep Learning",
+    "verdict": "keep",
+    "reason": "Italian specialist prose strongly favors the loan deep learning, while apprendimento profondo remains a useful register-sensitive alternative."
+  },
+  {
+    "id": "it_fancy_vocab_292",
+    "en": "the Machine Learning",
+    "verdict": "keep",
+    "reason": "The professional loan and established apprendimento automatico alternate by register, while apprendimento di macchina is an interference risk."
+  },
+  {
+    "id": "it_fancy_vocab_293",
+    "en": "the Training Data",
+    "verdict": "keep",
+    "reason": "Dati di addestramento fixes the ML sense and supports a useful distinction from the potentially narrower set di addestramento."
+  },
+  {
+    "id": "it_fancy_vocab_294",
+    "en": "the Algorithms",
+    "verdict": "drop",
+    "reason": "Algoritmi is a transparent, ubiquitous computing cognate with predictable masculine plural morphology and no specialized construction selected."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "verdict": "keep",
+    "reason": "Elaborazione del linguaggio naturale teaches the established word order, the continued use of NLP, and the boundary with broader linguistica computazionale."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "verdict": "keep",
+    "reason": "Reti generative avversarie is an established multiword technical term whose adjective order and specific two-network sense merit active practice."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "verdict": "keep",
+    "reason": "Apprendimento per rinforzo is a fixed technical construction whose preposition and reward-based meaning cannot be inferred safely from English."
+  },
+  {
+    "id": "it_fancy_vocab_298",
+    "en": "the AI Ethics",
+    "verdict": "drop",
+    "reason": "Etica dell'intelligenza artificiale or etica dell'IA is a transparent, now familiar policy-field expression with no narrower framework selected."
+  },
+  {
+    "id": "it_fancy_vocab_299",
+    "en": "the Supervised Learning",
+    "verdict": "drop",
+    "reason": "Apprendimento supervisionato is compositionally transparent, established core AI vocabulary with regular adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_300",
+    "en": "the Unsupervised Learning",
+    "verdict": "drop",
+    "reason": "Apprendimento non supervisionato is compositionally transparent and differs from the familiar supervised term only through regular negation."
+  },
+  {
+    "id": "it_fancy_vocab_301",
+    "en": "the Model",
+    "verdict": "drop",
+    "reason": "Modello is a transparent, high-frequency cognate, and the isolated prompt does not select a specific statistical, AI, or analytical sense."
+  },
+  {
+    "id": "it_fancy_vocab_302",
+    "en": "the Logistics",
+    "verdict": "drop",
+    "reason": "Logistica is transparent, familiar business vocabulary below the target level and carries no special construction in this prompt."
+  },
+  {
+    "id": "it_fancy_vocab_303",
+    "en": "the Inventory",
+    "verdict": "keep",
+    "reason": "Supply-chain inventory is normally scorte or giacenze, whereas inventario often denotes an accounting list or stocktaking result."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "verdict": "keep",
+    "reason": "Approvvigionamento is context-sensitive and must be distinguished from narrower supplier sourcing and sector-specific public procurement language."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "verdict": "keep",
+    "reason": "The production method requires the nominal form il just in time, Italian capitalization, and a distinction from the everyday phrase appena in tempo."
+  },
+  {
+    "id": "it_fancy_vocab_306",
+    "en": "the Distribution",
+    "verdict": "drop",
+    "reason": "Distribuzione is a transparent, familiar logistics cognate with regular morphology and no narrower channel or process specified."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "verdict": "keep",
+    "reason": "Logistica conto terzi is an idiomatic specialist service model, paired with 3PL and distinct from a literal political reading of third party."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "verdict": "keep",
+    "reason": "Italian industry commonly retains lead time, while the correct translation varies among delivery, production, and procurement intervals."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "verdict": "keep",
+    "reason": "Sourcing foregrounds finding and selecting suppliers, so the legacy ricerca dei fornitori is incomplete and broader procurement is not equivalent."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "verdict": "keep",
+    "reason": "Operational Italian favors codice SKU or codice articolo interno, and the identifier must be distinguished from standardized GTIN and EAN codes."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "verdict": "keep",
+    "reason": "Previsione della domanda is a productive planning collocation with a real previsione-versus-predizione interference risk."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "verdict": "keep",
+    "reason": "Effetto frusta and effetto Forrester are specialist names for a distinctive supply-chain mechanism rather than a transparent literal metaphor."
+  },
+  {
+    "id": "it_fancy_vocab_313",
+    "en": "the Vertical Integration",
+    "verdict": "drop",
+    "reason": "Integrazione verticale is a compositionally transparent, familiar business-policy term with ordinary gender and adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_314",
+    "en": "the Outsourcing",
+    "verdict": "drop",
+    "reason": "Outsourcing is an ubiquitous unchanged business loan in Italian, and the isolated prompt adds no distinction from familiar esternalizzazione."
+  },
+  {
+    "id": "it_fancy_vocab_315",
+    "en": "the Transportation",
+    "verdict": "drop",
+    "reason": "Trasporto is familiar core vocabulary with a direct translation and no selected modal, legal, or logistics-specific sense."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "verdict": "keep",
+    "reason": "Magazzinaggio and stoccaggio are noncognate professional terms whose scope must be separated from the broader gestione del magazzino."
+  },
+  {
+    "id": "it_fancy_vocab_317",
+    "en": "the Node",
+    "verdict": "drop",
+    "reason": "Nodo is a transparent, familiar technical cognate, and the prompt does not select a network, logistics, graph-theory, or infrastructure sense."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "verdict": "keep",
+    "reason": "Tracciare is productive in logistics and digital systems, with a useful distinction from rintracciare and a Portuguese interference risk."
+  },
+  {
+    "id": "it_fancy_vocab_319",
+    "en": "to marginalize",
+    "verdict": "keep",
+    "reason": "Emarginare is often more idiomatic for excluding people or voices than the obvious cognate marginalizzare, creating real production value."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "verdict": "keep",
+    "reason": "Trarre profitto da supplies the governed preposition and fixes the monetary sense, unlike broader beneficiare di or marked profittare di."
+  }
+]

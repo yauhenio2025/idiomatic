@@ -1,0 +1,103 @@
+[
+  {
+    "id": "it_fancy_vocab_530",
+    "en": "The rationale",
+    "category": "lexical-noun",
+    "tl": "la justification",
+    "alts": [
+      "le fondement"
+    ],
+    "register": "Neutral-formal noun for the reasons offered in support of a policy, decision or method; common in analytical and institutional prose.",
+    "trap": "Raisonnement denotes the reasoning process, not necessarily the rationale offered for a choice; raison d’être is narrower and stresses purpose or grounds for existence.",
+    "example_tl": "La justification avancée pour centraliser ces données paraît fragile, car le ministère n’a démontré ni gain d’efficacité ni nécessité opérationnelle.",
+    "example_en": "The rationale put forward for centralizing these data seems weak, since the ministry has demonstrated neither efficiency gains nor any operational necessity.",
+    "cloze": "La {{c1::justification}} avancée pour centraliser ces données paraît fragile, car le ministère n’a démontré ni gain d’efficacité ni nécessité opérationnelle.",
+    "note": "Materially corrects old_back: le raisonnement is the chain or process of reasoning, whereas the authored noun names its justificatory basis. Self-review retained le fondement only as a context-dependent alternative for the supporting basis sense."
+  },
+  {
+    "id": "it_fancy_vocab_532",
+    "en": "The scrutiny",
+    "category": "lexical-noun",
+    "tl": "un examen approfondi",
+    "alts": [
+      "un contrôle rigoureux"
+    ],
+    "register": "Neutral-formal phrase for close, critical inspection; contrôle rigoureux is preferable when oversight or compliance checking is foregrounded.",
+    "trap": "French scrutin means a ballot or an election, not scrutiny; examen or contrôle must carry the sense of close inspection.",
+    "example_tl": "Les contrats conclus avec les plateformes feront l’objet d’un examen approfondi afin d’établir si les garanties annoncées protègent réellement les journalistes indépendants.",
+    "example_en": "The contracts concluded with the platforms will undergo close scrutiny to establish whether the announced safeguards genuinely protect independent journalists.",
+    "cloze": "Les contrats conclus avec les plateformes feront l’objet d’un {{c1::examen approfondi}} afin d’établir si les garanties annoncées protègent réellement les journalistes indépendants.",
+    "note": "Old_back gives the right core meaning. The note is retained because the English–French faux ami scrutin is a substantial production risk and the example supplies the idiomatic faire l’objet de frame."
+  },
+  {
+    "id": "it_fancy_vocab_536",
+    "en": "Abstract",
+    "category": "lexical-adjective",
+    "tl": "abstrait",
+    "alts": [],
+    "register": "Neutral adjective for an idea, discussion or model detached from concrete cases or practical detail; ordinary in academic and policy prose.",
+    "trap": "English abstract is also a noun meaning résumé, but the adjective is abstrait; the two French forms are not interchangeable.",
+    "example_tl": "Le débat reste abstrait tant que le régulateur ne publie aucun scénario chiffré montrant comment la réforme affecterait les petits éditeurs.",
+    "example_en": "The debate remains abstract until the regulator publishes a quantified scenario showing how the reform would affect small publishers.",
+    "cloze": "Le débat reste {{c1::abstrait}} tant que le régulateur ne publie aucun scénario chiffré montrant comment la réforme affecterait les petits éditeurs.",
+    "note": "Materially corrects old_back, which treats the source as the noun meaning a summary. Its position at the start of the source adjective sequence supports the adjectival reading."
+  },
+  {
+    "id": "it_fancy_vocab_539",
+    "en": "Cogent",
+    "category": "lexical-adjective",
+    "tl": "solide",
+    "alts": [
+      "bien étayé"
+    ],
+    "register": "Neutral analytical adjective for reasoning whose structure and support make it compelling; bien étayé foregrounds the evidential support.",
+    "trap": "Do not carry English cogent over unchanged: current general French normally uses solide or convaincant, while the identical form is at best rare and learned.",
+    "example_tl": "Le raisonnement du rapport est solide : il relie chaque recommandation à des données vérifiables et répond explicitement aux principales objections du secteur.",
+    "example_en": "The report’s reasoning is cogent: it links every recommendation to verifiable data and explicitly addresses the sector’s main objections.",
+    "cloze": "Le raisonnement du rapport est {{c1::solide}} : il relie chaque recommandation à des données vérifiables et répond explicitement aux principales objections du secteur.",
+    "note": "Materially diverges from the marked cognate in old_back and selects the idiomatic general-prose rendering. Self-review chose solide rather than merely convaincant to preserve the source’s emphasis on sound reasoning."
+  },
+  {
+    "id": "it_fancy_vocab_540",
+    "en": "Conclusive",
+    "category": "lexical-adjective",
+    "tl": "concluant",
+    "alts": [
+      "probant"
+    ],
+    "register": "Neutral-formal adjective for evidence, findings or tests strong enough to settle a question; probant is slightly more formal and evidence-focused.",
+    "trap": "For evidence or results, French normally uses concluant rather than calquing English conclusive as conclusif; convaincant describes persuasive force without necessarily settling the issue.",
+    "example_tl": "Les résultats ne sont pas concluants, puisque l’échantillon exclut les zones rurales où les interruptions de service sont les plus fréquentes.",
+    "example_en": "The results are not conclusive, since the sample excludes the rural areas where service disruptions are most frequent.",
+    "cloze": "Les résultats ne sont pas {{c1::concluants}}, puisque l’échantillon exclut les zones rurales où les interruptions de service sont les plus fréquentes.",
+    "note": "Materially corrects old_back convaincant, which collapses evidential sufficiency into persuasive force. Self-review tested the alternative in the sentence: résultats probants preserves the intended evidential reading."
+  },
+  {
+    "id": "it_fancy_vocab_546",
+    "en": "Definitive",
+    "category": "lexical-adjective",
+    "tl": "de référence",
+    "alts": [
+      "qui fait autorité"
+    ],
+    "register": "Neutral-formal adjectival phrase for a work regarded as authoritative or canonical in its field; common in academic and journalistic evaluation.",
+    "trap": "Définitif usually means final or irrevocable; it can describe a work that settles a question, but de référence more clearly isolates the authoritative or canonical sense.",
+    "example_tl": "Après trois ans d’enquête, ce rapport est devenu l’étude de référence sur les effets économiques de la concentration dans la publicité numérique.",
+    "example_en": "After three years of investigation, this report has become the definitive study of the economic effects of concentration in digital advertising.",
+    "cloze": "Après trois ans d’enquête, ce rapport est devenu l’étude {{c1::de référence}} sur les effets économiques de la concentration dans la publicité numérique.",
+    "note": "The source is polysemous; this note selects the authoritative or canonical sense relevant to professional evaluation. Self-review softened the divergence claim: old_back also works when a work decisively settles a question."
+  },
+  {
+    "id": "it_fancy_vocab_555",
+    "en": "Fallacious",
+    "category": "lexical-adjective",
+    "tl": "fallacieux",
+    "alts": [],
+    "register": "Formal analytical adjective for reasoning that is misleading or logically unsound; trompeur is broader and less technical.",
+    "trap": "Do not import Spanish falacia or Italian fallacia as ordinary French fallace; for a named fallacy, French usually uses sophisme, while the adjective is fallacieux.",
+    "example_tl": "Cet argument est fallacieux, car il attribue la baisse des abonnements à la régulation sans examiner l’évolution parallèle des prix.",
+    "example_en": "This argument is fallacious because it attributes the decline in subscriptions to regulation without examining the parallel trend in prices.",
+    "cloze": "Cet argument est {{c1::fallacieux}}, car il attribue la baisse des abonnements à la régulation sans examiner l’évolution parallèle des prix.",
+    "note": "Old_back is accurate. Retained after self-review because the adjective is productive in formal criticism and its noun family creates a genuine cross-language interference risk; removed broader trompeur as a non-exact alternative."
+  }
+]

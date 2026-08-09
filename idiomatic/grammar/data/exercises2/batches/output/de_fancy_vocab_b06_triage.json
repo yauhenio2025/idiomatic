@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_201",
+    "en": "Asymmetric",
+    "verdict": "drop",
+    "reason": "Asymmetrisch is a transparent, familiar adjective in advanced policy vocabulary, with regular German morphology and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_202",
+    "en": "Homogenized",
+    "verdict": "drop",
+    "reason": "Homogenisiert is a transparent participial adjective with predictable morphology and no narrower sense or construction selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_203",
+    "en": "Privatized",
+    "verdict": "drop",
+    "reason": "Privatisiert is transparent, high-frequency public-policy vocabulary already expected at C1, and the legacy rendering is accurate."
+  },
+  {
+    "id": "it_fancy_vocab_204",
+    "en": "Hegemonic",
+    "verdict": "keep",
+    "reason": "The item teaches the formal pair hegemonisch and hegemonial, including their lower-case spelling, inflection and characteristic political collocations."
+  },
+  {
+    "id": "it_fancy_vocab_205",
+    "en": "Insidious",
+    "verdict": "keep",
+    "reason": "Structural or institutional harm is often idiomatically schleichend in German; legacy heimtückisch can wrongly imply a deliberately treacherous agent."
+  },
+  {
+    "id": "it_fancy_vocab_206",
+    "en": "Polarized",
+    "verdict": "drop",
+    "reason": "Polarisiert is a transparent, routine adjective in media and political analysis, with no special production issue in this isolated prompt."
+  },
+  {
+    "id": "it_fancy_vocab_207",
+    "en": "Dystopian",
+    "verdict": "drop",
+    "reason": "Dystopisch is a transparent and familiar cultural-critical cognate with regular adjective morphology."
+  },
+  {
+    "id": "it_fancy_vocab_208",
+    "en": "Automated",
+    "verdict": "drop",
+    "reason": "Automatisiert is transparent, ubiquitous technology vocabulary with predictable participial morphology and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_209",
+    "en": "Pervasive",
+    "verdict": "keep",
+    "reason": "German normally chooses a contextual adjective such as weitverbreitet; pervasiv is specialist jargon and legacy allgegenwärtig overstates some uses."
+  },
+  {
+    "id": "it_fancy_vocab_210",
+    "en": "Ephemeral",
+    "verdict": "keep",
+    "reason": "Kurzlebig and flüchtig are productive idiomatic choices, while the tempting cognate ephemer is markedly learned and uncommon."
+  },
+  {
+    "id": "it_fancy_vocab_211",
+    "en": "Contingent",
+    "verdict": "keep",
+    "reason": "The academic adjective kontingent and the construction abhängig von must be distinguished from the unrelated German noun Kontingent."
+  },
+  {
+    "id": "it_fancy_vocab_212",
+    "en": "Oversaturated",
+    "verdict": "drop",
+    "reason": "Übersättigt is a transparent and readily productive adjective whose literal and figurative uses are already accessible at C1."
+  },
+  {
+    "id": "it_fancy_vocab_213",
+    "en": "Manipulative",
+    "verdict": "drop",
+    "reason": "Manipulativ is a transparent, high-frequency critical adjective with regular German inflection and no distinct trap here."
+  },
+  {
+    "id": "it_fancy_vocab_214",
+    "en": "Extractive",
+    "verdict": "keep",
+    "reason": "Extraktiv has a marked critical-economy sense that emphasizes systematic extraction of resources, data or value rather than generic exploitation."
+  },
+  {
+    "id": "it_fancy_vocab_215",
+    "en": "Supranational",
+    "verdict": "drop",
+    "reason": "Supranational is a transparent, established political adjective with matching meaning and entirely regular German morphology."
+  },
+  {
+    "id": "it_fancy_vocab_216",
+    "en": "Myopic",
+    "verdict": "keep",
+    "reason": "Figurative policy criticism normally uses kurzsichtig, whereas the cognate myopisch is chiefly medical or deliberately technical."
+  },
+  {
+    "id": "it_fancy_vocab_217",
+    "en": "Digital-native",
+    "verdict": "keep",
+    "reason": "The legacy calque is unusable; German needs Digital Native as a noun or a descriptive adjective such as digital sozialisiert."
+  },
+  {
+    "id": "it_fancy_vocab_218",
+    "en": "Hegelian",
+    "verdict": "keep",
+    "reason": "The specialist philosophical adjective is useful C1+ vocabulary and teaches German lower-case spelling plus attributive inflection."
+  },
+  {
+    "id": "it_fancy_vocab_219",
+    "en": "Conformist",
+    "verdict": "keep",
+    "reason": "Konformistisch carries a critical implication of unreflective conformity that neutral konform does not."
+  },
+  {
+    "id": "it_fancy_vocab_220",
+    "en": "Authoritarian",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_221",
+    "en": "Singular",
+    "verdict": "keep",
+    "reason": "The learned adjective singulär expresses exceptional uniqueness in formal analysis and must be separated from English grammatical and evaluative senses."
+  },
+  {
+    "id": "it_fancy_vocab_222",
+    "en": "Protean",
+    "verdict": "keep",
+    "reason": "Idiomatic wandlungsfähig is more productive than rare proteisch, whose derivation from Proteus also creates a genuine lexical trap."
+  },
+  {
+    "id": "it_fancy_vocab_223",
+    "en": "Illusory",
+    "verdict": "drop",
+    "reason": "Illusorisch is a transparent and familiar advanced adjective with matching meaning, regular inflection and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_224",
+    "en": "Anomalous",
+    "verdict": "keep",
+    "reason": "Data and event anomalies are idiomatically anomal or ungewöhnlich; legacy anormal is often a less suitable or pathologizing choice."
+  },
+  {
+    "id": "it_fancy_vocab_225",
+    "en": "Interdependent",
+    "verdict": "keep",
+    "reason": "Wechselseitig abhängig supplies the transparent productive construction and corrects the capitalization of specialist interdependent."
+  },
+  {
+    "id": "it_fancy_vocab_226",
+    "en": "Unprecedented",
+    "verdict": "keep",
+    "reason": "Beispiellos or noch nie dagewesen means without precedent; legacy unvergleichlich instead means incomparable and may be evaluative."
+  },
+  {
+    "id": "it_fancy_vocab_227",
+    "en": "Permeable",
+    "verdict": "keep",
+    "reason": "The item teaches figurative durchlässig and prevents overextension of technical German permeabel to political or institutional boundaries."
+  },
+  {
+    "id": "it_fancy_vocab_228",
+    "en": "Contemporaneous",
+    "verdict": "keep",
+    "reason": "Zeitgleich expresses temporal coincidence and must be distinguished from contemporary as gegenwärtig or zeitgenössisch; old_back is not a headword."
+  },
+  {
+    "id": "it_fancy_vocab_229",
+    "en": "Partisan",
+    "verdict": "keep",
+    "reason": "In the selected media-bias sense German uses parteiisch, while Partisan is a resistance fighter and parteipolitisch selects a different sense."
+  },
+  {
+    "id": "it_fancy_vocab_230",
+    "en": "Undemocratic",
+    "verdict": "drop",
+    "reason": "Undemokratisch is a transparent, high-frequency political adjective with fully predictable German morphology."
+  },
+  {
+    "id": "it_fancy_vocab_231",
+    "en": "Exploitative",
+    "verdict": "keep",
+    "reason": "German characteristically uses ausbeuterisch for exploitative business or labor relations rather than legacy participial ausbeutend."
+  },
+  {
+    "id": "it_fancy_vocab_232",
+    "en": "Transitory",
+    "verdict": "keep",
+    "reason": "Temporary states and arrangements are vorübergehend; legacy vergänglich instead evokes inherent impermanence or evanescence."
+  },
+  {
+    "id": "it_fancy_vocab_233",
+    "en": "Reductionist",
+    "verdict": "drop",
+    "reason": "Reduktionistisch is a transparent, established academic adjective with regular inflection and no narrower construction supplied."
+  },
+  {
+    "id": "it_fancy_vocab_234",
+    "en": "Symbiotic",
+    "verdict": "drop",
+    "reason": "Symbiotisch is a transparent, familiar scientific and metaphorical cognate with predictable German morphology."
+  },
+  {
+    "id": "it_fancy_vocab_235",
+    "en": "Disparate",
+    "verdict": "keep",
+    "reason": "Grundverschieden or sehr unterschiedlich describes disparate items; legacy ungleichwertig wrongly asserts unequal value rather than difference."
+  },
+  {
+    "id": "it_fancy_vocab_236",
+    "en": "Censorious",
+    "verdict": "keep",
+    "reason": "Legacy zensiert means censored, not censorious; the source requires a critical disposition such as tadelsüchtig."
+  },
+  {
+    "id": "it_fancy_vocab_237",
+    "en": "Virtualized",
+    "verdict": "drop",
+    "reason": "Virtualisiert is a transparent, standard IT participle with regular morphology and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_238",
+    "en": "the sanctions",
+    "verdict": "drop",
+    "reason": "Die Sanktionen is transparent, high-frequency geopolitical vocabulary already expected at C1, and the isolated prompt adds no government or collocation."
+  },
+  {
+    "id": "it_fancy_vocab_239",
+    "en": "the Cybersecurity",
+    "verdict": "keep",
+    "reason": "German policy prose prefers Cybersicherheit, while the legacy English loanword and the related term IT-Sicherheit require register and scope guidance."
+  },
+  {
+    "id": "it_fancy_vocab_240",
+    "en": "the Espionage",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  }
+]

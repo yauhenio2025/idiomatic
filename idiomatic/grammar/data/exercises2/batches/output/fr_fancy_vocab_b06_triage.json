@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_201",
+    "en": "Asymmetric",
+    "verdict": "drop",
+    "reason": "Asymétrique is a transparent, familiar analytical cognate with regular agreement, and the isolated prompt selects no particular relational construction."
+  },
+  {
+    "id": "it_fancy_vocab_202",
+    "en": "Homogenized",
+    "verdict": "drop",
+    "reason": "Homogénéisé is a transparent participial adjective with predictable morphology and no narrower critical sense fixed by the bare prompt."
+  },
+  {
+    "id": "it_fancy_vocab_203",
+    "en": "Privatized",
+    "verdict": "drop",
+    "reason": "Privatisé is transparent, high-frequency policy vocabulary already expected at C1, with regular agreement and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_204",
+    "en": "Hegemonic",
+    "verdict": "keep",
+    "reason": "Hégémonique is marked political-theory vocabulary whose implication of dominance sustained through norms or consent is more specific than simple numerical predominance."
+  },
+  {
+    "id": "it_fancy_vocab_205",
+    "en": "Insidious",
+    "verdict": "keep",
+    "reason": "Insidieux is a useful critical adjective for harm that advances gradually or unnoticed, and its irregular-looking feminine form merits production practice."
+  },
+  {
+    "id": "it_fancy_vocab_206",
+    "en": "Polarized",
+    "verdict": "drop",
+    "reason": "Polarisé is transparent and ubiquitous in current political commentary, with predictable participial agreement and no distinct lesson in this prompt."
+  },
+  {
+    "id": "it_fancy_vocab_207",
+    "en": "Dystopian",
+    "verdict": "drop",
+    "reason": "Dystopique is a transparent, familiar cultural-critical cognate with regular adjective morphology and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_208",
+    "en": "Automated",
+    "verdict": "keep",
+    "reason": "The item teaches the consequential distinction between automatisé, converted to or performed by automation, and automatique, operating automatically by design."
+  },
+  {
+    "id": "it_fancy_vocab_209",
+    "en": "Pervasive",
+    "verdict": "keep",
+    "reason": "French normally requires a contextual choice such as omniprésent or généralisé; the tempting pervasif remains specialist jargon or an anglicism in broad commentary."
+  },
+  {
+    "id": "it_fancy_vocab_210",
+    "en": "Ephemeral",
+    "verdict": "drop",
+    "reason": "Éphémère is a familiar direct cognate at C1, identical in masculine and feminine and already rendered accurately by the legacy gloss."
+  },
+  {
+    "id": "it_fancy_vocab_211",
+    "en": "Contingent",
+    "verdict": "keep",
+    "reason": "In the high-value contingent-on sense, idiomatic French uses tributaire de or dépendant de rather than mechanically extending the narrower adjective contingent."
+  },
+  {
+    "id": "it_fancy_vocab_212",
+    "en": "Oversaturated",
+    "verdict": "drop",
+    "reason": "Sursaturé is compositionally transparent from sur- and saturé, with regular agreement and no specialist contrast selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_213",
+    "en": "Manipulative",
+    "verdict": "keep",
+    "reason": "The idiomatic evaluative adjective is manipulateur or manipulatrice, not a mechanical extension of English manipulative, and the feminine form is worth testing."
+  },
+  {
+    "id": "it_fancy_vocab_214",
+    "en": "Extractive",
+    "verdict": "keep",
+    "reason": "Extractif has a productive critical-economy sense for systems that remove data, resources or value, extending beyond literal mining terminology."
+  },
+  {
+    "id": "it_fancy_vocab_215",
+    "en": "Supranational",
+    "verdict": "drop",
+    "reason": "Supranational is a transparent, established institutional cognate already expected at C1, with no special government or contrast in the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_216",
+    "en": "Myopic",
+    "verdict": "keep",
+    "reason": "The figurative policy use of myope is productive, while the English-shaped myopique is chiefly technical and unnatural in ordinary commentary."
+  },
+  {
+    "id": "it_fancy_vocab_217",
+    "en": "Digital-native",
+    "verdict": "drop",
+    "reason": "This is a near-duplicate of the earlier retained FANCY_VOCAB item 'the Digital native'; both teach natif du numérique, so a second card adds no distinct production value."
+  },
+  {
+    "id": "it_fancy_vocab_218",
+    "en": "Hegelian",
+    "verdict": "keep",
+    "reason": "Hégélien is specialist intellectual-history vocabulary and teaches both adjective agreement and the lower-case French form, correcting legacy capitalization."
+  },
+  {
+    "id": "it_fancy_vocab_219",
+    "en": "Conformist",
+    "verdict": "drop",
+    "reason": "Conformiste is a transparent, familiar adjective with the same form in both genders and no narrower construction selected by the source."
+  },
+  {
+    "id": "it_fancy_vocab_220",
+    "en": "Authoritarian",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_221",
+    "en": "Singular",
+    "verdict": "drop",
+    "reason": "Singulier is a familiar direct cognate, while the isolated polysemous prompt gives no basis for choosing its grammatical, unusual or unique sense."
+  },
+  {
+    "id": "it_fancy_vocab_222",
+    "en": "Protean",
+    "verdict": "keep",
+    "reason": "Protéiforme is a marked, non-obvious rendering for something repeatedly changing form and must be distinguished from the protein-related adjective protéique."
+  },
+  {
+    "id": "it_fancy_vocab_223",
+    "en": "Illusory",
+    "verdict": "drop",
+    "reason": "Illusoire is a transparent, familiar academic cognate with predictable morphology, and the bare prompt supplies no useful contrast with apparent or deceptive."
+  },
+  {
+    "id": "it_fancy_vocab_224",
+    "en": "Anomalous",
+    "verdict": "keep",
+    "reason": "General French normally uses anormal or atypique; legacy anomalique is a rare derivative meaning related to anomalies rather than the default equivalent."
+  },
+  {
+    "id": "it_fancy_vocab_225",
+    "en": "Interdependent",
+    "verdict": "drop",
+    "reason": "Interdépendant is a transparent, high-frequency analytical cognate with ordinary agreement and no specific complement supplied by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_226",
+    "en": "Unprecedented",
+    "verdict": "keep",
+    "reason": "Sans précédent is a high-value nonliteral production expression whose fixed singular differs from the plural forms used in Spanish and Portuguese."
+  },
+  {
+    "id": "it_fancy_vocab_227",
+    "en": "Permeable",
+    "verdict": "drop",
+    "reason": "Perméable is transparent, and the earlier retained noun perméabilité already teaches this lexeme family's useful de A à B relational frame."
+  },
+  {
+    "id": "it_fancy_vocab_228",
+    "en": "Contemporaneous",
+    "verdict": "keep",
+    "reason": "Contemporain de supplies the relational complement and identifies shared time, preventing the common misreading of English contemporaneous as merely present-day."
+  },
+  {
+    "id": "it_fancy_vocab_229",
+    "en": "Partisan",
+    "verdict": "keep",
+    "reason": "The adjective partisan usefully labels aligned or biased coverage and must be distinguished from the French noun partisan de, meaning a supporter of something."
+  },
+  {
+    "id": "it_fancy_vocab_230",
+    "en": "Undemocratic",
+    "verdict": "drop",
+    "reason": "Antidémocratique and non démocratique are familiar, compositionally transparent political vocabulary already expected of a C1 learner."
+  },
+  {
+    "id": "it_fancy_vocab_231",
+    "en": "Exploitative",
+    "verdict": "keep",
+    "reason": "French often needs an adjectival phrase such as relevant de l’exploitation; the tempting exploitatif is not the routine standard equivalent and exploitable means something else."
+  },
+  {
+    "id": "it_fancy_vocab_232",
+    "en": "Transitory",
+    "verdict": "drop",
+    "reason": "Transitoire is a transparent, familiar formal cognate with predictable agreement and no narrower temporal contrast fixed by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_233",
+    "en": "Reductionist",
+    "verdict": "drop",
+    "reason": "Réductionniste is a transparent, established academic cognate with regular morphology and no particular analytical construction selected here."
+  },
+  {
+    "id": "it_fancy_vocab_234",
+    "en": "Symbiotic",
+    "verdict": "drop",
+    "reason": "Symbiotique is a transparent, familiar scientific and metaphorical cognate with predictable agreement and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_235",
+    "en": "Disparate",
+    "verdict": "drop",
+    "reason": "Disparate is a familiar direct cognate in advanced analytical prose, with regular plural agreement and no narrower sense chosen by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_236",
+    "en": "Censorious",
+    "verdict": "keep",
+    "reason": "The rare English adjective means harshly disapproving or fault-finding, requiring réprobateur in this context; legacy censuré means censored."
+  },
+  {
+    "id": "it_fancy_vocab_237",
+    "en": "Virtualized",
+    "verdict": "drop",
+    "reason": "Virtualisé is a transparent, standard IT participle with regular agreement and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_238",
+    "en": "the sanctions",
+    "verdict": "drop",
+    "reason": "Les sanctions is familiar core legal and geopolitical vocabulary already below the target learner's C1 threshold."
+  },
+  {
+    "id": "it_fancy_vocab_239",
+    "en": "the Cybersecurity",
+    "verdict": "drop",
+    "reason": "La cybersécurité is transparent, ubiquitous core technology vocabulary; correcting the source capitalization does not justify a full production note."
+  },
+  {
+    "id": "it_fancy_vocab_240",
+    "en": "the Espionage",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  }
+]

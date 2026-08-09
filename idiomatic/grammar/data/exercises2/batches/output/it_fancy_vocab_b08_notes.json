@@ -1,0 +1,342 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "category": "lexical-noun",
+    "tl": "la fonderia di semiconduttori",
+    "alts": [],
+    "register": "Locuzione tecnica neutra dell'industria microelettronica per uno stabilimento o un'impresa che fabbrica chip progettati anche da clienti esterni.",
+    "trap": "Fonderia da sola evoca normalmente la lavorazione dei metalli; nel settore dei chip va specificato di semiconduttori, mentre foundry resta frequente nel gergo aziendale.",
+    "example_tl": "La fonderia di semiconduttori taiwanese produce chip progettati altrove, concentrando in un solo impianto capacità industriali decisive per l'intera economia digitale europea.",
+    "example_en": "The Taiwanese semiconductor foundry manufactures chips designed elsewhere, concentrating industrial capacity crucial to the entire European digital economy in a single plant.",
+    "cloze": "{{c1::La fonderia di semiconduttori}} taiwanese produce chip progettati altrove, concentrando in un solo impianto capacità industriali decisive per l'intera economia digitale europea.",
+    "note": "The legacy rendering is too broad outside the supplied semiconductor context. Self-review added the domain complement to exclude an ordinary metal foundry."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "category": "lexical-noun",
+    "tl": "la fotolitografia",
+    "alts": [],
+    "register": "Termine tecnico neutro della microfabbricazione; litografia è il termine più ampio e resta appropriato in ambito artistico e tipografico.",
+    "trap": "Nel contesto dei semiconduttori, la resa non qualificata litografia è meno precisa: il processo trasferisce motivi sul wafer mediante radiazione luminosa.",
+    "example_tl": "La fotolitografia a ultravioletti estremi consente di incidere circuiti più densi sui wafer, ma rende la filiera europea dipendente da pochissimi fornitori specializzati.",
+    "example_en": "Extreme-ultraviolet photolithography makes it possible to etch denser circuits onto wafers, but leaves the European supply chain dependent on very few specialized suppliers.",
+    "cloze": "{{c1::La fotolitografia}} a ultravioletti estremi consente di incidere circuiti più densi sui wafer, ma rende la filiera europea dipendente da pochissimi fornitori specializzati.",
+    "note": "Materially narrows the legacy litografia to the semiconductor process. Self-review selected fotolitografia because the surrounding source items fix that domain."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "category": "lexical-noun",
+    "tl": "il die",
+    "alts": [
+      "il chip non incapsulato"
+    ],
+    "register": "Prestito tecnico specialistico dell'industria dei semiconduttori; la parafrasi chip non incapsulato è più trasparente per un pubblico generale.",
+    "trap": "Nel packaging elettronico, die indica il singolo circuito ricavato dal wafer prima dell'incapsulamento; non equivale né a matrice né al dispositivo confezionato completo.",
+    "example_tl": "Il die viene ricavato dal wafer e testato prima dell'incapsulamento, fase che aggiunge collegamenti elettrici e protezione meccanica al circuito.",
+    "example_en": "The die is cut from the wafer and tested before packaging, the stage that adds electrical connections and mechanical protection to the circuit.",
+    "cloze": "{{c1::Il die}} viene ricavato dal wafer e testato prima dell'incapsulamento, fase che aggiunge collegamenti elettrici e protezione meccanica al circuito.",
+    "note": "The legacy rendering is accurate but leaves the specialized sense unexplained. Self-review retained the English loan because it is the normal expert term in Italian."
+  },
+  {
+    "id": "it_fancy_vocab_286",
+    "en": "the Fabless",
+    "category": "lexical-adjective",
+    "tl": "fabless",
+    "alts": [],
+    "register": "Aggettivo tecnico inglese invariabile, usato soprattutto con impresa, produttore o modello nel settore dei semiconduttori.",
+    "trap": "Il prompt inglese lo sostantiva impropriamente: in italiano non si dice normalmente il fabless; l'aggettivo indica l'assenza di impianti propri per fabbricare chip.",
+    "example_tl": "Un'impresa fabless progetta processori e ne controlla la proprietà intellettuale, ma affida la fabbricazione materiale a una fonderia esterna.",
+    "example_en": "A fabless company designs processors and controls their intellectual property, but entrusts the physical manufacturing to an external foundry.",
+    "cloze": "Un'impresa {{c1::fabless}} progetta processori e ne controlla la proprietà intellettuale, ma affida la fabbricazione materiale a una fonderia esterna.",
+    "note": "The source is an awkward nominalization. Self-review recovered the teachable adjectival lexeme rather than adopting the legacy model noun, which the English prompt does not supply."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "category": "lexical-noun",
+    "tl": "il sistema su chip (SoC)",
+    "alts": [
+      "il system-on-chip"
+    ],
+    "register": "Termine tecnico neutro dell'elettronica; la sigla internazionale SoC e il prestito system-on-chip sono comuni nella documentazione specialistica.",
+    "trap": "Un sistema su chip integra più sottosistemi nello stesso circuito: non è sinonimo automatico di microprocessore, che può esserne soltanto una componente.",
+    "example_tl": "Un sistema su chip integra processore, memoria e interfacce nello stesso componente, riducendo consumi e ingombro nei dispositivi connessi.",
+    "example_en": "A system on a chip integrates a processor, memory, and interfaces into the same component, reducing power consumption and size in connected devices.",
+    "cloze": "Un {{c1::sistema su chip}} integra processore, memoria e interfacce nello stesso componente, riducendo consumi e ingombro nei dispositivi connessi.",
+    "note": "The legacy rendering is accurate. Self-review added the established abbreviation and retained the English technical alternative while keeping the Italian term primary."
+  },
+  {
+    "id": "it_fancy_vocab_291",
+    "en": "the Deep Learning",
+    "category": "lexical-noun",
+    "tl": "il deep learning",
+    "alts": [
+      "l'apprendimento profondo"
+    ],
+    "register": "Prestito tecnico ormai standard nella ricerca e nell'industria; apprendimento profondo è una valida alternativa italiana, più frequente nella divulgazione esplicativa.",
+    "trap": "Deep learning non coincide con tutto il machine learning: designa metodi basati su reti neurali con più livelli di rappresentazione.",
+    "example_tl": "Il deep learning ha migliorato il riconoscimento delle immagini, ma richiede enormi quantità di dati e una potenza di calcolo accessibile soltanto a poche imprese.",
+    "example_en": "Deep learning has improved image recognition, but it requires enormous amounts of data and computing power accessible to only a few companies.",
+    "cloze": "{{c1::Il deep learning}} ha migliorato il riconoscimento delle immagini, ma richiede enormi quantità di dati e una potenza di calcolo accessibile soltanto a poche imprese.",
+    "note": "The legacy Italian calque is valid but less usual in specialist prose than the English loan. Self-review retained it as a genuine register-sensitive alternative."
+  },
+  {
+    "id": "it_fancy_vocab_292",
+    "en": "the Machine Learning",
+    "category": "lexical-noun",
+    "tl": "il machine learning",
+    "alts": [
+      "l'apprendimento automatico"
+    ],
+    "register": "Prestito tecnico standard in ambito informatico e aziendale; apprendimento automatico è comune nella divulgazione, nell'università e nei testi istituzionali.",
+    "trap": "Evitare il calco apprendimento di macchina, favorito dal portoghese aprendizagem de máquina; inoltre machine learning è un sottoinsieme dell'intelligenza artificiale.",
+    "example_tl": "Il machine learning può individuare frodi nei pagamenti, ma senza controlli adeguati rischia di riprodurre discriminazioni presenti nei dati storici.",
+    "example_en": "Machine learning can detect payment fraud, but without adequate controls it risks reproducing discrimination present in historical data.",
+    "cloze": "{{c1::Il machine learning}} può individuare frodi nei pagamenti, ma senza controlli adeguati rischia di riprodurre discriminazioni presenti nei dati storici.",
+    "note": "The legacy rendering is accurate but not uniquely preferred. Self-review made the dominant professional loan primary and preserved the established Italian alternative."
+  },
+  {
+    "id": "it_fancy_vocab_293",
+    "en": "the Training Data",
+    "category": "lexical-noun",
+    "tl": "i dati di addestramento",
+    "alts": [
+      "i dati di training"
+    ],
+    "register": "Locuzione tecnica neutra dell'apprendimento automatico; dati di training è un'alternativa professionale informale con un prestito inglese.",
+    "trap": "Il set di addestramento è una partizione definita del dataset e può essere più ristretto dell'insieme complessivo dei dati usati durante l'addestramento.",
+    "example_tl": "I dati di addestramento raccolti dalle piattaforme riflettono gerarchie sociali pregresse, che il modello può trasformare in decisioni apparentemente neutrali.",
+    "example_en": "Training data collected by platforms reflect pre-existing social hierarchies, which the model can turn into apparently neutral decisions.",
+    "cloze": "{{c1::I dati di addestramento}} raccolti dalle piattaforme riflettono gerarchie sociali pregresse, che il modello può trasformare in decisioni apparentemente neutrali.",
+    "note": "The legacy rendering is accurate. Self-review rejected set di addestramento as an alternative because it can denote a narrower partition of the available data."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "category": "lexical-noun",
+    "tl": "l'elaborazione del linguaggio naturale (NLP)",
+    "alts": [],
+    "register": "Termine tecnico-formale dell'informatica e della linguistica computazionale; in italiano la sigla inglese NLP rimane molto più riconoscibile di ELN.",
+    "trap": "Linguistica computazionale è un campo più ampio e non sostituisce sempre questo termine; l'ordine inglese non va calcato in elaborazione naturale del linguaggio.",
+    "example_tl": "L'elaborazione del linguaggio naturale permette di analizzare milioni di documenti, ma l'accuratezza diminuisce quando mancano corpora rappresentativi delle varietà minoritarie.",
+    "example_en": "Natural language processing makes it possible to analyze millions of documents, but accuracy declines when representative corpora of minority varieties are lacking.",
+    "cloze": "{{c1::L'elaborazione del linguaggio naturale}} permette di analizzare milioni di documenti, ma l'accuratezza diminuisce quando mancano corpora rappresentativi delle varietà minoritarie.",
+    "note": "The legacy rendering is accurate. Self-review added the internationally dominant abbreviation without treating the broader linguistica computazionale as interchangeable."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "category": "lexical-noun",
+    "tl": "le reti generative avversarie (GAN)",
+    "alts": [],
+    "register": "Termine tecnico-formale dell'apprendimento automatico; la sigla inglese GAN è standard anche nei testi italiani.",
+    "trap": "Avversarie qualifica le reti che competono durante l'addestramento; non descrive genericamente contenuti ostili né ogni modello di intelligenza artificiale generativa.",
+    "example_tl": "Le reti generative avversarie mettono in competizione due modelli, producendo immagini plausibili che possono alimentare sia la ricerca creativa sia le campagne di disinformazione.",
+    "example_en": "Generative adversarial networks pit two models against each other, producing plausible images that can support both creative research and disinformation campaigns.",
+    "cloze": "{{c1::Le reti generative avversarie}} mettono in competizione due modelli, producendo immagini plausibili che possono alimentare sia la ricerca creativa sia le campagne di disinformazione.",
+    "note": "The legacy rendering is accurate. Self-review confirmed the adjective order and omitted competing literal variants that are less stable in current technical usage."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "category": "lexical-noun",
+    "tl": "l'apprendimento per rinforzo",
+    "alts": [],
+    "register": "Termine tecnico-formale dell'intelligenza artificiale e della teoria della decisione, spesso accompagnato dalla sigla inglese RL.",
+    "trap": "La costruzione stabilizzata usa per rinforzo, non di rinforzo; il rinforzo è il segnale di ricompensa o penalità, non un supplemento di dati.",
+    "example_tl": "L'apprendimento per rinforzo orienta la scelta delle azioni mediante premi e penalità, ma obiettivi mal definiti possono indurre strategie efficaci e socialmente dannose.",
+    "example_en": "Reinforcement learning guides action selection through rewards and penalties, but poorly defined objectives can induce effective yet socially harmful strategies.",
+    "cloze": "{{c1::L'apprendimento per rinforzo}} orienta la scelta delle azioni mediante premi e penalità, ma obiettivi mal definiti possono indurre strategie efficaci e socialmente dannose.",
+    "note": "The legacy rendering is accurate. Self-review retained the fixed preposition and made the reward-based technical sense explicit."
+  },
+  {
+    "id": "it_fancy_vocab_303",
+    "en": "the Inventory",
+    "category": "lexical-noun",
+    "tl": "le scorte",
+    "alts": [
+      "le giacenze"
+    ],
+    "register": "Termine operativo neutro della logistica, normalmente al plurale; giacenze è più contabile o legato alla quantità presente in magazzino.",
+    "trap": "Inventario indica spesso l'elenco o la rilevazione contabile dei beni, mentre English inventory nella gestione della filiera designa frequentemente le scorte fisiche.",
+    "example_tl": "Le scorte eccessive immobilizzano capitale nei magazzini, mentre livelli troppo bassi espongono la produzione a interruzioni improvvise delle forniture.",
+    "example_en": "Excess inventory ties up capital in warehouses, while levels that are too low expose production to sudden supply disruptions.",
+    "cloze": "{{c1::Le scorte}} eccessive immobilizzano capitale nei magazzini, mentre livelli troppo bassi espongono la produzione a interruzioni improvvise delle forniture.",
+    "note": "The legacy rendering correctly selects the supply-chain sense. Self-review retained giacenze only as a context-compatible alternative and excluded the tempting cognate inventario."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "category": "lexical-noun",
+    "tl": "l'approvvigionamento",
+    "alts": [
+      "il procurement"
+    ],
+    "register": "Termine neutro-formale della gestione aziendale; il prestito procurement è comune nel linguaggio manageriale e degli uffici acquisti.",
+    "trap": "Procurement copre l'acquisizione e la gestione contrattuale, mentre sourcing mette a fuoco ricerca e selezione dei fornitori; negli appalti pubblici serve una resa settoriale.",
+    "example_tl": "L'approvvigionamento di componenti strategici dovrebbe valutare affidabilità e sicurezza, non soltanto il prezzo iniziale proposto dai grandi fornitori internazionali.",
+    "example_en": "Procurement of strategic components should assess reliability and security, not merely the initial price proposed by major international suppliers.",
+    "cloze": "{{c1::L'approvvigionamento}} di componenti strategici dovrebbe valutare affidabilità e sicurezza, non soltanto il prezzo iniziale proposto dai grandi fornitori internazionali.",
+    "note": "The legacy rendering is appropriate to the logistics sense. Self-review added the sector-dependent public-procurement caveat and separated the term from sourcing."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "category": "lexical-expression",
+    "tl": "il just in time (JIT)",
+    "alts": [],
+    "register": "Prestito tecnico invariabile della produzione e della logistica, normalmente scritto in minuscolo e spesso abbreviato JIT.",
+    "trap": "Come metodo produttivo non equivale alla locuzione quotidiana appena in tempo; l'italiano corrente di settore preferisce just in time senza le maiuscole inglesi.",
+    "example_tl": "Il just in time riduce le scorte intermedie, ma rende la produzione vulnerabile quando ritardi logistici interrompono l'arrivo puntuale dei componenti.",
+    "example_en": "Just-in-time reduces work-in-process inventory, but makes production vulnerable when logistical delays disrupt the timely arrival of components.",
+    "cloze": "{{c1::Il just in time}} riduce le scorte intermedie, ma rende la produzione vulnerabile quando ritardi logistici interrompono l'arrivo puntuale dei componenti.",
+    "note": "The legacy rendering lacks a production-ready article, abbreviation, and domain distinction. Self-review normalized Italian capitalization while preserving the established loan."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "category": "lexical-noun",
+    "tl": "la logistica conto terzi (3PL)",
+    "alts": [
+      "la logistica di terze parti"
+    ],
+    "register": "Locuzione professionale neutra della gestione logistica; 3PL è la sigla internazionale, mentre logistica di terze parti risente maggiormente dell'inglese.",
+    "trap": "Conto terzi significa che il servizio è svolto per un'altra impresa; terzo partito sarebbe un calco politico e non una resa di third party.",
+    "example_tl": "La logistica conto terzi consente ai piccoli venditori digitali di delegare la gestione del magazzino e le consegne, trasformando costi fissi in servizi contrattuali misurabili.",
+    "example_en": "Third-party logistics allows small online sellers to delegate warehousing and deliveries, turning fixed costs into measurable contracted services.",
+    "cloze": "{{c1::La logistica conto terzi}} consente ai piccoli venditori digitali di delegare la gestione del magazzino e le consegne, trasformando costi fissi in servizi contrattuali misurabili.",
+    "note": "The legacy rendering is idiomatic. Self-review kept the English-shaped alternative because it is established in industry usage, but left conto terzi primary."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "category": "lexical-noun",
+    "tl": "il lead time",
+    "alts": [],
+    "register": "Prestito tecnico maschile molto comune nella produzione e nella logistica; la traduzione italiana cambia con l'intervallo concretamente misurato.",
+    "trap": "Tempo di consegna è corretto solo quando l'intervallo termina con la consegna; in produzione può servire tempo di attraversamento, negli acquisti tempo di approvvigionamento.",
+    "example_tl": "Ridurre il lead time di produzione permette alla fabbrica di reagire alla domanda senza accumulare grandi scorte di componenti costosi.",
+    "example_en": "Reducing production lead time allows the factory to respond to demand without accumulating large inventories of expensive components.",
+    "cloze": "Ridurre {{c1::il lead time}} di produzione permette alla fabbrica di reagire alla domanda senza accumulare grandi scorte di componenti costosi.",
+    "note": "The legacy tempo di consegna overselects one possible interval. Self-review retained the professional loan as the context-neutral headword and documented the principal contextual translations."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "category": "lexical-noun",
+    "tl": "la ricerca e selezione dei fornitori",
+    "alts": [
+      "il sourcing dei fornitori"
+    ],
+    "register": "Parafrasi professionale trasparente; il prestito sourcing è molto comune nel linguaggio manageriale e spesso compare con strategico o dei fornitori.",
+    "trap": "Sourcing riguarda anzitutto l'individuazione e la scelta delle fonti di fornitura; approvvigionamento o procurement coprono un processo di acquisto più ampio.",
+    "example_tl": "La ricerca e selezione dei fornitori richiede verifiche indipendenti, perché il prezzo più basso può nascondere rischi ambientali o dipendenze geopolitiche.",
+    "example_en": "Supplier sourcing requires independent checks, because the lowest price can conceal environmental risks or geopolitical dependencies.",
+    "cloze": "{{c1::La ricerca e selezione dei fornitori}} richiede verifiche indipendenti, perché il prezzo più basso può nascondere rischi ambientali o dipendenze geopolitiche.",
+    "note": "The legacy ricerca dei fornitori is directionally correct but omits selection. Self-review expanded it and separated the function explicitly from broader procurement."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "category": "lexical-noun",
+    "tl": "il codice SKU",
+    "alts": [
+      "il codice articolo interno"
+    ],
+    "register": "Termine operativo neutro del commercio e della gestione di magazzino; la sigla inglese SKU è nettamente più comune della sua espansione tradotta.",
+    "trap": "Lo SKU è assegnato internamente a una specifica variante vendibile; non coincide con GTIN o EAN, identificatori standardizzati utilizzabili tra imprese.",
+    "example_tl": "Il codice SKU distingue ogni variante vendibile per taglia e colore, consentendo al magazzino di gestire separatamente disponibilità, riordini e resi.",
+    "example_en": "The SKU distinguishes each saleable size and color variant, allowing the warehouse to manage availability, reorders, and returns separately.",
+    "cloze": "{{c1::Il codice SKU}} distingue ogni variante vendibile per taglia e colore, consentendo al magazzino di gestire separatamente disponibilità, riordini e resi.",
+    "note": "Materially diverges from the literal legacy expansion, which is intelligible but uncommon in live operations. Self-review chose the production-ready industry form and preserved the internal-code distinction."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "category": "lexical-noun",
+    "tl": "la previsione della domanda",
+    "alts": [],
+    "register": "Locuzione tecnico-formale della pianificazione commerciale, produttiva e logistica.",
+    "trap": "Nel linguaggio economico si usa stabilmente previsione della domanda; predizione della domanda è un calco evitabile, mentre stima può descrivere un'operazione più limitata.",
+    "example_tl": "La previsione della domanda basata soltanto sui dati passati sottostima gli shock politici e induce le imprese a mantenere scorte inadeguate.",
+    "example_en": "Demand forecasting based solely on past data underestimates political shocks and leads companies to maintain inadequate inventory.",
+    "cloze": "{{c1::La previsione della domanda}} basata soltanto sui dati passati sottostima gli shock politici e induce le imprese a mantenere scorte inadeguate.",
+    "note": "The legacy rendering is accurate. Self-review retained the item for the fixed professional collocation and the real previsione versus predizione interference risk."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "category": "lexical-noun",
+    "tl": "l'effetto frusta",
+    "alts": [
+      "l'effetto Forrester"
+    ],
+    "register": "Termine specialistico della logistica e della gestione delle filiere; effetto Forrester è una denominazione tecnica alternativa.",
+    "trap": "La locuzione italiana stabilizzata è effetto frusta, senza di: indica l'amplificazione della variabilità degli ordini risalendo la filiera.",
+    "example_tl": "L'effetto frusta amplifica piccole variazioni degli ordini lungo la filiera, creando a monte scorte eccessive che non riflettono la domanda finale.",
+    "example_en": "The bullwhip effect amplifies small changes in orders along the supply chain, creating excess upstream inventory that does not reflect final demand.",
+    "cloze": "{{c1::L'effetto frusta}} amplifica piccole variazioni degli ordini lungo la filiera, creando a monte scorte eccessive che non riflettono la domanda finale.",
+    "note": "The legacy rendering is accurate. Self-review added the established eponymous alternative and verified that both terms denote the same supply-chain mechanism."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "category": "lexical-noun",
+    "tl": "il magazzinaggio",
+    "alts": [
+      "lo stoccaggio"
+    ],
+    "register": "Termine professionale neutro per il deposito e la permanenza delle merci in magazzino; stoccaggio è un'alternativa industriale molto comune.",
+    "trap": "Gestione del magazzino comprende anche processi come ricevimento e prelievo ed è quindi più ampia; immagazzinamento descrive soprattutto l'azione di collocare le merci.",
+    "example_tl": "Il magazzinaggio a temperatura controllata protegge i vaccini durante la distribuzione, ma richiede sistemi energetici ridondanti e verifiche continue della catena del freddo.",
+    "example_en": "Temperature-controlled warehousing protects vaccines during distribution, but requires redundant energy systems and continuous checks of the cold chain.",
+    "cloze": "{{c1::Il magazzinaggio}} a temperatura controllata protegge i vaccini durante la distribuzione, ma richiede sistemi energetici ridondanti e verifiche continue della catena del freddo.",
+    "note": "The legacy stoccaggio is accurate and remains a true alternative. Self-review changed the primary term from gestione del magazzino to the more equivalent magazzinaggio."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "category": "lexical-verb",
+    "tl": "tracciare",
+    "alts": [],
+    "register": "Verbo transitivo neutro, pienamente corrente nella logistica e nei sistemi digitali per seguire nel tempo posizione, percorso o stato.",
+    "trap": "Il portoghese traçar significa soprattutto delineare o tracciare una linea; in italiano logistico tracciare è corretto, mentre rintracciare mette a fuoco il ritrovamento.",
+    "example_tl": "Il sistema traccia ogni lotto dalla fabbrica al rivenditore, così le autorità possono isolare rapidamente prodotti difettosi senza bloccare l'intera filiera.",
+    "example_en": "The system tracks every batch from the factory to the retailer, so authorities can quickly isolate defective products without blocking the entire supply chain.",
+    "cloze": "Il sistema {{c1::traccia}} ogni lotto dalla fabbrica al rivenditore, così le autorità possono isolare rapidamente prodotti difettosi senza bloccare l'intera filiera.",
+    "note": "The legacy rendering is accurate. Self-review fixed the logistics traceability sense in context and clozed the naturally inflected occurrence rather than the infinitive."
+  },
+  {
+    "id": "it_fancy_vocab_319",
+    "en": "to marginalize",
+    "category": "lexical-verb",
+    "tl": "emarginare",
+    "alts": [
+      "marginalizzare"
+    ],
+    "register": "Verbo neutro-formale della critica sociale; marginalizzare è più dotto e burocratico, ma corrente nell'analisi politica e sociologica.",
+    "trap": "Con persone, gruppi o voci escluse, emarginare è spesso più idiomatico del cognato marginalizzare; ridurre non esprime necessariamente l'esclusione dal centro del dibattito.",
+    "example_tl": "Gli algoritmi di raccomandazione emarginano le testate locali quando premiano soltanto contenuti capaci di generare reazioni immediate e polarizzanti.",
+    "example_en": "Recommendation algorithms marginalize local news outlets when they reward only content capable of generating immediate and polarizing reactions.",
+    "cloze": "Gli algoritmi di raccomandazione {{c1::emarginano}} le testate locali quando premiano soltanto contenuti capaci di generare reazioni immediate e polarizzanti.",
+    "note": "The legacy rendering is idiomatic. Self-review retained marginalizzare only for the same exclusion sense in formal analysis, not as a blanket substitute in every context."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "category": "lexical-verb",
+    "tl": "trarre profitto da",
+    "alts": [
+      "ricavare profitti da"
+    ],
+    "register": "Costruzione neutro-formale per ottenere un guadagno economico da una risorsa o attività; può assumere una sfumatura critica nel contesto.",
+    "trap": "La preposizione da appartiene alla costruzione; beneficiare di non implica necessariamente un guadagno monetario, mentre profittare di può suggerire opportunismo.",
+    "example_tl": "Le piattaforme traggono profitto dai dati degli utenti, mentre trasferiscono alla società gran parte dei costi della moderazione insufficiente.",
+    "example_en": "Platforms profit from users' data while shifting much of the cost of inadequate moderation onto society.",
+    "cloze": "Le piattaforme {{c1::traggono profitto dai}} dati degli utenti, mentre trasferiscono alla società gran parte dei costi della moderazione insufficiente.",
+    "note": "The legacy headword omits the governed preposition. Self-review restored da and clozed its contracted form with the inflected verb phrase."
+  }
+]

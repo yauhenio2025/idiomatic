@@ -1,0 +1,203 @@
+[
+  {
+    "id": "it_fancy_vocab_325",
+    "en": "to advertise",
+    "category": "lexical-verb",
+    "tl": "faire de la publicité pour",
+    "alts": [],
+    "register": "Neutral standard expression for advertising a product or service; faire de la pub pour is its colloquial counterpart.",
+    "trap": "French avertir means to warn, not to advertise; the advertised object follows the fixed preposition pour.",
+    "example_tl": "Lorsque la plateforme fait de la publicité pour ses propres services dans ses résultats de recherche, elle brouille la frontière entre recommandation et autopromotion.",
+    "example_en": "When the platform advertises its own services in its search results, it blurs the line between recommendation and self-promotion.",
+    "cloze": "Lorsque la plateforme {{c1::fait de la publicité pour}} ses propres services dans ses résultats de recherche, elle brouille la frontière entre recommandation et autopromotion.",
+    "note": "Expands old_back by supplying the governed preposition required with an advertised product or service. Self-review specified search results to eliminate an avoidable contextual ambiguity."
+  },
+  {
+    "id": "it_fancy_vocab_328",
+    "en": "to violate",
+    "category": "lexical-verb",
+    "tl": "porter atteinte à",
+    "alts": [],
+    "register": "Formal policy and legal expression used especially for harming privacy, integrity or a protected interest.",
+    "trap": "English violate is object-sensitive: French can violer une loi or un droit, but normally porter atteinte à la vie privée.",
+    "example_tl": "La collecte de données biométriques sans finalité précise porte atteinte à la vie privée, même lorsque l’entreprise promet un stockage sécurisé.",
+    "example_en": "Collecting biometric data without a specific purpose violates privacy, even when the company promises secure storage.",
+    "cloze": "La collecte de données biométriques sans finalité précise {{c1::porte atteinte à}} la vie privée, même lorsque l’entreprise promet un stockage sécurisé.",
+    "note": "The isolated source is polysemous. The surrounding digital-policy sequence supports the privacy sense, for which old_back violer is not the most idiomatic general rendering."
+  },
+  {
+    "id": "it_fancy_vocab_329",
+    "en": "to compete",
+    "category": "lexical-verb",
+    "tl": "rivaliser avec",
+    "alts": [],
+    "register": "Neutral professional verb for attempting to match a competitor’s performance or power; être en concurrence avec can merely identify the competitive relationship.",
+    "trap": "Concurrencer is transitive: une start-up concurrence un groupe. Rivaliser instead governs avec before the competitor.",
+    "example_tl": "Les petites plateformes peinent à rivaliser avec des groupes qui contrôlent simultanément l’infrastructure, les données et l’accès aux annonceurs.",
+    "example_en": "Small platforms struggle to compete with groups that simultaneously control infrastructure, data, and access to advertisers.",
+    "cloze": "Les petites plateformes peinent à {{c1::rivaliser avec}} des groupes qui contrôlent simultanément l’infrastructure, les données et l’accès aux annonceurs.",
+    "note": "Materially replaces old_back concurrencer, whose transitive argument structure does not match the usual intransitive reading of the bare English prompt. Self-review replaced être en concurrence avec because peiner à calls for the more dynamic performance sense."
+  },
+  {
+    "id": "it_fancy_vocab_331",
+    "en": "to address",
+    "category": "lexical-verb",
+    "tl": "traiter un problème",
+    "alts": [],
+    "register": "Neutral professional expression for dealing with an issue; s’attaquer à is more forceful and suggests active remedial effort.",
+    "trap": "S’adresser à means to speak or write to a person or audience; it does not mean to deal with a problem.",
+    "example_tl": "Le règlement prétend traiter le problème des abus de position dominante, mais il laisse intact le modèle économique qui les encourage.",
+    "example_en": "The regulation claims to address the problem of abuses of a dominant position, but it leaves intact the business model that encourages them.",
+    "cloze": "Le règlement prétend {{c1::traiter}} le problème des abus de position dominante, mais il laisse intact le modèle économique qui les encourage.",
+    "note": "The source is polysemous. This note selects address an issue and materially rejects old_back s’adresser, which selects the speech-recipient sense. Self-review tightened the example to remove a translated collocation."
+  },
+  {
+    "id": "it_fancy_vocab_334",
+    "en": "to entrench",
+    "category": "lexical-verb",
+    "tl": "ancrer durablement",
+    "alts": [
+      "enraciner"
+    ],
+    "register": "Formal analytical wording for making an institution, advantage or inequality resistant to change; enraciner uses a stronger root metaphor.",
+    "trap": "Old_back s’enraciner is reflexive and intransitive, whereas English often uses entrench transitively with power, practices or inequalities as its object.",
+    "example_tl": "En subventionnant les acteurs déjà dominants, la réforme risque d’ancrer durablement des inégalités que le législateur affirme pourtant vouloir corriger.",
+    "example_en": "By subsidizing already dominant players, the reform risks entrenching inequalities that the legislature nevertheless claims it wants to correct.",
+    "cloze": "En subventionnant les acteurs déjà dominants, la réforme risque d’{{c1::ancrer durablement}} des inégalités que le législateur affirme pourtant vouloir corriger.",
+    "note": "Materially replaces old_back pour s’enraciner, which both adds a spurious pour and reverses the transitive perspective selected here."
+  },
+  {
+    "id": "it_fancy_vocab_335",
+    "en": "to lobby",
+    "category": "lexical-verb",
+    "tl": "faire du lobbying auprès de",
+    "alts": [],
+    "register": "Standard in French political and corporate reporting; mener une action de lobbying is a more formal expanded form.",
+    "trap": "The institution being lobbied follows auprès de; faire pression sur is possible but foregrounds pressure rather than the organized advocacy activity.",
+    "example_tl": "Les grands groupes font du lobbying auprès de la Commission afin d’affaiblir des obligations de transparence qu’ils qualifient publiquement de disproportionnées.",
+    "example_en": "Large corporations lobby the Commission to weaken transparency requirements that they publicly describe as disproportionate.",
+    "cloze": "Les grands groupes {{c1::font du lobbying auprès de}} la Commission afin d’affaiblir des obligations de transparence qu’ils qualifient publiquement de disproportionnées.",
+    "note": "Old_back captures the activity but omits the government needed when the target institution is expressed. Self-review rewrote the example so the lobbying aim and public criticism cohere explicitly."
+  },
+  {
+    "id": "it_fancy_vocab_337",
+    "en": "to partner",
+    "category": "lexical-verb",
+    "tl": "s’associer à",
+    "alts": [
+      "conclure un partenariat avec"
+    ],
+    "register": "Neutral for entering a collaborative arrangement; conclure un partenariat avec is more explicit and common in institutional announcements.",
+    "trap": "French does not normally turn partenaire into a verb; s’associer is reflexive and governs à before the partner.",
+    "example_tl": "Le ministère s’est associé à deux opérateurs privés, sans publier les clauses qui encadrent l’usage secondaire des données scolaires.",
+    "example_en": "The ministry partnered with two private operators without publishing the clauses governing the secondary use of school data.",
+    "cloze": "Le ministère {{c1::s’est associé à}} deux opérateurs privés, sans publier les clauses qui encadrent l’usage secondaire des données scolaires.",
+    "note": "Expands old_back s’associer by adding the governed preposition and fixing the corporate partnership sense in context."
+  },
+  {
+    "id": "it_fancy_vocab_339",
+    "en": "to secure",
+    "category": "lexical-verb",
+    "tl": "obtenir",
+    "alts": [],
+    "register": "Neutral in the obtain-successfully sense used with funding, an agreement, access or support.",
+    "trap": "Sécuriser normally means to make something safe or less uncertain; translating secure funding as sécuriser un financement can obscure the simpler meaning obtenir.",
+    "example_tl": "Après des mois de négociation, le consortium a obtenu un financement public sans accepter de contrôle indépendant sur ses pratiques de sous-traitance.",
+    "example_en": "After months of negotiation, the consortium secured public funding without accepting independent oversight of its subcontracting practices.",
+    "cloze": "Après des mois de négociation, le consortium a {{c1::obtenu}} un financement public sans accepter de contrôle indépendant sur ses pratiques de sous-traitance.",
+    "note": "The source is highly polysemous. This note selects the obtain-successfully sense and materially replaces old_back sécuriser; technical protection is treated by the later adjective Secure."
+  },
+  {
+    "id": "it_fancy_vocab_341",
+    "en": "Invasive",
+    "category": "lexical-adjective",
+    "tl": "intrusif",
+    "alts": [],
+    "register": "Standard critical adjective for surveillance, advertising or a digital feature that excessively enters private life.",
+    "trap": "Invasif is standard in medical and biological contexts; intrusif is usually more idiomatic for privacy-invasive technology or questioning.",
+    "example_tl": "Le régulateur juge ce dispositif publicitaire intrusif, car il suit les utilisateurs hors de l’application et reconstitue leurs habitudes politiques.",
+    "example_en": "The regulator considers this advertising mechanism invasive because it tracks users outside the application and reconstructs their political habits.",
+    "cloze": "Le régulateur juge ce dispositif publicitaire {{c1::intrusif}}, car il suit les utilisateurs hors de l’application et reconstitue leurs habitudes politiques.",
+    "note": "Materially replaces old_back invasif with the adjective preferred for the privacy sense selected by the surrounding technology vocabulary. Self-review removed a heavy predicate inversion from the example."
+  },
+  {
+    "id": "it_fancy_vocab_346",
+    "en": "Unethical",
+    "category": "lexical-adjective",
+    "tl": "contraire à l’éthique",
+    "alts": [],
+    "register": "Neutral-formal evaluative expression in professional and institutional prose; peu éthique makes a weaker, more graded judgment.",
+    "trap": "The English prefix does not require a French non- calque; contraire à l’éthique is more idiomatic when making an explicit categorical judgment.",
+    "example_tl": "Le comité estime que l’exploitation de conversations privées pour entraîner un produit commercial sans consentement réellement éclairé est contraire à l’éthique.",
+    "example_en": "The committee considers using private conversations to train a commercial product without genuinely informed consent to be unethical.",
+    "cloze": "Le comité estime que l’exploitation de conversations privées pour entraîner un produit commercial sans consentement réellement éclairé est {{c1::contraire à l’éthique}}.",
+    "note": "Materially replaces the serviceable but English-shaped old_back non éthique with a more idiomatic categorical formulation. Self-review recast the example as a finite clause for more natural information order."
+  },
+  {
+    "id": "it_fancy_vocab_349",
+    "en": "Biased",
+    "category": "lexical-adjective",
+    "tl": "biaisé",
+    "alts": [],
+    "register": "Neutral analytical and technical adjective for data, samples, methods or judgments distorted by bias.",
+    "trap": "Biaisé agrees normally with its noun; for a person who shows favoritism, partial is often more idiomatic than applying biaisé directly to the person.",
+    "example_tl": "Un jeu de données d’entraînement biaisé peut pénaliser certains quartiers, même si les variables sensibles ont été retirées avant l’évaluation du modèle.",
+    "example_en": "A biased training dataset can disadvantage certain neighborhoods, even if sensitive variables were removed before the model was evaluated.",
+    "cloze": "Un jeu de données d’entraînement {{c1::biaisé}} peut pénaliser certains quartiers, même si les variables sensibles ont été retirées avant l’évaluation du modèle.",
+    "note": "Old_back is accurate. Retention is justified by the referent-sensitive contrast between biased data or analysis and a partial person. Self-review replaced base d’apprentissage with the established machine-learning term jeu de données d’entraînement."
+  },
+  {
+    "id": "it_fancy_vocab_351",
+    "en": "Globalized",
+    "category": "lexical-adjective",
+    "tl": "mondialisé",
+    "alts": [
+      "globalisé"
+    ],
+    "register": "Mondialisé is preferred in careful France-French economic and policy prose; globalisé is widespread but remains more visibly modeled on English.",
+    "trap": "English globalized usually describes integration through mondialisation; French global can instead mean overall or considered as a whole.",
+    "example_tl": "Dans une économie mondialisée, une restriction imposée à un seul fournisseur peut perturber simultanément des usines réparties sur trois continents.",
+    "example_en": "In a globalized economy, a restriction imposed on a single supplier can simultaneously disrupt factories spread across three continents.",
+    "cloze": "Dans une économie {{c1::mondialisée}}, une restriction imposée à un seul fournisseur peut perturber simultanément des usines réparties sur trois continents.",
+    "note": "Materially prefers mondialisé over old_back globalisé for careful standard France French while recording the established alternative."
+  },
+  {
+    "id": "it_fancy_vocab_352",
+    "en": "Competitive",
+    "category": "lexical-adjective",
+    "tl": "concurrentiel",
+    "alts": [],
+    "register": "Standard economic and regulatory adjective for a market characterized by effective competition.",
+    "trap": "A marché concurrentiel has active competition; compétitif more often describes an actor, product or price capable of competing successfully.",
+    "example_tl": "Sans portabilité effective des données, le marché ne deviendra pas concurrentiel, même si plusieurs applications proposent des interfaces presque identiques.",
+    "example_en": "Without effective data portability, the market will not become competitive, even if several applications offer almost identical interfaces.",
+    "cloze": "Sans portabilité effective des données, le marché ne deviendra pas {{c1::concurrentiel}}, même si plusieurs applications proposent des interfaces presque identiques.",
+    "note": "The source is polysemous. This note selects the market-structure sense and materially replaces old_back compétitif, which normally describes competitive ability."
+  },
+  {
+    "id": "it_fancy_vocab_353",
+    "en": "Comprehensive",
+    "category": "lexical-adjective",
+    "tl": "complet",
+    "alts": [],
+    "register": "Neutral-formal for a report, review or plan covering all relevant aspects; exhaustif makes the stronger claim that nothing is omitted.",
+    "trap": "French compréhensif means understanding or broad-minded when applied to a person; it does not describe a comprehensive report.",
+    "example_tl": "Le rapport propose un examen complet des risques, depuis la collecte des données jusqu’aux effets du système sur l’accès aux services publics.",
+    "example_en": "The report offers a comprehensive review of the risks, from data collection to the system’s effects on access to public services.",
+    "cloze": "Le rapport propose un examen {{c1::complet}} des risques, depuis la collecte des données jusqu’aux effets du système sur l’accès aux services publics.",
+    "note": "Old_back is semantically sound. Retention is justified by the productive English-to-French false-friend trap around comprehensive and compréhensif."
+  },
+  {
+    "id": "it_fancy_vocab_356",
+    "en": "Secure",
+    "category": "lexical-adjective",
+    "tl": "sécurisé",
+    "alts": [],
+    "register": "Neutral technical adjective for a service, connection or system protected by deliberate security measures.",
+    "trap": "Sûr means safe or reliable more broadly; sécurisé specifically suggests protective measures, while English secure can express either sense.",
+    "example_tl": "Une messagerie sécurisée ne protège réellement ses usagers que si le chiffrement couvre aussi les sauvegardes et les métadonnées conservées par l’opérateur.",
+    "example_en": "A secure messaging service truly protects its users only if encryption also covers backups and metadata retained by the operator.",
+    "cloze": "Une messagerie {{c1::sécurisée}} ne protège réellement ses usagers que si le chiffrement couvre aussi les sauvegardes et les métadonnées conservées par l’opérateur.",
+    "note": "The source is polysemous. The technology sequence supports the protected-system sense, which materially narrows old_back sûr."
+  }
+]

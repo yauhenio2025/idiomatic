@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_361",
+    "en": "Diverse",
+    "verdict": "drop",
+    "reason": "Vielfältig or divers is straightforward, and the isolated adjective selects no specialised social, biological or organisational sense worth a separate card."
+  },
+  {
+    "id": "it_fancy_vocab_362",
+    "en": "Dynamic",
+    "verdict": "drop",
+    "reason": "Dynamisch is a familiar transparent German cognate with predictable use, and the prompt supplies no technical or figurative distinction."
+  },
+  {
+    "id": "it_fancy_vocab_363",
+    "en": "Static",
+    "verdict": "drop",
+    "reason": "Statisch is a familiar transparent German technical cognate, while the bare adjective does not select a more instructive contrast."
+  },
+  {
+    "id": "it_fancy_vocab_364",
+    "en": "Responsive",
+    "verdict": "keep",
+    "reason": "Responsiv is established web-design vocabulary and differs usefully from reaktionsfähig and anpassungsfähig in system and interface contexts."
+  },
+  {
+    "id": "it_fancy_vocab_365",
+    "en": "Detached",
+    "verdict": "keep",
+    "reason": "Distanziert, losgelöst and abgekoppelt divide detached stance, abstract separation and technical disconnection in analytical prose."
+  },
+  {
+    "id": "it_fancy_vocab_366",
+    "en": "Limited",
+    "verdict": "drop",
+    "reason": "Begrenzt and eingeschränkt are familiar basic policy vocabulary, and the context-free adjective selects no useful construction or sense distinction."
+  },
+  {
+    "id": "it_fancy_vocab_367",
+    "en": "Scalable",
+    "verdict": "keep",
+    "reason": "Skalierbar is high-value technology and business vocabulary whose growth-without-proportional-cost sense is not merely simple expandability."
+  },
+  {
+    "id": "it_fancy_vocab_368",
+    "en": "Convergent",
+    "verdict": "drop",
+    "reason": "Konvergent is a transparent academic cognate, and the isolated adjective does not identify a specialised media, mathematical or political sense."
+  },
+  {
+    "id": "it_fancy_vocab_369",
+    "en": "Divergent",
+    "verdict": "drop",
+    "reason": "Divergent is a transparent German academic cognate, and the prompt provides no context that would distinguish its technical or figurative uses."
+  },
+  {
+    "id": "it_fancy_vocab_370",
+    "en": "Autonomous",
+    "verdict": "keep",
+    "reason": "Autonom is productive AI and governance vocabulary, with a useful distinction between technical autonomy, political independence and self-determination."
+  },
+  {
+    "id": "it_fancy_vocab_371",
+    "en": "Collaborative",
+    "verdict": "keep",
+    "reason": "Kollaborativ is common in modern technology and organisational discourse and needs separation from broader kooperativ."
+  },
+  {
+    "id": "it_fancy_vocab_372",
+    "en": "Sustainable",
+    "verdict": "drop",
+    "reason": "Nachhaltig is a very familiar core policy adjective, and the isolated prompt adds no environmental, financial or institutional sense distinction."
+  },
+  {
+    "id": "it_fancy_vocab_373",
+    "en": "Consumptive",
+    "verdict": "keep",
+    "reason": "Konsumtiv is specialised economic vocabulary for current-consumption spending and cannot be reduced safely to the generic verb verbrauchen."
+  },
+  {
+    "id": "it_fancy_vocab_374",
+    "en": "Neutral",
+    "verdict": "drop",
+    "reason": "Neutral is a familiar internationalism with predictable German form and no selected political, technical or rhetorical nuance."
+  },
+  {
+    "id": "it_fancy_vocab_375",
+    "en": "the Privacy",
+    "verdict": "keep",
+    "reason": "Privatsphäre and Datenschutz divide personal privacy from institutional data protection, correcting the source gloss's narrowed sense."
+  },
+  {
+    "id": "it_fancy_vocab_376",
+    "en": "the Data",
+    "verdict": "drop",
+    "reason": "Die Daten is basic, familiar technology vocabulary, and the bare plural prompt selects no specialised German collocation or grammatical issue."
+  },
+  {
+    "id": "it_fancy_vocab_377",
+    "en": "the Regulation",
+    "verdict": "keep",
+    "reason": "Regulierung, Regelung and Vorschrift distinguish regulatory intervention from an arrangement or individual prescriptive rule in policy prose."
+  },
+  {
+    "id": "it_fancy_vocab_378",
+    "en": "the Advertisement",
+    "verdict": "keep",
+    "reason": "Werbung names advertising broadly, while Anzeige names an individual ad and Reklame carries a marked register."
+  },
+  {
+    "id": "it_fancy_vocab_379",
+    "en": "the User",
+    "verdict": "drop",
+    "reason": "Der Nutzer is familiar basic digital vocabulary, and the context-free prompt does not select a useful distinction from Benutzer or Anwender."
+  },
+  {
+    "id": "it_fancy_vocab_380",
+    "en": "the Content",
+    "verdict": "keep",
+    "reason": "Inhalt is the neutral media noun, while Content is a distinct established industry loanword with useful digital-register contrast."
+  },
+  {
+    "id": "it_fancy_vocab_381",
+    "en": "the Revenue",
+    "verdict": "keep",
+    "reason": "Umsatz corrects the aggregate-business sense left unclear by singular Einnahme and teaches the crucial distinction from Gewinn."
+  },
+  {
+    "id": "it_fancy_vocab_382",
+    "en": "the Market",
+    "verdict": "drop",
+    "reason": "Der Markt is a core transparent German noun, and the bare prompt selects no economic collocation or conceptual contrast."
+  },
+  {
+    "id": "it_fancy_vocab_383",
+    "en": "the Competition",
+    "verdict": "keep",
+    "reason": "Wettbewerb and Konkurrenz differ between competitive conditions or process and the rival-focused sense used in economic analysis."
+  },
+  {
+    "id": "it_fancy_vocab_384",
+    "en": "the Security",
+    "verdict": "keep",
+    "reason": "Sicherheit is polysemous across safety and certainty, while IT-Sicherheit fixes the high-value cybersecurity sense for technology criticism."
+  },
+  {
+    "id": "it_fancy_vocab_385",
+    "en": "the Breach",
+    "verdict": "keep",
+    "reason": "Datenschutzverletzung corrects the old rule-breach gloss and distinguishes a data-compromise incident from a vulnerability or general violation."
+  },
+  {
+    "id": "it_fancy_vocab_386",
+    "en": "the Ethics",
+    "verdict": "drop",
+    "reason": "Die Ethik is a transparent, familiar academic cognate, and the isolated noun supplies no specialised AI, professional or philosophical collocation."
+  },
+  {
+    "id": "it_fancy_vocab_387",
+    "en": "the Accessibility",
+    "verdict": "keep",
+    "reason": "Barrierefreiheit is the essential digital and disability-policy rendering, more precise than the generic Zugänglichkeit in the old gloss."
+  },
+  {
+    "id": "it_fancy_vocab_388",
+    "en": "the Consumer",
+    "verdict": "keep",
+    "reason": "Verbraucher is the legal and market-policy term and usefully contrasts with the more analytical Konsument and unrelated Nutzer."
+  },
+  {
+    "id": "it_fancy_vocab_389",
+    "en": "the Profit",
+    "verdict": "keep",
+    "reason": "Gewinn teaches the accounting distinction from Umsatz and Rendite while allowing the marked or critical alternative Profit."
+  },
+  {
+    "id": "it_fancy_vocab_390",
+    "en": "the Trust",
+    "verdict": "drop",
+    "reason": "Das Vertrauen is a familiar core German noun, and the isolated prompt does not select a specialised legal, technical or media collocation."
+  },
+  {
+    "id": "it_fancy_vocab_391",
+    "en": "the Policy",
+    "verdict": "keep",
+    "reason": "Politik, Richtlinie and politischer Kurs divide public policy, internal policy documents and governing direction; the old gloss is dangerously broad."
+  },
+  {
+    "id": "it_fancy_vocab_392",
+    "en": "the Lobbying",
+    "verdict": "keep",
+    "reason": "Lobbyarbeit is organised political influence rather than influence in general, with useful register and collocation alternatives."
+  },
+  {
+    "id": "it_fancy_vocab_393",
+    "en": "the Accountability",
+    "verdict": "keep",
+    "reason": "Rechenschaftspflicht captures answerability and oversight, not merely responsibility, making it high-value governance vocabulary."
+  },
+  {
+    "id": "it_fancy_vocab_394",
+    "en": "the Stakeholder",
+    "verdict": "keep",
+    "reason": "Stakeholder is an established professional term with the formal German alternative Anspruchsgruppe and a useful participation-policy context."
+  },
+  {
+    "id": "it_fancy_vocab_395",
+    "en": "the Consolidation",
+    "verdict": "keep",
+    "reason": "Konsolidierung spans finance and market structure, where it must be distinguished from Zusammenlegung and the more critical Konzentration."
+  },
+  {
+    "id": "it_fancy_vocab_396",
+    "en": "the Acquisition",
+    "verdict": "keep",
+    "reason": "Übernahme is the idiomatic corporate term and contrasts with the anglicised Akquisition and broader Erwerb in business prose."
+  },
+  {
+    "id": "it_fancy_vocab_397",
+    "en": "the Expansion",
+    "verdict": "drop",
+    "reason": "Expansion is a familiar German internationalism, and the isolated noun adds no selected contrast with Ausweitung, Ausbau or Erweiterung."
+  },
+  {
+    "id": "it_fancy_vocab_398",
+    "en": "the Restriction",
+    "verdict": "keep",
+    "reason": "Einschränkung is useful neutral policy vocabulary and must be distinguished from a total Verbot and more formal Restriktion."
+  },
+  {
+    "id": "it_fancy_vocab_399",
+    "en": "the Influence",
+    "verdict": "keep",
+    "reason": "Einfluss is neutral capacity, while Einflussnahme and Beeinflussung foreground deliberate intervention or a process/effect."
+  },
+  {
+    "id": "it_fancy_vocab_400",
+    "en": "the Manipulation",
+    "verdict": "drop",
+    "reason": "Die Manipulation is a familiar transparent German cognate, and the bare noun selects no additional media, technical or psychological sense."
+  }
+]

@@ -1,0 +1,259 @@
+[
+  {
+    "id": "it_fancy_vocab_002",
+    "en": "To regulate",
+    "category": "lexical-verb",
+    "tl": "regolamentare",
+    "alts": [
+      "disciplinare"
+    ],
+    "register": "Neutral-formal in legal and public-policy prose; disciplinare is especially common when a law lays down the rules governing an activity.",
+    "trap": "Regolare can mean adjusting or controlling how a system operates; in a legal-policy context, regolamentare or disciplinare more clearly means subjecting an activity to rules.",
+    "example_tl": "L'Unione europea ha regolamentato i sistemi di raccomandazione per imporre obblighi di trasparenza senza dettare alle piattaforme una linea editoriale comune.",
+    "example_en": "The European Union regulated recommendation systems to impose transparency obligations without dictating a common editorial line to the platforms.",
+    "cloze": "L'Unione europea ha {{c1::regolamentato}} i sistemi di raccomandazione per imporre obblighi di trasparenza senza dettare alle piattaforme una linea editoriale comune.",
+    "note": "The legacy rendering is correct for the legal-policy sense selected here; the note distinguishes it from operational regulation expressed with regolare."
+  },
+  {
+    "id": "it_fancy_vocab_005",
+    "en": "To commodify",
+    "category": "lexical-verb",
+    "tl": "mercificare",
+    "alts": [
+      "trasformare in merce",
+      "ridurre a merce"
+    ],
+    "register": "Marked critical vocabulary in political economy, sociology and media criticism; ridurre a merce makes the negative evaluation especially explicit.",
+    "trap": "Commercializzare means putting an existing product on the market; it does not express turning attention, care or another nonmarket good into a commodity.",
+    "example_tl": "Mercificando l'attenzione degli utenti, le piattaforme trasformano ogni interazione in un segnale vendibile e subordinano il dibattito pubblico alle esigenze pubblicitarie.",
+    "example_en": "By commodifying users' attention, platforms turn every interaction into a marketable signal and subordinate public debate to advertising demands.",
+    "cloze": "{{c1::Mercificando}} l'attenzione degli utenti, le piattaforme trasformano ogni interazione in un segnale vendibile e subordinano il dibattito pubblico alle esigenze pubblicitarie.",
+    "note": "The legacy rendering is accurate. Self-review: retained the marked derived verb because the example fixes the political-economic sense rather than mere commercialization."
+  },
+  {
+    "id": "it_fancy_vocab_010",
+    "en": "To disrupt",
+    "category": "lexical-verb",
+    "tl": "sconvolgere",
+    "alts": [
+      "trasformare radicalmente"
+    ],
+    "register": "Neutral-critical for a lasting structural change in a sector or institution; it avoids promotional Anglicisms common in technology marketing.",
+    "trap": "Perturbare normally describes disturbing a process, service or equilibrium and can be too weak when disrupt means fundamentally reshaping an industry.",
+    "example_tl": "L'ingresso dei fondi speculativi ha sconvolto il panorama mediatico locale, indebolendo le redazioni e subordinando l'informazione a obiettivi di redditività immediata.",
+    "example_en": "The arrival of speculative funds disrupted the local media landscape, weakening newsrooms and subordinating news coverage to immediate profitability targets.",
+    "cloze": "L'ingresso dei fondi speculativi ha {{c1::sconvolto}} il panorama mediatico locale, indebolendo le redazioni e subordinando l'informazione a obiettivi di redditività immediata.",
+    "note": "The isolated source is polysemous. This note selects structural industry change; old_back remains possible for a temporary disturbance or service disruption."
+  },
+  {
+    "id": "it_fancy_vocab_012",
+    "en": "To encrypt",
+    "category": "lexical-verb",
+    "tl": "cifrare",
+    "alts": [
+      "crittografare"
+    ],
+    "register": "Neutral technical vocabulary; cifrare is concise and standard, while crittografare explicitly evokes the cryptographic process.",
+    "trap": "Codificare changes the representation of data without necessarily protecting its confidentiality, so it is not a synonym for cifrare.",
+    "example_tl": "Il servizio di messaggistica cifra i messaggi sui dispositivi degli utenti, ma conserva metadati sufficienti a ricostruire reti di contatti e abitudini d'uso.",
+    "example_en": "The messaging service encrypts messages on users' devices, but retains enough metadata to reconstruct contact networks and patterns of use.",
+    "cloze": "Il servizio di messaggistica {{c1::cifra}} i messaggi sui dispositivi degli utenti, ma conserva metadati sufficienti a ricostruire reti di contatti e abitudini d'uso.",
+    "note": "The legacy rendering is correct. The teaching value lies in separating encryption from mere encoding."
+  },
+  {
+    "id": "it_fancy_vocab_015",
+    "en": "To standardize",
+    "category": "lexical-verb",
+    "tl": "standardizzare",
+    "alts": [
+      "uniformare"
+    ],
+    "register": "Neutral in technical and institutional prose; standardizzare invokes a common standard, whereas uniformare only stresses consistency across items.",
+    "trap": "Normalizzare can mean restoring normal conditions or transforming data according to a convention; it is not automatically interchangeable with standardizzare.",
+    "example_tl": "L'autorità ha standardizzato i formati dei rapporti di trasparenza affinché giornalisti e ricercatori possano confrontare le decisioni di moderazione adottate dalle diverse piattaforme.",
+    "example_en": "The authority standardized transparency-report formats so that journalists and researchers can compare the moderation decisions made by different platforms.",
+    "cloze": "L'autorità ha {{c1::standardizzato}} i formati dei rapporti di trasparenza affinché giornalisti e ricercatori possano confrontare le decisioni di moderazione adottate dalle diverse piattaforme.",
+    "note": "The legacy rendering is correct. Self-review: kept uniformare only as a context-compatible alternative and stated that it does not itself imply a formal standard."
+  },
+  {
+    "id": "it_fancy_vocab_018",
+    "en": "To influence",
+    "category": "lexical-verb",
+    "tl": "influire su",
+    "alts": [
+      "influenzare"
+    ],
+    "register": "Neutral-formal and common in analytical prose; transitive influenzare is also standard and somewhat more direct.",
+    "trap": "Unlike English influence and Italian influenzare, influire is intransitive and requires su; Spanish influir en can encourage the wrong Italian preposition.",
+    "example_tl": "I grandi inserzionisti hanno influito sulla copertura economica minacciando di ritirare le campagne dai giornali che indagavano sulle loro pratiche fiscali.",
+    "example_en": "Major advertisers influenced economic coverage by threatening to withdraw campaigns from newspapers investigating their tax practices.",
+    "cloze": "I grandi inserzionisti hanno {{c1::influito sulla}} copertura economica minacciando di ritirare le campagne dai giornali che indagavano sulle loro pratiche fiscali.",
+    "note": "The legacy transitive verb is valid; the production headword adds the formal governed construction."
+  },
+  {
+    "id": "it_fancy_vocab_020",
+    "en": "To resist",
+    "category": "lexical-verb",
+    "tl": "resistere a",
+    "alts": [
+      "opporsi a"
+    ],
+    "register": "Neutral; resistere a can mean withstanding pressure or refusing to yield, while opporsi a foregrounds active opposition.",
+    "trap": "English resist takes a direct object, while Italian requires a; Spanish resistirse a can also prompt the incorrect Italian reflexive form *resistersi a.",
+    "example_tl": "Diverse redazioni hanno resistito alle pressioni governative, benché le autorità negassero loro l'accesso ai dati pubblici e alle conferenze stampa.",
+    "example_en": "Several newsrooms resisted government pressure, although the authorities denied them access to public data and press conferences.",
+    "cloze": "Diverse redazioni hanno {{c1::resistito alle}} pressioni governative, benché le autorità negassero loro l'accesso ai dati pubblici e alle conferenze stampa.",
+    "note": "The legacy rendering supplies the correct verb but omits its required preposition; the production headword restores a."
+  },
+  {
+    "id": "it_fancy_vocab_021",
+    "en": "To challenge",
+    "category": "lexical-verb",
+    "tl": "mettere qualcosa in discussione",
+    "alts": [
+      "contestare"
+    ],
+    "register": "Neutral-formal argumentative usage for questioning a premise, claim or decision; contestare is more directly adversarial.",
+    "trap": "Sfidare usually means confronting an opponent or facing a difficulty; it is misleading when challenge means questioning an argument or assumption.",
+    "example_tl": "Lo studio mette in discussione l'idea che i flussi personalizzati migliorino necessariamente la qualità dell'informazione e rafforzino l'autonomia politica degli utenti.",
+    "example_en": "The study challenges the idea that personalized feeds necessarily improve information quality and strengthen users' political autonomy.",
+    "cloze": "Lo studio {{c1::mette in discussione}} l'idea che i flussi personalizzati migliorino necessariamente la qualità dell'informazione e rafforzino l'autonomia politica degli utenti.",
+    "note": "The source is polysemous. This note selects the argumentative sense; old_back belongs to the confrontational sense."
+  },
+  {
+    "id": "it_fancy_vocab_023",
+    "en": "To adapt",
+    "category": "lexical-verb",
+    "tl": "adattarsi a",
+    "alts": [
+      "adeguarsi a"
+    ],
+    "register": "Neutral; the pronominal construction describes a subject changing in response to rules, conditions or an environment.",
+    "trap": "The intransitive sense requires both si and a; adattare without the reflexive marker is transitive and means modifying something else.",
+    "example_tl": "I media indipendenti si sono adattati alle nuove regole di distribuzione senza subordinare il lavoro d'inchiesta alle priorità opache imposte dalle piattaforme.",
+    "example_en": "Independent media adapted to the new distribution rules without subordinating investigative work to the opaque priorities imposed by platforms.",
+    "cloze": "I media indipendenti {{c1::si sono adattati alle}} nuove regole di distribuzione senza subordinare il lavoro d'inchiesta alle priorità opache imposte dalle piattaforme.",
+    "note": "The objectless source favors the intransitive reading; old_back gives the reflexive marker but omits the governed preposition."
+  },
+  {
+    "id": "it_fancy_vocab_024",
+    "en": "To implement",
+    "category": "lexical-verb",
+    "tl": "attuare",
+    "alts": [
+      "mettere in atto"
+    ],
+    "register": "Neutral-formal for carrying out a policy, plan or measure; mettere in atto is a common analytic alternative.",
+    "trap": "Implementare is established in computing, but with policies and institutional measures careful prose often prefers attuare, applicare or mettere in atto.",
+    "example_tl": "Il ministero ha attuato gradualmente le nuove misure di trasparenza, senza sospendere i servizi essenziali né limitare ulteriormente l'accesso dei ricercatori ai dati.",
+    "example_en": "The ministry implemented the new transparency measures gradually, without suspending essential services or further restricting researchers' access to data.",
+    "cloze": "Il ministero ha {{c1::attuato}} gradualmente le nuove misure di trasparenza, senza sospendere i servizi essenziali né limitare ulteriormente l'accesso dei ricercatori ai dati.",
+    "note": "The legacy rendering is the preferred policy verb. Self-review: changed the object from obligations to measures so that both attuare and mettere in atto remain natural."
+  },
+  {
+    "id": "it_fancy_vocab_025",
+    "en": "To predict",
+    "category": "lexical-verb",
+    "tl": "prevedere",
+    "alts": [
+      "predire"
+    ],
+    "register": "Neutral in analytical and scientific prose; predire foregrounds an explicit prediction and is also common in model descriptions.",
+    "trap": "Prevedere follows vedere in key irregular forms: the past participle is previsto and the future is prevedrà, not *preveduto or *prevederà.",
+    "example_tl": "Il modello prevede un forte aumento della polarizzazione politica, ma i progettisti non pubblicano i dati di addestramento né gli intervalli d'incertezza.",
+    "example_en": "The model predicts a sharp rise in political polarization, but its designers publish neither the training data nor the uncertainty intervals.",
+    "cloze": "Il modello {{c1::prevede}} un forte aumento della polarizzazione politica, ma i progettisti non pubblicano i dati di addestramento né gli intervalli d'incertezza.",
+    "note": "The legacy rendering is correct; retention is justified by the useful irregular morphology and the contrast with predire."
+  },
+  {
+    "id": "it_fancy_vocab_026",
+    "en": "To invest",
+    "category": "lexical-verb",
+    "tl": "investire in",
+    "alts": [
+      "destinare fondi a"
+    ],
+    "register": "Neutral in economic and policy prose; the target of investment follows in, while an amount of money can be a direct object.",
+    "trap": "When the target is stated, Italian uses investire in; French investir dans and Portuguese investir em can encourage transfer of the wrong preposition.",
+    "example_tl": "Lo Stato ha investito in centri dati pubblici per ridurre la dipendenza tecnologica senza sovvenzionare una nuova generazione di fornitori dominanti.",
+    "example_en": "The state invested in public data centers to reduce its technological dependence without subsidizing a new generation of dominant providers.",
+    "cloze": "Lo Stato ha {{c1::investito in}} centri dati pubblici per ridurre la dipendenza tecnologica senza sovvenzionare una nuova generazione di fornitori dominanti.",
+    "note": "The legacy rendering gives the correct verb but omits the productive preposition used before the investment target."
+  },
+  {
+    "id": "it_fancy_vocab_027",
+    "en": "To control",
+    "category": "lexical-verb",
+    "tl": "governare",
+    "alts": [
+      "controllare"
+    ],
+    "register": "Neutral-analytical when an actor determines how a process operates; controllare is broader and can also mean checking or inspecting.",
+    "trap": "Italian controllare overlaps with English control but often foregrounds verification; governare is clearer when the intended sense is directing a process or system.",
+    "example_tl": "Poche piattaforme governano i flussi dell'informazione, mentre i loro sistemi di raccomandazione continuano a sottrarsi a una supervisione democratica realmente efficace.",
+    "example_en": "Few platforms control information flows, while their recommendation systems continue to evade genuinely effective democratic oversight.",
+    "cloze": "Poche piattaforme {{c1::governano}} i flussi dell'informazione, mentre i loro sistemi di raccomandazione continuano a sottrarsi a una supervisione democratica realmente efficace.",
+    "note": "The isolated source is polysemous. This note selects command over a process; old_back remains a valid but potentially ambiguous alternative. Self-review: changed distribuzione dell'informazione to the more idiomatic flussi dell'informazione with governare."
+  },
+  {
+    "id": "it_fancy_vocab_031",
+    "en": "To undermine",
+    "category": "lexical-verb",
+    "tl": "minare",
+    "alts": [
+      "compromettere",
+      "erodere"
+    ],
+    "register": "Written-formal and critical; it commonly collocates with trust, legitimacy, authority, rights and institutional independence.",
+    "trap": "Scavare is literal 'to dig' and does not normally take an institution or its legitimacy as an object; figurative undermine is minare, erodere or compromettere.",
+    "example_tl": "La concentrazione del mercato pubblicitario digitale mina l'indipendenza editoriale, perché pochi intermediari possono penalizzare i media critici senza imporre alcun divieto formale.",
+    "example_en": "Concentration in the digital advertising market undermines editorial independence because a few intermediaries can penalize critical media without imposing any formal ban.",
+    "cloze": "La concentrazione del mercato pubblicitario digitale {{c1::mina}} l'indipendenza editoriale, perché pochi intermediari possono penalizzare i media critici senza imporre alcun divieto formale.",
+    "note": "The legacy rendering is accurate; retention is justified by the advanced institutional collocations and nonliteral English sense."
+  },
+  {
+    "id": "it_fancy_vocab_032",
+    "en": "To collaborate",
+    "category": "lexical-verb",
+    "tl": "collaborare con qualcuno a qualcosa",
+    "alts": [
+      "cooperare con qualcuno a qualcosa"
+    ],
+    "register": "Neutral-formal; con introduces a partner and a introduces the shared work, while political context can reactivate the sense of aiding an occupying power.",
+    "trap": "English collaborate on can prompt collaborare su; careful standard usage favors collaborare a un progetto and collaborare con a person or institution.",
+    "example_tl": "Diverse università hanno collaborato con redazioni indipendenti alla creazione di un archivio pubblico che documenta le campagne coordinate d'ingerenza elettorale.",
+    "example_en": "Several universities collaborated with independent newsrooms on creating a public archive documenting coordinated electoral-interference campaigns.",
+    "cloze": "Diverse università hanno {{c1::collaborato con}} redazioni indipendenti {{c1::alla}} creazione di un archivio pubblico che documenta le campagne coordinate d'ingerenza elettorale.",
+    "note": "The legacy rendering gives the verb alone; the production headword adds both complements. Self-review: wrapped each fixed arm of the discontinuous frame separately."
+  },
+  {
+    "id": "it_fancy_vocab_036",
+    "en": "To access",
+    "category": "lexical-verb",
+    "tl": "accedere a",
+    "alts": [
+      "avere accesso a"
+    ],
+    "register": "Neutral in technical and institutional usage for reaching, opening or consulting data, records, systems and services.",
+    "trap": "English access is transitive, whereas Italian requires accedere a; *accedere i dati is ungrammatical, and the preposition contracts in accedere ai dati.",
+    "example_tl": "I ricercatori indipendenti hanno potuto accedere ai registri tecnici interni solo dopo che un tribunale ha imposto alla piattaforma di conservare tutte le prove.",
+    "example_en": "Independent researchers were able to access the internal technical logs only after a court required the platform to preserve all the evidence.",
+    "cloze": "I ricercatori indipendenti hanno potuto {{c1::accedere ai}} registri tecnici interni solo dopo che un tribunale ha imposto alla piattaforma di conservare tutte le prove.",
+    "note": "The legacy rendering supplies the correct verb but omits its required preposition; the production headword restores a."
+  },
+  {
+    "id": "it_fancy_vocab_040",
+    "en": "To outsource",
+    "category": "lexical-verb",
+    "tl": "esternalizzare",
+    "alts": [
+      "affidare all'esterno"
+    ],
+    "register": "Neutral in business and policy prose; affidare all'esterno is a transparent analytic alternative that foregrounds delegation.",
+    "trap": "Delocalizzare means moving an activity geographically and does not entail an outside provider; appaltare is narrower because it presupposes a contract.",
+    "example_tl": "La piattaforma ha esternalizzato la moderazione dei contenuti a un fornitore straniero, perdendo così il controllo su decisioni decisive per i diritti fondamentali.",
+    "example_en": "The platform outsourced content moderation to a foreign provider, thereby losing control over decisions crucial to fundamental rights.",
+    "cloze": "La piattaforma ha {{c1::esternalizzato}} la moderazione dei contenuti a un fornitore straniero, perdendo così il controllo su decisioni decisive per i diritti fondamentali.",
+    "note": "The legacy rendering is correct. Self-review: added the provider complement so the distinction from geographic relocation and contract-specific appalto is explicit."
+  }
+]

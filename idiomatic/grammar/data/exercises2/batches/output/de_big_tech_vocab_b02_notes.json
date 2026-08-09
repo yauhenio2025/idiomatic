@@ -1,0 +1,356 @@
+[
+  {
+    "id": "it_big_tech_vocab_041",
+    "en": "the Digital proletariat",
+    "category": "lexical-noun",
+    "tl": "das digitale Proletariat",
+    "alts": [],
+    "register": "Critical labor-sociology and political-economy term for precarious workers whose labor is organized through digital systems.",
+    "trap": "The term does not denote everyone who uses digital devices; it foregrounds workers' dependence, dispossession, and weak control over digital production.",
+    "example_tl": "Das digitale Proletariat erledigt Klickarbeit, moderiert verstörende Inhalte und trainiert Modelle, während Plattformen die Risiken dieser unsichtbaren Beschäftigung systematisch auslagern.",
+    "example_en": "The digital proletariat performs clickwork, moderates disturbing content, and trains models while platforms systematically outsource the risks of this invisible employment.",
+    "cloze": "Das {{c1::digitale Proletariat}} erledigt Klickarbeit, moderiert verstörende Inhalte und trainiert Modelle, während Plattformen die Risiken dieser unsichtbaren Beschäftigung systematisch auslagern.",
+    "note": "Old_back is accurate apart from unnecessary capitalization of the English article; the example fixes the term's labor-critical rather than merely demographic sense."
+  },
+  {
+    "id": "it_big_tech_vocab_042",
+    "en": "the Commodification of data",
+    "category": "lexical-noun",
+    "tl": "die Kommodifizierung von Daten",
+    "alts": [
+      "die Verwandlung von Daten in Waren"
+    ],
+    "register": "Kommodifizierung is established academic political-economy vocabulary; the alternative is more explanatory and accessible in public commentary.",
+    "trap": "Kommodifizierung means turning something into a tradable commodity, not simply commercial use or the technical processing of data.",
+    "example_tl": "Die Kommodifizierung von Daten verwandelt Spuren alltäglicher Kommunikation in handelbare Güter, obwohl Nutzerinnen weder ihren Preis bestimmen noch an den Erlösen beteiligt werden.",
+    "example_en": "The commodification of data turns traces of everyday communication into tradable goods, although users neither determine their price nor share in the proceeds.",
+    "cloze": "Die {{c1::Kommodifizierung von Daten}} verwandelt Spuren alltäglicher Kommunikation in handelbare Güter, obwohl Nutzerinnen weder ihren Preis bestimmen noch an den Erlösen beteiligt werden.",
+    "note": "Old_back is accurate; self-review retained Kommodifizierung rather than the broader Inwertsetzung and made data traces, rather than communication itself, the commodity."
+  },
+  {
+    "id": "it_big_tech_vocab_043",
+    "en": "Data as labor",
+    "category": "lexical-expression",
+    "tl": "Daten als Arbeit",
+    "alts": [],
+    "register": "Specialist policy and political-economy framing that treats users' production of valuable data as labor potentially deserving rights or compensation.",
+    "trap": "Datenarbeit usually means work performed on data, such as labeling or cleaning; it does not automatically express the contested claim that producing data is labor.",
+    "example_tl": "Das Konzept „Daten als Arbeit“ fordert, die Erzeugung verwertbarer Datenspuren als ökonomische Tätigkeit anzuerkennen und Nutzer an Plattformerlösen zu beteiligen.",
+    "example_en": "The concept of data as labor calls for recognizing the production of exploitable data traces as economic activity and giving users a share of platform revenues.",
+    "cloze": "Das Konzept „{{c1::Daten als Arbeit}}“ fordert, die Erzeugung verwertbarer Datenspuren als ökonomische Tätigkeit anzuerkennen und Nutzer an Plattformerlösen zu beteiligen.",
+    "note": "The literal German frame is appropriate here, but it names a disputed analytical proposal rather than an uncontested description of all data generation."
+  },
+  {
+    "id": "it_big_tech_vocab_044",
+    "en": "the Digital means of production",
+    "category": "lexical-noun",
+    "tl": "die digitalen Produktionsmittel",
+    "alts": [],
+    "register": "Marxian and critical political-economy term extended to platforms, models, data centers, software, and other productive digital infrastructure.",
+    "trap": "Produktionsmittel are the assets and infrastructure used to produce; Produktionsweise instead denotes the wider organization of production and its social relations.",
+    "example_tl": "Wer Cloud-Infrastrukturen, Modelle und App-Stores als digitale Produktionsmittel begreift, erkennt, weshalb das Privateigentum an ihnen weitreichende wirtschaftliche Abhängigkeiten erzeugt.",
+    "example_en": "Anyone who understands cloud infrastructure, models, and app stores as digital means of production recognizes why their private ownership creates far-reaching economic dependencies.",
+    "cloze": "Wer Cloud-Infrastrukturen, Modelle und App-Stores als {{c1::digitale Produktionsmittel}} begreift, erkennt, weshalb das Privateigentum an ihnen weitreichende wirtschaftliche Abhängigkeiten erzeugt.",
+    "note": "Old_back is accurate. Self-review distinguished this item from digitale Produktionsweise and replaced the potentially ambiguous ihr privates Eigentum with Privateigentum an ihnen."
+  },
+  {
+    "id": "it_big_tech_vocab_045",
+    "en": "the Algorithmic exploitation",
+    "category": "lexical-noun",
+    "tl": "die algorithmische Ausbeutung",
+    "alts": [
+      "die algorithmisch vermittelte Ausbeutung"
+    ],
+    "register": "Critical labor-studies term; the main form is concise, while the alternative more cautiously states that algorithms mediate rather than personally perform exploitation.",
+    "trap": "Algorithmisch does not make the algorithm an intentional exploiter; the relevant agents and institutions remain employers and platforms using algorithmic management.",
+    "example_tl": "Algorithmische Ausbeutung entsteht, wenn Plattformen Arbeitsabläufe minutengenau vermessen, Leistungsziele einseitig verschärfen und Beschäftigten dennoch jede Einsicht in die Bewertung verweigern.",
+    "example_en": "Algorithmic exploitation arises when platforms measure workflows by the minute, unilaterally tighten performance targets, and still deny workers any insight into the evaluation.",
+    "cloze": "{{c1::Algorithmische Ausbeutung}} entsteht, wenn Plattformen Arbeitsabläufe minutengenau vermessen, Leistungsziele einseitig verschärfen und Beschäftigten dennoch jede Einsicht in die Bewertung verweigern.",
+    "note": "Old_back is lexically sound after lowercasing the adjective. The alternative records the more analytically precise formulation favored in careful prose."
+  },
+  {
+    "id": "it_big_tech_vocab_046",
+    "en": "Platform cooperativism",
+    "category": "lexical-noun",
+    "tl": "der Plattformkooperativismus",
+    "alts": [],
+    "register": "Established specialist term in debates on cooperative digital business models, labor ownership, and alternatives to platform capitalism.",
+    "trap": "Plattformkooperativismus is the movement or model; a Plattformkooperative is an individual cooperatively owned platform organization.",
+    "example_tl": "Plattformkooperativismus verlagert Eigentum und Entscheidungsrechte auf Beschäftigte und Nutzer, kann aber ohne geduldiges Kapital nur schwer gegen subventionierte Marktführer bestehen.",
+    "example_en": "Platform cooperativism shifts ownership and decision-making rights to workers and users but struggles to compete with subsidized market leaders without patient capital.",
+    "cloze": "{{c1::Plattformkooperativismus}} verlagert Eigentum und Entscheidungsrechte auf Beschäftigte und Nutzer, kann aber ohne geduldiges Kapital nur schwer gegen subventionierte Marktführer bestehen.",
+    "note": "Materially normalizes old_back by using the established closed compound and lowercasing the article. Self-review corrected the governed construction to etwas auf jemanden verlagern."
+  },
+  {
+    "id": "it_big_tech_vocab_047",
+    "en": "the Technological determinism",
+    "category": "lexical-noun",
+    "tl": "der Technikdeterminismus",
+    "alts": [
+      "der technologische Determinismus"
+    ],
+    "register": "Established critical term in sociology, media studies, and philosophy of technology; the compact German compound is the strongest production default.",
+    "trap": "Technological determinism treats technology as the primary driver of social change; it is not the narrower claim that one technical process has predictable results.",
+    "example_tl": "Technikdeterminismus führt politische Umbrüche vorschnell auf neue Geräte zurück, obwohl Institutionen, Eigentumsverhältnisse und gesellschaftliche Konflikte deren Wirkung entscheidend mitbestimmen.",
+    "example_en": "Technological determinism too readily attributes political upheavals to new devices, although institutions, property relations, and social conflicts decisively shape their effects.",
+    "cloze": "{{c1::Technikdeterminismus}} führt politische Umbrüche vorschnell auf neue Geräte zurück, obwohl Institutionen, Eigentumsverhältnisse und gesellschaftliche Konflikte deren Wirkung entscheidend mitbestimmen.",
+    "note": "Improves old_back by promoting Technikdeterminismus; self-review replaced the source-shaped etwas aus etwas erklären with the idiomatic etwas auf etwas zurückführen."
+  },
+  {
+    "id": "it_big_tech_vocab_048",
+    "en": "Data nationalism",
+    "category": "lexical-noun",
+    "tl": "der Datennationalismus",
+    "alts": [
+      "der Daten-Nationalismus"
+    ],
+    "register": "Emerging geopolitical and data-policy term; the hyphenated spelling is also used when writers want the compound's two elements to remain immediately visible.",
+    "trap": "Datennationalismus is not a synonym for data sovereignty: it criticizes protectionist or power-political alignment of data policy with national interests.",
+    "example_tl": "Der Datennationalismus verspricht Kontrolle durch territoriale Speicherung, kann jedoch neue Abhängigkeiten schaffen, wenn heimische Anbieter ebenfalls proprietäre Infrastrukturen betreiben.",
+    "example_en": "Data nationalism promises control through territorial storage but can create new dependencies when domestic providers also operate proprietary infrastructure.",
+    "cloze": "Der {{c1::Datennationalismus}} verspricht Kontrolle durch territoriale Speicherung, kann jedoch neue Abhängigkeiten schaffen, wenn heimische Anbieter ebenfalls proprietäre Infrastrukturen betreiben.",
+    "note": "Old_back's compound is defensible after lowercasing the article; independent review also found the transparent spelling Daten-Nationalismus in German geopolitical analysis."
+  },
+  {
+    "id": "it_big_tech_vocab_049",
+    "en": "the Digital commons",
+    "category": "lexical-noun",
+    "tl": "die digitalen Gemeingüter",
+    "alts": [
+      "die digitalen Commons"
+    ],
+    "register": "Established commons and digital-policy vocabulary for shared resources governed by a community rather than merely offered free of charge.",
+    "trap": "Gemeingüter are not simply öffentliche Güter in the economic sense; the term also foregrounds collective access, stewardship, and governance practices.",
+    "example_tl": "Digitale Gemeingüter bleiben nur zugänglich, wenn Gemeinschaften offene Lizenzen, verlässliche Finanzierung und Regeln gegen die private Aneignung gemeinsam durchsetzen.",
+    "example_en": "Digital commons remain accessible only if communities jointly enforce open licenses, reliable funding, and rules against private appropriation.",
+    "cloze": "{{c1::Digitale Gemeingüter}} bleiben nur zugänglich, wenn Gemeinschaften offene Lizenzen, verlässliche Finanzierung und Regeln gegen die private Aneignung gemeinsam durchsetzen.",
+    "note": "Old_back is accurate. The exact-duplicate report assigns this item to BIG_TECH_VOCAB, so it is deliberately retained here rather than in FANCY_VOCAB."
+  },
+  {
+    "id": "it_big_tech_vocab_050",
+    "en": "Global tech imperialism",
+    "category": "lexical-noun",
+    "tl": "der globale Technologieimperialismus",
+    "alts": [
+      "der globale Tech-Imperialismus"
+    ],
+    "register": "Strongly critical geopolitical term for structural domination through technology firms, infrastructure, standards, and dependencies; not a neutral policy label.",
+    "trap": "The expression alleges an imperial structure, not merely the international success or large market share of technology companies.",
+    "example_tl": "Globaler Technologieimperialismus zeigt sich dort, wo Konzerne Infrastrukturen exportieren, lokale Märkte beherrschen und ihre technischen Standards politisch absichern lassen.",
+    "example_en": "Global tech imperialism manifests itself where corporations export infrastructure, dominate local markets, and have their technical standards secured through political means.",
+    "cloze": "{{c1::Globaler Technologieimperialismus}} zeigt sich dort, wo Konzerne Infrastrukturen exportieren, lokale Märkte beherrschen und ihre technischen Standards politisch absichern lassen.",
+    "note": "Materially improves old_back: Technologieimperialismus is more idiomatic in analytical German than the media-style hybrid Tech-Imperialismus, retained as an alternative."
+  },
+  {
+    "id": "it_big_tech_vocab_051",
+    "en": "the Digital mode of production",
+    "category": "lexical-noun",
+    "tl": "die digitale Produktionsweise",
+    "alts": [],
+    "register": "Marxian and social-theoretical term for the organization of production, including its technologies, labor relations, property forms, and coordinating institutions.",
+    "trap": "Produktionsweise is broader than Produktionsmittel: it includes the social relations and organization of production, not only the productive assets.",
+    "example_tl": "Die digitale Produktionsweise ordnet Arbeit, Eigentum und Märkte um, weil Datenbestände und Plattformzugänge zunehmend über gesellschaftliche Wertschöpfung entscheiden.",
+    "example_en": "The digital mode of production reorganizes labor, ownership, and markets because data holdings and platform access increasingly determine social value creation.",
+    "cloze": "Die {{c1::digitale Produktionsweise}} ordnet Arbeit, Eigentum und Märkte um, weil Datenbestände und Plattformzugänge zunehmend über gesellschaftliche Wertschöpfung entscheiden.",
+    "note": "Old_back is accurate. This is retained alongside digitale Produktionsmittel because the two are distinct Marxian analytical levels, not duplicate labels."
+  },
+  {
+    "id": "it_big_tech_vocab_052",
+    "en": "Neoliberal techno-science",
+    "category": "lexical-noun",
+    "tl": "die neoliberale Technowissenschaft",
+    "alts": [],
+    "register": "Critical science-and-technology-studies vocabulary; it frames scientific research and technological development as a tightly coupled, market-oriented system.",
+    "trap": "German normally writes Technowissenschaft as one word; it denotes the entanglement of science and technology, not simply technology used by scientists.",
+    "example_tl": "Neoliberale Technowissenschaft richtet Forschung an Verwertbarkeit und Wettbewerb aus, während soziale Bedürfnisse ohne zahlungskräftige Nachfrage leicht aus den Förderprogrammen verschwinden.",
+    "example_en": "Neoliberal technoscience aligns research with commercial exploitation and competition, while social needs without solvent demand easily disappear from funding programs.",
+    "cloze": "{{c1::Neoliberale Technowissenschaft}} richtet Forschung an Verwertbarkeit und Wettbewerb aus, während soziale Bedürfnisse ohne zahlungskräftige Nachfrage leicht aus den Förderprogrammen verschwinden.",
+    "note": "Materially corrects old_back's nonstandard split compound Techno-Wissenschaft and lowercases the adjective outside sentence-initial position."
+  },
+  {
+    "id": "it_big_tech_vocab_053",
+    "en": "Cyber-Marxism",
+    "category": "lexical-noun",
+    "tl": "der Cybermarxismus",
+    "alts": [],
+    "register": "Rare intellectual-history label associated especially with Marxist interpretations of digital networks and cyberculture from the late twentieth century.",
+    "trap": "Cybermarxismus is a historical theoretical label, not a general synonym for left-wing online activism or contemporary criticism of technology firms.",
+    "example_tl": "Der Cybermarxismus der neunziger Jahre verband marxistische Medienkritik mit der Hoffnung, vernetzte Produktion könne Eigentum und Arbeit grundlegend neu organisieren.",
+    "example_en": "The cyber-Marxism of the 1990s combined Marxist media criticism with the hope that networked production could fundamentally reorganize ownership and labor.",
+    "cloze": "Der {{c1::Cybermarxismus}} der neunziger Jahre verband marxistische Medienkritik mit der Hoffnung, vernetzte Produktion könne Eigentum und Arbeit grundlegend neu organisieren.",
+    "note": "Normalizes old_back to the closed German compound. Confidence is moderate because the label is rare and historically bounded; the register line makes that restriction explicit."
+  },
+  {
+    "id": "it_big_tech_vocab_055",
+    "en": "Informationalism",
+    "category": "lexical-noun",
+    "tl": "der Informationalismus",
+    "alts": [],
+    "register": "Specialist social-theory term associated particularly with Manuel Castells and his distinction between informational and industrial modes of development.",
+    "trap": "Informationalismus is not simply the Informationsgesellschaft; it names a developmental logic in which generating and processing information drives productivity and power.",
+    "example_tl": "Informationalismus bezeichnet bei Castells ein Entwicklungsprinzip, in dem die Erzeugung und Verarbeitung von Informationen zur zentralen Quelle gesellschaftlicher Produktivität wird.",
+    "example_en": "For Castells, informationalism denotes a principle of development in which the generation and processing of information become the central source of social productivity.",
+    "cloze": "{{c1::Informationalismus}} bezeichnet bei Castells ein Entwicklungsprinzip, in dem die Erzeugung und Verarbeitung von Informationen zur zentralen Quelle gesellschaftlicher Produktivität wird.",
+    "note": "Old_back is accurate. Self-review anchored the rare term to Castells and used Informationen, rather than the broader Wissen, to preserve the concept's defining contrast."
+  },
+  {
+    "id": "it_big_tech_vocab_058",
+    "en": "Informational capitalism",
+    "category": "lexical-noun",
+    "tl": "der informationelle Kapitalismus",
+    "alts": [],
+    "register": "Established social-theory term associated with Castells; informationell is the conventional adjective in this specific concept.",
+    "trap": "Informationskapitalismus is a tempting compound, but Castells's established German term is informationeller Kapitalismus; it denotes a mode of development, not capital made of information.",
+    "example_tl": "Im informationellen Kapitalismus werden Wissen und Netzwerke zu entscheidenden Produktivkräften, ohne dass industrielle Arbeit oder materielle Infrastruktur deshalb verschwinden.",
+    "example_en": "In informational capitalism, knowledge and networks become decisive productive forces without industrial labor or material infrastructure disappearing as a result.",
+    "cloze": "Im {{c1::informationellen Kapitalismus}} werden Wissen und Netzwerke zu entscheidenden Produktivkräften, ohne dass industrielle Arbeit oder materielle Infrastruktur deshalb verschwinden.",
+    "note": "Materially corrects old_back's Informationskapitalismus to the established German rendering of Castells's term."
+  },
+  {
+    "id": "it_big_tech_vocab_059",
+    "en": "the Digital enclosure",
+    "category": "lexical-noun",
+    "tl": "die digitale Einhegung",
+    "alts": [
+      "die Einhegung digitaler Gemeingüter"
+    ],
+    "register": "Critical commons and political-economy metaphor extending the historical enclosure of shared land to knowledge, code, data, and digital infrastructure.",
+    "trap": "Abschottung means isolation or sealing-off; Marxian enclosure is Einhegung and emphasizes converting shared resources into controlled private property or access.",
+    "example_tl": "Die digitale Einhegung überführt offene Wissensbestände in Systeme kontrollierten Zugangs, indem Plattformen Schnittstellen schließen, Nutzungsrechte beschränken und Gebühren erheben.",
+    "example_en": "Digital enclosure transfers open bodies of knowledge into controlled-access systems by having platforms close interfaces, restrict usage rights, and charge fees.",
+    "cloze": "Die {{c1::digitale Einhegung}} überführt offene Wissensbestände in Systeme kontrollierten Zugangs, indem Plattformen Schnittstellen schließen, Nutzungsrechte beschränken und Gebühren erheben.",
+    "note": "Materially corrects old_back's Abschottung; self-review also replaced the logically loose transformation into Zugänge with the idiomatic Systeme kontrollierten Zugangs."
+  },
+  {
+    "id": "it_big_tech_vocab_061",
+    "en": "the Tech Cold War",
+    "category": "lexical-noun",
+    "tl": "der technologische Kalte Krieg",
+    "alts": [],
+    "register": "Geopolitical and journalistic label for systemic technology rivalry, especially between the United States and China; rhetorically strong and analytically contestable.",
+    "trap": "German retains the capitalization in Kalter Krieg; Tech-Kalter Krieg is an awkward English-patterned stack rather than the best production form.",
+    "example_tl": "Der technologische Kalte Krieg zwischen Washington und Peking verschärft Exportkontrollen, fragmentiert Lieferketten und zwingt kleinere Staaten zu riskanten strategischen Entscheidungen.",
+    "example_en": "The technological Cold War between Washington and Beijing tightens export controls, fragments supply chains, and forces smaller states into risky strategic decisions.",
+    "cloze": "Der {{c1::technologische Kalte Krieg}} zwischen Washington und Peking verschärft Exportkontrollen, fragmentiert Lieferketten und zwingt kleinere Staaten zu riskanten strategischen Entscheidungen.",
+    "note": "Materially recasts old_back's unnatural hybrid as idiomatic German while preserving the source metaphor."
+  },
+  {
+    "id": "it_big_tech_vocab_063",
+    "en": "the Digital Belt and Road",
+    "category": "lexical-noun",
+    "tl": "die digitale Seidenstraße",
+    "alts": [],
+    "register": "Established geopolitical and infrastructure-policy name for the digital component of China's Belt and Road Initiative.",
+    "trap": "The conventional German name is digitale Seidenstraße, not the word-for-word Gürtel und Straße; the term covers networks, data centers, platforms, and standards.",
+    "example_tl": "Chinas digitale Seidenstraße finanziert Netze und Rechenzentren im Ausland, verbindet Infrastrukturpolitik jedoch zugleich mit Standards, Märkten und geopolitischem Einfluss.",
+    "example_en": "China's Digital Silk Road finances networks and data centers abroad but also links infrastructure policy with standards, markets, and geopolitical influence.",
+    "cloze": "Chinas {{c1::digitale Seidenstraße}} finanziert Netze und Rechenzentren im Ausland, verbindet Infrastrukturpolitik jedoch zugleich mit Standards, Märkten und geopolitischem Einfluss.",
+    "note": "Materially corrects old_back's unusable literal translation and follows established German policy usage for the initiative."
+  },
+  {
+    "id": "it_big_tech_vocab_064",
+    "en": "Techno-nationalism",
+    "category": "lexical-noun",
+    "tl": "der Techno-Nationalismus",
+    "alts": [],
+    "register": "Established innovation-policy and geopolitical term for tying national power and security to domestic technological capacity.",
+    "trap": "Techno-Nationalismus is broader than protectionism in one industry; it links technology policy, standards, supply chains, and national strategic competition.",
+    "example_tl": "Techno-Nationalismus verknüpft Innovationspolitik mit nationaler Sicherheit und rechtfertigt Subventionen, Exportkontrollen sowie die bevorzugte Förderung heimischer Schlüsseltechnologien und Lieferketten.",
+    "example_en": "Techno-nationalism links innovation policy to national security and justifies subsidies, export controls, and preferential support for domestic key technologies and supply chains.",
+    "cloze": "{{c1::Techno-Nationalismus}} verknüpft Innovationspolitik mit nationaler Sicherheit und rechtfertigt Subventionen, Exportkontrollen sowie die bevorzugte Förderung heimischer Schlüsseltechnologien und Lieferketten.",
+    "note": "Old_back is accurate apart from unnecessary capitalization of the article. Self-review replaced Aufbau with Förderung to collocate naturally with both technologies and supply chains."
+  },
+  {
+    "id": "it_big_tech_vocab_065",
+    "en": "Digital commodity fetishism",
+    "category": "lexical-noun",
+    "tl": "der digitale Warenfetischismus",
+    "alts": [],
+    "register": "Specialist Marxian media-theory term extending commodity fetishism to digital goods and services; strongly theoretical rather than routine policy vocabulary.",
+    "trap": "Warenfetischismus does not mean excessive enthusiasm for products; it describes social relations appearing as properties or relations of commodities.",
+    "example_tl": "Digitaler Warenfetischismus lässt Plattformdienste als selbstständige Produkte erscheinen und verdeckt die menschliche Arbeit, materielle Infrastruktur sowie Energie, die sie voraussetzen.",
+    "example_en": "Digital commodity fetishism makes platform services appear as autonomous products and conceals the human labor, material infrastructure, and energy they presuppose.",
+    "cloze": "{{c1::Digitaler Warenfetischismus}} lässt Plattformdienste als selbstständige Produkte erscheinen und verdeckt die menschliche Arbeit, materielle Infrastruktur sowie Energie, die sie voraussetzen.",
+    "note": "Old_back is lexically accurate after lowercasing the adjective; the example supplies the specifically Marxian sense of Warenfetischismus."
+  },
+  {
+    "id": "it_big_tech_vocab_066",
+    "en": "Digital surplus value",
+    "category": "lexical-noun",
+    "tl": "der digitale Mehrwert",
+    "alts": [],
+    "register": "Marxian digital-labor vocabulary; outside an explicitly critical context, Mehrwert is often understood more loosely as added value.",
+    "trap": "Mehrwert can mean ordinary added value in German business prose; the Marxian sense is surplus value appropriated beyond the value of paid labor power.",
+    "example_tl": "Digitaler Mehrwert beruht in marxistischer Lesart nicht auf Daten allein, sondern auf unbezahlter Arbeit, deren Erträge entlang globaler Produktionsketten angeeignet werden.",
+    "example_en": "In a Marxian reading, digital surplus value rests not on data alone but on unpaid labor whose proceeds are appropriated along global production chains.",
+    "cloze": "{{c1::Digitaler Mehrwert}} beruht in marxistischer Lesart nicht auf Daten allein, sondern auf unbezahlter Arbeit, deren Erträge entlang globaler Produktionsketten angeeignet werden.",
+    "note": "Old_back is formally accurate. Self-review replaced a formulation that conflated the production and appropriation of surplus value with a more precise Marxian account."
+  },
+  {
+    "id": "it_big_tech_vocab_068",
+    "en": "Digital rentierism",
+    "category": "lexical-noun",
+    "tl": "der digitale Rentierkapitalismus",
+    "alts": [],
+    "register": "Critical political-economy term for profit models centered on controlling assets, markets, or access and extracting economic rents.",
+    "trap": "Der Rentier is an owner living from asset income, not der Rentner, a pensioner, or das Rentier, a reindeer; Rentierismus is also rare in German.",
+    "example_tl": "Digitaler Rentierkapitalismus erzielt Erträge vor allem durch kontrollierte Zugänge, Lizenzgebühren und Vermittlungsmacht, statt selbst neue Güter unter Wettbewerbsbedingungen herzustellen.",
+    "example_en": "Digital rentier capitalism derives revenue primarily from controlled access, licensing fees, and intermediary power instead of producing new goods under competitive conditions itself.",
+    "cloze": "{{c1::Digitaler Rentierkapitalismus}} erzielt Erträge vor allem durch kontrollierte Zugänge, Lizenzgebühren und Vermittlungsmacht, statt selbst neue Güter unter Wettbewerbsbedingungen herzustellen.",
+    "note": "Materially replaces old_back's rare direct calque Rentierismus with the established German analytical category Rentierkapitalismus."
+  },
+  {
+    "id": "it_big_tech_vocab_071",
+    "en": "Global tech governance",
+    "category": "lexical-noun",
+    "tl": "die globale Technologie-Governance",
+    "alts": [],
+    "register": "Established international-relations and technology-policy term for cross-border rule-making involving state and non-state actors.",
+    "trap": "Governance is broader than government or Regulierung: it includes formal and informal coordination, standard-setting, institutions, firms, and civil society.",
+    "example_tl": "Globale Technologie-Governance entsteht aus dem Zusammenspiel von Staaten, Unternehmen und internationalen Organisationen, die Standards, Sicherheitsregeln und Zugangsrechte grenzüberschreitend aushandeln.",
+    "example_en": "Global technology governance emerges from the interplay of states, companies, and international organizations that negotiate standards, security rules, and access rights across borders.",
+    "cloze": "{{c1::Globale Technologie-Governance}} entsteht aus dem Zusammenspiel von Staaten, Unternehmen und internationalen Organisationen, die Standards, Sicherheitsregeln und Zugangsrechte grenzüberschreitend aushandeln.",
+    "note": "Materially improves old_back's compressed Tech-Governance by using the attested German policy term Technologie-Governance."
+  },
+  {
+    "id": "it_big_tech_vocab_073",
+    "en": "Cybernetic socialism",
+    "category": "lexical-noun",
+    "tl": "der kybernetische Sozialismus",
+    "alts": [],
+    "register": "Historical political-economy and technology-studies term, especially associated with attempts to coordinate socialist planning through feedback systems and networked data.",
+    "trap": "German kybernetisch refers to feedback and control systems; it is not interchangeable with cyber- in the modern sense of internet security.",
+    "example_tl": "In Chile sollte kybernetischer Sozialismus Produktionsentscheidungen mithilfe vernetzter Daten koordinieren, ohne Märkte oder eine zentralistische Planbürokratie als alternativlos hinzunehmen.",
+    "example_en": "In Chile, cybernetic socialism was intended to coordinate production decisions using networked data without accepting either markets or a centralized planning bureaucracy as inevitable.",
+    "cloze": "In Chile sollte {{c1::kybernetischer Sozialismus}} Produktionsentscheidungen mithilfe vernetzter Daten koordinieren, ohne Märkte oder eine zentralistische Planbürokratie als alternativlos hinzunehmen.",
+    "note": "Old_back is accurate. Self-review narrowed the example to the Chilean historical setting rather than attributing one uniform program to every form of cybernetic socialism."
+  },
+  {
+    "id": "it_big_tech_vocab_079",
+    "en": "the Algorithmic means of control",
+    "category": "lexical-noun",
+    "tl": "die algorithmischen Kontrollinstrumente",
+    "alts": [
+      "die algorithmischen Kontrollmittel"
+    ],
+    "register": "Critical labor and platform-governance vocabulary; Kontrollinstrumente is more idiomatic in analytical prose than the source-shaped Mittel der Kontrolle.",
+    "trap": "Kontrolle can mean monitoring as well as control in German; the context must show whether the systems observe, direct, discipline, or sanction behavior.",
+    "example_tl": "Algorithmische Kontrollinstrumente verteilen Aufträge, setzen Leistungsvorgaben und sanktionieren Abweichungen, obwohl Beschäftigte ihre Funktionsweise kaum prüfen oder wirksam anfechten können.",
+    "example_en": "Algorithmic instruments of control allocate tasks, set performance targets, and sanction deviations, although workers can scarcely examine or effectively challenge how they function.",
+    "cloze": "{{c1::Algorithmische Kontrollinstrumente}} verteilen Aufträge, setzen Leistungsvorgaben und sanktionieren Abweichungen, obwohl Beschäftigte ihre Funktionsweise kaum prüfen oder wirksam anfechten können.",
+    "note": "Materially improves old_back's stiff genitive phrase with an idiomatic German compound while preserving the critical control sense."
+  },
+  {
+    "id": "it_big_tech_vocab_080",
+    "en": "the Digital base and superstructure",
+    "category": "lexical-expression",
+    "tl": "die digitale Basis und der digitale Überbau",
+    "alts": [],
+    "register": "Specialist Marxian analytical frame adapting the contested relation between economic base and legal, political, and cultural superstructure to digital society.",
+    "trap": "Überbau here is a Marxian term, not a physical upper structure; Basis and Überbau have different grammatical genders and therefore different articles.",
+    "example_tl": "Die digitale Basis und der digitale Überbau lassen sich analytisch kaum trennen, weil Plattforminfrastrukturen zugleich wirtschaftliche Beziehungen und politische Deutungsmuster prägen.",
+    "example_en": "The digital base and digital superstructure can hardly be separated analytically because platform infrastructures shape both economic relations and political interpretive patterns.",
+    "cloze": "{{c1::Die digitale Basis und der digitale Überbau}} lassen sich analytisch kaum trennen, weil Plattforminfrastrukturen zugleich wirtschaftliche Beziehungen und politische Deutungsmuster prägen.",
+    "note": "Old_back is accurate. The article contrast is retained in the headword because it is pedagogically useful, and the example avoids claiming a mechanically one-way relation."
+  }
+]

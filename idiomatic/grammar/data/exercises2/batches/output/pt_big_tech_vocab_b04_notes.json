@@ -1,0 +1,229 @@
+[
+  {
+    "id": "it_big_tech_vocab_121",
+    "en": "Platform independence",
+    "category": "lexical-noun",
+    "tl": "a independência de plataforma",
+    "alts": [
+      "a independência em relação à plataforma"
+    ],
+    "register": "Termo técnico de arquitetura de software para a propriedade de funcionar em ambientes distintos sem alterações específicas; a construção adjetiva independente de plataforma também é frequente.",
+    "trap": "Independência de plataforma é mais forte que portabilidade: esta admite adaptação do código, enquanto a primeira pressupõe execução em ambientes distintos sem alterações específicas.",
+    "example_tl": "A independência de plataforma permite que um aplicativo funcione em sistemas distintos, desde que bibliotecas proprietárias não reintroduzam dependências ocultas.",
+    "example_en": "Platform independence allows an application to run on different systems, provided that proprietary libraries do not reintroduce hidden dependencies.",
+    "cloze": "A {{c1::independência de plataforma}} permite que um aplicativo funcione em sistemas distintos, desde que bibliotecas proprietárias não reintroduzam dependências ocultas.",
+    "note": "Corrige materialmente old_back: da plataforma sugere uma plataforma específica, enquanto de plataforma forma o composto classificatório genérico. Na auto-revisão, distingui independência de portabilidade."
+  },
+  {
+    "id": "it_big_tech_vocab_122",
+    "en": "Cross-border data flows",
+    "category": "lexical-noun",
+    "tl": "os fluxos transfronteiriços de dados",
+    "alts": [
+      "os fluxos internacionais de dados"
+    ],
+    "register": "Termo formal do comércio internacional e da governança de dados; transfronteiriço destaca a passagem entre jurisdições, enquanto internacional é mais acessível em prosa geral.",
+    "trap": "Em fluxos de dados transfronteiriços, a posição do adjetivo pode sugerir que os próprios dados são transfronteiriços; a colocação consagrada qualifica os fluxos.",
+    "example_tl": "Os fluxos transfronteiriços de dados sustentam serviços globais, mas também expõem usuários a jurisdições, salvaguardas e mecanismos de recurso muito desiguais.",
+    "example_en": "Cross-border data flows sustain global services, but they also expose users to widely differing jurisdictions, safeguards, and avenues of redress.",
+    "cloze": "Os {{c1::fluxos transfronteiriços de dados}} sustentam serviços globais, mas também expõem usuários a jurisdições, salvaguardas e mecanismos de recurso muito desiguais.",
+    "note": "Reordena old_back para a colocação técnico-jurídica mais estável. Na auto-revisão, preservei internacional apenas como alternativa contextual, não como preferência terminológica."
+  },
+  {
+    "id": "it_big_tech_vocab_126",
+    "en": "Indigenous technologies",
+    "category": "lexical-noun",
+    "tl": "as tecnologias desenvolvidas no país",
+    "alts": [
+      "as tecnologias nacionais",
+      "as tecnologias autóctones"
+    ],
+    "register": "Na política industrial, a forma explicativa é clara e neutra; tecnologias autóctones é formal e rara, enquanto tecnologias nacionais pode abranger produtos apenas montados localmente.",
+    "trap": "Tecnologias indígenas refere-se normalmente às tecnologias de povos indígenas; no sentido geopolítico de indigenous, o inglês descreve desenvolvimento tecnológico interno.",
+    "example_tl": "As tecnologias desenvolvidas no país reduziram a exposição a embargos, mas continuaram dependentes de patentes, máquinas e componentes fornecidos pelo exterior.",
+    "example_en": "Technologies developed domestically reduced exposure to embargoes, but they remained dependent on patents, machinery, and components supplied from abroad.",
+    "cloze": "As {{c1::tecnologias desenvolvidas no país}} reduziram a exposição a embargos, mas continuaram dependentes de patentes, máquinas e componentes fornecidos pelo exterior.",
+    "note": "Diverge materialmente de old_back, que ativa a leitura referente a povos indígenas. O contexto de soberania tecnológica sustenta a leitura industrial; se a fonte pretendia saberes indígenas, esta carta precisará ser revista."
+  },
+  {
+    "id": "it_big_tech_vocab_127",
+    "en": "Cyber-espionage",
+    "category": "lexical-noun",
+    "tl": "a ciberespionagem",
+    "alts": [
+      "a espionagem cibernética"
+    ],
+    "register": "Ciberespionagem é o termo técnico e jornalístico conciso; espionagem cibernética é uma alternativa transparente, porém menos lexicalizada.",
+    "trap": "O prefixo ciber- se une à base sem hífen neste caso: ciberespionagem, não *ciber-espionagem; o termo especifica o meio digital, não qualquer vigilância secreta.",
+    "example_tl": "A ciberespionagem contra fabricantes de chips busca segredos industriais e informações estratégicas sem produzir os sinais visíveis de uma incursão militar.",
+    "example_en": "Cyber-espionage against chip manufacturers seeks trade secrets and strategic information without producing the visible signs of a military incursion.",
+    "cloze": "A {{c1::ciberespionagem}} contra fabricantes de chips busca segredos industriais e informações estratégicas sem produzir os sinais visíveis de uma incursão militar.",
+    "note": "Prefere a forma prefixada produtiva em português brasileiro; old_back permanece uma alternativa correta. Na auto-revisão, explicitei o recorte pelo meio digital."
+  },
+  {
+    "id": "it_big_tech_vocab_128",
+    "en": "Data ownership",
+    "category": "lexical-noun",
+    "tl": "a propriedade dos dados",
+    "alts": [],
+    "register": "Rótulo jurídico e político corrente, mas contestado, porque nem todo ordenamento trata dados como bens apropriáveis nos mesmos moldes da propriedade material.",
+    "trap": "Na LGPD, titular é a pessoa natural a quem os dados pessoais se referem; titularidade, controle técnico e propriedade não são sinônimos automáticos.",
+    "example_tl": "A propriedade dos dados permanece controversa porque controle técnico, direitos do titular e interesses econômicos podem caber a atores diferentes na mesma cadeia.",
+    "example_en": "Data ownership remains controversial because technical control, data-subject rights, and economic interests may belong to different actors in the same chain.",
+    "cloze": "A {{c1::propriedade dos dados}} permanece controversa porque controle técnico, direitos do titular e interesses econômicos podem caber a atores diferentes na mesma cadeia.",
+    "note": "Refina old_back com artigo e com dos, construção mais natural para discutir os dados como objeto de direitos. Na auto-revisão, evitei apresentar propriedade como regime jurídico pacífico."
+  },
+  {
+    "id": "it_big_tech_vocab_129",
+    "en": "the Digital trade barriers",
+    "category": "lexical-noun",
+    "tl": "as barreiras ao comércio digital",
+    "alts": [
+      "os obstáculos ao comércio digital"
+    ],
+    "register": "Termo formal da política comercial para medidas regulatórias ou técnicas que dificultam transações digitais, sobretudo para fornecedores estrangeiros.",
+    "trap": "Barreiras comerciais digitais pode sugerir barreiras implementadas por meios digitais; ao comércio digital deixa claro que o comércio é o domínio afetado.",
+    "example_tl": "As barreiras ao comércio digital incluem exigências de localização, licenças discriminatórias e padrões incompatíveis que elevam custos para fornecedores estrangeiros.",
+    "example_en": "Digital trade barriers include localization requirements, discriminatory licenses, and incompatible standards that raise costs for foreign suppliers.",
+    "cloze": "As {{c1::barreiras ao comércio digital}} incluem exigências de localização, licenças discriminatórias e padrões incompatíveis que elevam custos para fornecedores estrangeiros.",
+    "note": "Corrige materialmente o escopo ambíguo do adjetivo em old_back. O inglês de origem também contém um artigo singular incompatível com o substantivo plural."
+  },
+  {
+    "id": "it_big_tech_vocab_130",
+    "en": "the Source code review",
+    "category": "lexical-noun",
+    "tl": "a revisão de código",
+    "alts": [
+      "a revisão do código-fonte"
+    ],
+    "register": "Termo técnico rotineiro da engenharia de software; revisão de código nomeia a prática geral, e a alternativa é natural quando se aponta para um código-fonte determinado.",
+    "trap": "Revisão de código não é uma auditoria completa de software: normalmente examina alterações ou trechos de código e não substitui testes nem avaliação independente de segurança.",
+    "example_tl": "A revisão de código identificou uma falha de autenticação antes da implantação, mas não substituiu testes automatizados nem uma auditoria independente de segurança.",
+    "example_en": "The code review identified an authentication flaw before deployment, but it did not replace automated testing or an independent security audit.",
+    "cloze": "A {{c1::revisão de código}} identificou uma falha de autenticação antes da implantação, mas não substituiu testes automatizados nem uma auditoria independente de segurança.",
+    "note": "Generaliza o artigo definido de old_back para a denominação produtiva da prática. Na auto-revisão, mantive código-fonte apenas como alternativa referencial e delimitei o processo."
+  },
+  {
+    "id": "it_big_tech_vocab_131",
+    "en": "Zero trust architecture",
+    "category": "lexical-noun",
+    "tl": "a arquitetura de confiança zero",
+    "alts": [
+      "a arquitetura zero trust"
+    ],
+    "register": "Termo especializado da cibersegurança; a tradução é transparente em prosa institucional, enquanto o anglicismo é frequente entre profissionais do setor.",
+    "trap": "Confiança zero não significa bloquear todos os acessos: elimina a confiança implícita baseada apenas na localização da rede e aplica verificação e privilégio mínimo a cada solicitação.",
+    "example_tl": "A arquitetura de confiança zero exige verificar cada solicitação e conceder privilégios mínimos, mesmo a dispositivos já conectados à rede interna da organização.",
+    "example_en": "Zero trust architecture requires verifying every request and granting least privilege, even to devices already connected to the organization's internal network.",
+    "cloze": "A {{c1::arquitetura de confiança zero}} exige verificar cada solicitação e conceder privilégios mínimos, mesmo a dispositivos já conectados à rede interna da organização.",
+    "note": "Old_back identifica corretamente o termo; acrescentei artigo e o anglicismo profissional. Na auto-revisão, alinhei a armadilha ao princípio de ausência de confiança implícita do NIST."
+  },
+  {
+    "id": "it_big_tech_vocab_134",
+    "en": "the Technology standards",
+    "category": "lexical-noun",
+    "tl": "os padrões tecnológicos",
+    "alts": [],
+    "register": "Termo neutro da política industrial e da padronização; pode abranger especificações de facto, enquanto norma técnica costuma pressupor aprovação formal por entidade competente.",
+    "trap": "O inglês standard nem sempre corresponde a padrão: quando designa um documento normativo formal, norma técnica pode ser a tradução institucional mais precisa.",
+    "example_tl": "Os padrões tecnológicos definem interfaces e requisitos de interoperabilidade, permitindo que empresas dominantes convertam escolhas técnicas em vantagens geopolíticas duradouras.",
+    "example_en": "Technology standards define interfaces and interoperability requirements, allowing dominant companies to turn technical choices into lasting geopolitical advantages.",
+    "cloze": "Os {{c1::padrões tecnológicos}} definem interfaces e requisitos de interoperabilidade, permitindo que empresas dominantes convertam escolhas técnicas em vantagens geopolíticas duradouras.",
+    "note": "Old_back está correto. Na auto-revisão, não incluí normas técnicas como alternativa irrestrita porque a equivalência depende do processo formal de normalização."
+  },
+  {
+    "id": "it_big_tech_vocab_135",
+    "en": "End-to-end encryption",
+    "category": "lexical-noun",
+    "tl": "a criptografia de ponta a ponta",
+    "alts": [],
+    "register": "Termo técnico consolidado e corrente no debate público sobre segurança de comunicações; a sigla inglesa E2EE aparece sobretudo em documentação especializada.",
+    "trap": "A criptografia de ponta a ponta protege o conteúdo no percurso, mas não garante anonimato nem oculta necessariamente metadados; aparelhos comprometidos continuam expondo mensagens.",
+    "example_tl": "A criptografia de ponta a ponta protege o conteúdo entre remetente e destinatário, embora metadados e aparelhos comprometidos ainda possam revelar informações sensíveis.",
+    "example_en": "End-to-end encryption protects content between sender and recipient, although metadata and compromised devices may still reveal sensitive information.",
+    "cloze": "A {{c1::criptografia de ponta a ponta}} protege o conteúdo entre remetente e destinatário, embora metadados e aparelhos comprometidos ainda possam revelar informações sensíveis.",
+    "note": "Old_back está correto depois da inclusão do artigo. Na auto-revisão, limitei a alegação ao conteúdo e preservei as ressalvas sobre metadados e segurança dos dispositivos finais."
+  },
+  {
+    "id": "it_big_tech_vocab_138",
+    "en": "the Critical infrastructure",
+    "category": "lexical-noun",
+    "tl": "a infraestrutura crítica",
+    "alts": [],
+    "register": "Termo técnico-jurídico de segurança nacional e gestão de riscos; o plural infraestruturas críticas é comum ao enumerar setores, redes ou instalações.",
+    "trap": "Não designa apenas infraestrutura digital muito importante: energia, água, transportes e saúde também podem ser críticos quando sua interrupção causa impacto social grave.",
+    "example_tl": "A infraestrutura crítica inclui redes de energia e telecomunicações cuja interrupção prolongada comprometeria serviços públicos, atividade econômica e segurança nacional.",
+    "example_en": "Critical infrastructure includes energy and telecommunications networks whose prolonged disruption would jeopardize public services, economic activity, and national security.",
+    "cloze": "A {{c1::infraestrutura crítica}} inclui redes de energia e telecomunicações cuja interrupção prolongada comprometeria serviços públicos, atividade econômica e segurança nacional.",
+    "note": "Old_back está correto depois da inclusão do artigo. Na auto-revisão, usei o singular coletivo no exemplo e registrei o plural frequente sem tratá-lo como alternativa invariável."
+  },
+  {
+    "id": "it_big_tech_vocab_139",
+    "en": "Internet universality",
+    "category": "lexical-noun",
+    "tl": "a universalidade da internet",
+    "alts": [],
+    "register": "Conceito formal da governança digital, associado pela UNESCO a direitos, abertura, acessibilidade e participação de múltiplas partes interessadas.",
+    "trap": "Universalidade da internet não significa apenas acesso universal à rede; no marco da UNESCO, acesso é somente um de quatro princípios interdependentes.",
+    "example_tl": "A universalidade da internet exige mais que conexão: pressupõe direitos, abertura, acessibilidade e participação de múltiplas partes interessadas na definição das regras da rede.",
+    "example_en": "Internet universality requires more than connectivity: it presupposes rights, openness, accessibility, and multistakeholder participation in defining the network's rules.",
+    "cloze": "A {{c1::universalidade da internet}} exige mais que conexão: pressupõe direitos, abertura, acessibilidade e participação de múltiplas partes interessadas na definição das regras da rede.",
+    "note": "Old_back identifica o conceito; normalizei internet em minúscula segundo o uso editorial brasileiro. Na auto-revisão, ancorei a explicação nos quatro princípios DAAM da UNESCO."
+  },
+  {
+    "id": "it_big_tech_vocab_141",
+    "en": "Secure by design",
+    "category": "lexical-expression",
+    "tl": "seguro desde a concepção",
+    "alts": [
+      "seguro por design"
+    ],
+    "register": "Expressão adjetiva da engenharia de segurança; desde a concepção é clara em prosa institucional brasileira, enquanto por design é corrente no setor tecnológico.",
+    "trap": "Não significa apenas seguro na configuração padrão: a segurança deve orientar requisitos e arquitetura desde o início e continuar integrada ao ciclo de vida.",
+    "example_tl": "Serviços seguros desde a concepção incorporam modelagem de ameaças e requisitos de proteção antes que decisões arquiteturais tornem correções caras.",
+    "example_en": "Secure-by-design services incorporate threat modeling and protection requirements before architectural decisions make fixes costly.",
+    "cloze": "Serviços {{c1::seguros desde a concepção}} incorporam modelagem de ameaças e requisitos de proteção antes que decisões arquiteturais tornem correções caras.",
+    "note": "Corrige materialmente old_back, que converte a expressão adjetiva inglesa em um substantivo. Na auto-revisão, distingui secure by design de secure by default e flexionei o alvo no exemplo."
+  },
+  {
+    "id": "it_big_tech_vocab_142",
+    "en": "Digital resilience",
+    "category": "lexical-noun",
+    "tl": "a resiliência digital",
+    "alts": [],
+    "register": "Termo formal de continuidade operacional e política digital para a capacidade de preparar, absorver, recuperar e adaptar sistemas e instituições diante de perturbações.",
+    "trap": "Resiliência digital é mais ampla que cibersegurança e não se reduz a redundância técnica: inclui pessoas, procedimentos, recuperação e adaptação institucional.",
+    "example_tl": "A resiliência digital depende de redundância, equipes treinadas e planos de recuperação capazes de manter serviços essenciais durante ataques ou falhas sistêmicas.",
+    "example_en": "Digital resilience depends on redundancy, trained teams, and recovery plans capable of maintaining essential services during attacks or systemic failures.",
+    "cloze": "A {{c1::resiliência digital}} depende de redundância, equipes treinadas e planos de recuperação capazes de manter serviços essenciais durante ataques ou falhas sistêmicas.",
+    "note": "Old_back está correto depois da inclusão do artigo. Na auto-revisão, ampliei a definição além da resistência técnica e não ofereci resiliência cibernética como sinônimo irrestrito."
+  },
+  {
+    "id": "it_big_tech_vocab_143",
+    "en": "Sovereign operating systems",
+    "category": "lexical-noun",
+    "tl": "os sistemas operacionais soberanos",
+    "alts": [],
+    "register": "Rótulo geopolítico e de política industrial para sistemas cujo controle, manutenção e cadeia de dependências devem sustentar autonomia estatal ou institucional.",
+    "trap": "Soberano não é uma propriedade técnica equivalente a seguro ou nacional: origem local, código auditável e capacidade duradoura de manutenção são critérios distintos.",
+    "example_tl": "Os sistemas operacionais soberanos prometem reduzir dependências externas, mas seu valor estratégico exige código auditável, manutenção contínua e um ecossistema viável.",
+    "example_en": "Sovereign operating systems promise to reduce external dependencies, but their strategic value requires auditable code, continuous maintenance, and a viable ecosystem.",
+    "cloze": "Os {{c1::sistemas operacionais soberanos}} prometem reduzir dependências externas, mas seu valor estratégico exige código auditável, manutenção contínua e um ecossistema viável.",
+    "note": "Old_back está formalmente correto. Na auto-revisão, tratei soberano como rótulo político contestável e excluí nacionais dos alts porque a origem nacional não garante controle soberano."
+  },
+  {
+    "id": "it_big_tech_vocab_145",
+    "en": "Digital self-determination",
+    "category": "lexical-noun",
+    "tl": "a autodeterminação digital",
+    "alts": [
+      "a autodeterminação no ambiente digital"
+    ],
+    "register": "Conceito normativo dos direitos digitais para a capacidade de pessoas ou coletividades influenciarem as condições de sua participação na vida digital.",
+    "trap": "Não equivale à soberania digital dos Estados nem à autodeterminação informativa, noção jurídica mais estreita centrada no tratamento de dados pessoais.",
+    "example_tl": "A autodeterminação digital requer que pessoas possam escolher serviços, controlar dados e contestar decisões automatizadas sem abandonar inteiramente a vida conectada.",
+    "example_en": "Digital self-determination requires people to be able to choose services, control data, and challenge automated decisions without entirely abandoning connected life.",
+    "cloze": "A {{c1::autodeterminação digital}} requer que pessoas possam escolher serviços, controlar dados e contestar decisões automatizadas sem abandonar inteiramente a vida conectada.",
+    "note": "Old_back está correto depois da inclusão do artigo. Na auto-revisão, delimitei o conceito diante de soberania estatal e da autodeterminação informativa reconhecida no direito de dados."
+  }
+]

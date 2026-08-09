@@ -1,0 +1,152 @@
+[
+  {
+    "id": "it_big_tech_vocab_121",
+    "en": "Platform independence",
+    "verdict": "drop",
+    "reason": "Plattformunabhängigkeit is a transparent routine technical compound, while the isolated prompt does not specify independence from an operating system, vendor, marketplace, or infrastructure layer."
+  },
+  {
+    "id": "it_big_tech_vocab_122",
+    "en": "Cross-border data flows",
+    "verdict": "keep",
+    "reason": "Established data-governance and trade-policy term whose German compound and jurisdictional meaning merit contextual treatment."
+  },
+  {
+    "id": "it_big_tech_vocab_123",
+    "en": "Secure hardware",
+    "verdict": "drop",
+    "reason": "Sichere Hardware is fully transparent and too broad to identify a teachable security property, architecture, certification, or hardware class."
+  },
+  {
+    "id": "it_big_tech_vocab_124",
+    "en": "Software audits",
+    "verdict": "drop",
+    "reason": "Softwareaudits is a predictable compound and the broad prompt adds no distinct lesson beyond the narrower retained source code review item."
+  },
+  {
+    "id": "it_big_tech_vocab_125",
+    "en": "the Digital borders",
+    "verdict": "keep",
+    "reason": "Marked geopolitical metaphor that requires context to distinguish territorialized networks from literal or purely technical boundaries."
+  },
+  {
+    "id": "it_big_tech_vocab_126",
+    "en": "Indigenous technologies",
+    "verdict": "keep",
+    "reason": "The legacy einheimisch erases the source's specific reference to Indigenous peoples, creating a material lexical and political distinction."
+  },
+  {
+    "id": "it_big_tech_vocab_127",
+    "en": "Cyber-espionage",
+    "verdict": "keep",
+    "reason": "Established security term with useful German compounding guidance and a meaning narrower than general digital surveillance."
+  },
+  {
+    "id": "it_big_tech_vocab_128",
+    "en": "Data ownership",
+    "verdict": "keep",
+    "reason": "Legally contested policy term that teaches the Eigentum–Besitz distinction and warns against assuming a general property right in data."
+  },
+  {
+    "id": "it_big_tech_vocab_129",
+    "en": "the Digital trade barriers",
+    "verdict": "keep",
+    "reason": "Formal trade-policy concept for which Handelshemmnisse is more idiomatic and terminologically useful than the literal legacy rendering."
+  },
+  {
+    "id": "it_big_tech_vocab_130",
+    "en": "the Source code review",
+    "verdict": "keep",
+    "reason": "Useful software-security term requiring a distinction between formal Quellcodeprüfung, routine Code-Review, and the false rendering Rezension."
+  },
+  {
+    "id": "it_big_tech_vocab_131",
+    "en": "Zero trust architecture",
+    "verdict": "keep",
+    "reason": "Established cybersecurity term whose conventional English-based German form replaces a materially misleading literal legacy gloss."
+  },
+  {
+    "id": "it_big_tech_vocab_132",
+    "en": "Secure communication",
+    "verdict": "drop",
+    "reason": "Sichere Kommunikation is transparent and merely names a broad goal; the retained end-to-end encryption item supplies a precise technical mechanism and contrast."
+  },
+  {
+    "id": "it_big_tech_vocab_133",
+    "en": "Digital autonomy",
+    "verdict": "keep",
+    "reason": "Current policy concept whose practical-agency sense needs differentiation from digital sovereignty, dependency, and individual self-determination."
+  },
+  {
+    "id": "it_big_tech_vocab_134",
+    "en": "the Technology standards",
+    "verdict": "drop",
+    "reason": "Technologiestandards is transparent and underspecified; the prompt offers no particular standardization regime or distinction between formal norms and industry standards."
+  },
+  {
+    "id": "it_big_tech_vocab_135",
+    "en": "End-to-end encryption",
+    "verdict": "keep",
+    "reason": "Core technical and policy term whose defining distinction from transport encryption provides substantial teaching value."
+  },
+  {
+    "id": "it_big_tech_vocab_136",
+    "en": "the Digital policy",
+    "verdict": "keep",
+    "reason": "The established field name Digitalpolitik corrects the legacy phrase digitale Politik, which can denote politics conducted digitally."
+  },
+  {
+    "id": "it_big_tech_vocab_137",
+    "en": "Online censorship",
+    "verdict": "drop",
+    "reason": "Onlinezensur is transparent, and the broad prompt does not define the legal actor, mechanism, or threshold that would distinguish censorship from content moderation."
+  },
+  {
+    "id": "it_big_tech_vocab_138",
+    "en": "the Critical infrastructure",
+    "verdict": "keep",
+    "reason": "Established security and civil-protection term with a conventional German plural, the KRITIS abbreviation, and a capitalization error in old_back to correct."
+  },
+  {
+    "id": "it_big_tech_vocab_139",
+    "en": "Internet universality",
+    "verdict": "keep",
+    "reason": "Specialist normative internet-governance concept that must be distinguished from universal service and from a factual claim of worldwide reach."
+  },
+  {
+    "id": "it_big_tech_vocab_140",
+    "en": "the Digital dependencies",
+    "verdict": "drop",
+    "reason": "Digitale Abhängigkeiten is transparent and too broad, while narrower retained cards already teach platform dependency and the policy concept of digital autonomy."
+  },
+  {
+    "id": "it_big_tech_vocab_141",
+    "en": "Secure by design",
+    "verdict": "keep",
+    "reason": "Established cybersecurity principle whose German professional label and lifecycle meaning are obscured by the legacy word-for-word calque."
+  },
+  {
+    "id": "it_big_tech_vocab_142",
+    "en": "Digital resilience",
+    "verdict": "keep",
+    "reason": "Current policy term with a useful distinction between prevention-focused cybersecurity and broader continuity, recovery, learning, and adaptation."
+  },
+  {
+    "id": "it_big_tech_vocab_143",
+    "en": "Sovereign operating systems",
+    "verdict": "drop",
+    "reason": "The phrase is weakly lexicalized and underspecified: sovereign may refer to domestic origin, public control, auditable code, supply-chain independence, or certification."
+  },
+  {
+    "id": "it_big_tech_vocab_144",
+    "en": "Digital ethics",
+    "verdict": "keep",
+    "reason": "Established academic field whose idiomatic compact name Digitalethik improves on the less lexicalized adjective phrase in old_back."
+  },
+  {
+    "id": "it_big_tech_vocab_145",
+    "en": "Digital self-determination",
+    "verdict": "keep",
+    "reason": "Normative rights concept whose breadth and relation to informational self-determination and collective sovereignty require explicit guidance."
+  }
+]

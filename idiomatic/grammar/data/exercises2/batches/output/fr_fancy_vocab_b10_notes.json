@@ -1,0 +1,259 @@
+[
+  {
+    "id": "it_fancy_vocab_361",
+    "en": "Diverse",
+    "category": "lexical-adjective",
+    "tl": "diversifié",
+    "alts": [],
+    "register": "Neutral professional adjective for a group or institution whose composition includes varied profiles; the feminine form is diversifiée.",
+    "trap": "Divers placed before a plural noun usually means various or several; it does not reliably convey English diverse in the inclusion sense.",
+    "example_tl": "Le conseil est désormais plus diversifié, mais ses nouveaux membres disposent encore de peu d’influence sur les décisions stratégiques du groupe.",
+    "example_en": "The board is now more diverse, but its new members still have little influence over the group’s strategic decisions.",
+    "cloze": "Le conseil est désormais plus {{c1::diversifié}}, mais ses nouveaux membres disposent encore de peu d’influence sur les décisions stratégiques du groupe.",
+    "note": "Materially narrows old_back divers to the compositional sense suggested by professional diversity discourse. The bare English adjective remains context-sensitive."
+  },
+  {
+    "id": "it_fancy_vocab_364",
+    "en": "Responsive",
+    "category": "lexical-adjective",
+    "tl": "réactif à",
+    "alts": [],
+    "register": "Neutral professional wording for an institution or person that responds promptly to requests, evidence or criticism.",
+    "trap": "Responsive design is adaptatif in careful French, while réactif à selects the person, event or signal that receives a prompt response.",
+    "example_tl": "Une autorité réellement réactive aux signalements publics devrait publier rapidement ses décisions, plutôt que de laisser les plateformes définir seules les seuils d’intervention.",
+    "example_en": "An authority truly responsive to public reports should publish its decisions promptly rather than let platforms define intervention thresholds on their own.",
+    "cloze": "Une autorité réellement {{c1::réactive aux}} signalements publics devrait publier rapidement ses décisions, plutôt que de laisser les plateformes définir seules les seuils d’intervention.",
+    "note": "Old_back réactif is valid for the institutional sense selected here but omitted its governed preposition. The web-interface sense requires a different rendering. Self-review restored de after plutôt que for smoother formal prose."
+  },
+  {
+    "id": "it_fancy_vocab_365",
+    "en": "Detached",
+    "category": "lexical-adjective",
+    "tl": "distancié",
+    "alts": [],
+    "register": "Neutral-formal analytical adjective for a stance or assessment kept free of emotional or partisan identification.",
+    "trap": "Détaché suits emotional disengagement or physical separation; a detached analytical stance is more idiomatically distancié.",
+    "example_tl": "Son analyse reste suffisamment distanciée pour examiner les intérêts économiques du média sans adopter le récit rassurant proposé par sa direction.",
+    "example_en": "Her analysis remains sufficiently detached to examine the media outlet’s economic interests without adopting the reassuring narrative offered by its management.",
+    "cloze": "Son analyse reste suffisamment {{c1::distanciée}} pour examiner les intérêts économiques du média sans adopter le récit rassurant proposé par sa direction.",
+    "note": "The source is polysemous. This note selects detached judgment or analysis and materially replaces old_back détaché for that professional sense."
+  },
+  {
+    "id": "it_fancy_vocab_367",
+    "en": "Scalable",
+    "category": "lexical-adjective",
+    "tl": "capable de passer à l’échelle",
+    "alts": [],
+    "register": "Standard technology and business expression for handling growth without a comparable loss of performance or rise in cost.",
+    "trap": "Évolutif merely says that something can evolve; it does not necessarily express the capacity growth tested by scalable.",
+    "example_tl": "Le service doit être capable de passer à l’échelle sans multiplier les coûts de modération ni dégrader les garanties offertes aux utilisateurs.",
+    "example_en": "The service must be scalable without multiplying moderation costs or weakening the safeguards offered to users.",
+    "cloze": "Le service doit être {{c1::capable de passer à l’échelle}} sans multiplier les coûts de modération ni dégrader les garanties offertes aux utilisateurs.",
+    "note": "Materially replaces old_back évolutif with the explicit capacity-scaling sense. Anglicism scalable also occurs in technology teams but is unnecessary here."
+  },
+  {
+    "id": "it_fancy_vocab_372",
+    "en": "Sustainable",
+    "category": "lexical-adjective",
+    "tl": "durable",
+    "alts": [],
+    "register": "Neutral institutional adjective for environmentally and socially sustainable policies, systems or development.",
+    "trap": "Soutenable is preferred for a debt burden, pace or argument that can be sustained; durable is the normal environmental-policy term.",
+    "example_tl": "Le gouvernement ne pourra qualifier cette stratégie de durable tant qu’elle reposera sur l’extraction accélérée de minerais dans des régions fragiles.",
+    "example_en": "The government will not be able to call this strategy sustainable while it relies on accelerated mineral extraction in fragile regions.",
+    "cloze": "Le gouvernement ne pourra qualifier cette stratégie de {{c1::durable}} tant qu’elle reposera sur l’extraction accélérée de minerais dans des régions fragiles.",
+    "note": "Old_back is accurate for the environmental-policy sense selected here; the prompt remains context-sensitive because financial sustainability often calls for soutenable."
+  },
+  {
+    "id": "it_fancy_vocab_373",
+    "en": "Consumptive",
+    "category": "lexical-adjective",
+    "tl": "fortement consommateur de ressources",
+    "alts": [
+      "gourmand en ressources"
+    ],
+    "register": "Formal analytical phrase for a model or system that consumes substantial resources; gourmand en ressources is slightly less formal but common in technology prose.",
+    "trap": "French consommateur requires de before the resource consumed; consomptif is a specialist term and is not a general substitute for resource-intensive.",
+    "example_tl": "Le modèle reste fortement consommateur de ressources, puisqu’il multiplie les centres de données sans imposer de plafond à leur consommation énergétique.",
+    "example_en": "The model remains highly resource-intensive because it multiplies data centers without imposing any cap on their energy consumption.",
+    "cloze": "Le modèle reste {{c1::fortement consommateur de ressources}}, puisqu’il multiplie les centres de données sans imposer de plafond à leur consommation énergétique.",
+    "note": "The English prompt is rare and underspecified. This note interprets it as resource-consuming in the surrounding technology-policy domain and expands old_back accordingly."
+  },
+  {
+    "id": "it_fancy_vocab_375",
+    "en": "the Privacy",
+    "category": "lexical-noun",
+    "tl": "la vie privée",
+    "alts": [],
+    "register": "Neutral standard term for the protected personal sphere in legal, policy and everyday discussion.",
+    "trap": "Confidentialité concerns restricted information or communications; it does not cover the full personal sphere denoted by privacy.",
+    "example_tl": "La collecte continue de données de localisation menace la vie privée, même lorsque chaque identifiant direct est supprimé avant l’analyse des profils.",
+    "example_en": "Continuous collection of location data threatens privacy even when every direct identifier is removed before the profiles are analyzed.",
+    "cloze": "La collecte continue de données de localisation menace {{c1::la vie privée}}, même lorsque chaque identifiant direct est supprimé avant l’analyse des profils.",
+    "note": "Old_back is accurate. Retention is justified by the important scope distinction between vie privée and the narrower confidentialité."
+  },
+  {
+    "id": "it_fancy_vocab_376",
+    "en": "the Data",
+    "category": "lexical-noun",
+    "tl": "les données",
+    "alts": [],
+    "register": "Neutral standard term across technical, legal and general prose; singular une donnée refers to one item of data.",
+    "trap": "French normally treats données as a plural noun with plural agreement, unlike mass-noun data in much contemporary English; la data is industry jargon.",
+    "example_tl": "Les données issues des téléphones devront être conservées en Europe et ne pourront être transmises à des courtiers sans consentement explicite.",
+    "example_en": "Data from the phones will have to be stored in Europe and may not be sent to brokers without explicit consent.",
+    "cloze": "{{c1::Les données}} issues des téléphones devront être conservées en Europe et ne pourront être transmises à des courtiers sans consentement explicite.",
+    "note": "Old_back gives the correct plural headword. The note retains it to teach the number and agreement contrast with English."
+  },
+  {
+    "id": "it_fancy_vocab_377",
+    "en": "the Regulation",
+    "category": "lexical-noun",
+    "tl": "la réglementation",
+    "alts": [],
+    "register": "Neutral-formal policy noun for a body or framework of binding rules; common in legal and regulatory analysis.",
+    "trap": "Un règlement is a particular rule or legal instrument, while régulation often foregrounds the process of steering a sector rather than the rules themselves.",
+    "example_tl": "La réglementation sur les services numériques impose des obligations particulières aux grandes plateformes, sans interdire pour autant tous les modèles publicitaires ciblés.",
+    "example_en": "Digital-services regulation imposes specific obligations on large platforms without, however, banning every targeted-advertising model.",
+    "cloze": "{{c1::La réglementation}} sur les services numériques impose des obligations particulières aux grandes plateformes, sans interdire pour autant tous les modèles publicitaires ciblés.",
+    "note": "Materially replaces old_back le règlement, which selects an individual instrument rather than the regulatory framework demonstrated here."
+  },
+  {
+    "id": "it_fancy_vocab_378",
+    "en": "the Advertisement",
+    "category": "lexical-noun",
+    "tl": "une annonce publicitaire",
+    "alts": [
+      "une publicité"
+    ],
+    "register": "Neutral countable term for one advertisement; publicité is equally common and can also denote advertising as an activity.",
+    "trap": "La publicité can denote the whole activity or industry, whereas annonce publicitaire unambiguously identifies one ad; avertissement means warning.",
+    "example_tl": "Le réseau a présenté une annonce publicitaire comme un conseil médical, sans signaler autrement qu’en petits caractères qu’elle était financée par un fabricant.",
+    "example_en": "The network presented an advertisement as medical advice, disclosing only in small print that it was funded by a manufacturer.",
+    "cloze": "Le réseau a présenté {{c1::une annonce publicitaire}} comme un conseil médical, sans signaler autrement qu’en petits caractères qu’elle était financée par un fabricant.",
+    "note": "Materially specifies the countable object left ambiguous by old_back la publicité. Self-review retained publicité only as an alternative because it is broader outside this sentence, then recast the example in conventional présenter X comme Y order."
+  },
+  {
+    "id": "it_fancy_vocab_381",
+    "en": "the Revenue",
+    "category": "lexical-noun",
+    "tl": "le chiffre d’affaires",
+    "alts": [],
+    "register": "Standard business and financial term for a company’s aggregate sales revenue before costs are deducted.",
+    "trap": "Chiffre d’affaires is revenue, not profit; recettes suits incoming funds or proceeds, while revenu commonly describes an individual income or a recurring yield.",
+    "example_tl": "Le chiffre d’affaires publicitaire du groupe a progressé malgré la baisse du nombre d’utilisateurs, car ses espaces ciblés se vendent beaucoup plus cher.",
+    "example_en": "The group’s advertising revenue increased despite the fall in user numbers because its targeted ad space sells at a much higher price.",
+    "cloze": "{{c1::Le chiffre d’affaires}} publicitaire du groupe a progressé malgré la baisse du nombre d’utilisateurs, car ses espaces ciblés se vendent beaucoup plus cher.",
+    "note": "The bare source is polysemous. This note selects company revenue and materially replaces old_back le revenu, which is not idiomatic for aggregate corporate sales. Self-review replaced an abstract ciblage vendu with the idiomatic espaces ciblés."
+  },
+  {
+    "id": "it_fancy_vocab_383",
+    "en": "the Competition",
+    "category": "lexical-noun",
+    "tl": "la concurrence",
+    "alts": [],
+    "register": "Neutral economic and regulatory noun for rivalry among market actors or the competitive conditions of a market.",
+    "trap": "Compétition normally denotes a contest, especially in sport; market competition is concurrence, and competitors are concurrents.",
+    "example_tl": "L’autorité estime que la concurrence restera théorique tant que les nouveaux entrants dépendront de leur principal rival pour accéder aux infrastructures essentielles.",
+    "example_en": "The authority believes competition will remain theoretical as long as new entrants depend on their main rival for access to essential infrastructure.",
+    "cloze": "L’autorité estime que {{c1::la concurrence}} restera théorique tant que les nouveaux entrants dépendront de leur principal rival pour accéder aux infrastructures essentielles.",
+    "note": "Old_back is accurate for the market sense. Retention is justified by the recurrent English calque compétition in economic contexts."
+  },
+  {
+    "id": "it_fancy_vocab_385",
+    "en": "the Breach",
+    "category": "lexical-noun",
+    "tl": "une violation de données",
+    "alts": [],
+    "register": "Formal legal and cybersecurity term for a personal-data security incident, including unauthorized access, alteration, loss or disclosure.",
+    "trap": "Breach is complement-sensitive: a data breach is une violation de données, a security weakness is une faille, and a contractual breach is un manquement.",
+    "example_tl": "Une violation de données peut déclencher une enquête même si l’entreprise affirme avoir corrigé rapidement la faille qui a permis l’accès.",
+    "example_en": "A data breach can trigger an investigation even if the company claims to have quickly fixed the vulnerability that enabled access.",
+    "cloze": "{{c1::Une violation de données}} peut déclencher une enquête même si l’entreprise affirme avoir corrigé rapidement la faille qui a permis l’accès.",
+    "note": "Old_back violation is too incomplete to identify the cybersecurity event. The surrounding vocabulary supports the data-breach sense selected here."
+  },
+  {
+    "id": "it_fancy_vocab_389",
+    "en": "the Profit",
+    "category": "lexical-noun",
+    "tl": "le bénéfice",
+    "alts": [
+      "le profit"
+    ],
+    "register": "Bénéfice is the neutral accounting and business term; profit is established but can sound broader, economic or explicitly critical.",
+    "trap": "Bénéfice is what remains after costs and must not be confused with chiffre d’affaires, the total revenue before those costs.",
+    "example_tl": "Le bénéfice trimestriel a doublé, non parce que le service s’est amélioré, mais parce que l’entreprise a réduit ses dépenses de modération.",
+    "example_en": "Quarterly profit doubled not because the service improved, but because the company reduced its moderation spending.",
+    "cloze": "{{c1::Le bénéfice}} trimestriel a doublé, non parce que le service s’est amélioré, mais parce que l’entreprise a réduit ses dépenses de modération.",
+    "note": "Materially prefers bénéfice to old_back profit for the concrete company result shown in the example while preserving the established alternative."
+  },
+  {
+    "id": "it_fancy_vocab_391",
+    "en": "the Policy",
+    "category": "lexical-noun",
+    "tl": "la politique",
+    "alts": [],
+    "register": "Neutral institutional noun for an organization’s stated principles and course of action; the complement normally specifies its domain.",
+    "trap": "Politique can mean both policy and politics; an internal policy may instead be a directive or set of règles, while an insurance policy is une police.",
+    "example_tl": "La politique de modération interdit officiellement les appels à la violence, mais son application varie selon la langue et la notoriété des auteurs.",
+    "example_en": "The moderation policy officially prohibits calls for violence, but its enforcement varies according to the language and the authors’ prominence.",
+    "cloze": "{{c1::La politique}} de modération interdit officiellement les appels à la violence, mais son application varie selon la langue et la notoriété des auteurs.",
+    "note": "Old_back is accurate only after a domain complement fixes the institutional-policy sense. The example supplies that missing disambiguation."
+  },
+  {
+    "id": "it_fancy_vocab_393",
+    "en": "the Accountability",
+    "category": "lexical-noun",
+    "tl": "l’obligation de rendre des comptes",
+    "alts": [
+      "la redevabilité"
+    ],
+    "register": "Clear formal governance expression; redevabilité is concise institutional terminology but remains less familiar in general France-French prose.",
+    "trap": "Responsabilité may identify a duty or liability without the answerability, explanation and scrutiny central to accountability.",
+    "example_tl": "L’obligation de rendre des comptes reste illusoire si le régulateur ne peut ni consulter les données internes ni sanctionner les déclarations trompeuses.",
+    "example_en": "Accountability remains illusory if the regulator can neither examine internal data nor punish misleading statements.",
+    "cloze": "{{c1::L’obligation de rendre des comptes}} reste illusoire si le régulateur ne peut ni consulter les données internes ni sanctionner les déclarations trompeuses.",
+    "note": "Materially replaces old_back responsabilité, which does not necessarily encode a duty to explain and answer for decisions."
+  },
+  {
+    "id": "it_fancy_vocab_394",
+    "en": "the Stakeholder",
+    "category": "lexical-noun",
+    "tl": "une partie prenante",
+    "alts": [],
+    "register": "Standard institutional, project-management and public-consultation term for a person or group affected by or able to affect a decision.",
+    "trap": "A partie prenante is not necessarily an actionnaire: stakeholders include workers, users, regulators and communities as well as shareholders.",
+    "example_tl": "Chaque partie prenante pourra commenter le projet, mais les associations d’usagers demandent aussi un droit de regard sur sa mise en œuvre.",
+    "example_en": "Each stakeholder will be able to comment on the proposal, but user associations are also demanding oversight of its implementation.",
+    "cloze": "Chaque {{c1::partie prenante}} pourra commenter le projet, mais les associations d’usagers demandent aussi un droit de regard sur sa mise en œuvre.",
+    "note": "Old_back gives the correct lexeme but changes the singular prompt to a plural phrase. The headword restores a pedagogically useful singular article."
+  },
+  {
+    "id": "it_fancy_vocab_395",
+    "en": "the Consolidation",
+    "category": "lexical-noun",
+    "tl": "la concentration du marché",
+    "alts": [],
+    "register": "Formal competition-policy term for an industry becoming controlled by fewer firms through mergers, exits or acquisitions.",
+    "trap": "Consolidation in French often means strengthening finances or combining accounts; industry consolidation is more clearly concentration du marché.",
+    "example_tl": "La concentration du marché s’est accélérée après la crise, lorsque trois groupes ont racheté la plupart des fournisseurs indépendants encore rentables.",
+    "example_en": "Market consolidation accelerated after the crisis, when three groups bought most of the independent suppliers that were still profitable.",
+    "cloze": "{{c1::La concentration du marché}} s’est accélérée après la crise, lorsque trois groupes ont racheté la plupart des fournisseurs indépendants encore rentables.",
+    "note": "The source is polysemous. This note selects the competition-policy sense and materially replaces old_back la consolidation with a less English-shaped expression."
+  },
+  {
+    "id": "it_fancy_vocab_396",
+    "en": "the Acquisition",
+    "category": "lexical-noun",
+    "tl": "le rachat",
+    "alts": [
+      "l’acquisition"
+    ],
+    "register": "Neutral business and media term for one company buying another; acquisition is more formal and also applies to assets or technology.",
+    "trap": "Acquisition is broader than a corporate takeover and also names the act of acquiring knowledge; rachat fixes the company-purchase sense.",
+    "example_tl": "Le rachat de la jeune entreprise donne au groupe un accès exclusif à une technologie financée en grande partie par la recherche publique.",
+    "example_en": "The acquisition of the start-up gives the group exclusive access to technology financed largely through public research.",
+    "cloze": "{{c1::Le rachat}} de la jeune entreprise donne au groupe un accès exclusif à une technologie financée en grande partie par la recherche publique.",
+    "note": "The surrounding corporate vocabulary supports the takeover sense. Old_back l’acquisition remains valid but is less specific, so it is retained as an alternative."
+  }
+]

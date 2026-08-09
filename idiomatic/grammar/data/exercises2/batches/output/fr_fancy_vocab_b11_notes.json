@@ -1,0 +1,309 @@
+[
+  {
+    "id": "it_fancy_vocab_402",
+    "en": "the Dependency",
+    "category": "lexical-noun",
+    "tl": "la dépendance à l’égard de",
+    "alts": [],
+    "register": "Neutral-formal wording for reliance on an actor, system or resource; envers is also common when the complement denotes an actor.",
+    "trap": "The noun is feminine, and dépendre takes de, not the English-influenced preposition sur; the complement often determines whether envers is natural.",
+    "example_tl": "La dépendance des médias envers les plateformes fragilise leur autonomie éditoriale, surtout lorsque les revenus publicitaires proviennent d’un seul intermédiaire numérique.",
+    "example_en": "The media’s dependence on platforms weakens their editorial independence, especially when advertising revenue comes from a single digital intermediary.",
+    "cloze": "La {{c1::dépendance}} des médias envers les plateformes fragilise leur autonomie éditoriale, surtout lorsque les revenus publicitaires proviennent d’un seul intermédiaire numérique.",
+    "note": "Old_back gives the core noun but omits the government needed for production. The example uses envers because the dependent relationship is with institutional actors."
+  },
+  {
+    "id": "it_fancy_vocab_403",
+    "en": "To advocate",
+    "category": "lexical-verb",
+    "tl": "plaider en faveur de",
+    "alts": [],
+    "register": "Neutral-formal advocacy phrase, especially natural in legal, policy and public-debate contexts.",
+    "trap": "French has no standard verb *advocater; défendre can fit some contexts, but plaider en faveur de explicitly presents a public case for a measure.",
+    "example_tl": "Plusieurs juristes plaident en faveur de contrôles indépendants des algorithmes afin que les autorités puissent vérifier les biais signalés par les chercheurs.",
+    "example_en": "Several legal experts advocate independent audits of algorithms so that the authorities can verify the biases reported by researchers.",
+    "cloze": "Plusieurs juristes {{c1::plaident en faveur de}} contrôles indépendants des algorithmes afin que les autorités puissent vérifier les biais signalés par les chercheurs.",
+    "note": "Materially specifies the public-advocacy sense that old_back défendre leaves ambiguous."
+  },
+  {
+    "id": "it_fancy_vocab_404",
+    "en": "To appraise",
+    "category": "lexical-verb",
+    "tl": "évaluer",
+    "alts": [],
+    "register": "Neutral professional verb for assessing quality, viability, risk or value against explicit or implicit criteria.",
+    "trap": "Expertiser is reserved for a specialist examination or valuation; it is not a general replacement for appraise in policy analysis.",
+    "example_tl": "Avant de financer le projet, le comité évaluera sa viabilité économique, ses risques sociaux et la crédibilité des engagements environnementaux annoncés.",
+    "example_en": "Before funding the project, the committee will appraise its economic viability, social risks, and the credibility of its stated environmental commitments.",
+    "cloze": "Avant de financer le projet, le comité {{c1::évaluera}} sa viabilité économique, ses risques sociaux et la crédibilité des engagements environnementaux annoncés.",
+    "note": "Old_back is accurate. This item is retained for the professional assessment sense and its contrast with the narrower expertiser."
+  },
+  {
+    "id": "it_fancy_vocab_405",
+    "en": "To articulate",
+    "category": "lexical-verb",
+    "tl": "formuler clairement",
+    "alts": [
+      "énoncer clairement"
+    ],
+    "register": "Neutral-formal wording for expressing an argument, condition or position with clarity and structure.",
+    "trap": "Articuler is possible when organizing elements around one another, but English articulate an idea or concern is often more idiomatically formuler clairement.",
+    "example_tl": "La ministre formulera clairement les conditions d’un accord, sans masquer les concessions budgétaires que chaque État devrait accepter pour le rendre viable.",
+    "example_en": "The minister will clearly articulate the conditions of an agreement without concealing the budgetary concessions that each state would have to accept to make it viable.",
+    "cloze": "La ministre {{c1::formulera clairement}} les conditions d’un accord, sans masquer les concessions budgétaires que chaque État devrait accepter pour le rendre viable.",
+    "note": "Materially replaces the broad old_back articuler with the most natural rendering for clearly expressing conditions in this example."
+  },
+  {
+    "id": "it_fancy_vocab_406",
+    "en": "To champion",
+    "category": "lexical-verb",
+    "tl": "défendre avec force",
+    "alts": [],
+    "register": "Neutral professional phrase for sustained, energetic public support of a cause, principle or reform.",
+    "trap": "Championner is uncommon and regionally marked in this sense; standard France-French professional prose usually chooses défendre or promouvoir with an intensity marker.",
+    "example_tl": "Depuis plusieurs années, cette chercheuse défend avec force l’accès ouvert aux données publiques face aux intérêts commerciaux des grands fournisseurs privés.",
+    "example_en": "For several years, this researcher has championed open access to public data against the commercial interests of major private providers.",
+    "cloze": "Depuis plusieurs années, cette chercheuse {{c1::défend avec force}} l’accès ouvert aux données publiques face aux intérêts commerciaux des grands fournisseurs privés.",
+    "note": "Old_back défendre identifies the basic action but loses the conspicuous and energetic support encoded by champion; the intensity marker restores it."
+  },
+  {
+    "id": "it_fancy_vocab_411",
+    "en": "To contemplate",
+    "category": "lexical-verb",
+    "tl": "envisager de",
+    "alts": [
+      "songer à"
+    ],
+    "register": "Neutral wording for seriously considering a possible future action; songer à is slightly less institutional.",
+    "trap": "Contempler normally means to gaze at or admire; before an action, contemplate is rendered by envisager de plus an infinitive.",
+    "example_tl": "Le gouvernement envisage de suspendre le dispositif si l’évaluation indépendante confirme qu’il discrimine systématiquement les demandeurs issus des quartiers populaires.",
+    "example_en": "The government is contemplating suspending the scheme if the independent assessment confirms that it systematically discriminates against applicants from working-class districts.",
+    "cloze": "Le gouvernement {{c1::envisage de}} suspendre le dispositif si l’évaluation indépendante confirme qu’il discrimine systématiquement les demandeurs issus des quartiers populaires.",
+    "note": "Materially replaces old_back considérer, which does not supply the idiomatic construction for deliberating over a future action."
+  },
+  {
+    "id": "it_fancy_vocab_413",
+    "en": "To convey",
+    "category": "lexical-verb",
+    "tl": "transmettre",
+    "alts": [],
+    "register": "Neutral professional verb for communicating information, reservations or ideas from one source to another.",
+    "trap": "Convey is complement-sensitive: transmettre suits information, rendre can convey a tone or effect, and faire part de is limited to sharing something with someone.",
+    "example_tl": "Le rapport transmet avec précision les réserves des experts, mais sa synthèse publique atténue leur avertissement sur les risques de surveillance généralisée.",
+    "example_en": "The report accurately conveys the experts’ reservations, but its public summary softens their warning about the risks of mass surveillance.",
+    "cloze": "Le rapport {{c1::transmet}} avec précision les réserves des experts, mais sa synthèse publique atténue leur avertissement sur les risques de surveillance généralisée.",
+    "note": "The bare English verb is polysemous. This note selects communication of information; old_back faire part de son opinion is too narrow and changes the complement."
+  },
+  {
+    "id": "it_fancy_vocab_415",
+    "en": "To debate",
+    "category": "lexical-verb",
+    "tl": "débattre de",
+    "alts": [
+      "discuter de"
+    ],
+    "register": "Neutral-formal verb for structured public or institutional discussion; discuter de is somewhat less formal.",
+    "trap": "Unlike English debate plus a direct object, careful standard French normally uses débattre de a subject or débattre avec a person.",
+    "example_tl": "Les députés débattront de la réforme après la publication du rapport, afin que les associations puissent contester publiquement ses hypothèses les plus fragiles.",
+    "example_en": "The members of parliament will debate the reform after the report is published, so that associations can publicly challenge its weakest assumptions.",
+    "cloze": "Les députés {{c1::débattront de}} la réforme après la publication du rapport, afin que les associations puissent contester publiquement ses hypothèses les plus fragiles.",
+    "note": "Old_back gives the right verb but omits its governed preposition."
+  },
+  {
+    "id": "it_fancy_vocab_417",
+    "en": "To delineate",
+    "category": "lexical-verb",
+    "tl": "délimiter",
+    "alts": [
+      "circonscrire"
+    ],
+    "register": "Formal analytical verb for defining the boundaries, scope or extent of a power, field or concept.",
+    "trap": "Delineate does more than describe: délimiter identifies boundaries or scope, whereas décrire simply presents characteristics.",
+    "example_tl": "La proposition délimite précisément les pouvoirs du régulateur, tout en réservant aux tribunaux le contrôle des sanctions susceptibles de restreindre la liberté d’expression.",
+    "example_en": "The proposal precisely delineates the regulator’s powers while reserving for the courts oversight of sanctions liable to restrict freedom of expression.",
+    "cloze": "La proposition {{c1::délimite}} précisément les pouvoirs du régulateur, tout en réservant aux tribunaux le contrôle des sanctions susceptibles de restreindre la liberté d’expression.",
+    "note": "Old_back is accurate for the scope-defining sense selected here."
+  },
+  {
+    "id": "it_fancy_vocab_420",
+    "en": "To dismiss",
+    "category": "lexical-verb",
+    "tl": "écarter",
+    "alts": [],
+    "register": "Neutral-formal verb for rejecting a criticism, explanation or possibility as unworthy of further consideration.",
+    "trap": "Dismiss changes with its object: écarter une critique, rejeter un recours and licencier un salarié are distinct French renderings.",
+    "example_tl": "La direction a écarté les critiques au motif qu’elles étaient anecdotiques, alors que trois enquêtes indépendantes documentaient les mêmes défaillances dans plusieurs versions du système.",
+    "example_en": "Management dismissed the criticisms on the grounds that they were anecdotal, even though three independent investigations documented the same failures in several versions of the system.",
+    "cloze": "La direction {{c1::a écarté}} les critiques au motif qu’elles étaient anecdotiques, alors que trois enquêtes indépendantes documentaient les mêmes défaillances dans plusieurs versions du système.",
+    "note": "Old_back rejeter is possible, but écarter is more idiomatic for dismissing criticism from consideration in the selected sense. Self-review replaced the calqued comme anecdotiques with au motif qu’elles étaient anecdotiques."
+  },
+  {
+    "id": "it_fancy_vocab_421",
+    "en": "To dispute",
+    "category": "lexical-verb",
+    "tl": "contester",
+    "alts": [],
+    "register": "Neutral-formal verb for challenging the truth, validity or legitimacy of a claim, finding or decision.",
+    "trap": "Disputer means to argue, quarrel or compete for something; it is a false friend when English dispute means challenge a conclusion.",
+    "example_tl": "L’entreprise conteste les conclusions du régulateur, sans toutefois fournir les journaux techniques qui permettraient de vérifier sa propre version des incidents.",
+    "example_en": "The company disputes the regulator’s conclusions without, however, providing the technical logs that would make it possible to verify its own account of the incidents.",
+    "cloze": "L’entreprise {{c1::conteste}} les conclusions du régulateur, sans toutefois fournir les journaux techniques qui permettraient de vérifier sa propre version des incidents.",
+    "note": "Old_back is accurate. The item is retained because English dispute strongly invites the French false friend disputer."
+  },
+  {
+    "id": "it_fancy_vocab_422",
+    "en": "To embrace",
+    "category": "lexical-verb",
+    "tl": "adopter pleinement",
+    "alts": [],
+    "register": "Neutral professional wording for accepting and committing to an idea, doctrine, technology or course of action.",
+    "trap": "Embrasser une cause exists in elevated French, but neutral institutional prose generally uses adopter or faire sien for the figurative English verb.",
+    "example_tl": "Après des années d’hésitation, le parti a pleinement adopté une doctrine industrielle qui subordonne les aides publiques à des objectifs climatiques mesurables.",
+    "example_en": "After years of hesitation, the party fully embraced an industrial doctrine that makes public subsidies conditional on measurable climate goals.",
+    "cloze": "Après des années d’hésitation, le parti {{c1::a pleinement adopté}} une doctrine industrielle qui subordonne les aides publiques à des objectifs climatiques mesurables.",
+    "note": "The note selects the figurative acceptance sense. Old_back embrasser is possible in elevated phrasing but is not the best neutral choice for this institutional example."
+  },
+  {
+    "id": "it_fancy_vocab_425",
+    "en": "To expound",
+    "category": "lexical-verb",
+    "tl": "exposer en détail",
+    "alts": [
+      "présenter en détail"
+    ],
+    "register": "Formal expository phrase for setting out a theory, argument or mechanism systematically and at some length.",
+    "trap": "Expliquer may give a reason or make something understandable without the extended, systematic presentation normally implied by expound.",
+    "example_tl": "Dans son audition, l’économiste expose en détail les mécanismes par lesquels la concentration du marché publicitaire affaiblit progressivement l’indépendance financière des médias locaux.",
+    "example_en": "During the hearing, the economist expounds in detail the mechanisms through which concentration in the advertising market progressively weakens the financial independence of local media.",
+    "cloze": "Dans son audition, l’économiste {{c1::expose en détail}} les mécanismes par lesquels la concentration du marché publicitaire affaiblit progressivement l’indépendance financière des médias locaux.",
+    "note": "Old_back expliquer is broadly related but does not preserve the sustained expository force of the English verb. Self-review expanded concentration publicitaire to concentration du marché publicitaire to remove a possible advertising-volume reading."
+  },
+  {
+    "id": "it_fancy_vocab_427",
+    "en": "To foster",
+    "category": "lexical-verb",
+    "tl": "favoriser",
+    "alts": [
+      "encourager"
+    ],
+    "register": "Neutral professional verb for creating conditions that help a process, capacity or institution develop.",
+    "trap": "English foster changes by domain: favoriser suits development or emergence, while a foster family is une famille d’accueil.",
+    "example_tl": "Une fiscalité mieux coordonnée favoriserait l’émergence de médias locaux solides, au lieu d’accroître indirectement l’avantage concurrentiel des plateformes déjà dominantes.",
+    "example_en": "Better-coordinated taxation would foster the emergence of strong local media instead of indirectly increasing the competitive advantage of already dominant platforms.",
+    "cloze": "Une fiscalité mieux coordonnée {{c1::favoriserait}} l’émergence de médias locaux solides, au lieu d’accroître indirectement l’avantage concurrentiel des plateformes déjà dominantes.",
+    "note": "Old_back is accurate for the developmental sense, which the example fixes through the productive collocation favoriser l’émergence de."
+  },
+  {
+    "id": "it_fancy_vocab_429",
+    "en": "To highlight",
+    "category": "lexical-verb",
+    "tl": "mettre en lumière",
+    "alts": [
+      "mettre en évidence",
+      "souligner"
+    ],
+    "register": "Neutral professional expression for drawing analytical attention to a fact, contrast or problem.",
+    "trap": "Surligner means to mark written text with a highlighter; it is not the normal figurative equivalent of highlight a finding.",
+    "example_tl": "Les chiffres publiés hier mettent en lumière l’écart croissant entre les engagements climatiques des opérateurs et leurs investissements réels dans les infrastructures.",
+    "example_en": "The figures published yesterday highlight the growing gap between operators’ climate commitments and their actual investment in infrastructure.",
+    "cloze": "Les chiffres publiés hier {{c1::mettent en lumière}} l’écart croissant entre les engagements climatiques des opérateurs et leurs investissements réels dans les infrastructures.",
+    "note": "Old_back mettre en évidence is accurate and retained as an alternative; mettre en lumière is equally standard in analytical prose."
+  },
+  {
+    "id": "it_fancy_vocab_430",
+    "en": "To hypothesize",
+    "category": "lexical-verb",
+    "tl": "formuler l’hypothèse que",
+    "alts": [
+      "émettre l’hypothèse que"
+    ],
+    "register": "Formal academic and analytical construction for advancing a testable or provisional explanation.",
+    "trap": "Hypothétiser is rare in general formal prose; French normally uses formuler or émettre l’hypothèse que before a full proposition.",
+    "example_tl": "Les chercheurs formulent l’hypothèse que la baisse d’engagement résulte moins de la lassitude que d’une modification discrète du système de recommandation.",
+    "example_en": "The researchers hypothesize that the drop in engagement results less from fatigue than from a discreet change to the recommendation system.",
+    "cloze": "Les chercheurs {{c1::formulent l’hypothèse que}} la baisse d’engagement résulte moins de la lassitude que d’une modification discrète du système de recommandation.",
+    "note": "Old_back émettre des hypothèses is possible but changes the singular proposition and omits the que construction needed in this example."
+  },
+  {
+    "id": "it_fancy_vocab_432",
+    "en": "To infer",
+    "category": "lexical-verb",
+    "tl": "déduire de",
+    "alts": [
+      "inférer de"
+    ],
+    "register": "Déduire de is neutral analytical French; inférer de is more technical and common in logic, statistics and research writing.",
+    "trap": "English infer describes the reader’s or analyst’s deduction; French impliquer normally means imply, what the evidence or speaker suggests.",
+    "example_tl": "On ne peut déduire de cette corrélation que la plateforme a causé le recul électoral, faute de données comparables sur les autres médias.",
+    "example_en": "One cannot infer from this correlation that the platform caused the electoral decline, given the lack of comparable data on other media.",
+    "cloze": "On ne peut {{c1::déduire de}} cette corrélation que la plateforme a causé le recul électoral, faute de données comparables sur les autres médias.",
+    "note": "Old_back gives the preferred verb but omits its source preposition; the note restores the productive déduire de construction."
+  },
+  {
+    "id": "it_fancy_vocab_434",
+    "en": "To negate",
+    "category": "lexical-verb",
+    "tl": "nier",
+    "alts": [],
+    "register": "Neutral-formal verb when negating the truth or existence of a proposition, fact or harm.",
+    "trap": "Négation is a noun, not the requested infinitive; negate an effect or advantage may instead require annuler or neutraliser.",
+    "example_tl": "L’absence de plainte formelle ne suffit pas à nier l’existence du préjudice, car les travailleurs précaires renoncent souvent à saisir une institution jugée inaccessible.",
+    "example_en": "The absence of a formal complaint is not enough to negate the existence of harm, because precarious workers often give up on approaching an institution they consider inaccessible.",
+    "cloze": "L’absence de plainte formelle ne suffit pas à {{c1::nier}} l’existence du préjudice, car les travailleurs précaires renoncent souvent à saisir une institution jugée inaccessible.",
+    "note": "The English verb is polysemous. This note selects the proposition-and-existence sense and corrects old_back, which incorrectly supplies the noun négation."
+  },
+  {
+    "id": "it_fancy_vocab_435",
+    "en": "To ponder",
+    "category": "lexical-verb",
+    "tl": "réfléchir à",
+    "alts": [],
+    "register": "Neutral wording for considering a complex question carefully over time; suitable in both institutional speech and prose.",
+    "trap": "Pondérer means to weight, balance or adjust; it is a false friend for ponder, which normally requires réfléchir à.",
+    "example_tl": "Le comité réfléchit aux conséquences démocratiques du projet, notamment au pouvoir considérable qu’il confierait à des prestataires privés encore insuffisamment contrôlés.",
+    "example_en": "The committee is pondering the project’s democratic consequences, particularly the considerable power it would entrust to private providers that remain insufficiently supervised.",
+    "cloze": "Le comité {{c1::réfléchit aux}} conséquences démocratiques du projet, notamment au pouvoir considérable qu’il confierait à des prestataires privés encore insuffisamment contrôlés.",
+    "note": "Old_back identifies the verb but omits its governed preposition; aux in the example realizes à plus les."
+  },
+  {
+    "id": "it_fancy_vocab_436",
+    "en": "To posit",
+    "category": "lexical-verb",
+    "tl": "postuler que",
+    "alts": [
+      "poser comme hypothèse que"
+    ],
+    "register": "Formal analytical construction for introducing a proposition as an assumption or starting premise.",
+    "trap": "Poser alone is incomplete in ordinary prose for this sense; use poser comme hypothèse or postuler que before a proposition.",
+    "example_tl": "L’étude postule que les utilisateurs agissent rationnellement, sans examiner comment l’opacité des interfaces limite leur capacité à comparer réellement les offres.",
+    "example_en": "The study posits that users act rationally without examining how opaque interfaces limit their ability to genuinely compare offers.",
+    "cloze": "L’étude {{c1::postule que}} les utilisateurs agissent rationnellement, sans examiner comment l’opacité des interfaces limite leur capacité à comparer réellement les offres.",
+    "note": "Materially expands old_back poser, which is ambiguous and lacks the construction required to introduce the proposition."
+  },
+  {
+    "id": "it_fancy_vocab_439",
+    "en": "To qualify",
+    "category": "lexical-verb",
+    "tl": "nuancer",
+    "alts": [],
+    "register": "Neutral-formal verb for limiting, softening or adding reservations to a judgment or assertion.",
+    "trap": "Qualifier normally means to characterize or call something a particular term; it does not by itself express the English rhetorical sense of adding reservations.",
+    "example_tl": "Après avoir soutenu la réforme, l’expert nuance son jugement en rappelant que ses effets dépendront fortement des moyens accordés au régulateur.",
+    "example_en": "After supporting the reform, the expert qualifies his assessment by noting that its effects will depend heavily on the resources granted to the regulator.",
+    "cloze": "Après avoir soutenu la réforme, l’expert {{c1::nuance}} son jugement en rappelant que ses effets dépendront fortement des moyens accordés au régulateur.",
+    "note": "The bare source is polysemous. This note selects the rhetorical hedging sense, for which old_back qualifier is a false friend."
+  },
+  {
+    "id": "it_fancy_vocab_440",
+    "en": "To question",
+    "category": "lexical-verb",
+    "tl": "remettre en question",
+    "alts": [],
+    "register": "Neutral-formal expression for challenging the validity of an assumption, claim, policy or established practice.",
+    "trap": "Questionner can mean interrogate or critically examine, but remettre en question more explicitly conveys challenging the validity of a premise.",
+    "example_tl": "Le rapport remet en question l’idée que l’autorégulation protège suffisamment les mineurs, sans pour autant recommander une interdiction générale des réseaux sociaux.",
+    "example_en": "The report questions the idea that self-regulation sufficiently protects minors, without going so far as to recommend a general ban on social networks.",
+    "cloze": "Le rapport {{c1::remet en question}} l’idée que l’autorégulation protège suffisamment les mineurs, sans pour autant recommander une interdiction générale des réseaux sociaux.",
+    "note": "The note selects the challenge-to-validity sense. Old_back questionner is possible for probing a topic but is less explicit in this argumentative use."
+  }
+]

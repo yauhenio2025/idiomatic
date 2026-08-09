@@ -1,0 +1,376 @@
+[
+  {
+    "id": "it_fancy_vocab_443",
+    "en": "To scrutinize",
+    "category": "lexical-verb",
+    "tl": "passer au crible",
+    "alts": [
+      "examiner minutieusement"
+    ],
+    "register": "Neutral-formal idiom for a thorough, systematic and often critical examination of evidence, accounts or arrangements.",
+    "trap": "Scrutiniser is not standard French; scruter is possible, but passer au crible makes the systematic examination explicit.",
+    "example_tl": "Avant d’autoriser le rachat, l’autorité devra passer au crible les accords de partage de données conclus entre la plateforme et ses partenaires publicitaires.",
+    "example_en": "Before authorizing the acquisition, the authority will have to scrutinize the data-sharing agreements concluded between the platform and its advertising partners.",
+    "cloze": "Avant d’autoriser le rachat, l’autorité devra {{c1::passer au crible}} les accords de partage de données conclus entre la plateforme et ses partenaires publicitaires.",
+    "note": "Old_back gives an accurate idiom; the example fixes its systematic regulatory-review sense rather than mere visual inspection."
+  },
+  {
+    "id": "it_fancy_vocab_446",
+    "en": "To allege",
+    "category": "lexical-verb",
+    "tl": "alléguer que",
+    "alts": [],
+    "register": "Formal legal and journalistic construction for reporting a claim whose truth the speaker does not endorse.",
+    "trap": "Affirmer que presents a claim without the same legal or evidential distance; alléguer does not mean that the allegation has been proved.",
+    "example_tl": "L’entreprise allègue que la collecte biométrique améliore la sécurité, mais elle n’a publié aucune donnée permettant de vérifier cette affirmation.",
+    "example_en": "The company alleges that biometric data collection improves security, but it has published no data that would allow the claim to be verified.",
+    "cloze": "L’entreprise {{c1::allègue que}} la collecte biométrique améliore la sécurité, mais elle n’a publié aucune donnée permettant de vérifier cette affirmation.",
+    "note": "Old_back is accurate; the headword adds the clause pattern needed for productive use."
+  },
+  {
+    "id": "it_fancy_vocab_447",
+    "en": "To bolster",
+    "category": "lexical-verb",
+    "tl": "étayer",
+    "alts": [
+      "renforcer"
+    ],
+    "register": "Formal analytical verb used when evidence or reasoning gives stronger support to a claim, interpretation or case.",
+    "trap": "Soutenir can mean personally advocating a claim; evidence normally étaye that claim rather than taking a position on it.",
+    "example_tl": "De nouvelles données indépendantes étayent l’argument selon lequel la transparence publicitaire réduit les abus sans compromettre le financement des médias.",
+    "example_en": "New independent data bolster the argument that advertising transparency reduces abuse without jeopardizing media funding.",
+    "cloze": "De nouvelles données indépendantes {{c1::étayent}} l’argument selon lequel la transparence publicitaire réduit les abus sans compromettre le financement des médias.",
+    "note": "The bare English verb is object-dependent. This note selects evidential support and sharpens old_back soutenir."
+  },
+  {
+    "id": "it_fancy_vocab_448",
+    "en": "To broach",
+    "category": "lexical-verb",
+    "tl": "aborder",
+    "alts": [
+      "soulever"
+    ],
+    "register": "Neutral professional verb for introducing a subject, especially one that has been delicate, avoided or difficult to discuss.",
+    "trap": "Brocher means to bind or stitch printed sheets and is unrelated; the legacy phrase does not mean broach a subject.",
+    "example_tl": "Lors de la réunion, plusieurs rédactions ont abordé la question du partage des revenus, jusque-là soigneusement évitée par les grandes plateformes.",
+    "example_en": "At the meeting, several newsrooms broached the issue of revenue sharing, which the major platforms had carefully avoided until then.",
+    "cloze": "Lors de la réunion, plusieurs rédactions ont {{c1::abordé}} la question du partage des revenus, jusque-là soigneusement évitée par les grandes plateformes.",
+    "note": "Materially corrects old_back, which describes embarking on a path of progress and has no connection to raising a subject."
+  },
+  {
+    "id": "it_fancy_vocab_449",
+    "en": "To circumvent",
+    "category": "lexical-verb",
+    "tl": "contourner",
+    "alts": [],
+    "register": "Neutral-formal verb for deliberately finding a way around a rule, safeguard, restriction or obstacle.",
+    "trap": "Circonvenir normally means to manipulate or win over a person; it is not a formal synonym for contourner a rule.",
+    "example_tl": "Certaines applications contournent les garde-fous européens en transférant les profils sensibles vers des filiales établies dans des juridictions moins exigeantes.",
+    "example_en": "Some applications circumvent European safeguards by transferring sensitive profiles to subsidiaries established in less demanding jurisdictions.",
+    "cloze": "Certaines applications {{c1::contournent}} les garde-fous européens en transférant les profils sensibles vers des filiales établies dans des juridictions moins exigeantes.",
+    "note": "Old_back is accurate; the example fixes the intentional regulatory-evasion sense."
+  },
+  {
+    "id": "it_fancy_vocab_452",
+    "en": "To counter",
+    "category": "lexical-verb",
+    "tl": "contrecarrer",
+    "alts": [
+      "contrer"
+    ],
+    "register": "Neutral-formal verb for deliberately obstructing a plan, campaign or strategy and preventing its intended effect.",
+    "trap": "Counter is object-dependent: countering a claim may be répondre à or réfuter, while countering an effect may be contrebalancer.",
+    "example_tl": "Les autorités tentent de contrecarrer les campagnes d’ingérence qui exploitent les messageries chiffrées pour diffuser rapidement des récits fabriqués.",
+    "example_en": "The authorities are trying to counter interference campaigns that exploit encrypted messaging services to rapidly disseminate fabricated narratives.",
+    "cloze": "Les autorités tentent de {{c1::contrecarrer}} les campagnes d’ingérence qui exploitent les messageries chiffrées pour diffuser rapidement des récits fabriqués.",
+    "note": "Old_back contrer is valid and retained as an alternative; contrecarrer more clearly selects the obstructive-strategy sense."
+  },
+  {
+    "id": "it_fancy_vocab_454",
+    "en": "To demur",
+    "category": "lexical-verb",
+    "tl": "émettre des réserves sur",
+    "alts": [],
+    "register": "Formal institutional phrasing for expressing tactful hesitation, reservations or disagreement rather than issuing a blunt refusal.",
+    "trap": "Dénigrer means to disparage; it does not express the restrained objection or reluctance conveyed by demur.",
+    "example_tl": "Plusieurs juristes émettent des réserves sur ce dispositif, estimant qu’un contrôle administratif permanent menacerait la confidentialité des sources journalistiques.",
+    "example_en": "Several legal experts demur at this mechanism, believing that permanent administrative oversight would threaten the confidentiality of journalistic sources.",
+    "cloze": "Plusieurs juristes {{c1::émettent des réserves sur}} ce dispositif, estimant qu’un contrôle administratif permanent menacerait la confidentialité des sources journalistiques.",
+    "note": "Materially corrects old_back dénigrer. Self-review retained the tactful institutional sense instead of the stronger objecter."
+  },
+  {
+    "id": "it_fancy_vocab_456",
+    "en": "To deride",
+    "category": "lexical-verb",
+    "tl": "tourner en dérision",
+    "alts": [
+      "railler"
+    ],
+    "register": "Neutral-formal expression for treating a person, concern or proposal with contemptuous mockery.",
+    "trap": "Dénigrer attacks worth or reputation but does not necessarily involve the ridicule that defines tourner en dérision.",
+    "example_tl": "Certains éditorialistes tournent en dérision les inquiétudes des chercheurs, alors que plusieurs enquêtes documentent déjà les effets sociaux du système.",
+    "example_en": "Some editorialists deride the researchers’ concerns, even though several investigations already document the system’s social effects.",
+    "cloze": "Certains éditorialistes {{c1::tournent en dérision}} les inquiétudes des chercheurs, alors que plusieurs enquêtes documentent déjà les effets sociaux du système.",
+    "note": "Old_back collapses derision into general disparagement; the authored expression preserves the element of mockery."
+  },
+  {
+    "id": "it_fancy_vocab_458",
+    "en": "To disseminate",
+    "category": "lexical-verb",
+    "tl": "diffuser",
+    "alts": [
+      "propager"
+    ],
+    "register": "Neutral professional verb for distributing information, messages or content to a broad audience.",
+    "trap": "Disséminer is possible but often evokes physical scattering or technical biological use; diffuser is the default with information.",
+    "example_tl": "Des réseaux coordonnés diffusent de fausses informations sur le scrutin afin d’éroder la confiance publique avant même l’ouverture des bureaux de vote.",
+    "example_en": "Coordinated networks disseminate false information about the election in order to erode public trust before polling stations even open.",
+    "cloze": "Des réseaux coordonnés {{c1::diffusent}} de fausses informations sur le scrutin afin d’éroder la confiance publique avant même l’ouverture des bureaux de vote.",
+    "note": "Replaces the physically tilted old_back with the idiomatic information-domain verb."
+  },
+  {
+    "id": "it_fancy_vocab_459",
+    "en": "To elicit",
+    "category": "lexical-verb",
+    "tl": "susciter",
+    "alts": [],
+    "register": "Neutral professional verb when an event, statement or measure causes a response, emotion or reaction.",
+    "trap": "Éliciter is rare and technical; eliciting information may require obtenir or faire émerger rather than susciter.",
+    "example_tl": "L’annonce a suscité une réaction inhabituellement vive des rédactions, qui redoutent que le nouveau mode de rémunération favorise encore les contenus sensationnalistes.",
+    "example_en": "The announcement elicited an unusually strong reaction from newsrooms, which fear that the new remuneration model will further favor sensationalist content.",
+    "cloze": "L’annonce a {{c1::suscité}} une réaction inhabituellement vive des rédactions, qui redoutent que le nouveau mode de rémunération favorise encore les contenus sensationnalistes.",
+    "note": "Old_back is accurate for the reaction sense selected here; the source can require a different verb when its object is information. Self-review replaced barème with mode de rémunération to make the policy mechanism explicit."
+  },
+  {
+    "id": "it_fancy_vocab_460",
+    "en": "To embellish",
+    "category": "lexical-verb",
+    "tl": "enjoliver",
+    "alts": [
+      "embellir"
+    ],
+    "register": "Neutral verb for presenting an account, record or result more attractively than the facts warrant, often with a critical implication.",
+    "trap": "Embellir may describe a real improvement; enjoliver more readily signals a favorable presentation that simplifies, exaggerates or distorts.",
+    "example_tl": "Dans son entretien, le dirigeant a enjolivé les résultats du trimestre en présentant des visiteurs occasionnels comme des utilisateurs réguliers.",
+    "example_en": "In his interview, the executive embellished the quarter’s results by presenting occasional visitors as regular users.",
+    "cloze": "Dans son entretien, le dirigeant a {{c1::enjolivé}} les résultats du trimestre en présentant des visiteurs occasionnels comme des utilisateurs réguliers.",
+    "note": "Selects the figurative distortion sense; old_back embellir remains possible and is retained as an alternative. Self-review replaced the awkward abonnés durablement actifs with utilisateurs réguliers."
+  },
+  {
+    "id": "it_fancy_vocab_461",
+    "en": "To espouse",
+    "category": "lexical-verb",
+    "tl": "épouser",
+    "alts": [
+      "adopter"
+    ],
+    "register": "Formal intellectual and political usage for adopting or aligning oneself with a doctrine, vision or cause.",
+    "trap": "Épouser is literal with a person but idiomatic and formal with an abstract position; se marier avec cannot replace it in this figurative sense.",
+    "example_tl": "Le nouveau ministre épouse une vision technocratique de la régulation, où l’efficacité mesurable prime systématiquement sur la délibération démocratique.",
+    "example_en": "The new minister espouses a technocratic vision of regulation in which measurable efficiency systematically takes precedence over democratic deliberation.",
+    "cloze": "Le nouveau ministre {{c1::épouse}} une vision technocratique de la régulation, où l’efficacité mesurable prime systématiquement sur la délibération démocratique.",
+    "note": "Old_back is accurate; the example fixes the abstract formal sense."
+  },
+  {
+    "id": "it_fancy_vocab_462",
+    "en": "To fabricate",
+    "category": "lexical-verb",
+    "tl": "fabriquer de toutes pièces",
+    "alts": [
+      "inventer"
+    ],
+    "register": "Neutral-formal expression for deliberately inventing evidence, testimony, accusations or a narrative and presenting it as genuine.",
+    "trap": "Fabriquer alone often means manufacture; de toutes pièces marks the deceptive invention sense required here.",
+    "example_tl": "Pour discréditer l’enquête, le cabinet a fabriqué de toutes pièces des témoignages anonymes ensuite relayés par plusieurs comptes prétendument indépendants.",
+    "example_en": "To discredit the investigation, the firm fabricated anonymous testimonies that were then relayed by several supposedly independent accounts.",
+    "cloze": "Pour discréditer l’enquête, le cabinet a {{c1::fabriqué de toutes pièces}} des témoignages anonymes ensuite relayés par plusieurs comptes prétendument indépendants.",
+    "note": "Expands old_back so that the headword unambiguously targets false evidence rather than physical manufacture."
+  },
+  {
+    "id": "it_fancy_vocab_463",
+    "en": "To fathom",
+    "category": "lexical-verb",
+    "tl": "parvenir à comprendre",
+    "alts": [
+      "arriver à comprendre"
+    ],
+    "register": "Neutral wording for reaching an understanding of something opaque or difficult after sustained effort.",
+    "trap": "Sondage is the noun for a poll, survey or sounding and cannot translate the verb fathom in its understanding sense.",
+    "example_tl": "Après plusieurs audits indépendants, les experts parviennent à comprendre pourquoi l’algorithme pénalise certains médias malgré des performances comparables.",
+    "example_en": "After several independent audits, the experts manage to fathom why the algorithm penalizes certain media outlets despite comparable performance.",
+    "cloze": "Après plusieurs audits indépendants, les experts {{c1::parviennent à comprendre}} pourquoi l’algorithme pénalise certains médias malgré des performances comparables.",
+    "note": "Materially corrects the noun supplied by old_back and preserves the effort implicit in the English verb. Self-review aligned the algorithm’s ongoing behavior with the present tense."
+  },
+  {
+    "id": "it_fancy_vocab_464",
+    "en": "To glean",
+    "category": "lexical-verb",
+    "tl": "glaner",
+    "alts": [
+      "recueillir"
+    ],
+    "register": "Neutral-to-literary figurative verb for gathering a limited amount of information from scattered sources or indirect evidence.",
+    "trap": "Glaner suggests piecemeal findings; it should not describe the exhaustive collection of a complete dataset.",
+    "example_tl": "En croisant les registres publics, les journalistes ont glané quelques indices sur les sociétés-écrans utilisées pour financer discrètement la campagne.",
+    "example_en": "By cross-referencing public records, the journalists gleaned a few clues about the shell companies used to discreetly finance the campaign.",
+    "cloze": "En croisant les registres publics, les journalistes ont {{c1::glané}} quelques indices sur les sociétés-écrans utilisées pour financer discrètement la campagne.",
+    "note": "Old_back is accurate; quelques indices fixes the sparse, piecemeal information sense. Self-review normalized the compound to sociétés-écrans."
+  },
+  {
+    "id": "it_fancy_vocab_465",
+    "en": "To harp",
+    "category": "lexical-verb",
+    "tl": "ressasser",
+    "alts": [
+      "revenir sans cesse sur"
+    ],
+    "register": "Neutral and disapproving verb for repeating the same point tiresomely instead of engaging with new objections.",
+    "trap": "Harponner means to harpoon; English normally uses harp on in this figurative sense, which French renders without a harp cognate.",
+    "example_tl": "Le ministre ressasse l’argument de la souveraineté numérique, sans répondre aux objections précises concernant le coût et la faisabilité du projet.",
+    "example_en": "The minister keeps harping on the digital-sovereignty argument without answering precise objections about the project’s cost and feasibility.",
+    "cloze": "Le ministre {{c1::ressasse}} l’argument de la souveraineté numérique, sans répondre aux objections précises concernant le coût et la faisabilité du projet.",
+    "note": "The bare source is underspecified; this note treats the usual figurative harp on construction and materially corrects old_back."
+  },
+  {
+    "id": "it_fancy_vocab_466",
+    "en": "To impugn",
+    "category": "lexical-verb",
+    "tl": "mettre en cause",
+    "alts": [],
+    "register": "Formal argumentative expression for attacking or challenging someone’s integrity, credibility or the validity of something.",
+    "trap": "Impugner is not the ordinary standard-France verb; s’en prendre à is broader and need not challenge integrity or validity.",
+    "example_tl": "L’avocat tente de mettre en cause la probité des enquêteurs, mais ses accusations reposent uniquement sur des messages sortis de leur contexte.",
+    "example_en": "The lawyer attempts to impugn the investigators’ integrity, but his accusations rely solely on messages taken out of context.",
+    "cloze": "L’avocat tente de {{c1::mettre en cause}} la probité des enquêteurs, mais ses accusations reposent uniquement sur des messages sortis de leur contexte.",
+    "note": "Old_back is too general. This integrity sense is distinct from the earlier dispute card, which challenges the validity of a finding or claim."
+  },
+  {
+    "id": "it_fancy_vocab_467",
+    "en": "To inculcate",
+    "category": "lexical-verb",
+    "tl": "inculquer quelque chose à quelqu’un",
+    "alts": [],
+    "register": "Neutral-formal verb for instilling an idea, value or habit persistently through teaching, repetition or authority.",
+    "trap": "The construction is inculquer quelque chose à quelqu’un; incorporer means to include, mix in or integrate and is not equivalent.",
+    "example_tl": "La formation interne inculque aux cadres l’idée que toute critique publique menace l’entreprise, même lorsqu’elle révèle un risque juridique sérieux.",
+    "example_en": "The internal training inculcates in managers the idea that any public criticism threatens the company, even when it reveals a serious legal risk.",
+    "cloze": "La formation interne {{c1::inculque aux cadres}} l’idée que toute critique publique menace l’entreprise, même lorsqu’elle révèle un risque juridique sérieux.",
+    "note": "Materially corrects old_back and supplies both arguments of the French construction."
+  },
+  {
+    "id": "it_fancy_vocab_468",
+    "en": "To indict",
+    "category": "lexical-verb",
+    "tl": "inculper",
+    "alts": [
+      "mettre en accusation"
+    ],
+    "register": "Formal legal verb used in French reporting on jurisdictions that issue an indictment; domestic procedural terminology varies.",
+    "trap": "An indictment is a formal accusation, not a conviction; France’s mise en examen belongs to a different procedural system and is not automatically equivalent.",
+    "example_tl": "Aux États-Unis, un grand jury a inculpé deux anciens dirigeants pour fraude, sans que cette décision préjuge de leur culpabilité.",
+    "example_en": "In the United States, a grand jury indicted two former executives for fraud, without that decision prejudging their guilt.",
+    "cloze": "Aux États-Unis, un grand jury a {{c1::inculpé}} deux anciens dirigeants pour fraude, sans que cette décision préjuge de leur culpabilité.",
+    "note": "Old_back is nonsensical. Self-review anchored the example in the United States to avoid falsely equating distinct French and American procedural stages."
+  },
+  {
+    "id": "it_fancy_vocab_470",
+    "en": "To laud",
+    "category": "lexical-verb",
+    "tl": "louer",
+    "alts": [
+      "saluer"
+    ],
+    "register": "Formal verb for praising a quality, decision or achievement; saluer is a slightly more journalistic alternative.",
+    "trap": "Louer can also mean to rent, but a praised quality as direct object fixes the intended sense; old_back is unusable.",
+    "example_tl": "Le rapport loue la rapidité de la réponse européenne, tout en regrettant l’absence de garanties durables pour les chercheurs indépendants.",
+    "example_en": "The report lauds the speed of the European response while regretting the lack of lasting safeguards for independent researchers.",
+    "cloze": "Le rapport {{c1::loue}} la rapidité de la réponse européenne, tout en regrettant l’absence de garanties durables pour les chercheurs indépendants.",
+    "note": "Materially corrects old_back laver les yeux, which has no relation to public praise."
+  },
+  {
+    "id": "it_fancy_vocab_472",
+    "en": "To opine",
+    "category": "lexical-verb",
+    "tl": "estimer que",
+    "alts": [
+      "être d’avis que"
+    ],
+    "register": "Neutral institutional construction; English opine can sound marked or pompous, which French need not reproduce with a rare verb.",
+    "trap": "Opiner is now rare outside expressions such as opiner du chef and is not the normal French equivalent of expressing an opinion.",
+    "example_tl": "Le rapporteur estime que le texte protège insuffisamment les lanceurs d’alerte, notamment lorsque leur employeur contrôle directement les canaux de signalement.",
+    "example_en": "The rapporteur opines that the text insufficiently protects whistleblowers, particularly when their employer directly controls the reporting channels.",
+    "cloze": "Le rapporteur {{c1::estime que}} le texte protège insuffisamment les lanceurs d’alerte, notamment lorsque leur employeur contrôle directement les canaux de signalement.",
+    "note": "Materially replaces old_back s’engager, which means to commit or engage rather than to state an opinion."
+  },
+  {
+    "id": "it_fancy_vocab_474",
+    "en": "To promulgate",
+    "category": "lexical-verb",
+    "tl": "promulguer",
+    "alts": [],
+    "register": "Formal constitutional and legal verb for the authoritative act that brings an enacted law into force.",
+    "trap": "Promulguer is not merely publicize or advocate a rule; its usual objects are a law or constitution in a defined legal process.",
+    "example_tl": "Le président a promulgué la loi malgré les réserves des associations, ouvrant la voie à son entrée en vigueur dès septembre.",
+    "example_en": "The president promulgated the law despite the associations’ reservations, paving the way for it to enter into force in September.",
+    "cloze": "Le président a {{c1::promulgué}} la loi malgré les réserves des associations, ouvrant la voie à son entrée en vigueur dès septembre.",
+    "note": "Materially corrects the unusable old_back and fixes the precise legal object."
+  },
+  {
+    "id": "it_fancy_vocab_475",
+    "en": "To rebuff",
+    "category": "lexical-verb",
+    "tl": "rejeter catégoriquement",
+    "alts": [],
+    "register": "Neutral-formal phrasing for firmly and decisively rejecting a proposal, request, overture or criticism.",
+    "trap": "Éconduire often targets a person or an advance, while rejeter alone can lose the firmness carried by rebuff.",
+    "example_tl": "Le gouvernement a rejeté catégoriquement la proposition de moratoire, malgré l’appel conjoint des chercheurs, des syndicats et des autorités locales.",
+    "example_en": "The government firmly rebuffed the proposed moratorium despite the joint appeal from researchers, trade unions and local authorities.",
+    "cloze": "Le gouvernement a {{c1::rejeté catégoriquement}} la proposition de moratoire, malgré l’appel conjoint des chercheurs, des syndicats et des autorités locales.",
+    "note": "The source is object-dependent. This note selects a proposal and expands old_back to preserve the force of the rejection."
+  },
+  {
+    "id": "it_fancy_vocab_477",
+    "en": "To refute",
+    "category": "lexical-verb",
+    "tl": "réfuter",
+    "alts": [
+      "démontrer la fausseté de"
+    ],
+    "register": "Formal analytical verb for disproving a claim or argument with reasoning or evidence.",
+    "trap": "Nier or contester a claim does not necessarily refute it; réfuter implies that counterevidence or reasoning establishes its error.",
+    "example_tl": "L’audit indépendant réfute l’affirmation selon laquelle le ciblage publicitaire serait anonyme, en montrant que plusieurs identifiants permettent de retrouver les mêmes personnes.",
+    "example_en": "The independent audit refutes the claim that advertising targeting is anonymous by showing that several identifiers can be used to find the same people.",
+    "cloze": "L’audit indépendant {{c1::réfute}} l’affirmation selon laquelle le ciblage publicitaire serait anonyme, en montrant que plusieurs identifiants permettent de retrouver les mêmes personnes.",
+    "note": "Old_back is accurate; the item is retained for the advanced evidential distinction between disproving, denying and merely disputing. Self-review specified ciblage publicitaire to remove ambiguity."
+  },
+  {
+    "id": "it_fancy_vocab_479",
+    "en": "To repudiate",
+    "category": "lexical-verb",
+    "tl": "désavouer",
+    "alts": [
+      "rejeter catégoriquement"
+    ],
+    "register": "Neutral-formal verb for publicly withdrawing support from, or emphatically disowning, a doctrine, policy, statement or associate.",
+    "trap": "Répudier exists but is elevated and strongly associated with a spouse, inheritance or debt; désavouer is more natural for a former public position.",
+    "example_tl": "Le parti désavoue désormais la doctrine sécuritaire qu’il défendait encore l’an dernier, sans reconnaître les abus commis lors de sa mise en œuvre.",
+    "example_en": "The party now repudiates the security doctrine it was still defending last year, without acknowledging the abuses committed during its implementation.",
+    "cloze": "Le parti {{c1::désavoue}} désormais la doctrine sécuritaire qu’il défendait encore l’an dernier, sans reconnaître les abus commis lors de sa mise en œuvre.",
+    "note": "Materially corrects the unrelated old_back and selects public disavowal rather than routine rejection. Self-review replaced sous son application with the idiomatic lors de sa mise en œuvre."
+  },
+  {
+    "id": "it_fancy_vocab_480",
+    "en": "To ruminate",
+    "category": "lexical-verb",
+    "tl": "ruminer",
+    "alts": [
+      "ressasser"
+    ],
+    "register": "Neutral-to-literary figurative verb, usually critical, for brooding repeatedly over a thought, setback or grievance.",
+    "trap": "For neutral, productive reflection use réfléchir longuement à; ruminer often implies inward, repetitive and unproductive thought.",
+    "example_tl": "Depuis la fuite, les dirigeants ruminent leur échec stratégique, au lieu d’examiner les incitations qui ont rendu ces pratiques presque inévitables.",
+    "example_en": "Since the leak, the executives have been ruminating on their strategic failure instead of examining the incentives that made these practices almost inevitable.",
+    "cloze": "Depuis la fuite, les dirigeants {{c1::ruminent}} leur échec stratégique, au lieu d’examiner les incitations qui ont rendu ces pratiques presque inévitables.",
+    "note": "Old_back is accurate for the brooding sense. This meaning remains distinct from neutral pondering and from publicly harping on a point."
+  }
+]

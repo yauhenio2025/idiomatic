@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_361",
+    "en": "Diverse",
+    "verdict": "keep",
+    "reason": "Diversificado fixes the varied-composition sense, while diverso is ambiguous and diversos before a plural noun often means several."
+  },
+  {
+    "id": "it_fancy_vocab_362",
+    "en": "Dynamic",
+    "verdict": "drop",
+    "reason": "Dinâmico is a transparent, familiar cognate with predictable agreement and no narrower sense selected by the bare prompt."
+  },
+  {
+    "id": "it_fancy_vocab_363",
+    "en": "Static",
+    "verdict": "drop",
+    "reason": "Estático is a transparent, high-frequency technical cognate with regular morphology and no additional production pattern here."
+  },
+  {
+    "id": "it_fancy_vocab_364",
+    "en": "Responsive",
+    "verdict": "keep",
+    "reason": "Portuguese distinguishes an institution receptive to criticism from a responsive interface, for which responsivo is the established technical adjective."
+  },
+  {
+    "id": "it_fancy_vocab_365",
+    "en": "Detached",
+    "verdict": "keep",
+    "reason": "The adjective is strongly context-sensitive: physical separation, emotional distance and conceptual disconnection require different Portuguese renderings."
+  },
+  {
+    "id": "it_fancy_vocab_366",
+    "en": "Limited",
+    "verdict": "drop",
+    "reason": "Limitado is transparent, familiar well below C1 and morphologically predictable; the prompt supplies no specialist limitation sense."
+  },
+  {
+    "id": "it_fancy_vocab_367",
+    "en": "Scalable",
+    "verdict": "drop",
+    "reason": "Escalável is an established and transparent Brazilian technology term, and the isolated adjective adds no governed construction or sense contrast."
+  },
+  {
+    "id": "it_fancy_vocab_368",
+    "en": "Convergent",
+    "verdict": "drop",
+    "reason": "Convergente is a direct formal cognate with predictable agreement and no contextual distinction worth testing."
+  },
+  {
+    "id": "it_fancy_vocab_369",
+    "en": "Divergent",
+    "verdict": "drop",
+    "reason": "Divergente is a direct, familiar cognate with regular morphology and no narrower argumentative or technical use selected here."
+  },
+  {
+    "id": "it_fancy_vocab_370",
+    "en": "Autonomous",
+    "verdict": "drop",
+    "reason": "Autônomo is a transparent, common policy and technology cognate with ordinary adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_371",
+    "en": "Collaborative",
+    "verdict": "drop",
+    "reason": "Colaborativo is transparent and ubiquitous in professional Portuguese, with no special complement or register restriction in the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_372",
+    "en": "Sustainable",
+    "verdict": "drop",
+    "reason": "Sustentável is familiar core policy vocabulary and a direct cognate whose morphology is fully predictable."
+  },
+  {
+    "id": "it_fancy_vocab_373",
+    "en": "Consumptive",
+    "verdict": "keep",
+    "reason": "The specialist environmental adjective consuntivo is concentrated in resource-use contexts and must be distinguished from consumerist consumista."
+  },
+  {
+    "id": "it_fancy_vocab_374",
+    "en": "Neutral",
+    "verdict": "drop",
+    "reason": "Neutro is transparent, high-frequency vocabulary with regular agreement, and the prompt does not select a specialist neutrality construction."
+  },
+  {
+    "id": "it_fancy_vocab_375",
+    "en": "the Privacy",
+    "verdict": "drop",
+    "reason": "Privacidade is direct, ubiquitous vocabulary in the learner's technology register, and the bare prompt supplies no legal distinction involving intimidade or vida privada."
+  },
+  {
+    "id": "it_fancy_vocab_376",
+    "en": "the Data",
+    "verdict": "keep",
+    "reason": "English often treats data as a mass noun, whereas Portuguese normally requires plural os dados and plural agreement throughout the sentence."
+  },
+  {
+    "id": "it_fancy_vocab_377",
+    "en": "the Regulation",
+    "verdict": "keep",
+    "reason": "Professional Portuguese distinguishes regulação, regulamentação, regulamento and norma by scope; the legacy gloss selects only a specific instrument."
+  },
+  {
+    "id": "it_fancy_vocab_378",
+    "en": "the Advertisement",
+    "verdict": "keep",
+    "reason": "A countable advertisement is precisely anúncio publicitário or peça publicitária, while publicidade and propaganda can denote broader activities or campaigns."
+  },
+  {
+    "id": "it_fancy_vocab_379",
+    "en": "the User",
+    "verdict": "drop",
+    "reason": "Usuário is elementary, transparent technology vocabulary with predictable gender and number inflection."
+  },
+  {
+    "id": "it_fancy_vocab_380",
+    "en": "the Content",
+    "verdict": "drop",
+    "reason": "Conteúdo is a direct, familiar cognate in media and technology, and the prompt provides no distinction between material and digital-content senses."
+  },
+  {
+    "id": "it_fancy_vocab_381",
+    "en": "the Revenue",
+    "verdict": "keep",
+    "reason": "The accounting sense teaches the consequential distinction among receita, faturamento, renda and lucro."
+  },
+  {
+    "id": "it_fancy_vocab_382",
+    "en": "the Market",
+    "verdict": "drop",
+    "reason": "Mercado is elementary, fully transparent economic vocabulary with no special construction selected by the isolated noun."
+  },
+  {
+    "id": "it_fancy_vocab_383",
+    "en": "the Competition",
+    "verdict": "keep",
+    "reason": "The market-rivalry sense requires concorrência and should be distinguished from competição, concurso and the unrelated competence sense of competência."
+  },
+  {
+    "id": "it_fancy_vocab_384",
+    "en": "the Security",
+    "verdict": "drop",
+    "reason": "Segurança is core vocabulary, while the context-free English noun does not choose among safety, cybersecurity, collateral or confidence senses."
+  },
+  {
+    "id": "it_fancy_vocab_385",
+    "en": "the Breach",
+    "verdict": "keep",
+    "reason": "Breach is complement-sensitive: Brazilian Portuguese differentiates a security incident, a data leak and a contractual breach."
+  },
+  {
+    "id": "it_fancy_vocab_386",
+    "en": "the Ethics",
+    "verdict": "drop",
+    "reason": "Ética is a transparent and familiar academic cognate, and its ordinary singular mass-noun use presents no C1 production challenge here."
+  },
+  {
+    "id": "it_fancy_vocab_387",
+    "en": "the Accessibility",
+    "verdict": "drop",
+    "reason": "Acessibilidade is a transparent, established term in inclusive design and public policy, with predictable morphology and no narrower sense selected."
+  },
+  {
+    "id": "it_fancy_vocab_388",
+    "en": "the Consumer",
+    "verdict": "drop",
+    "reason": "Consumidor is a direct, familiar economic and legal cognate with ordinary gender and number inflection."
+  },
+  {
+    "id": "it_fancy_vocab_389",
+    "en": "the Profit",
+    "verdict": "keep",
+    "reason": "The accounting noun lucro supplies a useful contrast with receita and blocks cross-language transfer of beneficio or bénéfice."
+  },
+  {
+    "id": "it_fancy_vocab_390",
+    "en": "the Trust",
+    "verdict": "drop",
+    "reason": "Confiança is core vocabulary, and the bare prompt does not select the separate legal-entity sense of English trust."
+  },
+  {
+    "id": "it_fancy_vocab_391",
+    "en": "the Policy",
+    "verdict": "keep",
+    "reason": "English policy splits among política, diretriz, norma and apólice according to scope and domain, making the isolated cognate choice unsafe."
+  },
+  {
+    "id": "it_fancy_vocab_392",
+    "en": "the Lobbying",
+    "verdict": "drop",
+    "reason": "Lobby is a familiar, established Brazilian loan for the activity, and the prompt adds no complement or distinction beyond that core expression."
+  },
+  {
+    "id": "it_fancy_vocab_393",
+    "en": "the Accountability",
+    "verdict": "keep",
+    "reason": "Prestação de contas expresses answerability, while legacy responsabilidade is too broad and responsabilização emphasizes consequences."
+  },
+  {
+    "id": "it_fancy_vocab_394",
+    "en": "the Stakeholder",
+    "verdict": "keep",
+    "reason": "Parte interessada is the productive institutional term and prevents the consequential confusion of stakeholder with shareholder or acionista."
+  },
+  {
+    "id": "it_fancy_vocab_395",
+    "en": "the Consolidation",
+    "verdict": "drop",
+    "reason": "Consolidação is a transparent, common formal cognate; the prompt does not specifically select the related but narrower competition concept concentração de mercado."
+  },
+  {
+    "id": "it_fancy_vocab_396",
+    "en": "the Acquisition",
+    "verdict": "drop",
+    "reason": "Aquisição is a transparent and familiar corporate cognate with regular morphology and no special merger construction in the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_397",
+    "en": "the Expansion",
+    "verdict": "drop",
+    "reason": "Expansão is a direct, high-frequency cognate in business and policy prose, with no narrower sense or governed complement selected."
+  },
+  {
+    "id": "it_fancy_vocab_398",
+    "en": "the Restriction",
+    "verdict": "drop",
+    "reason": "Restrição is a direct, familiar formal cognate with predictable morphology and no additional production value in isolation."
+  },
+  {
+    "id": "it_fancy_vocab_399",
+    "en": "the Influence",
+    "verdict": "drop",
+    "reason": "Influência is a transparent, high-frequency cognate with ordinary noun behavior and no special collocation selected here."
+  },
+  {
+    "id": "it_fancy_vocab_400",
+    "en": "the Manipulation",
+    "verdict": "drop",
+    "reason": "Manipulação is a transparent, familiar media and technology cognate whose morphology and argument structure add no C1 teaching value here."
+  }
+]

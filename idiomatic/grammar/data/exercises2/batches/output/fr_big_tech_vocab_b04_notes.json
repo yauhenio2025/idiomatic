@@ -1,0 +1,211 @@
+[
+  {
+    "id": "it_big_tech_vocab_122",
+    "en": "Cross-border data flows",
+    "category": "lexical-noun",
+    "tl": "les flux transfrontières de données",
+    "alts": [
+      "les flux de données transfrontaliers"
+    ],
+    "register": "Established data-governance and trade-policy term; the headword follows long-standing OECD usage, while the alternative is also current in institutional French.",
+    "trap": "Flux and transferts are not interchangeable: a transfert de données is a particular legal or technical operation, whereas flux can describe data circulation in aggregate.",
+    "example_tl": "Les flux transfrontières de données soutiennent le commerce numérique, mais exposent les entreprises à des règles divergentes en matière de confidentialité, de sécurité et d’accès par les autorités publiques.",
+    "example_en": "Cross-border data flows support digital trade but expose companies to divergent rules on privacy, security, and access by public authorities.",
+    "cloze": "{{c1::Les flux transfrontières de données}} soutiennent le commerce numérique, mais exposent les entreprises à des règles divergentes en matière de confidentialité, de sécurité et d’accès par les autorités publiques.",
+    "note": "Old_back is an accurate current alternative. Self-review promoted the established OECD headword and distinguished broad flows from individual cross-border transfers."
+  },
+  {
+    "id": "it_big_tech_vocab_125",
+    "en": "the Digital borders",
+    "category": "lexical-noun",
+    "tl": "les frontières numériques",
+    "alts": [],
+    "register": "Critical geopolitical metaphor for the legal, technical and identity controls that territorialize networks and online services.",
+    "trap": "A frontière numérique is not simply a physical border shown or managed electronically; the metaphor concerns controls that divide or territorialize digital space.",
+    "example_tl": "Les frontières numériques se durcissent lorsque l’État impose des passerelles nationales, localise les données et réserve certains services aux titulaires d’une identité numérique nationale.",
+    "example_en": "Digital borders harden when the state imposes national gateways, localizes data, and reserves certain services for holders of a national digital identity.",
+    "cloze": "{{c1::Les frontières numériques}} se durcissent lorsque l’État impose des passerelles nationales, localise les données et réserve certains services aux titulaires d’une identité numérique nationale.",
+    "note": "Old_back is accurate after normalizing the article. Self-review separated the broad territorialization metaphor from b03’s narrower national-firewall mechanism and Internet-fragmentation process."
+  },
+  {
+    "id": "it_big_tech_vocab_126",
+    "en": "Indigenous technologies",
+    "category": "lexical-noun",
+    "tl": "les technologies des peuples autochtones",
+    "alts": [
+      "les technologies autochtones"
+    ],
+    "register": "Decolonial, anthropological and innovation-policy term for technologies developed, adapted or governed by Indigenous communities; the headword makes that relationship explicit.",
+    "trap": "In contemporary France French, indigène can carry a colonial or derogatory legacy when applied to peoples; autochtone is the neutral institutional term here.",
+    "example_tl": "Les technologies des peuples autochtones associent souvent savoirs écologiques, outils numériques et gouvernance communautaire, sans réduire l’innovation à l’importation de solutions industrielles.",
+    "example_en": "Indigenous technologies often combine ecological knowledge, digital tools, and community governance without reducing innovation to the importation of industrial solutions.",
+    "cloze": "{{c1::Les technologies des peuples autochtones}} associent souvent savoirs écologiques, outils numériques et gouvernance communautaire, sans réduire l’innovation à l’importation de solutions industrielles.",
+    "note": "Materially replaces old_back’s technologies indigènes. The English prompt remains context-sensitive; self-review fixes the peoples-specific sense rather than the unrelated meaning ‘home-grown technologies’."
+  },
+  {
+    "id": "it_big_tech_vocab_127",
+    "en": "Cyber-espionage",
+    "category": "lexical-noun",
+    "tl": "le cyberespionnage",
+    "alts": [
+      "l’espionnage informatique"
+    ],
+    "register": "Established security, intelligence and legal term; cyberespionnage is the official compact spelling in France, while the alternative is a transparent paraphrase.",
+    "trap": "The standard French compound has no hyphen. Cyberespionnage entails clandestine infiltration and intelligence collection, not every form of online monitoring or surveillance.",
+    "example_tl": "Le cyberespionnage vise moins à perturber immédiatement un ministère qu’à conserver un accès discret pour exfiltrer, pendant des mois, des documents stratégiques.",
+    "example_en": "Cyber-espionage aims less to disrupt a ministry immediately than to retain covert access and exfiltrate strategic documents for months.",
+    "cloze": "{{c1::Le cyberespionnage}} vise moins à perturber immédiatement un ministère qu’à conserver un accès discret pour exfiltrer, pendant des mois, des documents stratégiques.",
+    "note": "Materially normalizes old_back’s hyphenated form to the spelling published in France’s official terminology. Self-review narrowed the example to covert intelligence collection rather than generic cyberattack activity."
+  },
+  {
+    "id": "it_big_tech_vocab_128",
+    "en": "Data ownership",
+    "category": "lexical-noun",
+    "tl": "la propriété des données",
+    "alts": [],
+    "register": "Legal and data-governance term, usually used to frame a contested question rather than to assert that all data are governed by an ordinary property right.",
+    "trap": "Propriété must not be conflated with possession, access, control or data-subject rights; holding a dataset does not by itself confer every right to use it.",
+    "example_tl": "La propriété des données reste juridiquement contestée, car l’entreprise qui les détient ne possède pas nécessairement tous les droits permettant de les exploiter.",
+    "example_en": "Data ownership remains legally contested because the company holding the data does not necessarily possess all the rights needed to exploit them.",
+    "cloze": "{{c1::La propriété des données}} reste juridiquement contestée, car l’entreprise qui les détient ne possède pas nécessairement tous les droits permettant de les exploiter.",
+    "note": "Old_back supplies the conventional label but omits the article and its contested legal status. Self-review rejected maîtrise des données as an alternative because control is not ownership."
+  },
+  {
+    "id": "it_big_tech_vocab_129",
+    "en": "the Digital trade barriers",
+    "category": "lexical-noun",
+    "tl": "les obstacles au commerce numérique",
+    "alts": [
+      "les obstacles aux échanges numériques"
+    ],
+    "register": "Formal international-trade and regulatory-policy term; échanges numériques is especially common in institutional analysis of cross-border services and transactions.",
+    "trap": "The legacy barrières commerciales numériques attaches numérique ambiguously to the barriers themselves; au commerce numérique clearly identifies the activity being restricted.",
+    "example_tl": "Les obstacles au commerce numérique incluent la localisation obligatoire des données, des licences discriminatoires et des règles incompatibles qui renchérissent l’accès aux marchés étrangers.",
+    "example_en": "Digital trade barriers include mandatory data localization, discriminatory licenses, and incompatible rules that make access to foreign markets more costly.",
+    "cloze": "{{c1::Les obstacles au commerce numérique}} incluent la localisation obligatoire des données, des licences discriminatoires et des règles incompatibles qui renchérissent l’accès aux marchés étrangers.",
+    "note": "Materially replaces old_back’s attachment-ambiguous calque with the conventional French trade-policy construction. Self-review retained only the genuinely substitutable échanges variant."
+  },
+  {
+    "id": "it_big_tech_vocab_130",
+    "en": "the Source code review",
+    "category": "lexical-noun",
+    "tl": "la revue du code source",
+    "alts": [
+      "l’examen du code source"
+    ],
+    "register": "Software-engineering and security term; revue du code source is the conventional professional collocation, while the alternative is plainer and less method-specific.",
+    "trap": "English review is not révision or critique here. An audit de code source is a more formal assurance exercise and is therefore not a free synonym for every code review.",
+    "example_tl": "La revue du code source a révélé un contrôle d’accès défaillant que les tests fonctionnels n’avaient pas détecté avant la mise en production.",
+    "example_en": "The source code review uncovered a faulty access control that the functional tests had not detected before the system went into production.",
+    "cloze": "{{c1::La revue du code source}} a révélé un contrôle d’accès défaillant que les tests fonctionnels n’avaient pas détecté avant la mise en production.",
+    "note": "Old_back is semantically defensible but loses the conventional review collocation. Self-review excluded audit de code source from alts because it denotes a stronger, scoped evaluation."
+  },
+  {
+    "id": "it_big_tech_vocab_131",
+    "en": "Zero trust architecture",
+    "category": "lexical-noun",
+    "tl": "l’architecture Zero Trust",
+    "alts": [],
+    "register": "Established cybersecurity architecture; French professional and ANSSI usage normally retains the English Zero Trust label.",
+    "trap": "Zero Trust does not abolish trust indiscriminately: it requires each access request to be evaluated from identity, resource and contextual attributes, including inside the network.",
+    "example_tl": "L’architecture Zero Trust réévalue chaque demande d’accès selon l’identité, l’état du terminal et le contexte, même lorsque l’utilisateur se trouve sur le réseau interne.",
+    "example_en": "Zero trust architecture reassesses every access request according to identity, device state, and context, even when the user is on the internal network.",
+    "cloze": "{{c1::L’architecture Zero Trust}} réévalue chaque demande d’accès selon l’identité, l’état du terminal et le contexte, même lorsque l’utilisateur se trouve sur le réseau interne.",
+    "note": "Materially replaces old_back’s nonstandard architecture de confiance zéro. Self-review aligned the headword and access-control explanation with current ANSSI usage."
+  },
+  {
+    "id": "it_big_tech_vocab_133",
+    "en": "Digital autonomy",
+    "category": "lexical-noun",
+    "tl": "l’autonomie numérique",
+    "alts": [],
+    "register": "Current industrial and public-policy term for preserving practical freedom of action by understanding, choosing and changing digital dependencies.",
+    "trap": "Autonomie is not autarky, and it is not identical to sovereignty: the former concerns capacity for action, while the latter foregrounds authority and rule-setting power.",
+    "example_tl": "L’autonomie numérique de l’Europe dépend moins d’une autarcie illusoire que de sa capacité à choisir ses fournisseurs, à auditer ses outils et à changer d’infrastructure.",
+    "example_en": "Europe’s digital autonomy depends less on illusory autarky than on its ability to choose suppliers, audit its tools, and change infrastructure.",
+    "cloze": "{{c1::L’autonomie numérique}} de l’Europe dépend moins d’une autarcie illusoire que de sa capacité à choisir ses fournisseurs, à auditer ses outils et à changer d’infrastructure.",
+    "note": "Old_back is accurate after adding the article. Self-review fixed the strategic policy sense and distinguished practical autonomy from b01’s digital sovereignty and this batch’s self-determination card."
+  },
+  {
+    "id": "it_big_tech_vocab_135",
+    "en": "End-to-end encryption",
+    "category": "lexical-noun",
+    "tl": "le chiffrement de bout en bout",
+    "alts": [
+      "le chiffrement de client à client"
+    ],
+    "register": "Established cryptography and privacy term; the alternative is an explanatory technical label also used by the CNIL.",
+    "trap": "Formal France French prefers chiffrement to cryptage. Encryption in transit is not end-to-end if an intermediary can recover the plaintext or controls the decryption keys.",
+    "example_tl": "Le chiffrement de bout en bout empêche le fournisseur de lire les messages en clair, à condition que les clés restent sous le contrôle exclusif des correspondants.",
+    "example_en": "End-to-end encryption prevents the provider from reading messages in plaintext, provided that the keys remain under the correspondents’ exclusive control.",
+    "cloze": "{{c1::Le chiffrement de bout en bout}} empêche le fournisseur de lire les messages en clair, à condition que les clés restent sous le contrôle exclusif des correspondants.",
+    "note": "Materially corrects old_back’s cryptage to the institutional and technical France-French term chiffrement. Self-review added key control so the example distinguishes end-to-end protection from transport encryption."
+  },
+  {
+    "id": "it_big_tech_vocab_138",
+    "en": "the Critical infrastructure",
+    "category": "lexical-noun",
+    "tl": "les infrastructures critiques",
+    "alts": [],
+    "register": "Established civil-protection, security and EU legal category, conventionally discussed in the plural when referring to the class as a whole.",
+    "trap": "Critique is consequence-based, not merely an emphatic synonym for important; the category concerns assets whose disruption would seriously impair essential functions.",
+    "example_tl": "Les infrastructures critiques regroupent des réseaux et des actifs dont l’interruption compromettrait gravement l’énergie, les transports, la santé ou le fonctionnement des pouvoirs publics.",
+    "example_en": "Critical infrastructure comprises networks and assets whose disruption would seriously impair energy, transport, health care, or the functioning of public authorities.",
+    "cloze": "{{c1::Les infrastructures critiques}} regroupent des réseaux et des actifs dont l’interruption compromettrait gravement l’énergie, les transports, la santé ou le fonctionnement des pouvoirs publics.",
+    "note": "The conventional French category is plural, unlike the malformed English article-plus-mass-noun prompt and old_back’s isolated singular. Self-review avoided treating infrastructures d’importance vitale as a free synonym."
+  },
+  {
+    "id": "it_big_tech_vocab_139",
+    "en": "Internet universality",
+    "category": "lexical-noun",
+    "tl": "l’universalité de l’Internet",
+    "alts": [],
+    "register": "Specialist UNESCO internet-governance concept organized around the ROAM principles: rights, openness, accessibility and multistakeholder participation.",
+    "trap": "Universalité does not assert that internet coverage is already universal; it names a normative governance framework, not the telecommunications concept of universal service.",
+    "example_tl": "L’universalité de l’Internet exige que les politiques nationales garantissent les droits humains, l’ouverture, l’accessibilité et une gouvernance réellement multipartite.",
+    "example_en": "Internet universality requires national policies to guarantee human rights, openness, accessibility, and genuinely multistakeholder governance.",
+    "cloze": "{{c1::L’universalité de l’Internet}} exige que les politiques nationales garantissent les droits humains, l’ouverture, l’accessibilité et une gouvernance réellement multipartite.",
+    "note": "Old_back gives the label but not its specialist institutional content. Self-review verified the UNESCO capitalization and encoded all four ROAM dimensions in the example."
+  },
+  {
+    "id": "it_big_tech_vocab_141",
+    "en": "Secure by design",
+    "category": "lexical-expression",
+    "tl": "la sécurité dès la conception",
+    "alts": [],
+    "register": "Established cybersecurity engineering principle requiring security to be integrated across architecture, development, testing, deployment and maintenance.",
+    "trap": "Dès la conception is not par défaut: secure by design concerns the whole development lifecycle, whereas secure by default concerns the initial configuration delivered to users.",
+    "example_tl": "La sécurité dès la conception impose d’analyser les risques avant le développement, puis de tester les composants et de corriger les vulnérabilités pendant tout leur cycle de vie.",
+    "example_en": "Secure by design requires risks to be analyzed before development, then components to be tested and vulnerabilities corrected throughout their lifecycle.",
+    "cloze": "{{c1::La sécurité dès la conception}} impose d’analyser les risques avant le développement, puis de tester les composants et de corriger les vulnérabilités pendant tout leur cycle de vie.",
+    "note": "Old_back supplies the accepted core phrase but omits the article and lifecycle scope. Self-review made the contrast with secure by default explicit."
+  },
+  {
+    "id": "it_big_tech_vocab_142",
+    "en": "Digital resilience",
+    "category": "lexical-noun",
+    "tl": "la résilience numérique",
+    "alts": [],
+    "register": "Risk-management and continuity term for maintaining essential activities through digital incidents and restoring them afterward; broader than preventive cybersecurity.",
+    "trap": "Résilience numérique is not mere resistance to attack: it includes preparation, continuity, recovery and adaptation after a service has been disrupted.",
+    "example_tl": "La résilience numérique suppose des sauvegardes isolées, des procédures de crise éprouvées et la capacité de rétablir les services essentiels après une attaque.",
+    "example_en": "Digital resilience requires isolated backups, tested crisis procedures, and the ability to restore essential services after an attack.",
+    "cloze": "{{c1::La résilience numérique}} suppose des sauvegardes isolées, des procédures de crise éprouvées et la capacité de rétablir les services essentiels après une attaque.",
+    "note": "Old_back is accurate after adding the article. Self-review aligned the example with the ANSSI continuity-and-recovery sense rather than reducing resilience to prevention."
+  },
+  {
+    "id": "it_big_tech_vocab_145",
+    "en": "Digital self-determination",
+    "category": "lexical-noun",
+    "tl": "l’autodétermination numérique",
+    "alts": [
+      "l’autodétermination dans l’espace numérique"
+    ],
+    "register": "Emerging rights and data-policy concept, especially institutionalized in Swiss French, covering individual and sometimes collective knowledge, choice and capacity for action online.",
+    "trap": "The concept is not state sovereignty or data protection alone; autodétermination informationnelle is a related, narrower principle focused on deciding how personal information is used.",
+    "example_tl": "L’autodétermination numérique exige que les citoyens comprennent les traitements automatisés, disposent de choix réels et puissent contester l’usage de leurs données.",
+    "example_en": "Digital self-determination requires citizens to understand automated processing, have genuine choices, and be able to challenge the use of their data.",
+    "cloze": "{{c1::L’autodétermination numérique}} exige que les citoyens comprennent les traitements automatisés, disposent de choix réels et puissent contester l’usage de leurs données.",
+    "note": "Old_back is accurate after adding the article. Confidence is moderate because the label is more institutionalized in Swiss than France-French policy; self-review states that register and distinguishes the broader concept from informational self-determination."
+  }
+]

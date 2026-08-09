@@ -1,0 +1,409 @@
+[
+  {
+    "id": "it_fancy_vocab_443",
+    "en": "To scrutinize",
+    "category": "lexical-verb",
+    "tl": "vagliare",
+    "alts": [
+      "esaminare attentamente",
+      "passare al vaglio"
+    ],
+    "register": "Vagliare è formale e preciso nell'analisi istituzionale; esaminare attentamente è neutro, mentre passare al vaglio mette in rilievo la verifica minuziosa.",
+    "trap": "Scrutinare esiste in italiano, ma è raro e marcato; fuori da contesti specialistici, non è il corrispondente automatico dell'inglese scrutinize.",
+    "example_tl": "Prima di autorizzare l'acquisizione, l'autorità ha vagliato i contratti interni per verificare se l'impresa avesse nascosto clausole discriminatorie ai regolatori.",
+    "example_en": "Before authorizing the acquisition, the authority scrutinized the internal contracts to determine whether the company had hidden discriminatory clauses from regulators.",
+    "cloze": "Prima di autorizzare l'acquisizione, l'autorità ha {{c1::vagliato}} i contratti interni per verificare se l'impresa avesse nascosto clausole discriminatorie ai regolatori.",
+    "note": "The legacy paraphrase is accurate but less compact. Self-review selected vagliare for a document-based institutional examination and verified that both alternatives fit the same object and context."
+  },
+  {
+    "id": "it_fancy_vocab_446",
+    "en": "To allege",
+    "category": "lexical-verb",
+    "tl": "sostenere",
+    "alts": [
+      "affermare",
+      "asserire"
+    ],
+    "register": "Sostenere è neutro-formale nell'attribuzione di un'affermazione non provata; asserire è più sorvegliato e può suggerire maggiore perentorietà.",
+    "trap": "Nessuno dei tre verbi italiani codifica da solo la mancata prova: il valore di allegation deve emergere dall'attribuzione, dal condizionale o dal contesto.",
+    "example_tl": "La società sostiene che la fuga di dati sia opera di un fornitore esterno, ma non presenta alcuna prova verificabile.",
+    "example_en": "The company alleges that the data leak was the work of an external supplier, but it presents no verifiable evidence.",
+    "cloze": "La società {{c1::sostiene}} che la fuga di dati sia opera di un fornitore esterno, ma non presenta alcuna prova verificabile.",
+    "note": "The legacy asserire is possible but does not itself mean 'allege.' Self-review retained the evidential caveat in the sentence rather than forcing it into an unnatural Italian headword."
+  },
+  {
+    "id": "it_fancy_vocab_447",
+    "en": "To bolster",
+    "category": "lexical-verb",
+    "tl": "rafforzare",
+    "alts": [
+      "consolidare",
+      "avvalorare"
+    ],
+    "register": "Rafforzare è neutro-formale; con una tesi, consolidare sottolinea la maggiore solidità, mentre avvalorare indica specificamente il sostegno fornito da prove.",
+    "trap": "Supportare è comune in ambito tecnico, ma con tesi e argomentazioni può essere un calco meno idiomatico di rafforzare o avvalorare.",
+    "example_tl": "I nuovi dati rafforzano la tesi secondo cui gli obblighi di trasparenza riducono gli abusi senza compromettere la sicurezza dei sistemi.",
+    "example_en": "The new data bolster the thesis that transparency requirements reduce abuses without compromising the security of the systems.",
+    "cloze": "I nuovi dati {{c1::rafforzano}} la tesi secondo cui gli obblighi di trasparenza riducono gli abusi senza compromettere la sicurezza dei sistemi.",
+    "note": "The legacy rendering is accurate. Self-review fixed evidence as the subject and a thesis as the object, making both alternatives natural in the same sentence."
+  },
+  {
+    "id": "it_fancy_vocab_448",
+    "en": "To broach",
+    "category": "lexical-verb",
+    "tl": "sollevare",
+    "alts": [
+      "porre"
+    ],
+    "register": "Sollevare una questione è neutro-formale e idiomatico nel dibattito; porre una questione è leggermente più istituzionale.",
+    "trap": "Affrontare una questione significa discuterla o gestirla; broach indica anzitutto introdurla, quindi il vecchio gloss può sovratradurre l'azione.",
+    "example_tl": "Durante il vertice, la ministra ha sollevato la questione dei controlli sulle esportazioni, che le delegazioni avevano finora evitato per non incrinare l'alleanza regionale.",
+    "example_en": "During the summit, the minister broached the issue of export controls, which the delegations had previously avoided to prevent straining the regional alliance.",
+    "cloze": "Durante il vertice, la ministra ha {{c1::sollevato}} la questione dei controlli sulle esportazioni, che le delegazioni avevano finora evitato per non incrinare l'alleanza regionale.",
+    "note": "Materially narrows old_back, which can imply sustained treatment rather than first raising a topic. Self-review kept only porre because it preserves the example's syntax and rewrote the relative clause to identify who had avoided the issue."
+  },
+  {
+    "id": "it_fancy_vocab_449",
+    "en": "To circumvent",
+    "category": "lexical-verb",
+    "tl": "aggirare",
+    "alts": [
+      "eludere"
+    ],
+    "register": "Aggirare è neutro-formale con norme, vincoli e ostacoli; eludere è più formale e sottolinea l'intenzione di sottrarsi a un obbligo.",
+    "trap": "Circonvenire non significa circumvent: in italiano indica l'indurre con l'inganno una persona vulnerabile a compiere un atto dannoso.",
+    "example_tl": "Alcune piattaforme aggirano i vincoli sulla pubblicità politica classificando gli annunci come contenuti informativi e affidandone la distribuzione a intermediari opachi.",
+    "example_en": "Some platforms circumvent restrictions on political advertising by classifying ads as informational content and entrusting their distribution to opaque intermediaries.",
+    "cloze": "Alcune piattaforme {{c1::aggirano}} i vincoli sulla pubblicità politica classificando gli annunci come contenuti informativi e affidandone la distribuzione a intermediari opachi.",
+    "note": "The legacy rendering is accurate. Self-review retained eludere because the regulatory constraints in this example license its more intentional nuance."
+  },
+  {
+    "id": "it_fancy_vocab_451",
+    "en": "To corroborate",
+    "category": "lexical-verb",
+    "tl": "avvalorare",
+    "alts": [
+      "corroborare"
+    ],
+    "register": "Avvalorare è formale ma corrente nella prosa analitica; corroborare è corretto, più elevato e meno comune nell'italiano generale.",
+    "trap": "Avvalorare una ricostruzione significa renderla più credibile, non dimostrarla definitivamente; corroborate non autorizza a tradurre ogni volta con provare.",
+    "example_tl": "Le testimonianze raccolte dagli ispettori avvalorano la ricostruzione dei giornalisti, secondo cui l'azienda conosceva da mesi la vulnerabilità del sistema.",
+    "example_en": "The testimony collected by inspectors corroborates the journalists' account that the company had known about the system's vulnerability for months.",
+    "cloze": "Le testimonianze raccolte dagli ispettori {{c1::avvalorano}} la ricostruzione dei giornalisti, secondo cui l'azienda conosceva da mesi la vulnerabilità del sistema.",
+    "note": "The legacy cognate is valid but stylistically marked. Self-review promoted the more current avvalorare and excluded confermare because it can imply a stronger evidential conclusion."
+  },
+  {
+    "id": "it_fancy_vocab_452",
+    "en": "To counter",
+    "category": "lexical-verb",
+    "tl": "ribattere a",
+    "alts": [
+      "replicare a",
+      "controbattere a"
+    ],
+    "register": "Ribattere a è neutro-formale in uno scambio argomentativo; replicare a è più istituzionale, mentre controbattere a mette l'accento sulla confutazione.",
+    "trap": "Contrastare è adatto a una minaccia o a una tendenza; per counter criticism nel senso di rispondere argomentando, si ribatte o si replica alle critiche.",
+    "example_tl": "La ricercatrice ribatte alle critiche mostrando che il campione include anche piccole imprese, enti pubblici e utenti delle aree rurali.",
+    "example_en": "The researcher counters the criticism by showing that the sample also includes small businesses, public bodies, and users in rural areas.",
+    "cloze": "La ricercatrice {{c1::ribatte alle}} critiche mostrando che il campione include anche piccole imprese, enti pubblici e utenti delle aree rurali.",
+    "note": "The bare prompt is polysemous. Self-review fixed the argumentative-response sense suggested by old_back and included the governed preposition in the tested occurrence."
+  },
+  {
+    "id": "it_fancy_vocab_454",
+    "en": "To demur",
+    "category": "lexical-verb",
+    "tl": "obiettare",
+    "alts": [
+      "eccepire"
+    ],
+    "register": "Obiettare è neutro-formale; eccepire è più tecnico e ricorre soprattutto quando si formula un'obiezione precisa in ambito giuridico o istituzionale.",
+    "trap": "Demur esprime un'obiezione o una riserva, non necessariamente un rifiuto netto; respingere sarebbe troppo forte in molti contesti.",
+    "example_tl": "Tre membri dell'autorità hanno obiettato che il protocollo concede poteri eccessivi alla polizia, senza prevedere controlli giudiziari adeguati sull'accesso ai dati.",
+    "example_en": "Three members of the authority objected that the protocol grants excessive powers to the police without providing adequate judicial oversight of access to the data.",
+    "cloze": "Tre membri dell'autorità hanno {{c1::obiettato}} che il protocollo concede poteri eccessivi alla polizia, senza prevedere controlli giudiziari adeguati sull'accesso ai dati.",
+    "note": "The legacy rendering is accurate. Self-review clarified that the speakers are members of the authority and replaced two syntactically nonparallel alternatives with eccepire, which also licenses a che-clause."
+  },
+  {
+    "id": "it_fancy_vocab_457",
+    "en": "To discern",
+    "category": "lexical-verb",
+    "tl": "individuare",
+    "alts": [
+      "discernere",
+      "scorgere"
+    ],
+    "register": "Individuare è neutro-formale nell'analisi dei dati; discernere è più elevato, mentre scorgere suggerisce che il fenomeno sia appena percepibile.",
+    "trap": "Lo spagnolo discernir e il francese discerner possono favorire un uso eccessivo del cognato italiano, corretto ma meno comune di individuare in prosa tecnica.",
+    "example_tl": "Nei dati pubblicati dalla piattaforma, gli analisti faticano a individuare un andamento stabile perché le categorie cambiano a ogni rapporto.",
+    "example_en": "In the data published by the platform, analysts struggle to discern a stable trend because the categories change with every report.",
+    "cloze": "Nei dati pubblicati dalla piattaforma, gli analisti faticano a {{c1::individuare}} un andamento stabile perché le categorie cambiano a ogni rapporto.",
+    "note": "The legacy cognate is valid but elevated. Self-review chose a statistical object for which all three options are idiomatic and documented their register difference."
+  },
+  {
+    "id": "it_fancy_vocab_458",
+    "en": "To disseminate",
+    "category": "lexical-verb",
+    "tl": "diffondere",
+    "alts": [
+      "divulgare"
+    ],
+    "register": "Diffondere è neutro-formale per informazioni destinate a un pubblico ampio; divulgare è particolarmente adatto a conoscenze specialistiche rese accessibili.",
+    "trap": "Disseminare è possibile in senso figurato, ma resta più marcato; non è il cognato predefinito nella comunicazione istituzionale corrente.",
+    "example_tl": "Il centro di ricerca ha diffuso linee guida pratiche affinché le redazioni possano riconoscere immagini sintetiche durante le campagne elettorali.",
+    "example_en": "The research center disseminated practical guidelines so that newsrooms could recognize synthetic images during election campaigns.",
+    "cloze": "Il centro di ricerca ha {{c1::diffuso}} linee guida pratiche affinché le redazioni possano riconoscere immagini sintetiche durante le campagne elettorali.",
+    "note": "The legacy rendering is accurate. Self-review retained divulgare because making research guidance accessible is salient in this sentence and replaced the calqued adjective aperte with pratiche."
+  },
+  {
+    "id": "it_fancy_vocab_459",
+    "en": "To elicit",
+    "category": "lexical-verb",
+    "tl": "suscitare",
+    "alts": [
+      "provocare"
+    ],
+    "register": "Suscitare è neutro-formale con reazioni, domande e obiezioni; provocare è più energico e può suggerire un rapporto causale più diretto.",
+    "trap": "Con informazioni o confessioni, elicit si rende spesso con ottenere o far emergere; suscitare funziona invece quando l'oggetto è una reazione.",
+    "example_tl": "La proposta di sorveglianza biometrica ha suscitato forti obiezioni tra i sindaci, preoccupati per l'assenza di garanzie contro gli abusi.",
+    "example_en": "The biometric-surveillance proposal elicited strong objections among mayors concerned about the absence of safeguards against abuse.",
+    "cloze": "La proposta di sorveglianza biometrica ha {{c1::suscitato}} forti obiezioni tra i sindaci, preoccupati per l'assenza di garanzie contro gli abusi.",
+    "note": "The legacy rendering is accurate only for a response object. Self-review made that sense explicit and verified that provocare remains natural, though slightly stronger."
+  },
+  {
+    "id": "it_fancy_vocab_460",
+    "en": "To embellish",
+    "category": "lexical-verb",
+    "tl": "abbellire",
+    "alts": [],
+    "register": "Abbellire è neutro e può essere figurato; infiorare è più letterario, preferisce racconti o discorsi e spesso introduce particolari ornamentali con di.",
+    "trap": "Nel senso figurato, abbellire un resoconto non riguarda l'aspetto visivo: significa presentare i fatti in modo più favorevole, talvolta deformandoli.",
+    "example_tl": "Nel resoconto agli investitori, il dirigente ha abbellito il bilancio trimestrale, tacendo i costi straordinari e la perdita dei principali clienti.",
+    "example_en": "In the report to investors, the executive embellished the quarterly financial statement by concealing extraordinary costs and the loss of major clients.",
+    "cloze": "Nel resoconto agli investitori, il dirigente ha {{c1::abbellito}} il bilancio trimestrale, tacendo i costi straordinari e la perdita dei principali clienti.",
+    "note": "The legacy rendering is accurate but underspecified. Self-review selected a figurative, potentially deceptive use and removed infiorare from alts because it is not freely interchangeable with abbellire before bilancio."
+  },
+  {
+    "id": "it_fancy_vocab_461",
+    "en": "To espouse",
+    "category": "lexical-verb",
+    "tl": "abbracciare",
+    "alts": [
+      "sposare",
+      "fare proprio"
+    ],
+    "register": "Abbracciare un modello è neutro-formale ma figurato; sposare è più retorico, mentre fare proprio mette in rilievo l'adesione consapevole.",
+    "trap": "Espouse non corrisponde a esporre: il verbo inglese indica l'adozione o il sostegno di una posizione, non la sua semplice presentazione.",
+    "example_tl": "Il nuovo direttore ha abbracciato un modello centralizzato di moderazione, ignorando le differenze linguistiche e politiche tra i mercati locali.",
+    "example_en": "The new director espoused a centralized model of moderation, ignoring the linguistic and political differences among local markets.",
+    "cloze": "Il nuovo direttore ha {{c1::abbracciato}} un modello centralizzato di moderazione, ignorando le differenze linguistiche e politiche tra i mercati locali.",
+    "note": "The legacy sposare is idiomatic but more rhetorical. Self-review promoted abbracciare, replaced the abstract concezione with the more idiomatic modello, and verified the masculine agreement required by fare proprio."
+  },
+  {
+    "id": "it_fancy_vocab_462",
+    "en": "To fabricate",
+    "category": "lexical-verb",
+    "tl": "inventare di sana pianta",
+    "alts": [
+      "costruire ad arte"
+    ],
+    "register": "Inventare di sana pianta è neutro ma nettamente accusatorio; costruire ad arte è formale e sottolinea la manipolazione deliberata.",
+    "trap": "Fabbricare è naturale per oggetti e può esserlo per prove false, ma con una versione dei fatti inventare di sana pianta è più idiomatico.",
+    "example_tl": "Secondo l'inchiesta, i consulenti hanno inventato di sana pianta una versione dei fatti destinata a occultare i pagamenti effettuati attraverso società di comodo.",
+    "example_en": "According to the investigation, the consultants fabricated an account of events intended to conceal payments made through shell companies.",
+    "cloze": "Secondo l'inchiesta, i consulenti hanno {{c1::inventato di sana pianta}} una versione dei fatti destinata a occultare i pagamenti effettuati attraverso società di comodo.",
+    "note": "Materially enriches old_back by encoding deliberate falsity rather than ordinary invention. Self-review selected an account as object so the alternative remains equally idiomatic."
+  },
+  {
+    "id": "it_fancy_vocab_463",
+    "en": "To fathom",
+    "category": "lexical-verb",
+    "tl": "comprendere appieno",
+    "alts": [
+      "capire fino in fondo"
+    ],
+    "register": "Comprendere appieno è neutro-formale; capire fino in fondo è più colloquiale, ma resta adatto a un commento professionale non specialistico.",
+    "trap": "Scandagliare può evocare il senso nautico letterale di fathom, ma nel senso mentale richiede una metafora deliberata e non è la resa predefinita.",
+    "example_tl": "È difficile comprendere appieno come il nuovo sistema assegni i punteggi, poiché l'impresa non pubblica né i parametri né i dati di addestramento.",
+    "example_en": "It is difficult to fathom how the new system assigns scores because the company publishes neither the parameters nor the training data.",
+    "cloze": "È difficile {{c1::comprendere appieno}} come il nuovo sistema assegni i punteggi, poiché l'impresa non pubblica né i parametri né i dati di addestramento.",
+    "note": "The legacy rendering is accurate. Self-review retained the full-comprehension component and rejected sondare because it would make the Italian unnecessarily metaphorical."
+  },
+  {
+    "id": "it_fancy_vocab_464",
+    "en": "To glean",
+    "category": "lexical-verb",
+    "tl": "ricavare da",
+    "alts": [
+      "desumere da"
+    ],
+    "register": "Ricavare da è neutro-formale; desumere da è più analitico e mette maggiormente in rilievo l'inferenza a partire da elementi indiretti.",
+    "trap": "Glean implica spesso ottenere pochi elementi da fonti sparse; raccogliere può perdere questa componente inferenziale, mentre ricavare richiede da.",
+    "example_tl": "Gli analisti hanno ricavato dai documenti trapelati pochi indizi sulla catena di comando, ma nessuna prova diretta del coinvolgimento ministeriale.",
+    "example_en": "Analysts gleaned a few clues about the chain of command from the leaked documents, but no direct evidence of ministerial involvement.",
+    "cloze": "Gli analisti hanno {{c1::ricavato dai}} documenti trapelati pochi indizi sulla catena di comando, ma nessuna prova diretta del coinvolgimento ministeriale.",
+    "note": "The legacy rendering is accurate but omits government. Self-review wrapped the inflected da plus article in the cloze and preserved the limited-evidence nuance."
+  },
+  {
+    "id": "it_fancy_vocab_465",
+    "en": "To harp",
+    "category": "lexical-verb",
+    "tl": "insistere continuamente su",
+    "alts": [
+      "tornare ossessivamente su"
+    ],
+    "register": "Insistere continuamente su è neutro ma critico; tornare ossessivamente su è più polemico e attribuisce apertamente un'eccessiva fissazione.",
+    "trap": "Per interferenza del portoghese insistir em, si può scegliere la preposizione sbagliata: in italiano si insiste su un tema.",
+    "example_tl": "Il ministro insiste continuamente sugli errori del precedente governo, evitando però di spiegare perché il proprio piano continui a produrre gli stessi fallimenti.",
+    "example_en": "The minister keeps harping on the previous government's mistakes while avoiding explaining why his own plan continues to produce the same failures.",
+    "cloze": "Il ministro {{c1::insiste continuamente sugli}} errori del precedente governo, evitando però di spiegare perché il proprio piano continui a produrre gli stessi fallimenti.",
+    "note": "The legacy gloss is accurate but maximally polemical. Self-review chose continuamente as the main intensifier and reserved ossessivamente for the stronger alternative."
+  },
+  {
+    "id": "it_fancy_vocab_466",
+    "en": "To impugn",
+    "category": "lexical-verb",
+    "tl": "mettere in dubbio",
+    "alts": [
+      "contestare"
+    ],
+    "register": "Mettere in dubbio è neutro-formale; contestare è più diretto e può assumere un tono procedurale o polemico secondo l'oggetto.",
+    "trap": "L'italiano impugnare riguarda soprattutto un atto contestato in sede legale o un oggetto afferrato; non rende automaticamente impugn a person's credibility.",
+    "example_tl": "Il portavoce mette in dubbio la credibilità dei ricercatori, ma non contesta nessuno dei dati pubblicati nel loro rapporto indipendente.",
+    "example_en": "The spokesperson impugns the researchers' credibility but disputes none of the data published in their independent report.",
+    "cloze": "Il portavoce {{c1::mette in dubbio}} la credibilità dei ricercatori, ma non contesta nessuno dei dati pubblicati nel loro rapporto indipendente.",
+    "note": "The legacy rendering is accurate. Self-review centered the reputation-challenging sense precisely because the Italian cognate would misleadingly suggest a legal appeal."
+  },
+  {
+    "id": "it_fancy_vocab_468",
+    "en": "To indict",
+    "category": "lexical-verb",
+    "tl": "incriminare",
+    "alts": [
+      "mettere formalmente sotto accusa"
+    ],
+    "register": "Incriminare è giuridico-giornalistico; mettere formalmente sotto accusa è una parafrasi utile quando il sistema processuale straniero non ha un equivalente esatto.",
+    "trap": "Indictment dipende dall'ordinamento: incriminare non equivale a condannare né coincide sempre con il rinvio a giudizio del processo italiano.",
+    "example_tl": "La procura federale ha incriminato tre dirigenti per frode informatica, sostenendo che avessero occultato agli investitori perdite superiori a cento milioni di euro.",
+    "example_en": "Federal prosecutors indicted three executives for computer fraud, alleging that they had concealed losses exceeding one hundred million euros from investors.",
+    "cloze": "La procura federale ha {{c1::incriminato}} tre dirigenti per frode informatica, sostenendo che avessero occultato agli investitori perdite superiori a cento milioni di euro.",
+    "note": "The legacy rendering is serviceable in international reporting. Self-review added a federal jurisdiction and retained an explicit paraphrase to avoid falsely mapping foreign and Italian procedural stages."
+  },
+  {
+    "id": "it_fancy_vocab_470",
+    "en": "To laud",
+    "category": "lexical-verb",
+    "tl": "elogiare",
+    "alts": [
+      "lodare"
+    ],
+    "register": "Elogiare è neutro-formale e comune nella cronaca; lodare è leggermente più solenne o personale, ma naturale con lo stesso oggetto.",
+    "trap": "Laudare esiste, ma nell'italiano contemporaneo è raro, letterario o legato a formule tradizionali; non è il calco normale di laud.",
+    "example_tl": "Nel rapporto annuale, il consiglio elogia il ritmo dell'innovazione, ma tace sui lavoratori licenziati dopo l'introduzione dei nuovi sistemi automatizzati.",
+    "example_en": "In its annual report, the board lauds the pace of innovation but says nothing about workers dismissed after the introduction of the new automated systems.",
+    "cloze": "Nel rapporto annuale, il consiglio {{c1::elogia}} il ritmo dell'innovazione, ma tace sui lavoratori licenziati dopo l'introduzione dei nuovi sistemi automatizzati.",
+    "note": "The legacy rendering is accurate. Self-review kept the praise explicit, replaced rapidità with the more idiomatic ritmo, and verified that lodare remains natural in the same critical sentence."
+  },
+  {
+    "id": "it_fancy_vocab_472",
+    "en": "To opine",
+    "category": "lexical-verb",
+    "tl": "ritenere",
+    "alts": [
+      "esprimere il parere che"
+    ],
+    "register": "Ritenere è neutro-formale prima di una completiva; esprimere il parere che è più esplicito e tipico di testi consultivi o giuridici.",
+    "trap": "Opinare è attestato ma raro e spesso affettato; l'inglese opine, già formale o ironico, non richiede il cognato in italiano.",
+    "example_tl": "Nel parere consultivo, il comitato ritiene che la raccolta indiscriminata dei metadati violi il principio di proporzionalità previsto dal trattato.",
+    "example_en": "In its advisory opinion, the committee opines that indiscriminate metadata collection violates the proportionality principle established by the treaty.",
+    "cloze": "Nel parere consultivo, il comitato {{c1::ritiene}} che la raccolta indiscriminata dei metadati violi il principio di proporzionalità previsto dal trattato.",
+    "note": "Materially prefers a natural finite verb to the legacy paraphrase while preserving its meaning. Self-review selected a consultative context that also licenses the more explicit alternative."
+  },
+  {
+    "id": "it_fancy_vocab_474",
+    "en": "To promulgate",
+    "category": "lexical-verb",
+    "tl": "promulgare",
+    "alts": [],
+    "register": "Promulgare è un tecnicismo giuridico: indica l'atto con cui il capo dello Stato attesta l'approvazione di una legge e ne dispone la pubblicazione.",
+    "trap": "Emanare, approvare, promulgare e pubblicare designano fasi o atti diversi; non sono alternative automatiche soltanto perché una norma entra in vigore.",
+    "example_tl": "Il presidente ha promulgato la legge sulla trasparenza algoritmica dopo che la corte ha respinto l'ultimo ricorso delle associazioni industriali.",
+    "example_en": "The president promulgated the algorithmic-transparency law after the court rejected the trade associations' final appeal.",
+    "cloze": "Il presidente ha {{c1::promulgato}} la legge sulla trasparenza algoritmica dopo che la corte ha respinto l'ultimo ricorso delle associazioni industriali.",
+    "note": "The legacy rendering is accurate. Self-review distinguished promulgation from publication and left alts empty because near-synonyms would misstate the institutional actor or procedural stage."
+  },
+  {
+    "id": "it_fancy_vocab_475",
+    "en": "To rebuff",
+    "category": "lexical-verb",
+    "tl": "respingere con fermezza",
+    "alts": [
+      "rifiutare nettamente"
+    ],
+    "register": "Respingere con fermezza è neutro-formale e conserva la decisione netta; rifiutare nettamente mette maggiormente a fuoco l'atto di rifiuto.",
+    "trap": "Bruscamente descrive il modo, talvolta scortese, mentre rebuff richiede soprattutto un rifiuto netto; non ogni contesto autorizza quell'avverbio.",
+    "example_tl": "Il governo ha respinto con fermezza la proposta di sorveglianza congiunta, giudicandola incompatibile con le garanzie costituzionali sulla riservatezza delle comunicazioni.",
+    "example_en": "The government firmly rebuffed the joint-surveillance proposal, deeming it incompatible with constitutional safeguards for the privacy of communications.",
+    "cloze": "Il governo ha {{c1::respinto con fermezza}} la proposta di sorveglianza congiunta, giudicandola incompatibile con le garanzie costituzionali sulla riservatezza delle comunicazioni.",
+    "note": "Refines old_back by avoiding an unsupported claim of discourtesy. Self-review retained firmness as the core force and verified that the alternative takes the same direct object."
+  },
+  {
+    "id": "it_fancy_vocab_477",
+    "en": "To refute",
+    "category": "lexical-verb",
+    "tl": "confutare",
+    "alts": [
+      "smentire"
+    ],
+    "register": "Confutare è formale e implica argomenti o prove contrari; smentire è più comune nella cronaca e può indicare anche una semplice negazione autorevole.",
+    "trap": "Refute non significa soltanto negare o contestare: come confutare, nel senso rigoroso richiede elementi capaci di mostrare che una tesi è falsa.",
+    "example_tl": "I registri interni confutano l'affermazione secondo cui la società ignorava il difetto, documentando almeno quattro segnalazioni inviate alla direzione tecnica.",
+    "example_en": "The internal records refute the claim that the company was unaware of the defect by documenting at least four reports sent to technical management.",
+    "cloze": "I registri interni {{c1::confutano}} l'affermazione secondo cui la società ignorava il difetto, documentando almeno quattro segnalazioni inviate alla direzione tecnica.",
+    "note": "The legacy rendering is accurate. Self-review made documentary evidence the subject, changed the reported claim to the idiomatic indicative, and verified the broader smentire against the same context."
+  },
+  {
+    "id": "it_fancy_vocab_478",
+    "en": "To reiterate",
+    "category": "lexical-verb",
+    "tl": "ribadire",
+    "alts": [
+      "ripetere"
+    ],
+    "register": "Ribadire è neutro-formale e aggiunge enfasi alla ripetizione; ripetere è più generale e non segnala necessariamente fermezza.",
+    "trap": "Reiterare è corretto ma spesso burocratico e ricorre soprattutto con richieste, inviti o condotte ripetute; con una posizione, ribadire è più idiomatico.",
+    "example_tl": "Il garante ha ribadito che l'accesso ai dati dovrà restare subordinato a un mandato specifico e al controllo di un giudice indipendente.",
+    "example_en": "The regulator reiterated that access to the data must remain subject to a specific warrant and oversight by an independent judge.",
+    "cloze": "Il garante ha {{c1::ribadito}} che l'accesso ai dati dovrà restare subordinato a un mandato specifico e al controllo di un giudice indipendente.",
+    "note": "The legacy rendering is accurate. Self-review preserved the emphatic repetition sense and excluded reiterare from alts because its bureaucratic coloring is not fully interchangeable here."
+  },
+  {
+    "id": "it_fancy_vocab_479",
+    "en": "To repudiate",
+    "category": "lexical-verb",
+    "tl": "rinnegare",
+    "alts": [
+      "ripudiare"
+    ],
+    "register": "Rinnegare è formale e indica un distacco netto da idee prima sostenute; ripudiare è più solenne e manifesta un rifiuto radicale.",
+    "trap": "Per interferenza dello spagnolo repudiar o del francese répudier, attenzione alla forma italiana ripudiare, con una sola p e vocale iniziale i.",
+    "example_tl": "Dopo le proteste, il partito ha rinnegato la dottrina economica che aveva difeso per vent'anni, senza spiegare le ragioni del cambiamento.",
+    "example_en": "After the protests, the party repudiated the economic doctrine it had defended for twenty years without explaining the reasons for the change.",
+    "cloze": "Dopo le proteste, il partito ha {{c1::rinnegato}} la dottrina economica che aveva difeso per vent'anni, senza spiegare le ragioni del cambiamento.",
+    "note": "The legacy ripudiare is valid but more solemn. Self-review chose prior commitment as context and removed sconfessare because it is less freely interchangeable before dottrina."
+  },
+  {
+    "id": "it_fancy_vocab_480",
+    "en": "To ruminate",
+    "category": "lexical-verb",
+    "tl": "rimuginare su",
+    "alts": [
+      "arrovellarsi su"
+    ],
+    "register": "Rimuginare su è neutro ma di solito negativo e suggerisce un pensiero ripetitivo; arrovellarsi su è più intenso e mette in rilievo il tormento mentale.",
+    "trap": "Ruminare esiste in italiano, ma il senso figurato è letterario e richiama quello letterale del ruminare animale; nell'uso corrente prevale rimuginare.",
+    "example_tl": "Nel suo editoriale, l'autore rimugina sulle conseguenze della sconfitta elettorale, ma trascura i cambiamenti sociali che l'hanno resa possibile.",
+    "example_en": "In his editorial, the author ruminates on the consequences of the electoral defeat but overlooks the social changes that made it possible.",
+    "cloze": "Nel suo editoriale, l'autore {{c1::rimugina sulle}} conseguenze della sconfitta elettorale, ma trascura i cambiamenti sociali che l'hanno resa possibile.",
+    "note": "The legacy rendering is accurate. Self-review retained the brooding sense, replaced the overly neutral meditare with arrovellarsi, and included the governed preposition in the cloze."
+  }
+]

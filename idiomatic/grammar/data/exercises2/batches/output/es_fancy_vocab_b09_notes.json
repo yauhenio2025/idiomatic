@@ -1,0 +1,238 @@
+[
+  {
+    "id": "it_fancy_vocab_321",
+    "en": "to collect",
+    "category": "lexical-verb",
+    "tl": "recabar datos",
+    "alts": [
+      "recopilar datos"
+    ],
+    "register": "Neutral-formal in privacy, research and institutional writing; recopilar datos is an equally standard alternative.",
+    "trap": "English collect does not always mean recoger: for deliberately gathering information, recabar or recopilar datos is more precise; the infinitive itself takes no para.",
+    "example_tl": "Las plataformas recaban datos de navegación incluso antes de que el usuario inicie sesión, lo que dificulta atribuir responsabilidades entre empresas.",
+    "example_en": "Platforms collect browsing data even before the user signs in, which makes it difficult to assign responsibility among companies.",
+    "cloze": "Las plataformas {{c1::recaban datos}} de navegación incluso antes de que el usuario inicie sesión, lo que dificulta atribuir responsabilidades entre empresas.",
+    "note": "Materially replaces old_back para recoger: para incorrectly translates the English infinitive marker, while recoger is less precise for purposeful data collection."
+  },
+  {
+    "id": "it_fancy_vocab_325",
+    "en": "to advertise",
+    "category": "lexical-verb",
+    "tl": "hacer publicidad de algo",
+    "alts": [
+      "anunciar algo"
+    ],
+    "register": "Neutral and widely usable; anunciar is more compact, while publicitar is common in commercial and marketing language.",
+    "trap": "Do not confuse advertise with advertir: Spanish advertir normally means to warn or notice, not to promote a product or service.",
+    "example_tl": "Las plataformas hacen publicidad de sus servicios como espacios abiertos, aunque sus normas internas favorecen sistemáticamente a quienes pueden pagar mayor visibilidad.",
+    "example_en": "Platforms advertise their services as open spaces, although their internal rules systematically favour those who can pay for greater visibility.",
+    "cloze": "Las plataformas {{c1::hacen publicidad de}} sus servicios como espacios abiertos, aunque sus normas internas favorecen sistemáticamente a quienes pueden pagar mayor visibilidad.",
+    "note": "The legacy rendering is accurate; the production headword adds the governed de complement and avoids an English-Spanish false friend."
+  },
+  {
+    "id": "it_fancy_vocab_327",
+    "en": "to discriminate",
+    "category": "lexical-verb",
+    "tl": "discriminar a alguien por algo",
+    "alts": [
+      "tratar a alguien de forma discriminatoria"
+    ],
+    "register": "Neutral-formal in legal, institutional and social-policy discussion; the construction explicitly identifies both the affected person and the grounds.",
+    "trap": "In the unequal-treatment sense, a human direct object takes personal a and the grounds normally follow por; neutral differentiation may instead require distinguir.",
+    "example_tl": "El sistema discriminaba a solicitantes por su código postal, pues la variable territorial reproducía desigualdades que el proveedor nunca había evaluado.",
+    "example_en": "The system discriminated against applicants on the basis of their postcode, since the geographical variable reproduced inequalities that the provider had never assessed.",
+    "cloze": "El sistema {{c1::discriminaba}} a solicitantes por su código postal, pues la variable territorial reproducía desigualdades que el proveedor nunca había evaluado.",
+    "note": "The legacy cognate is correct but omits the argument structure that makes the verb production-ready."
+  },
+  {
+    "id": "it_fancy_vocab_328",
+    "en": "to violate",
+    "category": "lexical-verb",
+    "tl": "vulnerar un derecho",
+    "alts": [
+      "conculcar un derecho"
+    ],
+    "register": "Formal legal and policy usage; conculcar is more elevated and emphatic than the neutral-formal vulnerar.",
+    "trap": "Spanish distributes this English verb across collocations: vulnerar un derecho, infringir una norma and incumplir un contrato are often more precise than generic violar.",
+    "example_tl": "La aplicación vulneró el derecho a la intimidad al activar el micrófono sin permiso y conservar grabaciones que no eran necesarias.",
+    "example_en": "The application violated the right to privacy by activating the microphone without permission and retaining recordings that were not necessary.",
+    "cloze": "La aplicación {{c1::vulneró el derecho}} a la intimidad al activar el micrófono sin permiso y conservar grabaciones que no eran necesarias.",
+    "note": "Materially narrows the polysemous prompt to violation of a right; legacy violar is possible here but conceals useful professional collocations."
+  },
+  {
+    "id": "it_fancy_vocab_329",
+    "en": "to compete",
+    "category": "lexical-verb",
+    "tl": "competir con alguien por algo",
+    "alts": [
+      "competir contra alguien por algo"
+    ],
+    "register": "Neutral in economics, policy and general usage; con is often less adversarial than contra when naming the competitor.",
+    "trap": "Keep the complements distinct: an actor competes con or contra a rival, por a contract or prize, and en a market or sector.",
+    "example_tl": "Las empresas europeas compiten con conglomerados asiáticos por contratos públicos, pero carecen del capital paciente necesario para sostener proyectos estratégicos.",
+    "example_en": "European companies compete with Asian conglomerates for public contracts, but lack the patient capital needed to sustain strategic projects.",
+    "cloze": "Las empresas europeas {{c1::compiten}} con conglomerados asiáticos por contratos públicos, pero carecen del capital paciente necesario para sostener proyectos estratégicos.",
+    "note": "The legacy lemma is accurate; the production headword and example supply two complementary prepositions that the bare infinitive does not teach."
+  },
+  {
+    "id": "it_fancy_vocab_331",
+    "en": "to address",
+    "category": "lexical-verb",
+    "tl": "abordar un problema",
+    "alts": [
+      "afrontar un problema"
+    ],
+    "register": "Neutral-formal and idiomatic in policy and analytical prose; afrontar often suggests confronting a particularly difficult problem.",
+    "trap": "Address is sense-dependent: abordar or tratar una cuestión means deal with it, whereas dirigir is used for directing words or correspondence.",
+    "example_tl": "La propuesta aborda el problema de la moderación automatizada, pero omite explicar cómo podrán los usuarios impugnar decisiones erróneas o arbitrarias.",
+    "example_en": "The proposal addresses the problem of automated moderation, but fails to explain how users will be able to challenge erroneous or arbitrary decisions.",
+    "cloze": "La propuesta {{c1::aborda el problema}} de la moderación automatizada, pero omite explicar cómo podrán los usuarios impugnar decisiones erróneas o arbitrarias.",
+    "note": "The legacy rendering is accurate for the deal-with-an-issue sense selected here."
+  },
+  {
+    "id": "it_fancy_vocab_334",
+    "en": "to entrench",
+    "category": "lexical-verb",
+    "tl": "afianzar",
+    "alts": [
+      "consolidar"
+    ],
+    "register": "Neutral-formal in political economy and institutional analysis when an action makes an existing position or power structure more firmly established.",
+    "trap": "Legacy atrincherarse is reflexive and depicts an actor taking refuge or stubbornly holding a position; it does not express transitively entrenching power or inequality.",
+    "example_tl": "La compra afianzó el poder del proveedor dominante al integrar datos, publicidad e infraestructura en un ecosistema difícil de abandonar.",
+    "example_en": "The acquisition entrenched the dominant provider's power by integrating data, advertising and infrastructure into an ecosystem that was difficult to leave.",
+    "cloze": "La compra {{c1::afianzó}} el poder del proveedor dominante al integrar datos, publicidad e infraestructura en un ecosistema difícil de abandonar.",
+    "note": "Materially replaces old_back atrincherarse, whose reflexive argument structure and defensive image mistranslate the transitive institutional sense."
+  },
+  {
+    "id": "it_fancy_vocab_335",
+    "en": "to lobby",
+    "category": "lexical-verb",
+    "tl": "ejercer presión sobre alguien",
+    "alts": [
+      "hacer presión sobre alguien"
+    ],
+    "register": "Neutral-formal in political and regulatory reporting; hacer lobby is common but more visibly anglicized, while cabildear is especially frequent in the Americas.",
+    "trap": "Spanish has no single neutral verb matching every use of lobby; in formal Spain-oriented prose, prefer ejercer presión sobre or describe the lobbying activity.",
+    "example_tl": "Las plataformas ejercieron presión sobre varios diputados para suavizar la norma, mientras asociaciones civiles hacían públicas las reuniones celebradas a puerta cerrada.",
+    "example_en": "The platforms lobbied several members of parliament to weaken the rules, while civil-society associations disclosed the meetings held behind closed doors.",
+    "cloze": "Las plataformas {{c1::ejercieron presión sobre}} varios diputados para suavizar la norma, mientras asociaciones civiles hacían públicas las reuniones celebradas a puerta cerrada.",
+    "note": "Legacy presionar is valid, but the selected construction better names sustained influence activity and makes its sobre complement explicit. Self-review replaced publicaban las reuniones with idiomatic hacían públicas las reuniones."
+  },
+  {
+    "id": "it_fancy_vocab_337",
+    "en": "to partner",
+    "category": "lexical-verb",
+    "tl": "asociarse con alguien",
+    "alts": [],
+    "register": "Neutral in business, institutional and project contexts for entering a collaborative relationship; a more specific agreement may require colaborar or aliarse.",
+    "trap": "The partnership sense is reflexive and governs con: asociarse con una entidad. Non-reflexive asociar una cosa con otra means to connect ideas or things.",
+    "example_tl": "La operadora se asoció con una universidad pública para auditar sus algoritmos, pero la empresa se reservó la decisión final sobre los cambios.",
+    "example_en": "The operator partnered with a public university to audit its algorithms, but the company reserved the final decision on changes for itself.",
+    "cloze": "La operadora {{c1::se asoció con}} una universidad pública para auditar sus algoritmos, pero la empresa se reservó la decisión final sobre los cambios.",
+    "note": "The legacy rendering is accurate; the production headword preserves the obligatory reflexive marker and governed preposition. Self-review made the second clause reflexive to clarify which party retained final authority."
+  },
+  {
+    "id": "it_fancy_vocab_339",
+    "en": "to secure",
+    "category": "lexical-verb",
+    "tl": "conseguir algo",
+    "alts": [
+      "obtener algo"
+    ],
+    "register": "Neutral for successfully obtaining funding, a contract, support or access; obtener is slightly more formal in institutional prose.",
+    "trap": "Do not default to asegurar: it usually means to ensure, protect or fasten, whereas securing funding or a contract is conseguirlo or obtenerlo.",
+    "example_tl": "El consorcio consiguió financiación europea para ampliar la red, aunque deberá demostrar que los nuevos nodos reducen realmente la brecha territorial.",
+    "example_en": "The consortium secured European funding to expand the network, although it will have to show that the new nodes genuinely reduce the regional divide.",
+    "cloze": "El consorcio {{c1::consiguió}} financiación europea para ampliar la red, aunque deberá demostrar que los nuevos nodos reducen realmente la brecha territorial.",
+    "note": "The English prompt is polysemous. This note selects the obtain-successfully sense and materially replaces legacy asegurar, which normally points to a different sense."
+  },
+  {
+    "id": "it_fancy_vocab_341",
+    "en": "Invasive",
+    "category": "lexical-adjective",
+    "tl": "intrusivo",
+    "alts": [
+      "invasivo"
+    ],
+    "register": "Neutral-critical for tracking, interfaces and practices that improperly intrude on privacy; invasivo is also used figuratively but remains prominent in medical contexts.",
+    "trap": "In privacy criticism, intrusivo often captures unwanted intrusion more precisely; invasivo is not wrong, but its strongest established associations are medical and biological.",
+    "example_tl": "El seguimiento intrusivo convierte cada interacción en una señal comercial, incluso cuando el usuario rechaza cookies y limita los permisos de la aplicación.",
+    "example_en": "Invasive tracking turns every interaction into a commercial signal, even when the user rejects cookies and restricts the application's permissions.",
+    "cloze": "El seguimiento {{c1::intrusivo}} convierte cada interacción en una señal comercial, incluso cuando el usuario rechaza cookies y limita los permisos de la aplicación.",
+    "note": "Materially refines legacy invasivo by selecting the privacy-practice sense; the legacy cognate remains a possible alternative rather than a universal equivalent."
+  },
+  {
+    "id": "it_fancy_vocab_345",
+    "en": "Powerful",
+    "category": "lexical-adjective",
+    "tl": "poderoso",
+    "alts": [],
+    "register": "Neutral for actors or institutions possessing substantial power; influyente emphasizes influence, while potente normally modifies machines, drugs, arguments or other high-capacity things.",
+    "trap": "Choose by referent: a powerful regulator is poderoso, but a powerful computer is potente; legacy potente cannot serve as the default equivalent.",
+    "example_tl": "Un regulador poderoso puede exigir acceso a los modelos, pero necesita independencia política para sancionar a empresas capaces de dilatar indefinidamente las investigaciones.",
+    "example_en": "A powerful regulator can demand access to the models, but needs political independence to sanction companies capable of dragging investigations out indefinitely.",
+    "cloze": "Un regulador {{c1::poderoso}} puede exigir acceso a los modelos, pero necesita independencia política para sancionar a empresas capaces de dilatar indefinidamente las investigaciones.",
+    "note": "The prompt is polysemous. This note selects institutional power and materially replaces legacy potente, which suits a different class of referents. Self-review replaced the generic retrasar with the more idiomatic dilatar las investigaciones."
+  },
+  {
+    "id": "it_fancy_vocab_346",
+    "en": "Unethical",
+    "category": "lexical-adjective",
+    "tl": "poco ético",
+    "alts": [
+      "contrario a la ética"
+    ],
+    "register": "Neutral-critical; poco ético is idiomatic and can sound less categorical than inmoral, while contrario a la ética is more explicit and formal.",
+    "trap": "English un- does not map mechanically to a Spanish negative prefix here: poco ético and antiético are established, whereas inmoral can express a stronger judgment.",
+    "example_tl": "Resulta poco ético experimentar con usuarios vulnerables sin informarles de los riesgos ni ofrecerles una vía sencilla para retirar su consentimiento.",
+    "example_en": "It is unethical to experiment on vulnerable users without informing them of the risks or offering them a simple way to withdraw consent.",
+    "cloze": "Resulta {{c1::poco ético}} experimentar con usuarios vulnerables sin informarles de los riesgos ni ofrecerles una vía sencilla para retirar su consentimiento.",
+    "note": "The legacy rendering is accurate; the note records its pragmatic force and distinguishes it from the stronger inmoral."
+  },
+  {
+    "id": "it_fancy_vocab_347",
+    "en": "Lucrative",
+    "category": "lexical-adjective",
+    "tl": "lucrativo",
+    "alts": [
+      "rentable"
+    ],
+    "register": "Neutral-formal for an activity, market or arrangement that produces substantial profit; rentable has broader business and cost-effectiveness uses.",
+    "trap": "Lucrativo concerns profit, not revenue alone; a high-revenue activity may still be unprofitable once its costs are taken into account.",
+    "example_tl": "El mercado de datos biométricos resulta lucrativo para intermediarios opacos, aunque las personas cuyos rasgos se registran rara vez participan en los beneficios.",
+    "example_en": "The biometric-data market is lucrative for opaque intermediaries, although the people whose features are recorded rarely share in the profits.",
+    "cloze": "El mercado de datos biométricos resulta {{c1::lucrativo}} para intermediarios opacos, aunque las personas cuyos rasgos se registran rara vez participan en los beneficios.",
+    "note": "The legacy rendering is accurate; retention is justified by the useful contrast between profit-producing lucrativo and broader rentable. Self-review clarified that biometric features, rather than people as registry entries, are recorded."
+  },
+  {
+    "id": "it_fancy_vocab_349",
+    "en": "Biased",
+    "category": "lexical-adjective",
+    "tl": "sesgado",
+    "alts": [
+      "parcial"
+    ],
+    "register": "Neutral-critical in research, media and algorithmic analysis; parcial can emphasize lack of neutrality but may also simply mean incomplete.",
+    "trap": "Portuguese enviesado and French biaisé do not transfer morphologically into Spanish; a biased model, sample or account is normally sesgado.",
+    "example_tl": "El informe ofrecía un diagnóstico sesgado porque excluía a trabajadores subcontratados y presentaba como universales las experiencias de la plantilla fija.",
+    "example_en": "The report offered a biased diagnosis because it excluded subcontracted workers and presented the experiences of permanent staff as universal.",
+    "cloze": "El informe ofrecía un diagnóstico {{c1::sesgado}} porque excluía a trabajadores subcontratados y presentaba como universales las experiencias de la plantilla fija.",
+    "note": "The legacy adjective is lexically correct but appears in an arbitrary feminine form; the production headword restores the conventional masculine singular lemma."
+  },
+  {
+    "id": "it_fancy_vocab_353",
+    "en": "Comprehensive",
+    "category": "lexical-adjective",
+    "tl": "exhaustivo",
+    "alts": [
+      "integral"
+    ],
+    "register": "Neutral-formal for an analysis, review or account that covers the relevant material thoroughly; integral often emphasizes whole-system scope.",
+    "trap": "English comprehensive is not normally comprensivo in this collocation: a comprehensive audit is exhaustiva or integral, while a comprensiva person is understanding.",
+    "example_tl": "La comisión encargó una auditoría exhaustiva del sistema para determinar quién podía modificar el modelo, acceder a los registros y autorizar excepciones.",
+    "example_en": "The commission ordered a comprehensive audit of the system to determine who could modify the model, access the records and authorize exceptions.",
+    "cloze": "La comisión encargó una auditoría {{c1::exhaustiva}} del sistema para determinar quién podía modificar el modelo, acceder a los registros y autorizar excepciones.",
+    "note": "The source adjective is context-sensitive. This note selects thorough coverage for an audit and retains legacy integral as a scope-oriented alternative."
+  }
+]

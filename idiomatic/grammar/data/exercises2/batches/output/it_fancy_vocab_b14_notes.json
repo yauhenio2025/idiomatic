@@ -1,0 +1,92 @@
+[
+  {
+    "id": "it_fancy_vocab_530",
+    "en": "The rationale",
+    "category": "lexical-noun",
+    "tl": "la logica sottostante",
+    "alts": [
+      "la ragione di fondo",
+      "la motivazione di fondo"
+    ],
+    "register": "Logica sottostante è neutro-formale nella prosa analitica; ragione di fondo è più generale, mentre motivazione di fondo mette maggiormente in rilievo lo scopo dichiarato.",
+    "trap": "Il sostantivo inglese rationale non si traduce normalmente con l'italiano razionale, che è soprattutto un aggettivo o un termine tecnico-filosofico.",
+    "example_tl": "La logica sottostante resta opaca: il governo invoca la sicurezza nazionale senza spiegare quali rischi concreti la riforma dovrebbe ridurre.",
+    "example_en": "The rationale remains unclear: the government invokes national security without explaining which concrete risks the reform is supposed to reduce.",
+    "cloze": "{{c1::La logica sottostante}} resta opaca: il governo invoca la sicurezza nazionale senza spiegare quali rischi concreti la riforma dovrebbe ridurre.",
+    "note": "Materially refines old_back: fondamento logico is possible but more abstract. Self-review selected a natural policy-analysis phrase and verified that both alternatives can replace it without changing the sentence's syntax."
+  },
+  {
+    "id": "it_fancy_vocab_536",
+    "en": "Abstract",
+    "category": "lexical-adjective",
+    "tl": "astratto",
+    "alts": [],
+    "register": "Astratto è neutro e corrente in ambito accademico e politico quando un principio resta teorico o privo di applicazione concreta.",
+    "trap": "Abstract è ambiguo in inglese: come sostantivo è riassunto, ma nella sequenza aggettivale di questo batch richiede astratto.",
+    "example_tl": "Il principio resta astratto finché l'autorità non chiarisce come applicarlo ai sistemi biometrici già impiegati nelle stazioni ferroviarie.",
+    "example_en": "The principle remains abstract until the authority clarifies how to apply it to biometric systems already in use in railway stations.",
+    "cloze": "Il principio resta {{c1::astratto}} finché l'autorità non chiarisce come applicarlo ai sistemi biometrici già impiegati nelle stazioni ferroviarie.",
+    "note": "Corrects old_back, which chose the noun meaning summary. Self-review resolved the otherwise genuine source ambiguity from the item's position in the adjective sequence and left alternatives empty to avoid conflating abstract with merely theoretical."
+  },
+  {
+    "id": "it_fancy_vocab_539",
+    "en": "Cogent",
+    "category": "lexical-adjective",
+    "tl": "stringente",
+    "alts": [
+      "solido",
+      "ben fondato"
+    ],
+    "register": "Stringente è formale e tipico dell'argomentazione rigorosa; solido e ben fondato sono più trasparenti e mettono in primo piano la qualità delle ragioni.",
+    "trap": "Cogente in italiano qualifica soprattutto norme o obblighi vincolanti; argomento cogente è possibile ma elevato e non è il corrispondente neutro automatico di cogent.",
+    "example_tl": "Il rapporto presenta un argomento stringente contro la sorveglianza indiscriminata, collegando ogni misura proposta a prove verificabili e a garanzie giurisdizionali.",
+    "example_en": "The report presents a cogent argument against indiscriminate surveillance, linking each proposed measure to verifiable evidence and judicial safeguards.",
+    "cloze": "Il rapporto presenta un argomento {{c1::stringente}} contro la sorveglianza indiscriminata, collegando ogni misura proposta a prove verificabili e a garanzie giurisdizionali.",
+    "note": "Materially replaces old_back for general analytical prose. Self-review retained cogente only in the trap as a marked possibility and checked that both alternatives agree with argomento and preserve the evidential sense."
+  },
+  {
+    "id": "it_fancy_vocab_546",
+    "en": "Definitive",
+    "category": "lexical-adjective",
+    "tl": "di riferimento",
+    "alts": [
+      "autorevole"
+    ],
+    "register": "Di riferimento è neutro-formale per un'opera considerata uno standard autorevole nel proprio campo; autorevole sottolinea il prestigio senza implicare necessariamente unicità.",
+    "trap": "Definitivo rende i sensi di finale o irrevocabile, ma a definitive study è spesso uno studio di riferimento, non semplicemente la sua versione finale.",
+    "example_tl": "Lo studio di riferimento sulla moderazione online combina dati comparativi e documenti interni, superando le letture impressionistiche che avevano dominato il dibattito.",
+    "example_en": "The definitive study of online moderation combines comparative data and internal documents, surpassing the impressionistic accounts that had dominated the debate.",
+    "cloze": "Lo studio {{c1::di riferimento}} sulla moderazione online combina dati comparativi e documenti interni, superando le letture impressionistiche che avevano dominato il dibattito.",
+    "note": "The bare English adjective is polysemous; this note deliberately teaches its authoritative-work sense. Self-review recorded that old_back remains correct for the separate final or irrevocable sense."
+  },
+  {
+    "id": "it_fancy_vocab_554",
+    "en": "Factual",
+    "category": "lexical-adjective",
+    "tl": "basato sui fatti",
+    "alts": [
+      "fattuale"
+    ],
+    "register": "Basato sui fatti è neutro ed esplicito; fattuale è conciso ma più formale e ricorre soprattutto nel linguaggio analitico, giornalistico e filosofico.",
+    "trap": "Factual riguarda la conformità ai fatti, non garantisce imparzialità o completezza; attuale significa current e non traduce questo aggettivo inglese.",
+    "example_tl": "Il resoconto resta basato sui fatti, pur riconoscendo che la selezione delle fonti privilegia alcune vittime e ne rende invisibili altre.",
+    "example_en": "The account remains factual while acknowledging that the selection of sources privileges some victims and renders others invisible.",
+    "cloze": "Il resoconto resta {{c1::basato sui fatti}}, pur riconoscendo che la selezione delle fonti privilegia alcune vittime e ne rende invisibili altre.",
+    "note": "Materially expands old_back, which is valid but register-marked. Self-review changed the example from a fact-based debate to a factual account, where both renderings are interchangeable and factuality is clearly distinct from impartiality."
+  },
+  {
+    "id": "it_fancy_vocab_558",
+    "en": "Idealistic",
+    "category": "lexical-adjective",
+    "tl": "idealista",
+    "alts": [
+      "ispirato a ideali elevati"
+    ],
+    "register": "Idealista è neutro per persone, orientamenti e progetti guidati da ideali, ma il contesto può renderlo elogiativo oppure suggerire scarsa concretezza.",
+    "trap": "Idealistico è possibile, soprattutto in riferimento all'idealismo o a concezioni astratte; per un approccio politico mosso da ideali, idealista è normalmente più idiomatico.",
+    "example_tl": "Il ministro difende un approccio idealista nei negoziati sulla regolamentazione digitale, convinto che norme condivise possano prevalere sugli interessi strategici delle grandi potenze.",
+    "example_en": "The minister defends an idealistic approach in negotiations on digital regulation, convinced that shared rules can prevail over the strategic interests of major powers.",
+    "cloze": "Il ministro difende un approccio {{c1::idealista}} nei negoziati sulla regolamentazione digitale, convinto che norme condivise possano prevalere sugli interessi strategici delle grandi potenze.",
+    "note": "Materially refines rather than wholly rejects old_back. Self-review selected the more idiomatic adjective for the political sense and replaced the ambiguous modifier negoziati digitali with a precise domain phrase."
+  }
+]

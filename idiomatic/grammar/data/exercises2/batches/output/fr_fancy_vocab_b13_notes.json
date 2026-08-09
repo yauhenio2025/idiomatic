@@ -1,0 +1,282 @@
+[
+  {
+    "id": "it_fancy_vocab_481",
+    "en": "To stipulate",
+    "category": "lexical-verb",
+    "tl": "stipuler que",
+    "alts": [
+      "prévoir que"
+    ],
+    "register": "Formal legal and contractual construction used chiefly when a text, clause or agreement expressly lays down a condition.",
+    "trap": "French normally makes the contract or clause the subject of stipuler; when people reach terms, they conviennent de something rather than stipulent it conversationally.",
+    "example_tl": "Le contrat stipule que les données collectées en Europe doivent y rester, sauf autorisation expresse de l’autorité de contrôle compétente.",
+    "example_en": "The contract stipulates that data collected in Europe must remain there unless the competent supervisory authority expressly authorizes otherwise.",
+    "cloze": "Le contrat {{c1::stipule que}} les données collectées en Europe doivent y rester, sauf autorisation expresse de l’autorité de contrôle compétente.",
+    "note": "Old_back is accurate; the authored headword adds the productive clause pattern and the example fixes the text-as-subject construction."
+  },
+  {
+    "id": "it_fancy_vocab_482",
+    "en": "To substantiate",
+    "category": "lexical-verb",
+    "tl": "étayer",
+    "alts": [
+      "documenter"
+    ],
+    "register": "Formal analytical verb used when claims or accusations are supported with concrete evidence rather than merely repeated.",
+    "trap": "Substantiel means substantial, not substantiate; étayer commonly takes the claim as its direct object and the evidence after par.",
+    "example_tl": "Le rapport étaye ses accusations par des courriels internes, des contrats confidentiels et des témoignages concordants recueillis auprès d’anciens salariés.",
+    "example_en": "The report substantiates its accusations with internal emails, confidential contracts, and consistent testimony gathered from former employees.",
+    "cloze": "Le rapport {{c1::étaye}} ses accusations par des courriels internes, des contrats confidentiels et des témoignages concordants recueillis auprès d’anciens salariés.",
+    "note": "Materially corrects old_back, which means to take stock of the situation and does not express evidential support."
+  },
+  {
+    "id": "it_fancy_vocab_483",
+    "en": "To surmise",
+    "category": "lexical-verb",
+    "tl": "supposer que",
+    "alts": [
+      "conjecturer que"
+    ],
+    "register": "Neutral analytical construction for advancing a tentative conclusion from incomplete evidence; conjecturer que is more formal and marked.",
+    "trap": "Surmettre is not a French verb; surmise signals a tentative inference, so conclure que is generally too categorical.",
+    "example_tl": "Faute de données publiques, les chercheurs supposent que le modèle privilégie les contenus polarisants, mais ils présentent cette conclusion comme provisoire.",
+    "example_en": "In the absence of public data, the researchers surmise that the model favors polarizing content, but they present this conclusion as provisional.",
+    "cloze": "Faute de données publiques, les chercheurs {{c1::supposent que}} le modèle privilégie les contenus polarisants, mais ils présentent cette conclusion comme provisoire.",
+    "note": "Materially corrects the nonexistent old_back and preserves the source verb’s epistemic caution."
+  },
+  {
+    "id": "it_fancy_vocab_484",
+    "en": "To tout",
+    "category": "lexical-verb",
+    "tl": "vanter",
+    "alts": [
+      "faire l’éloge de"
+    ],
+    "register": "Neutral verb, often critical in journalism, for promoting something insistently by emphasizing its supposed merits.",
+    "trap": "The English verb tout is unrelated to French tout; présenter can be neutral and lacks the promotional praise conveyed by vanter.",
+    "example_tl": "Lors de la conférence, le dirigeant a vanté son assistant automatisé, présenté comme une révolution, sans fournir de chiffres indépendants sur ses performances réelles.",
+    "example_en": "At the conference, the executive touted his automated assistant, presented as a revolution, without providing independent figures on its actual performance.",
+    "cloze": "Lors de la conférence, le dirigeant {{c1::a vanté}} son assistant automatisé, présenté comme une révolution, sans fournir de chiffres indépendants sur ses performances réelles.",
+    "note": "Materially corrects old_back, which copies the English spelling but supplies neither a French verb nor the promotional sense. Self-review removed the calqued vanter comme construction."
+  },
+  {
+    "id": "it_fancy_vocab_487",
+    "en": "To vilify",
+    "category": "lexical-verb",
+    "tl": "vilipender",
+    "alts": [],
+    "register": "Written-formal and strongly condemnatory verb for publicly attacking someone as contemptible; commonest in polemical or journalistic prose.",
+    "trap": "Vilipender takes a direct object and is much stronger than critiquer: it entails abusive disparagement, not reasoned criticism.",
+    "example_tl": "Pendant la campagne, plusieurs chaînes ont vilipendé les magistrats chargés du dossier, les accusant sans preuve de servir des intérêts étrangers.",
+    "example_en": "During the campaign, several channels vilified the judges handling the case, accusing them without evidence of serving foreign interests.",
+    "cloze": "Pendant la campagne, plusieurs chaînes ont {{c1::vilipendé}} les magistrats chargés du dossier, les accusant sans preuve de servir des intérêts étrangers.",
+    "note": "Old_back is accurate; the example fixes the verb’s force and polemical public register."
+  },
+  {
+    "id": "it_fancy_vocab_488",
+    "en": "To warrant",
+    "category": "lexical-verb",
+    "tl": "justifier",
+    "alts": [
+      "motiver"
+    ],
+    "register": "Neutral-formal analytical verb when facts provide sufficient grounds for an action, conclusion or level of concern.",
+    "trap": "Garantir translates warrant only in senses such as guaranteeing a product; evidence that warrants an inquiry justifie or motive it.",
+    "example_tl": "Les irrégularités relevées justifient une enquête indépendante, mais elles ne permettent pas encore de conclure à une fraude organisée.",
+    "example_en": "The irregularities identified warrant an independent investigation, but they do not yet support the conclusion that organized fraud occurred.",
+    "cloze": "Les irrégularités relevées {{c1::justifient}} une enquête indépendante, mais elles ne permettent pas encore de conclure à une fraude organisée.",
+    "note": "Materially corrects old_back by selecting the grounds-for-action sense rather than guarantee."
+  },
+  {
+    "id": "it_fancy_vocab_489",
+    "en": "The assertion",
+    "category": "lexical-noun",
+    "tl": "une affirmation",
+    "alts": [
+      "une assertion"
+    ],
+    "register": "Neutral professional noun for a proposition stated as true; assertion is a more formal alternative in analytical prose.",
+    "trap": "An assertion is not necessarily false or attributed at a distance; allégation adds the idea of an unproved, often contested claim.",
+    "example_tl": "L’affirmation selon laquelle le chiffrement empêcherait toute enquête sérieuse ne résiste ni aux données disponibles ni à l’expérience des magistrats.",
+    "example_en": "The assertion that encryption would prevent any serious investigation withstands neither the available data nor judges’ experience.",
+    "cloze": "L’{{c1::affirmation}} selon laquelle le chiffrement empêcherait toute enquête sérieuse ne résiste ni aux données disponibles ni à l’expérience des magistrats.",
+    "note": "Old_back is accurate. Self-review retained affirmation as the less marked production headword and moved the formal cognate to alts."
+  },
+  {
+    "id": "it_fancy_vocab_492",
+    "en": "The contention",
+    "category": "lexical-noun",
+    "tl": "la thèse défendue",
+    "alts": [],
+    "register": "Formal argumentative phrase for a proposition that a speaker or institution actively advances and defends.",
+    "trap": "Contestation is a false friend here: it means a challenge, dispute or protest, whereas contention in this sense is the claim being defended.",
+    "example_tl": "La thèse défendue par le ministère est que cette base centralisée accélérera les enquêtes sans créer de nouvel instrument de surveillance.",
+    "example_en": "The ministry’s contention is that this centralized database will accelerate investigations without creating a new surveillance instrument.",
+    "cloze": "La {{c1::thèse défendue}} par le ministère est que cette base centralisée accélérera les enquêtes sans créer de nouvel instrument de surveillance.",
+    "note": "Materially corrects old_back contestation and selects the source’s defended-claim sense."
+  },
+  {
+    "id": "it_fancy_vocab_493",
+    "en": "The critique",
+    "category": "lexical-noun",
+    "tl": "une analyse critique",
+    "alts": [
+      "un examen critique"
+    ],
+    "register": "Neutral academic phrasing for a structured evaluation that examines assumptions, methods, strengths and weaknesses.",
+    "trap": "French une critique can mean a negative comment or a review; analyse critique prevents English critique from being reduced to mere disapproval.",
+    "example_tl": "L’étude propose une analyse critique des indicateurs de modération, en montrant qu’ils mesurent surtout la rapidité plutôt que la qualité des décisions.",
+    "example_en": "The study offers a critique of moderation metrics, showing that they primarily measure speed rather than the quality of decisions.",
+    "cloze": "L’étude propose une {{c1::analyse critique}} des indicateurs de modération, en montrant qu’ils mesurent surtout la rapidité plutôt que la qualité des décisions.",
+    "note": "The bare source is polysemous. This note selects the structured analytical sense and makes old_back more explicit."
+  },
+  {
+    "id": "it_fancy_vocab_494",
+    "en": "The deduction",
+    "category": "lexical-noun",
+    "tl": "une déduction",
+    "alts": [],
+    "register": "Neutral-formal reasoning term for a conclusion presented as following logically from one or more premises.",
+    "trap": "Déduction is narrower than inférence: deduction claims a logically entailed conclusion, while an inference may be probabilistic or defeasible.",
+    "example_tl": "La déduction paraît logique, mais elle dépend d’une prémisse non vérifiée : tous les comptes actifs correspondraient à des utilisateurs distincts.",
+    "example_en": "The deduction appears logical, but it depends on an unverified premise: every active account supposedly corresponds to a distinct user.",
+    "cloze": "La {{c1::déduction}} paraît logique, mais elle dépend d’une prémisse non vérifiée : tous les comptes actifs correspondraient à des utilisateurs distincts.",
+    "note": "Old_back is accurate. Retained after self-review specifically to teach the deduction–inference distinction made explicit in the trap."
+  },
+  {
+    "id": "it_fancy_vocab_496",
+    "en": "The elucidation",
+    "category": "lexical-noun",
+    "tl": "un éclaircissement",
+    "alts": [
+      "une clarification"
+    ],
+    "register": "Neutral professional noun for information or explanation that makes an obscure mechanism, statement or issue clearer.",
+    "trap": "Élucidation is idiomatic for solving a crime or mystery, but it sounds marked where the intended sense is an explanatory éclaircissement.",
+    "example_tl": "Le rapport apporte un éclaircissement utile sur la manière dont les plateformes calculent les commissions prélevées auprès des petits éditeurs.",
+    "example_en": "The report provides useful elucidation of how platforms calculate the commissions charged to small publishers.",
+    "cloze": "Le rapport apporte un {{c1::éclaircissement}} utile sur la manière dont les plateformes calculent les commissions prélevées auprès des petits éditeurs.",
+    "note": "Replaces the literal old_back with the idiomatic noun for explanatory clarification in the selected professional context."
+  },
+  {
+    "id": "it_fancy_vocab_497",
+    "en": "The emphasis",
+    "category": "lexical-noun",
+    "tl": "l’accent mis sur",
+    "alts": [],
+    "register": "Neutral professional construction for the prominence or priority given to a particular issue, criterion or policy objective.",
+    "trap": "Emphase usually suggests grandiloquence or excessive force in French; putting emphasis on something is mettre l’accent sur it.",
+    "example_tl": "L’accent mis sur la vitesse de retrait masque une question essentielle : les recours des utilisateurs sont-ils réellement examinés par des humains ?",
+    "example_en": "The emphasis on removal speed obscures an essential question: are users’ appeals actually reviewed by humans?",
+    "cloze": "L’{{c1::accent mis sur}} la vitesse de retrait masque une question essentielle : les recours des utilisateurs sont-ils réellement examinés par des humains ?",
+    "note": "Materially sharpens old_back: mise en évidence often means highlighting or revealing, while the authored frame expresses assigned emphasis."
+  },
+  {
+    "id": "it_fancy_vocab_499",
+    "en": "The inference",
+    "category": "lexical-noun",
+    "tl": "une inférence",
+    "alts": [],
+    "register": "Formal academic and analytical noun for a conclusion drawn from evidence; the phrasal alternative is less technical.",
+    "trap": "An inférence is a reasoning step or its conclusion, not a causal conséquence; unlike a déduction, it need not be logically necessary.",
+    "example_tl": "Cette inférence repose sur un échantillon trop restreint pour établir que la baisse observée résulte effectivement du nouveau règlement.",
+    "example_en": "This inference rests on a sample too limited to establish that the observed decline actually results from the new regulation.",
+    "cloze": "Cette {{c1::inférence}} repose sur un échantillon trop restreint pour établir que la baisse observée résulte effectivement du nouveau règlement.",
+    "note": "Old_back is accurate; the authored context fixes the broader, defeasible reasoning sense rather than strict deduction. Self-review removed a phrasal alternative that did not substitute cleanly in the example."
+  },
+  {
+    "id": "it_fancy_vocab_500",
+    "en": "The insight",
+    "category": "lexical-noun",
+    "tl": "un éclairage",
+    "alts": [
+      "un enseignement"
+    ],
+    "register": "Neutral professional noun, commonly with apporter, for understanding yielded by evidence, investigation or analysis.",
+    "trap": "Intuition often denotes an untested hunch or immediate apprehension; it does not reliably render an evidence-based analytical insight.",
+    "example_tl": "L’enquête apporte un éclairage précieux sur les arbitrages internes qui ont conduit la plateforme à affaiblir discrètement ses propres règles.",
+    "example_en": "The investigation provides valuable insight into the internal trade-offs that led the platform to quietly weaken its own rules.",
+    "cloze": "L’enquête apporte un {{c1::éclairage}} précieux sur les arbitrages internes qui ont conduit la plateforme à affaiblir discrètement ses propres règles.",
+    "note": "The context-free source has several readings. This note selects evidence-based understanding and materially diverges from old_back intuition."
+  },
+  {
+    "id": "it_fancy_vocab_506",
+    "en": "The perspective",
+    "category": "lexical-noun",
+    "tl": "un angle d’analyse",
+    "alts": [
+      "une perspective"
+    ],
+    "register": "Neutral analytical phrase for the particular lens or dimension through which a subject is examined.",
+    "trap": "French perspective can also mean a future prospect, while point de vue often denotes a person’s opinion; angle d’analyse fixes the analytical-lens sense.",
+    "example_tl": "Ce rapport adopte un angle d’analyse rarement considéré : les effets de la concentration numérique sur l’autonomie financière des médias locaux.",
+    "example_en": "This report adopts a rarely considered perspective: the effects of digital concentration on the financial autonomy of local media.",
+    "cloze": "Ce rapport adopte un {{c1::angle d’analyse}} rarement considéré : les effets de la concentration numérique sur l’autonomie financière des médias locaux.",
+    "note": "The source is underspecified. Self-review selected the analytical-lens sense and retained old_back only as a valid alternative."
+  },
+  {
+    "id": "it_fancy_vocab_508",
+    "en": "The premise",
+    "category": "lexical-noun",
+    "tl": "une prémisse",
+    "alts": [],
+    "register": "Formal reasoning term for a proposition from which an argument or conclusion proceeds.",
+    "trap": "French prémisse has a double s and denotes a reasoning premise; prémices, always plural, means the beginnings or early signs of something.",
+    "example_tl": "La prémisse centrale du projet est que davantage de données produisent nécessairement de meilleures décisions, hypothèse que plusieurs audits récents contredisent.",
+    "example_en": "The project’s central premise is that more data necessarily produces better decisions, a hypothesis contradicted by several recent audits.",
+    "cloze": "La {{c1::prémisse}} centrale du projet est que davantage de données produisent nécessairement de meilleures décisions, hypothèse que plusieurs audits récents contredisent.",
+    "note": "Old_back is accurate; the trap records a productive spelling and lexical distinction."
+  },
+  {
+    "id": "it_fancy_vocab_509",
+    "en": "The presumption",
+    "category": "lexical-noun",
+    "tl": "une présomption",
+    "alts": [],
+    "register": "Formal legal and analytical noun for a conclusion provisionally drawn from known facts until contrary evidence emerges.",
+    "trap": "Ordinary English presumption can mean assumption, often hypothèse or supposition; French présomption is especially natural for legal or evidence-based inference.",
+    "example_tl": "En l’absence de traces comptables, la présomption de coordination repose surtout sur la simultanéité des publications et la répétition des mêmes formulations.",
+    "example_en": "In the absence of accounting records, the presumption of coordination rests mainly on the simultaneity of the publications and the repetition of identical wording.",
+    "cloze": "En l’absence de traces comptables, la {{c1::présomption}} de coordination repose surtout sur la simultanéité des publications et la répétition des mêmes formulations.",
+    "note": "The bare source is ambiguous. This note retains old_back for the evidential and quasi-legal sense demonstrated by the example."
+  },
+  {
+    "id": "it_fancy_vocab_512",
+    "en": "The rebuttal",
+    "category": "lexical-noun",
+    "tl": "une réponse argumentée",
+    "alts": [],
+    "register": "Neutral-formal phrase for a reasoned answer that counters an argument point by point without necessarily disproving it conclusively.",
+    "trap": "Réfutation can overstate the result: a rebuttal answers and counters an argument, whereas a réfutation claims to demonstrate that it is false.",
+    "example_tl": "Sa réponse argumentée conteste méthodiquement les chiffres du lobby, mais reconnaît que certaines obligations pèseront davantage sur les petites entreprises.",
+    "example_en": "Her rebuttal methodically challenges the lobby’s figures but acknowledges that some obligations will weigh more heavily on small businesses.",
+    "cloze": "Sa {{c1::réponse argumentée}} conteste méthodiquement les chiffres du lobby, mais reconnaît que certaines obligations pèseront davantage sur les petites entreprises.",
+    "note": "Materially diverges from old_back so that rebuttal remains distinct from the separate refutation card in this batch."
+  },
+  {
+    "id": "it_fancy_vocab_514",
+    "en": "The refutation",
+    "category": "lexical-noun",
+    "tl": "une réfutation",
+    "alts": [],
+    "register": "Formal academic and argumentative noun for a reasoned demonstration intended to show that a claim or conclusion is false.",
+    "trap": "A réfutation requires counter-reasoning or evidence; a simple denial or institutional démenti does not by itself refute a claim.",
+    "example_tl": "La réfutation publiée par les chercheurs identifie trois erreurs de calcul qui invalident directement la conclusion avancée par le cabinet de conseil.",
+    "example_en": "The researchers’ published refutation identifies three calculation errors that directly invalidate the conclusion advanced by the consulting firm.",
+    "cloze": "La {{c1::réfutation}} publiée par les chercheurs identifie trois erreurs de calcul qui invalident directement la conclusion avancée par le cabinet de conseil.",
+    "note": "Old_back is accurate. Self-review made the example demonstrate actual disproof, preserving the distinction from rebuttal."
+  },
+  {
+    "id": "it_fancy_vocab_520",
+    "en": "The argument",
+    "category": "lexical-noun",
+    "tl": "un argument",
+    "alts": [],
+    "register": "Neutral argumentative noun for a reason or line of reasoning offered in support of a conclusion.",
+    "trap": "English argument can denote a quarrel, but French un argument is a supporting reason; a personal argument is une dispute or une querelle.",
+    "example_tl": "L’argument selon lequel toute exigence de transparence révélerait des secrets industriels confond volontairement audit indépendant et divulgation publique du code source.",
+    "example_en": "The argument that any transparency requirement would reveal trade secrets deliberately conflates independent auditing with public disclosure of source code.",
+    "cloze": "L’{{c1::argument}} selon lequel toute exigence de transparence révélerait des secrets industriels confond volontairement audit indépendant et divulgation publique du code source.",
+    "note": "Old_back is accurate for the reasoning sense; the trap records the productive English–French false-friend boundary. Self-review made the transparency example more idiomatic and removed a non-substitutable alternative."
+  }
+]

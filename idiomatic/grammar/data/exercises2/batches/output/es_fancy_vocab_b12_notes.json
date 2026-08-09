@@ -1,0 +1,359 @@
+[
+  {
+    "id": "it_fancy_vocab_443",
+    "en": "To scrutinize",
+    "category": "lexical-verb",
+    "tl": "examinar algo minuciosamente",
+    "alts": [
+      "escrutar algo",
+      "analizar algo detenidamente"
+    ],
+    "register": "Neutral-formal in investigative, regulatory and analytical prose; escrutar is more elevated and often suggests an especially searching examination.",
+    "trap": "Examinar alone can mean merely inspect or test; the adverb minuciosamente preserves the thorough, critical attention encoded by scrutinize.",
+    "example_tl": "La comisión examinó minuciosamente los contratos de computación en la nube antes de autorizar que los ministerios migraran datos especialmente sensibles.",
+    "example_en": "The commission scrutinized the cloud-computing contracts before authorizing the ministries to migrate particularly sensitive data.",
+    "cloze": "La comisión {{c1::examinó minuciosamente}} los contratos de computación en la nube antes de autorizar que los ministerios migraran datos especialmente sensibles.",
+    "note": "The legacy rendering captures the core action but omits the thoroughness that distinguishes scrutinize from a general examination."
+  },
+  {
+    "id": "it_fancy_vocab_446",
+    "en": "To allege",
+    "category": "lexical-verb",
+    "tl": "alegar algo",
+    "alts": [
+      "sostener algo sin demostrarlo"
+    ],
+    "register": "Neutral-formal in legal proceedings and reported controversy; the surrounding wording should preserve that the claim has not been established.",
+    "trap": "Spanish alegar can also mean adducing a reason or fact in support of a case, so it does not invariably carry the unproven-claim nuance of English allege.",
+    "example_tl": "El exdirectivo alegó que la plataforma desconocía el uso político de los datos, pero no aportó documentos que respaldaran su versión.",
+    "example_en": "The former executive alleged that the platform was unaware of the political use of the data, but supplied no documents supporting his account.",
+    "cloze": "El exdirectivo {{c1::alegó}} que la plataforma desconocía el uso político de los datos, pero no aportó documentos que respaldaran su versión.",
+    "note": "The legacy cognate is valid in this legal-media sense; the example makes the claim's unverified status explicit rather than treating that nuance as automatic."
+  },
+  {
+    "id": "it_fancy_vocab_447",
+    "en": "To bolster",
+    "category": "lexical-verb",
+    "tl": "reforzar algo",
+    "alts": [
+      "apuntalar algo"
+    ],
+    "register": "Neutral-formal for strengthening an argument, institution, position or effect; apuntalar is a more vivid metaphor and often suggests shoring up weakness.",
+    "trap": "Bolster is commonly figurative here; Spanish does not need a noun corresponding to the literal English cushion or support.",
+    "example_tl": "Los nuevos registros reforzaron la tesis de que la empresa había coordinado la campaña, aunque todavía no probaban una intervención directa.",
+    "example_en": "The new records bolstered the thesis that the company had coordinated the campaign, although they still did not prove direct intervention.",
+    "cloze": "Los nuevos registros {{c1::reforzaron}} la tesis de que la empresa había coordinado la campaña, aunque todavía no probaban una intervención directa.",
+    "note": "The legacy rendering is accurate for the selected evidential-strengthening sense."
+  },
+  {
+    "id": "it_fancy_vocab_448",
+    "en": "To broach",
+    "category": "lexical-verb",
+    "tl": "plantear un asunto",
+    "alts": [
+      "sacar un asunto a colación"
+    ],
+    "register": "Neutral for introducing a potentially delicate subject into a discussion; sacar a colación is somewhat more conversational and rhetorical.",
+    "trap": "Abordar un asunto means address or tackle it and does not by itself convey that someone is raising it for discussion for the first time.",
+    "example_tl": "Cuando terminó la reunión técnica, la ministra planteó el asunto de la vigilancia biométrica, que sus asesores habían evitado durante meses.",
+    "example_en": "When the technical meeting ended, the minister broached the subject of biometric surveillance, which her advisers had avoided for months.",
+    "cloze": "Cuando terminó la reunión técnica, la ministra {{c1::planteó el asunto}} de la vigilancia biométrica, que sus asesores habían evitado durante meses.",
+    "note": "Materially refines legacy Abordar by selecting the sense of first introducing a sensitive topic, not subsequently dealing with it."
+  },
+  {
+    "id": "it_fancy_vocab_449",
+    "en": "To circumvent",
+    "category": "lexical-verb",
+    "tl": "eludir algo",
+    "alts": [
+      "sortear algo"
+    ],
+    "register": "Neutral-formal for intentionally avoiding a rule, safeguard or restriction; sortear can sound less accusatory when the obstacle is practical.",
+    "trap": "Eludir foregrounds deliberate avoidance, whereas evitar may simply mean preventing or staying away from something without implying an evasive workaround.",
+    "example_tl": "La empresa creó una filial en otro país para eludir los controles de exportación impuestos a los proveedores de tecnología militar.",
+    "example_en": "The company created a subsidiary in another country to circumvent the export controls imposed on suppliers of military technology.",
+    "cloze": "La empresa creó una filial en otro país para {{c1::eludir}} los controles de exportación impuestos a los proveedores de tecnología militar.",
+    "note": "The legacy rendering is accurate and more precise than a generic evitar for this regulatory-evasion context."
+  },
+  {
+    "id": "it_fancy_vocab_452",
+    "en": "To counter",
+    "category": "lexical-verb",
+    "tl": "contrarrestar algo",
+    "alts": [
+      "neutralizar algo"
+    ],
+    "register": "Neutral-formal for offsetting an influence, tendency or effect; argumentative countering normally calls for rebatir or responder a instead.",
+    "trap": "English counter is polysemous: contrarrestar una influencia is natural, but contrarrestar una afirmación is usually less precise than rebatirla.",
+    "example_tl": "El regulador introdujo auditorías independientes para contrarrestar la influencia que los grandes proveedores ejercían sobre los organismos nacionales de certificación.",
+    "example_en": "The regulator introduced independent audits to counter the influence that major providers exerted over national certification bodies.",
+    "cloze": "El regulador introdujo auditorías independientes para {{c1::contrarrestar}} la influencia que los grandes proveedores ejercían sobre los organismos nacionales de certificación.",
+    "note": "The isolated source is ambiguous; this note deliberately retains the effect-offsetting sense represented by the legacy rendering, distinct from refuting an argument."
+  },
+  {
+    "id": "it_fancy_vocab_454",
+    "en": "To demur",
+    "category": "lexical-verb",
+    "tl": "poner reparos a algo",
+    "alts": [
+      "objetar algo",
+      "mostrar reservas ante algo"
+    ],
+    "register": "Neutral-formal for expressing hesitant or reasoned objection; demur itself is uncommon and distinctly formal in contemporary English.",
+    "trap": "Recusar in Spain normally means formally challenging a judge, expert or other participant for possible bias; it is not a general equivalent of demur.",
+    "example_tl": "Varios juristas pusieron reparos a la reforma porque permitía al Ejecutivo bloquear contenidos sin autorización judicial ni una vía clara de recurso.",
+    "example_en": "Several jurists demurred at the reform because it allowed the executive to block content without judicial authorization or a clear avenue of appeal.",
+    "cloze": "Varios juristas {{c1::pusieron reparos a}} la reforma porque permitía al Ejecutivo bloquear contenidos sin autorización judicial ni una vía clara de recurso.",
+    "note": "Materially replaces legacy Recusar, which selects a narrow procedural act absent from the English prompt."
+  },
+  {
+    "id": "it_fancy_vocab_456",
+    "en": "To deride",
+    "category": "lexical-verb",
+    "tl": "ridiculizar a alguien o algo",
+    "alts": [
+      "mofarse de alguien o algo"
+    ],
+    "register": "Neutral-formal for contemptuous mockery, often public; mofarse de is vivid and slightly less formal.",
+    "trap": "Burlarse de can cover ordinary teasing as well as contemptuous ridicule, while deride normally signals the stronger, dismissive reading.",
+    "example_tl": "El portavoz ridiculizó las advertencias de los científicos, aunque meses después el Gobierno adoptó casi todas las medidas que ellos habían propuesto.",
+    "example_en": "The spokesperson derided the scientists' warnings, although months later the government adopted almost all the measures they had proposed.",
+    "cloze": "El portavoz {{c1::ridiculizó}} las advertencias de los científicos, aunque meses después el Gobierno adoptó casi todas las medidas que ellos habían propuesto.",
+    "note": "The note chooses public, contemptuous dismissal; legacy Burlarse is possible but underspecifies that force without context."
+  },
+  {
+    "id": "it_fancy_vocab_458",
+    "en": "To disseminate",
+    "category": "lexical-verb",
+    "tl": "difundir algo",
+    "alts": [
+      "divulgar algo"
+    ],
+    "register": "Neutral-formal for distributing information or findings widely; divulgar especially suits making specialist knowledge accessible to a broader public.",
+    "trap": "The cognate diseminar is possible but often evokes physical dispersal or decentralized spread; difundir is the safer default for information and findings.",
+    "example_tl": "El consorcio difundió los resultados preliminares entre periodistas y organizaciones civiles antes de que la revista académica completara la revisión por pares.",
+    "example_en": "The consortium disseminated the preliminary results among journalists and civil-society organizations before the academic journal completed peer review.",
+    "cloze": "El consorcio {{c1::difundió}} los resultados preliminares entre periodistas y organizaciones civiles antes de que la revista académica completara la revisión por pares.",
+    "note": "The legacy rendering is the idiomatic default for informational dissemination; the note records the tempting but more marked cognate."
+  },
+  {
+    "id": "it_fancy_vocab_459",
+    "en": "To elicit",
+    "category": "lexical-verb",
+    "tl": "suscitar algo",
+    "alts": [
+      "provocar algo"
+    ],
+    "register": "Neutral-formal for causing a response, reaction or feeling; obtaining information from a person instead requires obtener or recabar.",
+    "trap": "Elicit alternates between causing a reaction and drawing out information; suscitar fits the former but not questions designed to elicit factual answers.",
+    "example_tl": "Las revelaciones suscitaron una respuesta inmediata del Parlamento, que exigió explicaciones sobre la venta de datos sanitarios a empresas aseguradoras.",
+    "example_en": "The revelations elicited an immediate response from Parliament, which demanded explanations about the sale of health data to insurance companies.",
+    "cloze": "Las revelaciones {{c1::suscitaron}} una respuesta inmediata del Parlamento, que exigió explicaciones sobre la venta de datos sanitarios a empresas aseguradoras.",
+    "note": "The legacy rendering is accurate for the reaction-causing sense selected here; the note explicitly excludes the information-obtaining sense."
+  },
+  {
+    "id": "it_fancy_vocab_460",
+    "en": "To embellish",
+    "category": "lexical-verb",
+    "tl": "adornar un relato",
+    "alts": [],
+    "register": "Neutral with a mildly critical implication when added details make an account more impressive but less reliable; literal decoration uses adornar or embellecer.",
+    "trap": "Embellecer emphasizes making something beautiful; with an account, adornar more readily suggests adding attractive, exaggerated or invented details.",
+    "example_tl": "El documental adornó el relato del fundador con episodios heroicos que antiguos empleados consideran exagerados o directamente inventados.",
+    "example_en": "The documentary embellished the founder's story with heroic episodes that former employees consider exaggerated or outright invented.",
+    "cloze": "El documental {{c1::adornó el relato}} del fundador con episodios heroicos que antiguos empleados consideran exagerados o directamente inventados.",
+    "note": "Materially narrows legacy Embellecer to the figurative account-enhancing sense; the object in the headword prevents an unintended decorative reading."
+  },
+  {
+    "id": "it_fancy_vocab_461",
+    "en": "To espouse",
+    "category": "lexical-verb",
+    "tl": "defender una idea",
+    "alts": [
+      "propugnar una idea",
+      "hacer suya una idea"
+    ],
+    "register": "Neutral-formal for publicly adopting or advocating a principle, doctrine or cause; propugnar is more elevated and programmatic.",
+    "trap": "Do not confuse espouse with Spanish esposar, which means to handcuff; defender or propugnar expresses support for a position.",
+    "example_tl": "El candidato defendió una visión de soberanía digital que sus propios asesores habían calificado meses antes de inviable y económicamente costosa.",
+    "example_en": "The candidate espoused a vision of digital sovereignty that his own advisers had described months earlier as unviable and economically costly.",
+    "cloze": "El candidato {{c1::defendió}} una visión de soberanía digital que sus propios asesores habían calificado meses antes de inviable y económicamente costosa.",
+    "note": "Legacy Propugnar is valid but more elevated than the broad English source; defender is the most reusable serious-register rendering."
+  },
+  {
+    "id": "it_fancy_vocab_462",
+    "en": "To fabricate",
+    "category": "lexical-verb",
+    "tl": "inventar algo",
+    "alts": [
+      "inventarse algo"
+    ],
+    "register": "Neutral for creating a false account, source or excuse; inventarse is especially idiomatic in Spain and makes the fabrication explicit.",
+    "trap": "Fabricar is standard for making objects and can collocate figuratively with pruebas or pretextos, but it is not the safest automatic choice for every false account.",
+    "example_tl": "El consultor inventó una fuente anónima para sostener que el programa de vigilancia contaba con respaldo mayoritario entre los funcionarios europeos.",
+    "example_en": "The consultant fabricated an anonymous source to claim that the surveillance program enjoyed majority support among European officials.",
+    "cloze": "El consultor {{c1::inventó}} una fuente anónima para sostener que el programa de vigilancia contaba con respaldo mayoritario entre los funcionarios europeos.",
+    "note": "Materially replaces the overly automatic legacy cognate and selects fabrication of false information rather than physical manufacture."
+  },
+  {
+    "id": "it_fancy_vocab_463",
+    "en": "To fathom",
+    "category": "lexical-verb",
+    "tl": "alcanzar a comprender algo",
+    "alts": [
+      "llegar a comprender algo"
+    ],
+    "register": "Neutral, often under negation, for succeeding in understanding something difficult or perplexing; the English verb is somewhat more marked.",
+    "trap": "Profundizar en algo means study it in greater depth, not necessarily manage to understand it; fathom describes achieved or attempted comprehension.",
+    "example_tl": "Los investigadores aún no alcanzan a comprender por qué el algoritmo penaliza sistemáticamente las noticias locales pese a sus elevados índices de lectura.",
+    "example_en": "Researchers still cannot fathom why the algorithm systematically penalizes local news despite its high readership figures.",
+    "cloze": "Los investigadores aún no {{c1::alcanzan a comprender}} por qué el algoritmo penaliza sistemáticamente las noticias locales pese a sus elevados índices de lectura.",
+    "note": "Materially replaces legacy Profundizar, which denotes deeper investigation rather than successful understanding. Self-review replaced the less idiomatic tasa de lectura with índices de lectura."
+  },
+  {
+    "id": "it_fancy_vocab_464",
+    "en": "To glean",
+    "category": "lexical-verb",
+    "tl": "extraer información de algo",
+    "alts": [
+      "obtener información de algo"
+    ],
+    "register": "Neutral-formal for deriving limited information from evidence or scattered material; the agricultural sense of glean is a separate, uncommon use.",
+    "trap": "Espigar is mainly literal or literary and is not the normal default for obtaining information from documents, metadata or indirect evidence.",
+    "example_tl": "Los periodistas extrajeron información de los metadatos sobre el origen de la filtración, aunque ningún dato identificaba por sí solo al responsable.",
+    "example_en": "The journalists gleaned information from the metadata about the leak's origin, although no single item of data identified the culprit by itself.",
+    "cloze": "Los periodistas {{c1::extrajeron información de}} los metadatos sobre el origen de la filtración, aunque ningún dato identificaba por sí solo al responsable.",
+    "note": "Materially replaces legacy Espigar with the productive analytical rendering for information inferred or gathered from a source."
+  },
+  {
+    "id": "it_fancy_vocab_465",
+    "en": "To harp",
+    "category": "lexical-verb",
+    "tl": "insistir machaconamente en algo",
+    "alts": [
+      "machacar con algo"
+    ],
+    "register": "Pejorative; insistir machaconamente works in serious commentary, while machacar con is more colloquial and common in speech.",
+    "trap": "The intended English construction is harp on something; legacy Arpar is not a standard Spanish equivalent and loses the repeated, tiresome insistence.",
+    "example_tl": "Durante la comparecencia, el ministro insistió machaconamente en el coste de la transición, sin mencionar los subsidios concedidos a las empresas contaminantes.",
+    "example_en": "During the hearing, the minister harped on the cost of the transition without mentioning the subsidies granted to polluting companies.",
+    "cloze": "Durante la comparecencia, el ministro {{c1::insistió machaconamente en}} el coste de la transición, sin mencionar los subsidios concedidos a las empresas contaminantes.",
+    "note": "Materially corrects the broken legacy rendering and restores the particle-dependent, negative-pragmatic sense of harp on."
+  },
+  {
+    "id": "it_fancy_vocab_467",
+    "en": "To inculcate",
+    "category": "lexical-verb",
+    "tl": "inculcar algo en alguien",
+    "alts": [],
+    "register": "Neutral-formal for instilling a belief, value or habit through repeated teaching; common in educational and institutional criticism.",
+    "trap": "Spanish admits inculcar algo en alguien and inculcarle algo a alguien; when using the first pattern, retain en before the person receiving the teaching.",
+    "example_tl": "La academia inculcó en los nuevos diplomáticos el deber de guardar confidencialidad, incluso cuando este dificultaba denunciar abusos dentro de la propia institución.",
+    "example_en": "The academy inculcated in the new diplomats a duty to maintain confidentiality, even when this made it harder to report abuses within the institution itself.",
+    "cloze": "La academia {{c1::inculcó en}} los nuevos diplomáticos el deber de guardar confidencialidad, incluso cuando este dificultaba denunciar abusos dentro de la propia institución.",
+    "note": "The legacy cognate is accurate, but the fuller headword and example supply the governed en phrase omitted by the bare infinitive. Self-review replaced deber de confidencialidad with the more explicit deber de guardar confidencialidad."
+  },
+  {
+    "id": "it_fancy_vocab_468",
+    "en": "To indict",
+    "category": "lexical-verb",
+    "tl": "acusar formalmente a alguien de algo",
+    "alts": [
+      "formular cargos contra alguien por algo"
+    ],
+    "register": "Formal legal language; the exact procedural term varies by jurisdiction, so neutral reporting often describes the formal accusation rather than borrowing a foreign institution.",
+    "trap": "Indict does not mean convict: acusar formalmente initiates or advances a prosecution, whereas condenar means a court has found the defendant guilty.",
+    "example_tl": "Un gran jurado acusó formalmente al exdirectivo de fraude electrónico y conspiración por ocultar pagos destinados a funcionarios extranjeros.",
+    "example_en": "A grand jury indicted the former executive for electronic fraud and conspiracy over concealing payments intended for foreign officials.",
+    "cloze": "Un gran jurado {{c1::acusó formalmente}} al exdirectivo de fraude electrónico y conspiración por ocultar pagos destinados a funcionarios extranjeros.",
+    "note": "The legacy Acusar is directionally correct but omits procedural formality. Spanish law has no exact institution-wide equivalent to the Anglo-American indictment."
+  },
+  {
+    "id": "it_fancy_vocab_470",
+    "en": "To laud",
+    "category": "lexical-verb",
+    "tl": "elogiar públicamente algo",
+    "alts": [
+      "ensalzar algo"
+    ],
+    "register": "Formal or elevated praise in the English source; elogiar is less marked in Spanish, while ensalzar restores a more rhetorical tone.",
+    "trap": "Alabar is valid but can sound personal, moral or devotional depending on context; policy and media prose often prefers elogiar.",
+    "example_tl": "El editorial elogió públicamente la transparencia del ministerio, pese a que los documentos divulgados omitían las reuniones con representantes de la industria.",
+    "example_en": "The editorial publicly lauded the ministry's transparency, even though the disclosed documents omitted its meetings with industry representatives.",
+    "cloze": "El editorial {{c1::elogió públicamente}} la transparencia del ministerio, pese a que los documentos divulgados omitían las reuniones con representantes de la industria.",
+    "note": "Legacy Alabar is possible; the selected rendering is more idiomatic in institutional media criticism, with public praise made explicit."
+  },
+  {
+    "id": "it_fancy_vocab_474",
+    "en": "To promulgate",
+    "category": "lexical-verb",
+    "tl": "promulgar una ley",
+    "alts": [],
+    "register": "Formal institutional term for officially publishing a law or provision so that it is observed; the competent authority depends on the constitutional system.",
+    "trap": "Spanish promulgar is narrower than simply announcing or promoting a policy, and sancionar una ley may denote a distinct constitutional step rather than a synonym.",
+    "example_tl": "El jefe del Estado promulgó la nueva ley de ciberseguridad una vez concluido el control constitucional previo exigido por el ordenamiento jurídico nacional.",
+    "example_en": "The head of state promulgated the new cybersecurity law once the prior constitutional review required by the national legal system had concluded.",
+    "cloze": "El jefe del Estado {{c1::promulgó}} la nueva ley de ciberseguridad una vez concluido el control constitucional previo exigido por el ordenamiento jurídico nacional.",
+    "note": "The legacy cognate is accurate in the legal sense selected here; the object-bearing headword prevents overextension to general advocacy or publicity. Self-review made the pre-promulgation legal sequence explicit."
+  },
+  {
+    "id": "it_fancy_vocab_475",
+    "en": "To rebuff",
+    "category": "lexical-verb",
+    "tl": "rechazar de plano algo",
+    "alts": [
+      "desestimar tajantemente algo"
+    ],
+    "register": "Neutral-formal for a firm, often abrupt rejection of a proposal or approach; rebuffing a person may instead be desairar a alguien.",
+    "trap": "Legacy Desairar fits rejecting a person or advance in a discourteous way, but it is not the natural default when the object is an institutional proposal.",
+    "example_tl": "La plataforma rechazó de plano la propuesta europea de interoperabilidad, alegando que abrir sus servicios pondría en peligro la seguridad de los usuarios.",
+    "example_en": "The platform rebuffed the European interoperability proposal, claiming that opening its services would endanger user security.",
+    "cloze": "La plataforma {{c1::rechazó de plano}} la propuesta europea de interoperabilidad, alegando que abrir sus servicios pondría en peligro la seguridad de los usuarios.",
+    "note": "Materially replaces legacy Desairar for the proposal-rejection sense and preserves the force of the English verb with de plano."
+  },
+  {
+    "id": "it_fancy_vocab_477",
+    "en": "To refute",
+    "category": "lexical-verb",
+    "tl": "refutar algo",
+    "alts": [
+      "demostrar la falsedad de algo"
+    ],
+    "register": "Neutral-formal in evidential and argumentative prose; properly used when reasons or evidence establish that a claim is false.",
+    "trap": "Refutar is stronger than negar or discrepar: merely rejecting a claim does not refute it unless counterevidence or reasoning demonstrates its falsity.",
+    "example_tl": "El análisis independiente refutó la afirmación de que el sistema reducía los sesgos, pues demostró un perjuicio sistemático para los barrios pobres.",
+    "example_en": "The independent analysis refuted the claim that the system reduced bias, as it demonstrated systematic harm to poor neighborhoods.",
+    "cloze": "El análisis independiente {{c1::refutó}} la afirmación de que el sistema reducía los sesgos, pues demostró un perjuicio sistemático para los barrios pobres.",
+    "note": "The legacy cognate is exact, but the note preserves the often-eroded evidential requirement that distinguishes refutation from denial."
+  },
+  {
+    "id": "it_fancy_vocab_479",
+    "en": "To repudiate",
+    "category": "lexical-verb",
+    "tl": "repudiar algo",
+    "alts": [
+      "rechazar categóricamente algo"
+    ],
+    "register": "Formal and emphatic for publicly disowning a position, act or association, often with moral condemnation.",
+    "trap": "Repudiar is substantially stronger than a routine rechazar: it commonly signals categorical disavowal and may imply moral or political distancing.",
+    "example_tl": "El partido repudió públicamente la campaña xenófoba de su antiguo portavoz, pero evitó explicar por qué había tolerado mensajes similares durante años.",
+    "example_en": "The party publicly repudiated its former spokesperson's xenophobic campaign but avoided explaining why it had tolerated similar messages for years.",
+    "cloze": "El partido {{c1::repudió públicamente}} la campaña xenófoba de su antiguo portavoz, pero evitó explicar por qué había tolerado mensajes similares durante años.",
+    "note": "The legacy cognate is accurate; the example fixes the strong public-disavowal sense that warrants retaining it beside more general rejection verbs."
+  },
+  {
+    "id": "it_fancy_vocab_480",
+    "en": "To ruminate",
+    "category": "lexical-verb",
+    "tl": "rumiar algo",
+    "alts": [
+      "darle vueltas a algo"
+    ],
+    "register": "Figurative and somewhat literary for prolonged, often uneasy reflection; darle vueltas is the neutral conversational alternative in Spain.",
+    "trap": "Rumiar also literally describes a ruminant chewing cud, so an abstract object or suitable context is needed to force the reflective sense.",
+    "example_tl": "Durante semanas, el gabinete rumió las consecuencias diplomáticas del acuerdo antes de aceptar unas garantías que inicialmente había considerado insuficientes.",
+    "example_en": "For weeks, the cabinet ruminated on the agreement's diplomatic consequences before accepting assurances it had initially considered insufficient.",
+    "cloze": "Durante semanas, el gabinete {{c1::rumió}} las consecuencias diplomáticas del acuerdo antes de aceptar unas garantías que inicialmente había considerado insuficientes.",
+    "note": "The legacy rendering is valid but underdetermined in isolation; the abstract object selects the figurative sense and avoids overlap with neutral reflexionar."
+  }
+]

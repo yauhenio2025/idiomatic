@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_161",
+    "en": "the Profiteering",
+    "verdict": "keep",
+    "reason": "Profiteering is condemnatory and context-sensitive; Italian speculazione needs a price or crisis context to distinguish opportunistic excessive profit from financial speculation."
+  },
+  {
+    "id": "it_fancy_vocab_162",
+    "en": "the Centralization",
+    "verdict": "drop",
+    "reason": "La centralizzazione is a transparent, familiar institutional and technical cognate with regular morphology and no narrower construction selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_163",
+    "en": "the Filter bubble",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by BIG_TECH_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_164",
+    "en": "the Monetization",
+    "verdict": "drop",
+    "reason": "La monetizzazione is a transparent, routine technology-business cognate; the bare prompt supplies no particular revenue model or Italian production difficulty."
+  },
+  {
+    "id": "it_fancy_vocab_165",
+    "en": "the Digital divide",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by BIG_TECH_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_166",
+    "en": "the Privatization",
+    "verdict": "drop",
+    "reason": "La privatizzazione is a transparent, high-frequency policy cognate already expected at C1, and the legacy rendering is accurate."
+  },
+  {
+    "id": "it_fancy_vocab_167",
+    "en": "the Cyberspace",
+    "verdict": "drop",
+    "reason": "Il cyberspazio is familiar core technology vocabulary with transparent formation and no distinctive Italian production problem here."
+  },
+  {
+    "id": "it_fancy_vocab_168",
+    "en": "the Digital native",
+    "verdict": "drop",
+    "reason": "Nativo digitale is a familiar, compositionally transparent expression whose gender and number follow ordinary Italian agreement."
+  },
+  {
+    "id": "it_fancy_vocab_169",
+    "en": "the Disinformation",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by COLD_WAR_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_170",
+    "en": "the Solutionism",
+    "verdict": "keep",
+    "reason": "Soluzionismo tecnologico is a marked critical concept that must be distinguished from neutral problem-solving or a practical orientation toward solutions."
+  },
+  {
+    "id": "it_fancy_vocab_171",
+    "en": "the Tokenization",
+    "verdict": "keep",
+    "reason": "Tokenizzazione has materially different financial-asset and language-processing senses, so a production note must select a domain and complement."
+  },
+  {
+    "id": "it_fancy_vocab_172",
+    "en": "the Virtualization",
+    "verdict": "drop",
+    "reason": "La virtualizzazione is a transparent, standard IT cognate with regular morphology, and the isolated prompt provides no specific resource or architecture sense."
+  },
+  {
+    "id": "it_fancy_vocab_173",
+    "en": "the Digital footprint",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by BIG_TECH_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_174",
+    "en": "the Techno-optimism",
+    "verdict": "keep",
+    "reason": "Tecno-ottimismo is a marked critical concept describing broad faith in technological progress rather than optimism about one device or project."
+  },
+  {
+    "id": "it_fancy_vocab_175",
+    "en": "the Netiquette",
+    "verdict": "drop",
+    "reason": "La netiquette is an unchanged, familiar internet-era loanword already below the target learner's C1 threshold, and the legacy rendering is accurate."
+  },
+  {
+    "id": "it_fancy_vocab_176",
+    "en": "the Digital commons",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by BIG_TECH_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_177",
+    "en": "the Overreach",
+    "verdict": "keep",
+    "reason": "Institutional overreach requires a contextual Italian frame such as sconfinamento oltre le proprie competenze rather than a single mechanical equivalent."
+  },
+  {
+    "id": "it_fancy_vocab_178",
+    "en": "Open-source",
+    "verdict": "keep",
+    "reason": "The source adjective teaches the established invariant loan open source and corrects the legacy default codice sorgente aperto, which is intelligible but calqued."
+  },
+  {
+    "id": "it_fancy_vocab_179",
+    "en": "the Balkanization",
+    "verdict": "keep",
+    "reason": "Balcanizzazione is a marked, historically loaded metaphor for division into rival or incompatible units, not generic fragmentation."
+  },
+  {
+    "id": "it_fancy_vocab_180",
+    "en": "the Duopoly",
+    "verdict": "keep",
+    "reason": "Duopolio is precise competition-policy vocabulary whose exact two-operator meaning must be distinguished from the broader oligopolio."
+  },
+  {
+    "id": "it_fancy_vocab_181",
+    "en": "the Encryption",
+    "verdict": "keep",
+    "reason": "Cifratura is precise technical vocabulary and must be distinguished from codifica, which changes data representation without necessarily providing secrecy."
+  },
+  {
+    "id": "it_fancy_vocab_182",
+    "en": "the Decentralization",
+    "verdict": "drop",
+    "reason": "La decentralizzazione is a transparent, familiar technology cognate; the broad prompt supplies no institutional context that would instead select decentramento."
+  },
+  {
+    "id": "it_fancy_vocab_183",
+    "en": "the Firewall",
+    "verdict": "drop",
+    "reason": "Il firewall is an unchanged and ubiquitous core technology loanword already firmly owned before C1, with no distinctive production issue here."
+  },
+  {
+    "id": "it_fancy_vocab_184",
+    "en": "Bias",
+    "verdict": "keep",
+    "reason": "The polysemous English prompt requires a domain choice between bias, distorsione and pregiudizio; the technology context supports algorithmic distortion."
+  },
+  {
+    "id": "it_fancy_vocab_185",
+    "en": "the Gig economy",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate owned by BIG_TECH_VOCAB under the deterministic duplicate report's specialist-topic rule."
+  },
+  {
+    "id": "it_fancy_vocab_186",
+    "en": "the Cloud",
+    "verdict": "drop",
+    "reason": "Il cloud is an unchanged, ubiquitous core computing loanword already well below the target learner's C1 threshold."
+  },
+  {
+    "id": "it_fancy_vocab_187",
+    "en": "Metadata",
+    "verdict": "keep",
+    "reason": "The item teaches Italian masculine plural usage in i metadati and blocks transfer from English metadata used collectively or as a mass noun."
+  },
+  {
+    "id": "it_fancy_vocab_188",
+    "en": "Protocol",
+    "verdict": "drop",
+    "reason": "Protocollo is a transparent, high-frequency technical and institutional cognate, and the bare prompt selects none of its domain senses more narrowly."
+  },
+  {
+    "id": "it_fancy_vocab_189",
+    "en": "Disruptive",
+    "verdict": "keep",
+    "reason": "The innovation sense calls for dirompente and must be distinguished from something that is merely disturbing, troublesome or interruptive."
+  },
+  {
+    "id": "it_fancy_vocab_190",
+    "en": "Ubiquitous",
+    "verdict": "keep",
+    "reason": "Ubiquo is marked learned vocabulary whose feminine form and lack of a written accent present a real Portuguese-to-Italian interference risk."
+  },
+  {
+    "id": "it_fancy_vocab_191",
+    "en": "Monopolistic",
+    "verdict": "drop",
+    "reason": "Monopolistico is a transparent, familiar economics cognate with predictable adjective morphology and no narrower collocation in the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_192",
+    "en": "Unregulated",
+    "verdict": "keep",
+    "reason": "The item teaches non regolamentato and its consequential distinction from deregolamentato, which normally implies removal of earlier controls."
+  },
+  {
+    "id": "it_fancy_vocab_193",
+    "en": "Fragmented",
+    "verdict": "drop",
+    "reason": "Frammentato is a transparent, familiar adjective with regular morphology and no domain-specific Italian contrast selected here."
+  },
+  {
+    "id": "it_fancy_vocab_194",
+    "en": "Opaque",
+    "verdict": "drop",
+    "reason": "Opaco is a transparent, familiar adjective in both literal and institutional senses, with no production difficulty supplied by the isolated prompt."
+  },
+  {
+    "id": "it_fancy_vocab_195",
+    "en": "Centralized",
+    "verdict": "drop",
+    "reason": "Centralizzato is a transparent, routine adjective with predictable agreement and duplicates the already trivial lexical family of centralizzazione."
+  },
+  {
+    "id": "it_fancy_vocab_196",
+    "en": "Intrusive",
+    "verdict": "drop",
+    "reason": "Intrusivo is a direct, familiar cognate in privacy and technology criticism, and the bare prompt supplies no additional production problem."
+  },
+  {
+    "id": "it_fancy_vocab_197",
+    "en": "Predatory",
+    "verdict": "drop",
+    "reason": "Predatorio is a transparent, familiar metaphorical adjective in business and policy contexts, with regular agreement and no narrower collocation supplied."
+  },
+  {
+    "id": "it_fancy_vocab_198",
+    "en": "Algorithmic",
+    "verdict": "drop",
+    "reason": "Algoritmico is a transparent, ubiquitous technology cognate with regular adjective morphology and an accurate legacy rendering."
+  },
+  {
+    "id": "it_fancy_vocab_199",
+    "en": "Neoliberal",
+    "verdict": "keep",
+    "reason": "Italian commonly uses neoliberista for the political-economic doctrine, creating a genuine contrast with English, French and Spanish forms in -liberal."
+  },
+  {
+    "id": "it_fancy_vocab_200",
+    "en": "Hyperconnected",
+    "verdict": "keep",
+    "reason": "Iperconnesso is useful contemporary critical vocabulary and teaches the joined Italian prefix iper- rather than English hyper- or a hyphenated form."
+  }
+]

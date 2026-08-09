@@ -1,0 +1,56 @@
+[
+  {
+    "id": "it_fancy_vocab_564",
+    "en": "Insightful",
+    "category": "lexical-adjective",
+    "tl": "perspicaz",
+    "alts": [],
+    "register": "Neutro-formal e elogioso para análises, observações ou pessoas que revelam compreensão aguda de um assunto complexo.",
+    "trap": "Insightful não equivale a intuitivo: intuitivo descreve o que se compreende sem raciocínio explícito, enquanto perspicaz destaca a profundidade da compreensão demonstrada.",
+    "example_tl": "A análise perspicaz do relatório mostra como métricas aparentemente neutras transferem poder editorial para plataformas sem qualquer debate público sobre responsabilidade.",
+    "example_en": "The insightful analysis of the report shows how apparently neutral metrics transfer editorial power to platforms without any public debate about accountability.",
+    "cloze": "A análise {{c1::perspicaz}} do relatório mostra como métricas aparentemente neutras transferem poder editorial para plataformas sem qualquer debate público sobre responsabilidade.",
+    "note": "Old_back é adequado. Autorrevisão: mantive perspicaz, em vez de esclarecedor, porque o exemplo elogia a compreensão analítica demonstrada, não apenas a capacidade de tornar o tema claro."
+  },
+  {
+    "id": "it_fancy_vocab_574",
+    "en": "Presumptuous",
+    "category": "lexical-adjective",
+    "tl": "presunçoso",
+    "alts": [],
+    "register": "Neutro-formal e crítico para uma conclusão, atitude ou intervenção que excede o que a evidência, a autoridade ou a posição do agente permite.",
+    "trap": "Presumptuous não significa apenas confiante ou ousado: presunçoso contém uma censura por pretensão excessiva ou por ultrapassar limites sem justificativa.",
+    "example_tl": "Seria presunçoso concluir, a partir de uma única eleição municipal, que toda uma geração abandonou definitivamente os partidos tradicionais.",
+    "example_en": "It would be presumptuous to conclude from a single municipal election that an entire generation has definitively abandoned traditional parties.",
+    "cloze": "Seria {{c1::presunçoso}} concluir, a partir de uma única eleição municipal, que toda uma geração abandonou definitivamente os partidos tradicionais.",
+    "note": "Old_back é adequado. Autorrevisão: deixei as alternativas vazias porque arrogante descreve uma postura mais ampla, e atrevido pode perder a ideia de pretensão injustificada."
+  },
+  {
+    "id": "it_fancy_vocab_576",
+    "en": "Recondite",
+    "category": "lexical-adjective",
+    "tl": "abstruso",
+    "alts": [],
+    "register": "Formal e geralmente crítico para linguagem, conhecimento ou argumentação excepcionalmente difíceis de compreender, sobretudo fora de um círculo especializado.",
+    "trap": "Reconditativo, dado por old_back, não é uma forma lexical padrão; recôndito costuma significar oculto, remoto ou íntimo, não necessariamente difícil de compreender.",
+    "example_tl": "O parecer converte uma escolha política urgente num debate abstruso sobre parâmetros algorítmicos, acessível apenas aos consultores contratados pelas próprias plataformas.",
+    "example_en": "The opinion turns an urgent policy choice into a recondite debate about algorithmic parameters, accessible only to the consultants hired by the platforms themselves.",
+    "cloze": "O parecer converte uma escolha política urgente num debate {{c1::abstruso}} sobre parâmetros algorítmicos, acessível apenas aos consultores contratados pelas próprias plataformas.",
+    "note": "Diverge materialmente de old_back, que fornece uma forma não padrão. Autorrevisão: escolhi abstruso para fixar a dificuldade intelectual; recôndito destacaria ocultação ou afastamento."
+  },
+  {
+    "id": "it_fancy_vocab_577",
+    "en": "Reductive",
+    "category": "lexical-adjective",
+    "tl": "reducionista",
+    "alts": [
+      "simplista"
+    ],
+    "register": "Neutro-formal e crítico em análise política ou acadêmica para uma explicação que elimina fatores ou distinções necessários; simplista é mais abertamente depreciativo.",
+    "trap": "Redutor descreve muitas vezes aquilo que reduz uma quantidade, um risco ou um custo; reducionista marca com mais clareza a simplificação indevida de uma questão complexa.",
+    "example_tl": "A leitura reducionista da crise atribui toda a polarização às redes sociais e apaga desigualdades econômicas, conflitos regionais e decisões institucionais.",
+    "example_en": "The reductive reading of the crisis attributes all polarization to social media and erases economic inequalities, regional conflicts, and institutional decisions.",
+    "cloze": "A leitura {{c1::reducionista}} da crise atribui toda a polarização às redes sociais e apaga desigualdades econômicas, conflitos regionais e decisões institucionais.",
+    "note": "Diverge de old_back: redutora é uma forma portuguesa válida, mas não fixa com igual clareza a acepção crítica de simplificação excessiva. Autorrevisão: mantive simplista como alternativa contextual, registrando sua censura mais forte."
+  }
+]

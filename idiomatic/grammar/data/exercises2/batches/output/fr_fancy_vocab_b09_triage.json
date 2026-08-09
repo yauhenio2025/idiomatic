@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_321",
+    "en": "to collect",
+    "verdict": "drop",
+    "reason": "Collecter is familiar core data vocabulary in French, and the isolated prompt selects no instructive contrast with recueillir or rassembler."
+  },
+  {
+    "id": "it_fancy_vocab_322",
+    "en": "to store",
+    "verdict": "drop",
+    "reason": "Stocker is a transparent, high-frequency technology verb with regular argument structure and no narrower storage distinction here."
+  },
+  {
+    "id": "it_fancy_vocab_323",
+    "en": "to share",
+    "verdict": "drop",
+    "reason": "Partager is elementary, productive vocabulary, and the prompt provides no specialist data-sharing construction worth testing at C1."
+  },
+  {
+    "id": "it_fancy_vocab_324",
+    "en": "to sell",
+    "verdict": "drop",
+    "reason": "Vendre is elementary core vocabulary with ordinary transitive use and no selected commercial or legal construction."
+  },
+  {
+    "id": "it_fancy_vocab_325",
+    "en": "to advertise",
+    "verdict": "keep",
+    "reason": "Faire de la publicité pour supplies a fixed preposition and blocks confusion with avertir, which means to warn."
+  },
+  {
+    "id": "it_fancy_vocab_326",
+    "en": "to personalize",
+    "verdict": "drop",
+    "reason": "Personnaliser is a transparent, familiar marketing and technology cognate with predictable morphology."
+  },
+  {
+    "id": "it_fancy_vocab_327",
+    "en": "to discriminate",
+    "verdict": "drop",
+    "reason": "Discriminer is established, familiar rights vocabulary in French, and the bare prompt adds no complement or sense distinction beyond that direct rendering."
+  },
+  {
+    "id": "it_fancy_vocab_328",
+    "en": "to violate",
+    "verdict": "keep",
+    "reason": "French distributes the English umbrella verb across violer une loi or un droit and porter atteinte à la vie privée, making the digital-policy sense instructive."
+  },
+  {
+    "id": "it_fancy_vocab_329",
+    "en": "to compete",
+    "verdict": "keep",
+    "reason": "Rivaliser avec teaches the intransitive frame and governed preposition, unlike old_back concurrencer, which is a transitive verb."
+  },
+  {
+    "id": "it_fancy_vocab_330",
+    "en": "to connect",
+    "verdict": "drop",
+    "reason": "Connecter is familiar technology vocabulary, while the underspecified prompt gives no basis for choosing among linking devices, people or ideas."
+  },
+  {
+    "id": "it_fancy_vocab_331",
+    "en": "to address",
+    "verdict": "keep",
+    "reason": "Addressing an issue requires traiter or s’attaquer à; old_back s’adresser selects speaking or writing to a recipient."
+  },
+  {
+    "id": "it_fancy_vocab_332",
+    "en": "to fail",
+    "verdict": "drop",
+    "reason": "The bare prompt is too broad to choose among échouer, tomber en panne and manquer à, while each individual sense is already familiar at C1."
+  },
+  {
+    "id": "it_fancy_vocab_333",
+    "en": "to succeed",
+    "verdict": "drop",
+    "reason": "Réussir is familiar core vocabulary, and the prompt does not select a useful construction such as réussir à or the unrelated succession sense."
+  },
+  {
+    "id": "it_fancy_vocab_334",
+    "en": "to entrench",
+    "verdict": "keep",
+    "reason": "Ancrer durablement preserves the common transitive policy sense, whereas old_back s’enraciner is reflexive and reverses the perspective."
+  },
+  {
+    "id": "it_fancy_vocab_335",
+    "en": "to lobby",
+    "verdict": "keep",
+    "reason": "Faire du lobbying auprès de is a productive institutional expression whose government merits explicit practice."
+  },
+  {
+    "id": "it_fancy_vocab_336",
+    "en": "to acquire",
+    "verdict": "drop",
+    "reason": "Acquérir is a transparent, common formal cognate with regular conjugation and no specialized acquisition frame selected here."
+  },
+  {
+    "id": "it_fancy_vocab_337",
+    "en": "to partner",
+    "verdict": "keep",
+    "reason": "French replaces the English converted verb with reflexive s’associer à or the noun-based expression conclure un partenariat avec."
+  },
+  {
+    "id": "it_fancy_vocab_338",
+    "en": "to limit",
+    "verdict": "drop",
+    "reason": "Limiter is a transparent, high-frequency verb with predictable valency and no special governed complement in this prompt."
+  },
+  {
+    "id": "it_fancy_vocab_339",
+    "en": "to secure",
+    "verdict": "keep",
+    "reason": "In the obtain-successfully sense, French uses obtenir; old_back sécuriser instead means to protect or make less uncertain."
+  },
+  {
+    "id": "it_fancy_vocab_340",
+    "en": "Dominant",
+    "verdict": "drop",
+    "reason": "Dominant is a transparent, familiar policy cognate with ordinary adjective agreement and no narrower collocation here."
+  },
+  {
+    "id": "it_fancy_vocab_341",
+    "en": "Invasive",
+    "verdict": "keep",
+    "reason": "Privacy criticism normally favors intrusif, while old_back invasif has stronger medical and biological associations."
+  },
+  {
+    "id": "it_fancy_vocab_342",
+    "en": "Innovative",
+    "verdict": "drop",
+    "reason": "Innovant is a transparent, ubiquitous business and policy cognate with predictable agreement."
+  },
+  {
+    "id": "it_fancy_vocab_343",
+    "en": "Restrictive",
+    "verdict": "drop",
+    "reason": "Restrictif is a direct, familiar policy cognate, and the prompt identifies no contrast with contraignant or limitation construction."
+  },
+  {
+    "id": "it_fancy_vocab_344",
+    "en": "Transparent",
+    "verdict": "drop",
+    "reason": "Transparent is a high-frequency identical cognate whose figurative institutional use is already standard well below C1."
+  },
+  {
+    "id": "it_fancy_vocab_345",
+    "en": "Powerful",
+    "verdict": "drop",
+    "reason": "Puissant is familiar core vocabulary, and the isolated prompt selects no referent-specific alternative such as performant or influent."
+  },
+  {
+    "id": "it_fancy_vocab_346",
+    "en": "Unethical",
+    "verdict": "keep",
+    "reason": "Contraire à l’éthique provides an idiomatic categorical judgment and improves on the English-shaped old_back non éthique."
+  },
+  {
+    "id": "it_fancy_vocab_347",
+    "en": "Lucrative",
+    "verdict": "drop",
+    "reason": "Lucratif is a transparent formal cognate already expected at C1, and the prompt gives no construction such as à but lucratif."
+  },
+  {
+    "id": "it_fancy_vocab_348",
+    "en": "Personalized",
+    "verdict": "drop",
+    "reason": "Personnalisé is a transparent, ubiquitous technology and marketing cognate with predictable adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_349",
+    "en": "Biased",
+    "verdict": "keep",
+    "reason": "Biaisé is natural for data, methods and judgments, while a biased person is more often partial, making the referent distinction useful."
+  },
+  {
+    "id": "it_fancy_vocab_350",
+    "en": "Decentralized",
+    "verdict": "drop",
+    "reason": "Décentralisé is a transparent, familiar technical and political cognate with fully predictable participial morphology."
+  },
+  {
+    "id": "it_fancy_vocab_351",
+    "en": "Globalized",
+    "verdict": "keep",
+    "reason": "Careful France-French policy prose generally prefers mondialisé, while old_back globalisé remains a visibly English-modeled alternative."
+  },
+  {
+    "id": "it_fancy_vocab_352",
+    "en": "Competitive",
+    "verdict": "keep",
+    "reason": "A competitive market is concurrentiel, whereas compétitif normally describes an actor, product or price capable of competing."
+  },
+  {
+    "id": "it_fancy_vocab_353",
+    "en": "Comprehensive",
+    "verdict": "keep",
+    "reason": "Complet in this sense blocks the productive false friend compréhensif, which describes an understanding or broad-minded person."
+  },
+  {
+    "id": "it_fancy_vocab_354",
+    "en": "Excessive",
+    "verdict": "drop",
+    "reason": "Excessif is a transparent, high-frequency evaluative cognate with ordinary agreement and no narrower professional sense."
+  },
+  {
+    "id": "it_fancy_vocab_355",
+    "en": "Controversial",
+    "verdict": "drop",
+    "reason": "Controversé is familiar C1 policy vocabulary, and the bare prompt provides no useful contrast with polémique or contesté."
+  },
+  {
+    "id": "it_fancy_vocab_356",
+    "en": "Secure",
+    "verdict": "keep",
+    "reason": "In the surrounding technology sequence, sécurisé identifies a system protected by security measures and usefully contrasts with broader sûr."
+  },
+  {
+    "id": "it_fancy_vocab_357",
+    "en": "Vulnerable",
+    "verdict": "drop",
+    "reason": "Vulnérable is an identical, high-frequency cognate in French with regular agreement and no selected technical construction."
+  },
+  {
+    "id": "it_fancy_vocab_358",
+    "en": "Exclusive",
+    "verdict": "drop",
+    "reason": "Exclusif is a transparent, familiar cognate, while the isolated prompt gives no basis for selecting restricted-access, prestige or incompatibility senses."
+  },
+  {
+    "id": "it_fancy_vocab_359",
+    "en": "Inclusive",
+    "verdict": "drop",
+    "reason": "Inclusif is a transparent, familiar social-policy cognate with regular agreement and no distinctive construction."
+  },
+  {
+    "id": "it_fancy_vocab_360",
+    "en": "Interconnected",
+    "verdict": "drop",
+    "reason": "Interconnecté is transparent, predictable technical vocabulary already familiar to an advanced learner."
+  }
+]

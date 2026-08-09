@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "verdict": "keep",
+    "reason": "In the semiconductor sense, fonderie de semi-conducteurs is a domain term and must not be reduced to an ordinary metal foundry."
+  },
+  {
+    "id": "it_fancy_vocab_282",
+    "en": "the Microprocessor",
+    "verdict": "drop",
+    "reason": "Microprocesseur is a transparent, ubiquitous technical cognate with predictable gender and no construction selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_283",
+    "en": "the Nanometer",
+    "verdict": "drop",
+    "reason": "Nanomètre is a transparent SI unit already familiar at C1, and its regular masculine gender adds too little teaching value."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "verdict": "keep",
+    "reason": "Semiconductor fabrication calls for photolithographie, a more precise term than the artistic and printing process lithographie given by the legacy gloss."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "verdict": "keep",
+    "reason": "A semiconductor die is a puce nue, not the legacy matrice; the package-status distinction is technically meaningful."
+  },
+  {
+    "id": "it_fancy_vocab_286",
+    "en": "the Fabless",
+    "verdict": "keep",
+    "reason": "Although the English prompt is elliptical, the fabless semiconductor business model supports a production-ready French noun phrase and a genuine register choice."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "verdict": "keep",
+    "reason": "Système sur puce is an established compound, normally paired with SoC, and denotes more than an ordinary microprocessor."
+  },
+  {
+    "id": "it_fancy_vocab_288",
+    "en": "the Moore's Law",
+    "verdict": "drop",
+    "reason": "La loi de Moore is a familiar, compositionally transparent proper-name expression with no further production difficulty here."
+  },
+  {
+    "id": "it_fancy_vocab_289",
+    "en": "the Integrated Circuit",
+    "verdict": "drop",
+    "reason": "Circuit intégré is a transparent and ubiquitous electronics term with ordinary masculine gender and regular modification."
+  },
+  {
+    "id": "it_fancy_vocab_290",
+    "en": "the Neural Networks",
+    "verdict": "drop",
+    "reason": "Réseaux neuronaux is now familiar core AI vocabulary, directly cognate and morphologically predictable."
+  },
+  {
+    "id": "it_fancy_vocab_291",
+    "en": "the Deep Learning",
+    "verdict": "keep",
+    "reason": "Apprentissage profond is the recommended French field name and usefully contrasts with the widespread English loan deep learning."
+  },
+  {
+    "id": "it_fancy_vocab_292",
+    "en": "the Machine Learning",
+    "verdict": "keep",
+    "reason": "Apprentissage automatique is an established nonliteral term vulnerable to an English-shaped apprentissage machine calque."
+  },
+  {
+    "id": "it_fancy_vocab_293",
+    "en": "the Training Data",
+    "verdict": "keep",
+    "reason": "Données d’entraînement fixes the machine-learning sense and supports a useful distinction from the narrower jeu d’entraînement."
+  },
+  {
+    "id": "it_fancy_vocab_294",
+    "en": "the Algorithms",
+    "verdict": "drop",
+    "reason": "Algorithmes is a transparent, ubiquitous computing cognate with predictable masculine plural morphology."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "verdict": "keep",
+    "reason": "The French discipline name adds automatique and conventionally yields TALN, so the legacy gloss is incomplete and English NLP should not be imported."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "verdict": "keep",
+    "reason": "Réseaux antagonistes génératifs is the established French technical rendering; legacy adversoriels is an avoidable calque."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "verdict": "keep",
+    "reason": "Apprentissage par renforcement is a fixed nonliteral construction whose preposition and technical sense merit active practice."
+  },
+  {
+    "id": "it_fancy_vocab_298",
+    "en": "the AI Ethics",
+    "verdict": "drop",
+    "reason": "Éthique de l’IA is a transparent and now familiar technology-policy compound, and the prompt selects no narrower framework."
+  },
+  {
+    "id": "it_fancy_vocab_299",
+    "en": "the Supervised Learning",
+    "verdict": "drop",
+    "reason": "Apprentissage supervisé is compositionally transparent, established core AI vocabulary with regular adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_300",
+    "en": "the Unsupervised Learning",
+    "verdict": "drop",
+    "reason": "Apprentissage non supervisé is compositionally transparent and differs from the familiar supervised term only by regular negation."
+  },
+  {
+    "id": "it_fancy_vocab_301",
+    "en": "the Model",
+    "verdict": "drop",
+    "reason": "Modèle is a transparent, high-frequency cognate, while the isolated prompt provides no basis for choosing a specialized AI sense."
+  },
+  {
+    "id": "it_fancy_vocab_302",
+    "en": "the Logistics",
+    "verdict": "drop",
+    "reason": "Logistique is transparent, ubiquitous business vocabulary already below C1 and carries no special construction here."
+  },
+  {
+    "id": "it_fancy_vocab_303",
+    "en": "the Inventory",
+    "verdict": "keep",
+    "reason": "Supply-chain inventory is stock or stocks; French inventaire normally denotes stocktaking or its resulting list, so the legacy cognate is misleading."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "verdict": "keep",
+    "reason": "French distinguishes the purchasing function from physical replenishment, whereas legacy approvisionnement collapses the two processes."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "verdict": "keep",
+    "reason": "The logistics method is the hyphenated noun le juste-à-temps, not the everyday adverbial phrase juste à temps."
+  },
+  {
+    "id": "it_fancy_vocab_306",
+    "en": "the Distribution",
+    "verdict": "drop",
+    "reason": "Distribution is a transparent, familiar logistics cognate with regular morphology and no narrower channel or process specified."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "verdict": "keep",
+    "reason": "Logistique externalisée and the industry label 3PL name a specialist service model; legacy logistique des tiers is not idiomatic French."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "verdict": "keep",
+    "reason": "Lead time requires a context-specific French délai compound and should not be treated as an English-shaped generic duration."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "verdict": "keep",
+    "reason": "Sourcing fournisseurs specifically foregrounds identifying and selecting suppliers, which legacy approvisionnement wrongly broadens to obtaining supplies."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "verdict": "keep",
+    "reason": "A SKU is an internal article reference, not the stock-management process suggested by a literal expansion, and it must be distinguished from EAN or GTIN."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "verdict": "keep",
+    "reason": "Prévision de la demande is a productive planning collocation whose fixed noun and preposition carry useful professional vocabulary."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "verdict": "keep",
+    "reason": "Effet coup de fouet is a fixed specialist metaphor for demand amplification; the capitalized legacy English loan is not the best French rendering."
+  },
+  {
+    "id": "it_fancy_vocab_313",
+    "en": "the Vertical Integration",
+    "verdict": "drop",
+    "reason": "Intégration verticale is a compositionally transparent and familiar business-policy term with ordinary gender and adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_314",
+    "en": "the Outsourcing",
+    "verdict": "keep",
+    "reason": "Externalisation is the idiomatic nonliteral French business term and must be distinguished from the narrower relationship of sous-traitance."
+  },
+  {
+    "id": "it_fancy_vocab_315",
+    "en": "the Transportation",
+    "verdict": "drop",
+    "reason": "Transport is familiar core vocabulary with a direct translation and no selected modal, legal or logistics-specific sense."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "verdict": "keep",
+    "reason": "Entreposage names the professional warehousing operation and usefully contrasts with stockage, which foregrounds keeping goods in storage."
+  },
+  {
+    "id": "it_fancy_vocab_317",
+    "en": "the Node",
+    "verdict": "keep",
+    "reason": "Nœud is a productive noncognate technical term, and nœud logistique fixes the network sense selected by the surrounding supply-chain vocabulary."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "verdict": "keep",
+    "reason": "Routine status tracking is suivre or assurer le suivi de, while tracer concerns traceability; the legacy infinitive is also malformed."
+  },
+  {
+    "id": "it_fancy_vocab_319",
+    "en": "to marginalize",
+    "verdict": "drop",
+    "reason": "Marginaliser is a transparent, familiar critical verb with regular conjugation and no special complement selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "verdict": "keep",
+    "reason": "Tirer profit de supplies the governed preposition and intended benefit sense, which a bare profiter headword leaves underspecified."
+  }
+]

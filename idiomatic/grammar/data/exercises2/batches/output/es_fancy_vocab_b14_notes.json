@@ -1,0 +1,58 @@
+[
+  {
+    "id": "it_fancy_vocab_530",
+    "en": "The rationale",
+    "category": "lexical-noun",
+    "tl": "la justificación",
+    "alts": [
+      "el fundamento"
+    ],
+    "register": "Neutral-formal for the reasons or basis offered in support of a policy, decision or argument; fundamento foregrounds the underlying basis.",
+    "trap": "Razonamiento names a reasoning process or line of reasoning; it is not the usual rendering when rationale means the basis offered to justify a decision.",
+    "example_tl": "La justificación oficial para ampliar la vigilancia se apoya en amenazas hipotéticas y omite cualquier evaluación seria de sus costes democráticos.",
+    "example_en": "The official rationale for expanding surveillance rests on hypothetical threats and omits any serious assessment of its democratic costs.",
+    "cloze": "{{c1::La justificación}} oficial para ampliar la vigilancia se apoya en amenazas hipotéticas y omite cualquier evaluación seria de sus costes democráticos.",
+    "note": "Materially replaces legacy El razonamiento, which denotes the reasoning process rather than the supporting basis. Self-review retained fundamento as the sole alternative because motivo would denote one reason and would not substitute cleanly here."
+  },
+  {
+    "id": "it_fancy_vocab_536",
+    "en": "Abstract",
+    "category": "lexical-adjective",
+    "tl": "abstracto",
+    "alts": [],
+    "register": "Neutral academic adjective for something conceptual or removed from concrete instances; the feminine form is abstracta.",
+    "trap": "English abstract is category-ambiguous: the noun is el resumen, but the adjective is abstracto; legacy Resumen selects the wrong category in this adjective sequence.",
+    "example_tl": "El principio abstracto de neutralidad pierde fuerza cuando los sistemas automatizados distribuyen visibilidad según criterios comerciales opacos y difícilmente impugnables.",
+    "example_en": "The abstract principle of neutrality loses force when automated systems distribute visibility according to opaque commercial criteria that are difficult to challenge.",
+    "cloze": "El principio {{c1::abstracto}} de neutralidad pierde fuerza cuando los sistemas automatizados distribuyen visibilidad según criterios comerciales opacos y difícilmente impugnables.",
+    "note": "Materially corrects legacy Resumen. The source's position at the start of the adjective sequence resolves the otherwise ambiguous English form. Self-review removed teórico because it is not interchangeable with abstracto in every conceptual contrast."
+  },
+  {
+    "id": "it_fancy_vocab_539",
+    "en": "Cogent",
+    "category": "lexical-adjective",
+    "tl": "sólido y convincente",
+    "alts": [],
+    "register": "Neutral-formal for reasoning that is both logically forceful and persuasive; Spanish often uses a coordinated phrase to preserve both components.",
+    "trap": "Cogente exists in learned Spanish, especially in legal or philosophical prose, but using it automatically for any persuasive argument makes general analytical writing sound unduly specialized.",
+    "example_tl": "El comité presentó un argumento sólido y convincente contra el reconocimiento facial, apoyado en auditorías independientes y no en temores meramente hipotéticos.",
+    "example_en": "The committee presented a cogent argument against facial recognition, grounded in independent audits rather than merely hypothetical fears.",
+    "cloze": "El comité presentó un argumento {{c1::sólido y convincente}} contra el reconocimiento facial, apoyado en auditorías independientes y no en temores meramente hipotéticos.",
+    "note": "Materially refines legacy Cogente: the cognate can be valid in learned specialist prose but is not the unmarked general rendering. Self-review used the two-part phrase because convincente alone can describe persuasion without sound reasoning."
+  },
+  {
+    "id": "it_fancy_vocab_554",
+    "en": "Factual",
+    "category": "lexical-adjective",
+    "tl": "basado en hechos",
+    "alts": [
+      "fáctico"
+    ],
+    "register": "Basado en hechos is neutral and broadly idiomatic; fáctico is formal and especially common when contrasting factual and normative questions.",
+    "trap": "Factual does not mean objective or unbiased: a text may report facts accurately while selecting or framing them tendentiously.",
+    "example_tl": "El reportaje ofrece un relato basado en hechos, pero omite el contexto histórico necesario para interpretar la conducta de los actores implicados.",
+    "example_en": "The report offers a factual account but omits the historical context needed to interpret the conduct of the actors involved.",
+    "cloze": "El reportaje ofrece un relato {{c1::basado en hechos}}, pero omite el contexto histórico necesario para interpretar la conducta de los actores implicados.",
+    "note": "Legacy Factual is possible in specialist Spanish, but basado en hechos is the safer general production choice. Self-review removed objetivo and veraz because neither is genuinely interchangeable with factual."
+  }
+]

@@ -1,0 +1,190 @@
+[
+  {
+    "id": "it_fancy_vocab_361",
+    "en": "Diverse",
+    "category": "lexical-adjective",
+    "tl": "diversificado",
+    "alts": [
+      "heterogêneo"
+    ],
+    "register": "Neutro-formal para um conjunto composto de elementos variados; heterogêneo é mais analítico e enfatiza diferenças internas.",
+    "trap": "Diverso é possível, mas antes de um substantivo plural costuma significar vários; diversos veículos não equivale necessariamente a veículos diversificados.",
+    "example_tl": "Um ecossistema midiático diversificado reduz a dependência de poucos intermediários e expõe o público a perspectivas, formatos e modelos econômicos distintos.",
+    "example_en": "A diverse media ecosystem reduces dependence on a few intermediaries and exposes the public to different perspectives, formats, and economic models.",
+    "cloze": "Um ecossistema midiático {{c1::diversificado}} reduz a dependência de poucos intermediários e expõe o público a perspectivas, formatos e modelos econômicos distintos.",
+    "note": "Old_back é possível em certos contextos, mas não fixa a acepção de variedade interna. A nota seleciona diversificado e o exemplo torna explícita a composição do conjunto. Autorrevisão: mantive heterogêneo porque preserva o sentido no exemplo, embora destaque mais a diferença entre os elementos."
+  },
+  {
+    "id": "it_fancy_vocab_364",
+    "en": "Responsive",
+    "category": "lexical-adjective",
+    "tl": "receptivo a",
+    "alts": [],
+    "register": "Neutro-formal para pessoa ou instituição disposta a considerar críticas, necessidades ou evidências; em interfaces digitais, responsivo é o termo técnico corrente.",
+    "trap": "Responsivo é natural em design responsivo e em certos usos técnicos, mas não substitui automaticamente receptive ou attentive ao descrever uma instituição.",
+    "example_tl": "O regulador permaneceu receptivo às críticas dos pesquisadores, mas exigiu evidências independentes antes de alterar o protocolo usado nas auditorias algorítmicas.",
+    "example_en": "The regulator remained responsive to the researchers' criticism but required independent evidence before changing the protocol used in algorithmic audits.",
+    "cloze": "O regulador permaneceu {{c1::receptivo às}} críticas dos pesquisadores, mas exigiu evidências independentes antes de alterar o protocolo usado nas auditorias algorítmicas.",
+    "note": "O prompt isolado é polissêmico. Esta nota seleciona a resposta institucional a críticas; old_back é adequado sobretudo para a acepção técnica ligada a interfaces e sistemas. Autorrevisão: retirei atento a das alternativas porque atenção não implica necessariamente disposição para responder."
+  },
+  {
+    "id": "it_fancy_vocab_365",
+    "en": "Detached",
+    "category": "lexical-adjective",
+    "tl": "desvinculado de",
+    "alts": [
+      "dissociado de"
+    ],
+    "register": "Neutro-formal para análises, decisões ou debates sem vínculo com seu contexto; distante descreve melhor o desapego emocional.",
+    "trap": "Detached muda conforme o referente: separado serve à distância física, distante ao comportamento emocional e desvinculado de à falta de conexão conceitual.",
+    "example_tl": "Um diagnóstico desvinculado das condições materiais do jornalismo transforma escolhas comerciais recentes em consequências aparentemente inevitáveis da inovação tecnológica.",
+    "example_en": "An assessment detached from journalism's material conditions turns recent commercial choices into apparently inevitable consequences of technological innovation.",
+    "cloze": "Um diagnóstico {{c1::desvinculado das}} condições materiais do jornalismo transforma escolhas comerciais recentes em consequências aparentemente inevitáveis da inovação tecnológica.",
+    "note": "O prompt é fortemente polissêmico. A nota seleciona a acepção argumentativa detached from context e substitui materialmente old_back, genérico demais nesse uso. Autorrevisão: acrescentei a preposição governada ao headword e confirmei que dissociado de funciona no mesmo exemplo."
+  },
+  {
+    "id": "it_fancy_vocab_373",
+    "en": "Consumptive",
+    "category": "lexical-adjective",
+    "tl": "consuntivo",
+    "alts": [],
+    "register": "Termo técnico-formal de hidrologia e gestão ambiental, frequente na locução uso consuntivo da água.",
+    "trap": "Consuntivo indica que o uso reduz a disponibilidade do recurso; consumista descreve orientação ao consumo e não traduz essa acepção técnica.",
+    "example_tl": "O relatório subestimou o uso consuntivo de água pelos centros de dados, cujos sistemas de resfriamento devolvem apenas parte do volume captado.",
+    "example_en": "The report underestimated data centers' consumptive use of water, as their cooling systems return only part of the volume withdrawn.",
+    "cloze": "O relatório subestimou o uso {{c1::consuntivo}} de água pelos centros de dados, cujos sistemas de resfriamento devolvem apenas parte do volume captado.",
+    "note": "Old_back é correto apenas nesta acepção especializada de uso de recursos; o adjetivo inglês exige outras traduções em contextos médicos ou comportamentais. Autorrevisão: o exemplo explicita a captação e a devolução para demonstrar o sentido técnico, sem generalizar sobre todos os centros de dados."
+  },
+  {
+    "id": "it_fancy_vocab_376",
+    "en": "the Data",
+    "category": "lexical-noun",
+    "tl": "os dados",
+    "alts": [],
+    "register": "Neutro e corrente em tecnologia, pesquisa e políticas públicas; o singular dado designa um elemento informacional individual.",
+    "trap": "Data funciona muitas vezes como nome de massa em inglês; em português, os dados é normalmente plural e exige determinantes, adjetivos e verbos no plural.",
+    "example_tl": "Os dados coletados pelos aplicativos revelam preferências políticas e informações de saúde que muitos usuários desconhecem ter compartilhado com intermediários comerciais.",
+    "example_en": "The data collected by apps reveal political preferences and health information that many users do not realize they have shared with commercial intermediaries.",
+    "cloze": "{{c1::Os dados}} coletados pelos aplicativos revelam preferências políticas e informações de saúde que muitos usuários desconhecem ter compartilhado com intermediários comerciais.",
+    "note": "Old_back fornece o headword correto. A retenção se justifica pelo contraste produtivo entre o frequente nome de massa inglês e a concordância plural exigida em português."
+  },
+  {
+    "id": "it_fancy_vocab_377",
+    "en": "the Regulation",
+    "category": "lexical-noun",
+    "tl": "a regulação de",
+    "alts": [],
+    "register": "Neutro-formal para o processo ou regime que disciplina uma atividade; regulamento costuma nomear um instrumento específico.",
+    "trap": "Regulation pode ser processo, conjunto de regras ou norma individual; português distingue regulação, regulamentação, regulamento e norma conforme o escopo.",
+    "example_tl": "A regulação dos mercados digitais será ineficaz se as autoridades não tiverem especialistas capazes de auditar sistemas algorítmicos e contestar alegações técnicas das plataformas.",
+    "example_en": "Regulation of digital markets will be ineffective if the authorities lack specialists capable of auditing algorithmic systems and challenging platforms' technical claims.",
+    "cloze": "{{c1::A regulação dos}} mercados digitais será ineficaz se as autoridades não tiverem especialistas capazes de auditar sistemas algorítmicos e contestar alegações técnicas das plataformas.",
+    "note": "Diverge materialmente de old_back: regulamento seleciona um ato ou conjunto específico de regras, enquanto o exemplo exige o processo ou regime regulatório. Autorrevisão: não listei regulamentação como alternativa porque ela pode enfatizar a elaboração de regras de execução."
+  },
+  {
+    "id": "it_fancy_vocab_378",
+    "en": "the Advertisement",
+    "category": "lexical-noun",
+    "tl": "o anúncio publicitário",
+    "alts": [
+      "a peça publicitária"
+    ],
+    "register": "Neutro para uma mensagem promocional individual; peça publicitária é corrente no setor e destaca o material produzido.",
+    "trap": "Publicidade costuma nomear a atividade ou o setor; propaganda pode ser um anúncio no Brasil, mas também designa uma campanha ou comunicação persuasiva mais ampla.",
+    "example_tl": "O anúncio publicitário prometia proteção absoluta, mas omitia que o serviço compartilharia dados sensíveis com dezenas de intermediários sem consentimento específico.",
+    "example_en": "The advertisement promised absolute protection but omitted that the service would share sensitive data with dozens of intermediaries without specific consent.",
+    "cloze": "{{c1::O anúncio publicitário}} prometia proteção absoluta, mas omitia que o serviço compartilharia dados sensíveis com dezenas de intermediários sem consentimento específico.",
+    "note": "Old_back é possível no português brasileiro, porém menos preciso para um anúncio contável isolado. A nota escolhe uma forma inequívoca e preserva a distinção entre uma peça e a publicidade como atividade."
+  },
+  {
+    "id": "it_fancy_vocab_381",
+    "en": "the Revenue",
+    "category": "lexical-noun",
+    "tl": "a receita",
+    "alts": [],
+    "register": "Termo neutro da contabilidade e do jornalismo econômico para valores gerados antes da dedução dos custos; pode ser qualificado como bruta ou líquida.",
+    "trap": "Revenue não é lucro: receita registra valores gerados pela atividade, enquanto lucro é o resultado após os custos; renda é mais comum para pessoas e famílias.",
+    "example_tl": "A receita publicitária da plataforma cresceu no trimestre, embora a empresa tenha perdido usuários ativos e recebido novas multas por práticas anticoncorrenciais.",
+    "example_en": "The platform's advertising revenue grew during the quarter, although the company lost active users and received new fines for anticompetitive practices.",
+    "cloze": "{{c1::A receita}} publicitária da plataforma cresceu no trimestre, embora a empresa tenha perdido usuários ativos e recebido novas multas por práticas anticoncorrenciais.",
+    "note": "Old_back fornece o equivalente correto para a acepção econômico-contábil selecionada. A retenção fixa a distinção entre receita, faturamento, renda e lucro sem tratá-los como sinônimos automáticos."
+  },
+  {
+    "id": "it_fancy_vocab_383",
+    "en": "the Competition",
+    "category": "lexical-noun",
+    "tl": "a concorrência",
+    "alts": [],
+    "register": "Neutro-formal em economia e direito concorrencial para a rivalidade entre agentes de mercado.",
+    "trap": "No sentido econômico, competition é concorrência; competição também pode indicar disputa ou concurso, e competência significa capacidade ou atribuição legal.",
+    "example_tl": "A autoridade concluiu que a aquisição reduziria a concorrência no mercado publicitário e aumentaria a dependência dos pequenos veículos em relação à plataforma resultante.",
+    "example_en": "The authority concluded that the acquisition would reduce competition in the advertising market and increase small outlets' dependence on the resulting platform.",
+    "cloze": "A autoridade concluiu que a aquisição reduziria {{c1::a concorrência}} no mercado publicitário e aumentaria a dependência dos pequenos veículos em relação à plataforma resultante.",
+    "note": "Old_back está correto para a acepção econômica fixada pelo exemplo. O prompt isolado também pode designar uma competição ou um concurso, por isso a nota documenta explicitamente o domínio."
+  },
+  {
+    "id": "it_fancy_vocab_385",
+    "en": "the Breach",
+    "category": "lexical-noun",
+    "tl": "o incidente de segurança",
+    "alts": [],
+    "register": "Termo técnico e regulatório corrente no Brasil para um evento que compromete dados ou sistemas; o ativo afetado pode ser especificado.",
+    "trap": "Breach depende do complemento: data breach pode ser incidente de segurança ou, se houve exposição, vazamento; breach of contract é descumprimento ou inadimplemento.",
+    "example_tl": "O incidente de segurança expôs prontuários médicos de milhares de pacientes porque o fornecedor ignorara repetidos alertas internos durante vários meses.",
+    "example_en": "The security breach exposed thousands of patients' medical records because the provider had ignored repeated internal warnings for several months.",
+    "cloze": "{{c1::O incidente de segurança}} expôs prontuários médicos de milhares de pacientes porque o fornecedor ignorara repetidos alertas internos durante vários meses.",
+    "note": "O prompt é polissêmico. Esta nota seleciona a acepção de segurança da informação; old_back violação, sem complemento, não identifica naturalmente esse evento no português brasileiro. Autorrevisão: preferi o termo regulatório amplo a vazamento, que pressupõe exposição ou divulgação."
+  },
+  {
+    "id": "it_fancy_vocab_389",
+    "en": "the Profit",
+    "category": "lexical-noun",
+    "tl": "o lucro",
+    "alts": [],
+    "register": "Termo neutro da contabilidade e da análise econômica para o resultado positivo depois dos custos, frequentemente qualificado como bruto, operacional ou líquido.",
+    "trap": "Lucro não é receita nem faturamento; além disso, benefício, embora próximo do espanhol e do francês, designa normalmente uma vantagem, não o resultado contábil.",
+    "example_tl": "O lucro líquido do grupo aumentou apesar da estagnação da receita, sobretudo após demissões em massa e cortes profundos no investimento em pesquisa.",
+    "example_en": "The group's net profit increased despite stagnant revenue, especially after mass layoffs and deep cuts in research investment.",
+    "cloze": "{{c1::O lucro}} líquido do grupo aumentou apesar da estagnação da receita, sobretudo após demissões em massa e cortes profundos no investimento em pesquisa.",
+    "note": "Old_back fornece o equivalente correto. A retenção usa o contraste com receita para fixar a acepção contábil e registrar uma interferência relevante das outras línguas do curso."
+  },
+  {
+    "id": "it_fancy_vocab_391",
+    "en": "the Policy",
+    "category": "lexical-noun",
+    "tl": "a política de",
+    "alts": [],
+    "register": "Neutro-formal para uma orientação pública ou organizacional coerente; diretriz e norma designam instruções ou regras mais estreitas.",
+    "trap": "Policy e politics podem ser política em português, mas uma insurance policy é apólice; o contexto e o complemento determinam a acepção.",
+    "example_tl": "A política de moderação permite exceções para líderes políticos, mas a empresa não explica quais critérios aplica nem quem autoriza cada decisão.",
+    "example_en": "The moderation policy allows exceptions for political leaders, but the company does not explain which criteria it applies or who authorizes each decision.",
+    "cloze": "{{c1::A política de}} moderação permite exceções para líderes políticos, mas a empresa não explica quais critérios aplica nem quem autoriza cada decisão.",
+    "note": "Old_back é correto para a acepção institucional selecionada, mas não traduz todos os usos do substantivo inglês. Autorrevisão: incluí a preposição produtiva no headword e evitei diretriz como alternativa irrestrita."
+  },
+  {
+    "id": "it_fancy_vocab_393",
+    "en": "the Accountability",
+    "category": "lexical-noun",
+    "tl": "a prestação de contas",
+    "alts": [],
+    "register": "Expressão formal consolidada em governança, administração pública e supervisão institucional para o dever de explicar e justificar decisões.",
+    "trap": "Responsabilidade é mais ampla e pode indicar atribuição, culpa ou obrigação; accountability acrescenta a exigência de responder por decisões perante alguém.",
+    "example_tl": "A prestação de contas exige que dirigentes justifiquem decisões automatizadas e ofereçam meios efetivos de contestação quando esses sistemas prejudicam cidadãos ou restringem direitos.",
+    "example_en": "Accountability requires executives to justify automated decisions and offer effective means of challenge when those systems harm citizens or restrict rights.",
+    "cloze": "{{c1::A prestação de contas}} exige que dirigentes justifiquem decisões automatizadas e ofereçam meios efetivos de contestação quando esses sistemas prejudicam cidadãos ou restringem direitos.",
+    "note": "Diverge materialmente de old_back: responsabilidade não exprime sozinha o dever institucional de dar explicações. Responsabilização é próxima, mas enfatiza mais a atribuição de consequências; por isso não foi listada como alternativa irrestrita."
+  },
+  {
+    "id": "it_fancy_vocab_394",
+    "en": "the Stakeholder",
+    "category": "lexical-noun",
+    "tl": "a parte interessada",
+    "alts": [],
+    "register": "Neutro-formal em consultas públicas, regulação e gestão de projetos; o anglicismo stakeholder é frequente no meio empresarial.",
+    "trap": "Stakeholder não é necessariamente acionista: qualquer pessoa, grupo ou instituição afetada por uma decisão pode ser parte interessada.",
+    "example_tl": "As partes interessadas participaram da consulta, mas organizações comunitárias tiveram menos recursos para analisar propostas técnicas e apresentar evidências no prazo fixado.",
+    "example_en": "Stakeholders took part in the consultation, but community organizations had fewer resources to analyze technical proposals and submit evidence by the deadline.",
+    "cloze": "{{c1::As partes interessadas}} participaram da consulta, mas organizações comunitárias tiveram menos recursos para analisar propostas técnicas e apresentar evidências no prazo fixado.",
+    "note": "Old_back fornece o conceito correto, mas no plural. O headword restaura o singular do prompt, e o exemplo flexiona a expressão naturalmente para demonstrar sua morfologia."
+  }
+]

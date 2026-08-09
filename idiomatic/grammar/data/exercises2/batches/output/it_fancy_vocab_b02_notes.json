@@ -1,0 +1,335 @@
+[
+  {
+    "id": "it_fancy_vocab_041",
+    "en": "To curate",
+    "category": "lexical-verb",
+    "tl": "curare",
+    "alts": [
+      "selezionare e organizzare"
+    ],
+    "register": "Neutral-formal in editorial, museum and digital-content work; curare implies responsible selection, organization and contextual presentation, not mere preservation.",
+    "trap": "Conservare means preserving something already assembled; in this sense, curare includes editorial judgment and does not refer to medical treatment.",
+    "example_tl": "La redazione ha curato un dossier basato su fonti aperte, selezionando documenti verificabili e contestualizzandoli per evitare che la quantità sostituisse il giudizio editoriale.",
+    "example_en": "The editorial team curated a dossier based on open sources, selecting verifiable documents and contextualizing them so that quantity would not replace editorial judgment.",
+    "cloze": "La redazione ha {{c1::curato}} un dossier basato su fonti aperte, selezionando documenti verificabili e contestualizzandoli per evitare che la quantità sostituisse il giudizio editoriale.",
+    "note": "The legacy rendering is correct but highly polysemous. Self-review: changed dossier di fonti aperte to the more idiomatic dossier basato su fonti aperte."
+  },
+  {
+    "id": "it_fancy_vocab_043",
+    "en": "To embed",
+    "category": "lexical-verb",
+    "tl": "incorporare in",
+    "alts": [
+      "integrare in"
+    ],
+    "register": "Neutral in technical, editorial and institutional prose when one element is inserted into a larger document, system or structure.",
+    "trap": "The element embedded is the direct object, while its containing context is introduced by in; embeddare is specialist jargon, not the default in careful prose.",
+    "example_tl": "Il quotidiano ha incorporato nel reportage una mappa interattiva che consente ai lettori di verificare l'origine geografica dei finanziamenti politici.",
+    "example_en": "The newspaper embedded an interactive map in the report that allows readers to verify the geographical origin of political funding.",
+    "cloze": "Il quotidiano ha {{c1::incorporato nel}} reportage una mappa interattiva che consente ai lettori di verificare l'origine geografica dei finanziamenti politici.",
+    "note": "The legacy rendering gives the correct verb but omits the productive in-complement used for the containing document or system."
+  },
+  {
+    "id": "it_fancy_vocab_044",
+    "en": "To interface",
+    "category": "lexical-verb",
+    "tl": "interfacciarsi con",
+    "alts": [
+      "dialogare con",
+      "interagire con"
+    ],
+    "register": "Technical and mildly bureaucratic for systems designed to exchange data; dialogare con is a common, less technical alternative in explanatory prose.",
+    "trap": "Transitive interfacciare means connecting components, whereas the pronominal interfacciarsi con describes a system interacting with another one.",
+    "example_tl": "Il nuovo registro si interfaccia con le banche dati nazionali, ma l'assenza di standard comuni continua a produrre errori e ritardi amministrativi.",
+    "example_en": "The new register interfaces with the national databases, but the lack of common standards continues to produce errors and administrative delays.",
+    "cloze": "Il nuovo registro {{c1::si interfaccia con}} le banche dati nazionali, ma l'assenza di standard comuni continua a produrre errori e ritardi amministrativi.",
+    "note": "Materially refines old_back: the bare transitive form does not supply the pronominal governed frame required by the system-interaction sense selected here."
+  },
+  {
+    "id": "it_fancy_vocab_045",
+    "en": "To converge",
+    "category": "lexical-verb",
+    "tl": "convergere su",
+    "alts": [
+      "concordare su",
+      "giungere a una posizione comune su"
+    ],
+    "register": "Neutral-formal in policy and analytical prose when several actors arrive at a shared conclusion or position.",
+    "trap": "Italian normally uses convergere su for a conclusion or shared position and convergere verso for a direction or outcome; the prepositions are not interchangeable.",
+    "example_tl": "Le autorità europee convergono sulla necessità di audit indipendenti, pur dissentendo sui poteri sanzionatori da attribuire alle agenzie nazionali.",
+    "example_en": "European authorities converge on the need for independent audits, while disagreeing over the sanctioning powers to assign to national agencies.",
+    "cloze": "Le autorità europee {{c1::convergono sulla}} necessità di audit indipendenti, pur dissentendo sui poteri sanzionatori da attribuire alle agenzie nazionali.",
+    "note": "The legacy cognate is accurate; the production headword adds the preposition selected by agreement on a proposition."
+  },
+  {
+    "id": "it_fancy_vocab_046",
+    "en": "To leverage",
+    "category": "lexical-verb",
+    "tl": "fare leva su",
+    "alts": [
+      "sfruttare strategicamente"
+    ],
+    "register": "Neutral-formal in policy and analytical prose; it expresses using an existing resource or source of influence to obtain a further result.",
+    "trap": "Italian levare means raising or removing, not leveraging an asset; leveraggiare is marked financial or managerial jargon and is unnecessary here.",
+    "example_tl": "Il governo fa leva sugli appalti pubblici per imporre standard aperti, senza trasformare la politica industriale in un sussidio permanente ai fornitori dominanti.",
+    "example_en": "The government leverages public procurement to impose open standards, without turning industrial policy into a permanent subsidy for dominant suppliers.",
+    "cloze": "Il governo {{c1::fa leva sugli}} appalti pubblici per imporre standard aperti, senza trasformare la politica industriale in un sussidio permanente ai fornitori dominanti.",
+    "note": "The legacy rendering is accurate. Self-review: retained the su-complement in the cloze because it is a fixed part of the productive frame."
+  },
+  {
+    "id": "it_fancy_vocab_050",
+    "en": "To enforce",
+    "category": "lexical-verb",
+    "tl": "far rispettare",
+    "alts": [
+      "imporre il rispetto di"
+    ],
+    "register": "Neutral-formal in legal and regulatory prose when an authority makes regulated actors comply with a rule or obligation.",
+    "trap": "Applicare can mean applying or implementing a rule, but enforcing compliance is often far rispettare; enforzare is an unnecessary English calque.",
+    "example_tl": "L'autorità deve far rispettare il regolamento anche ai grandi intermediari, altrimenti gli obblighi di trasparenza resteranno meri annunci privi di conseguenze.",
+    "example_en": "The authority must enforce the regulation even against major intermediaries, or the transparency obligations will remain mere announcements without consequences.",
+    "cloze": "L'autorità deve {{c1::far rispettare}} il regolamento anche ai grandi intermediari, altrimenti gli obblighi di trasparenza resteranno meri annunci privi di conseguenze.",
+    "note": "The legacy rendering is the natural causative frame for enforcing a rule. Self-review: replaced assicurare il rispetto di with imporre il rispetto di so the alternative remains natural with the example's regulated-party complement."
+  },
+  {
+    "id": "it_fancy_vocab_052",
+    "en": "To profile",
+    "category": "lexical-verb",
+    "tl": "profilare",
+    "alts": [
+      "tracciare il profilo di"
+    ],
+    "register": "Technical in data protection, advertising and automated decision-making for inferring characteristics or behavior from personal data.",
+    "trap": "Profilare is transitive in the data sense; profilarsi is a different pronominal verb meaning to take shape or loom on the horizon.",
+    "example_tl": "Le piattaforme profilano gli utenti combinando cronologia di navigazione, posizione e acquisti, benché tali inferenze possano rivelare convinzioni politiche mai dichiarate esplicitamente.",
+    "example_en": "Platforms profile users by combining browsing history, location and purchases, although those inferences may reveal political beliefs that were never explicitly stated.",
+    "cloze": "Le piattaforme {{c1::profilano}} gli utenti combinando cronologia di navigazione, posizione e acquisti, benché tali inferenze possano rivelare convinzioni politiche mai dichiarate esplicitamente.",
+    "note": "The legacy rendering is accurate for the digital-data sense. Self-review: expanded cronologia to cronologia di navigazione to remove contextual ambiguity."
+  },
+  {
+    "id": "it_fancy_vocab_054",
+    "en": "To obfuscate",
+    "category": "lexical-verb",
+    "tl": "rendere qualcosa opaco",
+    "alts": [],
+    "register": "Neutral-critical for information, responsibility or a structure made deliberately difficult to understand; offuscare is more established for code obfuscation.",
+    "trap": "Offuscare often concerns brightness, perception, memory or reputation in general Italian; in computing, however, offuscare il codice is the standard technical use.",
+    "example_tl": "Clausole deliberatamente complesse rendono opaca la struttura delle commissioni, impedendo agli editori di calcolare quale quota dei ricavi trattenga ogni intermediario.",
+    "example_en": "Deliberately complex clauses obfuscate the fee structure, preventing publishers from calculating what share of revenue each intermediary retains.",
+    "cloze": "Clausole deliberatamente complesse {{c1::rendono opaca}} la struttura delle commissioni, impedendo agli editori di calcolare quale quota dei ricavi trattenga ogni intermediario.",
+    "note": "Materially refines old_back for general analytical prose: offuscare is possible, but rendere opaco states the intended loss of intelligibility more precisely."
+  },
+  {
+    "id": "it_fancy_vocab_055",
+    "en": "To perpetuate",
+    "category": "lexical-verb",
+    "tl": "perpetuare",
+    "alts": [
+      "mantenere in vita"
+    ],
+    "register": "Written-formal and often critical with inequalities, abuses, stereotypes and institutional practices that continue over time.",
+    "trap": "Perpetrare means committing a serious offense or harmful act; it is not interchangeable with perpetuare, which means causing something to continue.",
+    "example_tl": "Criteri di assunzione apparentemente neutrali perpetuano squilibri storici, perché premiano percorsi professionali accessibili soprattutto ai gruppi già rappresentati nelle aziende tecnologiche.",
+    "example_en": "Apparently neutral hiring criteria perpetuate historical imbalances because they reward career paths accessible mainly to groups already represented in technology companies.",
+    "cloze": "Criteri di assunzione apparentemente neutrali {{c1::perpetuano}} squilibri storici, perché premiano percorsi professionali accessibili soprattutto ai gruppi già rappresentati nelle aziende tecnologiche.",
+    "note": "The legacy rendering is accurate. Self-review: retained the item because the near-neighbor perpetrare creates a genuine meaning-changing trap."
+  },
+  {
+    "id": "it_fancy_vocab_056",
+    "en": "To navigate",
+    "category": "lexical-verb",
+    "tl": "orientarsi tra",
+    "alts": [
+      "muoversi tra"
+    ],
+    "register": "Neutral in analytical prose for finding one's way through complex rules, institutions or competing constraints.",
+    "trap": "Navigare is literal or digital by default; figurative navigare tra is possible, but can sound more journalistic or Anglicizing than orientarsi tra.",
+    "example_tl": "Le piccole testate faticano a orientarsi tra obblighi nazionali divergenti, mentre le piattaforme possono distribuire i costi normativi su mercati molto più ampi.",
+    "example_en": "Small news outlets struggle to navigate divergent national obligations, while platforms can spread regulatory costs across much larger markets.",
+    "cloze": "Le piccole testate faticano a {{c1::orientarsi tra}} obblighi nazionali divergenti, mentre le piattaforme possono distribuire i costi normativi su mercati molto più ampi.",
+    "note": "Materially diverges from the literal or interface-oriented default suggested by old_back; the example selects managing a complex institutional environment."
+  },
+  {
+    "id": "it_fancy_vocab_058",
+    "en": "To mediate",
+    "category": "lexical-verb",
+    "tl": "mediare tra",
+    "alts": [
+      "condurre una mediazione tra"
+    ],
+    "register": "Neutral-formal in diplomacy, labor relations and institutional conflict resolution; tra introduces the parties or positions being reconciled.",
+    "trap": "French médiatiser can encourage mediatizzare, but that verb concerns media exposure or media influence; conflict mediation is mediare tra parties.",
+    "example_tl": "L'organizzazione ha mediato tra il governo e le emittenti indipendenti, ottenendo garanzie minime sull'accesso alle frequenze durante la campagna elettorale.",
+    "example_en": "The organization mediated between the government and independent broadcasters, obtaining minimum guarantees on access to frequencies during the election campaign.",
+    "cloze": "L'organizzazione ha {{c1::mediato tra}} il governo e le emittenti indipendenti, ottenendo garanzie minime sull'accesso alle frequenze durante la campagna elettorale.",
+    "note": "The legacy verb is accurate but omits the productive tra-complement. The example fixes the interpersonal and institutional sense rather than causal mediation."
+  },
+  {
+    "id": "it_fancy_vocab_062",
+    "en": "To benchmark",
+    "category": "lexical-verb",
+    "tl": "confrontare con un parametro di riferimento",
+    "alts": [
+      "valutare rispetto a uno standard"
+    ],
+    "register": "Neutral-formal and transparent in policy evaluation; benchmarkare and fare benchmarking are more marked managerial or technical formulations.",
+    "trap": "Benchmarking names the comparison process, whereas the English prompt is a verb and needs a verbal frame with an explicit reference point.",
+    "example_tl": "Il ministero confronta i tempi di risposta con un parametro di riferimento europeo, ma pubblica anche gli scostamenti per evitare classifiche ingannevoli.",
+    "example_en": "The ministry benchmarks response times against a European reference point, but also publishes deviations to avoid misleading rankings.",
+    "cloze": "Il ministero {{c1::confronta}} i tempi di risposta {{c1::con un parametro di riferimento}} europeo, ma pubblica anche gli scostamenti per evitare classifiche ingannevoli.",
+    "note": "The legacy paraphrase has the intended meaning. Self-review: used two clozes for the discontinuous verb-and-reference frame."
+  },
+  {
+    "id": "it_fancy_vocab_063",
+    "en": "To bypass",
+    "category": "lexical-verb",
+    "tl": "aggirare",
+    "alts": [
+      "eludere"
+    ],
+    "register": "Neutral-critical with rules, safeguards, intermediaries and technical controls; it implies finding a way around an obstacle rather than confronting it directly.",
+    "trap": "Bypassare occurs in specialist technical usage, but is needlessly marked in regulatory prose; evitare alone does not necessarily imply circumvention.",
+    "example_tl": "Alcune piattaforme aggirano i vincoli sulla pubblicità politica classificando come contenuti organici messaggi commissionati da gruppi formalmente indipendenti dai partiti.",
+    "example_en": "Some platforms bypass restrictions on political advertising by classifying messages commissioned by groups formally independent of political parties as organic content.",
+    "cloze": "Alcune piattaforme {{c1::aggirano}} i vincoli sulla pubblicità politica classificando come contenuti organici messaggi commissionati da gruppi formalmente indipendenti dai partiti.",
+    "note": "The legacy rendering is accurate for nonliteral regulatory circumvention."
+  },
+  {
+    "id": "it_fancy_vocab_066",
+    "en": "To elucidate",
+    "category": "lexical-verb",
+    "tl": "chiarire",
+    "alts": [
+      "delucidare",
+      "fare luce su"
+    ],
+    "register": "Neutral-formal and natural in analytical prose; delucidare is more elevated, while fare luce su is especially idiomatic in investigative writing.",
+    "trap": "Elucidare exists in Italian but is rare, so the English cognate should not displace the more natural chiarire or the formal delucidare.",
+    "example_tl": "L'indagine chiarisce i meccanismi con cui le raccomandazioni automatiche hanno favorito fonti riconducibili a reti coordinate, senza rivelare dati capaci di identificare i singoli utenti.",
+    "example_en": "The investigation elucidates the mechanisms by which automated recommendations favored sources traceable to coordinated networks, without revealing data capable of identifying individual users.",
+    "cloze": "L'indagine {{c1::chiarisce}} i meccanismi con cui le raccomandazioni automatiche hanno favorito fonti riconducibili a reti coordinate, senza rivelare dati capaci di identificare i singoli utenti.",
+    "note": "The legacy rendering is the most natural default. Self-review: rejected rare elucidare as the headword and replaced the compressed fonti coordinate with the clearer fonti riconducibili a reti coordinate."
+  },
+  {
+    "id": "it_fancy_vocab_068",
+    "en": "To erode",
+    "category": "lexical-verb",
+    "tl": "erodere",
+    "alts": [
+      "logorare",
+      "intaccare"
+    ],
+    "register": "Neutral-formal and often critical in the institutional metaphor erodere la fiducia, i diritti, la legittimità or il consenso.",
+    "trap": "The past participle is irregular eroso, not *eroduto; institutional collocations such as erodere la fiducia use the same verb as physical erosion.",
+    "example_tl": "Anni di decisioni opache hanno eroso la fiducia nelle autorità di vigilanza, rendendo più difficile costruire consenso intorno a forme di controllo realmente indipendenti.",
+    "example_en": "Years of opaque decisions have eroded trust in supervisory authorities, making it harder to build support around forms of genuinely independent oversight.",
+    "cloze": "Anni di decisioni opache hanno {{c1::eroso}} la fiducia nelle autorità di vigilanza, rendendo più difficile costruire consenso intorno a forme di controllo realmente indipendenti.",
+    "note": "The legacy rendering is accurate. Self-review: retained the irregular participle and replaced ottenere consenso per with the more idiomatic costruire consenso intorno a."
+  },
+  {
+    "id": "it_fancy_vocab_069",
+    "en": "To subscribe",
+    "category": "lexical-verb",
+    "tl": "abbonarsi a",
+    "alts": [
+      "sottoscrivere un abbonamento a"
+    ],
+    "register": "Neutral for paid or free subscriptions to publications and services; the pronominal verb takes a for the publication or service.",
+    "trap": "English subscribe to an opinion means condividere or aderire a; abbonarsi a applies to a publication or service and cannot cover every English sense.",
+    "example_tl": "Molti lettori si abbonano a testate indipendenti quando comprendono che la pubblicità programmatica non finanzia adeguatamente il giornalismo investigativo locale.",
+    "example_en": "Many readers subscribe to independent news outlets when they realize that programmatic advertising does not adequately fund local investigative journalism.",
+    "cloze": "Molti lettori {{c1::si abbonano a}} testate indipendenti quando comprendono che la pubblicità programmatica non finanzia adeguatamente il giornalismo investigativo locale.",
+    "note": "The source is polysemous. This note selects the publication sense represented by old_back and supplies the required reflexive marker and preposition."
+  },
+  {
+    "id": "it_fancy_vocab_072",
+    "en": "To retaliate",
+    "category": "lexical-verb",
+    "tl": "adottare misure di ritorsione",
+    "alts": [
+      "rispondere con contromisure"
+    ],
+    "register": "Formal geopolitical and diplomatic wording; rappresaglia is stronger and can suggest violent or unlawfully punitive action.",
+    "trap": "French rétorquer means making a verbal retort, not retaliating; Italian ritorcere likewise cannot serve as a direct one-word equivalent here.",
+    "example_tl": "In risposta alle nuove sanzioni, il governo ha adottato misure di ritorsione, sospendendo le licenze dei media stranieri e limitando l'accesso dei corrispondenti.",
+    "example_en": "In response to the new sanctions, the government retaliated by suspending foreign media licenses and restricting correspondents' access.",
+    "cloze": "In risposta alle nuove sanzioni, il governo ha {{c1::adottato misure di ritorsione}}, sospendendo le licenze dei media stranieri e limitando l'accesso dei corrispondenti.",
+    "note": "The legacy gloss conveys the meaning but is less production-ready. Self-review: replaced the redundant reagire con misure di ritorsione with the idiomatic adottare misure di ritorsione."
+  },
+  {
+    "id": "it_fancy_vocab_073",
+    "en": "To endorse",
+    "category": "lexical-verb",
+    "tl": "avallare",
+    "alts": [
+      "appoggiare pubblicamente"
+    ],
+    "register": "Written-formal and often critical when a prominent person lends authority or legitimacy to a proposal, interpretation or decision.",
+    "trap": "Endorsing a policy is avallare or appoggiare, but endorsing a cheque is girare; the English verb's financial sense requires a different Italian verb.",
+    "example_tl": "Tre ex ministri hanno avallato la proposta di sorveglianza, conferendole una legittimità politica che il parere tecnico indipendente non giustificava.",
+    "example_en": "Three former ministers endorsed the surveillance proposal, lending it a political legitimacy that the independent technical opinion did not justify.",
+    "cloze": "Tre ex ministri hanno {{c1::avallato}} la proposta di sorveglianza, conferendole una legittimità politica che il parere tecnico indipendente non giustificava.",
+    "note": "The legacy rendering is accurate for explicit approval. The example distinguishes endorsement from practical assistance or formal enactment."
+  },
+  {
+    "id": "it_fancy_vocab_076",
+    "en": "To authenticate",
+    "category": "lexical-verb",
+    "tl": "autenticare",
+    "alts": [
+      "verificare l'autenticità di"
+    ],
+    "register": "Neutral technical and legal vocabulary for verifying identity, origin or genuineness through credentials, signatures or other evidence.",
+    "trap": "Autenticare verifies identity or authenticity, whereas autorizzare grants permission to perform an action; authentication does not itself confer access rights.",
+    "example_tl": "Il portale autentica i documenti mediante firme digitali, ma separa questa verifica dall'autorizzazione necessaria per consultare gli archivi riservati.",
+    "example_en": "The portal authenticates documents using digital signatures, but separates this verification from the authorization required to consult restricted archives.",
+    "cloze": "Il portale {{c1::autentica}} i documenti mediante firme digitali, ma separa questa verifica dall'autorizzazione necessaria per consultare gli archivi riservati.",
+    "note": "The legacy rendering is correct. Retention is justified by the high-value technical distinction between authentication and authorization."
+  },
+  {
+    "id": "it_fancy_vocab_078",
+    "en": "To delegate",
+    "category": "lexical-verb",
+    "tl": "delegare qualcosa a qualcuno",
+    "alts": [
+      "affidare qualcosa a qualcuno"
+    ],
+    "register": "Neutral-formal in administrative and organizational prose; a introduces the person or body receiving the task, power or responsibility.",
+    "trap": "Delegare qualcosa a qualcuno assigns a task; delegare qualcuno can instead mean appointing or authorizing that person as a representative.",
+    "example_tl": "Il ministero ha delegato la valutazione dei rischi a consulenti privati, senza pubblicare i criteri usati né chiarire eventuali conflitti d'interesse.",
+    "example_en": "The ministry delegated the risk assessment to private consultants without publishing the criteria used or clarifying possible conflicts of interest.",
+    "cloze": "Il ministero ha {{c1::delegato}} la valutazione dei rischi {{c1::a}} consulenti privati, senza pubblicare i criteri usati né chiarire eventuali conflitti d'interesse.",
+    "note": "The legacy rendering gives only the verb. Self-review: wrapped both fixed arms of the task-and-recipient frame separately."
+  },
+  {
+    "id": "it_fancy_vocab_079",
+    "en": "To devalue",
+    "category": "lexical-verb",
+    "tl": "svalutare",
+    "alts": [
+      "ridurre il valore di"
+    ],
+    "register": "Neutral-formal in economics for an intentional reduction in a currency's official value; it also has broader figurative uses.",
+    "trap": "A central bank can svalutare a currency deliberately, whereas a currency that loses market value si deprezza; the two perspectives are not interchangeable.",
+    "example_tl": "La banca centrale ha svalutato la moneta per sostenere le esportazioni, trasferendo però sui consumatori il costo immediato dei beni importati.",
+    "example_en": "The central bank devalued the currency to support exports, while shifting the immediate cost of imported goods onto consumers.",
+    "cloze": "La banca centrale ha {{c1::svalutato}} la moneta per sostenere le esportazioni, trasferendo però sui consumatori il costo immediato dei beni importati.",
+    "note": "The isolated source is polysemous. This note selects intentional monetary devaluation, for which the legacy rendering is accurate."
+  },
+  {
+    "id": "it_fancy_vocab_080",
+    "en": "To prioritize",
+    "category": "lexical-verb",
+    "tl": "dare priorità a",
+    "alts": [
+      "privilegiare",
+      "prioritizzare"
+    ],
+    "register": "Neutral-formal in policy and management; prioritizzare is admissible but recent and more distinctly managerial than dare priorità a.",
+    "trap": "Dare priorità requires a before the favored objective, while transitive privilegiare does not; do not combine the two complement patterns.",
+    "example_tl": "Il piano dà priorità alla sicurezza delle infrastrutture locali, invece di finanziare sistemi predittivi costosi la cui efficacia non è stata dimostrata.",
+    "example_en": "The plan prioritizes the security of local infrastructure instead of funding expensive predictive systems whose effectiveness has not been demonstrated.",
+    "cloze": "Il piano {{c1::dà priorità alla}} sicurezza delle infrastrutture locali, invece di finanziare sistemi predittivi costosi la cui efficacia non è stata dimostrata.",
+    "note": "The legacy rendering omits the governed preposition. Self-review: retained prioritizzare only as a marked alternative, not as the careful-prose default."
+  }
+]

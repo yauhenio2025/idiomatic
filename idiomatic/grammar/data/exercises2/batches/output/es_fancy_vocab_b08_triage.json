@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "verdict": "keep",
+    "reason": "The semiconductor sense needs the domain-specific fundición de semiconductores and must be distinguished from an ordinary metal foundry."
+  },
+  {
+    "id": "it_fancy_vocab_282",
+    "en": "the Microprocessor",
+    "verdict": "drop",
+    "reason": "Microprocesador is a transparent, ubiquitous technical cognate with predictable gender and no narrower construction selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_283",
+    "en": "the Nanometer",
+    "verdict": "drop",
+    "reason": "Nanómetro is a transparent SI unit already familiar at this level; its accent and masculine gender add too little to justify a card."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "verdict": "keep",
+    "reason": "The semiconductor context favours the precise fotolitografía rather than the broader artistic and printing term litografía."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "verdict": "keep",
+    "reason": "Semiconductor die is pastilla semiconductora or chip sin encapsular; legacy matriz selects an unrelated mould or matrix sense."
+  },
+  {
+    "id": "it_fancy_vocab_286",
+    "en": "the Fabless",
+    "verdict": "keep",
+    "reason": "Despite the awkward English nominalization, the fabless business model requires a production-ready expansion such as empresa de semiconductores sin fábrica."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "verdict": "keep",
+    "reason": "Sistema en un chip teaches the required article, the established SoC abbreviation and the distinction between an integrated system and a microprocessor."
+  },
+  {
+    "id": "it_fancy_vocab_288",
+    "en": "the Moore's Law",
+    "verdict": "drop",
+    "reason": "La ley de Moore is a familiar, compositionally transparent proper-name expression with no additional production difficulty in this prompt."
+  },
+  {
+    "id": "it_fancy_vocab_289",
+    "en": "the Integrated Circuit",
+    "verdict": "drop",
+    "reason": "Circuito integrado is a transparent and ubiquitous electronics term with ordinary masculine gender and regular modification."
+  },
+  {
+    "id": "it_fancy_vocab_290",
+    "en": "the Neural Networks",
+    "verdict": "drop",
+    "reason": "Redes neuronales is now familiar core AI vocabulary, directly cognate and morphologically predictable."
+  },
+  {
+    "id": "it_fancy_vocab_291",
+    "en": "the Deep Learning",
+    "verdict": "keep",
+    "reason": "Aprendizaje profundo is the conventional nonliteral Spanish field name and merits contrast with both machine learning and the retained English label."
+  },
+  {
+    "id": "it_fancy_vocab_292",
+    "en": "the Machine Learning",
+    "verdict": "keep",
+    "reason": "Aprendizaje automático is an established nonliteral term vulnerable to transfer from Portuguese aprendizagem de máquina and English machine learning."
+  },
+  {
+    "id": "it_fancy_vocab_293",
+    "en": "the Training Data",
+    "verdict": "keep",
+    "reason": "Datos de entrenamiento fixes the machine-learning sense and supports a useful distinction from the narrower conjunto de entrenamiento."
+  },
+  {
+    "id": "it_fancy_vocab_294",
+    "en": "the Algorithms",
+    "verdict": "drop",
+    "reason": "Algoritmos is a transparent, ubiquitous computing cognate with predictable masculine plural morphology."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "verdict": "keep",
+    "reason": "The full term teaches the established lenguaje natural collocation, lowercase styling and the Spanish abbreviation PLN rather than English NLP."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "verdict": "keep",
+    "reason": "Redes generativas adversarias is a contested technical rendering with meaningful adjective-choice and cross-language word-order traps."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "verdict": "keep",
+    "reason": "Aprendizaje por refuerzo is a fixed nonliteral construction whose preposition and noun cannot be inferred safely from English morphology."
+  },
+  {
+    "id": "it_fancy_vocab_298",
+    "en": "the AI Ethics",
+    "verdict": "drop",
+    "reason": "Ética de la IA is a transparent and now familiar technology-policy compound, and the prompt selects no narrower ethical framework."
+  },
+  {
+    "id": "it_fancy_vocab_299",
+    "en": "the Supervised Learning",
+    "verdict": "drop",
+    "reason": "Aprendizaje supervisado is compositionally transparent, established core AI vocabulary with regular adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_300",
+    "en": "the Unsupervised Learning",
+    "verdict": "drop",
+    "reason": "Aprendizaje no supervisado is compositionally transparent and differs from the familiar supervised term only by regular negation."
+  },
+  {
+    "id": "it_fancy_vocab_301",
+    "en": "the Model",
+    "verdict": "drop",
+    "reason": "Modelo is a transparent, high-frequency cognate, while the isolated prompt gives no basis for choosing a specialized statistical or AI sense."
+  },
+  {
+    "id": "it_fancy_vocab_302",
+    "en": "the Logistics",
+    "verdict": "drop",
+    "reason": "Logística is transparent, ubiquitous business vocabulary already well below C1 and carries no special construction here."
+  },
+  {
+    "id": "it_fancy_vocab_303",
+    "en": "the Inventory",
+    "verdict": "drop",
+    "reason": "Inventario is a familiar direct business cognate, and the bare prompt does not isolate a useful contrast with existencias or stocktaking."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "verdict": "keep",
+    "reason": "Procurement requires a context-sensitive choice among aprovisionamiento, gestión de compras and public-sector contratación, which the legacy gloss does not expose."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "verdict": "keep",
+    "reason": "The logistics method needs a domain head noun and the JIT abbreviation to distinguish it from the everyday phrase justo a tiempo."
+  },
+  {
+    "id": "it_fancy_vocab_306",
+    "en": "the Distribution",
+    "verdict": "drop",
+    "reason": "Distribución is a transparent, familiar logistics cognate with regular morphology and no narrower channel or process specified."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "verdict": "keep",
+    "reason": "Logística de terceros is a specialist service model with the established abbreviation 3PL and a genuine third party versus tercer partido trap."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "verdict": "keep",
+    "reason": "The nonliteral plazo de entrega blocks a liderazgo calque and must be varied when the measured process is manufacturing or replenishment."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "verdict": "keep",
+    "reason": "Sourcing specifically foregrounds finding and selecting suppliers, so legacy aprovisionamiento wrongly collapses it into the broader procurement process."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "verdict": "keep",
+    "reason": "Spain-oriented retail usage prefers referencia interna or número de referencia, and an SKU must be distinguished from universal EAN and GTIN identifiers."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "verdict": "keep",
+    "reason": "Previsión de la demanda is a productive logistics collocation with a real previsión/provisión and Portuguese-spelling interference risk."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "verdict": "keep",
+    "reason": "Efecto látigo is a fixed specialist metaphor, without de, for the amplification of order variability along a supply chain."
+  },
+  {
+    "id": "it_fancy_vocab_313",
+    "en": "the Vertical Integration",
+    "verdict": "drop",
+    "reason": "Integración vertical is a compositionally transparent and familiar business-policy term with ordinary gender and adjective agreement."
+  },
+  {
+    "id": "it_fancy_vocab_314",
+    "en": "the Outsourcing",
+    "verdict": "keep",
+    "reason": "Externalización is the Spain-oriented term and supports a useful distinction from subcontratación and Latin American tercerización."
+  },
+  {
+    "id": "it_fancy_vocab_315",
+    "en": "the Transportation",
+    "verdict": "drop",
+    "reason": "Transporte is familiar core vocabulary with a direct translation and no selected modal, legal or logistics-specific sense."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "verdict": "keep",
+    "reason": "Gestión de almacenes captures receipt, placement, picking and dispatch, materially improving on legacy almacenamiento when the broader operation is intended."
+  },
+  {
+    "id": "it_fancy_vocab_317",
+    "en": "the Node",
+    "verdict": "drop",
+    "reason": "Nodo is a transparent, familiar technical cognate, and the prompt does not select a network, logistics, graph-theory or infrastructure sense."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "verdict": "keep",
+    "reason": "Routine status tracking is idiomatically hacer el seguimiento de, with government worth teaching and a narrower sense than legacy rastrear."
+  },
+  {
+    "id": "it_fancy_vocab_319",
+    "en": "to marginalize",
+    "verdict": "drop",
+    "reason": "Marginar is a transparent, familiar critical verb with regular conjugation and no special complement selected by the prompt."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "verdict": "keep",
+    "reason": "Intransitive profit requires beneficiarse de or obtener beneficios de; legacy rentabilizar is transitive and reverses the argument structure."
+  }
+]

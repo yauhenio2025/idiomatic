@@ -1,0 +1,416 @@
+[
+  {
+    "id": "it_big_tech_vocab_001",
+    "en": "the Technological solutionism",
+    "category": "lexical-noun",
+    "tl": "der technologische Solutionismus",
+    "alts": [
+      "das technikzentrierte Lösungsdenken"
+    ],
+    "register": "Critical technology-studies vocabulary; the explanatory alternative is clearer for readers unfamiliar with the relatively rare loanword.",
+    "trap": "Solutionismus is not neutral Lösungsorientierung: it criticizes the reduction of political or social conflicts to problems supposedly solvable by technology.",
+    "example_tl": "Technologischer Solutionismus verspricht für jede gesellschaftliche Krise eine App und blendet dabei Machtverhältnisse, Verteilungsfragen sowie institutionelle Verantwortung systematisch aus.",
+    "example_en": "Technological solutionism promises an app for every social crisis while systematically ignoring power relations, distributional questions, and institutional responsibility.",
+    "cloze": "{{c1::Technologischer Solutionismus}} verspricht für jede gesellschaftliche Krise eine App und blendet dabei Machtverhältnisse, Verteilungsfragen sowie institutionelle Verantwortung systematisch aus.",
+    "note": "Old_back uses the unattested-looking calque Lösungismus; the established critical loanword is Solutionismus. The example is new and distinct from the related FANCY_VOCAB card for solutionism."
+  },
+  {
+    "id": "it_big_tech_vocab_002",
+    "en": "the Internet centrism",
+    "category": "lexical-noun",
+    "tl": "der Internet-Zentrismus",
+    "alts": [],
+    "register": "Specialist and critical; associated particularly with criticism of treating the internet as a unified force with its own inevitable logic.",
+    "trap": "Internet-Zentrismus does not mean political centrism online; it names an explanatory habit that makes an abstract idea of the internet the center of analysis.",
+    "example_tl": "Der Internet-Zentrismus vieler Reformprogramme unterstellt, digitale Vernetzung führe zwangsläufig zu Demokratisierung, obwohl dieselben Infrastrukturen auch autoritäre Kontrolle erleichtern können.",
+    "example_en": "The internet-centrism of many reform programs assumes that digital connectivity inevitably leads to democratization, although the same infrastructure can also facilitate authoritarian control.",
+    "cloze": "Der {{c1::Internet-Zentrismus}} vieler Reformprogramme unterstellt, digitale Vernetzung führe zwangsläufig zu Demokratisierung, obwohl dieselben Infrastrukturen auch autoritäre Kontrolle erleichtern können.",
+    "note": "Old_back is accurate. Independent attestation review retained the hyphenated specialist form used in German discussion of Morozov's concept."
+  },
+  {
+    "id": "it_big_tech_vocab_004",
+    "en": "Surveillance capitalism",
+    "category": "lexical-noun",
+    "tl": "der Überwachungskapitalismus",
+    "alts": [],
+    "register": "Established critical term in social science, technology policy, and serious media commentary; analytically charged rather than neutral business vocabulary.",
+    "trap": "Überwachungskapitalismus denotes an economic logic of extracting and monetizing behavioral data, not merely a market in surveillance equipment.",
+    "example_tl": "Der Überwachungskapitalismus verwandelt alltägliche Interaktionen in verwertbare Verhaltensdaten, ohne den Betroffenen wirksame Kontrolle über deren spätere Nutzung einzuräumen.",
+    "example_en": "Surveillance capitalism turns everyday interactions into exploitable behavioral data without granting the people concerned effective control over their subsequent use.",
+    "cloze": "Der {{c1::Überwachungskapitalismus}} verwandelt alltägliche Interaktionen in verwertbare Verhaltensdaten, ohne den Betroffenen wirksame Kontrolle über deren spätere Nutzung einzuräumen.",
+    "note": "Old_back is lexically accurate apart from unnecessary capitalization of the common noun's article."
+  },
+  {
+    "id": "it_big_tech_vocab_005",
+    "en": "the Algorithmic bias",
+    "category": "lexical-noun",
+    "tl": "die algorithmische Verzerrung",
+    "alts": [
+      "der algorithmische Bias"
+    ],
+    "register": "Algorithmische Verzerrung is neutral-formal and explanatory; algorithmischer Bias is common technical and interdisciplinary jargon.",
+    "trap": "Voreingenommenheit usually attributes a disposition to a person; an algorithmic system more idiomatically exhibits Verzerrung or Bias in its outputs.",
+    "example_tl": "Eine algorithmische Verzerrung kann Bewerberinnen systematisch benachteiligen, selbst wenn Geschlecht nicht ausdrücklich als Merkmal in das Modell einfließt.",
+    "example_en": "Algorithmic bias can systematically disadvantage female applicants even when gender is not explicitly included as a feature in the model.",
+    "cloze": "Eine {{c1::algorithmische Verzerrung}} kann Bewerberinnen systematisch benachteiligen, selbst wenn Geschlecht nicht ausdrücklich als Merkmal in das Modell einfließt.",
+    "note": "Materially improves old_back: lowercases the adjective and replaces anthropomorphic Voreingenommenheit with the standard analytical term Verzerrung."
+  },
+  {
+    "id": "it_big_tech_vocab_006",
+    "en": "the Net neutrality",
+    "category": "lexical-noun",
+    "tl": "die Netzneutralität",
+    "alts": [],
+    "register": "Standard telecommunications-policy and regulatory term; neutral in itself, though disputes about its scope are politically contested.",
+    "trap": "German uses the compact compound Netzneutralität, not the English-patterned forms *Internetneutralität or *Neutralität des Netzes as the normal policy label.",
+    "example_tl": "Die Netzneutralität verpflichtet Zugangsanbieter grundsätzlich dazu, Datenverkehr unabhängig von Absender, Empfänger, Inhalt oder gewähltem Dienst gleich zu behandeln.",
+    "example_en": "Net neutrality generally requires access providers to treat data traffic equally regardless of sender, recipient, content, or chosen service.",
+    "cloze": "Die {{c1::Netzneutralität}} verpflichtet Zugangsanbieter grundsätzlich dazu, Datenverkehr unabhängig von Absender, Empfänger, Inhalt oder gewähltem Dienst gleich zu behandeln.",
+    "note": "Old_back is accurate; the card retains the item for the established compressed German compound and its precise regulatory sense."
+  },
+  {
+    "id": "it_big_tech_vocab_007",
+    "en": "the Data brokers",
+    "category": "lexical-noun",
+    "tl": "die Datenbroker",
+    "alts": [
+      "die Datenhändler"
+    ],
+    "register": "Datenbroker is the established industry and policy term; Datenhändler is a transparent, often more openly critical journalistic alternative.",
+    "trap": "Datenmakler is understandable but less established; the plural loanword Broker has no added ending in German: ein Broker, mehrere Broker.",
+    "example_tl": "Datenbroker verkaufen detaillierte Profile an Werbenetzwerke, Versicherer und politische Kampagnen, obwohl die erfassten Personen von diesen Transaktionen meist nichts erfahren.",
+    "example_en": "Data brokers sell detailed profiles to advertising networks, insurers, and political campaigns, although the people recorded usually know nothing about these transactions.",
+    "cloze": "{{c1::Datenbroker}} verkaufen detaillierte Profile an Werbenetzwerke, Versicherer und politische Kampagnen, obwohl die erfassten Personen von diesen Transaktionen meist nichts erfahren.",
+    "note": "Materially improves old_back by promoting the established German loanword and preserving the source plural; Datenmakler remains possible but is not the best production default."
+  },
+  {
+    "id": "it_big_tech_vocab_009",
+    "en": "the Filter bubble",
+    "category": "lexical-noun",
+    "tl": "die Filterblase",
+    "alts": [],
+    "register": "Established media-critical metaphor; common in journalism and public debate, though its empirical strength should not be assumed from the label alone.",
+    "trap": "Filterblase and Echokammer are related, not synonymous: the former emphasizes algorithmic selection, whereas the latter emphasizes mutually reinforcing communication within a group.",
+    "example_tl": "Wer politische Polarisierung allein mit der Filterblase erklärt, lässt soziale Konflikte und strategische Desinformation allzu leicht hinter Personalisierungsalgorithmen verschwinden.",
+    "example_en": "Anyone who explains political polarization solely through the filter bubble all too easily lets social conflict and strategic disinformation disappear behind personalization algorithms.",
+    "cloze": "Wer politische Polarisierung allein mit der {{c1::Filterblase}} erklärt, lässt soziale Konflikte und strategische Desinformation allzu leicht hinter Personalisierungsalgorithmen verschwinden.",
+    "note": "Old_back is accurate. The cross-topic duplicate report assigns this exact item to BIG_TECH_VOCAB, so it is deliberately retained here. Self-review replaced an awkward adverbial collocation with an idiomatic German argumentative frame."
+  },
+  {
+    "id": "it_big_tech_vocab_010",
+    "en": "Platform capitalism",
+    "category": "lexical-noun",
+    "tl": "der Plattformkapitalismus",
+    "alts": [],
+    "register": "Critical political-economy term for accumulation organized through digital platforms, data extraction, network effects, and control over market access.",
+    "trap": "German normally closes the compound as Plattformkapitalismus; it describes a systemic economic formation, not simply capitalism conducted on one platform.",
+    "example_tl": "Der Plattformkapitalismus verlagert unternehmerische Risiken auf Beschäftigte und Anbieter, während die Vermittler Daten, Zugänge und zentrale Marktregeln kontrollieren.",
+    "example_en": "Platform capitalism shifts business risks onto workers and suppliers while intermediaries control data, access, and key market rules.",
+    "cloze": "Der {{c1::Plattformkapitalismus}} verlagert unternehmerische Risiken auf Beschäftigte und Anbieter, während die Vermittler Daten, Zugänge und zentrale Marktregeln kontrollieren.",
+    "note": "Materially normalizes old_back's unnecessary hyphen to the conventional closed German compound."
+  },
+  {
+    "id": "it_big_tech_vocab_011",
+    "en": "the Disruption",
+    "category": "lexical-noun",
+    "tl": "die Disruption",
+    "alts": [],
+    "register": "A common but often promotional loanword in innovation discourse; critical prose may use disruptiver Umbruch to make the claimed structural change explicit.",
+    "trap": "Unterbrechung means an interruption in continuity; technology discourse uses Disruption for a claimed radical transformation of a market, institution, or business model.",
+    "example_tl": "Die angekündigte Disruption des Bildungsmarktes bestand vor allem darin, öffentliche Lerninhalte zu privatisieren und Lehrkräfte von proprietären Plattformen abhängig zu machen.",
+    "example_en": "The announced disruption of the education market consisted mainly in privatizing public learning content and making teachers dependent on proprietary platforms.",
+    "cloze": "Die angekündigte {{c1::Disruption}} des Bildungsmarktes bestand vor allem darin, öffentliche Lerninhalte zu privatisieren und Lehrkräfte von proprietären Plattformen abhängig zu machen.",
+    "note": "Materially corrects old_back, which gives only the interruption sense. The duplicate report assigns the exact FANCY_VOCAB copy to this specialist topic. Self-review removed a semantically valid paraphrase from alts because it cannot replace the feminine headword in the example without grammatical changes."
+  },
+  {
+    "id": "it_big_tech_vocab_012",
+    "en": "Digital colonialism",
+    "category": "lexical-noun",
+    "tl": "der digitale Kolonialismus",
+    "alts": [],
+    "register": "Critical postcolonial and technology-policy term; it foregrounds asymmetric control of infrastructure, data, standards, and value extraction.",
+    "trap": "The term is stronger than digitale Abhängigkeit: colonialism frames the relationship as structural domination and extraction, so it should not be used for every foreign technology purchase.",
+    "example_tl": "Digitaler Kolonialismus entsteht, wenn ausländische Konzerne Daten, Rechenzentren und Zahlungswege kontrollieren, während lokale Gesellschaften kaum über deren Regeln mitentscheiden.",
+    "example_en": "Digital colonialism arises when foreign corporations control data, data centers, and payment channels while local societies have little say over their rules.",
+    "cloze": "{{c1::Digitaler Kolonialismus}} entsteht, wenn ausländische Konzerne Daten, Rechenzentren und Zahlungswege kontrollieren, während lokale Gesellschaften kaum über deren Regeln mitentscheiden.",
+    "note": "Old_back is accurate apart from unnecessary capitalization of the article."
+  },
+  {
+    "id": "it_big_tech_vocab_013",
+    "en": "the Smart city",
+    "category": "lexical-noun",
+    "tl": "die Smart City",
+    "alts": [],
+    "register": "Established planning, municipal-policy, and technology-industry label; frequently used critically when digitization is treated as an end in itself.",
+    "trap": "Intelligente Stadt is a comprehensible calque but not the normal German domain label; Smart City is feminine and has the plural Smart Cities.",
+    "example_tl": "Das Leitbild der Smart City bleibt demokratisch leer, solange Sensoren beschafft werden, bevor Kommunen Ziele, Zuständigkeiten und verbindliche Grenzen der Datennutzung festgelegt haben.",
+    "example_en": "The smart-city model remains democratically hollow as long as sensors are procured before municipalities have defined goals, responsibilities, and binding limits on data use.",
+    "cloze": "Das Leitbild der {{c1::Smart City}} bleibt demokratisch leer, solange Sensoren beschafft werden, bevor Kommunen Ziele, Zuständigkeiten und verbindliche Grenzen der Datennutzung festgelegt haben.",
+    "note": "Materially corrects old_back's literal calque and supplies the established feminine German loan phrase. Self-review replaced the compressed Datenschutzgrenzen with the more idiomatic Grenzen der Datennutzung."
+  },
+  {
+    "id": "it_big_tech_vocab_014",
+    "en": "Techno-utopianism",
+    "category": "lexical-noun",
+    "tl": "der Techno-Utopismus",
+    "alts": [
+      "der technologische Utopismus"
+    ],
+    "register": "Critical intellectual-history and media term; the paraphrastic alternative sounds more academic, while Techno-Utopismus is concise and established.",
+    "trap": "Techno-Utopismus denotes faith in technology as a route to an ideal social order; it is not simply optimism about a particular innovation.",
+    "example_tl": "Der Techno-Utopismus der neunziger Jahre unterschätzte, wie rasch offene Netze durch Werbung, Überwachung und private Zugangskontrollen umgestaltet werden konnten.",
+    "example_en": "The techno-utopianism of the 1990s underestimated how quickly open networks could be reshaped by advertising, surveillance, and private access controls.",
+    "cloze": "Der {{c1::Techno-Utopismus}} der neunziger Jahre unterschätzte, wie rasch offene Netze durch Werbung, Überwachung und private Zugangskontrollen umgestaltet werden konnten.",
+    "note": "Old_back is accurate apart from unnecessary capitalization of the article; independent review confirmed the hyphenated form in serious German commentary."
+  },
+  {
+    "id": "it_big_tech_vocab_015",
+    "en": "the Datafication",
+    "category": "lexical-noun",
+    "tl": "die Datafizierung",
+    "alts": [],
+    "register": "Specialist social-science term for turning activities and relations into quantifiable data; less familiar than Digitalisierung and analytically distinct from it.",
+    "trap": "Datafizierung is not a synonym for Digitalisierung: it specifically emphasizes rendering phenomena measurable and processable as data.",
+    "example_tl": "Die Datafizierung des Schulalltags verändert nicht nur Verwaltungsabläufe, sondern auch die Maßstäbe, nach denen Leistung, Verhalten und Förderbedarf beurteilt werden.",
+    "example_en": "The datafication of everyday school life changes not only administrative processes but also the standards by which performance, behavior, and support needs are assessed.",
+    "cloze": "Die {{c1::Datafizierung}} des Schulalltags verändert nicht nur Verwaltungsabläufe, sondern auch die Maßstäbe, nach denen Leistung, Verhalten und Förderbedarf beurteilt werden.",
+    "note": "Old_back is accurate. The exact duplicate report assigns this item to BIG_TECH_VOCAB, and institutional German usage confirms Datafizierung as the established form."
+  },
+  {
+    "id": "it_big_tech_vocab_016",
+    "en": "the Privacy paradox",
+    "category": "lexical-noun",
+    "tl": "das Datenschutzparadox",
+    "alts": [],
+    "register": "Established research and public-policy term for the apparent gap between stated privacy concerns and observable disclosure behavior.",
+    "trap": "Datenschutzparadox is the conventional compound; Paradoxon der Privatsphäre is literal and obscures the term's specific behavioral-research meaning.",
+    "example_tl": "Das Datenschutzparadox erklärt nicht automatisch, warum Menschen trotz geäußerter Sorge Daten preisgeben, denn Plattformdesign und fehlende Alternativen begrenzen ihre Wahlmöglichkeiten.",
+    "example_en": "The privacy paradox does not automatically explain why people disclose data despite expressed concern, because platform design and a lack of alternatives constrain their choices.",
+    "cloze": "Das {{c1::Datenschutzparadox}} erklärt nicht automatisch, warum Menschen trotz geäußerter Sorge Daten preisgeben, denn Plattformdesign und fehlende Alternativen begrenzen ihre Wahlmöglichkeiten.",
+    "note": "Materially replaces old_back's literal paraphrase with the attested German research term and avoids treating the observed gap as proof of indifference."
+  },
+  {
+    "id": "it_big_tech_vocab_019",
+    "en": "the Digital detox",
+    "category": "lexical-expression",
+    "tl": "Digital Detox",
+    "alts": [
+      "die digitale Auszeit"
+    ],
+    "register": "Digital Detox is a common lifestyle and media label; digitale Auszeit is more transparent and less trend-driven.",
+    "trap": "Digitale Entgiftung sounds like an over-literal medical metaphor in German; the established label remains English or is paraphrased as digitale Auszeit.",
+    "example_tl": "Digital Detox verspricht individuelle Entlastung, ändert aber wenig an Geschäftsmodellen, die ständige Erreichbarkeit fördern und jede Unterbrechung als verlorene Aufmerksamkeit behandeln.",
+    "example_en": "Digital detox promises individual relief but changes little about business models that encourage constant availability and treat every interruption as lost attention.",
+    "cloze": "{{c1::Digital Detox}} verspricht individuelle Entlastung, ändert aber wenig an Geschäftsmodellen, die ständige Erreichbarkeit fördern und jede Unterbrechung als verlorene Aufmerksamkeit behandeln.",
+    "note": "Materially corrects old_back's unnatural literal rendering; the alternative supplies an idiomatic German paraphrase."
+  },
+  {
+    "id": "it_big_tech_vocab_020",
+    "en": "the Attention economy",
+    "category": "lexical-noun",
+    "tl": "die Aufmerksamkeitsökonomie",
+    "alts": [],
+    "register": "Established media-economics and critical technology term for markets in which scarce human attention is captured, measured, and monetized.",
+    "trap": "Aufmerksamkeitsökonomie describes an economic system organized around scarce attention, not personal Zeitmanagement or an economy that behaves attentively.",
+    "example_tl": "Die Aufmerksamkeitsökonomie belohnt zugespitzte Empörung stärker als sorgfältige Einordnung, weil Plattformen unmittelbare Reaktionen leichter messen und vermarkten können.",
+    "example_en": "The attention economy rewards pointed outrage more than careful contextualization because platforms can measure and market immediate reactions more easily.",
+    "cloze": "Die {{c1::Aufmerksamkeitsökonomie}} belohnt zugespitzte Empörung stärker als sorgfältige Einordnung, weil Plattformen unmittelbare Reaktionen leichter messen und vermarkten können.",
+    "note": "Old_back is accurate; the example fixes the specialist political-economy sense."
+  },
+  {
+    "id": "it_big_tech_vocab_022",
+    "en": "the Digital divide",
+    "category": "lexical-noun",
+    "tl": "die digitale Kluft",
+    "alts": [
+      "die digitale Spaltung"
+    ],
+    "register": "Standard social-policy term; it may refer to unequal access, skills, affordability, or the capacity to benefit from digital services.",
+    "trap": "Digitale Kluft is broader than a lack of internet connections; reducing the term to Netzzugang can hide inequalities in devices, skills, and effective use.",
+    "example_tl": "Die digitale Kluft verläuft heute nicht nur zwischen angeschlossenen und unversorgten Haushalten, sondern ebenso zwischen souveräner Nutzung und erzwungener Abhängigkeit.",
+    "example_en": "Today the digital divide runs not only between connected and underserved households but also between autonomous use and forced dependence.",
+    "cloze": "Die {{c1::digitale Kluft}} verläuft heute nicht nur zwischen angeschlossenen und unversorgten Haushalten, sondern ebenso zwischen souveräner Nutzung und erzwungener Abhängigkeit.",
+    "note": "Old_back is accurate. The exact duplicate report assigns this item to BIG_TECH_VOCAB, so it is retained in the specialist topic."
+  },
+  {
+    "id": "it_big_tech_vocab_023",
+    "en": "Techno-authoritarianism",
+    "category": "lexical-noun",
+    "tl": "der Techno-Autoritarismus",
+    "alts": [],
+    "register": "Critical political and geopolitical term for authoritarian rule enabled, intensified, or ideologically shaped by digital technology.",
+    "trap": "Techno-Autoritarismus is broader than digital surveillance: it can include automated control, platform power, censorship, and technocratic claims to political legitimacy.",
+    "example_tl": "Der Techno-Autoritarismus verbindet umfassende Datenerfassung mit dem Versprechen effizienter Verwaltung und entzieht politische Entscheidungen dadurch zunehmend öffentlicher Kontrolle.",
+    "example_en": "Techno-authoritarianism combines comprehensive data collection with the promise of efficient administration, thereby increasingly removing political decisions from public scrutiny.",
+    "cloze": "Der {{c1::Techno-Autoritarismus}} verbindet umfassende Datenerfassung mit dem Versprechen effizienter Verwaltung und entzieht politische Entscheidungen dadurch zunehmend öffentlicher Kontrolle.",
+    "note": "Old_back is accurate. Independent attestation review confirmed the hyphenated term in German policy and media discourse."
+  },
+  {
+    "id": "it_big_tech_vocab_025",
+    "en": "the Digital footprint",
+    "category": "lexical-noun",
+    "tl": "der digitale Fußabdruck",
+    "alts": [],
+    "register": "Common privacy and digital-literacy metaphor for the data traces left by online activity; neutral but often used in cautionary contexts.",
+    "trap": "Digitaler Fußabdruck is not limited to information a user deliberately posts; inferred, observed, and device-generated traces can also form part of it.",
+    "example_tl": "Der digitale Fußabdruck einer Person entsteht auch durch Standortdaten und Metadaten, die scheinbar harmlose Anwendungen dauerhaft im Hintergrund erfassen.",
+    "example_en": "A person's digital footprint is also created by location data and metadata that seemingly harmless applications continuously collect in the background.",
+    "cloze": "Der {{c1::digitale Fußabdruck}} einer Person entsteht auch durch Standortdaten und Metadaten, die scheinbar harmlose Anwendungen dauerhaft im Hintergrund erfassen.",
+    "note": "Old_back is accurate. The cross-topic duplicate report assigns the exact FANCY_VOCAB copy to BIG_TECH_VOCAB. Self-review made the subject fully general because employment status was irrelevant to the concept."
+  },
+  {
+    "id": "it_big_tech_vocab_026",
+    "en": "Big Data",
+    "category": "lexical-expression",
+    "tl": "Big Data",
+    "alts": [],
+    "register": "Established English technical and policy term, often used without an article; grammatically neuter when an article or pronoun is required.",
+    "trap": "Große Daten is not the German term: Big Data refers to data-intensive methods and datasets whose scale, speed, or variety challenges conventional processing.",
+    "example_tl": "Big Data verspricht neue Erkenntnisse, doch große Datenmengen beseitigen weder verzerrte Erhebungsverfahren noch politische Vorannahmen bei ihrer Auswertung.",
+    "example_en": "Big data promises new insights, but large volumes of data eliminate neither biased collection methods nor political assumptions in their analysis.",
+    "cloze": "{{c1::Big Data}} verspricht neue Erkenntnisse, doch große Datenmengen beseitigen weder verzerrte Erhebungsverfahren noch politische Vorannahmen bei ihrer Auswertung.",
+    "note": "Materially corrects old_back's false literal translation and records the usual articleless German usage."
+  },
+  {
+    "id": "it_big_tech_vocab_027",
+    "en": "Cloud computing",
+    "category": "lexical-noun",
+    "tl": "das Cloud-Computing",
+    "alts": [],
+    "register": "Established neutral terminology in IT, procurement, and digital policy; German normally integrates the English compound with a hyphen.",
+    "trap": "Cloud-Computing takes a hyphen in integrated German spelling; Cloud alone denotes the remote service environment, not necessarily the computing model.",
+    "example_tl": "Cloud-Computing erleichtert die gemeinsame Nutzung skalierbarer Ressourcen, kann öffentliche Verwaltungen jedoch langfristig an proprietäre Schnittstellen und einzelne Anbieter binden.",
+    "example_en": "Cloud computing facilitates shared use of scalable resources but can tie public administrations to proprietary interfaces and individual providers over the long term.",
+    "cloze": "{{c1::Cloud-Computing}} erleichtert die gemeinsame Nutzung skalierbarer Ressourcen, kann öffentliche Verwaltungen jedoch langfristig an proprietäre Schnittstellen und einzelne Anbieter binden.",
+    "note": "Materially normalizes old_back's open English spelling. The example is new and independent of the related non-exact FANCY_VOCAB prompt."
+  },
+  {
+    "id": "it_big_tech_vocab_029",
+    "en": "Platform governance",
+    "category": "lexical-noun",
+    "tl": "die Plattform-Governance",
+    "alts": [
+      "die Governance digitaler Plattformen"
+    ],
+    "register": "Established interdisciplinary term in media research, law, and technology policy; broader than state regulation because platforms also govern privately.",
+    "trap": "Plattform-Governance is not synonymous with Plattformregulierung: governance includes private rules, technical design, enforcement, oversight, and interactions among multiple actors.",
+    "example_tl": "Eine demokratische Plattform-Governance muss nicht nur mit rechtswidrigen Inhalten umgehen, sondern auch private Regelsetzung, algorithmische Sichtbarkeit und Beschwerdewege kontrollierbar machen.",
+    "example_en": "Democratic platform governance must not only deal with illegal content but also make private rule-setting, algorithmic visibility, and complaint mechanisms accountable.",
+    "cloze": "Eine demokratische {{c1::Plattform-Governance}} muss nicht nur mit rechtswidrigen Inhalten umgehen, sondern auch private Regelsetzung, algorithmische Sichtbarkeit und Beschwerdewege kontrollierbar machen.",
+    "note": "Old_back is accurate; the note supplies the essential scope distinction from the narrower Plattformregulierung. Self-review replaced Inhalte behandeln with the idiomatic mit Inhalten umgehen."
+  },
+  {
+    "id": "it_big_tech_vocab_030",
+    "en": "the Techlash",
+    "category": "lexical-noun",
+    "tl": "der Techlash",
+    "alts": [],
+    "register": "Journalistic and policy loanword for a broad backlash against major technology companies; concise but less transparent outside specialist debate.",
+    "trap": "Techlash denotes a social and political backlash, not a technical failure or merely one critical news cycle; the German loanword is masculine.",
+    "example_tl": "Der Techlash erfasste breitere gesellschaftliche Kreise, als Kritik an Datenschutzverletzungen mit Sorgen über Monopole, Arbeitsbedingungen und demokratische Macht zusammenlief.",
+    "example_en": "The techlash reached broader sections of society when criticism of privacy violations converged with concerns about monopolies, working conditions, and democratic power.",
+    "cloze": "Der {{c1::Techlash}} erfasste breitere gesellschaftliche Kreise, als Kritik an Datenschutzverletzungen mit Sorgen über Monopole, Arbeitsbedingungen und demokratische Macht zusammenlief.",
+    "note": "Old_back is accurate; the note supplies gender, register, and the term's collective political meaning. Self-review replaced the stiff gewann an Breite with an idiomatic journalistic collocation."
+  },
+  {
+    "id": "it_big_tech_vocab_031",
+    "en": "Techno-optimism",
+    "category": "lexical-noun",
+    "tl": "der Technikoptimismus",
+    "alts": [
+      "der Technooptimismus"
+    ],
+    "register": "Technikoptimismus is the established neutral-formal term in technology history and criticism; Technooptimismus is a less common contemporary variant.",
+    "trap": "German normally prefers the closed compound Technikoptimismus; the English-patterned hyphenated Techno-Optimismus is not the best production default.",
+    "example_tl": "Der Technikoptimismus der Regierung verwechselt schnelle Automatisierung mit gesellschaftlichem Fortschritt und behandelt demokratische Einwände vorschnell als bloße Innovationsfeindlichkeit.",
+    "example_en": "The government's techno-optimism confuses rapid automation with social progress and too readily treats democratic objections as mere hostility to innovation.",
+    "cloze": "Der {{c1::Technikoptimismus}} der Regierung verwechselt schnelle Automatisierung mit gesellschaftlichem Fortschritt und behandelt demokratische Einwände vorschnell als bloße Innovationsfeindlichkeit.",
+    "note": "Materially improves old_back by replacing the English-patterned hyphenated form with the established German compound. The example is distinct from the related FANCY_VOCAB card."
+  },
+  {
+    "id": "it_big_tech_vocab_032",
+    "en": "Digital sovereignty",
+    "category": "lexical-noun",
+    "tl": "die digitale Souveränität",
+    "alts": [],
+    "register": "Central formal term in European technology policy; its bearer may be an individual, state, institution, or region, so context must specify the level.",
+    "trap": "Digitale Souveränität does not necessarily mean national technological autarky; it usually concerns meaningful capacity to choose, shape, and control digital systems.",
+    "example_tl": "Digitale Souveränität entsteht nicht durch nationale Etiketten, sondern durch überprüfbare Standards, wechselbare Anbieter und öffentliche Gestaltungskompetenz bei kritischen Infrastrukturen.",
+    "example_en": "Digital sovereignty arises not from national labels but from verifiable standards, replaceable providers, and public capacity to shape critical infrastructure.",
+    "cloze": "{{c1::Digitale Souveränität}} entsteht nicht durch nationale Etiketten, sondern durch überprüfbare Standards, wechselbare Anbieter und öffentliche Gestaltungskompetenz bei kritischen Infrastrukturen.",
+    "note": "Old_back is accurate apart from unnecessary capitalization; the example prevents the common conceptual narrowing to autarky. Self-review replaced the unidiomatic Kompetenz über with Gestaltungskompetenz bei."
+  },
+  {
+    "id": "it_big_tech_vocab_033",
+    "en": "Public interest technology",
+    "category": "lexical-noun",
+    "tl": "die gemeinwohlorientierte Technologie",
+    "alts": [
+      "Public Interest Technology"
+    ],
+    "register": "Gemeinwohlorientierte Technologie is transparent in German policy prose; the English label names an emerging interdisciplinary field and is also used untranslated.",
+    "trap": "Technologie im öffentlichen Interesse is understandable but sounds legalistic; gemeinwohlorientiert expresses design and deployment directed toward collective benefit, not merely public-sector ownership.",
+    "example_tl": "Gemeinwohlorientierte Technologie verdient ihren Namen nur, wenn betroffene Gemeinschaften Ziele mitbestimmen und öffentliche Finanzierung langfristige Wartung statt kurzfristiger Pilotprojekte ermöglicht.",
+    "example_en": "Public interest technology deserves its name only when affected communities help determine goals and public funding enables long-term maintenance rather than short-lived pilot projects.",
+    "cloze": "{{c1::Gemeinwohlorientierte Technologie}} verdient ihren Namen nur, wenn betroffene Gemeinschaften Ziele mitbestimmen und öffentliche Finanzierung langfristige Wartung statt kurzfristiger Pilotprojekte ermöglicht.",
+    "note": "Materially improves old_back's legalistic paraphrase. Review of current German institutional usage found both the transparent German phrase and the untranslated emerging field label. Self-review sharpened the example's critical idiom with verdient ihren Namen."
+  },
+  {
+    "id": "it_big_tech_vocab_036",
+    "en": "Digital literacy",
+    "category": "lexical-noun",
+    "tl": "die digitale Kompetenz",
+    "alts": [
+      "die Digitalkompetenz"
+    ],
+    "register": "Standard broad education and policy term; digitale Literalität is a narrower specialist term in some research contexts, not the general default.",
+    "trap": "Digitale Alphabetisierung is an English-influenced calque when the source means critical, practical competence rather than the initial acquisition of basic reading-like skills.",
+    "example_tl": "Digitale Kompetenz umfasst nicht nur Bedienwissen, sondern auch die Fähigkeit, Quellen zu prüfen, Datenschutzfolgen abzuschätzen und automatisierte Entscheidungen kritisch einzuordnen.",
+    "example_en": "Digital literacy includes not only operational knowledge but also the ability to verify sources, assess privacy consequences, and critically evaluate automated decisions.",
+    "cloze": "{{c1::Digitale Kompetenz}} umfasst nicht nur Bedienwissen, sondern auch die Fähigkeit, Quellen zu prüfen, Datenschutzfolgen abzuschätzen und automatisierte Entscheidungen kritisch einzuordnen.",
+    "note": "Materially corrects old_back's overly literal and narrower Alphabetisierung; the card selects the broad policy sense of the underspecified English prompt."
+  },
+  {
+    "id": "it_big_tech_vocab_037",
+    "en": "Open source",
+    "category": "lexical-adjective",
+    "tl": "quelloffen",
+    "alts": [
+      "Open Source"
+    ],
+    "register": "Quelloffen is neutral and productively inflected; Open Source is the conventional uninflected technical label and appears in compounds.",
+    "trap": "Offene Quellen refers to accessible information sources, not software source code; attributive quelloffen takes normal German adjective endings.",
+    "example_tl": "Quelloffene Software ermöglicht unabhängige Prüfungen, garantiert jedoch ohne tragfähige Finanzierung weder zeitnahe Sicherheitsupdates noch eine tatsächlich inklusive Projektgovernance.",
+    "example_en": "Open-source software enables independent audits but, without sustainable funding, guarantees neither timely security updates nor genuinely inclusive project governance.",
+    "cloze": "{{c1::Quelloffene}} Software ermöglicht unabhängige Prüfungen, garantiert jedoch ohne tragfähige Finanzierung weder zeitnahe Sicherheitsupdates noch eine tatsächlich inklusive Projektgovernance.",
+    "note": "Materially corrects old_back's false-friend translation and uses the example to test adjective inflection."
+  },
+  {
+    "id": "it_big_tech_vocab_039",
+    "en": "the Decentralized web",
+    "category": "lexical-noun",
+    "tl": "das dezentrale Web",
+    "alts": [
+      "das dezentral organisierte Web"
+    ],
+    "register": "Neutral technical and policy term for web architectures that distribute control, hosting, or identity rather than relying on a few central intermediaries.",
+    "trap": "Dezentral describes an architecture or distribution; dezentralisiert may imply a completed process and is less idiomatic as the stable name of the concept.",
+    "example_tl": "Ein dezentrales Web kann Abhängigkeiten von Plattformkonzernen verringern, schafft jedoch neue Herausforderungen bei Moderation, Auffindbarkeit und der dauerhaften Verfügbarkeit von Inhalten.",
+    "example_en": "A decentralized web can reduce dependence on platform corporations but creates new challenges for moderation, discoverability, and the long-term availability of content.",
+    "cloze": "Ein {{c1::dezentrales Web}} kann Abhängigkeiten von Plattformkonzernen verringern, schafft jedoch neue Herausforderungen bei Moderation, Auffindbarkeit und der dauerhaften Verfügbarkeit von Inhalten.",
+    "note": "Materially improves old_back by using the idiomatic state adjective dezentral rather than the process-oriented participle dezentralisiert."
+  },
+  {
+    "id": "it_big_tech_vocab_040",
+    "en": "Information disorder",
+    "category": "lexical-noun",
+    "tl": "die Informationsstörung",
+    "alts": [],
+    "register": "Specialist media-research umbrella term covering misinformation, disinformation, and harmful uses of genuine information; often introduced alongside the English label.",
+    "trap": "Informationelle Unordnung is not established German terminology; Informationsstörung is broader than Desinformation because intent and factual falsity vary across its subtypes.",
+    "example_tl": "Eine Informationsstörung entsteht nicht allein durch erfundene Meldungen, sondern auch durch manipulierte Kontexte, koordinierte Verstärkung und die gezielte Veröffentlichung privater Daten.",
+    "example_en": "Information disorder arises not only from fabricated reports but also from manipulated contexts, coordinated amplification, and the targeted publication of private data.",
+    "cloze": "Eine {{c1::Informationsstörung}} entsteht nicht allein durch erfundene Meldungen, sondern auch durch manipulierte Kontexte, koordinierte Verstärkung und die gezielte Veröffentlichung privater Daten.",
+    "note": "Materially replaces old_back's unattested-looking calque with the German term used in media research and German treatments of the Information Disorder framework."
+  }
+]

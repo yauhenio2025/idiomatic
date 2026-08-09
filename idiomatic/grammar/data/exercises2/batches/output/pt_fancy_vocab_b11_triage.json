@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_401",
+    "en": "the Value",
+    "verdict": "drop",
+    "reason": "Valor is basic, transparent vocabulary already owned at C1, while the bare prompt does not select monetary value, moral worth, or numerical magnitude."
+  },
+  {
+    "id": "it_fancy_vocab_402",
+    "en": "the Dependency",
+    "verdict": "keep",
+    "reason": "Institutional dependence supplies useful government with de or em relação a and a meaningful contrast with the clinical addiction sense."
+  },
+  {
+    "id": "it_fancy_vocab_403",
+    "en": "To advocate",
+    "verdict": "keep",
+    "reason": "Public advocacy motivates defender publicamente, while formal advogar em favor de and interference from English *advocar provide additional production value."
+  },
+  {
+    "id": "it_fancy_vocab_404",
+    "en": "To appraise",
+    "verdict": "keep",
+    "reason": "The monetary-valuation sense motivates the precise phrase estimar o valor de and distinguishes an appraisal from general evaluation or price-setting."
+  },
+  {
+    "id": "it_fancy_vocab_405",
+    "en": "To articulate",
+    "verdict": "keep",
+    "reason": "The argumentative sense fixes coherent formulation of a position and contrasts productively with the broader expressar and the verb's mechanical senses."
+  },
+  {
+    "id": "it_fancy_vocab_406",
+    "en": "To champion",
+    "verdict": "keep",
+    "reason": "The nonliteral verb encodes vigorous public support and cannot be rendered with a Portuguese derivative of campeão."
+  },
+  {
+    "id": "it_fancy_vocab_407",
+    "en": "To clarify",
+    "verdict": "drop",
+    "reason": "Exact cross-topic duplicate: the retained CONNECTING note owns To clarify under the deterministic duplicate report."
+  },
+  {
+    "id": "it_fancy_vocab_408",
+    "en": "To compare",
+    "verdict": "drop",
+    "reason": "Comparar is a transparent, high-frequency verb with no distinctive sense or construction in the isolated prompt."
+  },
+  {
+    "id": "it_fancy_vocab_409",
+    "en": "To condemn",
+    "verdict": "drop",
+    "reason": "Condenar is a familiar direct equivalent, and the prompt does not distinguish moral condemnation from legal sentencing."
+  },
+  {
+    "id": "it_fancy_vocab_410",
+    "en": "To consider",
+    "verdict": "drop",
+    "reason": "The broad, high-frequency verb adds no distinct lesson beside the retained deliberative cards for contemplate and ponder."
+  },
+  {
+    "id": "it_fancy_vocab_411",
+    "en": "To contemplate",
+    "verdict": "keep",
+    "reason": "Cogitar fazer algo fixes the deliberative sense and distinguishes a possible future action from the visual and inclusive senses of contemplar."
+  },
+  {
+    "id": "it_fancy_vocab_412",
+    "en": "To contradict",
+    "verdict": "drop",
+    "reason": "Contradizer is a familiar direct equivalent, while legacy Contrariar is also natural when evidence or results run counter to a claim; the bare prompt selects no distinction."
+  },
+  {
+    "id": "it_fancy_vocab_413",
+    "en": "To convey",
+    "verdict": "keep",
+    "reason": "The communicative sense requires a context-sensitive choice among transmitir, comunicar, and renderings for physical transport."
+  },
+  {
+    "id": "it_fancy_vocab_414",
+    "en": "To criticize",
+    "verdict": "drop",
+    "reason": "Criticar is a transparent, high-frequency cognate whose isolated infinitive offers no advanced production lesson."
+  },
+  {
+    "id": "it_fancy_vocab_415",
+    "en": "To debate",
+    "verdict": "drop",
+    "reason": "Debater is familiar and transparent, while the bare prompt does not select public debate, internal deliberation, or disagreement."
+  },
+  {
+    "id": "it_fancy_vocab_416",
+    "en": "To defend",
+    "verdict": "drop",
+    "reason": "Defender is a basic direct equivalent and contributes nothing distinct beside the more marked advocate and champion cards."
+  },
+  {
+    "id": "it_fancy_vocab_417",
+    "en": "To delineate",
+    "verdict": "keep",
+    "reason": "Boundary-setting in policy prose motivates delimitar and a teachable contrast with merely restricting or loosely outlining something."
+  },
+  {
+    "id": "it_fancy_vocab_418",
+    "en": "To denounce",
+    "verdict": "drop",
+    "reason": "Denunciar is a familiar cognate, and the context-free prompt does not select public denunciation, accusation, or reporting to authorities."
+  },
+  {
+    "id": "it_fancy_vocab_419",
+    "en": "To describe",
+    "verdict": "drop",
+    "reason": "Descrever is basic, transparent vocabulary, and the prompt contains no specialized descriptive frame."
+  },
+  {
+    "id": "it_fancy_vocab_420",
+    "en": "To dismiss",
+    "verdict": "keep",
+    "reason": "The argumentative sense requires descartar or desconsiderar and materially corrects legacy Desmentir while contrasting with employment and legal senses."
+  },
+  {
+    "id": "it_fancy_vocab_421",
+    "en": "To dispute",
+    "verdict": "keep",
+    "reason": "A challenge to validity calls for contestar or impugnar rather than legacy Disputar, which normally expresses competition or contested possession."
+  },
+  {
+    "id": "it_fancy_vocab_422",
+    "en": "To embrace",
+    "verdict": "keep",
+    "reason": "Adopting a policy or approach is a valuable nonliteral sense for which adotar is less rhetorically marked than figurative abraçar."
+  },
+  {
+    "id": "it_fancy_vocab_423",
+    "en": "To evaluate",
+    "verdict": "drop",
+    "reason": "Avaliar is a transparent, familiar equivalent, and general assessment adds nothing beyond the retained monetary appraise card."
+  },
+  {
+    "id": "it_fancy_vocab_424",
+    "en": "To examine",
+    "verdict": "drop",
+    "reason": "Examinar is a basic direct equivalent, while the prompt does not choose a scientific, legal, or investigative construction."
+  },
+  {
+    "id": "it_fancy_vocab_425",
+    "en": "To expound",
+    "verdict": "keep",
+    "reason": "Extended systematic explanation and the government contrast between expor algo and discorrer sobre algo provide advanced value."
+  },
+  {
+    "id": "it_fancy_vocab_426",
+    "en": "To express",
+    "verdict": "drop",
+    "reason": "Expressar is a high-frequency transparent cognate and is subsumed by the more precise retained articulate card."
+  },
+  {
+    "id": "it_fancy_vocab_427",
+    "en": "To foster",
+    "verdict": "drop",
+    "reason": "Fomentar and promover are familiar policy vocabulary at C1, and the isolated prompt does not select a developmental, institutional, or caregiving sense."
+  },
+  {
+    "id": "it_fancy_vocab_428",
+    "en": "To generate",
+    "verdict": "drop",
+    "reason": "Gerar is a transparent, high-frequency equivalent with no distinctive collocation or interference issue here."
+  },
+  {
+    "id": "it_fancy_vocab_429",
+    "en": "To highlight",
+    "verdict": "drop",
+    "reason": "Destacar and salientar are familiar analytical verbs, and the prompt offers no distinct media or argumentative construction."
+  },
+  {
+    "id": "it_fancy_vocab_430",
+    "en": "To hypothesize",
+    "verdict": "keep",
+    "reason": "The conventional formular or levantar uma hipótese construction has genuine academic value and a useful cross-language spelling contrast."
+  },
+  {
+    "id": "it_fancy_vocab_431",
+    "en": "To illustrate",
+    "verdict": "drop",
+    "reason": "Ilustrar and exemplificar are familiar at C1, while the bare prompt does not distinguish visual illustration from an evidential example."
+  },
+  {
+    "id": "it_fancy_vocab_432",
+    "en": "To infer",
+    "verdict": "keep",
+    "reason": "The verb teaches government with de, useful preterite morphology, and the consequential distinction between inference and implication."
+  },
+  {
+    "id": "it_fancy_vocab_433",
+    "en": "To interpret",
+    "verdict": "drop",
+    "reason": "Interpretar is a transparent, familiar cognate, and the source does not select data, legal, linguistic, or artistic interpretation."
+  },
+  {
+    "id": "it_fancy_vocab_434",
+    "en": "To negate",
+    "verdict": "keep",
+    "reason": "When one factor cancels another's effect, anular or neutralizar materially corrects the misleading legacy Negar."
+  },
+  {
+    "id": "it_fancy_vocab_435",
+    "en": "To ponder",
+    "verdict": "keep",
+    "reason": "Sopesar precisely captures weighing competing considerations and distinguishes this deliberative sense from other uses of ponderar."
+  },
+  {
+    "id": "it_fancy_vocab_436",
+    "en": "To posit",
+    "verdict": "keep",
+    "reason": "Postular is a marked academic verb and materially corrects legacy Postar, which means post, mail, or place."
+  },
+  {
+    "id": "it_fancy_vocab_437",
+    "en": "To promote",
+    "verdict": "drop",
+    "reason": "Promover is a familiar transparent equivalent, and the isolated prompt does not distinguish advocacy, marketing, advancement, or causation."
+  },
+  {
+    "id": "it_fancy_vocab_438",
+    "en": "To propose",
+    "verdict": "drop",
+    "reason": "Propor is a basic direct equivalent with no selected register, government, or interference issue."
+  },
+  {
+    "id": "it_fancy_vocab_439",
+    "en": "To qualify",
+    "verdict": "keep",
+    "reason": "The argumentative sense requires matizar or relativizar and materially corrects legacy Qualificar, which belongs to other senses."
+  },
+  {
+    "id": "it_fancy_vocab_440",
+    "en": "To question",
+    "verdict": "keep",
+    "reason": "Epistemic doubt motivates pôr em dúvida and contrasts productively with asking or interrogating a person."
+  }
+]

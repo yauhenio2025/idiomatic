@@ -1,0 +1,58 @@
+[
+  {
+    "id": "it_fancy_vocab_530",
+    "en": "The rationale",
+    "category": "lexical-noun",
+    "tl": "a fundamentação",
+    "alts": [
+      "a justificativa"
+    ],
+    "register": "Neutro-formal em decisões públicas, textos jurídicos e análises para o conjunto de razões que sustenta uma medida; justificativa é mais corrente e pode soar menos técnica.",
+    "trap": "Em português, racional é sobretudo adjetivo; o uso substantivo de o racional por rationale soa jargonal, enquanto lógica pode indicar coerência sem nomear as razões apresentadas.",
+    "example_tl": "A fundamentação da nova exigência parece sólida, mas o ministério ainda não demonstrou que a coleta indiscriminada de dados reduzirá fraudes.",
+    "example_en": "The rationale for the new requirement seems sound, but the ministry has not yet shown that indiscriminate data collection will reduce fraud.",
+    "cloze": "{{c1::A fundamentação}} da nova exigência parece sólida, mas o ministério ainda não demonstrou que a coleta indiscriminada de dados reduzirá fraudes.",
+    "note": "Old_back oferece a lógica, opção possível em certos contextos, mas ampla demais para a base justificadora selecionada. Autorrevisão: preferi fundamentação a raciocínio para não confundir as razões apresentadas com o processo mental que as produz."
+  },
+  {
+    "id": "it_fancy_vocab_536",
+    "en": "Abstract",
+    "category": "lexical-adjective",
+    "tl": "abstrato",
+    "alts": [],
+    "register": "Neutro e corrente em prosa acadêmica e analítica para ideias desvinculadas de casos concretos; flexiona regularmente em gênero e número.",
+    "trap": "Abstract também é substantivo em inglês, mas resumo traduz esse substantivo, não o adjetivo desta sequência lexical; em português, o adjetivo é abstrato.",
+    "example_tl": "O princípio parece abstrato, mas orienta decisões concretas sobre quais dados públicos podem ser reutilizados por empresas privadas sem autorização.",
+    "example_en": "The principle seems abstract, but it guides concrete decisions about which public data may be reused by private companies without authorization.",
+    "cloze": "O princípio parece {{c1::abstrato}}, mas orienta decisões concretas sobre quais dados públicos podem ser reutilizados por empresas privadas sem autorização.",
+    "note": "Diverge materialmente de old_back, que interpreta o item como o substantivo inglês que significa resumo. Autorrevisão: a posição do item na série de adjetivos confirma a leitura adjetival."
+  },
+  {
+    "id": "it_fancy_vocab_539",
+    "en": "Cogent",
+    "category": "lexical-adjective",
+    "tl": "bem fundamentado",
+    "alts": [
+      "sólido"
+    ],
+    "register": "Neutro-formal em argumentação para um raciocínio sustentado por razões fortes e pertinentes; sólido é mais conciso e igualmente natural nesse uso.",
+    "trap": "Cogente existe, mas no português brasileiro é marcadamente formal e aparece sobretudo no direito para normas obrigatórias; não é o equivalente automático de cogent argument.",
+    "example_tl": "O argumento é bem fundamentado porque relaciona os incentivos econômicos das plataformas a dados auditáveis, sem atribuir causalidade onde há apenas correlação.",
+    "example_en": "The argument is cogent because it links platforms' economic incentives to auditable data without attributing causation where there is only correlation.",
+    "cloze": "O argumento é {{c1::bem fundamentado}} porque relaciona os incentivos econômicos das plataformas a dados auditáveis, sem atribuir causalidade onde há apenas correlação.",
+    "note": "Diverge de old_back, cujo cognato é marcado e sugere especialmente obrigatoriedade jurídica. Autorrevisão: escolhi bem fundamentado, não apenas convincente, para preservar a qualidade lógica e probatória de cogent."
+  },
+  {
+    "id": "it_fancy_vocab_546",
+    "en": "Definitive",
+    "category": "lexical-adjective",
+    "tl": "de referência",
+    "alts": [],
+    "register": "Neutro-formal para uma obra considerada autorizada e especialmente completa sobre um tema; definitivo é natural quando a ideia central é final ou irrevogável.",
+    "trap": "Definitivo é apenas um cognato parcial: uma definitive study pode ser um estudo de referência, sem ser a versão final nem encerrar permanentemente o debate.",
+    "example_tl": "A investigação produziu o estudo de referência sobre vigilância biométrica, reunindo documentos oficiais, entrevistas e auditorias técnicas antes dispersos em arquivos incompatíveis.",
+    "example_en": "The investigation produced the definitive study of biometric surveillance, bringing together official documents, interviews, and technical audits previously scattered across incompatible archives.",
+    "cloze": "A investigação produziu o estudo {{c1::de referência}} sobre vigilância biométrica, reunindo documentos oficiais, entrevistas e auditorias técnicas antes dispersos em arquivos incompatíveis.",
+    "note": "O item isolado é polissêmico; esta nota seleciona explicitamente a acepção de obra autorizada, na qual old_back definitivo pode induzir a leitura de final. Autorrevisão: mantive alts vazio porque autorizado também pode significar oficialmente permitido."
+  }
+]

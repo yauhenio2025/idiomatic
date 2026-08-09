@@ -1,0 +1,334 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "category": "lexical-noun",
+    "tl": "la fundición de semiconductores",
+    "alts": [],
+    "register": "Specialist semiconductor-industry term for a facility or business that manufactures chips designed by other companies.",
+    "trap": "Without a domain modifier, fundición normally suggests a metal foundry; de semiconductores fixes the contract-manufacturing sense intended here.",
+    "example_tl": "La fundición de semiconductores reservará parte de su capacidad para diseñadores europeos, aunque seguirá dependiendo de maquinaria litográfica importada.",
+    "example_en": "The semiconductor foundry will reserve part of its capacity for European designers, although it will remain dependent on imported lithography equipment.",
+    "cloze": "{{c1::La fundición de semiconductores}} reservará parte de su capacidad para diseñadores europeos, aunque seguirá dependiendo de maquinaria litográfica importada.",
+    "note": "The legacy fundición is possible but too ambiguous as a production headword; the domain complement follows Spanish EU semiconductor-policy usage."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "category": "lexical-noun",
+    "tl": "la fotolitografía",
+    "alts": [
+      "la litografía de semiconductores"
+    ],
+    "register": "Specialist microfabrication term for transferring circuit patterns onto a light-sensitive wafer surface.",
+    "trap": "Bare litografía also denotes artistic and printing processes; fotolitografía anchors the light-based semiconductor-manufacturing sense.",
+    "example_tl": "La fotolitografía proyecta patrones diminutos sobre la oblea, y cualquier desviación en la exposición puede inutilizar miles de circuitos antes del encapsulado.",
+    "example_en": "Photolithography projects minute patterns onto the wafer, and any deviation in exposure can render thousands of circuits unusable before packaging.",
+    "cloze": "{{c1::La fotolitografía}} proyecta patrones diminutos sobre la oblea, y cualquier desviación en la exposición puede inutilizar miles de circuitos antes del encapsulado.",
+    "note": "The legacy litografía is a valid hypernym but underspecifies the process selected by the semiconductor context."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "category": "lexical-noun",
+    "tl": "la pastilla semiconductora",
+    "alts": [
+      "el chip sin encapsular"
+    ],
+    "register": "Specialist microelectronics term for an individual piece cut from a processed wafer before or during packaging.",
+    "trap": "English die is highly polysemous: matriz denotes a mould or stamping die, not the semiconductor component intended in this batch.",
+    "example_tl": "Cada pastilla semiconductora se prueba antes del encapsulado para evitar que un defecto microscópico encarezca el montaje del procesador completo.",
+    "example_en": "Each semiconductor die is tested before packaging to prevent a microscopic defect from making assembly of the complete processor more expensive.",
+    "cloze": "Cada {{c1::pastilla semiconductora}} se prueba antes del encapsulado para evitar que un defecto microscópico encarezca el montaje del procesador completo.",
+    "note": "Materially corrects old_back matriz. Spanish technical and regulatory texts use pastilla semiconductora; chip sin encapsular is retained as a transparent alternative."
+  },
+  {
+    "id": "it_fancy_vocab_286",
+    "en": "the Fabless",
+    "category": "lexical-noun",
+    "tl": "la empresa de semiconductores sin fábrica",
+    "alts": [
+      "la empresa fabless"
+    ],
+    "register": "Neutral-formal industrial-policy expression; the specialist anglicism fabless is also common, postnominal and invariable.",
+    "trap": "Fabless does not mean that a business lacks offices: it designs or markets semiconductors while outsourcing their physical fabrication.",
+    "example_tl": "La empresa de semiconductores sin fábrica conserva el diseño y la comercialización, pero encarga la producción a una fundición especializada.",
+    "example_en": "The fabless semiconductor company retains design and marketing, but entrusts production to a specialist foundry.",
+    "cloze": "{{c1::La empresa de semiconductores sin fábrica}} conserva el diseño y la comercialización, pero encarga la producción a una fundición especializada.",
+    "note": "The source English is an awkward nominalization but still identifies a valuable industry model. The production headword replaces unusable legacy el Fabless."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "category": "lexical-noun",
+    "tl": "el sistema en un chip (SoC)",
+    "alts": [
+      "el sistema integrado en un chip (SoC)"
+    ],
+    "register": "Specialist electronics term; Spanish technical prose commonly introduces the international abbreviation SoC after the expanded form.",
+    "trap": "A system on a chip is not merely a microprocessor: it integrates several functional components, and Spanish normally requires un in en un chip.",
+    "example_tl": "El sistema en un chip (SoC) integra procesador, memoria y comunicaciones, lo que reduce el consumo energético de dispositivos pequeños y conectados.",
+    "example_en": "The system on a chip (SoC) integrates a processor, memory and communications, reducing the energy consumption of small connected devices.",
+    "cloze": "{{c1::El sistema en un chip (SoC)}} integra procesador, memoria y comunicaciones, lo que reduce el consumo energético de dispositivos pequeños y conectados.",
+    "note": "Materially refines old_back Sistema en Chip by restoring the article, normalizing lowercase and supplying the established abbreviation."
+  },
+  {
+    "id": "it_fancy_vocab_291",
+    "en": "the Deep Learning",
+    "category": "lexical-noun",
+    "tl": "el aprendizaje profundo",
+    "alts": [
+      "el deep learning"
+    ],
+    "register": "Standard technical and academic term; the English label remains common in specialist settings but is unnecessary in general Spanish prose.",
+    "trap": "Deep learning is a family of machine-learning methods, not a synonym for any sophisticated learning process; profundo is the established modifier.",
+    "example_tl": "El aprendizaje profundo mejoró la detección de tumores, pero sus resultados variaban entre hospitales por diferencias en los datos clínicos disponibles.",
+    "example_en": "Deep learning improved tumour detection, but its results varied between hospitals because of differences in the clinical data available.",
+    "cloze": "{{c1::El aprendizaje profundo}} mejoró la detección de tumores, pero sus resultados variaban entre hospitales por diferencias en los datos clínicos disponibles.",
+    "note": "The legacy equivalent is accurate; the production headword adds the article and uses normal Spanish lowercase styling."
+  },
+  {
+    "id": "it_fancy_vocab_292",
+    "en": "the Machine Learning",
+    "category": "lexical-noun",
+    "tl": "el aprendizaje automático",
+    "alts": [
+      "el machine learning"
+    ],
+    "register": "Standard Spanish technical and policy term; the English label is frequent in industry but less suitable in nonspecialist formal prose.",
+    "trap": "Portuguese aprendizagem de máquina can prompt the calque aprendizaje de máquina; in Spain, aprendizaje automático is the established general term.",
+    "example_tl": "El aprendizaje automático permite detectar operaciones fraudulentas, aunque un modelo mal evaluado puede reproducir sesgos presentes en los historiales bancarios.",
+    "example_en": "Machine learning makes it possible to detect fraudulent transactions, although a poorly evaluated model can reproduce biases present in banking records.",
+    "cloze": "{{c1::El aprendizaje automático}} permite detectar operaciones fraudulentas, aunque un modelo mal evaluado puede reproducir sesgos presentes en los historiales bancarios.",
+    "note": "The legacy equivalent is accurate. Retention is justified by the conventional nonliteral Spanish field name and the cross-language interference risk."
+  },
+  {
+    "id": "it_fancy_vocab_293",
+    "en": "the Training Data",
+    "category": "lexical-noun",
+    "tl": "los datos de entrenamiento",
+    "alts": [
+      "los datos para entrenar el modelo"
+    ],
+    "register": "Neutral specialist machine-learning term for data used to fit a model's parameters.",
+    "trap": "Conjunto de entrenamiento denotes a training set, usually a defined subset; it is not automatically interchangeable with all training data.",
+    "example_tl": "Los datos de entrenamiento excluían varios dialectos, por lo que el asistente transcribía peor a quienes se alejaban de la norma peninsular.",
+    "example_en": "The training data excluded several dialects, so the assistant transcribed speakers who departed from the peninsular norm less accurately.",
+    "cloze": "{{c1::Los datos de entrenamiento}} excluían varios dialectos, por lo que el asistente transcribía peor a quienes se alejaban de la norma peninsular.",
+    "note": "The legacy rendering is accurate; the note fixes the intended model-training sense and avoids unnecessary capitalization."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "category": "lexical-noun",
+    "tl": "el procesamiento del lenguaje natural (PLN)",
+    "alts": [
+      "el procesado del lenguaje natural (PLN)"
+    ],
+    "register": "Specialist computing term; PLN is the Spanish abbreviation, although the English abbreviation NLP also appears in multilingual professional settings.",
+    "trap": "The field concerns human language, but lenguaje natural is the established term; do not replace it mechanically with *idioma natural.",
+    "example_tl": "El procesamiento del lenguaje natural (PLN) permite analizar millones de comentarios, pero los modelos todavía confunden ironía, ambigüedad y referencias culturales locales.",
+    "example_en": "Natural language processing (NLP) makes it possible to analyse millions of comments, but models still confuse irony, ambiguity and local cultural references.",
+    "cloze": "{{c1::El procesamiento del lenguaje natural (PLN)}} permite analizar millones de comentarios, pero los modelos todavía confunden ironía, ambigüedad y referencias culturales locales.",
+    "note": "The legacy words are broadly correct but use title-style capitals and omit the useful Spanish abbreviation PLN. Self-review replaced a compressed facilitar + infinitive construction and gave confunden an explicit subject."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "category": "lexical-noun",
+    "tl": "las redes generativas adversarias (GAN)",
+    "alts": [
+      "las redes generativas antagónicas (GAN)"
+    ],
+    "register": "Specialist machine-learning term; the English-derived abbreviation GAN is normally retained after a Spanish expansion.",
+    "trap": "Portuguese redes adversárias generativas can pull the adjectives into that order; established Spanish usage commonly has generativas before adversarias.",
+    "example_tl": "Las redes generativas adversarias (GAN) pueden producir imágenes convincentes, pero también amplifican errores cuando el conjunto de entrenamiento representa mal a la población.",
+    "example_en": "Generative adversarial networks (GANs) can produce convincing images, but they also amplify errors when the training set poorly represents the population.",
+    "cloze": "{{c1::Las redes generativas adversarias (GAN)}} pueden producir imágenes convincentes, pero también amplifican errores cuando el conjunto de entrenamiento representa mal a la población.",
+    "note": "Terminology varies across Spanish technical writing. The note selects the well-attested redes generativas adversarias; legacy adversariales occurs but is not the preferred form here."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "category": "lexical-noun",
+    "tl": "el aprendizaje por refuerzo",
+    "alts": [],
+    "register": "Standard technical term for learning through actions, rewards and penalties within an environment.",
+    "trap": "The established construction is por refuerzo; aprendizaje reforzado would describe learning that has been strengthened rather than name this method.",
+    "example_tl": "El aprendizaje por refuerzo permitió optimizar el consumo del centro de datos, aunque la recompensa inicial favorecía decisiones eficientes pero difíciles de auditar.",
+    "example_en": "Reinforcement learning made it possible to optimize the data centre's consumption, although the initial reward favoured efficient decisions that were difficult to audit.",
+    "cloze": "{{c1::El aprendizaje por refuerzo}} permitió optimizar el consumo del centro de datos, aunque la recompensa inicial favorecía decisiones eficientes pero difíciles de auditar.",
+    "note": "The legacy equivalent is accurate; the production headword restores the article and normal Spanish lowercase styling."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "category": "lexical-noun",
+    "tl": "el aprovisionamiento",
+    "alts": [
+      "la gestión de compras"
+    ],
+    "register": "Neutral-formal business and supply-chain vocabulary; public procurement is instead contratación pública in Spanish institutional usage.",
+    "trap": "Procurement is context-sensitive: contratación suits public tendering, whereas aprovisionamiento covers securing the goods and inputs an organization needs.",
+    "example_tl": "El aprovisionamiento centralizado redujo costes, pero dejó a las filiales atadas a un proveedor incapaz de ajustar sus entregas a necesidades locales.",
+    "example_en": "Centralized procurement reduced costs, but left the subsidiaries tied to a supplier unable to adjust its deliveries to local needs.",
+    "cloze": "{{c1::El aprovisionamiento}} centralizado redujo costes, pero dejó a las filiales atadas a un proveedor incapaz de ajustar sus entregas a necesidades locales.",
+    "note": "The prompt is polysemous. This note selects the private-sector supply-chain sense represented by legacy aprovisionamiento and distinguishes public procurement explicitly. Self-review replaced services with deliveries to keep the example within that selected logistics sense."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "category": "lexical-expression",
+    "tl": "el sistema justo a tiempo (JIT)",
+    "alts": [
+      "la producción justo a tiempo (JIT)"
+    ],
+    "register": "Specialist production and inventory-management term; JIT is widely understood after the Spanish expansion.",
+    "trap": "Justo a tiempo is also an everyday adverbial meaning on time; adding sistema or producción identifies the inventory method rather than the ordinary phrase.",
+    "example_tl": "El sistema justo a tiempo (JIT) redujo inventarios durante años, pero mostró su fragilidad cuando los cierres portuarios interrumpieron entregas esenciales.",
+    "example_en": "The just-in-time (JIT) system reduced inventories for years, but revealed its fragility when port closures disrupted essential deliveries.",
+    "cloze": "{{c1::El sistema justo a tiempo (JIT)}} redujo inventarios durante años, pero mostró su fragilidad cuando los cierres portuarios interrumpieron entregas esenciales.",
+    "note": "Materially refines the underspecified legacy phrase by adding a domain head noun, the standard abbreviation and lowercase Spanish styling."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "category": "lexical-noun",
+    "tl": "la logística de terceros (3PL)",
+    "alts": [],
+    "register": "Specialist supply-chain term for logistics functions performed by an external provider; the international abbreviation 3PL is common.",
+    "trap": "Third party is tercero in this commercial relationship, not *tercer partido, which evokes political parties or parties to a game.",
+    "example_tl": "La logística de terceros (3PL) permitió abrir nuevos mercados sin construir almacenes propios, aunque dificultó supervisar los retrasos y gestionar las devoluciones.",
+    "example_en": "Third-party logistics (3PL) made it possible to enter new markets without building warehouses, although it made delays harder to monitor and returns harder to manage.",
+    "cloze": "{{c1::La logística de terceros (3PL)}} permitió abrir nuevos mercados sin construir almacenes propios, aunque dificultó supervisar los retrasos y gestionar las devoluciones.",
+    "note": "The legacy equivalent is essentially correct; the production note normalizes lowercase and adds the established abbreviation. Self-review replaced the calque visibilidad sobre with idiomatic verbal coordination."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "category": "lexical-noun",
+    "tl": "el plazo de entrega",
+    "alts": [],
+    "register": "Neutral-formal logistics term for the elapsed time from an order or commitment to delivery; other stages may require a more specific modifier.",
+    "trap": "Lead does not mean liderazgo here. Depending on the measured process, lead time can also be plazo de fabricación or plazo de aprovisionamiento.",
+    "example_tl": "El plazo de entrega aumentó en tres semanas porque el proveedor no había reservado capacidad suficiente para atender el repunte de pedidos.",
+    "example_en": "The lead time increased by three weeks because the supplier had not reserved enough capacity to meet the surge in orders.",
+    "cloze": "{{c1::El plazo de entrega}} aumentó en tres semanas porque el proveedor no había reservado capacidad suficiente para atender el repunte de pedidos.",
+    "note": "The legacy equivalent is accurate for the customer-facing logistics sense; the register line records the source term's process-dependent variation. Self-review restored en in the measure-of-change construction."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "category": "lexical-noun",
+    "tl": "la búsqueda y selección de proveedores",
+    "alts": [],
+    "register": "Neutral-formal business expression for identifying, evaluating and selecting suppliers; specialists also use the English anglicism sourcing.",
+    "trap": "Sourcing is narrower than procurement: it focuses on finding and choosing supply sources, while procurement also covers purchasing and contract administration.",
+    "example_tl": "La búsqueda y selección de proveedores incorporó criterios climáticos y laborales, de modo que el precio dejó de decidir por sí solo.",
+    "example_en": "Supplier sourcing incorporated climate and labour criteria, so price ceased to be the sole deciding factor.",
+    "cloze": "{{c1::La búsqueda y selección de proveedores}} incorporó criterios climáticos y laborales, de modo que el precio dejó de decidir por sí solo.",
+    "note": "Materially replaces old_back aprovisionamiento, which blurs the useful distinction between supplier selection and the broader procurement process."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "category": "lexical-noun",
+    "tl": "la referencia interna (SKU)",
+    "alts": [
+      "el número de referencia (SKU)"
+    ],
+    "register": "Standard retail and inventory-management expression in Spain; the English abbreviation SKU is retained and usually pronounced as individual letters.",
+    "trap": "An SKU is an internal company reference, not a universal EAN or GTIN; different businesses may assign different SKUs to the same product.",
+    "example_tl": "Cada referencia interna (SKU) distingue talla y color, de modo que el comercio puede reponer una variante sin confundirla con productos similares.",
+    "example_en": "Each stock keeping unit (SKU) distinguishes size and colour, allowing the retailer to replenish one variant without confusing it with similar products.",
+    "cloze": "Cada {{c1::referencia interna (SKU)}} distingue talla y color, de modo que el comercio puede reponer una variante sin confundirla con productos similares.",
+    "note": "Materially replaces the literal and unnatural legacy Unidad de Mantenimiento de Existencias with the Spain-oriented retail term referencia interna."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "category": "lexical-noun",
+    "tl": "la previsión de la demanda",
+    "alts": [
+      "el pronóstico de la demanda"
+    ],
+    "register": "Neutral-formal economics and supply-chain term; previsión is especially natural in Spain, while pronóstico is also established.",
+    "trap": "Do not confuse previsión, a forecast, with provisión, the act or result of providing; Portuguese previsão can also prompt a non-Spanish nasal spelling.",
+    "example_tl": "La previsión de la demanda subestimó las ventas rurales porque el modelo extrapoló hábitos urbanos y apenas incorporó información sobre cobertura móvil.",
+    "example_en": "Demand forecasting underestimated rural sales because the model extrapolated urban habits and incorporated very little information about mobile coverage.",
+    "cloze": "{{c1::La previsión de la demanda}} subestimó las ventas rurales porque el modelo extrapoló hábitos urbanos y apenas incorporó información sobre cobertura móvil.",
+    "note": "The legacy equivalent is accurate; the production note normalizes lowercase and records the Spain-oriented choice over pronóstico."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "category": "lexical-noun",
+    "tl": "el efecto látigo",
+    "alts": [
+      "el efecto Forrester"
+    ],
+    "register": "Specialist supply-chain term for increasing demand variability as orders move upstream from retailers to producers and suppliers.",
+    "trap": "The established compound is efecto látigo, without de; it denotes amplified order fluctuations, not merely a sudden disruption in supply.",
+    "example_tl": "El efecto látigo convirtió una variación modesta de las ventas en pedidos excesivos, inventarios sobrantes y oscilaciones cada vez mayores conforme avanzaba hacia los proveedores.",
+    "example_en": "The bullwhip effect turned a modest variation in sales into excessive orders, surplus inventories and increasingly large fluctuations as it moved towards suppliers.",
+    "cloze": "{{c1::El efecto látigo}} convirtió una variación modesta de las ventas en pedidos excesivos, inventarios sobrantes y oscilaciones cada vez mayores conforme avanzaba hacia los proveedores.",
+    "note": "The legacy term is accurate apart from unnecessary capitalization. Retention is justified by the fixed metaphor and its precise supply-chain meaning. Self-review replaced an implausible reference to successive stoppages with the defining upstream amplification."
+  },
+  {
+    "id": "it_fancy_vocab_314",
+    "en": "the Outsourcing",
+    "category": "lexical-noun",
+    "tl": "la externalización de algo",
+    "alts": [],
+    "register": "Neutral-formal business and public-administration term in Spain for transferring an internal function to an outside provider.",
+    "trap": "Subcontratación overlaps but need not transfer a formerly internal function; Latin American tercerización is not the preferred Spain-oriented headword here.",
+    "example_tl": "La externalización del servicio redujo costes inmediatos, pero dispersó responsabilidades y dificultó que la administración recuperase conocimiento técnico propio.",
+    "example_en": "Outsourcing the service reduced immediate costs, but dispersed responsibilities and made it harder for the administration to recover its own technical expertise.",
+    "cloze": "{{c1::La externalización del}} servicio redujo costes inmediatos, pero dispersó responsabilidades y dificultó que la administración recuperase conocimiento técnico propio.",
+    "note": "The legacy equivalent is accurate; the production headword adds the governed de complement and the example supplies its contracted form del."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "category": "lexical-noun",
+    "tl": "la gestión de almacenes",
+    "alts": [],
+    "register": "Neutral-formal logistics term for organizing warehouse operations, including receipt, placement, picking and dispatch.",
+    "trap": "Almacenamiento can denote storage alone; warehousing often names the broader operation and management of warehouses and their material flows.",
+    "example_tl": "La gestión de almacenes automatizada aceleró los pedidos, pero los fallos del sistema bloquearon simultáneamente la recepción, la preparación y la expedición.",
+    "example_en": "Automated warehousing sped up orders, but system failures simultaneously blocked receiving, picking and dispatch.",
+    "cloze": "{{c1::La gestión de almacenes}} automatizada aceleró los pedidos, pero los fallos del sistema bloquearon simultáneamente la recepción, la preparación y la expedición.",
+    "note": "Materially refines legacy almacenamiento by selecting the broader operational sense of warehousing fixed by the batch's supply-chain context."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "category": "lexical-verb",
+    "tl": "hacer el seguimiento de algo",
+    "alts": [
+      "seguir algo"
+    ],
+    "register": "Neutral business and administrative construction for following status or progress; rastrear is narrower and foregrounds locating or tracing a path.",
+    "trap": "Avoid the unnecessary anglicism trackear; in Spain the fixed construction is hacer el seguimiento de, with de before its object.",
+    "example_tl": "La empresa hace el seguimiento de cada envío para detectar pronto cualquier desvío, pero no comunica al cliente todas las incidencias registradas.",
+    "example_en": "The company tracks every shipment to detect any deviation early, but does not inform the customer of every recorded incident.",
+    "cloze": "La empresa {{c1::hace el seguimiento de}} cada envío para detectar pronto cualquier desvío, pero no comunica al cliente todas las incidencias registradas.",
+    "note": "Materially refines old_back rastrear, which is valid for tracing or locating but too narrow for routine operational status tracking. Self-review replaced the unnatural collocation desvíos tempranos with detectar pronto cualquier desvío."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "category": "lexical-verb",
+    "tl": "beneficiarse de algo",
+    "alts": [
+      "obtener beneficios de algo",
+      "lucrarse con algo"
+    ],
+    "register": "Beneficiarse de is neutral and broad; lucrarse con is more critical and often suggests questionable gain.",
+    "trap": "Rentabilizar is transitive and means to make something profitable; intransitive profit is beneficiarse de or obtener beneficios de.",
+    "example_tl": "Varias consultoras se beneficiaron de la crisis al vender sistemas de vigilancia cuya eficacia nunca fue evaluada por organismos independientes.",
+    "example_en": "Several consultancies profited from the crisis by selling surveillance systems whose effectiveness was never evaluated by independent bodies.",
+    "cloze": "Varias consultoras {{c1::se beneficiaron de}} la crisis al vender sistemas de vigilancia cuya eficacia nunca fue evaluada por organismos independientes.",
+    "note": "Materially corrects legacy rentabilizar, which reverses the argument structure and would mean making the crisis or another object profitable."
+  }
+]

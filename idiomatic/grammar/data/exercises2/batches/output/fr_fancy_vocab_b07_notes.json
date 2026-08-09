@@ -1,0 +1,289 @@
+[
+  {
+    "id": "it_fancy_vocab_241",
+    "en": "the Intellectual Property",
+    "category": "lexical-noun",
+    "tl": "la propriété intellectuelle",
+    "alts": [],
+    "register": "Neutral-formal legal and policy term for the system protecting intangible creations; particular rights should be named more precisely where relevant.",
+    "trap": "French distinguishes the abstract field la propriété intellectuelle from enforceable droits de propriété intellectuelle; the latter plural is often required for specific claims or licences.",
+    "example_tl": "La propriété intellectuelle protège les créations, mais son extension excessive peut aussi verrouiller l’accès aux connaissances et ralentir l’innovation cumulative.",
+    "example_en": "Intellectual property protects creations, but its excessive expansion can also lock up access to knowledge and slow cumulative innovation.",
+    "cloze": "{{c1::La propriété intellectuelle}} protège les créations, mais son extension excessive peut aussi verrouiller l’accès aux connaissances et ralentir l’innovation cumulative.",
+    "note": "Old_back is lexically accurate. The note adds the productive distinction between the abstract legal field and individual intellectual-property rights."
+  },
+  {
+    "id": "it_fancy_vocab_243",
+    "en": "the Supply Chain",
+    "category": "lexical-noun",
+    "tl": "la chaîne d’approvisionnement",
+    "alts": [
+      "la chaîne logistique"
+    ],
+    "register": "Neutral business and industrial-policy term; chaîne logistique is equally established and can foreground the organization of physical and information flows.",
+    "trap": "Do not calque English supply as fourniture here: chaîne de fournitures is not the established term, and approvisionnement normally remains singular.",
+    "example_tl": "La chaîne d’approvisionnement des batteries demeure vulnérable, car l’extraction, le raffinage et la fabrication restent concentrés dans quelques régions politiquement instables.",
+    "example_en": "The battery supply chain remains vulnerable because extraction, refining, and manufacturing are concentrated in a few politically unstable regions.",
+    "cloze": "{{c1::La chaîne d’approvisionnement}} des batteries demeure vulnérable, car l’extraction, le raffinage et la fabrication restent concentrés dans quelques régions politiquement instables.",
+    "note": "Old_back is accurate. Self-review retained chaîne logistique as an interchangeable professional alternative in this example rather than as a loose thesaurus synonym."
+  },
+  {
+    "id": "it_fancy_vocab_245",
+    "en": "the Tariffs",
+    "category": "lexical-noun",
+    "tl": "les droits de douane",
+    "alts": [],
+    "register": "Neutral-formal trade and customs term for charges imposed on imported or exported goods.",
+    "trap": "A French tarif is a price or schedule of rates; in trade-policy discussion, a levy on goods is normally un droit de douane.",
+    "example_tl": "Les droits de douane imposés sur les véhicules électriques risquent de renchérir la transition écologique sans rétablir durablement les capacités industrielles européennes.",
+    "example_en": "Tariffs imposed on electric vehicles risk making the green transition more expensive without sustainably restoring European industrial capacity.",
+    "cloze": "{{c1::Les droits de douane}} imposés sur les véhicules électriques risquent de renchérir la transition écologique sans rétablir durablement les capacités industrielles européennes.",
+    "note": "Materially replaces old_back les tarifs: the example fixes the customs-duty sense of the otherwise polysemous English prompt."
+  },
+  {
+    "id": "it_fancy_vocab_247",
+    "en": "the Decoupling",
+    "category": "lexical-noun",
+    "tl": "le découplage",
+    "alts": [],
+    "register": "Formal economic and geopolitical term for deliberately severing or substantially reducing strategic interdependence.",
+    "trap": "Découplage is stronger than réduction des risques: risk reduction can diversify selected dependencies while leaving extensive economic ties intact.",
+    "example_tl": "Le découplage technologique entre les États-Unis et la Chine s’opère secteur par secteur, malgré le coût élevé d’une rupture complète des interdépendances industrielles.",
+    "example_en": "Technological decoupling between the United States and China is proceeding sector by sector despite the high cost of completely breaking industrial interdependencies.",
+    "cloze": "{{c1::Le découplage}} technologique entre les États-Unis et la Chine s’opère secteur par secteur, malgré le coût élevé d’une rupture complète des interdépendances industrielles.",
+    "note": "Old_back is accurate. Retention is justified by the consequential policy distinction between decoupling and the less absolute reduction of strategic risks. Self-review replaced progresse par secteurs with the more idiomatic s’opère secteur par secteur."
+  },
+  {
+    "id": "it_fancy_vocab_251",
+    "en": "the Interference",
+    "category": "lexical-noun",
+    "tl": "l’ingérence dans quelque chose",
+    "alts": [],
+    "register": "Neutral-to-formal and critical political term for improper involvement in another actor’s affairs or processes.",
+    "trap": "Interférence is idiomatic for signals or mutually disruptive phenomena; improper political interference is normally ingérence, constructed with dans.",
+    "example_tl": "L’ingérence dans le scrutin ne se limite pas au piratage : elle comprend aussi le financement clandestin de médias et la manipulation coordonnée des récits.",
+    "example_en": "Interference in the election is not limited to hacking: it also includes covert media funding and the coordinated manipulation of narratives.",
+    "cloze": "{{c1::L’ingérence dans}} le scrutin ne se limite pas au piratage : elle comprend aussi le financement clandestin de médias et la manipulation coordonnée des récits.",
+    "note": "The English source is polysemous. This note deliberately selects the political sense and materially replaces legacy interférence, which would suggest a technical phenomenon here."
+  },
+  {
+    "id": "it_fancy_vocab_252",
+    "en": "the Regulations",
+    "category": "lexical-noun",
+    "tl": "la réglementation",
+    "alts": [],
+    "register": "Formal institutional term for the collective body of rules governing an activity; les règlements instead identifies discrete rules or legal instruments.",
+    "trap": "English plural regulations often maps to collective singular réglementation; French régulation usually foregrounds regulatory action or a sectoral governance mechanism.",
+    "example_tl": "La réglementation des plateformes devrait garantir l’accès des chercheurs aux données, sans permettre aux entreprises de choisir seules les questions jugées légitimes.",
+    "example_en": "Platform regulations should guarantee researchers access to data without allowing companies alone to decide which questions are considered legitimate.",
+    "cloze": "{{c1::La réglementation}} des plateformes devrait garantir l’accès des chercheurs aux données, sans permettre aux entreprises de choisir seules les questions jugées légitimes.",
+    "note": "Materially refines old_back les réglementations by selecting the idiomatic collective singular for the regulatory framework demonstrated in the example."
+  },
+  {
+    "id": "it_fancy_vocab_253",
+    "en": "the Digital Currency",
+    "category": "lexical-noun",
+    "tl": "la monnaie numérique",
+    "alts": [],
+    "register": "Formal monetary-policy term; in France-French institutional prose, numérique is preferred, while digital remains common in industry language.",
+    "trap": "Monnaie numérique is not automatically a cryptocurrency, and monnaie électronique is a narrower regulated category rather than a universal synonym.",
+    "example_tl": "Une monnaie numérique de banque centrale pourrait faciliter les paiements transfrontaliers, tout en donnant aux autorités une visibilité accrue sur les transactions.",
+    "example_en": "A central bank digital currency could facilitate cross-border payments while giving authorities greater visibility into transactions.",
+    "cloze": "Une {{c1::monnaie numérique}} de banque centrale pourrait faciliter les paiements transfrontaliers, tout en donnant aux autorités une visibilité accrue sur les transactions.",
+    "note": "Old_back is accurate. Self-review anchored the example in the central-bank subtype to distinguish the umbrella term from cryptocurrency and electronic money."
+  },
+  {
+    "id": "it_fancy_vocab_257",
+    "en": "the Dominance",
+    "category": "lexical-noun",
+    "tl": "la position dominante",
+    "alts": [],
+    "register": "Formal competition-law and market-policy expression for economic power that permits substantial independence from competitors, suppliers or customers.",
+    "trap": "Generic domination does not supply the established competition-law collocation; abuse of dominance is abus de position dominante, not abus de dominance.",
+    "example_tl": "La position dominante d’un moteur de recherche devient problématique lorsqu’elle permet d’imposer ses services annexes aux éditeurs qui dépendent de son trafic.",
+    "example_en": "A search engine’s dominant position becomes problematic when it allows the company to impose its ancillary services on publishers that depend on its traffic.",
+    "cloze": "{{c1::La position dominante}} d’un moteur de recherche devient problématique lorsqu’elle permet d’imposer ses services annexes aux éditeurs qui dépendent de son trafic.",
+    "note": "The prompt is polysemous. This note selects the high-value competition-policy sense and materially replaces legacy domination with the established legal expression."
+  },
+  {
+    "id": "it_fancy_vocab_259",
+    "en": "the Quantum Computing",
+    "category": "lexical-noun",
+    "tl": "l’informatique quantique",
+    "alts": [
+      "le calcul quantique"
+    ],
+    "register": "Neutral specialist and research-policy term; calcul quantique can foreground the computational paradigm, while informatique quantique can denote the broader field.",
+    "trap": "The field is informatique quantique or calcul quantique; an ordinateur quantique is a device and cannot replace the field term.",
+    "example_tl": "L’informatique quantique pourrait fragiliser certains systèmes cryptographiques, mais son calendrier industriel reste bien plus incertain que ne le suggèrent les annonces.",
+    "example_en": "Quantum computing could weaken some cryptographic systems, but its industrial timeline remains far more uncertain than announcements suggest.",
+    "cloze": "{{c1::L’informatique quantique}} pourrait fragiliser certains systèmes cryptographiques, mais son calendrier industriel reste bien plus incertain que ne le suggèrent les annonces.",
+    "note": "Old_back is accurate apart from unnecessary capitalization. The alternative was retained because it remains grammatical and preserves the source sense in the example."
+  },
+  {
+    "id": "it_fancy_vocab_260",
+    "en": "the Standards",
+    "category": "lexical-noun",
+    "tl": "les normes techniques",
+    "alts": [],
+    "register": "Formal technical and institutional term for specifications adopted through a recognized standardization process.",
+    "trap": "French distinguishes a norme, commonly issued by a recognized body, from a standard, which may simply prevail de facto; English standard does not decide between them.",
+    "example_tl": "Les normes techniques européennes peuvent orienter le marché mondial lorsque leur adoption garantit l’interopérabilité sans favoriser discrètement un fournisseur particulier.",
+    "example_en": "European technical standards can shape the global market when their adoption guarantees interoperability without discreetly favoring a particular supplier.",
+    "cloze": "{{c1::Les normes techniques}} européennes peuvent orienter le marché mondial lorsque leur adoption garantit l’interopérabilité sans favoriser discrètement un fournisseur particulier.",
+    "note": "Old_back gives the correct core noun. Self-review added techniques to fix the intended institutional sense and excluded standards from alts because its status can differ."
+  },
+  {
+    "id": "it_fancy_vocab_262",
+    "en": "R&D (Research and Development)",
+    "category": "lexical-noun",
+    "tl": "la R&D (recherche et développement)",
+    "alts": [],
+    "register": "Standard business, academic and public-policy abbreviation in France; formal documents normally expand it on first mention.",
+    "trap": "R&D is conventionally feminine through recherche: write la R&D, not le R&D; unlike Spanish and Portuguese, French retains the letters R and D.",
+    "example_tl": "La R&D publique peut financer des technologies essentielles dont les bénéfices collectifs apparaissent trop tard pour attirer le capital privé.",
+    "example_en": "Public R&D can fund essential technologies whose collective benefits emerge too late to attract private capital.",
+    "cloze": "{{c1::La R&D}} publique peut financer des technologies essentielles dont les bénéfices collectifs apparaissent trop tard pour attirer le capital privé.",
+    "note": "Old_back supplies the established abbreviation and expansion. The production headword adds the feminine article and the example tests ordinary institutional usage."
+  },
+  {
+    "id": "it_fancy_vocab_263",
+    "en": "the Digital Sovereignty",
+    "category": "lexical-noun",
+    "tl": "la souveraineté numérique",
+    "alts": [],
+    "register": "Formal and contested technology-policy term for a polity’s practical capacity to govern digital infrastructure, data and strategic dependencies.",
+    "trap": "Souveraineté numérique does not entail technological autarky or merely national data hosting; control, auditability and the ability to change suppliers can also establish it.",
+    "example_tl": "La souveraineté numérique exige moins une autarcie technologique qu’une capacité réelle à auditer les systèmes, déplacer les données et changer de fournisseur.",
+    "example_en": "Digital sovereignty requires less technological autarky than a genuine capacity to audit systems, move data, and switch suppliers.",
+    "cloze": "{{c1::La souveraineté numérique}} exige moins une autarcie technologique qu’une capacité réelle à auditer les systèmes, déplacer les données et changer de fournisseur.",
+    "note": "Old_back is accurate. Retention is justified by the contested policy meaning, which is broader than technological self-sufficiency."
+  },
+  {
+    "id": "it_fancy_vocab_265",
+    "en": "the Patents",
+    "category": "lexical-noun",
+    "tl": "le brevet",
+    "alts": [],
+    "register": "Neutral legal and technical term for an exclusive industrial-property right protecting an invention for a limited period.",
+    "trap": "English patent is brevet in this legal sense; French patente is chiefly historical fiscal vocabulary or an adjective meaning obvious, not an invention right.",
+    "example_tl": "Les brevets pharmaceutiques récompensent l’invention, mais leur durée et leur portée déterminent aussi le prix auquel les traitements deviennent largement accessibles.",
+    "example_en": "Pharmaceutical patents reward invention, but their duration and scope also determine the price at which treatments become widely accessible.",
+    "cloze": "Les {{c1::brevets}} pharmaceutiques récompensent l’invention, mais leur durée et leur portée déterminent aussi le prix auquel les traitements deviennent largement accessibles.",
+    "note": "Old_back is accurate. The item is retained for the consequential English, Spanish and Portuguese interference risk around patent and patente."
+  },
+  {
+    "id": "it_fancy_vocab_266",
+    "en": "the Data Privacy",
+    "category": "lexical-noun",
+    "tl": "la protection des données personnelles",
+    "alts": [],
+    "register": "Standard French and EU legal-policy term for rules and practices governing the lawful processing of personal data.",
+    "trap": "Confidentialité des données covers protection against unauthorized disclosure; protection des données also includes lawfulness, minimization, access rights and other safeguards.",
+    "example_tl": "La protection des données personnelles impose de limiter la collecte, même lorsque l’utilisateur a accepté une politique de confidentialité rédigée de manière obscure.",
+    "example_en": "Data privacy requires limiting collection even when the user has accepted a privacy policy written in obscure language.",
+    "cloze": "{{c1::La protection des données personnelles}} impose de limiter la collecte, même lorsque l’utilisateur a accepté une politique de confidentialité rédigée de manière obscure.",
+    "note": "Materially replaces old_back confidentialité des données, which is narrower than the institutional data-protection field demonstrated by the example."
+  },
+  {
+    "id": "it_fancy_vocab_269",
+    "en": "the Espionage Act",
+    "category": "lexical-noun",
+    "tl": "l’Espionage Act de 1917",
+    "alts": [
+      "la loi américaine sur l’espionnage de 1917"
+    ],
+    "register": "Formal US legal and historical proper name; France-French reporting commonly retains the English title or supplies an explicit explanatory translation.",
+    "trap": "English Act is loi, not acte, in a statute title; a bare loi sur l’espionnage loses the identifying country and year.",
+    "example_tl": "Les autorités américaines invoquent l’Espionage Act de 1917 pour poursuivre certaines divulgations de secrets d’État, au risque d’affaiblir la liberté de la presse.",
+    "example_en": "US authorities invoke the Espionage Act of 1917 to prosecute certain disclosures of state secrets, at the risk of weakening press freedom.",
+    "cloze": "Les autorités américaines invoquent {{c1::l’Espionage Act de 1917}} pour poursuivre certaines divulgations de secrets d’État, au risque d’affaiblir la liberté de la presse.",
+    "note": "Materially refines old_back by restoring the specific US proper name. Self-review retained the fully identified French paraphrase as an interchangeable alternative in this sentence."
+  },
+  {
+    "id": "it_fancy_vocab_270",
+    "en": "the Cloud Computing",
+    "category": "lexical-noun",
+    "tl": "le cloud computing",
+    "alts": [
+      "l’informatique en nuage"
+    ],
+    "register": "Cloud computing is the dominant neutral technical term in France French; informatique en nuage is an established institutional or explanatory alternative.",
+    "trap": "Le cloud often names the remote environment or service offering, whereas cloud computing names the computing model; infonuagique is principally associated with Canadian French.",
+    "example_tl": "Le cloud computing réduit les coûts d’entrée, mais concentre des données sensibles chez quelques fournisseurs soumis à des juridictions parfois étrangères.",
+    "example_en": "Cloud computing lowers entry costs but concentrates sensitive data with a few providers that are sometimes subject to foreign jurisdictions.",
+    "cloze": "{{c1::Le cloud computing}} réduit les coûts d’entrée, mais concentre des données sensibles chez quelques fournisseurs soumis à des juridictions parfois étrangères.",
+    "note": "Materially reorders old_back: informatique en nuage is valid but marked as the institutional alternative, while the English loan is the usual production term in France."
+  },
+  {
+    "id": "it_fancy_vocab_272",
+    "en": "the Chips",
+    "category": "lexical-noun",
+    "tl": "la puce électronique",
+    "alts": [],
+    "register": "Neutral mainstream and technical term; puce alone is sufficient when semiconductor context is already established.",
+    "trap": "English chip is not normally borrowed in formal French semiconductor prose; use puce, while circuit intégré is the more explicit component term.",
+    "example_tl": "Les puces avancées dépendent de machines lithographiques si complexes que leur contrôle à l’exportation devient un instrument de puissance géopolitique.",
+    "example_en": "Advanced chips depend on lithography machines so complex that export controls on them become an instrument of geopolitical power.",
+    "cloze": "Les {{c1::puces}} avancées dépendent de machines lithographiques si complexes que leur contrôle à l’exportation devient un instrument de puissance géopolitique.",
+    "note": "Old_back is correct but context-free. The production headword adds électronique to fix the intended semiconductor sense rather than the food sense."
+  },
+  {
+    "id": "it_fancy_vocab_273",
+    "en": "the Internet Protocol",
+    "category": "lexical-noun",
+    "tl": "le protocole IP",
+    "alts": [
+      "le protocole Internet"
+    ],
+    "register": "Standard specialist networking term; the international abbreviation IP is normally preferred after the protocol has been identified.",
+    "trap": "Le protocole IP is not une adresse IP: the protocol routes packets between networks, while an IP address identifies an interface within that system.",
+    "example_tl": "Le protocole IP permet l’acheminement de paquets entre réseaux hétérogènes, mais ne garantit à lui seul ni leur confidentialité ni leur authenticité.",
+    "example_en": "The Internet Protocol enables packets to be routed between heterogeneous networks but does not by itself guarantee their confidentiality or authenticity.",
+    "cloze": "{{c1::Le protocole IP}} permet l’acheminement de paquets entre réseaux hétérogènes, mais ne garantit à lui seul ni leur confidentialité ni leur authenticité.",
+    "note": "Old_back is valid but can read generically without the capitalized proper expansion. The main term adds the unambiguous, universally used abbreviation."
+  },
+  {
+    "id": "it_fancy_vocab_277",
+    "en": "the Zero Trust",
+    "category": "lexical-noun",
+    "tl": "le modèle Zero Trust",
+    "alts": [
+      "l’architecture zéro confiance"
+    ],
+    "register": "Specialist cybersecurity term; France-French technical prose commonly retains the English label, with architecture zéro confiance as an explanatory equivalent.",
+    "trap": "Bare confiance zéro is not a production-ready ordinary noun phrase, and Zero Trust means continuous verification with least privilege rather than indiscriminate distrust.",
+    "example_tl": "Le modèle Zero Trust suppose qu’aucune requête n’est fiable par défaut et exige une autorisation adaptée à l’identité, à l’appareil et au contexte.",
+    "example_en": "The zero-trust model assumes that no request is trustworthy by default and requires authorization tailored to the identity, device, and context.",
+    "cloze": "{{c1::Le modèle Zero Trust}} suppose qu’aucune requête n’est fiable par défaut et exige une autorisation adaptée à l’identité, à l’appareil et au contexte.",
+    "note": "Materially replaces the bare legacy calque. Self-review selected the established English label for France French, retained a fully specified descriptive alternative, and replaced an anthropomorphic adjustment claim with a requirement."
+  },
+  {
+    "id": "it_fancy_vocab_279",
+    "en": "the Silicon",
+    "category": "lexical-noun",
+    "tl": "le silicium",
+    "alts": [],
+    "register": "Neutral scientific and semiconductor-industry term for the chemical element used as the substrate of most integrated circuits.",
+    "trap": "English silicon is French silicium; silicone, in both languages, denotes a family of synthetic polymers rather than the semiconductor element.",
+    "example_tl": "Le silicium reste indispensable à la plupart des puces, mais l’avantage industriel dépend davantage des procédés, des équipements et des compétences accumulées.",
+    "example_en": "Silicon remains essential to most chips, but industrial advantage depends more on processes, equipment, and accumulated expertise.",
+    "cloze": "{{c1::Le silicium}} reste indispensable à la plupart des puces, mais l’avantage industriel dépend davantage des procédés, des équipements et des compétences accumulées.",
+    "note": "Old_back is accurate. Retention is justified by the consequential silicon versus silicone false-friend distinction."
+  },
+  {
+    "id": "it_fancy_vocab_280",
+    "en": "the Wafer",
+    "category": "lexical-noun",
+    "tl": "la tranche de silicium",
+    "alts": [
+      "la plaquette de silicium"
+    ],
+    "register": "Specialist semiconductor-manufacturing term; tranche is the standardized French term, while plaquette and the masculine loan wafer also occur in industry.",
+    "trap": "Tranche or plaquette alone is polysemous; adding de silicium fixes the thin semiconductor disc on which circuits are fabricated.",
+    "example_tl": "La tranche de silicium porte des centaines de circuits, si bien qu’un défaut microscopique peut réduire le rendement global après la découpe.",
+    "example_en": "The silicon wafer carries hundreds of circuits, so a microscopic defect can reduce the overall yield after dicing.",
+    "cloze": "{{c1::La tranche de silicium}} porte des centaines de circuits, si bien qu’un défaut microscopique peut réduire le rendement global après la découpe.",
+    "note": "Old_back plaquette is valid but underspecified. Self-review promoted standardized tranche, added de silicium to anchor the technical sense, and limited the defect’s stated yield effect to the wafer."
+  }
+]

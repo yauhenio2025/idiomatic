@@ -1,0 +1,242 @@
+[
+  {
+    "id": "it_fancy_vocab_281",
+    "en": "the Foundry",
+    "verdict": "keep",
+    "reason": "In semiconductor German, Foundry is an established industry term for a contract manufacturer or its fabrication operation, not simply a metal foundry."
+  },
+  {
+    "id": "it_fancy_vocab_282",
+    "en": "the Microprocessor",
+    "verdict": "drop",
+    "reason": "Mikroprozessor is a transparent, familiar technical cognate with regular morphology and no selected construction or semantic trap."
+  },
+  {
+    "id": "it_fancy_vocab_283",
+    "en": "the Nanometer",
+    "verdict": "drop",
+    "reason": "Nanometer is a transparent international unit term whose German form and gender are predictable, while the isolated prompt adds no teaching point."
+  },
+  {
+    "id": "it_fancy_vocab_284",
+    "en": "the Lithography",
+    "verdict": "keep",
+    "reason": "Lithografie is the current German technical spelling for a core semiconductor process, with useful contrast to the older Lithographie spelling."
+  },
+  {
+    "id": "it_fancy_vocab_285",
+    "en": "the Die",
+    "verdict": "keep",
+    "reason": "The semiconductor sense is narrower than Chip and teaches the German technical loanword, masculine gender and unencapsulated-chip distinction."
+  },
+  {
+    "id": "it_fancy_vocab_286",
+    "en": "the Fabless",
+    "verdict": "drop",
+    "reason": "The source is a malformed noun prompt: fabless is an adjective that requires a head such as Unternehmen or Geschäftsmodell."
+  },
+  {
+    "id": "it_fancy_vocab_287",
+    "en": "the System on Chip",
+    "verdict": "keep",
+    "reason": "System-on-Chip or SoC is an established German technical term, and the legacy auf-dem-Chip rendering is an English-shaped calque."
+  },
+  {
+    "id": "it_fancy_vocab_288",
+    "en": "the Moore's Law",
+    "verdict": "keep",
+    "reason": "Mooresches Gesetz teaches the German possessive adjective and orthography, including the absence of the English apostrophe."
+  },
+  {
+    "id": "it_fancy_vocab_289",
+    "en": "the Integrated Circuit",
+    "verdict": "drop",
+    "reason": "Integrierte Schaltung is a transparent, standard technical compound with a predictable adjective and no special government issue."
+  },
+  {
+    "id": "it_fancy_vocab_290",
+    "en": "the Neural Networks",
+    "verdict": "drop",
+    "reason": "Neuronale Netze is transparent core AI vocabulary with predictable plural morphology, and the bare prompt selects no narrower usage."
+  },
+  {
+    "id": "it_fancy_vocab_291",
+    "en": "the Deep Learning",
+    "verdict": "drop",
+    "reason": "Deep Learning is a ubiquitous unchanged German loan with no useful article, morphology or register distinction in this isolated prompt."
+  },
+  {
+    "id": "it_fancy_vocab_292",
+    "en": "the Machine Learning",
+    "verdict": "drop",
+    "reason": "Maschinelles Lernen is a transparent, already familiar expansion, and the source does not select a construction beyond the basic term."
+  },
+  {
+    "id": "it_fancy_vocab_293",
+    "en": "the Training Data",
+    "verdict": "drop",
+    "reason": "Trainingsdaten is a transparent German compound with predictable plural morphology and no selected distinction from ordinary training data."
+  },
+  {
+    "id": "it_fancy_vocab_294",
+    "en": "the Algorithms",
+    "verdict": "drop",
+    "reason": "Algorithmen is a familiar international technical plural whose German form and meaning are already secure for this learner."
+  },
+  {
+    "id": "it_fancy_vocab_295",
+    "en": "the Natural Language Processing",
+    "verdict": "keep",
+    "reason": "Verarbeitung natürlicher Sprache is the established German term and supplies a productive genitive phrase rather than a literal English order."
+  },
+  {
+    "id": "it_fancy_vocab_296",
+    "en": "the Generative Adversarial Networks",
+    "verdict": "keep",
+    "reason": "The specialist term is normally retained or carefully Germanized as GANs; forcing kontradiktorisch as the sole answer is needlessly literal."
+  },
+  {
+    "id": "it_fancy_vocab_297",
+    "en": "the Reinforcement Learning",
+    "verdict": "keep",
+    "reason": "Bestärkendes Lernen is the established German rendering, correcting the legacy Verstärkungslernen calque while retaining the English technical alternative."
+  },
+  {
+    "id": "it_fancy_vocab_298",
+    "en": "the AI Ethics",
+    "verdict": "keep",
+    "reason": "KI-Ethik is a productive German compound for a live policy field and is more idiomatic than leaving the English acronym unintegrated."
+  },
+  {
+    "id": "it_fancy_vocab_299",
+    "en": "the Supervised Learning",
+    "verdict": "keep",
+    "reason": "Überwachtes Lernen is a standard ML taxonomy term whose example can teach the required labeled-data sense rather than a generic watching meaning."
+  },
+  {
+    "id": "it_fancy_vocab_300",
+    "en": "the Unsupervised Learning",
+    "verdict": "keep",
+    "reason": "Unüberwachtes Lernen is the paired technical term and its meaning is not simply the everyday opposite of supervised human activity."
+  },
+  {
+    "id": "it_fancy_vocab_301",
+    "en": "the Model",
+    "verdict": "drop",
+    "reason": "Modell is a ubiquitous cognate with many ordinary senses, and the isolated prompt provides no advanced technical or analytical construction."
+  },
+  {
+    "id": "it_fancy_vocab_302",
+    "en": "the Logistics",
+    "verdict": "drop",
+    "reason": "Logistik is a transparent, familiar economics cognate with regular morphology and no selected supply-chain collocation."
+  },
+  {
+    "id": "it_fancy_vocab_303",
+    "en": "the Inventory",
+    "verdict": "keep",
+    "reason": "In supply-chain context inventory is Lagerbestand, not Inventur, which denotes the stocktaking process; the legacy gloss therefore selects the wrong sense."
+  },
+  {
+    "id": "it_fancy_vocab_304",
+    "en": "the Procurement",
+    "verdict": "keep",
+    "reason": "Beschaffung is high-value institutional vocabulary and must be distinguished from the narrower supplier-selection sense of Sourcing."
+  },
+  {
+    "id": "it_fancy_vocab_305",
+    "en": "Just-In-Time",
+    "verdict": "keep",
+    "reason": "German uses Just-in-time productively in compounds, with lower-case in and hyphenation that the legacy capitalization does not model."
+  },
+  {
+    "id": "it_fancy_vocab_306",
+    "en": "the Distribution",
+    "verdict": "keep",
+    "reason": "Distribution is established logistics vocabulary, but German context determines whether Distribution, Verteilung or Vertrieb is intended."
+  },
+  {
+    "id": "it_fancy_vocab_307",
+    "en": "the Third-party Logistics",
+    "verdict": "keep",
+    "reason": "Drittlogistik is a compact German industry term for outsourced logistics and is more idiomatic than the legacy literal phrase."
+  },
+  {
+    "id": "it_fancy_vocab_308",
+    "en": "the Lead Time",
+    "verdict": "keep",
+    "reason": "Vorlaufzeit is a useful supply-chain term and should not be collapsed into the related but different Durchlaufzeit or Lieferzeit."
+  },
+  {
+    "id": "it_fancy_vocab_309",
+    "en": "the Sourcing",
+    "verdict": "keep",
+    "reason": "Sourcing is used in German business language for finding and selecting suppliers, a narrower function than Beschaffung or procurement."
+  },
+  {
+    "id": "it_fancy_vocab_310",
+    "en": "the Stock Keeping Unit",
+    "verdict": "keep",
+    "reason": "SKU is a merchant-specific inventory unit, whereas Lagerhaltung is a process; the legacy gloss misses the term entirely."
+  },
+  {
+    "id": "it_fancy_vocab_311",
+    "en": "the Demand Forecasting",
+    "verdict": "keep",
+    "reason": "Nachfrageprognose is a productive planning compound that fixes the intended demand sense and belongs in professional supply-chain prose."
+  },
+  {
+    "id": "it_fancy_vocab_312",
+    "en": "the Bullwhip Effect",
+    "verdict": "keep",
+    "reason": "Bullwhip-Effekt is established specialist vocabulary, with Peitscheneffekt as a genuine German alternative for a distinctive supply-chain mechanism."
+  },
+  {
+    "id": "it_fancy_vocab_313",
+    "en": "the Vertical Integration",
+    "verdict": "keep",
+    "reason": "Vertikale Integration is a meaningful business-strategy term whose modifier distinguishes it from horizontal integration and generic integration."
+  },
+  {
+    "id": "it_fancy_vocab_314",
+    "en": "the Outsourcing",
+    "verdict": "drop",
+    "reason": "Outsourcing is a ubiquitous unchanged German business loan, and the isolated prompt adds no distinction from the familiar Auslagerung."
+  },
+  {
+    "id": "it_fancy_vocab_315",
+    "en": "the Transportation",
+    "verdict": "drop",
+    "reason": "Transport is a transparent, high-frequency cognate with predictable gender and no selected logistics construction."
+  },
+  {
+    "id": "it_fancy_vocab_316",
+    "en": "the Warehousing",
+    "verdict": "keep",
+    "reason": "Lagerhaltung names the warehousing process and usefully contrasts with Lagerbestand for inventory held in stock."
+  },
+  {
+    "id": "it_fancy_vocab_317",
+    "en": "the Node",
+    "verdict": "keep",
+    "reason": "Knoten is the productive German network term, while Knotenpunkt is a broader contextual alternative; the distinction matters across technical systems."
+  },
+  {
+    "id": "it_fancy_vocab_318",
+    "en": "to track",
+    "verdict": "keep",
+    "reason": "Nachverfolgen is the precise German verb for tracking shipments or data and supplies a valuable distinction from the broader verfolgen."
+  },
+  {
+    "id": "it_fancy_vocab_319",
+    "en": "to marginalize",
+    "verdict": "keep",
+    "reason": "Marginalisieren is formal social and political vocabulary, with an idiomatic verbal alternative and a clear human-impact sense."
+  },
+  {
+    "id": "it_fancy_vocab_320",
+    "en": "to profit",
+    "verdict": "keep",
+    "reason": "Profitieren requires von plus dative in the intended sense, so the governing preposition supplies the material teaching value absent from the old gloss."
+  }
+]

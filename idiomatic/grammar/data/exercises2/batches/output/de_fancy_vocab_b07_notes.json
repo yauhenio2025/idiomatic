@@ -1,0 +1,297 @@
+[
+  {
+    "id": "it_fancy_vocab_241",
+    "en": "the Intellectual Property",
+    "category": "lexical-noun",
+    "tl": "das geistige Eigentum",
+    "alts": [],
+    "register": "Neutral-formal legal and policy terminology for legally protected intangible creations and associated rights.",
+    "trap": "German writes geistige lower-case inside the noun phrase; geistiges Eigentum is a legal umbrella term, not physical Eigentum in the ordinary sense.",
+    "example_tl": "Der Schutz geistigen Eigentums darf nicht dazu führen, dass weit gefasste Patente Forschung behindern und den Zugang zu lebenswichtigen Technologien verteuern.",
+    "example_en": "The protection of intellectual property must not result in broadly worded patents obstructing research and making access to essential technologies more expensive.",
+    "cloze": "Der Schutz {{c1::geistigen Eigentums}} darf nicht dazu führen, dass weit gefasste Patente Forschung behindern und den Zugang zu lebenswichtigen Technologien verteuern.",
+    "note": "Old_back is accurate. Self-review retained the fixed legal term and used the example to test genitive adjectival inflection rather than simply repeating the headword."
+  },
+  {
+    "id": "it_fancy_vocab_242",
+    "en": "the 5G",
+    "category": "lexical-expression",
+    "tl": "5G",
+    "alts": [
+      "der Mobilfunkstandard der fünften Generation"
+    ],
+    "register": "Neutral technical and policy usage; bare 5G normally has no article, while compounds take the gender of their head noun.",
+    "trap": "The legacy form die 5G is unidiomatic: say 5G without an article, der 5G-Standard or das 5G-Netz according to the construction.",
+    "example_tl": "Der Mobilfunkstandard 5G senkt Latenzzeiten, schafft jedoch neue Abhängigkeiten, wenn Netzbetreiber bei kritischen Komponenten dauerhaft an wenige ausländische Anbieter gebunden bleiben.",
+    "example_en": "The 5G mobile communications standard reduces latency but creates new dependencies when network operators remain permanently tied to a few foreign suppliers for critical components.",
+    "cloze": "Der Mobilfunkstandard {{c1::5G}} senkt Latenzzeiten, schafft jedoch neue Abhängigkeiten, wenn Netzbetreiber bei kritischen Komponenten dauerhaft an wenige ausländische Anbieter gebunden bleiben.",
+    "note": "Materially corrects old_back's unsupported feminine article. Self-review kept bare 5G as the headword because German gender comes from an expressed compound head such as Standard or Netz."
+  },
+  {
+    "id": "it_fancy_vocab_243",
+    "en": "the Supply Chain",
+    "category": "lexical-noun",
+    "tl": "die Lieferkette",
+    "alts": [],
+    "register": "Neutral business, logistics and economic-policy vocabulary for the sequence through which goods and inputs are supplied.",
+    "trap": "Lieferkette is not interchangeable with Wertschöpfungskette, which is the broader value chain and includes stages that need not be supply relationships.",
+    "example_tl": "Eine widerstandsfähige Lieferkette entsteht nicht durch bloße Lagerhaltung, sondern durch diversifizierte Zulieferer, transparente Abhängigkeiten und verlässliche politische Beziehungen.",
+    "example_en": "A resilient supply chain is created not by stockpiling alone but by diversified suppliers, transparent dependencies, and reliable political relationships.",
+    "cloze": "Eine widerstandsfähige {{c1::Lieferkette}} entsteht nicht durch bloße Lagerhaltung, sondern durch diversifizierte Zulieferer, transparente Abhängigkeiten und verlässliche politische Beziehungen.",
+    "note": "Old_back is accurate; retention teaches the non-cognate German compound and its consequential distinction from Wertschöpfungskette."
+  },
+  {
+    "id": "it_fancy_vocab_245",
+    "en": "the Tariffs",
+    "category": "lexical-noun",
+    "tl": "die Zölle",
+    "alts": [],
+    "register": "Neutral terminology in trade policy and customs reporting; the singular is der Zoll and the plural has an umlaut.",
+    "trap": "Trade tariffs are Zölle; German Tarife normally denotes prices, rates or schedules, as in electricity and mobile-phone tariffs.",
+    "example_tl": "Höhere Zölle auf chinesische Solarmodule schützen einzelne Hersteller, verteuern aber zugleich die Energiewende und können handelspolitische Gegenmaßnahmen provozieren.",
+    "example_en": "Higher tariffs on Chinese solar modules protect individual manufacturers but also make the energy transition more expensive and can provoke trade-policy countermeasures.",
+    "cloze": "Höhere {{c1::Zölle}} auf chinesische Solarmodule schützen einzelne Hersteller, verteuern aber zugleich die Energiewende und können handelspolitische Gegenmaßnahmen provozieren.",
+    "note": "Old_back is accurate; the note adds the productive plural morphology and blocks the tempting English-German false friend Tarife."
+  },
+  {
+    "id": "it_fancy_vocab_247",
+    "en": "the Decoupling",
+    "category": "lexical-noun",
+    "tl": "die Entkopplung von etwas",
+    "alts": [
+      "die Abkopplung von etwas"
+    ],
+    "register": "Formal economic and geopolitical terminology; Entkopplung is the established analytical term, while Abkopplung foregrounds the act of separation.",
+    "trap": "Decoupling is stronger than De-Risking or Risikominderung: it denotes severing interdependencies, not merely reducing exposure to selected risks.",
+    "example_tl": "Eine vollständige Entkopplung von chinesischen Technologiemärkten wäre kostspielig und könnte gerade jene wirtschaftlichen Verflechtungen schwächen, die politische Eskalation bislang begrenzen.",
+    "example_en": "Complete decoupling from Chinese technology markets would be costly and could weaken precisely those economic interdependencies that have so far limited political escalation.",
+    "cloze": "Eine vollständige {{c1::Entkopplung}} {{c1::von}} chinesischen Technologiemärkten wäre kostspielig und könnte gerade jene wirtschaftlichen Verflechtungen schwächen, die politische Eskalation bislang begrenzen.",
+    "note": "Old_back gives the correct core term but omits its productive von-plus-dative complement."
+  },
+  {
+    "id": "it_fancy_vocab_250",
+    "en": "the Semiconductors",
+    "category": "lexical-noun",
+    "tl": "die Halbleiter",
+    "alts": [],
+    "register": "Neutral technical and industrial-policy vocabulary; it may denote materials or components and is also used metonymically for the sector.",
+    "trap": "Halbleiter can denote materials or components, whereas Chips are integrated circuits; the two are interchangeable only as contextual industry shorthand.",
+    "example_tl": "Fortschrittliche Halbleiter sind zum strategischen Engpass geworden, weil ihre Entwicklung globale Wissensnetze voraussetzt, während die modernste Fertigung geografisch stark konzentriert bleibt.",
+    "example_en": "Advanced semiconductors have become a strategic bottleneck because their development requires global knowledge networks while the most advanced manufacturing remains highly concentrated geographically.",
+    "cloze": "Fortschrittliche {{c1::Halbleiter}} sind zum strategischen Engpass geworden, weil ihre Entwicklung globale Wissensnetze voraussetzt, während die modernste Fertigung geografisch stark konzentriert bleibt.",
+    "note": "Old_back is accurate; retention supplies the productive non-cognate German term. Self-review replaced a speculative cognate warning with the consequential semantic distinction from Chips."
+  },
+  {
+    "id": "it_fancy_vocab_251",
+    "en": "the Interference",
+    "category": "lexical-noun",
+    "tl": "die Einmischung in etwas",
+    "alts": [],
+    "register": "Neutral-to-critical political vocabulary for improper intervention in another actor's affairs; the evaluation is usually negative.",
+    "trap": "Political interference is Einmischung in plus the accusative; signal interference instead requires Störung or, in specialist contexts, Interferenz.",
+    "example_tl": "Ausländische Einmischung in Wahlkämpfe bleibt schwer nachzuweisen, wenn Plattformen politische Werbung, koordinierte Netzwerke und algorithmische Verstärkung nur unvollständig dokumentieren.",
+    "example_en": "Foreign interference in election campaigns remains difficult to prove when platforms document political advertising, coordinated networks, and algorithmic amplification only incompletely.",
+    "cloze": "Ausländische {{c1::Einmischung}} {{c1::in}} Wahlkämpfe bleibt schwer nachzuweisen, wenn Plattformen politische Werbung, koordinierte Netzwerke und algorithmische Verstärkung nur unvollständig dokumentieren.",
+    "note": "The source is polysemous. Old_back is accurate for the political sense selected here, and the production headword adds the governed preposition."
+  },
+  {
+    "id": "it_fancy_vocab_252",
+    "en": "the Regulations",
+    "category": "lexical-noun",
+    "tl": "die Vorschriften",
+    "alts": [
+      "die Regelungen"
+    ],
+    "register": "Neutral official and legal vocabulary for individual binding rules; Regelungen can also include arrangements established by a rule.",
+    "trap": "Countable regulations are usually Vorschriften or Regelungen; Regulierung more often denotes the regulatory process or framework governing a sector.",
+    "example_tl": "Strengere Vorschriften für Plattformen entfalten nur Wirkung, wenn Aufsichtsbehörden ausreichende technische Expertise besitzen und Verstöße grenzüberschreitend konsequent verfolgen können.",
+    "example_en": "Stricter regulations for platforms have an effect only when supervisory authorities possess sufficient technical expertise and can pursue violations consistently across borders.",
+    "cloze": "Strengere {{c1::Vorschriften}} für Plattformen entfalten nur Wirkung, wenn Aufsichtsbehörden ausreichende technische Expertise besitzen und Verstöße grenzüberschreitend konsequent verfolgen können.",
+    "note": "Materially corrects old_back, whose plural Regulierungen is unnatural for a set of discrete rules."
+  },
+  {
+    "id": "it_fancy_vocab_259",
+    "en": "the Quantum Computing",
+    "category": "lexical-noun",
+    "tl": "das Quantencomputing",
+    "alts": [
+      "das Quantenrechnen"
+    ],
+    "register": "Specialist technology and research-policy terminology; Quantencomputing is established, while Quantenrechnen is a transparent German alternative.",
+    "trap": "Quantencomputer denotes a device, whereas Quantencomputing denotes the computing paradigm or activity; German writes the latter as one compound.",
+    "example_tl": "Das Quantencomputing verspricht Vorteile bei ausgewählten Optimierungsproblemen, doch in vielen politischen Strategien wird langfristiges Forschungspotenzial mit kurzfristig verfügbarer Rechenleistung verwechselt.",
+    "example_en": "Quantum computing promises advantages for selected optimization problems, but many policy strategies confuse long-term research potential with computing power available in the short term.",
+    "cloze": "Das {{c1::Quantencomputing}} verspricht Vorteile bei ausgewählten Optimierungsproblemen, doch in vielen politischen Strategien wird langfristiges Forschungspotenzial mit kurzfristig verfügbarer Rechenleistung verwechselt.",
+    "note": "Old_back is accurate; retention teaches the compound and the distinction between the field and an individual Quantencomputer. Self-review removed an unnatural personification of political strategies."
+  },
+  {
+    "id": "it_fancy_vocab_260",
+    "en": "the Standards",
+    "category": "lexical-noun",
+    "tl": "die technischen Standards",
+    "alts": [],
+    "register": "Neutral-formal in technology governance; Standard can include de facto specifications, whereas Norm often implies formal standardization by a recognized body.",
+    "trap": "English standard is not mechanically German Norm: the institutional status matters, and interoperability debates commonly use technischer Standard.",
+    "example_tl": "Offene technische Standards verhindern, dass einzelne Plattformen ganze Märkte kontrollieren, indem sie Schnittstellen ändern oder konkurrierende Dienste gezielt ausschließen.",
+    "example_en": "Open technical standards prevent individual platforms from controlling entire markets by changing interfaces or deliberately excluding competing services.",
+    "cloze": "Offene {{c1::technische Standards}} verhindern, dass einzelne Plattformen ganze Märkte kontrollieren, indem sie Schnittstellen ändern oder konkurrierende Dienste gezielt ausschließen.",
+    "note": "Old_back is broadly accurate. Self-review added the technical modifier to fix the intended domain and excluded Normen from alts because it can assert a more formal standardization status."
+  },
+  {
+    "id": "it_fancy_vocab_261",
+    "en": "the Alliances",
+    "category": "lexical-noun",
+    "tl": "die Bündnisse",
+    "alts": [
+      "die Allianzen"
+    ],
+    "register": "Neutral political and geopolitical vocabulary; Bündnis is the unmarked term, while Allianz is somewhat more formal or strategically framed.",
+    "trap": "English alliance need not become the cognate Allianz; political and military cooperation is often more idiomatically expressed with Bündnis.",
+    "example_tl": "Technologische Bündnisse bleiben fragil, solange Mitgliedstaaten Sicherheitsrisiken unterschiedlich bewerten und bei Exportkontrollen vor allem ihre nationalen Industrieinteressen verteidigen.",
+    "example_en": "Technology alliances remain fragile as long as member states assess security risks differently and primarily defend their national industrial interests in export controls.",
+    "cloze": "Technologische {{c1::Bündnisse}} bleiben fragil, solange Mitgliedstaaten Sicherheitsrisiken unterschiedlich bewerten und bei Exportkontrollen vor allem ihre nationalen Industrieinteressen verteidigen.",
+    "note": "Materially improves old_back by promoting the idiomatic unmarked political term and retaining Allianzen only as a register-marked alternative."
+  },
+  {
+    "id": "it_fancy_vocab_262",
+    "en": "R&D (Research and Development)",
+    "category": "lexical-expression",
+    "tl": "Forschung und Entwicklung (FuE)",
+    "alts": [
+      "Forschung und Entwicklung (F&E)"
+    ],
+    "register": "Standard in German research, business and government policy; FuE is frequent in official prose, while F&E is also widespread.",
+    "trap": "R&D is common in international corporate language, but German continuous prose normally expands it as Forschung und Entwicklung or abbreviates it as FuE or F&E.",
+    "example_tl": "Öffentliche Ausgaben für Forschung und Entwicklung fördern Innovation nur dann nachhaltig, wenn Universitäten Ergebnisse teilen und kleine Unternehmen Zugang zu Forschungsinfrastrukturen erhalten.",
+    "example_en": "Public spending on research and development promotes innovation sustainably only when universities share results and small companies gain access to research infrastructure.",
+    "cloze": "Öffentliche Ausgaben für {{c1::Forschung und Entwicklung}} fördern Innovation nur dann nachhaltig, wenn Universitäten Ergebnisse teilen und kleine Unternehmen Zugang zu Forschungsinfrastrukturen erhalten.",
+    "note": "Old_back explains the English abbreviation but leaves R&D as the apparent production form; the main answer supplies the established German abbreviation."
+  },
+  {
+    "id": "it_fancy_vocab_263",
+    "en": "the Digital Sovereignty",
+    "category": "lexical-noun",
+    "tl": "die digitale Souveränität",
+    "alts": [],
+    "register": "Formal and sometimes contested terminology in German and European technology policy; serious usage should specify whose capacity to act is at issue.",
+    "trap": "Digitale Souveränität does not necessarily mean technological autarky or national isolation; it usually foregrounds self-determination and practical capacity to act.",
+    "example_tl": "Digitale Souveränität setzt nicht nationale Abschottung voraus, sondern die Fähigkeit öffentlicher Institutionen, Anbieter zu wechseln, Standards mitzugestalten und Datenbestände wirksam zu kontrollieren.",
+    "example_en": "Digital sovereignty does not require national isolation but rather public institutions' ability to switch providers, help shape standards, and control data holdings effectively.",
+    "cloze": "{{c1::Digitale Souveränität}} setzt nicht nationale Abschottung voraus, sondern die Fähigkeit öffentlicher Institutionen, Anbieter zu wechseln, Standards mitzugestalten und Datenbestände wirksam zu kontrollieren.",
+    "note": "Old_back is accurate; retention fixes the term's contested policy sense rather than treating it as a self-explanatory synonym for digital independence."
+  },
+  {
+    "id": "it_fancy_vocab_266",
+    "en": "the Data Privacy",
+    "category": "lexical-noun",
+    "tl": "der Datenschutz",
+    "alts": [
+      "der Schutz personenbezogener Daten"
+    ],
+    "register": "Neutral legal, technical and policy vocabulary; Datenschutz is the established institutional term in German-speaking jurisdictions.",
+    "trap": "Datenschutz and Privatsphäre overlap but are not identical: the former concerns rules and practices for data processing, while the latter is the broader private sphere.",
+    "example_tl": "Wirksamer Datenschutz verlangt mehr als Einwilligungsbanner: Nutzer müssen erkennen können, welche Daten erhoben, zusammengeführt und für automatisierte Entscheidungen verwendet werden.",
+    "example_en": "Effective data privacy requires more than consent banners: users must be able to see what data is collected, combined, and used for automated decisions.",
+    "cloze": "Wirksamer {{c1::Datenschutz}} verlangt mehr als Einwilligungsbanner: Nutzer müssen erkennen können, welche Daten erhoben, zusammengeführt und für automatisierte Entscheidungen verwendet werden.",
+    "note": "Old_back is the normal domain equivalent. Self-review kept Privatsphäre out of alts because it names a related protected interest rather than the data-governance regime itself."
+  },
+  {
+    "id": "it_fancy_vocab_269",
+    "en": "the Espionage Act",
+    "category": "lexical-noun",
+    "tl": "der Espionage Act",
+    "alts": [
+      "das US-Spionagegesetz von 1917"
+    ],
+    "register": "Proper name in legal, historical and journalistic prose; German usually retains the English title and may add an explanatory translation.",
+    "trap": "The Espionage Act is the title of a specific United States statute; generic Spionagegesetz loses that proper-name status unless the law is clearly identified.",
+    "example_tl": "Der Espionage Act von 1917 wird bis heute herangezogen, um die Weitergabe geheimer Regierungsinformationen strafrechtlich zu verfolgen, auch wenn Journalisten dadurch unter Druck geraten.",
+    "example_en": "The Espionage Act of 1917 is still invoked to prosecute the disclosure of secret government information, even when this puts journalists under pressure.",
+    "cloze": "Der {{c1::Espionage Act}} von 1917 wird bis heute herangezogen, um die Weitergabe geheimer Regierungsinformationen strafrechtlich zu verfolgen, auch wenn Journalisten dadurch unter Druck geraten.",
+    "note": "Materially corrects old_back, which turns a proper title into an unidentified generic espionage law."
+  },
+  {
+    "id": "it_fancy_vocab_270",
+    "en": "the Cloud Computing",
+    "category": "lexical-noun",
+    "tl": "das Cloud-Computing",
+    "alts": [],
+    "register": "Neutral established terminology in IT, procurement and digital policy; German commonly treats the English compound as a neuter noun.",
+    "trap": "In integrated German spelling, the compound takes a hyphen as Cloud-Computing; bare Cloud instead denotes the remote service environment, not the computing model itself.",
+    "example_tl": "Cloud-Computing kann Rechenleistung und Datenspeicherung auf externe Anbieter verlagern, wodurch Verwaltungen Skalenvorteile gewinnen, zugleich aber neue Abhängigkeiten und Kontrollprobleme schaffen.",
+    "example_en": "Cloud computing can shift computing power and data storage to external providers, allowing public administrations to gain economies of scale while creating new dependencies and oversight problems.",
+    "cloze": "{{c1::Cloud-Computing}} kann Rechenleistung und Datenspeicherung auf externe Anbieter verlagern, wodurch Verwaltungen Skalenvorteile gewinnen, zugleich aber neue Abhängigkeiten und Kontrollprobleme schaffen.",
+    "note": "Materially normalizes old_back's open English spelling to the integrated German compound. Self-review changed the claim from categorical to modal and corrected the collocation to auf externe Anbieter verlagern."
+  },
+  {
+    "id": "it_fancy_vocab_273",
+    "en": "the Internet Protocol",
+    "category": "lexical-noun",
+    "tl": "das Internetprotokoll (IP)",
+    "alts": [],
+    "register": "Specialist but standard networking terminology; the abbreviation IP is universal in technical and policy discussion.",
+    "trap": "Capitalized Internet Protocol refers specifically to IP, not to every protocol used on the internet; German writes Internetprotokoll as one compound.",
+    "example_tl": "Das Internetprotokoll überträgt Datenpakete über heterogene Netze, garantiert jedoch weder ihre Zustellung noch ihre Reihenfolge oder den Schutz ihres Inhalts.",
+    "example_en": "The Internet Protocol transmits data packets across heterogeneous networks but guarantees neither their delivery nor their order nor the protection of their content.",
+    "cloze": "Das {{c1::Internetprotokoll}} überträgt Datenpakete über heterogene Netze, garantiert jedoch weder ihre Zustellung noch ihre Reihenfolge oder den Schutz ihres Inhalts.",
+    "note": "Old_back is accurate; the production headword adds the established abbreviation and fixes the specific protocol sense."
+  },
+  {
+    "id": "it_fancy_vocab_274",
+    "en": "the Resilience",
+    "category": "lexical-noun",
+    "tl": "die Widerstandsfähigkeit",
+    "alts": [
+      "die Resilienz"
+    ],
+    "register": "Neutral-formal in infrastructure and supply-chain policy; Resilienz is common policy jargon, while Widerstandsfähigkeit is plainer.",
+    "trap": "Ausfallsicherheit is narrower technical reliability; resilience can also include absorbing disruption, adapting and restoring function after a shock.",
+    "example_tl": "Die Widerstandsfähigkeit europäischer Liefernetze hängt davon ab, ob Unternehmen kritische Abhängigkeiten kennen, alternative Bezugsquellen aufbauen und ihre Notfallverfahren regelmäßig erproben.",
+    "example_en": "The resilience of European supply networks depends on whether companies understand critical dependencies, develop alternative sources, and regularly test their emergency procedures.",
+    "cloze": "Die {{c1::Widerstandsfähigkeit}} europäischer Liefernetze hängt davon ab, ob Unternehmen kritische Abhängigkeiten kennen, alternative Bezugsquellen aufbauen und ihre Notfallverfahren regelmäßig erproben.",
+    "note": "Materially diverges from old_back, which selects only the narrower failure-tolerance sense."
+  },
+  {
+    "id": "it_fancy_vocab_277",
+    "en": "the Zero Trust",
+    "category": "lexical-expression",
+    "tl": "das Zero-Trust-Modell",
+    "alts": [
+      "die Zero-Trust-Architektur"
+    ],
+    "register": "Established cybersecurity terminology; German retains the English label in hyphenated compounds and normally explains the relevant model or architecture.",
+    "trap": "Nullvertrauen is not the established term: Zero Trust requires repeated verification and least-privilege access rather than expressing ordinary interpersonal distrust.",
+    "example_tl": "Ein Zero-Trust-Modell gewährt Zugriffe nicht aufgrund des Netzwerkstandorts, sondern prüft Identität, Gerätezustand und Berechtigung für jede sensible Ressource fortlaufend neu.",
+    "example_en": "A zero-trust model grants access not on the basis of network location but continually rechecks identity, device state, and authorization for every sensitive resource.",
+    "cloze": "Ein {{c1::Zero-Trust-Modell}} gewährt Zugriffe nicht aufgrund des Netzwerkstandorts, sondern prüft Identität, Gerätezustand und Berechtigung für jede sensible Ressource fortlaufend neu.",
+    "note": "Materially corrects old_back's literal calque and supplies a production-ready German compound."
+  },
+  {
+    "id": "it_fancy_vocab_279",
+    "en": "the Silicon",
+    "category": "lexical-noun",
+    "tl": "das Silizium",
+    "alts": [],
+    "register": "Neutral scientific and semiconductor-industry terminology for the chemical element and foundational chip material.",
+    "trap": "English silicon is Silizium; German Silikon means silicone, a family of polymers used in sealants, implants and many other products.",
+    "example_tl": "Silizium bleibt das wichtigste Ausgangsmaterial der Chipindustrie, obwohl alternative Halbleiter bei hohen Frequenzen, Temperaturen oder Spannungen deutliche Vorteile bieten können.",
+    "example_en": "Silicon remains the chip industry's most important starting material, although alternative semiconductors can offer clear advantages at high frequencies, temperatures, or voltages.",
+    "cloze": "{{c1::Silizium}} bleibt das wichtigste Ausgangsmaterial der Chipindustrie, obwohl alternative Halbleiter bei hohen Frequenzen, Temperaturen oder Spannungen deutliche Vorteile bieten können.",
+    "note": "Old_back is accurate; retention addresses the high-value silicon-Silikon false friend."
+  },
+  {
+    "id": "it_fancy_vocab_280",
+    "en": "the Wafer",
+    "category": "lexical-noun",
+    "tl": "der Wafer",
+    "alts": [
+      "die Halbleiterscheibe"
+    ],
+    "register": "Standard specialist terminology in semiconductor manufacturing; the English loanword is masculine and its plural is unchanged.",
+    "trap": "Wafer is masculine in German, with plural die Wafer; the generic Scheibe is too vague unless semiconductor context is already explicit.",
+    "example_tl": "Auf einem Wafer entstehen Hunderte Chips gleichzeitig; kleinste Verunreinigungen können deshalb ganze Produktionschargen unbrauchbar machen und erhebliche wirtschaftliche Verluste verursachen.",
+    "example_en": "Hundreds of chips are produced simultaneously on a wafer; even the smallest contaminants can therefore render entire production batches unusable and cause substantial financial losses.",
+    "cloze": "Auf einem {{c1::Wafer}} entstehen Hunderte Chips gleichzeitig; kleinste Verunreinigungen können deshalb ganze Produktionschargen unbrauchbar machen und erhebliche wirtschaftliche Verluste verursachen.",
+    "note": "Old_back is accurate; retention teaches specialist gender and the zero plural. Self-review replaced the unnatural Fertigungsschritte entwerten with Produktionschargen unbrauchbar machen."
+  }
+]

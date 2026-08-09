@@ -1,0 +1,192 @@
+[
+  {
+    "id": "it_fancy_vocab_364",
+    "en": "Responsive",
+    "category": "lexical-adjective",
+    "tl": "receptivo a algo",
+    "alts": [
+      "sensible a algo"
+    ],
+    "register": "Neutral for a person or institution willing to consider concerns or evidence; for responsive web design, Spain-oriented technical prose prefers adaptativo.",
+    "trap": "Sensible a can fit this human or institutional sense, but legacy sensible without a complement is not a general equivalent; responsivo is avoidable in Spain-oriented prose.",
+    "example_tl": "El regulador se mostró receptivo a las objeciones de los investigadores, pero exigió pruebas independientes antes de modificar el protocolo de auditoría.",
+    "example_en": "The regulator was responsive to the researchers' objections, but demanded independent evidence before changing the audit protocol.",
+    "cloze": "El regulador se mostró {{c1::receptivo a}} las objeciones de los investigadores, pero exigió pruebas independientes antes de modificar el protocolo de auditoría.",
+    "note": "The isolated prompt is polysemous. This note selects responsiveness to representations or evidence; software and interface contexts require adaptativo or a context-specific verbal rendering."
+  },
+  {
+    "id": "it_fancy_vocab_365",
+    "en": "Detached",
+    "category": "lexical-adjective",
+    "tl": "distante",
+    "alts": [],
+    "register": "Neutral for an emotionally uninvolved manner, voice or person; frío is more openly critical, while desapasionado may positively suggest objectivity.",
+    "trap": "Legacy independiente means independent, not emotionally detached; physical separation instead calls for separado, aislado or, for housing, independiente or unifamiliar.",
+    "example_tl": "El portavoz mantuvo un tono distante durante la comparecencia, incluso cuando las víctimas describieron cómo la filtración había condicionado sus vidas.",
+    "example_en": "The spokesperson maintained a detached tone during the hearing, even when the victims described how the leak had affected their lives.",
+    "cloze": "El portavoz mantuvo un tono {{c1::distante}} durante la comparecencia, incluso cuando las víctimas describieron cómo la filtración había condicionado sus vidas.",
+    "note": "The prompt is strongly polysemous. This note selects emotional detachment and materially replaces legacy independiente, which belongs only to some physical or institutional contexts."
+  },
+  {
+    "id": "it_fancy_vocab_373",
+    "en": "Consumptive",
+    "category": "lexical-adjective",
+    "tl": "consuntivo",
+    "alts": [],
+    "register": "Specialist hydrological and environmental terminology; most often encountered in the fixed collocation uso consuntivo, especially of water.",
+    "trap": "Consuntivo means that a resource is consumed or made unavailable; consumista instead means consumerist and does not translate this technical sense.",
+    "example_tl": "El ministerio subestimó el uso consuntivo de agua del nuevo centro de datos, cuyo sistema de refrigeración devuelve muy poco caudal.",
+    "example_en": "The ministry underestimated the new data center's consumptive water use, as its cooling system returns very little flow.",
+    "cloze": "El ministerio subestimó el uso {{c1::consuntivo}} de agua del nuevo centro de datos, cuyo sistema de refrigeración devuelve muy poco caudal.",
+    "note": "The legacy rendering is correct only in this specialized resource-use sense; the bare English adjective can require different translations elsewhere. Self-review made the example project-specific to avoid a sweeping claim about all data centers."
+  },
+  {
+    "id": "it_fancy_vocab_376",
+    "en": "the Data",
+    "category": "lexical-noun",
+    "tl": "los datos",
+    "alts": [],
+    "register": "Neutral across technical, research and policy prose; singular el dato refers to one datum or individual piece of information.",
+    "trap": "English data often behaves as a mass noun, but datos is normally plural in Spanish and requires plural determiners, adjectives and verbs.",
+    "example_tl": "Los datos recopilados por la plataforma revelan patrones laborales sensibles, pero la empresa se niega a explicar quién puede consultarlos.",
+    "example_en": "The data collected by the platform reveal sensitive employment patterns, but the company refuses to explain who may access them.",
+    "cloze": "{{c1::Los datos}} recopilados por la plataforma revelan patrones laborales sensibles, pero la empresa se niega a explicar quién puede consultarlos.",
+    "note": "The legacy headword is accurate; retention is justified by the English mass-noun versus Spanish plural agreement contrast."
+  },
+  {
+    "id": "it_fancy_vocab_377",
+    "en": "the Regulation",
+    "category": "lexical-noun",
+    "tl": "la regulación",
+    "alts": [],
+    "register": "Neutral-formal for the regulation of an activity or market; normativa denotes the applicable body of rules, while reglamento can name a specific instrument.",
+    "trap": "English regulation may denote a process, an entire framework or one rule; Spanish distinguishes regulación, normativa and reglamento according to that scope.",
+    "example_tl": "La regulación de los mercados digitales será ineficaz si las autoridades carecen de personal técnico para investigar sistemas algorítmicos opacos.",
+    "example_en": "Regulation of digital markets will be ineffective if the authorities lack technical staff to investigate opaque algorithmic systems.",
+    "cloze": "{{c1::La regulación}} de los mercados digitales será ineficaz si las autoridades carecen de personal técnico para investigar sistemas algorítmicos opacos.",
+    "note": "The legacy rendering is correct for the process or framework sense selected here, but not for every count use of English regulation."
+  },
+  {
+    "id": "it_fancy_vocab_378",
+    "en": "the Advertisement",
+    "category": "lexical-noun",
+    "tl": "el anuncio publicitario",
+    "alts": [
+      "el anuncio"
+    ],
+    "register": "Neutral; the shorter anuncio is usually sufficient when the advertising context is already clear.",
+    "trap": "Publicidad normally denotes advertising as an activity or mass of promotional material; one countable advertisement is un anuncio, not una publicidad in standard European Spanish.",
+    "example_tl": "El anuncio publicitario omitía las condiciones del servicio y destacaba beneficios que la empresa nunca había demostrado ante los reguladores.",
+    "example_en": "The advertisement omitted the service conditions and highlighted benefits that the company had never demonstrated to regulators.",
+    "cloze": "{{c1::El anuncio publicitario}} omitía las condiciones del servicio y destacaba beneficios que la empresa nunca había demostrado ante los reguladores.",
+    "note": "Materially replaces legacy la publicidad, which changes one countable advertisement into advertising in general. Self-review replaced an awkward claim that the advertisement hid terms behind an interface."
+  },
+  {
+    "id": "it_fancy_vocab_381",
+    "en": "the Revenue",
+    "category": "lexical-noun",
+    "tl": "los ingresos",
+    "alts": [],
+    "register": "Neutral in financial and business reporting; facturación is appropriate when the figure specifically represents invoiced turnover.",
+    "trap": "Ingresos is normally plural and denotes revenue before costs; beneficios are profits after relevant costs, so the two are not interchangeable.",
+    "example_tl": "Los ingresos publicitarios crecieron durante el trimestre, aunque la plataforma perdió usuarios activos y afrontó nuevas sanciones por prácticas anticompetitivas.",
+    "example_en": "Advertising revenue grew during the quarter, although the platform lost active users and faced new penalties for anticompetitive practices.",
+    "cloze": "{{c1::Los ingresos}} publicitarios crecieron durante el trimestre, aunque la plataforma perdió usuarios activos y afrontó nuevas sanciones por prácticas anticompetitivas.",
+    "note": "The legacy rendering is accurate; the note retains the plural production pattern and the revenue-versus-profit distinction."
+  },
+  {
+    "id": "it_fancy_vocab_383",
+    "en": "the Competition",
+    "category": "lexical-noun",
+    "tl": "la competencia",
+    "alts": [],
+    "register": "Neutral-formal in economics and competition law for rivalry among market participants.",
+    "trap": "Outside the market sense, English competition may be una competición or un concurso; competencia can also mean competence or legal authority.",
+    "example_tl": "La autoridad concluyó que la adquisición reduciría la competencia en el mercado publicitario y agravaría la dependencia de los editores pequeños respecto de la plataforma resultante.",
+    "example_en": "The authority concluded that the acquisition would reduce competition in the advertising market and worsen small publishers' dependence on the resulting platform.",
+    "cloze": "La autoridad concluyó que la adquisición reduciría {{c1::la competencia}} en el mercado publicitario y agravaría la dependencia de los editores pequeños respecto de la plataforma resultante.",
+    "note": "The legacy rendering is correct for the economic rivalry sense selected here; the isolated English noun does not select that sense by itself. Self-review made the object of the publishers' dependence explicit."
+  },
+  {
+    "id": "it_fancy_vocab_385",
+    "en": "the Breach",
+    "category": "lexical-noun",
+    "tl": "la brecha de seguridad",
+    "alts": [],
+    "register": "Neutral technical and journalistic terminology for a security compromise; the affected asset can be specified when useful.",
+    "trap": "Breach is complement-sensitive: a security breach is una brecha de seguridad, but breach of contract is incumplimiento de contrato and breach of a right is vulneración.",
+    "example_tl": "La brecha de seguridad expuso historiales médicos de miles de pacientes porque el proveedor había ignorado varias alertas internas durante meses.",
+    "example_en": "The security breach exposed thousands of patients' medical records because the provider had ignored several internal warnings for months.",
+    "cloze": "{{c1::La brecha de seguridad}} expuso historiales médicos de miles de pacientes porque el proveedor había ignorado varias alertas internas durante meses.",
+    "note": "The prompt is polysemous. This note selects the security sense; legacy el incumplimiento is valid only for breaches of duties, rules or contracts."
+  },
+  {
+    "id": "it_fancy_vocab_389",
+    "en": "the Profit",
+    "category": "lexical-noun",
+    "tl": "el beneficio",
+    "alts": [
+      "la ganancia"
+    ],
+    "register": "Neutral in Spain-oriented financial reporting; ganancia is also standard but can refer more broadly to any gain.",
+    "trap": "Profit is what remains after relevant costs; ingresos means revenue, while facturación is turnover, so neither is a synonym for beneficio.",
+    "example_tl": "El beneficio de la empresa aumentó pese al estancamiento de los ingresos, principalmente por los despidos y la reducción del gasto en investigación.",
+    "example_en": "The company's profit increased despite stagnant revenue, mainly because of layoffs and reduced research spending.",
+    "cloze": "{{c1::El beneficio}} de la empresa aumentó pese al estancamiento de los ingresos, principalmente por los despidos y la reducción del gasto en investigación.",
+    "note": "The legacy rendering is accurate; the example deliberately contrasts beneficio with ingresos to fix the intended accounting sense."
+  },
+  {
+    "id": "it_fancy_vocab_391",
+    "en": "the Policy",
+    "category": "lexical-noun",
+    "tl": "la política",
+    "alts": [],
+    "register": "Neutral in institutional and corporate prose for a coherent policy or approach; directriz and norma suit narrower instructions or rules.",
+    "trap": "English policy divides among política, directriz and norma by scope; an insurance policy is una póliza, not una política.",
+    "example_tl": "La política de moderación permite excepciones para dirigentes políticos, pero la empresa no explica qué criterios aplica ni quién autoriza cada decisión.",
+    "example_en": "The moderation policy allows exceptions for political leaders, but the company does not explain which criteria it applies or who authorizes each decision.",
+    "cloze": "{{c1::La política}} de moderación permite excepciones para dirigentes políticos, pero la empresa no explica qué criterios aplica ni quién autoriza cada decisión.",
+    "note": "The legacy rendering is correct for the organizational-policy sense selected here, though it cannot translate every use of the English noun."
+  },
+  {
+    "id": "it_fancy_vocab_392",
+    "en": "the Lobbying",
+    "category": "lexical-noun",
+    "tl": "la actividad de los grupos de presión",
+    "alts": [
+      "la labor de los grupos de presión"
+    ],
+    "register": "Formal and transparent in Spain; cabildeo is established and especially common in the Americas, while the borrowing lobbying remains frequent in journalism.",
+    "trap": "Legacy los grupos de presión names the actors, not the lobbying activity; the distinction mirrors English lobby group versus lobbying.",
+    "example_tl": "La actividad de los grupos de presión condicionó la reforma, pues varias plataformas consiguieron reunirse en privado con los diputados antes de que se publicara el borrador.",
+    "example_en": "Lobbying shaped the reform, as several platforms managed to meet privately with members of parliament before the draft was published.",
+    "cloze": "{{c1::La actividad de los grupos de presión}} condicionó la reforma, pues varias plataformas consiguieron reunirse en privado con los diputados antes de que se publicara el borrador.",
+    "note": "Materially expands legacy los grupos de presión to preserve the source's activity-versus-actor distinction. Self-review replaced the unnatural collocation obtener reuniones with conseguir reunirse."
+  },
+  {
+    "id": "it_fancy_vocab_393",
+    "en": "the Accountability",
+    "category": "lexical-noun",
+    "tl": "la rendición de cuentas",
+    "alts": [],
+    "register": "Standard formal terminology in governance, public administration and corporate oversight.",
+    "trap": "Responsabilidad alone omits the institutional duty to explain decisions and answer for them; rendición de cuentas captures that broader governance concept.",
+    "example_tl": "La rendición de cuentas exige publicar los criterios de recomendación y ofrecer vías de recurso efectivas cuando una decisión automatizada perjudica a un ciudadano.",
+    "example_en": "Accountability requires publishing the recommendation criteria and providing effective avenues of appeal when an automated decision harms a citizen.",
+    "cloze": "{{c1::La rendición de cuentas}} exige publicar los criterios de recomendación y ofrecer vías de recurso efectivas cuando una decisión automatizada perjudica a un ciudadano.",
+    "note": "Materially replaces legacy la responsabilidad, which is too broad to express answerability or the requirement to give an account. Self-review replaced ambiguous recursos efectivos with vías de recurso efectivas."
+  },
+  {
+    "id": "it_fancy_vocab_394",
+    "en": "the Stakeholder",
+    "category": "lexical-noun",
+    "tl": "la parte interesada",
+    "alts": [],
+    "register": "Neutral-formal in administrative, regulatory and project-management prose; interested party is the closest literal back-translation.",
+    "trap": "A stakeholder is not necessarily an accionista: accionista means shareholder, whereas parte interesada includes any materially affected person or organization.",
+    "example_tl": "La parte interesada presentó observaciones sobre el protocolo, pero el ministerio solo incorporó aquellas respaldadas por pruebas técnicas verificables.",
+    "example_en": "The stakeholder submitted comments on the protocol, but the ministry incorporated only those supported by verifiable technical evidence.",
+    "cloze": "{{c1::La parte interesada}} presentó observaciones sobre el protocolo, pero el ministerio solo incorporó aquellas respaldadas por pruebas técnicas verificables.",
+    "note": "The legacy concept is correct but was supplied in the plural; the production headword restores the singular number of the English prompt."
+  }
+]
