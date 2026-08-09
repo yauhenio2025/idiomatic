@@ -914,6 +914,64 @@ async def dj_plan(
     return row
 
 
+# --- DJ-C2 curation triage console (read side) ------------------------------
+
+@router.get("/triage")
+async def dj_triage_console(_: None = Depends(authed_ui)) -> dict:
+    """Everything the /triage console needs in one call: per-subtree
+    evidence rows with the owner's verdicts, plus the per-language
+    due-minutes projection recomputed under those verdicts (undecided
+    scopes project unchanged; a lane verdict cascades to its unverdicted
+    subdecks, a subdeck's own verdict wins).
+
+    Read-only: verdicts are recorded via POST /admin/triage-verdict[-bulk].
+    NOTHING applies dispositions to any Anki collection from here — that is
+    the executor lane's job, in an owner-present collection window."""
+    from . import dj_triage
+
+    pool = await db.get_pool()
+    records = await pool.fetch(
+        """
+        SELECT subtree, language, lane, scope_kind, parent_subtree,
+               applied_scope, card_count, due_now, new_reservoir,
+               suspended_cards, provenance_dominant, reps,
+               distinct_studied_cards, recent_reps, last_touch_date,
+               easy_rate_pct, again_rate_pct, median_ivl_mature_days,
+               due_minutes_before, due_cards_before,
+               due_minutes_after_proposal, due_cards_after_proposal,
+               proposal_disposition, sample_n, rationale,
+               owner_verdict, owner_note, verdicted_at,
+               source_as_of, seeded_at
+        FROM dj_triage
+        ORDER BY language, lane, (scope_kind <> 'lane'), due_now DESC, subtree
+        """
+    )
+    rows = [dict(record) for record in records]
+    verdict_counts: dict[str, int] = {}
+    for row in rows:
+        key = row["owner_verdict"] or "unverdicted"
+        verdict_counts[key] = verdict_counts.get(key, 0) + 1
+    return {
+        "rows": rows,
+        "summary": {
+            "total": len(rows),
+            "verdicted": sum(1 for row in rows if row["owner_verdict"]),
+            "remaining": verdict_counts.get("unverdicted", 0),
+            "verdict_counts": verdict_counts,
+            "languages": dj_triage.project_languages(rows),
+        },
+        "meta": {
+            "source_as_of": rows[0]["source_as_of"] if rows else None,
+            "applies_dispositions": False,
+            "executor_note": (
+                "Verdicts are stored server-side only; a separate "
+                "owner-present collection window (the executor lane) "
+                "applies them. Nothing on this page touches any collection."
+            ),
+        },
+    }
+
+
 @router.get("/rescue/formats")
 async def rescue_formats(_: None = Depends(authed_ui)) -> dict:
     """The format taxonomy + provider registry, for the Formats page and

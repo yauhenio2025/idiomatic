@@ -981,3 +981,57 @@ CREATE TABLE IF NOT EXISTS dj_plans (
   generated_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   plan           JSONB NOT NULL
 );
+
+-- ============================================================================
+-- DJ-C2 curation triage (docs/commissions/CODEX_DJ_C2_CURATION_TRIAGE.md).
+-- One row per studyable subtree from the committed census evidence
+-- (docs/research/dj_census/triage_evidence.json). Census-owned columns are
+-- seeded from the artifact only when the table is empty at boot; the seed
+-- upsert never touches owner_verdict/owner_note/verdicted_at (legacy_estate
+-- doctrine), so owner verdicts survive any reseed. This table stores
+-- DECISIONS ONLY: no worker consumes it and nothing applies dispositions to
+-- any Anki collection from here — the executor lane does that later in an
+-- owner-present collection window.
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS dj_triage (
+  subtree                    TEXT PRIMARY KEY,
+  language                   TEXT NOT NULL,
+  lane                       TEXT NOT NULL,
+  scope_kind                 TEXT NOT NULL CHECK (
+    scope_kind IN ('lane', 'first_level_subdeck', 'dormant_summary')
+  ),
+  parent_subtree             TEXT,
+  applied_scope              BOOLEAN NOT NULL DEFAULT FALSE,
+  card_count                 INTEGER NOT NULL CHECK (card_count >= 0),
+  due_now                    INTEGER NOT NULL CHECK (due_now >= 0),
+  new_reservoir              INTEGER NOT NULL CHECK (new_reservoir >= 0),
+  suspended_cards            INTEGER NOT NULL DEFAULT 0,
+  provenance_dominant        TEXT,
+  reps                       BIGINT NOT NULL DEFAULT 0,
+  distinct_studied_cards     INTEGER NOT NULL DEFAULT 0,
+  recent_reps                BIGINT NOT NULL DEFAULT 0,
+  last_touch_date            TEXT,
+  easy_rate_pct              DOUBLE PRECISION,
+  again_rate_pct             DOUBLE PRECISION,
+  median_ivl_mature_days     DOUBLE PRECISION,
+  due_minutes_before         DOUBLE PRECISION NOT NULL DEFAULT 0,
+  due_cards_before           INTEGER NOT NULL DEFAULT 0,
+  due_minutes_after_proposal DOUBLE PRECISION NOT NULL DEFAULT 0,
+  due_cards_after_proposal   INTEGER NOT NULL DEFAULT 0,
+  proposal_disposition       TEXT NOT NULL CHECK (proposal_disposition IN
+    ('keep-active', 'suspend-reference', 'sample-hardest', 'owner-review')),
+  sample_n                   INTEGER,
+  rationale                  TEXT NOT NULL,
+  evidence                   JSONB NOT NULL DEFAULT '{}'::jsonb,
+  owner_verdict              TEXT CHECK (owner_verdict IS NULL OR owner_verdict IN
+    ('accept-proposal', 'keep-active', 'suspend-reference', 'sample-hardest', 'defer')),
+  owner_note                 TEXT,
+  verdicted_at               TIMESTAMPTZ,
+  source_as_of               TEXT NOT NULL,
+  seeded_at                  TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS dj_triage_tree_idx
+  ON dj_triage (language, lane, subtree);
+CREATE INDEX IF NOT EXISTS dj_triage_verdict_idx
+  ON dj_triage (COALESCE(owner_verdict, 'unverdicted'));

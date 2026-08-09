@@ -63,6 +63,18 @@ async def lifespan(app: FastAPI):
         )
     except Exception as e:
         log.warning("api.legacy_estate_seed_failed", err=repr(e)[:300])
+    # Seed the DJ-C2 curation-triage console only while its table is empty:
+    # the committed census is a point-in-time snapshot, not a live feed.
+    # db.seed_dj_triage itself upserts without touching the owner verdict
+    # columns, so a future evidence refresh can reseed without losing them.
+    try:
+        from .dj_triage import load_evidence
+
+        _meta, triage_rows = load_evidence()
+        if await db.seed_dj_triage_if_empty(triage_rows):
+            log.info("api.dj_triage_seeded", rows=len(triage_rows))
+    except Exception as e:
+        log.warning("api.dj_triage_seed_failed", err=repr(e)[:300])
     worker_task = asyncio.create_task(worker_loop(once=False))
     log.info("api.lifespan.started", worker_task=str(worker_task))
     try:
@@ -2156,6 +2168,72 @@ async def admin_dj_run(_: None = Depends(authed_admin)) -> dict:
 
     _spawn_bg(_run())
     return {"started": True}
+
+
+# --- DJ-C2 curation triage (docs/commissions/CODEX_DJ_C2_CURATION_TRIAGE.md).
+# Sanctioned dashboard-mutation surface for the /triage console. These
+# endpoints record OWNER DECISIONS ONLY — nothing here (or anywhere server-
+# side) applies a disposition to any Anki collection; a separate owner-
+# present collection window (the executor lane) applies accepted verdicts.
+
+@app.post("/admin/triage-verdict")
+async def admin_triage_verdict(body: dict, _: None = Depends(authed_admin)) -> dict:
+    """Record one owner verdict on a triage subtree. Body JSON:
+    {subtree_id, verdict?, note?} — subtree_id is the subtree path (the
+    dj_triage primary key), verdict ∈ accept-proposal | keep-active |
+    suspend-reference | sample-hardest | defer. A note-only body updates
+    the note without touching the verdict (phone flow: jot first, decide
+    later). Empty note clears it."""
+    from .dj_triage import VERDICTS
+    subtree = str(body.get("subtree_id") or "").strip()
+    if not subtree:
+        raise HTTPException(400, "need subtree_id (the subtree path)")
+    verdict = body.get("verdict")
+    if verdict is not None and verdict not in VERDICTS:
+        raise HTTPException(400, f"verdict must be one of {sorted(VERDICTS)}")
+    if verdict is None and "note" not in body:
+        raise HTTPException(400, "nothing to set (need verdict and/or note)")
+    sets, args = [], []
+    if verdict is not None:
+        args.append(verdict)
+        sets.append(f"owner_verdict = ${len(args)}")
+        sets.append("verdicted_at = NOW()")
+    if "note" in body:
+        args.append(str(body.get("note") or "") or None)
+        sets.append(f"owner_note = ${len(args)}")
+    args.append(subtree)
+    pool = await db.get_pool()
+    row = await pool.fetchrow(
+        f"UPDATE dj_triage SET {', '.join(sets)} "
+        f"WHERE subtree = ${len(args)} RETURNING subtree",
+        *args)
+    if not row:
+        raise HTTPException(404, "unknown subtree")
+    log.info("admin.triage_verdict", subtree=subtree, verdict=verdict)
+    return {"ok": True, "subtree": row["subtree"]}
+
+
+@app.post("/admin/triage-verdict-bulk")
+async def admin_triage_verdict_bulk(
+    body: dict, _: None = Depends(authed_admin),
+) -> dict:
+    """Bulk verdict for the accept-all-then-override flow. Body JSON:
+    {verdict: "accept-proposal", scope: "all-unverdicted"} — touches only
+    rows with no owner verdict yet; deferred rows keep their defer."""
+    from .dj_triage import VERDICTS
+    verdict = body.get("verdict")
+    if verdict not in VERDICTS:
+        raise HTTPException(400, f"verdict must be one of {sorted(VERDICTS)}")
+    if body.get("scope") != "all-unverdicted":
+        raise HTTPException(400, "scope must be 'all-unverdicted'")
+    pool = await db.get_pool()
+    status = await pool.execute(
+        "UPDATE dj_triage SET owner_verdict = $1, verdicted_at = NOW() "
+        "WHERE owner_verdict IS NULL",
+        verdict)
+    updated = int(status.rsplit(" ", 1)[-1])
+    log.info("admin.triage_verdict_bulk", verdict=verdict, updated=updated)
+    return {"ok": True, "updated": updated}
 
 
 @app.get("/dj/plan")

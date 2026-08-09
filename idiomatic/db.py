@@ -163,6 +163,117 @@ async def seed_legacy_estate(
             )
 
 
+# ---- DJ-C2 curation triage -------------------------------------------------
+
+async def dj_triage_count() -> int:
+    pool = await get_pool()
+    return await pool.fetchval("SELECT COUNT(*) FROM dj_triage") or 0
+
+
+async def seed_dj_triage(rows: list[dict[str, Any]]) -> None:
+    """Idempotently upsert census-owned columns while preserving verdicts.
+
+    Same doctrine as ``seed_legacy_estate``: the conflict update deliberately
+    excludes ``owner_verdict``/``owner_note``/``verdicted_at``, so an owner
+    verdict, once recorded, survives every reseed of the evidence.
+    """
+
+    values = [
+        (
+            row["subtree"],
+            row["language"],
+            row["lane"],
+            row["scope_kind"],
+            row["parent_subtree"],
+            row["applied_scope"],
+            row["card_count"],
+            row["due_now"],
+            row["new_reservoir"],
+            row["suspended_cards"],
+            row["provenance_dominant"],
+            row["reps"],
+            row["distinct_studied_cards"],
+            row["recent_reps"],
+            row["last_touch_date"],
+            row["easy_rate_pct"],
+            row["again_rate_pct"],
+            row["median_ivl_mature_days"],
+            row["due_minutes_before"],
+            row["due_cards_before"],
+            row["due_minutes_after_proposal"],
+            row["due_cards_after_proposal"],
+            row["proposal_disposition"],
+            row["sample_n"],
+            row["rationale"],
+            json.dumps(row["evidence"], ensure_ascii=False),
+            row["source_as_of"],
+        )
+        for row in rows
+    ]
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            await conn.executemany(
+                """
+                INSERT INTO dj_triage (
+                  subtree, language, lane, scope_kind, parent_subtree,
+                  applied_scope, card_count, due_now, new_reservoir,
+                  suspended_cards, provenance_dominant, reps,
+                  distinct_studied_cards, recent_reps, last_touch_date,
+                  easy_rate_pct, again_rate_pct, median_ivl_mature_days,
+                  due_minutes_before, due_cards_before,
+                  due_minutes_after_proposal, due_cards_after_proposal,
+                  proposal_disposition, sample_n, rationale, evidence,
+                  source_as_of
+                ) VALUES (
+                  $1, $2, $3, $4, $5,
+                  $6, $7, $8, $9, $10, $11, $12, $13, $14, $15,
+                  $16, $17, $18, $19, $20, $21, $22,
+                  $23, $24, $25, $26::jsonb, $27
+                )
+                ON CONFLICT (subtree) DO UPDATE SET
+                  language = EXCLUDED.language,
+                  lane = EXCLUDED.lane,
+                  scope_kind = EXCLUDED.scope_kind,
+                  parent_subtree = EXCLUDED.parent_subtree,
+                  applied_scope = EXCLUDED.applied_scope,
+                  card_count = EXCLUDED.card_count,
+                  due_now = EXCLUDED.due_now,
+                  new_reservoir = EXCLUDED.new_reservoir,
+                  suspended_cards = EXCLUDED.suspended_cards,
+                  provenance_dominant = EXCLUDED.provenance_dominant,
+                  reps = EXCLUDED.reps,
+                  distinct_studied_cards = EXCLUDED.distinct_studied_cards,
+                  recent_reps = EXCLUDED.recent_reps,
+                  last_touch_date = EXCLUDED.last_touch_date,
+                  easy_rate_pct = EXCLUDED.easy_rate_pct,
+                  again_rate_pct = EXCLUDED.again_rate_pct,
+                  median_ivl_mature_days = EXCLUDED.median_ivl_mature_days,
+                  due_minutes_before = EXCLUDED.due_minutes_before,
+                  due_cards_before = EXCLUDED.due_cards_before,
+                  due_minutes_after_proposal = EXCLUDED.due_minutes_after_proposal,
+                  due_cards_after_proposal = EXCLUDED.due_cards_after_proposal,
+                  proposal_disposition = EXCLUDED.proposal_disposition,
+                  sample_n = EXCLUDED.sample_n,
+                  rationale = EXCLUDED.rationale,
+                  evidence = EXCLUDED.evidence,
+                  source_as_of = EXCLUDED.source_as_of,
+                  seeded_at = NOW()
+                """,
+                values,
+            )
+
+
+async def seed_dj_triage_if_empty(rows: list[dict[str, Any]]) -> bool:
+    """Boot path: seed only an EMPTY table (unlike legacy_estate's every-boot
+    reseed) — the committed census is a point-in-time snapshot, not a live
+    feed.  Returns True when a seed happened."""
+    if await dj_triage_count() > 0:
+        return False
+    await seed_dj_triage(rows)
+    return True
+
+
 # ---- Channel helpers -------------------------------------------------------
 
 async def list_active_channels() -> list[dict[str, Any]]:
