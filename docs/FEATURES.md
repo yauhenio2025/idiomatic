@@ -215,7 +215,7 @@
   - `idiomatic/grammar/course.py` - frozen models, lesson parser (`[CARD]`/`[SIDE]`/`TITLE:`/`REF:`/`SVG:`/`SHOW:`/`TL:`), exercise loader + structural hygiene gate, `interleave_plan()`, `build_course_apkg()`
   - `idiomatic/grammar/data/course/lessons/de_kasus.md` - authored 10-card Kasus lesson (Hammer ch. 2 grounded)
   - `idiomatic/grammar/data/course/lessons/svg/` - 9 authored diagram sidecars (house `s-*` palette)
-  - `tools/course_select_de_kasus.py` - sealed-corpus selector (flags-only + structural gate, verified GGU §-refs, key-fallback mode)
+  - `tools/course_select.py` - generic plan-driven sealed-corpus selector (2026-08-10; kasus one-off retired, byte-identical output proven); plans in `idiomatic/grammar/data/course/plans/`; DE_UNITS registry (21 chapters) in `idiomatic/grammar/course.py`; `--production` builds route to `anki_root('de')::2 Grammar::<unit_label>`
   - `tools/course_build_pilot.py` - disposable-pilot APKG build; `--audio` resolves the unit's clips via the admin API (strict checksums, graceful audio-pending), stitches sides, drops the pending tag per voiced note
   - `tools/course_seed_audio.py` - POSTs the unit's seeding request (exercises as payload)
   - `idiomatic/local_tts.py` - course seeding contract: `course_lesson_job_rows` (one job per speech segment, `segNNN`, per-segment voice routing), `course_exercise_job_rows` (`solution` clips), `seed_course_audio`, `course_audio_status`, `match_course_completions`, `course_staged_path`

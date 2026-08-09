@@ -76,18 +76,31 @@ compute, don't eyeball.
  "unit_label": "<UNIT_LABEL>",
  "blocks": [
    {"block": 1, "card_seq": 2,
-    "exercise_sets": ["<set id from ch<NN>.json>", "..."],
+    "exercise_sets": ["<set id from ch<NN>.json>", "<set id>:key"],
+    "hammer_refs": ["<§ from the chapter's printed (GGU …) headers>"],
     "max_items": 14, "note": "<short rationale>"}
  ]}
 ```
 
 Every workbook set you judge drill-worthy lands in exactly one block,
 attached to the lesson card that teaches its topic (`card_seq`);
-blocks ascend; `max_items` 10–16 per block; total unit target 60–100
-atomic items where the chapter supports it (small chapters may yield
-less — never pad). Use set ids EXACTLY as they appear in the chapter
-file. Sets you exclude: list them with one-line reasons in your final
-summary, not in the plan.
+`block` ints unique ascending (plan ordering); `card_seq` unique too —
+it becomes the interleave block number; `max_items` 10–16 per block;
+total unit target 60–100 atomic items where the chapter supports it
+(small chapters may yield less — never pad). Use set ids EXACTLY as
+they appear in the chapter file; append `:key` to a set id when the
+set's drills must be read from the printed answer key
+(construct-the-sentence sets whose solutions live only in the key).
+`hammer_refs` is REQUIRED per block: the Hammer §§ this block drills,
+and every ref MUST appear in the chapter's printed `(GGU …)` exercise
+headers — `tools/course_select.py` verifies this mechanically and
+fails the plan otherwise. Sets you exclude: list them with one-line
+reasons in your final summary, not in the plan.
+
+After writing the plan, RUN the selector as a self-check:
+`.venv/bin/python tools/course_select.py idiomatic/grammar/data/course/plans/de_<unit>.plan.json`
+— it must exit 0 and write `book_local/de_<unit>.exercises.json`. Fix
+your plan until it does.
 
 ## Self-checks before finishing (all mandatory)
 

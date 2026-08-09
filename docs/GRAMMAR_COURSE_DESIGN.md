@@ -122,8 +122,13 @@ The repo is public; transcribed book content NEVER enters git.
 - The sealed corpora (`docs/research/grammar_books/*.tar.gz`) stay
   read-only inputs, extracted to scratch, never committed extracted.
 
-Selection pipeline (per corpus): a committed selector tool (e.g.
-`tools/course_select_de_kasus.py`) reads the extracted corpus and emits
+Selection pipeline (per corpus): the generic plan-driven selector
+`tools/course_select.py` (2026-08-10; replaced the retired kasus
+one-off, byte-identical output proven) reads a committed unit plan
+(`data/course/plans/<lang>_<unit>.plan.json` — blocks → card_seq →
+exercise-set ids + required per-block `hammer_refs` verified against
+printed `(GGU …)` headers; `:key` suffix = printed-answer-key mode)
+plus the extracted corpus, and emits
 `book_local/<lang>_<unit>.exercises.json`:
 
 - **book-verbatim only**: any Pass-2 flag (`reconstructed-by-model`,
