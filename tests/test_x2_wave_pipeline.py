@@ -94,11 +94,119 @@ def test_wave3_plan_is_five_languages_three_chunks_of_100_with_source_ids():
     assert _staged_json(files, "it_tenses_b01.json")[0]["old_back"]
 
 
-def test_plan_hashes_are_hashes_of_exact_staged_bytes():
-    manifest, files = wave.render_plan("wave3")
+@pytest.mark.parametrize("plan", ["wave3", "wave4", "wave5", "wave6"])
+def test_plan_hashes_are_hashes_of_exact_staged_bytes(plan: str):
+    manifest, files = wave.render_plan(plan)
     by_name = {path.relative_to(wave.REPO).as_posix(): data for path, data in files.items()}
     for chunk in manifest["chunks"]:
         assert hashlib.sha256(by_name[chunk["path"]]).hexdigest() == chunk["sha256"]
+
+
+def test_wave4_stages_all_582_fancy_vocab_prompts_in_forty_row_chunks():
+    manifest, files = wave.render_plan("wave4")
+    assert manifest["schema_version"] == 2
+    assert manifest["chunk_size"] == 40
+    assert manifest["format_verdict"].endswith(
+        "'this looks good to me too - all three formats'"
+    )
+    assert len(manifest["chunks"]) == 75
+    for lang in wave.LANGS:
+        rows = []
+        for number in range(1, 16):
+            rows.extend(_staged_json(files, f"{lang}_fancy_vocab_b{number:02d}.json"))
+        assert [row["id"] for row in rows] == [
+            f"it_fancy_vocab_{number:03d}" for number in range(1, 583)
+        ]
+        assert all(set(row) == {"id", "en", "old_back"} for row in rows)
+        sizes = [chunk["rows"] for chunk in manifest["chunks"] if chunk["lang"] == lang]
+        assert sizes == [40] * 14 + [22]
+    assert _staged_json(files, "it_fancy_vocab_b01.json")[0]["old_back"]
+    pt_missing = [
+        item
+        for chunk in manifest["chunks"]
+        if chunk["lang"] == "pt"
+        for item in chunk["missing_ref_ids"]
+    ]
+    assert pt_missing == ["it_fancy_vocab_312", "it_fancy_vocab_484"]
+
+
+def test_wave4_flags_exactly_the_committed_nonpreferred_duplicate_copies():
+    manifest, _files = wave.render_plan("wave4")
+    (topic,) = manifest["topics"]
+    assert topic["format_verdict"] == "owner-approved 2026-08-09"
+    assert topic["expected_duplicate_drops"] == 20
+    for lang in wave.LANGS:
+        flagged = [
+            item
+            for chunk in manifest["chunks"]
+            if chunk["lang"] == lang
+            for item in chunk["expected_duplicate_drop_ids"]
+        ]
+        assert len(flagged) == 20
+        # The two the V1 pilot already adjudicated, plus the CONNECTING-owned one.
+        assert {
+            "it_fancy_vocab_098", "it_fancy_vocab_099", "it_fancy_vocab_407",
+        } <= set(flagged)
+
+
+def test_wave5_stages_the_specialist_trio_at_517_prompts_per_language():
+    manifest, _files = wave.render_plan("wave5")
+    assert [topic["topic"] for topic in manifest["topics"]] == [
+        "big_tech_vocab", "cold_war_vocab", "geopolitics",
+    ]
+    assert [topic["source_rows"] for topic in manifest["topics"]] == [145, 222, 150]
+    assert all(topic["expected_duplicate_drops"] == 0 for topic in manifest["topics"])
+    assert len(manifest["chunks"]) == 70
+    for lang in wave.LANGS:
+        sizes = [chunk["rows"] for chunk in manifest["chunks"] if chunk["lang"] == lang]
+        assert sizes == [40, 40, 40, 25] + [40] * 5 + [22] + [40, 40, 40, 30]
+        assert sum(sizes) == 517
+    assert all(
+        chunk["expected_duplicate_drop_ids"] == [] for chunk in manifest["chunks"]
+    )
+    pt_missing = [
+        item
+        for chunk in manifest["chunks"]
+        if chunk["lang"] == "pt"
+        for item in chunk["missing_ref_ids"]
+    ]
+    assert pt_missing == ["it_big_tech_vocab_052"]
+
+
+def test_wave6_stages_90_shadowing_frames_with_quarantined_pt_backs():
+    manifest, files = wave.render_plan("wave6")
+    assert len(manifest["chunks"]) == 15
+    for lang in wave.LANGS:
+        sizes = [chunk["rows"] for chunk in manifest["chunks"] if chunk["lang"] == lang]
+        assert sizes == [40, 40, 10]
+    pt_rows = []
+    for number in range(1, 4):
+        pt_rows.extend(_staged_json(files, f"pt_big_tech_phrases_b{number:02d}.json"))
+    assert [row["id"] for row in pt_rows] == [
+        f"it_big_tech_phrases_{number:03d}" for number in range(1, 91)
+    ]
+    assert all(row["old_back"] == "" for row in pt_rows[:30])
+    assert all(row["old_back"].strip() for row in pt_rows[30:])
+    assert all(
+        chunk["expected_duplicate_drop_ids"] == [] for chunk in manifest["chunks"]
+    )
+
+
+def test_legacy_plans_still_render_schema_one_without_bulk_annotations():
+    for plan in ("wave3", "vocab-pilot", "geopolitics-pilot", "phrases-pilot"):
+        manifest, _files = wave.render_plan(plan)
+        assert manifest["schema_version"] == 1
+        assert manifest["chunk_size"] == 100
+        assert "format_verdict" not in manifest
+        assert "duplicate_policy" not in manifest
+        assert all(
+            "expected_duplicate_drop_ids" not in chunk
+            for chunk in manifest["chunks"]
+        )
+        assert all(
+            "format_verdict" not in topic and "expected_duplicate_drops" not in topic
+            for topic in manifest["topics"]
+        )
 
 
 def test_only_bounded_representative_pilots_are_commissioned():

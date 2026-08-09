@@ -1,0 +1,252 @@
+{
+  "schema_version": 2,
+  "generated_by": "tools/x2_wave_pipeline.py",
+  "plan": "wave6",
+  "chunk_size": 40,
+  "id_policy": "preserve canonical it_rebuild source IDs exactly",
+  "order_policy": "preserve canonical source order; pilots preserve relative order",
+  "format_verdict": "V1/V2/P1 owner-approved 2026-08-09: 'this looks good to me too - all three formats'",
+  "duplicate_policy": "expected_duplicate_drop_ids lists staged non-preferred exact-EN copies from the committed cross-topic report; staging never drops them — authoring triage does, unless the linguistic audit documents a distinct sense",
+  "topics": [
+    {
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "languages": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt"
+      ],
+      "source_rows": 90,
+      "selected_rows": 90,
+      "selected_ids_sha256": "c7fe82c0e281573c512af7571f678d93a665e3ec1728bdd7d79da9b6012d0700",
+      "owner_gate": null,
+      "format_verdict": "owner-approved 2026-08-09",
+      "expected_duplicate_drops": 0
+    }
+  ],
+  "source_files": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/input/big_tech_phrases_01.json",
+      "sha256": "ebee1da28696108d57be186a5d8c8cfa34cbff03a3c2ec188c6d9a5fc1770bdc"
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/it_rebuild/output/big_tech_phrases_01.json",
+      "sha256": "0ba3a2224cbdc4d7d401272acdc85998f198149959d2f59c62e0b41559ac94d4"
+    }
+  ],
+  "chunks": [
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/de_big_tech_phrases_b01.json",
+      "lang": "de",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_001",
+      "last_id": "it_big_tech_phrases_040",
+      "missing_ref_ids": [],
+      "sha256": "9dfd6be8e7d749a9a869f6586bd9ea83f01e42a54027143f7bb0f1938d20a741",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/de_big_tech_phrases_b02.json",
+      "lang": "de",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_041",
+      "last_id": "it_big_tech_phrases_080",
+      "missing_ref_ids": [],
+      "sha256": "bf3c8c58c494c8ec51fed1d60adc55cde3ae045c2d8658b46c80ec3ac1c8ef82",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/de_big_tech_phrases_b03.json",
+      "lang": "de",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 10,
+      "first_id": "it_big_tech_phrases_081",
+      "last_id": "it_big_tech_phrases_090",
+      "missing_ref_ids": [],
+      "sha256": "ca5500cb7474cdc6c9b31c90a55d4c17055e5fea91195bf26d13b74e413c5a22",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/es_big_tech_phrases_b01.json",
+      "lang": "es",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_001",
+      "last_id": "it_big_tech_phrases_040",
+      "missing_ref_ids": [],
+      "sha256": "fcbd6ebc8fb3c923e8972d8f3610825b8f15210438104bb3a4326c64a9410e1d",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/es_big_tech_phrases_b02.json",
+      "lang": "es",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_041",
+      "last_id": "it_big_tech_phrases_080",
+      "missing_ref_ids": [],
+      "sha256": "6c52d04958e3646e0bbc859bbf1a6a040fcbd201a0aedf5b9f06633a01a3db56",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/es_big_tech_phrases_b03.json",
+      "lang": "es",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 10,
+      "first_id": "it_big_tech_phrases_081",
+      "last_id": "it_big_tech_phrases_090",
+      "missing_ref_ids": [],
+      "sha256": "f97c4e83ded48bb8bc152e628c4e8e7a6370c82b00bfbf7da50f548ee5bd36b4",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/fr_big_tech_phrases_b01.json",
+      "lang": "fr",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_001",
+      "last_id": "it_big_tech_phrases_040",
+      "missing_ref_ids": [],
+      "sha256": "99f6d36d53a3a3e2663f51b75d56ea6e34f862f38af58c2101afc419d3ac3cce",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/fr_big_tech_phrases_b02.json",
+      "lang": "fr",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_041",
+      "last_id": "it_big_tech_phrases_080",
+      "missing_ref_ids": [],
+      "sha256": "ba8dda384ab065ba8a25daee5cecf185b9caa7e88c4ffe2ff8c7fe3e874a8e75",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/fr_big_tech_phrases_b03.json",
+      "lang": "fr",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 10,
+      "first_id": "it_big_tech_phrases_081",
+      "last_id": "it_big_tech_phrases_090",
+      "missing_ref_ids": [],
+      "sha256": "1d6ab460b7f8157a56009d9ea3a095a55e91ba3db058dc802ff5cca945f97bf0",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/it_big_tech_phrases_b01.json",
+      "lang": "it",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_001",
+      "last_id": "it_big_tech_phrases_040",
+      "missing_ref_ids": [],
+      "sha256": "21bf91aa2ed5ba2b8be8becf1ffb94cb2468ab2d68b90ec66074f25e5be50d59",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/it_big_tech_phrases_b02.json",
+      "lang": "it",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_041",
+      "last_id": "it_big_tech_phrases_080",
+      "missing_ref_ids": [],
+      "sha256": "9b37de78d7c2ae061c8435dbe9f4056f1b14d7640d2c91d211795adb71f96a40",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/it_big_tech_phrases_b03.json",
+      "lang": "it",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 10,
+      "first_id": "it_big_tech_phrases_081",
+      "last_id": "it_big_tech_phrases_090",
+      "missing_ref_ids": [],
+      "sha256": "ac20b85a3124add6c0e01e8b9ee6161e25c7132a4daa2e61c1008901c3f6d0a8",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/pt_big_tech_phrases_b01.json",
+      "lang": "pt",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_001",
+      "last_id": "it_big_tech_phrases_040",
+      "missing_ref_ids": [
+        "it_big_tech_phrases_001",
+        "it_big_tech_phrases_002",
+        "it_big_tech_phrases_003",
+        "it_big_tech_phrases_004",
+        "it_big_tech_phrases_005",
+        "it_big_tech_phrases_006",
+        "it_big_tech_phrases_007",
+        "it_big_tech_phrases_008",
+        "it_big_tech_phrases_009",
+        "it_big_tech_phrases_010",
+        "it_big_tech_phrases_011",
+        "it_big_tech_phrases_012",
+        "it_big_tech_phrases_013",
+        "it_big_tech_phrases_014",
+        "it_big_tech_phrases_015",
+        "it_big_tech_phrases_016",
+        "it_big_tech_phrases_017",
+        "it_big_tech_phrases_018",
+        "it_big_tech_phrases_019",
+        "it_big_tech_phrases_020",
+        "it_big_tech_phrases_021",
+        "it_big_tech_phrases_022",
+        "it_big_tech_phrases_023",
+        "it_big_tech_phrases_024",
+        "it_big_tech_phrases_025",
+        "it_big_tech_phrases_026",
+        "it_big_tech_phrases_027",
+        "it_big_tech_phrases_028",
+        "it_big_tech_phrases_029",
+        "it_big_tech_phrases_030"
+      ],
+      "sha256": "f9ac32b3a7dee8770dfcd84ff17579c222798b737770c62ae8db6ef6da8bc55e",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/pt_big_tech_phrases_b02.json",
+      "lang": "pt",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 40,
+      "first_id": "it_big_tech_phrases_041",
+      "last_id": "it_big_tech_phrases_080",
+      "missing_ref_ids": [],
+      "sha256": "58821c09e60af635e30128c8fa88424c4d86945cb55f4899440b3f81b7f199ba",
+      "expected_duplicate_drop_ids": []
+    },
+    {
+      "path": "idiomatic/grammar/data/exercises2/batches/input/pt_big_tech_phrases_b03.json",
+      "lang": "pt",
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "rows": 10,
+      "first_id": "it_big_tech_phrases_081",
+      "last_id": "it_big_tech_phrases_090",
+      "missing_ref_ids": [],
+      "sha256": "350ce5fc269bf34f55b8073ae0eaf0bc866cbb69b281e2b8977b77842eff0cd5",
+      "expected_duplicate_drop_ids": []
+    }
+  ]
+}
