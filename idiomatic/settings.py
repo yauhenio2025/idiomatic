@@ -42,6 +42,13 @@ class Settings(BaseSettings):
     rescue_autopilot_max_new_items: int = 3     # auto-activated per run
     rescue_struggle_min_fails_14d: int = 3      # struggle-list threshold
 
+    # --- Personal Study DJ (idiomatic/dj.py, slices 1-2) ---------------
+    # Daily pull → observe → plan, riding the worker's janitor cadence
+    # like the rescue autopilot. Budgets themselves live in kv_store
+    # (owner-editable via POST /admin/dj-budgets), not here.
+    dj_enabled: bool = True
+    dj_interval_hours: int = 24
+
     # Primary TTS provider. "qwen-local" (default since 2026-08-07, user
     # verdict after A/B listening) is the locally-hosted Qwen3-TTS bridge
     # on the home box — cost 0, voices cloned from the ElevenLabs deck

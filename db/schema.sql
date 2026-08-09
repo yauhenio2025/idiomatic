@@ -970,3 +970,14 @@ CREATE TABLE IF NOT EXISTS factory_actors (
   created_at        TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at        TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+-- ============================================================================
+-- Personal Study DJ (docs/commissions/PERSONAL_DJ_COMMISSION.md, slices 1-2).
+-- One session plan per day; regenerating a day overwrites in place. Budgets
+-- and cached observations live in kv_store (dj_budgets / dj_observations_last).
+CREATE TABLE IF NOT EXISTS dj_plans (
+  day            DATE PRIMARY KEY,
+  schema_version INTEGER NOT NULL,
+  generated_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  plan           JSONB NOT NULL
+);

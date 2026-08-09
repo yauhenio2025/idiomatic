@@ -599,6 +599,10 @@ async def loop(once: bool = False) -> None:
                 # kv_store and never raises.
                 from . import rescue_autopilot
                 await rescue_autopilot.maybe_run_autopilot()
+                # The Study DJ rides the same cadence; self-gates on
+                # dj_interval_hours (daily) via kv_store, never raises.
+                from . import dj
+                await dj.maybe_run_dj()
             try:
                 n_reaped = await db.fail_exhausted_stale_processing(
                     settings.worker_max_attempts)
