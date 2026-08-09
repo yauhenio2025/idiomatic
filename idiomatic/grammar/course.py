@@ -32,11 +32,21 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
 
+import subprocess
+
 import genanki
 import structlog
 
 from ..anki_tree import anki_root
-from .explainers import Segment, _WORD, _segments
+from ..pipeline.audio import concat_mp3s, silence_mp3
+from .explainers import (
+    BETWEEN_SPEECH_MS,
+    PAUSE_MS,
+    Segment,
+    _WORD,
+    _segments,
+    leveled_speech_clip,
+)
 from .podcast_cards import _lenient_frontmatter
 
 log = structlog.get_logger()
@@ -629,12 +639,32 @@ def parse_exercises_file(path: Path) -> list[CourseExercise]:
         )
     lang, unit = match.group(1), match.group(2)
     data = json.loads(path.read_text(encoding="utf-8"))
-    if not isinstance(data, dict):
-        raise CourseSourceError(f"{path.name}: expected a JSON object")
-    if data.get("lang") != lang or data.get("unit") != unit:
+    exercises = parse_exercises_payload(data, name=path.name)
+    if exercises[0].lang != lang or exercises[0].unit != unit:
         raise CourseSourceError(
             f"{path.name}: lang/unit fields must match the filename"
         )
+    return exercises
+
+
+def parse_exercises_payload(data: Any, *, name: str) -> list[CourseExercise]:
+    """Validate one exercises payload (the exercises-file JSON object).
+
+    Shared by the file loader and the admin seeding endpoint — book-derived
+    content reaches the server as a POSTed payload, never through the
+    public repo.
+    """
+    path = Path(name)
+    if not isinstance(data, dict):
+        raise CourseSourceError(f"{path.name}: expected a JSON object")
+    lang = data.get("lang")
+    unit = data.get("unit")
+    if not isinstance(lang, str) or lang not in SUPPORTED_LANGS:
+        raise CourseSourceError(f"{path.name}: lang must be de|es|fr|it|pt")
+    if not isinstance(unit, str) or not re.fullmatch(
+        r"[a-z0-9]+(?:-[a-z0-9]+)*", unit
+    ):
+        raise CourseSourceError(f"{path.name}: invalid unit {unit!r}")
     blocks = data.get("blocks")
     if not isinstance(blocks, list) or not blocks:
         raise CourseSourceError(f"{path.name}: blocks must be a nonempty array")
@@ -1001,3 +1031,118 @@ def build_course_apkg(
     }
     log.info("grammar.course.apkg_written", path=str(out_path), **result)
     return result
+
+
+# ---------------------------------------------------------------------------
+# Narration audio (local-TTS lane — design doc §6)
+# ---------------------------------------------------------------------------
+
+_BRACKETED = re.compile(r"\[[^\]]*\]")
+_PARENTHETICAL = re.compile(r"\([^)]*\)")
+
+
+def speech_segments(side: CourseSide) -> tuple[Segment, ...]:
+    """The side's spoken segments in script order (pauses excluded).
+
+    The ordinal of a segment in this tuple is its clip index — the
+    ``segNNN`` clip kind in the local-TTS queue.
+    """
+    return tuple(seg for seg in side.segments if seg.kind == "speech")
+
+
+def solution_spoken_text(exercise: CourseExercise) -> str:
+    """The exercise solution as text for the TL voice.
+
+    ``<mark>`` unwrapped; bracketed original-prompt fragments (``[der
+    weite Weg]``) and parenthetical key commentary (often English)
+    removed; whitespace collapsed. Raises if nothing speakable remains.
+    """
+    text = _MARK_SPAN.sub(lambda m: m.group(1), exercise.solution_html)
+    text = _BRACKETED.sub(" ", text)
+    text = _PARENTHETICAL.sub(" ", text)
+    text = re.sub(r"\s+([.,;:!?])", r"\1", re.sub(r"\s+", " ", text)).strip()
+    if not text:
+        raise ValueError(
+            f"exercise {exercise.item_id} has no speakable solution text"
+        )
+    return text
+
+
+def _uniform_speech_clip(clip: Path) -> Path:
+    """Re-encode one clip to the house 24 kHz mono so the concat demuxer's
+    ``-c copy`` splice stays within defined behavior (see pipeline/audio.py).
+    Cached beside the input; idempotent."""
+    out = clip.with_name(f"{clip.stem}_u24m.mp3")
+    if out.exists() and out.stat().st_size > 0:
+        return out
+    temporary = out.with_name(f".{out.stem}.building.mp3")
+    temporary.unlink(missing_ok=True)
+    try:
+        subprocess.run(
+            ["ffmpeg", "-y", "-loglevel", "error", "-i", str(clip),
+             "-ar", "24000", "-ac", "1",
+             "-c:a", "libmp3lame", "-q:a", "4", str(temporary)],
+            check=True,
+        )
+        temporary.replace(out)
+    except Exception:
+        temporary.unlink(missing_ok=True)
+        raise
+    return out
+
+
+def stitch_side_narration(
+    side: CourseSide,
+    clips_by_speech_index: dict[int, Path],
+    *,
+    out_path: Path,
+    work_dir: Path,
+    silence_fn: Any = silence_mp3,
+    concat_fn: Any = concat_mp3s,
+    level_fn: Any = leveled_speech_clip,
+    uniform_fn: Any = _uniform_speech_clip,
+) -> Path:
+    """Stitch one side's narration from its per-segment clips.
+
+    Follows the explainer renderer's conventions: every speech clip is
+    leveled to the house loudness target, consecutive speech segments get
+    a short breathing gap, explicit ``[PAUSE:ms]`` segments become
+    silence, and the concat pass loudnorm-levels the result. The caller
+    provides a COMPLETE clip map — a missing segment is an error here
+    (the graceful audio-pending path is decided by the caller, per side).
+    """
+    speech = speech_segments(side)
+    missing = [i for i in range(len(speech)) if i not in clips_by_speech_index]
+    if missing:
+        raise ValueError(
+            f"card {side.seq} {side.side} narration is missing segment "
+            f"clip(s): {missing}"
+        )
+    work_dir = Path(work_dir)
+    work_dir.mkdir(parents=True, exist_ok=True)
+
+    pieces: list[Path] = []
+    speech_index = 0
+    previous_kind: str | None = None
+    for segment in side.segments:
+        if segment.kind == "pause":
+            ms = int(segment.text) if segment.text else PAUSE_MS
+            pieces.append(silence_fn(work_dir, ms))
+        elif segment.kind == "speech":
+            if previous_kind == "speech":
+                pieces.append(silence_fn(work_dir, BETWEEN_SPEECH_MS))
+            clip = Path(clips_by_speech_index[speech_index])
+            pieces.append(uniform_fn(level_fn(clip)))
+            speech_index += 1
+        else:
+            # Course narration is speech+pause only; chime/music/think are
+            # podcast flavor and deliberately unsupported here.
+            raise ValueError(
+                f"card {side.seq} {side.side}: unsupported narration "
+                f"segment kind {segment.kind!r}"
+            )
+        previous_kind = segment.kind
+    out_path = Path(out_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    concat_fn(pieces, out_path)
+    return out_path

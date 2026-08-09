@@ -267,7 +267,8 @@ CREATE TABLE IF NOT EXISTS local_tts_jobs (
   updated_at        TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   CHECK (contract_version > 0),
   CHECK (lang ~ '^[a-z]{2}$'),
-  CHECK (clip_kind IN ('answer', 'example', 'prompt_en')),
+  CHECK (clip_kind IN ('answer', 'example', 'prompt_en', 'solution')
+         OR clip_kind ~ '^seg[0-9]{3}$'),
   CHECK (length(text) > 0),
   CHECK (content_hash ~ '^[0-9a-f]{64}$'),
   CHECK (status IN ('queued', 'leased', 'completed', 'failed')),
@@ -298,6 +299,22 @@ BEGIN
     ALTER TABLE local_tts_jobs DROP CONSTRAINT local_tts_jobs_clip_kind_check;
     ALTER TABLE local_tts_jobs ADD CONSTRAINT local_tts_jobs_clip_kind_check
       CHECK (clip_kind IN ('answer', 'example', 'prompt_en'));
+  END IF;
+END $$;
+-- 2026-08-09: Grammar Course narration adds clip kinds 'solution' (exercise
+-- backs) and 'segNNN' (per-segment lesson narration). Rebuild the CHECK on
+-- deployments that predate them; keep in sync with local_tts.COURSE_CLIP_KIND.
+DO $$
+BEGIN
+  IF EXISTS (
+    SELECT 1 FROM pg_constraint
+    WHERE conname = 'local_tts_jobs_clip_kind_check'
+      AND pg_get_constraintdef(oid) NOT LIKE '%seg[0-9]%'
+  ) THEN
+    ALTER TABLE local_tts_jobs DROP CONSTRAINT local_tts_jobs_clip_kind_check;
+    ALTER TABLE local_tts_jobs ADD CONSTRAINT local_tts_jobs_clip_kind_check
+      CHECK (clip_kind IN ('answer', 'example', 'prompt_en', 'solution')
+             OR clip_kind ~ '^seg[0-9]{3}$');
   END IF;
 END $$;
 CREATE INDEX IF NOT EXISTS local_tts_jobs_claim_idx
