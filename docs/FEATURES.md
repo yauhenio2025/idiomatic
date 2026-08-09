@@ -172,7 +172,7 @@
 - **Added**: 2026-08-03 | **Modified**: 2026-08-03
 
 ### Exercises 2.0 (rich EN→TL usage notes; pilot: es connecting — format approved)
-- **Status**: Active (Waves 1–2 shipped; Wave 3 TENSES audited and merged but audio build/release gated on the local-Qwen pilot verdict; Waves 4–6 format-gated)
+- **Status**: Active (Waves 1–3 shipped in all five languages with local-Qwen audio, apkgs 1621-25; Waves 4–6 formats owner-approved 2026-08-09 — 160 bulk chunk inputs staged via plans `wave4`/`wave5`/`wave6`, codex authoring next)
 - **Description**: Revival of the 2023 legacy EXCERCISES corpus (see docs/research/legacy-excercises-audit.md) as rich notes: EN prompt → TL main rendering + accepted alternatives, register line, interference trap, in-register example, pre-rendered cloze. Content is codex-authored against commissions, independently audited, mechanically gated, and committed as JSON under `data/exercises2/notes/<lang>_<topic>.json`. The normal builder retains the configured provider/cache path; the explicit owner-gated `local_only=true` lane instead resolves a current verified local-Qwen clip first, safely reuses a valid conventional cache clip second, refuses any unresolved clip, and never calls a provider. Both paths package the frozen 17-field `Idiomatic Exercises v1` model (2 templates: Production, Cloze) into `<ROOT>::4 Exercises::{Topic}` subdecks and publish the rolling `apkgs.kind='exercises2'` row. Waves 1–2 account for 1,772 shipped notes / 3,544 cards; Wave 3 adds five merged 300-note TENSES files, bringing authored totals to 3,272 / 6,544 without publishing an APKG yet.
 - **Entry Points**:
   - `idiomatic/grammar/exercises2.py` - schema validation, GUID/deck naming, cloze→mark/blank HTML, TTS cache + leveling, model + apkg build, `build_language()`
@@ -180,13 +180,14 @@
   - `idiomatic/grammar/data/exercises2/notes/*_tenses.json` - Wave 3's five audited 300-note merges
   - `idiomatic/grammar/data/exercises2/it_rebuild/` - IT corpus rebuild inputs/outputs (2,589 EN prompts with es/fr/pt/de refs)
   - `idiomatic/api.py` - `POST /admin/exercises2-build?lang[&local_only=true]`, `GET /admin/exercises2-list`, versioned local-queue endpoints
-  - `tools/x2_wave_pipeline.py`, `tools/x2_batch_gate.py` - source-hashed staging, duplicate checks, strict batch gate, merge verification
+  - `tools/x2_wave_pipeline.py`, `tools/x2_batch_gate.py` - source-hashed staging (incl. bulk plans `wave4`/`wave5`/`wave6`, 40-row chunks, schema-v2 manifests with expected duplicate drops), duplicate checks, strict batch gate, merge verification
+  - `idiomatic/grammar/data/exercises2/batches/` - staged chunk inputs + per-plan manifests; Waves 4–6 bulk inputs staged 2026-08-09
   - `docs/EXERCISES2_ROADMAP.md`, `docs/research/legacy_estate/EXERCISES2_WAVE3_AUDIT.md` - wave accounting and final Wave 3 evidence
   - `docs/commissions/EXERCISES2_PILOT_COMMISSION.md`, `docs/commissions/EXERCISES2_IT_REBUILD_COMMISSION.md` - codex authoring contracts
   - `tools/it_rebuild_driver.sh` - resumable parallel codex driver for the IT rebuild
   - `tests/test_exercises2.py`, `tests/test_local_tts.py`, `tests/test_x2_wave_pipeline.py` - model/content, provider-free local lane, and pipeline/gate coverage
 - **Dependencies**: normal route: configured `gemini.synthesize` provider chain + cache; local-only route: versioned `local_tts_jobs` queue and validated staged MP3s; both: `leveled_speech_clip`, voice fingerprints, genanki; codex CLI for authoring
-- **Added**: 2026-08-04 | **Modified**: 2026-08-08
+- **Added**: 2026-08-04 | **Modified**: 2026-08-09
 
 ### Local Qwen estate-voicing queue
 - **Status**: Pilot delivered; post-pilot adapters deployed but disarmed pending owner verdict (`LOCAL_TTS_EXERCISES2_PILOT_APPROVED=false`)

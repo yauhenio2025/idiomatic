@@ -62,6 +62,20 @@ ALL_SOURCE_TOPICS = (
     "tenses",
 )
 CHUNK_SIZE = 100
+# Waves 4--6 are commissioned at ~40-row chunks: vocabulary and shadowing
+# notes are denser per item than the grammar waves, so 40 rows keeps one codex
+# authoring invocation (and its hostile review) inside a single sitting.
+# Wave 3 and the pilots keep CHUNK_SIZE so their committed manifests and
+# staged inputs re-render byte-identically.
+BULK_CHUNK_SIZE = 40
+BULK_WAVE_PLANS = frozenset({"wave4", "wave5", "wave6"})
+PLAN_CHUNK_SIZE: dict[str, int] = {plan: BULK_CHUNK_SIZE for plan in BULK_WAVE_PLANS}
+# Owner verdict, 2026-08-09, ratifying pilots V1 + V2 + P1 verbatim:
+# "this looks good to me too - all three formats".  This is the gate record
+# that unlocks the bulk plans below (docs/research/legacy_estate/
+# EXERCISES2_NEW_FORMAT_PILOTS.md carries the dated OWNER VERDICT section).
+FORMAT_VERDICT_DATE = "2026-08-09"
+FORMAT_VERDICT_QUOTE = "this looks good to me too - all three formats"
 
 # These absences are settled audit facts, not optional tolerance.  Requiring
 # exact equality catches a newly missing ref as well as accidental reinsertion
@@ -92,10 +106,21 @@ class StageSpec:
     indices: tuple[int, ...] | None = None
 
 
-# Only these plans are staged by this commission.  Full Wave 4--6 staging is
-# intentionally absent until the named pilot verdicts are recorded.
+# wave3 and the three pilots are the historical record and must keep
+# re-rendering byte-identically.  wave4/wave5/wave6 are the bulk staging plans
+# unlocked by the 2026-08-09 owner verdicts on V1/V2/P1 (FORMAT_VERDICT_DATE):
+# wave4 = FANCY_VOCAB, wave5 = the specialist vocab trio, wave6 =
+# BIG_TECH_PHRASES shadowing frames (separate draft model; not Exercises v1
+# translation cards).  Staging never authors content; the codex lane does.
 STAGE_PLANS: dict[str, tuple[StageSpec, ...]] = {
     "wave3": (StageSpec("tenses", LANGS),),
+    "wave4": (StageSpec("fancy_vocab", LANGS),),
+    "wave5": (
+        StageSpec("big_tech_vocab", LANGS),
+        StageSpec("cold_war_vocab", LANGS),
+        StageSpec("geopolitics", LANGS),
+    ),
+    "wave6": (StageSpec("big_tech_phrases", LANGS),),
     "vocab-pilot": (
         StageSpec(
             "fancy_vocab",
@@ -228,12 +253,32 @@ def _selected_rows(rows: Sequence[dict], spec: StageSpec) -> list[dict]:
     return [rows[index] for index in spec.indices]
 
 
+def _expected_duplicate_drops() -> frozenset[tuple[str, str]]:
+    """(topic, id) pairs the committed duplicate doctrine expects triage to drop.
+
+    These are the non-preferred exact-English copies from the cross-topic
+    report.  They stay staged — the authoring triage drops them (or keeps them
+    with a documented distinct sense) per the report's triage_rule; the merged
+    corpus is then enforced by check_merged_duplicates.
+    """
+    report = render_duplicate_report()
+    return frozenset(
+        (occurrence["topic"], occurrence["id"])
+        for group in report["groups"]
+        for occurrence in group["occurrences"]
+        if occurrence["topic"] != group["preferred_topic"]
+    )
+
+
 def render_plan(plan: str) -> tuple[dict, dict[Path, bytes]]:
     """Return a deterministic manifest and staged-file byte map."""
     try:
         specs = STAGE_PLANS[plan]
     except KeyError as exc:
         raise PipelineError(f"unknown staging plan {plan!r}") from exc
+    chunk_size = PLAN_CHUNK_SIZE.get(plan, CHUNK_SIZE)
+    bulk = plan in BULK_WAVE_PLANS
+    duplicate_drops = _expected_duplicate_drops() if bulk else frozenset()
 
     files: dict[Path, bytes] = {}
     source_records: dict[str, dict[str, str]] = {}
@@ -245,21 +290,25 @@ def render_plan(plan: str) -> tuple[dict, dict[Path, bytes]]:
         for path in source_paths:
             record = _source_record(path)
             source_records[record["path"]] = record
-        plan_topics.append(
-            {
-                "topic": spec.topic,
-                "mode": "pilot" if spec.pilot else "approved-full-wave",
-                "languages": list(spec.langs),
-                "source_rows": len(source_rows),
-                "selected_rows": len(chosen),
-                "selected_ids_sha256": _sha256(
-                    ("\n".join(row["id"] for row in chosen) + "\n").encode("utf-8")
-                ),
-                "owner_gate": (
-                    f"{spec.topic}-format-pilot-verdict" if spec.pilot else None
-                ),
-            }
-        )
+        topic_record = {
+            "topic": spec.topic,
+            "mode": "pilot" if spec.pilot else "approved-full-wave",
+            "languages": list(spec.langs),
+            "source_rows": len(source_rows),
+            "selected_rows": len(chosen),
+            "selected_ids_sha256": _sha256(
+                ("\n".join(row["id"] for row in chosen) + "\n").encode("utf-8")
+            ),
+            "owner_gate": (
+                f"{spec.topic}-format-pilot-verdict" if spec.pilot else None
+            ),
+        }
+        if bulk:
+            topic_record["format_verdict"] = f"owner-approved {FORMAT_VERDICT_DATE}"
+            topic_record["expected_duplicate_drops"] = sum(
+                1 for row in chosen if (spec.topic, row["id"]) in duplicate_drops
+            )
+        plan_topics.append(topic_record)
         for lang in spec.langs:
             if lang not in LANGS:
                 raise PipelineError(f"unsupported language {lang!r}")
@@ -273,41 +322,61 @@ def render_plan(plan: str) -> tuple[dict, dict[Path, bytes]]:
                 )
                 staged.append({"id": item_id, "en": row["en"], "old_back": old_back})
 
-            for offset in range(0, len(staged), CHUNK_SIZE):
-                batch_number = offset // CHUNK_SIZE + 1
+            for offset in range(0, len(staged), chunk_size):
+                batch_number = offset // chunk_size + 1
                 suffix = f"pilot_b{batch_number:02d}" if spec.pilot else f"b{batch_number:02d}"
                 name = f"{lang}_{spec.topic}_{suffix}.json"
                 path = BATCH_DIR / "input" / name
-                chunk_rows = staged[offset : offset + CHUNK_SIZE]
+                chunk_rows = staged[offset : offset + chunk_size]
                 data = _json_bytes(chunk_rows)
                 files[path] = data
-                chunks.append(
-                    {
-                        "path": path.relative_to(REPO).as_posix(),
-                        "lang": lang,
-                        "topic": spec.topic,
-                        "mode": "pilot" if spec.pilot else "approved-full-wave",
-                        "rows": len(chunk_rows),
-                        "first_id": chunk_rows[0]["id"],
-                        "last_id": chunk_rows[-1]["id"],
-                        "missing_ref_ids": [
-                            row["id"] for row in chunk_rows if not row["old_back"].strip()
-                        ],
-                        "sha256": _sha256(data),
-                    }
-                )
+                chunk_record = {
+                    "path": path.relative_to(REPO).as_posix(),
+                    "lang": lang,
+                    "topic": spec.topic,
+                    "mode": "pilot" if spec.pilot else "approved-full-wave",
+                    "rows": len(chunk_rows),
+                    "first_id": chunk_rows[0]["id"],
+                    "last_id": chunk_rows[-1]["id"],
+                    "missing_ref_ids": [
+                        row["id"] for row in chunk_rows if not row["old_back"].strip()
+                    ],
+                    "sha256": _sha256(data),
+                }
+                if bulk:
+                    chunk_record["expected_duplicate_drop_ids"] = [
+                        row["id"]
+                        for row in chunk_rows
+                        if (spec.topic, row["id"]) in duplicate_drops
+                    ]
+                chunks.append(chunk_record)
 
     manifest = {
-        "schema_version": 1,
+        "schema_version": 2 if bulk else 1,
         "generated_by": "tools/x2_wave_pipeline.py",
         "plan": plan,
-        "chunk_size": CHUNK_SIZE,
+        "chunk_size": chunk_size,
         "id_policy": "preserve canonical it_rebuild source IDs exactly",
         "order_policy": "preserve canonical source order; pilots preserve relative order",
-        "topics": plan_topics,
-        "source_files": [source_records[key] for key in sorted(source_records)],
-        "chunks": chunks,
     }
+    if bulk:
+        manifest["format_verdict"] = (
+            f"V1/V2/P1 owner-approved {FORMAT_VERDICT_DATE}: "
+            f"{FORMAT_VERDICT_QUOTE!r}"
+        )
+        manifest["duplicate_policy"] = (
+            "expected_duplicate_drop_ids lists staged non-preferred exact-EN "
+            "copies from the committed cross-topic report; staging never drops "
+            "them — authoring triage does, unless the linguistic audit "
+            "documents a distinct sense"
+        )
+    manifest.update(
+        {
+            "topics": plan_topics,
+            "source_files": [source_records[key] for key in sorted(source_records)],
+            "chunks": chunks,
+        }
+    )
     manifest_path = MANIFEST_DIR / f"{plan}.json"
     files[manifest_path] = _json_bytes(manifest)
     return manifest, files

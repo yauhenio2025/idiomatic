@@ -1,7 +1,8 @@
 # Exercises 2.0 new-format pilots — owner gates V1, V2, and P1
 
-Status: **linguistically audited and mechanically clean; all three owner
-verdicts remain open**.
+Status: **OWNER VERDICTS RECORDED 2026-08-09 — V1, V2, and P1 all approved
+verbatim; bulk staging landed the same day (plans `wave4`/`wave5`/`wave6`).
+See the dated OWNER VERDICT section below.**
 
 The static review packet is
 [`EXERCISES2_NEW_FORMAT_PILOTS.html`](EXERCISES2_NEW_FORMAT_PILOTS.html).
@@ -14,9 +15,9 @@ owner verdict.
 
 | Gate | Commissioned slice | Inputs | Keep / drop | Final gate | Bulk state |
 |---|---|---:|---:|---|---|
-| V1 | ES `FANCY_VOCAB` generic vocabulary | 30 | 14 / 16 | pass | closed |
-| V2 | ES `GEOPOLITICS` term–definition | 30 | 30 / 0 | pass | closed |
-| P1 | PT `BIG_TECH_PHRASES` shadowing | 30 | 30 / 0 | pass | closed |
+| V1 | ES `FANCY_VOCAB` generic vocabulary | 30 | 14 / 16 | pass | approved 2026-08-09 — staged (`wave4`) |
+| V2 | ES `GEOPOLITICS` term–definition | 30 | 30 / 0 | pass | approved 2026-08-09 — staged (`wave5`) |
+| P1 | PT `BIG_TECH_PHRASES` shadowing | 30 | 30 / 0 | pass | approved 2026-08-09 — staged (`wave6`) |
 
 The source manifests also pass byte-for-byte staging checks and the committed
 cross-topic source report remains current at 20 exact-English groups. V1
@@ -100,6 +101,34 @@ No bulk authoring starts until the corresponding answer is explicit:
    focus spans, and the separate `Listen & Shadow` / `Cue & Produce` model.
    A representative phrase sample remains blocked until the already-delivered
    mixed-language local-Qwen pilot receives its listening verdict.
+
+## OWNER VERDICT (2026-08-09)
+
+> this looks good to me too - all three formats
+
+All three gates closed as approvals, verbatim and without revisions:
+
+1. **V1 approved** — the generic headword + production/cloze treatment ships
+   for `FANCY_VOCAB`, `BIG_TECH_VOCAB`, and `COLD_WAR_VOCAB`.
+2. **V2 approved** — the term–definition treatment ships for `GEOPOLITICS`,
+   with the corrected target-language definition recorded in `note` exactly
+   as piloted.
+3. **P1 approved** — the full-sentence rendering, the selected focus spans,
+   and the separate `Listen & Shadow` / `Cue & Produce` draft model ship for
+   `BIG_TECH_PHRASES`.
+
+Consequence: bulk staging was commissioned and landed the same day — plans
+`wave4` (`FANCY_VOCAB`, 582/lang → 75 chunks), `wave5` (`BIG_TECH_VOCAB` +
+`COLD_WAR_VOCAB` + `GEOPOLITICS`, 517/lang → 70 chunks), and `wave6`
+(`BIG_TECH_PHRASES`, 90/lang → 15 chunks) in `tools/x2_wave_pipeline.py`,
+staged as 160 forty-row chunk inputs with schema-v2 manifests under
+`idiomatic/grammar/data/exercises2/batches/`. Authoring proceeds through
+`EXERCISES2_BATCH_COMMISSION.md` plus the vocabulary and BIG_TECH_PHRASES
+addenda. The committed duplicate doctrine stands: the 20 non-preferred
+`FANCY_VOCAB` exact-EN copies stay staged, are flagged per chunk in the
+`wave4` manifest, and are triage-dropped during authoring unless the
+linguistic audit documents a distinct sense. Build and voicing remain
+separate downstream gates of the normal Exercises 2.0 pipeline.
 
 ## Reproduction
 
