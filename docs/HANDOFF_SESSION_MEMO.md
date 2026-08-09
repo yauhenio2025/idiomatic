@@ -31,6 +31,15 @@
 
 ## Successor task queue
 
+0. **When ES rendering completes** (all es_illu chunks have their
+   images): release the German hold — delete the `hold-es-first`
+   entries from PARTITION.json and commit. Fedora then renders de/fr/
+   it/pt in glob order; give the Mac its next queue at the same time
+   (its b19-26 chain runs dry; assign it chunks in PARTITION + a new
+   run_queue script chained on the box — pattern: run_queue_b19_26.sh).
+   ALL briefs are authored+committed (255 chunks, 5 langs) — rendering
+   is the only remaining stage.
+
 1. **Mornings**: read /srv/ai-models/outputs/factory/qa_mirror/DAILY.md;
    check human_review contact sheet; fix systemic failure modes at the
    RENDERER (prompt), not by softening the judge.
