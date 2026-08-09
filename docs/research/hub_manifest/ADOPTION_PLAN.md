@@ -1,21 +1,21 @@
 # F4 adoption plan — analyzer output
 
-> Generated 2026-08-09T00:06:42.488872+00:00 (read-only pass; plan sha `9867221cca0511c0…`). Nothing has been applied.
+> Generated 2026-08-09T00:23:06.599543+00:00 (read-only pass; plan sha `d7eec1bf5e246795…`). Nothing has been applied.
 
 | bucket | count |
 |---|---:|
 | deferred cards in (from F3 manifest) | 3,215 |
 | resolved against fresh server examples (no insert needed) | 48 |
-| proposed adoptions (new source + example rows) | 120 (reps 539) |
-| still deferred | 3,047 |
+| proposed adoptions (new source + example rows) | 126 (reps 553) |
+| still deferred | 3,041 |
 
-Adoptions by language: {'it': 42, 'pt': 36, 'fr': 24, 'de': 6, 'es': 12}
+Adoptions by language: {'it': 42, 'pt': 36, 'fr': 30, 'de': 6, 'es': 12}
 Resolved by language: {'es': 48}
-Deferred by language: {'it': 798, 'pt': 594, 'de': 512, 'fr': 722, 'es': 421}
+Deferred by language: {'it': 798, 'pt': 594, 'de': 512, 'fr': 716, 'es': 421}
 
 ## Every deferred case
 
-### no-expression-match (3041)
+### no-expression-match (3035)
 
 - card `1778059191436` note `1778059191435` [it] reps=35 — tanto vale che
 - card `1778059191428` note `1778059191427` [it] reps=35 — non gli poteva fregare di meno
@@ -557,7 +557,6 @@ Deferred by language: {'it': 798, 'pt': 594, 'de': 512, 'fr': 722, 'es': 421}
 - card `1777014793773` note `1777014793772` [fr] reps=6 — démarque bien des
 - card `1777014793767` note `1777014793766` [fr] reps=6 — démarque bien des
 - card `1777014793751` note `1777014793750` [fr] reps=6 — où en est-elle de
-- card `1777014793659` note `1777014793658` [fr] reps=6 — question de fond
 - card `1777014793571` note `1777014793570` [fr] reps=6 — d'une toute autre nature
 - card `1777014793563` note `1777014793562` [fr] reps=6 — d'une toute autre nature
 - card `1777011309130` note `1777011309129` [pt] reps=6 — Planalto
@@ -1668,7 +1667,6 @@ Deferred by language: {'it': 798, 'pt': 594, 'de': 512, 'fr': 722, 'es': 421}
 - card `1777014793701` note `1777014793700` [fr] reps=3 — s'estiment un peu chez eux
 - card `1777014793697` note `1777014793696` [fr] reps=3 — s'estiment un peu chez eux
 - card `1777014793671` note `1777014793670` [fr] reps=3 — très assumée
-- card `1777014793665` note `1777014793664` [fr] reps=3 — question de fond
 - card `1777014793655` note `1777014793654` [fr] reps=3 — tout compte fait
 - card `1777014793653` note `1777014793652` [fr] reps=3 — tout compte fait
 - card `1777014793643` note `1777014793642` [fr] reps=3 — en l'occurrence
@@ -2482,7 +2480,6 @@ Deferred by language: {'it': 798, 'pt': 594, 'de': 512, 'fr': 722, 'es': 421}
 - card `1777014793685` note `1777014793684` [fr] reps=2 — reste très opérant
 - card `1777014793677` note `1777014793676` [fr] reps=2 — très assumée
 - card `1777014793675` note `1777014793674` [fr] reps=2 — très assumée
-- card `1777014793669` note `1777014793668` [fr] reps=2 — question de fond
 - card `1777014793657` note `1777014793656` [fr] reps=2 — tout compte fait
 - card `1777014793651` note `1777014793650` [fr] reps=2 — tout compte fait
 - card `1777014793647` note `1777014793646` [fr] reps=2 — tout compte fait
@@ -3040,9 +3037,6 @@ Deferred by language: {'it': 798, 'pt': 594, 'de': 512, 'fr': 722, 'es': 421}
 - card `1777014793683` note `1777014793682` [fr] reps=1 — reste très opérant
 - card `1777014793681` note `1777014793680` [fr] reps=1 — très assumée
 - card `1777014793679` note `1777014793678` [fr] reps=1 — très assumée
-- card `1777014793667` note `1777014793666` [fr] reps=1 — question de fond
-- card `1777014793663` note `1777014793662` [fr] reps=1 — question de fond
-- card `1777014793661` note `1777014793660` [fr] reps=1 — question de fond
 - card `1777014793631` note `1777014793630` [fr] reps=1 — se veulent
 - card `1777009536848` note `1777009536847` [fr] reps=1 — font toujours primer
 - card `1777008510168` note `1777008510167` [fr] reps=1 — se sont essoufflés
