@@ -294,3 +294,20 @@ def test_owner_exclusions_drop_dues_and_amend_search():
                for n in lang["notes"])
     assert '-deck:"IT Italian::8 Pimsleur"' in lang["due"]["search"]
     assert not lang["due"]["overflow"]
+
+
+def test_overflow_amortizes_dues_to_budget_with_eta():
+    from idiomatic import dj
+    obs = {"langs": {"fr": {
+        "due": {"expressions": 700},
+        "new_reservoir": {},
+        "secs_per_rep": {"expressions": {"secs": 8.0, "source": "prior"}},
+        "recent": {},
+    }}}
+    plan = dj.build_plan(obs, {"fr": 8}, for_day="2026-08-09")
+    (lang,) = plan["languages"]
+    assert lang["due"]["overflow"]
+    assert lang["due"]["limit"] < 700
+    assert lang["due"]["limit"] == 60  # 8 min * 60s / 8s-per-rep
+    assert any("AMORTIZING" in n and "days to clear" in n
+               for n in lang["notes"])

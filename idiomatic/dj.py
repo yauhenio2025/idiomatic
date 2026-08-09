@@ -422,12 +422,22 @@ def build_plan(observations: dict, budgets_min: dict[str, int], for_day: str,
         due_minutes = round(due_minutes, 1)
         overflow = due_minutes > budget
         overflow_minutes = round(due_minutes - budget, 1) if overflow else 0
+        due_limit = due_cards
         if overflow:
             overflowing.append(lang)
+            # Amortize: cap today's dues to the budget (oldest-due first
+            # via the search order); carry the rest with a recovery ETA.
+            # Coordinator decision 2026-08-09 under owner delegation —
+            # a studyable day beats an eternal overflow wall.
+            avg_sec = (due_minutes * 60) / due_cards if due_cards else 0
+            due_limit = max(1, int(budget * 60 // avg_sec)) if avg_sec else 0
+            carry = due_cards - due_limit
+            eta_days = -(-carry // max(due_limit, 1))  # ceil
             notes.append(
-                f"OVERFLOW: dues alone need ~{due_minutes} min against a "
-                f"{budget}-min budget (+{overflow_minutes} min). All dues "
-                "stay in the plan; no new cards today.")
+                f"AMORTIZING BACKLOG: {due_limit} of {due_cards} dues "
+                f"today (oldest first); carrying {carry} (~{eta_days} "
+                f"days to clear at this budget). No new cards until the "
+                "backlog amortizes.")
 
         # --- remaining minutes → weighted new-card mix --------------------
         new_minutes = 0.0 if overflow else round(budget - due_minutes, 1)
@@ -490,7 +500,7 @@ def build_plan(observations: dict, budgets_min: dict[str, int], for_day: str,
                 "overflow_minutes": overflow_minutes,
                 "by_population": due_by_pop,
                 "search": _due_search(root, exclude_populations),
-                "limit": due_cards,
+                "limit": due_limit,
                 "order": "due",
             },
             "new": {"minutes_available": new_minutes, "mix": mix},
