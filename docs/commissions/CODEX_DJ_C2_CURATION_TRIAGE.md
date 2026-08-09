@@ -14,6 +14,19 @@ disposition console; propose, never apply. Write only to
 - Cross-reference `docs/research/dj_census/` outputs if DJ-C1 has
   landed (secs/rep, rating profiles); recompute locally if not.
 
+## Owner steer (2026-08-09, after the provisional Pimsleur hold)
+
+"We shouldn't exclude ALL Pimsleur content... it can be fine in
+advanced levels for German and possibly other languages. Let's not
+jump to conclusions — we need to examine that shit." Therefore:
+Pimsleur gets PER-LEVEL rows (every `8 Pimsleur::…::Level N` subtree,
+including the Spanish Spain/Latin America variants' levels), each with
+its own difficulty evidence and its own proposed disposition — the
+studied levels' again/easy-rates are exactly the signal that separates
+"beneath level" from "genuinely useful." The current population-wide
+DJ hold is provisional scaffolding that the per-level console verdict
+replaces.
+
 ## Task
 
 For every studyable subtree (each `<XX Language>::<lane>` and its

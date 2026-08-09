@@ -48,9 +48,12 @@ class Settings(BaseSettings):
     # (owner-editable via POST /admin/dj-budgets), not here.
     dj_enabled: bool = True
     dj_interval_hours: int = 24
-    # Owner curation: populations ruled out of study entirely (comma-
-    # separated). Their dues are reported in plan notes but never
-    # planned. 2026-08-09: pimsleur — batch-imported, beneath level.
+    # Owner curation: populations HELD OUT of planning (comma-separated).
+    # Dues are reported in plan notes but not planned. NOT a verdict:
+    # pimsleur is a PROVISIONAL hold pending the DJ-C2 per-subtree
+    # triage — owner 2026-08-09: advanced levels (e.g. DE L4-5) may well
+    # be worth studying; the console verdict decides per level, after
+    # which this coarse hold is replaced by per-deck exclusions.
     dj_exclude_populations: str = "pimsleur"
 
     # Primary TTS provider. "qwen-local" (default since 2026-08-07, user
