@@ -173,23 +173,137 @@ def test_wave5_stages_the_specialist_trio_at_517_prompts_per_language():
     assert pt_missing == ["it_big_tech_vocab_052"]
 
 
-def test_wave6_stages_90_shadowing_frames_with_quarantined_pt_backs():
+def test_wave6_stages_90_shadowing_frames_with_the_pt_pilot_prefix_skipped():
     manifest, files = wave.render_plan("wave6")
     assert len(manifest["chunks"]) == 15
-    for lang in wave.LANGS:
+    for lang in ("de", "es", "fr", "it"):
         sizes = [chunk["rows"] for chunk in manifest["chunks"] if chunk["lang"] == lang]
         assert sizes == [40, 40, 10]
+        rows = []
+        for number in range(1, 4):
+            rows.extend(_staged_json(files, f"{lang}_big_tech_phrases_b{number:02d}.json"))
+        assert [row["id"] for row in rows] == [
+            f"it_big_tech_phrases_{number:03d}" for number in range(1, 91)
+        ]
+    # The approved 30-row PT pilot owns rows 1-30: bulk staging skips them
+    # but keeps the canonical 40-row grid, so b02/b03 stay aligned with the
+    # already-authored chunks and b01 is the rows 31-40 tail.
+    pt_sizes = [chunk["rows"] for chunk in manifest["chunks"] if chunk["lang"] == "pt"]
+    assert pt_sizes == [10, 40, 10]
     pt_rows = []
     for number in range(1, 4):
         pt_rows.extend(_staged_json(files, f"pt_big_tech_phrases_b{number:02d}.json"))
     assert [row["id"] for row in pt_rows] == [
-        f"it_big_tech_phrases_{number:03d}" for number in range(1, 91)
+        f"it_big_tech_phrases_{number:03d}" for number in range(31, 91)
     ]
-    assert all(row["old_back"] == "" for row in pt_rows[:30])
-    assert all(row["old_back"].strip() for row in pt_rows[30:])
+    assert all(row["old_back"].strip() for row in pt_rows)
+    pt_topic = next(
+        topic for topic in manifest["topics"] if topic["languages"] == ["pt"]
+    )
+    assert pt_topic["pilot_prefix_rows"] == 30
+    assert pt_topic["pilot_prefix_chunk"] == "pt_big_tech_phrases_pilot_b01"
+    assert pt_topic["staged_rows"] == 60
     assert all(
         chunk["expected_duplicate_drop_ids"] == [] for chunk in manifest["chunks"]
     )
+
+
+def _valid_shadowing_chunk_payloads() -> tuple[list[dict], list[dict], list[dict]]:
+    source = [{
+        "id": "it_big_tech_phrases_031",
+        "en": "In alignment with consumer demand, tech giants are moving into AR commerce.",
+        "old_back": "Em sintonia com a demanda dos consumidores, as gigantes avançam no comércio de RA.",
+    }]
+    notes = [{
+        "id": "it_big_tech_phrases_031",
+        "en": source[0]["en"],
+        "category": "context-frame",
+        "tl": (
+            "Em sintonia com a demanda dos consumidores, os gigantes da tecnologia "
+            "estão avançando no comércio baseado em realidade aumentada."
+        ),
+        "focus_tl": "Em sintonia com a demanda dos consumidores",
+        "focus_en": "in alignment with",
+        "register": "Registro empresarial neutro.",
+        "trap": "Não decalcar o espanhol en sintonía con.",
+        "note": "",
+    }]
+    triage = [{
+        "id": "it_big_tech_phrases_031",
+        "en": source[0]["en"],
+        "verdict": "keep",
+        "reason": "",
+    }]
+    return source, notes, triage
+
+
+def test_merge_lane_validates_shadowing_chunks_under_the_p1_contract(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+):
+    batch_dir = tmp_path / "batches"
+    chunk = "pt_big_tech_phrases_b01"
+    source, notes, triage = _valid_shadowing_chunk_payloads()
+    _write_gate_chunk(batch_dir, chunk, source, notes, triage)
+    monkeypatch.setattr(wave, "BATCH_DIR", batch_dir)
+
+    verified = wave._verified_chunk_notes(chunk)
+
+    assert [row["id"] for row in verified] == ["it_big_tech_phrases_031"]
+
+
+@pytest.mark.parametrize(
+    ("case", "expected"),
+    [
+        ("v1-category", "unknown category"),
+        ("focus-outside-tl", "focus_tl must occur in tl"),
+        ("v1-note-shape", "shadowing keys mismatch"),
+        ("non-string-note", "note must be a string"),
+    ],
+)
+def test_merge_lane_rejects_shadowing_contract_violations(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, case: str, expected: str,
+):
+    batch_dir = tmp_path / "batches"
+    chunk = "pt_big_tech_phrases_b01"
+    source, notes, triage = _valid_shadowing_chunk_payloads()
+    if case == "v1-category":
+        # Valid for CONNECTING, forbidden under the shadowing contract.
+        notes[0]["category"] = "result"
+    elif case == "focus-outside-tl":
+        notes[0]["focus_tl"] = "Fora da frase autorizada"
+    elif case == "v1-note-shape":
+        notes[0].pop("focus_tl")
+        notes[0]["cloze"] = "{{c1::Em sintonia}} com a demanda."
+    elif case == "non-string-note":
+        notes[0]["note"] = 7
+    _write_gate_chunk(batch_dir, chunk, source, notes, triage)
+    monkeypatch.setattr(wave, "BATCH_DIR", batch_dir)
+
+    with pytest.raises(wave.PipelineError, match=expected):
+        wave._verified_chunk_notes(chunk)
+
+
+def test_v1_topics_still_reject_shadowing_categories_at_merge():
+    _source, notes, _triage = _valid_tenses_gate_payloads()
+    notes[0]["category"] = "context-frame"
+    with pytest.raises(wave.x2.Ex2SourceError, match="unknown category"):
+        wave._validate_notes("es_tenses", "es", "tenses", notes)
+
+
+def test_pt_big_tech_phrases_merge_is_blocked_until_the_gap_chunk_lands():
+    # Rows 31-40 are staged as pt b01 but not yet authored; the composed
+    # pilot-prefix merge must refuse rather than land an 80-note corpus.
+    with pytest.raises(
+        wave.PipelineError,
+        match="pt_big_tech_phrases_b01: awaiting authored outputs",
+    ):
+        wave.expected_merged_notes("pt", "big_tech_phrases")
+
+
+def test_pilot_prefix_composition_rejects_out_of_order_ids():
+    rows = [{"id": "it_big_tech_phrases_041"}, {"id": "it_big_tech_phrases_001"}]
+    with pytest.raises(wave.PipelineError, match="canonical source order"):
+        wave._require_canonical_order("pt", "big_tech_phrases", rows)
 
 
 def test_legacy_plans_still_render_schema_one_without_bulk_annotations():
@@ -499,4 +613,9 @@ def test_existing_merges_match_their_keep_triage_and_have_no_cross_topic_copies(
     results = wave.verify_all_merges()
     assert results["fr_connecting"] == 191
     assert results["es_conditionals"] == 168
-    assert wave.check_merged_duplicates() == 4022  # +750 geopolitics (2026-08-09)
+    for lang in ("de", "es", "fr", "it"):
+        assert results[f"{lang}_big_tech_phrases"] == 90
+    # 4022 (through geopolitics) + 360 big_tech_phrases; pt lands its 80+10
+    # notes only after the staged rows 31-40 gap chunk (pt b01) is authored,
+    # which will take this to 4472.
+    assert wave.check_merged_duplicates() == 4382

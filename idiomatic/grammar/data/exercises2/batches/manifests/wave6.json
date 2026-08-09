@@ -15,8 +15,7 @@
         "de",
         "es",
         "fr",
-        "it",
-        "pt"
+        "it"
       ],
       "source_rows": 90,
       "selected_rows": 90,
@@ -24,6 +23,22 @@
       "owner_gate": null,
       "format_verdict": "owner-approved 2026-08-09",
       "expected_duplicate_drops": 0
+    },
+    {
+      "topic": "big_tech_phrases",
+      "mode": "approved-full-wave",
+      "languages": [
+        "pt"
+      ],
+      "source_rows": 90,
+      "selected_rows": 90,
+      "selected_ids_sha256": "c7fe82c0e281573c512af7571f678d93a665e3ec1728bdd7d79da9b6012d0700",
+      "owner_gate": null,
+      "format_verdict": "owner-approved 2026-08-09",
+      "expected_duplicate_drops": 0,
+      "pilot_prefix_rows": 30,
+      "pilot_prefix_chunk": "pt_big_tech_phrases_pilot_b01",
+      "staged_rows": 60
     }
   ],
   "source_files": [
@@ -186,42 +201,11 @@
       "lang": "pt",
       "topic": "big_tech_phrases",
       "mode": "approved-full-wave",
-      "rows": 40,
-      "first_id": "it_big_tech_phrases_001",
+      "rows": 10,
+      "first_id": "it_big_tech_phrases_031",
       "last_id": "it_big_tech_phrases_040",
-      "missing_ref_ids": [
-        "it_big_tech_phrases_001",
-        "it_big_tech_phrases_002",
-        "it_big_tech_phrases_003",
-        "it_big_tech_phrases_004",
-        "it_big_tech_phrases_005",
-        "it_big_tech_phrases_006",
-        "it_big_tech_phrases_007",
-        "it_big_tech_phrases_008",
-        "it_big_tech_phrases_009",
-        "it_big_tech_phrases_010",
-        "it_big_tech_phrases_011",
-        "it_big_tech_phrases_012",
-        "it_big_tech_phrases_013",
-        "it_big_tech_phrases_014",
-        "it_big_tech_phrases_015",
-        "it_big_tech_phrases_016",
-        "it_big_tech_phrases_017",
-        "it_big_tech_phrases_018",
-        "it_big_tech_phrases_019",
-        "it_big_tech_phrases_020",
-        "it_big_tech_phrases_021",
-        "it_big_tech_phrases_022",
-        "it_big_tech_phrases_023",
-        "it_big_tech_phrases_024",
-        "it_big_tech_phrases_025",
-        "it_big_tech_phrases_026",
-        "it_big_tech_phrases_027",
-        "it_big_tech_phrases_028",
-        "it_big_tech_phrases_029",
-        "it_big_tech_phrases_030"
-      ],
-      "sha256": "f9ac32b3a7dee8770dfcd84ff17579c222798b737770c62ae8db6ef6da8bc55e",
+      "missing_ref_ids": [],
+      "sha256": "2e62d26122024a59d7888a8c35896372da3595e036e553e316b89b71aa14e2ac",
       "expected_duplicate_drop_ids": []
     },
     {
