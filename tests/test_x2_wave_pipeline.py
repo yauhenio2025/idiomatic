@@ -290,14 +290,13 @@ def test_v1_topics_still_reject_shadowing_categories_at_merge():
         wave._validate_notes("es_tenses", "es", "tenses", notes)
 
 
-def test_pt_big_tech_phrases_merge_is_blocked_until_the_gap_chunk_lands():
-    # Rows 31-40 are staged as pt b01 but not yet authored; the composed
-    # pilot-prefix merge must refuse rather than land an 80-note corpus.
-    with pytest.raises(
-        wave.PipelineError,
-        match="pt_big_tech_phrases_b01: awaiting authored outputs",
-    ):
-        wave.expected_merged_notes("pt", "big_tech_phrases")
+def test_pt_big_tech_phrases_composes_pilot_prefix_plus_gap_chunk():
+    # The gap chunk (rows 31-40) landed 2026-08-09: the composed merge is
+    # pilot 30 + b01 10 + b02 40 + b03 10 = 90 notes in canonical order.
+    notes = wave.expected_merged_notes("pt", "big_tech_phrases")
+    assert len(notes) == 90
+    ids = [n["id"] for n in notes]
+    assert ids == sorted(ids)
 
 
 def test_pilot_prefix_composition_rejects_out_of_order_ids():
@@ -618,4 +617,4 @@ def test_existing_merges_match_their_keep_triage_and_have_no_cross_topic_copies(
     # 4022 (through geopolitics) + 360 big_tech_phrases; pt lands its 80+10
     # notes only after the staged rows 31-40 gap chunk (pt b01) is authored,
     # which will take this to 4472.
-    assert wave.check_merged_duplicates() == 4382
+    assert wave.check_merged_duplicates() == 4472  # + pt_big_tech_phrases (2026-08-09)

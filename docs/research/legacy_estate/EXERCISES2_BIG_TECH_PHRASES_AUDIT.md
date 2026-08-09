@@ -1,11 +1,12 @@
 # Exercises 2.0 hostile audit: BIG_TECH_PHRASES
 
 Audited 2026-08-09 against `docs/commissions/CODEX_X2_WAVE_AUDIT.md`, the
-Wave 6 shadowing addendum, and `batches/manifests/wave6.json`. The 15 landed
-chunks contain the 90 canonical production frames in each of German,
-Spanish, French, Italian, and Portuguese. These are shadowing frames, not
-translation-note rows; the audit therefore treats `tl` as a complete spoken
-frame and `focus_tl`/`focus_en` as the reusable production cue.
+Wave 6 shadowing addendum, and `batches/manifests/wave6.json`. Following the
+Portuguese reconciliation dated below, the 16 landed output pairs contain the
+90 canonical production frames in each of German, Spanish, French, Italian,
+and Portuguese. These are shadowing frames, not translation-note rows; the
+audit therefore treats `tl` as a complete spoken frame and
+`focus_tl`/`focus_en` as the reusable production cue.
 
 ## Source and triage checks
 
@@ -35,9 +36,16 @@ frame and `focus_tl`/`focus_en` as the reusable production cue.
 | `it_big_tech_phrases_b01` | 40 | 40 keep / 0 drop | PASS-WITH-EDITS | 1 | 2 |
 | `it_big_tech_phrases_b02` | 40 | 40 keep / 0 drop | PASS-WITH-EDITS | 5 | 9 |
 | `it_big_tech_phrases_b03` | 10 | 10 keep / 0 drop | PASS-WITH-EDITS | 1 | 1 |
-| `pt_big_tech_phrases_b01` | 40 | 40 keep / 0 drop | PASS-WITH-EDITS | 1 | 2 |
+| `pt_big_tech_phrases_pilot_b01` | 30 | 30 keep / 0 drop | PASS-WITH-EDITS | 1 | 5 |
+| `pt_big_tech_phrases_b01` | 10 | 10 keep / 0 drop | PASS-WITH-EDITS | 4 | 10 |
 | `pt_big_tech_phrases_b02` | 40 | 40 keep / 0 drop | PASS-WITH-EDITS | 17 | 25 |
 | `pt_big_tech_phrases_b03` | 10 | 10 keep / 0 drop | PASS-WITH-EDITS | 5 | 10 |
+
+**Correction (2026-08-09):** the original table mislabeled the 30-row
+`pt_big_tech_phrases_pilot_b01` artifact as a 40-row
+`pt_big_tech_phrases_b01` chunk. The separately restaged
+`pt_big_tech_phrases_b01` contains only canonical rows 031–040; its audit is
+recorded in the dated `pt-b01-gap` section below.
 
 ## Every applied edit
 
@@ -159,7 +167,7 @@ language's chunk.
 
 ### Focus-span edits
 
-There were 110 `focus_tl` edits. The exact transformation was:
+There were 111 `focus_tl` edits. The exact transformation was:
 
 `author-selected prefix ending mid-clause (for example, “...überdenken viele Start-ups im”) → the complete reusable sentence-initial frame ending at the first clause boundary`.
 
@@ -175,17 +183,67 @@ verbatim focus spans. Every resulting span is parse-validated inside `tl`.
 
 | Defect class | Finding and disposition |
 |---|---|
-| Language / register | 95 complete target frames contained a literal calque, a meaning shift, awkward collocation, or register mismatch; each was rewritten above. |
+| Language / register | 97 complete target frames contained a literal calque, a meaning shift, awkward collocation, or register mismatch; each was rewritten above or in the dated gap section below. |
 | Shadowing semantics | `tl` remains a complete, production-ready sentence; `focus_tl` is a reusable discourse span and `focus_en` remains a short function cue. |
 | Triage / duplicates | 450/450 keeps, 0 drops, source order preserved, and no duplicate-report exception needed. |
-| Interference traps | The language-specific opening-preposition/contraction warnings were retained because they are genuine frame risks; the intentionally empty PT row remains empty rather than inventing a trap. No wrong trap was found. |
+| Interference traps | The language-specific opening-preposition/contraction warnings were retained where genuine. The gap audit narrowed one overstated warning, corrected one false cross-language claim, and left one PT trap empty rather than inventing a risk. |
 | Cloze integrity | Not applicable by design: this is the separate shadowing model, not the vocab/cloze model. |
 
 Rerun command:
 
 ```text
-.venv/bin/python tools/x2_batch_gate.py <all 15 *_big_tech_phrases_b* chunks>
-PASS 15/15 chunks; 450/450 kept notes parsed
+.venv/bin/python tools/x2_batch_gate.py <all 16 BIG_TECH_PHRASES output pairs, including the PT pilot and restaged gap>
+PASS 16/16 chunks; 450/450 kept notes parsed
 ```
 
-chunks passed / edited / failed: **15 / 15 / 0**.
+## 2026-08-09 — `pt-b01-gap` correction and hostile self-audit
+
+This reconciliation established that Portuguese row `004` lives in
+`pt_big_tech_phrases_pilot_b01_notes.json`, not in the restaged b01 gap. The
+previously recorded target-frame repair is now applied there exactly:
+
+- `tl`: `Em face da concorrência cada vez maior de empresas de mercados emergentes, as gigantes ocidentais da tecnologia estão acelerando suas iniciativas de pesquisa e desenvolvimento.` → `Diante da concorrência crescente dos mercados emergentes, as gigantes ocidentais da tecnologia estão acelerando suas iniciativas de pesquisa e desenvolvimento.`
+- `focus_tl`: `Em face da concorrência cada vez maior de empresas de mercados emergentes` → `Diante da concorrência crescente dos mercados emergentes`.
+- `register`: `Written-formal; em face de is common in analytical prose and foregrounds an adverse circumstance.` → `Neutral-formal; diante de is natural in analytical prose and foregrounds an adverse circumstance.`
+- `trap`: `In standard formal Portuguese the regency is em face de, not em face a; da here is the contraction of de + a.` → `The fixed expression is diante de; before a concorrência, de + a contracts to da. Avoid the Spanish-influenced diante a.`
+- `note`: `Companies was supplied after mercados emergentes to avoid implying that markets themselves are the competing agents.` → `Hostile-audit repair applied: Em face da concorrência cada vez maior de empresas de mercados emergentes was replaced by the more concise Diante da concorrência crescente dos mercados emergentes.`
+
+The restaged gap contains canonical rows 031–040. The author performed this
+hostile pass at the coordinator's explicit request; it is a self-audit, not a
+claim of reviewer independence. All ten source rows have teaching value, all
+remain `keep`, and the Wave 6 manifest specifies no expected duplicate drops.
+
+| ID | Triage | Row verdict | Finding and disposition |
+|---|---|---|---|
+| `031` | keep | PASS | Natural compliance-response frame; the note explicitly resolves the source's awkward `in conjunction with`. |
+| `032` | keep | PASS | The widening technology gap is rendered as inequality of access, without the literal `divisão tecnológica`. |
+| `033` | keep | PASS-WITH-EDIT | The warning against `ganhar tração` was too absolute; it now distinguishes valid startup usage from this abstract debate context. |
+| `034` | keep | PASS-WITH-EDIT | Replaced a compressed, ambiguous modifier chain so emerging technology clearly describes the companies' field, not the IPO. |
+| `035` | keep | PASS-WITH-EDIT | Made the big techs unambiguously the acquirers and tied transparency directly to those acquisition operations. |
+| `036` | keep | PASS-WITH-EDIT | Removed a false Spanish-interference claim; both Portuguese and Spanish select a subjunctive in the prospective frame. |
+| `037` | keep | PASS | Natural scope-broadening frame and register-appropriate rendering of `investment darlings`. |
+| `038` | keep | PASS | Natural interdisciplinary frame; the empty trap is intentional because no genuine interference risk was identified. |
+| `039` | keep | PASS | Preserves the nonbinding status of tax proposals instead of claiming adherence to enacted rules. |
+| `040` | keep | PASS | Natural geopolitical backdrop and institutional alliance-building frame; no scenery or forging calque remains. |
+
+Chunk verdict: **PASS-WITH-EDITS** (4 edited rows, 10 changed fields). The
+exact gap-audit changes, from authoring draft to audited final, are:
+
+- `033 trap`: `Gaining traction is ganhar força here, not the mechanical calque ganhar tração, which is avoidable in polished analysis.` → `In this abstract debate context, ganhar força is more idiomatic than ganhar tração, which is commoner for commercial momentum in startup discourse.`
+- `033 note`: `Concerns regarding deep learning ethics is unpacked as questionamentos éticos sobre o aprendizado profundo, avoiding the ambiguous ética do aprendizado profundo.` → `Concerns regarding deep learning ethics is unpacked as questionamentos éticos sobre o aprendizado profundo, avoiding the ambiguous ética do aprendizado profundo. Hostile self-audit: narrowed the trap because ganhar tração is established in Brazilian business usage, though less apt here.`
+- `034 tl`: `Ainda sob o impacto das bolhas tecnológicas do passado, os investidores mostram cautela diante de aberturas de capital de empresas de tecnologias emergentes.` → `Ainda sob o impacto das bolhas tecnológicas do passado, os investidores mostram cautela diante de ofertas públicas iniciais de empresas que atuam com tecnologias emergentes.`
+- `034 trap`: `Emerging modifies the technologies or companies, not the flotation itself; aberturas de capital de empresas de tecnologias emergentes preserves that scope.` → `Emerging tech describes the companies' field, not the flotation itself; empresas que atuam com tecnologias emergentes preserves that scope.`
+- `034 note`: `The source's shadow metaphor is normalized to the continuing impact of earlier bubbles; abertura de capital is the standard Brazilian finance term for an IPO.` → `The source's shadow metaphor is normalized to the continuing impact of earlier bubbles. Hostile self-audit: replaced the compressed de empresas de tecnologias emergentes with an unambiguous relative clause.`
+- `035 tl`: `Ao acompanhar a sequência de aquisições das big techs, as autoridades antitruste cobram maior transparência nas negociações.` → `Ao acompanhar as aquisições realizadas pelas big techs, as autoridades antitruste cobram maior transparência nessas operações.`
+- `035 focus_tl`: `Ao acompanhar a sequência de aquisições das big techs` → `Ao acompanhar as aquisições realizadas pelas big techs`.
+- `035 note`: `Deal-making is rendered as negociações, the natural term for the processes whose transparency the authorities are demanding.` → `Hostile self-audit: made the big techs unambiguously the acquirers and rendered deal-making as essas operações, referring directly to the acquisitions under review.`
+- `036 trap`: `When antes que introduces a future event, Portuguese requires the subjunctive entrem, not the Spanish-influenced indicative entram.` → `English before does not license the indicative entram here; the prospective frame antes que requires the subjunctive entrem.`
+- `036 note`: `Full rollout is recast as vehicles entering circulation on a large scale, which is more idiomatic than lançamento completo for this deployment context.` → `Full rollout is recast as vehicles entering circulation on a large scale, which is more idiomatic than lançamento completo for this deployment context. Hostile self-audit: removed the false Spanish-interference claim because Spanish also selects the subjunctive in this construction.`
+
+The restaged gap and the repaired pilot both pass `x2_batch_gate.py`; schema,
+source order, focus-span containment, and shadowing semantics are intact.
+Cloze integrity remains not applicable to this model.
+
+`pt-b01-gap` rows passed / edited / failed: **10 / 4 / 0**.
+
+chunks passed / edited / failed: **16 / 16 / 0**.
