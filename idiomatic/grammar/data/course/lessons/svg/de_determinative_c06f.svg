@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="A relative pronoun gets gender and number from its antecedent and case from its role inside the relative clause">
+  <text x="320" y="31" text-anchor="middle" font-size="21" font-weight="700" class="s-ink">Two coordinates determine the form</text>
+  <text x="145" y="64" text-anchor="middle" font-size="14" font-weight="700" class="s-muted">ANTECEDENT</text>
+  <rect x="40" y="77" width="210" height="70" rx="12" class="s-tile"/>
+  <text x="145" y="108" text-anchor="middle" font-size="23" font-weight="700" class="s-teal">die Forscherin</text>
+  <text x="145" y="132" text-anchor="middle" font-size="14" class="s-ink">feminine · singular</text>
+  <text x="495" y="64" text-anchor="middle" font-size="14" font-weight="700" class="s-muted">ROLE INSIDE CLAUSE</text>
+  <rect x="390" y="77" width="210" height="70" rx="12" class="s-tile"/>
+  <text x="495" y="108" text-anchor="middle" font-size="21" font-weight="700" class="s-coral">wir vertrauten ___</text>
+  <text x="495" y="132" text-anchor="middle" font-size="14" class="s-ink">dative object</text>
+  <path d="M145 147 L276 197" stroke-width="3" class="s-stroke-teal"/>
+  <polygon points="286,201 273,202 278,190" class="s-teal"/>
+  <path d="M495 147 L364 197" stroke-width="3" class="s-stroke-coral"/>
+  <polygon points="354,201 362,190 367,202" class="s-coral"/>
+  <rect x="245" y="211" width="150" height="66" rx="12" class="s-tile"/>
+  <text x="320" y="254" text-anchor="middle" font-size="34" font-weight="700" class="s-ink">der</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Question forms divide into choosing a member, classifying a kind, and asking about a person or thing">
+  <rect x="190" y="28" width="260" height="58" rx="12" class="s-tile"/>
+  <text x="320" y="53" text-anchor="middle" font-size="18" font-weight="700" class="s-ink">What is the question doing?</text>
+  <text x="320" y="75" text-anchor="middle" font-size="14" class="s-muted">solve meaning before endings</text>
+  <path d="M250 86 L136 144" stroke-width="3" class="s-stroke-line"/>
+  <polygon points="127,149 134,138 140,150" class="s-dead"/>
+  <path d="M320 86 L320 139" stroke-width="3" class="s-stroke-line"/>
+  <polygon points="320,149 314,138 326,138" class="s-dead"/>
+  <path d="M390 86 L504 144" stroke-width="3" class="s-stroke-line"/>
+  <polygon points="513,149 500,150 506,138" class="s-dead"/>
+  <rect x="35" y="159" width="185" height="118" rx="12" class="s-tile"/>
+  <text x="127" y="188" text-anchor="middle" font-size="15" font-weight="700" class="s-muted">CHOOSE A MEMBER</text>
+  <text x="127" y="222" text-anchor="middle" font-size="27" font-weight="700" class="s-teal">welcher?</text>
+  <text x="127" y="250" text-anchor="middle" font-size="14" class="s-ink">which one?</text>
+  <rect x="228" y="159" width="185" height="118" rx="12" class="s-tile"/>
+  <text x="320" y="188" text-anchor="middle" font-size="15" font-weight="700" class="s-muted">CLASSIFY A KIND</text>
+  <text x="320" y="222" text-anchor="middle" font-size="25" font-weight="700" class="s-coral">was für ein?</text>
+  <text x="320" y="250" text-anchor="middle" font-size="14" class="s-ink">what kind?</text>
+  <rect x="421" y="159" width="185" height="118" rx="12" class="s-tile"/>
+  <text x="513" y="188" text-anchor="middle" font-size="15" font-weight="700" class="s-muted">STAND ALONE</text>
+  <text x="513" y="222" text-anchor="middle" font-size="27" font-weight="700" class="s-teal">wer? / was?</text>
+  <text x="513" y="250" text-anchor="middle" font-size="14" class="s-ink">person / thing</text>
+</svg>

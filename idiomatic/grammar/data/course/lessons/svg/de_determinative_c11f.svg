@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" role="img" aria-label="Negation decision tree choosing kein for an indefinite noun phrase and nicht for a definite phrase or whole claim">
+  <rect x="190" y="25" width="260" height="58" rx="12" class="s-tile"/>
+  <text x="320" y="50" text-anchor="middle" font-size="18" font-weight="700" class="s-ink">What does the positive form use?</text>
+  <text x="320" y="72" text-anchor="middle" font-size="14" class="s-muted">reconstruct before negating</text>
+  <path d="M255 83 L145 137" stroke-width="3" class="s-stroke-line"/>
+  <polygon points="136,142 143,131 149,143" class="s-dead"/>
+  <path d="M385 83 L495 137" stroke-width="3" class="s-stroke-line"/>
+  <polygon points="504,142 491,143 497,131" class="s-dead"/>
+  <rect x="35" y="152" width="210" height="66" rx="12" class="s-tile"/>
+  <text x="140" y="181" text-anchor="middle" font-size="21" font-weight="700" class="s-teal">ein or zero article</text>
+  <text x="140" y="204" text-anchor="middle" font-size="14" class="s-muted">indefinite noun phrase</text>
+  <rect x="395" y="152" width="210" height="66" rx="12" class="s-tile"/>
+  <text x="500" y="181" text-anchor="middle" font-size="19" font-weight="700" class="s-coral">definite / possessive</text>
+  <text x="500" y="204" text-anchor="middle" font-size="14" class="s-muted">or the whole claim</text>
+  <path d="M140 218 L140 247" stroke-width="3" class="s-stroke-teal"/>
+  <polygon points="140,257 134,246 146,246" class="s-teal"/>
+  <path d="M500 218 L500 247" stroke-width="3" class="s-stroke-coral"/>
+  <polygon points="500,257 494,246 506,246" class="s-coral"/>
+  <rect x="65" y="267" width="150" height="48" rx="12" class="s-tile"/>
+  <text x="140" y="299" text-anchor="middle" font-size="27" font-weight="700" class="s-teal">kein</text>
+  <rect x="425" y="267" width="150" height="48" rx="12" class="s-tile"/>
+  <text x="500" y="299" text-anchor="middle" font-size="27" font-weight="700" class="s-coral">nicht</text>
+</svg>

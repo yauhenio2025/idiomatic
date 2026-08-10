@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="A determiner occupies the first noun phrase slot, while a pronoun replaces the whole phrase">
+  <text x="320" y="32" text-anchor="middle" font-size="21" font-weight="700" class="s-ink">One form, two jobs</text>
+  <text x="55" y="66" font-size="15" font-weight="700" class="s-muted">DETERMINER: FIRST SLOT</text>
+  <rect x="55" y="82" width="150" height="58" rx="12" class="s-tile"/>
+  <text x="130" y="118" text-anchor="middle" font-size="23" font-weight="700" class="s-teal">diese</text>
+  <rect x="225" y="82" width="180" height="58" rx="12" class="s-tile"/>
+  <text x="315" y="118" text-anchor="middle" font-size="21" class="s-ink">gründliche</text>
+  <rect x="425" y="82" width="160" height="58" rx="12" class="s-tile"/>
+  <text x="505" y="118" text-anchor="middle" font-size="21" class="s-ink">Analyse</text>
+  <text x="320" y="177" text-anchor="middle" font-size="16" class="s-coral">noun phrase becomes recoverable</text>
+  <text x="55" y="211" font-size="15" font-weight="700" class="s-muted">PRONOUN: WHOLE PHRASE</text>
+  <rect x="55" y="226" width="150" height="58" rx="12" class="s-tile"/>
+  <text x="130" y="262" text-anchor="middle" font-size="23" font-weight="700" class="s-teal">diese</text>
+  <rect x="245" y="226" width="340" height="58" rx="12" class="s-tile"/>
+  <text x="415" y="252" text-anchor="middle" font-size="17" font-weight="700" class="s-ink">carries the noun phrase alone</text>
+  <text x="415" y="272" text-anchor="middle" font-size="14" class="s-muted">no noun follows</text>
+</svg>
