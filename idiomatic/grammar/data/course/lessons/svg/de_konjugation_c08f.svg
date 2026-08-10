@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Four German compound tense patterns</title>
+  <desc id="desc">A table separates the finite auxiliary on the left from the non-finite payload at clause end.</desc>
+  <text x="320" y="34" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="23" font-weight="700">Finite anchor + final payload</text>
+  <rect x="40" y="62" width="560" height="292" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="148" y="98" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="15" font-weight="700">TENSE</text>
+  <text x="320" y="98" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="15" font-weight="700">FINITE</text>
+  <text x="490" y="98" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="15" font-weight="700">PAYLOAD AT END</text>
+  <line x1="64" y1="113" x2="576" y2="113" class="s-stroke-line" stroke-width="2"/>
+  <text x="148" y="151" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17">perfect</text>
+  <text x="320" y="151" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="18" font-weight="700">hat</text>
+  <text x="490" y="151" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="18" font-weight="700">geprüft</text>
+  <line x1="64" y1="170" x2="576" y2="170" class="s-stroke-line" stroke-width="2"/>
+  <text x="148" y="208" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17">pluperfect</text>
+  <text x="320" y="208" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="18" font-weight="700">hatte</text>
+  <text x="490" y="208" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="18" font-weight="700">geprüft</text>
+  <line x1="64" y1="227" x2="576" y2="227" class="s-stroke-line" stroke-width="2"/>
+  <text x="148" y="265" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17">future</text>
+  <text x="320" y="265" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="18" font-weight="700">wird</text>
+  <text x="490" y="265" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="18" font-weight="700">prüfen</text>
+  <line x1="64" y1="284" x2="576" y2="284" class="s-stroke-line" stroke-width="2"/>
+  <text x="148" y="322" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17">future perfect</text>
+  <text x="320" y="322" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="18" font-weight="700">wird</text>
+  <text x="490" y="322" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="18" font-weight="700">geprüft haben</text>
+  <text x="320" y="384" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16">Change the anchor or payload; keep the architecture.</text>
+</svg>

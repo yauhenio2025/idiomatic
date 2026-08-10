@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Present tense personal ending grid</title>
+  <desc id="desc">The six German subject positions map to the endings e, st, t, en, t and en.</desc>
+  <text x="320" y="34" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="23" font-weight="700">One present-tense grid</text>
+  <rect x="80" y="62" width="480" height="292" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="160" y="96" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16" font-weight="700">PERSON</text>
+  <text x="320" y="96" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16" font-weight="700">ENDING</text>
+  <text x="480" y="96" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16" font-weight="700">EXAMPLE</text>
+  <line x1="104" y1="111" x2="536" y2="111" class="s-stroke-line" stroke-width="2"/>
+  <text x="160" y="143" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">ich</text>
+  <text x="320" y="143" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="19" font-weight="700">-e</text>
+  <text x="480" y="143" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">werte</text>
+  <text x="160" y="183" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">du</text>
+  <text x="320" y="183" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="19" font-weight="700">-st</text>
+  <text x="480" y="183" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">wertest</text>
+  <text x="160" y="223" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">er / sie / es</text>
+  <text x="320" y="223" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="19" font-weight="700">-t</text>
+  <text x="480" y="223" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">wertet</text>
+  <line x1="104" y1="240" x2="536" y2="240" class="s-stroke-line" stroke-width="2"/>
+  <text x="160" y="273" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">wir / sie / Sie</text>
+  <text x="320" y="273" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="19" font-weight="700">-en</text>
+  <text x="480" y="273" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">werten</text>
+  <text x="160" y="317" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">ihr</text>
+  <text x="320" y="317" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="19" font-weight="700">-t</text>
+  <text x="480" y="317" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">wertet</text>
+  <text x="320" y="382" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16">The plural mostly returns to the infinitive shape.</text>
+</svg>

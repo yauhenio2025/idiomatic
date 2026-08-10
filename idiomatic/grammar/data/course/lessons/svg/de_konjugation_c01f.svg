@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Finite anchor and non-finite payload in a German verb chain</title>
+  <desc id="desc">The finite verb carries person, number, tense and mood; participles and infinitives add the event and construction.</desc>
+  <text x="320" y="34" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="23" font-weight="700">Read the chain in two layers</text>
+  <rect x="55" y="66" width="530" height="94" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="90" y="103" class="s-teal" font-family="system-ui, sans-serif" font-size="19" font-weight="700">FINITE ANCHOR</text>
+  <text x="90" y="134" class="s-ink" font-family="system-ui, sans-serif" font-size="18">person · number · tense · mood</text>
+  <rect x="55" y="190" width="530" height="94" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="90" y="227" class="s-coral" font-family="system-ui, sans-serif" font-size="19" font-weight="700">NON-FINITE PAYLOAD</text>
+  <text x="90" y="258" class="s-ink" font-family="system-ui, sans-serif" font-size="18">participle / infinitive · event · aspect · voice</text>
+  <rect x="157" y="309" width="94" height="36" rx="9" class="s-tile" stroke-width="2"/>
+  <rect x="273" y="309" width="94" height="36" rx="9" class="s-tile" stroke-width="2"/>
+  <rect x="389" y="309" width="94" height="36" rx="9" class="s-tile" stroke-width="2"/>
+  <text x="204" y="334" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="18" font-weight="700">wird</text>
+  <text x="320" y="334" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="18" font-weight="700">geprüft</text>
+  <text x="436" y="334" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="18" font-weight="700">haben</text>
+</svg>

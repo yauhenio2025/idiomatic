@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 390" role="img" aria-labelledby="title desc">
+  <title id="title">Formation map for Konjunktiv I and Konjunktiv II</title>
+  <desc id="desc">Two columns show the present stem route to Konjunktiv I and the past-system route to Konjunktiv II.</desc>
+  <text x="320" y="34" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="23" font-weight="700">Two moods, two formation routes</text>
+  <rect x="35" y="66" width="270" height="270" rx="16" class="s-tile" stroke-width="2"/>
+  <rect x="335" y="66" width="270" height="270" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="170" y="105" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="20" font-weight="700">KONJUNKTIV I</text>
+  <text x="470" y="105" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="20" font-weight="700">KONJUNKTIV II</text>
+  <line x1="59" y1="123" x2="281" y2="123" class="s-stroke-line" stroke-width="2"/>
+  <line x1="359" y1="123" x2="581" y2="123" class="s-stroke-line" stroke-width="2"/>
+  <text x="170" y="163" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16">present stem</text>
+  <text x="170" y="194" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="19">prüfen → prüfe</text>
+  <text x="170" y="228" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="19">geben → gebe</text>
+  <text x="170" y="277" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="16" font-weight="700">NO PRESENT VOWEL SHIFT</text>
+  <text x="170" y="308" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="15">compound forms change auxiliary</text>
+  <text x="470" y="163" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16">past system</text>
+  <text x="470" y="194" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="19">kam → käme</text>
+  <text x="470" y="228" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="19">hatte → hätte</text>
+  <text x="470" y="277" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="16" font-weight="700">OR WÜRDE + INFINITIVE</text>
+  <text x="470" y="308" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="15">choose the current idiomatic form</text>
+  <text x="320" y="376" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16">The labels describe mood families, not past-versus-present time.</text>
+</svg>

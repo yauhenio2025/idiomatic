@@ -1,0 +1,40 @@
+{
+  "lang": "de",
+  "unit": "konjugation",
+  "chapter": 10,
+  "unit_label": "Konjugation (conjugation)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 4,
+      "exercise_sets": ["3:key"],
+      "hammer_refs": ["10.1", "10.2"],
+      "max_items": 10,
+      "note": "Recall present, past and participial principal parts, including meaning-sensitive weak and strong variants."
+    },
+    {
+      "block": 2,
+      "card_seq": 8,
+      "exercise_sets": ["6:key"],
+      "hammer_refs": ["10.2", "10.3"],
+      "max_items": 10,
+      "note": "Build complete past-and-pluperfect clause pairs from the printed answer key."
+    },
+    {
+      "block": 3,
+      "card_seq": 9,
+      "exercise_sets": ["7:key"],
+      "hammer_refs": ["12.3"],
+      "max_items": 10,
+      "note": "Transform complete clauses into the perfect while selecting and positioning the finite auxiliary."
+    },
+    {
+      "block": 4,
+      "card_seq": 10,
+      "exercise_sets": ["10"],
+      "hammer_refs": ["10.3.2"],
+      "max_items": 16,
+      "note": "Choose haben or sein from transitivity, bounded motion, change of state, event type and regional usage."
+    }
+  ]
+}

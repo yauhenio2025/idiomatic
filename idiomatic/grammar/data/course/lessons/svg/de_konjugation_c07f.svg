@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 390" role="img" aria-labelledby="title desc">
+  <title id="title">Stress gate for the German past participle prefix</title>
+  <desc id="desc">A top decision box branches to stressed beginnings that permit ge and unstressed beginnings that exclude it.</desc>
+  <text x="320" y="32" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="23" font-weight="700">The participle prefix follows stress</text>
+  <rect x="200" y="58" width="240" height="72" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="320" y="88" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18" font-weight="700">WHERE IS THE STRESS?</text>
+  <text x="320" y="113" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="15">look at the verb's beginning</text>
+  <line x1="320" y1="130" x2="320" y2="148" class="s-stroke-line" stroke-width="3"/>
+  <line x1="165" y1="148" x2="475" y2="148" class="s-stroke-line" stroke-width="3"/>
+  <line x1="165" y1="148" x2="165" y2="170" class="s-stroke-teal" stroke-width="3"/>
+  <polygon points="165,180 157,166 173,166" class="s-teal"/>
+  <line x1="475" y1="148" x2="475" y2="170" class="s-stroke-coral" stroke-width="3"/>
+  <polygon points="475,180 467,166 483,166" class="s-coral"/>
+  <rect x="35" y="190" width="260" height="150" rx="14" class="s-tile" stroke-width="2"/>
+  <rect x="345" y="190" width="260" height="150" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="165" y="226" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="18" font-weight="700">STRESSED START</text>
+  <text x="165" y="261" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">prüfen → geprüft</text>
+  <text x="165" y="295" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">vorstellen → vorgestellt</text>
+  <text x="165" y="321" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">ge- outside or inside</text>
+  <text x="475" y="226" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="18" font-weight="700">UNSTRESSED START</text>
+  <text x="475" y="261" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">beschreiben → beschrieben</text>
+  <text x="475" y="295" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">analysieren → analysiert</text>
+  <text x="475" y="321" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">no ge-</text>
+  <text x="320" y="374" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16">Separable prefixes reopen a slot inside the verb.</text>
+</svg>
