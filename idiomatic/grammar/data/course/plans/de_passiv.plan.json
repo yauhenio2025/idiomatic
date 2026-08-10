@@ -1,0 +1,88 @@
+{
+ "lang": "de",
+ "unit": "passiv",
+ "chapter": 13,
+ "unit_label": "Passiv (passive)",
+ "blocks": [
+  {
+   "block": 1,
+   "card_seq": 2,
+   "exercise_sets": ["1"],
+   "hammer_refs": ["13.1"],
+   "max_items": 10,
+   "note": "Form the basic werden-passive by promoting the accusative object and supplying the participle."
+  },
+  {
+   "block": 2,
+   "card_seq": 3,
+   "exercise_sets": ["3"],
+   "hammer_refs": ["13.1"],
+   "max_items": 10,
+   "note": "Select an appropriate process-passive tense from the time and discourse context."
+  },
+  {
+   "block": 3,
+   "card_seq": 4,
+   "exercise_sets": ["7"],
+   "hammer_refs": ["13.1"],
+   "max_items": 10,
+   "note": "Build passive infinitive clusters under modal verbs while preserving the original tense."
+  },
+  {
+   "block": 4,
+   "card_seq": 5,
+   "exercise_sets": ["4", "5"],
+   "hammer_refs": ["13.1.3"],
+   "max_items": 16,
+   "note": "Keep dative and prepositional objects unchanged, form impersonal passives, and reject lexically impossible passives."
+  },
+  {
+   "block": 5,
+   "card_seq": 6,
+   "exercise_sets": ["6"],
+   "hammer_refs": ["13.1"],
+   "max_items": 10,
+   "note": "Produce subjectless passives from activities and control first-position es."
+  },
+  {
+   "block": 6,
+   "card_seq": 7,
+   "exercise_sets": ["8"],
+   "hammer_refs": ["13.1", "13.2"],
+   "max_items": 14,
+   "note": "Choose werden for a process and sein for a resulting or continuing state."
+  },
+  {
+   "block": 7,
+   "card_seq": 9,
+   "exercise_sets": ["12"],
+   "hammer_refs": ["13.4.3"],
+   "max_items": 10,
+   "note": "Contrast ordinary passive clauses with reflexive alternatives expressing results and characteristic behavior."
+  },
+  {
+   "block": 8,
+   "card_seq": 10,
+   "exercise_sets": ["13", "14"],
+   "hammer_refs": ["13.4", "13.4.6"],
+   "max_items": 10,
+   "note": "Recast modal passives with sein or bleiben plus zu, sich lassen, es gibt, and gehören."
+  },
+  {
+   "block": 9,
+   "card_seq": 11,
+   "exercise_sets": ["15"],
+   "hammer_refs": ["13.4.8"],
+   "max_items": 10,
+   "note": "Compress passive possibility into adjectives in -bar, -lich, and -fähig."
+  },
+  {
+   "block": 10,
+   "card_seq": 12,
+   "exercise_sets": ["16"],
+   "hammer_refs": ["Ch. 13"],
+   "max_items": 10,
+   "note": "Integrate passive formation, valency limits, process-state distinctions, and idiomatic alternatives in translation."
+  }
+ ]
+}

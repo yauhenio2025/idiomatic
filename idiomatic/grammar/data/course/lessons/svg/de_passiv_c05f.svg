@@ -1,0 +1,32 @@
+<svg viewBox="0 0 840 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Case routing diagram showing only an accusative object promoted to passive subject while dative and prepositional objects remain unchanged">
+  <text x="420" y="42" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">Passive routing follows case</text>
+
+  <rect x="35" y="82" width="300" height="252" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="185" y="118" text-anchor="middle" font-size="20" font-weight="700" class="s-muted">ACTIVE DEPENDENTS</text>
+  <rect x="70" y="142" width="230" height="48" rx="10" class="s-tile" stroke-width="2"/>
+  <text x="185" y="173" text-anchor="middle" font-size="20" font-weight="700" class="s-coral">accusative object</text>
+  <rect x="70" y="211" width="230" height="48" rx="10" class="s-tile" stroke-width="2"/>
+  <text x="185" y="242" text-anchor="middle" font-size="20" class="s-ink">dative object</text>
+  <rect x="70" y="280" width="230" height="34" rx="10" class="s-tile" stroke-width="2"/>
+  <text x="185" y="303" text-anchor="middle" font-size="17" class="s-ink">prepositional / genitive</text>
+
+  <rect x="505" y="82" width="300" height="252" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="655" y="118" text-anchor="middle" font-size="20" font-weight="700" class="s-muted">PASSIVE OUTCOME</text>
+  <rect x="540" y="142" width="230" height="48" rx="10" class="s-tile" stroke-width="2"/>
+  <text x="655" y="173" text-anchor="middle" font-size="20" font-weight="700" class="s-teal">nominative subject</text>
+  <rect x="540" y="211" width="230" height="48" rx="10" class="s-tile" stroke-width="2"/>
+  <text x="655" y="242" text-anchor="middle" font-size="20" class="s-ink">dative object</text>
+  <rect x="540" y="280" width="230" height="34" rx="10" class="s-tile" stroke-width="2"/>
+  <text x="655" y="303" text-anchor="middle" font-size="17" class="s-ink">prepositional / genitive</text>
+
+  <line x1="345" y1="166" x2="483" y2="166" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="495,166 477,155 477,177" class="s-teal"/>
+  <text x="420" y="146" text-anchor="middle" font-size="15" font-weight="700" class="s-teal">PROMOTED</text>
+  <line x1="345" y1="235" x2="483" y2="235" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="495,235 477,225 477,245" class="s-dead"/>
+  <line x1="345" y1="297" x2="483" y2="297" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="495,297 477,287 477,307" class="s-dead"/>
+
+  <text x="420" y="382" text-anchor="middle" font-size="21" font-weight="700" class="s-coral">No nominative outcome?</text>
+  <text x="420" y="415" text-anchor="middle" font-size="19" class="s-muted">The passive is subjectless, and the verb stays singular.</text>
+</svg>

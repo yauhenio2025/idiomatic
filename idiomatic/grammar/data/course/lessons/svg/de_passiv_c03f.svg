@@ -1,0 +1,38 @@
+<svg viewBox="0 0 840 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline of German process passive tenses showing the changing auxiliary frame around a fixed participle">
+  <text x="420" y="42" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">The participle stays; the frame moves</text>
+
+  <line x1="90" y1="98" x2="750" y2="98" class="s-stroke-line" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="115" cy="98" r="10" class="s-teal"/>
+  <circle cx="320" cy="98" r="10" class="s-coral"/>
+  <circle cx="525" cy="98" r="10" class="s-teal"/>
+  <circle cx="725" cy="98" r="10" class="s-coral"/>
+
+  <rect x="30" y="132" width="170" height="150" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="115" y="164" text-anchor="middle" font-size="18" font-weight="700" class="s-teal">PRESENT</text>
+  <text x="115" y="202" text-anchor="middle" font-size="22" class="s-ink">wird</text>
+  <text x="115" y="235" text-anchor="middle" font-size="20" font-weight="700" class="s-coral">geprüft</text>
+  <text x="115" y="264" text-anchor="middle" font-size="15" class="s-muted">now / timed future</text>
+
+  <rect x="235" y="132" width="170" height="150" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="320" y="164" text-anchor="middle" font-size="18" font-weight="700" class="s-coral">PAST</text>
+  <text x="320" y="202" text-anchor="middle" font-size="22" class="s-ink">wurde</text>
+  <text x="320" y="235" text-anchor="middle" font-size="20" font-weight="700" class="s-coral">geprüft</text>
+  <text x="320" y="264" text-anchor="middle" font-size="15" class="s-muted">narrated event</text>
+
+  <rect x="440" y="132" width="170" height="150" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="525" y="164" text-anchor="middle" font-size="18" font-weight="700" class="s-teal">PERFECT</text>
+  <text x="525" y="202" text-anchor="middle" font-size="22" class="s-ink">ist</text>
+  <text x="525" y="235" text-anchor="middle" font-size="20" font-weight="700" class="s-coral">geprüft worden</text>
+  <text x="525" y="264" text-anchor="middle" font-size="15" class="s-muted">completed process</text>
+
+  <rect x="645" y="132" width="170" height="150" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="730" y="164" text-anchor="middle" font-size="18" font-weight="700" class="s-coral">FUTURE</text>
+  <text x="730" y="202" text-anchor="middle" font-size="22" class="s-ink">wird</text>
+  <text x="730" y="235" text-anchor="middle" font-size="18" font-weight="700" class="s-coral">geprüft werden</text>
+  <text x="730" y="264" text-anchor="middle" font-size="15" class="s-muted">explicit futurity</text>
+
+  <rect x="185" y="329" width="470" height="74" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="359" text-anchor="middle" font-size="18" class="s-muted">Perfect-passive signature</text>
+  <text x="420" y="388" text-anchor="middle" font-size="23" font-weight="700" class="s-teal">worden — never geworden</text>
+  <text x="420" y="436" text-anchor="middle" font-size="17" class="s-muted">Use the smallest tense frame that makes the time clear.</text>
+</svg>

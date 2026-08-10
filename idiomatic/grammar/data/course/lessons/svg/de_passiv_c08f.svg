@@ -1,0 +1,27 @@
+<svg viewBox="0 0 840 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three semantic paths into a passive event distinguish agent with von, cause or channel with durch, and instrument with mit">
+  <text x="420" y="42" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">Ask what role the phrase plays</text>
+
+  <rect x="25" y="78" width="240" height="100" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="145" y="112" text-anchor="middle" font-size="19" font-weight="700" class="s-teal">AGENT / SOURCE</text>
+  <text x="145" y="145" text-anchor="middle" font-size="24" class="s-ink">von + dative</text>
+  <rect x="300" y="78" width="240" height="100" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="112" text-anchor="middle" font-size="19" font-weight="700" class="s-coral">CAUSE / CHANNEL</text>
+  <text x="420" y="145" text-anchor="middle" font-size="24" class="s-ink">durch + accusative</text>
+  <rect x="575" y="78" width="240" height="100" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="695" y="112" text-anchor="middle" font-size="19" font-weight="700" class="s-teal">INSTRUMENT</text>
+  <text x="695" y="145" text-anchor="middle" font-size="24" class="s-ink">mit + dative</text>
+
+  <line x1="145" y1="188" x2="145" y2="232" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="145,244 134,226 156,226" class="s-teal"/>
+  <line x1="420" y1="188" x2="420" y2="232" class="s-stroke-coral" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="420,244 409,226 431,226" class="s-coral"/>
+  <line x1="695" y1="188" x2="695" y2="232" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="695,244 684,226 706,226" class="s-teal"/>
+
+  <rect x="100" y="254" width="640" height="94" rx="16" class="s-tile" stroke-width="3"/>
+  <text x="420" y="291" text-anchor="middle" font-size="18" class="s-muted">PASSIVE EVENT OR CONTINUING STATE</text>
+  <text x="420" y="326" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">three relations — three prepositional choices</text>
+
+  <text x="420" y="398" text-anchor="middle" font-size="20" font-weight="700" class="s-coral">Person versus thing is only a shortcut.</text>
+  <text x="420" y="428" text-anchor="middle" font-size="18" class="s-muted">Agency, causation, mediation, and instrument decide.</text>
+</svg>

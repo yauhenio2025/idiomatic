@@ -1,0 +1,26 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline distinguishing the werden passive event from the sein passive resulting state">
+  <text x="420" y="42" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">Event first, resulting state after it</text>
+
+  <rect x="55" y="106" width="285" height="128" rx="16" class="s-tile" stroke-width="3"/>
+  <text x="197" y="142" text-anchor="middle" font-size="19" font-weight="700" class="s-coral">PROCESS PASSIVE</text>
+  <text x="197" y="180" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">wurde abgeschlossen</text>
+  <text x="197" y="211" text-anchor="middle" font-size="17" class="s-muted">the locking event occurs</text>
+
+  <line x1="350" y1="170" x2="478" y2="170" class="s-stroke-teal" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="490,170 470,158 470,182" class="s-teal"/>
+  <text x="420" y="145" text-anchor="middle" font-size="15" font-weight="700" class="s-teal">RESULT</text>
+
+  <rect x="500" y="106" width="285" height="128" rx="16" class="s-tile" stroke-width="3"/>
+  <text x="642" y="142" text-anchor="middle" font-size="19" font-weight="700" class="s-teal">STATE PASSIVE</text>
+  <text x="642" y="180" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">war abgeschlossen</text>
+  <text x="642" y="211" text-anchor="middle" font-size="17" class="s-muted">the locked state holds</text>
+
+  <rect x="95" y="294" width="280" height="76" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="235" y="326" text-anchor="middle" font-size="18" class="s-muted">point in time</text>
+  <text x="235" y="355" text-anchor="middle" font-size="21" font-weight="700" class="s-coral">choose the event</text>
+  <rect x="465" y="294" width="280" height="76" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="605" y="326" text-anchor="middle" font-size="18" class="s-muted">duration / visible result</text>
+  <text x="605" y="355" text-anchor="middle" font-size="21" font-weight="700" class="s-teal">choose the state</text>
+
+  <text x="420" y="413" text-anchor="middle" font-size="18" class="s-muted">English “be” does not make this decision for you.</text>
+</svg>

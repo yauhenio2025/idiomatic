@@ -1,0 +1,26 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision diagram mapping passive possibility and obligation to sich lassen, sein plus zu, bleiben plus zu, and gehören plus participle">
+  <text x="420" y="42" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">Passive meaning plus modality</text>
+
+  <rect x="260" y="72" width="320" height="72" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="102" text-anchor="middle" font-size="17" class="s-muted">WHAT DO YOU ADD?</text>
+  <text x="420" y="130" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">possibility or obligation</text>
+
+  <line x1="420" y1="154" x2="420" y2="177" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <line x1="180" y1="177" x2="660" y2="177" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <line x1="180" y1="177" x2="180" y2="207" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="180,219 169,201 191,201" class="s-teal"/>
+  <line x1="660" y1="177" x2="660" y2="207" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="660,219 649,201 671,201" class="s-coral"/>
+
+  <rect x="35" y="229" width="290" height="122" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="180" y="264" text-anchor="middle" font-size="20" font-weight="700" class="s-teal">POSSIBILITY</text>
+  <text x="180" y="299" text-anchor="middle" font-size="22" class="s-ink">sich lassen + infinitive</text>
+  <text x="180" y="329" text-anchor="middle" font-size="17" class="s-muted">frequent in every register</text>
+
+  <rect x="515" y="229" width="290" height="122" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="660" y="264" text-anchor="middle" font-size="20" font-weight="700" class="s-coral">DUTY / NECESSITY</text>
+  <text x="660" y="299" text-anchor="middle" font-size="21" class="s-ink">sein / bleiben + zu</text>
+  <text x="660" y="329" text-anchor="middle" font-size="17" class="s-muted">context and register decide</text>
+
+  <text x="420" y="395" text-anchor="middle" font-size="19" class="s-muted">Regional edge: gehören + participle expresses what ought to happen.</text>
+</svg>

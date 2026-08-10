@@ -1,0 +1,28 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="German first-position slot diagram showing impersonal es present only when no other constituent opens the clause">
+  <text x="420" y="42" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">The first slot must be filled</text>
+
+  <text x="420" y="82" text-anchor="middle" font-size="18" class="s-muted">Nothing else opens the clause</text>
+  <rect x="55" y="102" width="180" height="76" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="145" y="135" text-anchor="middle" font-size="16" class="s-muted">POSITION 1</text>
+  <text x="145" y="162" text-anchor="middle" font-size="24" font-weight="700" class="s-coral">es</text>
+  <rect x="265" y="102" width="200" height="76" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="365" y="135" text-anchor="middle" font-size="16" class="s-muted">FINITE VERB</text>
+  <text x="365" y="162" text-anchor="middle" font-size="23" font-weight="700" class="s-teal">wird</text>
+  <rect x="495" y="102" width="290" height="76" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="640" y="135" text-anchor="middle" font-size="16" class="s-muted">ACTIVITY</text>
+  <text x="640" y="162" text-anchor="middle" font-size="23" class="s-ink">im Innenhof gefeiert</text>
+
+  <text x="420" y="235" text-anchor="middle" font-size="18" class="s-muted">A real constituent opens the clause</text>
+  <rect x="55" y="255" width="250" height="76" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="180" y="288" text-anchor="middle" font-size="16" class="s-muted">POSITION 1</text>
+  <text x="180" y="315" text-anchor="middle" font-size="22" font-weight="700" class="s-ink">im Innenhof</text>
+  <rect x="335" y="255" width="180" height="76" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="425" y="288" text-anchor="middle" font-size="16" class="s-muted">FINITE VERB</text>
+  <text x="425" y="315" text-anchor="middle" font-size="23" font-weight="700" class="s-teal">wird</text>
+  <rect x="545" y="255" width="240" height="76" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="665" y="288" text-anchor="middle" font-size="16" class="s-muted">ACTIVITY</text>
+  <text x="665" y="315" text-anchor="middle" font-size="23" class="s-ink">gefeiert</text>
+
+  <text x="420" y="389" text-anchor="middle" font-size="22" font-weight="700" class="s-coral">es is a position holder, not a subject</text>
+  <text x="420" y="417" text-anchor="middle" font-size="17" class="s-muted">Move anything else forward and it vanishes.</text>
+</svg>

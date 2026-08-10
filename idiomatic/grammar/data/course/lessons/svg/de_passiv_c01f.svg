@@ -1,0 +1,24 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Active and passive frames show the accusative object becoming the nominative subject while the agent becomes optional">
+  <text x="420" y="42" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">Change the camera angle, not the event</text>
+
+  <text x="190" y="82" text-anchor="middle" font-size="19" font-weight="700" class="s-teal">ACTIVE FRAME</text>
+  <rect x="35" y="98" width="310" height="128" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="190" y="132" text-anchor="middle" font-size="18" class="s-muted">subject acts on object</text>
+  <text x="190" y="171" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">experts → documents</text>
+  <text x="190" y="204" text-anchor="middle" font-size="17" class="s-coral">documents = accusative</text>
+
+  <text x="650" y="82" text-anchor="middle" font-size="19" font-weight="700" class="s-coral">PASSIVE FRAME</text>
+  <rect x="495" y="98" width="310" height="128" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="650" y="132" text-anchor="middle" font-size="18" class="s-muted">affected thing becomes subject</text>
+  <text x="650" y="171" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">documents ← (experts)</text>
+  <text x="650" y="204" text-anchor="middle" font-size="17" class="s-teal">documents = nominative</text>
+
+  <line x1="355" y1="162" x2="473" y2="162" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="485,162 467,151 467,173" class="s-teal"/>
+  <text x="420" y="137" text-anchor="middle" font-size="15" font-weight="700" class="s-teal">PROMOTE</text>
+
+  <rect x="135" y="278" width="570" height="82" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="311" text-anchor="middle" font-size="18" class="s-muted">What changes?</text>
+  <text x="420" y="340" text-anchor="middle" font-size="21" font-weight="700" class="s-ink">topic and grammatical subject — not the event itself</text>
+  <text x="420" y="404" text-anchor="middle" font-size="18" class="s-muted">The agent survives only when it earns a place in the message.</text>
+</svg>
