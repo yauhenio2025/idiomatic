@@ -1090,6 +1090,52 @@ async def admin_local_tts_v1_rebuild(
         raise HTTPException(409, str(exc)) from exc
 
 
+@app.post("/admin/course-apkg-upload")
+async def admin_course_apkg_upload(
+    request: Request,
+    lang: str,
+    unit: str,
+    notes: int | None = None,
+    _: None = Depends(authed_admin),
+) -> dict:
+    """Enter a machine-locally built course unit APKG into normal add-on
+    delivery as a rolling per-unit row (kind='course_<unit>').
+
+    Book-derived content rides only inside the binary APKG — the public
+    repo never carries it; /data is the same trust boundary as
+    staged_audio. Re-uploading a unit replaces its row and clears its
+    acks, so every agent re-imports the fresh build (GUID-stable notes
+    update in place client-side)."""
+    from .grammar import course as course_mod
+
+    if lang not in course_mod.SUPPORTED_LANGS:
+        raise HTTPException(400, f"unsupported lang {lang!r}")
+    try:
+        course_mod.de_unit(unit)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    body = await request.body()
+    if len(body) > 128 * 1024 * 1024:
+        raise HTTPException(413, "apkg too large")
+    if len(body) < 1024 or body[:4] != b"PK\x03\x04":
+        raise HTTPException(400, "body must be a .apkg (zip) upload")
+    settings = get_settings()
+    rel = f"apkgs/{lang}/course_{unit}.apkg"
+    dest = Path(settings.data_dir) / rel
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    tmp = dest.with_name(dest.name + ".tmp")
+    tmp.write_bytes(body)
+    tmp.replace(dest)
+    apkg_id = await db.upsert_course_apkg(
+        lang=lang, kind=f"course_{unit}", filename=rel,
+        size_bytes=len(body), n_idioms=notes,
+    )
+    log.info("course.apkg.uploaded", lang=lang, unit=unit,
+             apkg_id=apkg_id, size_bytes=len(body))
+    return {"ok": True, "apkg_id": apkg_id, "kind": f"course_{unit}",
+            "size_bytes": len(body)}
+
+
 @app.post("/admin/local-tts/v1/course/seed")
 async def admin_local_tts_v1_course_seed(
     body: dict, _: None = Depends(authed_admin),

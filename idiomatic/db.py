@@ -1376,6 +1376,33 @@ async def fetch_grammar_items(lang: str, status: str = "verified",
     return result
 
 
+async def upsert_course_apkg(*, lang: str, kind: str, filename: str,
+                             size_bytes: int,
+                             n_idioms: int | None = None) -> int:
+    """Rolling per-(lang, kind) course-unit apkg row.
+
+    A fresh upload replaces the row and clears its acks so every agent
+    re-imports the new build (client-side GUIDs keep scheduling)."""
+    pool = await get_pool()
+    async with pool.acquire() as conn:
+        async with conn.transaction():
+            row = await conn.fetchrow(
+                """
+                INSERT INTO apkgs (lang, filename, size_bytes, n_idioms, kind)
+                VALUES ($1, $2, $3, $4, $5)
+                ON CONFLICT (lang, kind) WHERE kind <> 'video'
+                DO UPDATE SET filename = $2, size_bytes = $3,
+                              n_idioms = $4, created_at = NOW()
+                RETURNING id
+                """,
+                lang, filename, size_bytes, n_idioms, kind,
+            )
+            await conn.execute(
+                "DELETE FROM agent_acks WHERE apkg_id = $1", row["id"],
+            )
+    return row["id"]
+
+
 async def grammar_topic_stats(lang: str) -> list[dict[str, Any]]:
     """Per-topic verified/rejected counts — the dashboard's view of both
     curriculum size and LLM error rate."""
