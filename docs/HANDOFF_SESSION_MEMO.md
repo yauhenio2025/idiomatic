@@ -31,12 +31,14 @@
 
 ## Successor task queue
 
-0. **When ES rendering completes** (all es_illu chunks have their
-   images): release the German hold — delete the `hold-es-first`
-   entries from PARTITION.json and commit. Fedora then renders de/fr/
-   it/pt in glob order; give the Mac its next queue at the same time
-   (its b19-26 chain runs dry; assign it chunks in PARTITION + a new
-   run_queue script chained on the box — pattern: run_queue_b19_26.sh).
+0. **Render order (user 2026-08-10): es → fr → it → pt, GERMAN LAST.**
+   The `hold-es-first` entries in PARTITION.json stay in place — with
+   de held, Fedora rolls through fr/it/pt automatically in glob order;
+   no action needed at ES completion. Release the German hold (delete
+   the entries, commit) only when giving de to a renderer — natural
+   moment: as the Mac's next queue when its b19-26 chain runs dry
+   (assign de chunks to mac in PARTITION + a run_queue script chained
+   on the box — pattern: run_queue_b19_26.sh), or on Fedora after pt.
    ALL briefs are authored+committed (255 chunks, 5 langs) — rendering
    is the only remaining stage.
 
