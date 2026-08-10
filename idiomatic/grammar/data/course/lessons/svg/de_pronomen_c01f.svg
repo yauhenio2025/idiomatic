@@ -1,0 +1,37 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three noun phrases pass their case, number, and gender features to the pronouns er, ihn, and ihr">
+  <text x="420" y="34" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">A pronoun inherits the whole grammatical role</text>
+  <rect x="40" y="58" width="220" height="62" rx="13" class="s-tile" stroke-width="2"/>
+  <rect x="310" y="58" width="220" height="62" rx="13" class="s-tile" stroke-width="2"/>
+  <rect x="580" y="58" width="220" height="62" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="150" y="96" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">der Ausschuss</text>
+  <text x="420" y="96" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">den Vertrag</text>
+  <text x="690" y="96" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">der Bewerberin</text>
+  <line x1="150" y1="128" x2="150" y2="143" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="150,152 143,141 157,141" class="s-teal"/>
+  <line x1="420" y1="128" x2="420" y2="143" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="420,152 413,141 427,141" class="s-coral"/>
+  <line x1="690" y1="128" x2="690" y2="143" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="690,152 683,141 697,141" class="s-teal"/>
+  <rect x="40" y="160" width="220" height="82" rx="13" class="s-tile" stroke-width="2"/>
+  <rect x="310" y="160" width="220" height="82" rx="13" class="s-tile" stroke-width="2"/>
+  <rect x="580" y="160" width="220" height="82" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="150" y="194" text-anchor="middle" font-size="19" font-weight="700" class="s-teal">NOMINATIVE</text>
+  <text x="150" y="222" text-anchor="middle" font-size="17" class="s-muted">masculine · singular</text>
+  <text x="420" y="194" text-anchor="middle" font-size="19" font-weight="700" class="s-coral">ACCUSATIVE</text>
+  <text x="420" y="222" text-anchor="middle" font-size="17" class="s-muted">masculine · singular</text>
+  <text x="690" y="194" text-anchor="middle" font-size="19" font-weight="700" class="s-teal">DATIVE</text>
+  <text x="690" y="222" text-anchor="middle" font-size="17" class="s-muted">feminine · singular</text>
+  <line x1="150" y1="250" x2="150" y2="273" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="150,282 143,271 157,271" class="s-teal"/>
+  <line x1="420" y1="250" x2="420" y2="273" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="420,282 413,271 427,271" class="s-coral"/>
+  <line x1="690" y1="250" x2="690" y2="273" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="690,282 683,271 697,271" class="s-teal"/>
+  <rect x="70" y="290" width="160" height="72" rx="36" class="s-tile" stroke-width="3"/>
+  <rect x="340" y="290" width="160" height="72" rx="36" class="s-tile" stroke-width="3"/>
+  <rect x="610" y="290" width="160" height="72" rx="36" class="s-tile" stroke-width="3"/>
+  <text x="150" y="336" text-anchor="middle" font-size="32" font-weight="800" class="s-teal">er</text>
+  <text x="420" y="336" text-anchor="middle" font-size="32" font-weight="800" class="s-coral">ihn</text>
+  <text x="690" y="336" text-anchor="middle" font-size="32" font-weight="800" class="s-teal">ihr</text>
+  <text x="420" y="405" text-anchor="middle" font-size="19" class="s-muted">same referents · compressed forms · roles intact</text>
+</svg>

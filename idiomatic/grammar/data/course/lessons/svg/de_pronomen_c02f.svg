@@ -1,0 +1,21 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A two-lane decision diagram contrasts an accusative reflexive as the only object with a dative reflexive beside a separate direct object">
+  <text x="420" y="42" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">Which object slot does the reflexive occupy?</text>
+  <rect x="55" y="82" width="330" height="88" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="220" y="119" text-anchor="middle" font-size="21" font-weight="700" class="s-ink">reflexive is the only object</text>
+  <text x="220" y="149" text-anchor="middle" font-size="18" class="s-muted">Sie duscht sich.</text>
+  <line x1="220" y1="180" x2="220" y2="219" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="220,228 213,217 227,217" class="s-coral"/>
+  <rect x="80" y="236" width="280" height="94" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="220" y="273" text-anchor="middle" font-size="20" font-weight="700" class="s-coral">ACCUSATIVE</text>
+  <text x="220" y="307" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">mich · dich · sich</text>
+  <rect x="455" y="82" width="330" height="88" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="620" y="119" text-anchor="middle" font-size="21" font-weight="700" class="s-ink">a direct object is already present</text>
+  <text x="620" y="149" text-anchor="middle" font-size="18" class="s-muted">Sie bindet sich die Haare.</text>
+  <line x1="620" y1="180" x2="620" y2="219" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="620,228 613,217 627,217" class="s-teal"/>
+  <rect x="480" y="236" width="280" height="94" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="620" y="273" text-anchor="middle" font-size="20" font-weight="700" class="s-teal">DATIVE</text>
+  <text x="620" y="307" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">mir · dir · sich</text>
+  <line x1="420" y1="76" x2="420" y2="350" class="s-stroke-line" stroke-width="2"/>
+  <text x="420" y="397" text-anchor="middle" font-size="19" class="s-muted">locate every object first — then assign the case</text>
+</svg>

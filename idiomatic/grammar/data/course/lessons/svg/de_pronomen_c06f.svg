@@ -1,0 +1,26 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Masculine Bescheid, feminine Frist, and neuter Gutachten map to their matching third-person pronouns">
+  <text x="420" y="42" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">English “it” splits three ways</text>
+  <rect x="45" y="80" width="220" height="82" rx="14" class="s-tile" stroke-width="2"/>
+  <rect x="310" y="80" width="220" height="82" rx="14" class="s-tile" stroke-width="2"/>
+  <rect x="575" y="80" width="220" height="82" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="155" y="116" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">der Bescheid</text>
+  <text x="155" y="145" text-anchor="middle" font-size="17" class="s-muted">masculine</text>
+  <text x="420" y="116" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">die Frist</text>
+  <text x="420" y="145" text-anchor="middle" font-size="17" class="s-muted">feminine</text>
+  <text x="685" y="116" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">das Gutachten</text>
+  <text x="685" y="145" text-anchor="middle" font-size="17" class="s-muted">neuter</text>
+  <line x1="155" y1="172" x2="155" y2="224" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="155,233 148,222 162,222" class="s-coral"/>
+  <line x1="420" y1="172" x2="420" y2="224" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="420,233 413,222 427,222" class="s-teal"/>
+  <line x1="685" y1="172" x2="685" y2="224" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="685,233 678,222 692,222" class="s-coral"/>
+  <rect x="75" y="241" width="160" height="88" rx="44" class="s-tile" stroke-width="3"/>
+  <rect x="340" y="241" width="160" height="88" rx="44" class="s-tile" stroke-width="3"/>
+  <rect x="605" y="241" width="160" height="88" rx="44" class="s-tile" stroke-width="3"/>
+  <text x="155" y="296" text-anchor="middle" font-size="34" font-weight="800" class="s-coral">er / ihn</text>
+  <text x="420" y="296" text-anchor="middle" font-size="34" font-weight="800" class="s-teal">sie / ihr</text>
+  <text x="685" y="296" text-anchor="middle" font-size="34" font-weight="800" class="s-coral">es / ihm</text>
+  <text x="420" y="371" text-anchor="middle" font-size="20" font-weight="700" class="s-ink">gender comes from the noun</text>
+  <text x="420" y="401" text-anchor="middle" font-size="18" class="s-muted">case comes from the pronoun’s job in its new clause</text>
+</svg>
