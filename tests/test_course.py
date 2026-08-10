@@ -1402,3 +1402,31 @@ class TestCopyrightGuard:
     def test_book_local_dir_constant_points_inside_ignored_path(self) -> None:
         assert course.BOOK_LOCAL_DIR.name == "book_local"
         assert course.BOOK_LOCAL_DIR.parent.name == "course"
+
+
+def test_lesson_only_unit_parses_and_interleaves(tmp_path):
+    """An explicitly empty blocks array marks a lesson-only unit (all
+    workbook sets provenance-flagged, e.g. ch09 Modalpartikeln)."""
+    import json
+
+    from idiomatic.grammar import course
+
+    payload = {
+        "lang": "de", "unit": "partikeln",
+        "source": {"workbook": "w", "reference": "r", "corpus": "c"},
+        "blocks": [],
+    }
+    path = tmp_path / "de_partikeln.exercises.json"
+    path.write_text(json.dumps(payload), encoding="utf-8")
+    exercises = course.parse_exercises_file(path)
+    assert exercises == []
+
+    bad = dict(payload, lang="es")
+    path2 = tmp_path / "de_other.exercises.json"
+    path2.write_text(json.dumps(bad), encoding="utf-8")
+    try:
+        course.parse_exercises_file(path2)
+    except course.CourseSourceError as exc:
+        assert "match the filename" in str(exc)
+    else:
+        raise AssertionError("lang mismatch must still be rejected")

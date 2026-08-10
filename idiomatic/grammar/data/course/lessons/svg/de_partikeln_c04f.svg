@@ -1,0 +1,20 @@
+<svg viewBox="0 0 840 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Surprise splits into an unexpected fact and an unexpected degree">
+  <text x="420" y="42" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">WHAT VIOLATED THE EXPECTATION?</text>
+  <rect x="80" y="88" width="280" height="105" rx="16" class="s-tile" stroke-width="3"/>
+  <text x="220" y="128" text-anchor="middle" font-size="22" font-weight="800" class="s-teal">THE FACT ITSELF</text>
+  <text x="220" y="162" text-anchor="middle" font-size="17" class="s-muted">expected A · discovered B</text>
+  <rect x="480" y="88" width="280" height="105" rx="16" class="s-tile" stroke-width="3"/>
+  <text x="620" y="128" text-anchor="middle" font-size="22" font-weight="800" class="s-coral">THE DEGREE</text>
+  <text x="620" y="162" text-anchor="middle" font-size="17" class="s-muted">expected some · discovered much</text>
+  <line x1="220" y1="203" x2="220" y2="257" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="220,265 208,245 232,245" class="s-teal"/>
+  <line x1="620" y1="203" x2="620" y2="257" class="s-stroke-coral" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="620,265 608,245 632,245" class="s-coral"/>
+  <rect x="80" y="275" width="280" height="104" rx="16" class="s-tile" stroke-width="3"/>
+  <text x="220" y="317" text-anchor="middle" font-size="28" font-weight="800" class="s-teal">JA · DOCH</text>
+  <text x="220" y="352" text-anchor="middle" font-size="17" class="s-muted">“Why, it is true!”</text>
+  <rect x="480" y="275" width="280" height="104" rx="16" class="s-tile" stroke-width="3"/>
+  <text x="620" y="317" text-anchor="middle" font-size="27" font-weight="800" class="s-coral">ABER · VIELLEICHT</text>
+  <text x="620" y="352" text-anchor="middle" font-size="17" class="s-muted">“My, how much!”</text>
+  <text x="420" y="425" text-anchor="middle" font-size="18" class="s-ink">German marks the axis that English often leaves to intonation.</text>
+</svg>

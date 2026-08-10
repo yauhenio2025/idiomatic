@@ -777,7 +777,7 @@ def parse_exercises_file(path: Path) -> list[CourseExercise]:
     lang, unit = match.group(1), match.group(2)
     data = json.loads(path.read_text(encoding="utf-8"))
     exercises = parse_exercises_payload(data, name=path.name)
-    if exercises[0].lang != lang or exercises[0].unit != unit:
+    if data.get("lang") != lang or data.get("unit") != unit:
         raise CourseSourceError(
             f"{path.name}: lang/unit fields must match the filename"
         )
@@ -803,8 +803,11 @@ def parse_exercises_payload(data: Any, *, name: str) -> list[CourseExercise]:
     ):
         raise CourseSourceError(f"{path.name}: invalid unit {unit!r}")
     blocks = data.get("blocks")
-    if not isinstance(blocks, list) or not blocks:
-        raise CourseSourceError(f"{path.name}: blocks must be a nonempty array")
+    if not isinstance(blocks, list):
+        raise CourseSourceError(f"{path.name}: blocks must be an array")
+    # An explicitly empty array marks a LESSON-ONLY unit (every workbook
+    # set provenance-flagged, e.g. ch09 Modalpartikeln): the unit ships
+    # its lesson deck with no exercise population.
 
     exercises: list[CourseExercise] = []
     seen_blocks: set[int] = set()
