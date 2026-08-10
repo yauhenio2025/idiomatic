@@ -107,3 +107,60 @@ report; owner reads summaries, taps consoles from the iPad if moved.
   hour, /triage taps, arm dj_today_enabled. Hammer REFERENCE prose is
   fully extracted (pass 4) — lesson authoring converts tables→SVG+
   narration per unit; extraction is NOT the bottleneck.
+
+## UPDATE 2026-08-10 ~08:15 (session 2 — account switch imminent)
+
+Owner is switching Claude accounts (this session near token limit).
+Successor: read this block + task list; NO Fable agents were launched
+after the owner's freeze order — three wave-A lesson agents may still
+be running or just landed (see below).
+
+DONE this morning (all on main, suite 715 green, deployed):
+1. COURSE CARDS: three owner iterations shipped same-morning —
+   enrichment sidecar contract 2 (task lines, italic-serif German, EN
+   glosses, Hammer-grounded why boxes, FULL requested solution
+   sentences displayed+voiced via effective-solution substitution, no
+   server change); lesson EN: gloss lines (display-only, 121 narration
+   segments byte-identical = no re-voice), bulleted example lists,
+   3 SVGs re-laid. Voiced apkg rebuilt (audio_pending=0); owner
+   reimported and APPROVED ("the german deck is fine").
+2. COURSE FACTORY (owner: batch the whole book, ON CODEX — Fable only
+   for shared code; recorded in codex-delegation memory): DE_UNITS
+   21-chapter registry + generic plan-driven tools/course_select.py
+   (kasus byte-identical proof) + --production deck routing merged.
+   Commission docs/commissions/CODEX_COURSE_UNIT.md (plan schema v2:
+   per-block hammer_refs + :key + selector self-check). Sequential
+   codex runner `idiomatic-course-authoring` working through 17
+   remaining chapters (wortstellung first — started on schema v1, its
+   plan needs hammer_refs patched at selection time; later units get
+   v2 automatically). Log: docs/research/legacy_estate/
+   course_unit_authoring_run.log.
+3. WAVE A (last Fable authoring, in flight at freeze): praepositionen
+   ch18, adjektive ch06, valenz ch16 — each delivers lesson .md + SVGs
+   + plan.json in its own worktree, steered mid-flight to schema v2.
+   ON LANDING: review German (agent reports list every TL sentence),
+   merge worktree branches, run selector, then codex enrichment
+   (contract 2, brief pattern in scratchpad enrich_kasus_v2.sh),
+   seed --production, voice, build --production.
+4. big_tech_vocab MERGED (476 notes, audit 20/20, corpus 4948, snapshot
+   test updated); clips seeded → 09:00 window (2,211 queued incl. 783
+   geopolitics re-voice). Drain watcher fires exercises2 rebuild ×5
+   (Task #3). cold_war authored 30/30 gates green, baseline committed,
+   hostile audit RUNNING (codex unit idiomatic-coldwar-audit); on PASS:
+   merge per pipeline checklist (expected corpus 4948 → ~5400s; update
+   test_x2_wave_pipeline snapshot).
+5. LINGQ: inventory (docs/research/lingq/, data files gitignored —
+   PERSONAL DATA, never commit) + creative proposal
+   (LINGQ_VALUE_PROPOSAL.md). Key finding: 95% status-0 — it's an
+   encounter log, not a graded lexicon; winner concept C1 "Second
+   Encounter" (60-card FR pilot). NEXT: distill into owner decision
+   CONSOLE page (never MD), pilot-first.
+
+DELIVERY GAP (course): production upload endpoint not built — units
+finished pre-Tuesday go by manual import; build the server-side
+course upload/build path so trip-time units auto-deliver via the
+add-on (design sketch in GRAMMAR_COURSE_DESIGN.md §5 'Production
+delivery').
+
+Owner gates unchanged otherwise: hub cutover hour, /triage taps,
+/legacy verdicts, dj_today_enabled arming.
