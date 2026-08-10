@@ -75,6 +75,16 @@ async def lifespan(app: FastAPI):
             log.info("api.dj_triage_seeded", rows=len(triage_rows))
     except Exception as e:
         log.warning("api.dj_triage_seed_failed", err=repr(e)[:300])
+    # Seed the seven LingQ dormant-value concepts only while their decision
+    # table is empty.  The seed refresh path never touches owner decisions,
+    # and no worker consumes those decisions automatically.
+    try:
+        from .lingq_console import seed_lingq_verdicts_if_empty
+
+        if await seed_lingq_verdicts_if_empty():
+            log.info("api.lingq_console_seeded", rows=7)
+    except Exception as e:
+        log.warning("api.lingq_console_seed_failed", err=repr(e)[:300])
     worker_task = asyncio.create_task(worker_loop(once=False))
     log.info("api.lifespan.started", worker_task=str(worker_task))
     try:
@@ -2345,6 +2355,38 @@ async def admin_triage_verdict_bulk(
     updated = int(status.rsplit(" ", 1)[-1])
     log.info("admin.triage_verdict_bulk", verdict=verdict, updated=updated)
     return {"ok": True, "updated": updated}
+
+
+# --- LingQ dormant-value concept decisions ---------------------------------
+
+@app.post("/admin/lingq-verdict")
+async def admin_lingq_verdict(body: dict, _: None = Depends(authed_admin)) -> dict:
+    """Record one concept verdict and/or optional owner note.
+
+    Decisions are inert: the coordinator reads them and commissions any work
+    separately.  A note-only request does not touch the verdict timestamp.
+    """
+    from .lingq_console import save_lingq_verdict
+
+    concept_key = str(body.get("concept_key") or "").strip()
+    if not concept_key:
+        raise HTTPException(400, "need concept_key")
+    verdict = body.get("verdict")
+    kwargs: dict = {}
+    if verdict is not None:
+        kwargs["verdict"] = verdict
+    if "note" in body:
+        kwargs["note"] = body.get("note")
+    try:
+        result = await save_lingq_verdict(concept_key, **kwargs)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    except LookupError as exc:
+        raise HTTPException(404, str(exc)) from exc
+    log.info(
+        "admin.lingq_verdict", concept_key=concept_key, verdict=verdict,
+    )
+    return result
 
 
 @app.get("/dj/plan")

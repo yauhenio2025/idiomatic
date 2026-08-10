@@ -18,6 +18,7 @@ import RescueFormats from "./pages/RescueFormats";
 import Delivery from "./pages/Delivery";
 import DJ from "./pages/DJ";
 import Triage from "./pages/Triage";
+import Lingq from "./pages/Lingq";
 import Legacy from "./pages/Legacy";
 
 export default function App() {
@@ -78,6 +79,7 @@ export default function App() {
         <Route path="/rescue/formats" element={<RescueFormats />} />
         <Route path="/dj" element={<DJ />} />
         <Route path="/triage" element={<Triage />} />
+        <Route path="/lingq" element={<Lingq />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/legacy" element={<Legacy />} />
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -10,6 +10,7 @@ const NAV = [
   { to: "/cast", label: "Cast", icon: "☻" },
   { to: "/dj", label: "Study DJ", icon: "♫" },
   { to: "/triage", label: "Triage", icon: "⚖" },
+  { to: "/lingq", label: "LingQ", icon: "↻" },
   { to: "/delivery", label: "Delivery", icon: "⇣" },
   { to: "/legacy", label: "Legacy", icon: "⌁" },
 ];

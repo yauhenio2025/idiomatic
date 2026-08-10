@@ -972,6 +972,32 @@ async def dj_triage_console(_: None = Depends(authed_ui)) -> dict:
     }
 
 
+# --- LingQ dormant-value decision console (read side) ----------------------
+
+@router.get("/lingq")
+async def lingq_decision_console(_: None = Depends(authed_ui)) -> dict:
+    """Return the seven aggregate-only concepts and owner decision progress.
+
+    This route is strictly read-only.  POST /admin/lingq-verdict is the sole
+    sanctioned mutation, and even that only records a decision for the
+    coordinator; nothing here triggers a build or touches a collection.
+    """
+    from .lingq_console import list_lingq_verdicts, progress_summary
+
+    rows = await list_lingq_verdicts()
+    return {
+        "rows": rows,
+        "summary": progress_summary(rows),
+        "meta": {
+            "applies_changes": False,
+            "coordinator_note": (
+                "Verdicts trigger nothing automatically. The coordinator reads "
+                "them and commissions any follow-up work separately."
+            ),
+        },
+    }
+
+
 @router.get("/rescue/formats")
 async def rescue_formats(_: None = Depends(authed_ui)) -> dict:
     """The format taxonomy + provider registry, for the Formats page and

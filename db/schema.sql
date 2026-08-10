@@ -1052,3 +1052,24 @@ CREATE INDEX IF NOT EXISTS dj_triage_tree_idx
   ON dj_triage (language, lane, subtree);
 CREATE INDEX IF NOT EXISTS dj_triage_verdict_idx
   ON dj_triage (COALESCE(owner_verdict, 'unverdicted'));
+
+-- ============================================================================
+-- LingQ dormant-value concept verdicts
+-- (docs/commissions/CODEX_LINGQ_CONSOLE.md).
+-- Seven code-owned, aggregate-only concept payloads are seeded only while the
+-- table is empty.  Reseeds may refresh payload/seeded_at but never touch the
+-- owner columns.  These are DECISIONS ONLY: no worker consumes this table and
+-- no verdict starts a build or changes an Anki collection automatically.
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS lingq_verdicts (
+  concept_key    TEXT PRIMARY KEY,
+  payload        JSONB NOT NULL,
+  owner_verdict  TEXT CHECK (owner_verdict IS NULL OR owner_verdict IN
+    ('greenlight-pilot', 'interested-later', 'not-for-me', 'defer')),
+  owner_note     TEXT,
+  verdicted_at   TIMESTAMPTZ,
+  seeded_at      TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS lingq_verdicts_verdict_idx
+  ON lingq_verdicts (COALESCE(owner_verdict, 'unverdicted'));
