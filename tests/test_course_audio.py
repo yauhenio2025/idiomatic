@@ -425,3 +425,44 @@ class TestPayloadParsing:
                 {"lang": "xx", "unit": "kasus", "blocks": []},
                 name="payload.json",
             )
+
+
+def test_seed_course_audio_accepts_lesson_only_payload(monkeypatch, tmp_path):
+    """A lesson-only unit (empty blocks) seeds lesson segments and zero
+    exercise jobs — regression for the exercises[0] IndexError."""
+    import asyncio
+    import json
+
+    from idiomatic import db, local_tts
+    from idiomatic.grammar import course
+
+    lesson_md = tmp_path / "de_partikeln.md"
+    lesson_md.write_text(
+        (course.LESSON_DIR / "de_partikeln.md").read_text(encoding="utf-8"),
+        encoding="utf-8",
+    )
+    (tmp_path / "svg").symlink_to(course.LESSON_DIR / "svg")
+    payload = {
+        "lang": "de", "unit": "partikeln",
+        "source": {"workbook": "w", "reference": "r", "corpus": "c"},
+        "blocks": [],
+    }
+    seeded = {}
+
+    async def fake_seed(rows):
+        seeded["rows"] = rows
+        return {"total": len(rows), "inserted": len(rows),
+                "reset": 0, "unchanged": 0}
+
+    monkeypatch.setattr(db, "seed_local_tts_jobs", fake_seed)
+    result = asyncio.run(local_tts.seed_course_audio(
+        "de", "partikeln",
+        exercises_payload=json.loads(json.dumps(payload)),
+        lesson_dir=tmp_path,
+    ))
+    assert result["exercise_solution_jobs"] == 0
+    assert result["lesson_segment_jobs"] > 0
+    assert all(
+        r["source_kind"] != local_tts.COURSE_EXERCISE_SOURCE_KIND
+        for r in seeded["rows"]
+    )

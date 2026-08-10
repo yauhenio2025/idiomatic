@@ -534,7 +534,8 @@ async def seed_course_audio(
         exercises = course.parse_exercises_payload(
             exercises_payload, name=f"{lang}_{unit}.exercises.json"
         )
-        if exercises[0].lang != lang or exercises[0].unit != unit:
+        header = exercises_payload if isinstance(exercises_payload, dict) else {}
+        if header.get("lang") != lang or header.get("unit") != unit:
             raise ValueError("exercises payload lang/unit mismatch")
     rows = course_expected_job_rows(lesson, exercises, is_pilot=is_pilot)
     n_exercises = sum(
