@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="A complete subordinate clause fills a noun-phrase slot in the larger sentence">
+  <defs>
+    <marker id="arrow-teal-c03" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,5 L0,10 Z" class="s-teal"/>
+    </marker>
+  </defs>
+  <text x="320" y="34" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="22" font-weight="700">THE MATRIX SENTENCE HAS AN OPEN SLOT</text>
+  <rect x="30" y="62" width="252" height="92" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="156" y="96" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16">subject + finite verb</text>
+  <rect x="73" y="111" width="166" height="29" rx="7" class="s-stroke-coral" stroke-width="3"/>
+  <text x="156" y="132" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="15" font-weight="700">COMPLEMENT SLOT</text>
+
+  <line x1="292" y1="108" x2="338" y2="108" class="s-stroke-teal" stroke-width="4" marker-end="url(#arrow-teal-c03)"/>
+
+  <rect x="348" y="62" width="262" height="92" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="479" y="94" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="17" font-weight="700">WHOLE NOUN CLAUSE</text>
+  <text x="479" y="122" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="16">connector … finite verb</text>
+
+  <rect x="88" y="202" width="134" height="54" rx="12" class="s-stroke-line" stroke-width="2"/>
+  <rect x="253" y="202" width="134" height="54" rx="12" class="s-stroke-line" stroke-width="2"/>
+  <rect x="418" y="202" width="134" height="54" rx="12" class="s-stroke-line" stroke-width="2"/>
+  <text x="155" y="235" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17">SUBJECT</text>
+  <text x="320" y="235" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17">OBJECT</text>
+  <text x="485" y="235" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17">PREP. OBJECT</text>
+</svg>

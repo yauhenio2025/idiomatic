@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" role="img" aria-label="Coordination places equal clauses side by side, while subordination embeds a dependent clause">
+  <text x="32" y="34" class="s-muted" font-family="system-ui, sans-serif" font-size="17" font-weight="700">EQUAL STATUS</text>
+  <rect x="32" y="54" width="232" height="78" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="148" y="84" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18" font-weight="700">MAIN CLAUSE</text>
+  <text x="148" y="111" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="16">finite verb: position 2</text>
+  <text x="320" y="100" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="14" font-weight="700">COORDINATOR</text>
+  <rect x="376" y="54" width="232" height="78" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="492" y="84" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18" font-weight="700">MAIN CLAUSE</text>
+  <text x="492" y="111" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="16">finite verb: position 2</text>
+
+  <text x="32" y="180" class="s-muted" font-family="system-ui, sans-serif" font-size="17" font-weight="700">DEPENDENCY</text>
+  <rect x="32" y="200" width="576" height="102" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="52" y="231" class="s-ink" font-family="system-ui, sans-serif" font-size="18" font-weight="700">MAIN CLAUSE</text>
+  <rect x="290" y="218" width="292" height="64" rx="12" class="s-stroke-coral" stroke-width="3"/>
+  <text x="436" y="244" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="17" font-weight="700">SUBORDINATE CLAUSE</text>
+  <text x="436" y="268" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="15">finite verb at the right edge</text>
+</svg>

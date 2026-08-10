@@ -1,0 +1,56 @@
+{
+  "lang": "de",
+  "unit": "konjunktionen",
+  "chapter": 17,
+  "unit_label": "Konjunktionen (conjunctions)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["17.1"],
+      "max_items": 10,
+      "note": "Choose coordinating links while preserving the main-clause verb frame and the contrast-versus-correction distinction."
+    },
+    {
+      "block": 2,
+      "card_seq": 4,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["17.3.1"],
+      "max_items": 12,
+      "note": "Classify a time reference as a single past event, a repeated or non-past event, or a question about time."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["17.1.2", "17.4.1", "17.4.3"],
+      "max_items": 12,
+      "note": "Package reasons as subordinate causes, coordinated explanations, clause-internal afterthoughts, or strengthened grounds."
+    },
+    {
+      "block": 4,
+      "card_seq": 10,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["17.3.6", "17.5.2", "17.7d"],
+      "max_items": 10,
+      "note": "Distinguish threshold, duration, recurrence, result, extent, condition, and qualification across the so-family."
+    },
+    {
+      "block": 5,
+      "card_seq": 11,
+      "exercise_sets": ["8:key"],
+      "hammer_refs": ["Ch. 17"],
+      "max_items": 10,
+      "note": "Expand compact prepositional relations into explicit clauses using the workbook's printed transformation key."
+    },
+    {
+      "block": 6,
+      "card_seq": 12,
+      "exercise_sets": ["6:key", "7"],
+      "hammer_refs": ["Ch. 17"],
+      "max_items": 16,
+      "note": "Integrate clause relations in whole-sentence translation and mixed connector selection after the complete system."
+    }
+  ]
+}

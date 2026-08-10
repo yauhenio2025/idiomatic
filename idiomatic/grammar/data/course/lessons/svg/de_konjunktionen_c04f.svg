@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" role="img" aria-label="A single past event, repeated or non-past events, and a time question require different connectors">
+  <text x="320" y="34" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="22" font-weight="700">CLASSIFY THE TIME REFERENCE</text>
+
+  <rect x="28" y="60" width="584" height="70" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="54" y="85" class="s-muted" font-family="system-ui, sans-serif" font-size="15" font-weight="700">ONE PAST OCCASION</text>
+  <line x1="244" y1="104" x2="574" y2="104" class="s-stroke-line" stroke-width="3"/>
+  <circle cx="408" cy="104" r="9" class="s-coral"/>
+  <text x="408" y="92" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="16" font-weight="700">ALS</text>
+
+  <rect x="28" y="145" width="584" height="70" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="54" y="170" class="s-muted" font-family="system-ui, sans-serif" font-size="15" font-weight="700">REPEATED / NOW / LATER</text>
+  <line x1="275" y1="190" x2="574" y2="190" class="s-stroke-line" stroke-width="3"/>
+  <circle cx="342" cy="190" r="7" class="s-teal"/>
+  <circle cx="408" cy="190" r="7" class="s-teal"/>
+  <circle cx="474" cy="190" r="7" class="s-teal"/>
+  <text x="408" y="178" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="16" font-weight="700">WENN</text>
+
+  <rect x="28" y="230" width="584" height="70" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="54" y="257" class="s-muted" font-family="system-ui, sans-serif" font-size="15" font-weight="700">UNKNOWN TIME</text>
+  <circle cx="408" cy="266" r="23" class="s-stroke-coral" stroke-width="3"/>
+  <text x="408" y="273" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="24" font-weight="700">?</text>
+  <text x="472" y="272" class="s-ink" font-family="system-ui, sans-serif" font-size="16" font-weight="700">WANN</text>
+</svg>
