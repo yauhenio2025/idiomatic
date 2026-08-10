@@ -164,3 +164,27 @@ delivery').
 
 Owner gates unchanged otherwise: hub cutover hour, /triage taps,
 /legacy verdicts, dj_today_enabled arming.
+
+## UPDATE 2026-08-11 ~05:45 (course complete; owner flies today)
+
+- GRAMMAR COURSE: ALL 21 UNITS authored (codex), coordinator-reviewed
+  (18 clean / 3 edited — spoken-jargon class), enriched, committed.
+  ch09 partikeln = lesson-only (empty-blocks support in course.py +
+  local_tts seed fix d6596c0). 3,011 course clips queued; 09:00 window
+  voices; drain watcher then: for each unit not yet delivered → build
+  --production --audio → POST /admin/course-apkg-upload → add-on
+  imports. Delivered already: kasus wortstellung praepositionen
+  adjektive valenz.
+- /lingq CONSOLE LIVE (e659a78): seven concept verdict cards,
+  C1 Second Encounter recommended; verdicts are decisions-only — the
+  coordinator commissions the pilot after owner taps.
+- Yesterday's estate wins: exercises2 ×5 rebuilt fully voiced
+  (geopolitics rewrite + big_tech + cold_war, corpus 5,532);
+  TTS window policy = 09:00 until drained or 01:15 (memory updated;
+  stale-pause-marker deadlock + throughput-stall sentinel documented).
+  Mac TTS node: installed but MPS 50-100x too slow — STOPPED, keep for
+  MLX port (post-trip).
+- STILL OPEN: fancy_vocab audit (owner's codex window — 75 chunks, the
+  last unmerged topic; take over onto our codex lane if their queue
+  stalls); owner gates (hub cutover hour + /triage taps) — must happen
+  before the flight or wait 8 days.
