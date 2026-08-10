@@ -62,8 +62,9 @@
 
 ## Hard-won mechanics (violate at your peril)
 
-- **Mac**: ssh evgeny2026@192.168.110.65 (mac.lan mDNS flaky after
-  reboots). Renders/QA live in ~/llms/factory-node/. **Reboot recovery
+- **Mac**: ssh evgeny2026@192.168.110.56 — WIRED since 2026-08-11
+  (ventilated room + Ethernet; 192.168.110.65 = its Wi-Fi, mac.lan =
+  mDNS, both fallbacks). Renders/QA live in ~/llms/factory-node/. **Reboot recovery
   is AUTOMATED since 2026-08-10** (2nd kernel panic that day):
   launchd `com.idiomatic.boot-recover` runs
   ~/llms/factory-node/boot_recover.sh at login — clears stranded
