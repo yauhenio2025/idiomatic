@@ -336,7 +336,14 @@ memory; our layer aggregates over items per skill/topic.
 
 ## 8. Roadmap — WAVE PLAN (agreed with user 2026-07-29; CURRENT)
 
-STATUS AT LAST UPDATE (2026-07-31): Waves 1-4 and 6 shipped. Five decks
+STATUS AT LAST UPDATE (2026-08-11): GRAMMAR COURSE COMPLETE — all 21
+German units (Hammer/PGG chapters) authored on codex, coordinator-
+reviewed, enriched (contract-2 sidecars), voiced via local Qwen, and
+delivered through /admin/course-apkg-upload into
+`DE German::2 Grammar::<unit>`; ch09 Modalpartikeln ships lesson-only
+(workbook sets provenance-flagged). Earlier waves below unchanged.
+
+PRIOR STATUS (2026-07-31): Waves 1-4 and 6 shipped. Five decks
 live (es 222 / de 50 / fr 83 / it 84 / pt 82 cards, 42 units), all with
 ElevenLabs back audio, studied in the SYLLABUS Anki profile. Wave 6
 added per-cluster subdecks, the grammar_units curriculum table, and the
