@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Permission with dürfen and prohibition with nicht dürfen">
+  <text x="320" y="31" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Negation closes permission</text>
+  <rect x="48" y="72" width="236" height="90" rx="14" class="s-tile"/>
+  <text x="166" y="106" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="24" font-weight="700">dürfen</text>
+  <text x="166" y="135" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16">allowed</text>
+  <line x1="294" y1="117" x2="346" y2="117" class="s-stroke-coral" stroke-width="6"/>
+  <rect x="356" y="72" width="236" height="90" rx="14" class="s-tile"/>
+  <text x="474" y="106" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="24" font-weight="700">nicht dürfen</text>
+  <text x="474" y="135" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="16">forbidden</text>
+  <rect x="120" y="204" width="400" height="60" rx="12" class="s-tile"/>
+  <text x="320" y="229" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17" font-weight="700">not “no need”</text>
+  <text x="320" y="251" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">permission itself is negated</text>
+</svg>

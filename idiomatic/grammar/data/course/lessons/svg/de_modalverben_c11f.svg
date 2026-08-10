@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Epistemic scale from possibility through probability to deduction, plus report and claim sources">
+  <text x="320" y="31" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Evidence strength</text>
+  <rect x="24" y="60" width="168" height="70" rx="12" class="s-tile"/>
+  <text x="108" y="89" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="21" font-weight="700">könnte</text>
+  <text x="108" y="114" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">possible</text>
+  <line x1="202" y1="95" x2="226" y2="95" class="s-stroke-line" stroke-width="4"/>
+  <rect x="236" y="60" width="168" height="70" rx="12" class="s-tile"/>
+  <text x="320" y="89" text-anchor="middle" class="s-sun" font-family="system-ui, sans-serif" font-size="21" font-weight="700">dürfte</text>
+  <text x="320" y="114" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">probable</text>
+  <line x1="414" y1="95" x2="438" y2="95" class="s-stroke-teal" stroke-width="4"/>
+  <rect x="448" y="60" width="168" height="70" rx="12" class="s-tile"/>
+  <text x="532" y="89" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="21" font-weight="700">muss</text>
+  <text x="532" y="114" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">deduced</text>
+  <text x="320" y="166" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="19" font-weight="700">Source, not probability</text>
+  <rect x="96" y="190" width="194" height="70" rx="12" class="s-tile"/>
+  <text x="193" y="219" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="21" font-weight="700">soll</text>
+  <text x="193" y="244" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">others report</text>
+  <rect x="350" y="190" width="194" height="70" rx="12" class="s-tile"/>
+  <text x="447" y="219" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="21" font-weight="700">will</text>
+  <text x="447" y="244" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">subject claims</text>
+</svg>

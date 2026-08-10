@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Scope contrast between a modal over a past event and a counterfactual over modal ability">
+  <text x="320" y="31" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Same words, different scope</text>
+  <rect x="28" y="62" width="274" height="86" rx="14" class="s-tile"/>
+  <text x="165" y="91" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="19" font-weight="700">könnte</text>
+  <text x="165" y="118" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">verfasst haben</text>
+  <text x="165" y="137" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="12">maybe the event happened</text>
+  <rect x="338" y="62" width="274" height="86" rx="14" class="s-tile"/>
+  <text x="475" y="91" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="19" font-weight="700">hätte</text>
+  <text x="475" y="118" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">verfassen können</text>
+  <text x="475" y="137" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="12">ability existed; event did not</text>
+  <line x1="165" y1="165" x2="165" y2="195" class="s-stroke-coral" stroke-width="4"/>
+  <line x1="475" y1="165" x2="475" y2="195" class="s-stroke-teal" stroke-width="4"/>
+  <rect x="60" y="210" width="210" height="56" rx="12" class="s-tile"/>
+  <text x="165" y="235" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="16" font-weight="700">modal judges fact</text>
+  <text x="165" y="254" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="12">modal + perfect infinitive</text>
+  <rect x="370" y="210" width="210" height="56" rx="12" class="s-tile"/>
+  <text x="475" y="235" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="16" font-weight="700">mood judges modal</text>
+  <text x="475" y="254" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="12">hätte + double infinitive</text>
+</svg>

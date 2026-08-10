@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="Contrast between necessity, absence of necessity, and prohibition">
+  <text x="320" y="31" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Three different force states</text>
+  <rect x="30" y="65" width="180" height="98" rx="14" class="s-tile"/>
+  <text x="120" y="101" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="21" font-weight="700">müssen</text>
+  <text x="120" y="130" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="15">required</text>
+  <rect x="230" y="65" width="180" height="98" rx="14" class="s-tile"/>
+  <text x="320" y="101" text-anchor="middle" class="s-sun" font-family="system-ui, sans-serif" font-size="21" font-weight="700">nicht müssen</text>
+  <text x="320" y="130" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="15">optional</text>
+  <rect x="430" y="65" width="180" height="98" rx="14" class="s-tile"/>
+  <text x="520" y="101" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="21" font-weight="700">nicht dürfen</text>
+  <text x="520" y="130" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="15">forbidden</text>
+  <line x1="120" y1="180" x2="120" y2="207" class="s-stroke-teal" stroke-width="4"/>
+  <line x1="320" y1="180" x2="320" y2="207" class="s-stroke-line" stroke-width="4"/>
+  <line x1="520" y1="180" x2="520" y2="207" class="s-stroke-coral" stroke-width="4"/>
+  <text x="120" y="240" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="17" font-weight="700">must</text>
+  <text x="320" y="240" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="17" font-weight="700">need not</text>
+  <text x="520" y="240" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="17" font-weight="700">must not</text>
+  <text x="320" y="278" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">negation changes which modal German selects</text>
+</svg>
