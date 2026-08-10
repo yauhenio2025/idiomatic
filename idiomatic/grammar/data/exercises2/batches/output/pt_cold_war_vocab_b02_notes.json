@@ -33,10 +33,10 @@
     "alts": ["a política intervencionista"],
     "register": "Termo formal de política externa e economia; o contexto deve indicar se se trata de intervenção em outros Estados ou na economia nacional.",
     "trap": "Intervencionismo não identifica sozinho o domínio: pode descrever ingerência externa ou ampla atuação estatal na economia doméstica.",
-    "example_tl": "O intervencionismo de Washington enfraqueceu governos eleitos e alimentou um antiamericanismo que sobreviveu muito depois do fim da Guerra Fria.",
-    "example_en": "Washington's interventionism weakened elected governments and fueled an anti-Americanism that survived long after the end of the Cold War.",
-    "cloze": "{{c1::O intervencionismo}} de Washington enfraqueceu governos eleitos e alimentou um antiamericanismo que sobreviveu muito depois do fim da Guerra Fria.",
-    "note": "The example fixes the foreign-policy sense; old_back supplies the right lexeme but omits the pedagogically useful article."
+    "example_tl": "Diversos historiadores associaram o intervencionismo de Washington ao enfraquecimento de governos eleitos e a um antiamericanismo que perdurou após a Guerra Fria.",
+    "example_en": "Various historians linked Washington's interventionism to the weakening of elected governments and to anti-Americanism that endured after the Cold War.",
+    "cloze": "Diversos historiadores associaram {{c1::o intervencionismo}} de Washington ao enfraquecimento de governos eleitos e a um antiamericanismo que perdurou após a Guerra Fria.",
+    "note": "The example fixes the foreign-policy sense; old_back supplies the right lexeme but omits the pedagogically useful article. Audit review attributed the historical assessment."
   },
   {
     "id": "it_cold_war_vocab_047",
@@ -120,14 +120,16 @@
     "id": "it_cold_war_vocab_061",
     "en": "the Militancy",
     "category": "lexical-noun",
-    "tl": "a militância política",
-    "alts": [],
-    "register": "Termo neutro-formal para a participação ativa e continuada em partido ou movimento; por si só, não implica violência nem extremismo.",
-    "trap": "O inglês militancy costuma salientar combatividade; em português, militância geralmente indica participação ou filiação ativa, e o falso paralelo pode alterar o sentido.",
-    "example_tl": "A militância política sustentou redes clandestinas de imprensa e solidariedade, embora o exílio e a repressão reduzissem a capacidade organizativa dos partidos.",
-    "example_en": "Political activism sustained clandestine press and solidarity networks, although exile and repression reduced the parties' organizational capacity.",
-    "cloze": "{{c1::A militância política}} sustentou redes clandestinas de imprensa e solidariedade, embora o exílio e a repressão reduzissem a capacidade organizativa dos partidos.",
-    "note": "Materially sharpens old_back by fixing the political-participation sense. If English militancy instead means aggressive conduct, combatividade would be preferable; the source cluster supports the Romance political sense."
+    "tl": "a combatividade",
+    "alts": [
+      "a postura combativa"
+    ],
+    "register": "Termo neutro-formal para uma disposição firme e confrontadora na ação política, sindical ou social; pode ser retórica e não implica necessariamente violência.",
+    "trap": "Em português, militância geralmente indica participação ou filiação ativa e não equivale ao inglês militancy quando este salienta uma postura combativa.",
+    "example_tl": "A combatividade do sindicato aumentou após o fracasso das negociações, embora seus dirigentes continuassem a rejeitar explicitamente a violência política.",
+    "example_en": "The union's militancy increased after negotiations failed, although its leaders continued explicitly to reject political violence.",
+    "cloze": "{{c1::A combatividade}} do sindicato aumentou após o fracasso das negociações, embora seus dirigentes continuassem a rejeitar explicitamente a violência política.",
+    "note": "Materially corrects the false-friend legacy rendering: Portuguese militância normally means membership or organized activism, whereas the English prompt foregrounds a combative posture."
   },
   {
     "id": "it_cold_war_vocab_063",

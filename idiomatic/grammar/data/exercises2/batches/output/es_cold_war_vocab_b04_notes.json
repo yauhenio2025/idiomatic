@@ -59,9 +59,9 @@
     "alts": ["la falta de alfabetización"],
     "register": "Término neutral-formal de educación y política pública para el fenómeno social; la alternativa descriptiva evita convertir una carencia en una etiqueta personal.",
     "trap": "Analfabetismo funcional es un concepto más estrecho: describe capacidades insuficientes para tareas cotidianas y no equivale sin más a toda falta de alfabetización.",
-    "example_tl": "El analfabetismo persistió en zonas rurales donde la expansión escolar no vino acompañada de plantillas docentes estables, transporte escolar ni materiales suficientes.",
-    "example_en": "Illiteracy persisted in rural areas where school expansion was not accompanied by stable teaching staff, school transport, or sufficient materials.",
-    "cloze": "{{c1::El analfabetismo}} persistió en zonas rurales donde la expansión escolar no vino acompañada de plantillas docentes estables, transporte escolar ni materiales suficientes.",
+    "example_tl": "El analfabetismo persistió en zonas rurales donde la expansión escolar no vino acompañada de plantillas docentes estables, transporte para el alumnado ni materiales suficientes.",
+    "example_en": "Illiteracy persisted in rural areas where school expansion was not accompanied by stable teaching staff, transport for pupils, or sufficient materials.",
+    "cloze": "{{c1::El analfabetismo}} persistió en zonas rurales donde la expansión escolar no vino acompañada de plantillas docentes estables, transporte para el alumnado ni materiales suficientes.",
     "note": "Old_back is accurate; the card adds the important distinction between the general phenomenon and functional illiteracy. Self-review specified stable teaching staffs and school transport for a more coherent rural-education example."
   },
   {
@@ -176,10 +176,10 @@
     "alts": [],
     "register": "Término histórico y político generalmente crítico para un Estado formalmente soberano cuya política está decisivamente condicionada por una potencia.",
     "trap": "Estado satélite es una etiqueta evaluativa de dependencia, no una categoría jurídica neutral ni una referencia a tecnología espacial.",
-    "example_tl": "Como Estado satélite, el país conservaba instituciones propias, pero Moscú condicionaba su política exterior, su aparato de seguridad y sus prioridades económicas.",
-    "example_en": "As a satellite state, the country retained its own institutions, but Moscow shaped its foreign policy, security apparatus, and economic priorities.",
-    "cloze": "Como {{c1::Estado satélite}}, el país conservaba instituciones propias, pero Moscú condicionaba su política exterior, su aparato de seguridad y sus prioridades económicas.",
-    "note": "Old_back is accurate. The register warning prevents the historical label from being taught as a value-neutral constitutional status."
+    "example_tl": "En numerosos estudios occidentales, el país fue descrito como Estado satélite porque Moscú condicionaba su política exterior, su aparato de seguridad y sus prioridades económicas.",
+    "example_en": "In many Western studies, the country was described as a satellite state because Moscow shaped its foreign policy, security apparatus, and economic priorities.",
+    "cloze": "En numerosos estudios occidentales, el país fue descrito como {{c1::Estado satélite}} porque Moscú condicionaba su política exterior, su aparato de seguridad y sus prioridades económicas.",
+    "note": "Old_back is accurate. The register warning prevents the historical label from being taught as a value-neutral constitutional status, and audit review attributed that label in the example."
   },
   {
     "id": "it_cold_war_vocab_145",
@@ -332,10 +332,10 @@
     "alts": [],
     "register": "Nombre histórico de la política de reestructuración económica e institucional impulsada por Mijaíl Gorbachov en la Unión Soviética.",
     "trap": "Perestroika se escribe con minúscula como nombre común adaptado; reestructuración explica el significado, pero no identifica por sí sola la reforma soviética.",
-    "example_tl": "La perestroika intentó reformar la economía soviética mediante mayor autonomía empresarial, pero agravó desequilibrios que el sistema administrativo había mantenido ocultos.",
-    "example_en": "Perestroika sought to reform the Soviet economy through greater enterprise autonomy, but it worsened imbalances that the administrative system had kept hidden.",
-    "cloze": "{{c1::La perestroika}} intentó reformar la economía soviética mediante mayor autonomía empresarial, pero agravó desequilibrios que el sistema administrativo había mantenido ocultos.",
-    "note": "Materially normalizes old_back's capitalization and removes the explanatory parenthesis from the production headword."
+    "example_tl": "Los partidarios de la perestroika buscaban reformar la economía soviética mediante mayor autonomía empresarial, mientras sus críticos advertían que las reformas podían agravar los desequilibrios existentes.",
+    "example_en": "Supporters of perestroika sought to reform the Soviet economy through greater enterprise autonomy, while critics warned that the reforms could worsen existing imbalances.",
+    "cloze": "Los partidarios {{c1::de la perestroika}} buscaban reformar la economía soviética mediante mayor autonomía empresarial, mientras sus críticos advertían que las reformas podían agravar los desequilibrios existentes.",
+    "note": "Materially normalizes old_back's capitalization and removes the explanatory parenthesis from the production headword. Audit review replaced an unattributed causal assessment in the example."
   },
   {
     "id": "it_cold_war_vocab_159",

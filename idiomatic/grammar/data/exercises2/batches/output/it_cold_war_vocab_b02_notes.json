@@ -94,14 +94,14 @@
     "id": "it_cold_war_vocab_061",
     "en": "the Militancy",
     "category": "lexical-noun",
-    "tl": "la militanza politica",
-    "alts": ["l'impegno militante"],
-    "register": "Termine neutro-formale per la partecipazione attiva e continuativa a un partito o movimento; non implica di per sé violenza o estremismo.",
-    "trap": "L'inglese militancy sottolinea spesso la combattività; l'italiano militanza indica normalmente appartenenza e attivismo organizzato, creando un falso parallelismo semantico.",
-    "example_tl": "La militanza politica mantenne attive reti clandestine di stampa e solidarietà, sebbene l'esilio avesse drasticamente ridotto la capacità organizzativa dei partiti.",
-    "example_en": "Political activism kept clandestine press and solidarity networks active, although exile had drastically reduced the parties' organizational capacity.",
-    "cloze": "{{c1::La militanza politica}} mantenne attive reti clandestine di stampa e solidarietà, sebbene l'esilio avesse drasticamente ridotto la capacità organizzativa dei partiti.",
-    "note": "Materially sharpens old_back by fixing the political-participation sense. If the English prompt intended aggressive conduct instead, combattività would be preferable; the source cluster supports the Romance political sense."
+    "tl": "la combattività",
+    "alts": ["l'atteggiamento combattivo"],
+    "register": "Termine neutro-formale per una disposizione ferma e conflittuale nell'azione politica, sindacale o sociale; può essere retorica e non implica necessariamente violenza.",
+    "trap": "L'italiano militanza indica normalmente appartenenza o attivismo organizzato e non equivale all'inglese militancy quando questo sottolinea una postura combattiva.",
+    "example_tl": "La combattività del sindacato aumentò dopo il fallimento dei negoziati, sebbene i dirigenti continuassero a respingere esplicitamente la violenza politica.",
+    "example_en": "The union's militancy increased after negotiations failed, although its leaders continued explicitly to reject political violence.",
+    "cloze": "{{c1::La combattività}} del sindacato aumentò dopo il fallimento dei negoziati, sebbene i dirigenti continuassero a respingere esplicitamente la violenza politica.",
+    "note": "Materially corrects the false-friend legacy rendering: Italian militanza normally means membership or organized activism, whereas the English prompt foregrounds a combative posture."
   },
   {
     "id": "it_cold_war_vocab_063",

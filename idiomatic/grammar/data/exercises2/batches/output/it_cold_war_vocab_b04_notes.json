@@ -250,14 +250,14 @@
     "id": "it_cold_war_vocab_148",
     "en": "the Underground",
     "category": "lexical-noun",
-    "tl": "la clandestinità",
-    "alts": [],
-    "register": "Termine neutro-formale per la condizione e l'insieme delle pratiche di chi svolge attività politica illegalmente e in segreto.",
-    "trap": "Nel senso politico underground non è sotterraneo; se indica specificamente le persone o l'organizzazione, servono movimento clandestino o rete clandestina.",
-    "example_tl": "La clandestinità impose agli oppositori identità false, comunicazioni cifrate e riunioni frammentate, riducendo la capacità del regime di smantellare intere reti.",
-    "example_en": "Operating underground forced opponents to use false identities, coded communications, and fragmented meetings, reducing the regime's ability to dismantle entire networks.",
-    "cloze": "{{c1::La clandestinità}} impose agli oppositori identità false, comunicazioni cifrate e riunioni frammentate, riducendo la capacità del regime di smantellare intere reti.",
-    "note": "The English prompt is polysemous; old_back selects the state of operating underground, and the trap records the different rendering required for an underground organization."
+    "tl": "il movimento clandestino",
+    "alts": ["la resistenza clandestina"],
+    "register": "Termine neutro-formale per una rete o organizzazione politica che opera illegalmente e in segreto; resistenza clandestina è adatto quando l'opposizione a un regime è esplicita.",
+    "trap": "Nel senso politico underground non è sotterraneo; clandestinità indica la condizione o il metodo operativo, non il movimento designato dal sostantivo inglese con articolo determinativo.",
+    "example_tl": "Il movimento clandestino coordinò l'uso di identità false, comunicazioni cifrate e cellule separate, riducendo la capacità del regime di smantellare l'intera rete.",
+    "example_en": "The underground movement coordinated the use of false identities, coded communications, and separate cells, reducing the regime's ability to dismantle the entire network.",
+    "cloze": "{{c1::Il movimento clandestino}} coordinò l'uso di identità false, comunicazioni cifrate e cellule separate, riducendo la capacità del regime di smantellare l'intera rete.",
+    "note": "Materially corrects the semantic shift in old_back: the definite English noun denotes a covert political network or movement, whereas clandestinità names the condition or practice of operating underground."
   },
   {
     "id": "it_cold_war_vocab_149",
@@ -358,10 +358,10 @@
     "alts": [],
     "register": "Prestito storico-politico russo, femminile e invariabile, per l'insieme delle riforme politico-economiche avviate da Gorbačëv dal 1985.",
     "trap": "La grafia italiana di riferimento è perestrojka con j; ristrutturazione spiega l'etimo ma non sostituisce sempre il nome della politica sovietica.",
-    "example_tl": "La perestrojka tentò di riformare economia e istituzioni sovietiche, ma innescò dinamiche politiche che la dirigenza non riuscì più a controllare.",
-    "example_en": "Perestroika attempted to reform the Soviet economy and institutions but triggered political dynamics that the leadership could no longer control.",
-    "cloze": "{{c1::La perestrojka}} tentò di riformare economia e istituzioni sovietiche, ma innescò dinamiche politiche che la dirigenza non riuscì più a controllare.",
-    "note": "Old_back already uses the standard Italian transliteration. Self-review omitted ristrutturazione from alts because it is explanatory and changed liberò to the more idiomatic innescò."
+    "example_tl": "I sostenitori della perestrojka volevano riformare l'economia e le istituzioni sovietiche, mentre i critici temevano dinamiche politiche che la dirigenza non avrebbe saputo controllare.",
+    "example_en": "Supporters of perestroika wanted to reform the Soviet economy and institutions, while critics feared political dynamics that the leadership would be unable to control.",
+    "cloze": "I sostenitori {{c1::della perestrojka}} volevano riformare l'economia e le istituzioni sovietiche, mentre i critici temevano dinamiche politiche che la dirigenza non avrebbe saputo controllare.",
+    "note": "Old_back already uses the standard Italian transliteration. Self-review omitted ristrutturazione from alts because it is explanatory. Audit review replaced an unattributed causal assessment in the example."
   },
   {
     "id": "it_cold_war_vocab_159",

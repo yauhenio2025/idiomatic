@@ -107,14 +107,16 @@
     "id": "it_cold_war_vocab_061",
     "en": "the Militancy",
     "category": "lexical-noun",
-    "tl": "le militantisme",
-    "alts": [],
-    "register": "Neutral term for sustained activist or party engagement; the surrounding noun or adjective normally identifies the cause or organization.",
-    "trap": "English militancy often suggests aggressiveness, whereas French militantisme can describe peaceful activism; combativité is preferable when confrontation itself is central.",
-    "example_tl": "Le militantisme syndical s’est intensifié dans les mines, où les revendications salariales se mêlaient désormais à une contestation plus large du régime.",
-    "example_en": "Trade-union activism intensified in the mines, where wage demands were now merging with a broader challenge to the regime.",
-    "cloze": "{{c1::Le militantisme}} syndical s’est intensifié dans les mines, où les revendications salariales se mêlaient désormais à une contestation plus large du régime.",
-    "note": "Old_back gives the intended French term, but the English prompt is potentially stronger; the example fixes the organized-activism sense inherited from the source sequence."
+    "tl": "la combativité",
+    "alts": [
+      "l’attitude combative"
+    ],
+    "register": "Neutral-formal term for a firm, confrontational disposition in political, trade-union, or social action; it can be rhetorical and does not necessarily imply violence.",
+    "trap": "French militantisme usually denotes organized activism and is weaker than English militancy when the latter foregrounds a combative posture.",
+    "example_tl": "La combativité du syndicat s’est accrue après l’échec des négociations, bien que ses dirigeants aient continué de rejeter explicitement la violence politique.",
+    "example_en": "The union's militancy increased after negotiations failed, although its leaders continued explicitly to reject political violence.",
+    "cloze": "{{c1::La combativité}} du syndicat s’est accrue après l’échec des négociations, bien que ses dirigeants aient continué de rejeter explicitement la violence politique.",
+    "note": "Materially corrects the false-friend legacy rendering: French militantisme normally means organized activism, whereas the English prompt foregrounds a combative posture."
   },
   {
     "id": "it_cold_war_vocab_063",

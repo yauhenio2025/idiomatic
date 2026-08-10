@@ -1,0 +1,1568 @@
+[
+  {
+    "id": "it_cold_war_vocab_001",
+    "en": "the Military coup",
+    "category": "lexical-noun",
+    "tl": "il colpo di Stato militare",
+    "alts": [
+      "il golpe militare"
+    ],
+    "register": "Colpo di Stato militare è la locuzione neutra e formale; golpe militare è comune nel linguaggio giornalistico e lievemente più marcato.",
+    "trap": "Nella locuzione colpo di Stato, Stato si scrive tradizionalmente con la maiuscola; un semplice colpo non implica necessariamente la presa del potere.",
+    "example_tl": "Il colpo di Stato militare rovesciò il governo eletto, sospese il parlamento e affidò ai vertici delle forze armate la gestione dell'ordine pubblico.",
+    "example_en": "The military coup overthrew the elected government, suspended parliament, and entrusted the senior armed-forces leadership with maintaining public order.",
+    "cloze": "{{c1::Il colpo di Stato militare}} rovesciò il governo eletto, sospese il parlamento e affidò ai vertici delle forze armate la gestione dell'ordine pubblico.",
+    "note": "Old_back identifies the right expression; the card adds the journalistic alternative and fixes the established capitalization and seizure-of-power sense."
+  },
+  {
+    "id": "it_cold_war_vocab_006",
+    "en": "the Guerillas",
+    "category": "lexical-noun",
+    "tl": "i guerriglieri",
+    "alts": [
+      "i combattenti della guerriglia"
+    ],
+    "register": "Termine neutro in storiografia e cronaca dei conflitti per indicare i singoli combattenti irregolari; l'alternativa esplicita è meno compatta.",
+    "trap": "I guerriglieri sono le persone, mentre la guerriglia è soprattutto la forma di lotta; la grafia italiana richiede inoltre la doppia r.",
+    "example_tl": "I guerriglieri sfruttarono il controllo delle zone montuose per interrompere i rifornimenti dell'esercito, evitando però uno scontro frontale con reparti meglio equipaggiati.",
+    "example_en": "The guerrillas exploited their control of the mountain areas to disrupt army supplies, while avoiding a frontal clash with better-equipped units.",
+    "cloze": "{{c1::I guerriglieri}} sfruttarono il controllo delle zone montuose per interrompere i rifornimenti dell'esercito, evitando però uno scontro frontale con reparti meglio equipaggiati.",
+    "note": "Old_back is accurate; the note makes explicit the person-versus-form-of-warfare distinction obscured by the misspelled English source form."
+  },
+  {
+    "id": "it_cold_war_vocab_011",
+    "en": "the Capitalism",
+    "category": "lexical-noun",
+    "tl": "il capitalismo",
+    "alts": [
+      "il sistema capitalistico"
+    ],
+    "register": "Termine neutro dell'economia politica; sistema capitalistico è utile quando si vuole sottolineare l'assetto istituzionale anziché la dottrina astratta.",
+    "trap": "In italiano i nomi di sistemi e dottrine usati nel discorso tendono a richiedere l'articolo: il capitalismo, non semplicemente *capitalismo sul modello inglese.",
+    "example_tl": "Nel dopoguerra, il capitalismo occidentale fu presentato come argine al comunismo, benché molti alleati di Washington limitassero libertà sindacali e concorrenza politica.",
+    "example_en": "After the war, Western capitalism was presented as a bulwark against communism, although many of Washington's allies restricted trade-union freedoms and political competition.",
+    "cloze": "Nel dopoguerra, {{c1::il capitalismo}} occidentale fu presentato come argine al comunismo, benché molti alleati di Washington limitassero libertà sindacali e concorrenza politica.",
+    "note": "Retained here under the exact-duplicate report, which assigns this prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_014",
+    "en": "the Regime",
+    "category": "lexical-noun",
+    "tl": "il regime",
+    "alts": [],
+    "register": "Neutro-formale per un ordinamento politico, ma nella cronaca contemporanea riferirlo a un governo suggerisce spesso autoritarismo o scarsa legittimità.",
+    "trap": "L'italiano ha l'accento tonico sulla seconda sillaba, regìme, e il plurale regimi; lo spagnolo régimen può indurre accento e forma errati.",
+    "example_tl": "Il regime consolidò il proprio potere nominando giudici fedeli, asservendo la stampa e trasformando lo stato d'emergenza in una modalità ordinaria di governo.",
+    "example_en": "The regime consolidated its power by appointing loyal judges, subjugating the press, and turning the state of emergency into an ordinary mode of government.",
+    "cloze": "{{c1::Il regime}} consolidò il proprio potere nominando giudici fedeli, asservendo la stampa e trasformando lo stato d'emergenza in una modalità ordinaria di governo.",
+    "note": "Old_back has the correct headword; the retained card supplies the Italian stress and plural pattern plus the term's common pragmatic coloring."
+  },
+  {
+    "id": "it_cold_war_vocab_016",
+    "en": "Authoritarian",
+    "category": "lexical-adjective",
+    "tl": "autoritario",
+    "alts": [
+      "di stampo autoritario"
+    ],
+    "register": "Aggettivo neutro-formale della scienza politica per un potere che limita nettamente pluralismo, partecipazione e contrappesi istituzionali.",
+    "trap": "L'inglese authoritative si rende di norma con autorevole, non autoritario; autorizzato significa invece permitted, non authoritarian.",
+    "example_tl": "Il governo rimase autoritario nonostante le elezioni, poiché l'opposizione non accedeva ai media pubblici e i giudici subivano pressioni sistematiche.",
+    "example_en": "The government remained authoritarian despite the elections, since the opposition had no access to public media and judges faced systematic pressure.",
+    "cloze": "Il governo rimase {{c1::autoritario}} nonostante le elezioni, poiché l'opposizione non accedeva ai media pubblici e i giudici subivano pressioni sistematiche.",
+    "note": "Retained here under the exact-duplicate report. Old_back is accurate, while the card records the productive authoritative/autorevole interference risk."
+  },
+  {
+    "id": "it_cold_war_vocab_018",
+    "en": "the Exile",
+    "category": "lexical-noun",
+    "tl": "l'esilio",
+    "alts": [],
+    "register": "Termine neutro-formale per l'allontanamento forzato o la conseguente vita fuori dal proprio paese; ricorre spesso nella locuzione senza articolo in esilio.",
+    "trap": "L'esilio è la condizione; la persona è un esule o un esiliato. Nella locuzione in esilio non si inserisce l'articolo sul modello di altre lingue romanze.",
+    "example_tl": "In esilio, l'ex ministro coordinò una rete di giornalisti che documentava le violazioni e manteneva aperti canali riservati con le cancellerie europee.",
+    "example_en": "In exile, the former minister coordinated a network of journalists that documented the abuses and kept confidential channels open with European foreign ministries.",
+    "cloze": "In {{c1::esilio}}, l'ex ministro coordinò una rete di giornalisti che documentava le violazioni e manteneva aperti canali riservati con le cancellerie europee.",
+    "note": "Old_back is accurate; the example deliberately tests the high-value articleless phrase in esilio rather than merely repeating the citation form."
+  },
+  {
+    "id": "it_cold_war_vocab_020",
+    "en": "the Junta",
+    "category": "lexical-noun",
+    "tl": "la giunta militare",
+    "alts": [
+      "la giunta"
+    ],
+    "register": "Termine neutro della storia politica per il collegio militare che assume il potere; la forma breve basta soltanto quando il contesto è inequivocabile.",
+    "trap": "In italiano giunta indica normalmente anche un organo esecutivo comunale o regionale; militare seleziona il senso del termine inglese junta.",
+    "example_tl": "La giunta militare promise un rapido ritorno al governo civile, ma prorogò lo stato d'assedio e trasferì ai tribunali militari i processi politici.",
+    "example_en": "The junta promised a swift return to civilian government but extended the state of siege and transferred political trials to military courts.",
+    "cloze": "{{c1::La giunta militare}} promise un rapido ritorno al governo civile, ma prorogò lo stato d'assedio e trasferì ai tribunali militari i processi politici.",
+    "note": "Materially sharpens old_back: la giunta is possible in context, but the expanded headword fixes the intended military sense."
+  },
+  {
+    "id": "it_cold_war_vocab_021",
+    "en": "the Counterinsurgency",
+    "category": "lexical-noun",
+    "tl": "la controinsurrezione",
+    "alts": [
+      "la strategia di controinsurrezione"
+    ],
+    "register": "Termine tecnico della dottrina militare e degli studi sulla sicurezza; comprende strumenti politici e civili oltre alle operazioni armate.",
+    "trap": "Non va calcato come *contrainsurgenza: l'italiano usa controinsurrezione, in grafia unita; controguerriglia tende a indicare il versante più strettamente operativo.",
+    "example_tl": "La controinsurrezione combinò operazioni militari, attività d'intelligence e programmi civili, subordinando però ogni intervento alle priorità di sicurezza del governo.",
+    "example_en": "The counterinsurgency combined military operations, intelligence activities, and civilian programs, while subordinating every intervention to the government's security priorities.",
+    "cloze": "{{c1::La controinsurrezione}} combinò operazioni militari, attività d'intelligence e programmi civili, subordinando però ogni intervento alle priorità di sicurezza del governo.",
+    "note": "Old_back gives the established specialist term; the card clarifies its broader scope relative to controguerriglia."
+  },
+  {
+    "id": "it_cold_war_vocab_022",
+    "en": "the OAS (Organization of American States)",
+    "category": "lexical-noun",
+    "tl": "l'Organizzazione degli Stati americani (OSA)",
+    "alts": [
+      "l'OSA"
+    ],
+    "register": "Denominazione istituzionale italiana; alla prima menzione si usa il nome completo, mentre in seguito basta la sigla femminile OSA.",
+    "trap": "La sigla inglese OAS viene normalmente adattata in italiano a OSA, da Organizzazione degli Stati americani; non va confusa con la sigla romanza OEA.",
+    "example_tl": "L'Organizzazione degli Stati americani (OSA) inviò osservatori elettorali, ma evitò una condanna formale per non spezzare il fragile consenso regionale.",
+    "example_en": "The Organization of American States (OAS) sent election observers but avoided a formal condemnation so as not to shatter the fragile regional consensus.",
+    "cloze": "{{c1::L'Organizzazione degli Stati americani (OSA)}} inviò osservatori elettorali, ma evitò una condanna formale per non spezzare il fragile consenso regionale.",
+    "note": "Old_back has the correct Italian acronym. The capitalization follows standard Italian institutional spelling, with americani lowercase."
+  },
+  {
+    "id": "it_cold_war_vocab_023",
+    "en": "the Proxy wars",
+    "category": "lexical-noun",
+    "tl": "le guerre per procura",
+    "alts": [
+      "i conflitti per procura"
+    ],
+    "register": "Locuzione formale e corrente nell'analisi geopolitica per conflitti locali sostenuti da potenze esterne che evitano uno scontro diretto.",
+    "trap": "Per procura è la locuzione italiana stabilita: *guerre proxy è un anglicismo evitabile e non significa semplicemente guerre combattute da stati satelliti.",
+    "example_tl": "Le guerre per procura permisero alle superpotenze di armare attori locali e contendersi aree d'influenza senza affrontarsi direttamente sul campo.",
+    "example_en": "Proxy wars allowed the superpowers to arm local actors and compete for spheres of influence without confronting each other directly on the battlefield.",
+    "cloze": "{{c1::Le guerre per procura}} permisero alle superpotenze di armare attori locali e contendersi aree d'influenza senza affrontarsi direttamente sul campo.",
+    "note": "Old_back is accurate and idiomatic; the card distinguishes the established geopolitical expression from an unnecessary English loan."
+  },
+  {
+    "id": "it_cold_war_vocab_026",
+    "en": "the Diplomacy",
+    "category": "lexical-noun",
+    "tl": "la diplomazia",
+    "alts": [
+      "l'azione diplomatica"
+    ],
+    "register": "Termine neutro-formale per la pratica e gli strumenti con cui si gestiscono le relazioni internazionali attraverso negoziazione e rappresentanza.",
+    "trap": "Diplomazia designa la pratica o l'ambito istituzionale; chi la esercita è un diplomatico e l'insieme dei funzionari costituisce il corpo diplomatico.",
+    "example_tl": "Dopo settimane di minacce pubbliche, la diplomazia riaprì canali riservati attraverso i quali le due potenze negoziarono uno scambio di prigionieri.",
+    "example_en": "After weeks of public threats, diplomacy reopened confidential channels through which the two powers negotiated a prisoner exchange.",
+    "cloze": "Dopo settimane di minacce pubbliche, {{c1::la diplomazia}} riaprì canali riservati attraverso i quali le due potenze negoziarono uno scambio di prigionieri.",
+    "note": "Retained here under the exact-duplicate report, which assigns this prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB."
+  },
+  {
+    "id": "it_cold_war_vocab_029",
+    "en": "the Trade barriers",
+    "category": "lexical-noun",
+    "tl": "le barriere commerciali",
+    "alts": [
+      "gli ostacoli agli scambi commerciali"
+    ],
+    "register": "Termine formale della politica commerciale; l'alternativa è frequente nel linguaggio istituzionale e mette in primo piano gli scambi ostacolati.",
+    "trap": "Le barriere commerciali non sono soltanto dazi: comprendono anche quote, licenze, divieti e requisiti tecnici discriminatori.",
+    "example_tl": "Le barriere commerciali resero più costosi i macchinari importati, rallentarono il trasferimento tecnologico e protessero imprese nazionali prive di incentivi a innovare.",
+    "example_en": "Trade barriers made imported machinery more expensive, slowed technology transfer, and protected domestic firms that lacked incentives to innovate.",
+    "cloze": "{{c1::Le barriere commerciali}} resero più costosi i macchinari importati, rallentarono il trasferimento tecnologico e protessero imprese nazionali prive di incentivi a innovare.",
+    "note": "Old_back is accurate; the retained card fixes the broader tariff and non-tariff scope of the policy term."
+  },
+  {
+    "id": "it_cold_war_vocab_030",
+    "en": "the Censorship",
+    "category": "lexical-noun",
+    "tl": "la censura",
+    "alts": [],
+    "register": "Termine neutro-formale della politica e dei media per il controllo o la soppressione istituzionale di pubblicazioni, notizie ed espressioni.",
+    "trap": "Censura può significare anche biasimo o provvedimento disciplinare; il contesto deve distinguere la censorship informativa dalla censure inglese.",
+    "example_tl": "La censura colpì non soltanto i quotidiani d'opposizione, ma anche le riviste accademiche che contestavano la versione ufficiale della storia nazionale.",
+    "example_en": "Censorship affected not only opposition newspapers but also academic journals that challenged the official version of the country's history.",
+    "cloze": "{{c1::La censura}} colpì non soltanto i quotidiani d'opposizione, ma anche le riviste accademiche che contestavano la versione ufficiale della storia nazionale.",
+    "note": "Retained here under the exact-duplicate report, which assigns this prompt to COLD_WAR_VOCAB; old_back supplies the correct headword."
+  },
+  {
+    "id": "it_cold_war_vocab_032",
+    "en": "the Neoliberalism",
+    "category": "lexical-noun",
+    "tl": "il neoliberismo",
+    "alts": [
+      "il neoliberalismo"
+    ],
+    "register": "Neoliberismo è il termine preferito per la dottrina economica; neoliberalismo è possibile, ma meno comune in economia e anche riferibile a una corrente politica.",
+    "trap": "L'italiano distingue liberalismo politico e liberismo economico; perciò l'inglese neoliberalism non va reso automaticamente con neoliberalismo in un contesto economico.",
+    "example_tl": "Il neoliberismo acquistò influenza negli anni Ottanta, quando i creditori internazionali subordinarono la concessione di nuovi prestiti a privatizzazioni, disciplina fiscale e apertura commerciale.",
+    "example_en": "Neoliberalism gained influence in the 1980s, when international creditors made new loans conditional on privatization, fiscal discipline, and trade liberalization.",
+    "cloze": "{{c1::Il neoliberismo}} acquistò influenza negli anni Ottanta, quando i creditori internazionali subordinarono la concessione di nuovi prestiti a privatizzazioni, disciplina fiscale e apertura commerciale.",
+    "note": "Retained here under the exact-duplicate report. Old_back correctly selects the more idiomatic Italian economic term rather than the closer English cognate."
+  },
+  {
+    "id": "it_cold_war_vocab_035",
+    "en": "the Containment",
+    "category": "lexical-noun",
+    "tl": "la politica di contenimento",
+    "alts": [
+      "la dottrina del contenimento"
+    ],
+    "register": "Termine formale della storiografia della guerra fredda per la strategia volta a frenare un'ulteriore espansione dell'influenza sovietica o comunista.",
+    "trap": "Il solo contenimento indica qualsiasi azione del contenere; politica di contenimento identifica la dottrina strategica selezionata dal contesto storico.",
+    "example_tl": "La politica di contenimento mirava a frenare l'espansione sovietica senza provocare uno scontro diretto tra le due superpotenze nucleari.",
+    "example_en": "The policy of containment aimed to curb Soviet expansion without provoking a direct confrontation between the two nuclear superpowers.",
+    "cloze": "{{c1::La politica di contenimento}} mirava a frenare l'espansione sovietica senza provocare uno scontro diretto tra le due superpotenze nucleari.",
+    "note": "Materially sharpens old_back: il contenimento is a valid generic noun, but it does not by itself identify the Cold War doctrine."
+  },
+  {
+    "id": "it_cold_war_vocab_037",
+    "en": "the Pro-U.S. factions",
+    "category": "lexical-expression",
+    "tl": "le fazioni filoamericane",
+    "alts": [
+      "le fazioni filostatunitensi",
+      "i gruppi favorevoli agli Stati Uniti"
+    ],
+    "register": "Filoamericano è corrente nella pubblicistica e qui americano vale statunitense; filostatunitense è più preciso ma meno agile.",
+    "trap": "Fazione non è *frazione, e il prefissoide filo- si salda all'aggettivo senza spazio né trattino: filoamericano, filostatunitense.",
+    "example_tl": "Le fazioni filoamericane ricevettero finanziamenti occulti, mentre i gruppi neutralisti perdevano presenza nei ministeri e nei sindacati e visibilità nei mezzi d'informazione pubblici.",
+    "example_en": "The pro-U.S. factions received covert funding, while neutralist groups lost their presence in ministries and unions and their visibility in public media.",
+    "cloze": "{{c1::Le fazioni filoamericane}} ricevettero finanziamenti occulti, mentre i gruppi neutralisti perdevano presenza nei ministeri e nei sindacati e visibilità nei mezzi d'informazione pubblici.",
+    "note": "Diverges stylistically from old_back: filostatunitensi is correct and retained as an alternative, while filoamericane is the more established compact journalistic form."
+  },
+  {
+    "id": "it_cold_war_vocab_039",
+    "en": "Disappeared",
+    "category": "lexical-noun",
+    "tl": "i desaparecidos",
+    "alts": [],
+    "register": "Prestito spagnolo storico e giornalistico, usato soprattutto al plurale per le vittime delle dittature latinoamericane; l'alternativa è propria dei diritti umani.",
+    "trap": "I semplici scomparsi sono genericamente persone irreperibili; desaparecidos indica vittime sequestrate clandestinamente da apparati repressivi che ne occultano la sorte.",
+    "example_tl": "I desaparecidos non erano semplici dispersi: molti erano stati sequestrati da agenti statali, che negavano la detenzione e ne occultavano deliberatamente la sorte.",
+    "example_en": "The disappeared were not merely missing: many had been abducted by state agents, who denied detaining them and deliberately concealed their fate.",
+    "cloze": "{{c1::I desaparecidos}} non erano semplici dispersi: molti erano stati sequestrati da agenti statali, che negavano la detenzione e ne occultavano deliberatamente la sorte.",
+    "note": "Materially corrects old_back: the Cold War prompt selects the substantivized human-rights plural, not the isolated singular adjective scomparso. Self-review removed a grammatically feminine alternative that was not interchangeable in the example."
+  },
+  {
+    "id": "it_cold_war_vocab_040",
+    "en": "the Economic sanctions",
+    "category": "lexical-noun",
+    "tl": "le sanzioni economiche",
+    "alts": [],
+    "register": "Termine formale delle relazioni internazionali per restrizioni commerciali o finanziarie imposte allo scopo di modificare la condotta di un altro attore.",
+    "trap": "In italiano sanzionare significa anzitutto approvare o convalidare; per il senso coercitivo sono più chiari imporre sanzioni o colpire con sanzioni.",
+    "example_tl": "Le sanzioni economiche limitarono l'accesso del regime al credito estero, ma rincararono anche alimenti e medicinali per la popolazione civile.",
+    "example_en": "Economic sanctions restricted the regime's access to foreign credit but also made food and medicines more expensive for the civilian population.",
+    "cloze": "{{c1::Le sanzioni economiche}} limitarono l'accesso del regime al credito estero, ma rincararono anche alimenti e medicinali per la popolazione civile.",
+    "note": "Old_back is accurate; the example fixes the coercive international-relations sense and the trap records the counterintuitive primary sense of sanzionare."
+  },
+  {
+    "id": "it_cold_war_vocab_044",
+    "en": "the Ideology",
+    "category": "lexical-noun",
+    "tl": "l'ideologia",
+    "alts": [],
+    "register": "Termine neutro-formale della storia delle idee e dell'analisi politica per un insieme relativamente coerente di principi, valori e rappresentazioni.",
+    "trap": "Ideologia non indica necessariamente una mistificazione: nell'uso accademico può designare in modo neutro il quadro dottrinale di un attore politico.",
+    "example_tl": "L'ideologia ufficiale presentava l'allineamento con Mosca come una necessità storica, benché le élite locali adattassero la dottrina ai propri interessi.",
+    "example_en": "The official ideology presented alignment with Moscow as a historical necessity, although local elites adapted the doctrine to their own interests.",
+    "cloze": "{{c1::L'ideologia}} ufficiale presentava l'allineamento con Mosca come una necessità storica, benché le élite locali adattassero la dottrina ai propri interessi.",
+    "note": "Retained here under the exact-duplicate report, which assigns this prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB. Old_back gives the correct common noun."
+  },
+  {
+    "id": "it_cold_war_vocab_045",
+    "en": "the Arms race",
+    "category": "lexical-noun",
+    "tl": "la corsa agli armamenti",
+    "alts": [
+      "la corsa al riarmo"
+    ],
+    "register": "Locuzione neutro-formale della storiografia e degli studi strategici per la competizione volta ad accumulare o perfezionare armamenti.",
+    "trap": "Il complemento cristallizzato è agli armamenti; *corsa delle armi è un calco inglese, mentre corsa al riarmo mette maggiormente a fuoco il processo di riarmo.",
+    "example_tl": "La corsa agli armamenti assorbì risorse enormi, mentre ogni nuovo sistema missilistico accresceva l'insicurezza che avrebbe dovuto ridurre.",
+    "example_en": "The arms race absorbed enormous resources, while every new missile system increased the insecurity it was supposed to reduce.",
+    "cloze": "{{c1::La corsa agli armamenti}} assorbì risorse enormi, mentre ogni nuovo sistema missilistico accresceva l'insicurezza che avrebbe dovuto ridurre.",
+    "note": "Old_back supplies the established Italian expression; the card records its fixed plural complement and a contextually interchangeable rearmament variant."
+  },
+  {
+    "id": "it_cold_war_vocab_046",
+    "en": "Interventionism",
+    "category": "lexical-noun",
+    "tl": "l'interventismo",
+    "alts": [
+      "la politica interventista"
+    ],
+    "register": "Termine formale della politica estera e dell'economia; il contesto deve precisare se riguarda altri Stati o l'intervento pubblico nell'economia.",
+    "trap": "In italiano interventismo designa anche il movimento favorevole all'ingresso dell'Italia nella Prima guerra mondiale; non equivale a una singola intervention.",
+    "example_tl": "L'interventismo di Washington combinò aiuti economici, pressioni diplomatiche e operazioni clandestine per isolare i governi latinoamericani giudicati vicini a Mosca.",
+    "example_en": "Washington's interventionism combined economic aid, diplomatic pressure, and covert operations to isolate Latin American governments deemed close to Moscow.",
+    "cloze": "{{c1::L'interventismo}} di Washington combinò aiuti economici, pressioni diplomatiche e operazioni clandestine per isolare i governi latinoamericani giudicati vicini a Mosca.",
+    "note": "Old_back identifies the correct lexeme; the example fixes the foreign-policy sense and the trap records the historically marked Italian sense."
+  },
+  {
+    "id": "it_cold_war_vocab_051",
+    "en": "the Christian Democracy",
+    "category": "lexical-noun",
+    "tl": "la Democrazia cristiana",
+    "alts": [
+      "il Partito democratico cristiano"
+    ],
+    "register": "Nome storico-politico della formazione cilena in questo contesto; in senso generico, democrazia cristiana indica invece la famiglia ideologica.",
+    "trap": "Senza una specificazione geografica, Democrazia cristiana richiama facilmente il partito italiano; nel contesto cileno conviene aggiungere cilena o usare il nome del partito.",
+    "example_tl": "In Cile, la Democrazia cristiana promosse una riforma agraria moderata, cercando di ampliare il consenso senza rompere con l'ordine costituzionale.",
+    "example_en": "In Chile, Christian Democracy promoted a moderate agrarian reform, seeking to broaden support without breaking with the constitutional order.",
+    "cloze": "In Cile, {{c1::la Democrazia cristiana}} promosse una riforma agraria moderata, cercando di ampliare il consenso senza rompere con l'ordine costituzionale.",
+    "note": "The surrounding Chilean items select the party label rather than the generic current. Self-review standardized Italian sentence-case capitalization and added geographic disambiguation."
+  },
+  {
+    "id": "it_cold_war_vocab_052",
+    "en": "the Land redistribution",
+    "category": "lexical-noun",
+    "tl": "la redistribuzione delle terre",
+    "alts": [
+      "la ripartizione delle terre"
+    ],
+    "register": "Locuzione neutro-formale della politica agraria; ripartizione delle terre è lievemente più amministrativo e mette a fuoco l'assegnazione dei fondi.",
+    "trap": "Non equivale all'intera riforma agraria: redistribuire le terre modifica la proprietà, mentre una riforma può comprendere credito, contratti e infrastrutture.",
+    "example_tl": "La redistribuzione delle terre ridusse il potere dei latifondisti, ma non garantì ai nuovi assegnatari credito, assistenza tecnica né accesso stabile ai mercati.",
+    "example_en": "Land redistribution reduced the power of large landowners but did not guarantee new allottees credit, technical assistance, or stable access to markets.",
+    "cloze": "{{c1::La redistribuzione delle terre}} ridusse il potere dei latifondisti, ma non garantì ai nuovi assegnatari credito, assistenza tecnica né accesso stabile ai mercati.",
+    "note": "Old_back is accurate. Retained separately from agrarian reform because this item names the transfer of land itself, not the broader policy package."
+  },
+  {
+    "id": "it_cold_war_vocab_054",
+    "en": "the Expropriation",
+    "category": "lexical-noun",
+    "tl": "l'espropriazione",
+    "alts": [],
+    "register": "Termine formale del diritto e della politica economica per la sottrazione coattiva di un bene per interesse pubblico, normalmente dietro indennizzo.",
+    "trap": "L'espropriazione non coincide con la confisca, generalmente punitiva, né con la nazionalizzazione, che trasferisce allo Stato un'impresa o un intero settore.",
+    "example_tl": "L'espropriazione delle miniere richiedeva un indennizzo conforme alla legge, mentre il calcolo dei profitti pregressi alimentava un aspro contenzioso diplomatico.",
+    "example_en": "The expropriation of the mines required compensation in accordance with the law, while the calculation of past profits fueled a bitter diplomatic dispute.",
+    "cloze": "{{c1::L'espropriazione}} delle miniere richiedeva un indennizzo conforme alla legge, mentre il calcolo dei profitti pregressi alimentava un aspro contenzioso diplomatico.",
+    "note": "Old_back gives the correct legal term; the retained card fixes the substantive distinction from confiscation and nationalization."
+  },
+  {
+    "id": "it_cold_war_vocab_057",
+    "en": "the Peasants",
+    "category": "lexical-noun",
+    "tl": "i contadini",
+    "alts": [],
+    "register": "Termine neutro nella storia sociale per la popolazione rurale legata al lavoro della terra; nel discorso professionale contemporaneo agricoltori è spesso più preciso.",
+    "trap": "Contadini non equivale sempre ad agricoltori: è una categoria sociale storica che può comprendere affittuari e piccoli proprietari, ma non coincide con i braccianti.",
+    "example_tl": "I contadini entrarono nelle nuove cooperative, ma molti braccianti senza terra rimasero esclusi dai crediti destinati ai piccoli proprietari.",
+    "example_en": "The peasants joined the new cooperatives, but many landless laborers remained excluded from loans intended for small landowners.",
+    "cloze": "{{c1::I contadini}} entrarono nelle nuove cooperative, ma molti braccianti senza terra rimasero esclusi dai crediti destinati ai piccoli proprietari.",
+    "note": "Old_back is accurate. The example and trap preserve the historical social-category sense without collapsing all rural workers into farm operators."
+  },
+  {
+    "id": "it_cold_war_vocab_061",
+    "en": "the Militancy",
+    "category": "lexical-noun",
+    "tl": "la combattività",
+    "alts": [
+      "l'atteggiamento combattivo"
+    ],
+    "register": "Termine neutro-formale per una disposizione ferma e conflittuale nell'azione politica, sindacale o sociale; può essere retorica e non implica necessariamente violenza.",
+    "trap": "L'italiano militanza indica normalmente appartenenza o attivismo organizzato e non equivale all'inglese militancy quando questo sottolinea una postura combattiva.",
+    "example_tl": "La combattività del sindacato aumentò dopo il fallimento dei negoziati, sebbene i dirigenti continuassero a respingere esplicitamente la violenza politica.",
+    "example_en": "The union's militancy increased after negotiations failed, although its leaders continued explicitly to reject political violence.",
+    "cloze": "{{c1::La combattività}} del sindacato aumentò dopo il fallimento dei negoziati, sebbene i dirigenti continuassero a respingere esplicitamente la violenza politica.",
+    "note": "Materially corrects the false-friend legacy rendering: Italian militanza normally means membership or organized activism, whereas the English prompt foregrounds a combative posture."
+  },
+  {
+    "id": "it_cold_war_vocab_063",
+    "en": "the Agrarian reform",
+    "category": "lexical-noun",
+    "tl": "la riforma agraria",
+    "alts": [],
+    "register": "Termine neutro-formale della storia rurale e delle politiche pubbliche per modifiche alla proprietà, all'uso e all'organizzazione sociale della terra.",
+    "trap": "Agrario riguarda la terra e il suo assetto socioeconomico; agricolo si riferisce soprattutto alla coltivazione o alla produzione e non sostituisce l'aggettivo in questa locuzione.",
+    "example_tl": "La riforma agraria modificò la struttura proprietaria, ma procedette lentamente perché i tribunali bloccavano gli espropri e lo Stato disponeva di pochi tecnici.",
+    "example_en": "Agrarian reform changed the ownership structure but proceeded slowly because the courts blocked expropriations and the state had few technical specialists.",
+    "cloze": "{{c1::La riforma agraria}} modificò la struttura proprietaria, ma procedette lentamente perché i tribunali bloccavano gli espropri e lo Stato disponeva di pochi tecnici.",
+    "note": "Old_back is accurate. This is the strongest item in the land-reform family; the less precise plural Land reforms item is dropped as its constructional duplicate."
+  },
+  {
+    "id": "it_cold_war_vocab_064",
+    "en": "the Urbanization",
+    "category": "lexical-noun",
+    "tl": "l'urbanizzazione",
+    "alts": [],
+    "register": "Termine neutro-formale della demografia e degli studi urbani per la crescita delle città e le trasformazioni territoriali e sociali connesse.",
+    "trap": "Inurbamento indica specificamente l'afflusso verso le città; urbanizzazione è più ampio e, nel linguaggio urbanistico, designa anche l'infrastrutturazione di un'area.",
+    "example_tl": "L'urbanizzazione trasformò le capitali latinoamericane, ma i nuovi quartieri crebbero più rapidamente dei sistemi di trasporto, delle reti fognarie e degli acquedotti.",
+    "example_en": "Urbanization transformed Latin American capitals, but the new neighborhoods grew faster than transport systems, sewer networks, and aqueducts.",
+    "cloze": "{{c1::L'urbanizzazione}} trasformò le capitali latinoamericane, ma i nuovi quartieri crebbero più rapidamente dei sistemi di trasporto, delle reti fognarie e degli acquedotti.",
+    "note": "Old_back is accurate. The card is retained because Italian distinguishes the broader process from inurbamento and also uses the noun in a technical planning sense. Self-review replaced an awkward coordinate structure with parallel infrastructure nouns."
+  },
+  {
+    "id": "it_cold_war_vocab_070",
+    "en": "Left-wing",
+    "category": "lexical-adjective",
+    "tl": "di sinistra",
+    "alts": [],
+    "register": "Locuzione aggettivale neutra e invariabile, normalmente posposta al nome; sinistrorso è marcato e spesso spregiativo.",
+    "trap": "L'aggettivo politico non è *sinistro, che indica il lato sinistro o qualcosa di inquietante: si dice un partito, una coalizione o un governo di sinistra.",
+    "example_tl": "Un governo di sinistra ampliò la contrattazione collettiva, pur mantenendo accordi commerciali che parte del suo elettorato giudicava incompatibili con il programma.",
+    "example_en": "A left-wing government expanded collective bargaining while retaining trade agreements that part of its electorate considered incompatible with its platform.",
+    "cloze": "Un governo {{c1::di sinistra}} ampliò la contrattazione collettiva, pur mantenendo accordi commerciali che parte del suo elettorato giudicava incompatibili con il programma.",
+    "note": "Old_back gives the correct adjectival phrase. Retained for its invariant construction and the sinistro interference risk; the mirrored Right-wing item is dropped as a constructional duplicate."
+  },
+  {
+    "id": "it_cold_war_vocab_074",
+    "en": "the Dissent",
+    "category": "lexical-noun",
+    "tl": "il dissenso",
+    "alts": [],
+    "register": "Termine neutro-formale della politica e della storia intellettuale per un'opposizione esplicita a una linea, dottrina o autorità dominante.",
+    "trap": "Dissenso è più forte di un semplice disaccordo; dissidenza tende a indicare un'opposizione durevole e organizzata, mentre dissidente può nominare la persona.",
+    "example_tl": "Il dissenso si espresse attraverso riviste clandestine, i cui redattori rischiavano il carcere per aver contestato la linea ufficiale del partito.",
+    "example_en": "Dissent found expression through clandestine journals whose editors risked imprisonment for challenging the party's official line.",
+    "cloze": "{{c1::Il dissenso}} si espresse attraverso riviste clandestine, i cui redattori rischiavano il carcere per aver contestato la linea ufficiale del partito.",
+    "note": "Old_back is accurate. Self-review kept dissidenza out of alts because it would narrow the source to sustained or organized opposition."
+  },
+  {
+    "id": "it_cold_war_vocab_077",
+    "en": "the Popular unity",
+    "category": "lexical-noun",
+    "tl": "l'Unità Popolare",
+    "alts": [
+      "l'Unidad Popular"
+    ],
+    "register": "Nome proprio storico della coalizione cilena che sostenne Salvador Allende; la denominazione originale spagnola ricorre anche nella storiografia italiana.",
+    "trap": "Le maiuscole selezionano la coalizione cilena: unità popolare, in minuscolo, è soltanto una descrizione generica della coesione politica o sociale.",
+    "example_tl": "L'Unità Popolare riunì socialisti, comunisti e altre forze di sinistra attorno a un programma comune di trasformazione economica e istituzionale.",
+    "example_en": "Popular Unity brought together socialists, communists, and other left-wing forces around a common program of economic and institutional transformation.",
+    "cloze": "{{c1::L'Unità Popolare}} riunì socialisti, comunisti e altre forze di sinistra attorno a un programma comune di trasformazione economica e istituzionale.",
+    "note": "Materially sharpens old_back by treating the phrase as the proper name selected by the surrounding Chilean items. Self-review retained the original Spanish name as a genuine historiographic alternative."
+  },
+  {
+    "id": "it_cold_war_vocab_078",
+    "en": "the Divestment",
+    "category": "lexical-noun",
+    "tl": "il disinvestimento",
+    "alts": [
+      "la riduzione degli investimenti"
+    ],
+    "register": "Termine formale dell'economia e della finanza per la riduzione del capitale investito, mediante vendita di attività o mancato rinnovo degli impieghi.",
+    "trap": "Dismissione indica l'eliminazione o la cessione di uno specifico bene; disinvestimento mette invece a fuoco il recupero o la riduzione del capitale impiegato.",
+    "example_tl": "Il disinvestimento ridusse la capacità produttiva del paese, mentre la fuga di capitali aggravava la scarsità di valuta e rincarava le importazioni essenziali.",
+    "example_en": "Divestment reduced the country's productive capacity, while capital flight worsened the shortage of foreign currency and made essential imports more expensive.",
+    "cloze": "{{c1::Il disinvestimento}} ridusse la capacità produttiva del paese, mentre la fuga di capitali aggravava la scarsità di valuta e rincarava le importazioni essenziali.",
+    "note": "Old_back is accurate for the macroeconomic sense selected by the source cluster. Ethical divestment would require an explicit motive, while a particular asset sale may favor dismissione."
+  },
+  {
+    "id": "it_cold_war_vocab_080",
+    "en": "the Foreign relations",
+    "category": "lexical-noun",
+    "tl": "le relazioni internazionali",
+    "alts": [
+      "i rapporti con l'estero"
+    ],
+    "register": "Locuzione neutro-formale per i rapporti di uno Stato con altri paesi; relazioni internazionali denomina anche la disciplina accademica.",
+    "trap": "Politica estera indica la strategia dello Stato, non l'insieme dei rapporti che essa gestisce; il contesto distingue inoltre il concetto dalla disciplina accademica.",
+    "example_tl": "Le relazioni internazionali del nuovo governo risentirono del debito, della dipendenza tecnologica e della necessità di preservare i mercati per le esportazioni.",
+    "example_en": "The new government's foreign relations were affected by debt, technological dependence, and the need to preserve markets for exports.",
+    "cloze": "{{c1::Le relazioni internazionali}} del nuovo governo risentirono del debito, della dipendenza tecnologica e della necessità di preservare i mercati per le esportazioni.",
+    "note": "Materially improves old_back: relazioni estere is possible in institutional language, while relazioni internazionali and rapporti con l'estero are more idiomatic for a state's relationships in general prose."
+  },
+  {
+    "id": "it_cold_war_vocab_081",
+    "en": "the Discontent",
+    "category": "lexical-noun",
+    "tl": "il malcontento",
+    "alts": [
+      "lo scontento"
+    ],
+    "register": "Termine neutro-formale della storia sociale e politica per un'insoddisfazione diffusa, spesso condivisa da un gruppo o da una popolazione.",
+    "trap": "Malcontento può indicare sia il sentimento sia, collettivamente, chi lo prova; scontento tende a descrivere più genericamente l'insoddisfazione e non equivale a dissenso organizzato.",
+    "example_tl": "Il malcontento crebbe nelle periferie urbane, dove il miracolo economico prometteva mobilità sociale ma lasciava milioni di famiglie senza servizi essenziali.",
+    "example_en": "Discontent grew on the urban outskirts, where the economic miracle promised social mobility but left millions of families without essential services.",
+    "cloze": "{{c1::Il malcontento}} crebbe nelle periferie urbane, dove il miracolo economico prometteva mobilità sociale ma lasciava milioni di famiglie senza servizi essenziali.",
+    "note": "Old_back is accurate. Retained separately from the preceding Dissent card because malcontento names a diffuse social mood rather than articulated opposition to an authority or doctrine."
+  },
+  {
+    "id": "it_cold_war_vocab_084",
+    "en": "Developmentalism",
+    "category": "lexical-noun",
+    "tl": "lo sviluppismo",
+    "alts": [
+      "l'ideologia sviluppista"
+    ],
+    "register": "Termine formale delle scienze sociali, spesso critico, per una politica che subordina altri obiettivi alla crescita economica e infrastrutturale accelerata.",
+    "trap": "Sviluppismo non è il semplice sviluppo economico: in italiano comporta spesso una valutazione negativa della crescita perseguita come fine dominante.",
+    "example_tl": "I sostenitori dello sviluppismo dei governi militari esaltavano le grandi opere e la crescita industriale, mentre i critici denunciavano la scarsa tutela ambientale e la debole redistribuzione del reddito.",
+    "example_en": "Supporters of the military governments' developmentalism praised major projects and industrial growth, while critics denounced weak environmental protection and limited income redistribution.",
+    "cloze": "I sostenitori {{c1::dello sviluppismo}} dei governi militari esaltavano le grandi opere e la crescita industriale, mentre i critici denunciavano la scarsa tutela ambientale e la debole redistribuzione del reddito.",
+    "note": "Old_back identifies the established Italian term. Self-review made its frequent critical connotation explicit so it is not learned as a neutral synonym of sviluppo. Audit review attributed the contested assessment in the example."
+  },
+  {
+    "id": "it_cold_war_vocab_085",
+    "en": "the Import substitution",
+    "category": "lexical-noun",
+    "tl": "la sostituzione delle importazioni",
+    "alts": [
+      "l'industrializzazione per sostituzione delle importazioni"
+    ],
+    "register": "Locuzione formale dell'economia dello sviluppo; la forma estesa nomina con maggiore precisione la strategia di industrializzazione nota anche come ISI.",
+    "trap": "La costruzione stabilizzata usa delle importazioni; *sostituzione d'importazione è un calco, mentre la forma estesa non indica una semplice sostituzione occasionale di merci.",
+    "example_tl": "La sostituzione delle importazioni favorì l'industria nazionale attraverso dazi e credito pubblico, ma accrebbe la dipendenza da tecnologie e capitali stranieri.",
+    "example_en": "Import substitution supported domestic industry through tariffs and public credit, but increased dependence on foreign technology and capital.",
+    "cloze": "{{c1::La sostituzione delle importazioni}} favorì l'industria nazionale attraverso dazi e credito pubblico, ma accrebbe la dipendenza da tecnologie e capitali stranieri.",
+    "note": "Old_back is correct but underspecified as a policy label; the alternative records the full technical name used in development economics."
+  },
+  {
+    "id": "it_cold_war_vocab_087",
+    "en": "Tropicalia (referring to the music and art movement)",
+    "category": "lexical-noun",
+    "tl": "il tropicalismo",
+    "alts": [
+      "Tropicália"
+    ],
+    "register": "Nome storico-culturale del movimento d'avanguardia brasiliano della fine degli anni Sessanta; Tropicália conserva la denominazione portoghese.",
+    "trap": "Tropicalismo è il nome italiano del movimento, non un generico gusto tropicale; nella forma portoghese l'accento grafico di Tropicália va conservato.",
+    "example_tl": "Il tropicalismo trasformò musica, teatro e arti visive in un linguaggio ibrido, capace di contestare sia il nazionalismo culturale sia la dittatura.",
+    "example_en": "Tropicalia turned music, theater, and visual art into a hybrid language capable of challenging both cultural nationalism and the dictatorship.",
+    "cloze": "{{c1::Il tropicalismo}} trasformò musica, teatro e arti visive in un linguaggio ibrido, capace di contestare sia il nazionalismo culturale sia la dittatura.",
+    "note": "Materially normalizes old_back: Italian reference prose commonly uses tropicalismo, while the Portuguese movement name is Tropicália, not unaccented Tropicalia."
+  },
+  {
+    "id": "it_cold_war_vocab_092",
+    "en": "the Elite",
+    "category": "lexical-noun",
+    "tl": "l'élite",
+    "alts": [],
+    "register": "Termine neutro-formale della sociologia e dell'analisi politica; classe dirigente è adatto quando il gruppo esercita effettivamente funzioni di direzione.",
+    "trap": "Élite è femminile e invariabile; classe dirigente restringe il riferimento a chi detiene potere, mentre un'élite può essere anche culturale o professionale.",
+    "example_tl": "Una parte dell'élite economica sostenne inizialmente il golpe, confidando che i militari avrebbero ristabilito l'ordine senza alterare gli assetti proprietari del paese.",
+    "example_en": "Part of the economic elite initially supported the coup, trusting that the military would restore order without altering the country's ownership structure.",
+    "cloze": "Una parte {{c1::dell'élite}} economica sostenne inizialmente il golpe, confidando che i militari avrebbero ristabilito l'ordine senza alterare gli assetti proprietari del paese.",
+    "note": "Corrects old_back as the default headword: classe dirigente is a useful contextual rendering but is narrower than the source term, so self-review removed it from interchangeable alts."
+  },
+  {
+    "id": "it_cold_war_vocab_093",
+    "en": "the Amazon",
+    "category": "lexical-noun",
+    "tl": "l'Amazzonia",
+    "alts": [
+      "la regione amazzonica"
+    ],
+    "register": "Nome geografico neutro per la vasta regione e il bacino forestale sudamericano; regione amazzonica è una parafrasi esplicita da prosa analitica.",
+    "trap": "Amazzonia indica la regione; il corso d'acqua è il Rio delle Amazzoni, quindi l'inglese the Amazon richiede disambiguazione contestuale.",
+    "example_tl": "L'Amazzonia divenne una frontiera strategica, dove strade e insediamenti promossi dalla dittatura accelerarono la deforestazione e l'espropriazione delle terre indigene.",
+    "example_en": "The Amazon became a strategic frontier, where roads and settlements promoted by the dictatorship accelerated deforestation and territorial dispossession.",
+    "cloze": "{{c1::L'Amazzonia}} divenne una frontiera strategica, dove strade e insediamenti promossi dalla dittatura accelerarono la deforestazione e l'espropriazione delle terre indigene.",
+    "note": "Old_back is correct for the regional sense selected by the surrounding Brazil-focused items; the card records the river-versus-region distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_095",
+    "en": "Cinema Novo",
+    "category": "lexical-noun",
+    "tl": "il Cinema Novo",
+    "alts": [],
+    "register": "Denominazione storico-cinematografica del movimento brasiliano sviluppatosi dagli anni Sessanta; il nome portoghese resta normalmente non tradotto.",
+    "trap": "Non si rende con *Nuovo Cinema: Cinema Novo è un nome storico proprio, preceduto dall'articolo maschile quando funge da soggetto.",
+    "example_tl": "Il Cinema Novo raccontò disuguaglianze e conflitti rurali con un'estetica radicale, opponendosi tanto al folclore consolatorio quanto ai modelli commerciali importati.",
+    "example_en": "Cinema Novo portrayed inequality and rural conflicts with a radical aesthetic, opposing both reassuring folklore and imported commercial models.",
+    "cloze": "{{c1::Il Cinema Novo}} raccontò disuguaglianze e conflitti rurali con un'estetica radicale, opponendosi tanto al folclore consolatorio quanto ai modelli commerciali importati.",
+    "note": "Old_back preserves the proper name but omits the article useful for Italian production; the contextual example establishes the movement sense."
+  },
+  {
+    "id": "it_cold_war_vocab_096",
+    "en": "the Megacity",
+    "category": "lexical-noun",
+    "tl": "la megacittà",
+    "alts": [],
+    "register": "Termine neutro-formale della demografia urbana per una città di dimensioni eccezionali, convenzionalmente associata a oltre dieci milioni di abitanti.",
+    "trap": "Megacittà non coincide con megalopoli: quest'ultima indica propriamente un vasto sistema formato da più aree metropolitane connesse.",
+    "example_tl": "La megacittà crebbe senza una pianificazione adeguata, collegando nuovi distretti finanziari a periferie in cui trasporti, alloggi e servizi restavano insufficienti.",
+    "example_en": "The megacity grew without adequate planning, linking new financial districts to outskirts where transport, housing, and services remained insufficient.",
+    "cloze": "{{c1::La megacittà}} crebbe senza una pianificazione adeguata, collegando nuovi distretti finanziari a periferie in cui trasporti, alloggi e servizi restavano insufficienti.",
+    "note": "Old_back gives the precise headword. Retained to prevent the common but analytically misleading substitution of megalopoli."
+  },
+  {
+    "id": "it_cold_war_vocab_097",
+    "en": "Autarky",
+    "category": "lexical-noun",
+    "tl": "l'autarchia",
+    "alts": [
+      "la politica autarchica"
+    ],
+    "register": "Termine formale della storia economica per una politica volta a ridurre drasticamente la dipendenza dagli scambi con l'estero.",
+    "trap": "Autarchia riguarda l'autosufficienza economica e non va confusa con autocrazia, che indica la concentrazione del potere politico in un solo governante.",
+    "example_tl": "L'autarchia ridusse alcune importazioni strategiche, ma impose costi elevati ai consumatori e non eliminò la dipendenza da materie prime estere.",
+    "example_en": "Autarky reduced some strategic imports but imposed high costs on consumers and did not eliminate dependence on foreign raw materials.",
+    "cloze": "{{c1::L'autarchia}} ridusse alcune importazioni strategiche, ma impose costi elevati ai consumatori e non eliminò la dipendenza da materie prime estere.",
+    "note": "Old_back is accurate. The alternative is a policy paraphrase rather than a second technical headword, and the example fixes the economic sense."
+  },
+  {
+    "id": "it_cold_war_vocab_098",
+    "en": "the Dependency theory",
+    "category": "lexical-noun",
+    "tl": "la teoria della dipendenza",
+    "alts": [],
+    "register": "Termine formale dell'economia politica e della sociologia dello sviluppo, particolarmente legato all'analisi latinoamericana dei rapporti centro-periferia.",
+    "trap": "La locuzione disciplinare usa della dipendenza, non *di dipendenza; fuori dal contesto economico potrebbe essere scambiata per una teoria della dipendenza psicologica.",
+    "example_tl": "La teoria della dipendenza interpretava il sottosviluppo latinoamericano come effetto dei rapporti asimmetrici tra economie centrali e periferiche nel mercato mondiale.",
+    "example_en": "Dependency theory interpreted Latin American underdevelopment as an effect of asymmetric relations between core and peripheral economies in the world market.",
+    "cloze": "{{c1::La teoria della dipendenza}} interpretava il sottosviluppo latinoamericano come effetto dei rapporti asimmetrici tra economie centrali e periferiche nel mercato mondiale.",
+    "note": "Old_back supplies the established Italian name. The register and example prevent a generic reading of dipendenza."
+  },
+  {
+    "id": "it_cold_war_vocab_100",
+    "en": "the Favelas",
+    "category": "lexical-noun",
+    "tl": "le favelas",
+    "alts": [],
+    "register": "Prestito storico-sociale neutro per gli insediamenti informali urbani brasiliani; richiede cautela quando appiattisce comunità internamente molto diverse.",
+    "trap": "Il plurale portoghese favelas è attestato anche in italiano; baraccopoli è più generico e non designa necessariamente la specifica realtà urbana brasiliana.",
+    "example_tl": "Le favelas crebbero vicino ai poli industriali, accogliendo lavoratori esclusi dal mercato formale dell'alloggio e spesso privi di servizi pubblici essenziali.",
+    "example_en": "The favelas grew near industrial hubs, housing workers excluded from the formal housing market and often lacking essential public services.",
+    "cloze": "{{c1::Le favelas}} crebbero vicino ai poli industriali, accogliendo lavoratori esclusi dal mercato formale dell'alloggio e spesso privi di servizi pubblici essenziali.",
+    "note": "Old_back uses the dictionary-attested plural. Self-review avoided listing baraccopoli as an interchangeable alternative because it loses the Brazilian referent."
+  },
+  {
+    "id": "it_cold_war_vocab_101",
+    "en": "Bureaucratic-authoritarian",
+    "category": "lexical-adjective",
+    "tl": "burocratico-autoritario",
+    "alts": [],
+    "register": "Aggettivo specialistico della scienza politica, soprattutto nella tipologia dei regimi latinoamericani elaborata da Guillermo O'Donnell.",
+    "trap": "È un composto coordinato con trattino: nelle forme flesse varia il secondo elemento, come in regimi burocratico-autoritari o strutture burocratico-autoritarie.",
+    "example_tl": "Il regime burocratico-autoritario affidò ai tecnocrati non eletti le decisioni economiche, mentre reprimeva i sindacati e limitava la partecipazione politica.",
+    "example_en": "The bureaucratic-authoritarian regime entrusted economic decisions to unelected technocrats while repressing unions and restricting political participation.",
+    "cloze": "Il regime {{c1::burocratico-autoritario}} affidò ai tecnocrati non eletti le decisioni economiche, mentre reprimeva i sindacati e limitava la partecipazione politica.",
+    "note": "Old_back is accurate. The card fixes the term's political-science sense and records the inflection pattern absent from the lemma."
+  },
+  {
+    "id": "it_cold_war_vocab_102",
+    "en": "the Samba",
+    "category": "lexical-noun",
+    "tl": "la samba",
+    "alts": [
+      "il samba"
+    ],
+    "register": "Nome comune del ballo e genere musicale brasiliano; entrambi i generi grammaticali sono ammessi, ma il femminile è oggi più diffuso in italiano.",
+    "trap": "Il portoghese usa il maschile o samba e old_back lo ricalca; in italiano contemporaneo la samba è più comune, sebbene il samba resti corretto.",
+    "example_tl": "La samba offrì agli artisti afrobrasiliani uno spazio di affermazione culturale, anche quando lo Stato ne controllava l'immagine a fini nazionalistici.",
+    "example_en": "Samba offered Afro-Brazilian artists a space for cultural affirmation, even when the state controlled its image for nationalist purposes.",
+    "cloze": "{{c1::La samba}} offrì agli artisti afrobrasiliani uno spazio di affermazione culturale, anche quando lo Stato ne controllava l'immagine a fini nazionalistici.",
+    "note": "Materially diverges from old_back by selecting the more frequent contemporary Italian gender while retaining the accepted masculine as an alternative."
+  },
+  {
+    "id": "it_cold_war_vocab_104",
+    "en": "the Caudillo",
+    "category": "lexical-noun",
+    "tl": "il caudillo",
+    "alts": [],
+    "register": "Prestito storico-politico per un capo autoritario latinoamericano fondato sul potere personale, sul seguito clientelare e spesso sull'autorità militare.",
+    "trap": "Caudillo non è un sinonimo neutro di leader né l'equivalente generale di condottiero: conserva una precisa cornice storica latinoamericana.",
+    "example_tl": "Il caudillo costruì un rapporto diretto con i sostenitori, concentrando il potere personale e indebolendo le istituzioni incaricate di limitarlo.",
+    "example_en": "The caudillo built a direct relationship with his supporters, concentrating personal power and weakening the institutions charged with limiting it.",
+    "cloze": "{{c1::Il caudillo}} costruì un rapporto diretto con i sostenitori, concentrando il potere personale e indebolendo le istituzioni incaricate di limitarlo.",
+    "note": "Old_back is accurate; the teaching value lies in preserving the term's regional and political specificity rather than translating it loosely."
+  },
+  {
+    "id": "it_cold_war_vocab_105",
+    "en": "Corporatism",
+    "category": "lexical-noun",
+    "tl": "il corporativismo",
+    "alts": [],
+    "register": "Termine formale della storia politica e delle relazioni industriali per l'organizzazione degli interessi economici in corporazioni riconosciute o controllate dallo Stato.",
+    "trap": "L'inglese corporatism si rende con corporativismo, non con *corporatismo né con capitalismo aziendale; il termine italiano richiama anche l'ordinamento fascista.",
+    "example_tl": "Il corporativismo raggruppò lavoratori e imprenditori in organismi controllati dallo Stato, presentando la repressione del conflitto sociale come collaborazione nazionale.",
+    "example_en": "Corporatism organized workers and employers into state-controlled bodies, presenting the suppression of social conflict as national collaboration.",
+    "cloze": "{{c1::Il corporativismo}} raggruppò lavoratori e imprenditori in organismi controllati dallo Stato, presentando la repressione del conflitto sociale come collaborazione nazionale.",
+    "note": "Old_back gives the established lexeme. The example selects the authoritarian state-corporatist sense relevant to the batch rather than every form of interest intermediation."
+  },
+  {
+    "id": "it_cold_war_vocab_108",
+    "en": "the Surveillance",
+    "category": "lexical-noun",
+    "tl": "la sorveglianza",
+    "alts": [
+      "il controllo sistematico"
+    ],
+    "register": "Termine neutro-formale della sicurezza e dell'analisi politica per l'osservazione continuativa di persone, gruppi, comunicazioni o luoghi.",
+    "trap": "Vigilanza riguarda spesso la custodia o la prevenzione visibile; sorveglianza rende meglio l'osservazione sistematica, anche occulta, espressa dall'inglese surveillance.",
+    "example_tl": "La sorveglianza delle reti clandestine combinava intercettazioni, informatori e schedature, permettendo alla polizia politica di ricostruire legami tra militanti e giornalisti.",
+    "example_en": "Surveillance of clandestine networks combined wiretaps, informants, and record-keeping, allowing the political police to reconstruct links between activists and journalists.",
+    "cloze": "{{c1::La sorveglianza}} delle reti clandestine combinava intercettazioni, informatori e schedature, permettendo alla polizia politica di ricostruire legami tra militanti e giornalisti.",
+    "note": "Retained here under the exact-duplicate report, which assigns this prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB. Old_back is accurate."
+  },
+  {
+    "id": "it_cold_war_vocab_110",
+    "en": "Bossa Nova",
+    "category": "lexical-noun",
+    "tl": "la bossa nova",
+    "alts": [],
+    "register": "Nome comune femminile del genere musicale brasiliano nato alla fine degli anni Cinquanta; in prosa italiana si scrive normalmente in minuscolo.",
+    "trap": "Non si traduce come *nuova tendenza: bossa nova è il nome stabilizzato del genere e richiede l'articolo femminile nell'uso sintattico italiano.",
+    "example_tl": "La bossa nova proiettò all'estero un'immagine sofisticata del Brasile urbano, mentre le sue innovazioni armoniche ridefinivano il rapporto tra voce e chitarra.",
+    "example_en": "Bossa nova projected a sophisticated image of urban Brazil abroad, while its harmonic innovations redefined the relationship between voice and guitar.",
+    "cloze": "{{c1::La bossa nova}} proiettò all'estero un'immagine sofisticata del Brasile urbano, mentre le sue innovazioni armoniche ridefinivano il rapporto tra voce e chitarra.",
+    "note": "Normalizes old_back by adding the article and using lower case for a musical genre rather than treating the expression as a title."
+  },
+  {
+    "id": "it_cold_war_vocab_111",
+    "en": "the Economic miracle",
+    "category": "lexical-noun",
+    "tl": "il miracolo economico",
+    "alts": [
+      "il boom economico"
+    ],
+    "register": "Locuzione storico-economica neutra, spesso applicata a una fase nazionale precisa; il referente va specificato perché in Italia richiama anzitutto il dopoguerra italiano.",
+    "trap": "Senza brasiliano o altro contesto geografico, miracolo economico evoca facilmente l'espansione italiana del secondo dopoguerra; boom economico è meno storiograficamente specifico.",
+    "example_tl": "Il miracolo economico brasiliano produsse tassi di crescita eccezionali, ma la compressione salariale fece sì che i benefici dell'espansione fossero distribuiti in modo profondamente diseguale.",
+    "example_en": "The Brazilian economic miracle produced exceptional growth rates, but wage suppression caused the benefits of expansion to be distributed in a profoundly unequal way.",
+    "cloze": "{{c1::Il miracolo economico}} brasiliano produsse tassi di crescita eccezionali, ma la compressione salariale fece sì che i benefici dell'espansione fossero distribuiti in modo profondamente diseguale.",
+    "note": "Old_back is accurate. Self-review added geographic disambiguation because the bare Italian collocation has a strong domestic historical association."
+  },
+  {
+    "id": "it_cold_war_vocab_114",
+    "en": "the Geopolitics",
+    "category": "lexical-noun",
+    "tl": "la geopolitica",
+    "alts": [],
+    "register": "Termine formale dell'analisi internazionale per l'interazione tra potere politico, spazio geografico, risorse e posizione strategica.",
+    "trap": "Geopolitica è normalmente singolare in italiano e non coincide con geostrategia, che riguarda più specificamente l'impiego strategico dei fattori geografici.",
+    "example_tl": "La geopolitica della guerra fredda spinse Washington a interpretare riforme sociali autonome come possibili avanzate dell'influenza sovietica in America Latina.",
+    "example_en": "Cold War geopolitics led Washington to interpret autonomous social reforms as possible advances of Soviet influence in Latin America.",
+    "cloze": "{{c1::La geopolitica}} della guerra fredda spinse Washington a interpretare riforme sociali autonome come possibili avanzate dell'influenza sovietica in America Latina.",
+    "note": "Retained here under the exact-duplicate report, which assigns this prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB. Old_back is accurate."
+  },
+  {
+    "id": "it_cold_war_vocab_115",
+    "en": "the Infrastructure",
+    "category": "lexical-noun",
+    "tl": "le infrastrutture",
+    "alts": [
+      "le reti infrastrutturali"
+    ],
+    "register": "Termine neutro-formale delle politiche pubbliche; il plurale indica normalmente l'insieme di reti, impianti e opere che sostengono un territorio o un'economia.",
+    "trap": "L'inglese infrastructure è spesso collettivo singolare; in italiano, quando si parla del sistema nel suo complesso, il plurale le infrastrutture è generalmente più naturale.",
+    "example_tl": "Le infrastrutture finanziate dallo Stato integrarono regioni remote nei mercati nazionali, ma facilitarono anche l'estrazione di risorse e l'occupazione di terre indigene.",
+    "example_en": "State-funded infrastructure integrated remote regions into national markets but also facilitated resource extraction and the occupation of Indigenous lands.",
+    "cloze": "{{c1::Le infrastrutture}} finanziate dallo Stato integrarono regioni remote nei mercati nazionali, ma facilitarono anche l'estrazione di risorse e l'occupazione di terre indigene.",
+    "note": "Retained here under the exact-duplicate report, which assigns this prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB. Materially pluralizes old_back for the intended collective sense."
+  },
+  {
+    "id": "it_cold_war_vocab_116",
+    "en": "Mestizo",
+    "category": "lexical-noun",
+    "tl": "il meticcio",
+    "alts": [],
+    "register": "Termine storico-antropologico per una persona di ascendenza europea e indigena nell'America coloniale; riferito oggi a persone può risultare riduttivo o datato.",
+    "trap": "Lo spagnolo mestizo non va mantenuto automaticamente in italiano: la forma adattata è meticcio, ma non designa genericamente qualunque identità multietnica.",
+    "example_tl": "Il censimento classificava come meticci gruppi molto diversi, trasformando identità fluide e storie familiari complesse in una categoria amministrativa apparentemente uniforme.",
+    "example_en": "The census classified highly diverse groups as mestizo, turning fluid identities and complex family histories into an apparently uniform administrative category.",
+    "cloze": "Il censimento classificava come {{c1::meticci}} gruppi molto diversi, trasformando identità fluide e storie familiari complesse in una categoria amministrativa apparentemente uniforme.",
+    "note": "Old_back provides the established Italian equivalent. Self-review narrowed the historical sense and flagged the term's limitations in contemporary reference to people."
+  },
+  {
+    "id": "it_cold_war_vocab_118",
+    "en": "Afro-Brazilian",
+    "category": "lexical-adjective",
+    "tl": "afrobrasiliano",
+    "alts": [
+      "afro-brasiliano"
+    ],
+    "register": "Aggettivo neutro degli studi storici e culturali per persone, pratiche o tradizioni brasiliane di ascendenza africana; è regolarmente flesso.",
+    "trap": "Si scrive con la minuscola e concorda con il nome: cultura afrobrasiliana, religioni afrobrasiliane; la grafia con trattino è anch'essa diffusa.",
+    "example_tl": "Le religioni afrobrasiliane conservarono saperi della diaspora e crearono nuove forme rituali, nonostante la repressione poliziesca e la stigmatizzazione pubblica.",
+    "example_en": "Afro-Brazilian religions preserved diasporic knowledge and created new ritual forms despite police repression and public stigmatization.",
+    "cloze": "Le religioni {{c1::afrobrasiliane}} conservarono saperi della diaspora e crearono nuove forme rituali, nonostante la repressione poliziesca e la stigmatizzazione pubblica.",
+    "note": "Selects the closed compound as the production headword and retains old_back's widespread hyphenated spelling as an orthographic alternative."
+  },
+  {
+    "id": "it_cold_war_vocab_119",
+    "en": "the Indigenous rights",
+    "category": "lexical-noun",
+    "tl": "i diritti dei popoli indigeni",
+    "alts": [
+      "i diritti delle popolazioni indigene"
+    ],
+    "register": "Locuzione formale del diritto internazionale e delle politiche pubbliche; popoli indigeni mette in rilievo la soggettività collettiva e l'autodeterminazione.",
+    "trap": "Il calco *diritti indigeni è ambiguo e poco idiomatico; dei popoli indigeni esplicita i titolari e non limita il tema ai soli diritti individuali.",
+    "example_tl": "I diritti dei popoli indigeni entrarono nel dibattito costituzionale quando le comunità denunciarono espropri, violenze e progetti infrastrutturali imposti senza consultazione.",
+    "example_en": "Indigenous peoples' rights entered the constitutional debate when communities denounced dispossession, violence, and infrastructure projects imposed without consultation.",
+    "cloze": "{{c1::I diritti dei popoli indigeni}} entrarono nel dibattito costituzionale quando le comunità denunciarono espropri, violenze e progetti infrastrutturali imposti senza consultazione.",
+    "note": "Old_back is stronger than a literal adjective-only rendering. The alternative is natural but can sound more demographic and less centered on collective political status."
+  },
+  {
+    "id": "it_cold_war_vocab_121",
+    "en": "the Patron-client relations",
+    "category": "lexical-noun",
+    "tl": "le relazioni patrono-cliente",
+    "alts": [
+      "i rapporti patrono-cliente"
+    ],
+    "register": "Locuzione specialistica di sociologia, antropologia e scienza politica per scambi personali asimmetrici fondati su protezione, risorse e lealtà.",
+    "trap": "Cliente non ha qui il senso commerciale corrente; nel composto patrono-cliente entrambi i ruoli restano al singolare anche con relazioni al plurale.",
+    "example_tl": "Le relazioni patrono-cliente garantivano accesso a impieghi e protezione politica, ma consolidavano dipendenze personali incompatibili con istituzioni pubbliche imparziali.",
+    "example_en": "Patron-client relations guaranteed access to jobs and political protection, but consolidated personal dependencies incompatible with impartial public institutions.",
+    "cloze": "{{c1::Le relazioni patrono-cliente}} garantivano accesso a impieghi e protezione politica, ma consolidavano dipendenze personali incompatibili con istituzioni pubbliche imparziali.",
+    "note": "Old_back gives the established social-science expression; relazioni clientelari was excluded from alts because it can blur the explicit two-role structure."
+  },
+  {
+    "id": "it_cold_war_vocab_123",
+    "en": "the Integration",
+    "category": "lexical-noun",
+    "tl": "l'integrazione",
+    "alts": [],
+    "register": "Termine neutro-formale delle politiche sociali, economiche e regionali; il complemento o un modificatore deve normalmente precisarne l'ambito.",
+    "trap": "Integrazione non equivale automaticamente ad assimilazione: la prima può preservare differenze interne, mentre la seconda implica l'adeguamento al gruppo dominante.",
+    "example_tl": "L'integrazione regionale avanzò attraverso accordi commerciali e infrastrutture comuni, senza però eliminare le profonde asimmetrie economiche tra gli Stati partecipanti.",
+    "example_en": "Regional integration advanced through trade agreements and shared infrastructure, without, however, eliminating the profound economic asymmetries among the participating states.",
+    "cloze": "{{c1::L'integrazione}} regionale avanzò attraverso accordi commerciali e infrastrutture comuni, senza però eliminare le profonde asimmetrie economiche tra gli Stati partecipanti.",
+    "note": "Retained here under the exact-duplicate report, which assigns this prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB. Old_back is accurate."
+  },
+  {
+    "id": "it_cold_war_vocab_124",
+    "en": "the Literacy",
+    "category": "lexical-noun",
+    "tl": "l'alfabetizzazione",
+    "alts": [],
+    "register": "Termine neutro-formale dell'istruzione e delle statistiche sociali; può indicare il processo educativo oppure, tramite tasso, il suo esito nella popolazione.",
+    "trap": "L'inglese literacy si estende a competenze settoriali: digital literacy è spesso competenza digitale, non automaticamente alfabetizzazione digitale.",
+    "example_tl": "Il tasso di alfabetizzazione aumentò rapidamente, ma le disparità territoriali continuarono a limitare l'accesso delle comunità rurali all'informazione politica.",
+    "example_en": "The literacy rate rose rapidly, but territorial disparities continued to limit rural communities' access to political information.",
+    "cloze": "Il tasso di {{c1::alfabetizzazione}} aumentò rapidamente, ma le disparità territoriali continuarono a limitare l'accesso delle comunità rurali all'informazione politica.",
+    "note": "Old_back is appropriate for general and statistical literacy. The example supplies tasso, which selects the population-level sense rather than only the teaching process."
+  },
+  {
+    "id": "it_cold_war_vocab_130",
+    "en": "the Evangelical rise",
+    "category": "lexical-noun",
+    "tl": "l'ascesa dell'evangelicalismo",
+    "alts": [],
+    "register": "Locuzione formale della sociologia politica e religiosa per la crescita d'influenza delle correnti protestanti evangeliche, specialmente nelle Americhe.",
+    "trap": "Evangelicalismo indica la corrente religiosa; evangelizzazione è invece l'attività di diffusione del Vangelo e non traduce evangelical rise.",
+    "example_tl": "L'ascesa dell'evangelicalismo modificò il panorama politico brasiliano, trasformando reti religiose capillari in strutture capaci di mobilitare elettori e influenzare governi.",
+    "example_en": "The rise of evangelicalism changed Brazil's political landscape, transforming extensive religious networks into structures capable of mobilizing voters and influencing governments.",
+    "cloze": "{{c1::L'ascesa dell'evangelicalismo}} modificò il panorama politico brasiliano, trasformando reti religiose capillari in strutture capaci di mobilitare elettori e influenzare governi.",
+    "note": "Old_back captures the intended movement-level sense more precisely than a literal adjective attached to ascesa."
+  },
+  {
+    "id": "it_cold_war_vocab_132",
+    "en": "the Frontier expansion",
+    "category": "lexical-noun",
+    "tl": "l'espansione della frontiera",
+    "alts": [
+      "l'avanzata della frontiera"
+    ],
+    "register": "Locuzione formale della storia territoriale e ambientale per l'avanzamento di insediamenti e attività economiche verso aree considerate periferiche.",
+    "trap": "Nel concetto storiografico italiano frontiera è normalmente singolare e non coincide con il semplice confine giuridico tra due Stati.",
+    "example_tl": "L'espansione della frontiera agricola accelerò durante la dittatura, spingendo allevamenti e coltivazioni commerciali nelle foreste abitate da comunità indigene.",
+    "example_en": "The expansion of the agricultural frontier accelerated during the dictatorship, pushing ranching and commercial crops into forests inhabited by Indigenous communities.",
+    "cloze": "{{c1::L'espansione della frontiera}} agricola accelerò durante la dittatura, spingendo allevamenti e coltivazioni commerciali nelle foreste abitate da comunità indigene.",
+    "note": "Materially corrects old_back's plural frontiere: the historical-geographical concept is the singular frontiera, here specified as agricola."
+  },
+  {
+    "id": "it_cold_war_vocab_133",
+    "en": "the Detente",
+    "category": "lexical-noun",
+    "tl": "la distensione",
+    "alts": [
+      "la détente"
+    ],
+    "register": "Termine formale della storia diplomatica per la fase di attenuazione delle tensioni tra i blocchi; il francesismo è più marcato.",
+    "trap": "La détente francese conserva l'accento; nel contesto della guerra fredda non indica un rilassamento personale, ma un allentamento politico-strategico.",
+    "example_tl": "La distensione ridusse temporaneamente il rischio di confronto diretto, favorendo negoziati sugli armamenti senza cancellare la competizione strategica tra le superpotenze.",
+    "example_en": "Détente temporarily reduced the risk of direct confrontation, encouraging arms negotiations without eliminating strategic competition between the superpowers.",
+    "cloze": "{{c1::La distensione}} ridusse temporaneamente il rischio di confronto diretto, favorendo negoziati sugli armamenti senza cancellare la competizione strategica tra le superpotenze.",
+    "note": "Old_back supplies the preferred Italian historical term; the French loan is retained only as a register-marked alternative."
+  },
+  {
+    "id": "it_cold_war_vocab_134",
+    "en": "the Espionage",
+    "category": "lexical-noun",
+    "tl": "lo spionaggio",
+    "alts": [],
+    "register": "Termine neutro-formale della sicurezza per la raccolta clandestina di informazioni riservate; attività spionistica è una parafrasi più burocratica.",
+    "trap": "Spionaggio è più ristretto di intelligence, che comprende anche raccolta lecita, valutazione e analisi delle informazioni.",
+    "example_tl": "Lo spionaggio tecnologico divenne decisivo quando satelliti e intercettazioni permisero alle superpotenze di valutare capacità militari che le fonti pubbliche non rivelavano.",
+    "example_en": "Technological espionage became decisive when satellites and intercepts allowed the superpowers to assess military capabilities that public sources did not disclose.",
+    "cloze": "{{c1::Lo spionaggio}} tecnologico divenne decisivo quando satelliti e intercettazioni permisero alle superpotenze di valutare capacità militari che le fonti pubbliche non rivelavano.",
+    "note": "Retained here under the exact-duplicate report. Self-review removed attività spionistica because it did not interchange cleanly with the modified example and replaced the agency-implying occultavano with non rivelavano."
+  },
+  {
+    "id": "it_cold_war_vocab_135",
+    "en": "the Proxy war",
+    "category": "lexical-noun",
+    "tl": "la guerra per procura",
+    "alts": [
+      "il conflitto per procura"
+    ],
+    "register": "Locuzione formale delle relazioni internazionali per un conflitto locale sostenuto da potenze esterne che evitano di affrontarsi direttamente.",
+    "trap": "Il calco guerra proxy è giornalistico e instabile; la locuzione italiana consolidata usa per procura, non di procura.",
+    "example_tl": "La guerra per procura consentiva alle superpotenze di sostenere fazioni locali, limitando il confronto diretto ma prolungando conflitti devastanti nelle periferie del sistema.",
+    "example_en": "Proxy war allowed the superpowers to support local factions, limiting direct confrontation but prolonging devastating conflicts on the system's peripheries.",
+    "cloze": "{{c1::La guerra per procura}} consentiva alle superpotenze di sostenere fazioni locali, limitando il confronto diretto ma prolungando conflitti devastanti nelle periferie del sistema.",
+    "note": "Old_back gives the established collocation. The alternative preserves the indirect-war sense while avoiding repetition of guerra in context."
+  },
+  {
+    "id": "it_cold_war_vocab_136",
+    "en": "the Iron Curtain",
+    "category": "lexical-noun",
+    "tl": "la cortina di ferro",
+    "alts": [],
+    "register": "Locuzione storica stabilizzata per la divisione politico-militare dell'Europa durante la guerra fredda, usata anche metaforicamente.",
+    "trap": "L'inglese capitalizza il nome storico; in prosa italiana è normale la minuscola e curtain si rende qui con cortina, non tenda.",
+    "example_tl": "La cortina di ferro separò sistemi politici rivali, restringendo la circolazione di persone e informazioni ben oltre i confini materialmente fortificati.",
+    "example_en": "The Iron Curtain separated rival political systems, restricting the movement of people and information far beyond the physically fortified borders.",
+    "cloze": "{{c1::La cortina di ferro}} separò sistemi politici rivali, restringendo la circolazione di persone e informazioni ben oltre i confini materialmente fortificati.",
+    "note": "Old_back is accurate. Self-review retained lower case because this is the normal treatment of the historical expression in Italian prose."
+  },
+  {
+    "id": "it_cold_war_vocab_137",
+    "en": "the Nuclear arms race",
+    "category": "lexical-noun",
+    "tl": "la corsa agli armamenti nucleari",
+    "alts": [],
+    "register": "Locuzione formale della storia strategica per l'accumulazione competitiva, quantitativa e qualitativa, di arsenali nucleari tra potenze rivali.",
+    "trap": "La costruzione fissa è corsa agli armamenti; proliferazione nucleare riguarda invece la diffusione di capacità nucleari a nuovi attori.",
+    "example_tl": "La corsa agli armamenti nucleari assorbì risorse immense e moltiplicò gli scenari d'annientamento, benché entrambe le potenze dichiarassero di perseguire soltanto la sicurezza.",
+    "example_en": "The nuclear arms race absorbed immense resources and multiplied scenarios of annihilation, although both powers claimed to be pursuing security alone.",
+    "cloze": "{{c1::La corsa agli armamenti nucleari}} assorbì risorse immense e moltiplicò gli scenari d'annientamento, benché entrambe le potenze dichiarassero di perseguire soltanto la sicurezza.",
+    "note": "Old_back is accurate. No alternative was retained because riarmo nucleare can imply rebuilding rather than an open-ended competitive race."
+  },
+  {
+    "id": "it_cold_war_vocab_139",
+    "en": "the Domino theory",
+    "category": "lexical-noun",
+    "tl": "la teoria del domino",
+    "alts": [],
+    "register": "Termine formale della storia della guerra fredda per la dottrina secondo cui la caduta di uno Stato avrebbe trascinato quelli vicini.",
+    "trap": "La locuzione italiana stabilizzata usa del domino e normalmente la minuscola, non *teoria di domino né la capitalizzazione inglese.",
+    "example_tl": "La teoria del domino spinse Washington a interpretare ogni rivoluzione locale come il possibile inizio di un'espansione comunista regionale incontrollabile.",
+    "example_en": "Domino theory led Washington to interpret every local revolution as the possible beginning of an uncontrollable regional communist expansion.",
+    "cloze": "{{c1::La teoria del domino}} spinse Washington a interpretare ogni rivoluzione locale come il possibile inizio di un'espansione comunista regionale incontrollabile.",
+    "note": "Old_back gives the established Italian term; the example fixes its specific Cold War causal claim."
+  },
+  {
+    "id": "it_cold_war_vocab_140",
+    "en": "the Mutually Assured Destruction (MAD)",
+    "category": "lexical-noun",
+    "tl": "la distruzione mutua assicurata (MAD)",
+    "alts": [
+      "la distruzione reciproca assicurata (MAD)"
+    ],
+    "register": "Termine specialistico della strategia nucleare per una condizione in cui ciascun avversario conserva una capacità di rappresaglia devastante.",
+    "trap": "L'acronimo inglese MAD resta in uso anche in italiano; mutua e reciproca sono entrambe attestate, mentre l'acronimo non si italianizza.",
+    "example_tl": "La distruzione mutua assicurata presupponeva che una capacità di rappresaglia credibile rendesse irrazionale il primo attacco, trasformando la vulnerabilità reciproca in stabilità strategica.",
+    "example_en": "Mutually assured destruction assumed that a credible retaliatory capability would make a first strike irrational, turning mutual vulnerability into strategic stability.",
+    "cloze": "{{c1::La distruzione mutua assicurata}} presupponeva che una capacità di rappresaglia credibile rendesse irrazionale il primo attacco, trasformando la vulnerabilità reciproca in stabilità strategica.",
+    "note": "Old_back is accurate. Self-review retained reciproca as a true attested variant but kept mutua as the headword used in Italian military reference prose."
+  },
+  {
+    "id": "it_cold_war_vocab_141",
+    "en": "the Disarmament",
+    "category": "lexical-noun",
+    "tl": "il disarmo",
+    "alts": [],
+    "register": "Termine formale della diplomazia e della sicurezza per la riduzione o eliminazione di forze, armi o intere categorie di armamenti.",
+    "trap": "Disarmo non coincide con controllo degli armamenti: il secondo può limitare, verificare o regolamentare arsenali che continuano a esistere.",
+    "example_tl": "In quel negoziato, il disarmo richiedeva la distruzione verificabile degli arsenali, mentre molti accordi si limitavano a fissare tetti numerici o vietare specifiche categorie di armi.",
+    "example_en": "In that negotiation, disarmament required the verifiable destruction of arsenals, while many agreements merely set numerical ceilings or prohibited specific categories of weapons.",
+    "cloze": "In quel negoziato, {{c1::il disarmo}} richiedeva la distruzione verificabile degli arsenali, mentre molti accordi si limitavano a fissare tetti numerici o vietare specifiche categorie di armi.",
+    "note": "Old_back is accurate. Retained alongside Arms control because the concepts differ; self-review localized the example to one negotiation rather than implying that every form of disarmament requires destruction."
+  },
+  {
+    "id": "it_cold_war_vocab_142",
+    "en": "the Deterrence",
+    "category": "lexical-noun",
+    "tl": "la deterrenza",
+    "alts": [
+      "la dissuasione"
+    ],
+    "register": "Termine tecnico della strategia e delle relazioni internazionali; dissuasione è italiano più generale e meno legato alla dottrina militare.",
+    "trap": "Deterrenza indica la prevenzione mediante una minaccia credibile di costi; non è sinonimo generico di prevenzione o intimidazione.",
+    "example_tl": "La deterrenza nucleare dipendeva non soltanto dalla potenza degli arsenali, ma anche dalla credibilità politica e tecnica di un eventuale secondo colpo.",
+    "example_en": "Nuclear deterrence depended not only on the power of the arsenals but also on the political and technical credibility of a potential second strike.",
+    "cloze": "{{c1::La deterrenza}} nucleare dipendeva non soltanto dalla potenza degli arsenali, ma anche dalla credibilità politica e tecnica di un eventuale secondo colpo.",
+    "note": "Old_back gives the established technical loan. The alternative is interchangeable at the general concept level but less idiomatic in fixed strategic labels."
+  },
+  {
+    "id": "it_cold_war_vocab_143",
+    "en": "the Non-aligned movement",
+    "category": "lexical-noun",
+    "tl": "il Movimento dei non allineati",
+    "alts": [
+      "il Movimento dei paesi non allineati"
+    ],
+    "register": "Denominazione storico-istituzionale del movimento nato dalla decolonizzazione per rivendicare autonomia rispetto ai due blocchi della guerra fredda.",
+    "trap": "Non si ricalca come *movimento non allineato: non allineati designa collettivamente gli Stati aderenti e resta al plurale.",
+    "example_tl": "Il Movimento dei non allineati cercò di trasformare l'autonomia dai due blocchi in una piattaforma comune per decolonizzazione, sviluppo e riforma dell'ordine internazionale.",
+    "example_en": "The Non-Aligned Movement sought to turn autonomy from the two blocs into a common platform for decolonization, development, and reform of the international order.",
+    "cloze": "{{c1::Il Movimento dei non allineati}} cercò di trasformare l'autonomia dai due blocchi in una piattaforma comune per decolonizzazione, sviluppo e riforma dell'ordine internazionale.",
+    "note": "Old_back's fuller form is established and retained as an alternative; the shorter institutional name is equally standard and more economical."
+  },
+  {
+    "id": "it_cold_war_vocab_144",
+    "en": "the Satellite state",
+    "category": "lexical-noun",
+    "tl": "lo Stato satellite",
+    "alts": [],
+    "register": "Termine storico-politico, generalmente critico, per uno Stato formalmente sovrano ma sostanzialmente subordinato a una potenza dominante.",
+    "trap": "Satellite è metaforico e al plurale concorda normalmente in Stati satelliti; non indica una semplice alleanza tra partner autonomi.",
+    "example_tl": "Lo Stato satellite conservava formalmente governo e confini propri, ma subordinava le principali scelte militari e diplomatiche alla potenza dominante.",
+    "example_en": "The satellite state formally retained its own government and borders but subordinated its main military and diplomatic choices to the dominant power.",
+    "cloze": "{{c1::Lo Stato satellite}} conservava formalmente governo e confini propri, ma subordinava le principali scelte militari e diplomatiche alla potenza dominante.",
+    "note": "Old_back is accurate; capitalization of Stato is retained in the production headword as conventional institutional usage, though lower case also occurs."
+  },
+  {
+    "id": "it_cold_war_vocab_145",
+    "en": "the Sphere of influence",
+    "category": "lexical-noun",
+    "tl": "la sfera d'influenza",
+    "alts": [
+      "l'area d'influenza"
+    ],
+    "register": "Locuzione formale della geopolitica per uno spazio nel quale una potenza esercita un'influenza preponderante senza necessariamente governarlo direttamente.",
+    "trap": "Sfera d'influenza non equivale a territorio sovrano o occupato: descrive una relazione di predominio politico, economico o militare.",
+    "example_tl": "La sfera d'influenza sovietica non coincideva semplicemente con un confine geografico, perché comprendeva alleanze, dipendenze economiche e vincoli politici di diversa intensità.",
+    "example_en": "The Soviet sphere of influence did not simply coincide with a geographical boundary, because it included alliances, economic dependencies, and political constraints of varying intensity.",
+    "cloze": "{{c1::La sfera d'influenza}} sovietica non coincideva semplicemente con un confine geografico, perché comprendeva alleanze, dipendenze economiche e vincoli politici di diversa intensità.",
+    "note": "Old_back gives the idiomatic elided form. The alternative is natural but slightly less evocative of the established geopolitical concept."
+  },
+  {
+    "id": "it_cold_war_vocab_146",
+    "en": "the Defectors",
+    "category": "lexical-noun",
+    "tl": "i transfughi",
+    "alts": [],
+    "register": "Termine formale e giornalistico per persone che abbandonano uno schieramento, un regime o un'organizzazione passando spesso al campo avversario.",
+    "trap": "Disertori vale propriamente per militari che abbandonano il servizio; defectors della guerra fredda è più ampio e si rende normalmente con transfughi.",
+    "example_tl": "I transfughi fornivano informazioni preziose sui servizi avversari, ma le agenzie dovevano distinguere le testimonianze attendibili dalle operazioni di depistaggio.",
+    "example_en": "Defectors provided valuable information about rival intelligence services, but the agencies had to distinguish reliable testimony from deception operations.",
+    "cloze": "{{c1::I transfughi}} fornivano informazioni preziose sui servizi avversari, ma le agenzie dovevano distinguere le testimonianze attendibili dalle operazioni di depistaggio.",
+    "note": "Materially corrects old_back, whose disertori is too narrow for civilian officials, scientists, diplomats, and intelligence officers who changed sides."
+  },
+  {
+    "id": "it_cold_war_vocab_147",
+    "en": "the Intelligence",
+    "category": "lexical-noun",
+    "tl": "l'intelligence",
+    "alts": [
+      "l'attività di intelligence"
+    ],
+    "register": "Prestito tecnico della sicurezza per la raccolta, valutazione e analisi di informazioni utili alle decisioni; può anche indicare il relativo apparato.",
+    "trap": "Il falso amico intelligenza indica una facoltà mentale; quando il referente è l'organizzazione, possono servire servizi d'informazione o servizi segreti.",
+    "example_tl": "L'intelligence occidentale combinava fonti umane, intercettazioni e immagini satellitari per stimare intenzioni sovietiche che nessun singolo canale poteva ricostruire con certezza.",
+    "example_en": "Western intelligence combined human sources, intercepts, and satellite imagery to assess Soviet intentions that no single channel could reconstruct with certainty.",
+    "cloze": "{{c1::L'intelligence}} occidentale combinava fonti umane, intercettazioni e immagini satellitari per stimare intenzioni sovietiche che nessun singolo canale poteva ricostruire con certezza.",
+    "note": "Old_back is acceptable but underspecified. The register line records the term's activity-versus-institution polysemy rather than forcing one narrower paraphrase."
+  },
+  {
+    "id": "it_cold_war_vocab_148",
+    "en": "the Underground",
+    "category": "lexical-noun",
+    "tl": "il movimento clandestino",
+    "alts": [
+      "la resistenza clandestina"
+    ],
+    "register": "Termine neutro-formale per una rete o organizzazione politica che opera illegalmente e in segreto; resistenza clandestina è adatto quando l'opposizione a un regime è esplicita.",
+    "trap": "Nel senso politico underground non è sotterraneo; clandestinità indica la condizione o il metodo operativo, non il movimento designato dal sostantivo inglese con articolo determinativo.",
+    "example_tl": "Il movimento clandestino coordinò l'uso di identità false, comunicazioni cifrate e cellule separate, riducendo la capacità del regime di smantellare l'intera rete.",
+    "example_en": "The underground movement coordinated the use of false identities, coded communications, and separate cells, reducing the regime's ability to dismantle the entire network.",
+    "cloze": "{{c1::Il movimento clandestino}} coordinò l'uso di identità false, comunicazioni cifrate e cellule separate, riducendo la capacità del regime di smantellare l'intera rete.",
+    "note": "Materially corrects the semantic shift in old_back: the definite English noun denotes a covert political network or movement, whereas clandestinità names the condition or practice of operating underground."
+  },
+  {
+    "id": "it_cold_war_vocab_149",
+    "en": "the Disinformation",
+    "category": "lexical-noun",
+    "tl": "la disinformazione",
+    "alts": [],
+    "register": "Termine neutro-formale della comunicazione politica e della sicurezza per contenuti falsi o manipolati diffusi deliberatamente per ingannare.",
+    "trap": "Disinformazione implica normalmente intenzionalità; informazione errata o falsa informazione può invece essere prodotta e condivisa senza un piano deliberato.",
+    "example_tl": "La disinformazione sovietica sfruttava mezze verità e documenti falsificati per rendere plausibili narrazioni destinate a erodere la fiducia nelle istituzioni occidentali.",
+    "example_en": "Soviet disinformation exploited half-truths and forged documents to make narratives designed to erode trust in Western institutions seem plausible.",
+    "cloze": "{{c1::La disinformazione}} sovietica sfruttava mezze verità e documenti falsificati per rendere plausibili narrazioni destinate a erodere la fiducia nelle istituzioni occidentali.",
+    "note": "Retained here under the exact-duplicate report, which assigns this prompt to COLD_WAR_VOCAB rather than FANCY_VOCAB. Old_back is accurate."
+  },
+  {
+    "id": "it_cold_war_vocab_150",
+    "en": "the Buffer zone",
+    "category": "lexical-noun",
+    "tl": "la zona cuscinetto",
+    "alts": [
+      "la fascia cuscinetto"
+    ],
+    "register": "Locuzione formale della geopolitica e della sicurezza per un territorio interposto che separa forze, Stati o aree rivali.",
+    "trap": "Cuscinetto ha funzione appositiva e resta invariato al plurale: zone cuscinetto, non *zone cuscinetti.",
+    "example_tl": "La zona cuscinetto demilitarizzata separava le forze rivali, offrendo profondità strategica ma lasciando spesso le comunità locali sotto restrizioni eccezionali.",
+    "example_en": "The demilitarized buffer zone separated the rival forces, providing strategic depth but often leaving local communities under exceptional restrictions.",
+    "cloze": "{{c1::La zona cuscinetto}} demilitarizzata separava le forze rivali, offrendo profondità strategica ma lasciando spesso le comunità locali sotto restrizioni eccezionali.",
+    "note": "Old_back is accurate. Fascia cuscinetto is retained as a genuine alternative when the intervening space is conceived as a strip."
+  },
+  {
+    "id": "it_cold_war_vocab_151",
+    "en": "the Arms control",
+    "category": "lexical-noun",
+    "tl": "il controllo degli armamenti",
+    "alts": [],
+    "register": "Termine specialistico della sicurezza internazionale per accordi che limitano, regolano e verificano arsenali, schieramenti o tecnologie militari.",
+    "trap": "Controllo delle armi richiama spesso la regolazione civile delle armi; arms control strategico è controllo degli armamenti e non equivale a disarmo.",
+    "example_tl": "Il controllo degli armamenti introdusse limiti, verifiche e canali di consultazione, riducendo alcuni rischi senza perseguire necessariamente l'eliminazione completa degli arsenali.",
+    "example_en": "Arms control introduced limits, verification, and consultation channels, reducing certain risks without necessarily pursuing the complete elimination of arsenals.",
+    "cloze": "{{c1::Il controllo degli armamenti}} introdusse limiti, verifiche e canali di consultazione, riducendo alcuni rischi senza perseguire necessariamente l'eliminazione completa degli arsenali.",
+    "note": "Old_back gives the established strategic-policy term. Retained alongside Disarmament because the concepts differ materially."
+  },
+  {
+    "id": "it_cold_war_vocab_152",
+    "en": "the Space race",
+    "category": "lexical-noun",
+    "tl": "la corsa allo spazio",
+    "alts": [
+      "la corsa spaziale"
+    ],
+    "register": "Locuzione storica neutra per la competizione tecnologica e simbolica tra Stati Uniti e Unione Sovietica nell'esplorazione spaziale.",
+    "trap": "La costruzione idiomatica usa allo spazio, non *dello spazio; corsa spaziale è naturale ma può riferirsi anche a competizioni successive.",
+    "example_tl": "La corsa allo spazio trasformò successi scientifici in strumenti di prestigio nazionale, mentre missili e satelliti mantenevano evidenti applicazioni militari.",
+    "example_en": "The space race turned scientific achievements into instruments of national prestige, while missiles and satellites retained clear military applications.",
+    "cloze": "{{c1::La corsa allo spazio}} trasformò successi scientifici in strumenti di prestigio nazionale, mentre missili e satelliti mantenevano evidenti applicazioni militari.",
+    "note": "Materially improves old_back by selecting the established corsa allo spazio; the more compact adjective form is retained as an alternative."
+  },
+  {
+    "id": "it_cold_war_vocab_154",
+    "en": "the Missile crisis",
+    "category": "lexical-noun",
+    "tl": "la crisi dei missili di Cuba",
+    "alts": [
+      "la crisi di Cuba"
+    ],
+    "register": "Denominazione storica dell'ottobre 1962, quando il dispiegamento sovietico di missili a Cuba provocò un confronto diretto con gli Stati Uniti.",
+    "trap": "Crisi dei missili senza specificazione può essere generico; per l'evento storico il complemento di Cuba evita ambiguità.",
+    "example_tl": "La crisi dei missili di Cuba mostrò quanto ritardi comunicativi e percezioni errate potessero avvicinare due potenze nucleari a un'escalation incontrollabile.",
+    "example_en": "The Cuban Missile Crisis showed how communication delays and mistaken perceptions could bring two nuclear powers close to uncontrolled escalation.",
+    "cloze": "{{c1::La crisi dei missili di Cuba}} mostrò quanto ritardi comunicativi e percezioni errate potessero avvicinare due potenze nucleari a un'escalation incontrollabile.",
+    "note": "Expands old_back with di Cuba because the definite, capitalized English prompt selects the historical event rather than an arbitrary missile crisis."
+  },
+  {
+    "id": "it_cold_war_vocab_155",
+    "en": "the Nuclear proliferation",
+    "category": "lexical-noun",
+    "tl": "la proliferazione nucleare",
+    "alts": [
+      "la proliferazione delle armi nucleari"
+    ],
+    "register": "Termine specialistico della sicurezza internazionale per la diffusione di armi, materiali o capacità nucleari a un numero crescente di attori.",
+    "trap": "Proliferazione non è la corsa agli armamenti tra rivali già nucleari: mette a fuoco soprattutto la diffusione a nuovi attori.",
+    "example_tl": "La proliferazione nucleare preoccupava entrambe le superpotenze, perché nuovi arsenali avrebbero moltiplicato i centri decisionali e reso più instabile la deterrenza globale.",
+    "example_en": "Nuclear proliferation concerned both superpowers because new arsenals would multiply decision-making centers and make global deterrence more unstable.",
+    "cloze": "{{c1::La proliferazione nucleare}} preoccupava entrambe le superpotenze, perché nuovi arsenali avrebbero moltiplicato i centri decisionali e reso più instabile la deterrenza globale.",
+    "note": "Old_back gives the standard compact term; the explicit alternative is useful where nucleare could otherwise include civilian technology."
+  },
+  {
+    "id": "it_cold_war_vocab_157",
+    "en": "Glasnost (openness)",
+    "category": "lexical-noun",
+    "tl": "la glasnost",
+    "alts": [
+      "la politica di trasparenza"
+    ],
+    "register": "Prestito storico-politico russo per la maggiore pubblicità dell'informazione e libertà di discussione promosse da Gorbačëv; è femminile e invariabile.",
+    "trap": "Apertura è solo una glossa generica: glasnost riguarda soprattutto trasparenza, pubblicità delle notizie e possibilità di critica pubblica.",
+    "example_tl": "La glasnost ampliò lo spazio della discussione pubblica, consentendo ai media sovietici di affrontare abusi storici e inefficienze prima sottratti al dibattito.",
+    "example_en": "Glasnost expanded the space for public discussion, allowing Soviet media to address historical abuses and inefficiencies previously kept out of debate.",
+    "cloze": "{{c1::La glasnost}} ampliò lo spazio della discussione pubblica, consentendo ai media sovietici di affrontare abusi storici e inefficienze prima sottratti al dibattito.",
+    "note": "Old_back preserves the loan but its parenthetical apertura is broad; the alternative records the conventional explanatory rendering trasparenza."
+  },
+  {
+    "id": "it_cold_war_vocab_158",
+    "en": "Perestroika (restructuring)",
+    "category": "lexical-noun",
+    "tl": "la perestrojka",
+    "alts": [],
+    "register": "Prestito storico-politico russo, femminile e invariabile, per l'insieme delle riforme politico-economiche avviate da Gorbačëv dal 1985.",
+    "trap": "La grafia italiana di riferimento è perestrojka con j; ristrutturazione spiega l'etimo ma non sostituisce sempre il nome della politica sovietica.",
+    "example_tl": "I sostenitori della perestrojka volevano riformare l'economia e le istituzioni sovietiche, mentre i critici temevano dinamiche politiche che la dirigenza non avrebbe saputo controllare.",
+    "example_en": "Supporters of perestroika wanted to reform the Soviet economy and institutions, while critics feared political dynamics that the leadership would be unable to control.",
+    "cloze": "I sostenitori {{c1::della perestrojka}} volevano riformare l'economia e le istituzioni sovietiche, mentre i critici temevano dinamiche politiche che la dirigenza non avrebbe saputo controllare.",
+    "note": "Old_back already uses the standard Italian transliteration. Self-review omitted ristrutturazione from alts because it is explanatory. Audit review replaced an unattributed causal assessment in the example."
+  },
+  {
+    "id": "it_cold_war_vocab_159",
+    "en": "the Hotline",
+    "category": "lexical-noun",
+    "tl": "la linea diretta Washington-Mosca",
+    "alts": [
+      "il telefono rosso"
+    ],
+    "register": "Denominazione storico-diplomatica del collegamento di crisi istituito nel 1963; telefono rosso è l'etichetta divulgativa e metaforica.",
+    "trap": "Il celebre telefono rosso non era un telefono né necessariamente rosso: la resa precisa del sistema storico è linea diretta Washington-Mosca.",
+    "example_tl": "La linea diretta Washington-Mosca entrò in funzione nel 1963 per ridurre ritardi e malintesi durante crisi capaci di degenerare rapidamente.",
+    "example_en": "The Washington-Moscow hotline became operational in 1963 to reduce delays and misunderstandings during crises capable of escalating rapidly.",
+    "cloze": "{{c1::La linea diretta Washington-Mosca}} entrò in funzione nel 1963 per ridurre ritardi e malintesi durante crisi capaci di degenerare rapidamente.",
+    "note": "Materially specifies old_back's generic linea diretta. The conventional telefono rosso remains useful but is historically misleading if read literally."
+  },
+  {
+    "id": "it_cold_war_vocab_160",
+    "en": "the Embargoes",
+    "category": "lexical-noun",
+    "tl": "gli embarghi",
+    "alts": [
+      "le misure di embargo"
+    ],
+    "register": "Termine formale del diritto e delle relazioni internazionali per divieti statali di commercio o fornitura imposti come pressione politica.",
+    "trap": "Embargo è maschile e forma il plurale italiano embarghi; nel giornalismo può anche indicare un divieto temporaneo di pubblicazione, senso qui escluso.",
+    "example_tl": "Gli embarghi limitarono l'accesso a petrolio e tecnologie strategiche, ma crearono anche mercati paralleli che ne ridussero progressivamente l'efficacia politica.",
+    "example_en": "The embargoes restricted access to oil and strategic technologies but also created parallel markets that progressively reduced their political effectiveness.",
+    "cloze": "{{c1::Gli embarghi}} limitarono l'accesso a petrolio e tecnologie strategiche, ma crearono anche mercati paralleli che ne ridussero progressivamente l'efficacia politica.",
+    "note": "Old_back is accurate. Retained because the adapted plural embarghi and the international-relations sense create real production value beyond the transparent singular loan."
+  },
+  {
+    "id": "it_cold_war_vocab_164",
+    "en": "the Nuclear testing",
+    "category": "lexical-noun",
+    "tl": "i test nucleari",
+    "alts": [
+      "gli esperimenti nucleari"
+    ],
+    "register": "Locuzione neutro-formale della storia militare per le esplosioni sperimentali di armi nucleari; esperimenti nucleari è leggermente più esplicito.",
+    "trap": "Test è un prestito maschile invariabile: i test, non *i tests; qui il contesto bellico esclude le prove di impianti o tecnologie nucleari civili.",
+    "example_tl": "I test nucleari atmosferici contaminarono vaste aree del Pacifico, esponendo le comunità locali a radiazioni i cui effetti sanitari emersero decenni dopo.",
+    "example_en": "Atmospheric nuclear tests contaminated vast areas of the Pacific, exposing local communities to radiation whose health effects emerged decades later.",
+    "cloze": "{{c1::I test nucleari}} atmosferici contaminarono vaste aree del Pacifico, esponendo le comunità locali a radiazioni i cui effetti sanitari emersero decenni dopo.",
+    "note": "Old_back gives the standard compact collocation; the example fixes the weapons-testing sense left implicit by the isolated source."
+  },
+  {
+    "id": "it_cold_war_vocab_167",
+    "en": "the Conventional forces",
+    "category": "lexical-noun",
+    "tl": "le forze convenzionali",
+    "alts": [],
+    "register": "Termine specialistico della strategia militare per reparti e armamenti non nucleari impiegati secondo le forme ordinarie della guerra.",
+    "trap": "Convenzionali non significa qui semplicemente abituali: la locuzione oppone queste forze soprattutto a quelle nucleari, senza coincidere sempre con ogni possibile categoria non nucleare.",
+    "example_tl": "Le forze convenzionali della NATO dipendevano da rinforzi rapidi, poiché la superiorità numerica sovietica rendeva vulnerabili i settori centrali del fronte europeo.",
+    "example_en": "NATO's conventional forces depended on rapid reinforcements, since Soviet numerical superiority made the central sectors of the European front vulnerable.",
+    "cloze": "{{c1::Le forze convenzionali}} della NATO dipendevano da rinforzi rapidi, poiché la superiorità numerica sovietica rendeva vulnerabili i settori centrali del fronte europeo.",
+    "note": "Old_back is accurate; retention is justified by the technical nuclear-versus-conventional contrast rather than by the transparent surface form alone."
+  },
+  {
+    "id": "it_cold_war_vocab_168",
+    "en": "the Rearmament",
+    "category": "lexical-noun",
+    "tl": "il riarmo",
+    "alts": [],
+    "register": "Termine formale della storia e della politica di sicurezza per il ripristino o il potenziamento delle capacità militari di uno Stato.",
+    "trap": "Riarmamento è corretto, ma nel senso militare è più comune riarmo; quest'ultimo indica il processo, mentre gli armamenti sono l'insieme dei mezzi bellici.",
+    "example_tl": "Il riarmo della Germania Ovest suscitò forti proteste, ma gli alleati lo considerarono indispensabile per rafforzare la difesa convenzionale dell'Europa occidentale.",
+    "example_en": "West Germany's rearmament provoked strong protests, but the allies considered it essential to strengthen the conventional defense of Western Europe.",
+    "cloze": "{{c1::Il riarmo}} della Germania Ovest suscitò forti proteste, ma gli alleati lo considerarono indispensabile per rafforzare la difesa convenzionale dell'Europa occidentale.",
+    "note": "Old_back supplies the preferred compact Italian noun. Self-review replaced an overstrong cross-language warning with the dictionary-supported contrast between riarmo, riarmamento and armamenti."
+  },
+  {
+    "id": "it_cold_war_vocab_169",
+    "en": "the De-escalation",
+    "category": "lexical-noun",
+    "tl": "la de-escalation",
+    "alts": [],
+    "register": "Prestito femminile stabilizzato nel linguaggio politico e militare per una riduzione progressiva dell'intensità o dell'impegno; resta di registro tecnico-istituzionale.",
+    "trap": "Il prestito è femminile e si scrive normalmente de-escalation; l'adattamento deescalazione esiste ma è raro, mentre distensione può indicare un processo diplomatico più ampio.",
+    "example_tl": "La de-escalation richiese canali militari riservati, affinché ogni ritiro potesse essere verificato senza apparire come una concessione unilaterale all'avversario.",
+    "example_en": "De-escalation required confidential military channels so that each withdrawal could be verified without appearing to be a unilateral concession to the adversary.",
+    "cloze": "{{c1::La de-escalation}} richiese canali militari riservati, affinché ogni ritiro potesse essere verificato senza apparire come una concessione unilaterale all'avversario.",
+    "note": "Old_back is accurate. Dictionary review confirmed the hyphenated feminine loan as the standard headword and deescalazione as a rare adaptation."
+  },
+  {
+    "id": "it_cold_war_vocab_170",
+    "en": "the Nuclear fallout",
+    "category": "lexical-noun",
+    "tl": "le ricadute radioattive",
+    "alts": [],
+    "register": "Locuzione tecnico-divulgativa per il materiale radioattivo che ricade dopo un'esplosione nucleare; il plurale è comune nella prosa storica e ambientale.",
+    "trap": "Ricadute nucleari può essere interpretato figurativamente come conseguenze politiche; radioattive identifica senza ambiguità il fenomeno fisico espresso da fallout.",
+    "example_tl": "Le ricadute radioattive contaminarono terreni e riserve idriche molto oltre il poligono, trasformando un esperimento militare in una crisi sanitaria transnazionale.",
+    "example_en": "Radioactive fallout contaminated land and water supplies far beyond the test site, turning a military experiment into a transnational health crisis.",
+    "cloze": "{{c1::Le ricadute radioattive}} contaminarono terreni e riserve idriche molto oltre il poligono, trasformando un esperimento militare in una crisi sanitaria transnazionale.",
+    "note": "Old_back's singular is understandable, but the production headword adopts the conventional plural and makes radioactivity explicit."
+  },
+  {
+    "id": "it_cold_war_vocab_171",
+    "en": "the Nuclear umbrella",
+    "category": "lexical-noun",
+    "tl": "l'ombrello nucleare",
+    "alts": [],
+    "register": "Metafora specialistica della strategia per la garanzia di deterrenza nucleare estesa da una potenza ai propri alleati.",
+    "trap": "L'ombrello nucleare è una garanzia di rappresaglia, non uno scudo fisico capace di intercettare missili; difesa antimissile designa quest'ultimo concetto.",
+    "example_tl": "L'ombrello nucleare statunitense rassicurava gli alleati europei, ma li rendeva dipendenti dalla credibilità di una rappresaglia decisa a Washington.",
+    "example_en": "The American nuclear umbrella reassured the European allies but made them dependent on the credibility of retaliation decided in Washington.",
+    "cloze": "{{c1::L'ombrello nucleare}} statunitense rassicurava gli alleati europei, ma li rendeva dipendenti dalla credibilità di una rappresaglia decisa a Washington.",
+    "note": "Old_back gives the established Italian metaphor; the example fixes its extended-deterrence sense."
+  },
+  {
+    "id": "it_cold_war_vocab_173",
+    "en": "Cold peace",
+    "category": "lexical-noun",
+    "tl": "la pace fredda",
+    "alts": [],
+    "register": "Etichetta analitica, spesso giornalistica, per una pace formale priva di normalizzazione politica, fiducia o cooperazione sostanziale.",
+    "trap": "Pace fredda non è un altro nome della guerra fredda: presuppone la cessazione delle ostilità aperte tra parti che restano profondamente antagoniste.",
+    "example_tl": "La pace fredda tra i due vicini evitò nuove ostilità aperte, senza però ristabilire relazioni diplomatiche, fiducia reciproca o cooperazione economica.",
+    "example_en": "The cold peace between the two neighbors prevented renewed open hostilities without, however, restoring diplomatic relations, mutual trust, or economic cooperation.",
+    "cloze": "{{c1::La pace fredda}} tra i due vicini evitò nuove ostilità aperte, senza però ristabilire relazioni diplomatiche, fiducia reciproca o cooperazione economica.",
+    "note": "Old_back captures the analytical label but omits the pedagogically useful article supplied in the production headword. Self-review replaced scambi diplomatici with the more idiomatic relazioni diplomatiche."
+  },
+  {
+    "id": "it_cold_war_vocab_174",
+    "en": "to confront",
+    "category": "lexical-verb",
+    "tl": "affrontare",
+    "alts": [
+      "fronteggiare"
+    ],
+    "register": "Verbo neutro-formale per affrontare direttamente un avversario, una crisi o un problema; fronteggiare accentua la resistenza a una minaccia.",
+    "trap": "Confrontare significa normalmente paragonare elementi o metterli a confronto; non è il traducente predefinito dell'inglese confront nel senso avversativo.",
+    "example_tl": "Il presidente affrontò apertamente l'Unione Sovietica durante la crisi, pur mantenendo un canale riservato per evitare un confronto militare incontrollabile.",
+    "example_en": "The president openly confronted the Soviet Union during the crisis while maintaining a confidential channel to avoid an uncontrolled military confrontation.",
+    "cloze": "Il presidente {{c1::affrontò}} apertamente l'Unione Sovietica durante la crisi, pur mantenendo un canale riservato per evitare un confronto militare incontrollabile.",
+    "note": "Old_back is accurate for the adversarial sense selected by the example; the card explicitly blocks the tempting false cognate confrontare. Self-review replaced the calqued-sounding sulla crisi with durante la crisi."
+  },
+  {
+    "id": "it_cold_war_vocab_175",
+    "en": "to oppose",
+    "category": "lexical-verb",
+    "tl": "opporsi a",
+    "alts": [],
+    "register": "Costruzione neutra e comune nella prosa politica per dichiarare o esercitare opposizione a una misura, decisione, forza o persona.",
+    "trap": "A differenza dell'inglese oppose, l'italiano usa il verbo pronominale e la preposizione a: opporsi a qualcosa, non *opporre qualcosa in questo senso.",
+    "example_tl": "Diversi governi europei si opposero ai nuovi missili, temendo che il loro schieramento aumentasse il rischio di diventare bersagli prioritari.",
+    "example_en": "Several European governments opposed the new missiles, fearing that their deployment would increase the risk of becoming priority targets.",
+    "cloze": "Diversi governi europei {{c1::si opposero ai}} nuovi missili, temendo che il loro schieramento aumentasse il rischio di diventare bersagli prioritari.",
+    "note": "Old_back includes the pronominal marker but omits the required preposition; the production headword restores the full frame."
+  },
+  {
+    "id": "it_cold_war_vocab_176",
+    "en": "to align",
+    "category": "lexical-verb",
+    "tl": "allinearsi con",
+    "alts": [
+      "schierarsi con"
+    ],
+    "register": "Neutro-formale nella politica internazionale quando un attore adotta lo schieramento di un altro; schierarsi con rende più esplicita la scelta di campo.",
+    "trap": "Con un attore si usa comunemente con; a introduce invece una linea o posizione. Il francese s'aligner sur può indurre l'errato *allinearsi su un paese.",
+    "example_tl": "Dopo l'invasione, alcuni governi si allinearono con Washington, mentre altri conservarono una neutralità formale per proteggere i propri interessi commerciali.",
+    "example_en": "After the invasion, some governments aligned with Washington, while others maintained formal neutrality to protect their commercial interests.",
+    "cloze": "Dopo l'invasione, alcuni governi {{c1::si allinearono con}} Washington, mentre altri conservarono una neutralità formale per proteggere i propri interessi commerciali.",
+    "note": "Old_back gives the pronominal verb alone; the production headword selects the actor complement and supplies its preposition."
+  },
+  {
+    "id": "it_cold_war_vocab_177",
+    "en": "to infiltrate",
+    "category": "lexical-verb",
+    "tl": "infiltrarsi in",
+    "alts": [],
+    "register": "Costruzione neutro-formale della sicurezza e dello spionaggio per un agente che entra clandestinamente in una rete, organizzazione o ambiente.",
+    "trap": "Infiltrarsi in assegna all'agente il ruolo di soggetto; infiltrare un agente in una rete è invece transitivo e assegna quel ruolo all'oggetto.",
+    "example_tl": "Un agente si infiltrò nella rete clandestina fingendosi tipografo, ma rapporti troppo dettagliati finirono per insospettire i responsabili della sicurezza interna.",
+    "example_en": "An agent infiltrated the clandestine network by posing as a printer, but excessively detailed reports eventually aroused the suspicions of internal security officials.",
+    "cloze": "Un agente {{c1::si infiltrò nella}} rete clandestina fingendosi tipografo, ma rapporti troppo dettagliati finirono per insospettire i responsabili della sicurezza interna.",
+    "note": "The source leaves transitivity open. Old_back selects the agent-as-subject reading but omits the governed in, which the production headword restores."
+  },
+  {
+    "id": "it_cold_war_vocab_185",
+    "en": "to embargo",
+    "category": "lexical-expression",
+    "tl": "imporre un embargo a",
+    "alts": [
+      "sottoporre a embargo"
+    ],
+    "register": "Costruzione formale della diplomazia e del commercio per vietare ufficialmente determinati scambi con uno Stato, un'entità o un territorio.",
+    "trap": "L'inglese usa liberamente embargo come verbo; in italiano embargare è marcato e raro, mentre imporre un embargo a è la costruzione istituzionale non ambigua.",
+    "example_tl": "Il Consiglio impose un embargo al regime dopo che gli ispettori documentarono trasferimenti clandestini di componenti destinati a un programma missilistico.",
+    "example_en": "The Council embargoed the regime after inspectors documented clandestine transfers of components intended for a missile program.",
+    "cloze": "Il Consiglio {{c1::impose un embargo al}} regime dopo che gli ispettori documentarono trasferimenti clandestini di componenti destinati a un programma missilistico.",
+    "note": "Old_back is valid; the main headword uses the more typical institutional support verb. Dictionary review confirmed embargare as a marked later formation."
+  },
+  {
+    "id": "it_cold_war_vocab_188",
+    "en": "to protest",
+    "category": "lexical-verb",
+    "tl": "protestare contro",
+    "alts": [
+      "manifestare contro"
+    ],
+    "register": "Neutro nel discorso politico per esprimere pubblicamente opposizione; manifestare contro mette più chiaramente in primo piano l'azione collettiva in piazza.",
+    "trap": "L'inglese può usare protest con oggetto diretto; l'italiano standard richiede normalmente contro davanti alla misura o autorità contestata.",
+    "example_tl": "Gli studenti protestarono contro la legge d'emergenza, trasformando le università in luoghi di mobilitazione politica nonostante arresti e chiusure amministrative.",
+    "example_en": "The students protested against the emergency law, turning the universities into sites of political mobilization despite arrests and administrative closures.",
+    "cloze": "Gli studenti {{c1::protestarono contro}} la legge d'emergenza, trasformando le università in luoghi di mobilitazione politica nonostante arresti e chiusure amministrative.",
+    "note": "Old_back gives the verb alone; the production headword selects the public-opposition sense and supplies its normal preposition."
+  },
+  {
+    "id": "it_cold_war_vocab_192",
+    "en": "to dissent",
+    "category": "lexical-verb",
+    "tl": "dissentire da",
+    "alts": [],
+    "register": "Verbo scritto-formale dell'argomentazione e della deliberazione istituzionale; da introduce la persona, opinione o linea dalla quale si dissente.",
+    "trap": "Dissentire regge da davanti a una posizione o persona e può reggere su davanti al tema; es disentir de può favorire l'errata preposizione italiana *di.",
+    "example_tl": "Due consiglieri dissentirono dalla linea ufficiale, sostenendo che l'aumento delle spese militari avrebbe indebolito i programmi sociali senza migliorare la sicurezza.",
+    "example_en": "Two advisers dissented from the official line, arguing that increased military spending would weaken social programs without improving security.",
+    "cloze": "Due consiglieri {{c1::dissentirono dalla}} linea ufficiale, sostenendo che l'aumento delle spese militari avrebbe indebolito i programmi sociali senza migliorare la sicurezza.",
+    "note": "Old_back omits the governed preposition. Retained alongside the earlier Dissent noun card because that card does not teach the verbal da/su government."
+  },
+  {
+    "id": "it_cold_war_vocab_193",
+    "en": "to exile",
+    "category": "lexical-verb",
+    "tl": "esiliare",
+    "alts": [
+      "mandare in esilio"
+    ],
+    "register": "Verbo formale per costringere qualcuno a lasciare il proprio paese o luogo di residenza; mandare in esilio è una parafrasi neutra.",
+    "trap": "Esiliare qualcuno è transitivo e mantiene il regime come soggetto; esiliarsi cambia il soggetto e significa lasciare il paese, spesso volontariamente.",
+    "example_tl": "Il regime esiliò i principali oppositori, sperando di disperderne le reti, ma le comunità all'estero continuarono a finanziare la stampa clandestina.",
+    "example_en": "The regime exiled the leading opponents, hoping to disperse their networks, but communities abroad continued to fund the clandestine press.",
+    "cloze": "Il regime {{c1::esiliò}} i principali oppositori, sperando di disperderne le reti, ma le comunità all'estero continuarono a finanziare la stampa clandestina.",
+    "note": "Old_back is accurate. Retained alongside the earlier Exile noun card because the verb adds a consequential transitive-versus-pronominal distinction."
+  },
+  {
+    "id": "it_cold_war_vocab_196",
+    "en": "to deter",
+    "category": "lexical-verb",
+    "tl": "dissuadere qualcuno dal fare qualcosa",
+    "alts": [],
+    "register": "Costruzione neutro-formale; in strategia indica impedire un'azione rendendone credibili e sufficientemente elevati i costi previsti.",
+    "trap": "La persona è oggetto diretto, senza a, mentre l'azione evitata è introdotta da da: dissuadere qualcuno dal fare, non es disuadir a alguien de.",
+    "example_tl": "La possibilità di una risposta devastante dissuase entrambi i governi dal lanciare un attacco preventivo durante le fasi più tese della crisi.",
+    "example_en": "The possibility of a devastating response deterred both governments from launching a preemptive attack during the most tense phases of the crisis.",
+    "cloze": "La possibilità di una risposta devastante {{c1::dissuase}} entrambi i governi {{c1::dal}} lanciare un attacco preventivo durante le fasi più tese della crisi.",
+    "note": "Old_back supplies the correct verb but not its two-part argument structure; the production headword makes both complements explicit."
+  },
+  {
+    "id": "it_cold_war_vocab_197",
+    "en": "to escalate",
+    "category": "lexical-verb",
+    "tl": "inasprire",
+    "alts": [
+      "intensificare"
+    ],
+    "register": "Verbo neutro-formale e critico con conflitti, tensioni, sanzioni o repressione; intensificare è un'alternativa analitica leggermente meno valutativa.",
+    "trap": "Escalare si sta diffondendo nel linguaggio giornalistico, ma resta un anglicismo marcato e conserva altri sensi; inasprire o intensificare evita l'ambiguità.",
+    "example_tl": "L'invio di nuove batterie missilistiche inasprì il confronto, riducendo lo spazio politico per i mediatori e aumentando il rischio di errori di calcolo.",
+    "example_en": "The deployment of new missile batteries escalated the confrontation, reducing the political space for mediators and increasing the risk of miscalculation.",
+    "cloze": "L'invio di nuove batterie missilistiche {{c1::inasprì}} il confronto, riducendo lo spazio politico per i mediatori e aumentando il rischio di errori di calcolo.",
+    "note": "The source does not specify transitivity; the example selects the transitive conflict sense. Old_back is accurate for that reading."
+  },
+  {
+    "id": "it_cold_war_vocab_198",
+    "en": "to proliferate",
+    "category": "lexical-verb",
+    "tl": "proliferare",
+    "alts": [],
+    "register": "Verbo neutro-formale, spesso critico, per soggetti che si moltiplicano o si diffondono rapidamente; in italiano è intransitivo.",
+    "trap": "Proliferare non prende un oggetto diretto: proliferano le armi o i programmi, mentre un attore li fa proliferare o ne favorisce la proliferazione.",
+    "example_tl": "Dopo il crollo dei controlli centrali, proliferarono programmi nucleari clandestini alimentati da reti capaci di trasferire componenti sensibili attraverso intermediari commerciali.",
+    "example_en": "After central controls collapsed, clandestine nuclear programs proliferated, sustained by networks capable of transferring sensitive components through commercial intermediaries.",
+    "cloze": "Dopo il crollo dei controlli centrali, {{c1::proliferarono}} programmi nucleari clandestini alimentati da reti capaci di trasferire componenti sensibili attraverso intermediari commerciali.",
+    "note": "Old_back is accurate. Retained alongside the earlier Nuclear proliferation noun card because the intransitive verbal valency is a separate production lesson."
+  },
+  {
+    "id": "it_cold_war_vocab_200",
+    "en": "to transition",
+    "category": "lexical-expression",
+    "tl": "passare da ... a ...",
+    "alts": [
+      "compiere la transizione da ... a ..."
+    ],
+    "register": "Costruzione neutra e idiomatica per il passaggio politico, economico o istituzionale tra due sistemi; la perifrasi nominale è più formale.",
+    "trap": "L'inglese verbalizza liberamente transition; transizionare ricorre in usi tecnici e burocratici, ma non è la scelta non marcata per un generico cambiamento di sistema.",
+    "example_tl": "Dopo il 1989, diversi Stati passarono dall'economia pianificata a quella di mercato senza istituire subito solidi organismi di regolamentazione capaci di contenere gli oligopoli.",
+    "example_en": "After 1989, several states transitioned from a planned economy to a market economy without immediately establishing robust regulatory bodies capable of containing oligopolies.",
+    "cloze": "Dopo il 1989, diversi Stati {{c1::passarono dall'}}economia pianificata {{c1::a}} quella di mercato senza istituire subito solidi organismi di regolamentazione capaci di contenere gli oligopoli.",
+    "note": "Old_back gives a valid support-noun paraphrase but leaves both endpoints unexpressed; the main headword supplies the productive two-arm frame. Self-review replaced istituzioni regolatorie with the more idiomatic organismi di regolamentazione."
+  },
+  {
+    "id": "it_cold_war_vocab_202",
+    "en": "to subvert",
+    "category": "lexical-verb",
+    "tl": "sovvertire",
+    "alts": [],
+    "register": "Verbo scritto-formale della politica e del diritto per alterare radicalmente o rovesciare un ordine, un'istituzione o i suoi principi fondamentali.",
+    "trap": "L'italiano usa il prefisso sov-: sovvertire, non il calco *subvertire favorito dall'inglese subvert, dallo spagnolo subvertir e dal portoghese subverter.",
+    "example_tl": "Il governo accusò le emittenti straniere di sovvertire l'ordine costituzionale, ma le prove documentavano soltanto finanziamenti destinati a giornali dell'opposizione.",
+    "example_en": "The government accused foreign broadcasters of subverting the constitutional order, but the evidence documented only funding intended for opposition newspapers.",
+    "cloze": "Il governo accusò le emittenti straniere di {{c1::sovvertire}} l'ordine costituzionale, ma le prove documentavano soltanto finanziamenti destinati a giornali dell'opposizione.",
+    "note": "Old_back is accurate. Self-review retained the item for its formal institutional collocation and the genuine cross-language prefix trap, not for cognate recognition alone."
+  },
+  {
+    "id": "it_cold_war_vocab_208",
+    "en": "to broadcast",
+    "category": "lexical-verb",
+    "tl": "trasmettere",
+    "alts": [
+      "mandare in onda"
+    ],
+    "register": "Verbo neutro del linguaggio radiotelevisivo per diffondere un programma, discorso o segnale; mandare in onda mette in primo piano la programmazione del contenuto.",
+    "trap": "Diffondere è adatto alla circolazione ampia di notizie o messaggi, ma per un contenuto radiotelevisivo trasmettere è più preciso; ritrasmettere indica invece un segnale già ricevuto.",
+    "example_tl": "Radio Free Europe trasmise il discorso oltre la cortina di ferro, permettendo agli ascoltatori di confrontare la propaganda ufficiale con fonti straniere.",
+    "example_en": "Radio Free Europe broadcast the speech beyond the Iron Curtain, allowing listeners to compare official propaganda with foreign sources.",
+    "cloze": "Radio Free Europe {{c1::trasmise}} il discorso oltre la cortina di ferro, permettendo agli ascoltatori di confrontare la propaganda ufficiale con fonti straniere.",
+    "note": "Old_back gives the correct neutral verb. Self-review kept mandare in onda as the only alternative because it can replace the inflected occurrence without changing the broadcast-content sense."
+  },
+  {
+    "id": "it_cold_war_vocab_210",
+    "en": "to impose",
+    "category": "lexical-verb",
+    "tl": "imporre qualcosa a qualcuno",
+    "alts": [],
+    "register": "Costruzione neutro-formale della politica e del diritto per obblighi, sanzioni, limiti o costi stabiliti unilateralmente a carico di un destinatario.",
+    "trap": "Il destinatario è introdotto da a: imporre qualcosa a qualcuno. Il verbo segue porre, con participio imposto e passato remoto impose.",
+    "example_tl": "Dopo l'invasione, il Consiglio impose nuove sanzioni al regime, vietando l'esportazione di tecnologie utilizzabili per produrre missili a lungo raggio.",
+    "example_en": "After the invasion, the Council imposed new sanctions on the regime, banning the export of technologies usable to produce long-range missiles.",
+    "cloze": "Dopo l'invasione, il Consiglio {{c1::impose}} nuove sanzioni {{c1::al}} regime, vietando l'esportazione di tecnologie utilizzabili per produrre missili a lungo raggio.",
+    "note": "Old_back supplies the correct lemma but omits the productive recipient frame. Self-review wrapped the verb and governed preposition as separate fixed arms."
+  },
+  {
+    "id": "it_cold_war_vocab_214",
+    "en": "to annex",
+    "category": "lexical-verb",
+    "tl": "annettere",
+    "alts": [],
+    "register": "Verbo formale del diritto internazionale e della storia politica per incorporare unilateralmente un territorio in uno Stato esistente.",
+    "trap": "Non ricavare il verbo meccanicamente da annessione o dalle forme straniere in annex-: si usa annettere, con participio annesso e passato remoto annetté.",
+    "example_tl": "L'Unione Sovietica annetté le repubbliche baltiche nel 1940, mentre le potenze occidentali continuarono a contestare la legittimità giuridica dell'incorporazione.",
+    "example_en": "The Soviet Union annexed the Baltic republics in 1940, while the Western powers continued to contest the legal legitimacy of their incorporation.",
+    "cloze": "L'Unione Sovietica {{c1::annetté}} le repubbliche baltiche nel 1940, mentre le potenze occidentali continuarono a contestare la legittimità giuridica dell'incorporazione.",
+    "note": "Old_back is accurate. Self-review retained the item because its inflection and cross-language form interference create production value despite the transparent geopolitical concept; dictionary review prompted the attested annetté form."
+  },
+  {
+    "id": "it_cold_war_vocab_217",
+    "en": "to strategize",
+    "category": "lexical-expression",
+    "tl": "elaborare una strategia",
+    "alts": [
+      "mettere a punto una strategia"
+    ],
+    "register": "Locuzione neutro-formale della pianificazione politica e organizzativa; mettere a punto una strategia sottolinea il perfezionamento progressivo del piano.",
+    "trap": "L'inglese forma liberamente il verbo strategize; nell'italiano sorvegliato è più naturale ricorrere a una locuzione con strategia che riprodurre il verbo denominale.",
+    "example_tl": "Durante i colloqui segreti, i diplomatici elaborarono una strategia comune per concordare meccanismi di verifica reciproca senza trasformare ogni concessione tecnica in una sconfitta politica.",
+    "example_en": "During the secret talks, the diplomats devised a common strategy to agree on mutual verification mechanisms without turning every technical concession into a political defeat.",
+    "cloze": "Durante i colloqui segreti, i diplomatici {{c1::elaborarono una strategia}} comune per concordare meccanismi di verifica reciproca senza trasformare ogni concessione tecnica in una sconfitta politica.",
+    "note": "Old_back is accurate and already avoids an English verbal calque. Self-review retained only an alternative that can replace the clozed phrase with the same planning sense."
+  },
+  {
+    "id": "it_cold_war_vocab_220",
+    "en": "to intimidate",
+    "category": "lexical-verb",
+    "tl": "intimidire",
+    "alts": [
+      "intimorire"
+    ],
+    "register": "Verbo neutro-formale per incutere timore allo scopo di frenare un comportamento o ottenere obbedienza; intimorire mette leggermente più in rilievo la paura prodotta.",
+    "trap": "L'italiano usa intimidire in -ire, con forme presenti come intimidisce; lo spagnolo e il portoghese intimidar possono indurre l'errato *intimidare.",
+    "example_tl": "La polizia segreta intimidì i redattori convocandoli di notte, ma le minacce alimentarono una rete clandestina di solidarietà tra le testate indipendenti.",
+    "example_en": "The secret police intimidated the editors by summoning them at night, but the threats fueled a clandestine solidarity network among independent publications.",
+    "cloze": "La polizia segreta {{c1::intimidì}} i redattori convocandoli di notte, ma le minacce alimentarono una rete clandestina di solidarietà tra le testate indipendenti.",
+    "note": "Old_back is accurate. Self-review retained the verb for its Romance-language conjugation trap and confirmed that intimorire is interchangeable in the example, though slightly less coercive."
+  }
+]

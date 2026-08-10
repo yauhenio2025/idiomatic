@@ -179,16 +179,16 @@
     "id": "it_cold_war_vocab_140",
     "en": "the Mutually Assured Destruction (MAD)",
     "category": "lexical-expression",
-    "tl": "die gegenseitige gesicherte Zerstörung (MAD)",
+    "tl": "die gegenseitig gesicherte Zerstörung (MAD)",
     "alts": [
       "die wechselseitig gesicherte Zerstörung"
     ],
     "register": "Formal nuclear-strategy term; German discussions usually retain the English acronym MAD even when translating the full expression.",
-    "trap": "Assured here means made certain by survivable retaliation, so gesichert is correct; the legacy zugesichert wrongly suggests that destruction was verbally promised.",
-    "example_tl": "Die gegenseitige gesicherte Zerstörung beruhte auf der Fähigkeit beider Supermächte, selbst nach einem nuklearen Erstschlag noch vernichtend zurückzuschlagen.",
+    "trap": "Gegenseitig modifies gesichert adverbially and therefore remains uninflected: die gegenseitig gesicherte Zerstörung, not *die gegenseitige gesicherte Zerstörung; MAD remains English.",
+    "example_tl": "Die gegenseitig gesicherte Zerstörung beruhte auf der Fähigkeit beider Supermächte, selbst nach einem nuklearen Erstschlag noch vernichtend zurückzuschlagen.",
     "example_en": "Mutually assured destruction rested on both superpowers' ability to retaliate devastatingly even after suffering a nuclear first strike.",
-    "cloze": "Die {{c1::gegenseitige gesicherte Zerstörung}} beruhte auf der Fähigkeit beider Supermächte, selbst nach einem nuklearen Erstschlag noch vernichtend zurückzuschlagen.",
-    "note": "Materially corrects old_back to the established German strategic term; the headword retains MAD as the conventional identifying acronym."
+    "cloze": "Die {{c1::gegenseitig gesicherte Zerstörung}} beruhte auf der Fähigkeit beider Supermächte, selbst nach einem nuklearen Erstschlag noch vernichtend zurückzuschlagen.",
+    "note": "Materially corrects old_back's zugesichert to the established German strategic term and, after audit, keeps adverbial gegenseitig uninflected; MAD remains the conventional identifying acronym."
   },
   {
     "id": "it_cold_war_vocab_142",
@@ -228,10 +228,10 @@
     "alts": [],
     "register": "Historical and political term, usually critical, for a formally sovereign state under the decisive influence of a stronger power.",
     "trap": "Satellitenstaat is an evaluative dependency label, not a neutral constitutional category and not a state associated with spaceflight or communications satellites.",
-    "example_tl": "Als Satellitenstaat blieb die Republik formal souverän, doch ihre Außenpolitik, Sicherheitsorgane und wirtschaftlichen Prioritäten wurden maßgeblich von Moskau bestimmt.",
-    "example_en": "As a satellite state, the republic remained formally sovereign, but its foreign policy, security organs and economic priorities were largely determined by Moscow.",
-    "cloze": "Als {{c1::Satellitenstaat}} blieb die Republik formal souverän, doch ihre Außenpolitik, Sicherheitsorgane und wirtschaftlichen Prioritäten wurden maßgeblich von Moskau bestimmt.",
-    "note": "The legacy rendering is accurate; the register warning prevents the historical label from being presented as a value-neutral legal status."
+    "example_tl": "In westlichen Analysen galt die Republik als Satellitenstaat, weil Moskau ihre Außenpolitik, Sicherheitsorgane und wirtschaftlichen Prioritäten trotz formaler Souveränität maßgeblich bestimmte.",
+    "example_en": "In Western analyses, the republic was considered a satellite state because Moscow largely determined its foreign policy, security organs and economic priorities despite formal sovereignty.",
+    "cloze": "In westlichen Analysen galt die Republik als {{c1::Satellitenstaat}}, weil Moskau ihre Außenpolitik, Sicherheitsorgane und wirtschaftlichen Prioritäten trotz formaler Souveränität maßgeblich bestimmte.",
+    "note": "The legacy rendering is accurate; the register warning prevents the historical label from being presented as a value-neutral legal status, and audit review attributed that label in the example."
   },
   {
     "id": "it_cold_war_vocab_145",
@@ -364,10 +364,10 @@
     "alts": [],
     "register": "Established historical name for Gorbachev's program of restructuring the Soviet economy and political system.",
     "trap": "Generic Umstrukturierung is only an explanatory gloss; translating the named Soviet reform this way erases its historical specificity.",
-    "example_tl": "Die Perestroika sollte die sowjetische Wirtschaft erneuern, legte jedoch institutionelle Widersprüche offen, die weder administrative Reformen noch begrenzte Marktmechanismen rasch lösen konnten.",
-    "example_en": "Perestroika was intended to renew the Soviet economy but exposed institutional contradictions that neither administrative reforms nor limited market mechanisms could quickly resolve.",
-    "cloze": "Die {{c1::Perestroika}} sollte die sowjetische Wirtschaft erneuern, legte jedoch institutionelle Widersprüche offen, die weder administrative Reformen noch begrenzte Marktmechanismen rasch lösen konnten.",
-    "note": "The legacy headword is accurate; the explanatory parenthesis is omitted from the production form and supplied through the usage fields."
+    "example_tl": "Befürworter der Perestroika wollten die sowjetische Wirtschaft erneuern, während Kritiker vor institutionellen Widersprüchen und den politischen Folgen begrenzter Marktmechanismen warnten.",
+    "example_en": "Supporters of perestroika wanted to renew the Soviet economy, while critics warned of institutional contradictions and the political consequences of limited market mechanisms.",
+    "cloze": "Befürworter der {{c1::Perestroika}} wollten die sowjetische Wirtschaft erneuern, während Kritiker vor institutionellen Widersprüchen und den politischen Folgen begrenzter Marktmechanismen warnten.",
+    "note": "The legacy headword is accurate; the explanatory parenthesis is omitted from the production form and supplied through the usage fields. Audit review replaced an unattributed causal assessment in the example."
   },
   {
     "id": "it_cold_war_vocab_159",
