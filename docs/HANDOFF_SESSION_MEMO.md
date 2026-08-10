@@ -63,10 +63,14 @@
 ## Hard-won mechanics (violate at your peril)
 
 - **Mac**: ssh evgeny2026@192.168.110.65 (mac.lan mDNS flaky after
-  reboots). Renders/QA live in ~/llms/factory-node/. After ANY Mac
-  reboot: clear stranded ~/llms/factory-node/PAUSE_BOOKSCAN, restart
-  comfy (~/llms/qwen-image-edit/start_comfy.sh, dies with terminal),
-  relaunch run_queue_v2.sh + the b10_18 chain, check launchd qa tick.
+  reboots). Renders/QA live in ~/llms/factory-node/. **Reboot recovery
+  is AUTOMATED since 2026-08-10** (2nd kernel panic that day):
+  launchd `com.idiomatic.boot-recover` runs
+  ~/llms/factory-node/boot_recover.sh at login — clears stranded
+  PAUSE_BOOKSCAN + judge lock, starts comfy, relaunches the queue
+  chain (idempotent; log logs/boot_recover.log). Manual checklist
+  only if that agent is broken. Bookscan does NOT auto-restart —
+  owner starts it.
 - **PAUSE_BOOKSCAN flag = the only way to pause bookscan.** NEVER
   SIGSTOP its driver (wedges children; cost 5h once). Judge batches
   raise/release it themselves and won't release a hold they didn't
