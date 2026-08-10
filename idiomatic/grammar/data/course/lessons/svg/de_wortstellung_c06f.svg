@@ -1,0 +1,33 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two ordering rails contrast nominative accusative dative for personal pronouns with nominative dative accusative for full noun phrases">
+  <text x="420" y="44" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">Two queues, two neutral orders</text>
+  <text x="36" y="111" font-size="18" font-weight="700" class="s-teal">PERSONAL PRONOUNS</text>
+  <rect x="250" y="73" width="155" height="76" rx="38" class="s-tile" stroke-width="3"/>
+  <text x="327" y="105" text-anchor="middle" font-size="22" font-weight="800" class="s-teal">sie</text>
+  <text x="327" y="130" text-anchor="middle" font-size="15" class="s-muted">NOMINATIVE</text>
+  <line x1="415" y1="111" x2="434" y2="111" class="s-stroke-line" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="444,111 432,103 432,119" class="s-dead"/>
+  <rect x="454" y="73" width="155" height="76" rx="38" class="s-tile" stroke-width="3"/>
+  <text x="531" y="105" text-anchor="middle" font-size="22" font-weight="800" class="s-coral">ihn</text>
+  <text x="531" y="130" text-anchor="middle" font-size="15" class="s-muted">ACCUSATIVE</text>
+  <line x1="619" y1="111" x2="638" y2="111" class="s-stroke-line" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="648,111 636,103 636,119" class="s-dead"/>
+  <rect x="658" y="73" width="145" height="76" rx="38" class="s-tile" stroke-width="3"/>
+  <text x="730" y="105" text-anchor="middle" font-size="22" font-weight="800" class="s-ink">mir</text>
+  <text x="730" y="130" text-anchor="middle" font-size="15" class="s-muted">DATIVE</text>
+  <text x="36" y="268" font-size="18" font-weight="700" class="s-coral">FULL NOUN PHRASES</text>
+  <rect x="250" y="230" width="155" height="76" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="327" y="262" text-anchor="middle" font-size="19" font-weight="800" class="s-teal">der Verlag</text>
+  <text x="327" y="287" text-anchor="middle" font-size="15" class="s-muted">NOMINATIVE</text>
+  <line x1="415" y1="268" x2="434" y2="268" class="s-stroke-line" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="444,268 432,260 432,276" class="s-dead"/>
+  <rect x="454" y="230" width="155" height="76" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="531" y="262" text-anchor="middle" font-size="18" font-weight="800" class="s-ink">der Autorin</text>
+  <text x="531" y="287" text-anchor="middle" font-size="15" class="s-muted">DATIVE</text>
+  <line x1="619" y1="268" x2="638" y2="268" class="s-stroke-line" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="648,268 636,260 636,276" class="s-dead"/>
+  <rect x="658" y="230" width="145" height="76" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="730" y="262" text-anchor="middle" font-size="17" font-weight="800" class="s-coral">einen Vertrag</text>
+  <text x="730" y="287" text-anchor="middle" font-size="15" class="s-muted">ACCUSATIVE</text>
+  <text x="420" y="375" text-anchor="middle" font-size="20" font-weight="700" class="s-ink">pronouns: N–A–D · nouns: N–D–A</text>
+  <text x="420" y="407" text-anchor="middle" font-size="17" class="s-muted">old, light pronouns sprint left; full objects follow their neutral role order</text>
+</svg>

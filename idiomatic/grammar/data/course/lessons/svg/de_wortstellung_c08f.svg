@@ -1,0 +1,37 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six linked tiles show the neutral hierarchy of adverbials: attitude, time, reason, viewpoint, place, manner">
+  <text x="420" y="52" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">The full adverbial hierarchy</text>
+  <rect x="20" y="125" width="110" height="102" rx="13" class="s-tile" stroke-width="3"/>
+  <text x="75" y="168" text-anchor="middle" font-size="18" font-weight="800" class="s-teal">ATTITUDE</text>
+  <text x="75" y="199" text-anchor="middle" font-size="15" class="s-muted">probably</text>
+  <line x1="135" y1="176" x2="142" y2="176" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="148,176 140,170 140,182" class="s-dead"/>
+  <rect x="158" y="125" width="110" height="102" rx="13" class="s-tile" stroke-width="3"/>
+  <text x="213" y="168" text-anchor="middle" font-size="18" font-weight="800" class="s-ink">TIME</text>
+  <text x="213" y="199" text-anchor="middle" font-size="15" class="s-muted">yesterday</text>
+  <line x1="273" y1="176" x2="280" y2="176" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="286,176 278,170 278,182" class="s-dead"/>
+  <rect x="296" y="125" width="110" height="102" rx="13" class="s-tile" stroke-width="3"/>
+  <text x="351" y="168" text-anchor="middle" font-size="18" font-weight="800" class="s-coral">REASON</text>
+  <text x="351" y="199" text-anchor="middle" font-size="15" class="s-muted">because of</text>
+  <line x1="411" y1="176" x2="418" y2="176" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="424,176 416,170 416,182" class="s-dead"/>
+  <rect x="434" y="125" width="110" height="102" rx="13" class="s-tile" stroke-width="3"/>
+  <text x="489" y="162" text-anchor="middle" font-size="16" font-weight="800" class="s-ink">VIEWPOINT</text>
+  <text x="489" y="188" text-anchor="middle" font-size="14" class="s-muted">under time</text>
+  <text x="489" y="208" text-anchor="middle" font-size="14" class="s-muted">pressure</text>
+  <line x1="549" y1="176" x2="556" y2="176" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="562,176 554,170 554,182" class="s-dead"/>
+  <rect x="572" y="125" width="110" height="102" rx="13" class="s-tile" stroke-width="3"/>
+  <text x="627" y="168" text-anchor="middle" font-size="18" font-weight="800" class="s-ink">PLACE</text>
+  <text x="627" y="199" text-anchor="middle" font-size="15" class="s-muted">data centre</text>
+  <line x1="687" y1="176" x2="694" y2="176" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="700,176 692,170 692,182" class="s-dead"/>
+  <rect x="710" y="125" width="110" height="102" rx="13" class="s-tile" stroke-width="3"/>
+  <text x="765" y="168" text-anchor="middle" font-size="18" font-weight="800" class="s-coral">MANNER</text>
+  <text x="765" y="199" text-anchor="middle" font-size="15" class="s-muted">calmly</text>
+  <line x1="75" y1="277" x2="765" y2="277" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="785,277 763,264 763,290" class="s-teal"/>
+  <text x="420" y="318" text-anchor="middle" font-size="19" font-weight="700" class="s-ink">neutral order when every element has equal weight</text>
+  <text x="420" y="369" text-anchor="middle" font-size="18" class="s-muted">context may move an adverbial later to give it stronger stress</text>
+  <text x="420" y="401" text-anchor="middle" font-size="17" class="s-muted">required direction and location are complements — they come after manner</text>
+</svg>

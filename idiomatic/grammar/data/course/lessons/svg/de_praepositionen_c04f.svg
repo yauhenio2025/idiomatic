@@ -1,0 +1,18 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline contrasting seit, bis, and ab as an open span, endpoint, and new starting boundary">
+  <text x="420" y="50" text-anchor="middle" font-size="29" font-weight="700" class="s-ink">TIME AS BOUNDARIES</text>
+  <line x1="75" y1="225" x2="765" y2="225" class="s-stroke-line" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="785,225 760,211 760,239" class="s-dead"/>
+  <line x1="175" y1="188" x2="175" y2="262" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <line x1="455" y1="188" x2="455" y2="262" class="s-stroke-coral" stroke-width="5" stroke-linecap="round"/>
+  <line x1="655" y1="188" x2="655" y2="262" class="s-stroke-teal" stroke-width="5" stroke-linecap="round"/>
+  <line x1="175" y1="225" x2="445" y2="225" class="s-stroke-teal" stroke-width="8" stroke-linecap="round"/>
+  <text x="175" y="142" text-anchor="middle" font-size="26" font-weight="800" class="s-teal">SEIT</text>
+  <text x="175" y="171" text-anchor="middle" font-size="16" class="s-muted">past start</text>
+  <text x="455" y="305" text-anchor="middle" font-size="26" font-weight="800" class="s-coral">BIS</text>
+  <text x="455" y="334" text-anchor="middle" font-size="16" class="s-muted">closing endpoint</text>
+  <line x1="665" y1="225" x2="755" y2="225" class="s-stroke-teal" stroke-width="8" stroke-linecap="round"/>
+  <text x="655" y="142" text-anchor="middle" font-size="26" font-weight="800" class="s-teal">AB</text>
+  <text x="655" y="171" text-anchor="middle" font-size="16" class="s-muted">new start</text>
+  <text x="310" y="385" text-anchor="middle" font-size="18" class="s-ink">a span reaching the reference point</text>
+  <text x="655" y="385" text-anchor="middle" font-size="18" class="s-ink">a boundary opening forward</text>
+</svg>

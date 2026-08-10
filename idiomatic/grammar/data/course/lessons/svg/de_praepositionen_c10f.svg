@@ -1,0 +1,29 @@
+<svg viewBox="0 0 840 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision tree for German equivalents of English to: nach for geographical names without articles, zu for people and general direction, and an auf or in for precise endpoint geometry">
+  <rect x="270" y="28" width="300" height="78" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="420" y="61" text-anchor="middle" font-size="21" font-weight="800" class="s-ink">WHAT HOLDS AT ARRIVAL?</text>
+  <text x="420" y="88" text-anchor="middle" font-size="16" class="s-muted">predict the endpoint scene</text>
+  <line x1="330" y1="116" x2="330" y2="145" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <line x1="145" y1="145" x2="695" y2="145" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <line x1="145" y1="145" x2="145" y2="185" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="145,195 133,175 157,175" class="s-coral"/>
+  <line x1="420" y1="116" x2="420" y2="185" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="420,195 408,175 432,175" class="s-teal"/>
+  <line x1="695" y1="145" x2="695" y2="185" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="695,195 683,175 707,175" class="s-coral"/>
+  <rect x="30" y="205" width="230" height="170" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="145" y="244" text-anchor="middle" font-size="24" font-weight="800" class="s-coral">NACH</text>
+  <text x="145" y="279" text-anchor="middle" font-size="17" class="s-ink">geographical name</text>
+  <text x="145" y="305" text-anchor="middle" font-size="17" class="s-ink">without an article</text>
+  <text x="145" y="345" text-anchor="middle" font-size="18" class="s-muted">nach Oslo</text>
+  <rect x="305" y="205" width="230" height="170" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="420" y="244" text-anchor="middle" font-size="24" font-weight="800" class="s-teal">ZU + DATIVE</text>
+  <text x="420" y="279" text-anchor="middle" font-size="17" class="s-ink">person / person's home</text>
+  <text x="420" y="305" text-anchor="middle" font-size="17" class="s-ink">or general direction</text>
+  <text x="420" y="345" text-anchor="middle" font-size="18" class="s-muted">zu ihrer Gastgeberin</text>
+  <rect x="580" y="205" width="230" height="170" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="695" y="244" text-anchor="middle" font-size="24" font-weight="800" class="s-coral">AN · AUF · IN</text>
+  <text x="695" y="279" text-anchor="middle" font-size="17" class="s-ink">precise edge, surface,</text>
+  <text x="695" y="305" text-anchor="middle" font-size="17" class="s-ink">or interior endpoint</text>
+  <text x="695" y="345" text-anchor="middle" font-size="18" class="s-muted">in ein Theater</text>
+  <text x="420" y="421" text-anchor="middle" font-size="19" font-weight="700" class="s-ink">do not translate “to” — model the destination</text>
+</svg>

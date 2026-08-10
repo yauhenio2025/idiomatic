@@ -1,0 +1,23 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three clause tracks showing the finite verb second in a statement, first in a question, and final in a subordinate clause">
+  <text x="420" y="42" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">Find the finite verb</text>
+  <text x="34" y="102" font-size="18" font-weight="700" class="s-muted">STATEMENT</text>
+  <rect x="155" y="65" width="170" height="72" rx="12" class="s-tile" stroke-width="2"/>
+  <text x="240" y="108" text-anchor="middle" font-size="20" class="s-ink">one constituent</text>
+  <rect x="345" y="65" width="115" height="72" rx="12" class="s-tile" stroke-width="3"/>
+  <text x="402" y="108" text-anchor="middle" font-size="22" font-weight="800" class="s-teal">FINITE</text>
+  <rect x="480" y="65" width="325" height="72" rx="12" class="s-tile" stroke-width="2"/>
+  <text x="642" y="108" text-anchor="middle" font-size="20" class="s-ink">middle field · verb remainder</text>
+  <text x="34" y="212" font-size="18" font-weight="700" class="s-muted">QUESTION</text>
+  <rect x="155" y="175" width="115" height="72" rx="12" class="s-tile" stroke-width="3"/>
+  <text x="212" y="218" text-anchor="middle" font-size="22" font-weight="800" class="s-teal">FINITE</text>
+  <rect x="290" y="175" width="515" height="72" rx="12" class="s-tile" stroke-width="2"/>
+  <text x="547" y="218" text-anchor="middle" font-size="20" class="s-ink">middle field · verb remainder</text>
+  <text x="22" y="322" font-size="16" font-weight="700" class="s-muted">SUBORDINATE</text>
+  <rect x="155" y="285" width="135" height="72" rx="12" class="s-tile" stroke-width="2"/>
+  <text x="222" y="328" text-anchor="middle" font-size="20" class="s-ink">conjunction</text>
+  <rect x="310" y="285" width="330" height="72" rx="12" class="s-tile" stroke-width="2"/>
+  <text x="475" y="328" text-anchor="middle" font-size="20" class="s-ink">middle field · other verbs</text>
+  <rect x="660" y="285" width="145" height="72" rx="12" class="s-tile" stroke-width="3"/>
+  <text x="732" y="328" text-anchor="middle" font-size="22" font-weight="800" class="s-coral">FINITE</text>
+  <text x="420" y="405" text-anchor="middle" font-size="18" class="s-muted">second · first · final — one finite verb diagnoses the clause</text>
+</svg>
