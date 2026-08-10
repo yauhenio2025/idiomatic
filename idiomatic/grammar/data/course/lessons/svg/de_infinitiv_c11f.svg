@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 370" role="img" aria-labelledby="title desc">
+  <title id="title">Decision tree for translating English ing forms</title>
+  <desc id="desc">Classify an English ing form as an event noun, a shared-subject complement, a new-subject clause, or an adverbial relation before choosing the German construction.</desc>
+  <defs>
+    <marker id="arrow-teal-c10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" class="s-teal"/>
+    </marker>
+  </defs>
+  <text x="320" y="31" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="22" font-weight="700">First classify the job</text>
+  <rect x="240" y="55" width="160" height="78" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="320" y="91" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="24" font-weight="700">English -ing</text>
+  <text x="320" y="116" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="13">one form, many relations</text>
+  <line x1="270" y1="133" x2="87" y2="210" class="s-stroke-teal" stroke-width="3" marker-end="url(#arrow-teal-c10)"/>
+  <line x1="305" y1="133" x2="242" y2="210" class="s-stroke-teal" stroke-width="3" marker-end="url(#arrow-teal-c10)"/>
+  <line x1="335" y1="133" x2="397" y2="210" class="s-stroke-teal" stroke-width="3" marker-end="url(#arrow-teal-c10)"/>
+  <line x1="370" y1="133" x2="552" y2="210" class="s-stroke-teal" stroke-width="3" marker-end="url(#arrow-teal-c10)"/>
+  <rect x="15" y="220" width="145" height="112" rx="12" class="s-tile" stroke-width="2"/>
+  <rect x="170" y="220" width="145" height="112" rx="12" class="s-tile" stroke-width="2"/>
+  <rect x="325" y="220" width="145" height="112" rx="12" class="s-tile" stroke-width="2"/>
+  <rect x="480" y="220" width="145" height="112" rx="12" class="s-tile" stroke-width="2"/>
+  <text x="87" y="252" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="15" font-weight="700">EVENT NOUN</text>
+  <text x="87" y="284" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="16">das Prüfen</text>
+  <text x="87" y="308" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="12">nominalize</text>
+  <text x="242" y="252" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="15" font-weight="700">SHARED SUBJECT</text>
+  <text x="242" y="284" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="16">zu prüfen</text>
+  <text x="242" y="308" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="12">reduced clause</text>
+  <text x="397" y="252" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="15" font-weight="700">NEW SUBJECT</text>
+  <text x="397" y="284" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="16">dass … prüft</text>
+  <text x="397" y="308" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="12">finite clause</text>
+  <text x="552" y="252" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="15" font-weight="700">RELATION</text>
+  <text x="552" y="284" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="16">indem / weil</text>
+  <text x="552" y="308" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="12">name the logic</text>
+  <text x="320" y="357" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">translate function, controller and relation — never the suffix alone</text>
+</svg>

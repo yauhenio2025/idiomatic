@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Subject control in purpose clauses</title>
+  <desc id="desc">Use um zu when the matrix and purpose events share a controller; use damit with a finite verb when the purpose event has a new subject.</desc>
+  <defs>
+    <marker id="arrow-teal-c05" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" class="s-teal"/>
+    </marker>
+    <marker id="arrow-coral-c05" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" class="s-coral"/>
+    </marker>
+  </defs>
+  <text x="320" y="31" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Who controls the purpose?</text>
+  <text x="105" y="72" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">matrix event</text>
+  <text x="440" y="72" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">purpose event</text>
+  <rect x="25" y="88" width="160" height="82" rx="12" class="s-tile" stroke-width="2"/>
+  <rect x="255" y="88" width="360" height="82" rx="12" class="s-tile" stroke-width="2"/>
+  <text x="105" y="123" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17">Nora schließt</text>
+  <text x="105" y="148" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="13">Nora acts</text>
+  <text x="435" y="123" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="18" font-weight="700">um den Lärm auszublenden</text>
+  <text x="435" y="148" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="13">Nora acts again</text>
+  <line x1="185" y1="129" x2="245" y2="129" class="s-stroke-teal" stroke-width="3" marker-end="url(#arrow-teal-c05)"/>
+  <text x="215" y="105" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="12">same</text>
+  <rect x="25" y="234" width="160" height="82" rx="12" class="s-tile" stroke-width="2"/>
+  <rect x="255" y="234" width="360" height="82" rx="12" class="s-tile" stroke-width="2"/>
+  <text x="105" y="269" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="17">Nora schließt</text>
+  <text x="105" y="294" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="13">Nora acts</text>
+  <text x="435" y="269" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="18" font-weight="700">damit das Kind schläft</text>
+  <text x="435" y="294" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="13">the child acts</text>
+  <line x1="185" y1="275" x2="245" y2="275" class="s-stroke-coral" stroke-width="3" marker-end="url(#arrow-coral-c05)"/>
+  <text x="215" y="251" text-anchor="middle" class="s-coral" font-family="system-ui, sans-serif" font-size="12">new</text>
+  <text x="320" y="344" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">same controller: reduced clause · new subject: finite clause</text>
+</svg>

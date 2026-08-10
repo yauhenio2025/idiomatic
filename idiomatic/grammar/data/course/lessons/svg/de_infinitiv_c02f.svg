@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="title desc">
+  <title id="title">The right edge of an infinitive clause</title>
+  <desc id="desc">A matrix clause selects a separate infinitive clause whose objects and adverbials precede the final zu-infinitive.</desc>
+  <defs>
+    <marker id="arrow-teal-c02" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" class="s-teal"/>
+    </marker>
+  </defs>
+  <text x="320" y="31" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Two clauses, two fields</text>
+  <text x="130" y="63" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="15">matrix clause</text>
+  <text x="455" y="63" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="15">infinitive clause</text>
+  <rect x="25" y="78" width="210" height="100" rx="14" class="s-tile" stroke-width="2"/>
+  <rect x="305" y="78" width="310" height="230" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="130" y="120" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="18">hat beschlossen</text>
+  <text x="130" y="150" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="14">finite anchor</text>
+  <line x1="235" y1="128" x2="295" y2="128" class="s-stroke-teal" stroke-width="3" marker-end="url(#arrow-teal-c02)"/>
+  <text x="390" y="125" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="16">die Anhörung</text>
+  <text x="390" y="151" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="13">object</text>
+  <text x="488" y="194" text-anchor="middle" class="s-ink" font-family="system-ui, sans-serif" font-size="16">in den September</text>
+  <text x="488" y="220" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="13">adverbial</text>
+  <text x="530" y="266" text-anchor="middle" class="s-teal" font-family="system-ui, sans-serif" font-size="18" font-weight="700">zu verschieben</text>
+  <line x1="328" y1="280" x2="592" y2="280" class="s-stroke-line" stroke-width="2"/>
+  <text x="460" y="300" text-anchor="middle" class="s-muted" font-family="system-ui, sans-serif" font-size="13">the infinitive closes its own clause</text>
+</svg>
