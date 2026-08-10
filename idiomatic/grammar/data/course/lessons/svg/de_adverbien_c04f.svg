@@ -1,0 +1,21 @@
+<svg viewBox="0 0 840 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hin points away from the active reference point and her points toward it">
+  <text x="420" y="46" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">THE REFERENCE POINT SETS THE VECTOR</text>
+  <rect x="40" y="150" width="210" height="112" rx="16" class="s-tile" stroke-width="3"/>
+  <text x="145" y="194" text-anchor="middle" font-size="22" font-weight="800" class="s-ink">MOVEMENT</text>
+  <text x="145" y="229" text-anchor="middle" font-size="18" class="s-muted">toward the center</text>
+  <circle cx="420" cy="206" r="66" class="s-teal"/>
+  <text x="420" y="196" text-anchor="middle" font-size="20" font-weight="800" class="s-ink">REFERENCE</text>
+  <text x="420" y="226" text-anchor="middle" font-size="18" class="s-ink">speaker / viewpoint</text>
+  <rect x="590" y="150" width="210" height="112" rx="16" class="s-tile" stroke-width="3"/>
+  <text x="695" y="194" text-anchor="middle" font-size="22" font-weight="800" class="s-ink">MOVEMENT</text>
+  <text x="695" y="229" text-anchor="middle" font-size="18" class="s-muted">away from the center</text>
+  <line x1="270" y1="206" x2="329" y2="206" class="s-stroke-coral" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="344,206 318,191 318,221" class="s-coral"/>
+  <text x="307" y="167" text-anchor="middle" font-size="24" font-weight="800" class="s-coral">her</text>
+  <line x1="511" y1="206" x2="564" y2="206" class="s-stroke-teal" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="579,206 553,191 553,221" class="s-teal"/>
+  <text x="540" y="167" text-anchor="middle" font-size="24" font-weight="800" class="s-teal">hin</text>
+  <rect x="220" y="332" width="400" height="70" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="420" y="361" text-anchor="middle" font-size="19" font-weight="700" class="s-ink">the origin can shift with the point of view</text>
+  <text x="420" y="387" text-anchor="middle" font-size="17" class="s-muted">calculate first — translate second</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg viewBox="0 0 840 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Time adverbs locate a point, stretch over a duration, or repeat with a frequency">
+  <text x="420" y="46" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">THREE QUESTIONS ON THE TIME AXIS</text>
+  <line x1="70" y1="206" x2="770" y2="206" class="s-stroke-line" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="150" cy="206" r="14" class="s-coral"/>
+  <text x="150" y="164" text-anchor="middle" font-size="21" font-weight="800" class="s-coral">POINT</text>
+  <line x1="330" y1="206" x2="510" y2="206" class="s-stroke-teal" stroke-width="14" stroke-linecap="round"/>
+  <text x="420" y="164" text-anchor="middle" font-size="21" font-weight="800" class="s-teal">DURATION</text>
+  <circle cx="630" cy="206" r="10" class="s-sun"/>
+  <circle cx="685" cy="206" r="10" class="s-sun"/>
+  <circle cx="740" cy="206" r="10" class="s-sun"/>
+  <text x="685" y="164" text-anchor="middle" font-size="21" font-weight="800" class="s-ink">FREQUENCY</text>
+  <rect x="40" y="278" width="220" height="104" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="150" y="318" text-anchor="middle" font-size="22" font-weight="700" class="s-ink">gestern</text>
+  <text x="150" y="352" text-anchor="middle" font-size="17" class="s-muted">when?</text>
+  <rect x="310" y="278" width="220" height="104" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="420" y="318" text-anchor="middle" font-size="22" font-weight="700" class="s-ink">monatelang</text>
+  <text x="420" y="352" text-anchor="middle" font-size="17" class="s-muted">how long?</text>
+  <rect x="580" y="278" width="220" height="104" rx="14" class="s-tile" stroke-width="3"/>
+  <text x="690" y="318" text-anchor="middle" font-size="22" font-weight="700" class="s-ink">freitags</text>
+  <text x="690" y="352" text-anchor="middle" font-size="17" class="s-muted">how often?</text>
+  <text x="420" y="430" text-anchor="middle" font-size="18" class="s-muted">do not confuse a calendar point with a span or a schedule</text>
+</svg>
