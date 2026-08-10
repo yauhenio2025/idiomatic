@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 315" role="img" aria-labelledby="title desc">
+  <title id="title">Comma placement selects modifier attachment</title>
+  <desc id="desc">Two separate horizontal lanes show a time word before the comma attaching to the promise and after the comma attaching to the sending.</desc>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="320" y="32" class="s-ink" font-size="24" font-weight="700">THE COMMA CHOOSES THE ATTACHMENT</text>
+
+    <rect x="30" y="70" width="170" height="72" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="115" y="99" class="s-ink" font-size="23" font-weight="700">heute,</text>
+    <text x="115" y="124" class="s-muted" font-size="14">time before comma</text>
+    <line x1="210" y1="106" x2="270" y2="106" class="s-stroke-coral" stroke-width="4"/>
+    <polygon points="280,106 268,98 268,114" class="s-coral"/>
+    <rect x="290" y="70" width="320" height="72" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="450" y="99" class="s-coral" font-size="20" font-weight="700">ATTACH TO THE PROMISE</text>
+    <text x="450" y="124" class="s-muted" font-size="14">the promise happens today</text>
+
+    <rect x="30" y="185" width="170" height="72" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="115" y="214" class="s-ink" font-size="23" font-weight="700">, heute</text>
+    <text x="115" y="239" class="s-muted" font-size="14">time after comma</text>
+    <line x1="210" y1="221" x2="270" y2="221" class="s-stroke-teal" stroke-width="4"/>
+    <polygon points="280,221 268,213 268,229" class="s-teal"/>
+    <rect x="290" y="185" width="320" height="72" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="450" y="214" class="s-teal" font-size="20" font-weight="700">ATTACH TO THE SENDING</text>
+    <text x="450" y="239" class="s-muted" font-size="14">the sending happens today</text>
+
+    <text x="320" y="294" class="s-muted" font-size="15">Optional punctuation can still carry obligatory meaning.</text>
+  </g>
+</svg>

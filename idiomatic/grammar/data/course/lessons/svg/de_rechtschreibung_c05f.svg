@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="title desc">
+  <title id="title">Meaning and stress determine one word or two</title>
+  <desc id="desc">Two uncrossed rows contrast independent meanings and stresses leading to two words with one lexical concept and one main stress leading to one word.</desc>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="320" y="32" class="s-ink" font-size="24" font-weight="700">TEST MEANING, THEN LISTEN TO STRESS</text>
+
+    <rect x="25" y="72" width="170" height="82" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="110" y="101" class="s-muted" font-size="14">MEANING</text>
+    <text x="110" y="130" class="s-ink" font-size="19" font-weight="700">two live ideas</text>
+    <line x1="205" y1="113" x2="235" y2="113" class="s-stroke-line" stroke-width="4"/>
+    <polygon points="245,113 233,105 233,121" class="s-dead"/>
+    <rect x="255" y="72" width="160" height="82" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="335" y="101" class="s-muted" font-size="14">STRESS</text>
+    <text x="335" y="130" class="s-ink" font-size="19" font-weight="700">two beats</text>
+    <line x1="425" y1="113" x2="455" y2="113" class="s-stroke-coral" stroke-width="4"/>
+    <polygon points="465,113 453,105 453,121" class="s-coral"/>
+    <rect x="475" y="72" width="140" height="82" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="545" y="101" class="s-muted" font-size="14">SPELLING</text>
+    <text x="545" y="130" class="s-coral" font-size="21" font-weight="700">two words</text>
+
+    <rect x="25" y="207" width="170" height="82" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="110" y="236" class="s-muted" font-size="14">MEANING</text>
+    <text x="110" y="265" class="s-ink" font-size="19" font-weight="700">one concept</text>
+    <line x1="205" y1="248" x2="235" y2="248" class="s-stroke-line" stroke-width="4"/>
+    <polygon points="245,248 233,240 233,256" class="s-dead"/>
+    <rect x="255" y="207" width="160" height="82" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="335" y="236" class="s-muted" font-size="14">STRESS</text>
+    <text x="335" y="265" class="s-ink" font-size="19" font-weight="700">one main beat</text>
+    <line x1="425" y1="248" x2="455" y2="248" class="s-stroke-teal" stroke-width="4"/>
+    <polygon points="465,248 453,240 453,256" class="s-teal"/>
+    <rect x="475" y="207" width="140" height="82" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="545" y="236" class="s-muted" font-size="14">SPELLING</text>
+    <text x="545" y="265" class="s-teal" font-size="21" font-weight="700">one word</text>
+
+    <text x="320" y="324" class="s-muted" font-size="15">Modifier tests reveal whether the first meaning is still independent.</text>
+  </g>
+</svg>

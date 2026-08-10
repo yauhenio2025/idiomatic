@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" role="img" aria-labelledby="title desc">
+  <title id="title">Subordinate clauses are bounded by commas</title>
+  <desc id="desc">Three sentence patterns show a subordinate clause before, after, and embedded inside a main clause, with commas at every outer edge.</desc>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="320" y="32" class="s-ink" font-size="24" font-weight="700">MARK EVERY OUTER EDGE</text>
+
+    <text x="65" y="78" class="s-muted" font-size="14" text-anchor="start">FIRST</text>
+    <rect x="65" y="90" width="210" height="52" rx="10" class="s-tile" stroke-width="2"/>
+    <text x="170" y="123" class="s-coral" font-size="19" font-weight="700">SUBORDINATE</text>
+    <text x="292" y="126" class="s-coral" font-size="30" font-weight="700">,</text>
+    <rect x="315" y="90" width="260" height="52" rx="10" class="s-tile" stroke-width="2"/>
+    <text x="445" y="123" class="s-teal" font-size="19" font-weight="700">MAIN CLAUSE</text>
+
+    <text x="65" y="178" class="s-muted" font-size="14" text-anchor="start">LAST</text>
+    <rect x="65" y="190" width="260" height="52" rx="10" class="s-tile" stroke-width="2"/>
+    <text x="195" y="223" class="s-teal" font-size="19" font-weight="700">MAIN CLAUSE</text>
+    <text x="342" y="226" class="s-coral" font-size="30" font-weight="700">,</text>
+    <rect x="365" y="190" width="210" height="52" rx="10" class="s-tile" stroke-width="2"/>
+    <text x="470" y="223" class="s-coral" font-size="19" font-weight="700">SUBORDINATE</text>
+
+    <text x="65" y="278" class="s-muted" font-size="14" text-anchor="start">EMBEDDED</text>
+    <rect x="155" y="260" width="90" height="52" rx="10" class="s-tile" stroke-width="2"/>
+    <text x="200" y="293" class="s-teal" font-size="17" font-weight="700">MAIN</text>
+    <text x="262" y="296" class="s-coral" font-size="30" font-weight="700">,</text>
+    <rect x="285" y="260" width="170" height="52" rx="10" class="s-tile" stroke-width="2"/>
+    <text x="370" y="293" class="s-coral" font-size="17" font-weight="700">SUBORDINATE</text>
+    <text x="472" y="296" class="s-coral" font-size="30" font-weight="700">,</text>
+    <rect x="495" y="260" width="80" height="52" rx="10" class="s-tile" stroke-width="2"/>
+    <text x="535" y="293" class="s-teal" font-size="17" font-weight="700">MAIN</text>
+  </g>
+</svg>

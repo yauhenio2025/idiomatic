@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 350" role="img" aria-labelledby="title desc">
+  <title id="title">German vowel-length spelling signals</title>
+  <desc id="desc">Three separate horizontal lanes map doubled consonants to short vowels, explicit length markers to long vowels, and ch to word-specific learning.</desc>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="320" y="32" class="s-ink" font-size="24" font-weight="700">READ THE SIGNAL AFTER THE VOWEL</text>
+
+    <rect x="25" y="62" width="180" height="68" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="115" y="90" class="s-muted" font-size="14">DOUBLE CONSONANT</text>
+    <text x="115" y="114" class="s-ink" font-size="19" font-weight="700">tt · ss · mm</text>
+    <line x1="215" y1="96" x2="245" y2="96" class="s-stroke-coral" stroke-width="4"/>
+    <polygon points="255,96 243,88 243,104" class="s-coral"/>
+    <rect x="265" y="62" width="130" height="68" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="330" y="103" class="s-coral" font-size="22" font-weight="700">SHORT</text>
+    <line x1="405" y1="96" x2="435" y2="96" class="s-stroke-line" stroke-width="4"/>
+    <polygon points="445,96 433,88 433,104" class="s-dead"/>
+    <rect x="455" y="62" width="160" height="68" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="535" y="103" class="s-ink" font-size="21">Mitte</text>
+
+    <rect x="25" y="157" width="180" height="68" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="115" y="185" class="s-muted" font-size="14">LENGTH MARKER</text>
+    <text x="115" y="209" class="s-ink" font-size="19" font-weight="700">h · aa · ee · ie</text>
+    <line x1="215" y1="191" x2="245" y2="191" class="s-stroke-teal" stroke-width="4"/>
+    <polygon points="255,191 243,183 243,199" class="s-teal"/>
+    <rect x="265" y="157" width="130" height="68" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="330" y="198" class="s-teal" font-size="22" font-weight="700">LONG</text>
+    <line x1="405" y1="191" x2="435" y2="191" class="s-stroke-line" stroke-width="4"/>
+    <polygon points="445,191 433,183 433,199" class="s-dead"/>
+    <rect x="455" y="157" width="160" height="68" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="535" y="198" class="s-ink" font-size="21">Saal · riet</text>
+
+    <rect x="25" y="252" width="180" height="68" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="115" y="280" class="s-muted" font-size="14">BEFORE ch</text>
+    <text x="115" y="304" class="s-ink" font-size="19" font-weight="700">no fixed signal</text>
+    <line x1="215" y1="286" x2="245" y2="286" class="s-stroke-coral" stroke-width="4"/>
+    <polygon points="255,286 243,278 243,294" class="s-coral"/>
+    <rect x="265" y="252" width="130" height="68" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="330" y="293" class="s-coral" font-size="20" font-weight="700">LEARN IT</text>
+    <line x1="405" y1="286" x2="435" y2="286" class="s-stroke-line" stroke-width="4"/>
+    <polygon points="445,286 433,278 433,294" class="s-dead"/>
+    <rect x="455" y="252" width="160" height="68" rx="12" class="s-tile" stroke-width="2"/>
+    <text x="535" y="293" class="s-ink" font-size="21">Dach · hoch</text>
+  </g>
+</svg>

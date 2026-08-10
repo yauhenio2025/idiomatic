@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="title desc">
+  <title id="title">Spacing distinguishes grammatical units from free combinations</title>
+  <desc id="desc">Two parallel panels contrast fused conjunctions and adverbs with separate combinations whose two parts retain independent meanings.</desc>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="320" y="32" class="s-ink" font-size="24" font-weight="700">THE SPACE IS A MEANING SWITCH</text>
+
+    <rect x="30" y="65" width="270" height="225" rx="16" class="s-tile" stroke-width="2"/>
+    <text x="165" y="98" class="s-teal" font-size="19" font-weight="700">ONE GRAMMATICAL UNIT</text>
+    <line x1="65" y1="115" x2="265" y2="115" class="s-stroke-teal" stroke-width="3"/>
+    <text x="165" y="155" class="s-ink" font-size="25" font-weight="700">sobald</text>
+    <text x="165" y="180" class="s-muted" font-size="15">as soon as</text>
+    <text x="165" y="230" class="s-ink" font-size="25" font-weight="700">woanders</text>
+    <text x="165" y="255" class="s-muted" font-size="15">elsewhere</text>
+
+    <rect x="340" y="65" width="270" height="225" rx="16" class="s-tile" stroke-width="2"/>
+    <text x="475" y="98" class="s-coral" font-size="19" font-weight="700">TWO LIVE MEANINGS</text>
+    <line x1="375" y1="115" x2="575" y2="115" class="s-stroke-coral" stroke-width="3"/>
+    <text x="475" y="155" class="s-ink" font-size="25" font-weight="700">so bald</text>
+    <text x="475" y="180" class="s-muted" font-size="15">that soon</text>
+    <text x="475" y="230" class="s-ink" font-size="25" font-weight="700">wo anders</text>
+    <text x="475" y="255" class="s-muted" font-size="15">where else</text>
+
+    <text x="320" y="322" class="s-muted" font-size="15">Fuse the unit; preserve the space when each word still contributes.</text>
+  </g>
+</svg>
