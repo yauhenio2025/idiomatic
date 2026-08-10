@@ -2,8 +2,10 @@
 
 > Supersedes the 2026-08-06 memo (git history keeps it). Read this +
 > CLAUDE.md + auto-memory and take over. Everything below is committed
-> or machine-local at the stated paths. The user leaves 2026-08-10 for
-> ~10-11 days (iPad studying only; machines pregenerate).
+> or machine-local at the stated paths. The user flew out the morning
+> of 2026-08-11 for ~8 days (iPad studying only; machines pregenerate).
+> STANDING DIRECTIVE: both boxes mint 24/7 until the brief queue is
+> exhausted — no quiet-hours pauses while the user is away.
 
 ## What shipped since the last memo (all user-approved)
 
