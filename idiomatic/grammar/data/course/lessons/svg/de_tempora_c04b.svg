@@ -1,0 +1,22 @@
+<svg viewBox="0 0 840 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two register channels presenting simple past for written narrative and perfect for conversational narrative">
+  <text x="420" y="44" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">One past event, two register channels</text>
+
+  <rect x="300" y="78" width="240" height="72" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="108" text-anchor="middle" font-size="19" font-weight="700" class="s-ink">COMPLETED EVENT</text>
+  <text x="420" y="133" text-anchor="middle" font-size="15" class="s-muted">same temporal content</text>
+  <line x1="420" y1="158" x2="420" y2="192" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="420" cy="204" r="9" class="s-dead"/>
+  <line x1="411" y1="204" x2="228" y2="204" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <line x1="429" y1="204" x2="612" y2="204" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="55" y="226" width="320" height="128" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="215" y="262" text-anchor="middle" font-size="21" font-weight="700" class="s-teal">WRITTEN NARRATIVE</text>
+  <text x="215" y="298" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">SIMPLE PAST</text>
+  <text x="215" y="328" text-anchor="middle" font-size="16" class="s-muted">compact narrative default</text>
+
+  <rect x="465" y="226" width="320" height="128" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="625" y="262" text-anchor="middle" font-size="21" font-weight="700" class="s-coral">CONVERSATION</text>
+  <text x="625" y="298" text-anchor="middle" font-size="24" font-weight="700" class="s-ink">PERFECT</text>
+  <text x="625" y="328" text-anchor="middle" font-size="16" class="s-muted">especially common in the south</text>
+  <text x="420" y="400" text-anchor="middle" font-size="18" class="s-muted">Register often decides where English expects an aspect contrast.</text>
+</svg>

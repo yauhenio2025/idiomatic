@@ -1,0 +1,32 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of the six German tenses arranged by past, present, and future reference">
+  <text x="420" y="42" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">Six forms, organized by temporal viewpoint</text>
+  <line x1="105" y1="92" x2="735" y2="92" class="s-stroke-line" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="155" cy="92" r="10" class="s-coral"/>
+  <circle cx="420" cy="92" r="10" class="s-teal"/>
+  <circle cx="685" cy="92" r="10" class="s-sun"/>
+  <text x="155" y="74" text-anchor="middle" font-size="16" font-weight="700" class="s-coral">PAST</text>
+  <text x="420" y="74" text-anchor="middle" font-size="16" font-weight="700" class="s-teal">NOW</text>
+  <text x="685" y="74" text-anchor="middle" font-size="16" font-weight="700" class="s-muted">FUTURE</text>
+
+  <rect x="45" y="132" width="220" height="86" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="155" y="166" text-anchor="middle" font-size="20" font-weight="700" class="s-coral">SIMPLE PAST</text>
+  <text x="155" y="196" text-anchor="middle" font-size="16" class="s-muted">event viewed in past time</text>
+  <rect x="310" y="132" width="220" height="86" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="166" text-anchor="middle" font-size="20" font-weight="700" class="s-teal">PRESENT</text>
+  <text x="420" y="196" text-anchor="middle" font-size="16" class="s-muted">event viewed from now</text>
+  <rect x="575" y="132" width="220" height="86" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="685" y="166" text-anchor="middle" font-size="20" font-weight="700" class="s-ink">FUTURE</text>
+  <text x="685" y="196" text-anchor="middle" font-size="16" class="s-muted">event placed beyond now</text>
+
+  <rect x="45" y="258" width="220" height="96" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="155" y="292" text-anchor="middle" font-size="20" font-weight="700" class="s-coral">PLUPERFECT</text>
+  <text x="155" y="322" text-anchor="middle" font-size="16" class="s-muted">earlier than a past point</text>
+  <rect x="310" y="258" width="220" height="96" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="292" text-anchor="middle" font-size="20" font-weight="700" class="s-teal">PERFECT</text>
+  <text x="420" y="322" text-anchor="middle" font-size="16" class="s-muted">past related to the viewpoint</text>
+  <rect x="575" y="258" width="220" height="96" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="685" y="292" text-anchor="middle" font-size="20" font-weight="700" class="s-ink">FUTURE PERFECT</text>
+  <text x="685" y="322" text-anchor="middle" font-size="16" class="s-muted">earlier than a future point</text>
+
+  <text x="420" y="402" text-anchor="middle" font-size="19" class="s-muted">Choose a viewpoint first; choose a form second.</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg viewBox="0 0 840 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Past-before-past timeline distinguishing pluperfect from the later simple past event">
+  <text x="420" y="44" text-anchor="middle" font-size="27" font-weight="700" class="s-ink">Past before past: two ordered layers</text>
+  <line x1="80" y1="150" x2="760" y2="150" class="s-stroke-line" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="205" cy="150" r="13" class="s-coral"/>
+  <circle cx="515" cy="150" r="13" class="s-teal"/>
+  <circle cx="720" cy="150" r="13" class="s-dead"/>
+  <text x="205" y="106" text-anchor="middle" font-size="18" font-weight="700" class="s-coral">EARLIER PAST</text>
+  <text x="515" y="106" text-anchor="middle" font-size="18" font-weight="700" class="s-teal">LATER PAST</text>
+  <text x="720" y="106" text-anchor="middle" font-size="18" font-weight="700" class="s-muted">NOW</text>
+
+  <rect x="75" y="220" width="260" height="104" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="205" y="260" text-anchor="middle" font-size="24" font-weight="700" class="s-coral">PLUPERFECT</text>
+  <text x="205" y="293" text-anchor="middle" font-size="17" class="s-muted">had already happened</text>
+  <rect x="385" y="220" width="260" height="104" rx="16" class="s-tile" stroke-width="2"/>
+  <text x="515" y="260" text-anchor="middle" font-size="24" font-weight="700" class="s-teal">SIMPLE PAST</text>
+  <text x="515" y="293" text-anchor="middle" font-size="17" class="s-muted">the narrative advances here</text>
+  <text x="420" y="390" text-anchor="middle" font-size="18" class="s-muted">The pluperfect orders events relative to a past viewpoint.</text>
+</svg>
