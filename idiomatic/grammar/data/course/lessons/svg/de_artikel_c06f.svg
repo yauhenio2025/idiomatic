@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 310" role="img" aria-label="Time nouns split into definite periods, bare boundary phrases, and bare modified periods">
+  <text class="s-ink" x="320" y="28" text-anchor="middle" font-size="20" font-weight="700">Time expressions choose by construction</text>
+  <rect class="s-tile" x="245" y="45" width="150" height="48" rx="12"/>
+  <text class="s-ink" x="320" y="75" text-anchor="middle" font-size="18" font-weight="700">TIME NOUN</text>
+
+  <path class="s-stroke-line" d="M320 93 V116 M110 116 H530 M110 116 V144 M320 116 V144 M530 116 V144" stroke-width="3" stroke-linecap="round"/>
+
+  <rect class="s-tile" x="24" y="154" width="172" height="112" rx="14"/>
+  <text class="s-teal" x="110" y="185" text-anchor="middle" font-size="17" font-weight="700">PERIOD</text>
+  <text class="s-ink" x="110" y="213" text-anchor="middle" font-size="16">im Februar</text>
+  <text class="s-muted" x="110" y="240" text-anchor="middle" font-size="14">definite article</text>
+
+  <rect class="s-tile" x="234" y="154" width="172" height="112" rx="14"/>
+  <text class="s-coral" x="320" y="185" text-anchor="middle" font-size="17" font-weight="700">BOUNDARY</text>
+  <text class="s-ink" x="320" y="213" text-anchor="middle" font-size="16">Ende Februar</text>
+  <text class="s-muted" x="320" y="240" text-anchor="middle" font-size="14">zero article</text>
+
+  <rect class="s-tile" x="444" y="154" width="172" height="112" rx="14"/>
+  <text class="s-coral" x="530" y="185" text-anchor="middle" font-size="17" font-weight="700">NEXT / LAST</text>
+  <text class="s-ink" x="530" y="213" text-anchor="middle" font-size="16">nächsten Herbst</text>
+  <text class="s-muted" x="530" y="240" text-anchor="middle" font-size="14">zero article</text>
+
+  <text class="s-muted" x="320" y="294" text-anchor="middle" font-size="14">the surrounding frame controls the article</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="A reference scale runs from an unbounded amount through a bounded instance to a familiar whole">
+  <text class="s-ink" x="320" y="30" text-anchor="middle" font-size="20" font-weight="700">The noun stays; the construal changes</text>
+
+  <text class="s-muted" x="88" y="75" text-anchor="middle" font-size="14">UNBOUNDED</text>
+  <text class="s-coral" x="320" y="75" text-anchor="middle" font-size="14">ONE BOUNDED INSTANCE</text>
+  <text class="s-teal" x="552" y="75" text-anchor="middle" font-size="14">FAMILIAR WHOLE</text>
+  <path class="s-stroke-line" d="M88 122 H552" stroke-width="5" stroke-linecap="round"/>
+  <circle class="s-dead" cx="88" cy="122" r="12"/>
+  <circle class="s-coral" cx="320" cy="122" r="12"/>
+  <circle class="s-teal" cx="552" cy="122" r="12"/>
+
+  <rect class="s-tile" x="24" y="158" width="176" height="96" rx="14"/>
+  <text class="s-ink" x="112" y="191" text-anchor="middle" font-size="18" font-weight="700">zero article</text>
+  <text class="s-muted" x="112" y="218" text-anchor="middle" font-size="14">some courage</text>
+  <text class="s-muted" x="112" y="239" text-anchor="middle" font-size="14">some coffee</text>
+
+  <rect class="s-tile" x="232" y="158" width="176" height="96" rx="14"/>
+  <text class="s-coral" x="320" y="191" text-anchor="middle" font-size="18" font-weight="700">indefinite</text>
+  <text class="s-muted" x="320" y="218" text-anchor="middle" font-size="14">a defined bout</text>
+  <text class="s-muted" x="320" y="239" text-anchor="middle" font-size="14">a portion or unit</text>
+
+  <rect class="s-tile" x="440" y="158" width="176" height="96" rx="14"/>
+  <text class="s-teal" x="528" y="191" text-anchor="middle" font-size="18" font-weight="700">definite</text>
+  <text class="s-muted" x="528" y="218" text-anchor="middle" font-size="14">the known supply</text>
+  <text class="s-muted" x="528" y="239" text-anchor="middle" font-size="14">the concept as a whole</text>
+
+  <text class="s-ink" x="320" y="282" text-anchor="middle" font-size="14">abstract and mass nouns can occupy every point</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 312" role="img" aria-label="A profession after a copular verb takes zero article for classification and an indefinite article for an individualized description">
+  <text class="s-ink" x="320" y="28" text-anchor="middle" font-size="20" font-weight="700">What is the predicate doing?</text>
+  <rect class="s-tile" x="238" y="45" width="164" height="48" rx="12"/>
+  <text class="s-ink" x="320" y="75" text-anchor="middle" font-size="17" font-weight="700">SUBJECT + BE</text>
+
+  <path class="s-stroke-line" d="M320 93 V118 M160 118 H480 M160 118 V144 M480 118 V144" stroke-width="3" stroke-linecap="round"/>
+
+  <rect class="s-tile" x="28" y="154" width="264" height="112" rx="16"/>
+  <text class="s-teal" x="160" y="187" text-anchor="middle" font-size="18" font-weight="700">CLASSIFY</text>
+  <text class="s-ink" x="160" y="219" text-anchor="middle" font-size="19">Sie ist Architektin.</text>
+  <text class="s-muted" x="160" y="247" text-anchor="middle" font-size="14">profession as category → zero</text>
+
+  <rect class="s-tile" x="348" y="154" width="264" height="112" rx="16"/>
+  <text class="s-coral" x="480" y="187" text-anchor="middle" font-size="18" font-weight="700">INDIVIDUALIZE</text>
+  <text class="s-ink" x="480" y="219" text-anchor="middle" font-size="18">Sie ist eine gute Architektin.</text>
+  <text class="s-muted" x="480" y="247" text-anchor="middle" font-size="14">one described member → indefinite</text>
+
+  <text class="s-muted" x="320" y="296" text-anchor="middle" font-size="14">the noun is identical; the predication changes</text>
+</svg>

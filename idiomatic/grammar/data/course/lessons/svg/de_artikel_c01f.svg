@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 310" role="img" aria-label="Three article choices map a noun to a recoverable referent, one new member, or an unbounded concept">
+  <text class="s-ink" x="320" y="28" text-anchor="middle" font-size="20" font-weight="700">How should the listener locate the noun?</text>
+  <rect class="s-tile" x="24" y="50" width="184" height="184" rx="16"/>
+  <text class="s-teal" x="116" y="83" text-anchor="middle" font-size="18" font-weight="700">DEFINITE</text>
+  <circle class="s-teal" cx="116" cy="125" r="20"/>
+  <circle class="s-stroke-teal" cx="116" cy="125" r="34" stroke-width="3"/>
+  <text class="s-ink" x="116" y="177" text-anchor="middle" font-size="16" font-weight="700">recoverable</text>
+  <text class="s-muted" x="116" y="202" text-anchor="middle" font-size="14">the intended one</text>
+
+  <rect class="s-tile" x="228" y="50" width="184" height="184" rx="16"/>
+  <text class="s-coral" x="320" y="83" text-anchor="middle" font-size="18" font-weight="700">INDEFINITE</text>
+  <circle class="s-stroke-coral" cx="290" cy="125" r="17" stroke-width="3"/>
+  <circle class="s-coral" cx="320" cy="125" r="17"/>
+  <circle class="s-stroke-coral" cx="350" cy="125" r="17" stroke-width="3"/>
+  <text class="s-ink" x="320" y="177" text-anchor="middle" font-size="16" font-weight="700">one new member</text>
+  <text class="s-muted" x="320" y="202" text-anchor="middle" font-size="14">from a class</text>
+
+  <rect class="s-tile" x="432" y="50" width="184" height="184" rx="16"/>
+  <text class="s-muted" x="524" y="83" text-anchor="middle" font-size="18" font-weight="700">ZERO</text>
+  <path class="s-stroke-line" d="M468 119 C488 98 510 143 530 119 C550 96 570 141 590 119" stroke-width="6" stroke-linecap="round"/>
+  <path class="s-stroke-line" d="M468 137 C488 116 510 161 530 137 C550 114 570 159 590 137" stroke-width="6" stroke-linecap="round"/>
+  <text class="s-ink" x="524" y="177" text-anchor="middle" font-size="16" font-weight="700">unbounded</text>
+  <text class="s-muted" x="524" y="202" text-anchor="middle" font-size="14">stuff · quality · plural</text>
+
+  <rect class="s-tile" x="104" y="258" width="432" height="36" rx="18"/>
+  <text class="s-ink" x="320" y="282" text-anchor="middle" font-size="15">reference choice comes before the case ending</text>
+</svg>
