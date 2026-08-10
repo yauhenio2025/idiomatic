@@ -1,0 +1,32 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three positions for a German adjective: before a noun it takes an ending, after a linking verb or beside an action it stays bare">
+  <text x="420" y="48" text-anchor="middle" font-size="28" font-weight="700" class="s-ink">Where does the adjective live?</text>
+
+  <rect x="30" y="82" width="240" height="98" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="150" y="116" text-anchor="middle" font-size="18" class="s-muted">inside the noun phrase</text>
+  <text x="150" y="151" text-anchor="middle" font-size="25" font-weight="700" class="s-teal">gründliche Analyse</text>
+  <line x1="150" y1="190" x2="150" y2="229" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="150,245 140,226 160,226" class="s-teal"/>
+  <rect x="58" y="255" width="184" height="72" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="150" y="286" text-anchor="middle" font-size="19" font-weight="700" class="s-teal">ATTRIBUTIVE</text>
+  <text x="150" y="313" text-anchor="middle" font-size="18" class="s-ink">takes an ending</text>
+
+  <rect x="300" y="82" width="240" height="98" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="116" text-anchor="middle" font-size="18" class="s-muted">after a linking verb</text>
+  <text x="420" y="151" text-anchor="middle" font-size="25" font-weight="700" class="s-coral">war gründlich</text>
+  <line x1="420" y1="190" x2="420" y2="229" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="420,245 410,226 430,226" class="s-coral"/>
+  <rect x="328" y="255" width="184" height="72" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="420" y="286" text-anchor="middle" font-size="19" font-weight="700" class="s-coral">PREDICATIVE</text>
+  <text x="420" y="313" text-anchor="middle" font-size="18" class="s-ink">stays bare</text>
+
+  <rect x="570" y="82" width="240" height="98" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="690" y="116" text-anchor="middle" font-size="18" class="s-muted">describing the action</text>
+  <text x="690" y="151" text-anchor="middle" font-size="25" font-weight="700" class="s-coral">prüfte gründlich</text>
+  <line x1="690" y1="190" x2="690" y2="229" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="690,245 680,226 700,226" class="s-coral"/>
+  <rect x="598" y="255" width="184" height="72" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="690" y="286" text-anchor="middle" font-size="19" font-weight="700" class="s-coral">ADVERBIAL</text>
+  <text x="690" y="313" text-anchor="middle" font-size="18" class="s-ink">stays bare</text>
+
+  <text x="420" y="384" text-anchor="middle" font-size="22" font-weight="700" class="s-ink">Only the pre-noun position triggers agreement.</text>
+</svg>

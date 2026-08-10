@@ -1,0 +1,25 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An adjective becomes a noun by taking a capital letter and retaining adjective endings for people or abstract things">
+  <text x="420" y="46" text-anchor="middle" font-size="28" font-weight="700" class="s-ink">Promote an adjective into a noun</text>
+
+  <rect x="285" y="76" width="270" height="68" rx="14" class="s-tile" stroke-width="2"/>
+  <text x="420" y="119" text-anchor="middle" font-size="28" font-weight="700" class="s-muted">bekannt</text>
+
+  <line x1="360" y1="154" x2="226" y2="219" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="211,226 224,210 233,229" class="s-teal"/>
+  <line x1="480" y1="154" x2="614" y2="219" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="629,226 607,229 616,210" class="s-coral"/>
+  <text x="243" y="176" text-anchor="middle" font-size="17" class="s-teal">person + gender</text>
+  <text x="597" y="176" text-anchor="middle" font-size="17" class="s-coral">thing or idea</text>
+
+  <rect x="50" y="238" width="330" height="116" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="215" y="274" text-anchor="middle" font-size="18" class="s-muted">capital + personal ending</text>
+  <text x="215" y="310" text-anchor="middle" font-size="26" font-weight="700" class="s-teal">ein Bekannt-er</text>
+  <text x="215" y="338" text-anchor="middle" font-size="20" class="s-ink">die Bekannt-e</text>
+
+  <rect x="460" y="238" width="330" height="116" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="625" y="274" text-anchor="middle" font-size="18" class="s-muted">capital + neuter ending</text>
+  <text x="625" y="310" text-anchor="middle" font-size="26" font-weight="700" class="s-coral">etwas Bekannt-es</text>
+  <text x="625" y="338" text-anchor="middle" font-size="20" class="s-ink">das Bekannt-e</text>
+
+  <text x="420" y="404" text-anchor="middle" font-size="20" font-weight="700" class="s-ink">The word becomes a noun; the ending still behaves like an adjective.</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision tree for choosing the declined definite-article superlative or the am plus en form">
+  <text x="420" y="46" text-anchor="middle" font-size="28" font-weight="700" class="s-ink">Which superlative construction?</text>
+
+  <rect x="235" y="78" width="370" height="78" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="420" y="110" text-anchor="middle" font-size="19" class="s-muted">Is there an expressed or understood</text>
+  <text x="420" y="138" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">noun being identified?</text>
+
+  <line x1="420" y1="166" x2="420" y2="187" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <line x1="220" y1="187" x2="620" y2="187" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <line x1="220" y1="187" x2="220" y2="224" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <line x1="620" y1="187" x2="620" y2="224" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="220,240 210,221 230,221" class="s-teal"/>
+  <polygon points="620,240 610,221 630,221" class="s-coral"/>
+  <text x="174" y="211" text-anchor="end" font-size="18" font-weight="700" class="s-teal">YES</text>
+  <text x="666" y="211" text-anchor="start" font-size="18" font-weight="700" class="s-coral">NO</text>
+
+  <rect x="45" y="250" width="350" height="112" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="220" y="281" text-anchor="middle" font-size="18" class="s-muted">definite article + declined form</text>
+  <text x="220" y="318" text-anchor="middle" font-size="25" font-weight="700" class="s-teal">der kürzeste Weg</text>
+  <text x="220" y="347" text-anchor="middle" font-size="20" class="s-ink">dieser ist der kürzeste</text>
+
+  <rect x="445" y="250" width="350" height="112" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="620" y="281" text-anchor="middle" font-size="18" class="s-muted">am + superlative + -en</text>
+  <text x="620" y="318" text-anchor="middle" font-size="25" font-weight="700" class="s-coral">am gefährlichsten</text>
+  <text x="620" y="347" text-anchor="middle" font-size="20" class="s-ink">self across conditions</text>
+
+  <text x="420" y="408" text-anchor="middle" font-size="19" font-weight="700" class="s-ink">A recoverable noun decides the branch.</text>
+</svg>

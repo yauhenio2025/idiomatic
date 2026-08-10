@@ -1,0 +1,30 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Adjective endings share the job of marking gender, case and number with the determiner">
+  <text x="420" y="46" text-anchor="middle" font-size="28" font-weight="700" class="s-ink">One visible signal near the noun</text>
+  <text x="420" y="75" text-anchor="middle" font-size="17" class="s-muted">masculine · nominative · singular</text>
+
+  <rect x="45" y="105" width="220" height="66" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="155" y="134" text-anchor="middle" font-size="17" class="s-muted">no determiner</text>
+  <text x="155" y="158" text-anchor="middle" font-size="18" font-weight="700" class="s-ink">no signal</text>
+  <line x1="275" y1="138" x2="324" y2="138" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="340,138 321,128 321,148" class="s-teal"/>
+  <rect x="350" y="105" width="445" height="66" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="572" y="147" text-anchor="middle" font-size="24" font-weight="700" class="s-teal">kalt-er Wind · adjective signals</text>
+
+  <rect x="45" y="205" width="220" height="66" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="155" y="234" text-anchor="middle" font-size="17" class="s-muted">der</text>
+  <text x="155" y="258" text-anchor="middle" font-size="18" font-weight="700" class="s-teal">clear signal</text>
+  <line x1="275" y1="238" x2="324" y2="238" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="340,238 321,228 321,248" class="s-coral"/>
+  <rect x="350" y="205" width="445" height="66" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="572" y="247" text-anchor="middle" font-size="24" font-weight="700" class="s-coral">der kalt-e Wind · adjective recedes</text>
+
+  <rect x="45" y="305" width="220" height="66" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="155" y="334" text-anchor="middle" font-size="17" class="s-muted">ein</text>
+  <text x="155" y="358" text-anchor="middle" font-size="18" font-weight="700" class="s-ink">endingless here</text>
+  <line x1="275" y1="338" x2="324" y2="338" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="340,338 321,328 321,348" class="s-teal"/>
+  <rect x="350" y="305" width="445" height="66" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="572" y="347" text-anchor="middle" font-size="24" font-weight="700" class="s-teal">ein kalt-er Wind · adjective fills gap</text>
+
+  <text x="420" y="411" text-anchor="middle" font-size="19" class="s-muted">strong = informative · weak = information already supplied</text>
+</svg>

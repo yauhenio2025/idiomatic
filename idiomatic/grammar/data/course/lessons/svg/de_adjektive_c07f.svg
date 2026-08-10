@@ -1,0 +1,32 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three similar-looking German forms contrasted: a lowercase adjective with an understood noun, a capitalized adjectival noun, and a weak masculine noun">
+  <text x="420" y="46" text-anchor="middle" font-size="28" font-weight="700" class="s-ink">Three look-alikes, three analyses</text>
+
+  <rect x="30" y="82" width="240" height="225" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="150" y="118" text-anchor="middle" font-size="18" font-weight="700" class="s-teal">HIDDEN NOUN</text>
+  <text x="150" y="158" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">den dunklen</text>
+  <text x="150" y="187" text-anchor="middle" font-size="17" class="s-muted">Mantel understood</text>
+  <line x1="70" y1="214" x2="230" y2="214" class="s-stroke-line" stroke-width="3" stroke-linecap="round"/>
+  <text x="150" y="249" text-anchor="middle" font-size="19" class="s-ink">lowercase</text>
+  <text x="150" y="277" text-anchor="middle" font-size="19" class="s-ink">adjective agreement</text>
+
+  <rect x="300" y="82" width="240" height="225" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="420" y="118" text-anchor="middle" font-size="18" font-weight="700" class="s-coral">ADJECTIVAL NOUN</text>
+  <text x="420" y="158" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">den Kranken</text>
+  <text x="420" y="187" text-anchor="middle" font-size="17" class="s-muted">the sick man</text>
+  <line x1="340" y1="214" x2="500" y2="214" class="s-stroke-line" stroke-width="3" stroke-linecap="round"/>
+  <text x="420" y="249" text-anchor="middle" font-size="19" class="s-ink">capitalized</text>
+  <text x="420" y="277" text-anchor="middle" font-size="19" class="s-ink">adjective declension</text>
+
+  <rect x="570" y="82" width="240" height="225" rx="15" class="s-tile" stroke-width="2"/>
+  <text x="690" y="118" text-anchor="middle" font-size="18" font-weight="700" class="s-muted">WEAK NOUN</text>
+  <text x="690" y="158" text-anchor="middle" font-size="25" font-weight="700" class="s-ink">den Franzosen</text>
+  <text x="690" y="187" text-anchor="middle" font-size="17" class="s-muted">the Frenchman</text>
+  <line x1="610" y1="214" x2="770" y2="214" class="s-stroke-line" stroke-width="3" stroke-linecap="round"/>
+  <text x="690" y="249" text-anchor="middle" font-size="19" class="s-ink">capitalized</text>
+  <text x="690" y="277" text-anchor="middle" font-size="19" class="s-ink">noun declension</text>
+
+  <line x1="150" y1="317" x2="150" y2="351" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <line x1="420" y1="317" x2="420" y2="351" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <line x1="690" y1="317" x2="690" y2="351" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <text x="420" y="394" text-anchor="middle" font-size="21" font-weight="700" class="s-ink">Meaning and capitalization reveal the grammar.</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four German adjective frames map to their selected preposition and case">
+  <text x="420" y="44" text-anchor="middle" font-size="28" font-weight="700" class="s-ink">Store the whole lexical frame</text>
+  <text x="206" y="79" text-anchor="middle" font-size="17" class="s-muted">adjective</text>
+  <text x="625" y="79" text-anchor="middle" font-size="17" class="s-muted">selected preposition + case</text>
+
+  <rect x="55" y="96" width="300" height="58" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="205" y="133" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">abhängig</text>
+  <line x1="365" y1="125" x2="474" y2="125" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="490,125 471,115 471,135" class="s-teal"/>
+  <rect x="500" y="96" width="285" height="58" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="642" y="133" text-anchor="middle" font-size="23" font-weight="700" class="s-teal">von + dative</text>
+
+  <rect x="55" y="174" width="300" height="58" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="205" y="211" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">vorbereitet</text>
+  <line x1="365" y1="203" x2="474" y2="203" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="490,203 471,193 471,213" class="s-coral"/>
+  <rect x="500" y="174" width="285" height="58" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="642" y="211" text-anchor="middle" font-size="23" font-weight="700" class="s-coral">auf + accusative</text>
+
+  <rect x="55" y="252" width="300" height="58" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="205" y="289" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">einverstanden</text>
+  <line x1="365" y1="281" x2="474" y2="281" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="490,281 471,271 471,291" class="s-teal"/>
+  <rect x="500" y="252" width="285" height="58" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="642" y="289" text-anchor="middle" font-size="23" font-weight="700" class="s-teal">mit + dative</text>
+
+  <rect x="55" y="330" width="300" height="58" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="205" y="367" text-anchor="middle" font-size="23" font-weight="700" class="s-ink">zuständig</text>
+  <line x1="365" y1="359" x2="474" y2="359" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="490,359 471,349 471,369" class="s-coral"/>
+  <rect x="500" y="330" width="285" height="58" rx="13" class="s-tile" stroke-width="2"/>
+  <text x="642" y="367" text-anchor="middle" font-size="23" font-weight="700" class="s-coral">für + accusative</text>
+
+  <text x="420" y="418" text-anchor="middle" font-size="18" class="s-muted">Translation does not predict the frame — lexical memory does.</text>
+</svg>
