@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-labelledby="title desc">
+  <title id="title">The broad meanings of ver contrast with the focused meaning of zer</title>
+  <desc id="desc">Ver branches to completion, excess, error and provision; zer points to destruction into pieces.</desc>
+  <text class="s-ink" x="320" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Broad network versus focused image</text>
+
+  <rect class="s-tile" x="20" y="125" width="130" height="60" rx="12"/>
+  <text class="s-coral" x="85" y="163" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="700">ver-</text>
+  <line class="s-stroke-coral" x1="160" y1="155" x2="200" y2="155" stroke-width="3"/>
+  <line class="s-stroke-coral" x1="200" y1="60" x2="200" y2="255" stroke-width="3"/>
+  <line class="s-stroke-coral" x1="200" y1="60" x2="240" y2="60" stroke-width="3"/>
+  <polygon class="s-coral" points="240,54 250,60 240,66"/>
+  <line class="s-stroke-coral" x1="200" y1="125" x2="240" y2="125" stroke-width="3"/>
+  <polygon class="s-coral" points="240,119 250,125 240,131"/>
+  <line class="s-stroke-coral" x1="200" y1="190" x2="240" y2="190" stroke-width="3"/>
+  <polygon class="s-coral" points="240,184 250,190 240,196"/>
+  <line class="s-stroke-coral" x1="200" y1="255" x2="240" y2="255" stroke-width="3"/>
+  <polygon class="s-coral" points="240,249 250,255 240,261"/>
+
+  <rect class="s-tile" x="260" y="35" width="350" height="50" rx="10"/>
+  <text class="s-ink" x="300" y="66" font-family="system-ui, sans-serif" font-size="16">completion / fading</text>
+  <text class="s-coral" x="575" y="66" text-anchor="end" font-family="system-ui, sans-serif" font-size="16" font-weight="700">verblühen</text>
+  <rect class="s-tile" x="260" y="100" width="350" height="50" rx="10"/>
+  <text class="s-ink" x="300" y="131" font-family="system-ui, sans-serif" font-size="16">error / excess</text>
+  <text class="s-coral" x="575" y="131" text-anchor="end" font-family="system-ui, sans-serif" font-size="16" font-weight="700">versalzen</text>
+  <rect class="s-tile" x="260" y="165" width="350" height="50" rx="10"/>
+  <text class="s-ink" x="300" y="196" font-family="system-ui, sans-serif" font-size="16">change of state</text>
+  <text class="s-coral" x="575" y="196" text-anchor="end" font-family="system-ui, sans-serif" font-size="16" font-weight="700">verarmen</text>
+  <rect class="s-tile" x="260" y="230" width="350" height="50" rx="10"/>
+  <text class="s-ink" x="300" y="261" font-family="system-ui, sans-serif" font-size="16">provision</text>
+  <text class="s-coral" x="575" y="261" text-anchor="end" font-family="system-ui, sans-serif" font-size="16" font-weight="700">vergolden</text>
+
+  <rect class="s-tile" x="20" y="305" width="130" height="50" rx="12"/>
+  <text class="s-teal" x="85" y="337" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="700">zer-</text>
+  <line class="s-stroke-teal" x1="160" y1="330" x2="240" y2="330" stroke-width="3"/>
+  <polygon class="s-teal" points="240,324 250,330 240,336"/>
+  <rect class="s-tile" x="260" y="305" width="350" height="50" rx="10"/>
+  <text class="s-ink" x="300" y="337" font-family="system-ui, sans-serif" font-size="16">into pieces</text>
+  <text class="s-teal" x="575" y="337" text-anchor="end" font-family="system-ui, sans-serif" font-size="16" font-weight="700">zerbrechen</text>
+</svg>

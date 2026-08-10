@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Four routes from a root to a complex German word</title>
+  <desc id="desc">Four panels show prefixation, suffixation, vowel change and compounding.</desc>
+  <text class="s-ink" x="320" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Four formation routes</text>
+
+  <rect class="s-tile" x="20" y="55" width="290" height="125" rx="14"/>
+  <text class="s-muted" x="165" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15">prefix</text>
+  <rect class="s-tile" x="40" y="103" width="90" height="50" rx="10"/>
+  <text class="s-ink" x="85" y="134" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18">klug</text>
+  <line class="s-stroke-teal" x1="140" y1="128" x2="190" y2="128" stroke-width="3"/>
+  <polygon class="s-teal" points="190,122 200,128 190,134"/>
+  <rect class="s-tile" x="210" y="103" width="80" height="50" rx="10"/>
+  <text class="s-teal" x="250" y="134" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700">unklug</text>
+
+  <rect class="s-tile" x="330" y="55" width="290" height="125" rx="14"/>
+  <text class="s-muted" x="475" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15">suffix</text>
+  <rect class="s-tile" x="350" y="103" width="90" height="50" rx="10"/>
+  <text class="s-ink" x="395" y="134" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18">frei</text>
+  <line class="s-stroke-coral" x1="450" y1="128" x2="500" y2="128" stroke-width="3"/>
+  <polygon class="s-coral" points="500,122 510,128 500,134"/>
+  <rect class="s-tile" x="520" y="103" width="80" height="50" rx="10"/>
+  <text class="s-coral" x="560" y="134" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Freiheit</text>
+
+  <rect class="s-tile" x="20" y="200" width="290" height="125" rx="14"/>
+  <text class="s-muted" x="165" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15">vowel change</text>
+  <rect class="s-tile" x="40" y="248" width="90" height="50" rx="10"/>
+  <text class="s-ink" x="85" y="279" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18">stark</text>
+  <line class="s-stroke-teal" x1="140" y1="273" x2="190" y2="273" stroke-width="3"/>
+  <polygon class="s-teal" points="190,267 200,273 190,279"/>
+  <rect class="s-tile" x="210" y="248" width="80" height="50" rx="10"/>
+  <text class="s-teal" x="250" y="279" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" font-weight="700">Stärke</text>
+
+  <rect class="s-tile" x="330" y="200" width="290" height="125" rx="14"/>
+  <text class="s-muted" x="475" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15">compounding</text>
+  <text class="s-ink" x="355" y="279" font-family="system-ui, sans-serif" font-size="17">Daten</text>
+  <text class="s-muted" x="415" y="279" font-family="system-ui, sans-serif" font-size="17">+</text>
+  <text class="s-ink" x="438" y="279" font-family="system-ui, sans-serif" font-size="17">Schutz</text>
+  <text class="s-muted" x="500" y="279" font-family="system-ui, sans-serif" font-size="17">=</text>
+  <text class="s-coral" x="520" y="279" font-family="system-ui, sans-serif" font-size="17" font-weight="700">Datenschutz</text>
+</svg>

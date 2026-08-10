@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="title desc">
+  <title id="title">A separable prefix occupies different sentence slots</title>
+  <desc id="desc">The prefix stands at the right edge in a finite clause and surrounds inserted ge or zu in non-finite forms.</desc>
+  <text class="s-ink" x="320" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700">The movable seam</text>
+
+  <text class="s-muted" x="30" y="67" font-family="system-ui, sans-serif" font-size="14">finite main clause · split</text>
+  <rect class="s-tile" x="20" y="78" width="600" height="62" rx="12"/>
+  <text class="s-ink" x="48" y="116" font-family="system-ui, sans-serif" font-size="18">Das Team arbeitet nach der Pause</text>
+  <text class="s-teal" x="588" y="116" text-anchor="end" font-family="system-ui, sans-serif" font-size="18" font-weight="700">weiter.</text>
+
+  <text class="s-muted" x="30" y="173" font-family="system-ui, sans-serif" font-size="14">participle · insertion</text>
+  <rect class="s-tile" x="20" y="184" width="600" height="62" rx="12"/>
+  <text class="s-ink" x="48" y="222" font-family="system-ui, sans-serif" font-size="18">Das Team hat</text>
+  <text class="s-teal" x="190" y="222" font-family="system-ui, sans-serif" font-size="18" font-weight="700">weiter</text>
+  <text class="s-coral" x="244" y="222" font-family="system-ui, sans-serif" font-size="18" font-weight="700">ge</text>
+  <text class="s-teal" x="267" y="222" font-family="system-ui, sans-serif" font-size="18" font-weight="700">arbeitet.</text>
+
+  <text class="s-muted" x="30" y="279" font-family="system-ui, sans-serif" font-size="14">infinitive · same insertion point</text>
+  <rect class="s-tile" x="20" y="290" width="600" height="42" rx="12"/>
+  <text class="s-ink" x="48" y="318" font-family="system-ui, sans-serif" font-size="17">… morgen</text>
+  <text class="s-teal" x="150" y="318" font-family="system-ui, sans-serif" font-size="17" font-weight="700">weiter</text>
+  <text class="s-coral" x="200" y="318" font-family="system-ui, sans-serif" font-size="17" font-weight="700">zu</text>
+  <text class="s-teal" x="220" y="318" font-family="system-ui, sans-serif" font-size="17" font-weight="700">arbeiten.</text>
+</svg>

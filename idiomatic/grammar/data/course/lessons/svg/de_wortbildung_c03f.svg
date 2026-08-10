@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 310" role="img" aria-labelledby="title desc">
+  <title id="title">The final element controls a German compound noun</title>
+  <desc id="desc">Research combines with database; database supplies feminine gender and the plural ending.</desc>
+  <text class="s-ink" x="320" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Read the compound from the right</text>
+
+  <rect class="s-tile" x="20" y="80" width="160" height="70" rx="12"/>
+  <text class="s-muted" x="100" y="103" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13">modifier</text>
+  <text class="s-ink" x="100" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="19">Forschung</text>
+  <text class="s-muted" x="210" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24">+</text>
+  <rect class="s-tile" x="240" y="80" width="160" height="70" rx="12"/>
+  <text class="s-muted" x="320" y="103" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13">head</text>
+  <text class="s-teal" x="320" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="19" font-weight="700">Datenbank</text>
+  <text class="s-muted" x="430" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24">=</text>
+  <rect class="s-tile" x="460" y="80" width="160" height="70" rx="12"/>
+  <text class="s-muted" x="540" y="103" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13">whole compound</text>
+  <text class="s-coral" x="540" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Forschungsdatenbank</text>
+
+  <line class="s-stroke-teal" x1="320" y1="160" x2="320" y2="205" stroke-width="3"/>
+  <polygon class="s-teal" points="314,205 320,215 326,205"/>
+  <rect class="s-tile" x="210" y="225" width="220" height="58" rx="12"/>
+  <text class="s-teal" x="320" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700">die · feminine</text>
+  <text class="s-ink" x="320" y="272" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15">plural: Forschungsdatenbanken</text>
+</svg>
