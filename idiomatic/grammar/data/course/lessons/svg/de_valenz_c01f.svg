@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Verb frames with one, two and three selected complements">
+  <text x="320" y="34" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="22" font-weight="700">THE VERB OPENS SLOTS</text>
+
+  <text x="40" y="62" class="s-muted" font-family="sans-serif" font-size="15">ONE PLACE</text>
+  <rect x="150" y="72" width="150" height="58" rx="12" class="s-tile"/>
+  <text x="225" y="106" text-anchor="middle" class="s-teal" font-family="sans-serif" font-size="18" font-weight="700">SUBJECT</text>
+  <line x1="300" y1="101" x2="330" y2="101" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <rect x="340" y="72" width="150" height="58" rx="12" class="s-tile"/>
+  <text x="415" y="106" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="18" font-weight="700">VERB</text>
+
+  <text x="40" y="152" class="s-muted" font-family="sans-serif" font-size="15">TWO PLACES</text>
+  <rect x="65" y="162" width="135" height="58" rx="12" class="s-tile"/>
+  <text x="132" y="196" text-anchor="middle" class="s-teal" font-family="sans-serif" font-size="18" font-weight="700">SUBJECT</text>
+  <line x1="200" y1="191" x2="230" y2="191" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <rect x="240" y="162" width="135" height="58" rx="12" class="s-tile"/>
+  <text x="307" y="196" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="18" font-weight="700">VERB</text>
+  <line x1="375" y1="191" x2="405" y2="191" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <rect x="415" y="162" width="160" height="58" rx="12" class="s-tile"/>
+  <text x="495" y="196" text-anchor="middle" class="s-coral" font-family="sans-serif" font-size="18" font-weight="700">OBJECT</text>
+
+  <text x="40" y="242" class="s-muted" font-family="sans-serif" font-size="15">THREE PLACES</text>
+  <rect x="44" y="252" width="125" height="58" rx="12" class="s-tile"/>
+  <text x="106" y="286" text-anchor="middle" class="s-teal" font-family="sans-serif" font-size="17" font-weight="700">SUBJECT</text>
+  <line x1="169" y1="281" x2="193" y2="281" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <rect x="203" y="252" width="110" height="58" rx="12" class="s-tile"/>
+  <text x="258" y="286" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="17" font-weight="700">VERB</text>
+  <line x1="313" y1="281" x2="337" y2="281" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <rect x="347" y="252" width="110" height="58" rx="12" class="s-tile"/>
+  <text x="402" y="278" text-anchor="middle" class="s-coral" font-family="sans-serif" font-size="15" font-weight="700">RECEIVER</text>
+  <text x="402" y="298" text-anchor="middle" class="s-muted" font-family="sans-serif" font-size="13">DATIVE</text>
+  <line x1="457" y1="281" x2="481" y2="281" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <rect x="491" y="252" width="105" height="58" rx="12" class="s-tile"/>
+  <text x="543" y="278" text-anchor="middle" class="s-coral" font-family="sans-serif" font-size="15" font-weight="700">THING</text>
+  <text x="543" y="298" text-anchor="middle" class="s-muted" font-family="sans-serif" font-size="13">ACCUSATIVE</text>
+</svg>

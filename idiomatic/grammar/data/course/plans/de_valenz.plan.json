@@ -1,0 +1,80 @@
+{
+  "lang": "de",
+  "unit": "valenz",
+  "chapter": 16,
+  "unit_label": "Valenz (verb valency)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["4:key"],
+      "hammer_refs": ["16.2.4"],
+      "max_items": 10,
+      "note": "Build impersonal weather, experiencer and event constructions after the subject contrast."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["16.2.5"],
+      "max_items": 10,
+      "note": "Choose between general existence and presence at a definite place or time."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["6:key"],
+      "hammer_refs": ["16.3.4"],
+      "max_items": 10,
+      "note": "Contrast German transitive, intransitive, reflexive and causative equivalents."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["7:key"],
+      "hammer_refs": ["16.4.1"],
+      "max_items": 10,
+      "note": "Produce dative-recipient plus accusative-content frames."
+    },
+    {
+      "block": 5,
+      "card_seq": 6,
+      "exercise_sets": ["10", "9:key"],
+      "hammer_refs": ["16.3", "16.4", "16.7"],
+      "max_items": 15,
+      "note": "Integrate object-case recognition, then reinforce dative-only and two-object verbs."
+    },
+    {
+      "block": 6,
+      "card_seq": 7,
+      "exercise_sets": ["11", "12"],
+      "hammer_refs": ["16.5"],
+      "max_items": 15,
+      "note": "Recall fixed prepositions first, then combine them with governed-case endings."
+    },
+    {
+      "block": 7,
+      "card_seq": 8,
+      "exercise_sets": ["13"],
+      "hammer_refs": ["16.5"],
+      "max_items": 10,
+      "note": "Discriminate meaning changes produced by different prepositional frames."
+    },
+    {
+      "block": 8,
+      "card_seq": 9,
+      "exercise_sets": ["14:key"],
+      "hammer_refs": ["16.3", "16.5"],
+      "max_items": 10,
+      "note": "Contrast near-synonymous accusative and prepositional-object constructions."
+    },
+    {
+      "block": 9,
+      "card_seq": 10,
+      "exercise_sets": ["16:key", "15:key"],
+      "hammer_refs": ["16.5", "16.5.14"],
+      "max_items": 10,
+      "note": "Transform prepositional objects into anticipated clauses, then apply the frames in translation."
+    }
+  ]
+}

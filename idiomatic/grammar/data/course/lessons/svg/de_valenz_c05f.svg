@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="A transfer verb sends a thing in the accusative to a recipient in the dative">
+  <text x="320" y="38" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="22" font-weight="700">A THREE-PLACE TRANSFER FRAME</text>
+
+  <rect x="48" y="82" width="150" height="62" rx="14" class="s-tile"/>
+  <text x="123" y="109" text-anchor="middle" class="s-teal" font-family="sans-serif" font-size="17" font-weight="700">AGENT</text>
+  <text x="123" y="131" text-anchor="middle" class="s-muted" font-family="sans-serif" font-size="13">nominative</text>
+  <line x1="198" y1="113" x2="248" y2="113" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="258,113 246,106 246,120" class="s-teal"/>
+  <rect x="268" y="82" width="150" height="62" rx="14" class="s-tile"/>
+  <text x="343" y="119" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="18" font-weight="700">TRANSFER VERB</text>
+
+  <line x1="343" y1="144" x2="343" y2="178" class="s-stroke-line" stroke-width="4" stroke-linecap="round"/>
+  <line x1="343" y1="178" x2="158" y2="224" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="148,227 157,217 161,232" class="s-teal"/>
+  <line x1="343" y1="178" x2="528" y2="224" class="s-stroke-coral" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="538,227 525,232 529,217" class="s-coral"/>
+
+  <rect x="52" y="238" width="198" height="82" rx="16" class="s-tile"/>
+  <text x="151" y="270" text-anchor="middle" class="s-teal" font-family="sans-serif" font-size="18" font-weight="700">RECIPIENT</text>
+  <text x="151" y="298" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="17">DATIVE</text>
+  <rect x="436" y="238" width="152" height="82" rx="16" class="s-tile"/>
+  <text x="512" y="270" text-anchor="middle" class="s-coral" font-family="sans-serif" font-size="18" font-weight="700">THING</text>
+  <text x="512" y="298" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="17">ACCUSATIVE</text>
+</svg>

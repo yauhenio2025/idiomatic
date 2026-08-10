@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Selected complements inside a verb frame and optional adverbials outside it">
+  <text x="320" y="36" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="22" font-weight="700">WHAT BELONGS TO THE FRAME?</text>
+
+  <rect x="80" y="74" width="480" height="180" rx="24" class="s-stroke-teal" stroke-width="4"/>
+  <text x="105" y="104" class="s-teal" font-family="sans-serif" font-size="15" font-weight="700">SELECTED BY THE VERB</text>
+
+  <rect x="126" y="132" width="142" height="72" rx="14" class="s-tile"/>
+  <text x="197" y="161" text-anchor="middle" class="s-ink" font-family="sans-serif" font-size="17" font-weight="700">VERB</text>
+  <text x="197" y="184" text-anchor="middle" class="s-muted" font-family="sans-serif" font-size="14">lexical core</text>
+
+  <line x1="268" y1="168" x2="298" y2="168" class="s-stroke-teal" stroke-width="4" stroke-linecap="round"/>
+  <rect x="308" y="132" width="206" height="72" rx="14" class="s-tile"/>
+  <text x="411" y="161" text-anchor="middle" class="s-teal" font-family="sans-serif" font-size="17" font-weight="700">COMPLEMENT</text>
+  <text x="411" y="184" text-anchor="middle" class="s-muted" font-family="sans-serif" font-size="14">part of the frame</text>
+
+  <rect x="196" y="288" width="248" height="52" rx="14" class="s-tile"/>
+  <text x="320" y="320" text-anchor="middle" class="s-coral" font-family="sans-serif" font-size="17" font-weight="700">ADVERBIAL = EXTRA CONTEXT</text>
+  <line x1="320" y1="254" x2="320" y2="278" class="s-stroke-coral" stroke-width="3" stroke-dasharray="7 7" stroke-linecap="round"/>
+</svg>
