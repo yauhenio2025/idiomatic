@@ -153,3 +153,14 @@
 for tools, RENDER_API_KEY, IDIOMATIC_DATABASE_URL; `set -a; source;
 set +a`). Mac: ssh evgeny2026@192.168.110.56 (wired; .65=wifi). Suite
 runs `.venv/bin/python -m pytest -q` — 731 tests as of e659a78.
+
+## COMPLETION NOTE (2026-08-11 ~13:15)
+
+COURSE DELIVERED END TO END: all 21 units acked `ok` by the add-on —
+the complete voiced German grammar course is imported in the owner's
+collection under `DE German::2 Grammar::<unit>`. (Repair en route:
+wortbildung + zahlen were initially uploaded audio-less — their seeds
+had been skipped in the review rush; caught by the identical-123KB
+anomaly, re-seeded, topped-off, re-uploaded with audio_pending=0.
+16,491 clips voiced lifetime.) Task #7 CLOSED. Open: fancy_vocab
+audit, owner gates, LingQ pilot post-verdict.
