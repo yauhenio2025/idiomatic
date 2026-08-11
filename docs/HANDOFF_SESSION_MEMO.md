@@ -106,6 +106,14 @@
 
 ## Live watchers/automation at handoff
 
+- **Mac memory watchdog** (since 2026-08-12): launchd
+  `com.idiomatic.memwatch` auto-kills the judge (L1 swap>25G rising)
+  and repair walk + comfy /free (L2 >35G) during swap storms; alert =
+  `qa/MEM_ALERT` (mirrored to qa_mirror by qa-sync, auto-clears when
+  healthy). Check it whenever the Mac misbehaves — it may have already
+  acted.
+
+
 Fedora: qwen-miner timers; qa-sync.timer (30 min). Mac: launchd judge
 tick (15 min) + minting queue chain (b10-18 pending). Rescue autopilot
 daily on Render. No unfulfilled promises to other sessions.
