@@ -246,7 +246,7 @@ audit, owner gates, LingQ pilot post-verdict.
     wortbildung/rechtschreibung/zahlen the same way.
   - Data: docs/research/grammar_books/course_audit/ (machine-local).
 - MANDATE 2 (Romance books) — DONE, report machine-local at
-  docs/research/grammar_books/ROMANCE_BOOK_EQUIVALENTS.md: FR Towell/
+  docs/research/ROMANCE_BOOK_EQUIVALENTS.md: FR Towell/
   Lamy/Hawkins 5e 2025 + Practising French 5e (HIGH); ES Butt&Benjamin
   6e 2019 + Practising Spanish 4e (HIGH; 6e RENUMBERED vs 5e — get 6e);
   IT Maiden/Robustelli 2e + Practising Italian 1e (HIGH identity,
