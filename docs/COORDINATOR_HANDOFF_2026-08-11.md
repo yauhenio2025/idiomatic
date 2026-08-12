@@ -287,3 +287,6 @@ fr 1289 / it 1280 / pt 1253 notes). Ack watcher armed. Exercises2
 corpus waves: fancy_vocab was the last committed topic wave in
 batches/output — the roadmap's remaining topics need fresh staging
 (see docs/EXERCISES2_ROADMAP.md).
+ACK CONFIRMATION ~19:40: all five exercises2 apkgs (1719-1723) acked ok
+— the fancy_vocab wave is in the collection. Day's deliveries: 3
+flagged-fix apkgs + course_partikeln + 5 exercises2 decks, all acked.
