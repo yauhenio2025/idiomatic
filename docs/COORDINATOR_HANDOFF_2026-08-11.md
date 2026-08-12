@@ -164,3 +164,33 @@ had been skipped in the review rush; caught by the identical-123KB
 anomaly, re-seeded, topped-off, re-uploaded with audio_pending=0.
 16,491 clips voiced lifetime.) Task #7 CLOSED. Open: fancy_vocab
 audit, owner gates, LingQ pilot post-verdict.
+
+## UPDATE 2026-08-12 ~05:40 (owner in Rome; token-critical session end)
+
+- OXYLABS OUTAGE since 08-11 midday: youtube_download jobs fault
+  (~420 failed; probe reproduces live). NOT our config (auth/submit
+  ok). Recovery timer `oxylabs-recovery.timer` probes every 2h via
+  ~/llms/oxylabs_recovery_probe.sh; on first success auto-requeues
+  failures from last 4 days + disarms itself. Log:
+  ~/llms/oxylabs_recovery.log. Needs prod env at
+  scratchpad/prod.env (session-local! if scratchpad is gone, rebuild
+  from Render env-vars API) — CHECK THE TIMER STILL WORKS in a new
+  session; if scratchpad wiped, rewrite probe to source Render env
+  directly. If outage >48h: owner should file an Oxylabs ticket.
+- MINING: 24/7 mode confirmed real (496 images noon→dawn); owner
+  re-blessed daytime mining from Rome. Nothing to change.
+- FLAGGED-REVIEW LANE (new owner ask): 140 in-review flagged cards
+  pulled headlessly (rescue_autopilot._pull_collection_blocking +
+  ANKIWEB_HKEY). Split: 17 EUROPEAN pipeline cards (13 pool + 4
+  grammar drill — audio/grammar defects; THE actionable set) + 123
+  Mandarin (external builders — parked). Manifests in
+  docs/research/flagged_reviews/; commission =
+  docs/commissions/FLAGGED_REVIEWS_REMEDIATION.md. Codex diagnosis
+  running (unit idiomatic-flag-diagnosis). NEXT SESSION: review
+  DIAGNOSIS.md, execute phase-2 fixes (re-TTS/corpus fixes/pool
+  rebuild), decide flag-clearing mechanism with owner (add-on
+  cleanup.json extension vs manual). Make the flag pull a recurring
+  session routine.
+- Consoles still untouched: /lingq 0 verdicts, /triage 0/178.
+  fancy_vocab audit still unrun (owner's codex window died with
+  laptop) — next session should take it over per OPEN ITEMS.
