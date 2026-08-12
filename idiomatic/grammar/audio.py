@@ -13,6 +13,7 @@ filename only).
 from __future__ import annotations
 
 import asyncio
+import json
 from pathlib import Path
 
 import structlog
@@ -47,8 +48,30 @@ def _item_sentence_text(item: dict) -> str:
                               item.get("fmt") or "cloze")
 
 
-def _media_name(lang: str, item_id: int) -> str:
-    return f"idg_{lang}_{item_id}.mp3"
+def audio_rev(item: dict) -> int:
+    """Audio revision from ``meta.audio_rev`` (0 when absent).
+
+    Bumping the rev renames the media file, which is the only way to make
+    Anki pick up regenerated audio for an unchanged item — media sync and
+    apkg import both detect changes by filename only.
+    """
+    meta = item.get("meta")
+    if isinstance(meta, str):
+        try:
+            meta = json.loads(meta)
+        except ValueError:
+            meta = None
+    if isinstance(meta, dict):
+        try:
+            return int(meta.get("audio_rev") or 0)
+        except (TypeError, ValueError):
+            return 0
+    return 0
+
+
+def _media_name(lang: str, item_id: int, rev: int = 0) -> str:
+    base = f"idg_{lang}_{item_id}"
+    return f"{base}_r{rev}.mp3" if rev else f"{base}.mp3"
 
 
 async def ensure_item_audio(item: dict, lang: str) -> Path | None:
@@ -58,7 +81,7 @@ async def ensure_item_audio(item: dict, lang: str) -> Path | None:
     s = get_settings()
     stage = Path(s.data_dir) / "staged_audio" / "grammar" / lang
     stage.mkdir(parents=True, exist_ok=True)
-    final = stage / _media_name(lang, item["id"])
+    final = stage / _media_name(lang, item["id"], audio_rev(item))
     if final.exists() and final.stat().st_size > 1000:
         return final
 

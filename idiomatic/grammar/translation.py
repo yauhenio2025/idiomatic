@@ -50,7 +50,7 @@ from ..anki_tree import anki_root
 from ..pipeline.audio import EN_VOICE, LANG_VOICE
 from ..settings import get_settings
 from .apkg import _full_html
-from .audio import _media_name, full_sentence_text
+from .audio import _media_name, audio_rev, full_sentence_text
 from .curriculum import GRAMMAR_LANGS, topics_for
 from .explainers import VoiceRoute, _voice_fingerprint, leveled_speech_clip
 
@@ -200,7 +200,7 @@ def select_items(rows: list[dict], *, lang: str, audio_dir: Path,
             continue
         seen_sentences.add(tl_text)
         stats["eligible"] += 1
-        clip_name = _media_name(lang, it["id"])
+        clip_name = _media_name(lang, it["id"], audio_rev(it))
         clip = audio_dir / clip_name
         if not (clip.exists() and clip.stat().st_size > 1000):
             stats["no_tl_audio"] += 1

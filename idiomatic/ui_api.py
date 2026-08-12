@@ -586,11 +586,12 @@ async def legacy_estate(_: None = Depends(authed_ui)) -> dict:
 
 # --- grammar (Wave 6: curriculum tree + unit detail) -------------------------
 
-def _grammar_audio_rel(lang: str, item_id: int) -> str | None:
+def _grammar_audio_rel(lang: str, item: dict) -> str | None:
     """Relative path for the frontend audio player, or None when the item
     has no usable mp3 (TTS degraded to silence — ships text-only)."""
+    from .grammar.audio import _media_name, audio_rev
     p = (Path(get_settings().data_dir) / "staged_audio" / "grammar" / lang
-         / f"idg_{lang}_{item_id}.mp3")
+         / _media_name(lang, item["id"], audio_rev(item)))
     if p.is_file() and p.stat().st_size > 1000:
         return f"grammar/{lang}/{p.name}"
     return None
@@ -656,14 +657,15 @@ async def grammar_unit_detail(key: str, _: None = Depends(authed_ui)) -> dict:
     items = [dict(r) for r in await pool.fetch(
         """
         SELECT id, infinitive, person, sentence, answer, gloss_en, why_en,
-               batch, created_at
+               batch, created_at, meta
         FROM grammar_items
         WHERE lang = $1 AND topic = $2 AND status = 'verified'
         ORDER BY id
         """,
         lang, key)]
     for it in items:
-        it["audio"] = _grammar_audio_rel(lang, it["id"])
+        it["audio"] = _grammar_audio_rel(lang, it)
+        it.pop("meta", None)
 
     return {
         "unit": unit,

@@ -1276,3 +1276,23 @@ def test_lingq_row_parsing():
     assert r["hints"] == [{"locale": "en", "text": "devoid of"}]
     assert _row_from_card("es", {"pk": None, "term": "x"}) is None
     assert _row_from_card("es", {"pk": 1, "term": "  "}) is None
+
+
+# --- audio_rev media naming (flagged-review remediation 2026-08-12) ----------
+
+def test_audio_rev_media_naming():
+    from idiomatic.grammar.audio import _media_name, audio_rev
+
+    assert _media_name("it", 400) == "idg_it_400.mp3"
+    assert _media_name("it", 400, 0) == "idg_it_400.mp3"
+    assert _media_name("it", 400, 1) == "idg_it_400_r1.mp3"
+    assert _media_name("it", 400, 3) == "idg_it_400_r3.mp3"
+
+    assert audio_rev({}) == 0
+    assert audio_rev({"meta": None}) == 0
+    assert audio_rev({"meta": {}}) == 0
+    assert audio_rev({"meta": {"audio_rev": 2}}) == 2
+    # asyncpg may deliver jsonb as a string
+    assert audio_rev({"meta": '{"audio_rev": 1}'}) == 1
+    assert audio_rev({"meta": "not json"}) == 0
+    assert audio_rev({"meta": {"audio_rev": "bad"}}) == 0
