@@ -81,6 +81,16 @@
 - **Dependencies**: `ADMIN_TOKEN` env; `adopted_notes` table (db/schema.sql)
 - **Added**: 2026-08-05
 
+### Flagged-review remediation lane (recurring)
+- **Status**: Active
+- **Description**: Owner flags problem cards during reviews; each coordinator session pulls the collection headlessly, diffs flags against the committed manifest, and feeds NEW European pipeline cards through diagnosis (codex, read-only) → phase-2 fixes (audio nulls + expression-pool seed + rebuild; grammar `audio_rev` bumps; text corrections with GUID migration via cleanup.json). Mandarin flags are parked for the external builders' repos. Commission: docs/commissions/FLAGGED_REVIEWS_REMEDIATION.md.
+- **Entry Points**:
+  - `tools/pull_flagged_cards.py` - one-command headless pull + flag extraction + baseline diff (needs `ANKIWEB_HKEY`)
+  - `docs/research/flagged_reviews/` - manifests, DIAGNOSIS.md, phase-2 pre-edit row backup
+  - `idiomatic/rescue_autopilot.py:60` - `_pull_collection_blocking` (download-only sync guard)
+- **Dependencies**: anki lib in .venv, prod env file (`~/.config/idiomatic-prod.env`), local-TTS queue for re-voicing
+- **Added**: 2026-08-12
+
 ### Rescue autopilot (autonomous struggle → draft-asset loop)
 - **Status**: Active
 - **Description**: Daily worker-scheduled loop: headless download-only AnkiWeb pull on Render → struggle list from revlog (≥3 Agains/14d) → snapshot upsert + auto-activation → ladder-driven draft generation (glyph + strike-1 comic) on autopilot-approved Chinese image providers under a hard per-run budget → report to kv_store + dashboard Autopilot card. Never approves assets; never uploads to AnkiWeb.
@@ -180,9 +190,10 @@
   - `idiomatic/grammar/service.py` - orchestration + rolling deck rebuild
   - `idiomatic/api.py:330-518` - `/admin/grammar-generate|status|stats|rejects|rebuild`, `/admin/grammar-deckmap` (agent-authed, add-on reorganize), `/admin/grammar-unit/{key}`, `/admin/grammar-topup/{key}`, `/admin/grammar-retire-item/{id}`
   - `db/schema.sql` - `grammar_items` (verified/rejected/retired), `grammar_units` (cluster, status, target_size — code-owned cols re-seeded on boot), and private `f4_pairs` + staging
-  - `tests/test_grammar.py` - morphology, verifier, apkg/GUID stability, subdeck split, seed completeness
+  - `tests/test_grammar.py` - morphology, verifier, apkg/GUID stability, subdeck split, seed completeness, audio_rev naming
+  - `idiomatic/grammar/audio.py` - back-audio TTS + `audio_rev` media naming: `meta.audio_rev` on a row renames its clip `idg_<lang>_<id>_r<rev>.mp3`, forcing regeneration + Anki media update for unchanged text (drills, translation decks, and the dashboard unit page all resolve the revved name)
 - **Dependencies**: Gemini text model, genanki, pinned `regex` grapheme segmentation, vendored morphology DBs
-- **Added**: 2026-07-28 | **Modified**: 2026-08-01
+- **Added**: 2026-07-28 | **Modified**: 2026-08-12
 
 ### Grammar dashboard section
 - **Status**: Active
@@ -224,7 +235,8 @@
   - `db/schema.sql` - `local_tts_jobs.clip_kind` CHECK extended (`solution`, `seg[0-9]{3}`) via the DO-block boot migration
   - `tests/test_course.py`, `tests/test_course_audio.py` - frozen shape, GUIDs, interleave arithmetic, build output, copyright gitignore guard; seeding contract, spoken-text rules, stitch plan, partial-voicing build
 - **Dependencies**: `explainers._segments` narration routing + leveling helpers, `pipeline/audio.py` silence/concat, `anki_tree.anki_root`, genanki (per-note `due`); extracted `docs/research/grammar_books/de_hammer_v1` + `de_hammer_ref_v1` corpora (machine-local); local-Qwen queue (worker untouched — clip_kind opaque, lang drives voice)
-- **Added**: 2026-08-09 | **Modified**: 2026-08-09
+- **Completeness (2026-08-12 second-pass audit)**: all 146 Hammer sections cross-mapped against plan `hammer_refs` + lesson `REF:`s — every real numbered subsection is taught; hygiene gate killed exactly 1 item course-wide; thin units (partikeln/wortbildung/rechtschreibung/zahlen) are Pass-2-provenance-starved, remediated by ORIGINAL exercises under the now-unlocked `llm-generated` provenance (visibly rendered by the card's cx-refs line; pilot: partikeln). Audit data machine-local in `docs/research/grammar_books/course_audit/`; commissions: `CODEX_COURSE_COVERAGE_AUDIT.md`, `CODEX_COURSE_ORIGINAL_EXERCISES.md`.
+- **Added**: 2026-08-09 | **Modified**: 2026-08-12
 
 ### Exercises 2.0 (rich EN→TL usage notes; pilot: es connecting — format approved)
 - **Status**: Active (Waves 1–3 shipped in all five languages with local-Qwen audio, apkgs 1621-25; Waves 4–6 formats owner-approved 2026-08-09 — Wave 6 BIG_TECH_PHRASES merged de/es/fr/it at 90 shadowing notes each via the topic-dispatched merge lane, pt blocked on the staged rows 31-40 gap chunk; Waves 4–5 authoring in flight)

@@ -194,3 +194,69 @@ audit, owner gates, LingQ pilot post-verdict.
 - Consoles still untouched: /lingq 0 verdicts, /triage 0/178.
   fancy_vocab audit still unrun (owner's codex window died with
   laptop) — next session should take it over per OPEN ITEMS.
+
+## UPDATE 2026-08-12 ~15:45 (coordinator session, owner in Rome day 2)
+
+- OXYLABS: still down (probe faults every 2h, result code 112; ~26h at
+  session start). Probe HARDENED: env now at ~/.config/idiomatic-prod.env
+  (durable; was a session-scratchpad path that silently no-op'd the probe
+  if wiped), missing-env logs loudly, log lines carry timestamps again.
+  >48h threshold = 08-13 midday → owner files ticket.
+- FLAGGED-REVIEW PHASE 2 EXECUTED (13 of 17 live; delivery verified):
+  - 6 (b) pool notes (4 pt + 2 es): audio nulled → seeded → voiced in an
+    ad-hoc TTS window (inside the 09:00-01:15 ownership; queue was
+    drained so the window had exited — restarted it, 17 clips, minutes).
+    One suspect pre-flag local completion (job 396) force-requeued
+    instead of silently reused — WATCH FOR THIS CLASS: seed-missing-only
+    reuses completed jobs even when the completed clip is the bad one.
+  - 3 text fixes: pt jogo-combinado board-game example replaced
+    (GUID migrates), pt champanhe EN tautology rewritten (GUID stable),
+    es dar-la-curva example rewritten INTO ITS SOURCE DOMAIN (San Fermín
+    encierro) — the codex diagnosis's blanket tomar-la-curva was
+    over-broad: the source phrase itself is encierro commentary.
+    Pre-edit backup: docs/research/flagged_reviews/phase2_pre_edit_backup.json.
+  - 4 IT grammar drills (text correct, audio bad): NEW audio_rev
+    mechanism (meta.audio_rev → idg_it_<id>_r1.mp3; grammar/audio.py,
+    translation.py, ui_api.py) — rebuilt, all 4 revved clips verified
+    resolving. pt/es pools + it grammar apkgs all ACKED ok 15:13.
+  - 4 flagged notes are ORPHANS (3 IT pool + es palanquear): source
+    videos/idiom rows gone (slug-era). OWNER-GATED: recommend deletion
+    via cleanup.json ('guarda caso' is re-taught by a live card;
+    figuraccia/fruire would be lost — could re-enter via legacy lane;
+    palanquear is wrong Spanish, should die).
+  - cleanup.json STAGED in the add-on dir (profile-pinned syllabus) for
+    the 2 migrated GUIDs — fires on next Anki restart.
+  - RECURRING LANE TOOLED: tools/pull_flagged_cards.py (headless pull +
+    flag extract + baseline diff). Ran 15:30: 140 flags, 0 new.
+  - OWNER DECISIONS still open: orphan deletion; the 5 sibling
+    dar-la-curva vehicle examples (standard is tomar la curva — full
+    migration retires 6 cards' scheduling; I fixed only the flagged one);
+    flag-clearing mechanism (add-on clear_flags extension vs manual).
+- MANDATE 1 (course completeness, second pass) — AUDIT DONE, verdict:
+  - Hammer coverage COMPLETE: 146 sections mapped, the only 21 uncited
+    are unnumbered chapter headers. Zero material gaps.
+  - Hygiene gate killed exactly 1 item course-wide — NOT over-strict;
+    thin units are Pass-2 provenance-starved (partikeln 0/50 sets
+    usable, wortbildung 6 kept, rechtschreibung 3, zahlen 15).
+  - Remediation: ORIGINAL exercises, llm-generated provenance UNLOCKED
+    (course.py PROVENANCES; card back renders {{Provenance}} visibly).
+    Pilot-first: partikeln authoring running on codex
+    (docs/commissions/CODEX_COURSE_ORIGINAL_EXERCISES.md). After my
+    hostile review: enrich → seed → voice → build → upload, then batch
+    wortbildung/rechtschreibung/zahlen the same way.
+  - Data: docs/research/grammar_books/course_audit/ (machine-local).
+- MANDATE 2 (Romance books) — DONE, report machine-local at
+  docs/research/grammar_books/ROMANCE_BOOK_EQUIVALENTS.md: FR Towell/
+  Lamy/Hawkins 5e 2025 + Practising French 5e (HIGH); ES Butt&Benjamin
+  6e 2019 + Practising Spanish 4e (HIGH; 6e RENUMBERED vs 5e — get 6e);
+  IT Maiden/Robustelli 2e + Practising Italian 1e (HIGH identity,
+  MEDIUM extraction — pre-digital PDFs); PT: no Routledge pair EXISTS —
+  Modern Brazilian Portuguese Grammar + Workbook 3e 2023 (MEDIUM-HIGH,
+  BP-vs-EP is an owner call; 'Portuguese: A Comprehensive Grammar'
+  retail listings are unpublished vaporware). Unit registries sketched
+  per language in the report (17/24/21/24 units).
+- fancy_vocab hostile audit RUNNING on our codex lane (76 chunks:
+  es=16, others 15; log docs/research/legacy_estate/
+  fancy_vocab_audit_run.log). Next: review → merge ×5 (update snapshot
+  asserts) → seed-full → tomorrow's window voices.
+- Consoles: /lingq 0 verdicts, /triage 0/178 — still awaiting owner taps.
