@@ -1,0 +1,728 @@
+=== course delivery start 2026-08-11T11:58:44+08:00
+--- kasus build 2026-08-11T11:58:46+08:00
+2026-08-11 11:58:46 [info     ] course.pilot.enrichment        blocks=7 exercises=82 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_kasus.enrichment.json
+{
+ "clips_expected": 203,
+ "clips_matched": 203,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 20,
+ "sides_pending": [],
+ "exercises_voiced": 82,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 121
+  },
+  "course_exercise": {
+   "completed": 92
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 11:58:47 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Kasus (cases)::1 Lesson', 'DE German::2 Grammar::Kasus (cases)::2 Exercises'] enriched=True exercises=82 lang=de lesson_cards=10 notes=92 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_kasus.apkg size_kb=7845 unit=kasus
+{
+ "lang": "de",
+ "unit": "kasus",
+ "lesson_cards": 10,
+ "exercises": 82,
+ "notes": 92,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Kasus (cases)::1 Lesson",
+  "DE German::2 Grammar::Kasus (cases)::2 Exercises"
+ ],
+ "size_kb": 7845
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_kasus.apkg
+
+first-exposure order (due positions):
+L1 L2 L3 x x x x x x x x x x x x x x x x x x x x x x L4 x x x x x x x x x x L5 x x x x x x x x x x x x x x x x x L6 x x x x x x x x L7 L8 x x x x x x x x x x L9 x x x x x x x x x L10 x x x x x x
+--- kasus UPLOAD: {"ok":true,"apkg_id":1696,"kind":"course_kasus","size_bytes":7844890}
+--- konjunktiv build 2026-08-11T11:58:51+08:00
+2026-08-11 11:58:51 [info     ] course.pilot.enrichment        blocks=8 exercises=81 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_konjunktiv.enrichment.json
+{
+ "clips_expected": 268,
+ "clips_matched": 268,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 22,
+ "sides_pending": [],
+ "exercises_voiced": 81,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 187
+  },
+  "course_exercise": {
+   "completed": 81
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 11:59:31 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Imperativ & Konjunktiv::1 Lesson', 'DE German::2 Grammar::Imperativ & Konjunktiv::2 Exercises'] enriched=True exercises=81 lang=de lesson_cards=11 notes=92 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_konjunktiv.apkg size_kb=10272 unit=konjunktiv
+{
+ "lang": "de",
+ "unit": "konjunktiv",
+ "lesson_cards": 11,
+ "exercises": 81,
+ "notes": 92,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Imperativ & Konjunktiv::1 Lesson",
+  "DE German::2 Grammar::Imperativ & Konjunktiv::2 Exercises"
+ ],
+ "size_kb": 10272
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_konjunktiv.apkg
+
+first-exposure order (due positions):
+L1 x x x x x x x L2 x x x x x x x L3 L4 L5 x x x x x x x x x x x x x x x L6 x x x x x x x x x x x x x L7 x x x x x x x x x x L8 L9 x x x x x x x L10 x x x x x x x x x x x L11 x x x x x x x x x x x
+--- konjunktiv UPLOAD: {"ok":true,"apkg_id":1697,"kind":"course_konjunktiv","size_bytes":10272218}
+--- passiv build 2026-08-11T11:59:33+08:00
+2026-08-11 11:59:34 [info     ] course.pilot.enrichment        blocks=10 exercises=96 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_passiv.enrichment.json
+{
+ "clips_expected": 251,
+ "clips_matched": 251,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 24,
+ "sides_pending": [],
+ "exercises_voiced": 96,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 155
+  },
+  "course_exercise": {
+   "completed": 96
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:02:27 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Passiv (passive)::1 Lesson', 'DE German::2 Grammar::Passiv (passive)::2 Exercises'] enriched=True exercises=96 lang=de lesson_cards=12 notes=108 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_passiv.apkg size_kb=8128 unit=passiv
+{
+ "lang": "de",
+ "unit": "passiv",
+ "lesson_cards": 12,
+ "exercises": 96,
+ "notes": 108,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Passiv (passive)::1 Lesson",
+  "DE German::2 Grammar::Passiv (passive)::2 Exercises"
+ ],
+ "size_kb": 8128
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_passiv.apkg
+
+first-exposure order (due positions):
+L1 L2 x x x x x x x x x x L3 x x x x x x L4 x x x x x x x L5 x x x x x x x x x x x x x x x x L6 x x x x x x x x L7 x x x x x x x x x x x x x x L8 L9 x x x x x x L10 x x x x x x x x x x L11 x x x x x x x x x x L12 x x x x x x x x x
+--- passiv UPLOAD: {"ok":true,"apkg_id":1698,"kind":"course_passiv","size_bytes":8128142}
+--- tempora build 2026-08-11T12:02:29+08:00
+2026-08-11 12:02:29 [info     ] course.pilot.enrichment        blocks=7 exercises=57 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_tempora.enrichment.json
+{
+ "clips_expected": 163,
+ "clips_matched": 163,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 24,
+ "sides_pending": [],
+ "exercises_voiced": 57,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 106
+  },
+  "course_exercise": {
+   "completed": 57
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:04:30 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Tempora (tenses)::1 Lesson', 'DE German::2 Grammar::Tempora (tenses)::2 Exercises'] enriched=True exercises=57 lang=de lesson_cards=12 notes=69 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_tempora.apkg size_kb=7543 unit=tempora
+{
+ "lang": "de",
+ "unit": "tempora",
+ "lesson_cards": 12,
+ "exercises": 57,
+ "notes": 69,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Tempora (tenses)::1 Lesson",
+  "DE German::2 Grammar::Tempora (tenses)::2 Exercises"
+ ],
+ "size_kb": 7543
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_tempora.apkg
+
+first-exposure order (due positions):
+L1 L2 L3 x x x x x x L4 L5 L6 L7 x x x x x x x L8 x x x x x x x x x x L9 x x x x x x x x L10 x x x x x x x x x x x L11 x x x x x x L12 x x x x x x x x x
+--- tempora UPLOAD: {"ok":true,"apkg_id":1699,"kind":"course_tempora","size_bytes":7543257}
+--- modalverben build 2026-08-11T12:04:34+08:00
+2026-08-11 12:04:34 [info     ] course.pilot.enrichment        blocks=6 exercises=66 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_modalverben.enrichment.json
+{
+ "clips_expected": 237,
+ "clips_matched": 237,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 24,
+ "sides_pending": [],
+ "exercises_voiced": 66,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 171
+  },
+  "course_exercise": {
+   "completed": 66
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:07:24 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Modalverben (modal auxiliaries)::1 Lesson', 'DE German::2 Grammar::Modalverben (modal auxiliaries)::2 Exercises'] enriched=True exercises=66 lang=de lesson_cards=12 notes=78 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_modalverben.apkg size_kb=8436 unit=modalverben
+{
+ "lang": "de",
+ "unit": "modalverben",
+ "lesson_cards": 12,
+ "exercises": 66,
+ "notes": 78,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Modalverben (modal auxiliaries)::1 Lesson",
+  "DE German::2 Grammar::Modalverben (modal auxiliaries)::2 Exercises"
+ ],
+ "size_kb": 8436
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_modalverben.apkg
+
+first-exposure order (due positions):
+L1 L2 x x x x x x x x x x x x x x x x L3 x x L4 L5 L6 x x x x x x x x x x L7 L8 L9 L10 x x x x x x x L11 x x x x x x x x x x x x x x x L12 x x x x x x x x x x x x x x x x
+--- modalverben UPLOAD: {"ok":true,"apkg_id":1700,"kind":"course_modalverben","size_bytes":8436280}
+--- infinitiv build 2026-08-11T12:07:27+08:00
+2026-08-11 12:07:27 [info     ] course.pilot.enrichment        blocks=10 exercises=89 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_infinitiv.enrichment.json
+{
+ "clips_expected": 274,
+ "clips_matched": 274,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 22,
+ "sides_pending": [],
+ "exercises_voiced": 89,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 185
+  },
+  "course_exercise": {
+   "completed": 89
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:10:42 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Infinitiv & Partizipien::1 Lesson', 'DE German::2 Grammar::Infinitiv & Partizipien::2 Exercises'] enriched=True exercises=89 lang=de lesson_cards=11 notes=100 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_infinitiv.apkg size_kb=10694 unit=infinitiv
+{
+ "lang": "de",
+ "unit": "infinitiv",
+ "lesson_cards": 11,
+ "exercises": 89,
+ "notes": 100,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Infinitiv & Partizipien::1 Lesson",
+  "DE German::2 Grammar::Infinitiv & Partizipien::2 Exercises"
+ ],
+ "size_kb": 10694
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_infinitiv.apkg
+
+first-exposure order (due positions):
+L1 L2 x x x x x x x x x x L3 x x x x x x x x x x L4 x x x x x x x L5 x x x x x x x L6 x x x x x L7 x x x x x x x x x x L8 x x x x x x x x x x L9 x x x x x x x x x x L10 x x x x x x x x x x L11 x x x x x x x x x x
+--- infinitiv UPLOAD: {"ok":true,"apkg_id":1701,"kind":"course_infinitiv","size_bytes":10693956}
+--- determinative build 2026-08-11T12:10:45+08:00
+2026-08-11 12:10:45 [info     ] course.pilot.enrichment        blocks=9 exercises=98 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_determinative.enrichment.json
+{
+ "clips_expected": 231,
+ "clips_matched": 231,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 24,
+ "sides_pending": [],
+ "exercises_voiced": 98,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 133
+  },
+  "course_exercise": {
+   "completed": 98
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:13:30 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Determinative (determiners)::1 Lesson', 'DE German::2 Grammar::Determinative (determiners)::2 Exercises'] enriched=True exercises=98 lang=de lesson_cards=12 notes=110 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_determinative.apkg size_kb=10655 unit=determinative
+{
+ "lang": "de",
+ "unit": "determinative",
+ "lesson_cards": 12,
+ "exercises": 98,
+ "notes": 110,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Determinative (determiners)::1 Lesson",
+  "DE German::2 Grammar::Determinative (determiners)::2 Exercises"
+ ],
+ "size_kb": 10655
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_determinative.apkg
+
+first-exposure order (due positions):
+L1 L2 x x x x x x x x x x x x L3 x x x x x x x x x L4 L5 L6 x x x x x x x x x x L7 x x x x x x x x x x x x x x x x L8 x x x x x x x x L9 x x x x x x x x x x x x L10 x x x x x x x x x x x x x x x x L11 x x x x x x x L12 x x x x x x x x
+--- determinative UPLOAD: {"ok":true,"apkg_id":1702,"kind":"course_determinative","size_bytes":10655098}
+--- substantive build 2026-08-11T12:13:33+08:00
+2026-08-11 12:13:34 [info     ] course.pilot.enrichment        blocks=9 exercises=99 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_substantive.enrichment.json
+{
+ "clips_expected": 252,
+ "clips_matched": 252,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 24,
+ "sides_pending": [],
+ "exercises_voiced": 99,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 153
+  },
+  "course_exercise": {
+   "completed": 99
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:16:30 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Substantive (nouns)::1 Lesson', 'DE German::2 Grammar::Substantive (nouns)::2 Exercises'] enriched=True exercises=99 lang=de lesson_cards=12 notes=111 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_substantive.apkg size_kb=10019 unit=substantive
+{
+ "lang": "de",
+ "unit": "substantive",
+ "lesson_cards": 12,
+ "exercises": 99,
+ "notes": 111,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Substantive (nouns)::1 Lesson",
+  "DE German::2 Grammar::Substantive (nouns)::2 Exercises"
+ ],
+ "size_kb": 10019
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_substantive.apkg
+
+first-exposure order (due positions):
+L1 L2 x x x x x x x x x x L3 x x x x x x x x x x L4 x x x x x x x x x x L5 x x x x x x x x x L6 x x x x x x x x x x x x x x L7 x x x x x x x x x x L8 L9 x x x x x x x x x x L10 L11 x x x x x x x x x x L12 x x x x x x x x x x x x x x x x
+--- substantive UPLOAD: {"ok":true,"apkg_id":1703,"kind":"course_substantive","size_bytes":10018588}
+--- pronomen build 2026-08-11T12:16:35+08:00
+2026-08-11 12:16:35 [info     ] course.pilot.enrichment        blocks=10 exercises=99 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_pronomen.enrichment.json
+{
+ "clips_expected": 248,
+ "clips_matched": 248,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 22,
+ "sides_pending": [],
+ "exercises_voiced": 99,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 149
+  },
+  "course_exercise": {
+   "completed": 99
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:19:23 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Pronomen (pronouns)::1 Lesson', 'DE German::2 Grammar::Pronomen (pronouns)::2 Exercises'] enriched=True exercises=99 lang=de lesson_cards=11 notes=110 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_pronomen.apkg size_kb=10611 unit=pronomen
+{
+ "lang": "de",
+ "unit": "pronomen",
+ "lesson_cards": 11,
+ "exercises": 99,
+ "notes": 110,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Pronomen (pronouns)::1 Lesson",
+  "DE German::2 Grammar::Pronomen (pronouns)::2 Exercises"
+ ],
+ "size_kb": 10611
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_pronomen.apkg
+
+first-exposure order (due positions):
+L1 x x x x x x x L2 x x x x x x x x x x x x x x x x L3 x x x x x x x x x x x L4 x x x x x x x x x x L5 L6 x x x x x x x x x x L7 x x x x L8 x x x x x x x x x x L9 x x x x x x x x x x x L10 x x x x x x x x x x L11 x x x x x x x x x x
+--- pronomen UPLOAD: {"ok":true,"apkg_id":1704,"kind":"course_pronomen","size_bytes":10610906}
+--- artikel build 2026-08-11T12:19:26+08:00
+2026-08-11 12:19:26 [info     ] course.pilot.enrichment        blocks=6 exercises=68 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_artikel.enrichment.json
+{
+ "clips_expected": 211,
+ "clips_matched": 211,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 22,
+ "sides_pending": [],
+ "exercises_voiced": 68,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 143
+  },
+  "course_exercise": {
+   "completed": 68
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:21:58 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Artikel (articles)::1 Lesson', 'DE German::2 Grammar::Artikel (articles)::2 Exercises'] enriched=True exercises=68 lang=de lesson_cards=11 notes=79 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_artikel.apkg size_kb=8686 unit=artikel
+{
+ "lang": "de",
+ "unit": "artikel",
+ "lesson_cards": 11,
+ "exercises": 68,
+ "notes": 79,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Artikel (articles)::1 Lesson",
+  "DE German::2 Grammar::Artikel (articles)::2 Exercises"
+ ],
+ "size_kb": 8686
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_artikel.apkg
+
+first-exposure order (due positions):
+L1 L2 x x x x x x x x L3 L4 L5 x x x x x x x x x x x x x x x x L6 L7 x x x x x x x x L8 x x x x x x x x x x x x L9 L10 x x x x x x x x x x x L11 x x x x x x x x x x x x x
+--- artikel UPLOAD: {"ok":true,"apkg_id":1705,"kind":"course_artikel","size_bytes":8685948}
+--- konjugation build 2026-08-11T12:22:01+08:00
+2026-08-11 12:22:01 [info     ] course.pilot.enrichment        blocks=4 exercises=37 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_konjugation.enrichment.json
+{
+ "clips_expected": 153,
+ "clips_matched": 153,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 24,
+ "sides_pending": [],
+ "exercises_voiced": 37,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 116
+  },
+  "course_exercise": {
+   "completed": 37
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:23:58 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Konjugation (conjugation)::1 Lesson', 'DE German::2 Grammar::Konjugation (conjugation)::2 Exercises'] enriched=True exercises=37 lang=de lesson_cards=12 notes=49 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_konjugation.apkg size_kb=7608 unit=konjugation
+{
+ "lang": "de",
+ "unit": "konjugation",
+ "lesson_cards": 12,
+ "exercises": 37,
+ "notes": 49,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Konjugation (conjugation)::1 Lesson",
+  "DE German::2 Grammar::Konjugation (conjugation)::2 Exercises"
+ ],
+ "size_kb": 7608
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_konjugation.apkg
+
+first-exposure order (due positions):
+L1 L2 L3 L4 x x x L5 L6 L7 L8 x x x x x x x x L9 x x x x x x x x x x L10 x x x x x x x x x x x x x x x x L11 L12
+--- konjugation UPLOAD: {"ok":true,"apkg_id":1706,"kind":"course_konjugation","size_bytes":7607789}
+--- adverbien build 2026-08-11T12:24:00+08:00
+2026-08-11 12:24:00 [info     ] course.pilot.enrichment        blocks=5 exercises=46 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_adverbien.enrichment.json
+{
+ "clips_expected": 236,
+ "clips_matched": 236,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 24,
+ "sides_pending": [],
+ "exercises_voiced": 46,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 190
+  },
+  "course_exercise": {
+   "completed": 46
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:26:52 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Adverbien (adverbs)::1 Lesson', 'DE German::2 Grammar::Adverbien (adverbs)::2 Exercises'] enriched=True exercises=46 lang=de lesson_cards=12 notes=58 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_adverbien.apkg size_kb=9701 unit=adverbien
+{
+ "lang": "de",
+ "unit": "adverbien",
+ "lesson_cards": 12,
+ "exercises": 46,
+ "notes": 58,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Adverbien (adverbs)::1 Lesson",
+  "DE German::2 Grammar::Adverbien (adverbs)::2 Exercises"
+ ],
+ "size_kb": 9701
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_adverbien.apkg
+
+first-exposure order (due positions):
+L1 L2 L3 x x x x x x x x L4 x x x x x x L5 L6 L7 x x x x x x x L8 L9 x x x x x x x x x x x L10 L11 x x x x x x x x x x x x x x L12
+--- adverbien UPLOAD: {"ok":true,"apkg_id":1707,"kind":"course_adverbien","size_bytes":9700692}
+--- konjunktionen build 2026-08-11T12:26:55+08:00
+2026-08-11 12:26:55 [info     ] course.pilot.enrichment        blocks=6 exercises=60 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_konjunktionen.enrichment.json
+{
+ "clips_expected": 218,
+ "clips_matched": 218,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 24,
+ "sides_pending": [],
+ "exercises_voiced": 60,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 158
+  },
+  "course_exercise": {
+   "completed": 60
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:29:36 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Konjunktionen (conjunctions)::1 Lesson', 'DE German::2 Grammar::Konjunktionen (conjunctions)::2 Exercises'] enriched=True exercises=60 lang=de lesson_cards=12 notes=72 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_konjunktionen.apkg size_kb=9641 unit=konjunktionen
+{
+ "lang": "de",
+ "unit": "konjunktionen",
+ "lesson_cards": 12,
+ "exercises": 60,
+ "notes": 72,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Konjunktionen (conjunctions)::1 Lesson",
+  "DE German::2 Grammar::Konjunktionen (conjunctions)::2 Exercises"
+ ],
+ "size_kb": 9641
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_konjunktionen.apkg
+
+first-exposure order (due positions):
+L1 L2 x x x x x x L3 L4 x x x x x x x x x x x x L5 L6 x x x x x x x x x x L7 L8 L9 L10 x x x x x x x x x L11 x x x x x x x L12 x x x x x x x x x x x x x x x x
+--- konjunktionen UPLOAD: {"ok":true,"apkg_id":1708,"kind":"course_konjunktionen","size_bytes":9641390}
+--- wortbildung build 2026-08-11T12:29:39+08:00
+2026-08-11 12:29:39 [info     ] course.pilot.enrichment        blocks=1 exercises=6 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_wortbildung.enrichment.json
+{
+ "clips_expected": 140,
+ "clips_matched": 0,
+ "clips_stale": 0,
+ "clips_missing": 140,
+ "sides_voiced": 0,
+ "sides_pending": [
+  "c01f",
+  "c01b",
+  "c02f",
+  "c02b",
+  "c03f",
+  "c03b",
+  "c04f",
+  "c04b",
+  "c05f",
+  "c05b",
+  "c06f",
+  "c06b",
+  "c07f",
+  "c07b",
+  "c08f",
+  "c08b",
+  "c09f",
+  "c09b",
+  "c10f",
+  "c10b",
+  "c11f",
+  "c11b"
+ ],
+ "exercises_voiced": 0,
+ "exercises_pending": 6,
+ "queue_counts": {},
+ "failed_jobs": []
+}
+2026-08-11 12:29:40 [info     ] grammar.course.apkg_written    audio_pending=28 decks=['DE German::2 Grammar::Wortbildung (word formation)::1 Lesson', 'DE German::2 Grammar::Wortbildung (word formation)::2 Exercises'] enriched=True exercises=6 lang=de lesson_cards=11 notes=17 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_wortbildung.apkg size_kb=123 unit=wortbildung
+{
+ "lang": "de",
+ "unit": "wortbildung",
+ "lesson_cards": 11,
+ "exercises": 6,
+ "notes": 17,
+ "audio_pending": 28,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Wortbildung (word formation)::1 Lesson",
+  "DE German::2 Grammar::Wortbildung (word formation)::2 Exercises"
+ ],
+ "size_kb": 123
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_wortbildung.apkg
+
+first-exposure order (due positions):
+L1 L2 L3 L4 L5 L6 L7 L8 L9 L10 x x x x x x L11
+--- wortbildung UPLOAD: {"ok":true,"apkg_id":1709,"kind":"course_wortbildung","size_bytes":123098}
+--- zahlen build 2026-08-11T12:29:41+08:00
+2026-08-11 12:29:41 [info     ] course.pilot.enrichment        blocks=2 exercises=15 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_zahlen.enrichment.json
+{
+ "clips_expected": 165,
+ "clips_matched": 0,
+ "clips_stale": 0,
+ "clips_missing": 165,
+ "sides_voiced": 0,
+ "sides_pending": [
+  "c01f",
+  "c01b",
+  "c02f",
+  "c02b",
+  "c03f",
+  "c03b",
+  "c04f",
+  "c04b",
+  "c05f",
+  "c05b",
+  "c06f",
+  "c06b",
+  "c07f",
+  "c07b",
+  "c08f",
+  "c08b",
+  "c09f",
+  "c09b",
+  "c10f",
+  "c10b",
+  "c11f",
+  "c11b"
+ ],
+ "exercises_voiced": 0,
+ "exercises_pending": 15,
+ "queue_counts": {},
+ "failed_jobs": []
+}
+2026-08-11 12:29:41 [info     ] grammar.course.apkg_written    audio_pending=37 decks=['DE German::2 Grammar::Zahlwörter (numerals)::1 Lesson', 'DE German::2 Grammar::Zahlwörter (numerals)::2 Exercises'] enriched=True exercises=15 lang=de lesson_cards=11 notes=26 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_zahlen.apkg size_kb=123 unit=zahlen
+{
+ "lang": "de",
+ "unit": "zahlen",
+ "lesson_cards": 11,
+ "exercises": 15,
+ "notes": 26,
+ "audio_pending": 37,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Zahlwörter (numerals)::1 Lesson",
+  "DE German::2 Grammar::Zahlwörter (numerals)::2 Exercises"
+ ],
+ "size_kb": 123
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_zahlen.apkg
+
+first-exposure order (due positions):
+L1 L2 L3 L4 L5 L6 L7 x x x x x x L8 L9 x x x x x x x x x L10 L11
+--- zahlen UPLOAD: {"ok":true,"apkg_id":1710,"kind":"course_zahlen","size_bytes":123098}
+--- partikeln build 2026-08-11T12:29:42+08:00
+2026-08-11 12:29:42 [info     ] course.pilot.enrichment        mode=legacy path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_partikeln.enrichment.json reason='sidecar absent'
+{
+ "clips_expected": 134,
+ "clips_matched": 134,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 20,
+ "sides_pending": [],
+ "exercises_voiced": 0,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 134
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:31:31 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Modalpartikeln (modal particles)::1 Lesson', 'DE German::2 Grammar::Modalpartikeln (modal particles)::2 Exercises'] enriched=False exercises=0 lang=de lesson_cards=10 notes=10 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_partikeln.apkg size_kb=6391 unit=partikeln
+{
+ "lang": "de",
+ "unit": "partikeln",
+ "lesson_cards": 10,
+ "exercises": 0,
+ "notes": 10,
+ "audio_pending": 0,
+ "enriched": false,
+ "decks": [
+  "DE German::2 Grammar::Modalpartikeln (modal particles)::1 Lesson",
+  "DE German::2 Grammar::Modalpartikeln (modal particles)::2 Exercises"
+ ],
+ "size_kb": 6391
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_partikeln.apkg
+
+first-exposure order (due positions):
+L1 L2 L3 L4 L5 L6 L7 L8 L9 L10
+--- partikeln UPLOAD: {"ok":true,"apkg_id":1711,"kind":"course_partikeln","size_bytes":6390518}
+--- rechtschreibung build 2026-08-11T12:31:34+08:00
+2026-08-11 12:31:34 [info     ] course.pilot.enrichment        blocks=1 exercises=3 mode=enriched path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/de_rechtschreibung.enrichment.json
+{
+ "clips_expected": 135,
+ "clips_matched": 135,
+ "clips_stale": 0,
+ "clips_missing": 0,
+ "sides_voiced": 20,
+ "sides_pending": [],
+ "exercises_voiced": 3,
+ "exercises_pending": 0,
+ "queue_counts": {
+  "course_lesson_segment": {
+   "completed": 132
+  },
+  "course_exercise": {
+   "completed": 3
+  }
+ },
+ "failed_jobs": []
+}
+2026-08-11 12:33:27 [info     ] grammar.course.apkg_written    audio_pending=0 decks=['DE German::2 Grammar::Rechtschreibung (spelling)::1 Lesson', 'DE German::2 Grammar::Rechtschreibung (spelling)::2 Exercises'] enriched=True exercises=3 lang=de lesson_cards=10 notes=13 path=/home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_rechtschreibung.apkg size_kb=7764 unit=rechtschreibung
+{
+ "lang": "de",
+ "unit": "rechtschreibung",
+ "lesson_cards": 10,
+ "exercises": 3,
+ "notes": 13,
+ "audio_pending": 0,
+ "enriched": true,
+ "decks": [
+  "DE German::2 Grammar::Rechtschreibung (spelling)::1 Lesson",
+  "DE German::2 Grammar::Rechtschreibung (spelling)::2 Exercises"
+ ],
+ "size_kb": 7764
+}
+apkg: /home/admin/projects/idiomatic/idiomatic/grammar/data/course/book_local/course_de_rechtschreibung.apkg
+
+first-exposure order (due positions):
+L1 L2 L3 L4 x x x L5 L6 L7 L8 L9 L10
+--- rechtschreibung UPLOAD: {"ok":true,"apkg_id":1712,"kind":"course_rechtschreibung","size_bytes":7763555}
+=== course delivery done 2026-08-11T12:33:30+08:00

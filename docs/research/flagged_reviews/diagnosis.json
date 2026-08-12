@@ -1,0 +1,238 @@
+{
+  "1776916081194": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "it",
+        "idiom_text": "fare una figuraccia",
+        "target_text": "Sono caduto davanti a tutti. Che figuraccia ho fatto!",
+        "guid_key": "yt-pool::fareunafiguraccia::sonocadutodavantiatuttichefiguracciahofatto"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: null audio_en and audio_target on the resolved expression_examples row, re-seed both local-TTS clips, rebuild the Italian expression pool, and re-import before clearing the flag.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'it' AND i.idiom_text = 'fare una figuraccia' AND ex.target_text = 'Sono caduto davanti a tutti. Che figuraccia ho fatto!' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1777193962126": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "it",
+        "idiom_text": "fruire di",
+        "target_text": "Abbiamo fruito di uno sconto speciale questo mese.",
+        "guid_key": "yt-pool::fruiredi::abbiamofruitodiunoscontospecialequestomese"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: null audio_en and audio_target on the resolved expression_examples row, re-seed both local-TTS clips, rebuild the Italian expression pool, and re-import before clearing the flag.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'it' AND i.idiom_text = 'fruire di' AND ex.target_text = 'Abbiamo fruito di uno sconto speciale questo mese.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1777193963003": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "it",
+        "idiom_text": "guarda caso",
+        "target_text": "Guarda caso, le chiavi sono sparite.",
+        "guid_key": "yt-pool::guardacaso::guardacasolechiavisonosparite"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: null audio_en and audio_target on the resolved expression_examples row, re-seed both local-TTS clips, rebuild the Italian expression pool, and re-import before clearing the flag.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'it' AND i.idiom_text = 'guarda caso' AND ex.target_text = 'Guarda caso, le chiavi sono sparite.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1777442639125": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "es",
+        "idiom_text": "palanquear",
+        "target_text": "Están palanqueando la nueva tecnología para crecer.",
+        "guid_key": "yt-pool::palanquear::estanpalanqueandolanuevatecnologiaparacrecer"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(c) target-language error in text",
+    "proposed_fix": "Phase 2: obtain native-speaker approval for the intended regional sense, then either replace the example with a valid use of palanquear or correct the expression/sentence to aprovechar or apalancarse en. Update the affected expression_idioms and expression_examples text, null changed audio paths, re-TTS, and rebuild the Spanish pool. Because the pool GUID hashes normalized idiom_text and target_text, plan an explicit old-note retirement/new-note migration if either changes.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'es' AND i.idiom_text = 'palanquear' AND ex.target_text = 'Están palanqueando la nueva tecnología para crecer.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1783832893433": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "pt",
+        "idiom_text": "fora de sintonia",
+        "target_text": "Depois de tantos anos a viver longe, eles voltaram a encontrar-se mas estavam fora de sintonia.",
+        "guid_key": "yt-pool::foradesintonia::depoisdetantosanosaviverlongeelesvoltaramaencontrarsemasestavamforadesintonia"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: null audio_en and audio_target on the resolved expression_examples row, re-seed both local-TTS clips, rebuild the Portuguese expression pool, and re-import before clearing the flag.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'pt' AND i.idiom_text = 'fora de sintonia' AND ex.target_text = 'Depois de tantos anos a viver longe, eles voltaram a encontrar-se mas estavam fora de sintonia.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1783832893587": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "pt",
+        "idiom_text": "cria ruídos",
+        "target_text": "Mudar as regras do projeto a meio do caminho só vai criar ruídos no grupo.",
+        "guid_key": "yt-pool::criaruidos::mudarasregrasdoprojetoameiodocaminhosovaicriarruidosnogrupo"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: null audio_en and audio_target on the resolved expression_examples row, re-seed both local-TTS clips, rebuild the Portuguese expression pool, and re-import before clearing the flag.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'pt' AND i.idiom_text = 'cria ruídos' AND ex.target_text = 'Mudar as regras do projeto a meio do caminho só vai criar ruídos no grupo.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1783832893597": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "pt",
+        "idiom_text": "jogo combinado",
+        "target_text": "A polícia está investigando o resultado do campeonato por suspeita de jogo combinado.",
+        "guid_key": "yt-pool::jogocombinado::apoliciaestainvestigandooresultadodocampeonatoporsuspeitadejogocombinado"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: null audio_en and audio_target on the resolved expression_examples row, re-seed both local-TTS clips, rebuild the Portuguese expression pool, and re-import before clearing the flag.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'pt' AND i.idiom_text = 'jogo combinado' AND ex.target_text = 'A polícia está investigando o resultado do campeonato por suspeita de jogo combinado.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1783832893599": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "pt",
+        "idiom_text": "jogo combinado",
+        "target_text": "Nós perdemos o jogo de tabuleiro porque eles fizeram um jogo combinado em segredo.",
+        "guid_key": "yt-pool::jogocombinado::nosperdemosojogodetabuleiroporqueelesfizeramumjogocombinadoemsegredo"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(c) target-language error in text",
+    "proposed_fix": "Phase 2: replace the mismatched board-game/deal example with a natural fixed-match use, for example English 'We lost the match because we discovered it was fixed.' and Portuguese 'Nós perdemos a partida porque descobrimos que era um jogo combinado.' Null both example audio paths, re-TTS, and rebuild the Portuguese pool. The target change alters the pool GUID, so explicitly retire the old note and migrate/reintroduce the corrected note rather than assuming an in-place Anki update.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'pt' AND i.idiom_text = 'jogo combinado' AND ex.target_text = 'Nós perdemos o jogo de tabuleiro porque eles fizeram um jogo combinado em segredo.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1783832893601": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "pt",
+        "idiom_text": "jogo combinado",
+        "target_text": "Não adianta concorrer a esse prêmio, todo mundo sabe que isso é jogo combinado.",
+        "guid_key": "yt-pool::jogocombinado::naoadiantaconcorreraessepremiotodomundosabequeissoejogocombinado"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: null audio_en and audio_target on the resolved expression_examples row, re-seed both local-TTS clips, rebuild the Portuguese expression pool, and re-import before clearing the flag.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'pt' AND i.idiom_text = 'jogo combinado' AND ex.target_text = 'Não adianta concorrer a esse prêmio, todo mundo sabe que isso é jogo combinado.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1783832893603": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "pt",
+        "idiom_text": "abrir garrafas de champanhe",
+        "target_text": "Não comemore antes do apito final; ainda é cedo para abrir garrafas de champanhe.",
+        "guid_key": "yt-pool::abrirgarrafasdechampanhe::naocomemoreantesdoapitofinalaindaecedoparaabrirgarrafasdechampanhe"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(d) other: defective English prompt",
+    "proposed_fix": "Phase 2: replace the tautological English with 'Don't celebrate before the final whistle; it's still too early to open the champagne.', leave the valid Portuguese target unchanged, null and re-TTS audio_en, then rebuild the Portuguese pool. Because the target and idiom stay unchanged, the pool GUID remains stable.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'pt' AND i.idiom_text = 'abrir garrafas de champanhe' AND ex.target_text = 'Não comemore antes do apito final; ainda é cedo para abrir garrafas de champanhe.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1783834552882": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "es",
+        "idiom_text": "una vez atravesada",
+        "target_text": "Una vez atravesada la línea de meta, el corredor se cayó al suelo de cansancio.",
+        "guid_key": "yt-pool::unavezatravesada::unavezatravesadalalineademetaelcorredorsecayoalsuelodecansancio"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: null audio_en and audio_target on the resolved expression_examples row, re-seed both local-TTS clips, rebuild the Spanish expression pool, and re-import before clearing the flag.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'es' AND i.idiom_text = 'una vez atravesada' AND ex.target_text = 'Una vez atravesada la línea de meta, el corredor se cayó al suelo de cansancio.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1783834552886": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "es",
+        "idiom_text": "damos la curva",
+        "target_text": "El coche iba muy rápido y casi pierde el control al dar la curva.",
+        "guid_key": "yt-pool::damoslacurva::elcocheibamuyrapidoycasipierdeelcontrolaldarlacurva"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(c) target-language error in text",
+    "proposed_fix": "Phase 2: correct the expression to 'tomar la curva' and the target to 'El coche iba muy rápido y casi pierde el control al tomar la curva.', update the linked expression_idioms/expression_examples rows after native-speaker approval, null changed audio paths, re-TTS, and rebuild the Spanish pool. Both normalized idiom and target change, so explicitly retire the old note and migrate/reintroduce the corrected note under its new GUID.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'es' AND i.idiom_text = 'damos la curva' AND ex.target_text = 'El coche iba muy rápido y casi pierde el control al dar la curva.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1783834552902": {
+    "db_table": "expression_examples JOIN expression_idioms",
+    "db_id": {
+      "offline_key": {
+        "lang": "es",
+        "idiom_text": "llena hasta la bandera",
+        "target_text": "En hora punta, las líneas de metro siempre van llenas hasta la bandera.",
+        "guid_key": "yt-pool::llenahastalabandera::enhorapuntalaslineasdemetrosiemprevanllenashastalabandera"
+      },
+      "expression_example_id": null,
+      "expression_idiom_id": null
+    },
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: null audio_en and audio_target on the resolved expression_examples row, re-seed both local-TTS clips, rebuild the Spanish expression pool, and re-import before clearing the flag.",
+    "verify_sql": "SELECT ex.id AS expression_example_id, i.id AS expression_idiom_id, ex.audio_en, ex.audio_target FROM expression_examples AS ex JOIN expression_idioms AS i ON i.id = ex.idiom_id WHERE i.lang = 'es' AND i.idiom_text = 'llena hasta la bandera' AND ex.target_text = 'En hora punta, las líneas de metro siempre van llenas hasta la bandera.' AND i.video_id IS NOT NULL AND COALESCE(i.status, 'active') = 'active' AND COALESCE(ex.source_kind, 'initial') <> 'legacy_adopted' AND COALESCE(ex.status, 'published') = 'published';"
+  },
+  "1785311850951": {
+    "db_table": "grammar_items",
+    "db_id": 400,
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: preserve the validated grammar text, remove/quarantine the stale deterministic clip staged_audio/grammar/it/idg_it_400.mp3 so grammar audio is synthesized again, rebuild the Italian grammar APKG, and re-import before clearing the flag.",
+    "verify_sql": "SELECT id, lang, topic, fmt, infinitive, mood, tense, person, sentence, answer, gloss_en, why_en, status, reject_reason, batch, meta FROM grammar_items WHERE id = 400 AND lang = 'it';"
+  },
+  "1785311850963": {
+    "db_table": "grammar_items",
+    "db_id": 406,
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: preserve the validated grammar text, remove/quarantine the stale deterministic clip staged_audio/grammar/it/idg_it_406.mp3 so grammar audio is synthesized again, rebuild the Italian grammar APKG, and re-import before clearing the flag.",
+    "verify_sql": "SELECT id, lang, topic, fmt, infinitive, mood, tense, person, sentence, answer, gloss_en, why_en, status, reject_reason, batch, meta FROM grammar_items WHERE id = 406 AND lang = 'it';"
+  },
+  "1785520109601": {
+    "db_table": "grammar_items",
+    "db_id": 789,
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: preserve the validated grammar text, remove/quarantine the stale deterministic clip staged_audio/grammar/it/idg_it_789.mp3 so grammar audio is synthesized again, rebuild the Italian grammar APKG, and re-import before clearing the flag.",
+    "verify_sql": "SELECT id, lang, topic, fmt, infinitive, mood, tense, person, sentence, answer, gloss_en, why_en, status, reject_reason, batch, meta FROM grammar_items WHERE id = 789 AND lang = 'it';"
+  },
+  "1785722813973": {
+    "db_table": "grammar_items",
+    "db_id": 1066,
+    "defect": "(b) audio present but wrong/truncated",
+    "proposed_fix": "Phase 2: preserve the validated grammar text, remove/quarantine the stale deterministic clip staged_audio/grammar/it/idg_it_1066.mp3 so grammar audio is synthesized again, rebuild the Italian grammar APKG, and re-import before clearing the flag.",
+    "verify_sql": "SELECT id, lang, topic, fmt, infinitive, mood, tense, person, sentence, answer, gloss_en, why_en, status, reject_reason, batch, meta FROM grammar_items WHERE id = 1066 AND lang = 'it';"
+  }
+}
