@@ -275,3 +275,15 @@ L1..L10 interleave), uploaded as course_partikeln (apkg 1711, acks
 cleared). PILOT-FIRST HOLD: wortbildung/rechtschreibung/zahlen originals
 wait for the owner's reaction to the partikeln exercise cards (new
 content class: llm-generated provenance, visibly marked on-card).
+
+## UPDATE 2026-08-12 ~19:25 — FANCY_VOCAB WAVE SHIPPED
+
+Audit 76/76 (36 PASS-WITH-EDITS, 196 edits, gate green) → merged ×5
+(1,435 notes; corpus 5,532 → 6,967 EN keys; snapshot asserts updated,
+suite 732 green) → seed-full 4,305 clips → window voiced everything by
+19:19 (4,366 clips today incl. partikeln + flagged) → strict rebuild ×5
+ALL FULLY VOICED (clips_missing=0): apkgs 1719-1723 (de 1406 / es 1289 /
+fr 1289 / it 1280 / pt 1253 notes). Ack watcher armed. Exercises2
+corpus waves: fancy_vocab was the last committed topic wave in
+batches/output — the roadmap's remaining topics need fresh staging
+(see docs/EXERCISES2_ROADMAP.md).
