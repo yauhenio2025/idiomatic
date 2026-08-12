@@ -45,8 +45,10 @@
    is the only remaining stage.
 
 1. **Mornings**: read /srv/ai-models/outputs/factory/qa_mirror/DAILY.md;
-   check human_review contact sheet; fix systemic failure modes at the
-   RENDERER (prompt), not by softening the judge.
+   fix systemic failure modes at the RENDERER (prompt), not by softening
+   the judge. human_review is NO LONGER the owner's job (directive
+   2026-08-12): the cloud arbiter (qa-arbiter-daily.timer, 08:15) clears
+   or upholds escalations — check qa_mirror/arbiter_log.jsonl instead.
 2. **Prompt conveyor**: author ES b19-b38 (codex, 4 parallel, gate must
    PASS), then export/chunk/author de,fr,it,pt
    (/admin/corpus-export?lang=X → tools/illu_chunk.py → codex). Update
