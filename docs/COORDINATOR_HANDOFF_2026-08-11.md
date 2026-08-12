@@ -260,3 +260,18 @@ audit, owner gates, LingQ pilot post-verdict.
   fancy_vocab_audit_run.log). Next: review → merge ×5 (update snapshot
   asserts) → seed-full → tomorrow's window voices.
 - Consoles: /lingq 0 verdicts, /triage 0/178 — still awaiting owner taps.
+
+## UPDATE 2026-08-12 ~15:40 — PARTIKELN PILOT DELIVERED
+
+Original-exercises pilot (Mandate 1 remediation) went end to end in one
+session: codex authored 44 items / 8 blocks (CODEX_COURSE_ORIGINAL_
+EXERCISES.md), coordinator hostile review PASS-WITH-EDITS (11 ALT
+additions where choice-bank contexts could not honestly exclude the
+competing particle — codex's alternatives policy was principled but
+under-inclusive; 2 wording fixes: bemerkt-Luftzug collocation, Klingle
+imperative), enrichment sidecar generated + validated, 44 solution
+clips voiced in an ad-hoc window, apkg built VOICED (8.3 MB, correct
+L1..L10 interleave), uploaded as course_partikeln (apkg 1711, acks
+cleared). PILOT-FIRST HOLD: wortbildung/rechtschreibung/zahlen originals
+wait for the owner's reaction to the partikeln exercise cards (new
+content class: llm-generated provenance, visibly marked on-card).
