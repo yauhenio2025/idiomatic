@@ -72,9 +72,9 @@
     "alts": ["jemandem etwas vorwerfen", "etwas geltend machen"],
     "register": "Neutral-formal reporting and legal usage for presenting an unproven claim; vorwerfen adds an accusation against a person.",
     "trap": "Behaupten can be neutral or skeptical depending on context; allege does not establish that the claim is true.",
-    "example_tl": "Mehrere unabhängige Zeugen behaupten, dass der Sicherheitsdienst oppositionelle Gruppen vor der umkämpften Wahl offenbar systematisch und gezielt eingeschüchtert habe.",
-    "example_en": "Several independent witnesses allege that the security service apparently systematically and deliberately intimidated opposition groups before the contested election.",
-    "cloze": "Mehrere unabhängige Zeugen {{c1::behaupten}}, dass der Sicherheitsdienst oppositionelle Gruppen vor der umkämpften Wahl offenbar systematisch und gezielt eingeschüchtert habe.",
+    "example_tl": "Mehrere unabhängige Zeugen behaupten, dass der Sicherheitsdienst oppositionelle Gruppen vor der umkämpften Wahl systematisch und gezielt eingeschüchtert habe.",
+    "example_en": "Several independent witnesses allege that the security service systematically and deliberately intimidated opposition groups before the contested election.",
+    "cloze": "Mehrere unabhängige Zeugen {{c1::behaupten}}, dass der Sicherheitsdienst oppositionelle Gruppen vor der umkämpften Wahl systematisch und gezielt eingeschüchtert habe.",
     "note": "The old gloss Behaupten is a valid core equivalent; the note makes the evidentially unproven reporting sense explicit rather than treating it as established fact."
   },
   {
@@ -107,14 +107,14 @@
     "id": "it_fancy_vocab_449",
     "en": "To circumvent",
     "category": "lexical-verb",
-    "tl": "etwas umgehen",
-    "alts": ["etwas umschiffen", "etwas aushebeln"],
-    "register": "Formal policy, legal and technical usage for avoiding a rule, obstacle or restriction without confronting it directly.",
-    "trap": "Umgehen is separable when it means circumvent: Die Firma umgeht die Vorschrift; the non-separable pronunciation means handle or deal with.",
-    "example_tl": "Die Plattform umging die Exportkontrollen, indem sie die betroffenen Komponenten heimlich und wiederholt über mehrere ausländische Tochtergesellschaften weiterverkaufte.",
+    "tl": "etwas unterlaufen",
+    "alts": ["etwas umgehen", "etwas aushebeln"],
+    "register": "Formal policy and legal usage for frustrating or evading a rule, safeguard or restriction without confronting it directly.",
+    "trap": "Unterlaufen is inseparable in this sense, with unterläuft, unterlief and hat unterlaufen; the separable literal verb unter etwas durchlaufen follows a different pattern.",
+    "example_tl": "Die Plattform unterlief die Exportkontrollen, indem sie die betroffenen Komponenten heimlich und wiederholt über mehrere ausländische Tochtergesellschaften weiterverkaufte.",
     "example_en": "The platform circumvented the export controls by secretly and repeatedly reselling the affected components through several foreign subsidiaries.",
-    "cloze": "Die Plattform {{c1::umging die Exportkontrollen}}, indem sie die betroffenen Komponenten heimlich und wiederholt über mehrere ausländische Tochtergesellschaften weiterverkaufte.",
-    "note": "The old gloss Umschiffen is possible but marked and often figurative; the note selects the standard policy verb umgehen and its past-tense form."
+    "cloze": "Die Plattform {{c1::unterlief die Exportkontrollen}}, indem sie die betroffenen Komponenten heimlich und wiederholt über mehrere ausländische Tochtergesellschaften weiterverkaufte.",
+    "note": "The old gloss Umschiffen is possible but marked and often figurative; self-review selects unterlaufen to teach a distinct formal policy verb and its strong past-tense form."
   },
   {
     "id": "it_fancy_vocab_450",
@@ -137,9 +137,9 @@
     "alts": ["etwas bestätigen", "etwas untermauern"],
     "register": "Formal investigative and evidential usage for strengthening a suspicion, finding or account with additional evidence.",
     "trap": "Erhärten normally takes a suspicion, finding or case as its object; it is more evidentially specific than simply bestätigen.",
-    "example_tl": "Neue Satellitenbilder erhärten den Verdacht, dass die Miliz ihre Stellungen nahe der Grenze offenbar seit Monaten weiter ausbaut.",
-    "example_en": "New satellite images corroborate the suspicion that the militia has apparently continued expanding its positions near the border for months.",
-    "cloze": "Neue Satellitenbilder {{c1::erhärten}} den Verdacht, dass die Miliz ihre Stellungen nahe der Grenze offenbar seit Monaten weiter ausbaut.",
+    "example_tl": "Neue hochauflösende Satellitenbilder erhärten den Verdacht, dass die Miliz ihre Stellungen nahe der Grenze seit Monaten weiter ausbaut.",
+    "example_en": "New high-resolution satellite images corroborate the suspicion that the militia has continued expanding its positions near the border for months.",
+    "cloze": "Neue hochauflösende Satellitenbilder {{c1::erhärten}} den Verdacht, dass die Miliz ihre Stellungen nahe der Grenze seit Monaten weiter ausbaut.",
     "note": "The old gloss Bestätigen is a broad equivalent; the note narrows the card to the formal evidence-that-strengthens-a-suspicion sense."
   },
   {
@@ -165,7 +165,7 @@
     "trap": "Ableiten needs the source with aus plus dative in this sense; the bare old gloss omits the productive deduction frame.",
     "example_tl": "Aus den Haushaltsdaten leitet die Studie ab, dass die Reform vor allem bereits privilegierte Regionen überproportional weiter begünstigt.",
     "example_en": "From the budget data, the study deduces that the reform continues to benefit already privileged regions disproportionately.",
-    "cloze": "Aus den Haushaltsdaten {{c1::leitet die Studie ab}}, dass die Reform vor allem bereits privilegierte Regionen überproportional weiter begünstigt.",
+    "cloze": "{{c1::Aus}} den Haushaltsdaten {{c1::leitet die Studie ab}}, dass die Reform vor allem bereits privilegierte Regionen überproportional weiter begünstigt.",
     "note": "The old gloss Ableiten is incomplete. Self-review made the aus-source construction explicit and selected an inferential rather than physical meaning."
   },
   {
@@ -176,9 +176,9 @@
     "alts": ["Einwände erheben", "Widerspruch anmelden"],
     "register": "Formal institutional and legal usage for expressing a reservation or objection rather than simply refusing a proposal.",
     "trap": "Demur is not merely ablehnen; Bedenken anmelden and Einwände erheben foreground a reasoned reservation, not a final rejection.",
-    "example_tl": "Die Abgeordnete meldete Bedenken gegen den Gesetzentwurf an, weil seine Kontrollbefugnisse dadurch demokratische Schutzmechanismen unnötig weit aushöhlen könnten.",
-    "example_en": "The MP voiced objections to the bill because its oversight powers could thereby erode democratic safeguards unnecessarily far.",
-    "cloze": "Die Abgeordnete {{c1::meldete Bedenken gegen den Gesetzentwurf an}}, weil seine Kontrollbefugnisse dadurch demokratische Schutzmechanismen unnötig weit aushöhlen könnten.",
+    "example_tl": "Die Abgeordnete meldete Bedenken gegen den Gesetzentwurf an, weil seine Kontrollbefugnisse grundlegende demokratische Schutzmechanismen unnötig weit aushöhlen könnten.",
+    "example_en": "The MP voiced objections to the bill because its oversight powers could erode fundamental democratic safeguards unnecessarily far.",
+    "cloze": "Die Abgeordnete {{c1::meldete Bedenken gegen den Gesetzentwurf an}}, weil seine Kontrollbefugnisse grundlegende demokratische Schutzmechanismen unnötig weit aushöhlen könnten.",
     "note": "The old gloss Einspruch erheben is legal and usable but narrower; the authored frame captures a formal reservation before outright opposition."
   },
   {
@@ -228,9 +228,9 @@
     "alts": ["etwas in Umlauf bringen", "etwas streuen"],
     "register": "Formal media, public-health and information-policy usage for spreading information widely among a population or audience.",
     "trap": "Verbreiten covers intentional or unintentional spread; in German streuen is more specialized for selectively distributing information or rumors.",
-    "example_tl": "Die Redaktion verbreitete die Recherche über mehrere regionale Partner, nachdem sie die wichtigsten Quellen sorgfältig rechtlich abgesichert hatte.",
-    "example_en": "The editorial team disseminated the investigation through several regional partners after carefully securing its key sources legally.",
-    "cloze": "Die Redaktion {{c1::verbreitete die Recherche}} über mehrere regionale Partner, nachdem sie die wichtigsten Quellen sorgfältig rechtlich abgesichert hatte.",
+    "example_tl": "Die Redaktion verbreitete die Recherche über mehrere regionale Partner, nachdem sie die Veröffentlichung sorgfältig rechtlich geprüft und ihre wichtigsten Quellen geschützt hatte.",
+    "example_en": "The editorial team disseminated the investigation through several regional partners after carefully reviewing the publication for legal risk and protecting its key sources.",
+    "cloze": "Die Redaktion {{c1::verbreitete die Recherche}} über mehrere regionale Partner, nachdem sie die Veröffentlichung sorgfältig rechtlich geprüft und ihre wichtigsten Quellen geschützt hatte.",
     "note": "The old gloss Verbreiten is a valid broad equivalent; the note fixes the media-distribution sense and adds collocational alternatives rather than inventing a new meaning."
   },
   {
@@ -308,7 +308,7 @@
     "trap": "Glean means infer or extract information, not simply read; the source takes aus plus dative, and herauslesen is separable.",
     "example_tl": "Aus den geleakten Protokollen ließ sich herauslesen, dass die Verhandlungen längst vor der offiziellen Ankündigung intern gescheitert waren.",
     "example_en": "The leaked minutes revealed that the negotiations had already failed internally long before the official announcement.",
-    "cloze": "Aus den geleakten Protokollen ließ sich {{c1::herauslesen}}, dass die Verhandlungen längst vor der offiziellen Ankündigung intern gescheitert waren.",
+    "cloze": "{{c1::Aus}} den geleakten Protokollen ließ sich {{c1::herauslesen}}, dass die Verhandlungen längst vor der offiziellen Ankündigung intern gescheitert waren.",
     "note": "The old gloss Nachzulesen is not a German equivalent of glean. Self-review replaced it with the productive extraction-from-evidence frame."
   },
   {
@@ -345,9 +345,9 @@
     "alts": ["jemandem etwas einschärfen", "jemandem etwas eintrichtern"],
     "register": "Formal educational, ideological and institutional usage for instilling a belief, value or habit through repeated teaching.",
     "trap": "Einprägen takes a dative learner and an accusative content; it is not the same as merely informieren or erklären.",
-    "example_tl": "Die Propaganda prägte einer ganzen Generation ein, dass staatliche Loyalität wichtiger als unabhängiges Denken und private Zweifel sei.",
-    "example_en": "The propaganda inculcated in an entire generation that loyalty to the state mattered more than independent thought and private doubts.",
-    "cloze": "Die Propaganda {{c1::prägte einer ganzen Generation ein}}, dass staatliche Loyalität wichtiger als unabhängiges Denken und private Zweifel sei.",
+    "example_tl": "Die Propaganda prägte einer ganzen Generation die Überzeugung ein, dass staatliche Loyalität wichtiger als unabhängiges Denken und private Zweifel sei.",
+    "example_en": "The propaganda inculcated in an entire generation the belief that loyalty to the state mattered more than independent thought and private doubts.",
+    "cloze": "Die Propaganda {{c1::prägte}} einer ganzen Generation die Überzeugung {{c1::ein}}, dass staatliche Loyalität wichtiger als unabhängiges Denken und private Zweifel sei.",
     "note": "The old gloss Einschärfen is a genuine alternative but somewhat more forceful; self-review made the dative-plus-accusative teaching frame explicit."
   },
   {
@@ -419,14 +419,14 @@
     "id": "it_fancy_vocab_473",
     "en": "To postulate",
     "category": "lexical-verb",
-    "tl": "etwas postulieren",
-    "alts": ["etwas als gegeben annehmen", "etwas voraussetzen"],
-    "register": "Formal academic and theoretical usage for proposing a premise or explanatory claim as a basis for reasoning.",
-    "trap": "Postulieren is a legitimate German academic loanword, but it does not mean prove; the proposition remains a premise or hypothesis.",
-    "example_tl": "Die Studie postuliert, dass automatisierte Rankings bestehende soziale Vorurteile verstärken, selbst wenn ihre Entwickler keine politische Absicht verfolgen.",
+    "tl": "davon ausgehen, dass",
+    "alts": ["etwas postulieren", "etwas als gegeben annehmen"],
+    "register": "Neutral-formal analytical construction for treating a proposition as a premise; postulieren is the more technical academic alternative.",
+    "trap": "Davon ausgehen is separable in the clause frame geht davon aus, dass; it presents an assumption and does not mean that the proposition has been proved.",
+    "example_tl": "Die Studie geht davon aus, dass automatisierte Rankings bestehende soziale Vorurteile verstärken, selbst wenn ihre Entwickler keine politische Absicht verfolgen.",
     "example_en": "The study postulates that automated rankings reinforce existing social prejudices even when their developers have no political intention.",
-    "cloze": "Die Studie {{c1::postuliert}}, dass automatisierte Rankings bestehende soziale Vorurteile verstärken, selbst wenn ihre Entwickler keine politische Absicht verfolgen.",
-    "note": "The old gloss Postulieren is usable but leaves the register implicit; self-review confirms the academic premise-setting sense and adds the dass-clause pattern."
+    "cloze": "Die Studie {{c1::geht davon aus, dass}} automatisierte Rankings bestehende soziale Vorurteile verstärken, selbst wenn ihre Entwickler keine politische Absicht verfolgen.",
+    "note": "The old gloss Postulieren is usable but leaves the register implicit; self-review supplies the productive davon ausgehen, dass frame as a distinct, natural premise-setting construction."
   },
   {
     "id": "it_fancy_vocab_474",
@@ -488,9 +488,9 @@
     "alts": ["etwas erneut bekräftigen", "etwas noch einmal betonen"],
     "register": "Formal speech, media and institutional usage for repeating a point, demand or warning for emphasis.",
     "trap": "Reiterate repeats a particular point; it is not the same as rekapitulieren, which summarizes several preceding points.",
-    "example_tl": "Der Sprecher wiederholte seine Forderung nach unabhängigen Kontrollen, nachdem die erste Untersuchung zentrale Interessenkonflikte offenbar bewusst übergangen hatte.",
-    "example_en": "The spokesperson reiterated the demand for independent oversight after the first investigation had apparently deliberately overlooked key conflicts of interest.",
-    "cloze": "Der Sprecher {{c1::wiederholte seine Forderung nach unabhängigen Kontrollen}}, nachdem die erste Untersuchung zentrale Interessenkonflikte offenbar bewusst übergangen hatte.",
+    "example_tl": "Der Sprecher wiederholte seine Forderung nach unabhängigen Kontrollen, nachdem die erste Untersuchung mehrere zentrale Interessenkonflikte nachweislich übergangen hatte.",
+    "example_en": "The spokesperson reiterated the demand for independent oversight after the first investigation had demonstrably ignored several key conflicts of interest.",
+    "cloze": "Der Sprecher {{c1::wiederholte seine Forderung nach unabhängigen Kontrollen}}, nachdem die erste Untersuchung mehrere zentrale Interessenkonflikte nachweislich übergangen hatte.",
     "note": "The old gloss Wiederholen is correct but underspecified; self-review records the emphatic, repeated-point sense and separates it from recapitulation."
   },
   {

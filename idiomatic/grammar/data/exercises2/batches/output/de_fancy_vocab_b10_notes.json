@@ -60,7 +60,7 @@
     "register": "Neutral-formal technology and organisational adjective for producing or deciding jointly across people, teams or institutions.",
     "trap": "Kollaborativ foregrounds joint production, whereas kooperativ is broader; the related noun Kollaboration can carry a historical enemy-collaboration connotation outside modern tech usage.",
     "example_tl": "Kollaborative Entwicklungsmodelle verteilen Verantwortung auf Teams, ohne die strategische Entscheidungsmacht automatisch demokratischer oder transparenter für Nutzer und Öffentlichkeit zu machen.",
-    "example_en": "Collaborative development models distribute responsibility among teams without automatically making strategic decision-making more democratic or transparent to users and the public.",
+    "example_en": "Collaborative development models distribute responsibility among teams without automatically making strategic decisions more democratic or transparent to users and the public.",
     "cloze": "{{c1::Kollaborative}} Entwicklungsmodelle verteilen Verantwortung auf Teams, ohne die strategische Entscheidungsmacht automatisch demokratischer oder transparenter für Nutzer und Öffentlichkeit zu machen.",
     "note": "Old_back is a correct cognate. Self-review retained kollaborativ for the modern joint-work sense and marked kooperativ as the broader alternative."
   },
@@ -72,9 +72,9 @@
     "alts": ["konsumorientiert", "verbrauchsorientiert"],
     "register": "Formal economic adjective for spending on current consumption rather than productive investment or capacity-building.",
     "trap": "Konsumtiv is an economic term, not a general replacement for verbrauchend; it commonly modifies Ausgaben, Nachfrage or Staatsausgaben.",
-    "example_tl": "Konsumtive Staatsausgaben finanzieren laufenden Konsum statt produktiver Investitionen und können dadurch langfristiges Wachstum und öffentliche Resilienz dauerhaft schwächen.",
-    "example_en": "Consumption-oriented public spending finances current consumption instead of productive investment and can thereby weaken long-term growth and public resilience.",
-    "cloze": "{{c1::Konsumtive}} Staatsausgaben finanzieren laufenden Konsum statt produktiver Investitionen und können dadurch langfristiges Wachstum und öffentliche Resilienz dauerhaft schwächen.",
+    "example_tl": "Konsumtive Staatsausgaben decken laufenden Bedarf, statt produktive Investitionen zu finanzieren, und können dadurch langfristiges Wachstum sowie institutionelle Resilienz schwächen.",
+    "example_en": "Consumption-oriented public spending covers current needs rather than financing productive investment and can thereby weaken long-term growth and institutional resilience.",
+    "cloze": "{{c1::Konsumtive}} Staatsausgaben decken laufenden Bedarf, statt produktive Investitionen zu finanzieren, und können dadurch langfristiges Wachstum sowie institutionelle Resilienz schwächen.",
     "note": "Old_back's Verbrauchend is understandable but not the standard economic adjective. Self-review selected konsumtiv and fixed the specialized expenditure sense in the example."
   },
   {
@@ -176,9 +176,9 @@
     "alts": ["die Datenpanne", "der Sicherheitsvorfall"],
     "register": "Formal legal and technology noun for an incident in which protected personal data are compromised or unlawfully exposed.",
     "trap": "A Datenschutzverletzung is not simply a Verstoß in the abstract; Sicherheitslücke names a vulnerability, while Datenpanne is a less formal incident term.",
-    "example_tl": "Nach der Datenschutzverletzung musste der Konzern offenlegen, welche Kundendaten betroffen waren und warum die Warnsysteme zuvor versagt hatten.",
-    "example_en": "After the data breach, the corporation had to disclose which customer data were affected and why the warning systems had previously failed.",
-    "cloze": "Nach der {{c1::Datenschutzverletzung}} musste der Konzern offenlegen, welche Kundendaten betroffen waren und warum die Warnsysteme zuvor versagt hatten.",
+    "example_tl": "Nach der Datenschutzverletzung musste der Konzern offenlegen, welche Kundeninformationen betroffen waren und warum die Warnsysteme zuvor versagt hatten.",
+    "example_en": "After the data breach, the corporation had to disclose which customer records were affected and why the warning systems had previously failed.",
+    "cloze": "Nach der {{c1::Datenschutzverletzung}} musste der Konzern offenlegen, welche Kundeninformationen betroffen waren und warum die Warnsysteme zuvor versagt hatten.",
     "note": "Old_back's Verstoß names a breach of a rule, not a data-compromise incident. Self-review selected the GDPR-compatible Datenschutzverletzung and marked broader incident alternatives."
   },
   {

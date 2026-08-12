@@ -353,9 +353,9 @@
     ],
     "register": "Formal technical and policy adjective for a system, institution or group exposed to attack, disruption or exploitation.",
     "trap": "Angreifbar is the usual technical choice; verwundbar can be physical or strategic, while verletzlich often foregrounds people, emotions or social sensitivity.",
-    "example_tl": "Offene Standards machen Systeme interoperabel, können sie aber angreifbar machen, wenn Sicherheitsupdates nicht rechtzeitig bereitgestellt und geprüft werden.",
-    "example_en": "Open standards make systems interoperable but can make them vulnerable when security updates are not provided and tested promptly.",
-    "cloze": "Offene Standards machen Systeme interoperabel, können sie aber {{c1::angreifbar}} machen, wenn Sicherheitsupdates nicht rechtzeitig bereitgestellt und geprüft werden.",
+    "example_tl": "Offene Standards fördern die Interoperabilität, können Systeme aber angreifbar machen, wenn Sicherheitsupdates nicht rechtzeitig bereitgestellt und geprüft werden.",
+    "example_en": "Open standards promote interoperability but can leave systems vulnerable when security updates are not provided and tested promptly.",
+    "cloze": "Offene Standards fördern die Interoperabilität, können Systeme aber {{c1::angreifbar}} machen, wenn Sicherheitsupdates nicht rechtzeitig bereitgestellt und geprüft werden.",
     "note": "Old_back is a plausible but context-free rendering. Self-review chose angreifbar for the cybersecurity sense and recorded the physical and emotional alternatives."
   },
   {
@@ -401,7 +401,7 @@
     "register": "Formal systems and geopolitics adjective for components or developments linked so that changes in one affect the others.",
     "trap": "Verflochten stresses mutual dependence and complexity; vernetzt is more technical, while verbunden is broader and less implicational.",
     "example_tl": "Die miteinander verflochtenen Lieferketten übertragen politische Konflikte rasch auf Preise, Arbeitsplätze und die Versorgungssicherheit in weit entfernten Regionen.",
-    "example_en": "The interconnected supply chains rapidly transmit political conflicts to prices, jobs, and security of supply in distant regions.",
+    "example_en": "The interconnected supply chains rapidly transmit political conflicts to prices, jobs, and access to essential goods in distant regions.",
     "cloze": "Die {{c1::miteinander verflochtenen}} Lieferketten übertragen politische Konflikte rasch auf Preise, Arbeitsplätze und die Versorgungssicherheit in weit entfernten Regionen.",
     "note": "Old_back's verknüpft is possible but flatter than the mutual-dependence sense. Self-review selected miteinander verflochten and retained technical and neutral alternatives."
   }

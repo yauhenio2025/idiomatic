@@ -33,9 +33,9 @@
     "alts": ["etwas mutmaßen", "etwas annehmen"],
     "register": "Neutral-formal analytical usage for making a tentative inference from incomplete or indirect evidence.",
     "trap": "Surmise is tentative, so vermuten is safer than feststellen or schließen; mutmaßen is more explicitly speculative and often less neutral.",
-    "example_tl": "Aus den widersprüchlichen Aussagen vermutete die Analystin, dass der Rücktritt auf internen Druck und nicht auf gesundheitliche Gründe zurückzuführen war.",
-    "example_en": "From the contradictory statements, the analyst surmised that the resignation was due to internal pressure rather than health reasons.",
-    "cloze": "Aus den widersprüchlichen Aussagen {{c1::vermutete die Analystin}}, dass der Rücktritt auf internen Druck und nicht auf gesundheitliche Gründe zurückzuführen war.",
+    "example_tl": "Angesichts der widersprüchlichen Aussagen vermutete die Analystin, dass der Rücktritt auf internen Druck und nicht auf gesundheitliche Gründe zurückzuführen war.",
+    "example_en": "Given the contradictory statements, the analyst surmised that the resignation was due to internal pressure rather than health reasons.",
+    "cloze": "Angesichts der widersprüchlichen Aussagen {{c1::vermutete die Analystin}}, dass der Rücktritt auf internen Druck und nicht auf gesundheitliche Gründe zurückzuführen war.",
     "note": "The old gloss Vermutungen anstellen is understandable but clumsy; self-review replaced it with the productive verb and preserved the tentative evidential force."
   },
   {
@@ -146,14 +146,14 @@
     "id": "it_fancy_vocab_492",
     "en": "The contention",
     "category": "lexical-noun",
-    "tl": "die These",
-    "alts": ["die Behauptung"],
-    "register": "Formal argumentative usage for a claim or position advanced in a dispute, paper or public controversy.",
-    "trap": "Contention foregrounds a claim that is open to dispute; These is more structured than Behauptung, while Streit is the conflict itself.",
-    "example_tl": "Die strittige These der Studie, Sanktionen würden die Regierung rasch zum Einlenken bewegen, unterschätzt deren Fähigkeit zur wirtschaftlichen Anpassung.",
-    "example_en": "The study's contentious thesis that sanctions would quickly bring the government to the negotiating table underestimates its capacity for economic adaptation.",
-    "cloze": "Die strittige {{c1::These}} der Studie, Sanktionen würden die Regierung rasch zum Einlenken bewegen, unterschätzt deren Fähigkeit zur wirtschaftlichen Anpassung.",
-    "note": "The old gloss Die Behauptung is usable but misses the organized argumentative position; self-review retained this card as distinct from assertion."
+    "tl": "die strittige Behauptung",
+    "alts": ["die These"],
+    "register": "Formal argumentative usage for a claim or position advanced in a dispute, paper or public controversy; strittig makes its contested status explicit.",
+    "trap": "Contention foregrounds a claim that is open to dispute; These can be more structured, while Streit names the conflict rather than the proposition.",
+    "example_tl": "Die strittige Behauptung der Studie, Sanktionen würden die Regierung rasch zum Einlenken bewegen, unterschätzt deren Fähigkeit zur wirtschaftlichen Anpassung.",
+    "example_en": "The study’s contention that sanctions would quickly bring the government to the negotiating table underestimates its capacity for economic adaptation.",
+    "cloze": "Die {{c1::strittige Behauptung}} der Studie, Sanktionen würden die Regierung rasch zum Einlenken bewegen, unterschätzt deren Fähigkeit zur wirtschaftlichen Anpassung.",
+    "note": "The old gloss Die Behauptung is usable but underspecified; self-review adds strittig to preserve the contested force and keep this production answer distinct from thesis."
   },
   {
     "id": "it_fancy_vocab_493",
@@ -177,7 +177,7 @@
     "register": "Formal analytical usage for a conclusion derived from premises, data or a chain of reasoning.",
     "trap": "Schlussfolgerung usually names the resulting conclusion, while Deduktion emphasizes the formal logical method; both differ from a simple guess.",
     "example_tl": "Aus den widersprüchlichen Angaben zog die Kommission die Schlussfolgerung, dass die gemeldeten Einsparungen größtenteils nur rechnerische Verschiebungen waren.",
-    "example_en": "From the contradictory figures, the commission drew the deduction that the reported savings were largely only accounting shifts.",
+    "example_en": "From the contradictory figures, the commission drew the conclusion that the reported savings were largely only accounting shifts.",
     "cloze": "Aus den widersprüchlichen Angaben zog die Kommission die {{c1::Schlussfolgerung}}, dass die gemeldeten Einsparungen größtenteils nur rechnerische Verschiebungen waren.",
     "note": "The old gloss Die Schlussfolgerung is valid; self-review kept the item distinct from inference by foregrounding a conclusion derived through explicit reasoning."
   },
@@ -476,7 +476,7 @@
     "register": "Academic and intellectual usage for an explanatory framework that organizes evidence and predicts relationships.",
     "trap": "Theorie in this register is more than a casual guess; it is an explanatory framework, unlike a merely provisional Hypothese.",
     "example_tl": "Die Theorie der digitalen Öffentlichkeit verliert systematisch an Erklärungskraft, wenn sie ökonomische Machtkonzentration und staatliche Regulierung gleichermaßen ausblendet.",
-    "example_en": "The theory of the digital public sphere systematically loses explanatory power when it ignores economic concentration of power and state regulation alike.",
+    "example_en": "The theory of the digital public sphere systematically loses explanatory force when it ignores economic concentration of power and state regulation alike.",
     "cloze": "Die {{c1::Theorie}} der digitalen Öffentlichkeit verliert systematisch an Erklärungskraft, wenn sie ökonomische Machtkonzentration und staatliche Regulierung gleichermaßen ausblendet.",
     "note": "The old gloss Die Theorie is exact; self-review supplied an academic framework context and documented why it is not simply a guess."
   },

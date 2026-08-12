@@ -41,7 +41,7 @@
     "trap": "Appraise é polissêmico: estimar o valor fixa a acepção monetária, enquanto precificar costuma indicar a definição de um preço de venda.",
     "example_tl": "Auditores independentes estimaram o valor dos ativos digitais da empresa antes de o fundo apresentar uma oferta vinculante de aquisição.",
     "example_en": "Independent auditors appraised the company's digital assets before the fund submitted a binding acquisition offer.",
-    "cloze": "Auditores independentes {{c1::estimaram o valor}} dos ativos digitais da empresa antes de o fundo apresentar uma oferta vinculante de aquisição.",
+    "cloze": "Auditores independentes {{c1::estimaram o valor dos}} ativos digitais da empresa antes de o fundo apresentar uma oferta vinculante de aquisição.",
     "note": "O prompt isolado é polissêmico. Esta nota seleciona a avaliação monetária; old_back continua válido, mas é mais amplo. Autorrevisão: explicitei o valor também na alternativa e evitei precificar, que não equivale necessariamente a uma avaliação independente."
   },
   {
@@ -56,7 +56,7 @@
     "trap": "Articular também pode significar conectar partes de um sistema ou produzir sons da fala; o objeto e o contexto fixam a acepção argumentativa.",
     "example_tl": "A ministra articulou suas ressalvas com clareza, sem transformar uma divergência técnica sobre o pacto em ruptura política irreversível.",
     "example_en": "The minister articulated her reservations clearly, without turning a technical disagreement over the pact into an irreversible political rupture.",
-    "cloze": "A ministra {{c1::articulou}} suas ressalvas com clareza, sem transformar uma divergência técnica sobre o pacto em ruptura política irreversível.",
+    "cloze": "A ministra {{c1::articulou}} suas ressalvas {{c1::com clareza}}, sem transformar uma divergência técnica sobre o pacto em ruptura política irreversível.",
     "note": "Old_back é correto na acepção selecionada. A retenção contrasta a formulação coerente de uma posição com o mais amplo expressar. Autorrevisão: confirmei que formular preserva o sentido no exemplo."
   },
   {

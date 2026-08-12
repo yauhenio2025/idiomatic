@@ -26,7 +26,7 @@
     "trap": "Sustanciar is not the default cognate: in Spanish legal usage it commonly means to conduct or process proceedings, rather than support a claim with evidence.",
     "example_tl": "La empresa no pudo fundamentar su acusación con pruebas verificables, pese a que había repetido la misma versión ante tres comisiones parlamentarias.",
     "example_en": "The company could not substantiate its accusation with verifiable evidence, although it had repeated the same account before three parliamentary committees.",
-    "cloze": "La empresa no pudo {{c1::fundamentar}} su acusación con pruebas verificables, pese a que había repetido la misma versión ante tres comisiones parlamentarias.",
+    "cloze": "La empresa no pudo {{c1::fundamentar}} su acusación {{c1::con pruebas}} verificables, pese a que había repetido la misma versión ante tres comisiones parlamentarias.",
     "note": "The legacy rendering captures the core sense; the production headword adds the evidential complement that distinguishes substantiation from bare assertion. Self-review removed acreditar algo because it did not substitute naturally with the example's accusation object."
   },
   {
@@ -73,7 +73,7 @@
     "trap": "Vilipendiar is valid Spanish, but its elevated register makes it a poor automatic choice for the current media use of English vilify.",
     "example_tl": "La campaña demonizó a las organizaciones humanitarias, presentándolas como cómplices de las redes criminales sin aportar pruebas de esa colaboración.",
     "example_en": "The campaign vilified humanitarian organizations, portraying them as accomplices of criminal networks without providing evidence of that collaboration.",
-    "cloze": "La campaña {{c1::demonizó}} a las organizaciones humanitarias, presentándolas como cómplices de las redes criminales sin aportar pruebas de esa colaboración.",
+    "cloze": "La campaña {{c1::demonizó}} {{c1::a}} las organizaciones humanitarias, presentándolas como cómplices de las redes criminales sin aportar pruebas de esa colaboración.",
     "note": "The legacy rendering is semantically possible but overly elevated for the professional media context selected here."
   },
   {

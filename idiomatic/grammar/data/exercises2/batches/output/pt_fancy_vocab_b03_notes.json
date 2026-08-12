@@ -35,21 +35,21 @@
     "trap": "A grafia portuguesa é justapor, não juxtapor; como composto de pôr, o verbo conserva formas irregulares como justapõe e justapôs.",
     "example_tl": "O documentário justapõe anúncios otimistas da empresa a depoimentos de trabalhadores que descrevem jornadas imprevisíveis, vigilância constante e remuneração cada vez menor.",
     "example_en": "The documentary juxtaposes the company's optimistic advertisements with testimony from workers describing unpredictable hours, constant surveillance, and steadily declining pay.",
-    "cloze": "O documentário {{c1::justapõe}} anúncios otimistas da empresa a depoimentos de trabalhadores que descrevem jornadas imprevisíveis, vigilância constante e remuneração cada vez menor.",
+    "cloze": "O documentário {{c1::justapõe}} anúncios otimistas da empresa {{c1::a}} depoimentos de trabalhadores que descrevem jornadas imprevisíveis, vigilância constante e remuneração cada vez menor.",
     "note": "Old_back traz o infinitivo correto. A retenção se justifica pela grafia contrastiva, pela regência com a e pela conjugação irregular ausente da glosa."
   },
   {
     "id": "it_fancy_vocab_085",
     "en": "To overshadow",
     "category": "lexical-verb",
-    "tl": "ofuscar",
-    "alts": ["eclipsar"],
+    "tl": "eclipsar",
+    "alts": ["ofuscar"],
     "register": "Neutro-formal e frequentemente crítico quando um acontecimento ou tema desvia a atenção de outro ou reduz sua importância percebida.",
     "trap": "Sombrear normalmente significa fornecer sombra ou sombreado; no sentido figurado de relegar algo a segundo plano, ofuscar ou eclipsar é mais idiomático.",
-    "example_tl": "A controvérsia sobre o vazamento ofuscou as conclusões centrais da auditoria, que apontavam falhas sistêmicas na proteção de dados de milhões de usuários.",
+    "example_tl": "A controvérsia sobre o vazamento eclipsou as conclusões centrais da auditoria, que apontavam falhas sistêmicas na proteção de dados de milhões de usuários.",
     "example_en": "The controversy over the leak overshadowed the audit's central findings, which identified systemic failures in protecting the data of millions of users.",
-    "cloze": "A controvérsia sobre o vazamento {{c1::ofuscou}} as conclusões centrais da auditoria, que apontavam falhas sistêmicas na proteção de dados de milhões de usuários.",
-    "note": "Old_back oferece um equivalente adequado. O contexto fixa o sentido informacional de retirar destaque, não os sentidos físicos de bloquear a visão ou emitir brilho. Autorrevisão: substituí um verbo-decoy pouco natural por sombrear."
+    "cloze": "A controvérsia sobre o vazamento {{c1::eclipsou}} as conclusões centrais da auditoria, que apontavam falhas sistêmicas na proteção de dados de milhões de usuários.",
+    "note": "Old_back oferece um equivalente adequado. A autorrevisão torna eclipsar principal para fixar o sentido de retirar destaque e diferenciar este item do uso técnico de ofuscar em obfuscate."
   },
   {
     "id": "it_fancy_vocab_086",
@@ -107,8 +107,8 @@
     "id": "it_fancy_vocab_091",
     "en": "To resonate",
     "category": "lexical-verb",
-    "tl": "encontrar eco em",
-    "alts": ["ter ressonância em"],
+    "tl": "encontrar eco entre um público",
+    "alts": ["ter ressonância entre um público"],
     "register": "Escrito-neutro em mídia e política para uma proposta, reivindicação ou narrativa que provoca identificação ou resposta significativa em determinado público.",
     "trap": "Ressoar é natural para sons e admite uso figurado, mas encontrar eco costuma ser menos literal quando ideias ou demandas geram resposta pública.",
     "example_tl": "A proposta encontrou eco entre jornalistas locais porque vinculava a precarização das redações ao crescente poder de barganha das grandes plataformas.",

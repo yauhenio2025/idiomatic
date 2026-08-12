@@ -19,7 +19,7 @@
     "id": "it_fancy_vocab_446",
     "en": "To allege",
     "category": "lexical-verb",
-    "tl": "sostenere",
+    "tl": "sostenere che",
     "alts": [
       "affermare",
       "asserire"
@@ -28,7 +28,7 @@
     "trap": "Nessuno dei tre verbi italiani codifica da solo la mancata prova: il valore di allegation deve emergere dall'attribuzione, dal condizionale o dal contesto.",
     "example_tl": "La società sostiene che la fuga di dati sia opera di un fornitore esterno, ma non presenta alcuna prova verificabile.",
     "example_en": "The company alleges that the data leak was the work of an external supplier, but it presents no verifiable evidence.",
-    "cloze": "La società {{c1::sostiene}} che la fuga di dati sia opera di un fornitore esterno, ma non presenta alcuna prova verificabile.",
+    "cloze": "La società {{c1::sostiene che}} la fuga di dati sia opera di un fornitore esterno, ma non presenta alcuna prova verificabile.",
     "note": "The legacy asserire is possible but does not itself mean 'allege.' Self-review retained the evidential caveat in the sentence rather than forcing it into an unnatural Italian headword."
   },
   {
@@ -66,16 +66,16 @@
     "id": "it_fancy_vocab_449",
     "en": "To circumvent",
     "category": "lexical-verb",
-    "tl": "aggirare",
+    "tl": "eludere",
     "alts": [
-      "eludere"
+      "aggirare"
     ],
-    "register": "Aggirare è neutro-formale con norme, vincoli e ostacoli; eludere è più formale e sottolinea l'intenzione di sottrarsi a un obbligo.",
+    "register": "Eludere è formale con norme, vincoli e obblighi e sottolinea l'intenzione di sottrarvisi; aggirare è più neutro e più ampio.",
     "trap": "Circonvenire non significa circumvent: in italiano indica l'indurre con l'inganno una persona vulnerabile a compiere un atto dannoso.",
-    "example_tl": "Alcune piattaforme aggirano i vincoli sulla pubblicità politica classificando gli annunci come contenuti informativi e affidandone la distribuzione a intermediari opachi.",
+    "example_tl": "Alcune piattaforme eludono i vincoli sulla pubblicità politica classificando gli annunci come contenuti informativi e affidandone la distribuzione a intermediari opachi.",
     "example_en": "Some platforms circumvent restrictions on political advertising by classifying ads as informational content and entrusting their distribution to opaque intermediaries.",
-    "cloze": "Alcune piattaforme {{c1::aggirano}} i vincoli sulla pubblicità politica classificando gli annunci come contenuti informativi e affidandone la distribuzione a intermediari opachi.",
-    "note": "The legacy rendering is accurate. Self-review retained eludere because the regulatory constraints in this example license its more intentional nuance."
+    "cloze": "Alcune piattaforme {{c1::eludono}} i vincoli sulla pubblicità politica classificando gli annunci come contenuti informativi e affidandone la distribuzione a intermediari opachi.",
+    "note": "The legacy rendering is accurate. Self-review makes eludere primary because the regulatory constraints license its intentional nuance and keep the production answer distinct from bypass."
   },
   {
     "id": "it_fancy_vocab_451",

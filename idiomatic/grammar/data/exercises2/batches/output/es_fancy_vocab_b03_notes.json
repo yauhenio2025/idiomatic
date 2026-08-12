@@ -35,7 +35,7 @@
     "trap":"Spanish spells the verb yuxtaponer, not *yustaponer; the common construction is yuxtaponer one element a another, not a literal English-shaped form.",
     "example_tl":"El documental yuxtapone las promesas públicas del grupo a sus auditorías internas para revelar la distancia entre discurso corporativo y práctica regulatoria.",
     "example_en":"The documentary juxtaposes the group's public promises with its internal audits to reveal the distance between corporate discourse and regulatory practice.",
-    "cloze":"El documental {{c1::yuxtapone}} las promesas públicas del grupo a sus auditorías internas para revelar la distancia entre discurso corporativo y práctica regulatoria.",
+    "cloze":"El documental {{c1::yuxtapone}} las promesas públicas del grupo {{c1::a}} sus auditorías internas para revelar la distancia entre discurso corporativo y práctica regulatoria.",
     "note":"The old cognate is accurate, but the note supplies the productive prepositional frame and the spelling trap that matter in formal analytical writing."
   },
   {
@@ -74,7 +74,7 @@
     "trap":"Spanish uses interconectar two systems or interconectar one system con another; the governed con frame should not be replaced by an English-style bare juxtaposition.",
     "example_tl":"La nueva norma obliga a interconectar los registros públicos con sistemas de verificación, ampliando la trazabilidad sin resolver quién controla esos cruces.",
     "example_en":"The new rule requires public registers to be interconnected with verification systems, increasing traceability without resolving who controls those cross-checks.",
-    "cloze":"La nueva norma obliga a {{c1::interconectar}} los registros públicos con sistemas de verificación, ampliando la trazabilidad sin resolver quién controla esos cruces.",
+    "cloze":"La nueva norma obliga a {{c1::interconectar}} los registros públicos {{c1::con}} sistemas de verificación, ampliando la trazabilidad sin resolver quién controla esos cruces.",
     "note":"The legacy verb is correct; retention is justified by the productive con frame and the policy distinction between linking systems and merely making them available."
   },
   {
@@ -107,13 +107,13 @@
     "id":"it_fancy_vocab_091",
     "en":"To resonate",
     "category":"lexical-verb",
-    "tl":"tener eco en algo o alguien",
-    "alts":["encontrar eco en algo o alguien"],
+    "tl":"tener eco entre un público",
+    "alts":["encontrar eco entre un público"],
     "register":"Written media and political usage for an idea, demand or account receiving a meaningful public response; it need not be positive.",
     "trap":"Resonar is natural for sounds and can be figurative, but tener eco or encontrar eco is usually the idiomatic choice when a proposal gains public response.",
     "example_tl":"La denuncia tuvo eco entre los trabajadores porque vinculaba la precariedad cotidiana con decisiones financieras tomadas lejos de la redacción.",
     "example_en":"The denunciation resonated among the workers because it linked everyday insecurity to financial decisions made far from the newsroom.",
-    "cloze":"La denuncia {{c1::tuvo eco}} entre los trabajadores porque vinculaba la precariedad cotidiana con decisiones financieras tomadas lejos de la redacción.",
+    "cloze":"La denuncia {{c1::tuvo eco entre}} los trabajadores porque vinculaba la precariedad cotidiana con decisiones financieras tomadas lejos de la redacción.",
     "note":"The legacy cognate is possible, but the note selects the idiomatic public-reception frame rather than forcing the source into a positive support verb such as recibir apoyo."
   },
   {
@@ -242,7 +242,7 @@
     "register":"Specialist but standard in technical regulation and digital policy for systems that can exchange and use information across boundaries.",
     "trap":"Compatibilidad is not automatically interoperabilidad: compatible systems may coexist without being able to exchange and process one another's data.",
     "example_tl":"La interoperabilidad entre servicios de mensajería permitiría cambiar de proveedor sin perder contactos, historiales ni la posibilidad de comunicarse con otros usuarios.",
-    "example_en":"Interoperability between messaging services would allow users to change providers without losing contacts, histories or the ability to communicate with other users.",
+    "example_en":"Interoperability between messaging services would allow users to change providers without losing contacts, histories or the ability to communicate with others.",
     "cloze":"La {{c1::interoperabilidad entre}} servicios de mensajería permitiría cambiar de proveedor sin perder contactos, historiales ni la posibilidad de comunicarse con otros usuarios.",
     "note":"The legacy rendering is accurate. Retention is justified by the precise regulatory meaning and its consequential distinction from mere compatibility."
   },

@@ -77,7 +77,7 @@
     "register": "Neutral technical and industrial-policy vocabulary; it may denote materials or components and is also used metonymically for the sector.",
     "trap": "Halbleiter can denote materials or components, whereas Chips are integrated circuits; the two are interchangeable only as contextual industry shorthand.",
     "example_tl": "Fortschrittliche Halbleiter sind zum strategischen Engpass geworden, weil ihre Entwicklung globale Wissensnetze voraussetzt, während die modernste Fertigung geografisch stark konzentriert bleibt.",
-    "example_en": "Advanced semiconductors have become a strategic bottleneck because their development requires global knowledge networks while the most advanced manufacturing remains highly concentrated geographically.",
+    "example_en": "Leading-edge semiconductors have become a strategic bottleneck because their development requires global knowledge networks while the most advanced manufacturing remains highly concentrated geographically.",
     "cloze": "Fortschrittliche {{c1::Halbleiter}} sind zum strategischen Engpass geworden, weil ihre Entwicklung globale Wissensnetze voraussetzt, während die modernste Fertigung geografisch stark konzentriert bleibt.",
     "note": "Old_back is accurate; retention supplies the productive non-cognate German term. Self-review replaced a speculative cognate warning with the consequential semantic distinction from Chips."
   },
@@ -120,7 +120,7 @@
     "register": "Specialist technology and research-policy terminology; Quantencomputing is established, while Quantenrechnen is a transparent German alternative.",
     "trap": "Quantencomputer denotes a device, whereas Quantencomputing denotes the computing paradigm or activity; German writes the latter as one compound.",
     "example_tl": "Das Quantencomputing verspricht Vorteile bei ausgewählten Optimierungsproblemen, doch in vielen politischen Strategien wird langfristiges Forschungspotenzial mit kurzfristig verfügbarer Rechenleistung verwechselt.",
-    "example_en": "Quantum computing promises advantages for selected optimization problems, but many policy strategies confuse long-term research potential with computing power available in the short term.",
+    "example_en": "Quantum computing promises advantages for selected optimization problems, but many policy strategies confuse long-term research potential with processing power available in the short term.",
     "cloze": "Das {{c1::Quantencomputing}} verspricht Vorteile bei ausgewählten Optimierungsproblemen, doch in vielen politischen Strategien wird langfristiges Forschungspotenzial mit kurzfristig verfügbarer Rechenleistung verwechselt.",
     "note": "Old_back is accurate; retention teaches the compound and the distinction between the field and an individual Quantencomputer. Self-review removed an unnatural personification of political strategies."
   },
@@ -162,9 +162,9 @@
     ],
     "register": "Standard in German research, business and government policy; FuE is frequent in official prose, while F&E is also widespread.",
     "trap": "R&D is common in international corporate language, but German continuous prose normally expands it as Forschung und Entwicklung or abbreviates it as FuE or F&E.",
-    "example_tl": "Öffentliche Ausgaben für Forschung und Entwicklung fördern Innovation nur dann nachhaltig, wenn Universitäten Ergebnisse teilen und kleine Unternehmen Zugang zu Forschungsinfrastrukturen erhalten.",
-    "example_en": "Public spending on research and development promotes innovation sustainably only when universities share results and small companies gain access to research infrastructure.",
-    "cloze": "Öffentliche Ausgaben für {{c1::Forschung und Entwicklung}} fördern Innovation nur dann nachhaltig, wenn Universitäten Ergebnisse teilen und kleine Unternehmen Zugang zu Forschungsinfrastrukturen erhalten.",
+    "example_tl": "Öffentliche Ausgaben für Forschung und Entwicklung fördern Innovation nur dann nachhaltig, wenn Universitäten Ergebnisse teilen und kleine Unternehmen Zugang zu gemeinsamen Infrastrukturen erhalten.",
+    "example_en": "Public spending on research and development promotes innovation sustainably only when universities share results and small companies gain access to shared infrastructure.",
+    "cloze": "Öffentliche Ausgaben für {{c1::Forschung und Entwicklung}} fördern Innovation nur dann nachhaltig, wenn Universitäten Ergebnisse teilen und kleine Unternehmen Zugang zu gemeinsamen Infrastrukturen erhalten.",
     "note": "Old_back explains the English abbreviation but leaves R&D as the apparent production form; the main answer supplies the established German abbreviation."
   },
   {
@@ -191,7 +191,7 @@
     "register": "Neutral legal, technical and policy vocabulary; Datenschutz is the established institutional term in German-speaking jurisdictions.",
     "trap": "Datenschutz and Privatsphäre overlap but are not identical: the former concerns rules and practices for data processing, while the latter is the broader private sphere.",
     "example_tl": "Wirksamer Datenschutz verlangt mehr als Einwilligungsbanner: Nutzer müssen erkennen können, welche Daten erhoben, zusammengeführt und für automatisierte Entscheidungen verwendet werden.",
-    "example_en": "Effective data privacy requires more than consent banners: users must be able to see what data is collected, combined, and used for automated decisions.",
+    "example_en": "Effective data privacy requires more than consent banners: users must be able to see what information is collected, combined, and used for automated decisions.",
     "cloze": "Wirksamer {{c1::Datenschutz}} verlangt mehr als Einwilligungsbanner: Nutzer müssen erkennen können, welche Daten erhoben, zusammengeführt und für automatisierte Entscheidungen verwendet werden.",
     "note": "Old_back is the normal domain equivalent. Self-review kept Privatsphäre out of alts because it names a related protected interest rather than the data-governance regime itself."
   },
@@ -219,7 +219,7 @@
     "register": "Neutral established terminology in IT, procurement and digital policy; German commonly treats the English compound as a neuter noun.",
     "trap": "In integrated German spelling, the compound takes a hyphen as Cloud-Computing; bare Cloud instead denotes the remote service environment, not the computing model itself.",
     "example_tl": "Cloud-Computing kann Rechenleistung und Datenspeicherung auf externe Anbieter verlagern, wodurch Verwaltungen Skalenvorteile gewinnen, zugleich aber neue Abhängigkeiten und Kontrollprobleme schaffen.",
-    "example_en": "Cloud computing can shift computing power and data storage to external providers, allowing public administrations to gain economies of scale while creating new dependencies and oversight problems.",
+    "example_en": "Cloud computing can shift processing capacity and data storage to external providers, allowing public administrations to gain economies of scale while creating new dependencies and oversight problems.",
     "cloze": "{{c1::Cloud-Computing}} kann Rechenleistung und Datenspeicherung auf externe Anbieter verlagern, wodurch Verwaltungen Skalenvorteile gewinnen, zugleich aber neue Abhängigkeiten und Kontrollprobleme schaffen.",
     "note": "Materially normalizes old_back's open English spelling to the integrated German compound. Self-review changed the claim from categorical to modal and corrected the collocation to auf externe Anbieter verlagern."
   },

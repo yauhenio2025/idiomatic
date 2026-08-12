@@ -23,7 +23,7 @@
     "register": "Formal legal and journalistic construction for reporting a claim whose truth the speaker does not endorse.",
     "trap": "Affirmer que presents a claim without the same legal or evidential distance; alléguer does not mean that the allegation has been proved.",
     "example_tl": "L’entreprise allègue que la collecte biométrique améliore la sécurité, mais elle n’a publié aucune donnée permettant de vérifier cette affirmation.",
-    "example_en": "The company alleges that biometric data collection improves security, but it has published no data that would allow the claim to be verified.",
+    "example_en": "The company alleges that biometric-data collection improves security, but it has published no evidence allowing the claim to be verified.",
     "cloze": "L’entreprise {{c1::allègue que}} la collecte biométrique améliore la sécurité, mais elle n’a publié aucune donnée permettant de vérifier cette affirmation.",
     "note": "Old_back is accurate; the headword adds the clause pattern needed for productive use."
   },
@@ -31,15 +31,15 @@
     "id": "it_fancy_vocab_447",
     "en": "To bolster",
     "category": "lexical-verb",
-    "tl": "étayer",
+    "tl": "renforcer",
     "alts": [
-      "renforcer"
+      "étayer"
     ],
     "register": "Formal analytical verb used when evidence or reasoning gives stronger support to a claim, interpretation or case.",
     "trap": "Soutenir can mean personally advocating a claim; evidence normally étaye that claim rather than taking a position on it.",
-    "example_tl": "De nouvelles données indépendantes étayent l’argument selon lequel la transparence publicitaire réduit les abus sans compromettre le financement des médias.",
+    "example_tl": "De nouvelles données indépendantes renforcent l’argument selon lequel la transparence publicitaire réduit les abus sans compromettre le financement des médias.",
     "example_en": "New independent data bolster the argument that advertising transparency reduces abuse without jeopardizing media funding.",
-    "cloze": "De nouvelles données indépendantes {{c1::étayent}} l’argument selon lequel la transparence publicitaire réduit les abus sans compromettre le financement des médias.",
+    "cloze": "De nouvelles données indépendantes {{c1::renforcent}} l’argument selon lequel la transparence publicitaire réduit les abus sans compromettre le financement des médias.",
     "note": "The bare English verb is object-dependent. This note selects evidential support and sharpens old_back soutenir."
   },
   {
@@ -61,14 +61,14 @@
     "id": "it_fancy_vocab_449",
     "en": "To circumvent",
     "category": "lexical-verb",
-    "tl": "contourner",
-    "alts": [],
-    "register": "Neutral-formal verb for deliberately finding a way around a rule, safeguard, restriction or obstacle.",
-    "trap": "Circonvenir normally means to manipulate or win over a person; it is not a formal synonym for contourner a rule.",
-    "example_tl": "Certaines applications contournent les garde-fous européens en transférant les profils sensibles vers des filiales établies dans des juridictions moins exigeantes.",
+    "tl": "éluder",
+    "alts": ["contourner"],
+    "register": "Formal verb for deliberately evading a rule, obligation or difficulty; contourner is the broader and more neutral alternative.",
+    "trap": "Éluder foregrounds deliberate evasion and normally takes a difficulty, obligation or safeguard as its object; élucider instead means clarify or solve.",
+    "example_tl": "Certaines applications éludent les garde-fous européens en transférant les profils sensibles vers des filiales établies dans des juridictions moins exigeantes.",
     "example_en": "Some applications circumvent European safeguards by transferring sensitive profiles to subsidiaries established in less demanding jurisdictions.",
-    "cloze": "Certaines applications {{c1::contournent}} les garde-fous européens en transférant les profils sensibles vers des filiales établies dans des juridictions moins exigeantes.",
-    "note": "Old_back is accurate; the example fixes the intentional regulatory-evasion sense."
+    "cloze": "Certaines applications {{c1::éludent}} les garde-fous européens en transférant les profils sensibles vers des filiales établies dans des juridictions moins exigeantes.",
+    "note": "Old_back is accurate; self-review selects éluder to fix the intentional regulatory-evasion sense and provide a production answer distinct from bypass."
   },
   {
     "id": "it_fancy_vocab_452",

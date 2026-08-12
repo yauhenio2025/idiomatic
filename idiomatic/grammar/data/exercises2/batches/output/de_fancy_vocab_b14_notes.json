@@ -55,14 +55,14 @@
     "id": "it_fancy_vocab_525",
     "en": "The explication",
     "category": "lexical-noun",
-    "tl": "die Erläuterung",
-    "alts": ["die Erklärung", "die Auslegung"],
-    "register": "Formal academic and literary usage for a detailed explanation or interpretation of a difficult text, idea or passage.",
-    "trap": "Explication is a close explanation, not simply a translation; Erläuterung is more precise here than the broad, everyday Erklärung.",
-    "example_tl": "Die Erläuterung des Leitartikels für ein breiteres Publikum zeigt, wie seine scheinbar neutrale Sprache stillschweigend eine bestimmte geopolitische Ordnung voraussetzt.",
-    "example_en": "The explication of the editorial for a broader audience shows how its seemingly neutral language tacitly presupposes a particular geopolitical order.",
-    "cloze": "Die {{c1::Erläuterung}} des Leitartikels für ein breiteres Publikum zeigt, wie seine scheinbar neutrale Sprache stillschweigend eine bestimmte geopolitische Ordnung voraussetzt.",
-    "note": "The old gloss is correct; self-review fixed the academic-literary sense and avoided treating explication as a simple synonym for translation."
+    "tl": "die eingehende Interpretation",
+    "alts": ["die detaillierte Textdeutung"],
+    "register": "Formal academic and literary usage for a close, detailed interpretation of a difficult text, idea or passage.",
+    "trap": "An explication develops a close interpretation rather than merely translating or briefly paraphrasing a text; Erläuterung instead foregrounds a clarifying explanation.",
+    "example_tl": "Die eingehende Interpretation des Leitartikels zeigt einem breiteren Publikum, wie seine scheinbar neutrale Sprache stillschweigend eine bestimmte geopolitische Ordnung voraussetzt.",
+    "example_en": "The explication of the editorial shows a broader audience how its seemingly neutral language tacitly presupposes a particular geopolitical order.",
+    "cloze": "Die {{c1::eingehende Interpretation}} des Leitartikels zeigt einem breiteren Publikum, wie seine scheinbar neutrale Sprache stillschweigend eine bestimmte geopolitische Ordnung voraussetzt.",
+    "note": "The old gloss captures the explanatory sense; self-review selects an explicit close-reading construction to provide a distinct, production-worthy answer."
   },
   {
     "id": "it_fancy_vocab_526",
@@ -176,23 +176,23 @@
     "alts": ["die Bestätigung", "die Überprüfung"],
     "register": "Technical, scientific and data-policy usage for establishing that a model, method or result performs as intended.",
     "trap": "Validierung is a systematic technical process, not just a quick check; Verifizierung often asks whether a result is correct under specified criteria.",
-    "example_tl": "Die Validierung des Prognosemodells unter realen Bedingungen scheiterte, weil es bei veränderten Marktbedingungen systematisch falsche Risiken als vernachlässigbar einstufte.",
-    "example_en": "The validation of the forecasting model under real conditions failed because it systematically classified false risks as negligible under changed market conditions.",
-    "cloze": "Die {{c1::Validierung}} des Prognosemodells unter realen Bedingungen scheiterte, weil es bei veränderten Marktbedingungen systematisch falsche Risiken als vernachlässigbar einstufte.",
+    "example_tl": "Die Validierung des Prognosemodells im Praxiseinsatz scheiterte, weil es unter veränderten Marktbedingungen tatsächliche Risiken systematisch fälschlich als vernachlässigbar einstufte.",
+    "example_en": "Validation of the forecasting model in operational use failed because, under changed market conditions, it systematically misclassified real risks as negligible.",
+    "cloze": "Die {{c1::Validierung}} des Prognosemodells im Praxiseinsatz scheiterte, weil es unter veränderten Marktbedingungen tatsächliche Risiken systematisch fälschlich als vernachlässigbar einstufte.",
     "note": "The old gloss is correct; self-review kept the technical loanword and distinguished validation from generic confirmation."
   },
   {
     "id": "it_fancy_vocab_535",
     "en": "The verdict.",
     "category": "lexical-noun",
-    "tl": "das Urteil",
-    "alts": ["der Richterspruch", "die Entscheidung"],
-    "register": "Legal usage for the formal decision delivered by a court or jury; figurative media use is also possible.",
-    "trap": "Urteil is the standard legal verdict; Entscheidung is broader, and Richterspruch emphasizes the judge's pronouncement rather than the legal decision itself.",
-    "example_tl": "Das Urteil gegen den Whistleblower löste internationale Kritik aus, weil das Gericht zentrale Beweise unter Ausschluss der Öffentlichkeit bewertete.",
+    "tl": "der Richterspruch",
+    "alts": ["das Urteil", "die Entscheidung"],
+    "register": "Formal legal and journalistic usage for a judge’s pronounced decision; Urteil is the more neutral general legal term.",
+    "trap": "Richterspruch specifically foregrounds the judge’s pronouncement and is unsuitable for a jury verdict; Entscheidung is broader than either legal noun.",
+    "example_tl": "Der Richterspruch gegen den Whistleblower löste internationale Kritik aus, weil das Gericht zentrale Beweise unter Ausschluss der Öffentlichkeit bewertete.",
     "example_en": "The verdict against the whistleblower provoked international criticism because the court assessed key evidence behind closed doors.",
-    "cloze": "Das {{c1::Urteil}} gegen den Whistleblower löste internationale Kritik aus, weil das Gericht zentrale Beweise unter Ausschluss der Öffentlichkeit bewertete.",
-    "note": "The old gloss is exact; the source's final period is preserved in en, while the target headword gives the standard legal noun."
+    "cloze": "Der {{c1::Richterspruch}} gegen den Whistleblower löste internationale Kritik aus, weil das Gericht zentrale Beweise unter Ausschluss der Öffentlichkeit bewertete.",
+    "note": "The old gloss is exact; self-review selects the more marked judicial-pronouncement sense to provide a distinct production answer from judgment."
   },
   {
     "id": "it_fancy_vocab_536",
@@ -215,9 +215,9 @@
     "alts": [],
     "register": "Academic, journalistic and policy usage for an approach that breaks complex material into components and relationships.",
     "trap": "Analytisch describes methodical examination, not merely intelligent or critical thinking; German inflects it normally before a noun.",
-    "example_tl": "Eine analytische Betrachtung der Plattformökonomie muss Geschäftsmodelle, Machtverhältnisse und regulatorische Anreize im jeweiligen politischen Kontext gemeinsam systematisch untersuchen.",
-    "example_en": "An analytical examination of the platform economy must systematically examine business models, power relations and regulatory incentives together within their respective political context.",
-    "cloze": "Eine {{c1::analytische}} Betrachtung der Plattformökonomie muss Geschäftsmodelle, Machtverhältnisse und regulatorische Anreize im jeweiligen politischen Kontext gemeinsam systematisch untersuchen.",
+    "example_tl": "Eine analytische Betrachtung der Plattformökonomie muss Geschäftsmodelle, Machtverhältnisse und regulatorische Anreize systematisch in ihrem Zusammenspiel und jeweiligen politischen Kontext untersuchen.",
+    "example_en": "An analytical study of the platform economy must systematically consider business models, power relations, and regulatory incentives in their interaction and specific political context.",
+    "cloze": "Eine {{c1::analytische}} Betrachtung der Plattformökonomie muss Geschäftsmodelle, Machtverhältnisse und regulatorische Anreize systematisch in ihrem Zusammenspiel und jeweiligen politischen Kontext untersuchen.",
     "note": "The old gloss is exact; self-review used the feminine adjective ending to test morphology rather than presenting the bare dictionary form only."
   },
   {
@@ -263,14 +263,14 @@
     "id": "it_fancy_vocab_541",
     "en": "Convincing",
     "category": "lexical-adjective",
-    "tl": "überzeugend",
-    "alts": [],
-    "register": "Neutral-formal argumentative and public-facing usage for something that persuades through its reasoning, evidence or presentation.",
-    "trap": "Überzeugend means persuasive, not necessarily proven; glaubwürdig describes credibility, while plausibel may only mean compatible with the facts.",
-    "example_tl": "Die überzeugende Gegenanalyse zeigt im Detail, dass die behaupteten Effizienzgewinne vor allem aus einer selektiven Auswahl der Vergleichsdaten stammen.",
+    "tl": "einleuchtend",
+    "alts": ["überzeugend"],
+    "register": "Neutral-formal argumentative usage for reasoning or an explanation that is readily understandable and convincing.",
+    "trap": "Einleuchtend describes reasoning that makes sense, not necessarily a claim that has been proved; glaubwürdig instead concerns credibility.",
+    "example_tl": "Die einleuchtende Gegenanalyse zeigt im Detail, dass die behaupteten Effizienzgewinne vor allem aus einer selektiven Auswahl der Vergleichsdaten stammen.",
     "example_en": "The convincing counter-analysis shows in detail that the claimed efficiency gains mainly result from a selective choice of comparison data.",
-    "cloze": "Die {{c1::überzeugende}} Gegenanalyse zeigt im Detail, dass die behaupteten Effizienzgewinne vor allem aus einer selektiven Auswahl der Vergleichsdaten stammen.",
-    "note": "The old gloss is exact; self-review kept the ordinary adjective and clarified that persuasion does not equal proof."
+    "cloze": "Die {{c1::einleuchtende}} Gegenanalyse zeigt im Detail, dass die behaupteten Effizienzgewinne vor allem aus einer selektiven Auswahl der Vergleichsdaten stammen.",
+    "note": "The old gloss is exact; self-review selects the closely related but distinct einleuchtend and clarifies that intelligible persuasion does not equal proof."
   },
   {
     "id": "it_fancy_vocab_542",
@@ -281,7 +281,7 @@
     "register": "Technical and analytical usage for a result or idea that conflicts with ordinary intuition or expectation.",
     "trap": "Kontraintuitiv means contrary to initial intuition, not necessarily irrational or false; the German loanword is standard in research and policy writing.",
     "example_tl": "Das kontraintuitive Ergebnis erklärt sich dadurch, dass strengere Moderation die sichtbarsten Beiträge entfernt, nicht aber die zugrunde liegenden Netzwerke.",
-    "example_en": "The counterintuitive result is explained by stricter moderation removing the most visible posts, but not the underlying networks.",
+    "example_en": "The counterintuitive result arises because stricter moderation removes the most visible posts but not the underlying networks.",
     "cloze": "Das {{c1::kontraintuitive}} Ergebnis erklärt sich dadurch, dass strengere Moderation die sichtbarsten Beiträge entfernt, nicht aber die zugrunde liegenden Netzwerke.",
     "note": "The old gloss is correct; self-review made clear that counterintuitive signals surprise, not error or irrationality."
   },
@@ -358,9 +358,9 @@
     "alts": ["erfahrungsbasiert"],
     "register": "Academic, scientific and policy usage for knowledge grounded in observation, measurement or collected evidence.",
     "trap": "Empirisch means grounded in observed evidence, not merely practical; datenbasiert is narrower when the evidence is specifically quantitative data.",
-    "example_tl": "Die empirische Studie widerlegt die Annahme, dass automatisierte Empfehlungen politisch neutrale Informationen unabhängig von bestehenden Vorurteilen in der Praxis verbreiten.",
-    "example_en": "The empirical study refutes the assumption that automated recommendations distribute politically neutral information independently of existing biases in practice.",
-    "cloze": "Die {{c1::empirische}} Studie widerlegt die Annahme, dass automatisierte Empfehlungen politisch neutrale Informationen unabhängig von bestehenden Vorurteilen in der Praxis verbreiten.",
+    "example_tl": "Die empirische Studie widerlegt die Annahme, dass automatisierte Empfehlungen in der Praxis politisch neutrale Informationen verbreiten, ohne bestehende Vorurteile zu reproduzieren.",
+    "example_en": "The empirical study refutes the assumption that automated recommendations distribute politically neutral information in practice without reproducing existing biases.",
+    "cloze": "Die {{c1::empirische}} Studie widerlegt die Annahme, dass automatisierte Empfehlungen in der Praxis politisch neutrale Informationen verbreiten, ohne bestehende Vorurteile zu reproduzieren.",
     "note": "The old gloss is exact; self-review preserved the cognate and distinguished observed evidence from merely practical experience."
   },
   {
