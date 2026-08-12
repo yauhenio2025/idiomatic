@@ -153,7 +153,11 @@ EXERCISE_EXAMPLE_FIELD = "Extra1"      # example_html (front worked example)
 EXERCISE_SOLUTION_EN_FIELD = "Extra2"  # solution_en (EN gloss, back)
 EXERCISE_WHY_FIELD = "Extra3"          # why_en (grammar why, back)
 
-PROVENANCES = frozenset({"book-verbatim"})  # "llm-generated" reserved for v2
+# llm-generated = original exercises authored for provenance-starved units
+# (2026-08-12 completeness audit: partikeln 0 / wortbildung 6 /
+# rechtschreibung 3 / zahlen 15 kept book items). The template's cx-refs
+# line renders {{Provenance}}, so the marking is visible on every card.
+PROVENANCES = frozenset({"book-verbatim", "llm-generated"})
 
 # Lesson CSS follows the podcast-lesson house style: shared SVG palette
 # classes, explicit night mode (prevents AnkiDroid's heuristic inversion).

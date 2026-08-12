@@ -527,6 +527,13 @@ class TestExerciseParsing:
         with pytest.raises(course.CourseSourceError, match="provenance"):
             course.parse_exercises_file(path)
 
+    def test_accepts_llm_generated_provenance(self, tmp_path: Path) -> None:
+        path = _write_exercises(tmp_path, _exercises_payload(
+            {1: [_exercise("orig-c09-e01-i1", provenance="llm-generated")]}
+        ))
+        exercises = course.parse_exercises_file(path)
+        assert exercises[0].provenance == "llm-generated"
+
     def test_rejects_duplicate_ids_across_blocks(self, tmp_path: Path) -> None:
         path = _write_exercises(tmp_path, _exercises_payload(
             {1: [_exercise("x1")], 2: [_exercise("x1")]}
