@@ -67,22 +67,21 @@ def resolve_deck_root(lang: str, unit: str, lesson_unit_label: str,
                       production: bool) -> str | None:
     """The build's root_override: ZZ pilot root by default, None under
     --production (deck names then compose from anki_tree.anki_root via
-    course.course_deck_names — never a baked root string).  For DE
-    production the unit must exist in course.DE_UNITS and the lesson's
-    unit_label must match the registry (DE_UNITS is the authority for
-    deck naming)."""
+    course.course_deck_names — never a baked root string).  For production,
+    the unit must exist in the language's course registry and the
+    lesson's unit_label must match it (the registry is the authority for deck
+    naming)."""
     if not production:
         return PILOT_ROOT
-    if lang == "de":
-        try:
-            _chapter, label = course.de_unit(unit)
-        except ValueError as exc:
-            raise SystemExit(str(exc)) from exc
-        if lesson_unit_label != label:
-            raise SystemExit(
-                f"lesson unit_label {lesson_unit_label!r} does not match "
-                f"DE_UNITS {label!r} — fix the lesson frontmatter"
-            )
+    try:
+        _chapter, label = course.course_unit(lang, unit)
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
+    if lesson_unit_label != label:
+        raise SystemExit(
+            f"lesson unit_label {lesson_unit_label!r} does not match "
+            f"{lang.upper()}_UNITS {label!r} — fix the lesson frontmatter"
+        )
     return None
 
 

@@ -179,6 +179,29 @@ class TestLoadPlan:
                 _write_plan(tmp_path, data, name="de_foo.plan.json")
             )
 
+    def test_spanish_plan_uses_spanish_registry(self, tmp_path: Path) -> None:
+        data = _plan_dict(
+            lang="es",
+            unit="sustantivos",
+            chapter=1,
+            unit_label="Sustantivos (nouns; B&B 1-2)",
+            blocks=[_plan_block(1, 1, hammer_refs=["1.2"])],
+        )
+        plan = course_select.load_plan(
+            _write_plan(tmp_path, data, name="es_sustantivos.plan.json")
+        )
+        assert plan.lang == "es"
+        assert plan.unit == "sustantivos"
+        assert plan.chapter == 1
+
+    def test_rejects_language_filename_mismatch(self, tmp_path: Path) -> None:
+        with pytest.raises(course_select.PlanError,
+                           match="lang field must match"):
+            course_select.load_plan(
+                _write_plan(tmp_path, _plan_dict(),
+                            name="es_praepositionen.plan.json")
+            )
+
     def test_rejects_chapter_mismatch(self, tmp_path: Path) -> None:
         with pytest.raises(course_select.PlanError,
                            match="chapter must be 18"):
@@ -350,6 +373,33 @@ class TestSelectUnit:
                         encoding="utf-8")
         assert len(course.parse_exercises_file(path)) == len(exercises)
 
+    def test_spanish_payload_uses_language_metadata(
+        self, tmp_path: Path
+    ) -> None:
+        plan = course_select.load_plan(_write_plan(
+            tmp_path,
+            _plan_dict(
+                lang="es",
+                unit="sustantivos",
+                chapter=1,
+                unit_label="Sustantivos (nouns; B&B 1-2)",
+                blocks=[_plan_block(1, 1, hammer_refs=["1.2"])],
+            ),
+            name="es_sustantivos.plan.json",
+        ))
+        chapter = _chapter_fixture()
+        chapter["chapter"] = 1
+        chapter["title"] = "Nouns"
+        chapter["hammer_sections"] = ["Section 1.2"]
+        payload, _report = course_select.select_unit(plan, chapter)
+        assert payload["lang"] == "es"
+        first = payload["blocks"][0]["exercises"][0]
+        assert first["id"] == "psg-c01-e03-i1"
+        assert first["source_ref"] == \
+            "PSG Ch. 1, Ex. 3, No. 1 (p. 150; key p. 210)"
+        assert "Practising Spanish Grammar" in \
+            payload["source"]["workbook"]
+
     def test_unknown_set_id_names_available_ids(self, tmp_path: Path) -> None:
         plan = self._plan(tmp_path, [_plan_block(1, 2, exercise_sets=["9"])])
         with pytest.raises(course_select.PlanError,
@@ -414,6 +464,16 @@ class TestProductionRouting:
         with pytest.raises(SystemExit, match="unknown DE course unit"):
             resolve_deck_root("de", "nope", "Whatever", production=True)
 
+    def test_spanish_production_validates_its_registry(self) -> None:
+        assert resolve_deck_root(
+            "es", "sustantivos", "Sustantivos (nouns; B&B 1-2)",
+            production=True,
+        ) is None
+        with pytest.raises(SystemExit, match="does not match ES_UNITS"):
+            resolve_deck_root(
+                "es", "sustantivos", "Sustantivos", production=True
+            )
+
 
 # ---------------------------------------------------------------------------
 # The committed kasus plan parses against the registry
@@ -430,7 +490,7 @@ class TestCommittedPlans:
             [3, 4, 5, 6, 8, 9, 10]
 
     def test_every_committed_plan_parses(self) -> None:
-        plans = sorted(course_select.PLANS_DIR.glob("de_*.plan.json"))
+        plans = sorted(course_select.PLANS_DIR.glob("*.plan.json"))
         assert plans, "plans dir must at least carry de_kasus"
         for path in plans:
             course_select.load_plan(path)

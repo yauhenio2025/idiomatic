@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Select one DE course unit's exercises from the sealed Hammer corpus.
+"""Select one course unit's exercises from a sealed grammar corpus.
 
 Usage:
     .venv/bin/python tools/course_select.py \
-        idiomatic/grammar/data/course/plans/de_<unit>.plan.json \
-        [--corpus-dir /path/to/de_hammer_work/chapters]
+        idiomatic/grammar/data/course/plans/<lang>_<unit>.plan.json \
+        [--corpus-dir /path/to/<lang>_work/chapters]
 
 Data-driven successor of ``course_select_de_kasus.py`` (RETIRED into this
 tool: its hand-picked SELECTIONS table now lives on as the committed plan
@@ -35,11 +35,11 @@ The PLAN (committed — carries only set ids and metadata, never book text):
 - ``max_items``: optional cap applied AFTER the hygiene gate, preserving
   book order; going over cap logs a warning and truncates (not fatal).
 
-The corpus is the sealed ``de_hammer_v1`` extraction — transcriptions of
-copyrighted books that must NEVER be committed. It is read from the
-machine-local main tree by default (CORPUS_DIR) and the selected,
+The corpora are sealed machine-local extractions — transcriptions of
+copyrighted books that must NEVER be committed. The language-specific corpus
+is read from the local research tree by default, and the selected,
 hygiene-gated output is written to the gitignored
-``idiomatic/grammar/data/course/book_local/de_<unit>.exercises.json``.
+``idiomatic/grammar/data/course/book_local/<lang>_<unit>.exercises.json``.
 
 Selection policy (docs/GRAMMAR_COURSE_DESIGN.md):
 - book-verbatim items only: any Pass-2 flag excludes the item;
@@ -69,11 +69,48 @@ log = structlog.get_logger()
 
 # The sealed corpus lives in the MAIN tree only (gitignored book content;
 # worktrees do not carry it) — hence an absolute machine-local default.
-CORPUS_DIR = Path(
-    "/home/admin/projects/idiomatic/docs/research/grammar_books"
-    "/de_hammer_work/chapters"
-)
+CORPUS_ROOT = REPO_ROOT / "docs" / "research" / "grammar_books"
+CORPUS_DIRS = {
+    "de": CORPUS_ROOT / "de_hammer_work" / "chapters",
+    "es": CORPUS_ROOT / "es_work" / "chapters",
+    "fr": CORPUS_ROOT / "fr_work" / "chapters",
+    "it": CORPUS_ROOT / "it_work" / "chapters",
+    "pt": CORPUS_ROOT / "pt_work" / "chapters",
+}
 PLANS_DIR = course.DATA_DIR / "plans"
+
+SOURCE_METADATA = {
+    "de": {
+        "id_prefix": "pgg",
+        "workbook": "Practising German Grammar (Kaiser & Kohl)",
+        "reference": "Hammer's German Grammar and Usage, 7th ed. (Durrell)",
+        "corpus": "de_hammer_v1 (sealed extraction, Pass 3)",
+    },
+    "es": {
+        "id_prefix": "psg",
+        "workbook": "Practising Spanish Grammar, 4th ed. (Howkins et al.)",
+        "reference": "A New Reference Grammar of Modern Spanish, 6th ed. (Butt et al.)",
+        "corpus": "es_work/es_ref (sealed extraction, QA sweep)",
+    },
+    "fr": {
+        "id_prefix": "pfg",
+        "workbook": "Practising French Grammar, 5th ed. (Lamy et al.)",
+        "reference": "French Grammar and Usage, 5th ed. (Towell et al.)",
+        "corpus": "fr_work/fr_ref (sealed extraction, QA complete)",
+    },
+    "it": {
+        "id_prefix": "pig",
+        "workbook": "Practising Italian Grammar (Bianchi et al.)",
+        "reference": "A Reference Grammar of Modern Italian, 2nd ed. (Maiden & Robustelli)",
+        "corpus": "it_work/it_ref (sealed extraction, QA complete)",
+    },
+    "pt": {
+        "id_prefix": "mbpg",
+        "workbook": "Modern Brazilian Portuguese Grammar Workbook, 3rd ed. (Whitlam & Silveira)",
+        "reference": "Modern Brazilian Portuguese Grammar, 3rd ed. (Whitlam & Silveira)",
+        "corpus": "pt_work/pt_ref (sealed extraction, QA complete)",
+    },
+}
 
 _MARK_SPAN = re.compile(r"<mark>(.*?)</mark>", re.DOTALL)
 _WS = re.compile(r"\s+")
@@ -112,22 +149,26 @@ def _plan_error(path: Path, message: str) -> PlanError:
 
 
 def load_plan(path: Path) -> UnitPlan:
-    """Parse + validate one ``de_<unit>.plan.json`` against DE_UNITS."""
+    """Parse + validate one ``<lang>_<unit>.plan.json`` against its registry."""
     path = Path(path)
-    match = re.fullmatch(r"de_([a-z0-9]+(?:-[a-z0-9]+)*)\.plan\.json",
-                         path.name)
+    match = re.fullmatch(
+        r"([a-z]{2})_([a-z0-9]+(?:-[a-z0-9]+)*)\.plan\.json", path.name
+    )
     if match is None:
-        raise _plan_error(path, "filename must be de_<unit>.plan.json")
+        raise _plan_error(
+            path, "filename must be <lang>_<unit>.plan.json"
+        )
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         raise _plan_error(path, "expected a JSON object")
+    lang = match.group(1)
     unit = data.get("unit")
-    if unit != match.group(1):
+    if unit != match.group(2):
         raise _plan_error(path, "unit field must match the filename")
-    if data.get("lang") != "de":
-        raise _plan_error(path, "lang must be 'de'")
+    if data.get("lang") != lang:
+        raise _plan_error(path, "lang field must match the filename")
     try:
-        chapter, unit_label = course.de_unit(unit)
+        chapter, unit_label = course.course_unit(lang, unit)
     except ValueError as exc:
         raise _plan_error(path, str(exc)) from exc
     if data.get("chapter") != chapter:
@@ -217,7 +258,7 @@ def load_plan(path: Path) -> UnitPlan:
             note=str(raw.get("note") or ""),
         ))
     return UnitPlan(
-        path=path, lang="de", unit=unit, chapter=chapter,
+        path=path, lang=lang, unit=unit, chapter=chapter,
         unit_label=unit_label, blocks=tuple(blocks),
     )
 
@@ -335,9 +376,23 @@ def select_unit(plan: UnitPlan, chapter_data: dict) -> tuple[dict, dict]:
                 if not re.fullmatch(r"[a-z0-9]+", item_no):
                     skipped.append(f"{label}: unusable item number")
                     continue
+                source = SOURCE_METADATA[plan.lang]
+                if plan.lang == "de":
+                    source_ref = (
+                        f"PGG Kap. {plan.chapter}, Üb. {ex_no}, "
+                        f"Nr. {item['item_no']} (S. {exercise['page']}; "
+                        f"Key S. {item['key_page']})"
+                    )
+                else:
+                    source_ref = (
+                        f"{source['id_prefix'].upper()} Ch. {plan.chapter}, "
+                        f"Ex. {ex_no}, No. {item['item_no']} "
+                        f"(p. {exercise['page']}; key p. {item['key_page']})"
+                    )
                 items_out.append({
                     "id": (
-                        f"pgg-c{plan.chapter:02d}-e{ex_no:02d}-i{item_no}"
+                        f"{source['id_prefix']}-c{plan.chapter:02d}"
+                        f"-e{ex_no:02d}-i{item_no}"
                     ),
                     "instruction": instruction,
                     "prompt": prompt,
@@ -348,11 +403,7 @@ def select_unit(plan: UnitPlan, chapter_data: dict) -> tuple[dict, dict]:
                         if alt.strip()
                     ],
                     "hammer_refs": list(block.hammer_refs),
-                    "source_ref": (
-                        f"PGG Kap. {plan.chapter}, Üb. {ex_no}, "
-                        f"Nr. {item['item_no']} (S. {exercise['page']}; "
-                        f"Key S. {item['key_page']})"
-                    ),
+                    "source_ref": source_ref,
                     "provenance": "book-verbatim",
                 })
         if not items_out:
@@ -370,19 +421,19 @@ def select_unit(plan: UnitPlan, chapter_data: dict) -> tuple[dict, dict]:
         out_blocks.append({"block": block.card_seq, "exercises": items_out})
 
     title = chapter_data.get("title", "")
+    source = SOURCE_METADATA[plan.lang]
+    reference = (
+        f"{source['reference']}, Ch. {plan.chapter}"
+        if plan.lang == "de"
+        else f"{source['reference']}, cited sections"
+    )
     payload = {
-        "lang": "de",
+        "lang": plan.lang,
         "unit": plan.unit,
         "source": {
-            "workbook": (
-                "Practising German Grammar (Kaiser & Kohl), "
-                f"Ch. {plan.chapter} {title}"
-            ),
-            "reference": (
-                "Hammer's German Grammar and Usage, 7th ed. (Durrell), "
-                f"Ch. {plan.chapter}"
-            ),
-            "corpus": "de_hammer_v1 (sealed extraction, Pass 3)",
+            "workbook": f"{source['workbook']}, Ch. {plan.chapter} {title}",
+            "reference": reference,
+            "corpus": source["corpus"],
         },
         "blocks": out_blocks,
     }
@@ -393,13 +444,14 @@ def select_unit(plan: UnitPlan, chapter_data: dict) -> tuple[dict, dict]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("plan", type=Path,
-                        help="path to plans/de_<unit>.plan.json")
-    parser.add_argument("--corpus-dir", type=Path, default=CORPUS_DIR,
-                        help="sealed corpus chapters directory")
+                        help="path to plans/<lang>_<unit>.plan.json")
+    parser.add_argument("--corpus-dir", type=Path,
+                        help="sealed corpus chapters directory (default: language-specific local corpus)")
     args = parser.parse_args()
 
     plan = load_plan(args.plan)
-    chapter_path = args.corpus_dir / f"ch{plan.chapter:02d}.json"
+    corpus_dir = args.corpus_dir or CORPUS_DIRS[plan.lang]
+    chapter_path = corpus_dir / f"ch{plan.chapter:02d}.json"
     if not chapter_path.is_file():
         raise SystemExit(
             f"corpus chapter not found: {chapter_path} (the sealed corpus "
@@ -410,7 +462,7 @@ def main() -> int:
 
     # Cross-check card_seq against the lesson when it already exists
     # (lesson authoring runs in parallel — absence is not an error).
-    lesson_path = course.LESSON_DIR / f"de_{plan.unit}.md"
+    lesson_path = course.LESSON_DIR / f"{plan.lang}_{plan.unit}.md"
     if lesson_path.is_file():
         lesson = course.parse_course_lesson(lesson_path)
         seqs = {card.seq for card in lesson.cards}
@@ -422,7 +474,9 @@ def main() -> int:
     else:
         log.info("course.select.no_lesson_yet", lesson=str(lesson_path))
 
-    out_path = course.BOOK_LOCAL_DIR / f"de_{plan.unit}.exercises.json"
+    out_path = (
+        course.BOOK_LOCAL_DIR / f"{plan.lang}_{plan.unit}.exercises.json"
+    )
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(
         json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8"

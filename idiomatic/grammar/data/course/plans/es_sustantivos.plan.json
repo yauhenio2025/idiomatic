@@ -1,0 +1,72 @@
+{
+  "lang": "es",
+  "unit": "sustantivos",
+  "chapter": 1,
+  "unit_label": "Sustantivos (nouns; B&B 1-2)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 1,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["1"],
+      "max_items": 10,
+      "note": "Retrieve noun gender through the article before extending agreement across the phrase."
+    },
+    {
+      "block": 2,
+      "card_seq": 2,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["1.2"],
+      "max_items": 10,
+      "note": "Produce feminine human-denoting forms while respecting lexical and common-gender patterns."
+    },
+    {
+      "block": 3,
+      "card_seq": 3,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["1.3.7"],
+      "max_items": 16,
+      "note": "Apply learned gender patterns to potentially misleading noun endings and show agreement."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["1.5"],
+      "max_items": 12,
+      "note": "Use articles and adjective endings to resolve meaning-sensitive gender in context."
+    },
+    {
+      "block": 5,
+      "card_seq": 9,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["1.5"],
+      "max_items": 12,
+      "note": "Integrate lexical gender choices with full noun-phrase agreement."
+    },
+    {
+      "block": 6,
+      "card_seq": 6,
+      "exercise_sets": ["11"],
+      "hammer_refs": ["2"],
+      "max_items": 14,
+      "note": "Form noun plurals while preserving spelling and stress conventions."
+    },
+    {
+      "block": 7,
+      "card_seq": 7,
+      "exercise_sets": ["13"],
+      "hammer_refs": ["2.2.3", "2.2.4"],
+      "max_items": 10,
+      "note": "Choose Spanish lexical number independently of the English source and propagate agreement."
+    },
+    {
+      "block": 8,
+      "card_seq": 8,
+      "exercise_sets": ["12"],
+      "hammer_refs": ["2.3"],
+      "max_items": 7,
+      "note": "Recover the grammatical subject and select singular or plural verb agreement."
+    }
+  ]
+}
