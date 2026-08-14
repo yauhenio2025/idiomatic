@@ -60,10 +60,12 @@ BOOK_LOCAL_DIR = DATA_DIR / "book_local"
 SUPPORTED_LANGS = frozenset({"de", "es", "fr", "it", "pt"})
 
 # ---------------------------------------------------------------------------
-# DE course units registry (batch generation, 2026-08-10): unit key →
-# (workbook/Hammer chapter, learner-facing unit_label deck segment).
-# One unit per chapter of Practising German Grammar; kasus (ch02) is the
-# shipped pilot.  unit_label strings are deck-name segments — never "::" .
+# Course unit registries: unit key →
+# (workbook chapter, learner-facing unit_label deck segment).  Unit keys use
+# the same lowercase-hyphen slug contract as lesson/exercise filenames and
+# local-TTS queue keys.  unit_label strings are deck-name segments — never
+# "::".  German uses one unit per Practising German Grammar chapter; Romance
+# units follow the chapter groupings recorded in ROMANCE_BOOK_EQUIVALENTS.md.
 # ---------------------------------------------------------------------------
 
 DE_UNITS: dict[str, tuple[int, str]] = {
@@ -90,16 +92,168 @@ DE_UNITS: dict[str, tuple[int, str]] = {
     "rechtschreibung": (21, "Rechtschreibung (spelling)"),
 }
 
+FR_UNITS: dict[str, tuple[int, str]] = {
+    "substantifs": (1, "Substantifs (nouns)"),
+    "determinants": (2, "Déterminants (articles & determiners)"),
+    "pronoms": (3, "Pronoms (personal & impersonal pronouns)"),
+    "adjectifs": (4, "Adjectifs (adjectives)"),
+    "adverbes": (5, "Adverbes (adverbs)"),
+    "nombres": (6, "Nombres & quantité (numbers, measurements, time)"),
+    "conjugaison": (7, "Conjugaison (verb forms)"),
+    "constructions": (
+        8,
+        "Constructions verbales (incl. pronominal verbs, valency)",
+    ),
+    "accord": (9, "Accord du participe (verb & participle agreement)"),
+    "temps": (10, "Temps (tense: passé composé vs imparfait, etc.)"),
+    "subjonctif": (
+        11,
+        "Subjonctif & modaux (subjunctive, modal verbs, exclamatives)",
+    ),
+    "infinitif": (12, "Infinitif (infinitives)"),
+    "prepositions": (13, "Prépositions (prepositions)"),
+    "interrogation": (14, "Interrogation (question formation)"),
+    "relatives": (15, "Relatives (relative clauses)"),
+    "negation": (16, "Négation (negation)"),
+    "conjonctions": (17, "Conjonctions & liaison (linking constructions)"),
+}
+
+ES_UNITS: dict[str, tuple[int, str]] = {
+    "sustantivos": (1, "Sustantivos (nouns; B&B 1-2)"),
+    "articulos": (2, "Artículos (articles; B&B 3-4)"),
+    "adjetivos": (3, "Adjetivos & comparación (PSG 3-4; B&B 5-6)"),
+    "demostrativos": (
+        5,
+        "Demostrativos, neutro & posesivos (PSG 5-7; B&B 7-9)",
+    ),
+    "numerales": (8, "Numerales (numbers; B&B 11)"),
+    "pronombres": (
+        9,
+        "Pronombres personales (PSG 9; B&B 12-15: le/lo/la, leísmo)",
+    ),
+    "conjugacion": (10, "Conjugación (forms of verbs; B&B 16)"),
+    "tiempos": (11, "Tiempos de indicativo (PSG 11; B&B 17-19)"),
+    "subjuntivo": (12, "Subjuntivo (B&B 20)"),
+    "imperativo": (13, "Imperativo (B&B 21)"),
+    "infinitivo": (
+        14,
+        "Infinitivo, participio & gerundio (PSG 14; B&B 22-24)",
+    ),
+    "modales": (15, "Auxiliares modales: poder, saber, deber (B&B 25)"),
+    "a-personal": (16, "A personal (B&B 26)"),
+    "negacion": (17, "Negación (B&B 27)"),
+    "interrogacion": (18, "Preguntas & exclamaciones (B&B 28)"),
+    "condicionales": (19, "Oraciones condicionales (B&B 29)"),
+    "pronominales": (
+        20,
+        "Verbos pronominales, 'hacerse' & pasiva (PSG 20-22; B&B 30-32)",
+    ),
+    "ser-estar": (23, "Ser, estar & haber (B&B 33-34)"),
+    "adverbios": (
+        24,
+        "Adverbios & expresiones de tiempo (PSG 24-25; B&B 35-36)",
+    ),
+    "conjunciones": (26, "Conjunciones & marcadores (B&B 37)"),
+    "preposiciones": (27, "Preposiciones: por/para etc. (B&B 38)"),
+    "relativas": (
+        28,
+        "Relativas, nominalización & énfasis (PSG 28-29; B&B 39-41)",
+    ),
+    "orden-palabras": (30, "Orden de palabras (B&B 42)"),
+    "ortografia": (
+        32,
+        "Ortografía, acentos & sufijos (PSG 31-32; B&B 43-44)",
+    ),
+}
+
+IT_UNITS: dict[str, tuple[int, str]] = {
+    "ortografia": (1, "Ortografia & pronuncia (M&R 2)"),
+    "sostantivi": (2, "Sostantivi & aggettivi (M&R 3)"),
+    "articoli": (3, "Articoli (M&R 4)"),
+    "dimostrativi": (4, "Dimostrativi (M&R 5)"),
+    "pronomi": (5, "Pronomi personali & clitici (M&R 6)"),
+    "relative": (6, "Strutture relative (M&R 7)"),
+    "interrogative": (7, "Strutture interrogative (M&R 8)"),
+    "indefiniti": (8, "Indefiniti & negativi (M&R 9)"),
+    "possessivi": (9, "Possessivi (M&R 10)"),
+    "preposizioni": (10, "Preposizioni (M&R 11)"),
+    "numerali": (11, "Numerali (M&R 12)"),
+    "avverbi": (12, "Avverbi (M&R 13)"),
+    "coniugazione": (13, "Coniugazione (forms of the verb; M&R 14)"),
+    "tempi-modi": (
+        14,
+        "Tempi & modi: congiuntivo, condizionale, passato (M&R 15)",
+    ),
+    "comparativi": (15, "Comparativi & superlativi (M&R 16)"),
+    "sintassi": (16, "Struttura della frase: si, passivo, ordine (M&R 17)"),
+    "negazione": (17, "Negazione (M&R 18)"),
+    "congiunzioni": (18, "Congiunzioni & segnali discorsivi (M&R 19)"),
+    "derivazione": (19, "Derivazione delle parole (M&R 20)"),
+    "tempo-espr": (20, "Espressioni di tempo (M&R 21)"),
+    "allocutivi": (21, "Forme allocutive: tu/Lei (M&R 22)"),
+}
+
+PT_UNITS: dict[str, tuple[int, str]] = {
+    "ortografia": (1, "Ortografia & pronúncia"),
+    "concordancia": (2, "Género & número (ch. 2-3)"),
+    "artigos": (4, "Artigos"),
+    "adjetivos": (5, "Adjetivos & advérbios"),
+    "numerais": (6, "Numerais"),
+    "pronomes": (7, "Pronomes pessoais & colocação de clíticos"),
+    "demonstrativos": (8, "Demonstrativos & possessivos (ch. 8-9)"),
+    "relativos": (10, "Pronomes relativos"),
+    "interrogativos": (11, "Interrogativos & exclamações (ch. 11-12)"),
+    "indefinidos": (13, "Indefinidos"),
+    "negacao": (14, "Negação"),
+    "conjugacao": (15, "Conjugação regular & irregular (ch. 15-16)"),
+    "participios": (
+        17,
+        "Gerúndio, particípios, perfeito composto & passiva",
+    ),
+    "tempos": (18, "Uso dos tempos"),
+    "infinitivo": (19, "Infinitivo (incl. infinitivo pessoal)"),
+    "subjuntivo": (20, "Subjuntivo/conjuntivo"),
+    "imperativo": (21, "Imperativo"),
+    "reflexivos": (22, "Verbos reflexivos"),
+    "ser-estar": (23, "Ser, estar & ficar"),
+    "modais": (24, "Auxiliares, modais & construções impessoais"),
+    "preposicoes": (25, "Preposições"),
+    "conjuncoes": (26, "Conjunções"),
+    "ordem-palavras": (27, "Ordem das palavras"),
+    "formacao": (28, "Formação de palavras"),
+}
+
+COURSE_UNITS: dict[str, dict[str, tuple[int, str]]] = {
+    "de": DE_UNITS,
+    "es": ES_UNITS,
+    "fr": FR_UNITS,
+    "it": IT_UNITS,
+    "pt": PT_UNITS,
+}
+
+
+def course_unit(lang: str, unit: str) -> tuple[int, str]:
+    """Return ``(chapter, unit_label)`` for a registered course unit."""
+    try:
+        registry = COURSE_UNITS[lang]
+    except KeyError:
+        known_langs = ", ".join(sorted(COURSE_UNITS))
+        raise ValueError(
+            f"unknown course language {lang!r}; known languages: {known_langs}"
+        ) from None
+    try:
+        return registry[unit]
+    except KeyError:
+        known_units = ", ".join(sorted(registry))
+        raise ValueError(
+            f"unknown {lang.upper()} course unit {unit!r}; "
+            f"known units: {known_units}"
+        ) from None
+
 
 def de_unit(unit: str) -> tuple[int, str]:
     """(chapter, unit_label) for a DE unit key; loud error otherwise."""
-    try:
-        return DE_UNITS[unit]
-    except KeyError:
-        known = ", ".join(sorted(DE_UNITS))
-        raise ValueError(
-            f"unknown DE course unit {unit!r}; known units: {known}"
-        ) from None
+    return course_unit("de", unit)
 
 # ---------------------------------------------------------------------------
 # Frozen models (1_820_190_0xx — the Grammar Course range)

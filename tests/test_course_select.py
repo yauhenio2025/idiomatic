@@ -1,4 +1,4 @@
-"""Batch course generation: DE units registry, plan schema, selector.
+"""Batch course generation: unit registries, DE plan schema, selector.
 
 All selector tests run on synthetic fixture chapters — the sealed corpus
 is machine-local book content and never enters the repo or the suite.
@@ -18,7 +18,7 @@ from tools.course_build_pilot import PILOT_ROOT, resolve_deck_root
 
 
 # ---------------------------------------------------------------------------
-# DE_UNITS registry
+# Course unit registries
 # ---------------------------------------------------------------------------
 
 
@@ -48,6 +48,74 @@ class TestDeUnitsRegistry:
             (18, "Präpositionen (prepositions)")
         with pytest.raises(ValueError, match="unknown DE course unit"):
             course.de_unit("nope")
+
+
+ROMANCE_REGISTRIES = {
+    "fr": (
+        course.FR_UNITS,
+        list(range(1, 18)),
+        ("subjonctif", (11, "Subjonctif & modaux (subjunctive, modal verbs, exclamatives)")),
+    ),
+    "es": (
+        course.ES_UNITS,
+        [1, 2, 3, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+         19, 20, 23, 24, 26, 27, 28, 30, 32],
+        ("ser-estar", (23, "Ser, estar & haber (B&B 33-34)")),
+    ),
+    "it": (
+        course.IT_UNITS,
+        list(range(1, 22)),
+        ("tempi-modi", (14, "Tempi & modi: congiuntivo, condizionale, passato (M&R 15)")),
+    ),
+    "pt": (
+        course.PT_UNITS,
+        [1, 2, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 17, 18, 19, 20,
+         21, 22, 23, 24, 25, 26, 27, 28],
+        ("infinitivo", (19, "Infinitivo (incl. infinitivo pessoal)")),
+    ),
+}
+
+
+class TestRomanceUnitsRegistry:
+    @pytest.mark.parametrize(
+        ("lang", "registry", "chapters", "anchor"),
+        [(lang, *values) for lang, values in ROMANCE_REGISTRIES.items()],
+    )
+    def test_registry_matches_curated_workbook_chapter_order(
+        self,
+        lang: str,
+        registry: dict[str, tuple[int, str]],
+        chapters: list[int],
+        anchor: tuple[str, tuple[int, str]],
+    ) -> None:
+        assert list(chapter for chapter, _label in registry.values()) == chapters
+        assert registry[anchor[0]] == anchor[1]
+        assert course.COURSE_UNITS[lang] is registry
+
+    @pytest.mark.parametrize(
+        "registry", [values[0] for values in ROMANCE_REGISTRIES.values()]
+    )
+    def test_keys_and_labels_obey_course_contract(
+        self, registry: dict[str, tuple[int, str]]
+    ) -> None:
+        import re
+
+        labels = [label for _chapter, label in registry.values()]
+        assert len(labels) == len(set(labels))
+        assert all(label and label.strip() == label and "::" not in label
+                   for label in labels)
+        assert all(re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", key)
+                   for key in registry)
+
+    def test_course_unit_helper(self) -> None:
+        assert course.course_unit("fr", "prepositions") == \
+            (13, "Prépositions (prepositions)")
+        assert course.course_unit("pt", "ser-estar") == \
+            (23, "Ser, estar & ficar")
+        with pytest.raises(ValueError, match="unknown ES course unit"):
+            course.course_unit("es", "nope")
+        with pytest.raises(ValueError, match="unknown course language"):
+            course.course_unit("xx", "nope")
 
 
 # ---------------------------------------------------------------------------
