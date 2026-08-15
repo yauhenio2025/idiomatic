@@ -1,0 +1,48 @@
+{
+  "lang": "es",
+  "unit": "conjugacion",
+  "chapter": 10,
+  "unit_label": "Conjugación (forms of verbs; B&B 16)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["16.4", "16.9"],
+      "max_items": 10,
+      "note": "Diagnose spelling and accent changes as sound-preserving operations rather than lexical irregularities."
+    },
+    {
+      "block": 2,
+      "card_seq": 5,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["16.7.3"],
+      "max_items": 16,
+      "note": "Transform complete sentences with strong and j-stem preterites while preserving person and number."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["16.7.4"],
+      "max_items": 11,
+      "note": "Choose future or conditional endings on the shared set of irregular stems from sentence context."
+    },
+    {
+      "block": 4,
+      "card_seq": 7,
+      "exercise_sets": ["8"],
+      "hammer_refs": ["16.2", "16.7.5"],
+      "max_items": 15,
+      "note": "Build regular, yo-stem, spelling-changing, and independently irregular present-subjunctive forms."
+    },
+    {
+      "block": 5,
+      "card_seq": 9,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["16.7.8", "21.2.2"],
+      "max_items": 9,
+      "note": "Recall the compact irregular affirmative tú imperatives and place them in complete sentences."
+    }
+  ]
+}
