@@ -1,0 +1,80 @@
+{
+  "lang": "es",
+  "unit": "articulos",
+  "chapter": 2,
+  "unit_label": "Artículos (articles; B&B 3-4)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 1,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["3.1", "4.1"],
+      "max_items": 12,
+      "note": "Choose the article form while preserving feminine agreement around stressed initial a."
+    },
+    {
+      "block": 2,
+      "card_seq": 2,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["3.2"],
+      "max_items": 15,
+      "note": "Distinguish generic or identifiable reference from partitive and institutional zero-article uses."
+    },
+    {
+      "block": 3,
+      "card_seq": 3,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["4.1.5", "4.1.9"],
+      "max_items": 15,
+      "note": "Contrast a bounded individual with a role, expected possession, or unqualified type."
+    },
+    {
+      "block": 4,
+      "card_seq": 4,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["4.2"],
+      "max_items": 10,
+      "note": "Interpret unos and unas as approximation, a limited set, or one conventional pair."
+    },
+    {
+      "block": 5,
+      "card_seq": 5,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["3.2.16"],
+      "max_items": 10,
+      "note": "Select the article with language names from syntactic role and qualification."
+    },
+    {
+      "block": 6,
+      "card_seq": 6,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["3.2.20"],
+      "max_items": 10,
+      "note": "Use articles with one-off and recurring weekdays while recognizing article-free ranges and predicates."
+    },
+    {
+      "block": 7,
+      "card_seq": 8,
+      "exercise_sets": ["8"],
+      "hammer_refs": ["3.2.17", "3.2.20"],
+      "max_items": 15,
+      "note": "Integrate proper-name, title, time, location, and generic-reference conventions in full sentences."
+    },
+    {
+      "block": 8,
+      "card_seq": 9,
+      "exercise_sets": ["10"],
+      "hammer_refs": ["3.2", "4.1"],
+      "max_items": 10,
+      "note": "Resolve definite, indefinite, and zero article choices across dense noun phrases."
+    },
+    {
+      "block": 9,
+      "card_seq": 10,
+      "exercise_sets": ["11"],
+      "hammer_refs": ["3.2", "4.1"],
+      "max_items": 7,
+      "note": "Edit connected prose by tracking discourse status and article choice across sentences."
+    }
+  ]
+}
