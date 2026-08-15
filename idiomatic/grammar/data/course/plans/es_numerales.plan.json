@@ -1,0 +1,48 @@
+{
+  "lang": "es",
+  "unit": "numerales",
+  "chapter": 8,
+  "unit_label": "Numerales (numbers; B&B 11)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 1,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["11.1", "11.12"],
+      "max_items": 5,
+      "note": "Read cardinal and ordinal values in connected Spanish while preserving agreement and the conventions of each numerical context."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["11.6"],
+      "max_items": 9,
+      "note": "Choose cien, ciento, or cientos from the number's syntactic role and the material that follows it."
+    },
+    {
+      "block": 3,
+      "card_seq": 5,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["11.12"],
+      "max_items": 8,
+      "note": "Translate ordinal meanings with the appropriate agreement, apocope, and preference for cardinal forms in higher positions."
+    },
+    {
+      "block": 4,
+      "card_seq": 7,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["11.10"],
+      "max_items": 8,
+      "note": "Name common fractions accurately and distinguish compact mathematical nouns from everyday parte expressions."
+    },
+    {
+      "block": 5,
+      "card_seq": 9,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["11.7", "11.9", "11.10", "11.11", "11.15"],
+      "max_items": 10,
+      "note": "Integrate percentages, arithmetic, fractions, dimensions, temperatures, and other numerical expressions in full sentences."
+    }
+  ]
+}
