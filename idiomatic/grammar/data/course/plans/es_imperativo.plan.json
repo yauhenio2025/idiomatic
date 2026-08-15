@@ -1,0 +1,64 @@
+{
+  "lang": "es",
+  "unit": "imperativo",
+  "chapter": 13,
+  "unit_label": "Imperativo (B&B 21)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1:key"],
+      "hammer_refs": ["21.2.2", "21.2.4", "21.3"],
+      "max_items": 9,
+      "note": "Complete the affirmative and negative familiar-command paradigm while keeping the positive-form and subjunctive routes distinct."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["21.2.4", "21.3"],
+      "max_items": 18,
+      "note": "Replace infinitives with complete affirmative vosotros commands, including pronominal forms and irregular lexical stems."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["21.2", "21.4"],
+      "max_items": 15,
+      "note": "Attach one or two object pronouns to affirmative commands and preserve their order, spelling, and stress."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["21.3", "21.4"],
+      "max_items": 16,
+      "note": "Turn affirmative commands into negative commands by moving pronouns before a present-subjunctive verb."
+    },
+    {
+      "block": 5,
+      "card_seq": 6,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["21.5"],
+      "max_items": 10,
+      "note": "Form first-person plural imperatives and apply the special spelling and pronoun rules of nosotros commands."
+    },
+    {
+      "block": 6,
+      "card_seq": 7,
+      "exercise_sets": ["8"],
+      "hammer_refs": ["21.6"],
+      "max_items": 10,
+      "note": "Express relayed third-person instructions with que plus subjunctive, adding object pronouns where context requires them."
+    },
+    {
+      "block": 7,
+      "card_seq": 8,
+      "exercise_sets": ["9"],
+      "hammer_refs": ["21.8", "21.9"],
+      "max_items": 5,
+      "note": "Rewrite passive-se procedural instructions as compact infinitive commands while preserving the complete instruction."
+    }
+  ]
+}
