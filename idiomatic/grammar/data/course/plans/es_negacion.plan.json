@@ -1,0 +1,40 @@
+{
+  "lang": "es",
+  "unit": "negacion",
+  "chapter": 17,
+  "unit_label": "Negación (B&B 27)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["27.5.1", "27.5.3", "27.5.5"],
+      "max_items": 15,
+      "note": "Choose nada, nadie, or the correctly inflected form of ninguno while preserving Spanish negative concord."
+    },
+    {
+      "block": 2,
+      "card_seq": 4,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["27.4", "27.5"],
+      "max_items": 15,
+      "note": "Complete a range of negative and negative-polarity constructions with the expression licensed by syntax and meaning."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["27.2.2"],
+      "max_items": 10,
+      "note": "Translate English no through an idiomatic Spanish clause, preposition, prohibition, or fixed negative expression rather than copying the determiner."
+    },
+    {
+      "block": 4,
+      "card_seq": 8,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["27.6"],
+      "max_items": 5,
+      "note": "Interpret regional nomas from context and supply its ordinary English or Peninsular Spanish equivalent."
+    }
+  ]
+}
