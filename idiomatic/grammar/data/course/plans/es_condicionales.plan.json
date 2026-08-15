@@ -1,0 +1,48 @@
+{
+  "lang": "es",
+  "unit": "condicionales",
+  "chapter": 19,
+  "unit_label": "Oraciones condicionales (B&B 29)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["29.2"],
+      "max_items": 11,
+      "note": "Complete open conditions with an indicative tense that matches the real time reference."
+    },
+    {
+      "block": 2,
+      "card_seq": 4,
+      "exercise_sets": ["2", "3"],
+      "hammer_refs": ["29.3"],
+      "max_items": 18,
+      "note": "Build remote conditions with an imperfect subjunctive condition and a conditional result."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["29.4"],
+      "max_items": 5,
+      "note": "Complete unfulfilled past conditions while keeping the condition and result clauses distinct."
+    },
+    {
+      "block": 4,
+      "card_seq": 8,
+      "exercise_sets": ["6", "7"],
+      "hammer_refs": ["17.7.5", "29.3", "29.4", "29.6"],
+      "max_items": 12,
+      "note": "Choose between remote, unfulfilled, and mixed-time readings; flagged alternative-rich answers remain excluded."
+    },
+    {
+      "block": 5,
+      "card_seq": 10,
+      "exercise_sets": ["9", "10"],
+      "hammer_refs": ["29.8.1", "29.8.2", "29.8.3", "29.9"],
+      "max_items": 15,
+      "note": "Translate between si clauses and other conditional frames without changing the time or stance."
+    }
+  ]
+}
