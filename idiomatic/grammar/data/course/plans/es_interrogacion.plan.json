@@ -1,0 +1,32 @@
+{
+  "lang": "es",
+  "unit": "interrogacion",
+  "chapter": 18,
+  "unit_label": "Preguntas & exclamaciones (B&B 28)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["28"],
+      "max_items": 10,
+      "note": "Turn statements into focused questions by choosing the interrogative phrase that asks for the underlined information."
+    },
+    {
+      "block": 2,
+      "card_seq": 4,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["28.3", "28.4"],
+      "max_items": 11,
+      "note": "Choose qué or the agreeing form of cuál from the noun phrase and the type of answer requested."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["28", "28.1", "28.4", "8.2.2"],
+      "max_items": 2,
+      "note": "Translate clean multi-clause prompts using direct and indirect interrogatives, degree, quantity, and duration expressions."
+    }
+  ]
+}
