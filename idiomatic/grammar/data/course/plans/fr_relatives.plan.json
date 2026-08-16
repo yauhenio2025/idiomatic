@@ -1,0 +1,43 @@
+{
+  "lang": "fr",
+  "unit": "relatives",
+  "chapter": 15,
+  "unit_label": "Relatives (relative clauses)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1", "2:key"],
+      "hammer_refs": ["15.1", "15.2", "15.3"],
+      "note": "Recover the head's role inside the relative clause, then choose qui for a subject or que for a direct object; all twenty-seven items are unflagged, and printed-key mode gives complete answers for the fill-in and sentence-combination set."
+    },
+    {
+      "block": 2,
+      "card_seq": 5,
+      "exercise_sets": ["3:key", "4:key"],
+      "hammer_refs": ["15.4", "15.5", "15.6.1", "15.6.2"],
+      "note": "Preserve the governing preposition and distinguish animate qui, agreeing lequel forms, ordinary dont, and embedded de phrases requiring duquel; the hygiene gate excludes the one judgment-dependent alternative."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["15.7"],
+      "note": "Combine clauses with relative où for place and definite time, or literary/time que with an indefinite head; all ten complete sentence transformations are clean."
+    },
+    {
+      "block": 4,
+      "card_seq": 9,
+      "exercise_sets": ["6:key", "7:key"],
+      "hammer_refs": ["15.9", "15.9.1"],
+      "note": "Choose free-relative and whole-event forms from subject, object, de-complement, and other prepositional roles; printed-key mode removes residual source blanks and the gate excludes the one ambiguous animate alternative."
+    },
+    {
+      "block": 5,
+      "card_seq": 10,
+      "exercise_sets": ["8:key", "9:key"],
+      "hammer_refs": ["15.10"],
+      "note": "Practise the controlled whoever, whatever, and however families together with ordinary relatives in context; printed-key mode retains twelve unambiguous items and the gate excludes five judgment-dependent alternatives."
+    }
+  ]
+}
