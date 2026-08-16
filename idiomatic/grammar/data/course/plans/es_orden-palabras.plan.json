@@ -1,0 +1,48 @@
+{
+  "lang": "es",
+  "unit": "orden-palabras",
+  "chapter": 30,
+  "unit_label": "Orden de palabras (B&B 42)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["42.2"],
+      "max_items": 10,
+      "note": "Keep a relative clause beside its antecedent and use verb-subject order where it prevents a long subject from stranding the main verb."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["42.3", "42.3.1"],
+      "max_items": 10,
+      "note": "Form direct questions, then preserve their internal verb-subject order when embedding them as indirect questions; all implicit-answer continuations remain excluded."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["42.3.1"],
+      "max_items": 12,
+      "note": "Convert statements into exclamations with an accented exclamative and the neutral order appropriate to the focused predicate or quantity."
+    },
+    {
+      "block": 4,
+      "card_seq": 6,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["42.7.1"],
+      "max_items": 8,
+      "note": "Keep each governing preposition before its relative form while completing compact definitions."
+    },
+    {
+      "block": 5,
+      "card_seq": 8,
+      "exercise_sets": ["4:key"],
+      "hammer_refs": ["42.5", "42.8"],
+      "max_items": 5,
+      "note": "Use the printed answer key to identify the misplaced adverb in each otherwise structurally ambiguous multiple-choice item."
+    }
+  ]
+}
