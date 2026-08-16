@@ -1,0 +1,29 @@
+{
+  "lang": "it",
+  "unit": "ortografia",
+  "chapter": 1,
+  "unit_label": "Ortografia & pronuncia (M&R 2)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 6,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["2.8"],
+      "note": "Remove an optional final unstressed vowel only in licensed phrase-internal environments; all eleven items are unflagged and retain the workbook's contextual register evidence."
+    },
+    {
+      "block": 2,
+      "card_seq": 8,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["2.14"],
+      "note": "Divide words at syllable boundaries using vowel, glide, and initial-cluster tests; the hygiene gate excludes the synthetic full-letter composite and retains all sixteen atomic word items."
+    },
+    {
+      "block": 3,
+      "card_seq": 10,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["2.15"],
+      "note": "Choose Italian capitalization for names, titles, calendar words, compass points, institutions, and formal address; the hygiene gate excludes the synthetic full-passage composite and any solved choice that merely repeats a multiword prompt span."
+    }
+  ]
+}
