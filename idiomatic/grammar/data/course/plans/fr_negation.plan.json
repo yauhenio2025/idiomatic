@@ -1,0 +1,64 @@
+{
+  "lang": "fr",
+  "unit": "negation",
+  "chapter": 16,
+  "unit_label": "Négation (negation)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1", "2"],
+      "hammer_refs": ["16.2.1", "16.2.2", "16.6.1", "16.6.2"],
+      "note": "Place the two parts of ne ... pas around a finite verb or before an infinitive, and apply de to an indefinite or partitive direct object; all twenty transformations are unflagged."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["16.6.3", "16.6.4"],
+      "note": "Negate a word, phrase, or focused constituent with pas or formal non; all six transformations are complete and unflagged."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["16.2.1", "16.7"],
+      "note": "Place que immediately before the restricted constituent and distinguish only from ordinary negation; the hygiene gate excludes the one item with two judgment-dependent rewrites."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["16.2.1", "16.8"],
+      "note": "Make aucun agree with the noun it negates and place subject, object, and prepositional uses correctly; all eight items are unflagged."
+    },
+    {
+      "block": 5,
+      "card_seq": 6,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["16.2.1", "16.9"],
+      "note": "Place jamais after the finite verb or auxiliary and change an indefinite direct object to de; all eight transformations are unflagged."
+    },
+    {
+      "block": 6,
+      "card_seq": 7,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["16.2.1", "16.10", "16.11"],
+      "note": "Contrast no-longer plus with restrictive pas plus and use guère for hardly, including the direct-object de pattern; all eight items are unflagged."
+    },
+    {
+      "block": 7,
+      "card_seq": 9,
+      "exercise_sets": ["8"],
+      "hammer_refs": ["16.2.1", "16.12", "16.14"],
+      "note": "Choose and position rien, personne, or coordinated ni ... ni according to grammatical role; the hygiene gate excludes the one mood-dependent alternative."
+    },
+    {
+      "block": 8,
+      "card_seq": 10,
+      "exercise_sets": ["9"],
+      "hammer_refs": ["16.3"],
+      "note": "Combine negative elements in their controlled order without treating French multiple negation as cancellation; all eight transformations are complete and unflagged."
+    }
+  ]
+}
