@@ -1,0 +1,40 @@
+{
+  "lang": "fr",
+  "unit": "conjugaison",
+  "chapter": 7,
+  "unit_label": "Conjugaison (verb forms)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 4,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["7.3.2", "7.6.3", "7.6.7"],
+      "max_items": 12,
+      "note": "Generate imperfect forms in context from the present nous stem. The selector excludes the unusable synthetic table rows and retains the twelve clean sentence items."
+    },
+    {
+      "block": 2,
+      "card_seq": 5,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["7.3.3", "7.6.3", "7.6.7"],
+      "max_items": 12,
+      "note": "Generate and retrieve simple-past forms in complete sentences. The selector excludes the unusable synthetic table rows and retains the twelve clean contextual items."
+    },
+    {
+      "block": 3,
+      "card_seq": 9,
+      "exercise_sets": ["9"],
+      "hammer_refs": ["7.6.1"],
+      "max_items": 14,
+      "note": "Identify named simple and compound forms of avoir, then produce requested person-tense combinations; exclude the single judgment-flagged item."
+    },
+    {
+      "block": 4,
+      "card_seq": 10,
+      "exercise_sets": ["10"],
+      "hammer_refs": ["7.6.2"],
+      "max_items": 14,
+      "note": "Identify named simple and compound forms of être, then produce requested person-tense combinations; exclude the single judgment-flagged item."
+    }
+  ]
+}
