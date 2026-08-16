@@ -1,0 +1,43 @@
+{
+  "lang": "fr",
+  "unit": "temps",
+  "chapter": 10,
+  "unit_label": "Temps (tense: passé composé vs imparfait, etc.)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["10.2"],
+      "note": "Classify clean present-tense examples as current, timeless, habitual, future, or historical; exclude the open-ended synthetic film-outline task."
+    },
+    {
+      "block": 2,
+      "card_seq": 5,
+      "exercise_sets": ["5:key"],
+      "hammer_refs": ["10.4.4"],
+      "note": "Choose present or imperfect for an ongoing interval introduced by depuis, and a completed past form when the event itself is over; exclude the one answer with competing interpretations and use the printed key because reconstructed solutions retain source blanks."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["6:key"],
+      "hammer_refs": ["10.4.3", "17.3.2"],
+      "note": "Use future, future perfect, conditional, or an appropriate past tense in time clauses according to the clause's actual temporal relation; exclude the three judgment-dependent translations and use the printed key because reconstructed solutions retain source blanks."
+    },
+    {
+      "block": 4,
+      "card_seq": 8,
+      "exercise_sets": ["7:key"],
+      "hammer_refs": ["10.5"],
+      "note": "Distinguish ordinary earlier-past relations from immediate succession in literary and spoken registers, including the rare past-anterior and double-compound forms; use the printed key because reconstructed solutions retain source blanks."
+    },
+    {
+      "block": 5,
+      "card_seq": 11,
+      "exercise_sets": ["8:key"],
+      "hammer_refs": ["10.8", "17.3.6"],
+      "note": "First decide whether si means whether or introduces a condition, then apply reported-speech tense sequence or the no-future/no-conditional rule for hypothetical si clauses; exclude the one judgment-dependent item and use the printed key because reconstructed solutions retain source blanks."
+    }
+  ]
+}
