@@ -1,0 +1,57 @@
+{
+  "lang": "fr",
+  "unit": "accord",
+  "chapter": 9,
+  "unit_label": "Accord du participe (verb & participle agreement)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 3,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["9.1"],
+      "note": "Apply person-and-number agreement to coordinated subjects, collectives, fractions, percentages, and cleft constructions; exclude the one source-suspect item."
+    },
+    {
+      "block": 2,
+      "card_seq": 4,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["9.2"],
+      "note": "Make past participles agree with the grammatical subject in compound forms and passives built with être."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["9.3.1", "9.3.2"],
+      "note": "First classify unstressed pronouns by reconstructing the lexical complement frame, then apply agreement only to preceding direct objects."
+    },
+    {
+      "block": 4,
+      "card_seq": 7,
+      "exercise_sets": ["4:key"],
+      "hammer_refs": ["9.3.4", "9.3.5"],
+      "note": "Distinguish a preceding direct-object relative head from a prepositional, subject, measure-adverb, or impersonal complement; use the printed answer key because reconstructed solutions retain their source blanks."
+    },
+    {
+      "block": 5,
+      "card_seq": 8,
+      "exercise_sets": ["5:key"],
+      "hammer_refs": ["9.3.7", "9.3.8"],
+      "note": "Apply the same direct-object test when an interrogative phrase precedes the past participle; use the printed answer key because reconstructed solutions retain their source blanks."
+    },
+    {
+      "block": 6,
+      "card_seq": 9,
+      "exercise_sets": ["6:key"],
+      "hammer_refs": ["9.3.3", "9.3.6", "9.3.9"],
+      "note": "With a following infinitive, decide whether the preceding object performs the infinitive; retain the invariant faire plus infinitive exception and use the printed answer key because reconstructed solutions retain their source blanks."
+    },
+    {
+      "block": 7,
+      "card_seq": 10,
+      "exercise_sets": ["7:key"],
+      "hammer_refs": ["9.4"],
+      "note": "Resolve pronominal agreement through the underlying complement frame, including intrinsic verbs, body-part objects, preceding direct objects, and causative or passive infinitive constructions; use the printed answer key because reconstructed solutions retain their source blanks."
+    }
+  ]
+}
