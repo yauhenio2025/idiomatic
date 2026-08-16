@@ -1,0 +1,37 @@
+{
+  "lang": "fr",
+  "unit": "infinitif",
+  "chapter": 12,
+  "unit_label": "Infinitif (infinitives)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 4,
+      "exercise_sets": ["1:key"],
+      "hammer_refs": ["12.1", "12.5", "12.11"],
+      "note": "Choose the lexical frame selected by each governing verb: a bare infinitive, à, de, or par; exclude all sixteen translations or variant forms marked as judgment-dependent and use the printed key so source blanks do not remain in solutions."
+    },
+    {
+      "block": 2,
+      "card_seq": 7,
+      "exercise_sets": ["2:key"],
+      "hammer_refs": ["12.7.1", "12.7.4"],
+      "note": "Contrast impersonal adjective plus de with a personal construction whose subject is understood as the infinitive's object plus à, then apply the lexical à/de split for other personal adjectives; all twelve source items are clean."
+    },
+    {
+      "block": 3,
+      "card_seq": 8,
+      "exercise_sets": ["3:key"],
+      "hammer_refs": ["12.8.1", "12.8.4"],
+      "note": "Select à when the noun is involved in the infinitive event or belongs to a fixed à expression, and de for inherited or ordinary noun complements; exclude the one translation with competing accepted nouns."
+    },
+    {
+      "block": 4,
+      "card_seq": 10,
+      "exercise_sets": ["4:key"],
+      "hammer_refs": ["12.10"],
+      "max_items": 8,
+      "note": "Recover infinitives used as impersonal written instructions; exclude the judgment-dependent opening and all synthetic recipe items, then cap in book order before the unchanged final imperative line."
+    }
+  ]
+}
