@@ -1,0 +1,56 @@
+{
+  "lang": "fr",
+  "unit": "constructions",
+  "chapter": 8,
+  "unit_label": "Constructions verbales (incl. pronominal verbs, valency)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["8.2.1", "8.3.4"],
+      "max_items": 18,
+      "note": "Choose avoir or être in compound forms and distinguish intransitive movement from a transitive use of the same verb; exclude every judgment-flagged item."
+    },
+    {
+      "block": 2,
+      "card_seq": 4,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["8.5"],
+      "max_items": 6,
+      "note": "Build French ditransitive frames with an explicit à or de object; exclude the four judgment-dependent translations."
+    },
+    {
+      "block": 3,
+      "card_seq": 5,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["8.6"],
+      "max_items": 17,
+      "note": "Convert clean active sentences to passives while preserving direct-versus-prepositional object structure; omit all synthetic, suspect, and judgment-dependent items."
+    },
+    {
+      "block": 4,
+      "card_seq": 9,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["8.7"],
+      "max_items": 23,
+      "note": "Classify pronominal meanings and direct-versus-indirect se, then apply past-participle agreement; exclude four flagged items and three structurally duplicated solutions."
+    },
+    {
+      "block": 5,
+      "card_seq": 10,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["8.7.6"],
+      "max_items": 8,
+      "note": "Distinguish passive pronominal constructions from ordinary lexical pronominal verbs in eight clean translation judgments."
+    },
+    {
+      "block": 6,
+      "card_seq": 11,
+      "exercise_sets": ["9"],
+      "hammer_refs": ["8.8"],
+      "max_items": 7,
+      "note": "Retrieve impersonal falloir, être, suffire, and il s'agit de frames; exclude the one answer with competing alternatives."
+    }
+  ]
+}
