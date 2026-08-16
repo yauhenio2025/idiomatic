@@ -1,0 +1,80 @@
+{
+  "lang": "fr",
+  "unit": "nombres",
+  "chapter": 6,
+  "unit_label": "Nombres & quantité (numbers, measurements, time)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["6.1", "6.1.1", "6.1.5"],
+      "max_items": 3,
+      "note": "Build cardinal numbers in layers and preserve the written agreement and plural behavior of the final numeral. The cap conservatively stops before a malformed extracted spelling in the otherwise clean set."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["6.1.6"],
+      "max_items": 8,
+      "note": "Choose nombre for a number or amount, chiffre for a digit or statistic, and numéro for the identifier of a numbered entity."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["5", "6"],
+      "hammer_refs": ["6.1.7", "6.1.9"],
+      "max_items": 16,
+      "note": "Supply en when a bare number or quantifier is a direct object, then retrieve cardinal forms in elementary arithmetic."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["6.2", "6.3.1", "6.3.3"],
+      "max_items": 16,
+      "note": "Form agreeing ordinals and the lexical or ordinal-based fractions required by their syntactic context."
+    },
+    {
+      "block": 5,
+      "card_seq": 6,
+      "exercise_sets": ["8", "9"],
+      "hammer_refs": ["6.4.2", "6.4.6", "6.4.7", "6.4.9"],
+      "max_items": 16,
+      "note": "Use French cardinal conventions for names and numbered entities, and distinguish exact mille from noun-like milliers, millions, and milliards."
+    },
+    {
+      "block": 6,
+      "card_seq": 7,
+      "exercise_sets": ["10"],
+      "hammer_refs": ["6.5.1", "6.5.2"],
+      "max_items": 13,
+      "note": "Select a grammatical dimension frame and distinguish a numerical benchmark with de from a relative comparison with que."
+    },
+    {
+      "block": 7,
+      "card_seq": 8,
+      "exercise_sets": ["11"],
+      "hammer_refs": ["6.5.3"],
+      "max_items": 2,
+      "note": "Express an approximate amount with either an approximation marker or an appropriate numeral noun."
+    },
+    {
+      "block": 8,
+      "card_seq": 9,
+      "exercise_sets": ["12"],
+      "hammer_refs": ["6.4.1", "6.6", "6.7"],
+      "max_items": 2,
+      "note": "Rebuild dates, recurring days, and clock ranges according to French cardinal and determiner conventions."
+    },
+    {
+      "block": 9,
+      "card_seq": 10,
+      "exercise_sets": ["13"],
+      "hammer_refs": ["6.9.1", "6.9.6"],
+      "max_items": 4,
+      "note": "Choose the quantifier frame, retain a definite complement when required, and supply en or d'entre when the noun is not repeated."
+    }
+  ]
+}
