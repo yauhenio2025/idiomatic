@@ -1,0 +1,64 @@
+{
+  "lang": "fr",
+  "unit": "substantifs",
+  "chapter": 1,
+  "unit_label": "Substantifs (nouns)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 1,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["1.1.1", "1.1.3", "1.1.4"],
+      "max_items": 10,
+      "note": "Classify concrete, abstract, proper and compound nouns before retrieving their lexical form."
+    },
+    {
+      "block": 2,
+      "card_seq": 2,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["1.1.1", "2.2", "2.3"],
+      "max_items": 9,
+      "note": "Choose articles for general classes, abstract qualities and particular instances in complete sentences."
+    },
+    {
+      "block": 3,
+      "card_seq": 3,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["1.2.1"],
+      "max_items": 6,
+      "note": "Use high-yield ending patterns while letting determiners and agreement confirm noun gender."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["1.2.4"],
+      "max_items": 14,
+      "note": "Treat same-spelling masculine and feminine nouns as separate lexical entries selected by context."
+    },
+    {
+      "block": 5,
+      "card_seq": 6,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["1.2.6", "2.2.2", "13.2.3", "13.26.1"],
+      "max_items": 10,
+      "note": "Apply the gender and article patterns of countries and regions inside prepositional phrases."
+    },
+    {
+      "block": 6,
+      "card_seq": 7,
+      "exercise_sets": ["9"],
+      "hammer_refs": ["1.2.10"],
+      "max_items": 10,
+      "note": "Retrieve the fixed gender of frequent nouns whose English equivalents provide no useful cue."
+    },
+    {
+      "block": 7,
+      "card_seq": 10,
+      "exercise_sets": ["12", "13"],
+      "hammer_refs": ["1.1.5", "1.2.4", "1.3"],
+      "max_items": 12,
+      "note": "Integrate time-noun contrasts, lexical gender and number choices in full-sentence production."
+    }
+  ]
+}
