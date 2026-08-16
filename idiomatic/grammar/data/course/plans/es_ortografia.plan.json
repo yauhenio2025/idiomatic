@@ -1,0 +1,32 @@
+{
+  "lang": "es",
+  "unit": "ortografia",
+  "chapter": 32,
+  "unit_label": "Ortografía, acentos & sufijos (PSG 31-32; B&B 43-44)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 7,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["44.2"],
+      "max_items": 10,
+      "note": "Distinguish otherwise similar forms by locating stress and deciding whether the written accent changes pronunciation, grammatical form, or lexical meaning."
+    },
+    {
+      "block": 2,
+      "card_seq": 9,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["44.3"],
+      "max_items": 5,
+      "note": "Restore capitals in proper names and official institutional names while keeping ordinary words lower-case."
+    },
+    {
+      "block": 3,
+      "card_seq": 12,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["44.4.5"],
+      "max_items": 10,
+      "note": "Place the opening question or exclamation mark at the exact point where the interrogative or exclamatory span begins."
+    }
+  ]
+}
