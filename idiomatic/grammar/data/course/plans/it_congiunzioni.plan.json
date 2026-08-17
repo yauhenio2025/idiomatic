@@ -1,0 +1,53 @@
+{
+  "lang": "it",
+  "unit": "congiunzioni",
+  "chapter": 18,
+  "unit_label": "Congiunzioni & segnali discorsivi (M&R 19)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 3,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["19.1", "19.2", "19.3", "19.4", "19.5", "19.6", "19.7", "19.8"],
+      "note": "Choose additive, alternative, negative, contrastive, and corrective coordinators from the intended relation; retain the full clean source sequence and let the hygiene gate remove the whitespace-only reconstruction."
+    },
+    {
+      "block": 2,
+      "card_seq": 5,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["19.9", "19.10"],
+      "note": "Separate reformulation and confirmation from discourse-level conclusion and narrative progression; retain every structurally usable source item without a judgment cap."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["19.13", "19.14", "19.17"],
+      "max_items": 7,
+      "note": "Distinguish cause, purpose, and result while respecting finite versus infinitival packaging; cap before source item 8, whose reconstructed solution marks only punctuation, and thereby also exclude the later source item whose answer has lost a central clause."
+    },
+    {
+      "block": 4,
+      "card_seq": 7,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["19.12", "19.16"],
+      "note": "Choose between restrictive conditions and concessions, including finite, participial, gerundial, and infinitival frames; retain the complete unflagged set."
+    },
+    {
+      "block": 5,
+      "card_seq": 8,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["19.18"],
+      "max_items": 9,
+      "note": "Classify time as coincidence, recurrence, progression, boundary, sequence, or duration; after the hygiene drop inside the prefix, cap through raw item 10 so neither the punctuation-only reconstruction nor the following merged-answer defect can enter the deck."
+    },
+    {
+      "block": 6,
+      "card_seq": 9,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["19.19", "19.20"],
+      "max_items": 11,
+      "note": "Choose discourse organizers and interjections by conversational function and stance; cap before source item 12, whose reconstructed solution marks punctuation instead of the connector, conservatively omitting the final tail."
+    }
+  ]
+}
