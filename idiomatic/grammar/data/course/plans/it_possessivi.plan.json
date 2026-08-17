@@ -1,0 +1,57 @@
+{
+  "lang": "it",
+  "unit": "possessivi",
+  "chapter": 9,
+  "unit_label": "Possessivi (M&R 10)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["10.1", "10.3"],
+      "note": "Translate English possessive structures by choosing Italian di phrases, contextual article-only nouns, and avere plus an article for characteristic attributes."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["10.4"],
+      "note": "Inflect possessive adjectives for the possessed noun rather than the possessor, while keeping loro invariant and preserving the normal article pattern."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["3:key"],
+      "hammer_refs": ["10.6"],
+      "note": "Choose articleless singular close-family forms and restore the article with plurals, loro, modified kinship nouns, and lexical exceptions; printed-key mode preserves each complete choice answer."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["10.8"],
+      "note": "Contrast bare predicative possessives with article-bearing possessive pronouns that select one referent; retain only the table rows whose source prompt actually leaves an answer to supply."
+    },
+    {
+      "block": 5,
+      "card_seq": 6,
+      "exercise_sets": ["5:key"],
+      "hammer_refs": ["10.10"],
+      "note": "Decide whether ne may replace a non-reflexive di possessor while retaining proprio, suo, or loro for the subject's own relation; printed-key mode keeps the meaningful no-change decisions."
+    },
+    {
+      "block": 6,
+      "card_seq": 7,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["10.11", "10.12"],
+      "note": "Use agreeing proprio for one's own and formal invariant altrui for someone else's or other people's, in adjectival and pronominal functions."
+    },
+    {
+      "block": 7,
+      "card_seq": 9,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["10.5", "10.13", "10.15"],
+      "note": "Resolve ambiguous third-person possessors and replace English possessives with Italian affected-possessor datives, reflexive body-part constructions, bare articles, and perception datives."
+    }
+  ]
+}
