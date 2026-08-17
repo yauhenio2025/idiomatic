@@ -166,6 +166,7 @@ class TestLoadPlan:
         assert plan.unit == "praepositionen"
         assert plan.chapter == 18
         assert plan.unit_label == "Präpositionen (prepositions)"
+        assert plan.blocks[0].chapter == 18
         assert plan.blocks[0].sets == ((3, "html"), (5, "key"))
         assert plan.blocks[0].max_items == 14
         assert plan.blocks[1].sets == ((5, "html"),)
@@ -240,6 +241,32 @@ class TestLoadPlan:
             course_select.load_plan(_write_plan(tmp_path, _plan_dict(
                 blocks=[_plan_block(1, 2), _plan_block(2, 2)]
             )))
+
+    def test_combined_unit_accepts_only_its_registry_chapter_span(
+        self, tmp_path: Path
+    ) -> None:
+        data = _plan_dict(
+            lang="pt",
+            unit="concordancia",
+            chapter=2,
+            unit_label="Género & número (ch. 2-3)",
+            blocks=[
+                _plan_block(1, 1, chapter=2, hammer_refs=["2.2"]),
+                _plan_block(2, 2, chapter=3, hammer_refs=["3.2"]),
+            ],
+        )
+        path = _write_plan(
+            tmp_path, data, name="pt_concordancia.plan.json"
+        )
+        plan = course_select.load_plan(path)
+        assert [block.chapter for block in plan.blocks] == [2, 3]
+
+        data["blocks"][1]["chapter"] = 4
+        path = _write_plan(
+            tmp_path, data, name="pt_concordancia.plan.json"
+        )
+        with pytest.raises(course_select.PlanError, match="outside unit"):
+            course_select.load_plan(path)
 
     def test_rejects_bad_set_token(self, tmp_path: Path) -> None:
         with pytest.raises(course_select.PlanError,
@@ -443,6 +470,42 @@ class TestSelectUnit:
         with pytest.raises(course_select.PlanError,
                            match="corpus chapter"):
             course_select.select_unit(plan, chapter)
+
+    def test_combined_unit_selects_from_two_chapters(
+        self, tmp_path: Path
+    ) -> None:
+        plan = course_select.load_plan(_write_plan(
+            tmp_path,
+            _plan_dict(
+                lang="pt",
+                unit="concordancia",
+                chapter=2,
+                unit_label="Género & número (ch. 2-3)",
+                blocks=[
+                    _plan_block(1, 1, chapter=2, hammer_refs=["2.2"]),
+                    _plan_block(2, 2, chapter=3, hammer_refs=["3.2"]),
+                ],
+            ),
+            name="pt_concordancia.plan.json",
+        ))
+        chapter2 = _chapter_fixture()
+        chapter2["chapter"] = 2
+        chapter2["title"] = "Gender"
+        chapter2["hammer_sections"] = ["Section 2.2"]
+        chapter3 = _chapter_fixture()
+        chapter3["chapter"] = 3
+        chapter3["title"] = "Number"
+        chapter3["hammer_sections"] = ["Section 3.2"]
+
+        payload, _report = course_select.select_unit(
+            plan, {2: chapter2, 3: chapter3}
+        )
+
+        assert [
+            block["exercises"][0]["id"] for block in payload["blocks"]
+        ] == ["mbpg-c02-e03-i1", "mbpg-c03-e03-i1"]
+        assert "Ch. 2 Gender; Ch. 3 Number" in \
+            payload["source"]["workbook"]
 
 
 # ---------------------------------------------------------------------------

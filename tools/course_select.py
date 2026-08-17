@@ -16,6 +16,7 @@ The PLAN (committed — carries only set ids and metadata, never book text):
     {"lang": "de", "unit": "praepositionen", "chapter": 18,
      "unit_label": "Präpositionen (prepositions)",
      "blocks": [{"block": 1, "card_seq": 2,
+                 "chapter": 18,
                  "exercise_sets": ["3", "5:key"],
                  "max_items": 14,
                  "hammer_refs": ["18.1", "18.2"],
@@ -23,6 +24,10 @@ The PLAN (committed — carries only set ids and metadata, never book text):
 - ``block``: unique, ascending plan-order ints.
 - ``card_seq``: the lesson card the block follows (unique; becomes the
   output ``blocks[].block``, which is what interleave_plan keys on).
+- ``chapter``: optional workbook chapter for this block; defaults to the
+  unit's registry chapter. A later chapter is accepted only when it falls
+  before the next registered unit (for intentionally combined units such as
+  Portuguese gender + number, chapters 2–3).
 - ``exercise_sets``: workbook set ids exactly as they appear in the
   corpus chapter file (``ex_no``); the suffix ``:key`` selects the
   printed-answer-key solution mode for construct-the-sentence sets whose
@@ -132,6 +137,7 @@ class PlanError(course.CourseSourceError):
 class PlanBlock:
     block: int
     card_seq: int
+    chapter: int
     sets: tuple[tuple[int, str], ...]  # (ex_no, mode) with mode html|key
     hammer_refs: tuple[str, ...]
     max_items: int | None
@@ -150,6 +156,15 @@ class UnitPlan:
 
 def _plan_error(path: Path, message: str) -> PlanError:
     return PlanError(f"{path.name}: {message}")
+
+
+def _unit_chapter_range(lang: str, unit: str) -> range:
+    """Return the workbook chapters owned by one registry unit."""
+    entries = list(course.COURSE_UNITS[lang].items())
+    index = next(i for i, (key, _value) in enumerate(entries) if key == unit)
+    first = entries[index][1][0]
+    stop = entries[index + 1][1][0] if index + 1 < len(entries) else first + 1
+    return range(first, stop)
 
 
 def load_plan(path: Path) -> UnitPlan:
@@ -182,9 +197,10 @@ def load_plan(path: Path) -> UnitPlan:
         )
     if data.get("unit_label") != unit_label:
         raise _plan_error(
-            path, f"unit_label must be {unit_label!r} (DE_UNITS is the "
+            path, f"unit_label must be {unit_label!r} (the registry is the "
             f"authority), got {data.get('unit_label')!r}"
         )
+    unit_chapters = _unit_chapter_range(lang, unit)
 
     blocks_raw = data.get("blocks")
     if not isinstance(blocks_raw, list) or not blocks_raw:
@@ -214,6 +230,20 @@ def load_plan(path: Path) -> UnitPlan:
                 path, f"block {block_no}: duplicate card_seq {card_seq}"
             )
         seen_seqs.add(card_seq)
+
+        source_chapter = raw.get("chapter", chapter)
+        if not isinstance(source_chapter, int) or isinstance(
+            source_chapter, bool
+        ):
+            raise _plan_error(
+                path, f"block {block_no}: chapter must be an integer"
+            )
+        if source_chapter not in unit_chapters:
+            allowed = ", ".join(str(number) for number in unit_chapters)
+            raise _plan_error(
+                path, f"block {block_no}: chapter {source_chapter} is outside "
+                f"unit {unit!r}; allowed workbook chapter(s): {allowed}"
+            )
 
         sets_raw = raw.get("exercise_sets")
         if not isinstance(sets_raw, list) or not sets_raw:
@@ -256,6 +286,7 @@ def load_plan(path: Path) -> UnitPlan:
         blocks.append(PlanBlock(
             block=block_no,
             card_seq=card_seq,
+            chapter=source_chapter,
             sets=tuple(sets),
             hammer_refs=tuple(ref.strip() for ref in refs_raw),
             max_items=max_items,
@@ -331,40 +362,54 @@ def select_unit(plan: UnitPlan, chapter_data: dict) -> tuple[dict, dict]:
     exercises-file shape (accepted by course.parse_exercises_file), the
     report carries kept/skipped/capped detail for the CLI.
     """
-    if chapter_data.get("chapter") != plan.chapter:
-        raise PlanError(
-            f"{plan.path.name}: corpus chapter is "
-            f"{chapter_data.get('chapter')!r}, plan wants {plan.chapter}"
-        )
-    ref_pool = _header_ref_pool(chapter_data)
+    if "chapter" in chapter_data:
+        chapters = {chapter_data.get("chapter"): chapter_data}
+    else:
+        chapters = chapter_data
     for block in plan.blocks:
+        if block.chapter not in chapters:
+            available = ", ".join(str(number) for number in sorted(chapters))
+            raise PlanError(
+                f"{plan.path.name}: corpus chapter {block.chapter} required "
+                f"by block {block.block} is unavailable; got: {available}"
+            )
+        block_chapter = chapters[block.chapter]
+        if block_chapter.get("chapter") != block.chapter:
+            raise PlanError(
+                f"{plan.path.name}: corpus chapter is "
+                f"{block_chapter.get('chapter')!r}, plan wants {block.chapter}"
+            )
+        ref_pool = _header_ref_pool(block_chapter)
         for ref in block.hammer_refs:
             if ref not in ref_pool:
                 raise PlanError(
                     f"{plan.path.name}: block {block.block}: hammer ref "
                     f"§{ref} does not appear in the chapter's printed "
-                    f"headers: {chapter_data.get('hammer_sections', [])}"
+                    f"headers: {block_chapter.get('hammer_sections', [])}"
                 )
 
-    by_no = {ex["ex_no"]: ex for ex in chapter_data["exercises"]}
     out_blocks: list[dict] = []
     skipped: list[str] = []
     capped: list[str] = []
     kept = 0
     for block in plan.blocks:
+        block_chapter = chapters[block.chapter]
+        by_no = {ex["ex_no"]: ex for ex in block_chapter["exercises"]}
         items_out: list[dict] = []
         for ex_no, mode in block.sets:
             if ex_no not in by_no:
                 available = ", ".join(str(no) for no in sorted(by_no))
                 raise PlanError(
                     f"{plan.path.name}: block {block.block}: unknown "
-                    f"exercise set {ex_no} in ch{plan.chapter:02d}; "
+                    f"exercise set {ex_no} in ch{block.chapter:02d}; "
                     f"available set ids: {available}"
                 )
             exercise = by_no[ex_no]
             instruction = _WS.sub(" ", exercise["instruction"]).strip()
             for item in exercise["items"]:
-                label = f"ex{ex_no} item {item['item_no']}"
+                label = (
+                    f"ch{block.chapter:02d} ex{ex_no} item {item['item_no']}"
+                )
                 if item["flags"]:
                     skipped.append(f"{label}: flags {item['flags']}")
                     continue
@@ -392,19 +437,19 @@ def select_unit(plan: UnitPlan, chapter_data: dict) -> tuple[dict, dict]:
                 source = SOURCE_METADATA[plan.lang]
                 if plan.lang == "de":
                     source_ref = (
-                        f"PGG Kap. {plan.chapter}, Üb. {ex_no}, "
+                        f"PGG Kap. {block.chapter}, Üb. {ex_no}, "
                         f"Nr. {item['item_no']} (S. {exercise['page']}; "
                         f"Key S. {item['key_page']})"
                     )
                 else:
                     source_ref = (
-                        f"{source['id_prefix'].upper()} Ch. {plan.chapter}, "
+                        f"{source['id_prefix'].upper()} Ch. {block.chapter}, "
                         f"Ex. {ex_no}, No. {item['item_no']} "
                         f"(p. {exercise['page']}; key p. {item['key_page']})"
                     )
                 items_out.append({
                     "id": (
-                        f"{source['id_prefix']}-c{plan.chapter:02d}"
+                        f"{source['id_prefix']}-c{block.chapter:02d}"
                         f"-e{ex_no:02d}-i{item_no}"
                     ),
                     "instruction": instruction,
@@ -433,7 +478,11 @@ def select_unit(plan: UnitPlan, chapter_data: dict) -> tuple[dict, dict]:
         kept += len(items_out)
         out_blocks.append({"block": block.card_seq, "exercises": items_out})
 
-    title = chapter_data.get("title", "")
+    selected_chapters = sorted({block.chapter for block in plan.blocks})
+    workbook_chapters = "; ".join(
+        f"Ch. {number} {chapters[number].get('title', '')}".rstrip()
+        for number in selected_chapters
+    )
     source = SOURCE_METADATA[plan.lang]
     reference = (
         f"{source['reference']}, Ch. {plan.chapter}"
@@ -444,7 +493,7 @@ def select_unit(plan: UnitPlan, chapter_data: dict) -> tuple[dict, dict]:
         "lang": plan.lang,
         "unit": plan.unit,
         "source": {
-            "workbook": f"{source['workbook']}, Ch. {plan.chapter} {title}",
+            "workbook": f"{source['workbook']}, {workbook_chapters}",
             "reference": reference,
             "corpus": source["corpus"],
         },
@@ -464,13 +513,19 @@ def main() -> int:
 
     plan = load_plan(args.plan)
     corpus_dir = args.corpus_dir or CORPUS_DIRS[plan.lang]
-    chapter_path = corpus_dir / f"ch{plan.chapter:02d}.json"
-    if not chapter_path.is_file():
-        raise SystemExit(
-            f"corpus chapter not found: {chapter_path} (the sealed corpus "
-            "is machine-local; pass --corpus-dir)"
+    chapter_data: dict = {}
+    for chapter in sorted({block.chapter for block in plan.blocks}):
+        chapter_path = corpus_dir / f"ch{chapter:02d}.json"
+        if not chapter_path.is_file():
+            raise SystemExit(
+                f"corpus chapter not found: {chapter_path} (the sealed corpus "
+                "is machine-local; pass --corpus-dir)"
+            )
+        chapter_data[chapter] = json.loads(
+            chapter_path.read_text(encoding="utf-8")
         )
-    chapter_data = json.loads(chapter_path.read_text(encoding="utf-8"))
+    if len(chapter_data) == 1:
+        chapter_data = next(iter(chapter_data.values()))
     payload, report = select_unit(plan, chapter_data)
 
     # Cross-check card_seq against the lesson when it already exists
