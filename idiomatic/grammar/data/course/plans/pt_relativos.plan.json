@@ -1,0 +1,37 @@
+{
+  "lang": "pt",
+  "unit": "relativos",
+  "chapter": 10,
+  "unit_label": "Pronomes relativos",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 3,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["10.1", "10.2", "10.3"],
+      "note": "Choose que, quem, or o que from the antecedent, the governing preposition, and whether the relative itself supplies the antecedent; the unchanged hygiene gate excludes all four source-flagged ambiguous reconstructions."
+    },
+    {
+      "block": 2,
+      "card_seq": 5,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["10.4", "10.5"],
+      "note": "Inflect o qual by its antecedent and cujo by the following possessed noun, retaining the complete structurally clean source set with simple and compound prepositions."
+    },
+    {
+      "block": 3,
+      "card_seq": 7,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["10"],
+      "note": "Translate complete relative clauses into Portuguese, integrating que, quem, onde, em que, and preposition choice; the unchanged hygiene gate excludes the one source-flagged movement-relative reconstruction."
+    },
+    {
+      "block": 4,
+      "card_seq": 8,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["10"],
+      "max_items": 3,
+      "note": "Finish with the first three clean review completions, conservatively stopping before unflagged source anomalies in the remaining extracted set, including agreement and duplicated-preposition errors."
+    }
+  ]
+}
