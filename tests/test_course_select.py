@@ -423,6 +423,19 @@ class TestSelectUnit:
                            match="printed"):
             course_select.select_unit(plan, _chapter_fixture())
 
+    def test_ref_inside_printed_section_range_is_accepted(
+        self, tmp_path: Path
+    ) -> None:
+        plan = self._plan(
+            tmp_path, [_plan_block(1, 2, hammer_refs=["18.2"])]
+        )
+        chapter = _chapter_fixture()
+        chapter["hammer_sections"] = ["Sections 18.1–18.4"]
+        payload, _report = course_select.select_unit(plan, chapter)
+        assert payload["blocks"][0]["exercises"][0]["hammer_refs"] == [
+            "18.2"
+        ]
+
     def test_chapter_mismatch_is_fatal(self, tmp_path: Path) -> None:
         plan = self._plan(tmp_path, [_plan_block(1, 2)])
         chapter = _chapter_fixture()

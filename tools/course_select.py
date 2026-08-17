@@ -117,6 +117,10 @@ _WS = re.compile(r"\s+")
 _SET_TOKEN = re.compile(r"(\d{1,3})(:key)?")
 # Section ids as printed in the (GGU …) headers, e.g. "2.2.2", "1.1.2e".
 _HEADER_SECTION = re.compile(r"\d{1,2}(?:\.\d{1,3}){0,3}[a-z]?")
+_HEADER_SECTION_RANGE = re.compile(
+    r"(?P<chapter>\d{1,2})\.(?P<start>\d{1,3})\s*[\N{EN DASH}\N{EM DASH}-]\s*"
+    r"(?:(?P<end_chapter>\d{1,2})\.)?(?P<end>\d{1,3})"
+)
 _HEADER_CHAPTER = re.compile(r"Chapter\s+(\d{1,2})")
 
 
@@ -305,6 +309,15 @@ def _header_ref_pool(chapter_data: dict) -> set[str]:
     pool: set[str] = set()
     for header in chapter_data.get("hammer_sections", []):
         pool.update(_HEADER_SECTION.findall(header))
+        for match in _HEADER_SECTION_RANGE.finditer(header):
+            chapter = int(match.group("chapter"))
+            end_chapter = int(match.group("end_chapter") or chapter)
+            start = int(match.group("start"))
+            end = int(match.group("end"))
+            if chapter == end_chapter and start <= end:
+                pool.update(f"{chapter}.{section}" for section in range(
+                    start, end + 1
+                ))
         pool.update(
             f"Ch. {number}" for number in _HEADER_CHAPTER.findall(header)
         )
