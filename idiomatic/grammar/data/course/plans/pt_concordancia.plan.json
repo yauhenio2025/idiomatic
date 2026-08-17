@@ -1,0 +1,56 @@
+{
+  "lang": "pt",
+  "unit": "concordancia",
+  "chapter": 2,
+  "unit_label": "Género & número (ch. 2-3)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 1,
+      "chapter": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["2.2"],
+      "note": "Choose the article that reveals each noun's grammatical gender, retaining the complete clean source set across productive endings, lexical exceptions, and implied heads."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "chapter": 2,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["2.3"],
+      "note": "Transform male-denoting noun phrases to their feminine forms, changing every article, noun, and adjective licensed by the printed key."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "chapter": 2,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["2.2", "2.3"],
+      "note": "Retrieve Portuguese gender where Spanish cognates are misleading; this owner-relevant contrast set is complete and structurally clean."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "chapter": 3,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["3.2"],
+      "note": "Form noun plurals across the productive vowel and consonant classes, preserving lexical -ão choices and stress-driven accent changes."
+    },
+    {
+      "block": 5,
+      "card_seq": 7,
+      "chapter": 3,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["3.2.6"],
+      "note": "Pluralize hyphenated compounds according to their internal structure; retain the complete printed-key set, including the licensed variant for noun+noun compounds."
+    },
+    {
+      "block": 6,
+      "card_seq": 8,
+      "chapter": 3,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["3.2"],
+      "note": "Pluralize the noun and every agreeing adjective together, combining gender and number retrieval in complete noun phrases."
+    }
+  ]
+}
