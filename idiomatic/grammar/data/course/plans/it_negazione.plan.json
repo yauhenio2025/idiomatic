@@ -1,0 +1,37 @@
+{
+  "lang": "it",
+  "unit": "negazione",
+  "chapter": 17,
+  "unit_label": "Negazione (M&R 18)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["18.1", "18.4"],
+      "note": "Place non before a finite or clitic-bearing verb phrase, an infinitive, or a specifically contrasted constituent, while recognizing its reinforcing use in questions and exclamations; all sixteen items are unflagged."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["18.2", "18.3"],
+      "note": "Place o no, o meno, e non, and the expectation-sensitive colloquial negator mica according to the scope and discourse force of the sentence; all eleven items are unflagged."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["18.5"],
+      "note": "Move negative pronouns, adverbs, and conjunctions across the verb while adding non after the verb and omitting it before the verb; all twelve transformations are unflagged."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["18.6"],
+      "max_items": 10,
+      "note": "Answer with non ancora, non più, non mai, non affatto, or non per niente according to whether the negation concerns onset, continuation, frequency, or degree; cap before the final item whose extracted prompt has absorbed the printed answer legend."
+    }
+  ]
+}
