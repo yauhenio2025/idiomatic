@@ -1,0 +1,78 @@
+{
+  "lang": "it",
+  "unit": "pronomi",
+  "chapter": 5,
+  "unit_label": "Pronomi personali & clitici (M&R 6)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 3,
+      "exercise_sets": ["1", "2"],
+      "hammer_refs": ["6.1", "6.2", "6.4", "6.19", "6.23"],
+      "note": "Choose stressed or clitic forms, distinguish direct, indirect, and reflexive functions, and place a single clitic with finite, imperative, and multi-verb constructions; the hygiene gate excludes the one judgment-dependent correction."
+    },
+    {
+      "block": 2,
+      "card_seq": 4,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["6.6"],
+      "note": "Replace complements with an unsplit, correctly ordered clitic cluster and apply the me/te/glie/se/ce/ve forms before lo, la, li, le, or ne; judgment-dependent translations are excluded."
+    },
+    {
+      "block": 3,
+      "card_seq": 5,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["6.5", "6.9"],
+      "note": "Translate current constructions with ecco, everyday plural gli versus formal postverbal loro, propositional lo, and lexicalized feminine la; the source-flagged open translation is excluded."
+    },
+    {
+      "block": 4,
+      "card_seq": 6,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["6.10", "6.12"],
+      "note": "Replace an already established place or a-complement with ci and form current esserci, volerci, and related locative constructions; the judgment-dependent final item is excluded."
+    },
+    {
+      "block": 5,
+      "card_seq": 7,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["6.13", "6.14"],
+      "note": "Use ne for di-complements, quantities, partitives, and motion away, preserving the quantifier and required participle agreement."
+    },
+    {
+      "block": 6,
+      "card_seq": 8,
+      "exercise_sets": ["8"],
+      "hammer_refs": ["6.15"],
+      "note": "Choose between a transitive verb and its lexically reflexive or change-of-state counterpart, then conjugate the selected verb in context."
+    },
+    {
+      "block": 7,
+      "card_seq": 9,
+      "exercise_sets": ["9"],
+      "hammer_refs": ["6.27"],
+      "note": "Rewrite plural events with reciprocal si while keeping tense, person, and any preposition required by the underlying verb."
+    },
+    {
+      "block": 8,
+      "card_seq": 10,
+      "exercise_sets": ["10"],
+      "hammer_refs": ["6.29"],
+      "note": "Replace a generic human subject with finite third-person singular indefinite si without turning non-finite clauses into unsupported si constructions."
+    },
+    {
+      "block": 9,
+      "card_seq": 11,
+      "exercise_sets": ["11", "12"],
+      "hammer_refs": ["6.30", "6.31"],
+      "note": "Form passive si with verb agreement, then distinguish it from indefinite si and combine indefinite si with reflexive verbs or object clitics as ci si and lo/la/li/le si."
+    },
+    {
+      "block": 10,
+      "card_seq": 12,
+      "exercise_sets": ["13"],
+      "hammer_refs": ["6.32"],
+      "note": "Move si constructions into a compound tense, selecting singular essere and the participle pattern licensed by the verb, passive subject, reflexive construction, or object clitic."
+    }
+  ]
+}
