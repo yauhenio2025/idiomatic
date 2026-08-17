@@ -1,0 +1,72 @@
+{
+  "lang": "it",
+  "unit": "coniugazione",
+  "chapter": 13,
+  "unit_label": "Coniugazione (forms of the verb; M&R 14)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["14.2"],
+      "note": "Identify regular synthetic forms from their conjugation, stem, and endings, then supply the contextually licensed tense or mood; the hygiene gate removes the synthetic matching rows and both judgment-dependent alternatives."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["14.3"],
+      "note": "Retrieve high-frequency irregular forms in both directions across the present, imperative, passato remoto, future, conditional, gerund, and participle."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["3", "4"],
+      "hammer_refs": ["14.4", "14.5"],
+      "note": "Derive prefixed and suffixed irregular verbs from a known family model, while treating compiere and the variable -fare family as mixed systems; the hygiene gate removes the three printed alternative rows."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["14.8", "14.9"],
+      "note": "Produce special and formal imperative forms, including clitic attachment; the synthetic table and route passage plus all judgment-dependent alternatives are excluded."
+    },
+    {
+      "block": 5,
+      "card_seq": 6,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["14.18"],
+      "note": "Choose finite agreement from grammatical number and the person hierarchy of coordinated subjects rather than from an English collective reading."
+    },
+    {
+      "block": 6,
+      "card_seq": 7,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["14.19", "14.20", "14.21"],
+      "max_items": 33,
+      "note": "Build compound forms and select avere or essere for transitive, reflexive, controlled-activity, change-of-state, and bounded-motion readings. The post-gate cap retains all clean a-c items plus d1-d3 and stops before the source's unflagged d4/d5 prompt-boundary merge."
+    },
+    {
+      "block": 7,
+      "card_seq": 8,
+      "exercise_sets": ["8"],
+      "hammer_refs": ["14.22", "14.23", "14.24"],
+      "note": "Apply participle agreement with essere, third-person direct-object clitics, partitive ne, and reflexive structures while leaving ordinary avere forms invariant."
+    },
+    {
+      "block": 8,
+      "card_seq": 9,
+      "exercise_sets": ["9"],
+      "hammer_refs": ["14.25", "14.26", "14.27", "14.28", "14.29", "14.30"],
+      "note": "Build fare plus an unmodified active infinitive, placing the infinitive's performer with a or da according to active or passive focus and attaching clitics to fare."
+    },
+    {
+      "block": 9,
+      "card_seq": 10,
+      "exercise_sets": ["10"],
+      "hammer_refs": ["14.31", "14.32", "14.33", "14.34", "14.35", "14.36"],
+      "note": "Transform direct objects into passive subjects and choose essere, venire, andare, or si passivante for neutral, dynamic, obligatory, or impersonal-passive meanings; alternative translations and the synthetic recipe passage are excluded."
+    }
+  ]
+}
