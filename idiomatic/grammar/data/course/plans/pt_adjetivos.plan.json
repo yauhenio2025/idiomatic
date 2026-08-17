@@ -1,0 +1,51 @@
+{
+  "lang": "pt",
+  "unit": "adjetivos",
+  "chapter": 5,
+  "unit_label": "Adjetivos & advérbios",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 1,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["5.1"],
+      "note": "Place and inflect attributive adjectives across the default post-nominal pattern and the licensed pre-nominal classes, retaining the complete clean source set."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["5.3"],
+      "note": "Choose adjective position from the intended lexical meaning, including grande, antigo, novo, próximo, certo, mesmo, and único; retain the complete structurally clean contrast set."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["5.5"],
+      "note": "Retrieve the invariant masculine-singular adjective forms used adverbially; the unchanged hygiene gate excludes the one judgment-dependent item."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["4"],
+      "max_items": 4,
+      "hammer_refs": ["5.6", "5.7"],
+      "note": "Form and place manner adverbs in -mente, conservatively stopping before an unflagged source reconstruction that drops the required accent in difícil."
+    },
+    {
+      "block": 5,
+      "card_seq": 7,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["5.8", "5.9", "5.10"],
+      "note": "Form regular and irregular comparatives and relative superlatives, preserving adjective agreement and the source distinction between mais/menos and melhor/pior/maior/menor."
+    },
+    {
+      "block": 6,
+      "card_seq": 8,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["5.11"],
+      "note": "Build agreeing absolute superlatives in -íssimo and retrieve the lexical forms ótimo, péssimo, mínimo, facílimo, felicíssimo, and confortabilíssimo."
+    }
+  ]
+}
