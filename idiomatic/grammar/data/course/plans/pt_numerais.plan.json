@@ -1,0 +1,43 @@
+{
+  "lang": "pt",
+  "unit": "numerais",
+  "chapter": 6,
+  "unit_label": "Numerais",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["6.1"],
+      "note": "Build cardinal numbers across tens, hundreds, thousands, and the milhão/bilhão scale while preserving agreement, conjunction placement, and de before a directly governed noun."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["6.2"],
+      "note": "Expand written ordinals, inflect every component for the qualified noun, and contrast ordinary compounds with the rare large ordinal forms retained by the source set."
+    },
+    {
+      "block": 3,
+      "card_seq": 5,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["6.4"],
+      "note": "Produce dates with cardinal day numbers except primeiro, insert de between date fields, and read years as ordinary cardinal numbers."
+    },
+    {
+      "block": 4,
+      "card_seq": 7,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["6.5"],
+      "note": "Express conversational and scheduled clock times with singular or plural ser, feminine hour numerals, articles after prepositions, and both past-hour and para alternatives."
+    },
+    {
+      "block": 5,
+      "card_seq": 10,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["6.6"],
+      "note": "Integrate fractions, meio versus metade, decimal commas, percentages, monetary amounts, and regnal numbers in a final mixed numerical-expression block."
+    }
+  ]
+}
