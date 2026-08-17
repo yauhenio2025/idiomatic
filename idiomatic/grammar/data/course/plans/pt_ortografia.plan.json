@@ -1,0 +1,50 @@
+{
+  "lang": "pt",
+  "unit": "ortografia",
+  "chapter": 1,
+  "unit_label": "Ortografia & pronúncia",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 1,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["1.1"],
+      "note": "Spell names with the Brazilian Portuguese letter names; retain the complete clean source set."
+    },
+    {
+      "block": 2,
+      "card_seq": 2,
+      "exercise_sets": ["5", "8"],
+      "hammer_refs": ["1.1", "1.5.6"],
+      "note": "Complete ch, lh, nh, qu, and related spelling groups, then identify the soft value of g; source flags remove every unmatched negative choice from the sound-identification set."
+    },
+    {
+      "block": 3,
+      "card_seq": 3,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["1.5.6"],
+      "note": "Identify the workbook's h-like realizations of r; source flags exclude the four choices absent from the printed answer key."
+    },
+    {
+      "block": 4,
+      "card_seq": 4,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["1.5.6"],
+      "note": "Identify intervocalic and other voiced realizations of s; source flags exclude the five choices absent from the printed answer key."
+    },
+    {
+      "block": 5,
+      "card_seq": 8,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["1.7"],
+      "note": "Add written accents only where the spelling rules require them; retain all sixteen unflagged contrasts, including explicit no-accent answers. The preceding stress-identification set is omitted because extraction lost the printed underlining and therefore preserves no answer distinction."
+    },
+    {
+      "block": 6,
+      "card_seq": 10,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["1.9"],
+      "note": "Apply Portuguese capitalization to calendar words, nationalities, affiliations, languages, and academic disciplines; retain the complete clean source set."
+    }
+  ]
+}
