@@ -1,0 +1,44 @@
+{
+  "lang": "pt",
+  "unit": "infinitivo",
+  "chapter": 19,
+  "unit_label": "Infinitivo (incl. infinitivo pessoal)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["3:key"],
+      "hammer_refs": ["19.3", "19.6", "19.7"],
+      "note": "Choose inflected or uninflected infinitives across all ten source contexts; use the printed key because stem-plus-blank reconstruction duplicated endings or collapsed some full solutions to answer fragments."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["19", "20"],
+      "max_items": 7,
+      "note": "Replace subjunctive clauses with compact infinitive constructions in the first seven complete clean items; cap before the printed minhã typo while avoiding a selective edit to sealed source text."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "exercise_sets": ["1:key"],
+      "hammer_refs": ["19.5"],
+      "note": "Supply the governed preposition, or explicitly no preposition, across the complete source set; use the printed key because literal insertion of the no-preposition label makes reconstructed sentences invalid."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "exercise_sets": ["2:key"],
+      "hammer_refs": ["19.5", "19.6"],
+      "note": "Convert six formal written constructions to their source-provided colloquial equivalents; use whole-answer key mode because alternative-rich reconstruction fragmented the marked spans."
+    },
+    {
+      "block": 5,
+      "card_seq": 7,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["19.10"],
+      "note": "Build perfect infinitives for ten complete contexts where the non-finite action precedes the main reference point; retain the full clean set and omit the following infinitive-versus-gerund word-box exercise whose extracted prompts lost the choice pool."
+    }
+  ]
+}
