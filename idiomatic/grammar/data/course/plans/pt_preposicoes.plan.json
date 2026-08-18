@@ -1,0 +1,44 @@
+{
+  "lang": "pt",
+  "unit": "preposicoes",
+  "chapter": 25,
+  "unit_label": "Preposições",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1:key"],
+      "hammer_refs": ["25.1"],
+      "note": "Keep all twenty source choices in printed-key mode because several reconstructed contractions duplicate the following article; the prompts and printed keys remain intact."
+    },
+    {
+      "block": 2,
+      "card_seq": 5,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["25.1"],
+      "note": "Translate all sixteen complete time expressions into Portuguese, retaining the source's accepted regional and register alternatives."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["3"],
+      "max_items": 6,
+      "hammer_refs": ["25.2"],
+      "note": "Keep the six clean initial simple-preposition choices; cap before item g, whose reconstruction joins Segundo to the following article, while avoiding a local repair to sealed book text."
+    },
+    {
+      "block": 4,
+      "card_seq": 8,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["25.3", "25.4", "25.5"],
+      "note": "Translate all sixteen self-contained compound-preposition phrases into Portuguese, preserving the source's formal and colloquial alternatives."
+    },
+    {
+      "block": 5,
+      "card_seq": 9,
+      "exercise_sets": ["5:key"],
+      "hammer_refs": ["25.1"],
+      "note": "Use the printed replacement keys for all ten spoken-to-formal register items because the source asks for phrase replacement rather than full-sentence reconstruction."
+    }
+  ]
+}
