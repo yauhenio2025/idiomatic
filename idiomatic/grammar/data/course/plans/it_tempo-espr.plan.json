@@ -1,0 +1,23 @@
+{
+  "lang": "it",
+  "unit": "tempo-espr",
+  "chapter": 20,
+  "unit_label": "Espressioni di tempo (M&R 21)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 7,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["21.2", "21.3", "21.4", "21.5"],
+      "max_items": 11,
+      "note": "Distinguish weekday and day-period frames, durative forms in -ata, dates, years, and age expressions; cap before source item 12, whose prompt contains an unflagged repeated clock-number extraction artifact."
+    },
+    {
+      "block": 2,
+      "card_seq": 11,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["21.6", "21.7"],
+      "note": "Produce frequency frames and keep speaking-time scorso/prossimo distinct from narrative-relative precedente/seguente; retain all twelve structurally clean source translations."
+    }
+  ]
+}
