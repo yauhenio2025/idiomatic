@@ -1,0 +1,16 @@
+{
+  "lang": "pt",
+  "unit": "ordem-palavras",
+  "chapter": 27,
+  "unit_label": "Ordem das palavras",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 7,
+      "exercise_sets": ["1"],
+      "max_items": 1,
+      "hammer_refs": ["27"],
+      "note": "Keep only the first clean indirect-question translation. The selector cannot sparsely omit items b and g, whose sealed English prompts say 'she' while their printed Portuguese keys say 'ele', so conservatively cap before both defects rather than alter source text."
+    }
+  ]
+}
