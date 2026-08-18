@@ -1,0 +1,90 @@
+{
+  "lang": "pt",
+  "unit": "conjugacao",
+  "chapter": 15,
+  "unit_label": "Conjugação regular & irregular (ch. 15-16)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "chapter": 15,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["15.3", "15.4", "15.5"],
+      "note": "Retrieve present, imperfect, and preterite forms across all three regular conjugations; retain the complete clean source set."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "chapter": 15,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["15.6", "20.3", "20.6"],
+      "note": "Form the present subjunctive in nine complete contexts that make person and clause trigger explicit."
+    },
+    {
+      "block": 3,
+      "card_seq": 4,
+      "chapter": 15,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["15.7", "20.3", "20.4", "20.5", "20.6"],
+      "note": "Form the imperfect subjunctive after past wishes, evaluations, concessions, and hypothetical se-clauses."
+    },
+    {
+      "block": 4,
+      "card_seq": 5,
+      "chapter": 15,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["15.8", "20.4", "20.5"],
+      "note": "Choose regular future-subjunctive person endings in prospective se, quando, assim que, quem, and relative-clause contexts."
+    },
+    {
+      "block": 5,
+      "card_seq": 6,
+      "chapter": 15,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["15.9"],
+      "note": "Attach the shared future and conditional endings to complete regular infinitive stems across all persons."
+    },
+    {
+      "block": 6,
+      "card_seq": 7,
+      "chapter": 15,
+      "exercise_sets": ["6"],
+      "max_items": 23,
+      "hammer_refs": ["15.12"],
+      "note": "Apply spelling and written-accent rules across a broad clean prefix; cap before the final unflagged reconstruction that places punctuation inside the inserted verb and breaks the sentence boundary."
+    },
+    {
+      "block": 7,
+      "card_seq": 8,
+      "chapter": 16,
+      "exercise_sets": ["1", "3"],
+      "hammer_refs": ["16.1", "16.2"],
+      "note": "Contrast radical-changing and semi-irregular present systems using the two structurally clean paradigm sets; omit the separate sentence set because its unflagged source text contains a corrupted word mid-set."
+    },
+    {
+      "block": 8,
+      "card_seq": 9,
+      "chapter": 16,
+      "exercise_sets": ["4"],
+      "hammer_refs": ["16.3"],
+      "note": "Retrieve present, imperfect, and preterite principal parts for the core irregular verbs and productive compounds."
+    },
+    {
+      "block": 9,
+      "card_seq": 10,
+      "chapter": 16,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["16.3", "20.3", "20.4", "20.5", "20.6"],
+      "note": "Derive irregular imperfect-subjunctive forms from the preterite stem in ten complete clean contexts; omit the present-subjunctive set because an unflagged agreement defect splits its source block."
+    },
+    {
+      "block": 10,
+      "card_seq": 11,
+      "chapter": 16,
+      "exercise_sets": ["7"],
+      "max_items": 8,
+      "hammer_refs": ["16.3", "20.4", "20.5"],
+      "note": "Practice irregular future-subjunctive stems through the first eight complete sentences; cap before an answer-only reconstruction that loses its sentence frame."
+    }
+  ]
+}
