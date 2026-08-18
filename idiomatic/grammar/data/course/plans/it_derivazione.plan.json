@@ -1,0 +1,23 @@
+{
+  "lang": "it",
+  "unit": "derivazione",
+  "chapter": 19,
+  "unit_label": "Derivazione delle parole (M&R 20)",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 4,
+      "exercise_sets": ["2"],
+      "hammer_refs": ["20.2", "20.3", "20.4"],
+      "max_items": 40,
+      "note": "Build words through attested prefixes and suffixes, identify the base of derived nouns, and keep lexical choice separate from productive patterns; the hygiene gate removes the three source-flagged ambiguous noun derivations, then the cap excludes the final unflagged item whose prompt has absorbed text from the following dialogue."
+    },
+    {
+      "block": 2,
+      "card_seq": 7,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["20.4"],
+      "note": "Form and interpret evaluatives by combining suffix meaning with lexicalized exceptions; retain all nineteen structurally clean source items."
+    }
+  ]
+}
