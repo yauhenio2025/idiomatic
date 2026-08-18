@@ -1,0 +1,29 @@
+{
+  "lang": "pt",
+  "unit": "imperativo",
+  "chapter": 21,
+  "unit_label": "Imperativo",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["21.1"],
+      "note": "Recast eight complete requests as familiar spoken commands, covering regular forms, high-frequency irregular forms, and pre-verbal object pronouns."
+    },
+    {
+      "block": 2,
+      "card_seq": 3,
+      "exercise_sets": ["2:key"],
+      "hammer_refs": ["21.2"],
+      "note": "Supply all eighteen formal imperative forms in a complete sequence of written bicycle-repair instructions; printed-key mode preserves the requested replacement forms without pretending the repeated multi-gap prompts were fully reconstructed."
+    },
+    {
+      "block": 3,
+      "card_seq": 5,
+      "exercise_sets": ["4:key"],
+      "hammer_refs": ["21.2", "21.3"],
+      "note": "Attach direct and indirect object pronouns to formal singular and plural affirmative imperatives; the unchanged source flag excludes the corrected bilingual final item. The plural word-box set is omitted because extraction lost its required choice pool."
+    }
+  ]
+}
