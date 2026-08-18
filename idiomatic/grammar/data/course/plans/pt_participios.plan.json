@@ -1,0 +1,43 @@
+{
+  "lang": "pt",
+  "unit": "participios",
+  "chapter": 17,
+  "unit_label": "Gerúndio, particípios, perfeito composto & passiva",
+  "blocks": [
+    {
+      "block": 1,
+      "card_seq": 2,
+      "exercise_sets": ["1"],
+      "hammer_refs": ["17.1"],
+      "note": "Form gerunds and place them in continuous, durative, and adverbial contexts across the complete clean dialogue set; omit the separate English-output movement translation set."
+    },
+    {
+      "block": 2,
+      "card_seq": 4,
+      "exercise_sets": ["3"],
+      "hammer_refs": ["17.2"],
+      "note": "Choose regular or core irregular past participles and apply agreement only where the auxiliary or adjectival construction requires it; retain the complete clean set."
+    },
+    {
+      "block": 3,
+      "card_seq": 6,
+      "exercise_sets": ["5"],
+      "hammer_refs": ["17.3"],
+      "note": "Select compound-perfect auxiliaries, tenses, and moods in complete contexts; the unchanged hygiene gate excludes the source-flagged split alternative."
+    },
+    {
+      "block": 4,
+      "card_seq": 7,
+      "exercise_sets": ["6"],
+      "hammer_refs": ["17.4", "17.2.3"],
+      "note": "Transform every structurally complete active sentence into a ser-passive while preserving tense and enforcing participle agreement."
+    },
+    {
+      "block": 5,
+      "card_seq": 8,
+      "exercise_sets": ["7"],
+      "hammer_refs": ["17.4", "17.2.3"],
+      "note": "Contrast eventive ser-passives with resultant estar states across the complete clean source set; omit the preceding dual-participle choice exercise because extraction lost its numbered option pool."
+    }
+  ]
+}
